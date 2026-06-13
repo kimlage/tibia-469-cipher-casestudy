@@ -1,0 +1,55 @@
+sheet__books deduped rows: 70
+total digits: 11263
+probe_books rows: 70
+total code tokens: 5729
+code count rows (distinct codes): 99
+codes with omission>0: ['00', '01', '03', '04', '05', '06', '07', '08', '09']
+books where render(stream, omitted positions) != digits: 0
+
+=== OBSERVED ===
+sum p^2 = 0.1083
+lag 1: match=0.0945 n=11193 z_iid=-4.70
+lag 2: match=0.1112 n=11123 z_iid=+0.98
+lag 3: match=0.1050 n=11053 z_iid=-1.11
+lag 4: match=0.0951 n=10983 z_iid=-4.48
+lag 5: match=0.1011 n=10913 z_iid=-2.44
+lag 6: match=0.0931 n=10843 z_iid=-5.12
+lag 7: match=0.1122 n=10773 z_iid=+1.30
+lag 8: match=0.1118 n=10703 z_iid=+1.17
+runs len==3: 13, len>=4: 0
+diff mod10 chi2 (df9): 126.8 over 5659 pairs
+  mod10 counts: [675, 509, 572, 536, 539, 470, 616, 745, 466, 531]
+diff mod10 chi2 after dropping top-10 bigrams: 65.7 over 5013 pairs
+
+digit-shuffle baseline: triples 104.5+-10.6, quads+ 14.8+-3.9
+observed triples z vs shuffle: -8.67, quads z: -3.81
+code-shuffle baseline chi2: 18.0+-7.5; observed z vs shuffle: +14.54
+
+Markov fit: 99 codes, 814 bigram types, 5659 bigram tokens
+
+=== SYNTHETIC ENVELOPE (200 corpora, order-1 Markov + omission rates) ===
+lag1 match_prob: obs=0.0945 synth=0.0935+-0.0026 range[0.0848,0.1005] z=+0.41 tail_p=0.325 inside_envelope=True
+lag2 match_prob: obs=0.1112 synth=0.1134+-0.0030 range[0.1054,0.1219] z=-0.70 tail_p=0.235 inside_envelope=True
+lag3 match_prob: obs=0.1050 synth=0.0954+-0.0032 range[0.0868,0.1030] z=+3.03 tail_p=0.000 inside_envelope=False
+lag4 match_prob: obs=0.0951 synth=0.1031+-0.0032 range[0.0938,0.1109] z=-2.46 tail_p=0.005 inside_envelope=True
+lag5 match_prob: obs=0.1011 synth=0.0982+-0.0028 range[0.0913,0.1079] z=+1.03 tail_p=0.155 inside_envelope=True
+lag6 match_prob: obs=0.0931 synth=0.1070+-0.0038 range[0.0976,0.1171] z=-3.68 tail_p=0.000 inside_envelope=False
+lag7 match_prob: obs=0.1122 synth=0.1106+-0.0033 range[0.1020,0.1208] z=+0.50 tail_p=0.310 inside_envelope=True
+lag8 match_prob: obs=0.1118 synth=0.1071+-0.0034 range[0.0967,0.1176] z=+1.38 tail_p=0.055 inside_envelope=True
+
+lag1 z_iid: obs=-4.70 synth=-5.06+-+0.88 range[-7.68,-2.73] z=+0.41 tail_p=0.350 inside_envelope=True
+lag2 z_iid: obs=+0.98 synth=+1.71+-+1.03 range[-0.78,+4.58] z=-0.71 tail_p=0.255 inside_envelope=True
+lag3 z_iid: obs=-1.11 synth=-4.36+-+1.02 range[-7.16,-1.91] z=+3.18 tail_p=0.000 inside_envelope=False
+lag4 z_iid: obs=-4.48 synth=-1.77+-+1.08 range[-4.46,+1.07] z=-2.50 tail_p=0.000 inside_envelope=False
+lag5 z_iid: obs=-2.44 synth=-3.39+-+0.93 range[-5.70,-0.19] z=+1.02 tail_p=0.155 inside_envelope=True
+lag6 z_iid: obs=-5.12 synth=-0.42+-+1.23 range[-3.39,+2.69] z=-3.81 tail_p=0.000 inside_envelope=False
+lag7 z_iid: obs=+1.30 synth=+0.75+-+1.10 range[-2.16,+3.88] z=+0.50 tail_p=0.285 inside_envelope=True
+lag8 z_iid: obs=+1.17 synth=-0.40+-+1.11 range[-3.76,+2.98] z=+1.42 tail_p=0.050 inside_envelope=True
+
+triple runs: obs=13.0 synth=21.9+-4.8 range[11.0,34.0] z=-1.85 tail_p=0.035 inside_envelope=True
+quad+ runs: obs=0.0 synth=0.2+-0.5 range[0.0,3.0] z=-0.39 tail_p=0.850 inside_envelope=True
+diff-mod10 chi2: obs=126.8 synth=135.6+-23.2 range[87.7,205.0] z=-0.38 tail_p=0.375 inside_envelope=True
+diff-mod10 chi2 (top10 bigrams dropped): obs=65.7 synth=82.9+-26.8 range[30.0,154.5] z=-0.64 tail_p=0.285 inside_envelope=True
+
+statistics outside synthetic envelope: 5/20
+outside: ['lag3_mp', 'lag6_mp', 'lag3_z', 'lag4_z', 'lag6_z']

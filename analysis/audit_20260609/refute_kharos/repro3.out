@@ -1,0 +1,20 @@
+PROJECTION (tokens fully inside window):
+  chunk@0 len=16: occurrences-with-tokens=12, distinct projections=1
+  chunk@16 len=24: occurrences-with-tokens=12, distinct projections=1
+  chunk@40 len=12: occurrences-with-tokens=9, distinct projections=1
+  chunk@52 len=18: occurrences-with-tokens=4, distinct projections=1
+  chunk@70 len=15: occurrences-with-tokens=10, distinct projections=1
+  chunk@90 len=14: occurrences-with-tokens=8, distinct projections=1
+  chunk@109 len=14: occurrences-with-tokens=9, distinct projections=2
+unique projections: 6/7 (claim 6/7)
+decoded positions: 109/137 (claim 109 = 79.6%)
+conflicts: 1 (claim 0)
+
+constrained decode: 71 symbols, 5 omitted, identity 142==142: True
+mine : TEINTAAETTEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAEFTEFSEICTA*
+claim: TEINTAAETTEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAEFTNESFEVIII
+match: False
+diffs: [62, 63, 65, 66, 67, 68, 69, 70] [('E', 'N'), ('F', 'E'), ('E', 'F'), ('I', 'E'), ('C', 'V'), ('T', 'I'), ('A', 'I'), ('*', 'I')]
+omitted codes used: ['00', '05', '07', '07', '09']
+violations (39, written07, omit-never): (False, False, False)
+PART3 DONE

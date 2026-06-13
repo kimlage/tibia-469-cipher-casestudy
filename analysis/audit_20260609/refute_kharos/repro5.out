@@ -1,0 +1,20 @@
+DP count [anyA]: 10^28.49 (claim 10^28.49)
+DP count [strict]: 10^24.50 (claim 10^28.49)
+DP count [omitA_writB]: 10^28.49 (claim 10^28.49)
+DP count [omitB_writA]: 10^24.50 (claim 10^28.49)
+
+Kharos ML: 71 toks, lp/tok=-4.1161
+Kharos ML omitted codes: ['01', '05', '07', '07', '07']
+
+Kharos metrics (gramcov, poscov, LSS, chunkcov): (0.4140625, 0.8248175182481752, 24, 0.8248175182481752)
+
+CTRL (n=100, parsed=100):
+  lp/tok mean,std = (-4.675015609039386, 0.09781614954559237) (claim -4.685 +/- 0.093)
+  poscov mean,std = (0.0, 0.0) (claim 0.0)
+  LSS mean,std = (5.22, 0.7011419257183241) (claim 5.15 +/- 0.72)
+  chunkcov mean,std = (0.0, 0.0) (claim 0.0006 +/- 0.0058)
+  log10 dpcount mean,std = (28.442968448849022, 0.075021610698106) (claim 28.44 +/- 0.08)
+
+LOO books: poscov mean=0.9661 min=0.4609 (claim mean .966 min .461)
+LOO books: LSS mean=116.34 min=18 (claim mean 116.3 min 18)
+PART5 DONE

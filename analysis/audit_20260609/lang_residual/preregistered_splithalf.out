@@ -1,0 +1,80 @@
+ROWCOUNT 70
+novel spans: 100, symbols: 1772 (expect 100 / 1772)
+subsegments after '*' split: 118, symbols: 1743, bigrams: 1625
+half A: 59 segs, 818 symbols, 759 bigrams
+half B: 59 segs, 925 symbols, 866 bigrams
+
+== HALF A (even segs) ==
+  a_EN_identity obs=-2.8122 null mu=-3.0687 sd=0.1784  z=+1.44  (n=818)
+  b_EN_order    obs=-7.7620 null mu=-7.9037 sd=0.0759  z=+1.87  (n=759)
+  c_DE_order    obs=-7.2583 null mu=-7.4756 sd=0.0741  z=+2.93  (n=759)
+  d_DEminusEN   obs=+0.5037 null mu=+0.4281 sd=0.0660  z=+1.14  (n=759)
+
+== HALF B (odd segs) ==
+  a_EN_identity obs=-2.8309 null mu=-3.0733 sd=0.1843  z=+1.31  (n=925)
+  b_EN_order    obs=-7.8252 null mu=-7.9420 sd=0.0696  z=+1.68  (n=866)
+  c_DE_order    obs=-7.3380 null mu=-7.5407 sd=0.0678  z=+2.99  (n=866)
+  d_DEminusEN   obs=+0.4872 null mu=+0.4013 sd=0.0598  z=+1.44  (n=866)
+
+== COMBINED (all novel) ==
+  a_EN_identity obs=-2.8221 null mu=-3.0649 sd=0.1811  z=+1.34  (n=1743)
+  b_EN_order    obs=-7.7957 null mu=-7.9226 sd=0.0504  z=+2.52  (n=1625)
+  c_DE_order    obs=-7.3008 null mu=-7.5072 sd=0.0524  z=+3.94  (n=1625)
+  d_DEminusEN   obs=+0.4949 null mu=+0.4154 sd=0.0453  z=+1.75  (n=1625)
+
+-- POWER: injected GERMAN (merged length 1656, need 818/offset) --
+
+== GERMAN offset 0 ==
+  a_EN_identity obs=-2.8233 null mu=-3.0702 sd=0.1303  z=+1.89  (n=818)
+  b_EN_order    obs=-6.9342 null mu=-7.6812 sd=0.0784  z=+9.53  (n=759)
+  c_DE_order    obs=-6.9562 null mu=-7.6834 sd=0.0728  z=+9.98  (n=759)
+  d_DEminusEN   obs=-0.0220 null mu=-0.0022 sd=0.0620  z=-0.32  (n=759)
+
+== GERMAN offset 419 ==
+  a_EN_identity obs=-2.8441 null mu=-3.0702 sd=0.1302  z=+1.74  (n=818)
+  b_EN_order    obs=-6.9900 null mu=-7.6636 sd=0.0790  z=+8.53  (n=759)
+  c_DE_order    obs=-6.8894 null mu=-7.6380 sd=0.0733  z=+10.21  (n=759)
+  d_DEminusEN   obs=+0.1006 null mu=+0.0256 sd=0.0625  z=+1.20  (n=759)
+
+== GERMAN offset 838 ==
+  a_EN_identity obs=-2.8641 null mu=-3.0836 sd=0.1169  z=+1.88  (n=818)
+  b_EN_order    obs=-7.0735 null mu=-7.7225 sd=0.0793  z=+8.18  (n=759)
+  c_DE_order    obs=-7.0998 null mu=-7.7248 sd=0.0720  z=+8.68  (n=759)
+  d_DEminusEN   obs=-0.0263 null mu=-0.0023 sd=0.0651  z=-0.37  (n=759)
+POWER GERMAN mean z: a=+1.84 b=+8.75 c=+9.62 d=+0.17
+
+-- POWER: injected ENGLISH (merged length 1528, need 818/offset) --
+
+== ENGLISH offset 0 ==
+  a_EN_identity obs=-2.8727 null mu=-3.0690 sd=0.0868  z=+2.26  (n=818)
+  b_EN_order    obs=-7.2280 null mu=-7.8551 sd=0.0795  z=+7.89  (n=759)
+  c_DE_order    obs=-7.7434 null mu=-8.0981 sd=0.0654  z=+5.42  (n=759)
+  d_DEminusEN   obs=-0.5154 null mu=-0.2429 sd=0.0650  z=-4.19  (n=759)
+
+== ENGLISH offset 355 ==
+  a_EN_identity obs=-2.8517 null mu=-3.0733 sd=0.1039  z=+2.13  (n=818)
+  b_EN_order    obs=-7.0809 null mu=-7.8313 sd=0.0761  z=+9.86  (n=759)
+  c_DE_order    obs=-7.6665 null mu=-8.0635 sd=0.0661  z=+6.01  (n=759)
+  d_DEminusEN   obs=-0.5857 null mu=-0.2321 sd=0.0624  z=-5.67  (n=759)
+
+== ENGLISH offset 710 ==
+  a_EN_identity obs=-2.8549 null mu=-3.0676 sd=0.1046  z=+2.03  (n=818)
+  b_EN_order    obs=-7.1747 null mu=-7.8917 sd=0.0760  z=+9.43  (n=759)
+  c_DE_order    obs=-7.7832 null mu=-8.1371 sd=0.0667  z=+5.30  (n=759)
+  d_DEminusEN   obs=-0.6086 null mu=-0.2455 sd=0.0616  z=-5.89  (n=759)
+POWER ENGLISH mean z: a=+2.14 b=+9.06 c=+5.58 d=-5.25
+
+-- R1: motif-token-order null (DE) --
+MOTIF-NULL DE COMBINED: obs=-7.3008 mu=-7.3259 sd=0.0260 z=+0.97 | tokens=632 multi-sym motifs=241 (1352 syms, 78% of half)
+MOTIF-NULL DE HALF A: obs=-7.2583 mu=-7.3330 sd=0.0400 z=+1.87 | tokens=323 multi-sym motifs=113 (608 syms, 74% of half)
+MOTIF-NULL DE HALF B: obs=-7.3380 mu=-7.3218 sd=0.0345 z=-0.47 | tokens=309 multi-sym motifs=128 (744 syms, 80% of half)
+
+-- R2: DE-order edge (<=3 syms from segment boundary) vs interior, combined corpus --
+EDGE   (n= 592): obs=-7.3324 mu=-7.5235 z=+2.01
+INTERIOR(n=1033): obs=-7.2827 mu=-7.5034 z=+3.21
+
+==== DECISION (pre-registered rule: REAL iff z>=+3.00 in BOTH halves) ====
+  a_EN_identity halfA z=+1.44  halfB z=+1.31  combined z=+1.34  -> FAIL
+  b_EN_order    halfA z=+1.87  halfB z=+1.68  combined z=+2.52  -> FAIL
+  c_DE_order    halfA z=+2.93  halfB z=+2.99  combined z=+3.94  -> FAIL
+  d_DEminusEN   halfA z=+1.14  halfB z=+1.44  combined z=+1.75  -> FAIL

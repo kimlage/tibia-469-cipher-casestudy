@@ -1,0 +1,29 @@
+books: 70 | total digits: 11263
+probe rows: 70 | all valid: True
+total tokens: 5729
+token==base length mismatches: 0
+byte-exact failures: 0
+total omissions: 195 (11458-11263 = 195 )
+omitted codes: {'00': 13, '01': 21, '03': 14, '04': 20, '05': 12, '06': 37, '07': 50, '08': 20, '09': 8}
+code 07: occurrences 50 omitted 50
+omissions on codes 10-99: 0
+counts-table rows: 99 | mismatches vs stream-derived: []
+codes mapping to >1 symbol: none (deterministic)
+homophone class sizes: {'*': 1, 'A': 10, 'B': 2, 'C': 2, 'E': 17, 'F': 6, 'I': 15, 'L': 4, 'N': 15, 'O': 2, 'R': 2, 'S': 2, 'T': 12, 'V': 9}
+
+sum p^2 = 0.1083
+lag 1: match=0.0945 n=11193 z_iid=-4.70
+lag 2: match=0.1112 n=11123 z_iid=+0.98
+lag 3: match=0.1050 n=11053 z_iid=-1.11
+lag 4: match=0.0951 n=10983 z_iid=-4.48
+lag 5: match=0.1011 n=10913 z_iid=-2.44
+lag 6: match=0.0931 n=10843 z_iid=-5.12
+lag 7: match=0.1122 n=10773 z_iid=+1.30
+lag 8: match=0.1118 n=10703 z_iid=+1.17
+runs len3, len>=4: (13, 0)
+diff-mod10 chi2: 126.8 over 5659 pairs; after drop-top10: 65.7 over 5013
+code-shuffle chi2 baseline: 19.8+-8.2; obs z=+13.03
+digit-shuffle: triples 103.9+-9.8 (obs z=-9.26), quads 14.3+-3.8 (obs z=-3.76)
+code lag 1: same=0.0163 tens=0.1060 units=0.1193 n=5659
+code lag 2: same=0.0043 tens=0.1052 units=0.0836 n=5589
+code lag 3: same=0.0074 tens=0.0855 units=0.0933 n=5519

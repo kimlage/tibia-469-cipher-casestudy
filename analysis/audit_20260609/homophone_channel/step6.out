@@ -1,0 +1,10 @@
+rows: 70
+novel tokens: 1116, miss rate: 0.242
+observed NOVEL: ac1=0.3560 bookG=296.1
+novel segments touched: 71
+within-SEGMENT permute: ac1 ctl=0.2231+-0.0249 z=+5.33 | bookG ctl=296.1+-0.0 z=-1.00
+within-BOOK permute  : ac1 ctl=0.2223+-0.0251 z=+5.32 | bookG ctl=296.1+-0.0 z=-1.00
+
+sub-chunk reuse attribution (novel tokens, +-4-digit context seen before):
+  reused-context: hit=0.912 (n=114)
+  fresh-context:  hit=0.741 (n=1002)

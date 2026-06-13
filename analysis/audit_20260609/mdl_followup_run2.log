@@ -1,0 +1,27 @@
+[load] books=70 probe=70
+[verify] all 70 books: written-token concatenation == digits EXACT
+[verify] total short-form (omitted-zero) tokens: 195
+
+[B] WRITTEN-FIXED (canonical boundaries, written types, K=110): ntok=5729 TOTAL=36553.9 bits (3.2455 b/d)
+[C] SMART-CANON (per-code KT omission flags): stream=35584.6 flags=459.5 cb=524.2 TOTAL=36568.3 bits (3.2468 b/d)
+    per-code omission rates: {'00': '13/120', '01': '21/86', '02': '0/8', '03': '14/65', '04': '20/93', '05': '12/53', '06': '37/58', '07': '50/50', '08': '20/58', '09': '8/43'}
+
+[D] canonical internal boundaries: 5659 of 11193 internal positions (chance rate 0.5056)
+[rebuild] MIXA1 total=34777.3
+[rebuild] LEARNED best K=180 total=29757.1; K<=110 total=31076.5
+[D] MIXA1         : boundary-coincidence=0.4720 (chance 0.5056, z≈-5.2) whole-token-respects-canon=0.4207 token-lengths={2: 5371, 1: 521}
+[D] LEARNED_best  : boundary-coincidence=0.5002 (chance 0.5056, z≈-0.7) whole-token-respects-canon=0.0581 token-lengths={1: 252, 3: 3355, 2: 473}
+[D] LEARNED_K<=110: boundary-coincidence=0.5036 (chance 0.5056, z≈-0.3) whole-token-respects-canon=0.0580 token-lengths={1: 1373, 3: 2976, 2: 481}
+
+[E] TOKEN-SHUFFLE control (canonical written tokens shuffled per book; canonical MDL invariant by exchangeability)
+    rep 0: LEARNEDbest=37105.8 (K=12)  MIXA1=36157.3
+    rep 1: LEARNEDbest=37110.9 (K=12)  MIXA1=36150.2
+    rep 2: LEARNEDbest=36997.0 (K=12)  MIXA1=36164.4
+    rep 3: LEARNEDbest=37137.0 (K=12)  MIXA1=36131.3
+    rep 4: LEARNEDbest=37012.3 (K=12)  MIXA1=36114.4
+    rep 5: LEARNEDbest=37017.6 (K=12)  MIXA1=36130.3
+    rep 6: LEARNEDbest=37001.2 (K=12)  MIXA1=36130.5
+    rep 7: LEARNEDbest=37027.0 (K=12)  MIXA1=36076.6
+[E] token-shuffled LEARNEDbest: mean=37051.1 sd=56.8  (real LEARNEDbest=29757.1; CANON=36736.0 invariant)
+[E] token-shuffled MIXA1:      mean=36131.9 sd=27.8  (real MIXA1=34777.3)
+[E] z(real learned vs token-shuffled learned) = -128.44

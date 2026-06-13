@@ -1,0 +1,14 @@
+ROWCOUNT 70
+novel decoded spans: 100 spans, 1772 symbols (of 5729)
+NOVEL-ONLY EN: obs=-7.7957 mu=-7.9282 sd=0.0490 z=+2.71 (n bigrams=1625)
+NOVEL-ONLY DE: obs=-7.3008 mu=-7.5270 sd=0.0508 z=+4.45 (n bigrams=1625)
+
+row0 tables: ['row0_omission_probe_runs', 'row0_omission_probe_book_items', 'row0_path_reconstruction_runs', 'row0_path_reconstruction_items', 'row0_code_symbol_probe_runs', 'row0_code_symbol_probe_books', 'row0_code_symbol_counts', 'row0_symbol_code_counts', 'row0_base_frontier_runs', 'row0_base_symbol_counts', 'row0_base_ngram_items', 'row0_base_book_items', 'row0_variant_frontier_runs', 'row0_variant_book_tokens', 'row0_variant_token_counts', 'row0_variant_ngram_items', 'row0_function_registry_runs', 'row0_function_registry', 'row0_function_evidence', 'row0_function_policy_runs', 'row0_function_policy_items', 'row0_function_policy_override_runs', 'row0_subfunction_policy_runs', 'row0_subfunction_policy_items', 'row0_phase_operator_path_gate_v1_runs', 'row0_phase_operator_path_gate_v1_items', 'row0_c86_c68_occurrence_pairs_v1_runs', 'row0_c86_c68_occurrence_pairs_v1_items', 'row0_r20_r02_occurrence_pairs_v1_runs', 'row0_r20_r02_occurrence_pairs_v1_items']
+row0_code_symbol_counts cols: ['run_id', 'code', 'symbol', 'occurrence_count', 'omitted_count', 'written_count']
+rows: 99
+[(1, '00', '*', 120, 13, 107), (1, '01', 'N', 86, 21, 65), (1, '02', 'R', 8, 0, 8), (1, '03', 'V', 65, 14, 51), (1, '04', 'F', 93, 20, 73), (1, '05', 'T', 53, 12, 41), (1, '06', 'I', 58, 37, 21), (1, '07', 'I', 50, 50, 0), (1, '08', 'I', 58, 20, 38), (1, '09', 'T', 43, 8, 35), (1, '10', 'N', 14, 0, 14), (1, '11', 'E', 139, 0, 139), (1, '12', 'F', 127, 0, 127), (1, '13', 'N', 11, 0, 11), (1, '14', 'A', 138, 0, 138), (1, '15', 'E', 87, 0, 87), (1, '16', 'T', 56, 0, 56), (1, '17', 'V', 37, 0, 37), (1, '18', 'I', 130, 0, 130), (1, '19', 'I', 192, 0, 192), (1, '20', 'R', 24, 0, 24), (1, '21', 'F', 167, 0, 167), (1, '22', 'A', 8, 0, 8), (1, '23', 'O', 9, 0, 9), (1, '24', 'L', 41, 0, 41), (1, '25', 'I', 22, 0, 22), (1, '26', 'N', 12, 0, 12), (1, '27', 'S', 120, 0, 120), (1, '28', 'T', 41, 0, 41), (1, '29', 'N', 20, 0, 20), (1, '30', 'V', 18, 0, 18), (1, '31', 'N', 34, 0, 34), (1, '32', 'O', 1, 0, 1), (1, '33', 'E', 1, 0, 1), (1, '34', 'B', 81, 0, 81), (1, '35', 'L', 79, 0, 79), (1, '36', 'V', 88, 0, 88), (1, '37', 'A', 8, 0, 8), (1, '38', 'T', 1, 0, 1), (1, '40', 'F', 11, 0, 11)]
+
+iz distribution: [(0, 2), (1, 17), (2, 14), (3, 15), (4, 13), (5, 3), (6, 4), (7, 2)]
+corr(iz, zerocount)=0.385 corr(iz,len)=0.581 corr(zerocount,len)=0.810
+
+digit run-length distribution: [(1, 9160), (2, 1032), (3, 13)]

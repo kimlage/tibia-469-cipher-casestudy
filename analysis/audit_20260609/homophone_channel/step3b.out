@@ -1,0 +1,33 @@
+rows: 70
+tokens: 5609
+
+A) same-(word,idx) non-identical-context pairs: agree=47/49 = 0.9592
+   cross-book only: agree=47/49 = 0.9592
+   all-pairs: obs=0.9592 ctl=0.1269+-0.0507 z=+16.41
+   cross-book: obs=0.9592 ctl=0.1269+-0.0507 z=+16.41
+
+=== ALL (n=5609) ===
+model bits/choice    top1  total bits
+MS1        1.3043  0.7106      7316.0
+MS2        0.7463  0.8686      4185.9
+MSW        2.4283  0.4072     13620.5
+MSWM       0.5470  0.8980      3068.1
+
+=== NOVEL (n=1116) ===
+model bits/choice    top1  total bits
+MS1        2.0907  0.5735      2333.2
+MS2        1.7392  0.6944      1941.0
+MSW        2.8082  0.3127      3134.0
+MSWM       1.2921  0.7652      1441.9
+
+=== XUNIQ (n=451) ===
+model bits/choice    top1  total bits
+MS1        3.4364  0.3747      1549.8
+MS2        3.4890  0.4013      1573.5
+MSW        3.4003  0.1796      1533.5
+MSWM       2.5951  0.5299      1170.4
+
+residual diagnostics under MSWM (200 model-sampled controls):
+  ALL: ac1 obs=0.3246 ctl=0.1342+-0.0180 z=+10.60 | bookG obs=508.0 ctl=270.7+-26.6 z=+8.94
+  NOVEL: ac1 obs=0.3724 ctl=0.1683+-0.0336 z=+6.08 | bookG obs=300.4 ctl=132.1+-17.0 z=+9.89
+  XUNIQ: ac1 obs=0.2545 ctl=0.1226+-0.0469 z=+2.82 | bookG obs=48.1 ctl=36.3+-10.1 z=+1.17

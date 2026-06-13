@@ -1,0 +1,34 @@
+# NOTICE — provenance, data, and trademarks
+
+This repository documents an independent cryptanalysis of the Tibia "469"
+Bonelord cipher. It mixes two kinds of material with different status.
+
+## 1. Original work (MIT-licensed)
+
+All analysis code, scripts, statistical derivations, and written documentation
+(the report, the wiki, the case study, the audit scripts) are original work,
+© 2026 Kim de Amorim Lage, released under the MIT License (see LICENSE).
+
+## 2. Game-derived data (NOT licensed by this project)
+
+To make the analysis reproducible, the repository includes numeric data
+**derived from** the game *Tibia*: the Bonelord "469" digit strings and
+frequency tables — e.g. `analysis/audit_20260609/books_digits.json` and the
+historical working files under `archive/old_attempts_2024/`.
+
+These digit corpora originate from in-game content created by **CipSoft GmbH**.
+They are included **nominatively**, solely to identify and reproducibly study
+the puzzle. They are **not** covered by the MIT grant above and remain subject
+to CipSoft's rights. No game art, audio, maps, or original book prose is
+reproduced here — only the numeric strings and statistics needed for the
+cryptanalysis.
+
+## 3. Trademarks and affiliation
+
+*Tibia*, *Bonelord*, and related names are trademarks of **CipSoft GmbH**.
+This project is **not affiliated with, authorized by, or endorsed by CipSoft
+GmbH**. Trademarks are used here only nominatively, to identify the subject of
+study.
+
+If you are a CipSoft rightsholder and would like any derived data removed,
+please open an issue.

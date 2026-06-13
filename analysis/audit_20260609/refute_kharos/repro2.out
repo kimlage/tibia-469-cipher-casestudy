@@ -1,0 +1,29 @@
+byte-exact: 0-based 3/70, 1-based 70/70 (claim 70/70)
+code-stream -> decodedbase via inventory map: 70/70
+
+PROJECTION per chunk:
+  chunk@0 len=16: 0 token-aligned occurrence(s), 0 distinct token-seq(s); srcs=[]
+  chunk@16 len=24: 12 token-aligned occurrence(s), 1 distinct token-seq(s); srcs=[('13', 95), ('2', 120), ('22', 82), ('28', 30), ('38', 66), ('46', 216), ('48', 53), ('5', 81), ('51', 226), ('53', 197), ('56', 178), ('9', 79)]
+  chunk@40 len=12: 9 token-aligned occurrence(s), 1 distinct token-seq(s); srcs=[('2', 108), ('22', 70), ('28', 18), ('46', 204), ('48', 41), ('5', 69), ('51', 214), ('53', 185), ('9', 67)]
+  chunk@52 len=18: 4 token-aligned occurrence(s), 1 distinct token-seq(s); srcs=[('2', 43), ('22', 5), ('42', 108), ('67', 74)]
+  chunk@70 len=15: 0 token-aligned occurrence(s), 0 distinct token-seq(s); srcs=[]
+  chunk@90 len=14: 8 token-aligned occurrence(s), 1 distinct token-seq(s); srcs=[('2', 65), ('22', 27), ('42', 130), ('46', 161), ('5', 26), ('51', 171), ('53', 142), ('9', 24)]
+  chunk@109 len=14: 0 token-aligned occurrence(s), 0 distinct token-seq(s); srcs=[]
+chunks with unique projection: 4/7 (claim 6/7 unique)
+kharos digit positions decoded by projection: 68/137 (claim 109, 79.6%)
+
+ML parse logprob total=-292.242
+ML parse: 71 tokens (claim 71), 5 omitted (claim 5), identity 137+5==142: True
+ML logprob/token = -4.1161 (claim -4.119)
+omitted codes used: ['01', '05', '07', '07', '07'] (claim 00x1,01,04,05,07... wait claim says 00,01,04,05,07x? -> '00x1w,01,04,05,07x3')
+violations: code39=False, written07=False, omit-of-never-omitted=False (claim all 0)
+ML decode: ETINTAAETEFFIIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAENFTESFEVIII
+
+claimed decode len: 71
+constrained decode: 70 symbols
+mine : EIINEAFITEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAENFTESFEVIII
+claim: TEINTAAETTEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAEFTNESFEVIII
+match: False
+decode 5-gram coverage: 31/67 = 0.4627 (claim 31/67=.463)
+longest decoded-symbol shared substring: 12 (claim 12)
+PART2 DONE

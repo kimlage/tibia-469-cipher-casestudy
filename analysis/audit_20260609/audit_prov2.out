@@ -1,0 +1,26 @@
+=== s2ward_corpus_audit_items: status breakdown ===
+  {'source_set': 'books_json', 'candidate_status': 'EXACT_SHEET_BOOK_DUPLICATE', 'n': 70}
+  {'source_set': 'sorted_unique_with_kharos', 'candidate_status': 'EXACT_SHEET_BOOK_DUPLICATE', 'n': 70}
+  {'source_set': 'sorted_unique_with_kharos', 'candidate_status': 'NEW_OR_REARRANGED_SEQUENCE_AUDIT_ONLY', 'n': 1}
+
+=== non-exact items ===
+count: 1
+  {'source_set': 'sorted_unique_with_kharos', 'source_index': 22, 'sequence_len': 137, 'exact_sheet_bookid': None, 'best_sheet_bookid': '2', 'best_lcs_len': 24, 'candidate_status': 'NEW_OR_REARRANGED_SEQUENCE_AUDIT_ONLY', 'seq': '515956461141451905845217652197278304648796366125275789672127788943887278572611857642176145889521961800316512888997511216'}
+
+=== cross-check: s2ward books_json digits == sheet digits, per book ===
+books_json items: 70
+digit-exact matches sheet by same index: 70/70; mismatches: NONE
+
+=== s2ward_index_book_map: full mapping ===
+rows: 70
+mapping is s2ward_index-1==bookid except: NONE (all 70 follow index-1)
+residual-flagged: [{'s2ward_index': 5, 'bookid': '4', 'sequence_len': 140, 'is_residual': 1, 'candidate_status': 'RESIDUAL_MAPPED_NO_S2WARD_SPECIAL_NOTE'}, {'s2ward_index': 35, 'bookid': '34', 'sequence_len': 123, 'is_residual': 1, 'candidate_status': 'RESIDUAL_MAPPED_NO_S2WARD_SPECIAL_NOTE'}, {'s2ward_index': 50, 'bookid': '49', 'sequence_len': 115, 'is_residual': 1, 'candidate_status': 'RESIDUAL_HAS_S2WARD_REARRANGE_NOTE_AUDIT_ONLY'}]
+
+=== external_research_notes ===
+rows: 4
+  {'note_id': '1', 'created_at': '2026-04-23T21:36:11Z', 'topic': '469 public status', 'source_url': 'https://tibia.fandom.com/wiki/469', 'source_label': 'TibiaWiki 469', 'finding': '469 is described as Bonelord language, written as numeric sequences without spacing/punctuation; public claims of translation lack solid proof.', 'implication': 'Treat fluent anagram output as provisional unless supported by in-game/external anchors.'}
+  {'note_id': '2', 'created_at': '2026-04-23T21:36:11Z', 'topic': 'Hellgate context', 'source_url': 'https://tibia.fandom.com/wiki/Hellgate', 'source_label': 'TibiaWiki Hellgate', 'finding': 'Hellgate contains a strange library where all books are written in numerical 469.', 'implication': 'Books are a coherent corpus, but not necessarily English-like word substitution.'}
+  {'note_id': '3', 'created_at': '2026-04-23T21:36:11Z', 'topic': 'known clue theories', 'source_url': 'https://www.tibiaqa.com/9729/how-to-speak-bonelord-language-469', 'source_label': 'TibiaQA 469 discussion', 'finding': 'Community answers mention cryptography, eye/binary hints, and Hellgate skull matrix as possible mathematical clues.', 'implication': 'Maintain parallel mechanical/mathematical search; do not overfit English anagrams.'}
+  {'note_id': '4', 'created_at': '2026-04-23T21:37:39Z', 'topic': 'evil eye lore anchor', 'source_url': 'https://tibia.fandom.com/wiki/The_Evil_Eye', 'source_label': 'TibiaWiki The Evil Eye', 'finding': 'The Evil Eye is a Bonelord-class boss in Hellgate and says a numeric utterance, so the phrase evil eye is real Tibia/Bonelord lore.', 'implication': 'The phrase evil eye can be a lore-supported display candidate, but the macro I*VLVEEIIV itself still lacks direct external roundtrip evidence.'}
+
+=== probe_runs entry for row0 code symbol probe ===

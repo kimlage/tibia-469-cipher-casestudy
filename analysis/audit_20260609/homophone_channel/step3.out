@@ -1,0 +1,85 @@
+tokens: 5609
+  control 0/200
+  control 50/200
+  control 100/200
+  control 150/200
+
+===== MODEL M1 =====
+-- subset ALL (n=5609)
+   lzma     obs=  952.0000 ctl= 1429.5000+- 19.7733 z= -24.15 ctl99%[1387.960,1476.000]
+   zlib     obs=  906.0000 ctl= 1409.7850+- 21.5926 z= -23.33 ctl99%[1362.995,1454.040]
+   logloss  obs=    0.9547 ctl=    1.2186+-  0.0210 z= -12.58 ctl99%[1.172,1.272]
+   ac_max   obs=    0.1548 ctl=    0.0329+-  0.0092 z= +13.25 ctl99%[0.016,0.060]
+   ac1      obs=    0.1548 ctl=    0.0249+-  0.0134 z=  +9.70 ctl99%[-0.004,0.060]
+   bookG    obs=  235.4622 ctl=   94.2342+- 14.2451 z=  +9.91 ctl99%[61.693,131.307]
+   pit_ks   obs=    0.3039 ctl=    0.2540+-  0.0051 z=  +9.82 ctl99%[0.241,0.266]
+   pit_ac1  obs=    0.0953 ctl=    0.0006+-  0.0136 z=  +6.94 ctl99%[-0.031,0.031]
+-- subset NOVEL (n=1116)
+   lzma     obs=  432.0000 ctl=  423.2800+- 10.3313 z=  +0.84 ctl99%[399.980,448.000]
+   zlib     obs=  355.0000 ctl=  344.8600+-  9.1162 z=  +1.11 ctl99%[323.995,367.015]
+   logloss  obs=    1.5679 ctl=    1.4061+-  0.0447 z=  +3.62 ctl99%[1.306,1.532]
+   ac_max   obs=    0.2028 ctl=    0.0708+-  0.0187 z=  +7.07 ctl99%[0.030,0.126]
+   ac1      obs=    0.2028 ctl=    0.0492+-  0.0313 z=  +4.91 ctl99%[-0.020,0.126]
+   bookG    obs=  173.1771 ctl=   54.1988+- 10.8376 z= +10.98 ctl99%[28.871,82.220]
+   pit_ks   obs=    0.1904 ctl=    0.2251+-  0.0122 z=  -2.83 ctl99%[0.194,0.251]
+   pit_ac1  obs=    0.0922 ctl=    0.0014+-  0.0317 z=  +2.86 ctl99%[-0.066,0.082]
+-- subset XUNIQ (n=451)
+   lzma     obs=  304.0000 ctl=  257.2400+-  7.1328 z=  +6.56 ctl99%[240.000,276.020]
+   zlib     obs=  213.0000 ctl=  177.6700+-  5.5493 z=  +6.37 ctl99%[164.980,192.010]
+   logloss  obs=    2.5879 ctl=    1.6907+-  0.0703 z= +12.76 ctl99%[1.553,1.885]
+   ac_max   obs=    0.2019 ctl=    0.0972+-  0.0249 z=  +4.20 ctl99%[0.044,0.156]
+   ac1      obs=    0.2019 ctl=    0.0618+-  0.0450 z=  +3.11 ctl99%[-0.041,0.148]
+   bookG    obs=   42.6630 ctl=   28.1316+-  7.2892 z=  +1.99 ctl99%[11.686,47.440]
+   pit_ks   obs=    0.1925 ctl=    0.1836+-  0.0204 z=  +0.43 ctl99%[0.144,0.228]
+   pit_ac1  obs=    0.0448 ctl=   -0.0001+-  0.0503 z=  +0.89 ctl99%[-0.130,0.116]
+  control 0/200
+  control 50/200
+  control 100/200
+  control 150/200
+
+===== MODEL M2R =====
+-- subset ALL (n=5609)
+   lzma     obs=  764.0000 ctl=  842.1600+- 17.5383 z=  -4.46 ctl99%[799.980,884.020]
+   zlib     obs=  711.0000 ctl=  777.9950+- 18.8276 z=  -3.56 ctl99%[732.995,825.010]
+   logloss  obs=    0.5706 ctl=    0.5491+-  0.0159 z=  +1.36 ctl99%[0.508,0.587]
+   ac_max   obs=    0.2959 ctl=    0.1182+-  0.0146 z= +12.14 ctl99%[0.085,0.149]
+   ac1      obs=    0.2959 ctl=    0.1181+-  0.0149 z= +11.97 ctl99%[0.085,0.149]
+   bookG    obs=  456.7307 ctl=  226.9523+- 23.8988 z=  +9.61 ctl99%[180.824,288.087]
+   pit_ks   obs=    0.3962 ctl=    0.3898+-  0.0037 z=  +1.75 ctl99%[0.382,0.399]
+   pit_ac1  obs=    0.0847 ctl=   -0.0001+-  0.0171 z=  +4.96 ctl99%[-0.033,0.042]
+-- subset NOVEL (n=1116)
+   lzma     obs=  360.0000 ctl=  324.9000+-  8.9885 z=  +3.90 ctl99%[295.980,344.000]
+   zlib     obs=  286.0000 ctl=  250.5150+-  8.7867 z=  +4.04 ctl99%[222.965,267.010]
+   logloss  obs=    1.3085 ctl=    0.8701+-  0.0371 z= +11.82 ctl99%[0.769,0.940]
+   ac_max   obs=    0.3560 ctl=    0.1540+-  0.0290 z=  +6.97 ctl99%[0.096,0.227]
+   ac1      obs=    0.3560 ctl=    0.1500+-  0.0333 z=  +6.18 ctl99%[0.060,0.227]
+   bookG    obs=  296.0866 ctl=  122.5787+- 16.0577 z= +10.81 ctl99%[89.335,174.534]
+   pit_ks   obs=    0.2717 ctl=    0.3269+-  0.0104 z=  -5.31 ctl99%[0.303,0.356]
+   pit_ac1  obs=    0.0950 ctl=   -0.0000+-  0.0355 z=  +2.68 ctl99%[-0.082,0.098]
+-- subset XUNIQ (n=451)
+   lzma     obs=  292.0000 ctl=  235.8000+-  6.9427 z=  +8.09 ctl99%[216.000,252.000]
+   zlib     obs=  209.0000 ctl=  161.1050+-  5.5432 z=  +8.64 ctl99%[147.990,173.000]
+   logloss  obs=    2.5928 ctl=    1.3763+-  0.0675 z= +18.03 ctl99%[1.219,1.514]
+   ac_max   obs=    0.2464 ctl=    0.1333+-  0.0391 z=  +2.89 ctl99%[0.055,0.253]
+   ac1      obs=    0.2464 ctl=    0.1226+-  0.0499 z=  +2.48 ctl99%[0.002,0.253]
+   bookG    obs=   50.6929 ctl=   36.1412+-  8.5969 z=  +1.69 ctl99%[18.037,65.933]
+   pit_ks   obs=    0.2209 ctl=    0.2303+-  0.0183 z=  -0.52 ctl99%[0.185,0.270]
+   pit_ac1  obs=    0.0390 ctl=   -0.0005+-  0.0546 z=  +0.72 ctl99%[-0.136,0.157]
+
+=== SUMMARY: tests with |z|>=3 on FULL and NOVEL (pre-registered) ===
+M1   lzma     zALL=-24.15 zNOVEL= +0.84 zXUNIQ= +6.56 
+M1   zlib     zALL=-23.33 zNOVEL= +1.11 zXUNIQ= +6.37 
+M1   logloss  zALL=-12.58 zNOVEL= +3.62 zXUNIQ=+12.76 <-- SURVIVES
+M1   ac_max   zALL=+13.25 zNOVEL= +7.07 zXUNIQ= +4.20 <-- SURVIVES
+M1   ac1      zALL= +9.70 zNOVEL= +4.91 zXUNIQ= +3.11 <-- SURVIVES
+M1   bookG    zALL= +9.91 zNOVEL=+10.98 zXUNIQ= +1.99 <-- SURVIVES
+M1   pit_ks   zALL= +9.82 zNOVEL= -2.83 zXUNIQ= +0.43 
+M1   pit_ac1  zALL= +6.94 zNOVEL= +2.86 zXUNIQ= +0.89 
+M2R  lzma     zALL= -4.46 zNOVEL= +3.90 zXUNIQ= +8.09 <-- SURVIVES
+M2R  zlib     zALL= -3.56 zNOVEL= +4.04 zXUNIQ= +8.64 <-- SURVIVES
+M2R  logloss  zALL= +1.36 zNOVEL=+11.82 zXUNIQ=+18.03 
+M2R  ac_max   zALL=+12.14 zNOVEL= +6.97 zXUNIQ= +2.89 <-- SURVIVES
+M2R  ac1      zALL=+11.97 zNOVEL= +6.18 zXUNIQ= +2.48 <-- SURVIVES
+M2R  bookG    zALL= +9.61 zNOVEL=+10.81 zXUNIQ= +1.69 <-- SURVIVES
+M2R  pit_ks   zALL= +1.75 zNOVEL= -5.31 zXUNIQ= -0.52 
+M2R  pit_ac1  zALL= +4.96 zNOVEL= +2.68 zXUNIQ= +0.72 

@@ -1,0 +1,97 @@
+probe rows: 70
+code rows: 99
+
+=== observed code-level lag stats ===
+code lag 1: same-code=0.0163 tens-match=0.1060 units-match=0.1193 n=5659
+code lag 2: same-code=0.0043 tens-match=0.1052 units-match=0.0836 n=5589
+code lag 3: same-code=0.0074 tens-match=0.0855 units-match=0.0933 n=5519
+
+order-2 fit: 803 contexts, 1196 trigram types, 5589 trigram tokens
+
+=== ORDER-1 envelope (200 corpora) ===
+digit lag1 match: obs=0.0945 synth=0.0935+-0.0026 range[0.0848,0.1005] z=+0.41 tail_p=0.325 inside=True
+digit lag2 match: obs=0.1112 synth=0.1134+-0.0030 range[0.1054,0.1219] z=-0.70 tail_p=0.235 inside=True
+digit lag3 match: obs=0.1050 synth=0.0954+-0.0032 range[0.0868,0.1030] z=+3.03 tail_p=0.000 inside=False
+digit lag4 match: obs=0.0951 synth=0.1031+-0.0032 range[0.0938,0.1109] z=-2.46 tail_p=0.005 inside=True
+digit lag5 match: obs=0.1011 synth=0.0982+-0.0028 range[0.0913,0.1079] z=+1.03 tail_p=0.155 inside=True
+digit lag6 match: obs=0.0931 synth=0.1070+-0.0038 range[0.0976,0.1171] z=-3.68 tail_p=0.000 inside=False
+digit lag7 match: obs=0.1122 synth=0.1106+-0.0033 range[0.1020,0.1208] z=+0.50 tail_p=0.310 inside=True
+digit lag8 match: obs=0.1118 synth=0.1071+-0.0034 range[0.0967,0.1176] z=+1.38 tail_p=0.055 inside=True
+triple runs: obs=13.0 synth=21.9+-4.8 range[11.0,34.0] z=-1.85 tail_p=0.035 inside=True
+quad+ runs: obs=0.0 synth=0.2+-0.5 range[0.0,3.0] z=-0.39 tail_p=0.850 inside=True
+code lag1 same-code: obs=0.0163 synth=0.0160+-0.0019 range[0.0115,0.0212] z=+0.13 tail_p=0.445 inside=True
+code lag1 tens-match: obs=0.1060 synth=0.1058+-0.0039 range[0.0958,0.1149] z=+0.05 tail_p=0.435 inside=True
+code lag1 units-match: obs=0.1193 synth=0.1186+-0.0042 range[0.1066,0.1308] z=+0.16 tail_p=0.470 inside=True
+code lag2 same-code: obs=0.0043 synth=0.0080+-0.0014 range[0.0047,0.0122] z=-2.56 tail_p=0.000 inside=False
+code lag2 tens-match: obs=0.1052 synth=0.0985+-0.0043 range[0.0905,0.1097] z=+1.54 tail_p=0.075 inside=True
+code lag2 units-match: obs=0.0836 synth=0.1048+-0.0043 range[0.0957,0.1165] z=-5.00 tail_p=0.000 inside=False
+code lag3 same-code: obs=0.0074 synth=0.0166+-0.0023 range[0.0098,0.0236] z=-4.00 tail_p=0.000 inside=False
+code lag3 tens-match: obs=0.0855 synth=0.1037+-0.0046 range[0.0935,0.1167] z=-3.94 tail_p=0.000 inside=False
+code lag3 units-match: obs=0.0933 synth=0.1087+-0.0051 range[0.0946,0.1228] z=-3.03 tail_p=0.000 inside=False
+ORDER-1 outside envelope: ['mp3', 'mp6', 'rep2', 'units2', 'rep3', 'tens3', 'units3']
+
+=== ORDER-2 envelope (200 corpora) ===
+digit lag1 match: obs=0.0945 synth=0.0947+-0.0028 range[0.0849,0.1041] z=-0.08 tail_p=0.490 inside=True
+digit lag2 match: obs=0.1112 synth=0.1128+-0.0031 range[0.1058,0.1222] z=-0.52 tail_p=0.325 inside=True
+digit lag3 match: obs=0.1050 synth=0.1035+-0.0032 range[0.0944,0.1122] z=+0.47 tail_p=0.305 inside=True
+digit lag4 match: obs=0.0951 synth=0.0953+-0.0031 range[0.0880,0.1059] z=-0.08 tail_p=0.470 inside=True
+digit lag5 match: obs=0.1011 synth=0.1046+-0.0029 range[0.0941,0.1121] z=-1.20 tail_p=0.100 inside=True
+digit lag6 match: obs=0.0931 synth=0.1006+-0.0033 range[0.0918,0.1089] z=-2.30 tail_p=0.005 inside=True
+digit lag7 match: obs=0.1122 synth=0.1072+-0.0030 range[0.1004,0.1172] z=+1.70 tail_p=0.060 inside=True
+digit lag8 match: obs=0.1118 synth=0.1124+-0.0033 range[0.1024,0.1230] z=-0.17 tail_p=0.460 inside=True
+triple runs: obs=13.0 synth=21.1+-4.3 range[8.0,34.0] z=-1.87 tail_p=0.025 inside=True
+quad+ runs: obs=0.0 synth=0.0+-0.0 range[0.0,0.0] z=+nan tail_p=1.000 inside=True
+code lag1 same-code: obs=0.0163 synth=0.0161+-0.0018 range[0.0102,0.0207] z=+0.09 tail_p=0.470 inside=True
+code lag1 tens-match: obs=0.1060 synth=0.1053+-0.0048 range[0.0929,0.1175] z=+0.15 tail_p=0.400 inside=True
+code lag1 units-match: obs=0.1193 synth=0.1192+-0.0041 range[0.1101,0.1362] z=+0.01 tail_p=0.465 inside=True
+code lag2 same-code: obs=0.0043 synth=0.0041+-0.0008 range[0.0014,0.0068] z=+0.25 tail_p=0.475 inside=True
+code lag2 tens-match: obs=0.1052 synth=0.1042+-0.0046 range[0.0921,0.1150] z=+0.21 tail_p=0.425 inside=True
+code lag2 units-match: obs=0.0836 synth=0.0832+-0.0040 range[0.0717,0.0938] z=+0.09 tail_p=0.455 inside=True
+code lag3 same-code: obs=0.0074 synth=0.0132+-0.0020 range[0.0071,0.0185] z=-2.94 tail_p=0.005 inside=True
+code lag3 tens-match: obs=0.0855 synth=0.0934+-0.0041 range[0.0830,0.1031] z=-1.89 tail_p=0.015 inside=True
+code lag3 units-match: obs=0.0933 synth=0.0994+-0.0041 range[0.0891,0.1091] z=-1.50 tail_p=0.080 inside=True
+ORDER-2 outside envelope: []
+
+=== digit-pair residual vs ORDER-1 synthetic (per-pair z) ===
+
+lag 3: top-5 suppressed pairs (obs<exp):
+  7->5: obs=59 exp=100.8 z=-4.16
+  6->8: obs=53 exp=89.5 z=-3.86
+  3->9: obs=4 exp=22.1 z=-3.84
+  3->3: obs=1 exp=16.3 z=-3.79
+  4->7: obs=51 exp=83.5 z=-3.55
+lag 3: top-5 enriched pairs:
+  5->5: obs=299 exp=245.5 z=+3.41
+  8->7: obs=95 exp=66.9 z=+3.44
+  3->6: obs=139 exp=100.2 z=+3.88
+  7->2: obs=81 exp=50.2 z=+4.35
+  0->9: obs=129 exp=72.6 z=+6.62
+lag 3: diagonal (d->d) z-scores: 0:+0.8 1:+3.1 2:-1.1 3:-3.8 4:+2.6 5:+3.4 6:+0.2 7:-2.5 8:-1.1 9:+1.2
+
+lag 4: top-5 suppressed pairs (obs<exp):
+  5->5: obs=85 exp=145.1 z=-4.99
+  4->6: obs=48 exp=94.7 z=-4.80
+  3->1: obs=66 exp=113.9 z=-4.49
+  6->0: obs=67 exp=114.5 z=-4.44
+  8->3: obs=34 exp=68.8 z=-4.19
+lag 4: top-5 enriched pairs:
+  9->6: obs=132 exp=96.3 z=+3.64
+  8->0: obs=106 exp=73.3 z=+3.82
+  4->2: obs=117 exp=78.3 z=+4.37
+  6->3: obs=94 exp=55.2 z=+5.22
+  3->7: obs=163 exp=92.1 z=+7.38
+lag 4: diagonal (d->d) z-scores: 0:-0.1 1:+0.0 2:-2.7 3:-1.3 4:+3.3 5:-5.0 6:-1.3 7:-0.8 8:-0.3 9:-0.8
+
+lag 6: top-5 suppressed pairs (obs<exp):
+  2->4: obs=39 exp=109.2 z=-6.72
+  7->0: obs=16 exp=63.5 z=-5.96
+  2->5: obs=47 exp=98.2 z=-5.16
+  0->0: obs=19 exp=52.2 z=-4.59
+  6->8: obs=87 exp=134.3 z=-4.08
+lag 6: top-5 enriched pairs:
+  5->4: obs=234 exp=163.5 z=+5.51
+  4->5: obs=206 exp=140.4 z=+5.54
+  0->5: obs=181 exp=119.6 z=+5.62
+  2->8: obs=162 exp=92.7 z=+7.20
+  2->0: obs=142 exp=77.7 z=+7.30
+lag 6: diagonal (d->d) z-scores: 0:-4.6 1:-0.3 2:-2.7 3:-2.4 4:-2.7 5:-2.3 6:+3.5 7:-1.2 8:-3.2 9:-0.5

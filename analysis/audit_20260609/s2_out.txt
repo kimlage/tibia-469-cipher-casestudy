@@ -1,0 +1,45 @@
+ROWCOUNT 70
+
+--- metadata sample (5 books) ---
+0 len(digits)= 144 iz= '4' baselen= 74 len(dec)= 74
+1 len(digits)= 92 iz= '2' baselen= 47 len(dec)= 47
+2 len(digits)= 177 iz= '3' baselen= 90 len(dec)= 90
+3 len(digits)= 140 iz= '2' baselen= 71 len(dec)= 71
+4 len(digits)= 140 iz= '2' baselen= 71 len(dec)= 71
+
+--- length relations ---
+books with odd digit length: 37 of 70
+books where len(digits)!=baselen: 70
+
+iz field samples: ['4', '2', '7', '3', '3', '1', '3', '1']
+baselen values: [(18, 1), (29, 1), (30, 1), (32, 1), (47, 2), (50, 1), (55, 1), (59, 1), (60, 2), (63, 3), (64, 2), (65, 1), (66, 1), (67, 1), (68, 2), (69, 3), (70, 4), (71, 4), (72, 2), (73, 2)]
+
+bid, len(digits), baselen, len(dec) for 10 books:
+('0', 144, 74, 74)
+('1', 92, 47, 47)
+('10', 281, 144, 144)
+('11', 137, 70, 70)
+('12', 137, 70, 70)
+('13', 141, 71, 71)
+('14', 133, 68, 68)
+('15', 143, 72, 72)
+('16', 174, 89, 89)
+('17', 274, 139, 139)
+baselen/len(dec) min 1.000 max 1.000
+len(digits)-baselen distribution: [(17, 1), (28, 1), (29, 1), (31, 1), (45, 1), (46, 1), (48, 1), (51, 1), (55, 1), (57, 1), (59, 1), (60, 1), (61, 2), (62, 2), (63, 2), (65, 1), (66, 1), (67, 6), (68, 4), (69, 2), (70, 4), (71, 2), (72, 1), (73, 1), (74, 1), (75, 3), (76, 1), (79, 1), (82, 1), (83, 1), (84, 3), (85, 1), (87, 3), (92, 1), (103, 1), (112, 1), (121, 1), (124, 1), (132, 2), (133, 1), (134, 2), (135, 2), (137, 1), (140, 1), (145, 1)]
+bigram 07: obs=0 shuffle mu=72.9 sd=7.3 z=-9.93
+bigram 32: obs=2 shuffle mu=54.6 sd=6.3 z=-8.35
+bigram 33: obs=1 shuffle mu=35.9 sd=5.3 z=-6.57
+bigram 19: obs=435 shuffle mu=166.3 sd=11.5 z=+23.32
+bigram 11: obs=382 shuffle mu=309.7 sd=13.9 z=+5.18
+
+--- segmentation comparisons (per-book tokenization, order-0 MDL bits/digit) ---
+fixed-1: vocab=10 tokens=11263 H=3.265 bits/digit=3.2647 (+model=3.2796)
+fixed-2: vocab=97 tokens=5613 H=6.175 bits/digit=3.0873 (+model=3.2417)
+fixed-3: vocab=437 tokens=3728 H=8.023 bits/digit=2.6742 (+model=3.5024)
+fixed-4: vocab=693 tokens=2790 H=8.857 bits/digit=2.2144 (+model=3.7160)
+2-digit vocab aligned-even-start: 97 ; all offsets: 99
+2-digit vocab aligned-odd-start: 99
+
+zlib len(all)=11263  comp=1117 ratio=0.0992
+shuffled comp=5617

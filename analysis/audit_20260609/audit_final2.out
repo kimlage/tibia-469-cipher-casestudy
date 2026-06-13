@@ -1,0 +1,15 @@
+=== tables like row0_code_symbol% ===
+  row0_code_symbol_probe_runs: 1 rows
+
+=== row0_code_symbol_probe_runs content (if exists) ===
+  {'run_id': '1', 'created_at': '2026-04-24T00:27:21Z', 'book_count': '70', 'valid_books': '70', 'invalid_books': '0', 'total_base_symbols': '5729', 'total_observed_digits': '11263', 'total_omitted_zero_codes': '195', 'distinct_codes': '99', 'conflicting_codes': '0', 'distinct_symbols': '14', 'decision': 'ROW0_CODE_SYMBOL_MODEL_VALIDATED', 'payload_json': '{"meaning": "base digit model, not external German mapping", "symbols_by_code": {"00": ["*"], "01": ["N"], "02": ["R"], "03": ["V"], "04": ["F"], "05": ["T"], "06": ["I"], "07": ["I"], "08": ["I"], "09": ["T"], "10": ["N"], "11": ["E"], "12": ["F"], '}
+
+=== digits charset sanity ===
+books with non-digit chars: NONE (all 70 pure 0-9)
+
+=== insertedzeros totals ===
+sum insertedzeros=195, sum baselen=5729, sum digitslen=11263; check dl+iz=2*bl: 11458 == 11458
+
+=== code 00 written vs omitted (star) ===
+  {'run_id': 1, 'code': '00', 'symbol': '*', 'occurrence_count': 120, 'omitted_count': 13, 'written_count': 107}
+any other code rows with symbol '*': 1

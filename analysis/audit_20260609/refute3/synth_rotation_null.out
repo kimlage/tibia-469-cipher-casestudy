@@ -1,0 +1,12 @@
+probe rows: 70 | code->symbol rows: 99
+decode map mismatches vs decodedbase: 0
+
+rotation-test z on 40 order-1 synthetic corpora (200 perms each):
+  d=1: synth z mean=+1.59 sd=0.96 min=-0.65 max=+4.16
+  d=2: synth z mean=-4.19 sd=0.98 min=-5.85 max=-2.30
+  d=3: synth z mean=-1.54 sd=0.99 min=-3.34 max=+0.62
+  d=4: synth z mean=-0.69 sd=1.09 min=-2.68 max=+2.06
+  d=5: synth z mean=+0.36 sd=1.15 min=-1.36 max=+3.05
+  d=6: synth z mean=+0.49 sd=1.14 min=-1.74 max=+3.45
+
+observed (real corpus) z for reference: d2=-6.2 d3=-6.6 d5=+6.0

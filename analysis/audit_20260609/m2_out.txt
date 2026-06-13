@@ -1,0 +1,27 @@
+ROWCOUNT: 70
+books=70 symbols=5729 alphabet=14 (*ABCEFILNORSTV)
+baseline MDL = N*log2(A0) = 21812 bits
+
+== shared 10-gram coverage (symbols in 10-grams verbatim in >=2 books) ==
+REAL: 4925/5729 = 86.0%
+CONTROL unigram-shuffle x100: mean=0.2 (0.00%) sd=2.0 max=20 -> z=2474.8
+CONTROL order-1 Markov x100: mean=1.0 (0.02%) sd=4.4 max=20 -> z=1129.6
+CONTROL order-2 Markov x100: mean=163.8 (2.86%) sd=56.5 max=361 -> z=84.3
+
+== RePair two-part MDL (decoded corpus) ==
+REAL: best MDL=13125 bits (rules=336, residual tokens=881, alphabet 14+336)
+      vs baseline 21812 bits -> ratio 0.602
+      rules whose nonterminal appears in >=2 books: 154/336
+      symbols emitted by shared(>=2 books) nonterminals: 4621/5729 = 80.7%
+      rule R291: expands to 94 symbols, top-level in 3 books
+      rule R283: expands to 69 symbols, top-level in 3 books
+      rule R282: expands to 61 symbols, top-level in 0 books
+      rule R222: expands to 59 symbols, top-level in 2 books
+      rule R225: expands to 58 symbols, top-level in 2 books
+CONTROL unigram-shuffle x20: MDL mean=21303 sd=59 min=21138 -> real z=-138.3
+CONTROL order-1 Markov x20: MDL mean=20185 sd=102 min=19995 -> real z=-69.5
+CONTROL order-2 Markov x20: MDL mean=18955 sd=123 min=18708 -> real z=-47.5
+
+lzma bytes: REAL=1248  shuffle mean=2698 sd=6.9 (z=-211.4)  order2-Markov mean=2403 sd=15.9 (z=-72.7)
+
+DONE m2

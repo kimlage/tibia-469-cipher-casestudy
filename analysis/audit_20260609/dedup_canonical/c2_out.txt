@@ -1,0 +1,55 @@
+ROWCOUNT sheet__books grouped: 70
+books=70 total_digits=11263 total_symbols=5729
+ROWCOUNT probe_books: 70
+ROWCOUNT map rows: 99
+
+== REAL CORPUS, digit level ==
+RAW digit baseline: 11263 * log2(10) = 37414.9 bits
+
+GENERATIVE TWO-PART CODE G (modules minL=20):
+  modules M=62 inventory_digits=4464
+  MODEL  = 15562.1 bits  [gamma(M+1)=11; per-module length gammas + 4464*log2(10)=14829.1]
+  DATA   = 9065.8 bits:
+    book count+item counts: 313.0
+    item flags (242 items): 242.0
+    module refs (127 x log2(62)=5.95): 756.2
+    literal lengths (115 literals): 835.0
+    literal content (2083 digits x log2(10)): 6919.6
+  TOTAL  = 24627.8 bits (2.1866 b/d)
+  TOTAL (KT digit model variant) = 24315.9 bits
+
+GENERATIVE LZ77 SELF-REFERENTIAL CODE (minM=8): TOTAL = 10678.9 bits (0.9481 b/d) [literal digits=1101, copies=231]
+
+MESSAGE-BEARING BENCHMARKS (digit level):
+  internal token-KT on reconstructed code stream (5729 tokens, 100-token KT): 36503.6 bits (caveat: ignores inserted-zero reconstruction flags ~600 bits)
+  CANON  (verified ../mdl_contest_run1.log): 36736.0 bits (3.2616 b/d, incl codebook+insertion flags)
+  MIXA1  (verified ../mdl_contest_run1.log): 34777.3 bits (3.0877 b/d, incl codebook) <- best message-bearing
+  RAW: 37414.9
+  [symbol-level, different object (5729-symbol stream, lossy wrt digits):
+   baseline 21812; RePair grammar 13125 (../m2_out.txt) - generative grammar already wins there]
+
+MARGINS: G vs MIXA1 = +10149.5 bits; G vs CANON = +12108.2; G vs RAW = +12787.0
+         LZ77 vs MIXA1 = +24098.4 bits
+
+RESIDUAL ATTACK SURFACE (the novel payload, whatever wins):
+  novel symbols = 995; flat bound 995*log2(14) = 3788 bits; unigram entropy H1=3.262 -> 3245 bits
+  module-code literal digits = 2083 -> flat 6920 bits
+  at ~10 bits/English-word this caps any hidden message at ~324-691 words IF the novel material were a channel
+
+== CONTROLS (same two-part coding; does the generative code win on genuinely linguistic data?) ==
+  [ENGLISH x 14-sym merge x same homophonic code, matched lengths] digits=11458 RAW=38063 | GENERATIVE module-code=39395 (M=0) LZ77=49373 | message-bearing token-KT=34234
+      generative beats message-bearing? NO (margin gen-vs-token -5161 bits)
+  [SHUFFLED real symbols x same code] digits=11458 RAW=38063 | GENERATIVE module-code=39395 (M=0) LZ77=50453 | message-bearing token-KT=36355
+      generative beats message-bearing? NO (margin gen-vs-token -3040 bits)
+  [REAL symbol streams re-encoded via homophone sampler (sanity)] digits=11458 RAW=38063 | GENERATIVE module-code=39395 (M=0) LZ77=50133 | message-bearing token-KT=36425
+      generative beats message-bearing? NO (margin gen-vs-token -2970 bits)
+
+-- deterministic-homophone variants (symbol-level repetition CAN surface as digit repetition) --
+  [ENGLISH merge, deterministic encoding] digits=11458 RAW=38063 | GENERATIVE module-code=38122 (M=28) LZ77=28660 | message-bearing token-KT=22277
+      generative beats message-bearing? NO (margin gen-vs-token -15844 bits)
+  [SHUFFLED real symbols, deterministic encoding] digits=11458 RAW=38063 | GENERATIVE module-code=39395 (M=0) LZ77=34174 | message-bearing token-KT=20048
+      generative beats message-bearing? NO (margin gen-vs-token -19347 bits)
+  [REAL symbol streams, deterministic encoding (positive control)] digits=11458 RAW=38063 | GENERATIVE module-code=26727 (M=59) LZ77=13057 | message-bearing token-KT=20048
+      generative beats message-bearing? NO (margin gen-vs-token -6679 bits)
+
+DONE c2

@@ -1,0 +1,22 @@
+# Third-party Python dependencies for the 469 project.
+# Standard-library modules (sqlite3, json, argparse, pathlib, datetime,
+# collections, urllib, etc.) are not listed.
+#
+# Versions below are the ones the project was last run against (Python 3.12).
+# Names are safe to use unpinned; pin if you need bit-for-bit reproducibility.
+
+# Workbook ingest (export_workbook_to_sqlite.py) and the iteration runners.
+openpyxl>=3.1            # last run: 3.1.5
+
+# Numerical / statistical analysis used by the audit + structural probes.
+numpy>=1.26              # last run: 1.26.4
+scipy>=1.13              # last run: 1.13.1  (scipy.stats)
+scikit-learn>=1.4        # last run: 1.4.2   (imported as sklearn)
+
+# Optional — only for image/heatmap generation in a few analysis scripts.
+Pillow>=10.0             # last run: 10.3.0  (imported as PIL)
+
+# Optional — only for the network-fetch scripts. Not needed to reproduce
+# the final report.
+requests>=2.31
+beautifulsoup4>=4.12     # imported as bs4

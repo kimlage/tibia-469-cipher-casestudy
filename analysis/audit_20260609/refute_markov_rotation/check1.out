@@ -1,0 +1,28 @@
+probe rows: 70; sheet books: 70; map rows: 99
+distinct codes in map: 99
+
+A) books with >1 valid parse: 20/70
+   token positions with ambiguous code identity: 18/5729
+
+B1) independent reproduction (2000 perms, seed 20260610):
+  d=1: obs=92/555 perm=72.5+-7.4 z=+2.62 p_lo=0.9970 p_hi=0.0045
+  d=2: obs=24/574 perm=69.8+-7.6 z=-6.01 p_lo=0.0000 p_hi=1.0000
+  d=3: obs=41/749 perm=96.5+-8.6 z=-6.43 p_lo=0.0000 p_hi=1.0000
+  d=4: obs=88/663 perm=87.4+-8.0 z=+0.07 p_lo=0.5570 p_hi=0.4920
+  d=5: obs=146/708 perm=95.0+-8.3 z=+6.11 p_lo=1.0000 p_hi=0.0000
+  d=6: obs=87/612 perm=73.6+-7.6 z=+1.75 p_lo=0.9620 p_hi=0.0510
+
+B2) excluding all omittable codes 00-09 (segmentation-ambiguity-proof):
+  d=1: obs=82/442 perm=66.7+-7.0 z=+2.17 p_lo=0.9830 p_hi=0.0240
+  d=2: obs=24/445 perm=65.4+-7.4 z=-5.63 p_lo=0.0000 p_hi=1.0000
+  d=3: obs=41/618 perm=91.2+-8.6 z=-5.80 p_lo=0.0000 p_hi=1.0000
+  d=4: obs=83/515 perm=82.8+-7.9 z=+0.03 p_lo=0.5430 p_hi=0.5020
+  d=5: obs=140/606 perm=89.2+-8.2 z=+6.21 p_lo=1.0000 p_hi=0.0000
+  d=6: obs=86/471 perm=68.5+-7.6 z=+2.30 p_lo=0.9940 p_hi=0.0110
+
+B3) per-book consistency at d in {2,3}:
+   books below perm mean: 65, above: 5, equal: 0 (of 70)
+
+B4) d=5 same-code pairs inside locally repeated code contexts:
+   71/146 d=5 same-code pairs have an adjacent code also repeating at offset 5
+   baseline among all equal-symbol d=5 pairs: 101/708

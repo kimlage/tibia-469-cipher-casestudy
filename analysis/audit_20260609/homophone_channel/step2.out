@@ -1,0 +1,55 @@
+books: 70; multi-class tokens: 5609
+token records: 5609
+novel: 1116, xuniq: 451
+per-symbol-weight symbols (A2): ['A', 'E', 'F', 'I', 'N', 'T', 'V']
+fold 0/70 (book 0) done, D best_k=2
+fold 10/70 (book 18) done, D best_k=2
+fold 20/70 (book 27) done, D best_k=2
+fold 30/70 (book 36) done, D best_k=2
+fold 40/70 (book 45) done, D best_k=2
+fold 50/70 (book 54) done, D best_k=2
+fold 60/70 (book 63) done, D best_k=2
+
+=== ALL multi-class tokens (n=5609) ===
+model  bits/choice  top1 acc  total bits
+F           2.9619    0.2548     16613.1
+A           2.9465    0.2551     16527.1
+A2          2.9279    0.2678     16422.5
+Bnum        2.9973    0.2480     16812.1
+Bfreq       2.9788    0.2430     16708.0
+C           2.9749    0.2512     16686.3
+D           2.9740    0.2528     16681.4
+E           0.9547    0.7821      5355.0
+E2          2.6715    0.3412     14984.7
+AE          0.9481    0.7893      5318.1
+
+=== NOVEL only (n=1116) ===
+model  bits/choice  top1 acc  total bits
+F           3.1182    0.2168      3479.9
+A           3.1130    0.2115      3474.1
+A2          3.1130    0.2231      3474.1
+Bnum        3.1483    0.2106      3513.5
+Bfreq       3.1368    0.2106      3500.7
+C           3.1268    0.2052      3489.6
+D           3.1229    0.2186      3485.1
+E           1.5679    0.6595      1749.8
+E2          3.2288    0.2572      3603.4
+AE          1.5642    0.6658      1745.7
+
+=== XUNIQ only (cross-book-unique) (n=451) ===
+model  bits/choice  top1 acc  total bits
+F           3.4003    0.1796      1533.5
+A           3.4056    0.1752      1535.9
+A2          3.4360    0.1774      1549.6
+Bnum        3.4162    0.1774      1540.7
+Bfreq       3.4121    0.1796      1538.9
+C           3.3977    0.1596      1532.4
+D           3.4037    0.1840      1535.1
+E           2.5879    0.4745      1167.1
+E2          4.0309    0.1707      1817.9
+AE          2.5859    0.4745      1166.2
+uniform-baseline ALL: 3.3283 bits/choice, total 18668.5
+uniform-baseline NOVEL: 3.3784 bits/choice, total 3770.3
+uniform-baseline XUNIQ: 3.4827 bits/choice, total 1570.7
+
+saved preds.npz + tokens.json; rows=5609

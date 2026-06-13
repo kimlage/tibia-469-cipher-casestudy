@@ -1,0 +1,30 @@
+BOOKS: deduped rows = 70
+total digits=11263 (claim 11263), total symbols=5729 (claim 5729), identity 70/70
+kharos rows: 1
+KHAROS len=137 (claim 137), status=NEW_OR_REARRANGED_SEQUENCE_AUDIT_ONLY
+kharos digits: 51595646114145190584521765219727830464879636612527578967212778894388727857261185764217614588952196180031651288899751121615127215196805970
+inventory rows: 99
+distinct codes: 99 (claim 99)
+missing codes: ['39'] (claim only '39')
+codes mapping to >1 symbol: 0
+codes ever omitted: ['00', '01', '03', '04', '05', '06', '07', '08', '09'] (claim subset of 00-09)
+07: occ=50 om=50 wr=0 (claim always omitted)
+02: occ=8 om=0 wr=8 (claim never omitted)
+0d stats (occ,om,wr): {'00': (120, 13, 107), '01': (86, 21, 65), '02': (8, 0, 8), '03': (65, 14, 51), '04': (93, 20, 73), '05': (53, 12, 41), '06': (58, 37, 21), '07': (50, 50, 0), '08': (58, 20, 38), '09': (43, 8, 35)}
+probe_books rows: 70 valid: 70
+byte-exact (omitted=token-index): 0/70
+byte-exact (omitted=full-stream digit pos): 0/70
+books with token maps: 0
+10-gram cov: grams 53/128=0.4141 (claim .414), positions 113/137=0.8248 (claim .825)
+LSS=24 at kharos[16] from book 13 @ 95 (claim 24)
+GREEDY CHUNKS>=8: n=7 cover=113/137=0.8248 (claim 7, 113/137)
+  kharos@0 len=16 <- book 13 @ 120 : 5159564611414519
+  kharos@16 len=24 <- book 13 @ 95 : 058452176521972783046487
+  kharos@40 len=12 <- book 2 @ 108 : 963661252757
+  kharos@52 len=18 <- book 2 @ 43 : 896721277889438872
+  kharos@70 len=15 <- book 2 @ 84 : 785726118576421
+  kharos@90 len=14 <- book 2 @ 65 : 88952196180031
+  kharos@109 len=14 <- book 2 @ 161 : 88997511216151
+GAPS: [(85, '76145'), (104, '65128'), (123, '27215196805970')]
+(claim gaps: 76145@85, 65128@104, 27215196805970@123)
+PART1 DONE

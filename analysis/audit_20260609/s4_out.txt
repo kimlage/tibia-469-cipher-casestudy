@@ -1,0 +1,240 @@
+ROWCOUNT 70
+--- full containment ---
+book 0 (len 144) is a SUBSTRING of book 10 (len 281) at offset 5
+book 0 (len 144) is a SUBSTRING of book 35 (len 286) at offset 12
+book 0 (len 144) is a SUBSTRING of book 66 (len 210) at offset 5
+book 1 (len 92) is a SUBSTRING of book 10 (len 281) at offset 149
+book 1 (len 92) is a SUBSTRING of book 35 (len 286) at offset 156
+book 11 (len 137) is a SUBSTRING of book 58 (len 272) at offset 41
+book 12 (len 137) is a SUBSTRING of book 21 (len 176) at offset 7
+book 12 (len 137) is a SUBSTRING of book 26 (len 170) at offset 33
+book 22 (len 137) is a SUBSTRING of book 2 (len 177) at offset 38
+book 25 (len 35) is a SUBSTRING of book 39 (len 59) at offset 4
+book 27 (len 124) is a SUBSTRING of book 10 (len 281) at offset 152
+book 27 (len 124) is a SUBSTRING of book 35 (len 286) at offset 159
+book 28 (len 146) is a SUBSTRING of book 48 (len 169) at offset 23
+book 32 (len 137) is a SUBSTRING of book 58 (len 272) at offset 27
+book 33 (len 134) is a SUBSTRING of book 10 (len 281) at offset 18
+book 33 (len 134) is a SUBSTRING of book 35 (len 286) at offset 25
+book 33 (len 134) is a SUBSTRING of book 66 (len 210) at offset 18
+book 43 (len 141) is a SUBSTRING of book 58 (len 272) at offset 52
+book 43 (len 141) is a SUBSTRING of book 59 (len 272) at offset 0
+book 44 (len 126) is a SUBSTRING of book 52 (len 137) at offset 3
+book 46 (len 253) is a SUBSTRING of book 51 (len 268) at offset 10
+book 47 (len 126) is a SUBSTRING of book 5 (len 273) at offset 118
+book 47 (len 126) is a SUBSTRING of book 9 (len 294) at offset 116
+book 50 (len 141) is a SUBSTRING of book 9 (len 294) at offset 134
+book 61 (len 145) is a SUBSTRING of book 65 (len 169) at offset 3
+book 62 (len 126) is a SUBSTRING of book 3 (len 140) at offset 11
+book 62 (len 126) is a SUBSTRING of book 17 (len 274) at offset 20
+book 66 (len 210) is a SUBSTRING of book 10 (len 281) at offset 0
+book 66 (len 210) is a SUBSTRING of book 35 (len 286) at offset 7
+book 68 (len 143) is a SUBSTRING of book 17 (len 274) at offset 27
+book 69 (len 140) is a SUBSTRING of book 9 (len 294) at offset 144
+containment count: 31
+
+--- overlap graph: edges where LCS >= 50%% of shorter book ---
+  0-10 LCS=144 frac=1.00
+  0-35 LCS=144 frac=1.00
+  0-66 LCS=144 frac=1.00
+  1-10 LCS=92 frac=1.00
+  1-35 LCS=92 frac=1.00
+  2-22 LCS=137 frac=1.00
+  3-62 LCS=126 frac=1.00
+  5-47 LCS=126 frac=1.00
+  9-47 LCS=126 frac=1.00
+  9-50 LCS=141 frac=1.00
+  9-69 LCS=140 frac=1.00
+  10-27 LCS=124 frac=1.00
+  10-33 LCS=134 frac=1.00
+  10-66 LCS=210 frac=1.00
+  11-58 LCS=137 frac=1.00
+  12-21 LCS=137 frac=1.00
+  12-26 LCS=137 frac=1.00
+  17-62 LCS=126 frac=1.00
+  17-68 LCS=143 frac=1.00
+  25-39 LCS=35 frac=1.00
+  27-35 LCS=124 frac=1.00
+  28-48 LCS=146 frac=1.00
+  32-58 LCS=137 frac=1.00
+  33-35 LCS=134 frac=1.00
+  33-66 LCS=134 frac=1.00
+  35-66 LCS=210 frac=1.00
+  43-58 LCS=141 frac=1.00
+  43-59 LCS=141 frac=1.00
+  44-52 LCS=126 frac=1.00
+  46-51 LCS=253 frac=1.00
+  61-65 LCS=145 frac=1.00
+  10-35 LCS=279 frac=0.99
+  5-9 LCS=271 frac=0.99
+  0-33 LCS=131 frac=0.98
+  5-50 LCS=137 frac=0.97
+  1-27 LCS=89 frac=0.97
+  3-44 LCS=121 frac=0.96
+  3-17 LCS=133 frac=0.95
+  62-68 LCS=119 frac=0.94
+  3-52 LCS=129 frac=0.94
+  52-62 LCS=118 frac=0.94
+  50-69 LCS=131 frac=0.94
+  29-62 LCS=117 frac=0.93
+  46-53 LCS=234 frac=0.92
+  11-43 LCS=126 frac=0.92
+  11-59 LCS=126 frac=0.92
+  15-25 LCS=32 frac=0.91
+  5-69 LCS=127 frac=0.91
+  5-22 LCS=124 frac=0.91
+  9-22 LCS=124 frac=0.91
+  22-53 LCS=124 frac=0.91
+  17-44 LCS=114 frac=0.90
+  45-51 LCS=134 frac=0.90
+  11-32 LCS=123 frac=0.90
+  20-54 LCS=51 frac=0.89
+  51-53 LCS=239 frac=0.89
+  17-52 LCS=122 frac=0.89
+  15-39 LCS=52 frac=0.88
+  44-62 LCS=110 frac=0.87
+  3-68 LCS=122 frac=0.87
+  47-50 LCS=108 frac=0.86
+  21-26 LCS=144 frac=0.85
+  29-61 LCS=122 frac=0.84
+  0-58 LCS=121 frac=0.84
+  13-38 LCS=112 frac=0.84
+  3-29 LCS=117 frac=0.84
+  58-69 LCS=117 frac=0.84
+  45-46 LCS=124 frac=0.83
+  29-65 LCS=125 frac=0.83
+  29-68 LCS=117 frac=0.82
+  32-43 LCS=112 frac=0.82
+  32-59 LCS=112 frac=0.82
+  44-68 LCS=103 frac=0.82
+  22-51 LCS=111 frac=0.81
+  52-68 LCS=111 frac=0.81
+  29-44 LCS=102 frac=0.81
+  33-58 LCS=108 frac=0.81
+  29-52 LCS=110 frac=0.80
+  22-48 LCS=108 frac=0.79
+  47-69 LCS=98 frac=0.78
+  17-29 LCS=117 frac=0.77
+  22-46 LCS=106 frac=0.77
+  50-58 LCS=108 frac=0.77
+  10-63 LCS=94 frac=0.75
+  35-63 LCS=94 frac=0.75
+  15-16 LCS=106 frac=0.74
+  63-66 LCS=92 frac=0.73
+  10-67 LCS=71 frac=0.72
+  62-65 LCS=91 frac=0.72
+  8-37 LCS=111 frac=0.72
+  2-5 LCS=126 frac=0.71
+  2-9 LCS=126 frac=0.71
+  2-53 LCS=126 frac=0.71
+  45-53 LCS=105 frac=0.70
+  35-67 LCS=69 frac=0.70
+  35-69 LCS=98 frac=0.70
+  61-62 LCS=88 frac=0.70
+  40-69 LCS=97 frac=0.69
+  1-41 LCS=63 frac=0.68
+  1-63 LCS=63 frac=0.68
+  2-67 LCS=67 frac=0.68
+  40-50 LCS=96 frac=0.68
+  27-67 LCS=66 frac=0.67
+  1-66 LCS=61 frac=0.66
+  5-48 LCS=112 frac=0.66
+  9-48 LCS=112 frac=0.66
+  48-53 LCS=112 frac=0.66
+  2-48 LCS=110 frac=0.65
+  3-65 LCS=91 frac=0.65
+  10-69 LCS=91 frac=0.65
+  66-69 LCS=91 frac=0.65
+  65-68 LCS=91 frac=0.64
+  35-50 LCS=89 frac=0.63
+  3-61 LCS=88 frac=0.63
+  2-51 LCS=111 frac=0.63
+  8-63 LCS=79 frac=0.63
+  37-63 LCS=79 frac=0.63
+  0-9 LCS=90 frac=0.62
+  22-28 LCS=85 frac=0.62
+  61-68 LCS=88 frac=0.62
+  0-69 LCS=86 frac=0.61
+  52-65 LCS=84 frac=0.61
+  5-28 LCS=89 frac=0.61
+  9-28 LCS=89 frac=0.61
+  28-53 LCS=89 frac=0.61
+  17-61 LCS=88 frac=0.61
+  44-65 LCS=76 frac=0.60
+  58-66 LCS=126 frac=0.60
+  2-46 LCS=106 frac=0.60
+  21-24 LCS=71 frac=0.60
+  2-28 LCS=87 frac=0.60
+  47-58 LCS=75 frac=0.60
+  52-61 LCS=81 frac=0.59
+  33-59 LCS=79 frac=0.59
+  10-50 LCS=82 frac=0.58
+  50-66 LCS=82 frac=0.58
+  43-47 LCS=73 frac=0.58
+  44-61 LCS=73 frac=0.58
+  47-59 LCS=73 frac=0.58
+  9-40 LCS=97 frac=0.58
+  40-58 LCS=97 frac=0.58
+  1-8 LCS=53 frac=0.58
+  1-37 LCS=53 frac=0.58
+  9-33 LCS=77 frac=0.57
+  5-53 LCS=155 frac=0.57
+  1-31 LCS=52 frac=0.57
+  9-53 LCS=153 frac=0.56
+  48-51 LCS=95 frac=0.56
+  42-67 LCS=55 frac=0.56
+  0-59 LCS=79 frac=0.55
+  0-18 LCS=51 frac=0.55
+  10-18 LCS=51 frac=0.55
+  18-33 LCS=51 frac=0.55
+  18-35 LCS=51 frac=0.55
+  18-66 LCS=51 frac=0.55
+  5-40 LCS=92 frac=0.55
+  0-50 LCS=77 frac=0.55
+  33-69 LCS=73 frac=0.54
+  38-56 LCS=73 frac=0.54
+  0-40 LCS=78 frac=0.54
+  17-65 LCS=91 frac=0.54
+  35-40 LCS=90 frac=0.54
+  22-42 LCS=73 frac=0.53
+  46-48 LCS=90 frac=0.53
+  17-45 LCS=79 frac=0.53
+  1-19 LCS=48 frac=0.52
+  43-69 LCS=73 frac=0.52
+  59-69 LCS=73 frac=0.52
+  58-59 LCS=141 frac=0.52
+  5-43 LCS=73 frac=0.52
+  9-43 LCS=73 frac=0.52
+  43-50 LCS=73 frac=0.52
+  50-59 LCS=73 frac=0.52
+  41-63 LCS=65 frac=0.52
+  0-5 LCS=73 frac=0.51
+  13-56 LCS=71 frac=0.50
+  45-64 LCS=75 frac=0.50
+  8-64 LCS=76 frac=0.50
+  40-47 LCS=63 frac=0.50
+
+--- families (>=50%% LCS components) ---
+  family size 45: ['0', '1', '2', '3', '5', '8', '9', '10', '11', '17', '18', '19', '22', '27', '28', '29', '31', '32', '33', '35', '37', '40', '41', '42', '43', '44', '45', '46', '47', '48', '50', '51', '52', '53', '58', '59', '61', '62', '63', '64', '65', '66', '67', '68', '69']
+  family size 4: ['12', '21', '24', '26']
+  family size 4: ['15', '16', '25', '39']
+  family size 3: ['13', '38', '56']
+  family size 2: ['20', '54']
+  singletons (12): ['4', '6', '7', '14', '23', '30', '34', '36', '49', '55', '57', '60']
+
+most-shared 60-mer (in 11 books): 192889521601993646724314278943151911865128191180035611472611
+  book 0 len=144 offset=13
+  book 5 len=273 offset=213
+  book 9 len=294 offset=211
+  book 10 len=281 offset=18
+  book 33 len=134 offset=0
+  book 35 len=286 offset=25
+  book 40 len=168 offset=32
+  book 50 len=141 offset=77
+  book 58 len=272 offset=164
+  book 66 len=210 offset=18
+  book 69 len=140 offset=67
+
+book 0 decodedbase around offset//2: BENNAIFIININSBASTFNENIIFINI*LTASTTNVV
+
+rough novel-digit estimate (10+ repeats deduped, greedy): 2020 of 11263

@@ -1,0 +1,8 @@
+ROWCOUNT: 70
+ROWCOUNT: 70
+AGGREGATE anagram-beat z over all 70 books, English bigram model: +9.70
+global relabel control (60 perms): mean +0.44 min -12.77 max +9.49; n_perms >= observed: 0
+
+de-templated subset (no two books share a 19-char fragment): 18 books
+aggregate z on de-templated subset: +3.38  (bigrams=1182)
+aggregate z of random same-size subsets (templates retained): ['+6.30', '+5.26', '+3.83', '+6.23', '+4.94', '+5.74', '+3.38', '+4.73']

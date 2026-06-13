@@ -1,0 +1,86 @@
+ROWCOUNT sheet__books grouped: 70
+books=70 total_digits=11263 total_symbols=5729
+ROWCOUNT probe_books: 70
+decodedbase mismatch sheet vs probe: []
+
+== (a0) CONTAINMENT: 20/70 books are exact digit substrings of another book (31 containment pairs)
+
+== (a) MODULE TILING minL=20: modules=62 inventory_digits=4466 occurrences=127 covered=9184 (81.5%) novel_residual=2079 unique_content=inventory+novel=6545 compression=1.72x books_fully_covered=12
+   top modules (len x uses):
+     M00 len=279 uses=2 books=2 0421595615135347801928895216019936467243...
+     M01 len=271 uses=2 books=2 5857651972788943887215128895219618003114...
+     M02 len=253 uses=2 books=2 1180014015255175191180189445229534527477...
+     M08 len=141 uses=3 books=3 8195372434856251081146364672435546003614...
+     M03 len=146 uses=2 books=2 1185764219709680579636612527570584521765...
+     M04 len=145 uses=2 books=2 8550649967046726114580036904220464845191...
+     M05 len=144 uses=2 books=2 9561513534780192889521601993646724314278...
+     M06 len=144 uses=2 books=2 5084348561145727857261185764364672435345...
+     M07 len=143 uses=2 books=2 6114312889500362496847560199658550649967...
+     M09 len=137 uses=2 books=2 6512889672127788943887215128895219618003...
+
+== (a) MODULE TILING minL=10: modules=90 inventory_digits=4849 occurrences=183 covered=9950 (88.3%) novel_residual=1313 unique_content=inventory+novel=6162 compression=1.83x books_fully_covered=14
+
+== per-book module composition (minL=20), first 15 books:
+   book 0: len=144 modules=[5] residual_digits=0
+   book 1: len=92 modules=[18] residual_digits=3
+   book 2: len=177 modules=[41, 9] residual_digits=4
+   book 3: len=140 modules=[11] residual_digits=11
+   book 4: len=140 modules=[35, 57] residual_digits=79
+   book 5: len=273 modules=[1] residual_digits=2
+   book 6: len=175 modules=[47, 44, 58] residual_digits=90
+   book 7: len=106 modules=[44, 47] residual_digits=42
+   book 8: len=155 modules=[15, 53] residual_digits=21
+   book 9: len=294 modules=[1] residual_digits=23
+   book 10: len=281 modules=[0] residual_digits=2
+   book 11: len=137 modules=[12] residual_digits=14
+   book 12: len=137 modules=[32, 39, 36] residual_digits=18
+   book 13: len=141 modules=[14] residual_digits=29
+   book 14: len=133 modules=[55, 37, 52] residual_digits=50
+
+== (c) DEDUP decoded level (LZ, min match 5 symbols, bookid order): novel=995 of 5729 (17.4%)
+   DEDUP digit level (LZ, min match 10 digits): novel=1305 of 11263 (11.6%)
+   13 symbols: ABCEFILNORSTV
+   chi2 gate [FULL corpus 5729 syms] N=5609: UNIFORM 3691 < English 4296 < German 4850 < Spanish 9408
+   chi2 gate [DEDUPED residual 995 syms] N=977: UNIFORM 639 < English 788 < German 887 < Spanish 1737
+   symbol freq full vs dedup (pct of non-star):
+     A: full  8.70%  dedup  9.01%
+     B: full  3.41%  dedup  3.48%
+     C: full  0.84%  dedup  0.92%
+     E: full 17.65%  dedup 18.83%
+     F: full 10.07%  dedup 10.54%
+     I: full 20.63%  dedup 18.83%
+     L: full  3.78%  dedup  3.58%
+     N: full 12.62%  dedup 13.20%
+     O: full  0.18%  dedup  0.41%
+     R: full  0.57%  dedup  0.51%
+     S: full  4.35%  dedup  3.07%
+     T: full 10.61%  dedup 10.54%
+     V: full  6.60%  dedup  7.06%
+   star: full 120 dedup 18
+
+   code stream: 5729 codes full, 995 novel; distinct codes full=99 dedup=97
+   top 10 codes full vs dedup:
+     19: full 192 (3.35%)  dedup 22 (2.21%)
+     51: full 177 (3.09%)  dedup 33 (3.32%)
+     21: full 167 (2.91%)  dedup 31 (3.12%)
+     46: full 156 (2.72%)  dedup 27 (2.71%)
+     45: full 150 (2.62%)  dedup 24 (2.41%)
+     95: full 146 (2.55%)  dedup 17 (1.71%)
+     11: full 139 (2.43%)  dedup 25 (2.51%)
+     14: full 138 (2.41%)  dedup 17 (1.71%)
+     61: full 135 (2.36%)  dedup 14 (1.41%)
+     64: full 131 (2.29%)  dedup 23 (2.31%)
+   chi2(dedup codes vs full-corpus code dist) = 103.4 on ~91 df
+
+== (d) MODULE ORDER SYNTAX (minL=20 modules) ==
+   books with >=1 module: 68; with >=2: 38
+   first-module counts (top5): [(5, 2), (18, 2), (41, 2), (11, 2), (35, 2)]
+   last-module counts (top5): [(19, 3), (9, 2), (11, 2), (57, 2), (1, 2)]
+   bigrams: total=59 tokens in repeated(>=2) bigram types=4
+   PERMUTATION CONTROL (10000 within-book order shuffles):
+     first-module max count: obs=2 p=1.0000
+     last-module max count:  obs=3 p=0.2587
+     repeated-bigram tokens: obs=4 control mean=4.4 sd=2.51 z=-0.16 p=0.6926
+   module offset consistency (modules used in >=3 books):
+
+DONE m1

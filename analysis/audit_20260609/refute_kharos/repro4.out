@@ -1,0 +1,30 @@
+chunk@109 distinct projections:
+  srcs: [('2', 161), ('22', 123)]
+   toks: ((1, 2, '89', False), (3, 2, '97', False), (5, 2, '51', False), (7, 2, '12', False), (9, 2, '16', False), (11, 1, '01', True), (12, 2, '51', False)) -> TAEFTNE
+  srcs: [('23', 43), ('28', 71), ('47', 4), ('48', 94), ('5', 122), ('53', 238), ('9', 120)]
+   toks: ((1, 2, '89', False), (3, 2, '97', False), (5, 2, '51', False), (7, 2, '12', False), (9, 2, '16', False), (11, 2, '15', False)) -> TAEFTE
+decoded positions (source-occurrence projection): 109
+constrained decode: 71 symbols, 5 omitted, identity True
+mine : TEINTAAETTEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAEFTNESFEVIII
+claim: TEINTAAETTEIVIFASTFNEVVTISETAFSETBASIESTIENFITFAIFVI*NIFATAEFTNESFEVIII
+match: True
+tail tokens (kharos digit pos>=109):
+  pos100 code=00 om=False sym=*
+  pos102 code=31 om=False sym=N
+  pos104 code=65 om=False sym=I
+  pos106 code=12 om=False sym=F
+  pos108 code=88 om=False sym=A
+  pos110 code=89 om=False sym=T
+  pos112 code=97 om=False sym=A
+  pos114 code=51 om=False sym=E
+  pos116 code=12 om=False sym=F
+  pos118 code=16 om=False sym=T
+  pos120 code=01 om=True sym=N
+  pos121 code=51 om=False sym=E
+  pos123 code=27 om=False sym=S
+  pos125 code=21 om=False sym=F
+  pos127 code=51 om=False sym=E
+  pos129 code=96 om=False sym=V
+  pos131 code=80 om=False sym=I
+  pos133 code=59 om=False sym=I
+  pos135 code=70 om=False sym=I

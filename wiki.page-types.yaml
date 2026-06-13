@@ -1,0 +1,41 @@
+schema_version: wiki_page_types.v1
+
+# Project-local page types for a CLOSED forensic case study (frozen-artifact
+# mode). We deliberately do NOT import the kit's operational catalog
+# (action / claim / decision / meeting / source / ingestion_event / ...), which
+# is tuned for a live operational wiki. These are the only shapes this archival
+# wiki uses.
+
+common_required: &common
+  - page_id
+  - page_type
+  - context
+  - visibility
+  - status
+  - updated_at
+
+page_types:
+  root_index:
+    description: The map-of-contents / wiki home.
+    required_frontmatter: *common
+  overview:
+    description: Background — what the puzzle is.
+    required_frontmatter: *common
+  method:
+    description: Data sources and how claims were verified.
+    required_frontmatter: *common
+  finding:
+    description: An accepted result.
+    required_frontmatter: *common
+  log:
+    description: Chronological record (attempts, external sources).
+    required_frontmatter: *common
+  retrospective:
+    description: Process lessons.
+    required_frontmatter: *common
+  open_questions:
+    description: What remains genuinely unknown.
+    required_frontmatter: *common
+  reference:
+    description: Glossary or entity stub.
+    required_frontmatter: *common

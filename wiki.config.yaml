@@ -1,0 +1,37 @@
+# 469 project — the wiki-viva kit in FROZEN-ARTIFACT mode.
+#
+# This is a CLOSED project, published as an archival case study. We adopt the
+# kit's STATIC documentation conventions (frontmatter, declared page types, a
+# map-of-contents, diagrams, and the public/private boundary) but we DO NOT run
+# the kit's live-operational machinery — ingestion pipeline, delegated LLM
+# context pass, daily cockpit, freshness/staleness gates, or karma. Re-enlivening
+# a finished case study would be the activity-over-outcome failure mode the
+# project itself diagnosed (see docs/wiki/08-lessons-and-process.md). See AGENTS.md.
+
+repo_id: tibia-469-bonelord-cipher
+owner_label: "Project Owner"
+language: en
+default_visibility: public_candidate
+contexts: bonelord-469
+mode: frozen_artifact
+
+# A finished case study is not on a refresh cadence: freshness disabled.
+freshness:
+  default: 0
+
+audit:
+  # Conventions we DO enforce (static, deterministic, zero-token):
+  require_frontmatter: true
+  page_type_registry_check: true
+  require_markdown_links: true
+  forbid_access_secrets: true
+  # Live-pipeline gates intentionally OFF for a closed project:
+  stale_check: false
+  freshness_budget: 0
+  impact_check: false
+  impact_closure_check: false
+  perspective_coverage_check: false
+
+llm:
+  # No live ingestion in frozen-artifact mode; there is nothing to deep-read.
+  required_context_pass: false

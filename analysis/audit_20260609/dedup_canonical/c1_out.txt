@@ -1,0 +1,58 @@
+ROWCOUNT sheet__books grouped: 70
+books=70 total_digits=11263 total_symbols=5729
+
+DEDUP OBJECT: LZ first-occurrence residual, symbol level, min match 5, bookid order
+  novel symbols = 995 / 5729 (17.4%)
+  novel segments = 162  (lengths min=1 median=3 max=74)
+  books contributing novel material = 61/70
+  alphabet: ABCEFILNORSTV + '*'
+
+(a) SYMBOL FREQUENCY PROFILE (pct of non-star; star shown separately)
+    sym   full%  dedup%
+      E   17.65   18.83
+      I   20.63   18.83
+      N   12.62   13.20
+      F   10.07   10.54
+      T   10.61   10.54
+      A    8.70    9.01
+      V    6.60    7.06
+      L    3.78    3.58
+      B    3.41    3.48
+      S    4.35    3.07
+      C    0.84    0.92
+      R    0.57    0.51
+      O    0.18    0.41
+    '*' count: full 120 (2.09% of all) dedup 18 (1.81% of all)
+    Gini(13-sym dist): full 0.452  dedup 0.451
+
+(b) CHI-SQUARE vs renormalized 13-symbol references (12 df)
+    [FULL corpus] N=5609: UNIFORM 3691 < English 4296 < German 4850 < Spanish 9408
+    [DEDUP residual] N=977: UNIFORM 639 < English 788 < German 887 < Spanish 1737
+    per-N normalization (chi2/N, scale-free): full UNIFORM=0.658 English=0.766 German=0.865 Spanish=1.677
+                                              dedup UNIFORM=0.654 English=0.806 German=0.908 Spanish=1.778
+
+(c) PER-SYMBOL ANOMALIES (dedup residual, pct of non-star)
+    F: dedup 10.54% (full 10.07%)  vs renorm-English  2.97% renorm-German  2.27%
+    V: dedup  7.06% (full  6.60%)  vs renorm-English  1.30% renorm-German  1.16%
+    I: dedup 18.83% (full 20.63%)  vs renorm-English  9.29% renorm-German  9.00%
+    R: dedup  0.51% (full  0.57%)  vs renorm-English  7.99% renorm-German  9.62%
+    O: dedup  0.41% (full  0.18%)  vs renorm-English 10.01% renorm-German  3.56%
+
+(d) VOWEL FRACTION + DICTIONARY COVERAGE
+    vowel fraction (A,E,I,O over non-star): full 47.2%  dedup 47.1%  (English AEIOU = 38.1%)
+    dictionary: 19322 words of len>=3 writable in 13-letter alphabet
+    dict coverage of dedup residual: 36.7%  unigram-control mean 34.3% sd 2.2% -> z=+1.09
+
+(e) REVERSAL INVARIANCE (map-level, unaffected by dedup; recheck from row0_code_symbol_counts)
+    ROWCOUNT map rows: 99
+    non-palindrome codes whose reverse is also in map: 88; map to SAME symbol: 86 (86/88)
+    unordered digit-pair classes: 55; pure (single symbol): 54
+    -> property of the lookup TABLE, not of any particular text; dedup cannot affect it. HELD by construction.
+
+(f) EFFECTIVE SAMPLE SIZE
+    full corpus: 5729 symbols across 70 books; LZ dedup shows only 995 (17.4%) are first-occurrence material
+    -> the published full-corpus tests were computed on ~5.8x pseudo-replicated data
+    chi2 statistics scale ~N, so dedup values are ~5.8x smaller in magnitude;
+    the DISQUALIFIER is the ordering + per-symbol profile, both of which must be re-checked above.
+
+DONE c1

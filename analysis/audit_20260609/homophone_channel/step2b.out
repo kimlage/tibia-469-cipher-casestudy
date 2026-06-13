@@ -1,0 +1,27 @@
+token records: 5609
+fold 0 done (book 0); bucket w2=[-0.031 -0.032 -0.5    0.175  0.163  0.044  0.18 ]
+fold 20 done (book 27); bucket w2=[-0.032 -0.033 -0.494  0.176  0.165  0.039  0.178]
+fold 40 done (book 45); bucket w2=[-0.027 -0.032 -0.503  0.173  0.18   0.039  0.171]
+fold 60 done (book 63); bucket w2=[-0.031 -0.031 -0.494  0.176  0.162  0.038  0.18 ]
+
+=== ALL multi-class tokens (n=5609) ===
+model bits/choice    top1  total bits
+M1         0.9547  0.7821      5355.0
+M2         0.5733  0.8875      3215.6
+M3         0.5194  0.9007      2913.0
+M2R        0.5706  0.8909      3200.7
+
+=== NOVEL only (n=1116) ===
+model bits/choice    top1  total bits
+M1         1.5679  0.6595      1749.8
+M2         1.3103  0.7563      1462.3
+M3         1.2909  0.7697      1440.7
+M2R        1.3085  0.7581      1460.3
+
+=== XUNIQ only (n=451) ===
+model bits/choice    top1  total bits
+M1         2.5879  0.4745      1167.1
+M2         2.5951  0.5299      1170.4
+M3         2.6620  0.5410      1200.6
+M2R        2.5928  0.5255      1169.3
+saved preds2.npz

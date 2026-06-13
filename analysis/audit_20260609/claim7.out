@@ -1,0 +1,34 @@
+ROWCOUNT: 70
+selected books (id,len): [('9', 149), ('35', 146), ('10', 144), ('17', 139), ('58', 139), ('5', 138), ('59', 138), ('53', 137), ('51', 136), ('56', 134), ('68', 73), ('15', 72)]
+
+book  len   z_EN(300sh)   relabel z: mean/min/max of 30 perms   z_corpusLOO
+   9  149     +1.56       -0.25 /  -3.37 /  +2.36        +8.12
+  35  146     +1.61       -0.23 /  -2.45 /  +1.55        +7.14
+  10  144     +1.57       +0.30 /  -1.36 /  +2.04        +7.00
+  17  139     +2.13       +0.16 /  -2.08 /  +2.49        +5.97
+  58  139     -0.10       -0.21 /  -2.41 /  +1.45        +7.41
+   5  138     +2.29       +0.14 /  -1.78 /  +2.00        +7.18
+  59  138     -0.04       -0.43 /  -2.93 /  +2.42        +6.31
+  53  137     +1.26       +0.08 /  -1.96 /  +1.98        +6.71
+  51  136     +2.29       +0.06 /  -3.01 /  +2.47        +6.76
+  56  134     +1.75       +0.10 /  -2.04 /  +2.39        +6.00
+  68   73     +2.26       +0.32 /  -1.44 /  +2.84        +4.72
+  15   72     +1.93       +0.51 /  -1.57 /  +2.50        +4.27
+
+summary: z_EN mean=+1.54 range [-0.10,+2.29]
+relabel-control z: mean=+0.05 range [-3.37,+2.84]; 17/360 perms exceed z=+2
+corpus-LOO z: mean=+6.47 range [+4.27,+8.12]
+
+per-book percentile of z_EN within its relabel-control distribution:
+  book    9: z_EN= +1.56 is at  90.0th pct of relabel z (mean -0.25)
+  book   35: z_EN= +1.61 is at 100.0th pct of relabel z (mean -0.23)
+  book   10: z_EN= +1.57 is at  90.0th pct of relabel z (mean +0.30)
+  book   17: z_EN= +2.13 is at  96.7th pct of relabel z (mean +0.16)
+  book   58: z_EN= -0.10 is at  50.0th pct of relabel z (mean -0.21)
+  book    5: z_EN= +2.29 is at 100.0th pct of relabel z (mean +0.14)
+  book   59: z_EN= -0.04 is at  60.0th pct of relabel z (mean -0.43)
+  book   53: z_EN= +1.26 is at  93.3th pct of relabel z (mean +0.08)
+  book   51: z_EN= +2.29 is at  96.7th pct of relabel z (mean +0.06)
+  book   56: z_EN= +1.75 is at  90.0th pct of relabel z (mean +0.10)
+  book   68: z_EN= +2.26 is at  93.3th pct of relabel z (mean +0.32)
+  book   15: z_EN= +1.93 is at  90.0th pct of relabel z (mean +0.51)

@@ -1,0 +1,67 @@
+ROWCOUNT 70
+identity len+iz==2*baselen violations: NONE (holds for all 70)
+exact duplicate digit-strings: {}
+exact duplicate decodedbase: []
+
+per-book zlib ratio (sorted):
+  most-compressible book 31 len=248 ratio=0.391 (shuf 0.544)
+  most-compressible book 57 len=230 ratio=0.435 (shuf 0.548)
+  most-compressible book 55 len=116 ratio=0.500 (shuf 0.647)
+  most-compressible book 56 len=266 ratio=0.511 (shuf 0.541)
+  most-compressible book 10 len=281 ratio=0.512 (shuf 0.544)
+  most-compressible book 35 len=286 ratio=0.514 (shuf 0.542)
+  most-compressible book 9 len=294 ratio=0.520 (shuf 0.541)
+  most-compressible book 59 len=272 ratio=0.526 (shuf 0.548)
+  least: book 54 len=57 ratio=0.825 (shuf 0.842)
+  least: book 39 len=59 ratio=0.831 (shuf 0.814)
+  least: book 25 len=35 ratio=1.000 (shuf 1.086)
+
+top 20 cross-book compression-gain pairs (bytes saved):
+  5+9 gain=135 (lenA=273 lenB=294)
+  10+35 gain=135 (lenA=281 lenB=286)
+  58+59 gain=130 (lenA=272 lenB=272)
+  46+51 gain=128 (lenA=253 lenB=268)
+  51+53 gain=122 (lenA=268 lenB=271)
+  46+53 gain=120 (lenA=253 lenB=271)
+  35+66 gain=110 (lenA=286 lenB=210)
+  10+66 gain=109 (lenA=281 lenB=210)
+  5+53 gain=89 (lenA=273 lenB=271)
+  9+53 gain=88 (lenA=294 lenB=271)
+  61+65 gain=86 (lenA=145 lenB=169)
+  9+58 gain=84 (lenA=294 lenB=272)
+  32+58 gain=83 (lenA=137 lenB=272)
+  43+59 gain=82 (lenA=141 lenB=272)
+  28+48 gain=82 (lenA=146 lenB=169)
+  11+58 gain=82 (lenA=137 lenB=272)
+  0+66 gain=82 (lenA=144 lenB=210)
+  0+10 gain=82 (lenA=144 lenB=281)
+  43+58 gain=81 (lenA=141 lenB=272)
+  17+68 gain=81 (lenA=274 lenB=143)
+median gain: 29
+
+LCS for top gain pairs:
+  5/9 LCS=271  585765197278894388721512889521961800311457278572611857642197...
+  10/35 LCS=279  042159561513534780192889521601993646724314278943151911865128...
+  58/59 LCS=141  819537243485625108114636467243554600361451912112888304646797...
+  46/51 LCS=253  118001401525517519118018944522953452747709096734709201285719...
+  51/53 LCS=239  180189445229534527477090967347092012857197278304042158576594...
+  46/53 LCS=234  180189445229534527477090967347092012857197278304042158576594...
+  35/66 LCS=210  042159561513534780192889521601993646724314278943151911865128...
+  10/66 LCS=210  042159561513534780192889521601993646724314278943151911865128...
+k=10: 1270 substrings shared by >=2 books; top shared-by counts [('4856114519..', 23), ('9911800364..', 20), ('0192889521..', 19)]
+k=15: 1414 substrings shared by >=2 books; top shared-by counts [('561145191991180..', 18), ('611451919911800..', 18), ('114519199118003..', 18)]
+k=20: 1471 substrings shared by >=2 books; top shared-by counts [('56114519199118003646..', 18), ('61145191991180036468..', 17), ('53478019288952160199..', 16)]
+k=30: 1493 substrings shared by >=2 books; top shared-by counts [('9561513534780192889521601..', 14), ('5615135347801928895216019..', 14), ('6151353478019288952160199..', 14)]
+k=40: 1430 substrings shared by >=2 books; top shared-by counts [('9561513534780192889521601..', 13), ('5615135347801928895216019..', 13), ('6151353478019288952160199..', 13)]
+k=60: 1186 substrings shared by >=2 books; top shared-by counts [('1928895216019936467243142..', 11), ('9561513534780192889521601..', 10), ('5615135347801928895216019..', 10)]
+
+within-book longest internal repeat (top 8):
+  book 55 len=116 longest-repeat=45
+  book 57 len=230 longest-repeat=33
+  book 31 len=248 longest-repeat=33
+  book 49 len=115 longest-repeat=17
+  book 16 len=174 longest-repeat=13
+  book 8 len=155 longest-repeat=10
+  book 37 len=160 longest-repeat=10
+  book 53 len=271 longest-repeat=9
+  median: 7

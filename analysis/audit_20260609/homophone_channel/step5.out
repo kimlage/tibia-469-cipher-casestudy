@@ -1,0 +1,24 @@
+count rows: 99, book rows: 70
+
+5.1 counts (full / novel):
+  code 19 (sym I, class 15): full=192/1157 (0.166) novel=25/222 (0.113) [uniform would be 0.067]
+  code 32 (sym O, class 2): full=1/10 (0.100) novel=1/4 (0.250) [uniform would be 0.500]
+  code 33 (sym E, class 17): full=1/990 (0.001) novel=0/222 (0.000) [uniform would be 0.059]
+  code 38 (sym T, class 12): full=1/595 (0.002) novel=0/115 (0.000) [uniform would be 0.083]
+
+5.2 19-share homogeneity across books (novel I, books w/ n>=5): share=0.122, G=23.3 sims=22.1+-5.4 z=+0.20 p=0.393 (nbooks=19)
+
+5.3 19 positional preference (novel I): mean relpos 19=0.550 all-I=0.517 diff z=+0.59
+
+5.4 distinct segments: 145
+  code 19: used in 153 lexicon cells (class I: 954 cells over 15 codes; uniform exp 63.6)
+  code 32: used in 1 lexicon cells (class O: 10 cells over 2 codes; uniform exp 5.0)
+  code 33: used in 1 lexicon cells (class E: 851 cells over 17 codes; uniform exp 50.1)
+  code 38: used in 1 lexicon cells (class T: 513 cells over 12 codes; uniform exp 42.8)
+  code 32: P(usage<=1 | uniform within class, 10 cells) = 1.07e-02
+  code 33: P(usage<=1 | uniform within class, 851 cells) = 2.13e-21
+  code 38: P(usage<=1 | uniform within class, 513 cells) = 1.96e-18
+
+5.5 lexicon first-choice stream: n=145
+  bias: obs=0.366 ctl=0.436+-0.041 z=-1.72
+  runs: obs=66 ctl=71.8+-6.1 z=-0.95

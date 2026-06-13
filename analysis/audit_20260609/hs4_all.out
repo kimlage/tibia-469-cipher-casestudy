@@ -1,0 +1,380 @@
+codes 99 books 70
+train_books ['5', '8', '9', '10', '11', '14', '19', '21', '24', '26', '29', '30', '31', '34', '36', '37', '39', '41', '42', '43', '45', '46', '49', '50', '51', '52', '54', '55', '56', '57', '59', '60', '64', '65', '68']
+held_books ['0', '1', '2', '3', '4', '6', '7', '12', '13', '15', '16', '17', '18', '20', '22', '23', '25', '27', '28', '32', '33', '35', '38', '40', '44', '47', '48', '53', '58', '61', '62', '63', '66', '67', '69']
+train frags 33 tokens 2963
+held novel frags 25 novel tokens 415 masked tokens 2245
+LMs loaded
+train stream L 3059 real windows 2864
+held stream L 487 real windows 340
+full stream L 5330 real windows 4979
+[SYNTH-EN] plaintext len 3210 (want 3210)
+  [SYNTH-EN] restart 0: best_total=-5263.3 mean=-2.4629
+  [SYNTH-EN] restart 1: best_total=-5303.3 mean=-2.4816
+  [SYNTH-EN] restart 2: best_total=-5267.0 mean=-2.4646
+  [SYNTH-EN] restart 3: best_total=-4941.0 mean=-2.3121
+  [SYNTH-EN] restart 4: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 5: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 6: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 7: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 8: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 9: best_total=-5160.2 mean=-2.4147
+  [SYNTH-EN] restart 10: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 11: best_total=-5284.9 mean=-2.4731
+  [SYNTH-EN] restart 12: best_total=-5266.4 mean=-2.4644
+  [SYNTH-EN] restart 13: best_total=-5165.4 mean=-2.4171
+  [SYNTH-EN] restart 14: best_total=-5178.1 mean=-2.4231
+  [SYNTH-EN] restart 15: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 16: best_total=-5231.9 mean=-2.4482
+  [SYNTH-EN] restart 17: best_total=-4963.3 mean=-2.3225
+  [SYNTH-EN] restart 18: best_total=-4321.7 mean=-2.0223
+  [SYNTH-EN] restart 19: best_total=-4926.9 mean=-2.3055
+  [SYNTH-EN] restart 20: best_total=-4912.0 mean=-2.2986
+  [SYNTH-EN] restart 21: best_total=-4962.2 mean=-2.3220
+  [SYNTH-EN] restart 22: best_total=-5169.9 mean=-2.4192
+  [SYNTH-EN] restart 23: best_total=-5162.6 mean=-2.4158
+[SYNTH-EN] train_acc=0.999 held_acc=0.999 held z=39.30 p=0.0000 cov=0.9560747663551402
+[SYNTH-EN] held decrypt: hiterabbitwasstillinsighthurryingdownittherewasnotamomenttobelostawaywentalicelikethewindandwasjustintimetohearitsayasitturnedacornerohmyearsandwhiskershowlateitsgettingshewasclosebehinditwhensheturne
+[SYNTH-DE] plaintext len 3076 (want 3210)
+  [SYNTH-DE] restart 0: best_total=-4203.5 mean=-2.0535
+  [SYNTH-DE] restart 1: best_total=-6333.8 mean=-3.0942
+  [SYNTH-DE] restart 2: best_total=-4143.5 mean=-2.0242
+  [SYNTH-DE] restart 3: best_total=-4153.4 mean=-2.0290
+  [SYNTH-DE] restart 4: best_total=-4143.5 mean=-2.0242
+  [SYNTH-DE] restart 5: best_total=-6327.8 mean=-3.0913
+  [SYNTH-DE] restart 6: best_total=-6333.8 mean=-3.0942
+  [SYNTH-DE] restart 7: best_total=-6333.8 mean=-3.0942
+  [SYNTH-DE] restart 8: best_total=-6346.4 mean=-3.1003
+  [SYNTH-DE] restart 9: best_total=-4201.1 mean=-2.0523
+  [SYNTH-DE] restart 10: best_total=-6326.6 mean=-3.0907
+  [SYNTH-DE] restart 11: best_total=-4143.5 mean=-2.0242
+  [SYNTH-DE] restart 12: best_total=-6345.4 mean=-3.0998
+  [SYNTH-DE] restart 13: best_total=-6326.6 mean=-3.0907
+  [SYNTH-DE] restart 14: best_total=-6326.6 mean=-3.0907
+  [SYNTH-DE] restart 15: best_total=-6333.8 mean=-3.0942
+  [SYNTH-DE] restart 16: best_total=-4200.5 mean=-2.0520
+  [SYNTH-DE] restart 17: best_total=-6345.4 mean=-3.0998
+  [SYNTH-DE] restart 18: best_total=-4412.5 mean=-2.1556
+  [SYNTH-DE] restart 19: best_total=-6326.6 mean=-3.0907
+  [SYNTH-DE] restart 20: best_total=-6327.8 mean=-3.0913
+  [SYNTH-DE] restart 21: best_total=-4153.4 mean=-2.0290
+  [SYNTH-DE] restart 22: best_total=-4413.9 mean=-2.1563
+  [SYNTH-DE] restart 23: best_total=-6345.4 mean=-3.0998
+[SYNTH-DE] train_acc=0.423 held_acc=0.415 held z=13.34 p=0.0000 cov=None
+[SYNTH-DE] held decrypt: nniendeieieinnrennennnendeinendnnenddenindennineinnenedennnenenneineineinneidninddienennninnnenniedenneinnenineedeiiinedenennnennnieneidneendedenniienninddenindieninneneieennnenindeineieeiennenenendni
+  [REAL-EN-free] restart 0: best_total=-6254.7 mean=-2.1839
+  [REAL-EN-free] restart 1: best_total=-6392.8 mean=-2.2321
+  [REAL-EN-free] restart 2: best_total=-6153.9 mean=-2.1487
+  [REAL-EN-free] restart 3: best_total=-6297.5 mean=-2.1989
+  [REAL-EN-free] restart 4: best_total=-6340.6 mean=-2.2139
+  [REAL-EN-free] restart 5: best_total=-6442.7 mean=-2.2495
+  [REAL-EN-free] restart 6: best_total=-6154.7 mean=-2.1490
+  [REAL-EN-free] restart 7: best_total=-6305.7 mean=-2.2017
+  [REAL-EN-free] restart 8: best_total=-6398.4 mean=-2.2341
+  [REAL-EN-free] restart 9: best_total=-6455.8 mean=-2.2541
+  [REAL-EN-free] restart 10: best_total=-6270.2 mean=-2.1893
+  [REAL-EN-free] restart 11: best_total=-6361.7 mean=-2.2213
+  [REAL-EN-free] restart 12: best_total=-6272.6 mean=-2.1902
+  [REAL-EN-free] restart 13: best_total=-6360.4 mean=-2.2208
+  [REAL-EN-free] restart 14: best_total=-6377.8 mean=-2.2269
+  [REAL-EN-free] restart 15: best_total=-6224.3 mean=-2.1733
+  [REAL-EN-free] restart 16: best_total=-6428.3 mean=-2.2445
+  [REAL-EN-free] restart 17: best_total=-6243.1 mean=-2.1798
+  [REAL-EN-free] restart 18: best_total=-6373.2 mean=-2.2253
+  [REAL-EN-free] restart 19: best_total=-6286.7 mean=-2.1951
+  [REAL-EN-free] restart 20: best_total=-6207.2 mean=-2.1673
+  [REAL-EN-free] restart 21: best_total=-6275.8 mean=-2.1913
+  [REAL-EN-free] restart 22: best_total=-6312.2 mean=-2.2040
+  [REAL-EN-free] restart 23: best_total=-6313.3 mean=-2.2044
+[REAL-EN-free] train_mean=-2.1487 held z=8.34 p=0.0000 held_mean=-2.4776 traincov=0.8218022274721566
+[REAL-EN-free] held decrypt: itehe|||rheratsthetaha|||tnotteeeththattearthhesetateeshatstreeat|||ttotteathattettohhteetthestate|||rteeearthssestsaahasaretheettettahasteeseertheehe|||tteattahatestatereereststeeearthetosehttthettoh
+[REAL-EN-free] train decrypt: theetsthatthattatheehesththothefataeheehatheethentobettoheearthahatthreththeseetothteathatsterrethatthatesseattherestheettearteherththethastesshesteh|||hatthatesseattherestheettearteherththethastesshe
+  [REAL-EN-pin] restart 0: best_total=-6238.4 mean=-2.1782
+  [REAL-EN-pin] restart 1: best_total=-6303.9 mean=-2.2011
+  [REAL-EN-pin] restart 2: best_total=-6315.7 mean=-2.2052
+  [REAL-EN-pin] restart 3: best_total=-6382.0 mean=-2.2283
+  [REAL-EN-pin] restart 4: best_total=-6534.4 mean=-2.2816
+  [REAL-EN-pin] restart 5: best_total=-6461.7 mean=-2.2562
+  [REAL-EN-pin] restart 6: best_total=-6355.0 mean=-2.2189
+  [REAL-EN-pin] restart 7: best_total=-6285.3 mean=-2.1946
+  [REAL-EN-pin] restart 8: best_total=-6420.4 mean=-2.2417
+  [REAL-EN-pin] restart 9: best_total=-6474.1 mean=-2.2605
+  [REAL-EN-pin] restart 10: best_total=-6514.8 mean=-2.2747
+  [REAL-EN-pin] restart 11: best_total=-6507.8 mean=-2.2723
+  [REAL-EN-pin] restart 12: best_total=-6429.3 mean=-2.2449
+  [REAL-EN-pin] restart 13: best_total=-6518.0 mean=-2.2758
+  [REAL-EN-pin] restart 14: best_total=-6435.7 mean=-2.2471
+  [REAL-EN-pin] restart 15: best_total=-6368.2 mean=-2.2235
+  [REAL-EN-pin] restart 16: best_total=-6420.4 mean=-2.2418
+  [REAL-EN-pin] restart 17: best_total=-6515.3 mean=-2.2749
+  [REAL-EN-pin] restart 18: best_total=-6491.1 mean=-2.2664
+  [REAL-EN-pin] restart 19: best_total=-6375.7 mean=-2.2261
+  [REAL-EN-pin] restart 20: best_total=-6464.6 mean=-2.2572
+  [REAL-EN-pin] restart 21: best_total=-6396.0 mean=-2.2332
+  [REAL-EN-pin] restart 22: best_total=-6411.2 mean=-2.2385
+  [REAL-EN-pin] restart 23: best_total=-6445.0 mean=-2.2503
+[REAL-EN-pin] train_mean=-2.1782 held z=6.35 p=0.0000 held_mean=-2.6570 traincov=0.8228147148160648
+[REAL-EN-pin] held decrypt: shbar|||earssethersrer|||sataetgeeseetheeersaarteessnetsorttsteth|||srtttbesnoterthteshenherbthehr|||tttrrethsetsthtreereereherthreeirarehsrttershehhe|||ttbesaeereehheresthrtthettrrethsrsteeahiearthte
+[REAL-EN-pin] train decrypt: sarthehethtethesheeratthehatesetressestartagresterterthterrethseerthesthethsherstartbesnottersstrtotheetbeenthenthetherthreethreetheterhertosttetesre|||eotheetbeenthenthetherthreethreetheterhertosttet
+  [REAL-DE-free] restart 0: best_total=-5939.1 mean=-2.0737
+  [REAL-DE-free] restart 1: best_total=-5877.8 mean=-2.0523
+  [REAL-DE-free] restart 2: best_total=-5772.6 mean=-2.0156
+  [REAL-DE-free] restart 3: best_total=-5715.6 mean=-1.9957
+  [REAL-DE-free] restart 4: best_total=-5722.7 mean=-1.9982
+  [REAL-DE-free] restart 5: best_total=-5772.1 mean=-2.0154
+  [REAL-DE-free] restart 6: best_total=-5762.1 mean=-2.0119
+  [REAL-DE-free] restart 7: best_total=-5896.2 mean=-2.0587
+  [REAL-DE-free] restart 8: best_total=-5787.4 mean=-2.0207
+  [REAL-DE-free] restart 9: best_total=-5702.4 mean=-1.9911
+  [REAL-DE-free] restart 10: best_total=-5754.0 mean=-2.0091
+  [REAL-DE-free] restart 11: best_total=-5828.8 mean=-2.0352
+  [REAL-DE-free] restart 12: best_total=-5778.1 mean=-2.0175
+  [REAL-DE-free] restart 13: best_total=-5900.2 mean=-2.0601
+  [REAL-DE-free] restart 14: best_total=-5702.2 mean=-1.9910
+  [REAL-DE-free] restart 15: best_total=-5694.5 mean=-1.9883
+  [REAL-DE-free] restart 16: best_total=-5732.6 mean=-2.0016
+  [REAL-DE-free] restart 17: best_total=-5755.5 mean=-2.0096
+  [REAL-DE-free] restart 18: best_total=-5718.7 mean=-1.9968
+  [REAL-DE-free] restart 19: best_total=-5827.6 mean=-2.0348
+  [REAL-DE-free] restart 20: best_total=-5782.7 mean=-2.0191
+  [REAL-DE-free] restart 21: best_total=-5764.2 mean=-2.0126
+  [REAL-DE-free] restart 22: best_total=-5751.0 mean=-2.0080
+  [REAL-DE-free] restart 23: best_total=-5751.6 mean=-2.0082
+[REAL-DE-free] train_mean=-1.9883 held z=7.18 p=0.0000 held_mean=-2.1738 traincov=None
+[REAL-DE-free] held decrypt: nenne|||inenneneinnene|||eindiedeinindeieenennennennennneinnneide|||enneenennerierenineneeeinerenn|||rrennenenineneeneneienneindeneeeeneieenneineeinei|||eenendeneindreienenneneirennenenneniinneinereni
+[REAL-DE-free] train decrypt: nneeereiderndeinenenndeeiennineneineindneendeindenndereninnenenenerenneeinendenendienennereiennennereieenrindeineinneindeneereenereneineiennennnereen|||nereieenrindeineinneindeneereenereneineiennennne
+  [REAL-DE-pin] restart 0: best_total=-5909.9 mean=-2.0635
+  [REAL-DE-pin] restart 1: best_total=-5994.5 mean=-2.0930
+  [REAL-DE-pin] restart 2: best_total=-5925.1 mean=-2.0688
+  [REAL-DE-pin] restart 3: best_total=-5902.4 mean=-2.0609
+  [REAL-DE-pin] restart 4: best_total=-5901.1 mean=-2.0604
+  [REAL-DE-pin] restart 5: best_total=-5931.8 mean=-2.0712
+  [REAL-DE-pin] restart 6: best_total=-5997.0 mean=-2.0939
+  [REAL-DE-pin] restart 7: best_total=-5995.8 mean=-2.0935
+  [REAL-DE-pin] restart 8: best_total=-6028.5 mean=-2.1049
+  [REAL-DE-pin] restart 9: best_total=-5979.2 mean=-2.0877
+  [REAL-DE-pin] restart 10: best_total=-5894.4 mean=-2.0581
+  [REAL-DE-pin] restart 11: best_total=-5949.5 mean=-2.0773
+  [REAL-DE-pin] restart 12: best_total=-5819.3 mean=-2.0319
+  [REAL-DE-pin] restart 13: best_total=-5979.4 mean=-2.0878
+  [REAL-DE-pin] restart 14: best_total=-6021.3 mean=-2.1024
+  [REAL-DE-pin] restart 15: best_total=-5989.4 mean=-2.0913
+  [REAL-DE-pin] restart 16: best_total=-6023.1 mean=-2.1030
+  [REAL-DE-pin] restart 17: best_total=-6094.3 mean=-2.1279
+  [REAL-DE-pin] restart 18: best_total=-5882.3 mean=-2.0539
+  [REAL-DE-pin] restart 19: best_total=-5958.0 mean=-2.0803
+  [REAL-DE-pin] restart 20: best_total=-6109.3 mean=-2.1332
+  [REAL-DE-pin] restart 21: best_total=-5788.6 mean=-2.0212
+  [REAL-DE-pin] restart 22: best_total=-5999.2 mean=-2.0947
+  [REAL-DE-pin] restart 23: best_total=-5884.0 mean=-2.0545
+[REAL-DE-pin] train_mean=-2.0212 held z=5.56 p=0.0000 held_mean=-2.3940 traincov=None
+[REAL-DE-pin] held decrypt: enbni|||nernndeinennei|||eenaeeeieneeinedineeereednndeeeeienneiin|||ennenbindenernnnnedednueberiee|||nneeeininneneieiieinineinedinneinninennneineeinei|||enbinaieieedrieinenneninneeeininesnneneieernnnn
+[REAL-DE-pin] train decrypt: nereieiniineinendeneedeindenendenennnndenenerendennernnnneeininieindeneinnendiesnaenbindeneeinnendennninbeneinedeneeinedinnindreindenneinieineeeeeere|||eennninbeneinedeneeinedinnindreindenneinieineeee
+  [REAL-PL-free] restart 0: best_total=-6637.1 mean=-2.3174
+  [REAL-PL-free] restart 1: best_total=-6811.8 mean=-2.3784
+  [REAL-PL-free] restart 2: best_total=-6918.1 mean=-2.4155
+  [REAL-PL-free] restart 3: best_total=-6972.4 mean=-2.4345
+  [REAL-PL-free] restart 4: best_total=-6956.1 mean=-2.4288
+  [REAL-PL-free] restart 5: best_total=-6882.5 mean=-2.4031
+  [REAL-PL-free] restart 6: best_total=-6887.2 mean=-2.4048
+  [REAL-PL-free] restart 7: best_total=-6927.2 mean=-2.4187
+  [REAL-PL-free] restart 8: best_total=-6688.4 mean=-2.3353
+  [REAL-PL-free] restart 9: best_total=-6815.8 mean=-2.3798
+  [REAL-PL-free] restart 10: best_total=-6732.8 mean=-2.3508
+  [REAL-PL-free] restart 11: best_total=-6847.4 mean=-2.3909
+  [REAL-PL-free] restart 12: best_total=-6933.8 mean=-2.4210
+  [REAL-PL-free] restart 13: best_total=-6720.7 mean=-2.3466
+  [REAL-PL-free] restart 14: best_total=-6813.7 mean=-2.3791
+  [REAL-PL-free] restart 15: best_total=-6774.2 mean=-2.3653
+  [REAL-PL-free] restart 16: best_total=-6843.6 mean=-2.3895
+  [REAL-PL-free] restart 17: best_total=-6673.2 mean=-2.3300
+  [REAL-PL-free] restart 18: best_total=-6930.8 mean=-2.4200
+  [REAL-PL-free] restart 19: best_total=-6895.9 mean=-2.4078
+  [REAL-PL-free] restart 20: best_total=-6648.4 mean=-2.3214
+  [REAL-PL-free] restart 21: best_total=-6914.6 mean=-2.4143
+  [REAL-PL-free] restart 22: best_total=-6730.6 mean=-2.3501
+  [REAL-PL-free] restart 23: best_total=-6745.7 mean=-2.3554
+[REAL-PL-free] train_mean=-2.3174 held z=5.23 p=0.0000 held_mean=-2.7377 traincov=None
+[REAL-PL-free] held decrypt: cinin|||anieiinienniam|||nnieennnenianieiiennninmiinamnceanienini|||nnieininieniiniiecnmaiinnnainn|||ennnniennineniniiamiieminninnenaiimineennienninni|||einineiamimiaiineinennninnnniennneicninaeniniie
+[REAL-PL-free] train decrypt: nniniinnninanieinienniniennienieiiieeninieinienienieiniiennienniamnnieiininninneienininiennineennienieiiniicnieinlmninninneienianeniieniemniennaninia|||ienieiiniicnieinlmninninneienianeniieniemniennan
+  [REAL-PT-free] restart 0: best_total=-9349.7 mean=-3.2646
+  [REAL-PT-free] restart 1: best_total=-6371.0 mean=-2.2245
+  [REAL-PT-free] restart 2: best_total=-9160.8 mean=-3.1986
+  [REAL-PT-free] restart 3: best_total=-6327.7 mean=-2.2094
+  [REAL-PT-free] restart 4: best_total=-6236.8 mean=-2.1776
+  [REAL-PT-free] restart 5: best_total=-6875.4 mean=-2.4006
+  [REAL-PT-free] restart 6: best_total=-9264.3 mean=-3.2347
+  [REAL-PT-free] restart 7: best_total=-6395.3 mean=-2.2330
+  [REAL-PT-free] restart 8: best_total=-6181.4 mean=-2.1583
+  [REAL-PT-free] restart 9: best_total=-6935.2 mean=-2.4215
+  [REAL-PT-free] restart 10: best_total=-6185.0 mean=-2.1596
+  [REAL-PT-free] restart 11: best_total=-6795.3 mean=-2.3727
+  [REAL-PT-free] restart 12: best_total=-5953.7 mean=-2.0788
+  [REAL-PT-free] restart 13: best_total=-9297.0 mean=-3.2461
+  [REAL-PT-free] restart 14: best_total=-8959.1 mean=-3.1282
+  [REAL-PT-free] restart 15: best_total=-8793.1 mean=-3.0702
+  [REAL-PT-free] restart 16: best_total=-9221.8 mean=-3.2199
+  [REAL-PT-free] restart 17: best_total=-6205.9 mean=-2.1669
+  [REAL-PT-free] restart 18: best_total=-9078.3 mean=-3.1698
+  [REAL-PT-free] restart 19: best_total=-6181.4 mean=-2.1583
+  [REAL-PT-free] restart 20: best_total=-6246.9 mean=-2.1812
+  [REAL-PT-free] restart 21: best_total=-6297.6 mean=-2.1989
+  [REAL-PT-free] restart 22: best_total=-6232.7 mean=-2.1762
+  [REAL-PT-free] restart 23: best_total=-6292.0 mean=-2.1969
+[REAL-PT-free] train_mean=-2.0788 held z=6.32 p=0.0000 held_mean=-2.4437 traincov=None
+[REAL-PT-free] held decrypt: rapra|||aarmperarptpaa|||arparaaaraoaparaaraaarraeptaarsarraraapa|||aspaapatrarorraprsaaaairparapp|||prapparaaararaaiaaaaaraarprasaaapraapavpaaraparra|||aapataaaaoarragamarrapaarapparaapaprarpararrapr
+[REAL-PT-free] train decrypt: taraaparparaparparaparaaraapraappopararapararraresparraprpparaaaaararmaaraparapaparapatraraoarraspararaapparparrapararprasaaparaapararpararparraapara|||rararaapparparrapararprasaaparaapararpararparraa
+  [SHUF-en] restart 0: best_total=-7750.0 mean=-2.7060
+  [SHUF-en] restart 1: best_total=-7726.3 mean=-2.6977
+  [SHUF-en] restart 2: best_total=-7699.9 mean=-2.6885
+  [SHUF-en] restart 3: best_total=-7716.0 mean=-2.6941
+  [SHUF-en] restart 4: best_total=-7738.3 mean=-2.7019
+  [SHUF-en] restart 5: best_total=-7716.8 mean=-2.6944
+  [SHUF-en] restart 6: best_total=-7743.2 mean=-2.7036
+  [SHUF-en] restart 7: best_total=-7724.8 mean=-2.6972
+  [SHUF-en] restart 8: best_total=-7717.3 mean=-2.6946
+  [SHUF-en] restart 9: best_total=-7742.9 mean=-2.7035
+  [SHUF-en] restart 10: best_total=-7722.6 mean=-2.6965
+  [SHUF-en] restart 11: best_total=-7717.2 mean=-2.6946
+  [SHUF-en] restart 12: best_total=-7709.8 mean=-2.6920
+  [SHUF-en] restart 13: best_total=-7709.8 mean=-2.6920
+  [SHUF-en] restart 14: best_total=-7729.4 mean=-2.6988
+  [SHUF-en] restart 15: best_total=-7718.8 mean=-2.6951
+  [SHUF-en] restart 16: best_total=-7725.7 mean=-2.6975
+  [SHUF-en] restart 17: best_total=-7766.0 mean=-2.7116
+  [SHUF-en] restart 18: best_total=-7695.8 mean=-2.6871
+  [SHUF-en] restart 19: best_total=-7720.9 mean=-2.6959
+  [SHUF-en] restart 20: best_total=-7738.8 mean=-2.7021
+  [SHUF-en] restart 21: best_total=-7707.5 mean=-2.6912
+  [SHUF-en] restart 22: best_total=-7735.0 mean=-2.7008
+  [SHUF-en] restart 23: best_total=-7702.1 mean=-2.6893
+[SHUF-en] train_mean=-2.6871 held z=1.65 p=0.0460
+  [SHUF-de] restart 0: best_total=-7028.7 mean=-2.4542
+  [SHUF-de] restart 1: best_total=-9028.9 mean=-3.1526
+  [SHUF-de] restart 2: best_total=-6978.1 mean=-2.4365
+  [SHUF-de] restart 3: best_total=-9021.1 mean=-3.1498
+  [SHUF-de] restart 4: best_total=-9025.1 mean=-3.1512
+  [SHUF-de] restart 5: best_total=-7040.8 mean=-2.4584
+  [SHUF-de] restart 6: best_total=-9031.8 mean=-3.1535
+  [SHUF-de] restart 7: best_total=-9020.3 mean=-3.1496
+  [SHUF-de] restart 8: best_total=-7010.5 mean=-2.4478
+  [SHUF-de] restart 9: best_total=-7068.3 mean=-2.4680
+  [SHUF-de] restart 10: best_total=-7025.1 mean=-2.4529
+  [SHUF-de] restart 11: best_total=-7064.3 mean=-2.4666
+  [SHUF-de] restart 12: best_total=-9027.2 mean=-3.1520
+  [SHUF-de] restart 13: best_total=-7038.7 mean=-2.4576
+  [SHUF-de] restart 14: best_total=-7042.7 mean=-2.4590
+  [SHUF-de] restart 15: best_total=-6992.0 mean=-2.4413
+  [SHUF-de] restart 16: best_total=-7050.8 mean=-2.4619
+  [SHUF-de] restart 17: best_total=-9021.1 mean=-3.1498
+  [SHUF-de] restart 18: best_total=-9019.7 mean=-3.1493
+  [SHUF-de] restart 19: best_total=-9019.7 mean=-3.1493
+  [SHUF-de] restart 20: best_total=-9023.7 mean=-3.1507
+  [SHUF-de] restart 21: best_total=-7045.3 mean=-2.4599
+  [SHUF-de] restart 22: best_total=-7034.9 mean=-2.4563
+  [SHUF-de] restart 23: best_total=-7080.6 mean=-2.4723
+[SHUF-de] train_mean=-2.4365 held z=0.74 p=0.2350
+  [FULL-EN-free] restart 0: best_total=-11124.1 mean=-2.2342
+  [FULL-EN-free] restart 1: best_total=-11127.9 mean=-2.2350
+  [FULL-EN-free] restart 2: best_total=-10963.3 mean=-2.2019
+  [FULL-EN-free] restart 3: best_total=-10805.0 mean=-2.1701
+  [FULL-EN-free] restart 4: best_total=-11058.2 mean=-2.2210
+  [FULL-EN-free] restart 5: best_total=-11048.7 mean=-2.2191
+  [FULL-EN-free] restart 6: best_total=-10907.2 mean=-2.1906
+  [FULL-EN-free] restart 7: best_total=-11190.5 mean=-2.2475
+  [FULL-EN-free] restart 8: best_total=-10871.6 mean=-2.1835
+  [FULL-EN-free] restart 9: best_total=-10936.7 mean=-2.1966
+  [FULL-EN-free] restart 10: best_total=-10994.7 mean=-2.2082
+  [FULL-EN-free] restart 11: best_total=-10964.4 mean=-2.2021
+  [FULL-EN-free] restart 12: best_total=-10802.0 mean=-2.1695
+  [FULL-EN-free] restart 13: best_total=-10788.7 mean=-2.1668
+  [FULL-EN-free] restart 14: best_total=-11132.4 mean=-2.2359
+  [FULL-EN-free] restart 15: best_total=-10929.0 mean=-2.1950
+  [FULL-EN-free] restart 16: best_total=-11175.2 mean=-2.2445
+  [FULL-EN-free] restart 17: best_total=-11228.8 mean=-2.2552
+  [FULL-EN-free] restart 18: best_total=-11133.9 mean=-2.2362
+  [FULL-EN-free] restart 19: best_total=-11124.9 mean=-2.2344
+  [FULL-EN-free] restart 20: best_total=-10996.9 mean=-2.2087
+  [FULL-EN-free] restart 21: best_total=-11183.7 mean=-2.2462
+  [FULL-EN-free] restart 22: best_total=-11087.0 mean=-2.2268
+  [FULL-EN-free] restart 23: best_total=-10936.8 mean=-2.1966
+[FULL-EN-free] mean=-2.1668 cov=0.8607447633824671 covz=10.614358255404305
+[FULL-EN-free] decrypt[0:400]: ttetreeshetaltteresightseesisterthesetethettherentreisttheisaretheetterresseeseeereatestheretheresseenterintheerhesteettreetheetotheitatethratthentasstotresthererethereserharttheseththeresertersthestshereenthatestenaa|||eeeresheestthesttersetherthereattreeesthtreststhetethenthethehattathratthentasstotrehersihearteheisstthetreesestilaereenseetteresightstsheeheseehereststherhethethttheeatseeyehatthe
+  [FULL-EN-pin] restart 0: best_total=-11487.8 mean=-2.3072
+  [FULL-EN-pin] restart 1: best_total=-11602.1 mean=-2.3302
+  [FULL-EN-pin] restart 2: best_total=-11198.9 mean=-2.2492
+  [FULL-EN-pin] restart 3: best_total=-11252.9 mean=-2.2601
+  [FULL-EN-pin] restart 4: best_total=-11134.7 mean=-2.2363
+  [FULL-EN-pin] restart 5: best_total=-11170.3 mean=-2.2435
+  [FULL-EN-pin] restart 6: best_total=-11028.9 mean=-2.2151
+  [FULL-EN-pin] restart 7: best_total=-11327.7 mean=-2.2751
+  [FULL-EN-pin] restart 8: best_total=-11270.7 mean=-2.2637
+  [FULL-EN-pin] restart 9: best_total=-11379.7 mean=-2.2855
+  [FULL-EN-pin] restart 10: best_total=-11283.9 mean=-2.2663
+  [FULL-EN-pin] restart 11: best_total=-11411.6 mean=-2.2919
+  [FULL-EN-pin] restart 12: best_total=-11411.7 mean=-2.2920
+  [FULL-EN-pin] restart 13: best_total=-11265.7 mean=-2.2626
+  [FULL-EN-pin] restart 14: best_total=-11465.4 mean=-2.3028
+  [FULL-EN-pin] restart 15: best_total=-11219.2 mean=-2.2533
+  [FULL-EN-pin] restart 16: best_total=-11294.8 mean=-2.2685
+  [FULL-EN-pin] restart 17: best_total=-11409.2 mean=-2.2915
+  [FULL-EN-pin] restart 18: best_total=-11189.4 mean=-2.2473
+  [FULL-EN-pin] restart 19: best_total=-11147.2 mean=-2.2388
+  [FULL-EN-pin] restart 20: best_total=-11145.1 mean=-2.2384
+  [FULL-EN-pin] restart 21: best_total=-11286.1 mean=-2.2667
+  [FULL-EN-pin] restart 22: best_total=-11127.7 mean=-2.2349
+  [FULL-EN-pin] restart 23: best_total=-11286.4 mean=-2.2668
+[FULL-EN-pin] mean=-2.2151 cov=0.8328161365399535 covz=6.162414095914381
+[FULL-EN-pin] decrypt[0:400]: shrebetheehsatteettheandeeeeheobshehhtsthestesreteetertanterebeseetsheaatreetheetbeentheethetherthreethreetheterhertesttetesarthtenteattehereastetheheathatethereatsthathearteresthestrestthobseersertesthattthestohattes|||eheethesotheettssentsthersestertsaththenhethehearasthhtheterrestaehereastetheheathatestthetresenterresarebethereeasheretheetteettheandeharthehethtethetheeratshehatentothtsestathatr
+  [FULL-DE-free] restart 0: best_total=-10176.8 mean=-2.0439
+  [FULL-DE-free] restart 1: best_total=-10006.2 mean=-2.0097
+  [FULL-DE-free] restart 2: best_total=-10052.3 mean=-2.0189
+  [FULL-DE-free] restart 3: best_total=-10097.5 mean=-2.0280
+  [FULL-DE-free] restart 4: best_total=-10089.6 mean=-2.0264
+  [FULL-DE-free] restart 5: best_total=-10233.8 mean=-2.0554
+  [FULL-DE-free] restart 6: best_total=-10125.5 mean=-2.0336
+  [FULL-DE-free] restart 7: best_total=-10148.9 mean=-2.0383
+  [FULL-DE-free] restart 8: best_total=-9920.6 mean=-1.9925
+  [FULL-DE-free] restart 9: best_total=-10117.0 mean=-2.0319
+  [FULL-DE-free] restart 10: best_total=-9980.7 mean=-2.0046
+  [FULL-DE-free] restart 11: best_total=-10053.0 mean=-2.0191
+  [FULL-DE-free] restart 12: best_total=-9887.6 mean=-1.9859
+  [FULL-DE-free] restart 13: best_total=-10056.6 mean=-2.0198
+  [FULL-DE-free] restart 14: best_total=-10169.6 mean=-2.0425
+  [FULL-DE-free] restart 15: best_total=-9957.9 mean=-2.0000
+  [FULL-DE-free] restart 16: best_total=-10134.4 mean=-2.0354
+  [FULL-DE-free] restart 17: best_total=-10029.2 mean=-2.0143
+  [FULL-DE-free] restart 18: best_total=-9960.2 mean=-2.0004
+  [FULL-DE-free] restart 19: best_total=-10080.6 mean=-2.0246
+  [FULL-DE-free] restart 20: best_total=-10205.3 mean=-2.0497
+  [FULL-DE-free] restart 21: best_total=-10220.8 mean=-2.0528
+  [FULL-DE-free] restart 22: best_total=-9941.3 mean=-1.9966
+  [FULL-DE-free] restart 23: best_total=-10273.3 mean=-2.0633
+[FULL-DE-free] mean=-1.9859 cov=None covz=None
+[FULL-DE-free] decrypt[0:400]: eenenndeineneeeeienenindenereeinebeneeneinnenndenninineedeinineeindeeriinnendeneineinnenineneindenndenenirnenindinnenneeineeinnennderenenendienieneinneneieneindeineneinneinniinrinnenindeneineninenndeineinnnenneinennin|||neninenninseinnennendeindennendeeinenendeineneeineneieneniendineeiendienieneinneneiendenenediendeinnneinenndennnieneinnnnnneeeienenindeninniennnidinennenddieeineiendeinennndeinsein
+  [FULL-DE-pin] restart 0: best_total=-10380.8 mean=-2.0849
+  [FULL-DE-pin] restart 1: best_total=-10254.4 mean=-2.0595
+  [FULL-DE-pin] restart 2: best_total=-10183.0 mean=-2.0452
+  [FULL-DE-pin] restart 3: best_total=-10211.6 mean=-2.0509
+  [FULL-DE-pin] restart 4: best_total=-10454.1 mean=-2.0996
+  [FULL-DE-pin] restart 5: best_total=-10221.2 mean=-2.0529
+  [FULL-DE-pin] restart 6: best_total=-10578.3 mean=-2.1246
+  [FULL-DE-pin] restart 7: best_total=-10287.9 mean=-2.0663
+  [FULL-DE-pin] restart 8: best_total=-10423.4 mean=-2.0935
+  [FULL-DE-pin] restart 9: best_total=-10448.6 mean=-2.0985
+  [FULL-DE-pin] restart 10: best_total=-10334.8 mean=-2.0757
+  [FULL-DE-pin] restart 11: best_total=-10273.9 mean=-2.0635
+  [FULL-DE-pin] restart 12: best_total=-10325.9 mean=-2.0739
+  [FULL-DE-pin] restart 13: best_total=-10277.4 mean=-2.0642
+  [FULL-DE-pin] restart 14: best_total=-10545.0 mean=-2.1179
+  [FULL-DE-pin] restart 15: best_total=-10174.0 mean=-2.0434
+  [FULL-DE-pin] restart 16: best_total=-10502.5 mean=-2.1094
+  [FULL-DE-pin] restart 17: best_total=-10191.0 mean=-2.0468
+  [FULL-DE-pin] restart 18: best_total=-10348.8 mean=-2.0785
+  [FULL-DE-pin] restart 19: best_total=-10265.7 mean=-2.0618
+  [FULL-DE-pin] restart 20: best_total=-10185.2 mean=-2.0456
+  [FULL-DE-pin] restart 21: best_total=-10143.6 mean=-2.0373
+  [FULL-DE-pin] restart 22: best_total=-10507.5 mean=-2.1104
+  [FULL-DE-pin] restart 23: best_total=-10196.5 mean=-2.0479
+[FULL-DE-pin] mean=-2.0373 cov=None covz=None
+[FULL-DE-pin] decrypt[0:400]: eienbreierineeeneienundienenigebernideneiniennenennedieaendenbniereeineeriereinnebendeinereneinenninneienneineneineerneenreinerinnennaeerineneinneinndendendeinenerinderineienenneinineereeiebenneineneinderreinnennerenn|||ndnneinneereereiiniereineinnerneierdeineineininneeneideineeineneanineneinneinndendenereeneinnerendiininenbreinindendeerennneeneienundieinerienneieneineinnenneinineneineiennennerene
+DONE

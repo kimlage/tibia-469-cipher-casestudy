@@ -1,0 +1,67 @@
+[ytc] string=78567 34334 989 135 65142  concat=785673433498913565142  len=21
+[books] deduped rows: 70
+[books] total corpus digits=11263
+[codes] inventory rows: 99
+[codes] absent codes: ['39']
+
+[novelty] per-position longest substring of YTC found anywhere in 70 books:
+  pos:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+  dig: 7  8  5  6  7  3  4  3  3  4  9  8  9  1  3  5  6  5  1  4  2
+  lm :  3  3  2  4  3  3  2  3  3  2  2  3  2  3  3  2  3  3  3  2  1
+[novelty] longest shared substring: len=4 '6734' hits=[('13', 70), ('29', 140), ('32', 8), ('38', 41), ('45', 69), ('46', 44)]
+
+[novelty] chance a given n-gram appears in a 11263-digit corpus (1-(1-10^-n)^N), and YTC n-gram presence:
+  n= 3: 13/19 YTC n-grams in corpus | P(single n-gram by chance)=1.0000 -> expected ~19.0
+  n= 4: 1/18 YTC n-grams in corpus | P(single n-gram by chance)=0.6758 -> expected ~12.2
+  n= 5: 0/17 YTC n-grams in corpus | P(single n-gram by chance)=0.1065 -> expected ~1.8
+  n= 6: 0/16 YTC n-grams in corpus | P(single n-gram by chance)=0.0112 -> expected ~0.2
+
+[cover] greedy verbatim-copy cover of YTC vs controls (n=100 each):
+  minlen=5: ytc_cov=0.000 | shuffle mu=0.040 sd=0.092 P>= 100/100 | uniform mu=0.041 sd=0.098 P>= 100/100
+  minlen=6: ytc_cov=0.000 | shuffle mu=0.006 sd=0.044 P>= 100/100 | uniform mu=0.003 sd=0.029 P>= 100/100
+  minlen=7: ytc_cov=0.000 | shuffle mu=0.003 sd=0.033 P>= 100/100 | uniform mu=0.000 sd=0.000 P>= 100/100
+  minlen=8: ytc_cov=0.000 | shuffle mu=0.000 sd=0.000 P>= 100/100 | uniform mu=0.000 sd=0.000 P>= 100/100
+[cover] longest shared substr: ytc=4 | shuffle mu=3.99 sd=0.69 P>= 80/100
+[cover] longest shared substr: ytc=4 | uniform mu=3.95 sd=0.64 P>= 78/100
+
+[parse] exact tokenization-path counts (note: ALWAYS >=1 for any digit string):
+  ytc: paths=17711 (log10=4.25)
+  shuffle: log10 paths mu=4.20 sd=0.08 | ytc z=+0.64 P>= 69/100
+  uniform: log10 paths mu=4.21 sd=0.07 | ytc z=+0.48 P>= 79/100
+
+[parse] ML (Viterbi) parse of YTC under 99-code inventory + corpus omission rates:
+  [free] tokens=11 omitted=1 identity(len+omit==2*tok)=True lp/token=-4.544 flags={}
+  [free] tokens: 78 56 73 43 34 98 91 35 06* 51 42  (*=omitted zero)
+  [free] decoded symbols: EIABBTNLIEL
+[parse] group-boundary-respecting parse (tokens may not straddle the published spaces ['78567', '34334', '989', '135', '65142']):
+  [grouped] tokens=13 omitted=5 identity(len+omit==2*tok)=True lp/token=-4.716 flags={}
+  [grouped] tokens: 07* 85 67 03* 43 34 09* 89 01* 35 06* 51 42  (*=omitted zero)
+  [grouped] decoded symbols: IEAVBBTTNLIEL
+[parse] per-group parseability as whole tokens:
+  group 78567: paths=8 ml_tokens=07* 85 67 decode=IEA
+  group 34334: paths=8 ml_tokens=03* 43 34 decode=VBB
+  group 989: paths=3 ml_tokens=09* 89 decode=TT
+  group 135: paths=3 ml_tokens=01* 35 decode=NL
+  group 65142: paths=8 ml_tokens=06* 51 42 decode=IEL
+
+[parse] ML logprob/token vs controls:
+  shuffle: mu=-4.875 sd=0.238 | ytc=-4.544 z=+1.39 P>= 7/100
+  uniform: mu=-4.937 sd=0.238 | ytc=-4.544 z=+1.65 P>= 5/100
+[parse] omission-consistency flag rates on controls (free ML parse):
+  shuffle: 0/100 controls have any flag (ytc flags: {})
+  uniform: 1/100 controls have any flag (ytc flags: {})
+
+[tokens] YTC free-parse token inventory check vs corpus row0 counts:
+  code 78 (written) sym=E corpus occ=55 written=55 omitted=0
+  code 56 (written) sym=I corpus occ=73 written=73 omitted=0
+  code 73 (written) sym=A corpus occ=22 written=22 omitted=0
+  code 43 (written) sym=B corpus occ=110 written=110 omitted=0
+  code 34 (written) sym=B corpus occ=81 written=81 omitted=0
+  code 98 (written) sym=T corpus occ=17 written=17 omitted=0
+  code 91 (written) sym=N corpus occ=111 written=111 omitted=0
+  code 35 (written) sym=L corpus occ=79 written=79 omitted=0
+  code 06 (omitted) sym=I corpus occ=58 written=21 omitted=37
+  code 51 (written) sym=E corpus occ=177 written=177 omitted=0
+  code 42 (written) sym=L corpus occ=61 written=61 omitted=0
+
+DONE

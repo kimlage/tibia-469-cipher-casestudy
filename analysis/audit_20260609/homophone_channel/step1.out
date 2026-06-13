@@ -1,0 +1,41 @@
+probe rows: 70
+digit rows: 70
+round-trip byte-exact: 70/70
+
+homophone classes (symbol: codes):
+  '*': ['00'] (size 1)
+  'A': ['14', '22', '37', '41', '67', '73', '76', '79', '88', '97'] (size 10)
+  'B': ['34', '43'] (size 2)
+  'C': ['68', '86'] (size 2)
+  'E': ['11', '15', '33', '44', '47', '48', '51', '57', '58', '66', '74', '75', '78', '84', '85', '87', '99'] (size 17)
+  'F': ['04', '12', '21', '40', '45', '54'] (size 6)
+  'I': ['06', '07', '08', '18', '19', '25', '52', '56', '59', '60', '65', '70', '80', '81', '95'] (size 15)
+  'L': ['24', '35', '42', '53'] (size 4)
+  'N': ['01', '10', '13', '26', '29', '31', '46', '49', '62', '64', '77', '91', '92', '93', '94'] (size 15)
+  'O': ['23', '32'] (size 2)
+  'R': ['02', '20'] (size 2)
+  'S': ['27', '72'] (size 2)
+  'T': ['05', '09', '16', '28', '38', '50', '61', '82', '83', '89', '90', '98'] (size 12)
+  'V': ['03', '17', '30', '36', '55', '63', '69', '71', '96'] (size 9)
+
+total tokens: 5729 (expect 5729); novel tokens: 1135 (19.8%); cross-book-unique tokens: 456 (8.0%)
+
+per-symbol stream lengths (occurrences), class size, novel, xuniq:
+  '*': n=120 class=1 novel=19 xuniq=5
+  'A': n=488 class=10 novel=94 xuniq=31
+  'B': n=191 class=2 novel=37 xuniq=11
+  'C': n=47 class=2 novel=6 xuniq=2
+  'E': n=990 class=17 novel=222 xuniq=113
+  'F': n=565 class=6 novel=116 xuniq=44
+  'I': n=1157 class=15 novel=222 xuniq=91
+  'L': n=212 class=4 novel=37 xuniq=14
+  'N': n=708 class=15 novel=149 xuniq=68
+  'O': n=10 class=2 novel=4 xuniq=3
+  'R': n=32 class=2 novel=5 xuniq=1
+  'S': n=244 class=2 novel=38 xuniq=10
+  'T': n=595 class=12 novel=115 xuniq=39
+  'V': n=370 class=9 novel=71 xuniq=24
+
+books with zero novel digits: 25: ['18', '19', '22', '27', '33', '35', '43', '47', '48', '5', '50', '51', '52', '53', '58', '59', '61', '62', '63', '65', '66', '67', '68', '69', '8']
+
+wrote ./tmp/audit_20260609/homophone_channel/occ_streams.json

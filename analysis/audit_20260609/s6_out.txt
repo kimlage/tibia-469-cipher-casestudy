@@ -1,0 +1,18 @@
+ROWCOUNT 70
+total decoded symbols: 5729
+symbol counts: {'I': 1157, 'E': 990, 'N': 708, 'T': 595, 'F': 565, 'A': 488, 'V': 370, 'S': 244, 'L': 212, 'B': 191, '*': 120, 'C': 47, 'R': 32, 'O': 10}
+star fraction: 0.021
+EN bigram score: obs=-7.8238 shuffle mu=-7.9224 sd=0.0307 z=+3.21
+DE bigram score: obs=-7.3558 shuffle mu=-7.5964 sd=0.0302 z=+7.96
+decoded bigram-structure chi2: obs=2818 shuffle mu=159 sd=22 z=+122.97
+top 15 decoded bigrams: [('EI', 331), ('IN', 205), ('II', 187), ('IE', 182), ('FI', 155), ('EN', 153), ('IF', 145), ('FA', 130), ('NI', 125), ('NE', 124), ('IV', 122), ('EF', 121), ('EE', 112), ('AE', 109), ('TA', 107)]
+top 15 decoded trigrams: [('EIE', 81), ('EEI', 79), ('EII', 78), ('EFI', 77), ('AIF', 70), ('IIN', 67), ('AST', 61), ('IEF', 59), ('IFA', 57), ('INI', 56), ('IEI', 56), ('TAE', 53), ('FAI', 53), ('NEI', 52), ('FIE', 50)]
+vowel fraction 0.472 ; VV 0.211 VC 0.261 CV 0.260 CC 0.268 (expect VV 0.223)
+
+run-length / spacing check for top symbols:
+  I gaps top: [(2, 196), (1, 187), (3, 174), (4, 119), (5, 106)]
+  E gaps top: [(3, 159), (2, 154), (1, 112), (4, 97), (5, 78)]
+  N gaps top: [(5, 105), (2, 72), (1, 67), (4, 59), (9, 51)]
+  T gaps top: [(4, 68), (8, 57), (1, 54), (6, 45), (3, 42)]
+  F gaps top: [(3, 67), (1, 53), (5, 44), (6, 35), (2, 35)]
+  A gaps top: [(3, 59), (4, 55), (10, 27), (12, 27), (17, 27)]

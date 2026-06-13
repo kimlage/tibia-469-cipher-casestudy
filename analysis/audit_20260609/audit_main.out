@@ -1,0 +1,230 @@
+=== CHECK 1: dedupe ===
+-- query returned 140 rows: SELECT __export_id, __row_index, bookid, clusterid, digitslen, digits, insertedzeros, base
+total rows: 140
+distinct bookids: 70
+export_id distribution: {1: 70, 2: 70}
+conflicting/odd bookids: NONE
+
+=== CHECK 2: length identities ===
+identity len(digits)+insertedzeros==2*baselen: 70/70
+identity len(decodedbase)==baselen: 70/70
+digitslen col matches len(digits) failures: []
+total digits: 11263 (expect 11263)
+total symbols: 5729 (expect 5729)
+symbol alphabet: *ABCEFILNORSTV
+symbol counts: {'*': 120, 'A': 488, 'B': 191, 'C': 47, 'E': 990, 'F': 565, 'I': 1157, 'L': 212, 'N': 708, 'O': 10, 'R': 32, 'S': 244, 'T': 595, 'V': 370}
+
+=== CHECK 3: probe_books ===
+schema:
+-- query returned 13 rows: SELECT name, type FROM pragma_table_info('row0_code_symbol_probe_books')
+   run_id INTEGER
+   bookid TEXT
+   baselen INTEGER
+   decodedbase_len INTEGER
+   digitslen INTEGER
+   consumed_digits INTEGER
+   insertedzeros INTEGER
+   omitted_positions_json TEXT
+   omitted_codes_json TEXT
+   valid INTEGER
+   reconstructed_code_stream TEXT
+   decodedbase TEXT
+   payload_json TEXT
+-- query returned 70 rows: SELECT * FROM row0_code_symbol_probe_books
+probe rows: 70
+columns: ['run_id', 'bookid', 'baselen', 'decodedbase_len', 'digitslen', 'consumed_digits', 'insertedzeros', 'omitted_positions_json', 'omitted_codes_json', 'valid', 'reconstructed_code_stream', 'decodedbase', 'payload_json']
+invalid or consumed!=digitslen: 0
+probe vs sheet digitslen mismatches: NONE
+books in sheet not in probe: []
+books in probe not in sheet: []
+
+=== CHECK 4: duplicate / near-duplicate digit strings ===
+identical digit strings across different bookids: NONE
+digit-prefix relations (A prefix of B): [('43', '59', 141, 272), ('66', '10', 210, 281)]
+identical decodedbase across different bookids: NONE
+decodedbase prefix relations: NONE
+near-dup pairs (20-gram overlap >50% of smaller): 97
+   ('10', '27', 1.0, 144, 63)
+   ('27', '35', 1.0, 63, 146)
+   ('10', '35', 0.984, 144, 146)
+   ('9', '69', 0.981, 149, 72)
+   ('17', '68', 0.981, 139, 73)
+   ('12', '21', 0.98, 70, 89)
+   ('9', '47', 0.978, 149, 65)
+   ('61', '65', 0.964, 74, 85)
+   ('2', '22', 0.961, 90, 70)
+   ('11', '58', 0.961, 70, 139)
+   ('0', '10', 0.945, 74, 144)
+   ('0', '35', 0.945, 74, 146)
+   ('0', '66', 0.945, 74, 107)
+   ('28', '48', 0.945, 74, 85)
+   ('5', '47', 0.935, 138, 65)
+   ('52', '62', 0.911, 70, 64)
+   ('10', '66', 0.898, 144, 107)
+   ('9', '50', 0.889, 149, 73)
+   ('50', '69', 0.887, 73, 72)
+   ('35', '66', 0.886, 146, 107)
+   ('3', '17', 0.885, 71, 139)
+   ('51', '53', 0.872, 136, 137)
+   ('43', '58', 0.865, 71, 139)
+   ('43', '59', 0.865, 71, 138)
+   ('11', '43', 0.863, 70, 71)
+   ('11', '59', 0.863, 70, 138)
+   ('5', '9', 0.857, 138, 149)
+   ('5', '22', 0.843, 138, 70)
+   ('9', '22', 0.843, 149, 70)
+   ('12', '26', 0.843, 70, 87)
+   ('22', '53', 0.843, 70, 137)
+   ('10', '33', 0.837, 144, 68)
+   ('33', '35', 0.837, 68, 146)
+   ('33', '66', 0.837, 68, 107)
+   ('44', '52', 0.822, 64, 70)
+   ('44', '62', 0.822, 64, 64)
+   ('3', '68', 0.808, 71, 73)
+   ('1', '10', 0.786, 47, 144)
+   ('1', '27', 0.786, 47, 63)
+   ('1', '35', 0.786, 47, 146)
+moderate overlap pairs (20-50%): 85
+   ('65', '68', 0.5)
+   ('0', '9', 0.491)
+   ('29', '52', 0.49)
+   ('52', '68', 0.49)
+   ('2', '67', 0.484)
+   ('27', '67', 0.484)
+   ('5', '53', 0.483)
+   ('9', '53', 0.483)
+   ('3', '61', 0.481)
+   ('35', '50', 0.481)
+   ('0', '69', 0.472)
+   ('9', '40', 0.463)
+   ('40', '58', 0.463)
+   ('61', '68', 0.463)
+   ('17', '61', 0.455)
+   ('17', '65', 0.455)
+   ('2', '46', 0.451)
+   ('32', '43', 0.44)
+   ('32', '59', 0.44)
+   ('48', '51', 0.439)
+
+=== CHECK 6: star mask ===
+non-alphabet chars in decodedbase: {'*'} {'*': 120}
+mask char: '*'
+total mask symbols: 120 / 5729 = 2.0946%
+books with >=1 mask: 56
+top books by mask count (bookid, maskcount, len, frac):
+   ('10', 5, 144, 0.0347)
+   ('17', 5, 139, 0.036)
+   ('3', 4, 71, 0.0563)
+   ('35', 4, 146, 0.0274)
+   ('68', 4, 73, 0.0548)
+   ('9', 3, 149, 0.0201)
+   ('16', 3, 89, 0.0337)
+   ('18', 3, 47, 0.0638)
+   ('29', 3, 76, 0.0395)
+   ('40', 3, 86, 0.0349)
+   ('42', 3, 95, 0.0316)
+   ('44', 3, 64, 0.0469)
+   ('52', 3, 70, 0.0429)
+   ('55', 3, 59, 0.0508)
+   ('58', 3, 139, 0.0216)
+top-5 books hold 22/120 = 18.3% of all masks
+
+=== code->symbol map tables ===
+--- row0_code_symbol_counts ---
+-- query returned 6 rows: SELECT name FROM pragma_table_info('row0_code_symbol_counts')
+  col: run_id
+  col: code
+  col: symbol
+  col: occurrence_count
+  col: omitted_count
+  col: written_count
+-- query returned 99 rows: SELECT * FROM row0_code_symbol_counts LIMIT 100
+   {'run_id': 1, 'code': '00', 'symbol': '*', 'occurrence_count': 120, 'omitted_count': 13, 'written_count': 107}
+   {'run_id': 1, 'code': '01', 'symbol': 'N', 'occurrence_count': 86, 'omitted_count': 21, 'written_count': 65}
+   {'run_id': 1, 'code': '02', 'symbol': 'R', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'code': '03', 'symbol': 'V', 'occurrence_count': 65, 'omitted_count': 14, 'written_count': 51}
+   {'run_id': 1, 'code': '04', 'symbol': 'F', 'occurrence_count': 93, 'omitted_count': 20, 'written_count': 73}
+   {'run_id': 1, 'code': '05', 'symbol': 'T', 'occurrence_count': 53, 'omitted_count': 12, 'written_count': 41}
+   {'run_id': 1, 'code': '06', 'symbol': 'I', 'occurrence_count': 58, 'omitted_count': 37, 'written_count': 21}
+   {'run_id': 1, 'code': '07', 'symbol': 'I', 'occurrence_count': 50, 'omitted_count': 50, 'written_count': 0}
+   {'run_id': 1, 'code': '08', 'symbol': 'I', 'occurrence_count': 58, 'omitted_count': 20, 'written_count': 38}
+   {'run_id': 1, 'code': '09', 'symbol': 'T', 'occurrence_count': 43, 'omitted_count': 8, 'written_count': 35}
+   {'run_id': 1, 'code': '10', 'symbol': 'N', 'occurrence_count': 14, 'omitted_count': 0, 'written_count': 14}
+   {'run_id': 1, 'code': '11', 'symbol': 'E', 'occurrence_count': 139, 'omitted_count': 0, 'written_count': 139}
+   {'run_id': 1, 'code': '12', 'symbol': 'F', 'occurrence_count': 127, 'omitted_count': 0, 'written_count': 127}
+   {'run_id': 1, 'code': '13', 'symbol': 'N', 'occurrence_count': 11, 'omitted_count': 0, 'written_count': 11}
+   {'run_id': 1, 'code': '14', 'symbol': 'A', 'occurrence_count': 138, 'omitted_count': 0, 'written_count': 138}
+   {'run_id': 1, 'code': '15', 'symbol': 'E', 'occurrence_count': 87, 'omitted_count': 0, 'written_count': 87}
+   {'run_id': 1, 'code': '16', 'symbol': 'T', 'occurrence_count': 56, 'omitted_count': 0, 'written_count': 56}
+   {'run_id': 1, 'code': '17', 'symbol': 'V', 'occurrence_count': 37, 'omitted_count': 0, 'written_count': 37}
+   {'run_id': 1, 'code': '18', 'symbol': 'I', 'occurrence_count': 130, 'omitted_count': 0, 'written_count': 130}
+   {'run_id': 1, 'code': '19', 'symbol': 'I', 'occurrence_count': 192, 'omitted_count': 0, 'written_count': 192}
+   {'run_id': 1, 'code': '20', 'symbol': 'R', 'occurrence_count': 24, 'omitted_count': 0, 'written_count': 24}
+   {'run_id': 1, 'code': '21', 'symbol': 'F', 'occurrence_count': 167, 'omitted_count': 0, 'written_count': 167}
+   {'run_id': 1, 'code': '22', 'symbol': 'A', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'code': '23', 'symbol': 'O', 'occurrence_count': 9, 'omitted_count': 0, 'written_count': 9}
+   {'run_id': 1, 'code': '24', 'symbol': 'L', 'occurrence_count': 41, 'omitted_count': 0, 'written_count': 41}
+   {'run_id': 1, 'code': '25', 'symbol': 'I', 'occurrence_count': 22, 'omitted_count': 0, 'written_count': 22}
+   {'run_id': 1, 'code': '26', 'symbol': 'N', 'occurrence_count': 12, 'omitted_count': 0, 'written_count': 12}
+   {'run_id': 1, 'code': '27', 'symbol': 'S', 'occurrence_count': 120, 'omitted_count': 0, 'written_count': 120}
+   {'run_id': 1, 'code': '28', 'symbol': 'T', 'occurrence_count': 41, 'omitted_count': 0, 'written_count': 41}
+   {'run_id': 1, 'code': '29', 'symbol': 'N', 'occurrence_count': 20, 'omitted_count': 0, 'written_count': 20}
+   {'run_id': 1, 'code': '30', 'symbol': 'V', 'occurrence_count': 18, 'omitted_count': 0, 'written_count': 18}
+   {'run_id': 1, 'code': '31', 'symbol': 'N', 'occurrence_count': 34, 'omitted_count': 0, 'written_count': 34}
+   {'run_id': 1, 'code': '32', 'symbol': 'O', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'code': '33', 'symbol': 'E', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'code': '34', 'symbol': 'B', 'occurrence_count': 81, 'omitted_count': 0, 'written_count': 81}
+   {'run_id': 1, 'code': '35', 'symbol': 'L', 'occurrence_count': 79, 'omitted_count': 0, 'written_count': 79}
+   {'run_id': 1, 'code': '36', 'symbol': 'V', 'occurrence_count': 88, 'omitted_count': 0, 'written_count': 88}
+   {'run_id': 1, 'code': '37', 'symbol': 'A', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'code': '38', 'symbol': 'T', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'code': '40', 'symbol': 'F', 'occurrence_count': 11, 'omitted_count': 0, 'written_count': 11}
+--- row0_symbol_code_counts ---
+-- query returned 6 rows: SELECT name FROM pragma_table_info('row0_symbol_code_counts')
+  col: run_id
+  col: symbol
+  col: code
+  col: occurrence_count
+  col: omitted_count
+  col: written_count
+-- query returned 99 rows: SELECT * FROM row0_symbol_code_counts LIMIT 100
+   {'run_id': 1, 'symbol': '*', 'code': '00', 'occurrence_count': 120, 'omitted_count': 13, 'written_count': 107}
+   {'run_id': 1, 'symbol': 'N', 'code': '01', 'occurrence_count': 86, 'omitted_count': 21, 'written_count': 65}
+   {'run_id': 1, 'symbol': 'R', 'code': '02', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'symbol': 'V', 'code': '03', 'occurrence_count': 65, 'omitted_count': 14, 'written_count': 51}
+   {'run_id': 1, 'symbol': 'F', 'code': '04', 'occurrence_count': 93, 'omitted_count': 20, 'written_count': 73}
+   {'run_id': 1, 'symbol': 'T', 'code': '05', 'occurrence_count': 53, 'omitted_count': 12, 'written_count': 41}
+   {'run_id': 1, 'symbol': 'I', 'code': '06', 'occurrence_count': 58, 'omitted_count': 37, 'written_count': 21}
+   {'run_id': 1, 'symbol': 'I', 'code': '07', 'occurrence_count': 50, 'omitted_count': 50, 'written_count': 0}
+   {'run_id': 1, 'symbol': 'I', 'code': '08', 'occurrence_count': 58, 'omitted_count': 20, 'written_count': 38}
+   {'run_id': 1, 'symbol': 'T', 'code': '09', 'occurrence_count': 43, 'omitted_count': 8, 'written_count': 35}
+   {'run_id': 1, 'symbol': 'N', 'code': '10', 'occurrence_count': 14, 'omitted_count': 0, 'written_count': 14}
+   {'run_id': 1, 'symbol': 'E', 'code': '11', 'occurrence_count': 139, 'omitted_count': 0, 'written_count': 139}
+   {'run_id': 1, 'symbol': 'F', 'code': '12', 'occurrence_count': 127, 'omitted_count': 0, 'written_count': 127}
+   {'run_id': 1, 'symbol': 'N', 'code': '13', 'occurrence_count': 11, 'omitted_count': 0, 'written_count': 11}
+   {'run_id': 1, 'symbol': 'A', 'code': '14', 'occurrence_count': 138, 'omitted_count': 0, 'written_count': 138}
+   {'run_id': 1, 'symbol': 'E', 'code': '15', 'occurrence_count': 87, 'omitted_count': 0, 'written_count': 87}
+   {'run_id': 1, 'symbol': 'T', 'code': '16', 'occurrence_count': 56, 'omitted_count': 0, 'written_count': 56}
+   {'run_id': 1, 'symbol': 'V', 'code': '17', 'occurrence_count': 37, 'omitted_count': 0, 'written_count': 37}
+   {'run_id': 1, 'symbol': 'I', 'code': '18', 'occurrence_count': 130, 'omitted_count': 0, 'written_count': 130}
+   {'run_id': 1, 'symbol': 'I', 'code': '19', 'occurrence_count': 192, 'omitted_count': 0, 'written_count': 192}
+   {'run_id': 1, 'symbol': 'R', 'code': '20', 'occurrence_count': 24, 'omitted_count': 0, 'written_count': 24}
+   {'run_id': 1, 'symbol': 'F', 'code': '21', 'occurrence_count': 167, 'omitted_count': 0, 'written_count': 167}
+   {'run_id': 1, 'symbol': 'A', 'code': '22', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'symbol': 'O', 'code': '23', 'occurrence_count': 9, 'omitted_count': 0, 'written_count': 9}
+   {'run_id': 1, 'symbol': 'L', 'code': '24', 'occurrence_count': 41, 'omitted_count': 0, 'written_count': 41}
+   {'run_id': 1, 'symbol': 'I', 'code': '25', 'occurrence_count': 22, 'omitted_count': 0, 'written_count': 22}
+   {'run_id': 1, 'symbol': 'N', 'code': '26', 'occurrence_count': 12, 'omitted_count': 0, 'written_count': 12}
+   {'run_id': 1, 'symbol': 'S', 'code': '27', 'occurrence_count': 120, 'omitted_count': 0, 'written_count': 120}
+   {'run_id': 1, 'symbol': 'T', 'code': '28', 'occurrence_count': 41, 'omitted_count': 0, 'written_count': 41}
+   {'run_id': 1, 'symbol': 'N', 'code': '29', 'occurrence_count': 20, 'omitted_count': 0, 'written_count': 20}
+   {'run_id': 1, 'symbol': 'V', 'code': '30', 'occurrence_count': 18, 'omitted_count': 0, 'written_count': 18}
+   {'run_id': 1, 'symbol': 'N', 'code': '31', 'occurrence_count': 34, 'omitted_count': 0, 'written_count': 34}
+   {'run_id': 1, 'symbol': 'O', 'code': '32', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'symbol': 'E', 'code': '33', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'symbol': 'B', 'code': '34', 'occurrence_count': 81, 'omitted_count': 0, 'written_count': 81}
+   {'run_id': 1, 'symbol': 'L', 'code': '35', 'occurrence_count': 79, 'omitted_count': 0, 'written_count': 79}
+   {'run_id': 1, 'symbol': 'V', 'code': '36', 'occurrence_count': 88, 'omitted_count': 0, 'written_count': 88}
+   {'run_id': 1, 'symbol': 'A', 'code': '37', 'occurrence_count': 8, 'omitted_count': 0, 'written_count': 8}
+   {'run_id': 1, 'symbol': 'T', 'code': '38', 'occurrence_count': 1, 'omitted_count': 0, 'written_count': 1}
+   {'run_id': 1, 'symbol': 'F', 'code': '40', 'occurrence_count': 11, 'omitted_count': 0, 'written_count': 11}

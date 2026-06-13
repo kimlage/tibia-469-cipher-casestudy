@@ -1,0 +1,123 @@
+ROWCOUNT sheet__books grouped: 70
+books whose duplicated export rows disagree on digits/decodedbase: []
+CORPUS: books=70 total_digits=11263 total_symbols=5729
+alphabet: *ABCEFILNORSTV
+per-book invariant len(digits)==2*baselen-insertedzeros holds for all 70
+
+== CLAIM 1: symbol frequencies (pct of all 5729 chars incl '*') ==
+  I:  1157   20.20%
+  E:   990   17.28%
+  N:   708   12.36%
+  T:   595   10.39%
+  F:   565    9.86%
+  A:   488    8.52%
+  V:   370    6.46%
+  S:   244    4.26%
+  L:   212    3.70%
+  B:   191    3.33%
+  *:   120    2.09%
+  C:    47    0.82%
+  R:    32    0.56%
+  O:    10    0.17%
+non-star total: 5609
+pct excluding star:
+  I:  20.63%
+  E:  17.65%
+  N:  12.62%
+  T:  10.61%
+  F:  10.07%
+  A:   8.70%
+  V:   6.60%
+  S:   4.35%
+  L:   3.78%
+  B:   3.41%
+  C:   0.84%
+  R:   0.57%
+  O:   0.18%
+
+== CLAIM 2: chi-square (book counts vs renormalized 13-letter refs) ==
+13 real symbols: ABCEFILNORSTV
+  UNIFORM  chi2 =    3691.0
+  English  chi2 =    4296.3
+  German   chi2 =    4850.5
+  Spanish  chi2 =    9407.9
+claimed: UNIFORM 3691 < English 4292 < German 4656 < Spanish 9817
+
+== CLAIM 3: per-symbol disqualifiers ==
+  book F =  9.86% (incl *) / 10.07% (excl *)   refs: EN 2.228%, DE 1.656%, ES 0.692%
+  book V =  6.46% (incl *) /  6.60% (excl *)   refs: EN 0.978%, DE 0.846%, ES 1.138%
+  book R =  0.56% (incl *) /  0.57% (excl *)   refs: EN 5.987%, DE 7.003%, ES 6.871%
+  book O =  0.17% (incl *) /  0.18% (excl *)   refs: EN 7.507%, DE 2.594%, ES 8.683%
+
+== CLAIM 4: cross-book identical fragments ==
+  L=19: best fragment shared by 12 books: 'ITELBENNAIFIININSBA'
+  L=29: best fragment shared by 9 books: 'ITELBENNAIFIININSBASTFNENIIFI'
+  L=49: best fragment shared by 7 books: 'SETBASEFAIFVI*NAESESTIENFATCTIVVTISETEIVIFASTFNEI'
+  curve (L -> max books sharing):
+    L=  5 -> 25 books   e.g. 'ASTFN'
+    L=  6 -> 23 books   e.g. 'ASTFNE'
+    L=  7 -> 16 books   e.g. 'ITELBEN'
+    L= 10 -> 15 books   e.g. 'ITELBENNAI'
+    L= 14 -> 14 books   e.g. 'ITELBENNAIFIIN'
+    L= 16 -> 13 books   e.g. 'ITELBENNAIFIININ'
+    L= 18 -> 12 books   e.g. 'ITELBENNAIFIININSB'
+    L= 22 -> 11 books   e.g. 'LEITELBENNAIFIININSBAS'
+    L= 25 -> 10 books   e.g. 'ISETEIVIFASTFNEIEINTAAETT'
+    L= 27 -> 9 books   e.g. 'ITELBENNAIFIININSBASTFNENII'
+    L= 40 -> 8 books   e.g. 'ITELBENNAIFIININSBASTFNENIIFINI*LTASTTNV'
+    L= 43 -> 7 books   e.g. 'ITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNN'
+    L= 52 -> 6 books   e.g. 'SETBASEFAIFVI*NAESESTIENFATCTIVVTISETEIVIFASTFNEIEIN'
+    L= 58 -> 5 books   e.g. 'ITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNNFIEEEIIINFASIAT'
+    L= 63 -> 4 books   e.g. 'ITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNNFIEEEIIINFASIATNV'
+    L= 72 -> 3 books   e.g. 'LEITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNNFIEEEIIINFASIAT'
+    L=106 -> 2 books   e.g. 'LEITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNNFIEEEIIINFASIAT'
+    L=143 -> 1 books   e.g. '*LEITELBENNAIFIININSBASTFNENIIFINI*LTASTTNVVNNFIEEEIIINFASIA'
+
+== CLAIM 8/6: rebuild code streams, global map, consistency ==
+ROWCOUNT probe_books: 70
+distinct codes: 99  distinct symbols: 14 (*ABCEFILNORSTV)
+ambiguous codes (map to >1 symbol): 0 {}
+total aligned positions: 5729
+codes never used: ['39']
+books whose decodedbase != global-map(reconstructed stream): []
+omitted-zero codes observed (should all be 0d): {'06': 37, '04': 20, '07': 50, '08': 20, '05': 12, '00': 13, '01': 21, '09': 8, '03': 14}
+books where parse from digits+count+global table is NOT unique-and-correct: 68
+    ('0', 5, False)
+    ('1', 5, False)
+    ('10', 5, False)
+    ('11', 5, False)
+    ('12', 5, False)
+    ('13', 5, False)
+    ('14', 5, False)
+    ('15', 5, False)
+    ('16', 5, False)
+    ('17', 5, False)
+
+== CLAIM 5: reversal invariance of recomputed map ==
+palindrome codes present: 10  non-palindrome: 89
+non-palindrome codes whose reverse maps to SAME symbol: 86
+...different symbol: 2 -> [('19', 'I', '91', 'N'), ('91', 'N', '19', 'I')]
+...reverse code absent from corpus: 1
+unordered-pair classes: 55  pure: 54  impure: [(['1', '9'], ['I', 'N'])]
+digit-sums with >1 symbol: 14 of 19
+   ds= 0: ['*']
+   ds= 1: ['N']
+   ds= 2: ['E', 'R']
+   ds= 3: ['F', 'V']
+   ds= 4: ['A', 'F', 'N']
+   ds= 5: ['A', 'O', 'T']
+   ds= 6: ['E', 'I', 'L']
+   ds= 7: ['B', 'I', 'T']
+   ds= 8: ['E', 'I', 'L', 'N', 'V']
+   ds= 9: ['F', 'I', 'S', 'T', 'V']
+   ds=10: ['A', 'I', 'N', 'T', 'V']
+   ds=11: ['E', 'I', 'N', 'T']
+   ds=12: ['E', 'N']
+   ds=13: ['A', 'E', 'N']
+   ds=14: ['C', 'I', 'N']
+   ds=15: ['E', 'V']
+   ds=16: ['A']
+   ds=17: ['T']
+   ds=18: ['E']
+
+DONE

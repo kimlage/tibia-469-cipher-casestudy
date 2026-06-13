@@ -1,0 +1,19 @@
+ROWCOUNT: 70
+books with >1 valid parse (digits+count+table only): 68 of 70
+books with >1 distinct OUTPUT string: 68 (capped: 24 )
+(bookid, insertedzeros, n_parses, n_distinct_outputs, true_base_among_outputs):
+   ('0', 4, 1150626, -1, None)
+   ('1', 2, 1081, 944, True)
+   ('2', 3, 117480, 99715, True)
+   ('3', 2, 2485, 1936, True)
+   ('4', 2, 2485, 1996, True)
+   ('5', 3, 428536, -1, None)
+known-positions parse == decodedbase for all books: True (verified in main_audit)
+
+chi2 per reference (13-symbol renormalized):
+  EN-Lewand     4296.3
+  EN-Norvig     4068.3
+  DE-wiki       4850.5
+  DE-alt        4797.8
+  ES-wiki       9407.9
+  UNIFORM       3691.0
