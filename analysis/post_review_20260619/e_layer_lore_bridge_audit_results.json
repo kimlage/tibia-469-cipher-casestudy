@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "evidence": "diagonal E 5/10, 33/66 anchors 2/2, zero holdout delta 0.120, joint p=0.00280",
+      "front": "shared_i_ge_j_predicate",
+      "source": "shared_e_zero_predicate_report.md",
+      "status": "shared_predicate_signal_only"
+    },
+    {
+      "evidence": "diag OR both_in_4578 and prod_eq_5 OR both_in_4578 show weak E-layer signal, but exact fit remains unavailable",
+      "front": "e_inventory_predicates",
+      "source": "e_layer_predicate_report.md",
+      "status": "weak_e_layer_signal"
+    },
+    {
+      "evidence": "15/15 local claims hit, but model charges selected blockers/high-block/diagonal choices and is not global",
+      "front": "priority_masked_e_layer",
+      "source": "priority_masked_e_layer_report.md",
+      "status": "exact_local_e_priority_layer_not_global_formula"
+    },
+    {
+      "evidence": "best blocker rule exactly selects 45/55/77/88, but conditional p=0.17409 and digit-set p=1.0 block promotion",
+      "front": "high_block_blockers",
+      "source": "high_block_blocker_origin_report.md",
+      "status": "high_block_blocker_not_promoted"
+    },
+    {
+      "evidence": "render/orientation features are supporting context only and do not explain E-priority as a general origin rule",
+      "front": "render_features_for_e_priority",
+      "source": "render_origin_e_priority_probe_report.md",
+      "status": "supporting_context_not_formula"
+    }
+  ],
+  "schema": "e_layer_lore_bridge_audit.v1",
+  "translation_delta": "NONE",
+  "verdict": "E/diagonal/zero is a real local mechanism bridge but not a recovered matrix formula"
+}

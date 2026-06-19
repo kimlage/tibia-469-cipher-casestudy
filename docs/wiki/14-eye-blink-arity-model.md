@@ -46,8 +46,10 @@ The post-review source file proposed two concrete arity models:
 
 The source registry for future sprite/frame counts is
 [eye_count_source_registry.yaml](../../analysis/eye_model_20260619/eye_count_source_registry.yaml).
-It intentionally leaves visible eye counts as `TBD_manual` until a specific
-frame, orientation, and image source are captured and reviewed.
+The sprite source/count audit is
+[sprite_eye_count_audit.md](../../analysis/post_review_20260619/sprite_eye_count_audit.md).
+It records first-frame counts with confidence and does not publish raw sprite
+binaries in the repository.
 
 ## Results
 
@@ -91,6 +93,9 @@ watchlist item. A stronger result would need a specific external clue such as
 a CipSoft-attested eye mapping, official symbol table, or official
 number-to-plaintext pair. Without that, eye/sprite material remains a
 mechanism-only weak clue.
+
+The full post-review closure audit is
+[completion_audit.md](../../analysis/post_review_20260619/completion_audit.md).
 
 ---
 

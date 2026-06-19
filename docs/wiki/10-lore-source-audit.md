@@ -129,6 +129,9 @@ as a proven embedded word or book plaintext key. Short values such as `34`,
 `99`, `32`, and `20` occur at rates expected for short digit strings and are not
 probative.
 
+The post-review closure splits this aggregate family into subfronts in
+[demona_formula_family_subledger.md](../../analysis/post_review_20260619/demona_formula_family_subledger.md).
+
 ### Pair / mirror / subjective viewer
 
 This is the best lore-to-mechanism bridge. Pair and observer motifs line up with
@@ -138,12 +141,18 @@ classes are pure.
 
 That still does not make a sentence. It describes table geometry.
 
+The post-review closure compiles the viewer/render side in
+[observer_transform_render_audit.md](../../analysis/post_review_20260619/observer_transform_render_audit.md).
+
 ## Confirmed but weak anchors
 
 The Secret Library pair `74032 45331` is now confirmed as a transcribed external
 book, but it is still unglossed and absent from the frozen 70-book Hellgate
 corpus. It can be used only as an external numeric-anchor/control case for
 pair-geometry hypotheses.
+
+Known external numeric strings are classified in
+[external_numeric_string_classifier.md](../../analysis/post_review_20260619/external_numeric_string_classifier.md).
 
 Serpentine Tower, Hellgate matrix material, Imortus, Robson, and Braindeath are
 preserved to prevent the same ideas from being rediscovered later, but none has

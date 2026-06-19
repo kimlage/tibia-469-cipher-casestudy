@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "evidence": "99/100 ordered codes present; lower surface mirror-copy gives 43/45 before exception/orphan metadata and 45/45 after it",
+      "signal": "ordered_surface_mirror",
+      "source": "directed_pair_surface_report.md",
+      "status": "accepted_render_orientation_layer"
+    },
+    {
+      "evidence": "19 -> I and 91 -> N are the only directed conflict pair",
+      "signal": "19_91_directed_conflict",
+      "source": "directed_pair_surface_report.md",
+      "status": "accepted_directed_exception"
+    },
+    {
+      "evidence": "39 is absent while 93 is present; metadata closes mirror-copy lower-surface reconstruction",
+      "signal": "39_absent_93_orphan",
+      "source": "directed_pair_surface_report.md",
+      "status": "accepted_orphan_render_metadata"
+    },
+    {
+      "evidence": "pair_prevcode reaches 680/730 (0.932) on book holdout with control p=0.00050",
+      "signal": "book_holdout_orientation_context",
+      "source": "orientation_render_rule_report.md",
+      "status": "candidate_orientation_render_channel_not_pair_formula"
+    },
+    {
+      "evidence": "best pair-holdout model reaches only 0.526 and is not a general pair formula",
+      "signal": "pair_holdout_grid_formula_failure",
+      "source": "orientation_render_rule_report.md",
+      "status": "rejected_as_matrix_formula"
+    },
+    {
+      "evidence": "best seven-segment/6-9 visual model remains worse than lookup after MDL",
+      "signal": "6_9_visual_symmetry",
+      "source": "digit_visual_symmetry_report.md",
+      "status": "weak_visual_clue_rejected_formula"
+    },
+    {
+      "evidence": "zero omission has local previous-code/geometry support but selected predictive rules do not beat code_only under rough MDL",
+      "signal": "zero_render_context",
+      "source": "zero_compact_rule_report.md",
+      "status": "supporting_render_layer"
+    }
+  ],
+  "schema": "observer_transform_render_audit.v1",
+  "translation_delta": "NONE",
+  "verdict": "observer/viewer language maps to render-orientation metadata, not plaintext or a new row0 formula"
+}

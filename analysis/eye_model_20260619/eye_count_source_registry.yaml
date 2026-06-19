@@ -1,9 +1,7 @@
 # Eye/sprite source registry for mechanism-only follow-up.
 #
-# This file intentionally stores no sprite-derived counts as facts until a
-# frame/orientation/image is captured and reviewed. The review hypothesis is
-# useful because of lore arity, not because an unverified sprite count proves a
-# decoder.
+# Sprite-derived counts are stored only with frame/source basis and confidence.
+# They are source cues for mechanism-only tests, not semantic proof.
 
 schema: eye_count_source_registry.v1
 created_at: 2026-06-19
@@ -19,37 +17,69 @@ sources:
     source: TibiaWiki Bonelord
     source_class: creature_sprite
     pre_post_2010_rename: post_2010
-    visible_eye_count: TBD_manual
-    confidence: unverified
-    notes: Current sprite should be captured before any count is used.
+    source_file: File:Bonelord.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/d/d3/Bonelord.gif/revision/latest?cb=20210211191847&path-prefix=en
+    visible_eye_count: 5
+    count_basis: first_frame_peripheral_stalk_eyes
+    confidence: medium
+    semantic_use: none
   bonelord_nostalgia:
     source: TibiaWiki Bonelord (Nostalgia)
     source_class: creature_sprite
     pre_post_2010_rename: old_beholder_preserved_as_event_variant
-    visible_eye_count: TBD_manual
-    confidence: unverified
-    notes: Use as old-Beholder visual control, not proof of a 469 rule.
+    source_file: File:Bonelord (Nostalgia).gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/4/49/Bonelord_%28Nostalgia%29.gif/revision/latest?cb=20120118123404&path-prefix=en
+    visible_eye_count: 5
+    count_basis: first_frame_central_plus_four_peripheral_eyes
+    confidence: medium
+    semantic_use: none
   elder_bonelord:
     source: TibiaWiki Elder Bonelord
     source_class: creature_sprite
     pre_post_2010_rename: post_2010
-    visible_eye_count: TBD_manual
-    confidence: unverified
+    source_file: File:Elder Bonelord.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/0/09/Elder_Bonelord.gif/revision/latest?cb=20240228100944&path-prefix=en
+    visible_eye_count: 5
+    count_basis: first_frame_peripheral_stalk_eyes
+    confidence: medium
+    semantic_use: none
   gazer:
     source: TibiaWiki Gazer
     source_class: creature_sprite
     pre_post_2010_rename: post_2010
-    visible_eye_count: TBD_manual
-    confidence: unverified
+    source_file: File:Gazer.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/8/82/Gazer.gif/revision/latest?cb=20240228101059&path-prefix=en
+    visible_eye_count: 1
+    count_basis: first_frame_central_eye
+    confidence: high
+    semantic_use: none
   evil_eye:
     source: TibiaWiki The Evil Eye
     source_class: creature_or_npc_source
     pre_post_2010_rename: mixed_or_unknown
-    visible_eye_count: TBD_manual
-    confidence: unverified
+    source_file: File:The Evil Eye.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/9/93/The_Evil_Eye.gif/revision/latest?cb=20240228100858&path-prefix=en
+    visible_eye_count: 5
+    count_basis: first_frame_peripheral_stalk_eyes
+    confidence: medium
+    semantic_use: none
   eye_of_the_seven:
     source: TibiaWiki Eye of the Seven
     source_class: creature_or_lore_source
     pre_post_2010_rename: mixed_or_unknown
-    visible_eye_count: TBD_manual
-    confidence: unverified
+    source_file: File:Eye of the Seven.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/9/90/Eye_of_the_Seven.gif/revision/latest?cb=20221109183639&path-prefix=en
+    visible_eye_count: 1
+    count_basis: first_frame_central_eye
+    confidence: high
+    semantic_use: none
+  braindeath:
+    source: TibiaWiki Braindeath
+    source_class: creature_sprite
+    pre_post_2010_rename: post_2010
+    source_file: File:Braindeath.gif
+    source_url: https://static.wikia.nocookie.net/tibia/images/1/18/Braindeath.gif/revision/latest?cb=20070620013329&path-prefix=en
+    visible_eye_count: ambiguous
+    count_basis: first_frame_sealed_central_eye_and_appendage_eyes
+    confidence: low
+    semantic_use: none

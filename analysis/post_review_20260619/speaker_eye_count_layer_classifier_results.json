@@ -1,0 +1,63 @@
+{
+  "rows": [
+    {
+      "evidence": "enough eyes / subjective viewer lore; current Bonelord first-frame sprite count is five peripheral eyes",
+      "layer_class": "lore_mechanism_viewer_arity",
+      "source": "A Wrinkled Bonelord",
+      "speaker_or_class": "Bonelord",
+      "visible_eye_count_proxy": 5
+    },
+    {
+      "evidence": "Elder sprite first-frame count is five; no official glossed numeric pair",
+      "layer_class": "phrase_or_npc_context_only",
+      "source": "Elder Bonelord",
+      "speaker_or_class": "Elder Bonelord",
+      "visible_eye_count_proxy": 5
+    },
+    {
+      "evidence": "Evil Eye sprite first-frame count is five; no official glossed numeric pair",
+      "layer_class": "phrase_or_npc_context_only",
+      "source": "The Evil Eye",
+      "speaker_or_class": "Evil Eye / boss",
+      "visible_eye_count_proxy": 5
+    },
+    {
+      "evidence": "Gazer first-frame count is one central eye",
+      "layer_class": "negative_arity_contrast",
+      "source": "Gazer",
+      "speaker_or_class": "one-eye creature",
+      "visible_eye_count_proxy": 1
+    },
+    {
+      "evidence": "Eye of the Seven first-frame count is one central eye",
+      "layer_class": "negative_arity_contrast",
+      "source": "Eye of the Seven",
+      "speaker_or_class": "one-eye trap/creature style",
+      "visible_eye_count_proxy": 1
+    },
+    {
+      "evidence": "external holdout minLen=8 coverage 45/49; not a speaker anatomy source",
+      "layer_class": "copy_holdout_like_secondary_validation",
+      "source": "Chayenne",
+      "speaker_or_class": "external employee/interview string",
+      "visible_eye_count_proxy": null
+    },
+    {
+      "evidence": "confirmed unglossed numeric book, absent from 70-book corpus",
+      "layer_class": "external_numeric_anchor",
+      "source": "Secret Library 74032 45331",
+      "speaker_or_class": "external numeric book",
+      "visible_eye_count_proxy": null
+    },
+    {
+      "evidence": "negative control; minLen=8 coverage 0/115",
+      "layer_class": "negative_control_not_true_469",
+      "source": "Avar Tar",
+      "speaker_or_class": "external poem/control",
+      "visible_eye_count_proxy": null
+    }
+  ],
+  "schema": "speaker_eye_count_layer_classifier.v1",
+  "source_registry_loaded": true,
+  "translation_delta": "NONE"
+}

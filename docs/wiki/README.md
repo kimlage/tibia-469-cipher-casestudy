@@ -192,6 +192,13 @@ tests reject the hypothesis as the pair-cell label formula (`18/55` and
 mechanism-only lore bridge for arity/orientation, not a semantic decoder.
 → [page 14](14-eye-blink-arity-model.md)
 
+**Post-review closure (2026-06-19):** the remaining review action items are
+compiled in [`analysis/post_review_20260619/`](../../analysis/post_review_20260619/):
+observer/render audit, E-layer lore bridge, external numeric classifier,
+Demona/Magic Web subledger, sprite count audit, and a completion matrix. The
+official future-evidence gate is tracked in
+[official_469_watchlist.md](../watchlist/official_469_watchlist.md).
+
 ## Reproduce / verify
 
 Every quantitative claim is re-derivable from committed evidence: the audit

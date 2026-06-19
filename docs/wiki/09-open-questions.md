@@ -77,6 +77,9 @@ baseline. Any future internal work should improve the matrix-origin rule, the
 tape/module/literal formula, or source-official evidence; otherwise it is
 activity, not progress.
 
+Future official-source monitoring is limited to the
+[Official 469 Watchlist](../watchlist/official_469_watchlist.md).
+
 ---
 
 [← Lessons & Process](08-lessons-and-process.md) · [Wiki home](README.md) · Next: [Lore Source Audit →](10-lore-source-audit.md)

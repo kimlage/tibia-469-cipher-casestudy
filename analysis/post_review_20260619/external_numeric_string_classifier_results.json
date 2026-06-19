@@ -1,0 +1,50 @@
+{
+  "deep_verification_schema": "lore_deep_verification.v1",
+  "rows": [
+    {
+      "classification": "copy_holdout_like_secondary_validation",
+      "evidence": "minLen=8 coverage 45/49; minLen=3 coverage 49/49",
+      "name": "chayenne",
+      "raw_digits": "1145145194856114519083045765122821776612527570584",
+      "semantic_value": "NONE"
+    },
+    {
+      "classification": "external_unknown_event_layer",
+      "evidence": "minLen=8 coverage 0/21; minLen=3 coverage 19/21",
+      "name": "your_true_colour",
+      "raw_digits": "785673433498913565142",
+      "semantic_value": "NONE"
+    },
+    {
+      "classification": "external_numeric_anchor",
+      "evidence": "confirmed external unglossed book; 0 exact hits for 74032, 45331, and 7403245331 in the 70-book corpus",
+      "name": "secret_library_74032_45331",
+      "raw_digits": "7403245331",
+      "semantic_value": "NONE"
+    },
+    {
+      "classification": "generator_selector_hypothesis_only",
+      "evidence": "primary vectors 43153 and 34784 have 0 exact hits; shorter 3478 is structural/common",
+      "name": "honeminas_primary_vectors",
+      "raw_digits": "4315334784",
+      "semantic_value": "NONE"
+    },
+    {
+      "classification": "negative_control_not_true_469",
+      "evidence": "negative control; minLen=8 coverage 0/115 in external holdout report",
+      "name": "avar_tar",
+      "raw_digits": "2963946781906337629032220116778032242967538148053946880326677633781293370117268314963043784536395783009863722953639",
+      "semantic_value": "NONE"
+    }
+  ],
+  "schema": "external_numeric_string_classifier.v1",
+  "source_scores_available": [
+    "avar_tar_min3",
+    "avar_tar_min8",
+    "chayenne_min3",
+    "chayenne_min8",
+    "ytc_min3",
+    "ytc_min8"
+  ],
+  "translation_delta": "NONE"
+}

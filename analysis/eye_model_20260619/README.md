@@ -27,9 +27,10 @@ python3 analysis/eye_model_20260619/eye_state_5x2_model_search.py
 
 | File | Role |
 |---|---|
-| `eye_count_source_registry.yaml` | Source registry for future manual sprite/frame counts. Counts are intentionally `TBD_manual` until verified. |
+| `eye_count_source_registry.yaml` | Source registry with first-frame sprite URLs, manual visible-eye counts, confidence, and no semantic promotion. |
 | `k5_eye_pair_model_report.md` / `k5_eye_pair_model_results.json` | Tests `5 eyes -> C(5,2)=10` against row0 labels and E-layer controls. |
 | `eye_state_5x2_model_report.md` / `eye_state_5x2_model_results.json` | Tests the alternative `5 eyes x 2 states` arity model. |
+| `../post_review_20260619/sprite_eye_count_audit.md` | Records the sprite source audit and first-frame count policy without committing sprite binaries. |
 
 ## Current Verdict
 
