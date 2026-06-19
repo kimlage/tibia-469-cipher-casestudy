@@ -1,0 +1,223 @@
+{
+  "component_correlation_rows": [
+    {
+      "abs_spearman": 1.0,
+      "component_id": "T01",
+      "feature": "module_length",
+      "slice_count": 3,
+      "spearman": 1.0
+    },
+    {
+      "abs_spearman": 1.0,
+      "component_id": "T01",
+      "feature": "module_number",
+      "slice_count": 3,
+      "spearman": -1.0
+    },
+    {
+      "abs_spearman": 0.8944271909999159,
+      "component_id": "T03",
+      "feature": "first_offset",
+      "slice_count": 5,
+      "spearman": 0.8944271909999159
+    },
+    {
+      "abs_spearman": 0.8660254037844387,
+      "component_id": "T01",
+      "feature": "occurrence_count",
+      "slice_count": 3,
+      "spearman": 0.8660254037844387
+    },
+    {
+      "abs_spearman": 0.6,
+      "component_id": "T03",
+      "feature": "module_length",
+      "slice_count": 5,
+      "spearman": -0.6
+    },
+    {
+      "abs_spearman": 0.6,
+      "component_id": "T03",
+      "feature": "module_number",
+      "slice_count": 5,
+      "spearman": 0.6
+    },
+    {
+      "abs_spearman": 0.5,
+      "component_id": "T01",
+      "feature": "first_book",
+      "slice_count": 3,
+      "spearman": -0.5
+    },
+    {
+      "abs_spearman": 0.5,
+      "component_id": "T01",
+      "feature": "first_occurrence_key",
+      "slice_count": 3,
+      "spearman": -0.5
+    },
+    {
+      "abs_spearman": 0.4472135954999579,
+      "component_id": "T03",
+      "feature": "first_book",
+      "slice_count": 5,
+      "spearman": -0.4472135954999579
+    },
+    {
+      "abs_spearman": 0.10896948657195685,
+      "component_id": "T00",
+      "feature": "module_length",
+      "slice_count": 38,
+      "spearman": -0.10896948657195685
+    },
+    {
+      "abs_spearman": 0.10865521391837181,
+      "component_id": "T00",
+      "feature": "module_number",
+      "slice_count": 38,
+      "spearman": 0.10865521391837181
+    },
+    {
+      "abs_spearman": 0.1,
+      "component_id": "T03",
+      "feature": "first_occurrence_key",
+      "slice_count": 5,
+      "spearman": -0.1
+    },
+    {
+      "abs_spearman": 0.09814614588259193,
+      "component_id": "T00",
+      "feature": "first_offset",
+      "slice_count": 38,
+      "spearman": 0.09814614588259193
+    },
+    {
+      "abs_spearman": 0.06746353737874408,
+      "component_id": "T00",
+      "feature": "occurrence_count",
+      "slice_count": 38,
+      "spearman": 0.06746353737874408
+    },
+    {
+      "abs_spearman": 0.03818798555640661,
+      "component_id": "T00",
+      "feature": "first_occurrence_key",
+      "slice_count": 38,
+      "spearman": 0.03818798555640661
+    },
+    {
+      "abs_spearman": 0.037018799240526534,
+      "component_id": "T00",
+      "feature": "first_book",
+      "slice_count": 38,
+      "spearman": 0.037018799240526534
+    },
+    {
+      "abs_spearman": 0.0,
+      "component_id": "T01",
+      "feature": "first_offset",
+      "slice_count": 3,
+      "spearman": 0.0
+    },
+    {
+      "abs_spearman": 0.0,
+      "component_id": "T03",
+      "feature": "occurrence_count",
+      "slice_count": 5,
+      "spearman": 0.0
+    }
+  ],
+  "control_trials": 20000,
+  "random_seed": 46920260623,
+  "schema": "module_tape_order_results.v1",
+  "t00_control": {
+    "best": {
+      "bonferroni_p": 1.0,
+      "component_id": "T00",
+      "control_max": 0.6249386641019066,
+      "control_mean": 0.13236666378745754,
+      "control_min": 0.0,
+      "control_sd": 0.0987617377670216,
+      "feature": "first_book",
+      "observed": 0.037018799240526534,
+      "p_good_direction": 0.8227588620568972,
+      "z_good_direction": -0.9654332406731856
+    },
+    "feature_rows": [
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.6249386641019066,
+        "control_mean": 0.13236666378745754,
+        "control_min": 0.0,
+        "control_sd": 0.0987617377670216,
+        "feature": "first_book",
+        "observed": 0.037018799240526534,
+        "p_good_direction": 0.8227588620568972,
+        "z_good_direction": -0.9654332406731856
+      },
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.6478827005142794,
+        "control_mean": 0.1320908961593172,
+        "control_min": 0.000109421162052741,
+        "control_sd": 0.09862583129330642,
+        "feature": "first_occurrence_key",
+        "observed": 0.03818798555640661,
+        "p_good_direction": 0.8199090045497726,
+        "z_good_direction": -0.9521127413735031
+      },
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.6259983693050167,
+        "control_mean": 0.13318359295418922,
+        "control_min": 0.0,
+        "control_sd": 0.09897487722185848,
+        "feature": "first_offset",
+        "observed": 0.09814614588259193,
+        "p_good_direction": 0.5579221038948052,
+        "z_good_direction": -0.3540034406211853
+      },
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.5718981496268931,
+        "control_mean": 0.13229527035755248,
+        "control_min": 0.0,
+        "control_sd": 0.09860194154322112,
+        "feature": "module_length",
+        "observed": 0.10896948657195685,
+        "p_good_direction": 0.5164741762911854,
+        "z_good_direction": -0.23656515703974268
+      },
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.6516030200240727,
+        "control_mean": 0.13114621949885108,
+        "control_min": 0.000109421162052741,
+        "control_sd": 0.09811920770483831,
+        "feature": "module_number",
+        "observed": 0.10865521391837181,
+        "p_good_direction": 0.5094745262736863,
+        "z_good_direction": -0.22922123105739495
+      },
+      {
+        "bonferroni_p": 1.0,
+        "component_id": "T00",
+        "control_max": 0.2773500981126146,
+        "control_mean": 0.14254895529156672,
+        "control_min": 0.007495948597638231,
+        "control_sd": 0.08217068496059544,
+        "feature": "occurrence_count",
+        "observed": 0.06746353737874408,
+        "p_good_direction": 0.7899605019749013,
+        "z_good_direction": -0.9137737862210774
+      }
+    ]
+  },
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

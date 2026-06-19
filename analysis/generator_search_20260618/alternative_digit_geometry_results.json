@@ -1,0 +1,2675 @@
+{
+  "depths": [
+    1,
+    2,
+    3
+  ],
+  "global_accuracy_control": {
+    "control_max": 0.5818181818181818,
+    "control_mean": 0.4919151515151515,
+    "control_min": 0.41818181818181815,
+    "control_sd": 0.023378833435670012,
+    "observed": 0.509090909090909,
+    "p": 0.34776815456362425,
+    "z": 0.7346712838781673
+  },
+  "global_mdl_control": {
+    "control_max": 382.96264140749236,
+    "control_mean": 346.7951571916285,
+    "control_min": 302.9242435990542,
+    "control_sd": 11.718219868320856,
+    "observed": 341.2791021413832,
+    "p": 0.36508994003997336,
+    "z": 0.47072465888419346
+  },
+  "layouts": [
+    "circle_0_to_9",
+    "circle_1_to_0",
+    "keyboard_row_1_to_0",
+    "numeric_line_0_to_9",
+    "numpad",
+    "numpad_y_flipped",
+    "phone_keypad",
+    "phone_keypad_y_flipped",
+    "seven_segment"
+  ],
+  "method_note": "Uses primary label for conflict cell {19}; controls preserve primary-label multiset and choose best layout/depth.",
+  "observed_best": {
+    "accuracy": 0.509090909090909,
+    "correct": 28,
+    "errors": 27,
+    "layout": "circle_1_to_0",
+    "leaves": 8,
+    "max_depth": 3,
+    "mdl_bits_est": 341.2791021413832,
+    "predicate_count": 170,
+    "rules": [
+      "dx_dy <= (62, 0) AND x1 == 81 AND euclid2 <= 3796 -> *",
+      "dx_dy <= (62, 0) AND x1 == 81 AND NOT (euclid2 <= 3796) -> N",
+      "dx_dy <= (62, 0) AND NOT (x1 == 81) AND y2 == 59 -> F",
+      "dx_dy <= (62, 0) AND NOT (x1 == 81) AND NOT (y2 == 59) -> E",
+      "NOT (dx_dy <= (62, 0)) AND mid_y2 <= -36 AND mid_x2 <= -62 -> C",
+      "NOT (dx_dy <= (62, 0)) AND mid_y2 <= -36 AND NOT (mid_x2 <= -62) -> I",
+      "NOT (dx_dy <= (62, 0)) AND NOT (mid_y2 <= -36) AND euclid2 <= 36242 -> N",
+      "NOT (dx_dy <= (62, 0)) AND NOT (mid_y2 <= -36) AND NOT (euclid2 <= 36242) -> T"
+    ],
+    "splits": 7,
+    "total": 55,
+    "tree": {
+      "fallback_prediction": "E",
+      "kind": "split",
+      "left": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "N",
+          "kind": "split",
+          "left": {
+            "error": 3,
+            "kind": "leaf",
+            "pairs": 4,
+            "prediction": "*"
+          },
+          "pairs": 8,
+          "predicate": {
+            "display": "euclid2 <= 3796",
+            "feature": "euclid2",
+            "id": "euclid2<=3796",
+            "op": "<=",
+            "value": 3796
+          },
+          "right": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 4,
+            "prediction": "N"
+          }
+        },
+        "pairs": 28,
+        "predicate": {
+          "display": "x1 == 81",
+          "feature": "x1",
+          "id": "x1==81",
+          "op": "==",
+          "value": 81
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 1,
+            "kind": "leaf",
+            "pairs": 3,
+            "prediction": "F"
+          },
+          "pairs": 20,
+          "predicate": {
+            "display": "y2 == 59",
+            "feature": "y2",
+            "id": "y2==59",
+            "op": "==",
+            "value": 59
+          },
+          "right": {
+            "error": 7,
+            "kind": "leaf",
+            "pairs": 17,
+            "prediction": "E"
+          }
+        }
+      },
+      "pairs": 55,
+      "predicate": {
+        "display": "dx_dy <= (62, 0)",
+        "feature": "dx_dy",
+        "id": "dx_dy<=(62, 0)",
+        "op": "<=",
+        "value": [
+          62,
+          0
+        ]
+      },
+      "right": {
+        "fallback_prediction": "I",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 1,
+            "kind": "leaf",
+            "pairs": 2,
+            "prediction": "C"
+          },
+          "pairs": 11,
+          "predicate": {
+            "display": "mid_x2 <= -62",
+            "feature": "mid_x2",
+            "id": "mid_x2<=-62",
+            "op": "<=",
+            "value": -62
+          },
+          "right": {
+            "error": 3,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "I"
+          }
+        },
+        "pairs": 27,
+        "predicate": {
+          "display": "mid_y2 <= -36",
+          "feature": "mid_y2",
+          "id": "mid_y2<=-36",
+          "op": "<=",
+          "value": -36
+        },
+        "right": {
+          "fallback_prediction": "N",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 16,
+          "predicate": {
+            "display": "euclid2 <= 36242",
+            "feature": "euclid2",
+            "id": "euclid2<=36242",
+            "op": "<=",
+            "value": 36242
+          },
+          "right": {
+            "error": 4,
+            "kind": "leaf",
+            "pairs": 7,
+            "prediction": "T"
+          }
+        }
+      }
+    }
+  },
+  "random_seed": 46920260620,
+  "rows": [
+    {
+      "accuracy": 0.509090909090909,
+      "correct": 28,
+      "errors": 27,
+      "layout": "circle_1_to_0",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 341.2791021413832,
+      "predicate_count": 170,
+      "rules": [
+        "dx_dy <= (62, 0) AND x1 == 81 AND euclid2 <= 3796 -> *",
+        "dx_dy <= (62, 0) AND x1 == 81 AND NOT (euclid2 <= 3796) -> N",
+        "dx_dy <= (62, 0) AND NOT (x1 == 81) AND y2 == 59 -> F",
+        "dx_dy <= (62, 0) AND NOT (x1 == 81) AND NOT (y2 == 59) -> E",
+        "NOT (dx_dy <= (62, 0)) AND mid_y2 <= -36 AND mid_x2 <= -62 -> C",
+        "NOT (dx_dy <= (62, 0)) AND mid_y2 <= -36 AND NOT (mid_x2 <= -62) -> I",
+        "NOT (dx_dy <= (62, 0)) AND NOT (mid_y2 <= -36) AND euclid2 <= 36242 -> N",
+        "NOT (dx_dy <= (62, 0)) AND NOT (mid_y2 <= -36) AND NOT (euclid2 <= 36242) -> T"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "*"
+            },
+            "pairs": 8,
+            "predicate": {
+              "display": "euclid2 <= 3796",
+              "feature": "euclid2",
+              "id": "euclid2<=3796",
+              "op": "<=",
+              "value": 3796
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "N"
+            }
+          },
+          "pairs": 28,
+          "predicate": {
+            "display": "x1 == 81",
+            "feature": "x1",
+            "id": "x1==81",
+            "op": "==",
+            "value": 81
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "F"
+            },
+            "pairs": 20,
+            "predicate": {
+              "display": "y2 == 59",
+              "feature": "y2",
+              "id": "y2==59",
+              "op": "==",
+              "value": 59
+            },
+            "right": {
+              "error": 7,
+              "kind": "leaf",
+              "pairs": 17,
+              "prediction": "E"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "dx_dy <= (62, 0)",
+          "feature": "dx_dy",
+          "id": "dx_dy<=(62, 0)",
+          "op": "<=",
+          "value": [
+            62,
+            0
+          ]
+        },
+        "right": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "C"
+            },
+            "pairs": 11,
+            "predicate": {
+              "display": "mid_x2 <= -62",
+              "feature": "mid_x2",
+              "id": "mid_x2<=-62",
+              "op": "<=",
+              "value": -62
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 9,
+              "prediction": "I"
+            }
+          },
+          "pairs": 27,
+          "predicate": {
+            "display": "mid_y2 <= -36",
+            "feature": "mid_y2",
+            "id": "mid_y2<=-36",
+            "op": "<=",
+            "value": -36
+          },
+          "right": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 6,
+              "kind": "leaf",
+              "pairs": 9,
+              "prediction": "N"
+            },
+            "pairs": 16,
+            "predicate": {
+              "display": "euclid2 <= 36242",
+              "feature": "euclid2",
+              "id": "euclid2<=36242",
+              "op": "<=",
+              "value": 36242
+            },
+            "right": {
+              "error": 4,
+              "kind": "leaf",
+              "pairs": 7,
+              "prediction": "T"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.4727272727272727,
+      "correct": 26,
+      "errors": 29,
+      "layout": "numpad",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 354.7309537036564,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND distance_bucket == 0 AND max_y == 1 -> V",
+        "x1 == 1 AND distance_bucket == 0 AND NOT (max_y == 1) -> A",
+        "x1 == 1 AND NOT (distance_bucket == 0) AND dx_dy == (0, 2) -> T",
+        "x1 == 1 AND NOT (distance_bucket == 0) AND NOT (dx_dy == (0, 2)) -> I",
+        "NOT (x1 == 1) AND dx == 2 AND min_y == 0 -> A",
+        "NOT (x1 == 1) AND dx == 2 AND NOT (min_y == 0) -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND dx_dy == (0, 1) -> V",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND NOT (dx_dy == (0, 1)) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "A",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 1,
+              "prediction": "V"
+            },
+            "pairs": 4,
+            "predicate": {
+              "display": "max_y == 1",
+              "feature": "max_y",
+              "id": "max_y==1",
+              "op": "==",
+              "value": 1
+            },
+            "right": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "A"
+            }
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "distance_bucket == 0",
+            "feature": "distance_bucket",
+            "id": "distance_bucket==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "T"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 2)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 2)",
+              "op": "==",
+              "value": [
+                0,
+                2
+              ]
+            },
+            "right": {
+              "error": 13,
+              "kind": "leaf",
+              "pairs": 19,
+              "prediction": "I"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "A"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "min_y == 0",
+              "feature": "min_y",
+              "id": "min_y==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "N"
+            }
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "V"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 1)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 1)",
+              "op": "==",
+              "value": [
+                0,
+                1
+              ]
+            },
+            "right": {
+              "error": 9,
+              "kind": "leaf",
+              "pairs": 17,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.4727272727272727,
+      "correct": 26,
+      "errors": 29,
+      "layout": "numpad_y_flipped",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 354.7309537036564,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND distance_bucket == 0 AND max_y == -1 -> V",
+        "x1 == 1 AND distance_bucket == 0 AND NOT (max_y == -1) -> A",
+        "x1 == 1 AND NOT (distance_bucket == 0) AND dx_dy == (0, 2) -> T",
+        "x1 == 1 AND NOT (distance_bucket == 0) AND NOT (dx_dy == (0, 2)) -> I",
+        "NOT (x1 == 1) AND dx == 2 AND max_y == 0 -> A",
+        "NOT (x1 == 1) AND dx == 2 AND NOT (max_y == 0) -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND dx_dy == (0, 1) -> V",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND NOT (dx_dy == (0, 1)) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "A",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 1,
+              "prediction": "V"
+            },
+            "pairs": 4,
+            "predicate": {
+              "display": "max_y == -1",
+              "feature": "max_y",
+              "id": "max_y==-1",
+              "op": "==",
+              "value": -1
+            },
+            "right": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "A"
+            }
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "distance_bucket == 0",
+            "feature": "distance_bucket",
+            "id": "distance_bucket==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "T"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 2)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 2)",
+              "op": "==",
+              "value": [
+                0,
+                2
+              ]
+            },
+            "right": {
+              "error": 13,
+              "kind": "leaf",
+              "pairs": 19,
+              "prediction": "I"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "A"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "max_y == 0",
+              "feature": "max_y",
+              "id": "max_y==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "N"
+            }
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "V"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 1)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 1)",
+              "op": "==",
+              "value": [
+                0,
+                1
+              ]
+            },
+            "right": {
+              "error": 9,
+              "kind": "leaf",
+              "pairs": 17,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.45454545454545453,
+      "correct": 25,
+      "errors": 30,
+      "layout": "phone_keypad",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 364.3196683392386,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND min_y == 0 AND area == 0 -> R",
+        "x1 == 1 AND min_y == 0 AND NOT (area == 0) -> N",
+        "x1 == 1 AND NOT (min_y == 0) AND max_y == 2 -> E",
+        "x1 == 1 AND NOT (min_y == 0) AND NOT (max_y == 2) -> I",
+        "NOT (x1 == 1) AND dx == 2 AND max_y == 2 -> A",
+        "NOT (x1 == 1) AND dx == 2 AND NOT (max_y == 2) -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND dx_dy == (0, 1) -> V",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND NOT (dx_dy == (0, 1)) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 4,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "R"
+            },
+            "pairs": 11,
+            "predicate": {
+              "display": "area == 0",
+              "feature": "area",
+              "id": "area==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 6,
+              "prediction": "N"
+            }
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "min_y == 0",
+            "feature": "min_y",
+            "id": "min_y==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "E"
+            },
+            "pairs": 14,
+            "predicate": {
+              "display": "max_y == 2",
+              "feature": "max_y",
+              "id": "max_y==2",
+              "op": "==",
+              "value": 2
+            },
+            "right": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 9,
+              "prediction": "I"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "A"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "max_y == 2",
+              "feature": "max_y",
+              "id": "max_y==2",
+              "op": "==",
+              "value": 2
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "N"
+            }
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "V"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 1)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 1)",
+              "op": "==",
+              "value": [
+                0,
+                1
+              ]
+            },
+            "right": {
+              "error": 9,
+              "kind": "leaf",
+              "pairs": 17,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.45454545454545453,
+      "correct": 25,
+      "errors": 30,
+      "layout": "phone_keypad_y_flipped",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 364.3196683392386,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND max_y == 0 AND area == 0 -> R",
+        "x1 == 1 AND max_y == 0 AND NOT (area == 0) -> N",
+        "x1 == 1 AND NOT (max_y == 0) AND mid_y2 == -4 -> T",
+        "x1 == 1 AND NOT (max_y == 0) AND NOT (mid_y2 == -4) -> I",
+        "NOT (x1 == 1) AND dx == 2 AND min_y == -2 -> A",
+        "NOT (x1 == 1) AND dx == 2 AND NOT (min_y == -2) -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND dx_dy == (0, 1) -> V",
+        "NOT (x1 == 1) AND NOT (dx == 2) AND NOT (dx_dy == (0, 1)) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 4,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "R"
+            },
+            "pairs": 11,
+            "predicate": {
+              "display": "area == 0",
+              "feature": "area",
+              "id": "area==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 6,
+              "prediction": "N"
+            }
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "max_y == 0",
+            "feature": "max_y",
+            "id": "max_y==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "T"
+            },
+            "pairs": 14,
+            "predicate": {
+              "display": "mid_y2 == -4",
+              "feature": "mid_y2",
+              "id": "mid_y2==-4",
+              "op": "==",
+              "value": -4
+            },
+            "right": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 9,
+              "prediction": "I"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "A"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "min_y == -2",
+              "feature": "min_y",
+              "id": "min_y==-2",
+              "op": "==",
+              "value": -2
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "N"
+            }
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "V"
+            },
+            "pairs": 21,
+            "predicate": {
+              "display": "dx_dy == (0, 1)",
+              "feature": "dx_dy",
+              "id": "dx_dy==(0, 1)",
+              "op": "==",
+              "value": [
+                0,
+                1
+              ]
+            },
+            "right": {
+              "error": 9,
+              "kind": "leaf",
+              "pairs": 17,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.45454545454545453,
+      "correct": 25,
+      "errors": 30,
+      "layout": "circle_0_to_9",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 370.04524604813,
+      "predicate_count": 170,
+      "rules": [
+        "mid_x2 <= -19 AND max_y == 95 AND distance_bucket == 3 -> I",
+        "mid_x2 <= -19 AND max_y == 95 AND NOT (distance_bucket == 3) -> L",
+        "mid_x2 <= -19 AND NOT (max_y == 95) AND dy == 59 -> I",
+        "mid_x2 <= -19 AND NOT (max_y == 95) AND NOT (dy == 59) -> E",
+        "NOT (mid_x2 <= -19) AND mid_y2 <= 0 AND euclid2 <= 26216 -> I",
+        "NOT (mid_x2 <= -19) AND mid_y2 <= 0 AND NOT (euclid2 <= 26216) -> T",
+        "NOT (mid_x2 <= -19) AND NOT (mid_y2 <= 0) AND area == 0 -> A",
+        "NOT (mid_x2 <= -19) AND NOT (mid_y2 <= 0) AND NOT (area == 0) -> N"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "L",
+            "kind": "split",
+            "left": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            },
+            "pairs": 8,
+            "predicate": {
+              "display": "distance_bucket == 3",
+              "feature": "distance_bucket",
+              "id": "distance_bucket==3",
+              "op": "==",
+              "value": 3
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "L"
+            }
+          },
+          "pairs": 23,
+          "predicate": {
+            "display": "max_y == 95",
+            "feature": "max_y",
+            "id": "max_y==95",
+            "op": "==",
+            "value": 95
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            },
+            "pairs": 15,
+            "predicate": {
+              "display": "dy == 59",
+              "feature": "dy",
+              "id": "dy==59",
+              "op": "==",
+              "value": 59
+            },
+            "right": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 11,
+              "prediction": "E"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "mid_x2 <= -19",
+          "feature": "mid_x2",
+          "id": "mid_x2<=-19",
+          "op": "<=",
+          "value": -19
+        },
+        "right": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "T",
+            "kind": "split",
+            "left": {
+              "error": 7,
+              "kind": "leaf",
+              "pairs": 11,
+              "prediction": "I"
+            },
+            "pairs": 20,
+            "predicate": {
+              "display": "euclid2 <= 26216",
+              "feature": "euclid2",
+              "id": "euclid2<=26216",
+              "op": "<=",
+              "value": 26216
+            },
+            "right": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 9,
+              "prediction": "T"
+            }
+          },
+          "pairs": 32,
+          "predicate": {
+            "display": "mid_y2 <= 0",
+            "feature": "mid_y2",
+            "id": "mid_y2<=0",
+            "op": "<=",
+            "value": 0
+          },
+          "right": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "A"
+            },
+            "pairs": 12,
+            "predicate": {
+              "display": "area == 0",
+              "feature": "area",
+              "id": "area==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 4,
+              "kind": "leaf",
+              "pairs": 8,
+              "prediction": "N"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.41818181818181815,
+      "correct": 23,
+      "errors": 32,
+      "layout": "seven_segment",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 382.96264140749236,
+      "predicate_count": 91,
+      "rules": [
+        "union == 7 AND right_count == 7 AND both_e == False -> E",
+        "union == 7 AND right_count == 7 AND NOT (both_e == False) -> I",
+        "union == 7 AND NOT (right_count == 7) AND both_g == False -> T",
+        "union == 7 AND NOT (right_count == 7) AND NOT (both_g == False) -> N",
+        "NOT (union == 7) AND common == 3 AND both_a == False -> B",
+        "NOT (union == 7) AND common == 3 AND NOT (both_a == False) -> A",
+        "NOT (union == 7) AND NOT (common == 3) AND hamming == 1 -> I",
+        "NOT (union == 7) AND NOT (common == 3) AND NOT (hamming == 1) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "E"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "both_e == False",
+              "feature": "both_e",
+              "id": "both_e==False",
+              "op": "==",
+              "value": false
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            }
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "right_count == 7",
+            "feature": "right_count",
+            "id": "right_count==7",
+            "op": "==",
+            "value": 7
+          },
+          "right": {
+            "fallback_prediction": "T",
+            "kind": "split",
+            "left": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 8,
+              "prediction": "T"
+            },
+            "pairs": 16,
+            "predicate": {
+              "display": "both_g == False",
+              "feature": "both_g",
+              "id": "both_g==False",
+              "op": "==",
+              "value": false
+            },
+            "right": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 8,
+              "prediction": "N"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "union == 7",
+          "feature": "union",
+          "id": "union==7",
+          "op": "==",
+          "value": 7
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "A",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "B"
+            },
+            "pairs": 6,
+            "predicate": {
+              "display": "both_a == False",
+              "feature": "both_a",
+              "id": "both_a==False",
+              "op": "==",
+              "value": false
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "A"
+            }
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "common == 3",
+            "feature": "common",
+            "id": "common==3",
+            "op": "==",
+            "value": 3
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            },
+            "pairs": 24,
+            "predicate": {
+              "display": "hamming == 1",
+              "feature": "hamming",
+              "id": "hamming==1",
+              "op": "==",
+              "value": 1
+            },
+            "right": {
+              "error": 12,
+              "kind": "leaf",
+              "pairs": 20,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.4,
+      "correct": 22,
+      "errors": 33,
+      "layout": "circle_1_to_0",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 353.91056020710283,
+      "predicate_count": 170,
+      "rules": [
+        "dx_dy <= (62, 0) AND x1 == 81 -> N",
+        "dx_dy <= (62, 0) AND NOT (x1 == 81) -> E",
+        "NOT (dx_dy <= (62, 0)) AND mid_y2 <= -36 -> I",
+        "NOT (dx_dy <= (62, 0)) AND NOT (mid_y2 <= -36) -> N"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 8,
+            "prediction": "N"
+          },
+          "pairs": 28,
+          "predicate": {
+            "display": "x1 == 81",
+            "feature": "x1",
+            "id": "x1==81",
+            "op": "==",
+            "value": 81
+          },
+          "right": {
+            "error": 10,
+            "kind": "leaf",
+            "pairs": 20,
+            "prediction": "E"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "dx_dy <= (62, 0)",
+          "feature": "dx_dy",
+          "id": "dx_dy<=(62, 0)",
+          "op": "<=",
+          "value": [
+            62,
+            0
+          ]
+        },
+        "right": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 5,
+            "kind": "leaf",
+            "pairs": 11,
+            "prediction": "I"
+          },
+          "pairs": 27,
+          "predicate": {
+            "display": "mid_y2 <= -36",
+            "feature": "mid_y2",
+            "id": "mid_y2<=-36",
+            "op": "<=",
+            "value": -36
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 16,
+            "prediction": "N"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.4,
+      "correct": 22,
+      "errors": 33,
+      "layout": "keyboard_row_1_to_0",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 395.1501466938312,
+      "predicate_count": 118,
+      "rules": [
+        "max_x == 9 AND mid_x2 <= 13 AND mid_x2 <= 10 -> N",
+        "max_x == 9 AND mid_x2 <= 13 AND NOT (mid_x2 <= 10) -> V",
+        "max_x == 9 AND NOT (mid_x2 <= 13) AND mid_x2 <= 16 -> I",
+        "max_x == 9 AND NOT (mid_x2 <= 13) AND NOT (mid_x2 <= 16) -> *",
+        "NOT (max_x == 9) AND max_x == 8 AND distance_bucket == 0 -> N",
+        "NOT (max_x == 9) AND max_x == 8 AND NOT (distance_bucket == 0) -> I",
+        "NOT (max_x == 9) AND NOT (max_x == 8) AND dx == 5 -> T",
+        "NOT (max_x == 9) AND NOT (max_x == 8) AND NOT (dx == 5) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "N"
+            },
+            "pairs": 5,
+            "predicate": {
+              "display": "mid_x2 <= 10",
+              "feature": "mid_x2",
+              "id": "mid_x2<=10",
+              "op": "<=",
+              "value": 10
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "V"
+            }
+          },
+          "pairs": 10,
+          "predicate": {
+            "display": "mid_x2 <= 13",
+            "feature": "mid_x2",
+            "id": "mid_x2<=13",
+            "op": "<=",
+            "value": 13
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "I"
+            },
+            "pairs": 5,
+            "predicate": {
+              "display": "mid_x2 <= 16",
+              "feature": "mid_x2",
+              "id": "mid_x2<=16",
+              "op": "<=",
+              "value": 16
+            },
+            "right": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "*"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "max_x == 9",
+          "feature": "max_x",
+          "id": "max_x==9",
+          "op": "==",
+          "value": 9
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "N"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "distance_bucket == 0",
+              "feature": "distance_bucket",
+              "id": "distance_bucket==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            }
+          },
+          "pairs": 45,
+          "predicate": {
+            "display": "max_x == 8",
+            "feature": "max_x",
+            "id": "max_x==8",
+            "op": "==",
+            "value": 8
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "T"
+            },
+            "pairs": 36,
+            "predicate": {
+              "display": "dx == 5",
+              "feature": "dx",
+              "id": "dx==5",
+              "op": "==",
+              "value": 5
+            },
+            "right": {
+              "error": 23,
+              "kind": "leaf",
+              "pairs": 33,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.4,
+      "correct": 22,
+      "errors": 33,
+      "layout": "numeric_line_0_to_9",
+      "leaves": 8,
+      "max_depth": 3,
+      "mdl_bits_est": 395.1501466938312,
+      "predicate_count": 118,
+      "rules": [
+        "min_x == 0 AND mid_x2 <= 4 AND mid_x2 <= 1 -> *",
+        "min_x == 0 AND mid_x2 <= 4 AND NOT (mid_x2 <= 1) -> R",
+        "min_x == 0 AND NOT (mid_x2 <= 4) AND dx == 5 -> T",
+        "min_x == 0 AND NOT (mid_x2 <= 4) AND NOT (dx == 5) -> I",
+        "NOT (min_x == 0) AND max_x == 9 AND distance_bucket == 0 -> N",
+        "NOT (min_x == 0) AND max_x == 9 AND NOT (distance_bucket == 0) -> I",
+        "NOT (min_x == 0) AND NOT (max_x == 9) AND dx == 5 -> T",
+        "NOT (min_x == 0) AND NOT (max_x == 9) AND NOT (dx == 5) -> E"
+      ],
+      "splits": 7,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "*",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "*"
+            },
+            "pairs": 5,
+            "predicate": {
+              "display": "mid_x2 <= 1",
+              "feature": "mid_x2",
+              "id": "mid_x2<=1",
+              "op": "<=",
+              "value": 1
+            },
+            "right": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "R"
+            }
+          },
+          "pairs": 10,
+          "predicate": {
+            "display": "mid_x2 <= 4",
+            "feature": "mid_x2",
+            "id": "mid_x2<=4",
+            "op": "<=",
+            "value": 4
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 1,
+              "prediction": "T"
+            },
+            "pairs": 5,
+            "predicate": {
+              "display": "dx == 5",
+              "feature": "dx",
+              "id": "dx==5",
+              "op": "==",
+              "value": 5
+            },
+            "right": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "min_x == 0",
+          "feature": "min_x",
+          "id": "min_x==0",
+          "op": "==",
+          "value": 0
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "N",
+            "kind": "split",
+            "left": {
+              "error": 2,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "N"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "distance_bucket == 0",
+              "feature": "distance_bucket",
+              "id": "distance_bucket==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 4,
+              "prediction": "I"
+            }
+          },
+          "pairs": 45,
+          "predicate": {
+            "display": "max_x == 9",
+            "feature": "max_x",
+            "id": "max_x==9",
+            "op": "==",
+            "value": 9
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 3,
+              "prediction": "T"
+            },
+            "pairs": 36,
+            "predicate": {
+              "display": "dx == 5",
+              "feature": "dx",
+              "id": "dx==5",
+              "op": "==",
+              "value": 5
+            },
+            "right": {
+              "error": 23,
+              "kind": "leaf",
+              "pairs": 33,
+              "prediction": "E"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.36363636363636365,
+      "correct": 20,
+      "errors": 35,
+      "layout": "numpad",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 370.634170460171,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND distance_bucket == 0 -> A",
+        "x1 == 1 AND NOT (distance_bucket == 0) -> I",
+        "NOT (x1 == 1) AND dx == 2 -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 4,
+            "prediction": "A"
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "distance_bucket == 0",
+            "feature": "distance_bucket",
+            "id": "distance_bucket==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "error": 15,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.36363636363636365,
+      "correct": 20,
+      "errors": 35,
+      "layout": "numpad_y_flipped",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 370.634170460171,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND distance_bucket == 0 -> A",
+        "x1 == 1 AND NOT (distance_bucket == 0) -> I",
+        "NOT (x1 == 1) AND dx == 2 -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 4,
+            "prediction": "A"
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "distance_bucket == 0",
+            "feature": "distance_bucket",
+            "id": "distance_bucket==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "error": 15,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.36363636363636365,
+      "correct": 20,
+      "errors": 35,
+      "layout": "phone_keypad",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 370.634170460171,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND min_y == 0 -> N",
+        "x1 == 1 AND NOT (min_y == 0) -> I",
+        "NOT (x1 == 1) AND dx == 2 -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 8,
+            "kind": "leaf",
+            "pairs": 11,
+            "prediction": "N"
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "min_y == 0",
+            "feature": "min_y",
+            "id": "min_y==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "error": 9,
+            "kind": "leaf",
+            "pairs": 14,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.36363636363636365,
+      "correct": 20,
+      "errors": 35,
+      "layout": "phone_keypad_y_flipped",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 370.634170460171,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 AND max_y == 0 -> N",
+        "x1 == 1 AND NOT (max_y == 0) -> I",
+        "NOT (x1 == 1) AND dx == 2 -> N",
+        "NOT (x1 == 1) AND NOT (dx == 2) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 8,
+            "kind": "leaf",
+            "pairs": 11,
+            "prediction": "N"
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "max_y == 0",
+            "feature": "max_y",
+            "id": "max_y==0",
+            "op": "==",
+            "value": 0
+          },
+          "right": {
+            "error": 9,
+            "kind": "leaf",
+            "pairs": 14,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "dx == 2",
+            "feature": "dx",
+            "id": "dx==2",
+            "op": "==",
+            "value": 2
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 21,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.34545454545454546,
+      "correct": 19,
+      "errors": 36,
+      "layout": "circle_0_to_9",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 382.6767041138496,
+      "predicate_count": 170,
+      "rules": [
+        "mid_x2 <= -19 AND max_y == 95 -> L",
+        "mid_x2 <= -19 AND NOT (max_y == 95) -> E",
+        "NOT (mid_x2 <= -19) AND mid_y2 <= 0 -> T",
+        "NOT (mid_x2 <= -19) AND NOT (mid_y2 <= 0) -> N"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 8,
+            "prediction": "L"
+          },
+          "pairs": 23,
+          "predicate": {
+            "display": "max_y == 95",
+            "feature": "max_y",
+            "id": "max_y==95",
+            "op": "==",
+            "value": 95
+          },
+          "right": {
+            "error": 8,
+            "kind": "leaf",
+            "pairs": 15,
+            "prediction": "E"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "mid_x2 <= -19",
+          "feature": "mid_x2",
+          "id": "mid_x2<=-19",
+          "op": "<=",
+          "value": -19
+        },
+        "right": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "error": 14,
+            "kind": "leaf",
+            "pairs": 20,
+            "prediction": "T"
+          },
+          "pairs": 32,
+          "predicate": {
+            "display": "mid_y2 <= 0",
+            "feature": "mid_y2",
+            "id": "mid_y2<=0",
+            "op": "<=",
+            "value": 0
+          },
+          "right": {
+            "error": 8,
+            "kind": "leaf",
+            "pairs": 12,
+            "prediction": "N"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.3090909090909091,
+      "correct": 17,
+      "errors": 38,
+      "layout": "circle_1_to_0",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 379.4037185111271,
+      "predicate_count": 170,
+      "rules": [
+        "dx_dy <= (62, 0) -> E",
+        "NOT (dx_dy <= (62, 0)) -> I"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 18,
+          "kind": "leaf",
+          "pairs": 28,
+          "prediction": "E"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "dx_dy <= (62, 0)",
+          "feature": "dx_dy",
+          "id": "dx_dy<=(62, 0)",
+          "op": "<=",
+          "value": [
+            62,
+            0
+          ]
+        },
+        "right": {
+          "error": 20,
+          "kind": "leaf",
+          "pairs": 27,
+          "prediction": "I"
+        }
+      }
+    },
+    {
+      "accuracy": 0.3090909090909091,
+      "correct": 17,
+      "errors": 38,
+      "layout": "seven_segment",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 399.1712617085274,
+      "predicate_count": 91,
+      "rules": [
+        "union == 7 AND right_count == 7 -> E",
+        "union == 7 AND NOT (right_count == 7) -> T",
+        "NOT (union == 7) AND common == 3 -> A",
+        "NOT (union == 7) AND NOT (common == 3) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "E"
+          },
+          "pairs": 25,
+          "predicate": {
+            "display": "right_count == 7",
+            "feature": "right_count",
+            "id": "right_count==7",
+            "op": "==",
+            "value": 7
+          },
+          "right": {
+            "error": 12,
+            "kind": "leaf",
+            "pairs": 16,
+            "prediction": "T"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "union == 7",
+          "feature": "union",
+          "id": "union==7",
+          "op": "==",
+          "value": 7
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 4,
+            "kind": "leaf",
+            "pairs": 6,
+            "prediction": "A"
+          },
+          "pairs": 30,
+          "predicate": {
+            "display": "common == 3",
+            "feature": "common",
+            "id": "common==3",
+            "op": "==",
+            "value": 3
+          },
+          "right": {
+            "error": 16,
+            "kind": "leaf",
+            "pairs": 24,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.3090909090909091,
+      "correct": 17,
+      "errors": 38,
+      "layout": "keyboard_row_1_to_0",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 400.28502913028024,
+      "predicate_count": 118,
+      "rules": [
+        "max_x == 9 AND mid_x2 <= 13 -> N",
+        "max_x == 9 AND NOT (mid_x2 <= 13) -> I",
+        "NOT (max_x == 9) AND max_x == 8 -> N",
+        "NOT (max_x == 9) AND NOT (max_x == 8) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 4,
+            "kind": "leaf",
+            "pairs": 5,
+            "prediction": "N"
+          },
+          "pairs": 10,
+          "predicate": {
+            "display": "mid_x2 <= 13",
+            "feature": "mid_x2",
+            "id": "mid_x2<=13",
+            "op": "<=",
+            "value": 13
+          },
+          "right": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 5,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "max_x == 9",
+          "feature": "max_x",
+          "id": "max_x==9",
+          "op": "==",
+          "value": 9
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 45,
+          "predicate": {
+            "display": "max_x == 8",
+            "feature": "max_x",
+            "id": "max_x==8",
+            "op": "==",
+            "value": 8
+          },
+          "right": {
+            "error": 26,
+            "kind": "leaf",
+            "pairs": 36,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.3090909090909091,
+      "correct": 17,
+      "errors": 38,
+      "layout": "numeric_line_0_to_9",
+      "leaves": 4,
+      "max_depth": 2,
+      "mdl_bits_est": 400.28502913028024,
+      "predicate_count": 118,
+      "rules": [
+        "min_x == 0 AND mid_x2 <= 4 -> *",
+        "min_x == 0 AND NOT (mid_x2 <= 4) -> I",
+        "NOT (min_x == 0) AND max_x == 9 -> N",
+        "NOT (min_x == 0) AND NOT (max_x == 9) -> E"
+      ],
+      "splits": 3,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "I",
+          "kind": "split",
+          "left": {
+            "error": 4,
+            "kind": "leaf",
+            "pairs": 5,
+            "prediction": "*"
+          },
+          "pairs": 10,
+          "predicate": {
+            "display": "mid_x2 <= 4",
+            "feature": "mid_x2",
+            "id": "mid_x2<=4",
+            "op": "<=",
+            "value": 4
+          },
+          "right": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 5,
+            "prediction": "I"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "min_x == 0",
+          "feature": "min_x",
+          "id": "min_x==0",
+          "op": "==",
+          "value": 0
+        },
+        "right": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 6,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "N"
+          },
+          "pairs": 45,
+          "predicate": {
+            "display": "max_x == 9",
+            "feature": "max_x",
+            "id": "max_x==9",
+            "op": "==",
+            "value": 9
+          },
+          "right": {
+            "error": 26,
+            "kind": "leaf",
+            "pairs": 36,
+            "prediction": "E"
+          }
+        }
+      }
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "layout": "numpad",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 397.7632081095929,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 -> I",
+        "NOT (x1 == 1) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 19,
+          "kind": "leaf",
+          "pairs": 25,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "error": 21,
+          "kind": "leaf",
+          "pairs": 30,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "layout": "numpad_y_flipped",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 397.7632081095929,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 -> I",
+        "NOT (x1 == 1) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 19,
+          "kind": "leaf",
+          "pairs": 25,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "error": 21,
+          "kind": "leaf",
+          "pairs": 30,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "layout": "phone_keypad",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 397.7632081095929,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 -> I",
+        "NOT (x1 == 1) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 19,
+          "kind": "leaf",
+          "pairs": 25,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "error": 21,
+          "kind": "leaf",
+          "pairs": 30,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "layout": "phone_keypad_y_flipped",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 397.7632081095929,
+      "predicate_count": 96,
+      "rules": [
+        "x1 == 1 -> I",
+        "NOT (x1 == 1) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 19,
+          "kind": "leaf",
+          "pairs": 25,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "x1 == 1",
+          "feature": "x1",
+          "id": "x1==1",
+          "op": "==",
+          "value": 1
+        },
+        "right": {
+          "error": 21,
+          "kind": "leaf",
+          "pairs": 30,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "correct": 14,
+      "errors": 41,
+      "layout": "seven_segment",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 407.27557185904504,
+      "predicate_count": 91,
+      "rules": [
+        "union == 7 -> T",
+        "NOT (union == 7) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 19,
+          "kind": "leaf",
+          "pairs": 25,
+          "prediction": "T"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "union == 7",
+          "feature": "union",
+          "id": "union==7",
+          "op": "==",
+          "value": 7
+        },
+        "right": {
+          "error": 22,
+          "kind": "leaf",
+          "pairs": 30,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "correct": 14,
+      "errors": 41,
+      "layout": "keyboard_row_1_to_0",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 407.64682766629596,
+      "predicate_count": 118,
+      "rules": [
+        "max_x == 9 -> I",
+        "NOT (max_x == 9) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 7,
+          "kind": "leaf",
+          "pairs": 10,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "max_x == 9",
+          "feature": "max_x",
+          "id": "max_x==9",
+          "op": "==",
+          "value": 9
+        },
+        "right": {
+          "error": 34,
+          "kind": "leaf",
+          "pairs": 45,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "correct": 14,
+      "errors": 41,
+      "layout": "numeric_line_0_to_9",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 407.64682766629596,
+      "predicate_count": 118,
+      "rules": [
+        "min_x == 0 -> I",
+        "NOT (min_x == 0) -> E"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 7,
+          "kind": "leaf",
+          "pairs": 10,
+          "prediction": "I"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "min_x == 0",
+          "feature": "min_x",
+          "id": "min_x==0",
+          "op": "==",
+          "value": 0
+        },
+        "right": {
+          "error": 34,
+          "kind": "leaf",
+          "pairs": 45,
+          "prediction": "E"
+        }
+      }
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "correct": 14,
+      "errors": 41,
+      "layout": "circle_0_to_9",
+      "leaves": 2,
+      "max_depth": 1,
+      "mdl_bits_est": 408.16986241787396,
+      "predicate_count": 170,
+      "rules": [
+        "mid_x2 <= -19 -> E",
+        "NOT (mid_x2 <= -19) -> T"
+      ],
+      "splits": 1,
+      "total": 55,
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 15,
+          "kind": "leaf",
+          "pairs": 23,
+          "prediction": "E"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "mid_x2 <= -19",
+          "feature": "mid_x2",
+          "id": "mid_x2<=-19",
+          "op": "<=",
+          "value": -19
+        },
+        "right": {
+          "error": 26,
+          "kind": "leaf",
+          "pairs": 32,
+          "prediction": "T"
+        }
+      }
+    }
+  ],
+  "schema": "alternative_digit_geometry_results.v1",
+  "trials": 1500,
+  "verdict": "rejected_control"
+}

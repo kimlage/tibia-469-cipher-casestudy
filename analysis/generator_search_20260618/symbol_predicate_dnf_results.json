@@ -1,0 +1,762 @@
+{
+  "control": {
+    "best_symbol_f1": {
+      "control_max": 1.0,
+      "control_mean": 1.0,
+      "control_min": 1.0,
+      "control_sd": 0.0,
+      "observed": 1.0,
+      "p_good_direction": 1.0,
+      "z_good_direction": 0.0
+    },
+    "hit_count": {
+      "control_max": 48,
+      "control_mean": 42.82333333333333,
+      "control_min": 37,
+      "control_sd": 1.9107482176868658,
+      "observed": 44,
+      "p_good_direction": 0.3588039867109635,
+      "z_good_direction": 0.615814609049397
+    },
+    "mdl_gain_vs_lookup_bits": {
+      "control_max": -643.8987458366241,
+      "control_mean": -781.3619318233738,
+      "control_min": -927.3194196127588,
+      "control_sd": 49.739633742653574,
+      "observed": -752.1220356100063,
+      "p_good_direction": 0.2857142857142857,
+      "z_good_direction": 0.5878590977298092
+    },
+    "trials": 300
+  },
+  "created_at": "2026-06-19",
+  "observed": {
+    "accuracy": 0.8,
+    "exception_bits": 105.4758609914049,
+    "fallback": "E",
+    "hit_count": 44,
+    "lookup_bits": 209.40452071316824,
+    "lookup_cost_ratio": 4.5917182353490125,
+    "mdl_bits": 961.5265563231745,
+    "mdl_gain_vs_lookup_bits": -752.1220356100063,
+    "model_bits": 856.0506953317696,
+    "predictions": [
+      {
+        "actual": "*",
+        "hit": true,
+        "matched_symbols": [
+          "*",
+          "E"
+        ],
+        "pair": "00",
+        "predicted": "*"
+      },
+      {
+        "actual": "N",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "01",
+        "predicted": "E"
+      },
+      {
+        "actual": "R",
+        "hit": true,
+        "matched_symbols": [
+          "R"
+        ],
+        "pair": "02",
+        "predicted": "R"
+      },
+      {
+        "actual": "V",
+        "hit": true,
+        "matched_symbols": [
+          "V"
+        ],
+        "pair": "03",
+        "predicted": "V"
+      },
+      {
+        "actual": "F",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "04",
+        "predicted": "E"
+      },
+      {
+        "actual": "T",
+        "hit": true,
+        "matched_symbols": [
+          "T"
+        ],
+        "pair": "05",
+        "predicted": "T"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "06",
+        "predicted": "I"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "07",
+        "predicted": "I"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "08",
+        "predicted": "I"
+      },
+      {
+        "actual": "T",
+        "hit": false,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "09",
+        "predicted": "I"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "11",
+        "predicted": "E"
+      },
+      {
+        "actual": "F",
+        "hit": true,
+        "matched_symbols": [
+          "F"
+        ],
+        "pair": "12",
+        "predicted": "F"
+      },
+      {
+        "actual": "N",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "13",
+        "predicted": "E"
+      },
+      {
+        "actual": "A",
+        "hit": true,
+        "matched_symbols": [
+          "A"
+        ],
+        "pair": "14",
+        "predicted": "A"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [],
+        "pair": "15",
+        "predicted": "E"
+      },
+      {
+        "actual": "T",
+        "hit": true,
+        "matched_symbols": [
+          "T"
+        ],
+        "pair": "16",
+        "predicted": "T"
+      },
+      {
+        "actual": "V",
+        "hit": false,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "17",
+        "predicted": "I"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "18",
+        "predicted": "I"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "19",
+        "predicted": "I"
+      },
+      {
+        "actual": "A",
+        "hit": true,
+        "matched_symbols": [
+          "A"
+        ],
+        "pair": "22",
+        "predicted": "A"
+      },
+      {
+        "actual": "O",
+        "hit": true,
+        "matched_symbols": [
+          "O"
+        ],
+        "pair": "23",
+        "predicted": "O"
+      },
+      {
+        "actual": "L",
+        "hit": true,
+        "matched_symbols": [
+          "L"
+        ],
+        "pair": "24",
+        "predicted": "L"
+      },
+      {
+        "actual": "I",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "25",
+        "predicted": "E"
+      },
+      {
+        "actual": "N",
+        "hit": true,
+        "matched_symbols": [
+          "N"
+        ],
+        "pair": "26",
+        "predicted": "N"
+      },
+      {
+        "actual": "S",
+        "hit": true,
+        "matched_symbols": [
+          "S"
+        ],
+        "pair": "27",
+        "predicted": "S"
+      },
+      {
+        "actual": "T",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "28",
+        "predicted": "E"
+      },
+      {
+        "actual": "N",
+        "hit": true,
+        "matched_symbols": [
+          "N"
+        ],
+        "pair": "29",
+        "predicted": "N"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [],
+        "pair": "33",
+        "predicted": "E"
+      },
+      {
+        "actual": "B",
+        "hit": true,
+        "matched_symbols": [
+          "B"
+        ],
+        "pair": "34",
+        "predicted": "B"
+      },
+      {
+        "actual": "L",
+        "hit": true,
+        "matched_symbols": [
+          "L"
+        ],
+        "pair": "35",
+        "predicted": "L"
+      },
+      {
+        "actual": "V",
+        "hit": true,
+        "matched_symbols": [
+          "V"
+        ],
+        "pair": "36",
+        "predicted": "V"
+      },
+      {
+        "actual": "A",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "37",
+        "predicted": "E"
+      },
+      {
+        "actual": "T",
+        "hit": true,
+        "matched_symbols": [
+          "T"
+        ],
+        "pair": "38",
+        "predicted": "T"
+      },
+      {
+        "actual": "N",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "39",
+        "predicted": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "44",
+        "predicted": "E"
+      },
+      {
+        "actual": "F",
+        "hit": true,
+        "matched_symbols": [
+          "F"
+        ],
+        "pair": "45",
+        "predicted": "F"
+      },
+      {
+        "actual": "N",
+        "hit": true,
+        "matched_symbols": [
+          "N"
+        ],
+        "pair": "46",
+        "predicted": "N"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "47",
+        "predicted": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "48",
+        "predicted": "E"
+      },
+      {
+        "actual": "N",
+        "hit": true,
+        "matched_symbols": [
+          "N",
+          "E"
+        ],
+        "pair": "49",
+        "predicted": "N"
+      },
+      {
+        "actual": "V",
+        "hit": true,
+        "matched_symbols": [
+          "V"
+        ],
+        "pair": "55",
+        "predicted": "V"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I",
+          "E"
+        ],
+        "pair": "56",
+        "predicted": "I"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "57",
+        "predicted": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "58",
+        "predicted": "E"
+      },
+      {
+        "actual": "I",
+        "hit": true,
+        "matched_symbols": [
+          "I"
+        ],
+        "pair": "59",
+        "predicted": "I"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "66",
+        "predicted": "E"
+      },
+      {
+        "actual": "A",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "67",
+        "predicted": "E"
+      },
+      {
+        "actual": "C",
+        "hit": true,
+        "matched_symbols": [
+          "C"
+        ],
+        "pair": "68",
+        "predicted": "C"
+      },
+      {
+        "actual": "V",
+        "hit": true,
+        "matched_symbols": [
+          "V"
+        ],
+        "pair": "69",
+        "predicted": "V"
+      },
+      {
+        "actual": "N",
+        "hit": false,
+        "matched_symbols": [],
+        "pair": "77",
+        "predicted": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [],
+        "pair": "78",
+        "predicted": "E"
+      },
+      {
+        "actual": "A",
+        "hit": true,
+        "matched_symbols": [
+          "A"
+        ],
+        "pair": "79",
+        "predicted": "A"
+      },
+      {
+        "actual": "A",
+        "hit": true,
+        "matched_symbols": [
+          "A"
+        ],
+        "pair": "88",
+        "predicted": "A"
+      },
+      {
+        "actual": "T",
+        "hit": true,
+        "matched_symbols": [
+          "T"
+        ],
+        "pair": "89",
+        "predicted": "T"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "matched_symbols": [
+          "E"
+        ],
+        "pair": "99",
+        "predicted": "E"
+      }
+    ],
+    "priority": [
+      "N",
+      "A",
+      "T",
+      "V",
+      "F",
+      "L",
+      "*",
+      "C",
+      "S",
+      "B",
+      "O",
+      "R",
+      "I",
+      "E"
+    ],
+    "rules": {
+      "*": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "*",
+        "term_cost": 1.5,
+        "terms": [
+          "b_le_0"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "A": {
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "rule_type": "or2",
+        "symbol": "A",
+        "term_cost": 4.4,
+        "terms": [
+          "prod_eq_4",
+          "sum_eq_16"
+        ],
+        "tn": 49,
+        "tp": 4
+      },
+      "B": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "B",
+        "term_cost": 3.4000000000000004,
+        "terms": [
+          "and(contains_3,contains_4)"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "C": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "C",
+        "term_cost": 1.8,
+        "terms": [
+          "prod_eq_48"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "E": {
+        "f1": 0.7272727272727273,
+        "fn": 3,
+        "fp": 3,
+        "precision": 0.7272727272727273,
+        "recall": 0.7272727272727273,
+        "rule_type": "or2",
+        "symbol": "E",
+        "term_cost": 8.0,
+        "terms": [
+          "and(diag,both_square)",
+          "and(prod_ge_28,prod_le_40)"
+        ],
+        "tn": 41,
+        "tp": 8
+      },
+      "F": {
+        "f1": 0.8,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "rule_type": "or2",
+        "symbol": "F",
+        "term_cost": 4.4,
+        "terms": [
+          "prod_eq_2",
+          "prod_eq_20"
+        ],
+        "tn": 52,
+        "tp": 2
+      },
+      "I": {
+        "f1": 0.823529411764706,
+        "fn": 1,
+        "fp": 2,
+        "precision": 0.7777777777777778,
+        "recall": 0.875,
+        "rule_type": "or2",
+        "symbol": "I",
+        "term_cost": 8.1,
+        "terms": [
+          "and(a_le_1,diff_ge_6)",
+          "and(contains_digit_5,contains_6_or_9)"
+        ],
+        "tn": 45,
+        "tp": 7
+      },
+      "L": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "or2",
+        "symbol": "L",
+        "term_cost": 6.1,
+        "terms": [
+          "and(contains_digit_2,contains_4)",
+          "prod_eq_15"
+        ],
+        "tn": 53,
+        "tp": 2
+      },
+      "N": {
+        "f1": 0.6666666666666666,
+        "fn": 4,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.5,
+        "rule_type": "or2",
+        "symbol": "N",
+        "term_cost": 7.7,
+        "terms": [
+          "and(contains_4,contains_6_or_9)",
+          "and(contains_digit_2,contains_6_or_9)"
+        ],
+        "tn": 47,
+        "tp": 4
+      },
+      "O": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "O",
+        "term_cost": 3.5,
+        "terms": [
+          "and(contains_digit_2,contains_3)"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "R": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "R",
+        "term_cost": 3.5,
+        "terms": [
+          "and(contains_digit_2,contains_0)"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "S": {
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule_type": "single",
+        "symbol": "S",
+        "term_cost": 1.8,
+        "terms": [
+          "prod_eq_14"
+        ],
+        "tn": 54,
+        "tp": 1
+      },
+      "T": {
+        "f1": 0.8,
+        "fn": 2,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "rule_type": "or2",
+        "symbol": "T",
+        "term_cost": 9.0,
+        "terms": [
+          "and(a_le_1,diff_eq_5)",
+          "and(contains_digit_8,any_digits_39)"
+        ],
+        "tn": 49,
+        "tp": 4
+      },
+      "V": {
+        "f1": 0.888888888888889,
+        "fn": 1,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8,
+        "rule_type": "or2",
+        "symbol": "V",
+        "term_cost": 7.1,
+        "terms": [
+          "and(diff_eq_3,any_digits_39)",
+          "prod_eq_25"
+        ],
+        "tn": 50,
+        "tp": 4
+      }
+    },
+    "total_rule_cost": 70.3
+  },
+  "predicate_count": 4630,
+  "schema": "symbol_predicate_dnf_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "verdict": "lookup_disguise"
+}

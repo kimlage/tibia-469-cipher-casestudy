@@ -1,0 +1,1215 @@
+{
+  "baseline": {
+    "description": "Per-code train majority baseline.",
+    "holdout": {
+      "accuracy": 0.7717391304347826,
+      "balanced_accuracy": 0.6692226335272342,
+      "errors": 21,
+      "fn_false_keep": 20,
+      "fp_false_omit": 1,
+      "tn_keep": 60,
+      "tp_omit": 11
+    },
+    "holdout_component_stats": {},
+    "holdout_mdl_bits": 181.9166512196416,
+    "holdout_mdl_gain_vs_code_only_bits": 0.0,
+    "name": "code_only",
+    "rule": {
+      "boundary_prev_symbols": [],
+      "geometry_prev_code_descending_or_diagonal": false,
+      "negative_06_override": false,
+      "negative_06_prev_codes": [],
+      "negative_06_prev_symbol": null,
+      "prev_code_whitelist": []
+    },
+    "rule_description_bits": 0.0,
+    "train": {
+      "accuracy": 0.8007380073800738,
+      "balanced_accuracy": 0.7052522906181443,
+      "errors": 108,
+      "fn_false_keep": 88,
+      "fp_false_omit": 20,
+      "tn_keep": 358,
+      "tp_omit": 76
+    },
+    "train_component_stats": {},
+    "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+      "control_max": 0.0,
+      "control_mean": 0.0,
+      "control_min": 0.0,
+      "control_sd": 0.0,
+      "observed": 0.0,
+      "p_good_direction": 1.0,
+      "z_good_direction": 0.0
+    },
+    "verdict": "baseline"
+  },
+  "candidate_rows": [
+    {
+      "description": "Per-code train majority baseline.",
+      "holdout": {
+        "accuracy": 0.7717391304347826,
+        "balanced_accuracy": 0.6692226335272342,
+        "errors": 21,
+        "fn_false_keep": 20,
+        "fp_false_omit": 1,
+        "tn_keep": 60,
+        "tp_omit": 11
+      },
+      "holdout_component_stats": {},
+      "holdout_mdl_bits": 181.9166512196416,
+      "holdout_mdl_gain_vs_code_only_bits": 0.0,
+      "name": "code_only",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": []
+      },
+      "rule_description_bits": 0.0,
+      "train": {
+        "accuracy": 0.8007380073800738,
+        "balanced_accuracy": 0.7052522906181443,
+        "errors": 108,
+        "fn_false_keep": 88,
+        "fp_false_omit": 20,
+        "tn_keep": 358,
+        "tp_omit": 76
+      },
+      "train_component_stats": {},
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.0,
+        "control_mean": 0.0,
+        "control_min": 0.0,
+        "control_sd": 0.0,
+        "observed": 0.0,
+        "p_good_direction": 1.0,
+        "z_good_direction": 0.0
+      },
+      "verdict": "baseline"
+    },
+    {
+      "description": "code_only plus primary positive prev_code whitelist.",
+      "holdout": {
+        "accuracy": 0.8478260869565217,
+        "balanced_accuracy": 0.782125859333686,
+        "errors": 14,
+        "fn_false_keep": 13,
+        "fp_false_omit": 1,
+        "tn_keep": 60,
+        "tp_omit": 18
+      },
+      "holdout_component_stats": {
+        "whitelist": {
+          "omitted": 7,
+          "omitted_fraction": 1.0,
+          "support": 7
+        }
+      },
+      "holdout_mdl_bits": 171.97859018521194,
+      "holdout_mdl_gain_vs_code_only_bits": 9.938061034429666,
+      "name": "primary_prev_code_whitelist",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": [
+          "11",
+          "65",
+          "74",
+          "76",
+          "89",
+          "91",
+          "96"
+        ]
+      },
+      "rule_description_bits": 35.83605064332655,
+      "train": {
+        "accuracy": 0.8597785977859779,
+        "balanced_accuracy": 0.8028132662279004,
+        "errors": 76,
+        "fn_false_keep": 56,
+        "fp_false_omit": 20,
+        "tn_keep": 358,
+        "tp_omit": 108
+      },
+      "train_component_stats": {
+        "whitelist": {
+          "omitted": 34,
+          "omitted_fraction": 1.0,
+          "support": 34
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.03198799845141298,
+        "control_mean": -0.009132815524583868,
+        "control_min": -0.037956510517486164,
+        "control_sd": 0.009801176257356919,
+        "observed": 0.09756097560975607,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 10.885814960653716
+      },
+      "verdict": "candidate_compact_render_rule_mdl"
+    },
+    {
+      "description": "code_only plus secondary positive prev_code whitelist.",
+      "holdout": {
+        "accuracy": 0.7934782608695652,
+        "balanced_accuracy": 0.7014806980433633,
+        "errors": 19,
+        "fn_false_keep": 18,
+        "fp_false_omit": 1,
+        "tn_keep": 60,
+        "tp_omit": 13
+      },
+      "holdout_component_stats": {
+        "whitelist": {
+          "omitted": 2,
+          "omitted_fraction": 1.0,
+          "support": 2
+        }
+      },
+      "holdout_mdl_bits": 204.67438424075212,
+      "holdout_mdl_gain_vs_code_only_bits": -22.75773302111051,
+      "name": "secondary_prev_code_whitelist",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": [
+          "21",
+          "50",
+          "54",
+          "64",
+          "71",
+          "75",
+          "95"
+        ]
+      },
+      "rule_description_bits": 35.83605064332655,
+      "train": {
+        "accuracy": 0.8062730627306273,
+        "balanced_accuracy": 0.7333849528971481,
+        "errors": 105,
+        "fn_false_keep": 74,
+        "fp_false_omit": 31,
+        "tn_keep": 347,
+        "tp_omit": 90
+      },
+      "train_component_stats": {
+        "whitelist": {
+          "omitted": 26,
+          "omitted_fraction": 0.7027027027027027,
+          "support": 37
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.010646535036778926,
+        "control_mean": -0.017130178087495136,
+        "control_min": -0.033068783068783136,
+        "control_sd": 0.007044791657340839,
+        "observed": 0.028132662279003795,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 6.425007660706897
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "code_only plus primary and secondary positive prev_code whitelists.",
+      "holdout": {
+        "accuracy": 0.8695652173913043,
+        "balanced_accuracy": 0.814383923849815,
+        "errors": 12,
+        "fn_false_keep": 11,
+        "fp_false_omit": 1,
+        "tn_keep": 60,
+        "tp_omit": 20
+      },
+      "holdout_component_stats": {
+        "whitelist": {
+          "omitted": 9,
+          "omitted_fraction": 1.0,
+          "support": 9
+        }
+      },
+      "holdout_mdl_bits": 173.72919476442178,
+      "holdout_mdl_gain_vs_code_only_bits": 8.18745645521983,
+      "name": "primary_plus_secondary_prev_code_whitelist",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": [
+          "11",
+          "21",
+          "50",
+          "54",
+          "64",
+          "65",
+          "71",
+          "74",
+          "75",
+          "76",
+          "89",
+          "91",
+          "95",
+          "96"
+        ]
+      },
+      "rule_description_bits": 50.66497284475244,
+      "train": {
+        "accuracy": 0.8653136531365314,
+        "balanced_accuracy": 0.8309459285069041,
+        "errors": 73,
+        "fn_false_keep": 42,
+        "fp_false_omit": 31,
+        "tn_keep": 347,
+        "tp_omit": 122
+      },
+      "train_component_stats": {
+        "whitelist": {
+          "omitted": 60,
+          "omitted_fraction": 0.8450704225352113,
+          "support": 71
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.016405342624854824,
+        "control_mean": -0.026761348238482245,
+        "control_min": -0.062282229965156866,
+        "control_sd": 0.011744182189141358,
+        "observed": 0.12569363788875976,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 12.981319914144514
+      },
+      "verdict": "candidate_compact_render_rule_mdl"
+    },
+    {
+      "description": "code_only plus keep-zero override for code=06 after V/80/45/18.",
+      "holdout": {
+        "accuracy": 0.782608695652174,
+        "balanced_accuracy": 0.6774193548387097,
+        "errors": 20,
+        "fn_false_keep": 20,
+        "fp_false_omit": 0,
+        "tn_keep": 61,
+        "tp_omit": 11
+      },
+      "holdout_component_stats": {
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        }
+      },
+      "holdout_mdl_bits": 206.33890209338193,
+      "holdout_mdl_gain_vs_code_only_bits": -24.422250873740325,
+      "name": "negative_06_override_only",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": []
+      },
+      "rule_description_bits": 30.961409684848324,
+      "train": {
+        "accuracy": 0.8339483394833949,
+        "balanced_accuracy": 0.7273357852626146,
+        "errors": 90,
+        "fn_false_keep": 89,
+        "fp_false_omit": 1,
+        "tn_keep": 377,
+        "tp_omit": 75
+      },
+      "train_component_stats": {
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": -0.004145696218866957,
+        "control_mean": -0.028108247838430578,
+        "control_min": -0.05223254613498518,
+        "control_sd": 0.007490675326668689,
+        "observed": 0.022083494644470236,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 6.700563072625185
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "code_only plus omit after book/star boundary.",
+      "holdout": {
+        "accuracy": 0.7934782608695652,
+        "balanced_accuracy": 0.7014806980433633,
+        "errors": 19,
+        "fn_false_keep": 18,
+        "fp_false_omit": 1,
+        "tn_keep": 60,
+        "tp_omit": 13
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        }
+      },
+      "holdout_mdl_bits": 180.9310907383454,
+      "holdout_mdl_gain_vs_code_only_bits": 0.9855604812962042,
+      "name": "boundary_only",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": []
+      },
+      "rule_description_bits": 12.092757140919852,
+      "train": {
+        "accuracy": 0.8284132841328413,
+        "balanced_accuracy": 0.7561620854303781,
+        "errors": 93,
+        "fn_false_keep": 70,
+        "fp_false_omit": 23,
+        "tn_keep": 355,
+        "tp_omit": 94
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.03342366757000903,
+        "control_mean": -0.004042545812362929,
+        "control_min": -0.02340624596722163,
+        "control_sd": 0.008299963218683743,
+        "observed": 0.05090979481223379,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 6.620793270612997
+      },
+      "verdict": "candidate_compact_render_rule_mdl"
+    },
+    {
+      "description": "code_only plus omit after prev_code with first digit >= second digit.",
+      "holdout": {
+        "accuracy": 0.8043478260869565,
+        "balanced_accuracy": 0.7890005288207298,
+        "errors": 18,
+        "fn_false_keep": 8,
+        "fp_false_omit": 10,
+        "tn_keep": 51,
+        "tp_omit": 23
+      },
+      "holdout_component_stats": {
+        "geometry": {
+          "omitted": 15,
+          "omitted_fraction": 0.6,
+          "support": 25
+        }
+      },
+      "holdout_mdl_bits": 170.29917478631754,
+      "holdout_mdl_gain_vs_code_only_bits": 11.617476433324072,
+      "name": "geometry_descdiag_only",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": true,
+        "negative_06_override": false,
+        "negative_06_prev_codes": [],
+        "negative_06_prev_symbol": null,
+        "prev_code_whitelist": []
+      },
+      "rule_description_bits": 8.0,
+      "train": {
+        "accuracy": 0.6918819188191881,
+        "balanced_accuracy": 0.7083333333333333,
+        "errors": 167,
+        "fn_false_keep": 41,
+        "fp_false_omit": 126,
+        "tn_keep": 252,
+        "tp_omit": 123
+      },
+      "train_component_stats": {
+        "geometry": {
+          "omitted": 101,
+          "omitted_fraction": 0.45701357466063347,
+          "support": 221
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.02056716995741381,
+        "control_mean": -0.04866696509227001,
+        "control_min": -0.10620725254871599,
+        "control_sd": 0.01631234958714861,
+        "observed": 0.003081042715188942,
+        "p_good_direction": 0.0029985007496251873,
+        "z_good_direction": 3.1723209174126383
+      },
+      "verdict": "candidate_compact_render_rule_mdl"
+    },
+    {
+      "description": "primary whitelist with negative code=06 override.",
+      "holdout": {
+        "accuracy": 0.8586956521739131,
+        "balanced_accuracy": 0.7903225806451613,
+        "errors": 13,
+        "fn_false_keep": 13,
+        "fp_false_omit": 0,
+        "tn_keep": 61,
+        "tp_omit": 18
+      },
+      "holdout_component_stats": {
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        },
+        "whitelist": {
+          "omitted": 7,
+          "omitted_fraction": 1.0,
+          "support": 7
+        }
+      },
+      "holdout_mdl_bits": 196.40084105895224,
+      "holdout_mdl_gain_vs_code_only_bits": -14.48418983931063,
+      "name": "primary_with_negative_06",
+      "rule": {
+        "boundary_prev_symbols": [],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": [
+          "11",
+          "65",
+          "74",
+          "76",
+          "89",
+          "91",
+          "96"
+        ]
+      },
+      "rule_description_bits": 66.79746032817488,
+      "train": {
+        "accuracy": 0.8929889298892989,
+        "balanced_accuracy": 0.8248967608723706,
+        "errors": 58,
+        "fn_false_keep": 57,
+        "fp_false_omit": 1,
+        "tn_keep": 377,
+        "tp_omit": 107
+      },
+      "train_component_stats": {
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        },
+        "whitelist": {
+          "omitted": 34,
+          "omitted_fraction": 1.0,
+          "support": 34
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.005984643179765103,
+        "control_mean": -0.03762357239643834,
+        "control_min": -0.07707446122080275,
+        "control_sd": 0.01260643799390361,
+        "observed": 0.11964447025422631,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 12.475216451048142
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "primary whitelist, negative code=06 override, and boundary omission.",
+      "holdout": {
+        "accuracy": 0.8804347826086957,
+        "balanced_accuracy": 0.8225806451612903,
+        "errors": 11,
+        "fn_false_keep": 11,
+        "fp_false_omit": 0,
+        "tn_keep": 61,
+        "tp_omit": 20
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        },
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        },
+        "whitelist": {
+          "omitted": 7,
+          "omitted_fraction": 1.0,
+          "support": 7
+        }
+      },
+      "holdout_mdl_bits": 195.41528057765606,
+      "holdout_mdl_gain_vs_code_only_bits": -13.498629358014455,
+      "name": "primary_with_negative_06_and_boundary",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": [
+          "11",
+          "65",
+          "74",
+          "76",
+          "89",
+          "91",
+          "96"
+        ]
+      },
+      "rule_description_bits": 78.89021746909474,
+      "train": {
+        "accuracy": 0.9206642066420664,
+        "balanced_accuracy": 0.8758065556846044,
+        "errors": 43,
+        "fn_false_keep": 39,
+        "fp_false_omit": 4,
+        "tn_keep": 374,
+        "tp_omit": 125
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        },
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        },
+        "whitelist": {
+          "omitted": 34,
+          "omitted_fraction": 1.0,
+          "support": 34
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 6.452445476834434e-05,
+        "control_mean": -0.041462841979610296,
+        "control_min": -0.09173764356691183,
+        "control_sd": 0.014327938715900733,
+        "observed": 0.1705542650664601,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 14.797460489608316
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "primary+secondary whitelist, negative code=06 override, and boundary omission.",
+      "holdout": {
+        "accuracy": 0.9021739130434783,
+        "balanced_accuracy": 0.8548387096774194,
+        "errors": 9,
+        "fn_false_keep": 9,
+        "fp_false_omit": 0,
+        "tn_keep": 61,
+        "tp_omit": 22
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        },
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        },
+        "whitelist": {
+          "omitted": 9,
+          "omitted_fraction": 1.0,
+          "support": 9
+        }
+      },
+      "holdout_mdl_bits": 197.16588515686587,
+      "holdout_mdl_gain_vs_code_only_bits": -15.249233937224261,
+      "name": "primary_secondary_with_negative_06_and_boundary",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": false,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": [
+          "11",
+          "21",
+          "50",
+          "54",
+          "64",
+          "65",
+          "71",
+          "74",
+          "75",
+          "76",
+          "89",
+          "91",
+          "95",
+          "96"
+        ]
+      },
+      "rule_description_bits": 93.71913967052062,
+      "train": {
+        "accuracy": 0.9261992619926199,
+        "balanced_accuracy": 0.9039392179636082,
+        "errors": 40,
+        "fn_false_keep": 25,
+        "fp_false_omit": 15,
+        "tn_keep": 363,
+        "tp_omit": 139
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        },
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        },
+        "whitelist": {
+          "omitted": 60,
+          "omitted_fraction": 0.8450704225352113,
+          "support": 71
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": 0.006339527680991108,
+        "control_mean": -0.05843345915602024,
+        "control_min": -0.11169183120402637,
+        "control_sd": 0.015729002295808182,
+        "observed": 0.1986869273454639,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 16.34689738522114
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "descending/diagonal proxy with negative code=06 override and boundary omission.",
+      "holdout": {
+        "accuracy": 0.8152173913043478,
+        "balanced_accuracy": 0.7971972501322051,
+        "errors": 17,
+        "fn_false_keep": 8,
+        "fp_false_omit": 9,
+        "tn_keep": 52,
+        "tp_omit": 23
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        },
+        "geometry": {
+          "omitted": 15,
+          "omitted_fraction": 0.6,
+          "support": 25
+        },
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        }
+      },
+      "holdout_mdl_bits": 206.81418280097768,
+      "holdout_mdl_gain_vs_code_only_bits": -24.897531581336068,
+      "name": "geometry_with_negative_06_and_boundary",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": true,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": []
+      },
+      "rule_description_bits": 51.05416682576818,
+      "train": {
+        "accuracy": 0.7398523985239852,
+        "balanced_accuracy": 0.7599851593754032,
+        "errors": 141,
+        "fn_false_keep": 31,
+        "fp_false_omit": 110,
+        "tn_keep": 268,
+        "tp_omit": 133
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        },
+        "geometry": {
+          "omitted": 101,
+          "omitted_fraction": 0.45701357466063347,
+          "support": 221
+        },
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": -0.019583172022196504,
+        "control_mean": -0.08171356787972668,
+        "control_min": -0.1332429990966576,
+        "control_sd": 0.017991290062333826,
+        "observed": 0.05473286875725891,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 7.5840273912678935
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "primary whitelist plus descending/diagonal proxy, negative code=06 override, and boundary omission.",
+      "holdout": {
+        "accuracy": 0.8478260869565217,
+        "balanced_accuracy": 0.8455843469063987,
+        "errors": 14,
+        "fn_false_keep": 5,
+        "fp_false_omit": 9,
+        "tn_keep": 52,
+        "tp_omit": 26
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        },
+        "geometry": {
+          "omitted": 15,
+          "omitted_fraction": 0.6,
+          "support": 25
+        },
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        },
+        "whitelist": {
+          "omitted": 7,
+          "omitted_fraction": 1.0,
+          "support": 7
+        }
+      },
+      "holdout_mdl_bits": 223.03275701098016,
+      "holdout_mdl_gain_vs_code_only_bits": -41.116105791338555,
+      "name": "primary_geometry_with_negative_06_and_boundary",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": true,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": [
+          "11",
+          "65",
+          "74",
+          "76",
+          "89",
+          "91",
+          "96"
+        ]
+      },
+      "rule_description_bits": 86.89021746909474,
+      "train": {
+        "accuracy": 0.7583025830258303,
+        "balanced_accuracy": 0.790472964253452,
+        "errors": 131,
+        "fn_false_keep": 21,
+        "fp_false_omit": 110,
+        "tn_keep": 268,
+        "tp_omit": 143
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        },
+        "geometry": {
+          "omitted": 101,
+          "omitted_fraction": 0.45701357466063347,
+          "support": 221
+        },
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        },
+        "whitelist": {
+          "omitted": 34,
+          "omitted_fraction": 1.0,
+          "support": 34
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": -0.024067621628597213,
+        "control_mean": -0.08695866402116428,
+        "control_min": -0.15084204413472702,
+        "control_sd": 0.01850045111634943,
+        "observed": 0.08522067363530772,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 9.306764282321295
+      },
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "description": "primary+secondary whitelist plus descending/diagonal proxy, negative code=06 override, and boundary omission.",
+      "holdout": {
+        "accuracy": 0.8478260869565217,
+        "balanced_accuracy": 0.8455843469063987,
+        "errors": 14,
+        "fn_false_keep": 5,
+        "fp_false_omit": 9,
+        "tn_keep": 52,
+        "tp_omit": 26
+      },
+      "holdout_component_stats": {
+        "boundary": {
+          "omitted": 4,
+          "omitted_fraction": 1.0,
+          "support": 4
+        },
+        "geometry": {
+          "omitted": 15,
+          "omitted_fraction": 0.6,
+          "support": 25
+        },
+        "negative_06_override": {
+          "omitted": 0,
+          "omitted_fraction": 0.0,
+          "support": 1
+        },
+        "whitelist": {
+          "omitted": 9,
+          "omitted_fraction": 1.0,
+          "support": 9
+        }
+      },
+      "holdout_mdl_bits": 237.86167921240605,
+      "holdout_mdl_gain_vs_code_only_bits": -55.94502799276444,
+      "name": "primary_secondary_geometry_with_negative_06_and_boundary",
+      "rule": {
+        "boundary_prev_symbols": [
+          "*",
+          "<s>"
+        ],
+        "geometry_prev_code_descending_or_diagonal": true,
+        "negative_06_override": true,
+        "negative_06_prev_codes": [
+          "18",
+          "45",
+          "80"
+        ],
+        "negative_06_prev_symbol": "V",
+        "prev_code_whitelist": [
+          "11",
+          "21",
+          "50",
+          "54",
+          "64",
+          "65",
+          "71",
+          "74",
+          "75",
+          "76",
+          "89",
+          "91",
+          "95",
+          "96"
+        ]
+      },
+      "rule_description_bits": 101.71913967052062,
+      "train": {
+        "accuracy": 0.7583025830258303,
+        "balanced_accuracy": 0.790472964253452,
+        "errors": 131,
+        "fn_false_keep": 21,
+        "fp_false_omit": 110,
+        "tn_keep": 268,
+        "tp_omit": 143
+      },
+      "train_component_stats": {
+        "boundary": {
+          "omitted": 21,
+          "omitted_fraction": 0.875,
+          "support": 24
+        },
+        "geometry": {
+          "omitted": 101,
+          "omitted_fraction": 0.45701357466063347,
+          "support": 221
+        },
+        "negative_06_override": {
+          "omitted": 1,
+          "omitted_fraction": 0.05,
+          "support": 20
+        },
+        "whitelist": {
+          "omitted": 60,
+          "omitted_fraction": 0.8450704225352113,
+          "support": 71
+        }
+      },
+      "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+        "control_max": -0.024067621628597213,
+        "control_mean": -0.08620457478384334,
+        "control_min": -0.1420989805136147,
+        "control_sd": 0.01788623033508369,
+        "observed": 0.08522067363530772,
+        "p_good_direction": 0.0004997501249375312,
+        "z_good_direction": 9.584202216321787
+      },
+      "verdict": "supporting_render_layer"
+    }
+  ],
+  "control_trials": 2000,
+  "holdout_books": [
+    "0",
+    "7",
+    "14",
+    "21",
+    "28",
+    "35",
+    "42",
+    "49",
+    "56",
+    "63"
+  ],
+  "holdout_examples": 92,
+  "overall_classification": "supporting_render_layer",
+  "random_seed": 46920260623,
+  "schema": "zero_compact_rule_results.v1",
+  "selected_by_balanced_accuracy": {
+    "description": "primary+secondary whitelist, negative code=06 override, and boundary omission.",
+    "holdout": {
+      "accuracy": 0.9021739130434783,
+      "balanced_accuracy": 0.8548387096774194,
+      "errors": 9,
+      "fn_false_keep": 9,
+      "fp_false_omit": 0,
+      "tn_keep": 61,
+      "tp_omit": 22
+    },
+    "holdout_component_stats": {
+      "boundary": {
+        "omitted": 4,
+        "omitted_fraction": 1.0,
+        "support": 4
+      },
+      "negative_06_override": {
+        "omitted": 0,
+        "omitted_fraction": 0.0,
+        "support": 1
+      },
+      "whitelist": {
+        "omitted": 9,
+        "omitted_fraction": 1.0,
+        "support": 9
+      }
+    },
+    "holdout_mdl_bits": 197.16588515686587,
+    "holdout_mdl_gain_vs_code_only_bits": -15.249233937224261,
+    "name": "primary_secondary_with_negative_06_and_boundary",
+    "rule": {
+      "boundary_prev_symbols": [
+        "*",
+        "<s>"
+      ],
+      "geometry_prev_code_descending_or_diagonal": false,
+      "negative_06_override": true,
+      "negative_06_prev_codes": [
+        "18",
+        "45",
+        "80"
+      ],
+      "negative_06_prev_symbol": "V",
+      "prev_code_whitelist": [
+        "11",
+        "21",
+        "50",
+        "54",
+        "64",
+        "65",
+        "71",
+        "74",
+        "75",
+        "76",
+        "89",
+        "91",
+        "95",
+        "96"
+      ]
+    },
+    "rule_description_bits": 93.71913967052062,
+    "train": {
+      "accuracy": 0.9261992619926199,
+      "balanced_accuracy": 0.9039392179636082,
+      "errors": 40,
+      "fn_false_keep": 25,
+      "fp_false_omit": 15,
+      "tn_keep": 363,
+      "tp_omit": 139
+    },
+    "train_component_stats": {
+      "boundary": {
+        "omitted": 21,
+        "omitted_fraction": 0.875,
+        "support": 24
+      },
+      "negative_06_override": {
+        "omitted": 1,
+        "omitted_fraction": 0.05,
+        "support": 20
+      },
+      "whitelist": {
+        "omitted": 60,
+        "omitted_fraction": 0.8450704225352113,
+        "support": 71
+      }
+    },
+    "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+      "control_max": 0.006339527680991108,
+      "control_mean": -0.05843345915602024,
+      "control_min": -0.11169183120402637,
+      "control_sd": 0.015729002295808182,
+      "observed": 0.1986869273454639,
+      "p_good_direction": 0.0004997501249375312,
+      "z_good_direction": 16.34689738522114
+    },
+    "verdict": "supporting_render_layer"
+  },
+  "selected_by_mdl_gain": {
+    "description": "code_only plus omit after prev_code with first digit >= second digit.",
+    "holdout": {
+      "accuracy": 0.8043478260869565,
+      "balanced_accuracy": 0.7890005288207298,
+      "errors": 18,
+      "fn_false_keep": 8,
+      "fp_false_omit": 10,
+      "tn_keep": 51,
+      "tp_omit": 23
+    },
+    "holdout_component_stats": {
+      "geometry": {
+        "omitted": 15,
+        "omitted_fraction": 0.6,
+        "support": 25
+      }
+    },
+    "holdout_mdl_bits": 170.29917478631754,
+    "holdout_mdl_gain_vs_code_only_bits": 11.617476433324072,
+    "name": "geometry_descdiag_only",
+    "rule": {
+      "boundary_prev_symbols": [],
+      "geometry_prev_code_descending_or_diagonal": true,
+      "negative_06_override": false,
+      "negative_06_prev_codes": [],
+      "negative_06_prev_symbol": null,
+      "prev_code_whitelist": []
+    },
+    "rule_description_bits": 8.0,
+    "train": {
+      "accuracy": 0.6918819188191881,
+      "balanced_accuracy": 0.7083333333333333,
+      "errors": 167,
+      "fn_false_keep": 41,
+      "fp_false_omit": 126,
+      "tn_keep": 252,
+      "tp_omit": 123
+    },
+    "train_component_stats": {
+      "geometry": {
+        "omitted": 101,
+        "omitted_fraction": 0.45701357466063347,
+        "support": 221
+      }
+    },
+    "train_delta_balanced_accuracy_vs_code_only_shuffle": {
+      "control_max": 0.02056716995741381,
+      "control_mean": -0.04866696509227001,
+      "control_min": -0.10620725254871599,
+      "control_sd": 0.01631234958714861,
+      "observed": 0.003081042715188942,
+      "p_good_direction": 0.0029985007496251873,
+      "z_good_direction": 3.1723209174126383
+    },
+    "verdict": "candidate_compact_render_rule_mdl"
+  },
+  "split": "generator_holdout_manifest.book_holdouts",
+  "train_examples": 542,
+  "translation_delta": "NONE"
+}

@@ -4,7 +4,7 @@ page_type: log
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-13
+updated_at: 2026-06-18
 moc_parent: README.md
 source_refs: [web-sources-cited-in-page]
 ---
@@ -59,6 +59,21 @@ So it is **not** a book-crib. It does, however, **independently corroborate** ou
 ## Net external result
 
 **No new usable ground truth exists publicly** — no book-crib, no new attested phrase pair, no external gloss for BENNA. The community has the same digit strings we do and the same wall. This is why the only remaining unlock is *new* CipSoft-attested ground truth ([page 9](09-open-questions.md)).
+
+## Post-final lore-source audit
+
+A 2026-06-18 addendum reviewed additional lore fronts that were not previously
+organized in the final wiki: Great Calculator, Demona formula/Magic Web,
+pair/mirror sources, Secret Library `74032 45331`, Paradox Tower, Spirit
+Grounds, Evil Mastermind fake dictionaries, and lower-confidence environmental
+or watchlist items.
+
+The result is still negative for translation: no source supplies a usable
+number<->plaintext pair. The exhaustive follow-up did confirm
+`74032 45331` as an untranslated Secret Library Ice Section book, but the exact
+numbers have zero hits in the 70 Hellgate-book raw corpus. The addendum is
+preserved because it improves the mechanism/origin framing and records the
+controls/watchlist explicitly. See [page 10](10-lore-source-audit.md).
 
 ---
 

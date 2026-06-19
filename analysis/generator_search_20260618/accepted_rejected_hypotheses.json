@@ -1,0 +1,1546 @@
+{
+  "rows": [
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "tape_based_mechanical_formula",
+      "lore_fit": 0.7,
+      "mdl_gain": 6.59713442105809,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.35,
+      "score_total": 7.94713442105809,
+      "targets_explained": [
+        "G",
+        "H",
+        "I"
+      ],
+      "verdict": "candidate_tape_based_formula"
+    },
+    {
+      "control_leakage": 0.004975124378109453,
+      "hypothesis_id": "module_overlap_tape_grammar",
+      "lore_fit": 0.65,
+      "mdl_gain": 6.237688114905144,
+      "prediction_score": 0.5168010752688172,
+      "rule_complexity": 0.35,
+      "score_total": 7.049514065795853,
+      "targets_explained": [
+        "G",
+        "H"
+      ],
+      "verdict": "candidate_overlap_tape"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "residual_exact_repeat_pruned",
+      "lore_fit": 0.6,
+      "mdl_gain": 2.783473435032237,
+      "prediction_score": 0.8079692750840134,
+      "rule_complexity": 0.2,
+      "score_total": 3.9914427101162504,
+      "targets_explained": [
+        "I",
+        "H"
+      ],
+      "verdict": "candidate_generator"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "core_mechanical_formula",
+      "lore_fit": 0.8,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.35,
+      "score_total": 1.4500000000000002,
+      "targets_explained": [
+        "A",
+        "B",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "verdict": "core"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "frequency_weighted_stochastic_inventory",
+      "lore_fit": 0.65,
+      "mdl_gain": 0.3214915371866929,
+      "prediction_score": 0.8037288429667322,
+      "rule_complexity": 0.35,
+      "score_total": 1.4252203801534251,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "candidate_generator_stochastic_inventory"
+    },
+    {
+      "control_leakage": 0.0004997501249375312,
+      "hypothesis_id": "module_tape_origin_search",
+      "lore_fit": 0.65,
+      "mdl_gain": 0.3554463061529477,
+      "prediction_score": 0.5958686440677966,
+      "rule_complexity": 0.3,
+      "score_total": 1.3008152000958066,
+      "targets_explained": [
+        "G",
+        "H",
+        "I"
+      ],
+      "verdict": "secondary_support_overlap_tape_origin"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "chayenne_min8_copy_holdout",
+      "lore_fit": 0.4,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9183673469387755,
+      "rule_complexity": 0.1,
+      "score_total": 1.2183673469387755,
+      "targets_explained": [
+        "K"
+      ],
+      "verdict": "secondary_validation"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "symbol_digit_origin_order",
+      "lore_fit": 0.7,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.7627118644067796,
+      "rule_complexity": 0.25,
+      "score_total": 1.2127118644067796,
+      "targets_explained": [
+        "G",
+        "H"
+      ],
+      "verdict": "candidate_generator"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "pair_table_frequency_allocation",
+      "lore_fit": 0.5,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8948799786101228,
+      "rule_complexity": 0.25,
+      "score_total": 1.1448799786101227,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "candidate_generator"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "avar_tar_min8_negative_control",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.1,
+      "score_total": 1.0999999999999999,
+      "targets_explained": [
+        "L"
+      ],
+      "verdict": "negative_control_pass"
+    },
+    {
+      "control_leakage": 0.0004997501249375312,
+      "hypothesis_id": "tape_tokenization_analysis",
+      "lore_fit": 0.55,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9397784657105399,
+      "rule_complexity": 0.45,
+      "score_total": 1.0392787155856025,
+      "targets_explained": [
+        "G",
+        "H",
+        "J"
+      ],
+      "verdict": "candidate_token_coherent_tapes_with_edge_exceptions"
+    },
+    {
+      "control_leakage": 4.999750012499375e-05,
+      "hypothesis_id": "structural_exception_layer_search",
+      "lore_fit": 0.45,
+      "mdl_gain": -0.01864385618977471,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.45,
+      "score_total": 0.9813061463101004,
+      "targets_explained": [
+        "A",
+        "C",
+        "D",
+        "J"
+      ],
+      "verdict": "compact_render_layer_over_lookup_not_new_matrix_formula"
+    },
+    {
+      "control_leakage": 4.999750012499375e-05,
+      "hypothesis_id": "directed_pair_surface_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9772727272727273,
+      "rule_complexity": 0.45,
+      "score_total": 0.9772227297726023,
+      "targets_explained": [
+        "A",
+        "C",
+        "D",
+        "J"
+      ],
+      "verdict": "render_orientation_layer_over_lookup_not_new_matrix_formula"
+    },
+    {
+      "control_leakage": 0.0004997501249375312,
+      "hypothesis_id": "orientation_render_rule",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9315068493150684,
+      "rule_complexity": 0.55,
+      "score_total": 0.8310070991901308,
+      "targets_explained": [
+        "G",
+        "J"
+      ],
+      "verdict": "candidate_orientation_render_channel_not_pair_formula"
+    },
+    {
+      "control_leakage": 0.002997002997002997,
+      "hypothesis_id": "e_layer_predicate_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0069786495040654,
+      "prediction_score": 0.923076923076923,
+      "rule_complexity": 0.35,
+      "score_total": 0.8270585695839853,
+      "targets_explained": [
+        "A",
+        "C"
+      ],
+      "verdict": "weak_e_layer_signal"
+    },
+    {
+      "control_leakage": 0.0004997501249375312,
+      "hypothesis_id": "zero_compact_rule_search",
+      "lore_fit": 0.4,
+      "mdl_gain": 0.011617476433324071,
+      "prediction_score": 0.8548387096774194,
+      "rule_complexity": 0.45,
+      "score_total": 0.815956435985806,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "deterministic_apportionment_inventory",
+      "lore_fit": 0.55,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.7073170731707317,
+      "rule_complexity": 0.45,
+      "score_total": 0.8073170731707318,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "secondary_support_not_exact"
+    },
+    {
+      "control_leakage": 0.015992003998001,
+      "hypothesis_id": "pair_symbol_stream_compression_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.992546603378579,
+      "rule_complexity": 0.55,
+      "score_total": 0.776554599380578,
+      "targets_explained": [
+        "A",
+        "G",
+        "H"
+      ],
+      "verdict": "not_promoted_symbol_stream_hint"
+    },
+    {
+      "control_leakage": 0.03482587064676617,
+      "hypothesis_id": "digit_orbit_quotient_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0035676415904584645,
+      "prediction_score": 0.9272727272727272,
+      "rule_complexity": 0.55,
+      "score_total": 0.6960144982164196,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "weak_lossless_orbit_compression"
+    },
+    {
+      "control_leakage": 0.0027997200279972004,
+      "hypothesis_id": "shared_e_zero_predicate_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.019617476433324094,
+      "prediction_score": 0.5959683714839717,
+      "rule_complexity": 0.25,
+      "score_total": 0.6627861278892986,
+      "targets_explained": [
+        "C",
+        "D",
+        "J"
+      ],
+      "verdict": "shared_predicate_signal_only"
+    },
+    {
+      "control_leakage": 0.0131986801319868,
+      "hypothesis_id": "pair_context_cluster_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8568974945390861,
+      "rule_complexity": 0.55,
+      "score_total": 0.6436988144070994,
+      "targets_explained": [
+        "A",
+        "F",
+        "G"
+      ],
+      "verdict": "not_promoted_context_cluster_hint"
+    },
+    {
+      "control_leakage": 0.18779061046947654,
+      "hypothesis_id": "tape_literal_exception_analysis",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.55,
+      "score_total": 0.6122093895305235,
+      "targets_explained": [
+        "A",
+        "H",
+        "I"
+      ],
+      "verdict": "not_promoted"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "grid_unordered_pair",
+      "lore_fit": 0.6,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.98989898989899,
+      "rule_complexity": 1.0,
+      "score_total": 0.5898989898989899,
+      "targets_explained": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdict": "candidate_generator"
+    },
+    {
+      "control_leakage": 0.004975124378109453,
+      "hypothesis_id": "zero_exception_decision_list",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.08263491301647406,
+      "prediction_score": 0.8709677419354839,
+      "rule_complexity": 0.55,
+      "score_total": 0.5833577045409003,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "supporting_render_layer_signal_only"
+    },
+    {
+      "control_leakage": 0.033112582781456956,
+      "hypothesis_id": "digit_symbol_automorphism_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.11090374251379317,
+      "prediction_score": 0.5555555555555556,
+      "rule_complexity": 0.35,
+      "score_total": 0.5833467152878917,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "weak_symmetry_signal"
+    },
+    {
+      "control_leakage": 0.08527648234510327,
+      "hypothesis_id": "directed_surface_sequence_generator_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.04996648500366631,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.65,
+      "score_total": 0.5647570326512303,
+      "targets_explained": [
+        "A",
+        "C",
+        "D"
+      ],
+      "verdict": "mirror_render_redundancy_not_origin_formula"
+    },
+    {
+      "control_leakage": 0.048597570121493926,
+      "hypothesis_id": "pair_context_partition_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8686408380437856,
+      "rule_complexity": 0.65,
+      "score_total": 0.5200432679222917,
+      "targets_explained": [
+        "A",
+        "F",
+        "G"
+      ],
+      "verdict": "not_promoted_context_partition_hint"
+    },
+    {
+      "control_leakage": 0.04059188162367527,
+      "hypothesis_id": "digit_visual_symmetry_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.004163975735111137,
+      "prediction_score": 0.8,
+      "rule_complexity": 0.65,
+      "score_total": 0.45524414264121355,
+      "targets_explained": [
+        "A",
+        "C",
+        "D"
+      ],
+      "verdict": "reject_visual_6_9_symmetry_as_pair_matrix_formula"
+    },
+    {
+      "control_leakage": 0.024348782560871956,
+      "hypothesis_id": "quotient_inventory_pressure_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.021316578948506987,
+      "prediction_score": 0.8,
+      "rule_complexity": 0.7,
+      "score_total": 0.40433463849062096,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "weak_quotient_inventory_pressure_support"
+    },
+    {
+      "control_leakage": 0.03225806451612903,
+      "hypothesis_id": "ml_zero_omission_probe",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8707033315705975,
+      "rule_complexity": 0.65,
+      "score_total": 0.3884452670544686,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "supporting_render_layer_signal_only"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "homophone_prev_code",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.7727272727272727,
+      "rule_complexity": 0.6,
+      "score_total": 0.3727272727272727,
+      "targets_explained": [
+        "G"
+      ],
+      "verdict": "supporting_homophone_channel"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "zero_code_prev_next",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8260869565217391,
+      "rule_complexity": 0.7,
+      "score_total": 0.32608695652173925,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "supporting_render_layer"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "ytc_min8_copy_holdout",
+      "lore_fit": 0.4,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.1,
+      "score_total": 0.30000000000000004,
+      "targets_explained": [
+        "K"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "one_equals_tibia",
+      "lore_fit": 0.5,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2,
+      "rule_complexity": 0.4,
+      "score_total": 0.29999999999999993,
+      "targets_explained": [
+        "C"
+      ],
+      "verdict": "pareidolia_risk"
+    },
+    {
+      "control_leakage": 0.38161838161838163,
+      "hypothesis_id": "t00_internal_fsa_compression_probe",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9547569431443184,
+      "rule_complexity": 0.65,
+      "score_total": 0.2731385615259368,
+      "targets_explained": [
+        "G",
+        "H"
+      ],
+      "verdict": "slice_internal_regular_not_t00_order_formula"
+    },
+    {
+      "control_leakage": 0.4312796208530806,
+      "hypothesis_id": "high_block_blocker_origin_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.65,
+      "score_total": 0.2687203791469195,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "high_block_blocker_not_promoted"
+    },
+    {
+      "control_leakage": 0.2857142857142857,
+      "hypothesis_id": "digit_orbit_exception_context_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.75,
+      "score_total": 0.26428571428571435,
+      "targets_explained": [
+        "A",
+        "G",
+        "H"
+      ],
+      "verdict": "rejected_control_no_auditable_exception_pattern"
+    },
+    {
+      "control_leakage": 0.3899220155968806,
+      "hypothesis_id": "residual_marginal_after_e_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.9764904270155432,
+      "rule_complexity": 0.6,
+      "score_total": 0.23656841141866264,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "residual_marginal_not_promoted"
+    },
+    {
+      "control_leakage": 0.161994600179994,
+      "hypothesis_id": "pair_marginal_signature_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.6509119985834979,
+      "rule_complexity": 0.6,
+      "score_total": 0.13891739840350392,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "magic_web_numbers",
+      "lore_fit": 0.5,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.4,
+      "score_total": 0.09999999999999998,
+      "targets_explained": [
+        "H",
+        "K"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "deep_compact_formula_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.494949494949495,
+      "rule_complexity": 0.7,
+      "score_total": 0.094949494949495,
+      "targets_explained": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.04019196160767846,
+      "hypothesis_id": "row_column_balance_objective_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.41847921258348175,
+      "rule_complexity": 0.65,
+      "score_total": 0.028287250975803313,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.000999000999000999,
+      "hypothesis_id": "anchored_remaining_fill_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.23960690919921285,
+      "prediction_score": 0.4727272727272727,
+      "rule_complexity": 0.6,
+      "score_total": -0.01787863747094113,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "verdict": "anchored_remaining_fill_not_promoted"
+    },
+    {
+      "control_leakage": 0.25870646766169153,
+      "hypothesis_id": "digit_permutation_formula_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.8181818181818182,
+      "rule_complexity": 0.85,
+      "score_total": -0.040524649479873165,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.004995004995004995,
+      "hypothesis_id": "quotient_line_order_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.09634631609615081,
+      "prediction_score": 0.6956521739130435,
+      "rule_complexity": 1.0,
+      "score_total": -0.05568914717811241,
+      "targets_explained": [
+        "A",
+        "B",
+        "D"
+      ],
+      "verdict": "weak_quotient_structure_signal_not_formula"
+    },
+    {
+      "control_leakage": 0.6736631684157921,
+      "hypothesis_id": "digit_orbit_exception_rule_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.009472582329624401,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.75,
+      "score_total": -0.06419058608616779,
+      "targets_explained": [
+        "A",
+        "C",
+        "D"
+      ],
+      "verdict": "not_promoted_exception_microfit_control_failed"
+    },
+    {
+      "control_leakage": 0.2692435854715095,
+      "hypothesis_id": "decision_tree_pair_formula_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.6545454545454545,
+      "rule_complexity": 0.75,
+      "score_total": -0.06469813092605492,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.15384615384615385,
+      "hypothesis_id": "digit_order_distance_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.035801739732928724,
+      "prediction_score": 0.8727272727272727,
+      "rule_complexity": 1.0,
+      "score_total": -0.06692062085180994,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "pair_table_source_cycle",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2727272727272727,
+      "rule_complexity": 0.65,
+      "score_total": -0.07727272727272727,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.10454477276136193,
+      "hypothesis_id": "digit_shape_pressure_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.41995526893491225,
+      "rule_complexity": 0.65,
+      "score_total": -0.08458950382644975,
+      "targets_explained": [
+        "A",
+        "J"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.12188781121887811,
+      "hypothesis_id": "homophone_intrasymbol_order_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.29682119326198303,
+      "rule_complexity": 0.55,
+      "score_total": -0.12506661795689505,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.11288711288711288,
+      "hypothesis_id": "priority_anchored_quotient_residual_fill",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.16887498718664115,
+      "prediction_score": 0.34375,
+      "rule_complexity": 0.55,
+      "score_total": -0.13801210007375414,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "F"
+      ],
+      "verdict": "priority_anchored_quotient_residual_not_promoted"
+    },
+    {
+      "control_leakage": 0.2,
+      "hypothesis_id": "pair_table_spatial_dispersion",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.6112401688049798,
+      "rule_complexity": 0.75,
+      "score_total": -0.13875983119502028,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.044347782610869455,
+      "hypothesis_id": "digit_orbit_robust_control_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.003567641590458436,
+      "prediction_score": 0.15173553719008265,
+      "rule_complexity": 0.6,
+      "score_total": -0.13904460383032835,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "robust_weak_6_9_orbit_signal"
+    },
+    {
+      "control_leakage": 0.03992015968063872,
+      "hypothesis_id": "zero_homophone_transition_origin_probe",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2,
+      "rule_complexity": 0.65,
+      "score_total": -0.1399201596806387,
+      "targets_explained": [
+        "A",
+        "F",
+        "G",
+        "J"
+      ],
+      "verdict": "weak_context_signal_not_matrix_formula"
+    },
+    {
+      "control_leakage": 0.1,
+      "hypothesis_id": "pair_table_seeded_placement",
+      "lore_fit": 0.4,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2727272727272727,
+      "rule_complexity": 0.75,
+      "score_total": -0.17727272727272728,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.24752475247524752,
+      "hypothesis_id": "latent_digit_factor_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.5454545454545454,
+      "rule_complexity": 0.75,
+      "score_total": -0.2020702070207021,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.4255744255744256,
+      "hypothesis_id": "residual_tape_feature_after_e_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.13130135595103246,
+      "prediction_score": 0.6,
+      "rule_complexity": 0.6,
+      "score_total": -0.20687578152545805,
+      "targets_explained": [
+        "A",
+        "G",
+        "H"
+      ],
+      "verdict": "residual_tape_feature_not_promoted"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "pair_symbol_stream_optimization_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.017,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.45,
+      "score_total": -0.21700000000000003,
+      "targets_explained": [
+        "A",
+        "G",
+        "H"
+      ],
+      "verdict": "rejected_as_original_repeat6_maximization_formula"
+    },
+    {
+      "control_leakage": 0.34776815456362425,
+      "hypothesis_id": "alternative_digit_geometry_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.509090909090909,
+      "rule_complexity": 0.75,
+      "score_total": -0.23867724547271524,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "lore_zero_phase_mask_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0036860001994372736,
+      "prediction_score": 0.7332099418297198,
+      "rule_complexity": 0.45,
+      "score_total": -0.2631040579708428,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.0734632683658171,
+      "hypothesis_id": "line_template_alignment_search",
+      "lore_fit": 0.3,
+      "mdl_gain": -0.13132486602408502,
+      "prediction_score": 0.6181818181818182,
+      "rule_complexity": 1.0,
+      "score_total": -0.28660631620808397,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.38853715428190605,
+      "hypothesis_id": "tape_feature_pair_label_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2909090909090909,
+      "rule_complexity": 0.55,
+      "score_total": -0.2976280633728152,
+      "targets_explained": [
+        "A",
+        "H",
+        "I"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.0,
+      "hypothesis_id": "seed_prng_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.6,
+      "score_total": -0.3,
+      "targets_explained": [
+        "A",
+        "G"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.125,
+      "hypothesis_id": "digit_orbit_directed_provenance_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0039772799234999165,
+      "prediction_score": 0.16363636363636364,
+      "rule_complexity": 0.7,
+      "score_total": -0.30738635644013645,
+      "targets_explained": [
+        "A",
+        "C",
+        "D"
+      ],
+      "verdict": "weak_directed_provenance_signal"
+    },
+    {
+      "control_leakage": 0.0001999600079984003,
+      "hypothesis_id": "priority_masked_e_layer_search",
+      "lore_fit": 0.2,
+      "mdl_gain": -0.24396644655775135,
+      "prediction_score": 0.2727272727272727,
+      "rule_complexity": 0.55,
+      "score_total": -0.32143913383847705,
+      "targets_explained": [
+        "A",
+        "C"
+      ],
+      "verdict": "exact_local_e_priority_layer_not_global_formula"
+    },
+    {
+      "control_leakage": 0.033932135728542916,
+      "hypothesis_id": "digit_orbit_split_label_pair_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.010447305516361454,
+      "prediction_score": 0.17288788754982265,
+      "rule_complexity": 0.8271121124501774,
+      "score_total": -0.32770905511253623,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "weak_split_metadata_compression"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "lore_anomaly_operator_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.6666666666666666,
+      "rule_complexity": 0.45,
+      "score_total": -0.33333333333333326,
+      "targets_explained": [
+        "C",
+        "D"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "render_origin_e_priority_probe",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.7,
+      "score_total": -0.34999999999999987,
+      "targets_explained": [
+        "A",
+        "G",
+        "J"
+      ],
+      "verdict": "render_origin_e_priority_not_promoted"
+    },
+    {
+      "control_leakage": 0.0001999600079984003,
+      "hypothesis_id": "matrix_generator_exhaustive_search",
+      "lore_fit": 0.45,
+      "mdl_gain": -0.19577982216485285,
+      "prediction_score": 0.38181818181818183,
+      "rule_complexity": 1.0,
+      "score_total": -0.3641616003546694,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "verdict": "mechanical_partial_not_final_no_exact_matrix_formula"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "sevenseg_orbit_exception_selector",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.007571815620483818,
+      "prediction_score": 1.0,
+      "rule_complexity": 0.7,
+      "score_total": -0.3924281843795161,
+      "targets_explained": [
+        "A",
+        "C",
+        "D"
+      ],
+      "verdict": "weak_visual_exception_microfit_not_formula"
+    },
+    {
+      "control_leakage": 0.017456359102244388,
+      "hypothesis_id": "quotient_constructive_fill_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.12264256819211562,
+      "prediction_score": 0.3695652173913043,
+      "rule_complexity": 1.0,
+      "score_total": -0.4205337099030557,
+      "targets_explained": [
+        "A",
+        "B",
+        "F"
+      ],
+      "verdict": "weak_constructive_signal"
+    },
+    {
+      "control_leakage": 0.5087281795511222,
+      "hypothesis_id": "row_transition_edit_mdl_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.014610114468031099,
+      "prediction_score": 0.46296296296296297,
+      "rule_complexity": 0.65,
+      "score_total": -0.46037533105619033,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "row_transition_not_promoted"
+    },
+    {
+      "control_leakage": 0.001999000499750125,
+      "hypothesis_id": "marginal_constraint_solver_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.01113804850858847,
+      "prediction_score": 0.10511479076885011,
+      "rule_complexity": 0.9468108497817733,
+      "score_total": -0.4825570110040849,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ],
+      "verdict": "weak_constraint_signal"
+    },
+    {
+      "control_leakage": 0.5742851429714058,
+      "hypothesis_id": "pair_table_spatial_features",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.7272727272727273,
+      "rule_complexity": 0.85,
+      "score_total": -0.4970124156986785,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.4567901234567901,
+      "hypothesis_id": "composite_objective_inverse_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.29216707531134517,
+      "rule_complexity": 0.7,
+      "score_total": -0.514623048145445,
+      "targets_explained": [
+        "A",
+        "F",
+        "G",
+        "J"
+      ],
+      "verdict": "weak_composite_objective_signal_not_formula"
+    },
+    {
+      "control_leakage": 0.0004997501249375312,
+      "hypothesis_id": "zero_omission_rule_explainer",
+      "lore_fit": 0.35,
+      "mdl_gain": -1.0483264585184502,
+      "prediction_score": 0.8225806451612903,
+      "rule_complexity": 0.65,
+      "score_total": -0.5262455634820975,
+      "targets_explained": [
+        "J"
+      ],
+      "verdict": "supporting_render_layer_signal_only"
+    },
+    {
+      "control_leakage": 0.5198740062996849,
+      "hypothesis_id": "pair_graph_incidence_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.37280395359457036,
+      "rule_complexity": 0.65,
+      "score_total": -0.5470700527051146,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.12903225806451613,
+      "hypothesis_id": "ml_pair_cell_probe",
+      "lore_fit": 0.1,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2222222222222222,
+      "rule_complexity": 0.75,
+      "score_total": -0.5568100358422939,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "not_promoted"
+    },
+    {
+      "control_leakage": 0.3069306930693069,
+      "hypothesis_id": "digit_signature_formula_search",
+      "lore_fit": 0.2,
+      "mdl_gain": -0.04700822822159722,
+      "prediction_score": 0.32727272727272727,
+      "rule_complexity": 0.75,
+      "score_total": -0.5766661940181769,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "NEGATIVE_PLATEAU_CONFIRMED"
+    },
+    {
+      "control_leakage": 0.03225806451612903,
+      "hypothesis_id": "ml_homophone_probe",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.75,
+      "score_total": -0.582258064516129,
+      "targets_explained": [
+        "G"
+      ],
+      "verdict": "simple_prev_code_rule_confirmed_not_ml_upgrade"
+    },
+    {
+      "control_leakage": 0.2934131736526946,
+      "hypothesis_id": "endpoint_affinity_assignment_search",
+      "lore_fit": 0.3,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.14545454545454545,
+      "rule_complexity": 0.75,
+      "score_total": -0.5979586281981492,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "rejected_endpoint_affinity"
+    },
+    {
+      "control_leakage": 0.4146341463414634,
+      "hypothesis_id": "algebraic_digit_composition_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.11205095913892237,
+      "prediction_score": 0.6363636363636364,
+      "rule_complexity": 1.0,
+      "score_total": -0.6403214691167494,
+      "targets_explained": [
+        "A",
+        "B",
+        "F"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 0.001999600079984003,
+      "hypothesis_id": "nine_identity_render_split_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.0005843615029866101,
+      "prediction_score": 0.0,
+      "rule_complexity": 1.0,
+      "score_total": -0.6525839615829707,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "base45_renderer_not_promoted"
+    },
+    {
+      "control_leakage": 0.6534488503832055,
+      "hypothesis_id": "usage_driven_pair_placement_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2727272727272727,
+      "rule_complexity": 0.65,
+      "score_total": -0.6807215776559329,
+      "targets_explained": [
+        "A",
+        "G"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.00998003992015968,
+      "hypothesis_id": "adaptive_quota_fill_search",
+      "lore_fit": 0.3,
+      "mdl_gain": -0.210906456482008,
+      "prediction_score": 0.23636363636363636,
+      "rule_complexity": 1.0,
+      "score_total": -0.6845228600385314,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "finite_group_pair_formula_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.04500370712251069,
+      "prediction_score": 1.0,
+      "rule_complexity": 1.0,
+      "score_total": -0.6950037071225106,
+      "targets_explained": [
+        "A",
+        "B"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 0.47590481903619275,
+      "hypothesis_id": "pair_assignment_constraint_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.2727272727272727,
+      "rule_complexity": 0.75,
+      "score_total": -0.70317754630892,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.008264462809917356,
+      "hypothesis_id": "quotient_edit_log_mdl_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.08278273739792183,
+      "prediction_score": 0.0,
+      "rule_complexity": 1.0,
+      "score_total": -0.7410472002078392,
+      "targets_explained": [
+        "A",
+        "B",
+        "F"
+      ],
+      "verdict": "edit_log_not_promoted"
+    },
+    {
+      "control_leakage": 0.10631229235880399,
+      "hypothesis_id": "local_2d_pair_rule_search",
+      "lore_fit": 0.3,
+      "mdl_gain": -0.2095656693598693,
+      "prediction_score": 0.2545454545454545,
+      "rule_complexity": 1.0,
+      "score_total": -0.7613325071732189,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 0.9760479041916168,
+      "hypothesis_id": "inventory_shuffle_seed_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.34545454545454546,
+      "rule_complexity": 0.65,
+      "score_total": -0.8305933587370714,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.7272727272727273,
+      "hypothesis_id": "pair_rule_cover_search",
+      "lore_fit": 0.3,
+      "mdl_gain": -0.06583939077669297,
+      "prediction_score": 0.6181818181818182,
+      "rule_complexity": 1.0,
+      "score_total": -0.8749302998676021,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "pair_graph_motif_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.4914889212302648,
+      "rule_complexity": 0.65,
+      "score_total": -0.9085110787697352,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_no_motif_formula"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "tape_first_use_pair_order_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.18867924528301888,
+      "rule_complexity": 0.55,
+      "score_total": -0.9113207547169812,
+      "targets_explained": [
+        "A",
+        "G",
+        "H"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.9900332225913622,
+      "hypothesis_id": "lore_text_subsequence_search",
+      "lore_fit": 0.45,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.23636363636363636,
+      "rule_complexity": 0.65,
+      "score_total": -0.9536695862277258,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.8282034359312814,
+      "hypothesis_id": "inventory_residual_explainer",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.16666666666666663,
+      "rule_complexity": 0.65,
+      "score_total": -0.9615367692646148,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "pair_sequence_automaton_search",
+      "lore_fit": 0.25,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.5038850629166854,
+      "rule_complexity": 0.75,
+      "score_total": -0.9961149370833146,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.4462809917355372,
+      "hypothesis_id": "direct_symbol_formula_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.16900498416748108,
+      "prediction_score": 0.32727272727272727,
+      "rule_complexity": 1.0,
+      "score_total": -1.038013248630291,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_no_compression"
+    },
+    {
+      "control_leakage": 0.6049382716049383,
+      "hypothesis_id": "block_biclique_cover_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.18049088167175512,
+      "prediction_score": 0.4909090909090909,
+      "rule_complexity": 1.0,
+      "score_total": -1.0445200623676025,
+      "targets_explained": [
+        "A",
+        "B",
+        "F"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 0.3588039867109635,
+      "hypothesis_id": "symbol_predicate_dnf_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.7521220356100062,
+      "prediction_score": 0.8,
+      "rule_complexity": 1.0,
+      "score_total": -1.0609260223209698,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "lookup_disguise"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "endpoint_literal_bridge_mdl_search",
+      "lore_fit": 0.45,
+      "mdl_gain": -0.1026882880346966,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.5,
+      "score_total": -1.1526882880346965,
+      "targets_explained": [
+        "H",
+        "I"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "module_tape_order_search",
+      "lore_fit": 0.35,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.037018799240526534,
+      "rule_complexity": 0.55,
+      "score_total": -1.1629812007594735,
+      "targets_explained": [
+        "G",
+        "H"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.8048780487804879,
+      "hypothesis_id": "quotient_pair_formula_search",
+      "lore_fit": 0.35,
+      "mdl_gain": -0.1297412245638161,
+      "prediction_score": 0.34782608695652173,
+      "rule_complexity": 1.0,
+      "score_total": -1.2367931863877821,
+      "targets_explained": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "verdict": "rejected_no_compression"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "triangular_line_pattern_search",
+      "lore_fit": 0.2,
+      "mdl_gain": 0.0,
+      "prediction_score": 0.0,
+      "rule_complexity": 0.55,
+      "score_total": -1.35,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_control"
+    },
+    {
+      "control_leakage": 0.9834710743801653,
+      "hypothesis_id": "pair_hash_formula_search",
+      "lore_fit": 0.4,
+      "mdl_gain": -0.18512056374318858,
+      "prediction_score": 0.2909090909090909,
+      "rule_complexity": 1.0,
+      "score_total": -1.477682547214263,
+      "targets_explained": [
+        "A"
+      ],
+      "verdict": "rejected_no_compression"
+    },
+    {
+      "control_leakage": 1.0,
+      "hypothesis_id": "symbol_base_accent_layer_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -0.0005442478510022113,
+      "prediction_score": 0.0,
+      "rule_complexity": 1.0,
+      "score_total": -1.7505442478510023,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "symbol_base_accent_not_promoted"
+    },
+    {
+      "control_leakage": 0.025974025974025976,
+      "hypothesis_id": "bilinear_low_rank_pair_factor_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -2.194479297265164,
+      "prediction_score": 0.32727272727272727,
+      "rule_complexity": 0.75,
+      "score_total": -2.3931805959664625,
+      "targets_explained": [
+        "A",
+        "F"
+      ],
+      "verdict": "weak_low_rank_signal_not_formula"
+    },
+    {
+      "control_leakage": 0.5643564356435643,
+      "hypothesis_id": "quotient_low_rank_pair_factor_search",
+      "lore_fit": 0.25,
+      "mdl_gain": -2.306949170855924,
+      "prediction_score": 0.2391304347826087,
+      "rule_complexity": 0.75,
+      "score_total": -3.1321751717168795,
+      "targets_explained": [
+        "A",
+        "B"
+      ],
+      "verdict": "technical_gap_closed_rejected_control"
+    }
+  ],
+  "schema": "accepted_rejected_hypotheses.v1"
+}

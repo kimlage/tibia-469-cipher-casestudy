@@ -1,0 +1,690 @@
+{
+  "best_by_accuracy": {
+    "accuracy": 0.6545454545454545,
+    "accuracy_p": 0.2692435854715095,
+    "correct": 36,
+    "errors": 19,
+    "leaves": 14,
+    "max_depth": 4,
+    "mdl_bits_est": 340.13657812772675,
+    "mdl_p": 0.08930356547817395,
+    "rules": [
+      "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 AND diff_mod3 == 0 -> A",
+      "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 AND NOT (diff_mod3 == 0) -> N",
+      "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) AND center_band == False -> A",
+      "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) AND NOT (center_band == False) -> E",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 AND diff_mod3 == 2 -> L",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 AND NOT (diff_mod3 == 2) -> E",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) AND diff <= 1 -> F",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) AND NOT (diff <= 1) -> V",
+      "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False AND max_digit == 7 -> V",
+      "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False AND NOT (max_digit == 7) -> T",
+      "NOT (diff <= 4) AND center_distance <= 6.0 AND NOT (has_nine == False) -> N",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 AND min_digit == 2 -> N",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 AND NOT (min_digit == 2) -> I",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND NOT (center_distance <= 8.0) -> T"
+    ],
+    "splits": 13,
+    "total": 55
+  },
+  "best_by_mdl": {
+    "accuracy": 0.5272727272727272,
+    "accuracy_p": 0.09330223258913696,
+    "correct": 29,
+    "errors": 26,
+    "leaves": 8,
+    "max_depth": 3,
+    "mdl_bits_est": 336.1143597477536,
+    "mdl_p": 0.09763412195934688,
+    "rules": [
+      "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 -> N",
+      "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) -> A",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 -> E",
+      "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) -> V",
+      "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False -> T",
+      "NOT (diff <= 4) AND center_distance <= 6.0 AND NOT (has_nine == False) -> N",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 -> I",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND NOT (center_distance <= 8.0) -> T"
+    ],
+    "splits": 7,
+    "total": 55
+  },
+  "method_note": "Uses primary label for conflict cell {19}; controls preserve primary-label multiset.",
+  "predicate_count": 264,
+  "random_seed": 46920260620,
+  "rows": [
+    {
+      "accuracy_control": {
+        "control_max": 0.32727272727272727,
+        "control_mean": 0.27352727272727273,
+        "control_min": 0.23636363636363636,
+        "control_sd": 0.014856001634324104,
+        "observed": 0.2909090909090909,
+        "p_good_direction": 0.25191602799066976,
+        "z_good_direction": 1.1700199427589102
+      },
+      "max_depth": 1,
+      "mdl_control": {
+        "control_max": 418.39057308802086,
+        "control_mean": 398.7912403728907,
+        "control_min": 370.4469999101095,
+        "control_sd": 7.8347478163502755,
+        "observed": 389.624429181274,
+        "p_good_direction": 0.25191602799066976,
+        "z_good_direction": 1.170019942758912
+      },
+      "score": {
+        "accuracy": 0.2909090909090909,
+        "correct": 16,
+        "errors": 39,
+        "leaves": 2,
+        "mdl_bits_est": 389.624429181274,
+        "rules": [
+          "diff <= 4 -> E",
+          "NOT (diff <= 4) -> T"
+        ],
+        "splits": 1,
+        "total": 55
+      },
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "error": 29,
+          "kind": "leaf",
+          "pairs": 40,
+          "prediction": "E"
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "diff <= 4",
+          "feature": "diff",
+          "id": "diff<=4",
+          "op": "<=",
+          "value": 4
+        },
+        "right": {
+          "error": 10,
+          "kind": "leaf",
+          "pairs": 15,
+          "prediction": "T"
+        }
+      }
+    },
+    {
+      "accuracy_control": {
+        "control_max": 0.4727272727272727,
+        "control_mean": 0.3656787878787879,
+        "control_min": 0.3090909090909091,
+        "control_sd": 0.022373385128081878,
+        "observed": 0.41818181818181815,
+        "p_good_direction": 0.03265578140619793,
+        "z_good_direction": 2.346673514198407
+      },
+      "max_depth": 2,
+      "mdl_control": {
+        "control_max": 403.7501214887081,
+        "control_mean": 373.9028929034071,
+        "control_min": 317.45168976846776,
+        "control_sd": 11.794458288598857,
+        "observed": 346.21783367521454,
+        "p_good_direction": 0.03265578140619793,
+        "z_good_direction": 2.347293835016943
+      },
+      "score": {
+        "accuracy": 0.41818181818181815,
+        "correct": 23,
+        "errors": 32,
+        "leaves": 4,
+        "mdl_bits_est": 346.21783367521454,
+        "rules": [
+          "diff <= 4 AND sum_mod3 == 1 -> A",
+          "diff <= 4 AND NOT (sum_mod3 == 1) -> E",
+          "NOT (diff <= 4) AND center_distance <= 6.0 -> T",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) -> I"
+        ],
+        "splits": 3,
+        "total": 55
+      },
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "error": 8,
+            "kind": "leaf",
+            "pairs": 13,
+            "prediction": "A"
+          },
+          "pairs": 40,
+          "predicate": {
+            "display": "sum_mod3 == 1",
+            "feature": "sum_mod3",
+            "id": "sum_mod3==1",
+            "op": "==",
+            "value": 1
+          },
+          "right": {
+            "error": 17,
+            "kind": "leaf",
+            "pairs": 27,
+            "prediction": "E"
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "diff <= 4",
+          "feature": "diff",
+          "id": "diff<=4",
+          "op": "<=",
+          "value": 4
+        },
+        "right": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "error": 5,
+            "kind": "leaf",
+            "pairs": 9,
+            "prediction": "T"
+          },
+          "pairs": 15,
+          "predicate": {
+            "display": "center_distance <= 6.0",
+            "feature": "center_distance",
+            "id": "center_distance<=6.0",
+            "op": "<=",
+            "value": 6.0
+          },
+          "right": {
+            "error": 2,
+            "kind": "leaf",
+            "pairs": 6,
+            "prediction": "I"
+          }
+        }
+      }
+    },
+    {
+      "accuracy_control": {
+        "control_max": 0.6,
+        "control_mean": 0.48195151515151513,
+        "control_min": 0.38181818181818183,
+        "control_sd": 0.02821063254613675,
+        "observed": 0.5272727272727272,
+        "p_good_direction": 0.09330223258913696,
+        "z_good_direction": 1.606529454704429
+      },
+      "max_depth": 3,
+      "mdl_control": {
+        "control_max": 403.2353621968295,
+        "control_mean": 359.1225864345281,
+        "control_min": 297.75950120542456,
+        "control_sd": 14.371714734367343,
+        "observed": 336.1143597477536,
+        "p_good_direction": 0.09763412195934688,
+        "z_good_direction": 1.600938170012135
+      },
+      "score": {
+        "accuracy": 0.5272727272727272,
+        "correct": 29,
+        "errors": 26,
+        "leaves": 8,
+        "mdl_bits_est": 336.1143597477536,
+        "rules": [
+          "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 -> N",
+          "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) -> A",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 -> E",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) -> V",
+          "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False -> T",
+          "NOT (diff <= 4) AND center_distance <= 6.0 AND NOT (has_nine == False) -> N",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 -> I",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND NOT (center_distance <= 8.0) -> T"
+        ],
+        "splits": 7,
+        "total": 55
+      },
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "A",
+            "kind": "split",
+            "left": {
+              "error": 5,
+              "kind": "leaf",
+              "pairs": 8,
+              "prediction": "N"
+            },
+            "pairs": 13,
+            "predicate": {
+              "display": "triangular_index <= 25",
+              "feature": "triangular_index",
+              "id": "triangular_index<=25",
+              "op": "<=",
+              "value": 25
+            },
+            "right": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "A"
+            }
+          },
+          "pairs": 40,
+          "predicate": {
+            "display": "sum_mod3 == 1",
+            "feature": "sum_mod3",
+            "id": "sum_mod3==1",
+            "op": "==",
+            "value": 1
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "error": 8,
+              "kind": "leaf",
+              "pairs": 16,
+              "prediction": "E"
+            },
+            "pairs": 27,
+            "predicate": {
+              "display": "diff_mod2 == 0",
+              "feature": "diff_mod2",
+              "id": "diff_mod2==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "error": 8,
+              "kind": "leaf",
+              "pairs": 11,
+              "prediction": "V"
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "diff <= 4",
+          "feature": "diff",
+          "id": "diff<=4",
+          "op": "<=",
+          "value": 4
+        },
+        "right": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "T",
+            "kind": "split",
+            "left": {
+              "error": 3,
+              "kind": "leaf",
+              "pairs": 7,
+              "prediction": "T"
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "has_nine == False",
+              "feature": "has_nine",
+              "id": "has_nine==False",
+              "op": "==",
+              "value": false
+            },
+            "right": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "N"
+            }
+          },
+          "pairs": 15,
+          "predicate": {
+            "display": "center_distance <= 6.0",
+            "feature": "center_distance",
+            "id": "center_distance<=6.0",
+            "op": "<=",
+            "value": 6.0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "error": 1,
+              "kind": "leaf",
+              "pairs": 5,
+              "prediction": "I"
+            },
+            "pairs": 6,
+            "predicate": {
+              "display": "center_distance <= 8.0",
+              "feature": "center_distance",
+              "id": "center_distance<=8.0",
+              "op": "<=",
+              "value": 8.0
+            },
+            "right": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 1,
+              "prediction": "T"
+            }
+          }
+        }
+      }
+    },
+    {
+      "accuracy_control": {
+        "control_max": 0.7272727272727273,
+        "control_mean": 0.6223515151515151,
+        "control_min": 0.4727272727272727,
+        "control_sd": 0.03885522410490318,
+        "observed": 0.6545454545454545,
+        "p_good_direction": 0.2692435854715095,
+        "z_good_direction": 0.828561413183996
+      },
+      "max_depth": 4,
+      "mdl_control": {
+        "control_max": 411.7945582486544,
+        "control_mean": 363.28469371547254,
+        "control_min": 309.10194538505414,
+        "control_sd": 16.528100884829726,
+        "observed": 340.13657812772675,
+        "p_good_direction": 0.08930356547817395,
+        "z_good_direction": 1.4005308746023102
+      },
+      "score": {
+        "accuracy": 0.6545454545454545,
+        "correct": 36,
+        "errors": 19,
+        "leaves": 14,
+        "mdl_bits_est": 340.13657812772675,
+        "rules": [
+          "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 AND diff_mod3 == 0 -> A",
+          "diff <= 4 AND sum_mod3 == 1 AND triangular_index <= 25 AND NOT (diff_mod3 == 0) -> N",
+          "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) AND center_band == False -> A",
+          "diff <= 4 AND sum_mod3 == 1 AND NOT (triangular_index <= 25) AND NOT (center_band == False) -> E",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 AND diff_mod3 == 2 -> L",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND diff_mod2 == 0 AND NOT (diff_mod3 == 2) -> E",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) AND diff <= 1 -> F",
+          "diff <= 4 AND NOT (sum_mod3 == 1) AND NOT (diff_mod2 == 0) AND NOT (diff <= 1) -> V",
+          "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False AND max_digit == 7 -> V",
+          "NOT (diff <= 4) AND center_distance <= 6.0 AND has_nine == False AND NOT (max_digit == 7) -> T",
+          "NOT (diff <= 4) AND center_distance <= 6.0 AND NOT (has_nine == False) -> N",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 AND min_digit == 2 -> N",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND center_distance <= 8.0 AND NOT (min_digit == 2) -> I",
+          "NOT (diff <= 4) AND NOT (center_distance <= 6.0) AND NOT (center_distance <= 8.0) -> T"
+        ],
+        "splits": 13,
+        "total": 55
+      },
+      "tree": {
+        "fallback_prediction": "E",
+        "kind": "split",
+        "left": {
+          "fallback_prediction": "E",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "A",
+            "kind": "split",
+            "left": {
+              "fallback_prediction": "N",
+              "kind": "split",
+              "left": {
+                "error": 2,
+                "kind": "leaf",
+                "pairs": 3,
+                "prediction": "A"
+              },
+              "pairs": 8,
+              "predicate": {
+                "display": "diff_mod3 == 0",
+                "feature": "diff_mod3",
+                "id": "diff_mod3==0",
+                "op": "==",
+                "value": 0
+              },
+              "right": {
+                "error": 2,
+                "kind": "leaf",
+                "pairs": 5,
+                "prediction": "N"
+              }
+            },
+            "pairs": 13,
+            "predicate": {
+              "display": "triangular_index <= 25",
+              "feature": "triangular_index",
+              "id": "triangular_index<=25",
+              "op": "<=",
+              "value": 25
+            },
+            "right": {
+              "fallback_prediction": "A",
+              "kind": "split",
+              "left": {
+                "error": 0,
+                "kind": "leaf",
+                "pairs": 4,
+                "prediction": "A"
+              },
+              "pairs": 5,
+              "predicate": {
+                "display": "center_band == False",
+                "feature": "center_band",
+                "id": "center_band==False",
+                "op": "==",
+                "value": false
+              },
+              "right": {
+                "error": 0,
+                "kind": "leaf",
+                "pairs": 1,
+                "prediction": "E"
+              }
+            }
+          },
+          "pairs": 40,
+          "predicate": {
+            "display": "sum_mod3 == 1",
+            "feature": "sum_mod3",
+            "id": "sum_mod3==1",
+            "op": "==",
+            "value": 1
+          },
+          "right": {
+            "fallback_prediction": "E",
+            "kind": "split",
+            "left": {
+              "fallback_prediction": "E",
+              "kind": "split",
+              "left": {
+                "error": 3,
+                "kind": "leaf",
+                "pairs": 5,
+                "prediction": "L"
+              },
+              "pairs": 16,
+              "predicate": {
+                "display": "diff_mod3 == 2",
+                "feature": "diff_mod3",
+                "id": "diff_mod3==2",
+                "op": "==",
+                "value": 2
+              },
+              "right": {
+                "error": 4,
+                "kind": "leaf",
+                "pairs": 11,
+                "prediction": "E"
+              }
+            },
+            "pairs": 27,
+            "predicate": {
+              "display": "diff_mod2 == 0",
+              "feature": "diff_mod2",
+              "id": "diff_mod2==0",
+              "op": "==",
+              "value": 0
+            },
+            "right": {
+              "fallback_prediction": "V",
+              "kind": "split",
+              "left": {
+                "error": 4,
+                "kind": "leaf",
+                "pairs": 6,
+                "prediction": "F"
+              },
+              "pairs": 11,
+              "predicate": {
+                "display": "diff <= 1",
+                "feature": "diff",
+                "id": "diff<=1",
+                "op": "<=",
+                "value": 1
+              },
+              "right": {
+                "error": 2,
+                "kind": "leaf",
+                "pairs": 5,
+                "prediction": "V"
+              }
+            }
+          }
+        },
+        "pairs": 55,
+        "predicate": {
+          "display": "diff <= 4",
+          "feature": "diff",
+          "id": "diff<=4",
+          "op": "<=",
+          "value": 4
+        },
+        "right": {
+          "fallback_prediction": "T",
+          "kind": "split",
+          "left": {
+            "fallback_prediction": "T",
+            "kind": "split",
+            "left": {
+              "fallback_prediction": "T",
+              "kind": "split",
+              "left": {
+                "error": 1,
+                "kind": "leaf",
+                "pairs": 2,
+                "prediction": "V"
+              },
+              "pairs": 7,
+              "predicate": {
+                "display": "max_digit == 7",
+                "feature": "max_digit",
+                "id": "max_digit==7",
+                "op": "==",
+                "value": 7
+              },
+              "right": {
+                "error": 1,
+                "kind": "leaf",
+                "pairs": 5,
+                "prediction": "T"
+              }
+            },
+            "pairs": 9,
+            "predicate": {
+              "display": "has_nine == False",
+              "feature": "has_nine",
+              "id": "has_nine==False",
+              "op": "==",
+              "value": false
+            },
+            "right": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 2,
+              "prediction": "N"
+            }
+          },
+          "pairs": 15,
+          "predicate": {
+            "display": "center_distance <= 6.0",
+            "feature": "center_distance",
+            "id": "center_distance<=6.0",
+            "op": "<=",
+            "value": 6.0
+          },
+          "right": {
+            "fallback_prediction": "I",
+            "kind": "split",
+            "left": {
+              "fallback_prediction": "I",
+              "kind": "split",
+              "left": {
+                "error": 0,
+                "kind": "leaf",
+                "pairs": 1,
+                "prediction": "N"
+              },
+              "pairs": 5,
+              "predicate": {
+                "display": "min_digit == 2",
+                "feature": "min_digit",
+                "id": "min_digit==2",
+                "op": "==",
+                "value": 2
+              },
+              "right": {
+                "error": 0,
+                "kind": "leaf",
+                "pairs": 4,
+                "prediction": "I"
+              }
+            },
+            "pairs": 6,
+            "predicate": {
+              "display": "center_distance <= 8.0",
+              "feature": "center_distance",
+              "id": "center_distance<=8.0",
+              "op": "<=",
+              "value": 8.0
+            },
+            "right": {
+              "error": 0,
+              "kind": "leaf",
+              "pairs": 1,
+              "prediction": "T"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "schema": "decision_tree_pair_formula_results.v1",
+  "strongest_control_row": {
+    "accuracy": 0.41818181818181815,
+    "accuracy_p": 0.03265578140619793,
+    "correct": 23,
+    "errors": 32,
+    "leaves": 4,
+    "max_depth": 2,
+    "mdl_bits_est": 346.21783367521454,
+    "mdl_p": 0.03265578140619793,
+    "rules": [
+      "diff <= 4 AND sum_mod3 == 1 -> A",
+      "diff <= 4 AND NOT (sum_mod3 == 1) -> E",
+      "NOT (diff <= 4) AND center_distance <= 6.0 -> T",
+      "NOT (diff <= 4) AND NOT (center_distance <= 6.0) -> I"
+    ],
+    "splits": 3,
+    "total": 55
+  },
+  "trials": 3000,
+  "verdict": "rejected_control"
+}

@@ -1,0 +1,574 @@
+{
+  "baselines": {
+    "inventory_cost_bits": 44.83439215964847,
+    "inventory_residual_bits": 157.52070273483625,
+    "inventory_total_bits": 202.35509489448472,
+    "raw_lookup_bits": 209.40452071316824
+  },
+  "best_by_residual": {
+    "constraint_cost_bits": 301.2471552649613,
+    "constraint_family": "row_column_counts_plus_diagonal_exact",
+    "control": {
+      "capped_controls": 0,
+      "residual_bits": {
+        "max": 7.774787059601174,
+        "mean": 3.6496219065250677,
+        "min": 0.0,
+        "p_good_direction": 0.3442622950819672,
+        "sd": 1.8088679555104774,
+        "trials": 60
+      },
+      "total_mdl_bits": {
+        "max": 309.0219423245625,
+        "mean": 304.89677717148635,
+        "min": 301.2471552649613,
+        "p_good_direction": 0.3442622950819672,
+        "sd": 1.808867955510478,
+        "trials": 60
+      },
+      "unique_table_controls": 3
+    },
+    "id": "row_column_counts_plus_diagonal_exact",
+    "lookup_ratio": 1.4496777926569326,
+    "meta": {
+      "cache_info": "CacheInfo(hits=93, misses=236, maxsize=None, currsize=236)",
+      "capped": false,
+      "count_cap": 1000000000000
+    },
+    "notes": "Exact row and column symbol histograms over the triangular 10x10 table. The exact diagonal sequence is additionally fixed.",
+    "residual_bits": 2.321928094887362,
+    "residual_count": 5,
+    "residual_exact": true,
+    "total_mdl_bits": 303.56908335984866,
+    "unique_table": false,
+    "verdict": "lookup_disguise"
+  },
+  "best_by_total_mdl": {
+    "constraint_cost_bits": 57.303525179478065,
+    "constraint_family": "swap_6_9_orbit_equalities",
+    "control": {
+      "capped_controls": 0,
+      "residual_bits": {
+        "max": 157.52070273483625,
+        "mean": 154.51347776872754,
+        "min": 140.9629470251017,
+        "p_good_direction": 0.001999000499750125,
+        "sd": 2.970998414000964,
+        "trials": 2000
+      },
+      "total_mdl_bits": {
+        "max": 207.84694799081439,
+        "mean": 207.34906141124165,
+        "min": 198.26647220457977,
+        "p_good_direction": 0.001999000499750125,
+        "sd": 1.018832242901017,
+        "trials": 2000
+      },
+      "unique_table_controls": 0
+    },
+    "id": "inventory_plus_6_9_orbit_split_metadata",
+    "lookup_ratio": 0.9468108497817733,
+    "meta": {
+      "double_orbit_items": 5,
+      "mixed_non_singleton_indices": [
+        0,
+        1,
+        3,
+        8
+      ],
+      "mixed_non_singleton_orbit_count": 4,
+      "mixed_pairs": [
+        [
+          "06",
+          "09"
+        ],
+        [
+          "16",
+          "19"
+        ],
+        [
+          "36",
+          "39"
+        ],
+        [
+          "68",
+          "89"
+        ]
+      ],
+      "non_singleton_orbit_count": 9,
+      "orbit_count": 46,
+      "singleton_items_after_split": 45
+    },
+    "notes": "Inventory plus 6<->9 equality orbits and which non-singleton orbits are split.",
+    "residual_bits": 140.9629470251017,
+    "residual_count": 2716910497180046175841216281426617088000000,
+    "residual_exact": true,
+    "total_mdl_bits": 198.26647220457977,
+    "unique_table": false,
+    "verdict": "weak_constraint_signal"
+  },
+  "count_cap": 1000000000000,
+  "fast_control_trials": 2000,
+  "label_inventory": {
+    "*": 1,
+    "A": 6,
+    "B": 1,
+    "C": 1,
+    "E": 11,
+    "F": 3,
+    "I": 8,
+    "L": 2,
+    "N": 8,
+    "O": 1,
+    "R": 1,
+    "S": 1,
+    "T": 6,
+    "V": 5
+  },
+  "random_seed": 46920260619,
+  "row_set_control_trials": 80,
+  "rows": [
+    {
+      "constraint_cost_bits": 57.303525179478065,
+      "constraint_family": "swap_6_9_orbit_equalities",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 157.52070273483625,
+          "mean": 154.51347776872754,
+          "min": 140.9629470251017,
+          "p_good_direction": 0.001999000499750125,
+          "sd": 2.970998414000964,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 207.84694799081439,
+          "mean": 207.34906141124165,
+          "min": 198.26647220457977,
+          "p_good_direction": 0.001999000499750125,
+          "sd": 1.018832242901017,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_plus_6_9_orbit_split_metadata",
+      "lookup_ratio": 0.9468108497817733,
+      "meta": {
+        "double_orbit_items": 5,
+        "mixed_non_singleton_indices": [
+          0,
+          1,
+          3,
+          8
+        ],
+        "mixed_non_singleton_orbit_count": 4,
+        "mixed_pairs": [
+          [
+            "06",
+            "09"
+          ],
+          [
+            "16",
+            "19"
+          ],
+          [
+            "36",
+            "39"
+          ],
+          [
+            "68",
+            "89"
+          ]
+        ],
+        "non_singleton_orbit_count": 9,
+        "orbit_count": 46,
+        "singleton_items_after_split": 45
+      },
+      "notes": "Inventory plus 6<->9 equality orbits and which non-singleton orbits are split.",
+      "residual_bits": 140.9629470251017,
+      "residual_count": 2716910497180046175841216281426617088000000,
+      "residual_exact": true,
+      "total_mdl_bits": 198.26647220457977,
+      "unique_table": false,
+      "verdict": "weak_constraint_signal"
+    },
+    {
+      "constraint_cost_bits": 44.83439215964847,
+      "constraint_family": "global_inventory",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 157.52070273483625,
+          "mean": 157.52070273483625,
+          "min": 157.52070273483625,
+          "p_good_direction": 1.0,
+          "sd": 0.0,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 202.35509489448472,
+          "mean": 202.35509489448472,
+          "min": 202.35509489448472,
+          "p_good_direction": 1.0,
+          "sd": 0.0,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_only",
+      "lookup_ratio": 0.9663358470262471,
+      "notes": "Only the 14-symbol homophone inventory is fixed.",
+      "residual_bits": 157.52070273483625,
+      "residual_count": 262093627223856729564716297836925927465472000000,
+      "residual_exact": true,
+      "total_mdl_bits": 202.35509489448472,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 131.5868030221926,
+      "constraint_family": "diagonal_diff_symbol_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 84.84231636398044,
+          "mean": 76.73194495361082,
+          "min": 67.08742886181699,
+          "p_good_direction": 0.07746126936531735,
+          "sd": 2.8781736676842926,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 216.42911938617306,
+          "mean": 208.31874797580343,
+          "min": 198.6742318840096,
+          "p_good_direction": 0.07746126936531735,
+          "sd": 2.878173667684294,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "diagonal_diff_symbol_counts",
+      "lookup_ratio": 0.9738914212324307,
+      "notes": "Exact symbol histograms on each diagonal_diff line.",
+      "residual_bits": 72.35046326765078,
+      "residual_count": 6020875455823872000000,
+      "residual_exact": true,
+      "total_mdl_bits": 203.9372662898434,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 52.449102003763684,
+      "constraint_family": "anomaly_pair_anchors",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 152.7658152326728,
+          "mean": 150.89994828508563,
+          "min": 145.98445551914813,
+          "p_good_direction": 0.7606196901549226,
+          "sd": 1.4309164063764248,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 205.21491723643646,
+          "mean": 203.3490502888493,
+          "min": 198.43355752291183,
+          "p_good_direction": 0.7606196901549226,
+          "sd": 1.4309164063764221,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_plus_19_39_anchors",
+      "lookup_ratio": 0.9762614332616755,
+      "notes": "Global inventory plus labels at lore/anomaly pairs 19 and 39.",
+      "residual_bits": 151.98445551914813,
+      "residual_count": 5647808802130246024290182849011198436966400000,
+      "residual_exact": true,
+      "total_mdl_bits": 204.43355752291183,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 64.96013101109432,
+      "constraint_family": "diagonal_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 147.22593693153425,
+          "mean": 142.29724908439508,
+          "min": 132.5668329680606,
+          "p_good_direction": 0.25487256371814093,
+          "sd": 2.3422678476823346,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 212.18606794262857,
+          "mean": 207.2573800954894,
+          "min": 197.5269639791549,
+          "p_good_direction": 0.25487256371814093,
+          "sd": 2.3422678476823346,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_plus_diagonal_counts",
+      "lookup_ratio": 0.9827569615927048,
+      "notes": "Global inventory plus symbol counts on the ten diagonal cells.",
+      "residual_bits": 140.8336195087555,
+      "residual_count": 2483955836673074221852689413577338880000000,
+      "residual_exact": true,
+      "total_mdl_bits": 205.79375051984982,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 82.90794138022451,
+      "constraint_family": "diagonal_exact",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 130.6979102226511,
+          "mean": 124.63926274599686,
+          "min": 114.36073435406479,
+          "p_good_direction": 0.7866066966516742,
+          "sd": 2.8370219097165283,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 213.60585160287562,
+          "mean": 207.54720412622137,
+          "min": 197.2686757342893,
+          "p_good_direction": 0.7866066966516742,
+          "sd": 2.837021909716528,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_plus_diagonal_exact",
+      "lookup_ratio": 1.0021626546321014,
+      "notes": "Global inventory plus the exact diagonal label sequence.",
+      "residual_bits": 126.94944898964705,
+      "residual_count": 164282793430758877106659352749824000000,
+      "residual_exact": true,
+      "total_mdl_bits": 209.85739036987155,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 162.66474555370678,
+      "constraint_family": "anti_diagonal_sum_symbol_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 53.4003717925948,
+          "mean": 46.31054918596222,
+          "min": 36.645484290431334,
+          "p_good_direction": 0.7641179410294853,
+          "sd": 2.2126009188312303,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 216.06511734630158,
+          "mean": 208.975294739669,
+          "min": 199.31022984413812,
+          "p_good_direction": 0.7641179410294853,
+          "sd": 2.212600918831232,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "anti_diagonal_sum_symbol_counts",
+      "lookup_ratio": 1.0051366328136035,
+      "notes": "Exact symbol histograms on each anti_diagonal_sum line.",
+      "residual_bits": 47.81540929187364,
+      "residual_count": 247669456896000,
+      "residual_exact": true,
+      "total_mdl_bits": 210.48015484558042,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 131.5868030221926,
+      "constraint_family": "column_symbol_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 86.4272788647016,
+          "mean": 76.79227192353731,
+          "min": 66.76550076692962,
+          "p_good_direction": 0.8270864567716142,
+          "sd": 2.798862961860672,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 218.01408188689422,
+          "mean": 208.3790749457299,
+          "min": 198.35230378912223,
+          "p_good_direction": 0.8270864567716142,
+          "sd": 2.798862961860673,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "column_symbol_counts",
+      "lookup_ratio": 1.006874904932237,
+      "notes": "Exact symbol histograms on each column line.",
+      "residual_bits": 79.2573538632593,
+      "residual_count": 722505054698864640000000,
+      "residual_exact": true,
+      "total_mdl_bits": 210.84415688545192,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 131.5868030221926,
+      "constraint_family": "row_symbol_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 84.4272788647016,
+          "mean": 76.7704800621413,
+          "min": 65.18053826620847,
+          "p_good_direction": 0.8935532233883059,
+          "sd": 2.9376191711777597,
+          "trials": 2000
+        },
+        "total_mdl_bits": {
+          "max": 216.01408188689422,
+          "mean": 208.35728308433391,
+          "min": 196.7673412884011,
+          "p_good_direction": 0.8935532233883059,
+          "sd": 2.937619171177761,
+          "trials": 2000
+        },
+        "unique_table_controls": 0
+      },
+      "id": "row_symbol_counts",
+      "lookup_ratio": 1.0116503510238224,
+      "notes": "Exact symbol histograms on each row line.",
+      "residual_bits": 80.2573538632593,
+      "residual_count": 1445010109397729280000000,
+      "residual_exact": true,
+      "total_mdl_bits": 211.84415688545192,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 137.61948725133502,
+      "constraint_family": "row_symbol_presence_sets",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 90.93698057066496,
+          "mean": 84.58249796115007,
+          "min": 74.62762149241811,
+          "p_good_direction": 0.49382716049382713,
+          "sd": 3.1260189702461014,
+          "trials": 80
+        },
+        "total_mdl_bits": {
+          "max": 231.50791965180218,
+          "mean": 222.29213152432385,
+          "min": 210.7256686248083,
+          "p_good_direction": 0.5432098765432098,
+          "sd": 4.722572924520489,
+          "trials": 80
+        },
+        "unique_table_controls": 0
+      },
+      "id": "inventory_plus_row_symbol_sets",
+      "lookup_ratio": 1.0618926794827335,
+      "notes": "Global inventory plus the set of symbols present in each row, without row counts.",
+      "residual_bits": 84.74564034456878,
+      "residual_count": 32432449122037923840000000,
+      "residual_exact": true,
+      "total_mdl_bits": 222.3651275959038,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 263.1736060443852,
+      "constraint_family": "row_column_symbol_counts",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 11.641600215834357,
+          "mean": 6.287904470163007,
+          "min": 1.0,
+          "p_good_direction": 0.5245901639344263,
+          "sd": 2.326845043846401,
+          "trials": 60
+        },
+        "total_mdl_bits": {
+          "max": 274.81520626021955,
+          "mean": 269.46151051454825,
+          "min": 264.1736060443852,
+          "p_good_direction": 0.5245901639344263,
+          "sd": 2.3268450438464003,
+          "trials": 60
+        },
+        "unique_table_controls": 0
+      },
+      "id": "row_column_symbol_counts",
+      "lookup_ratio": 1.286235512626591,
+      "meta": {
+        "cache_info": "CacheInfo(hits=136, misses=267, maxsize=None, currsize=267)",
+        "capped": false,
+        "count_cap": 1000000000000
+      },
+      "notes": "Exact row and column symbol histograms over the triangular 10x10 table.",
+      "residual_bits": 6.169925001442312,
+      "residual_count": 72,
+      "residual_exact": true,
+      "total_mdl_bits": 269.34353104582755,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    },
+    {
+      "constraint_cost_bits": 301.2471552649613,
+      "constraint_family": "row_column_counts_plus_diagonal_exact",
+      "control": {
+        "capped_controls": 0,
+        "residual_bits": {
+          "max": 7.774787059601174,
+          "mean": 3.6496219065250677,
+          "min": 0.0,
+          "p_good_direction": 0.3442622950819672,
+          "sd": 1.8088679555104774,
+          "trials": 60
+        },
+        "total_mdl_bits": {
+          "max": 309.0219423245625,
+          "mean": 304.89677717148635,
+          "min": 301.2471552649613,
+          "p_good_direction": 0.3442622950819672,
+          "sd": 1.808867955510478,
+          "trials": 60
+        },
+        "unique_table_controls": 3
+      },
+      "id": "row_column_counts_plus_diagonal_exact",
+      "lookup_ratio": 1.4496777926569326,
+      "meta": {
+        "cache_info": "CacheInfo(hits=93, misses=236, maxsize=None, currsize=236)",
+        "capped": false,
+        "count_cap": 1000000000000
+      },
+      "notes": "Exact row and column symbol histograms over the triangular 10x10 table. The exact diagonal sequence is additionally fixed.",
+      "residual_bits": 2.321928094887362,
+      "residual_count": 5,
+      "residual_exact": true,
+      "total_mdl_bits": 303.56908335984866,
+      "unique_table": false,
+      "verdict": "lookup_disguise"
+    }
+  ],
+  "schema": "marginal_constraint_solver_results.v1",
+  "solver_control_trials": 60,
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "verdict": "weak_constraint_signal"
+}

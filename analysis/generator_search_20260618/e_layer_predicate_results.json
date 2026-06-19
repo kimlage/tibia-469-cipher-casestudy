@@ -1,0 +1,247 @@
+{
+  "all_candidate_count": 64763,
+  "all_e": {
+    "best": {
+      "correction_bits": 18.25262847769824,
+      "exact": false,
+      "f1": 0.7407407407407406,
+      "fn": 1,
+      "fp": 6,
+      "lookup_bits": 36.80007243568508,
+      "mask_hex": "0x562d6c08080401",
+      "mdl_bits": 30.42411794719884,
+      "mdl_gain_vs_e_lookup_bits": 6.37595448848624,
+      "model_cost_bits": 12.1714894695006,
+      "precision": 0.625,
+      "recall": 0.9090909090909091,
+      "selected_count": 16,
+      "terms": [
+        "diag",
+        "both_in_4578"
+      ],
+      "tn": 38,
+      "tp": 10,
+      "universe_count": 55
+    },
+    "controls": {
+      "best_f1": {
+        "max": 0.8421052631578948,
+        "mean": 0.5016241309679295,
+        "min": 0.0,
+        "observed": 0.7407407407407406,
+        "p_good_direction": 0.017982017982017984,
+        "sd": 0.22554754240915262,
+        "z_good_direction": 1.060160564015562
+      },
+      "best_mdl_gain": {
+        "max": 9.27639420662733,
+        "mean": -1.7393481531926256,
+        "min": -6.414487530296583,
+        "observed": 6.37595448848624,
+        "p_good_direction": 0.003996003996003996,
+        "sd": 2.2310821239460448,
+        "z_good_direction": 3.6373840992126216
+      },
+      "exact_fit_rate": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "observed": 0.0,
+        "p_good_direction": 1.0,
+        "sd": 0.0,
+        "z_good_direction": 0.0
+      },
+      "trials": 1000,
+      "universe_count": 55
+    },
+    "selected_cells": [
+      "00",
+      "11",
+      "22",
+      "33",
+      "44",
+      "45",
+      "47",
+      "48",
+      "55",
+      "57",
+      "58",
+      "66",
+      "77",
+      "78",
+      "88",
+      "99"
+    ],
+    "verdict": "weak_e_layer_signal"
+  },
+  "best": {
+    "correction_bits": 2.807354922057604,
+    "exact": false,
+    "f1": 0.923076923076923,
+    "fn": 0,
+    "fp": 1,
+    "lookup_bits": 22.957493895623603,
+    "mask_hex": "0x40c6800004000",
+    "mdl_bits": 15.978844391558203,
+    "mdl_gain_vs_e_lookup_bits": 6.9786495040654,
+    "model_cost_bits": 13.1714894695006,
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "selected_count": 7,
+    "terms": [
+      "prod_eq_5",
+      "both_in_4578"
+    ],
+    "tn": 38,
+    "tp": 6,
+    "universe_count": 45
+  },
+  "controls": {
+    "best_f1": {
+      "max": 1.0,
+      "mean": 0.5775901689243723,
+      "min": 0.0,
+      "observed": 0.923076923076923,
+      "p_good_direction": 0.003996003996003996,
+      "sd": 0.19897241429235907,
+      "z_good_direction": 1.7363550388694162
+    },
+    "best_mdl_gain": {
+      "max": 8.986004426123003,
+      "mean": -2.68277760693041,
+      "min": -6.727095350142147,
+      "observed": 6.9786495040654,
+      "p_good_direction": 0.002997002997002997,
+      "sd": 2.1110857303622566,
+      "z_good_direction": 4.576520494664106
+    },
+    "exact_fit_rate": {
+      "max": 1.0,
+      "mean": 0.001,
+      "min": 0.0,
+      "observed": 0.0,
+      "p_good_direction": 1.0,
+      "sd": 0.03162277660168379,
+      "z_good_direction": -0.0316227766016838
+    },
+    "trials": 1000,
+    "universe_count": 45
+  },
+  "diagonal_baseline": {
+    "diagonal_cells": [
+      "00",
+      "11",
+      "22",
+      "33",
+      "44",
+      "55",
+      "66",
+      "77",
+      "88",
+      "99"
+    ],
+    "diagonal_count": 10,
+    "e_diagonal_cells": [
+      "11",
+      "33",
+      "44",
+      "66",
+      "99"
+    ],
+    "e_diagonal_count": 5
+  },
+  "e_cells": [
+    "11",
+    "15",
+    "33",
+    "44",
+    "47",
+    "48",
+    "57",
+    "58",
+    "66",
+    "78",
+    "99"
+  ],
+  "max_terms": 2,
+  "new_plaintext": false,
+  "residual_candidate_count": 44877,
+  "residual_e_cells": [
+    "15",
+    "47",
+    "48",
+    "57",
+    "58",
+    "78"
+  ],
+  "residual_offdiag_e": {
+    "best": {
+      "correction_bits": 2.807354922057604,
+      "exact": false,
+      "f1": 0.923076923076923,
+      "fn": 0,
+      "fp": 1,
+      "lookup_bits": 22.957493895623603,
+      "mask_hex": "0x40c6800004000",
+      "mdl_bits": 15.978844391558203,
+      "mdl_gain_vs_e_lookup_bits": 6.9786495040654,
+      "model_cost_bits": 13.1714894695006,
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "selected_count": 7,
+      "terms": [
+        "prod_eq_5",
+        "both_in_4578"
+      ],
+      "tn": 38,
+      "tp": 6,
+      "universe_count": 45
+    },
+    "controls": {
+      "best_f1": {
+        "max": 1.0,
+        "mean": 0.5775901689243723,
+        "min": 0.0,
+        "observed": 0.923076923076923,
+        "p_good_direction": 0.003996003996003996,
+        "sd": 0.19897241429235907,
+        "z_good_direction": 1.7363550388694162
+      },
+      "best_mdl_gain": {
+        "max": 8.986004426123003,
+        "mean": -2.68277760693041,
+        "min": -6.727095350142147,
+        "observed": 6.9786495040654,
+        "p_good_direction": 0.002997002997002997,
+        "sd": 2.1110857303622566,
+        "z_good_direction": 4.576520494664106
+      },
+      "exact_fit_rate": {
+        "max": 1.0,
+        "mean": 0.001,
+        "min": 0.0,
+        "observed": 0.0,
+        "p_good_direction": 1.0,
+        "sd": 0.03162277660168379,
+        "z_good_direction": -0.0316227766016838
+      },
+      "trials": 1000,
+      "universe_count": 45
+    },
+    "selected_cells": [
+      "15",
+      "45",
+      "47",
+      "48",
+      "57",
+      "58",
+      "78"
+    ],
+    "verdict": "weak_e_layer_signal"
+  },
+  "schema": "e_layer_predicate_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "term_count": 436,
+  "translation_delta": "NONE",
+  "verdict": "weak_e_layer_signal"
+}

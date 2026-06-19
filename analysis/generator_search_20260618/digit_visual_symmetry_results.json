@@ -1,0 +1,7265 @@
+{
+  "controls": {
+    "best_edge_accuracy": {
+      "control_max": 0.38095238095238093,
+      "control_mean": 0.16840738095238095,
+      "control_min": 0.04,
+      "control_sd": 0.048273216653958985,
+      "observed": 0.16,
+      "p_good_direction": 0.6984603079384123,
+      "z_good_direction": -0.17416243488906674
+    },
+    "best_edge_hits": {
+      "control_max": 18,
+      "control_mean": 8.3108,
+      "control_min": 2,
+      "control_sd": 2.341217550746616,
+      "observed": 8,
+      "p_good_direction": 0.6984603079384123,
+      "z_good_direction": -0.13275143948108797
+    },
+    "best_mdl_gain_bits": {
+      "control_max": 7.3987436919381935,
+      "control_mean": -18.044444801837205,
+      "control_min": -21.666007235461336,
+      "control_sd": 5.35381824833724,
+      "observed": -4.163975735111137,
+      "p_good_direction": 0.04059188162367527,
+      "z_good_direction": 2.5926298620684385
+    },
+    "best_nontrivial_hits": {
+      "control_max": 33,
+      "control_mean": 28.8664,
+      "control_min": 26,
+      "control_sd": 1.1921557310424722,
+      "observed": 29,
+      "p_good_direction": 0.5954809038192361,
+      "z_good_direction": 0.1120658958567231
+    },
+    "label_shuffle": "preserves exact 55-cell label multiset, including the 19 conflict label",
+    "random_seed": 46920260618,
+    "trials": 5000
+  },
+  "hypothesis": "55 unordered pair cells explained by visual/geometric transformations around 6 and 9",
+  "label_counts": {
+    "*": 1,
+    "A": 6,
+    "B": 1,
+    "C": 1,
+    "E": 11,
+    "F": 3,
+    "I": 7,
+    "I+N": 1,
+    "L": 2,
+    "N": 8,
+    "O": 1,
+    "R": 1,
+    "S": 1,
+    "T": 6,
+    "V": 5
+  },
+  "label_space": [
+    "*",
+    "A",
+    "B",
+    "C",
+    "E",
+    "F",
+    "I",
+    "I+N",
+    "L",
+    "N",
+    "O",
+    "R",
+    "S",
+    "T",
+    "V"
+  ],
+  "lookup_cost_bits": 214.87898275846854,
+  "observed_best_by_hits": {
+    "best_nontrivial_components": [
+      {
+        "cells": [
+          "06",
+          "59"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "I": 2
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "11",
+          "44"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "E": 2
+        },
+        "majority_label": "E"
+      },
+      {
+        "cells": [
+          "26",
+          "39"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "N": 2
+        },
+        "majority_label": "N"
+      },
+      {
+        "cells": [
+          "66",
+          "99"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "E": 2
+        },
+        "majority_label": "E"
+      },
+      {
+        "cells": [
+          "00",
+          "55"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "*": 1,
+          "V": 1
+        },
+        "majority_label": "*"
+      },
+      {
+        "cells": [
+          "01",
+          "45"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "F": 1,
+          "N": 1
+        },
+        "majority_label": "N"
+      },
+      {
+        "cells": [
+          "02",
+          "35"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "L": 1,
+          "R": 1
+        },
+        "majority_label": "R"
+      },
+      {
+        "cells": [
+          "03",
+          "25"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "I": 1,
+          "V": 1
+        },
+        "majority_label": "V"
+      },
+      {
+        "cells": [
+          "04",
+          "15"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "E": 1,
+          "F": 1
+        },
+        "majority_label": "F"
+      },
+      {
+        "cells": [
+          "07",
+          "58"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "E": 1,
+          "I": 1
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "08",
+          "57"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "E": 1,
+          "I": 1
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "09",
+          "56"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "I": 1,
+          "T": 1
+        },
+        "majority_label": "T"
+      },
+      {
+        "cells": [
+          "12",
+          "34"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "B": 1,
+          "F": 1
+        },
+        "majority_label": "F"
+      },
+      {
+        "cells": [
+          "13",
+          "24"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "L": 1,
+          "N": 1
+        },
+        "majority_label": "N"
+      },
+      {
+        "cells": [
+          "16",
+          "49"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "N": 1,
+          "T": 1
+        },
+        "majority_label": "T"
+      },
+      {
+        "cells": [
+          "17",
+          "48"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "E": 1,
+          "V": 1
+        },
+        "majority_label": "V"
+      },
+      {
+        "cells": [
+          "18",
+          "47"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "E": 1,
+          "I": 1
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "19",
+          "46"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "I+N": 1,
+          "N": 1
+        },
+        "majority_label": "I+N"
+      },
+      {
+        "cells": [
+          "22",
+          "33"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "A": 1,
+          "E": 1
+        },
+        "majority_label": "A"
+      },
+      {
+        "cells": [
+          "27",
+          "38"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "S": 1,
+          "T": 1
+        },
+        "majority_label": "S"
+      }
+    ],
+    "components": 30,
+    "digit_map": {
+      "0": "5",
+      "1": "4",
+      "2": "3",
+      "3": "2",
+      "4": "1",
+      "5": "0",
+      "6": "9",
+      "7": "8",
+      "8": "7",
+      "9": "6"
+    },
+    "edge_accuracy": 0.16,
+    "edge_hits": 8,
+    "edge_mismatches_sample": [
+      {
+        "cell": "00",
+        "source_label": "*",
+        "target": "55",
+        "target_label": "V"
+      },
+      {
+        "cell": "01",
+        "source_label": "N",
+        "target": "45",
+        "target_label": "F"
+      },
+      {
+        "cell": "02",
+        "source_label": "R",
+        "target": "35",
+        "target_label": "L"
+      },
+      {
+        "cell": "03",
+        "source_label": "V",
+        "target": "25",
+        "target_label": "I"
+      },
+      {
+        "cell": "04",
+        "source_label": "F",
+        "target": "15",
+        "target_label": "E"
+      },
+      {
+        "cell": "07",
+        "source_label": "I",
+        "target": "58",
+        "target_label": "E"
+      },
+      {
+        "cell": "08",
+        "source_label": "I",
+        "target": "57",
+        "target_label": "E"
+      },
+      {
+        "cell": "09",
+        "source_label": "T",
+        "target": "56",
+        "target_label": "I"
+      },
+      {
+        "cell": "12",
+        "source_label": "F",
+        "target": "34",
+        "target_label": "B"
+      },
+      {
+        "cell": "13",
+        "source_label": "N",
+        "target": "24",
+        "target_label": "L"
+      },
+      {
+        "cell": "15",
+        "source_label": "E",
+        "target": "04",
+        "target_label": "F"
+      },
+      {
+        "cell": "16",
+        "source_label": "T",
+        "target": "49",
+        "target_label": "N"
+      },
+      {
+        "cell": "17",
+        "source_label": "V",
+        "target": "48",
+        "target_label": "E"
+      },
+      {
+        "cell": "18",
+        "source_label": "I",
+        "target": "47",
+        "target_label": "E"
+      },
+      {
+        "cell": "19",
+        "source_label": "I+N",
+        "target": "46",
+        "target_label": "N"
+      },
+      {
+        "cell": "22",
+        "source_label": "A",
+        "target": "33",
+        "target_label": "E"
+      },
+      {
+        "cell": "24",
+        "source_label": "L",
+        "target": "13",
+        "target_label": "N"
+      },
+      {
+        "cell": "25",
+        "source_label": "I",
+        "target": "03",
+        "target_label": "V"
+      },
+      {
+        "cell": "27",
+        "source_label": "S",
+        "target": "38",
+        "target_label": "T"
+      },
+      {
+        "cell": "28",
+        "source_label": "T",
+        "target": "37",
+        "target_label": "A"
+      }
+    ],
+    "edge_total": 50,
+    "family": "clock",
+    "id": "clock_0123456789_mirror_horizontal",
+    "lookup_cost_bits": 214.87898275846854,
+    "majority_accuracy": 0.6181818181818182,
+    "majority_errors": 21,
+    "majority_hits": 34,
+    "mapped_cells": 55,
+    "model_cost_bits": 324.9819024549397,
+    "model_cost_gain_bits": -110.10291969647116,
+    "nontrivial_accuracy": 0.58,
+    "nontrivial_cells": 50,
+    "nontrivial_components": 25,
+    "nontrivial_errors": 21,
+    "nontrivial_hits": 29,
+    "note": "Digits placed on a 10-position clock/circle in the listed order."
+  },
+  "observed_best_by_mdl": {
+    "best_nontrivial_components": [
+      {
+        "cells": [
+          "26",
+          "29"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "N": 2
+        },
+        "majority_label": "N"
+      },
+      {
+        "cells": [
+          "56",
+          "59"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "I": 2
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "66",
+          "99"
+        ],
+        "errors": 0,
+        "hits": 2,
+        "labels": {
+          "E": 2
+        },
+        "majority_label": "E"
+      },
+      {
+        "cells": [
+          "06",
+          "09"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "I": 1,
+          "T": 1
+        },
+        "majority_label": "I"
+      },
+      {
+        "cells": [
+          "68",
+          "89"
+        ],
+        "errors": 1,
+        "hits": 1,
+        "labels": {
+          "C": 1,
+          "T": 1
+        },
+        "majority_label": "C"
+      }
+    ],
+    "components": 50,
+    "digit_map": {
+      "0": "0",
+      "1": null,
+      "2": "2",
+      "3": null,
+      "4": null,
+      "5": "5",
+      "6": "9",
+      "7": null,
+      "8": "8",
+      "9": "6"
+    },
+    "edge_accuracy": 0.6,
+    "edge_hits": 6,
+    "edge_mismatches_sample": [
+      {
+        "cell": "06",
+        "source_label": "I",
+        "target": "09",
+        "target_label": "T"
+      },
+      {
+        "cell": "09",
+        "source_label": "T",
+        "target": "06",
+        "target_label": "I"
+      },
+      {
+        "cell": "68",
+        "source_label": "C",
+        "target": "89",
+        "target_label": "T"
+      },
+      {
+        "cell": "89",
+        "source_label": "T",
+        "target": "68",
+        "target_label": "C"
+      }
+    ],
+    "edge_total": 10,
+    "family": "seven_segment",
+    "id": "sevenseg_rotate180_exact",
+    "lookup_cost_bits": 214.87898275846854,
+    "majority_accuracy": 0.9636363636363636,
+    "majority_errors": 2,
+    "majority_hits": 53,
+    "mapped_cells": 21,
+    "model_cost_bits": 219.04295849357968,
+    "model_cost_gain_bits": -4.163975735111137,
+    "nontrivial_accuracy": 0.8,
+    "nontrivial_cells": 10,
+    "nontrivial_components": 5,
+    "nontrivial_errors": 2,
+    "nontrivial_hits": 8,
+    "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+  },
+  "overlay_traces": [
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "99",
+          "target_ordered_symbol": "E",
+          "target_pair": "99",
+          "target_pair_label": "E"
+        }
+      ],
+      "transform_id": "sevenseg_rotate180_exact"
+    },
+    {
+      "family": "six_nine_specific",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": false,
+          "source_pair_label": "I+N",
+          "target_code": "16",
+          "target_ordered_symbol": "T",
+          "target_pair": "16",
+          "target_pair_label": "T"
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": false,
+          "source_pair_label": "I+N",
+          "target_code": "61",
+          "target_ordered_symbol": "T",
+          "target_pair": "16",
+          "target_pair_label": "T"
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "36",
+          "target_ordered_symbol": "V",
+          "target_pair": "36",
+          "target_pair_label": "V"
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "63",
+          "target_ordered_symbol": "V",
+          "target_pair": "36",
+          "target_pair_label": "V"
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "33",
+          "target_ordered_symbol": "E",
+          "target_pair": "33",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "99",
+          "target_ordered_symbol": "E",
+          "target_pair": "99",
+          "target_pair_label": "E"
+        }
+      ],
+      "transform_id": "local_swap_6_9_identity_else"
+    },
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "66",
+          "target_ordered_symbol": "E",
+          "target_pair": "66",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "66",
+          "target_ordered_symbol": "E",
+          "target_pair": "66",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "66",
+          "target_ordered_symbol": "E",
+          "target_pair": "66",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "99",
+          "target_ordered_symbol": "E",
+          "target_pair": "99",
+          "target_pair_label": "E"
+        }
+      ],
+      "transform_id": "sevenseg_rotate180_nearest"
+    },
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        }
+      ],
+      "transform_id": "sevenseg_mirror_vertical_exact"
+    },
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "33",
+          "target_ordered_symbol": "E",
+          "target_pair": "33",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        }
+      ],
+      "transform_id": "sevenseg_mirror_horizontal_exact"
+    },
+    {
+      "family": "required_overlay_control",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": true,
+          "source_pair_label": "I+N",
+          "target_code": "19",
+          "target_ordered_symbol": "I",
+          "target_pair": "19",
+          "target_pair_label": "I+N"
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": true,
+          "source_pair_label": "I+N",
+          "target_code": "91",
+          "target_ordered_symbol": "N",
+          "target_pair": "19",
+          "target_pair_label": "I+N"
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "69",
+          "target_ordered_symbol": "V",
+          "target_pair": "69",
+          "target_pair_label": "V"
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": false,
+          "source_pair_label": "N",
+          "target_code": "96",
+          "target_ordered_symbol": "V",
+          "target_pair": "69",
+          "target_pair_label": "V"
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "66",
+          "target_ordered_symbol": "E",
+          "target_pair": "66",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "33",
+          "target_ordered_symbol": "E",
+          "target_pair": "33",
+          "target_pair_label": "E"
+        }
+      ],
+      "transform_id": "overlay_swap_3_6_identity_else"
+    },
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "66",
+          "target_ordered_symbol": "E",
+          "target_pair": "66",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        }
+      ],
+      "transform_id": "sevenseg_mirror_vertical_nearest"
+    },
+    {
+      "family": "seven_segment",
+      "traces": [
+        {
+          "code": "19",
+          "ordered_symbol": "I",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "91",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "I+N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "39",
+          "ordered_symbol": null,
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "93",
+          "ordered_symbol": "N",
+          "pair_label_preserved": null,
+          "source_pair_label": "N",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        },
+        {
+          "code": "33",
+          "ordered_symbol": "E",
+          "pair_label_preserved": true,
+          "source_pair_label": "E",
+          "target_code": "33",
+          "target_ordered_symbol": "E",
+          "target_pair": "33",
+          "target_pair_label": "E"
+        },
+        {
+          "code": "66",
+          "ordered_symbol": "E",
+          "pair_label_preserved": null,
+          "source_pair_label": "E",
+          "target_code": null,
+          "target_ordered_symbol": null,
+          "target_pair": null,
+          "target_pair_label": null
+        }
+      ],
+      "transform_id": "sevenseg_mirror_horizontal_nearest"
+    }
+  ],
+  "random_seed": 46920260618,
+  "required_overlays": [
+    {
+      "codes": [
+        {
+          "code": "19",
+          "ordered_code_present": true,
+          "ordered_symbol": "I",
+          "unordered_pair": "19",
+          "unordered_pair_label": "I+N",
+          "unordered_pair_status": "conflict"
+        },
+        {
+          "code": "91",
+          "ordered_code_present": true,
+          "ordered_symbol": "N",
+          "unordered_pair": "19",
+          "unordered_pair_label": "I+N",
+          "unordered_pair_status": "conflict"
+        }
+      ],
+      "id": "19_91_ordered_reversal",
+      "interpretation": "This is an exception to simple unordered visual symmetry, not a plaintext clue.",
+      "observation": "19 and 91 are both present but map to different ordered symbols; the unordered pair cell is a conflict label."
+    },
+    {
+      "codes": [
+        {
+          "code": "39",
+          "ordered_code_present": false,
+          "ordered_symbol": null,
+          "unordered_pair": "39",
+          "unordered_pair_label": "N",
+          "unordered_pair_status": "pure"
+        },
+        {
+          "code": "93",
+          "ordered_code_present": true,
+          "ordered_symbol": "N",
+          "unordered_pair": "39",
+          "unordered_pair_label": "N",
+          "unordered_pair_status": "pure"
+        }
+      ],
+      "id": "39_absent_93_present",
+      "interpretation": "This is an omission/orientation fact, not evidence for a complete 55-cell visual formula.",
+      "observation": "39 is absent from the ordered code table while 93 is present; the unordered pair cell 39 exists through 93."
+    },
+    {
+      "codes": [
+        {
+          "code": "33",
+          "ordered_code_present": true,
+          "ordered_symbol": "E",
+          "unordered_pair": "33",
+          "unordered_pair_label": "E",
+          "unordered_pair_status": "pure"
+        },
+        {
+          "code": "66",
+          "ordered_code_present": true,
+          "ordered_symbol": "E",
+          "unordered_pair": "66",
+          "unordered_pair_label": "E",
+          "unordered_pair_status": "pure"
+        }
+      ],
+      "id": "33_66_same_pair_label",
+      "interpretation": "The equality is tracked as a visual overlay candidate and tested against controls.",
+      "observation": "33 and 66 share the same pair label in the mechanical table."
+    }
+  ],
+  "rule_choice_bits": 4.321928094887363,
+  "schema": "digit_visual_symmetry_results.v1",
+  "scope_guard": {
+    "docs_updated": false,
+    "generator_search_suite_touched": false,
+    "glossary_created": false,
+    "plaintext_promoted": false
+  },
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "transform_rows": [
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "26",
+            "29"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "N": 2
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "56",
+            "59"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "66",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "06",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "68",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "T": 1
+          },
+          "majority_label": "C"
+        }
+      ],
+      "components": 50,
+      "digit_map": {
+        "0": "0",
+        "1": null,
+        "2": "2",
+        "3": null,
+        "4": null,
+        "5": "5",
+        "6": "9",
+        "7": null,
+        "8": "8",
+        "9": "6"
+      },
+      "edge_accuracy": 0.6,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "68",
+          "source_label": "C",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "89",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        }
+      ],
+      "edge_total": 10,
+      "family": "seven_segment",
+      "id": "sevenseg_rotate180_exact",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.9636363636363636,
+      "majority_errors": 2,
+      "majority_hits": 53,
+      "mapped_cells": 21,
+      "model_cost_bits": 219.04295849357968,
+      "model_cost_gain_bits": -4.163975735111137,
+      "nontrivial_accuracy": 0.8,
+      "nontrivial_cells": 10,
+      "nontrivial_components": 5,
+      "nontrivial_errors": 2,
+      "nontrivial_hits": 8,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "26",
+            "29"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "N": 2
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "46",
+            "49"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "N": 2
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "56",
+            "59"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "66",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "67",
+            "79"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "06",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "16",
+            "19"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I+N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "36",
+            "39"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "68",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "T": 1
+          },
+          "majority_label": "C"
+        }
+      ],
+      "components": 46,
+      "digit_map": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "9",
+        "7": "7",
+        "8": "8",
+        "9": "6"
+      },
+      "edge_accuracy": 0.5555555555555556,
+      "edge_hits": 10,
+      "edge_mismatches_sample": [
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "19",
+          "target_label": "I+N"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "16",
+          "target_label": "T"
+        },
+        {
+          "cell": "36",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        },
+        {
+          "cell": "39",
+          "source_label": "N",
+          "target": "36",
+          "target_label": "V"
+        },
+        {
+          "cell": "68",
+          "source_label": "C",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "89",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        }
+      ],
+      "edge_total": 18,
+      "family": "six_nine_specific",
+      "id": "local_swap_6_9_identity_else",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.9272727272727272,
+      "majority_errors": 4,
+      "majority_hits": 51,
+      "mapped_cells": 55,
+      "model_cost_bits": 222.79189672941192,
+      "model_cost_gain_bits": -7.912913970943379,
+      "nontrivial_accuracy": 0.7777777777777778,
+      "nontrivial_cells": 18,
+      "nontrivial_components": 9,
+      "nontrivial_errors": 4,
+      "nontrivial_hits": 14,
+      "note": "Direct local 6<->9 visual rotation hypothesis; all other digits fixed."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "33",
+            "39",
+            "66",
+            "99"
+          ],
+          "errors": 1,
+          "hits": 3,
+          "labels": {
+            "E": 3,
+            "N": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "23",
+            "26",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 2,
+          "labels": {
+            "N": 2,
+            "O": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "35",
+            "56",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 2,
+          "labels": {
+            "I": 2,
+            "L": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "38",
+            "68",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 2,
+          "labels": {
+            "C": 1,
+            "T": 2
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "03",
+            "06",
+            "09"
+          ],
+          "errors": 2,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "36",
+            "69"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "V": 2
+          },
+          "majority_label": "V"
+        }
+      ],
+      "components": 43,
+      "digit_map": {
+        "0": "0",
+        "1": null,
+        "2": "2",
+        "3": "6",
+        "4": null,
+        "5": "5",
+        "6": "9",
+        "7": null,
+        "8": "8",
+        "9": "6"
+      },
+      "edge_accuracy": 0.47058823529411764,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "38",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "39",
+          "source_label": "N",
+          "target": "66",
+          "target_label": "E"
+        },
+        {
+          "cell": "68",
+          "source_label": "C",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "89",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        }
+      ],
+      "edge_total": 17,
+      "family": "seven_segment",
+      "id": "sevenseg_rotate180_nearest",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.8909090909090909,
+      "majority_errors": 6,
+      "majority_hits": 49,
+      "mapped_cells": 28,
+      "model_cost_bits": 230.44772556085275,
+      "model_cost_gain_bits": -15.568742802384207,
+      "nontrivial_accuracy": 0.6666666666666666,
+      "nontrivial_cells": 18,
+      "nontrivial_components": 6,
+      "nontrivial_errors": 6,
+      "nontrivial_hits": 12,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "02",
+            "05"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "R": 1,
+            "T": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "22",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "28",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        }
+      ],
+      "components": 52,
+      "digit_map": {
+        "0": "0",
+        "1": null,
+        "2": "5",
+        "3": null,
+        "4": null,
+        "5": "2",
+        "6": null,
+        "7": null,
+        "8": "8",
+        "9": null
+      },
+      "edge_accuracy": 0.0,
+      "edge_hits": 0,
+      "edge_mismatches_sample": [
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "05",
+          "target_label": "T"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "55",
+          "source_label": "V",
+          "target": "22",
+          "target_label": "A"
+        },
+        {
+          "cell": "58",
+          "source_label": "E",
+          "target": "28",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 6,
+      "family": "seven_segment",
+      "id": "sevenseg_mirror_vertical_exact",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.9454545454545454,
+      "majority_errors": 3,
+      "majority_hits": 52,
+      "mapped_cells": 10,
+      "model_cost_bits": 236.54498999392987,
+      "model_cost_gain_bits": -21.666007235461336,
+      "nontrivial_accuracy": 0.5,
+      "nontrivial_cells": 6,
+      "nontrivial_components": 3,
+      "nontrivial_errors": 3,
+      "nontrivial_hits": 3,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "02",
+            "05"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "R": 1,
+            "T": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "12",
+            "15"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "22",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "28",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        }
+      ],
+      "components": 50,
+      "digit_map": {
+        "0": "0",
+        "1": "1",
+        "2": "5",
+        "3": "3",
+        "4": null,
+        "5": "2",
+        "6": null,
+        "7": null,
+        "8": "8",
+        "9": null
+      },
+      "edge_accuracy": 0.0,
+      "edge_hits": 0,
+      "edge_mismatches_sample": [
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "05",
+          "target_label": "T"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "12",
+          "target_label": "F"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "23",
+          "target_label": "O"
+        },
+        {
+          "cell": "55",
+          "source_label": "V",
+          "target": "22",
+          "target_label": "A"
+        },
+        {
+          "cell": "58",
+          "source_label": "E",
+          "target": "28",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 10,
+      "family": "seven_segment",
+      "id": "sevenseg_mirror_horizontal_exact",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.9090909090909091,
+      "majority_errors": 5,
+      "majority_hits": 50,
+      "mapped_cells": 21,
+      "model_cost_bits": 248.1077094209792,
+      "model_cost_gain_bits": -33.22872666251067,
+      "nontrivial_accuracy": 0.5,
+      "nontrivial_cells": 10,
+      "nontrivial_components": 5,
+      "nontrivial_errors": 5,
+      "nontrivial_hits": 5,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "33",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "37",
+            "67"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "03",
+            "06"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "13",
+            "16"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "23",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "34",
+            "46"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "N": 1
+          },
+          "majority_label": "B"
+        },
+        {
+          "cells": [
+            "35",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "38",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "39",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "N"
+        }
+      ],
+      "components": 46,
+      "digit_map": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "6",
+        "4": "4",
+        "5": "5",
+        "6": "3",
+        "7": "7",
+        "8": "8",
+        "9": "9"
+      },
+      "edge_accuracy": 0.2222222222222222,
+      "edge_hits": 4,
+      "edge_mismatches_sample": [
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "16",
+          "target_label": "T"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "13",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "23",
+          "target_label": "O"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "46",
+          "target_label": "N"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "38",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "39",
+          "source_label": "N",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "46",
+          "source_label": "N",
+          "target": "34",
+          "target_label": "B"
+        },
+        {
+          "cell": "56",
+          "source_label": "I",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "68",
+          "source_label": "C",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "69",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        }
+      ],
+      "edge_total": 18,
+      "family": "required_overlay_control",
+      "id": "overlay_swap_3_6_identity_else",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.8727272727272727,
+      "majority_errors": 7,
+      "majority_hits": 48,
+      "mapped_cells": 55,
+      "model_cost_bits": 251.85664765681145,
+      "model_cost_gain_bits": -36.97766489834291,
+      "nontrivial_accuracy": 0.6111111111111112,
+      "nontrivial_cells": 18,
+      "nontrivial_components": 9,
+      "nontrivial_errors": 7,
+      "nontrivial_hits": 11,
+      "note": "Control overlay for the required 33/66 check; not a 6/9 generator claim."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "33",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "02",
+            "05"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "R": 1,
+            "T": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "06"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "22",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "45"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "26",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "28",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "34",
+            "46"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "N": 1
+          },
+          "majority_label": "B"
+        },
+        {
+          "cells": [
+            "38",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        }
+      ],
+      "components": 45,
+      "digit_map": {
+        "0": "0",
+        "1": null,
+        "2": "5",
+        "3": "6",
+        "4": "4",
+        "5": "2",
+        "6": null,
+        "7": null,
+        "8": "8",
+        "9": null
+      },
+      "edge_accuracy": 0.07142857142857142,
+      "edge_hits": 1,
+      "edge_mismatches_sample": [
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "05",
+          "target_label": "T"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "45",
+          "target_label": "F"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "46",
+          "target_label": "N"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "38",
+          "source_label": "T",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "45",
+          "source_label": "F",
+          "target": "24",
+          "target_label": "L"
+        },
+        {
+          "cell": "55",
+          "source_label": "V",
+          "target": "22",
+          "target_label": "A"
+        },
+        {
+          "cell": "58",
+          "source_label": "E",
+          "target": "28",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 14,
+      "family": "seven_segment",
+      "id": "sevenseg_mirror_vertical_nearest",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.8363636363636363,
+      "majority_errors": 9,
+      "majority_hits": 46,
+      "mapped_cells": 21,
+      "model_cost_bits": 267.32625767946934,
+      "model_cost_gain_bits": -52.4472749210008,
+      "nontrivial_accuracy": 0.55,
+      "nontrivial_cells": 20,
+      "nontrivial_components": 10,
+      "nontrivial_errors": 9,
+      "nontrivial_hits": 11,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "12",
+            "15",
+            "27",
+            "57"
+          ],
+          "errors": 2,
+          "hits": 2,
+          "labels": {
+            "E": 2,
+            "F": 1,
+            "S": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "11",
+            "17",
+            "77"
+          ],
+          "errors": 2,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "01",
+            "07"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "05"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "R": 1,
+            "T": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "13",
+            "37"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "18",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "22",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "28",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        }
+      ],
+      "components": 43,
+      "digit_map": {
+        "0": "0",
+        "1": "1",
+        "2": "5",
+        "3": "3",
+        "4": null,
+        "5": "2",
+        "6": null,
+        "7": "1",
+        "8": "8",
+        "9": null
+      },
+      "edge_accuracy": 0.0,
+      "edge_hits": 0,
+      "edge_mismatches_sample": [
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "05",
+          "target_label": "T"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "12",
+          "target_label": "F"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "11",
+          "target_label": "E"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "23",
+          "target_label": "O"
+        },
+        {
+          "cell": "37",
+          "source_label": "A",
+          "target": "13",
+          "target_label": "N"
+        },
+        {
+          "cell": "55",
+          "source_label": "V",
+          "target": "22",
+          "target_label": "A"
+        },
+        {
+          "cell": "57",
+          "source_label": "E",
+          "target": "12",
+          "target_label": "F"
+        },
+        {
+          "cell": "58",
+          "source_label": "E",
+          "target": "28",
+          "target_label": "T"
+        },
+        {
+          "cell": "77",
+          "source_label": "N",
+          "target": "11",
+          "target_label": "E"
+        },
+        {
+          "cell": "78",
+          "source_label": "E",
+          "target": "18",
+          "target_label": "I"
+        }
+      ],
+      "edge_total": 17,
+      "family": "seven_segment",
+      "id": "sevenseg_mirror_horizontal_nearest",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.8,
+      "majority_errors": 11,
+      "majority_hits": 44,
+      "mapped_cells": 28,
+      "model_cost_bits": 278.8889771065186,
+      "model_cost_gain_bits": -64.00999434805007,
+      "nontrivial_accuracy": 0.47619047619047616,
+      "nontrivial_cells": 21,
+      "nontrivial_components": 9,
+      "nontrivial_errors": 11,
+      "nontrivial_hits": 10,
+      "note": "Seven-segment visual transform; nearest mode is conservative only when unique and distance <= 2."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "15",
+            "57"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "88"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "33",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "36",
+            "69"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "V": 2
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "11",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "12",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "47"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "E": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "16",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "18",
+            "27"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "S": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "37"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I+N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "23",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "O": 1,
+            "T": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "25",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "26",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "29",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "34",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "N": 1
+          },
+          "majority_label": "B"
+        },
+        {
+          "cells": [
+            "35",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        }
+      ],
+      "components": 37,
+      "digit_map": {
+        "0": null,
+        "1": "7",
+        "2": "8",
+        "3": "9",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "1",
+        "8": "2",
+        "9": "3"
+      },
+      "edge_accuracy": 0.2222222222222222,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "11",
+          "source_label": "E",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "47",
+          "target_label": "E"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "37",
+          "target_label": "A"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "18",
+          "target_label": "I"
+        },
+        {
+          "cell": "29",
+          "source_label": "N",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "49",
+          "target_label": "N"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "37",
+          "source_label": "A",
+          "target": "19",
+          "target_label": "I+N"
+        },
+        {
+          "cell": "38",
+          "source_label": "T",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "47",
+          "source_label": "E",
+          "target": "14",
+          "target_label": "A"
+        },
+        {
+          "cell": "48",
+          "source_label": "E",
+          "target": "24",
+          "target_label": "L"
+        },
+        {
+          "cell": "49",
+          "source_label": "N",
+          "target": "34",
+          "target_label": "B"
+        }
+      ],
+      "edge_total": 36,
+      "family": "numpad",
+      "id": "numpad_mirror_horizontal_strict",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.7454545454545455,
+      "majority_errors": 14,
+      "majority_hits": 41,
+      "mapped_cells": 45,
+      "model_cost_bits": 284.51238446026707,
+      "model_cost_gain_bits": -69.63340170179853,
+      "nontrivial_accuracy": 0.6111111111111112,
+      "nontrivial_cells": 36,
+      "nontrivial_components": 18,
+      "nontrivial_errors": 14,
+      "nontrivial_hits": 22,
+      "note": "Numpad transform over the 1..9 grid; strict leaves 0 undefined when no opposite key exists."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "15",
+            "57"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "88"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "33",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "36",
+            "69"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "V": 2
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "01",
+            "07"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "08"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "T": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "11",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "12",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "47"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "E": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "16",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "18",
+            "27"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "S": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "37"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I+N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "23",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "O": 1,
+            "T": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "25",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "26",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "29",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "34",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "N": 1
+          },
+          "majority_label": "B"
+        }
+      ],
+      "components": 34,
+      "digit_map": {
+        "0": "0",
+        "1": "7",
+        "2": "8",
+        "3": "9",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "1",
+        "8": "2",
+        "9": "3"
+      },
+      "edge_accuracy": 0.19047619047619047,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "07",
+          "target_label": "I"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "08",
+          "target_label": "I"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "11",
+          "source_label": "E",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "47",
+          "target_label": "E"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "37",
+          "target_label": "A"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "18",
+          "target_label": "I"
+        },
+        {
+          "cell": "29",
+          "source_label": "N",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "49",
+          "target_label": "N"
+        }
+      ],
+      "edge_total": 42,
+      "family": "numpad",
+      "id": "numpad_mirror_horizontal_zero_fixed",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6909090909090909,
+      "majority_errors": 17,
+      "majority_hits": 38,
+      "mapped_cells": 55,
+      "model_cost_bits": 301.85646360084104,
+      "model_cost_gain_bits": -86.9774808423725,
+      "nontrivial_accuracy": 0.5952380952380952,
+      "nontrivial_cells": 42,
+      "nontrivial_components": 21,
+      "nontrivial_errors": 17,
+      "nontrivial_hits": 25,
+      "note": "Numpad transform over the 1..9 grid; strict leaves 0 undefined when no opposite key exists."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "11",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "88"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "44",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "12",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "16",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "17",
+            "39"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "23",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "25",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "26",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "27",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "S"
+        },
+        {
+          "cells": [
+            "33",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "34",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "B": 1
+          },
+          "majority_label": "B"
+        },
+        {
+          "cells": [
+            "35",
+            "57"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "36",
+            "47"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "45",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        }
+      ],
+      "components": 35,
+      "digit_map": {
+        "0": null,
+        "1": "9",
+        "2": "8",
+        "3": "7",
+        "4": "6",
+        "5": "5",
+        "6": "4",
+        "7": "3",
+        "8": "2",
+        "9": "1"
+      },
+      "edge_accuracy": 0.15,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "49",
+          "target_label": "N"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "29",
+          "source_label": "N",
+          "target": "18",
+          "target_label": "I"
+        },
+        {
+          "cell": "33",
+          "source_label": "E",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "57",
+          "target_label": "E"
+        },
+        {
+          "cell": "36",
+          "source_label": "V",
+          "target": "47",
+          "target_label": "E"
+        },
+        {
+          "cell": "38",
+          "source_label": "T",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "39",
+          "source_label": "N",
+          "target": "17",
+          "target_label": "V"
+        },
+        {
+          "cell": "45",
+          "source_label": "F",
+          "target": "56",
+          "target_label": "I"
+        }
+      ],
+      "edge_total": 40,
+      "family": "numpad",
+      "id": "numpad_rotate180_strict",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6909090909090909,
+      "majority_errors": 17,
+      "majority_hits": 38,
+      "mapped_cells": 45,
+      "model_cost_bits": 305.76335419644954,
+      "model_cost_gain_bits": -90.884371437981,
+      "nontrivial_accuracy": 0.575,
+      "nontrivial_cells": 40,
+      "nontrivial_components": 20,
+      "nontrivial_errors": 17,
+      "nontrivial_hits": 23,
+      "note": "Numpad transform over the 1..9 grid; strict leaves 0 undefined when no opposite key exists."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "07",
+            "25"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "33",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "36",
+            "69"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "V": 2
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "47",
+            "58"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "00",
+            "22"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "*": 1,
+            "A": 1
+          },
+          "majority_label": "*"
+        },
+        {
+          "cells": [
+            "01",
+            "12"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "03",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "28"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "05",
+            "27"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "06",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "08",
+            "24"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "L": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "09",
+            "23"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "O": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "13",
+            "19"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I+N": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "18"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "17"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "34",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "T": 1
+          },
+          "majority_label": "B"
+        },
+        {
+          "cells": [
+            "35",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "37",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "38",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "44",
+            "88"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "E": 1
+          },
+          "majority_label": "E"
+        }
+      ],
+      "components": 31,
+      "digit_map": {
+        "0": "2",
+        "1": "1",
+        "2": "0",
+        "3": "9",
+        "4": "8",
+        "5": "7",
+        "6": "6",
+        "7": "5",
+        "8": "4",
+        "9": "3"
+      },
+      "edge_accuracy": 0.16666666666666666,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "00",
+          "source_label": "*",
+          "target": "22",
+          "target_label": "A"
+        },
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "12",
+          "target_label": "F"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "28",
+          "target_label": "T"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "24",
+          "target_label": "L"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "23",
+          "target_label": "O"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "19",
+          "target_label": "I+N"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "18",
+          "target_label": "I"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "17",
+          "target_label": "V"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "14",
+          "target_label": "A"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "13",
+          "target_label": "N"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "00",
+          "target_label": "*"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "08",
+          "target_label": "I"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "05",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 48,
+      "family": "clock",
+      "id": "clock_1234567890_mirror_vertical",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6363636363636364,
+      "majority_errors": 20,
+      "majority_hits": 35,
+      "mapped_cells": 55,
+      "model_cost_bits": 319.200542741415,
+      "model_cost_gain_bits": -104.32155998294647,
+      "nontrivial_accuracy": 0.5833333333333334,
+      "nontrivial_cells": 48,
+      "nontrivial_components": 24,
+      "nontrivial_errors": 20,
+      "nontrivial_hits": 28,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "11",
+            "33"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "44",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "01",
+            "03"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "04",
+            "06"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "07",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "12",
+            "23"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "O": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "14",
+            "36"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "L": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "16",
+            "34"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "17",
+            "39"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "37"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I+N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "24",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "N": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "27",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "S": 1
+          },
+          "majority_label": "S"
+        },
+        {
+          "cells": [
+            "45",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "47",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "48",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "E": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "49",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "57",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "77",
+            "99"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        }
+      ],
+      "components": 34,
+      "digit_map": {
+        "0": "0",
+        "1": "3",
+        "2": "2",
+        "3": "1",
+        "4": "6",
+        "5": "5",
+        "6": "4",
+        "7": "9",
+        "8": "8",
+        "9": "7"
+      },
+      "edge_accuracy": 0.09523809523809523,
+      "edge_hits": 4,
+      "edge_mismatches_sample": [
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "04",
+          "target_label": "F"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "07",
+          "target_label": "I"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "23",
+          "target_label": "O"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "36",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "34",
+          "target_label": "B"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "37",
+          "target_label": "A"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "12",
+          "target_label": "F"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "24",
+          "target_label": "L"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "29",
+          "source_label": "N",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "34",
+          "source_label": "B",
+          "target": "16",
+          "target_label": "T"
+        },
+        {
+          "cell": "35",
+          "source_label": "L",
+          "target": "15",
+          "target_label": "E"
+        }
+      ],
+      "edge_total": 42,
+      "family": "numpad",
+      "id": "numpad_mirror_vertical_strict",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6545454545454545,
+      "majority_errors": 19,
+      "majority_hits": 36,
+      "mapped_cells": 55,
+      "model_cost_bits": 321.2329642191074,
+      "model_cost_gain_bits": -106.35398146063883,
+      "nontrivial_accuracy": 0.5476190476190477,
+      "nontrivial_cells": 42,
+      "nontrivial_components": 21,
+      "nontrivial_errors": 19,
+      "nontrivial_hits": 23,
+      "note": "Numpad transform over the 1..9 grid; strict leaves 0 undefined when no opposite key exists."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "06",
+            "59"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "44"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "26",
+            "39"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "N": 2
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "66",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "00",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "*": 1,
+            "V": 1
+          },
+          "majority_label": "*"
+        },
+        {
+          "cells": [
+            "01",
+            "45"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "25"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "15"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "07",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "08",
+            "57"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "09",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "12",
+            "34"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "B": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "24"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "L": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "16",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "17",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "47"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "46"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I+N": 1,
+            "N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "22",
+            "33"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "E": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "27",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "S"
+        }
+      ],
+      "components": 30,
+      "digit_map": {
+        "0": "5",
+        "1": "4",
+        "2": "3",
+        "3": "2",
+        "4": "1",
+        "5": "0",
+        "6": "9",
+        "7": "8",
+        "8": "7",
+        "9": "6"
+      },
+      "edge_accuracy": 0.16,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "00",
+          "source_label": "*",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "45",
+          "target_label": "F"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "25",
+          "target_label": "I"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "57",
+          "target_label": "E"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "34",
+          "target_label": "B"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "24",
+          "target_label": "L"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "04",
+          "target_label": "F"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "49",
+          "target_label": "N"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "47",
+          "target_label": "E"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "46",
+          "target_label": "N"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "33",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "13",
+          "target_label": "N"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "38",
+          "target_label": "T"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "37",
+          "target_label": "A"
+        }
+      ],
+      "edge_total": 50,
+      "family": "clock",
+      "id": "clock_0123456789_mirror_horizontal",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6181818181818182,
+      "majority_errors": 21,
+      "majority_hits": 34,
+      "mapped_cells": 55,
+      "model_cost_bits": 324.9819024549397,
+      "model_cost_gain_bits": -110.10291969647116,
+      "nontrivial_accuracy": 0.58,
+      "nontrivial_cells": 50,
+      "nontrivial_components": 25,
+      "nontrivial_errors": 21,
+      "nontrivial_hits": 29,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "11",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "13",
+            "46"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "N": 2
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "24",
+            "35"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "L": 2
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "33",
+            "44"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "00",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "*": 1,
+            "N": 1
+          },
+          "majority_label": "*"
+        },
+        {
+          "cells": [
+            "01",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "57"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "47"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "37"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "05",
+            "27"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "06",
+            "17"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "08",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "09",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "12",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "14",
+            "36"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "18",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "I+N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "22",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "45"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        }
+      ],
+      "components": 30,
+      "digit_map": {
+        "0": "7",
+        "1": "6",
+        "2": "5",
+        "3": "4",
+        "4": "3",
+        "5": "2",
+        "6": "1",
+        "7": "0",
+        "8": "9",
+        "9": "8"
+      },
+      "edge_accuracy": 0.16,
+      "edge_hits": 8,
+      "edge_mismatches_sample": [
+        {
+          "cell": "00",
+          "source_label": "*",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "57",
+          "target_label": "E"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "47",
+          "target_label": "E"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "37",
+          "target_label": "A"
+        },
+        {
+          "cell": "05",
+          "source_label": "T",
+          "target": "27",
+          "target_label": "S"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "17",
+          "target_label": "V"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "36",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "45",
+          "target_label": "F"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "05",
+          "target_label": "T"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "59",
+          "target_label": "I"
+        }
+      ],
+      "edge_total": 50,
+      "family": "clock",
+      "id": "clock_1234567890_mirror_horizontal",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6181818181818182,
+      "majority_errors": 21,
+      "majority_hits": 34,
+      "mapped_cells": 55,
+      "model_cost_bits": 324.9819024549397,
+      "model_cost_gain_bits": -110.10291969647116,
+      "nontrivial_accuracy": 0.58,
+      "nontrivial_cells": 50,
+      "nontrivial_components": 25,
+      "nontrivial_errors": 21,
+      "nontrivial_hits": 29,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "11",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "88"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "44",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "01",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "08"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "07"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "06"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "12",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "16",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "17",
+            "39"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "23",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "25",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "26",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "27",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "S"
+        },
+        {
+          "cells": [
+            "33",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        }
+      ],
+      "components": 31,
+      "digit_map": {
+        "0": "0",
+        "1": "9",
+        "2": "8",
+        "3": "7",
+        "4": "6",
+        "5": "5",
+        "6": "4",
+        "7": "3",
+        "8": "2",
+        "9": "1"
+      },
+      "edge_accuracy": 0.125,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "08",
+          "target_label": "I"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "07",
+          "target_label": "I"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "04",
+          "target_label": "F"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "49",
+          "target_label": "N"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "38",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 48,
+      "family": "clock",
+      "id": "clock_0123456789_mirror_vertical",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6181818181818182,
+      "majority_errors": 21,
+      "majority_hits": 34,
+      "mapped_cells": 55,
+      "model_cost_bits": 328.8887930505482,
+      "model_cost_gain_bits": -114.00981029207966,
+      "nontrivial_accuracy": 0.5625,
+      "nontrivial_cells": 48,
+      "nontrivial_components": 24,
+      "nontrivial_errors": 21,
+      "nontrivial_hits": 27,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "11",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "88"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "A": 2
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "44",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "01",
+            "09"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "08"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "07"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "06"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "12",
+            "89"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "15",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "16",
+            "49"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "17",
+            "39"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "29"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "23",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        },
+        {
+          "cells": [
+            "25",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "26",
+            "48"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "27",
+            "38"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "S": 1,
+            "T": 1
+          },
+          "majority_label": "S"
+        },
+        {
+          "cells": [
+            "33",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "N": 1
+          },
+          "majority_label": "E"
+        }
+      ],
+      "components": 31,
+      "digit_map": {
+        "0": "0",
+        "1": "9",
+        "2": "8",
+        "3": "7",
+        "4": "6",
+        "5": "5",
+        "6": "4",
+        "7": "3",
+        "8": "2",
+        "9": "1"
+      },
+      "edge_accuracy": 0.125,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "09",
+          "target_label": "T"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "08",
+          "target_label": "I"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "07",
+          "target_label": "I"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "04",
+          "target_label": "F"
+        },
+        {
+          "cell": "07",
+          "source_label": "I",
+          "target": "03",
+          "target_label": "V"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "02",
+          "target_label": "R"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "01",
+          "target_label": "N"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "89",
+          "target_label": "T"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "16",
+          "source_label": "T",
+          "target": "49",
+          "target_label": "N"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "39",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "29",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "25",
+          "source_label": "I",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "48",
+          "target_label": "E"
+        },
+        {
+          "cell": "27",
+          "source_label": "S",
+          "target": "38",
+          "target_label": "T"
+        }
+      ],
+      "edge_total": 48,
+      "family": "numpad",
+      "id": "numpad_rotate180_zero_fixed",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6181818181818182,
+      "majority_errors": 21,
+      "majority_hits": 34,
+      "mapped_cells": 55,
+      "model_cost_bits": 328.8887930505482,
+      "model_cost_gain_bits": -114.00981029207966,
+      "nontrivial_accuracy": 0.5625,
+      "nontrivial_cells": 48,
+      "nontrivial_components": 24,
+      "nontrivial_errors": 21,
+      "nontrivial_hits": 27,
+      "note": "Numpad transform over the 1..9 grid; strict leaves 0 undefined when no opposite key exists."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "07",
+            "25"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "44",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "00",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "*": 1,
+            "V": 1
+          },
+          "majority_label": "*"
+        },
+        {
+          "cells": [
+            "01",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "57"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "06",
+            "15"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "08",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "L": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "09",
+            "45"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "12",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "17",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "36"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "46"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I+N": 1,
+            "N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "22",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        }
+      ],
+      "components": 30,
+      "digit_map": {
+        "0": "5",
+        "1": "6",
+        "2": "7",
+        "3": "8",
+        "4": "9",
+        "5": "0",
+        "6": "1",
+        "7": "2",
+        "8": "3",
+        "9": "4"
+      },
+      "edge_accuracy": 0.12,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "00",
+          "source_label": "*",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "57",
+          "target_label": "E"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "45",
+          "target_label": "F"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "36",
+          "target_label": "V"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "46",
+          "target_label": "N"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "17",
+          "target_label": "V"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "37",
+          "target_label": "A"
+        }
+      ],
+      "edge_total": 50,
+      "family": "clock",
+      "id": "clock_0123456789_rotate180",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6,
+      "majority_errors": 22,
+      "majority_hits": 33,
+      "mapped_cells": 55,
+      "model_cost_bits": 334.67015276407284,
+      "model_cost_gain_bits": -119.7911700056043,
+      "nontrivial_accuracy": 0.56,
+      "nontrivial_cells": 50,
+      "nontrivial_components": 25,
+      "nontrivial_errors": 22,
+      "nontrivial_hits": 28,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    },
+    {
+      "best_nontrivial_components": [
+        {
+          "cells": [
+            "07",
+            "25"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "I": 2
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "66"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "44",
+            "99"
+          ],
+          "errors": 0,
+          "hits": 2,
+          "labels": {
+            "E": 2
+          },
+          "majority_label": "E"
+        },
+        {
+          "cells": [
+            "00",
+            "55"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "*": 1,
+            "V": 1
+          },
+          "majority_label": "*"
+        },
+        {
+          "cells": [
+            "01",
+            "56"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "02",
+            "57"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "R": 1
+          },
+          "majority_label": "R"
+        },
+        {
+          "cells": [
+            "03",
+            "58"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "04",
+            "59"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "I": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "06",
+            "15"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "I": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "08",
+            "35"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "L": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "09",
+            "45"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "F": 1,
+            "T": 1
+          },
+          "majority_label": "T"
+        },
+        {
+          "cells": [
+            "12",
+            "67"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "F": 1
+          },
+          "majority_label": "F"
+        },
+        {
+          "cells": [
+            "13",
+            "68"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "C": 1,
+            "N": 1
+          },
+          "majority_label": "N"
+        },
+        {
+          "cells": [
+            "14",
+            "69"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "V": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "17",
+            "26"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "N": 1,
+            "V": 1
+          },
+          "majority_label": "V"
+        },
+        {
+          "cells": [
+            "18",
+            "36"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I": 1,
+            "V": 1
+          },
+          "majority_label": "I"
+        },
+        {
+          "cells": [
+            "19",
+            "46"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "I+N": 1,
+            "N": 1
+          },
+          "majority_label": "I+N"
+        },
+        {
+          "cells": [
+            "22",
+            "77"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "N": 1
+          },
+          "majority_label": "A"
+        },
+        {
+          "cells": [
+            "23",
+            "78"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "E": 1,
+            "O": 1
+          },
+          "majority_label": "O"
+        },
+        {
+          "cells": [
+            "24",
+            "79"
+          ],
+          "errors": 1,
+          "hits": 1,
+          "labels": {
+            "A": 1,
+            "L": 1
+          },
+          "majority_label": "L"
+        }
+      ],
+      "components": 30,
+      "digit_map": {
+        "0": "5",
+        "1": "6",
+        "2": "7",
+        "3": "8",
+        "4": "9",
+        "5": "0",
+        "6": "1",
+        "7": "2",
+        "8": "3",
+        "9": "4"
+      },
+      "edge_accuracy": 0.12,
+      "edge_hits": 6,
+      "edge_mismatches_sample": [
+        {
+          "cell": "00",
+          "source_label": "*",
+          "target": "55",
+          "target_label": "V"
+        },
+        {
+          "cell": "01",
+          "source_label": "N",
+          "target": "56",
+          "target_label": "I"
+        },
+        {
+          "cell": "02",
+          "source_label": "R",
+          "target": "57",
+          "target_label": "E"
+        },
+        {
+          "cell": "03",
+          "source_label": "V",
+          "target": "58",
+          "target_label": "E"
+        },
+        {
+          "cell": "04",
+          "source_label": "F",
+          "target": "59",
+          "target_label": "I"
+        },
+        {
+          "cell": "06",
+          "source_label": "I",
+          "target": "15",
+          "target_label": "E"
+        },
+        {
+          "cell": "08",
+          "source_label": "I",
+          "target": "35",
+          "target_label": "L"
+        },
+        {
+          "cell": "09",
+          "source_label": "T",
+          "target": "45",
+          "target_label": "F"
+        },
+        {
+          "cell": "12",
+          "source_label": "F",
+          "target": "67",
+          "target_label": "A"
+        },
+        {
+          "cell": "13",
+          "source_label": "N",
+          "target": "68",
+          "target_label": "C"
+        },
+        {
+          "cell": "14",
+          "source_label": "A",
+          "target": "69",
+          "target_label": "V"
+        },
+        {
+          "cell": "15",
+          "source_label": "E",
+          "target": "06",
+          "target_label": "I"
+        },
+        {
+          "cell": "17",
+          "source_label": "V",
+          "target": "26",
+          "target_label": "N"
+        },
+        {
+          "cell": "18",
+          "source_label": "I",
+          "target": "36",
+          "target_label": "V"
+        },
+        {
+          "cell": "19",
+          "source_label": "I+N",
+          "target": "46",
+          "target_label": "N"
+        },
+        {
+          "cell": "22",
+          "source_label": "A",
+          "target": "77",
+          "target_label": "N"
+        },
+        {
+          "cell": "23",
+          "source_label": "O",
+          "target": "78",
+          "target_label": "E"
+        },
+        {
+          "cell": "24",
+          "source_label": "L",
+          "target": "79",
+          "target_label": "A"
+        },
+        {
+          "cell": "26",
+          "source_label": "N",
+          "target": "17",
+          "target_label": "V"
+        },
+        {
+          "cell": "28",
+          "source_label": "T",
+          "target": "37",
+          "target_label": "A"
+        }
+      ],
+      "edge_total": 50,
+      "family": "clock",
+      "id": "clock_1234567890_rotate180",
+      "lookup_cost_bits": 214.87898275846854,
+      "majority_accuracy": 0.6,
+      "majority_errors": 22,
+      "majority_hits": 33,
+      "mapped_cells": 55,
+      "model_cost_bits": 334.67015276407284,
+      "model_cost_gain_bits": -119.7911700056043,
+      "nontrivial_accuracy": 0.56,
+      "nontrivial_cells": 50,
+      "nontrivial_components": 25,
+      "nontrivial_errors": 22,
+      "nontrivial_hits": 28,
+      "note": "Digits placed on a 10-position clock/circle in the listed order."
+    }
+  ],
+  "translation_delta": "NONE",
+  "trials": 5000,
+  "verdict": "reject_visual_6_9_symmetry_as_pair_matrix_formula"
+}

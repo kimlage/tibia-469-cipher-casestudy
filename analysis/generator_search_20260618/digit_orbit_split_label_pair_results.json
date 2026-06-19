@@ -1,0 +1,743 @@
+{
+  "controls": {
+    "directed_label_shuffle_preserving_inventory": {
+      "best_formula_directed_hits": {
+        "max": 14,
+        "mean": 11.154,
+        "min": 10,
+        "observed": 11,
+        "p_good_direction": 0.782435129740519,
+        "sd": 0.8808153446339848,
+        "z_good_direction": -0.1748380076916045
+      },
+      "best_formula_lossless_bits": {
+        "max": 83.53401669769349,
+        "mean": 80.75345778490608,
+        "min": 61.96474700657844,
+        "observed": 82.2591568564629,
+        "p_good_direction": 0.4351297405189621,
+        "sd": 4.183497108814194,
+        "z_good_direction": -0.3599139744555978
+      },
+      "structural_lossless_bits": {
+        "max": 90.08760375436398,
+        "mean": 79.82713816882641,
+        "min": 59.73211525446597,
+        "observed": 49.98090414263365,
+        "p_good_direction": 0.001996007984031936,
+        "sd": 6.17639904715979,
+        "z_good_direction": 4.832303385565335
+      }
+    },
+    "pair_row_shuffle_preserving_directed_pairs": {
+      "best_formula_directed_hits": {
+        "max": 13,
+        "mean": 10.85,
+        "min": 10,
+        "observed": 11,
+        "p_good_direction": 0.5688622754491018,
+        "sd": 0.8972793435942241,
+        "z_good_direction": 0.1671720195843879
+      },
+      "best_formula_lossless_bits": {
+        "max": 83.53401669769349,
+        "mean": 79.34749246345419,
+        "min": 68.57037915272983,
+        "observed": 82.2591568564629,
+        "p_good_direction": 0.7724550898203593,
+        "sd": 3.6848308504416143,
+        "z_good_direction": -0.7901758618471602
+      },
+      "structural_lossless_bits": {
+        "max": 54.85818406613356,
+        "mean": 53.33378212807161,
+        "min": 47.08090414263364,
+        "observed": 49.98090414263365,
+        "p_good_direction": 0.033932135728542916,
+        "sd": 1.4576911343564574,
+        "z_good_direction": 2.300129229309057
+      }
+    },
+    "trials": 500
+  },
+  "directed_lookup_bits": 68.53238859703687,
+  "observed": {
+    "affine": {
+      "best_lossless_bits": 89.00221892322958,
+      "best_side6_by_hits": {
+        "errors": [
+          {
+            "actual": "I",
+            "predicted": "C",
+            "x": 0
+          },
+          {
+            "actual": "T",
+            "predicted": "S",
+            "x": 1
+          },
+          {
+            "actual": "N",
+            "predicted": "*",
+            "x": 4
+          },
+          {
+            "actual": "I",
+            "predicted": "O",
+            "x": 5
+          },
+          {
+            "actual": "C",
+            "predicted": "F",
+            "x": 8
+          }
+        ],
+        "exceptions": 5,
+        "family": "side_affine_symbol_order",
+        "hits": 4,
+        "id": "pair_frequency_desc|affine|a=3|b=10",
+        "lossless_bits": 45.50110946161479,
+        "model_bits": 10.614709844115207,
+        "order": "pair_frequency_desc"
+      },
+      "best_side6_by_mdl": {
+        "errors": [
+          {
+            "actual": "I",
+            "predicted": "C",
+            "x": 0
+          },
+          {
+            "actual": "T",
+            "predicted": "S",
+            "x": 1
+          },
+          {
+            "actual": "N",
+            "predicted": "*",
+            "x": 4
+          },
+          {
+            "actual": "I",
+            "predicted": "O",
+            "x": 5
+          },
+          {
+            "actual": "C",
+            "predicted": "F",
+            "x": 8
+          }
+        ],
+        "exceptions": 5,
+        "family": "side_affine_symbol_order",
+        "hits": 4,
+        "id": "pair_frequency_desc|affine|a=3|b=10",
+        "lossless_bits": 45.50110946161479,
+        "model_bits": 10.614709844115207,
+        "order": "pair_frequency_desc"
+      },
+      "best_side9_by_hits": {
+        "errors": [
+          {
+            "actual": "N",
+            "predicted": "*",
+            "x": 2
+          },
+          {
+            "actual": "N",
+            "predicted": "B",
+            "x": 4
+          },
+          {
+            "actual": "I",
+            "predicted": "R",
+            "x": 5
+          },
+          {
+            "actual": "A",
+            "predicted": "T",
+            "x": 7
+          },
+          {
+            "actual": "T",
+            "predicted": "I",
+            "x": 8
+          }
+        ],
+        "exceptions": 5,
+        "family": "side_affine_symbol_order",
+        "hits": 4,
+        "id": "sigma|affine|a=8|b=12",
+        "lossless_bits": 43.50110946161479,
+        "model_bits": 8.614709844115207,
+        "order": "sigma"
+      },
+      "best_side9_by_mdl": {
+        "errors": [
+          {
+            "actual": "N",
+            "predicted": "*",
+            "x": 2
+          },
+          {
+            "actual": "N",
+            "predicted": "B",
+            "x": 4
+          },
+          {
+            "actual": "I",
+            "predicted": "R",
+            "x": 5
+          },
+          {
+            "actual": "A",
+            "predicted": "T",
+            "x": 7
+          },
+          {
+            "actual": "T",
+            "predicted": "I",
+            "x": 8
+          }
+        ],
+        "exceptions": 5,
+        "family": "side_affine_symbol_order",
+        "hits": 4,
+        "id": "sigma|affine|a=8|b=12",
+        "lossless_bits": 43.50110946161479,
+        "model_bits": 8.614709844115207,
+        "order": "sigma"
+      },
+      "directed_hits": 8,
+      "directed_lookup_ratio": 1.2986884120813755,
+      "family": "directed_label_formula",
+      "id": "independent_side_affine_symbol_order",
+      "lossless_bits_for_best_hits": 99.00221892322958
+    },
+    "periodic_pair_template": {
+      "best_by_hits": {
+        "directed_hits": 11,
+        "errors": [
+          {
+            "actual": "II",
+            "predicted": "IT",
+            "x": 5
+          },
+          {
+            "actual": "EE",
+            "predicted": "TI",
+            "x": 6
+          },
+          {
+            "actual": "AA",
+            "predicted": "NN",
+            "x": 7
+          },
+          {
+            "actual": "CT",
+            "predicted": "VN",
+            "x": 8
+          }
+        ],
+        "exceptions": 4,
+        "family": "periodic_directed_pair_template",
+        "id": "directed_pair_period_5",
+        "lossless_bits": 83.53401669769349,
+        "model_bits": 40.3954773154634,
+        "pair_hits": 5,
+        "pair_lookup_ratio": 1.3823678902467524,
+        "period": 5,
+        "template": [
+          "IT",
+          "TI",
+          "NN",
+          "VN",
+          "NN"
+        ]
+      },
+      "best_by_lossless_mdl": {
+        "directed_hits": 7,
+        "errors": [
+          {
+            "actual": "IT",
+            "predicted": "NN",
+            "x": 0
+          },
+          {
+            "actual": "VN",
+            "predicted": "TI",
+            "x": 3
+          },
+          {
+            "actual": "II",
+            "predicted": "TI",
+            "x": 5
+          },
+          {
+            "actual": "EE",
+            "predicted": "NN",
+            "x": 6
+          },
+          {
+            "actual": "AA",
+            "predicted": "TI",
+            "x": 7
+          },
+          {
+            "actual": "CT",
+            "predicted": "NN",
+            "x": 8
+          }
+        ],
+        "exceptions": 6,
+        "family": "periodic_directed_pair_template",
+        "id": "directed_pair_period_2",
+        "lossless_bits": 82.2591568564629,
+        "model_bits": 17.55134778311778,
+        "pair_hits": 3,
+        "pair_lookup_ratio": 1.3612707925762306,
+        "period": 2,
+        "template": [
+          "NN",
+          "TI"
+        ]
+      },
+      "top_rows": [
+        {
+          "directed_hits": 11,
+          "errors": [
+            {
+              "actual": "II",
+              "predicted": "IT",
+              "x": 5
+            },
+            {
+              "actual": "EE",
+              "predicted": "TI",
+              "x": 6
+            },
+            {
+              "actual": "AA",
+              "predicted": "NN",
+              "x": 7
+            },
+            {
+              "actual": "CT",
+              "predicted": "VN",
+              "x": 8
+            }
+          ],
+          "exceptions": 4,
+          "family": "periodic_directed_pair_template",
+          "id": "directed_pair_period_5",
+          "lossless_bits": 83.53401669769349,
+          "model_bits": 40.3954773154634,
+          "pair_hits": 5,
+          "pair_lookup_ratio": 1.3823678902467524,
+          "period": 5,
+          "template": [
+            "IT",
+            "TI",
+            "NN",
+            "VN",
+            "NN"
+          ]
+        },
+        {
+          "directed_hits": 10,
+          "errors": [
+            {
+              "actual": "NN",
+              "predicted": "IT",
+              "x": 4
+            },
+            {
+              "actual": "II",
+              "predicted": "TI",
+              "x": 5
+            },
+            {
+              "actual": "EE",
+              "predicted": "NN",
+              "x": 6
+            },
+            {
+              "actual": "AA",
+              "predicted": "VN",
+              "x": 7
+            },
+            {
+              "actual": "CT",
+              "predicted": "IT",
+              "x": 8
+            }
+          ],
+          "exceptions": 5,
+          "family": "periodic_directed_pair_template",
+          "id": "directed_pair_period_4",
+          "lossless_bits": 86.7039416991358,
+          "model_bits": 32.7807674713482,
+          "pair_hits": 4,
+          "pair_lookup_ratio": 1.4348255920276036,
+          "period": 4,
+          "template": [
+            "IT",
+            "TI",
+            "NN",
+            "VN"
+          ]
+        },
+        {
+          "directed_hits": 7,
+          "errors": [
+            {
+              "actual": "IT",
+              "predicted": "NN",
+              "x": 0
+            },
+            {
+              "actual": "VN",
+              "predicted": "TI",
+              "x": 3
+            },
+            {
+              "actual": "II",
+              "predicted": "TI",
+              "x": 5
+            },
+            {
+              "actual": "EE",
+              "predicted": "NN",
+              "x": 6
+            },
+            {
+              "actual": "AA",
+              "predicted": "TI",
+              "x": 7
+            },
+            {
+              "actual": "CT",
+              "predicted": "NN",
+              "x": 8
+            }
+          ],
+          "exceptions": 6,
+          "family": "periodic_directed_pair_template",
+          "id": "directed_pair_period_2",
+          "lossless_bits": 82.2591568564629,
+          "model_bits": 17.55134778311778,
+          "pair_hits": 3,
+          "pair_lookup_ratio": 1.3612707925762306,
+          "period": 2,
+          "template": [
+            "NN",
+            "TI"
+          ]
+        },
+        {
+          "directed_hits": 6,
+          "errors": [
+            {
+              "actual": "VN",
+              "predicted": "IT",
+              "x": 3
+            },
+            {
+              "actual": "NN",
+              "predicted": "TI",
+              "x": 4
+            },
+            {
+              "actual": "II",
+              "predicted": "NN",
+              "x": 5
+            },
+            {
+              "actual": "EE",
+              "predicted": "IT",
+              "x": 6
+            },
+            {
+              "actual": "AA",
+              "predicted": "TI",
+              "x": 7
+            },
+            {
+              "actual": "CT",
+              "predicted": "NN",
+              "x": 8
+            }
+          ],
+          "exceptions": 6,
+          "family": "periodic_directed_pair_template",
+          "id": "directed_pair_period_3",
+          "lossless_bits": 89.8738667005781,
+          "model_bits": 25.166057627232988,
+          "pair_hits": 3,
+          "pair_lookup_ratio": 1.4872832938084546,
+          "period": 3,
+          "template": [
+            "IT",
+            "TI",
+            "NN"
+          ]
+        },
+        {
+          "directed_hits": 5,
+          "errors": [
+            {
+              "actual": "IT",
+              "predicted": "NN",
+              "x": 0
+            },
+            {
+              "actual": "TI",
+              "predicted": "NN",
+              "x": 1
+            },
+            {
+              "actual": "VN",
+              "predicted": "NN",
+              "x": 3
+            },
+            {
+              "actual": "II",
+              "predicted": "NN",
+              "x": 5
+            },
+            {
+              "actual": "EE",
+              "predicted": "NN",
+              "x": 6
+            },
+            {
+              "actual": "AA",
+              "predicted": "NN",
+              "x": 7
+            },
+            {
+              "actual": "CT",
+              "predicted": "NN",
+              "x": 8
+            }
+          ],
+          "exceptions": 7,
+          "family": "periodic_directed_pair_template",
+          "id": "directed_pair_period_1",
+          "lossless_bits": 85.4290818579052,
+          "model_bits": 9.936637939002571,
+          "pair_hits": 2,
+          "pair_lookup_ratio": 1.4137284943570816,
+          "period": 1,
+          "template": [
+            "NN"
+          ]
+        }
+      ]
+    },
+    "structural_split_model": {
+      "base_sequence": "IINNNIEAC",
+      "base_sequence_bits": 34.266194298518435,
+      "directed_hits": 18,
+      "directed_lookup_ratio": 0.7293034018778483,
+      "family": "split_metadata_structural_model",
+      "id": "base_sequence_plus_selector_secondary_side",
+      "lossless_bits": 49.98090414263365,
+      "mixed_xs": [
+        0,
+        1,
+        3,
+        8
+      ],
+      "pair_hits": 9,
+      "pair_lookup_ratio": 0.8271121124501774,
+      "secondary_model": {
+        "bits": 9.614709844115207,
+        "default": "T",
+        "exceptions": [
+          {
+            "actual": "V",
+            "index": 2
+          }
+        ],
+        "model": "default_plus_exceptions"
+      },
+      "secondary_sequence": "TTVT",
+      "selector_bits": 4.6,
+      "selector_rule": "or(edge_0_8,lore_exception_19_39)",
+      "side_bits": 1.5,
+      "side_rule": "parity_even_6_odd_9"
+    },
+    "summary": {
+      "best_formula_directed_hits": 11,
+      "best_formula_lossless_bits": 82.2591568564629,
+      "structural_lossless_bits": 49.98090414263365
+    }
+  },
+  "orbit_rows": [
+    {
+      "base_label": "I",
+      "label6": "I",
+      "label9": "T",
+      "lower_label_on_side6": true,
+      "mixed": true,
+      "pair6": "06",
+      "pair9": "09",
+      "pair_label_directed": "IT",
+      "pair_label_unordered": "IT",
+      "secondary_label": "T",
+      "x": 0
+    },
+    {
+      "base_label": "I",
+      "label6": "T",
+      "label9": "I",
+      "lower_label_on_side6": false,
+      "mixed": true,
+      "pair6": "16",
+      "pair9": "19",
+      "pair_label_directed": "TI",
+      "pair_label_unordered": "IT",
+      "secondary_label": "T",
+      "x": 1
+    },
+    {
+      "base_label": "N",
+      "label6": "N",
+      "label9": "N",
+      "lower_label_on_side6": true,
+      "mixed": false,
+      "pair6": "26",
+      "pair9": "29",
+      "pair_label_directed": "NN",
+      "pair_label_unordered": "NN",
+      "secondary_label": null,
+      "x": 2
+    },
+    {
+      "base_label": "N",
+      "label6": "V",
+      "label9": "N",
+      "lower_label_on_side6": false,
+      "mixed": true,
+      "pair6": "36",
+      "pair9": "39",
+      "pair_label_directed": "VN",
+      "pair_label_unordered": "NV",
+      "secondary_label": "V",
+      "x": 3
+    },
+    {
+      "base_label": "N",
+      "label6": "N",
+      "label9": "N",
+      "lower_label_on_side6": true,
+      "mixed": false,
+      "pair6": "46",
+      "pair9": "49",
+      "pair_label_directed": "NN",
+      "pair_label_unordered": "NN",
+      "secondary_label": null,
+      "x": 4
+    },
+    {
+      "base_label": "I",
+      "label6": "I",
+      "label9": "I",
+      "lower_label_on_side6": true,
+      "mixed": false,
+      "pair6": "56",
+      "pair9": "59",
+      "pair_label_directed": "II",
+      "pair_label_unordered": "II",
+      "secondary_label": null,
+      "x": 5
+    },
+    {
+      "base_label": "E",
+      "label6": "E",
+      "label9": "E",
+      "lower_label_on_side6": true,
+      "mixed": false,
+      "pair6": "66",
+      "pair9": "99",
+      "pair_label_directed": "EE",
+      "pair_label_unordered": "EE",
+      "secondary_label": null,
+      "x": 6
+    },
+    {
+      "base_label": "A",
+      "label6": "A",
+      "label9": "A",
+      "lower_label_on_side6": true,
+      "mixed": false,
+      "pair6": "67",
+      "pair9": "79",
+      "pair_label_directed": "AA",
+      "pair_label_unordered": "AA",
+      "secondary_label": null,
+      "x": 7
+    },
+    {
+      "base_label": "C",
+      "label6": "C",
+      "label9": "T",
+      "lower_label_on_side6": true,
+      "mixed": true,
+      "pair6": "68",
+      "pair9": "89",
+      "pair_label_directed": "CT",
+      "pair_label_unordered": "CT",
+      "secondary_label": "T",
+      "x": 8
+    }
+  ],
+  "pair_lookup_bits": 60.4282096589951,
+  "schema": "digit_orbit_split_label_pair_results.v1",
+  "symbol_orders": [
+    {
+      "bits": 1.0,
+      "id": "sigma",
+      "symbols": "*ABCEFILNORSTV"
+    },
+    {
+      "bits": 1.2,
+      "id": "sigma_reverse",
+      "symbols": "VTSRONLIFECBA*"
+    },
+    {
+      "bits": 3.0,
+      "id": "pair_frequency_desc",
+      "symbols": "EINATVFL*BCORS"
+    },
+    {
+      "bits": 3.2,
+      "id": "pair_frequency_asc",
+      "symbols": "SROCB*LFVTANIE"
+    },
+    {
+      "bits": 3.5,
+      "id": "pair_table_first",
+      "symbols": "*NRVFTIEAOLSBC"
+    },
+    {
+      "bits": 3.7,
+      "id": "pair_table_first_reverse",
+      "symbols": "CBSLOAEITFVRN*"
+    },
+    {
+      "bits": 4.0,
+      "id": "orbit_first",
+      "symbols": "ITNVEAC*BFLORS"
+    },
+    {
+      "bits": 4.2,
+      "id": "orbit_first_reverse",
+      "symbols": "SROLFB*CAEVNTI"
+    }
+  ],
+  "target": "6_9_quotient_split_label_pairs",
+  "translation_delta": "NONE",
+  "verdict": "weak_split_metadata_compression"
+}

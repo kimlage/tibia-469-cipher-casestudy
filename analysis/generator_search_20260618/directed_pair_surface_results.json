@@ -1,0 +1,586 @@
+{
+  "conclusion": {
+    "classification": "render_orientation_layer_over_lookup_not_new_matrix_formula",
+    "semantic_delta": "NONE",
+    "summary": "The ordered table is 99 present codes over the 00..99 domain, with 39 absent. The lower triangle is almost exactly the transpose/mirror of the upper triangle: 43/44 reverse-available unordered pairs match, with one directed conflict 19=I vs 91=N, and one lower orphan 93=N because upper 39 is missing. A complete ordered lookup is lossless but saturated; mirror-copy plus the 91 exception and missing-39 metadata renders the ordered surface losslessly without deriving the upper/unordered symbol labels.",
+    "translation_or_glossary_created": false
+  },
+  "control_trials": 20000,
+  "controls": {
+    "lower_inventory_shuffle_mirror_matches": {
+      "control_max": 15,
+      "control_mean": 4.9973,
+      "control_min": 0,
+      "control_p50": 5,
+      "control_p95": 9,
+      "control_p99": 10,
+      "control_sd_population": 2.0944194207464752,
+      "evaluated_positions": 44,
+      "null": "shuffle labels across reverse-available lower-triangle positions, preserving lower inventory",
+      "observed": 43,
+      "p_value_ge_observed": 4.999750012499375e-05,
+      "trials": 20000
+    },
+    "ordered_inventory_shuffle_reverse_pair_matches": {
+      "control_max": 14,
+      "control_mean": 4.7005,
+      "control_min": 0,
+      "control_p50": 5,
+      "control_p95": 8,
+      "control_p99": 10,
+      "control_sd_population": 2.023462317415375,
+      "evaluated_pairs": 44,
+      "null": "shuffle labels across all present ordered 00..99 codes, preserving global ordered inventory",
+      "observed": 43,
+      "p_value_ge_observed": 4.999750012499375e-05,
+      "trials": 20000
+    }
+  },
+  "created_at": "2026-06-19",
+  "diagnostics": {
+    "directed_conflict": {
+      "19": "I",
+      "91": "N",
+      "is_conflict": true,
+      "pair": "19/91"
+    },
+    "mirror_transposition": {
+      "conflict_unordered_pairs": 1,
+      "conflicts": [
+        {
+          "lower_code": "91",
+          "lower_symbol": "N",
+          "upper_code": "19",
+          "upper_symbol": "I"
+        }
+      ],
+      "lower_orphans": [
+        "93"
+      ],
+      "present_non_diagonal_codes": 89,
+      "reverse_available_present_non_diagonal_codes": 88,
+      "reverse_available_unordered_pairs": 44,
+      "reverse_conflict_codes": [
+        "19",
+        "91"
+      ],
+      "reverse_conflict_present_non_diagonal_codes": 2,
+      "reverse_missing_unordered_pairs": [
+        {
+          "lower_code": "93",
+          "lower_present": true,
+          "lower_symbol": "N",
+          "upper_code": "39",
+          "upper_present": false,
+          "upper_symbol": null
+        }
+      ],
+      "reverse_preserving_present_non_diagonal_codes": 86,
+      "same_symbol_unordered_pairs": 43
+    },
+    "ordered_domain": {
+      "missing_codes": [
+        "39"
+      ],
+      "missing_count": 1,
+      "present_count": 99,
+      "total_codes": 100
+    },
+    "surfaces": {
+      "lower_strict": {
+        "inventory": {
+          "*": 0,
+          "A": 4,
+          "B": 1,
+          "C": 1,
+          "E": 6,
+          "F": 3,
+          "I": 7,
+          "L": 2,
+          "N": 8,
+          "O": 1,
+          "R": 1,
+          "S": 1,
+          "T": 6,
+          "V": 4
+        },
+        "missing_codes": [],
+        "missing_count": 0,
+        "present_count": 45,
+        "total_codes": 45
+      },
+      "ordered_present": {
+        "inventory": {
+          "*": 1,
+          "A": 10,
+          "B": 2,
+          "C": 2,
+          "E": 17,
+          "F": 6,
+          "I": 15,
+          "L": 4,
+          "N": 15,
+          "O": 2,
+          "R": 2,
+          "S": 2,
+          "T": 12,
+          "V": 9
+        }
+      },
+      "upper_including_diagonal": {
+        "inventory": {
+          "*": 1,
+          "A": 6,
+          "B": 1,
+          "C": 1,
+          "E": 11,
+          "F": 3,
+          "I": 8,
+          "L": 2,
+          "N": 7,
+          "O": 1,
+          "R": 1,
+          "S": 1,
+          "T": 6,
+          "V": 5
+        },
+        "missing_codes": [
+          "39"
+        ],
+        "missing_count": 1,
+        "present_count": 54,
+        "total_codes": 55
+      }
+    },
+    "symbol_permutation_probe": {
+      "best_score": 43,
+      "confusion": {
+        "A": {
+          "A": 4
+        },
+        "B": {
+          "B": 1
+        },
+        "C": {
+          "C": 1
+        },
+        "E": {
+          "E": 6
+        },
+        "F": {
+          "F": 3
+        },
+        "I": {
+          "I": 7,
+          "N": 1
+        },
+        "L": {
+          "L": 2
+        },
+        "N": {
+          "N": 6
+        },
+        "O": {
+          "O": 1
+        },
+        "R": {
+          "R": 1
+        },
+        "S": {
+          "S": 1
+        },
+        "T": {
+          "T": 6
+        },
+        "V": {
+          "V": 4
+        }
+      },
+      "identity_score": 43,
+      "identity_tie_symbols": 14,
+      "mapping": {
+        "*": "*",
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "E": "E",
+        "F": "F",
+        "I": "I",
+        "L": "L",
+        "N": "N",
+        "O": "O",
+        "R": "R",
+        "S": "S",
+        "T": "T",
+        "V": "V"
+      }
+    }
+  },
+  "input": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "models": {
+    "lower_surface": [
+      {
+        "correct": 43,
+        "coverage": 0.9777777777777777,
+        "covered_accuracy": 0.9772727272727273,
+        "error_count": 1,
+        "errors": [
+          {
+            "actual": "N",
+            "code": "91",
+            "predicted": "I"
+          }
+        ],
+        "model_type": "render_orientation_layer",
+        "name": "mirror_copy_lower_surface",
+        "notes": [
+          "Tests only whether lower-triangle rendering is a transpose of the upper surface.",
+          "It does not derive the upper/unordered symbols."
+        ],
+        "parameters": {
+          "rule": "lower(ab) = upper(ba) when upper counterpart is present",
+          "stored_surface": "upper triangle including diagonal",
+          "stored_upper_entries": 54
+        },
+        "predicted": 44,
+        "set_valued": false,
+        "strict_accuracy": 0.9555555555555556,
+        "target": {
+          "codes": "present lower-triangle codes",
+          "total": 45
+        },
+        "total": 45,
+        "uncovered": [
+          {
+            "actual": "N",
+            "code": "93"
+          }
+        ],
+        "uncovered_count": 1
+      },
+      {
+        "correct": 44,
+        "coverage": 0.9777777777777777,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "render_orientation_layer_plus_one_exception",
+        "name": "mirror_copy_plus_exception_91",
+        "notes": [
+          "Adds the observed 19/91 conflict as one directed lower-surface exception.",
+          "Still leaves the 93 lower orphan uncovered because 39 is absent."
+        ],
+        "parameters": {
+          "explicit_exceptions": {
+            "91": "N"
+          },
+          "stored_surface": "upper triangle including diagonal",
+          "stored_upper_entries": 54
+        },
+        "predicted": 44,
+        "set_valued": false,
+        "strict_accuracy": 0.9777777777777777,
+        "target": {
+          "codes": "present lower-triangle codes",
+          "total": 45
+        },
+        "total": 45,
+        "uncovered": [
+          {
+            "actual": "N",
+            "code": "93"
+          }
+        ],
+        "uncovered_count": 1
+      },
+      {
+        "correct": 45,
+        "coverage": 1.0,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "render_orientation_layer_plus_exception_and_orphan_metadata",
+        "name": "mirror_copy_plus_exception_and_missing_39_metadata",
+        "notes": [
+          "This renders the lower surface completely, but uses metadata for the absent upper code 39.",
+          "It is not an independent formula for the matrix labels."
+        ],
+        "parameters": {
+          "explicit_exceptions": {
+            "91": "N"
+          },
+          "reverse_missing_lower_metadata": {
+            "93": "N"
+          },
+          "stored_surface": "upper triangle including diagonal",
+          "stored_upper_entries": 54
+        },
+        "predicted": 45,
+        "set_valued": false,
+        "strict_accuracy": 1.0,
+        "target": {
+          "codes": "present lower-triangle codes",
+          "total": 45
+        },
+        "total": 45,
+        "uncovered": [],
+        "uncovered_count": 0
+      },
+      {
+        "correct": 43,
+        "coverage": 0.9777777777777777,
+        "covered_accuracy": 0.9772727272727273,
+        "error_count": 1,
+        "errors": [
+          {
+            "actual": "N",
+            "code": "91",
+            "predicted": "I"
+          }
+        ],
+        "model_type": "lower_surface_symbol_permutation_probe",
+        "name": "symbol_permutation_lower_surface",
+        "notes": [
+          "A global symbol permutation does not improve on the identity mirror relation.",
+          "Useful as a negative control against a hidden lower-surface alphabet substitution."
+        ],
+        "parameters": {
+          "best_reverse_available_score": 43,
+          "identity_reverse_available_score": 43,
+          "mapping": {
+            "*": "*",
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "E": "E",
+            "F": "F",
+            "I": "I",
+            "L": "L",
+            "N": "N",
+            "O": "O",
+            "R": "R",
+            "S": "S",
+            "T": "T",
+            "V": "V"
+          }
+        },
+        "predicted": 44,
+        "set_valued": false,
+        "strict_accuracy": 0.9555555555555556,
+        "target": {
+          "codes": "present lower-triangle codes",
+          "total": 45
+        },
+        "total": 45,
+        "uncovered": [
+          {
+            "actual": "N",
+            "code": "93"
+          }
+        ],
+        "uncovered_count": 1
+      }
+    ],
+    "ordered_surface": [
+      {
+        "correct": 99,
+        "coverage": 1.0,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "saturated_ordered_matrix_lookup",
+        "name": "ordered_lookup_complete",
+        "notes": [
+          "Exact because it stores every present ordered code.",
+          "This is a matrix lookup, not a compact generator for the labels."
+        ],
+        "parameters": {
+          "domain": "00..99 except missing code 39",
+          "stored_entries": 99
+        },
+        "predicted": 99,
+        "set_valued": false,
+        "strict_accuracy": 1.0,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [],
+        "uncovered_count": 0
+      },
+      {
+        "correct": 98,
+        "coverage": 1.0,
+        "covered_accuracy": 0.98989898989899,
+        "error_count": 1,
+        "errors": [
+          {
+            "actual": "N",
+            "code": "91",
+            "predicted": "I"
+          }
+        ],
+        "model_type": "unordered_matrix_lookup_with_one_forced_conflict_choice",
+        "name": "unordered_pair_lookup_single_label",
+        "notes": [
+          "Almost all ordered labels are explained by the unordered cell label.",
+          "The forced single-label cell cannot satisfy both 19=I and 91=N."
+        ],
+        "parameters": {
+          "representative_policy": "use upper code label if present, else the present lower orphan",
+          "stored_unordered_cells": 55
+        },
+        "predicted": 99,
+        "set_valued": false,
+        "strict_accuracy": 0.98989898989899,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [],
+        "uncovered_count": 0
+      },
+      {
+        "correct": 99,
+        "coverage": 1.0,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "unordered_matrix_lookup_with_conflict_set",
+        "name": "unordered_pair_lookup_set_valued_diagnostic",
+        "notes": [
+          "Set-valued acceptance records the conflict instead of rendering one directed symbol.",
+          "It is diagnostic metadata, not a single-symbol rendering formula."
+        ],
+        "parameters": {
+          "conflict_cells": {
+            "19": [
+              "I",
+              "N"
+            ]
+          },
+          "stored_unordered_cells": 55
+        },
+        "predicted": 99,
+        "set_valued": true,
+        "strict_accuracy": 1.0,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [],
+        "uncovered_count": 0
+      },
+      {
+        "correct": 97,
+        "coverage": 0.98989898989899,
+        "covered_accuracy": 0.9897959183673469,
+        "error_count": 1,
+        "errors": [
+          {
+            "actual": "N",
+            "code": "91",
+            "predicted": "I"
+          }
+        ],
+        "model_type": "upper_matrix_lookup_plus_render_orientation_layer",
+        "name": "upper_lookup_plus_mirror_lower",
+        "notes": [
+          "Combines an explicit upper matrix with the base lower mirror rule.",
+          "The remaining failures are 91 and lower orphan 93."
+        ],
+        "parameters": {
+          "lower_rule": "transpose from upper when reverse is present",
+          "stored_upper_entries": 54
+        },
+        "predicted": 98,
+        "set_valued": false,
+        "strict_accuracy": 0.9797979797979798,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [
+          {
+            "actual": "N",
+            "code": "93"
+          }
+        ],
+        "uncovered_count": 1
+      },
+      {
+        "correct": 98,
+        "coverage": 0.98989898989899,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "upper_matrix_lookup_plus_render_orientation_layer_plus_one_exception",
+        "name": "upper_lookup_plus_mirror_lower_plus_exception_91",
+        "notes": [
+          "Adds the directed 91 exception to the upper-plus-mirror rendering layer.",
+          "The only remaining uncovered present ordered code is 93 because 39 is absent."
+        ],
+        "parameters": {
+          "explicit_exceptions": {
+            "91": "N"
+          },
+          "stored_upper_entries": 54
+        },
+        "predicted": 98,
+        "set_valued": false,
+        "strict_accuracy": 0.98989898989899,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [
+          {
+            "actual": "N",
+            "code": "93"
+          }
+        ],
+        "uncovered_count": 1
+      },
+      {
+        "correct": 99,
+        "coverage": 1.0,
+        "covered_accuracy": 1.0,
+        "error_count": 0,
+        "errors": [],
+        "model_type": "upper_matrix_lookup_plus_complete_render_metadata",
+        "name": "upper_lookup_plus_mirror_lower_plus_exception_and_missing_39_metadata",
+        "notes": [
+          "This is lossless for the ordered table only after adding the 91 exception and 93 orphan metadata.",
+          "The content labels still come from lookup/metadata, so this is not a generative matrix formula."
+        ],
+        "parameters": {
+          "explicit_exceptions": {
+            "91": "N"
+          },
+          "reverse_missing_lower_metadata": {
+            "93": "N"
+          },
+          "stored_upper_entries": 54
+        },
+        "predicted": 99,
+        "set_valued": false,
+        "strict_accuracy": 1.0,
+        "target": {
+          "codes": "present ordered codes",
+          "total": 99
+        },
+        "total": 99,
+        "uncovered": [],
+        "uncovered_count": 0
+      }
+    ]
+  },
+  "random_seed": 46920260619,
+  "schema": "directed_pair_surface_search.v1",
+  "scope": "mechanical_ordered_code_table_only_no_semantics"
+}

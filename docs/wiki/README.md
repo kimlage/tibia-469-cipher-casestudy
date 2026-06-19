@@ -4,7 +4,7 @@ page_type: root_index
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-13
+updated_at: 2026-06-19
 ---
 
 # The Bonelord "469" Cipher — Project Wiki
@@ -47,6 +47,10 @@ Start at the top and follow the path, or jump to what you need:
 | 7 | [External Sources & Falsified Solutions](07-external-sources.md) | The web evidence, and the German "solution" that was correctly rejected |
 | 8 | [Lessons & Process](08-lessons-and-process.md) | The activity-over-outcome critique; the Outcome Ledger reform |
 | 9 | [Open Questions & The Only Unlock](09-open-questions.md) | What remains genuinely unknown, and the single thing that could move it |
+| 10 | [Lore Source Audit](10-lore-source-audit.md) | 2026-06-18 addendum: Great Calculator, formula, pair/mirror, controls, and watchlist sources |
+| 11 | [Mechanism & Origin Model](11-mechanism-origin-model.md) | Production model: numeric index table, pair geometry, homophone classes, and chunk assembly |
+| 12 | [Generator-Origin Search](12-generator-origin-search.md) | Formula-generator search: scoring contract, targets, holdouts, front reports, and MDL leaderboard |
+| 13 | [Mechanical Origin Model v1](13-mechanical-origin-model-v1.md) | Frozen public summary of the best mechanical fabrication model and plateau |
 | — | [Glossary](GLOSSARY.md) | Definitions of the coined terms (Layer A/B, row0, disqualifier, …) |
 | — | [CipSoft](entities/cipsoft.md) | The external ground-truth holder — the only thing that could reopen the verdict |
 
@@ -67,6 +71,10 @@ mindmap
     Reflection
       08 Lessons and process
       09 Open questions
+      10 Lore source audit
+      11 Mechanism origin model
+      12 Generator origin search
+      13 Mechanical origin model v1
     Reference
       Glossary
       CipSoft
@@ -77,6 +85,101 @@ mindmap
 1. **There are two different ciphers.** The NPC *phrases* are a variable-length digit-group **word-code** (partially crackable); the 70 *books* are a separate fixed-2-digit **symbol** system. They are not the same code. → [page 3](03-two-cipher-systems.md)
 2. **The phrase codebook is real but small** (10 words; 6 codes attested in-DB + 7 reconstructed; only one code generalizes across phrases) and is validated only against the project's own decoder, not against CipSoft-attested text. → [page 4](04-phrase-codebook.md)
 3. **The book layer is verified non-linguistic** — its symbol-frequency profile is closer to flat-random than to any language, its only structure is verbatim cross-book templating, and the mathemagic/number hypothesis is exhausted. No internal method can decode it; only external ground truth could. → [page 5](05-book-layer-non-linguistic.md)
+
+**Post-final lore addendum (2026-06-18):** a systematic review of Great
+Calculator, Demona formula/Magic Web, pair/mirror, Secret Library, Paradox
+Tower, Spirit Grounds, and other lore fronts found no new translation or
+ground truth. The exhaustive follow-up confirmed `74032 45331` as an external
+untranslated Secret Library book, but it has zero exact hits in the 70-book raw
+corpus. The addendum strengthens the mechanism-only framing: the lore is more
+compatible with assembled/calculated/formulaic production than with hidden
+plaintext. → [page 10](10-lore-source-audit.md)
+
+**Mechanism/origin addendum (2026-06-18):** the best production model is a
+handmade 10x10 numeric index table folded through mirror/unordered pairs, then
+fixed homophone classes, then pre-encoded chunks copied into books. This
+now has a compiled mechanical formula that roundtrips all 70 raw digit books.
+The residual pass then pushes below the old 20-digit module threshold: a
+permissive upper-bound explains 100% of literal residual digits, while the
+MDL/control-pruned layer keeps only exact short repeats. It explains how the
+book layer was likely made; it does not translate it. → [page 11](11-mechanism-origin-model.md)
+
+**Generator-origin search addendum (2026-06-18/19):** the next pass freezes a
+scoring contract, target matrix, clue ledger, Chayenne/YTC holdouts, Avar Tar
+negative control, and front-by-front reports for grid formulas, Magic Web
+vectors, `1 = Tibia`, homophones, zero omissions, module grammar, and seeds.
+The constructive pair-table pass adds one mechanical clue: homophone inventory
+size strongly tracks internal symbol frequency, while exact pair-cell placement
+by source text or lore seed still fails. A symbol-vs-digit origin test then
+shows repeated chunks usually preserve exact code sequences, pointing to
+copied pre-rendered numeric modules rather than fresh symbol-level rendering.
+The module layer now compiles into a stronger tape-based formula: 16 numeric
+components, 62 module slices, 12 merged same-component spans, and 70/70 exact
+book roundtrip with no plaintext claim. A later endpoint-bridge test finds that
+the internal literal bridges do not transfer by adjacent tape/module endpoints
+on bridge/book/residual holdouts. The current leaderboard accepts only
+mechanical layers and keeps translation delta at zero. The later no-hard-gate
+matrix ledger records 294,528 candidates across matrix orders, symbol orders,
+lore seeds, anomaly overlays, and weak compositions; the best reaches only
+21/55 pair-cell hits and classifies as lookup-disguise. Zero omission remains a
+supporting render layer, not the matrix formula. A fixed shared predicate
+`i>=j` now links diagonal E pressure with previous-code zero omission (`5/10`
+diagonal E, `2/2` 33/66 anchors, joint `p=0.00280`), but it still does not
+derive labels or the table. Lore-number phase masks over
+`1`, `3478`, Honeminas/Magic Web, and `74032/45331` fail controls. A later
+lore-anomaly operator pass also rejects the narrower idea that `469` or the
+lore numbers select only the small anomaly sets. A later human-predicate
+rule-cover pass reaches 34/55, but shuffles do at least that well, so it is
+also rejected as lookup-disguise. A per-symbol predicate/DNF pass reaches
+44/55, but costs `4.592x` lookup and is ordinary under shuffles, so it is also
+lookup-disguise. A simple algebraic digit-composition pass hits 55/55 only by
+creating 55 buckets; its best compact row is 35/55 at `1.535x` lookup. A
+marginal-constraint solver finds a weak but real `6<->9` constraint signal
+(`0.947x` raw lookup, p `0.00200`), yet it still leaves about `2^141` possible
+tables. A hidden digit-order distance pass reaches a
+flashier 48/55, but only with 40 groups and higher-than-lookup MDL, and shuffles
+also reach 48/55. The latest ordered-surface audit finds a strong rendering
+rule: 99/100 ordered codes exist, only `39` is absent, the lower triangle is a
+near-perfect mirror of the upper, and the only true directed conflict is
+`19 -> I` vs `91 -> N`; this improves the mechanical orientation layer, not
+the unresolved origin of the pair-cell labels. A directed sequence-generator
+follow-up finds signal only in full/mirror ordered traversals, not in the
+upper-only table, so it also reinforces rendering rather than origin. Subsequent row/column balance,
+graph-motif, local 2D neighbour-rule, direct coordinate-to-symbol,
+line-template, row-transition edit, endpoint-affinity, composite objective,
+and joint zero/homophone context probes also reject those as original
+cell-placement formulas.
+A digit/symbol automorphism pass adds one weak matrix-side clue: swapping
+digit identities `6` and `9` preserves 47/55 pair labels and 10/18 moved cells.
+A quotient follow-up sharpens that into a tiny lossless compression: 46 orbits,
+50 labels, 4 mixed two-cell orbits, and `3.6` rough bits saved vs raw pair
+lookup. The quotient inventory pressure is slightly sharper (`L1/slot=0.200`
+versus `0.218`), but mixed-orbit overhead removes MDL promotion, and a direct
+search over 1,248,362 quotient-coordinate formulas reaches only 16/46 at
+`1.741x` quotient lookup. A parallel quotient line/order pass finds nominal
+scan structure but still costs more than lookup (`1.550x` for the best line
+template). A constructive quotient fill using inventory + order + symbol cycle
+beats controls weakly but reaches only 17/46 at `1.700x` lookup. A low-rank
+SVD follow-up on the quotient is control-negative (`11/46`, `p=0.56436`), so
+the quotient does not rescue the continuous-surface hypothesis. A secondary rule describes the mixed orbits (`x <= 1 or x mod 5 == 3`,
+orientation by parity), but controls classify it as a nine-case microfit, so
+it still does not generate the labels. A tape-position threshold separates the
+same four mixed orbits but also fails 4-of-9 controls. Cell-local hash/PRNG formulas,
+set-block/biclique decompositions, visual 6/9 geometries, and digit-signature
+formulas were also tested and rejected by MDL/controls. The exact seven-segment
+rotation exception set is now identified as anchors `0` and `8`, but two-of-five
+controls make it a weak microfit, not a promoted origin rule.
+→ [page 12](12-generator-origin-search.md)
+
+**Mechanical origin model v1 (2026-06-19):** the public state is now frozen as
+a partial fabrication model, not a translation. Accepted mechanics are the
+row0 substrate, unordered-pair/mirror geometry, directed render exceptions,
+the 16-tape/62-slice 70/70 formula, MDL-surviving exact residual repeats,
+Chayenne as secondary compatibility, and zero omission as a render layer.
+Weak clues include `6<->9`, E-layer pressure, orientation/render, and ML's
+zero signal. Rejected origin formulas include broad 10x10 matrix searches,
+PRNG/seeds, lore-number masks, high-block blocker strokes, and render-origin
+E-priority probes. → [page 13](13-mechanical-origin-model-v1.md)
 
 ## Reproduce / verify
 
@@ -91,6 +194,23 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
 
 - **Canonical:** [docs/469_final_report.md](../469_final_report.md) — the
   definitive document; supersedes all earlier snapshots.
+- **Post-final addendum:** [docs/wiki/10-lore-source-audit.md](10-lore-source-audit.md)
+  and [`analysis/lore_audit_20260618/`](../../analysis/lore_audit_20260618/) —
+  incorporates the 2026-06-18 lore audit as mechanism/context/watchlist
+  material, confirms the Secret Library numeric book as unglossed external
+  evidence, and keeps the translation delta at zero.
+- **Mechanism/origin addendum:** [docs/wiki/11-mechanism-origin-model.md](11-mechanism-origin-model.md)
+  and [`analysis/mechanism_model_20260618/`](../../analysis/mechanism_model_20260618/) —
+  consolidates the generator/index/pair model, publishes the lossless
+  mechanical formula, and keeps the translation delta at zero.
+- **Generator-origin search addendum:** [docs/wiki/12-generator-origin-search.md](12-generator-origin-search.md)
+  and [`analysis/generator_search_20260618/`](../../analysis/generator_search_20260618/) —
+  freezes the scoring/holdout contract and runs the generator-formula
+  leaderboard, including the no-hard-gate matrix ledger, without promoting
+  semantics.
+- **Mechanical origin model v1:** [docs/wiki/13-mechanical-origin-model-v1.md](13-mechanical-origin-model-v1.md) —
+  freezes the current best fabrication model as accepted mechanics, weak
+  clues, and rejected origin formulas, with translation delta still zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

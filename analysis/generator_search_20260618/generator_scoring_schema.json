@@ -1,0 +1,25 @@
+{
+  "components": {
+    "control_leakage": "0..1 penalty for explaining Avar Tar, shuffles, or non-469 controls",
+    "lore_fit": "0..1 preregistered fit to clue ledger; context never overrides controls",
+    "mdl_gain": "bits saved versus the frozen baseline, normalized by 1000 bits for leaderboard display",
+    "prediction_score": "0..1 normalized predictive accuracy or coverage on declared target/holdout",
+    "rule_complexity": "0..1 penalty for table-like rules, exceptions, free parameters, and lookup disguise"
+  },
+  "exploration_policy": [
+    "no hard coverage cutoff during exploration",
+    "no hard exception-count cutoff during exploration",
+    "thresholds classify confidence only",
+    "record weak and failed hypotheses before pruning",
+    "zero omission is a supporting render layer, not the matrix formula"
+  ],
+  "promotion_gate": [
+    "must declare targets",
+    "must improve prediction or MDL",
+    "must not use external holdout for fitting",
+    "must not explain Avar Tar as well as real 469",
+    "must not promote semantics"
+  ],
+  "schema": "generator_scoring_schema.v1",
+  "state": "mechanical_partial_not_final"
+}

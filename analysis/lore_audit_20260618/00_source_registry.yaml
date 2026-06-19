@@ -1,0 +1,548 @@
+{
+  "schema": "lore_source_registry.v1",
+  "created_at": "2026-06-18",
+  "verified_at": "2026-06-18",
+  "status": "closed_project_addendum",
+  "source_report": "source_report_pt.md",
+  "source_verification": {
+    "status": "deep_web_and_local_numeric_audit",
+    "secret_library_pair": "confirmed_external_book_transcription_unglossed",
+    "primary_honeminas_vectors": "43153_and_34784_from_formula_not_s2ward_43151_34783",
+    "local_numeric_corpus_result": "secret_library_and_primary_honeminas_exact_strings_absent_from_70_book_raw_digits"
+  },
+  "global_verdict": {
+    "translation_delta": "NONE",
+    "new_cipsoft_ground_truth": false,
+    "new_number_plaintext_pair": false,
+    "new_book_plaintext": false,
+    "outcome_ledger_delta": {
+      "CRIBS_REPRODUCED_UNDER_HOLDOUT": 0,
+      "CODES_CONFIRMED_EXTERNALLY": 0,
+      "BOOKS_NO_PROSE_TO_ACCEPTED": 0,
+      "GT_PHRASES_PASSING_EXTERNALLY": 0
+    },
+    "mechanism_addendum": "Several lore sources fit the already-established assembly/generator interpretation better than a plaintext-decoder interpretation."
+  },
+  "classes": [
+    "GROUND_TRUTH",
+    "MECHANISM_LORE",
+    "NUMERIC_ANCHOR",
+    "MECHANISM_GEOMETRY",
+    "COMPARANDUM",
+    "META_WARNING",
+    "WATCHLIST",
+    "CONTEXT",
+    "PAREIDOLIA_RISK"
+  ],
+  "promotion_rule": [
+    "Do not promote any lore source as translation unless it supplies a CipSoft/in-game number<->plaintext pair.",
+    "Mechanism support may only explain generation, assembly, selection, lookup, or controls.",
+    "Secondary numeric anchors remain pending until a primary screenshot, page, or in-game transcription is captured; confirmed unglossed numbers remain numeric anchors only.",
+    "Every numeric or formula claim needs null controls before it can become more than context."
+  ],
+  "entries": [
+    {
+      "id": "h01_great_calculator_assembly",
+      "rank": 1,
+      "title": "Great Calculator / assembly hypothesis",
+      "evidence_class": "MECHANISM_LORE",
+      "priority": "P0",
+      "source_type": "primary_tibia_book",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "You Cannot Even Imagine (Book)"
+      ],
+      "text_keys": [
+        "assisted the great calculator to assemble the bonelords language"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "generative MDL/module assembly",
+        "digit-verbatim copy/paste",
+        "book layer non-linguistic"
+      ],
+      "status": "ACCEPTED_AS_MECHANISM_HYPOTHESIS_PENDING_REAUDIT",
+      "translation_value": "NONE",
+      "mechanism_value": "Strongest lore fit for the idea that the book corpus is assembled from calculated modules rather than encrypted prose.",
+      "required_gate": "May become ACCEPTED_MECHANISM only if it restates already-verified module assembly without making plaintext claims.",
+      "tests": [
+        "great_calculator_assembly_test"
+      ],
+      "notes": "This is an origin/mechanism hypothesis, not a decoder."
+    },
+    {
+      "id": "h02_demona_formula_family_generator",
+      "rank": 2,
+      "title": "Demona formula family / Magic Web as generator",
+      "evidence_class": "MECHANISM_LORE",
+      "priority": "P0/P1",
+      "source_type": "primary_tibia_books",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "The Honeminas Formula",
+        "The Tridiag Formula",
+        "The Donina Formula I",
+        "The Donina Formula II",
+        "Investigation of the Red Light",
+        "Teleportation Through the Magic Web",
+        "Demona Library context"
+      ],
+      "text_keys": [
+        "g[a_,x_] as gate/coordinate notation",
+        "formula/gate/magic web/red light family"
+      ],
+      "numbers": [
+        3,
+        2,
+        4,
+        1,
+        5,
+        7,
+        8,
+        9,
+        20,
+        32,
+        34,
+        99,
+        3478,
+        43153,
+        34784
+      ],
+      "related_project_findings": [
+        "mathemagic plaintext tests exhausted",
+        "3478 aligns as 34|78 = B|E",
+        "no arithmetic plaintext channel"
+      ],
+      "status": "REOPEN_AS_GENERATOR_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Worth preserving as possible generator/indexer/selector lore, not as a plaintext route.",
+      "required_gate": "Any operator must be preregistered, beat formula-null controls, and produce mechanism-only evidence.",
+      "tests": [
+        "formula_family_overlap",
+        "formula_operator_null_control",
+        "module_generator_overlap"
+      ],
+      "notes": "The old mathemagic path remains closed as plaintext; this addendum only reframes it as possible assembly lore."
+    },
+    {
+      "id": "h03_pair_mirror_subjective_viewer",
+      "rank": 3,
+      "title": "Pair geometry / mirror / subjective viewer",
+      "evidence_class": "MECHANISM_GEOMETRY",
+      "priority": "P1",
+      "source_type": "mixed_primary_secondary",
+      "source_confidence": "mixed",
+      "sources": [
+        "Honeminas vectors",
+        "2011 mirrored-pair Facebook post as reported by s2ward",
+        "A Wrinkled Bonelord subjective-viewer formula",
+        "Secret Library 74032 45331 confirmed unglossed book",
+        "Paradox Tower mirror-room context"
+      ],
+      "text_keys": [
+        "formula changes for the subjective viewer",
+        "paired vectors",
+        "mirror/pair geometry"
+      ],
+      "numbers": [
+        43153,
+        34784,
+        74032,
+        45331
+      ],
+      "related_project_findings": [
+        "86/88 reverse-available non-palindrome code reversals preserve symbol; 89 non-palindrome codes are present in total",
+        "54/55 unordered-pair classes are pure"
+      ],
+      "status": "ACTIVE_MECHANISM_AUDIT_SOURCE_VERIFIED_NO_DECODER",
+      "translation_value": "NONE",
+      "mechanism_value": "Best lore bridge to the row0 reversal-invariant unordered-pair lookup.",
+      "required_gate": "Pair features must beat pair-null controls and cannot be read as plaintext.",
+      "tests": [
+        "pair_geometry_audit",
+        "mirror_paradox_audit"
+      ],
+      "notes": "This is a map-geometry hypothesis, not a semantic one. Primary Honeminas gives 43153/34784; s2ward later cites 43151/34783, so the secondary pair extraction is imprecise."
+    },
+    {
+      "id": "h04_paradox_tower_mirror_books",
+      "rank": 5,
+      "title": "Paradox Tower mirror room / Riddler books",
+      "evidence_class": "COMPARANDUM",
+      "priority": "P2",
+      "source_type": "primary_tibia_books_and_quest_context",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "Ljkhbl Nilse (Book)",
+        "Dtjfhg Jhfvzk (Book)",
+        "Paradox Tower / Mad Mage Valley context"
+      ],
+      "text_keys": [
+        "alphabetic gibberish books in a mirror/paradox context"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "book layer artificiality",
+        "non-linguistic controls"
+      ],
+      "status": "CONTROL_AND_STYLE_COMPARANDUM",
+      "translation_value": "NONE",
+      "mechanism_value": "Useful only to compare artificial/gibberish construction style against 469.",
+      "required_gate": "A shared operator must predict a non-trivial property in both corpora against controls.",
+      "tests": [
+        "mirror_paradox_audit"
+      ],
+      "notes": "No direct key or crib."
+    },
+    {
+      "id": "h05_minotaur_mages_close_truth",
+      "rank": 8,
+      "title": "Minotaur mages close to the truth",
+      "evidence_class": "WATCHLIST",
+      "priority": "P2/P3",
+      "source_type": "primary_npc_transcript",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "A Wrinkled Bonelord transcript"
+      ],
+      "text_keys": [
+        "Their mages are so close to the truth"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "mathemagic context",
+        "formula/gate watchlist"
+      ],
+      "status": "WATCHLIST_CONTEXT_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Potential lore pointer to magic/formula/labyrinth context, but currently too vague.",
+      "required_gate": "Needs a numeric source, formula source, direct Bonelord language mention, or official 469 link.",
+      "tests": [
+        "minotaur_mage_truth_audit"
+      ],
+      "notes": "Direct NPC source but no numbers or gloss."
+    },
+    {
+      "id": "h06_spirit_grounds_gate_keeper_negative",
+      "rank": 6,
+      "title": "Spirit Grounds / Gate Keeper as negative comparandum",
+      "evidence_class": "COMPARANDUM",
+      "priority": "P2",
+      "source_type": "primary_npc_transcript_and_area_lore",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "The Gate Keeper transcript",
+        "Spirit Grounds"
+      ],
+      "text_keys": [
+        "Zg'!kch of Cthle-ZuuKh'lkrlxchwr",
+        "doors/keys/realms/spirits/Ancients"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "anti-pareidolia controls"
+      ],
+      "status": "CONTROL_NEGATIVE",
+      "translation_value": "NONE",
+      "mechanism_value": "Useful to prevent generic weird-language or gate/door motifs from being treated as 469 evidence.",
+      "required_gate": "Should be used as a false-positive control, not as a source of candidate plaintext.",
+      "tests": [
+        "non469_language_comparanda"
+      ],
+      "notes": "Weird text is not automatically Bonelord language."
+    },
+    {
+      "id": "h07_secret_library_pair_74032_45331",
+      "rank": 4,
+      "title": "Secret Library 74032 45331",
+      "evidence_class": "NUMERIC_ANCHOR",
+      "priority": "P1_anchor_confirmed_P3_translation",
+      "source_type": "tibiawiki_br_book_transcription_plus_secondary_s2ward",
+      "source_confidence": "confirmed_external_book_transcription_unglossed",
+      "sources": [
+        "TibiaWiki BR 74032 45331 (Book)",
+        "TibiaWiki BR Bibliotecas de Secret Library Ice Section / Mesa 07",
+        "s2ward Secret Library book note",
+        "TibiaSecrets article166 negative Hellgate-corpus note"
+      ],
+      "text_keys": [
+        "Secret Library book (2018): 74032 45331"
+      ],
+      "numbers": [
+        74032,
+        45331
+      ],
+      "related_project_findings": [
+        "pair geometry",
+        "zero omission risk",
+        "external numeric anchor policy"
+      ],
+      "status": "CONFIRMED_UNGLOSSED_EXTERNAL_NUMERIC_BOOK",
+      "translation_value": "NONE",
+      "mechanism_value": "Confirmed external numeric pair anchor; local substring check finds no exact occurrence in the 70-book raw corpus.",
+      "required_gate": "Needs official/CipSoft gloss or in-game screenshot to become ground truth; exact transcription alone cannot be used as translation.",
+      "tests": [
+        "pair_geometry_audit_after_confirmation",
+        "deep_numeric_substring_check"
+      ],
+      "notes": "Confirmed as Secret Library Ice Section Mesa 07 book, still not translated and not found as an exact substring in the 70 Hellgate-book raw digit corpus."
+    },
+    {
+      "id": "h08_wydrin_madman",
+      "rank": 9,
+      "title": "Wydrin/Wyrdin madman line",
+      "evidence_class": "CONTEXT",
+      "priority": "P3",
+      "source_type": "npc_transcript",
+      "source_confidence": "needs_primary_spelling_confirmation",
+      "sources": [
+        "Wydrin/Wyrdin transcript"
+      ],
+      "text_keys": [
+        "Could the language of bonelords be the invention of some madman?"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "artificial language framing",
+        "Great Calculator",
+        "Paradox/Mad Mage context"
+      ],
+      "status": "CONTEXTUAL_EDGE_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Lore graph edge linking artificial invention, mad-mage context, and calculated assembly.",
+      "required_gate": "No tests beyond graph placement unless a numeric/formula source appears.",
+      "tests": [
+        "lore_graph_edge"
+      ],
+      "notes": "Contextual, not operational."
+    },
+    {
+      "id": "h09_serpentine_tower_sum_469",
+      "rank": 12,
+      "title": "Serpentine Tower sum to 469",
+      "evidence_class": "PAREIDOLIA_RISK",
+      "priority": "P3/P4",
+      "source_type": "secondary_s2ward_environmental_note",
+      "source_confidence": "secondary_numerology",
+      "sources": [
+        "s2ward Serpentine Tower research-paper note"
+      ],
+      "text_keys": [
+        "subset sum can be made to equal 469 if one paper is omitted"
+      ],
+      "numbers": [
+        469
+      ],
+      "related_project_findings": [
+        "Outcome Ledger anti-pareidolia rule"
+      ],
+      "status": "LOW_CONFIDENCE_NUMEROLOGY",
+      "translation_value": "NONE",
+      "mechanism_value": "No current mechanism value; preserved as a cautionary example.",
+      "required_gate": "Must show official Bonelord/469 linkage and predictive value against subset-sum controls.",
+      "tests": [
+        "serpentine_numerology_control"
+      ],
+      "notes": "High risk of cherry-picked arithmetic."
+    },
+    {
+      "id": "h10_hellgate_skull_matrix",
+      "rank": 13,
+      "title": "Hellgate skull matrix / old matrix",
+      "evidence_class": "PAREIDOLIA_RISK",
+      "priority": "P4",
+      "source_type": "environmental_secondary",
+      "source_confidence": "secondary_environmental_changed",
+      "sources": [
+        "s2ward old/new Hellgate matrix note"
+      ],
+      "text_keys": [
+        "environmental matrix changed across updates"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "environmental numerology caution"
+      ],
+      "status": "DOCUMENTED_LOW_CONFIDENCE",
+      "translation_value": "NONE",
+      "mechanism_value": "Historical/environmental context only.",
+      "required_gate": "Must beat matrix-null controls and explain update changes before any analytical use.",
+      "tests": [
+        "matrix_null_control"
+      ],
+      "notes": "Do not use as decoder."
+    },
+    {
+      "id": "h11_evil_mastermind_fake_dictionaries",
+      "rank": 7,
+      "title": "Evil Mastermind fake Bonelord dictionaries",
+      "evidence_class": "META_WARNING",
+      "priority": "P2_documental",
+      "source_type": "primary_npc_or_lore_text",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "Evil Mastermind"
+      ],
+      "text_keys": [
+        "fake Bonelord language dictionaries",
+        "calculations"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "German/MHG solution falsified",
+        "overfit codebook warning"
+      ],
+      "status": "META_WARNING",
+      "translation_value": "NONE",
+      "mechanism_value": "Supports the project's refusal to promote plausible-looking dictionaries without external cribs.",
+      "required_gate": "Use as process warning only.",
+      "tests": [
+        "external_claims_register_note"
+      ],
+      "notes": "Anti-overfit lore."
+    },
+    {
+      "id": "h12_dreadeye_language_difficulty",
+      "rank": 10,
+      "title": "Dreadeye alien parts of writings",
+      "evidence_class": "CONTEXT",
+      "priority": "P3",
+      "source_type": "primary_npc_or_lore_text",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "Dreadeye"
+      ],
+      "text_keys": [
+        "only true bonelords understand the language",
+        "some parts are alien even to altered Dreadeye"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "heterogeneous/non-human language caution",
+        "book layer non-linguistic verdict"
+      ],
+      "status": "CONTEXT_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Contextual support for not treating the corpus as simple human prose.",
+      "required_gate": "Needs exact number/text data for operational use.",
+      "tests": [
+        "context_register_only"
+      ],
+      "notes": "No direct mechanism."
+    },
+    {
+      "id": "h13_first_dragon_future_memoir",
+      "rank": 11,
+      "title": "First Dragon future Bonelord-language memoir hook",
+      "evidence_class": "WATCHLIST",
+      "priority": "P3_watchlist",
+      "source_type": "primary_lore_text",
+      "source_confidence": "primary_text_reported",
+      "sources": [
+        "The First Dragon"
+      ],
+      "text_keys": [
+        "learned the Bonelord language and might tell the story in a future memoir"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "future CipSoft ground-truth watch"
+      ],
+      "status": "WATCHLIST_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Potential future official hook only.",
+      "required_gate": "Reopen only if a new official book/event/memoir supplies number<->meaning evidence.",
+      "tests": [
+        "watchlist_official_groundtruth"
+      ],
+      "notes": "No present evidence."
+    },
+    {
+      "id": "h14_imortus_fansite_item",
+      "rank": 14,
+      "title": "Imortus fansite/meta item",
+      "evidence_class": "PAREIDOLIA_RISK",
+      "priority": "P4",
+      "source_type": "fansite_meta_item",
+      "source_confidence": "secondary_or_fansite",
+      "sources": [
+        "Imortus / TibiaML fansite item as reported by s2ward"
+      ],
+      "text_keys": [
+        "46.90 oz",
+        "469!? So easy...",
+        "More eyes for many numbers!"
+      ],
+      "numbers": [
+        46.90,
+        469
+      ],
+      "related_project_findings": [
+        "community/meta source caution"
+      ],
+      "status": "LOW_CONFIDENCE_META",
+      "translation_value": "NONE",
+      "mechanism_value": "Curiosity only.",
+      "required_gate": "Do not use as canonical evidence.",
+      "tests": [
+        "document_only"
+      ],
+      "notes": "Meta/fansite tone, no gloss. The useful fact is the 469-themed joke, not the item's weight; any 46.90/46.09 discrepancy is ignored analytically."
+    },
+    {
+      "id": "h15_robson_bonelord_hideout_architecture",
+      "rank": 15,
+      "title": "Robson / Bonelord hideout architecture",
+      "evidence_class": "CONTEXT",
+      "priority": "P4",
+      "source_type": "npc_or_environmental_lore",
+      "source_confidence": "contextual_reported",
+      "sources": [
+        "Robson"
+      ],
+      "text_keys": [
+        "ruins/pillars compared to a Bonelord hideout"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "environmental lore background"
+      ],
+      "status": "DOCUMENT_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Archaeological/environmental context only.",
+      "required_gate": "Needs direct numeric/language evidence for analytical use.",
+      "tests": [
+        "document_only"
+      ],
+      "notes": "No formula, number, or language data."
+    },
+    {
+      "id": "h16_braindeath_necromancy_bonelord_threat",
+      "rank": 16,
+      "title": "Braindeath / necromancy / broken mind",
+      "evidence_class": "CONTEXT",
+      "priority": "P4",
+      "source_type": "lore_background",
+      "source_confidence": "contextual_reported",
+      "sources": [
+        "Braindeath lore",
+        "Bonelord Threat lore"
+      ],
+      "text_keys": [
+        "bonelords, necromancy, experiments, city/labs, race decline"
+      ],
+      "numbers": [],
+      "related_project_findings": [
+        "racial/background lore"
+      ],
+      "status": "BACKGROUND_ONLY",
+      "translation_value": "NONE",
+      "mechanism_value": "Background only; may explain alien/necromantic framing but not the 469 mechanism.",
+      "required_gate": "No analytical use without direct 469 evidence.",
+      "tests": [
+        "document_only"
+      ],
+      "notes": "No numbers, formula, or text 469."
+    }
+  ]
+}

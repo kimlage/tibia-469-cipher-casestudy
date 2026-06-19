@@ -1,0 +1,1826 @@
+{
+  "best": {
+    "accuracy": 0.6,
+    "correct": 24,
+    "depth": 3,
+    "errors": 16,
+    "feature_set": "tape_usage_grid",
+    "leaf_count": 8,
+    "lookup_bits": 108.57691759474461,
+    "mdl_gain_vs_residual_lookup_bits": -131.30135595103246,
+    "mdl_ratio_vs_residual_lookup": 2.2092934562860327,
+    "rough_mdl_bits": 239.87827354577706,
+    "rule_class": "tree_depth_3",
+    "rules": [
+      "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+      "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+      "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND diff_mod3<=0 => V (5 cells, 2 err)",
+      "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT diff_mod3<=0 => T (4 cells, 2 err)",
+      "NOT literal_only_tokens<=18 AND triangular_index<=13 AND in_component_02==True => F (3 cells, 1 err)",
+      "NOT literal_only_tokens<=18 AND triangular_index<=13 AND NOT in_component_02==True => N (2 cells, 1 err)",
+      "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND numeric_pair<=59 => I (12 cells, 4 err)",
+      "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND NOT numeric_pair<=59 => A (3 cells, 1 err)"
+    ],
+    "total": 40
+  },
+  "control_trials": 1000,
+  "controls": {
+    "tape_only": {
+      "accuracy": {
+        "max": 0.675,
+        "mean": 0.5324249999999999,
+        "min": 0.3,
+        "observed": 0.55,
+        "p_good_direction": 0.5484515484515484,
+        "sd": 0.05442615714508586,
+        "z_good_direction": 0.32291458596185246
+      },
+      "mdl_gain": {
+        "max": -102.53521204428566,
+        "mean": -149.99355039871205,
+        "min": -179.95908261862468,
+        "observed": -150.47878522219696,
+        "p_good_direction": 0.6133866133866134,
+        "sd": 12.353890809904298,
+        "z_good_direction": -0.03927789479051377
+      }
+    },
+    "tape_plus_usage": {
+      "accuracy": {
+        "max": 0.675,
+        "mean": 0.556725,
+        "min": 0.375,
+        "observed": 0.55,
+        "p_good_direction": 0.7572427572427572,
+        "sd": 0.04683848010149579,
+        "z_good_direction": -0.14357852742931376
+      },
+      "mdl_gain": {
+        "max": -102.53521204428566,
+        "mean": -143.81407618219342,
+        "min": -179.2449291289438,
+        "observed": -138.67143030013938,
+        "p_good_direction": 0.2727272727272727,
+        "sd": 12.210213940938408,
+        "z_good_direction": 0.42117573917454276
+      }
+    },
+    "tape_usage_grid": {
+      "accuracy": {
+        "max": 0.7,
+        "mean": 0.5775750000000001,
+        "min": 0.375,
+        "observed": 0.6,
+        "p_good_direction": 0.4155844155844156,
+        "sd": 0.04152672445358342,
+        "z_good_direction": 0.5400136970847654
+      },
+      "mdl_gain": {
+        "max": -92.94649740870341,
+        "mean": -137.43469580043973,
+        "min": -170.37036798304237,
+        "observed": -131.30135595103246,
+        "p_good_direction": 0.4255744255744256,
+        "sd": 12.157545127709701,
+        "z_good_direction": 0.5044883473578924
+      }
+    },
+    "usage_only": {
+      "accuracy": {
+        "max": 0.65,
+        "mean": 0.49460000000000004,
+        "min": 0.275,
+        "observed": 0.575,
+        "p_good_direction": 0.12287712287712288,
+        "sd": 0.0677896410628898,
+        "z_good_direction": 1.1860219163192092
+      },
+      "mdl_gain": {
+        "max": -112.1239266798679,
+        "mean": -158.0662672098266,
+        "min": -188.83364376452602,
+        "observed": -140.89007058661474,
+        "p_good_direction": 0.14185814185814186,
+        "sd": 12.43474577869189,
+        "z_good_direction": 1.3813066168706802
+      }
+    }
+  },
+  "feature_sets": {
+    "tape_only": [
+      "boundary_cross_tokens",
+      "first_component",
+      "first_component_start_bin",
+      "first_tape_position",
+      "in_component_00",
+      "in_component_01",
+      "in_component_02",
+      "in_component_03",
+      "in_component_04",
+      "in_component_05",
+      "in_component_06",
+      "in_component_07",
+      "in_component_08",
+      "in_component_09",
+      "in_component_10",
+      "in_component_11",
+      "in_component_12",
+      "in_component_13",
+      "in_component_14",
+      "in_component_15",
+      "literal_only_tokens",
+      "mixed_tape_literal",
+      "omitted_zero_outside",
+      "omitted_zero_tape",
+      "only_outside",
+      "outside_fraction_pct",
+      "outside_tokens",
+      "tape_fraction_pct",
+      "tape_only",
+      "tape_tokens",
+      "total_tokens",
+      "unique_components"
+    ],
+    "tape_plus_usage": [
+      "boundary_cross_tokens",
+      "first_component",
+      "first_component_start_bin",
+      "first_tape_position",
+      "in_component_00",
+      "in_component_01",
+      "in_component_02",
+      "in_component_03",
+      "in_component_04",
+      "in_component_05",
+      "in_component_06",
+      "in_component_07",
+      "in_component_08",
+      "in_component_09",
+      "in_component_10",
+      "in_component_11",
+      "in_component_12",
+      "in_component_13",
+      "in_component_14",
+      "in_component_15",
+      "literal_only_tokens",
+      "mixed_tape_literal",
+      "omitted_zero_outside",
+      "omitted_zero_tape",
+      "only_outside",
+      "outside_fraction_pct",
+      "outside_tokens",
+      "tape_fraction_pct",
+      "tape_only",
+      "tape_tokens",
+      "total_tokens",
+      "unique_components",
+      "usage_count",
+      "usage_first_book",
+      "usage_first_global_bin",
+      "usage_first_pos_bin",
+      "usage_last_global_bin",
+      "usage_mean_global_bin",
+      "usage_orientation_bias_pct"
+    ],
+    "tape_usage_grid": [
+      "boundary_cross_tokens",
+      "first_component",
+      "first_component_start_bin",
+      "first_tape_position",
+      "in_component_00",
+      "in_component_01",
+      "in_component_02",
+      "in_component_03",
+      "in_component_04",
+      "in_component_05",
+      "in_component_06",
+      "in_component_07",
+      "in_component_08",
+      "in_component_09",
+      "in_component_10",
+      "in_component_11",
+      "in_component_12",
+      "in_component_13",
+      "in_component_14",
+      "in_component_15",
+      "literal_only_tokens",
+      "mixed_tape_literal",
+      "omitted_zero_outside",
+      "omitted_zero_tape",
+      "only_outside",
+      "outside_fraction_pct",
+      "outside_tokens",
+      "tape_fraction_pct",
+      "tape_only",
+      "tape_tokens",
+      "total_tokens",
+      "unique_components",
+      "usage_count",
+      "usage_first_book",
+      "usage_first_global_bin",
+      "usage_first_pos_bin",
+      "usage_last_global_bin",
+      "usage_mean_global_bin",
+      "usage_orientation_bias_pct",
+      "center_distance_x2",
+      "diagonal",
+      "diff",
+      "diff_mod2",
+      "diff_mod3",
+      "has_nine",
+      "has_one",
+      "has_zero",
+      "numeric_pair",
+      "product",
+      "same_parity",
+      "sum",
+      "sum_mod2",
+      "sum_mod3",
+      "triangular_index",
+      "x",
+      "y"
+    ],
+    "usage_only": [
+      "usage_count",
+      "usage_first_book",
+      "usage_first_global_bin",
+      "usage_first_pos_bin",
+      "usage_last_global_bin",
+      "usage_mean_global_bin",
+      "usage_orientation_bias_pct"
+    ]
+  },
+  "new_plaintext": false,
+  "random_seed": 46920260619,
+  "removed_fixed_claim_pairs": [
+    "11",
+    "15",
+    "33",
+    "44",
+    "45",
+    "47",
+    "48",
+    "55",
+    "57",
+    "58",
+    "66",
+    "77",
+    "78",
+    "88",
+    "99"
+  ],
+  "residual_pair_count": 40,
+  "rows": [
+    {
+      "accuracy": 0.6,
+      "correct": 24,
+      "depth": 3,
+      "errors": 16,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -131.30135595103246,
+      "mdl_ratio_vs_residual_lookup": 2.2092934562860327,
+      "rough_mdl_bits": 239.87827354577706,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND diff_mod3<=0 => V (5 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT diff_mod3<=0 => T (4 cells, 2 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 AND in_component_02==True => F (3 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 AND NOT in_component_02==True => N (2 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND numeric_pair<=59 => I (12 cells, 4 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND NOT numeric_pair<=59 => A (3 cells, 1 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.55,
+      "correct": 22,
+      "depth": 3,
+      "errors": 18,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 7,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -138.67143030013938,
+      "mdl_ratio_vs_residual_lookup": 2.2771722882917005,
+      "rough_mdl_bits": 247.24834789488398,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND literal_only_tokens<=11 => V (4 cells, 1 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT literal_only_tokens<=11 => L (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 AND total_tokens<=108 => A (7 cells, 5 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 AND NOT total_tokens<=108 => I (11 cells, 4 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.575,
+      "correct": 23,
+      "depth": 3,
+      "errors": 17,
+      "feature_set": "usage_only",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -140.89007058661474,
+      "mdl_ratio_vs_residual_lookup": 2.297606099967551,
+      "rough_mdl_bits": 249.46698818135934,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "usage_count<=100 AND usage_count<=50 AND usage_last_global_bin<=110 => A (4 cells, 2 err)",
+        "usage_count<=100 AND usage_count<=50 AND NOT usage_last_global_bin<=110 => N (5 cells, 2 err)",
+        "usage_count<=100 AND NOT usage_count<=50 AND usage_first_global_bin<=0 => N (3 cells, 1 err)",
+        "usage_count<=100 AND NOT usage_count<=50 AND NOT usage_first_global_bin<=0 => T (8 cells, 4 err)",
+        "NOT usage_count<=100 AND usage_count<=110 AND usage_first_pos_bin<=3 => L (3 cells, 1 err)",
+        "NOT usage_count<=100 AND usage_count<=110 AND NOT usage_first_pos_bin<=3 => V (2 cells, 1 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 AND NOT usage_mean_global_bin<=53 => I (13 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.45,
+      "correct": 18,
+      "depth": 2,
+      "errors": 22,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -141.60422407629562,
+      "mdl_ratio_vs_residual_lookup": 2.3041834969456674,
+      "rough_mdl_bits": 250.18114167104022,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 => I (18 cells, 10 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.45,
+      "correct": 18,
+      "depth": 2,
+      "errors": 22,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -141.60422407629562,
+      "mdl_ratio_vs_residual_lookup": 2.3041834969456674,
+      "rough_mdl_bits": 250.18114167104022,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 => F (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 => I (15 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.55,
+      "correct": 22,
+      "depth": 3,
+      "errors": 18,
+      "feature_set": "tape_only",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -150.47878522219696,
+      "mdl_ratio_vs_residual_lookup": 2.3859187436490688,
+      "rough_mdl_bits": 259.05570281694156,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND literal_only_tokens<=11 => V (4 cells, 1 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT literal_only_tokens<=11 => L (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 AND boundary_cross_tokens<=0 => I (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 AND NOT boundary_cross_tokens<=0 => T (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 AND outside_tokens<=34 => I (7 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 AND NOT outside_tokens<=34 => F (3 cells, 2 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.425,
+      "correct": 17,
+      "depth": 2,
+      "errors": 23,
+      "feature_set": "tape_only",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -151.19293871187784,
+      "mdl_ratio_vs_residual_lookup": 2.3924961406271854,
+      "rough_mdl_bits": 259.76985630662244,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 => T (10 cells, 7 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 => I (10 cells, 4 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.425,
+      "correct": 17,
+      "depth": 2,
+      "errors": 23,
+      "feature_set": "usage_only",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -151.19293871187784,
+      "mdl_ratio_vs_residual_lookup": 2.3924961406271854,
+      "rough_mdl_bits": 259.76985630662244,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "usage_count<=100 AND usage_count<=50 => N (9 cells, 5 err)",
+        "usage_count<=100 AND NOT usage_count<=50 => T (11 cells, 7 err)",
+        "NOT usage_count<=100 AND usage_count<=110 => L (5 cells, 3 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 => I (15 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=127",
+        "op": "<=",
+        "value": 127
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=127 => I (26 cells, 18 err)",
+        "NOT first_tape_position<=127 => N (14 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=129",
+        "op": "<=",
+        "value": 129
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=129 => I (27 cells, 19 err)",
+        "NOT first_tape_position<=129 => N (13 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=130",
+        "op": "<=",
+        "value": 130
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=130 => I (28 cells, 20 err)",
+        "NOT first_tape_position<=130 => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=145",
+        "op": "<=",
+        "value": 145
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=145 => I (29 cells, 21 err)",
+        "NOT first_tape_position<=145 => N (11 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "in_component_02",
+        "id": "in_component_02==True",
+        "op": "==",
+        "value": true
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "in_component_02==True => I (28 cells, 20 err)",
+        "NOT in_component_02==True => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => N (16 cells, 11 err)",
+        "NOT literal_only_tokens<=14 => I (24 cells, 16 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => N (17 cells, 12 err)",
+        "NOT literal_only_tokens<=16 => I (23 cells, 15 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => N (19 cells, 14 err)",
+        "NOT literal_only_tokens<=17 => I (21 cells, 13 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => N (20 cells, 15 err)",
+        "NOT literal_only_tokens<=18 => I (20 cells, 12 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=15",
+        "op": "<=",
+        "value": 15
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=15 => N (15 cells, 10 err)",
+        "NOT outside_tokens<=15 => I (25 cells, 17 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=127",
+        "op": "<=",
+        "value": 127
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=127 => I (26 cells, 18 err)",
+        "NOT first_tape_position<=127 => N (14 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=129",
+        "op": "<=",
+        "value": 129
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=129 => I (27 cells, 19 err)",
+        "NOT first_tape_position<=129 => N (13 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=130",
+        "op": "<=",
+        "value": 130
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=130 => I (28 cells, 20 err)",
+        "NOT first_tape_position<=130 => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=145",
+        "op": "<=",
+        "value": 145
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=145 => I (29 cells, 21 err)",
+        "NOT first_tape_position<=145 => N (11 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "in_component_02",
+        "id": "in_component_02==True",
+        "op": "==",
+        "value": true
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "in_component_02==True => I (28 cells, 20 err)",
+        "NOT in_component_02==True => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => N (16 cells, 11 err)",
+        "NOT literal_only_tokens<=14 => I (24 cells, 16 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => N (17 cells, 12 err)",
+        "NOT literal_only_tokens<=16 => I (23 cells, 15 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => N (19 cells, 14 err)",
+        "NOT literal_only_tokens<=17 => I (21 cells, 13 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => N (20 cells, 15 err)",
+        "NOT literal_only_tokens<=18 => I (20 cells, 12 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=15",
+        "op": "<=",
+        "value": 15
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=15 => N (15 cells, 10 err)",
+        "NOT outside_tokens<=15 => I (25 cells, 17 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=127",
+        "op": "<=",
+        "value": 127
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=127 => I (26 cells, 18 err)",
+        "NOT first_tape_position<=127 => N (14 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=129",
+        "op": "<=",
+        "value": 129
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=129 => I (27 cells, 19 err)",
+        "NOT first_tape_position<=129 => N (13 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=130",
+        "op": "<=",
+        "value": 130
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=130 => I (28 cells, 20 err)",
+        "NOT first_tape_position<=130 => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=145",
+        "op": "<=",
+        "value": 145
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=145 => I (29 cells, 21 err)",
+        "NOT first_tape_position<=145 => N (11 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "in_component_02",
+        "id": "in_component_02==True",
+        "op": "==",
+        "value": true
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "in_component_02==True => I (28 cells, 20 err)",
+        "NOT in_component_02==True => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => N (16 cells, 11 err)",
+        "NOT literal_only_tokens<=14 => I (24 cells, 16 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => N (17 cells, 12 err)",
+        "NOT literal_only_tokens<=16 => I (23 cells, 15 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => N (19 cells, 14 err)",
+        "NOT literal_only_tokens<=17 => I (21 cells, 13 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => N (20 cells, 15 err)",
+        "NOT literal_only_tokens<=18 => I (20 cells, 12 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=15",
+        "op": "<=",
+        "value": 15
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=15 => N (15 cells, 10 err)",
+        "NOT outside_tokens<=15 => I (25 cells, 17 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=100",
+        "op": "<=",
+        "value": 100
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=100 => N (20 cells, 14 err)",
+        "NOT usage_count<=100 => I (20 cells, 13 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=102",
+        "op": "<=",
+        "value": 102
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=102 => N (21 cells, 15 err)",
+        "NOT usage_count<=102 => I (19 cells, 12 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=103",
+        "op": "<=",
+        "value": 103
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=103 => N (22 cells, 16 err)",
+        "NOT usage_count<=103 => I (18 cells, 11 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=104",
+        "op": "<=",
+        "value": 104
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=104 => N (23 cells, 17 err)",
+        "NOT usage_count<=104 => I (17 cells, 10 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=108",
+        "op": "<=",
+        "value": 108
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=108 => N (24 cells, 18 err)",
+        "NOT usage_count<=108 => I (16 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=110",
+        "op": "<=",
+        "value": 110
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=110 => N (25 cells, 19 err)",
+        "NOT usage_count<=110 => I (15 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=56",
+        "op": "<=",
+        "value": 56
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=56 => N (11 cells, 6 err)",
+        "NOT usage_count<=56 => I (29 cells, 21 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=57",
+        "op": "<=",
+        "value": 57
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=57 => N (11 cells, 6 err)",
+        "NOT usage_count<=57 => I (29 cells, 21 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=62",
+        "op": "<=",
+        "value": 62
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=62 => N (12 cells, 7 err)",
+        "NOT usage_count<=62 => I (28 cells, 20 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "usage_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "usage_count",
+        "id": "usage_count<=69",
+        "op": "<=",
+        "value": 69
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "usage_count<=69 => N (12 cells, 7 err)",
+        "NOT usage_count<=69 => I (28 cells, 20 err)"
+      ],
+      "total": 40
+    }
+  ],
+  "schema": "residual_tape_feature_after_e_results.v1",
+  "top_rows": [
+    {
+      "accuracy": 0.6,
+      "correct": 24,
+      "depth": 3,
+      "errors": 16,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -131.30135595103246,
+      "mdl_ratio_vs_residual_lookup": 2.2092934562860327,
+      "rough_mdl_bits": 239.87827354577706,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND diff_mod3<=0 => V (5 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT diff_mod3<=0 => T (4 cells, 2 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 AND in_component_02==True => F (3 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 AND NOT in_component_02==True => N (2 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND numeric_pair<=59 => I (12 cells, 4 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 AND NOT numeric_pair<=59 => A (3 cells, 1 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.55,
+      "correct": 22,
+      "depth": 3,
+      "errors": 18,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 7,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -138.67143030013938,
+      "mdl_ratio_vs_residual_lookup": 2.2771722882917005,
+      "rough_mdl_bits": 247.24834789488398,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND literal_only_tokens<=11 => V (4 cells, 1 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT literal_only_tokens<=11 => L (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 AND total_tokens<=108 => A (7 cells, 5 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 AND NOT total_tokens<=108 => I (11 cells, 4 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.575,
+      "correct": 23,
+      "depth": 3,
+      "errors": 17,
+      "feature_set": "usage_only",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -140.89007058661474,
+      "mdl_ratio_vs_residual_lookup": 2.297606099967551,
+      "rough_mdl_bits": 249.46698818135934,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "usage_count<=100 AND usage_count<=50 AND usage_last_global_bin<=110 => A (4 cells, 2 err)",
+        "usage_count<=100 AND usage_count<=50 AND NOT usage_last_global_bin<=110 => N (5 cells, 2 err)",
+        "usage_count<=100 AND NOT usage_count<=50 AND usage_first_global_bin<=0 => N (3 cells, 1 err)",
+        "usage_count<=100 AND NOT usage_count<=50 AND NOT usage_first_global_bin<=0 => T (8 cells, 4 err)",
+        "NOT usage_count<=100 AND usage_count<=110 AND usage_first_pos_bin<=3 => L (3 cells, 1 err)",
+        "NOT usage_count<=100 AND usage_count<=110 AND NOT usage_first_pos_bin<=3 => V (2 cells, 1 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 AND NOT usage_mean_global_bin<=53 => I (13 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.45,
+      "correct": 18,
+      "depth": 2,
+      "errors": 22,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -141.60422407629562,
+      "mdl_ratio_vs_residual_lookup": 2.3041834969456674,
+      "rough_mdl_bits": 250.18114167104022,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND usage_mean_global_bin<=53 => T (2 cells, 0 err)",
+        "NOT literal_only_tokens<=18 AND NOT usage_mean_global_bin<=53 => I (18 cells, 10 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.45,
+      "correct": 18,
+      "depth": 2,
+      "errors": 22,
+      "feature_set": "tape_usage_grid",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -141.60422407629562,
+      "mdl_ratio_vs_residual_lookup": 2.3041834969456674,
+      "rough_mdl_bits": 250.18114167104022,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND triangular_index<=13 => F (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND NOT triangular_index<=13 => I (15 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.55,
+      "correct": 22,
+      "depth": 3,
+      "errors": 18,
+      "feature_set": "tape_only",
+      "leaf_count": 8,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -150.47878522219696,
+      "mdl_ratio_vs_residual_lookup": 2.3859187436490688,
+      "rough_mdl_bits": 259.05570281694156,
+      "rule_class": "tree_depth_3",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND in_component_05==True => A (5 cells, 3 err)",
+        "literal_only_tokens<=18 AND tape_tokens<=47 AND NOT in_component_05==True => N (6 cells, 2 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND literal_only_tokens<=11 => V (4 cells, 1 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 AND NOT literal_only_tokens<=11 => L (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 AND boundary_cross_tokens<=0 => I (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 AND NOT boundary_cross_tokens<=0 => T (5 cells, 3 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 AND outside_tokens<=34 => I (7 cells, 1 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 AND NOT outside_tokens<=34 => F (3 cells, 2 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.425,
+      "correct": 17,
+      "depth": 2,
+      "errors": 23,
+      "feature_set": "tape_only",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -151.19293871187784,
+      "mdl_ratio_vs_residual_lookup": 2.3924961406271854,
+      "rough_mdl_bits": 259.76985630662244,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "literal_only_tokens<=18 AND tape_tokens<=47 => N (11 cells, 6 err)",
+        "literal_only_tokens<=18 AND NOT tape_tokens<=47 => V (9 cells, 6 err)",
+        "NOT literal_only_tokens<=18 AND literal_only_tokens<=22 => T (10 cells, 7 err)",
+        "NOT literal_only_tokens<=18 AND NOT literal_only_tokens<=22 => I (10 cells, 4 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.425,
+      "correct": 17,
+      "depth": 2,
+      "errors": 23,
+      "feature_set": "usage_only",
+      "leaf_count": 4,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -151.19293871187784,
+      "mdl_ratio_vs_residual_lookup": 2.3924961406271854,
+      "rough_mdl_bits": 259.76985630662244,
+      "rule_class": "tree_depth_2",
+      "rules": [
+        "usage_count<=100 AND usage_count<=50 => N (9 cells, 5 err)",
+        "usage_count<=100 AND NOT usage_count<=50 => T (11 cells, 7 err)",
+        "NOT usage_count<=100 AND usage_count<=110 => L (5 cells, 3 err)",
+        "NOT usage_count<=100 AND NOT usage_count<=110 => I (15 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=127",
+        "op": "<=",
+        "value": 127
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=127 => I (26 cells, 18 err)",
+        "NOT first_tape_position<=127 => N (14 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=129",
+        "op": "<=",
+        "value": 129
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=129 => I (27 cells, 19 err)",
+        "NOT first_tape_position<=129 => N (13 cells, 8 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=130",
+        "op": "<=",
+        "value": 130
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=130 => I (28 cells, 20 err)",
+        "NOT first_tape_position<=130 => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=145",
+        "op": "<=",
+        "value": 145
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=145 => I (29 cells, 21 err)",
+        "NOT first_tape_position<=145 => N (11 cells, 6 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "in_component_02",
+        "id": "in_component_02==True",
+        "op": "==",
+        "value": true
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "in_component_02==True => I (28 cells, 20 err)",
+        "NOT in_component_02==True => N (12 cells, 7 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => N (16 cells, 11 err)",
+        "NOT literal_only_tokens<=14 => I (24 cells, 16 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => N (17 cells, 12 err)",
+        "NOT literal_only_tokens<=16 => I (23 cells, 15 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => N (19 cells, 14 err)",
+        "NOT literal_only_tokens<=17 => I (21 cells, 13 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => N (20 cells, 15 err)",
+        "NOT literal_only_tokens<=18 => I (20 cells, 12 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=15",
+        "op": "<=",
+        "value": 15
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=15 => N (15 cells, 10 err)",
+        "NOT outside_tokens<=15 => I (25 cells, 17 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=127",
+        "op": "<=",
+        "value": 127
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=127 => I (26 cells, 18 err)",
+        "NOT first_tape_position<=127 => N (14 cells, 9 err)"
+      ],
+      "total": 40
+    },
+    {
+      "accuracy": 0.325,
+      "correct": 13,
+      "errors": 27,
+      "feature_set": "tape_plus_usage",
+      "leaf_count": 2,
+      "lookup_bits": 108.57691759474461,
+      "mdl_gain_vs_residual_lookup_bits": -165.93308741009173,
+      "mdl_ratio_vs_residual_lookup": 2.528253804638522,
+      "predicate": {
+        "feature": "first_tape_position",
+        "id": "first_tape_position<=129",
+        "op": "<=",
+        "value": 129
+      },
+      "rough_mdl_bits": 274.51000500483633,
+      "rule_class": "stump",
+      "rules": [
+        "first_tape_position<=129 => I (27 cells, 19 err)",
+        "NOT first_tape_position<=129 => N (13 cells, 8 err)"
+      ],
+      "total": 40
+    }
+  ],
+  "translation_delta": "NONE",
+  "verdict": "residual_tape_feature_not_promoted"
+}

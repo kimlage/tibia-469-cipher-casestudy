@@ -1,0 +1,6125 @@
+{
+  "controls": {
+    "inventory_label_shuffle": {
+      "hits": {
+        "control_max": 20,
+        "control_mean": 17.45,
+        "control_min": 16,
+        "control_sd": 0.8285859169987984,
+        "observed": 18,
+        "p_good_direction": 0.4462809917355372,
+        "z_good_direction": 0.6637814965431018
+      },
+      "mdl_gain": {
+        "control_max": -149.8275548963165,
+        "control_mean": -174.2787772170513,
+        "control_min": -188.18241343864557,
+        "control_sd": 7.945073909163717,
+        "observed": -169.00498416748107,
+        "p_good_direction": 0.4462809917355372,
+        "z_good_direction": 0.6637814965431
+      },
+      "method": "inventory_preserving_label_shuffle",
+      "trials": 120
+    },
+    "symbol_order_shuffle": {
+      "hits": {
+        "control_max": 19,
+        "control_mean": 17.308333333333334,
+        "control_min": 16,
+        "control_sd": 0.7194282666203247,
+        "observed": 18,
+        "p_good_direction": 0.3305785123966942,
+        "z_good_direction": 0.9614115802203956
+      },
+      "mdl_gain": {
+        "control_max": -159.4162695318988,
+        "control_mean": -175.6371784570921,
+        "control_min": -188.18241343864557,
+        "control_sd": 6.898392349393873,
+        "observed": -169.00498416748107,
+        "p_good_direction": 0.3305785123966942,
+        "z_good_direction": 0.9614115802203913
+      },
+      "method": "symbol_order_shuffle",
+      "orders_per_trial": 27,
+      "trials": 120
+    }
+  },
+  "created_at": "2026-06-19",
+  "observed": {
+    "best": {
+      "acceptable_accuracy": 0.32727272727272727,
+      "acceptable_hits": 18,
+      "coefs": [
+        2,
+        -1
+      ],
+      "complexity_score": 2.3,
+      "compresses_vs_lookup": false,
+      "expression": "((0 +2*diff -1*row_triangular_index) mod 55) mod 14",
+      "family": "arithmetic_affine",
+      "features": [
+        "diff",
+        "row_triangular_index"
+      ],
+      "formula_id": "arith:55:0:2,-1:diff,row_triangular_index",
+      "lookup_cost_bits": 209.40452071316824,
+      "lookup_cost_ratio": 1.8070741911010393,
+      "mdl_cost_bits": 378.4095048806493,
+      "mdl_gain_vs_lookup_bits": -169.00498416748107,
+      "offset": 0,
+      "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+      "predictions": [
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "*"
+          ],
+          "pair": "00",
+          "predicted_symbol": "*",
+          "primary_hit": true,
+          "primary_symbol": "*"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "01",
+          "predicted_symbol": "N",
+          "primary_hit": true,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "R"
+          ],
+          "pair": "02",
+          "predicted_symbol": "R",
+          "primary_hit": true,
+          "primary_symbol": "R"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "03",
+          "predicted_symbol": "V",
+          "primary_hit": true,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "F"
+          ],
+          "pair": "04",
+          "predicted_symbol": "F",
+          "primary_hit": true,
+          "primary_symbol": "F"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "05",
+          "predicted_symbol": "T",
+          "primary_hit": true,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "06",
+          "predicted_symbol": "I",
+          "primary_hit": true,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "07",
+          "predicted_symbol": "E",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "08",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "09",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "11",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "F"
+          ],
+          "pair": "12",
+          "predicted_symbol": "F",
+          "primary_hit": true,
+          "primary_symbol": "F"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "13",
+          "predicted_symbol": "T",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "14",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "15",
+          "predicted_symbol": "E",
+          "primary_hit": true,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "16",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "17",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "18",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I",
+            "N"
+          ],
+          "pair": "19",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "22",
+          "predicted_symbol": "A",
+          "primary_hit": true,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "O"
+          ],
+          "pair": "23",
+          "predicted_symbol": "O",
+          "primary_hit": true,
+          "primary_symbol": "O"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "L"
+          ],
+          "pair": "24",
+          "predicted_symbol": "L",
+          "primary_hit": true,
+          "primary_symbol": "L"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "25",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "26",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "S"
+          ],
+          "pair": "27",
+          "predicted_symbol": "C",
+          "primary_hit": false,
+          "primary_symbol": "S"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "28",
+          "predicted_symbol": "*",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "29",
+          "predicted_symbol": "N",
+          "primary_hit": true,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "33",
+          "predicted_symbol": "*",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "B"
+          ],
+          "pair": "34",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "B"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "L"
+          ],
+          "pair": "35",
+          "predicted_symbol": "R",
+          "primary_hit": false,
+          "primary_symbol": "L"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "36",
+          "predicted_symbol": "V",
+          "primary_hit": true,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "37",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "38",
+          "predicted_symbol": "T",
+          "primary_hit": true,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "39",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "44",
+          "predicted_symbol": "E",
+          "primary_hit": true,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "F"
+          ],
+          "pair": "45",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "F"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "46",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "47",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "48",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "49",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "55",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "56",
+          "predicted_symbol": "R",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "57",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "58",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "59",
+          "predicted_symbol": "T",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "66",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "67",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "C"
+          ],
+          "pair": "68",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "C"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "69",
+          "predicted_symbol": "C",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "77",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "78",
+          "predicted_symbol": "E",
+          "primary_hit": true,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": true,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "79",
+          "predicted_symbol": "A",
+          "primary_hit": true,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "88",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "89",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "99",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        }
+      ],
+      "primary_accuracy": 0.32727272727272727,
+      "primary_hits": 18,
+      "primary_misses": [
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "07",
+          "predicted_symbol": "E",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "08",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "09",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "11",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "13",
+          "predicted_symbol": "T",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "14",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "16",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "17",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "18",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I",
+            "N"
+          ],
+          "pair": "19",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "25",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "26",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "S"
+          ],
+          "pair": "27",
+          "predicted_symbol": "C",
+          "primary_hit": false,
+          "primary_symbol": "S"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "28",
+          "predicted_symbol": "*",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "33",
+          "predicted_symbol": "*",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "B"
+          ],
+          "pair": "34",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "B"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "L"
+          ],
+          "pair": "35",
+          "predicted_symbol": "R",
+          "primary_hit": false,
+          "primary_symbol": "L"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "37",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "39",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "F"
+          ],
+          "pair": "45",
+          "predicted_symbol": "A",
+          "primary_hit": false,
+          "primary_symbol": "F"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "46",
+          "predicted_symbol": "O",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "47",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "48",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "49",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "55",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "56",
+          "predicted_symbol": "R",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "57",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "58",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "I"
+          ],
+          "pair": "59",
+          "predicted_symbol": "T",
+          "primary_hit": false,
+          "primary_symbol": "I"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "66",
+          "predicted_symbol": "L",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "67",
+          "predicted_symbol": "S",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "C"
+          ],
+          "pair": "68",
+          "predicted_symbol": "B",
+          "primary_hit": false,
+          "primary_symbol": "C"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "V"
+          ],
+          "pair": "69",
+          "predicted_symbol": "C",
+          "primary_hit": false,
+          "primary_symbol": "V"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "N"
+          ],
+          "pair": "77",
+          "predicted_symbol": "I",
+          "primary_hit": false,
+          "primary_symbol": "N"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "A"
+          ],
+          "pair": "88",
+          "predicted_symbol": "V",
+          "primary_hit": false,
+          "primary_symbol": "A"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "T"
+          ],
+          "pair": "89",
+          "predicted_symbol": "F",
+          "primary_hit": false,
+          "primary_symbol": "T"
+        },
+        {
+          "acceptable_hit": false,
+          "acceptable_symbols": [
+            "E"
+          ],
+          "pair": "99",
+          "predicted_symbol": "N",
+          "primary_hit": false,
+          "primary_symbol": "E"
+        }
+      ],
+      "raw_mod": 55,
+      "symbol_order": [
+        "*",
+        "N",
+        "R",
+        "V",
+        "F",
+        "T",
+        "I",
+        "E",
+        "A",
+        "O",
+        "L",
+        "S",
+        "B",
+        "C"
+      ],
+      "symbol_order_id": "code_table_first_use",
+      "symbol_order_source": "code_table_order",
+      "target_label_leakage": false,
+      "term_count": 2,
+      "uses_lore": false
+    },
+    "best_by_symbol_order": [
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          2,
+          -1
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "((0 +2*diff -1*row_triangular_index) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "diff",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:55:0:2,-1:diff,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.76,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "(9 -2*pos_triangular_index +2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_43153:14:9:-2,2:pos_triangular_index,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "OAEENTVIIVOVTAVOTTOAIONNVVNAEITAATEOAEEANIOOIENNEEEAATO",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          2,
+          -1
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "((0 +2*diff -1*row_triangular_index) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "diff",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:55:0:2,-1:diff,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          3,
+          2
+        ],
+        "complexity_score": 2.98,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "(12 +3*pos_prod +2*pos_triangular_index) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:14:12:3,2:pos_prod,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 12,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAONCSOETVNCAVBERSINECTSVONBNFELCOOOOOBOIVENOACN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "symbol_order_id": "cell_first_use_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          2,
+          -2
+        ],
+        "complexity_score": 2.56,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(4 +2*pos_prod -2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:4:2,-2:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "*ITREERTIBBRNEET*RINIEE*B*REBEB*T*EEEEEEEBEE*EINENRNBTN",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "I",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "alphabetic",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          1,
+          -1
+        ],
+        "complexity_score": 2.72,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(13 +1*line_dist -1*pos_min) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "pos_min"
+        ],
+        "formula_id": "dist:lore_digits_469:14:13:1,-1:line_dist,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "RSTVIOONITLRSATNVOVFL*RISTOEBFALRNVCOEFNC*EFITBCVBCA**S",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "O",
+          "N",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_donina",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -2,
+          3
+        ],
+        "complexity_score": 2.74,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "((-6 -2*pos_sum +3*edge) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_3478:55:-6:-2,3:pos_sum,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": -6,
+        "predicted_symbol_string_natural_pair_order": "*RNVIBIROLVFST*TVIECLNRNSTBEBEB*R*CFCAORVFLE*CAORB*VASV",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 55,
+        "symbol_order": [
+          "I",
+          "R",
+          "O",
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_mirror",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.76,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(9 -2*pos_prod +2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:9:-2,2:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "*ITREERTIBBRNEET*RINIEE*B*REBEB*T*EEEEEEEBEE*EINENRNBTN",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "V",
+          "T",
+          "S",
+          "R",
+          "O",
+          "N",
+          "L",
+          "I",
+          "F",
+          "E",
+          "C",
+          "B",
+          "A",
+          "*"
+        ],
+        "symbol_order_id": "alphabetic_rev",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1
+        ],
+        "complexity_score": 1.1,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(0 +1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:0:1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEAVNIATTENTIITNEATNIIENVAIEAVNENTEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1
+        ],
+        "complexity_score": 1.62,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(13 -1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:13:-1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEAVNIATTENTIITNEATNIIENVAIEAVNENTEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          2
+        ],
+        "complexity_score": 2.46,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "(4 +1*pos_max +2*edge) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_max",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_43153:14:4:1,2:pos_max,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "ISANFTIRTVNVFCOTRTVAOLRIRTVEBLSVTV*ENOSVVIRTVIRTVRTVTVV",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "T",
+          "R",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_tridiag",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          3,
+          1
+        ],
+        "complexity_score": 2.6799999999999997,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "((-7 +3*line_dist +1*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:55:-7:3,1:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": -7,
+        "predicted_symbol_string_natural_pair_order": "EOICCNIVIOEOINCCNVIEOVINCNCEIOVICNEAOCFIEIOIVEACOEOIEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "T",
+          "I",
+          "B",
+          "A",
+          "*",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_tibia",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          2,
+          0,
+          0,
+          -2
+        ],
+        "complexity_score": 4.0,
+        "compresses_vs_lookup": false,
+        "expression": "(0 +1*a +2*b +0*a2 +0*ab -2*b2) mod 14",
+        "family": "quadratic_ab",
+        "features": [
+          "a",
+          "b",
+          "a2",
+          "ab",
+          "b2"
+        ],
+        "formula_id": "quadratic_ab:14:0:1,2,0,0,-2",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "NNLTRTLNNLIOAEAOIIOSR*RSTTSEBEVAAVC*NRRNBIEEIT**TBBACRE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "N",
+          "I",
+          "T",
+          "A",
+          "R",
+          "E",
+          "*",
+          "B",
+          "C",
+          "F",
+          "L",
+          "O",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_knightmare",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 3,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          -3
+        ],
+        "complexity_score": 2.44,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "(1 -1*line_dist -3*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_45331:14:1:-1,-3:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "ENN*VT*TVFE*NT*TVFNETFVN*TVE*NVFNVENNVETEFNVEEN*TEN*ENE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "R",
+          "E",
+          "A",
+          "T",
+          "C",
+          "L",
+          "O",
+          "*",
+          "B",
+          "F",
+          "I",
+          "N",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_great_calculator",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          -2,
+          -2,
+          1,
+          -1
+        ],
+        "complexity_score": 6.4,
+        "compresses_vs_lookup": false,
+        "expression": "(5 +1*a -2*b -2*a2 +1*ab -1*b2) mod 14",
+        "family": "quadratic_ab",
+        "features": [
+          "a",
+          "b",
+          "a2",
+          "ab",
+          "b2"
+        ],
+        "formula_id": "quadratic_ab:14:5:1,-2,-2,1,-1",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 5,
+        "predicted_symbol_string_natural_pair_order": "IELTANONATENVNETTENATLEIVIENVNETTELTANONVNETTLEIVNETANE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "S",
+          "B",
+          "E",
+          "C",
+          "T",
+          "I",
+          "V",
+          "R",
+          "*",
+          "A",
+          "F",
+          "L",
+          "N",
+          "O"
+        ],
+        "symbol_order_id": "lore_subjective_viewer",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 5,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          1,
+          -2
+        ],
+        "complexity_score": 2.38,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "((2 +1*pos_sum -2*pos_prod) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "pos_prod"
+        ],
+        "formula_id": "dist:lore_digits_45331:55:2:1,-2:pos_sum,pos_prod",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 2,
+        "predicted_symbol_string_natural_pair_order": "*TT*FT*T*SELN*ACSFIECLSNTENSBIVRLBCENORSCRONLRVC*AICATO",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "A",
+          "I",
+          "C",
+          "E",
+          "B",
+          "*",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_magic_web",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          3,
+          -1
+        ],
+        "complexity_score": 2.52,
+        "compresses_vs_lookup": false,
+        "expression": "(3 +3*prod -1*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "prod",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:3:3,-1:prod,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 3,
+        "predicted_symbol_string_natural_pair_order": "ENOBVTSIFCITBNL*CITIO*SNATEESRVAOFEBSCRNIIIIIIVNREFOETI",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "B",
+          "O",
+          "N",
+          "E",
+          "L",
+          "R",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_bonelord",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          -3,
+          -2
+        ],
+        "complexity_score": 2.54,
+        "compresses_vs_lookup": false,
+        "expression": "((1 -3*a2 -2*diff2) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "a2",
+          "diff2"
+        ],
+        "formula_id": "arith:55:1:-3,-2:a2,diff2",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "BN*II*LTIRLFEAAECIASOCNNATBBTALI*NC*OEETC*ORREBCNVELBTV",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "O",
+          "B",
+          "S",
+          "E",
+          "R",
+          "V",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "L",
+          "N",
+          "T"
+        ],
+        "symbol_order_id": "lore_observer",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          -1,
+          -3
+        ],
+        "complexity_score": 2.7199999999999998,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          1,
+          9,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_19",
+        "expression": "(8 -1*line_dist -3*pos_triangular_index) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:lore_digits_19:14:8:-1,-3:line_dist,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 8,
+        "predicted_symbol_string_natural_pair_order": "FRRSO*RAANLTEANTCCCNOLINSSVLBTFOOACV*LLSRIBBFTCCVEEEAEE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "A",
+          "T",
+          "E",
+          "I",
+          "C",
+          "*",
+          "B",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_mathemagic",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          -2,
+          -2,
+          1,
+          1,
+          2
+        ],
+        "complexity_score": 6.54,
+        "compresses_vs_lookup": false,
+        "expression": "((6 -2*a -2*b +1*a2 +1*ab +2*b2) mod 55) mod 14",
+        "family": "quadratic_ab",
+        "features": [
+          "a",
+          "b",
+          "a2",
+          "ab",
+          "b2"
+        ],
+        "formula_id": "quadratic_ab:55:6:-2,-2,1,1,2",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 6,
+        "predicted_symbol_string_natural_pair_order": "**LAEARBCT*R*SCEVN*OLLNFBLIEIFAABNTSNE*NINECIEARCFEOLCS",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "O",
+          "N",
+          "E",
+          "I",
+          "A",
+          "S",
+          "*",
+          "B",
+          "C",
+          "F",
+          "L",
+          "R",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_honeminas",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 5,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          1,
+          2
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          9,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_39",
+        "expression": "(0 +1*cycle_dist +2*pos_min) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist",
+          "pos_min"
+        ],
+        "formula_id": "dist:lore_digits_39:14:0:1,2:cycle_dist,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*BCNFILIFVCFVILORO*I*LORSTBEB*VNAAORSTECSTEAFEANCNVB**N",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "A",
+          "N",
+          "V",
+          "*",
+          "B",
+          "C",
+          "F",
+          "I",
+          "L",
+          "O",
+          "R",
+          "S",
+          "T"
+        ],
+        "symbol_order_id": "diagonal_first_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          -1,
+          -2
+        ],
+        "complexity_score": 2.5,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "((-5 -1*pos_sum -2*line_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "line_dist"
+        ],
+        "formula_id": "dist:lore_digits_43153:55:-5:-1,-2:pos_sum,line_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": -5,
+        "predicted_symbol_string_natural_pair_order": "*SRROTIBATNLVAECV*RSIFOLCV*CB*BATOITNESLAFNESOFNEIBACVN",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "E",
+          "A",
+          "V",
+          "N",
+          "B",
+          "C",
+          "F",
+          "I",
+          "L",
+          "O",
+          "R",
+          "S",
+          "T"
+        ],
+        "symbol_order_id": "diagonal_first",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          3,
+          3
+        ],
+        "complexity_score": 2.64,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "((-1 +3*pos_prod +3*pos_max) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_43153:55:-1:3,3:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.990235750420313,
+        "mdl_cost_bits": 416.76436342297836,
+        "mdl_gain_vs_lookup_bits": -207.35984270981012,
+        "offset": -1,
+        "predicted_symbol_string_natural_pair_order": "BVLFNLSVFT*CNLENVCNSROBTRLFLC*VILNEA*SFEVCOETRACFCEAAAV",
+        "primary_accuracy": 0.2545454545454545,
+        "primary_hits": 14,
+        "raw_mod": 55,
+        "symbol_order": [
+          "O",
+          "R",
+          "C",
+          "*",
+          "B",
+          "L",
+          "S",
+          "V",
+          "A",
+          "F",
+          "T",
+          "N",
+          "E",
+          "I"
+        ],
+        "symbol_order_id": "code_usage_asc",
+        "symbol_order_source": "code_usage",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2727272727272727,
+        "acceptable_hits": 15,
+        "coefs": [
+          -3,
+          -3
+        ],
+        "complexity_score": 2.64,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "((1 -3*pos_prod -3*pos_max) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_43153:55:1:-3,-3:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.990235750420313,
+        "mdl_cost_bits": 416.76436342297836,
+        "mdl_gain_vs_lookup_bits": -207.35984270981012,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "BVLFNLSVFT*CNLENVCNSROBTRLFLC*VILNEA*SFEVCOETRACFCEAAAV",
+        "primary_accuracy": 0.2545454545454545,
+        "primary_hits": 14,
+        "raw_mod": 55,
+        "symbol_order": [
+          "I",
+          "E",
+          "N",
+          "T",
+          "F",
+          "A",
+          "V",
+          "S",
+          "L",
+          "B",
+          "*",
+          "C",
+          "R",
+          "O"
+        ],
+        "symbol_order_id": "code_usage_desc",
+        "symbol_order_source": "code_usage",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2545454545454545,
+        "acceptable_hits": 14,
+        "coefs": [
+          3
+        ],
+        "complexity_score": 1.34,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "(1 +3*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_45331:14:1:3:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.990235750420313,
+        "mdl_cost_bits": 416.76436342297836,
+        "mdl_gain_vs_lookup_bits": -207.35984270981012,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "ENNCVOCOVLECNOCOVLVEOLVNCOVECNVLVOENVOCNELVOCENCOENCENE",
+        "primary_accuracy": 0.2545454545454545,
+        "primary_hits": 14,
+        "raw_mod": 14,
+        "symbol_order": [
+          "T",
+          "E",
+          "L",
+          "B",
+          "N",
+          "A",
+          "*",
+          "C",
+          "F",
+          "I",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_telbenna",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2545454545454545,
+        "acceptable_hits": 14,
+        "coefs": [
+          3
+        ],
+        "complexity_score": 1.3800000000000001,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "(2 +3*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_45331:14:2:3:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.990235750420313,
+        "mdl_cost_bits": 416.76436342297836,
+        "mdl_gain_vs_lookup_bits": -207.35984270981012,
+        "offset": 2,
+        "predicted_symbol_string_natural_pair_order": "ENNCIRCRILECNRCRILIERLINCRIECNILIRENIRCNELIRCENCRENCENE",
+        "primary_accuracy": 0.2545454545454545,
+        "primary_hits": 14,
+        "raw_mod": 14,
+        "symbol_order": [
+          "I",
+          "T",
+          "E",
+          "L",
+          "B",
+          "N",
+          "A",
+          "*",
+          "C",
+          "F",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_itelbenna",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2545454545454545,
+        "acceptable_hits": 14,
+        "coefs": [
+          -1,
+          1
+        ],
+        "complexity_score": 2.24,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "natural",
+        "expression": "(1 -1*line_dist +1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:natural:14:1:-1,1:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.990235750420313,
+        "mdl_cost_bits": 416.76436342297836,
+        "mdl_gain_vs_lookup_bits": -207.35984270981012,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "EEEEEEVSICEEEEEEVSIEEEEEEVSEEEEEEVEEEEEEEEEEEEEEEEEEEEE",
+        "primary_accuracy": 0.2545454545454545,
+        "primary_hits": 14,
+        "raw_mod": 14,
+        "symbol_order": [
+          "B",
+          "E",
+          "O",
+          "L",
+          "R",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_beholder",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      }
+    ],
+    "top_rows": [
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          2,
+          -1
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "((0 +2*diff -1*row_triangular_index) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "diff",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:55:0:2,-1:diff,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          -3,
+          -2
+        ],
+        "complexity_score": 2.54,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "(1 -3*pos_prod -2*pos_triangular_index) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:14:1:-3,-2:pos_prod,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAONCSOETVNCAVBERSINECTSVONBNFELCOOOOOBOIVENOACN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.76,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "(9 -2*pos_triangular_index +2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_43153:14:9:-2,2:pos_triangular_index,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "OAEENTVIIVOVTAVOTTOAIONNVVNAEITAATEOAEEANIOOIENNEEEAATO",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          2,
+          -1
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "((0 +2*diff -1*row_triangular_index) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "diff",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:55:0:2,-1:diff,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          -3,
+          -2
+        ],
+        "complexity_score": 2.54,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "(1 -3*pos_prod -2*pos_triangular_index) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:14:1:-3,-2:pos_prod,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAONCSOETVNCAVBERSINECTSVONBNFELCOOOOOBOIVENOACN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.32727272727272727,
+        "acceptable_hits": 18,
+        "coefs": [
+          3,
+          2
+        ],
+        "complexity_score": 2.98,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "(12 +3*pos_prod +2*pos_triangular_index) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:14:12:3,2:pos_prod,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8070741911010393,
+        "mdl_cost_bits": 378.4095048806493,
+        "mdl_gain_vs_lookup_bits": -169.00498416748107,
+        "offset": 12,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAONCSOETVNCAVBERSINECTSVONBNFELCOOOOOBOIVENOACN",
+        "primary_accuracy": 0.32727272727272727,
+        "primary_hits": 18,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "symbol_order_id": "cell_first_use_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -3,
+          1
+        ],
+        "complexity_score": 2.4,
+        "compresses_vs_lookup": false,
+        "expression": "(0 -3*prod +1*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "prod",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:0:-3,1:prod,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOETVNCSOETERSINLT**IBFLRA*VIOBNEEEEEEFNB*AR*TE",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          2,
+          -2
+        ],
+        "complexity_score": 2.56,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(4 +2*pos_prod -2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:4:2,-2:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "*ITREERTIBBRNEET*RINIEE*B*REBEB*T*EEEEEEEBEE*EINENRNBTN",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "I",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "alphabetic",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          1,
+          -1
+        ],
+        "complexity_score": 2.72,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(13 +1*line_dist -1*pos_min) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "pos_min"
+        ],
+        "formula_id": "dist:lore_digits_469:14:13:1,-1:line_dist,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "RSTVIOONITLRSATNVOVFL*RISTOEBFALRNVCOEFNC*EFITBCVBCA**S",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "O",
+          "N",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_donina",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -2,
+          3
+        ],
+        "complexity_score": 2.74,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "((-6 -2*pos_sum +3*edge) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_3478:55:-6:-2,3:pos_sum,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": -6,
+        "predicted_symbol_string_natural_pair_order": "*RNVIBIROLVFST*TVIECLNRNSTBEBEB*R*CFCAORVFLE*CAORB*VASV",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 55,
+        "symbol_order": [
+          "I",
+          "R",
+          "O",
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_mirror",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.76,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(9 -2*pos_prod +2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:9:-2,2:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "*ITREERTIBBRNEET*RINIEE*B*REBEB*T*EEEEEEEBEE*EINENRNBTN",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "V",
+          "T",
+          "S",
+          "R",
+          "O",
+          "N",
+          "L",
+          "I",
+          "F",
+          "E",
+          "C",
+          "B",
+          "A",
+          "*"
+        ],
+        "symbol_order_id": "alphabetic_rev",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          3,
+          3
+        ],
+        "complexity_score": 2.84,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "((-6 +3*line_dist +3*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:55:-6:3,3:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": -6,
+        "predicted_symbol_string_natural_pair_order": "EICATTACINEINACTTCAENNICATTEINNCTNENNICNEINACENNIEINENE",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 55,
+        "symbol_order": [
+          "I",
+          "R",
+          "O",
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_mirror",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -2,
+          1
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "((0 -2*diff +1*row_triangular_index) mod 55) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "diff",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:55:0:-2,1:diff,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "CNRVFTIEAOVFTIEAOLSAOLSBC*N*NRVFTIEAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 55,
+        "symbol_order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "symbol_order_id": "cell_first_use_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          -3,
+          1
+        ],
+        "complexity_score": 2.4,
+        "compresses_vs_lookup": false,
+        "expression": "(0 -3*prod +1*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "prod",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:0:-3,1:prod,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOETVNCSOETERSINLT**IBFLRA*VIOBNEEEEEEFNB*AR*TE",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.3090909090909091,
+        "acceptable_hits": 17,
+        "coefs": [
+          3,
+          -1
+        ],
+        "complexity_score": 2.92,
+        "compresses_vs_lookup": false,
+        "expression": "(13 +3*prod -1*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "prod",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:13:3,-1:prod,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.8528645809308575,
+        "mdl_cost_bits": 387.99821951623153,
+        "mdl_gain_vs_lookup_bits": -178.5936988030633,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOETVNCSOETERSINLT**IBFLRA*VIOBNEEEEEEFNB*AR*TE",
+        "primary_accuracy": 0.3090909090909091,
+        "primary_hits": 17,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "symbol_order_id": "cell_first_use_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "(0 -1*b +2*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "b",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:0:-1,2:b,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOTIEAOLSBCAOLSBC*NOLSBC*NAOLSBCTIEAO*NRVEAOBCN",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          2,
+          1
+        ],
+        "complexity_score": 2.34,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "((1 +2*cycle_dist +1*pos_triangular_index) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:55:1:2,1:cycle_dist,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTRBOIVFTIEATRCAOLSBCLE*NRVFTREAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1
+        ],
+        "complexity_score": 1.1,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(0 +1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:0:1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEAVNIATTENTIITNEATNIIENVAIEAVNENTEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1
+        ],
+        "complexity_score": 1.1,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(0 +1*line_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:0:1:line_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEFVNIATTENL*ITREFLNI*ENVAIEFVNENLEFE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1
+        ],
+        "complexity_score": 1.1,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(0 +1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:0:1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENITTAIVANENIATTAVIENVIATATEANVITAETNINIEANIVETINENAETE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1
+        ],
+        "complexity_score": 1.62,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(13 -1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:13:-1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEAVNIATTENTIITNEATNIIENVAIEAVNENTEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1
+        ],
+        "complexity_score": 1.62,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(13 -1*line_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:13:-1:line_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEFVNIATTENLSITREFLNISENVAIEFVNENLEFE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1
+        ],
+        "complexity_score": 1.62,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(13 -1*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:13:-1:cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENITTAIVANENIATTAVIENVIATATEANVITAETNINIEANIVETINENAETE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 1,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(0 -1*line_dist +2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:0:-1,2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENITTAIVINENIATTAVIENVIATATEINVITAECNOLIEINIVECONENIECE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "((0 -1*line_dist +2*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:55:0:-1,2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENITTAIVINENIATTAVIENVIATATEINVITAEBNRFIEINIVEBRNENIEBE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.34,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          7,
+          4,
+          0,
+          3,
+          2,
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_74032",
+        "expression": "((1 -1*pos_triangular_index +2*pos_min) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_min"
+        ],
+        "formula_id": "dist:lore_digits_74032:55:1:-1,2:pos_triangular_index,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NILBORSACFVR*BTCSRAETSFFLNSOLVAO*NAN*EBCIEBVE*CFNIS*TI",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          2
+        ],
+        "complexity_score": 2.46,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "(4 +1*pos_max +2*edge) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_max",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_43153:14:4:1,2:pos_max,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "ISANFTIRTVNVFCOTRTVAOLRIRTVEBLSVTV*ENOSVVIRTVIRTVRTVTVV",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "T",
+          "R",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_tridiag",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          3,
+          -2
+        ],
+        "complexity_score": 2.5,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(0 +3*line_dist -2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:0:3,-2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEOVNIATTENNFITSEONNIFENVAIEOVNENNEOE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.52,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "(3 -2*pos_sum +2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_43153:14:3:-2,2:pos_sum,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 3,
+        "predicted_symbol_string_natural_pair_order": "IEIVOTIIIIEEVOEEETINVOTNNNNVOVVETIOOVETITTTTIAAAAOOOVVE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.56,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "((4 -2*pos_sum +2*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_43153:55:4:-2,2:pos_sum,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "IEICFTIIIIEECFEEETINCFTNNNNCFCCETIFFCETITTTTIAAAAOOOVVE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.56,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "((4 -2*pos_sum +2*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_45331:55:4:-2,2:pos_sum,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "ITIEFCIIIITTEFCTTTINEFCNNNNEFCEETIFFCETICCETIAAAAOOOVVE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          3,
+          1
+        ],
+        "complexity_score": 2.6799999999999997,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "((-7 +3*line_dist +1*cycle_dist) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:55:-7:3,1:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": -7,
+        "predicted_symbol_string_natural_pair_order": "EOICCNIVIOEOINCCNVIEOVINCNCEIOVICNEAOCFIEIOIVEACOEOIEAE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "T",
+          "I",
+          "B",
+          "A",
+          "*",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_tibia",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -2,
+          3
+        ],
+        "complexity_score": 2.74,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "((-6 -2*pos_sum +3*edge) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_3478:55:-6:-2,3:pos_sum,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": -6,
+        "predicted_symbol_string_natural_pair_order": "ANRVOBONILVFSTATVOECLRNRSTBEBEBANACFC*INVFLEAC*INBAV*SV",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "O",
+          "N",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_donina",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -2,
+          2
+        ],
+        "complexity_score": 2.76,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "(9 -2*pos_triangular_index +2*pos_max) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_45331:14:9:-2,2:pos_triangular_index,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "OTEANEVIIVNNVOIIOOIAVOINVVNOATOTTOEEAEEAATAATENNEEEAATO",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "symbol_order_id": "lore_cipsoft",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          -2
+        ],
+        "complexity_score": 2.82,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(13 +1*line_dist -2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:13:1,-2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENITTAIVINENIATTAVIENVIATATEINVITAE*NOLIEINIVE*ONENIE*E",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -3,
+          2
+        ],
+        "complexity_score": 3.02,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          3,
+          4,
+          7,
+          8,
+          0,
+          1,
+          2,
+          5,
+          6,
+          9
+        ],
+        "digit_order_id": "lore_digits_3478",
+        "expression": "(13 -3*line_dist +2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_3478:14:13:-3,2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 13,
+        "predicted_symbol_string_natural_pair_order": "ENIATTAINVENVAITTIAEOVNIATTENNFITCEONNIFENVAIEOVNENNEOE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "symbol_order_id": "cell_frequency_asc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          2,
+          0,
+          0,
+          -2
+        ],
+        "complexity_score": 4.0,
+        "compresses_vs_lookup": false,
+        "expression": "(0 +1*a +2*b +0*a2 +0*ab -2*b2) mod 14",
+        "family": "quadratic_ab",
+        "features": [
+          "a",
+          "b",
+          "a2",
+          "ab",
+          "b2"
+        ],
+        "formula_id": "quadratic_ab:14:0:1,2,0,0,-2",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "NNLTRTLNNLIOAEAOIIOSR*RSTTSEBEVAAVC*NRRNBIEEIT**TBBACRE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "N",
+          "I",
+          "T",
+          "A",
+          "R",
+          "E",
+          "*",
+          "B",
+          "C",
+          "F",
+          "L",
+          "O",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_knightmare",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 3,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          -1,
+          -2,
+          2,
+          0
+        ],
+        "complexity_score": 5.34,
+        "compresses_vs_lookup": false,
+        "expression": "((-6 +1*a -1*b -2*a2 +2*ab +0*b2) mod 55) mod 14",
+        "family": "quadratic_ab",
+        "features": [
+          "a",
+          "b",
+          "a2",
+          "ab",
+          "b2"
+        ],
+        "formula_id": "quadratic_ab:55:-6:1,-1,-2,2,0",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": -6,
+        "predicted_symbol_string_natural_pair_order": "ECB*AINOVTEFLRSTONIEROACLTNET*LOBRENFNFNEATEIEBIVEECELE",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "O",
+          "N",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "lore_donina",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 4,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.3,
+        "compresses_vs_lookup": false,
+        "expression": "(0 -1*b +2*row_triangular_index) mod 14",
+        "family": "arithmetic_affine",
+        "features": [
+          "b",
+          "row_triangular_index"
+        ],
+        "formula_id": "arith:14:0:-1,2:b,row_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOTIEAOLSBCAOLSBC*NOLSBC*NAOLSBCTIEAO*NRVEAOBCN",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          2,
+          1
+        ],
+        "complexity_score": 2.34,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "((1 +2*cycle_dist +1*pos_triangular_index) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist",
+          "pos_triangular_index"
+        ],
+        "formula_id": "dist:natural_rev:55:1:2,1:cycle_dist,pos_triangular_index",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTRBOIVFTIEATRCAOLSBCLE*NRVFTREAOLSBNRVFTLSBCIEAVFN",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          2,
+          -1
+        ],
+        "complexity_score": 2.78,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "digit_order_id": "natural_rev",
+        "expression": "(12 +2*pos_triangular_index -1*pos_min) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_min"
+        ],
+        "formula_id": "dist:natural_rev:14:12:2,-1:pos_triangular_index,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 12,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTIEAOTIEAOLSBCAOLSBC*NOLSBC*NAOLSBCTIEAO*NRVEAOBCN",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 14,
+        "symbol_order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "symbol_order_id": "cell_first_use_rev",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          2
+        ],
+        "complexity_score": 2.34,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          7,
+          4,
+          0,
+          3,
+          2,
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_74032",
+        "expression": "((1 -1*pos_triangular_index +2*pos_min) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_triangular_index",
+          "pos_min"
+        ],
+        "formula_id": "dist:lore_digits_74032:55:1:-1,2:pos_triangular_index,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.898654970760676,
+        "mdl_cost_bits": 397.5869341518138,
+        "mdl_gain_vs_lookup_bits": -188.18241343864557,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "*NILBORSACFVR*BTCSRAETSFFLNSOLVAO*NAN*EBCIEBVE*CFNIS*TI",
+        "primary_accuracy": 0.2909090909090909,
+        "primary_hits": 16,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_first_use",
+        "symbol_order_source": "target_label_order",
+        "target_label_leakage": true,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          -1
+        ],
+        "complexity_score": 2.2,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "natural",
+        "expression": "((0 +1*cycle_dist -1*pos_min) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist",
+          "pos_min"
+        ],
+        "formula_id": "dist:natural:55:0:1,-1:cycle_dist,pos_min",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*NRVFTFVRNB*NRVFVRNSB*NRVRNLSB*NRNOLSB*NAOLSBEAOLIEATIF",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "code_table_first_use",
+        "symbol_order_source": "code_table_order",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": false
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          1
+        ],
+        "complexity_score": 2.3200000000000003,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "((-3 +1*cycle_dist +1*edge) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "cycle_dist",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_45331:55:-3:1,1:cycle_dist,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": -3,
+        "predicted_symbol_string_natural_pair_order": "NNINNNIIIIEIEEETTTNNIIINNNNBBBTAIEOSNEBSSTINBEEEEBBBSSO",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          -3
+        ],
+        "complexity_score": 2.44,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          5,
+          3,
+          1,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_45331",
+        "expression": "(1 -1*line_dist -3*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_45331:14:1:-1,-3:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 1,
+        "predicted_symbol_string_natural_pair_order": "ENN*VT*TVFE*NT*TVFNETFVN*TVE*NVFNVENNVETEFNVEEN*TEN*ENE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "R",
+          "E",
+          "A",
+          "T",
+          "C",
+          "L",
+          "O",
+          "*",
+          "B",
+          "F",
+          "I",
+          "N",
+          "S",
+          "V"
+        ],
+        "symbol_order_id": "lore_great_calculator",
+        "symbol_order_source": "lore_word",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -1,
+          -2
+        ],
+        "complexity_score": 2.5,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          7,
+          4,
+          0,
+          3,
+          2,
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_74032",
+        "expression": "((-5 -1*pos_sum -2*edge) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_74032:55:-5:-1,-2:pos_sum,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": -5,
+        "predicted_symbol_string_natural_pair_order": "*STVCROIRSEFN*FICLNIOAILENORBLNFOREVTLSTEFBILEAFIN*VEFE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "I",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "alphabetic",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          1,
+          2
+        ],
+        "complexity_score": 2.5,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          7,
+          4,
+          0,
+          3,
+          2,
+          1,
+          5,
+          6,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_74032",
+        "expression": "(5 +1*pos_sum +2*edge) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_sum",
+          "edge"
+        ],
+        "formula_id": "dist:lore_digits_74032:14:5:1,2:pos_sum,edge",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 5,
+        "predicted_symbol_string_natural_pair_order": "*STVCROIRSEFN*FICLNIOAILENORBLNFOREVTLSTEFBILEAFIN*VEFE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "V",
+          "T",
+          "S",
+          "R",
+          "O",
+          "N",
+          "L",
+          "I",
+          "F",
+          "E",
+          "C",
+          "B",
+          "A",
+          "*"
+        ],
+        "symbol_order_id": "alphabetic_rev",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -3,
+          -3
+        ],
+        "complexity_score": 2.6,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          3,
+          1,
+          5,
+          0,
+          2,
+          6,
+          7,
+          8,
+          9
+        ],
+        "digit_order_id": "lore_digits_43153",
+        "expression": "((0 -3*pos_prod -3*pos_max) mod 55) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "pos_prod",
+          "pos_max"
+        ],
+        "formula_id": "dist:lore_digits_43153:55:0:-3,-3:pos_prod,pos_max",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 0,
+        "predicted_symbol_string_natural_pair_order": "*VLTNLFVTIRONLENVONFSB*ISLTLORVCLNEARFTEVOBEISAOTOEAAAV",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 55,
+        "symbol_order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "symbol_order_id": "cell_frequency_desc",
+        "symbol_order_source": "cell_inventory",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          -3,
+          -2
+        ],
+        "complexity_score": 2.66,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(4 -3*line_dist -2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:4:-3,-2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 4,
+        "predicted_symbol_string_natural_pair_order": "EVNCCTNLIVEVNTCCTLNEVLNTCTCEIVLNCTEFVECNEIVNLEFEVEVIEFE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "I",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "symbol_order_id": "alphabetic",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      },
+      {
+        "acceptable_accuracy": 0.2909090909090909,
+        "acceptable_hits": 16,
+        "coefs": [
+          3,
+          2
+        ],
+        "complexity_score": 2.86,
+        "compresses_vs_lookup": false,
+        "digit_order": [
+          4,
+          6,
+          9,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "digit_order_id": "lore_digits_469",
+        "expression": "(9 +3*line_dist +2*cycle_dist) mod 14",
+        "family": "digit_order_distance_affine",
+        "features": [
+          "line_dist",
+          "cycle_dist"
+        ],
+        "formula_id": "dist:lore_digits_469:14:9:3,2:line_dist,cycle_dist",
+        "lookup_cost_bits": 209.40452071316824,
+        "lookup_cost_ratio": 1.9444453605904946,
+        "mdl_cost_bits": 407.1756487873961,
+        "mdl_gain_vs_lookup_bits": -197.77112807422785,
+        "offset": 9,
+        "predicted_symbol_string_natural_pair_order": "EVNCCTNLIVEVNTCCTLNEVLNTCTCEIVLNCTEFVECNEIVNLEFEVEVIEFE",
+        "primary_accuracy": 0.2727272727272727,
+        "primary_hits": 15,
+        "raw_mod": 14,
+        "symbol_order": [
+          "V",
+          "T",
+          "S",
+          "R",
+          "O",
+          "N",
+          "L",
+          "I",
+          "F",
+          "E",
+          "C",
+          "B",
+          "A",
+          "*"
+        ],
+        "symbol_order_id": "alphabetic_rev",
+        "symbol_order_source": "alphabet",
+        "target_label_leakage": false,
+        "term_count": 2,
+        "uses_lore": true
+      }
+    ]
+  },
+  "schema": "direct_symbol_formula_results.v1",
+  "search_space": {
+    "affine_coefs": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+    ],
+    "attempted_formula_count": 479834,
+    "family_attempts": {
+      "arithmetic_affine": 83694,
+      "digit_order:lore_digits_19": 30624,
+      "digit_order:lore_digits_3478": 30624,
+      "digit_order:lore_digits_34784": 30624,
+      "digit_order:lore_digits_39": 30624,
+      "digit_order:lore_digits_43153": 30624,
+      "digit_order:lore_digits_45331": 30624,
+      "digit_order:lore_digits_469": 30624,
+      "digit_order:lore_digits_74032": 30624,
+      "digit_order:natural": 30624,
+      "digit_order:natural_rev": 30624,
+      "digit_order_distance_affine": 306240,
+      "quadratic_ab": 89900
+    },
+    "lore_digit_seeds": [
+      "469",
+      "3478",
+      "43153",
+      "34784",
+      "74032",
+      "45331",
+      "19",
+      "39"
+    ],
+    "lore_words": {
+      "beholder": "BEHOLDER",
+      "bonelord": "BONELORD",
+      "cipsoft": "CIPSOFT",
+      "donina": "DONINA",
+      "great_calculator": "GREATCALCULATOR",
+      "honeminas": "HONEMINAS",
+      "itelbenna": "ITELBENNA",
+      "knightmare": "KNIGHTMARE",
+      "magic_web": "MAGICWEB",
+      "mathemagic": "MATHEMAGIC",
+      "mirror": "MIRROR",
+      "observer": "OBSERVER",
+      "subjective_viewer": "SUBJECTIVEVIEWER",
+      "telbenna": "TELBENNA",
+      "tibia": "TIBIA",
+      "tridiag": "TRIDIAG"
+    },
+    "offsets_by_mod": {
+      "14": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "55": [
+        -7,
+        -6,
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "quadratic_coefs": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "raw_moduli": [
+      14,
+      55
+    ],
+    "symbol_order_count": 27,
+    "symbol_orders": {
+      "alphabetic": {
+        "order": [
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "I",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "alphabet"
+      },
+      "alphabetic_rev": {
+        "order": [
+          "V",
+          "T",
+          "S",
+          "R",
+          "O",
+          "N",
+          "L",
+          "I",
+          "F",
+          "E",
+          "C",
+          "B",
+          "A",
+          "*"
+        ],
+        "source": "alphabet"
+      },
+      "cell_first_use": {
+        "order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "source": "target_label_order",
+        "target_label_leakage": true
+      },
+      "cell_first_use_rev": {
+        "order": [
+          "C",
+          "B",
+          "S",
+          "L",
+          "O",
+          "A",
+          "E",
+          "I",
+          "T",
+          "F",
+          "V",
+          "R",
+          "N",
+          "*"
+        ],
+        "source": "target_label_order",
+        "target_label_leakage": true
+      },
+      "cell_frequency_asc": {
+        "order": [
+          "*",
+          "B",
+          "C",
+          "O",
+          "R",
+          "S",
+          "L",
+          "F",
+          "V",
+          "A",
+          "T",
+          "I",
+          "N",
+          "E"
+        ],
+        "source": "cell_inventory"
+      },
+      "cell_frequency_desc": {
+        "order": [
+          "E",
+          "N",
+          "I",
+          "T",
+          "A",
+          "V",
+          "F",
+          "L",
+          "*",
+          "R",
+          "O",
+          "S",
+          "B",
+          "C"
+        ],
+        "source": "cell_inventory"
+      },
+      "code_table_first_use": {
+        "order": [
+          "*",
+          "N",
+          "R",
+          "V",
+          "F",
+          "T",
+          "I",
+          "E",
+          "A",
+          "O",
+          "L",
+          "S",
+          "B",
+          "C"
+        ],
+        "source": "code_table_order"
+      },
+      "code_usage_asc": {
+        "order": [
+          "O",
+          "R",
+          "C",
+          "*",
+          "B",
+          "L",
+          "S",
+          "V",
+          "A",
+          "F",
+          "T",
+          "N",
+          "E",
+          "I"
+        ],
+        "source": "code_usage"
+      },
+      "code_usage_desc": {
+        "order": [
+          "I",
+          "E",
+          "N",
+          "T",
+          "F",
+          "A",
+          "V",
+          "S",
+          "L",
+          "B",
+          "*",
+          "C",
+          "R",
+          "O"
+        ],
+        "source": "code_usage"
+      },
+      "diagonal_first": {
+        "order": [
+          "*",
+          "E",
+          "A",
+          "V",
+          "N",
+          "B",
+          "C",
+          "F",
+          "I",
+          "L",
+          "O",
+          "R",
+          "S",
+          "T"
+        ],
+        "source": "target_label_order",
+        "target_label_leakage": true
+      },
+      "diagonal_first_rev": {
+        "order": [
+          "E",
+          "A",
+          "N",
+          "V",
+          "*",
+          "B",
+          "C",
+          "F",
+          "I",
+          "L",
+          "O",
+          "R",
+          "S",
+          "T"
+        ],
+        "source": "target_label_order",
+        "target_label_leakage": true
+      },
+      "lore_beholder": {
+        "lore_word": "BEHOLDER",
+        "order": [
+          "B",
+          "E",
+          "O",
+          "L",
+          "R",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_bonelord": {
+        "lore_word": "BONELORD",
+        "order": [
+          "B",
+          "O",
+          "N",
+          "E",
+          "L",
+          "R",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_cipsoft": {
+        "lore_word": "CIPSOFT",
+        "order": [
+          "C",
+          "I",
+          "S",
+          "O",
+          "F",
+          "T",
+          "*",
+          "A",
+          "B",
+          "E",
+          "L",
+          "N",
+          "R",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_donina": {
+        "lore_word": "DONINA",
+        "order": [
+          "O",
+          "N",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_great_calculator": {
+        "lore_word": "GREATCALCULATOR",
+        "order": [
+          "R",
+          "E",
+          "A",
+          "T",
+          "C",
+          "L",
+          "O",
+          "*",
+          "B",
+          "F",
+          "I",
+          "N",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_honeminas": {
+        "lore_word": "HONEMINAS",
+        "order": [
+          "O",
+          "N",
+          "E",
+          "I",
+          "A",
+          "S",
+          "*",
+          "B",
+          "C",
+          "F",
+          "L",
+          "R",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_itelbenna": {
+        "lore_word": "ITELBENNA",
+        "order": [
+          "I",
+          "T",
+          "E",
+          "L",
+          "B",
+          "N",
+          "A",
+          "*",
+          "C",
+          "F",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_knightmare": {
+        "lore_word": "KNIGHTMARE",
+        "order": [
+          "N",
+          "I",
+          "T",
+          "A",
+          "R",
+          "E",
+          "*",
+          "B",
+          "C",
+          "F",
+          "L",
+          "O",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_magic_web": {
+        "lore_word": "MAGICWEB",
+        "order": [
+          "A",
+          "I",
+          "C",
+          "E",
+          "B",
+          "*",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_mathemagic": {
+        "lore_word": "MATHEMAGIC",
+        "order": [
+          "A",
+          "T",
+          "E",
+          "I",
+          "C",
+          "*",
+          "B",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_mirror": {
+        "lore_word": "MIRROR",
+        "order": [
+          "I",
+          "R",
+          "O",
+          "*",
+          "A",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "S",
+          "T",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_observer": {
+        "lore_word": "OBSERVER",
+        "order": [
+          "O",
+          "B",
+          "S",
+          "E",
+          "R",
+          "V",
+          "*",
+          "A",
+          "C",
+          "F",
+          "I",
+          "L",
+          "N",
+          "T"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_subjective_viewer": {
+        "lore_word": "SUBJECTIVEVIEWER",
+        "order": [
+          "S",
+          "B",
+          "E",
+          "C",
+          "T",
+          "I",
+          "V",
+          "R",
+          "*",
+          "A",
+          "F",
+          "L",
+          "N",
+          "O"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_telbenna": {
+        "lore_word": "TELBENNA",
+        "order": [
+          "T",
+          "E",
+          "L",
+          "B",
+          "N",
+          "A",
+          "*",
+          "C",
+          "F",
+          "I",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_tibia": {
+        "lore_word": "TIBIA",
+        "order": [
+          "T",
+          "I",
+          "B",
+          "A",
+          "*",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "R",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      },
+      "lore_tridiag": {
+        "lore_word": "TRIDIAG",
+        "order": [
+          "T",
+          "R",
+          "I",
+          "A",
+          "*",
+          "B",
+          "C",
+          "E",
+          "F",
+          "L",
+          "N",
+          "O",
+          "S",
+          "V"
+        ],
+        "source": "lore_word",
+        "uses_lore": true
+      }
+    },
+    "unique_prediction_vector_count": 327425
+  },
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "target": {
+    "conflict_cells": [
+      {
+        "acceptable_symbols": [
+          "I",
+          "N"
+        ],
+        "pair": "19",
+        "primary_symbol": "I"
+      }
+    ],
+    "pair_cells": 55,
+    "primary_conflict_policy": "pure symbol else sorted(cell.symbols)[0]",
+    "symbols": [
+      "*",
+      "A",
+      "B",
+      "C",
+      "E",
+      "F",
+      "I",
+      "L",
+      "N",
+      "O",
+      "R",
+      "S",
+      "T",
+      "V"
+    ]
+  },
+  "translation_delta": "NONE",
+  "verdict": "rejected_no_compression"
+}

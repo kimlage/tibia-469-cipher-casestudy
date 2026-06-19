@@ -1,0 +1,482 @@
+{
+  "anomalies": [
+    {
+      "derived": "upper 39 absence explains why mirror rendering cannot cover lower 93",
+      "id": "missing_ordered_39_lower_orphan_93",
+      "lookup_or_metadata": "93=N is still stored as orphan metadata; N is not derived",
+      "status": "compact metadata in mirror model"
+    },
+    {
+      "derived": "the layer isolates it as the only reverse-available lower conflict",
+      "id": "conflict_19_91",
+      "lookup_or_metadata": "91=N is not predicted by the mirror rule; it is an explicit directed exception",
+      "status": "explicit exception"
+    },
+    {
+      "derived": "a possible rule can mark pair-only-outside diagonal cells as E",
+      "id": "tape_only_diagonal_E_33_66",
+      "lookup_or_metadata": "prior Bonferroni control remains non-promoted; E is still an anchor label",
+      "status": "weak anchor, not selected"
+    },
+    {
+      "derived": "diagonal E count is measured against inventory-preserving shuffles",
+      "id": "diagonal_E_pressure",
+      "lookup_or_metadata": "does not recover the full diagonal or table placement",
+      "status": "suggestive pressure only"
+    },
+    {
+      "derived": "previous-code descending/diagonal geometry improves zero-omission holdout MDL",
+      "id": "zero_omission_geometry",
+      "lookup_or_metadata": "zero rendering is not a symbol-label generator and remains incomplete",
+      "status": "separate supporting render layer"
+    },
+    {
+      "derived": "43/44 reverse-available lower pairs copy the upper symbol",
+      "id": "mirror_lower",
+      "lookup_or_metadata": "the upper/unordered labels themselves remain lookup",
+      "status": "strong structural layer"
+    }
+  ],
+  "conclusion": {
+    "classification": "compact_render_layer_over_lookup_not_new_matrix_formula",
+    "selected_delta_vs_unordered_lookup_lossless_bits": -18.64385618977471,
+    "semantic_delta": "NONE",
+    "summary": "The anomalies do form a compact render/exception layer for the ordered surface: mirror lower is far above shuffled controls, and the only residual lower-side codes are 91 and 93. The layer saves substantial MDL versus a saturated ordered lookup, but it does not beat the most compact unordered-pair lookup with one residual correction. Diagonal E anchors and zero-omission geometry are useful mechanical side evidence, not a promoted table-origin formula.",
+    "translation_or_glossary_created": false
+  },
+  "control_trials": 20000,
+  "controls": {
+    "diagonal_anchor_control": {
+      "both_are_e": {
+        "control_max": 2,
+        "control_mean": 1.0011,
+        "control_min": 0,
+        "control_p50": 1,
+        "control_p95": 2,
+        "control_p99": 2,
+        "control_sd_population": 0.665581542712837,
+        "diagonal_candidate_count": 10,
+        "null": "choose two random present diagonal cells and count E labels",
+        "observed": 2,
+        "observed_anchor_codes": [
+          "33",
+          "66"
+        ],
+        "p_value_good_direction": 0.22208889555522224,
+        "score": "E-labeled sampled diagonal cells",
+        "trials": 20000,
+        "z_good_direction": 1.5007928193570297
+      },
+      "exact_anchor_set": {
+        "control_max": 2,
+        "control_mean": 0.3959,
+        "control_min": 0,
+        "control_p50": 0,
+        "control_p95": 1,
+        "control_p99": 2,
+        "control_sd_population": 0.5328819662927241,
+        "diagonal_candidate_count": 10,
+        "null": "choose two random present diagonal cells as the anchor set",
+        "observed": 2,
+        "observed_anchor_codes": [
+          "33",
+          "66"
+        ],
+        "p_value_good_direction": 0.022448877556122192,
+        "score": "overlap with {33,66}",
+        "trials": 20000,
+        "z_good_direction": 3.010235101705115
+      }
+    },
+    "diagonal_e_pressure_shuffle": {
+      "control_max": 7,
+      "control_mean": 1.992,
+      "control_min": 0,
+      "control_p50": 2,
+      "control_p95": 4,
+      "control_p99": 5,
+      "control_sd_population": 1.1547882922856467,
+      "diagonal_cells": [
+        "00",
+        "11",
+        "22",
+        "33",
+        "44",
+        "55",
+        "66",
+        "77",
+        "88",
+        "99"
+      ],
+      "diagonal_count": 10,
+      "null": "shuffle unordered pair labels over the 55 fixed cells, preserving inventory",
+      "observed": 5,
+      "observed_e_diagonal_count": 5,
+      "p_value_good_direction": 0.01744912754362282,
+      "trials": 20000,
+      "unordered_e_cell_count": 11,
+      "z_good_direction": 2.6048064568149827
+    },
+    "exception_pick_control": {
+      "conflict_candidate_count": 44,
+      "control_max": 2,
+      "control_mean": 0.04525,
+      "control_min": 0,
+      "control_p50": 0,
+      "control_p95": 0,
+      "control_p99": 1,
+      "control_sd_population": 0.2097675797162183,
+      "null": "choose one random reverse-available lower code and one random present lower code as exceptions",
+      "observed": 2,
+      "observed_exception_codes": [
+        "91",
+        "93"
+      ],
+      "orphan_candidate_count": 45,
+      "p_value_good_direction": 0.00044997750112494374,
+      "trials": 20000,
+      "z_good_direction": 9.31864686928486
+    },
+    "existing_directed_surface_controls": {
+      "lower_inventory_shuffle_mirror_matches": {
+        "control_max": 15,
+        "control_mean": 4.9973,
+        "control_min": 0,
+        "control_p50": 5,
+        "control_p95": 9,
+        "control_p99": 10,
+        "control_sd_population": 2.0944194207464752,
+        "evaluated_positions": 44,
+        "null": "shuffle labels across reverse-available lower-triangle positions, preserving lower inventory",
+        "observed": 43,
+        "p_value_ge_observed": 4.999750012499375e-05,
+        "trials": 20000
+      },
+      "ordered_inventory_shuffle_reverse_pair_matches": {
+        "control_max": 14,
+        "control_mean": 4.7005,
+        "control_min": 0,
+        "control_p50": 5,
+        "control_p95": 8,
+        "control_p99": 10,
+        "control_sd_population": 2.023462317415375,
+        "evaluated_pairs": 44,
+        "null": "shuffle labels across all present ordered 00..99 codes, preserving global ordered inventory",
+        "observed": 43,
+        "p_value_ge_observed": 4.999750012499375e-05,
+        "trials": 20000
+      }
+    },
+    "existing_tape_literal_exception_control": {
+      "best_raw_p": 0.03129843507824609,
+      "bonferroni_p": 0.18779061046947654,
+      "pair_all_e": {
+        "control_max": 1,
+        "control_mean": 0.0376,
+        "control_min": 0,
+        "control_sd": 0.1902315678389634,
+        "observed": 1,
+        "p_good_direction": 0.037648117594120296,
+        "z_good_direction": 5.059097240972644
+      },
+      "pair_diagonal_count": {
+        "control_max": 2,
+        "control_mean": 0.36875,
+        "control_min": 0,
+        "control_sd": 0.5434042711555509,
+        "observed": 2,
+        "p_good_direction": 0.03129843507824609,
+        "z_good_direction": 3.0019086830715223
+      },
+      "verdict": "not_promoted"
+    },
+    "mirror_lower_match_shuffle": {
+      "control_max": 14,
+      "control_mean": 4.97985,
+      "control_min": 0,
+      "control_p50": 5,
+      "control_p95": 9,
+      "control_p99": 10,
+      "control_sd_population": 2.095267042049772,
+      "evaluated_positions": 44,
+      "null": "shuffle lower-triangle labels over reverse-available positions, preserving lower inventory",
+      "observed": 43,
+      "p_value_good_direction": 4.999750012499375e-05,
+      "trials": 20000,
+      "z_good_direction": 18.14572998905447
+    },
+    "zero_omission_geometry": {
+      "classification": "supporting_render_layer",
+      "holdout_accuracy": 0.8043478260869565,
+      "holdout_balanced_accuracy": 0.7890005288207298,
+      "holdout_errors": 18,
+      "holdout_mdl_bits": 170.29917478631754,
+      "holdout_mdl_gain_vs_code_only_bits": 11.617476433324072,
+      "model": "geometry_descdiag_only",
+      "note": "zero-render support only; it does not derive pair-table labels",
+      "rule_description_bits": 8.0,
+      "source": "analysis/generator_search_20260618/zero_compact_rule_results.json",
+      "train_shuffle_p_good_direction": 0.0029985007496251873
+    }
+  },
+  "created_at": "2026-06-19",
+  "diagnostics": {
+    "diagonal_anchor_codes": [
+      "33",
+      "66"
+    ],
+    "lower_present_count": 45,
+    "mirror_residuals": {
+      "error_codes": [
+        "91"
+      ],
+      "orphan_codes": [
+        "93"
+      ],
+      "residuals": [
+        {
+          "actual": "N",
+          "code": "91",
+          "kind": "directed_conflict",
+          "reverse": "19",
+          "reverse_symbol": "I"
+        },
+        {
+          "actual": "N",
+          "code": "93",
+          "kind": "lower_orphan",
+          "reverse": "39"
+        }
+      ]
+    },
+    "mirror_same_reverse_pairs": 43,
+    "missing_ordered": [
+      "39"
+    ],
+    "ordered_present_count": 99,
+    "pair_lookup_size": 55,
+    "reverse_available_lower_count": 44,
+    "symbols": [
+      "*",
+      "A",
+      "B",
+      "C",
+      "E",
+      "F",
+      "I",
+      "L",
+      "N",
+      "O",
+      "R",
+      "S",
+      "T",
+      "V"
+    ],
+    "tape_pair_only_outside": [
+      "33",
+      "66"
+    ],
+    "upper_present_count": 54
+  },
+  "mdl_parameters": {
+    "alphabet": "*ABCEFILNORSTV",
+    "alphabet_size": 14,
+    "code_address_bits": 6.643856189774724,
+    "diagonal_anchor_rule_bits": 12.0,
+    "directed_overlay_header_bits": 4.0,
+    "exception_layer_header_bits": 4.0,
+    "label_bits": 3.807354922057604,
+    "mirror_rule_bits": 8.0,
+    "note": "rough internal MDL for comparing these render-layer models only",
+    "ordered_lookup_reference_bits": 376.9281372837028,
+    "pair_address_bits": 5.78135971352466,
+    "residual_correction_bits": 10.451211111832329,
+    "zero_geometry_rule_bits": 8.0
+  },
+  "models": [
+    {
+      "correct": 98,
+      "coverage": 1.0,
+      "covered_accuracy": 0.98989898989899,
+      "derives": [
+        "54/55 pure unordered pair classes and the lower orphan as pair-cell lookup"
+      ],
+      "description": "Store one label for each unordered pair cell; render both directions with that label.",
+      "error_count": 1,
+      "errors": [
+        {
+          "actual": "N",
+          "code": "91",
+          "predicted": "I"
+        }
+      ],
+      "leaves_lookup": [
+        "sole conflict 91 is wrong unless stored as residual; all pair labels are still lookup"
+      ],
+      "mdl": {
+        "delta_bits_vs_ordered_lookup": 157.07240545870226,
+        "delta_bits_vs_previous_lossless_model": null,
+        "description_bits": 209.40452071316824,
+        "lossless_bits": 219.85573182500056,
+        "residual_correction_bits": 10.451211111832329
+      },
+      "model_type": "unordered_pair_lookup_single_label",
+      "name": "unordered_lookup",
+      "predicted": 99,
+      "strict_accuracy": 0.98989898989899,
+      "total": 99,
+      "uncovered": [],
+      "uncovered_count": 0
+    },
+    {
+      "correct": 99,
+      "coverage": 1.0,
+      "covered_accuracy": 1.0,
+      "derives": [
+        "the 19/91 conflict as a single directed render overlay"
+      ],
+      "description": "Store unordered pair labels plus one directed overlay for 91=N.",
+      "error_count": 0,
+      "errors": [],
+      "leaves_lookup": [
+        "55 unordered labels, including pair 39 from lower 93, are still lookup"
+      ],
+      "mdl": {
+        "delta_bits_vs_ordered_lookup": 153.07240545870226,
+        "delta_bits_vs_previous_lossless_model": -4.0,
+        "description_bits": 223.85573182500056,
+        "lossless_bits": 223.85573182500056,
+        "residual_correction_bits": 0.0
+      },
+      "model_type": "unordered_pair_lookup_with_one_directed_overlay",
+      "name": "unordered_lookup_plus_directed_render",
+      "predicted": 99,
+      "strict_accuracy": 1.0,
+      "total": 99,
+      "uncovered": [],
+      "uncovered_count": 0
+    },
+    {
+      "correct": 99,
+      "coverage": 1.0,
+      "covered_accuracy": 1.0,
+      "derives": [
+        "43/44 reverse-available lower cells by mirror; 91 and 93 isolated as the residual layer"
+      ],
+      "description": "Store the upper surface, mirror lower cells, and encode 91 plus 93 as the exception layer.",
+      "error_count": 0,
+      "errors": [],
+      "leaves_lookup": [
+        "54 upper/diagonal labels are still lookup; 91 and 93 are explicit metadata"
+      ],
+      "mdl": {
+        "delta_bits_vs_ordered_lookup": 138.42854926892755,
+        "delta_bits_vs_previous_lossless_model": -14.64385618977471,
+        "description_bits": 238.49958801477527,
+        "lossless_bits": 238.49958801477527,
+        "residual_correction_bits": 0.0
+      },
+      "model_type": "upper_lookup_mirror_lower_with_91_93_exceptions",
+      "name": "directed_render_plus_exception_layer",
+      "predicted": 99,
+      "strict_accuracy": 1.0,
+      "total": 99,
+      "uncovered": [],
+      "uncovered_count": 0
+    },
+    {
+      "correct": 99,
+      "coverage": 1.0,
+      "covered_accuracy": 1.0,
+      "derives": [
+        "33 and 66 from the pair-only-outside diagonal E anchor rule; lower surface by mirror"
+      ],
+      "description": "Replace stored labels for 33/66 with a tape/literal-only diagonal=>E anchor rule, plus 91/93 exceptions.",
+      "error_count": 0,
+      "errors": [],
+      "leaves_lookup": [
+        "52 upper labels and the anchor symbol E remain lookup-like; tape anchor is weak after controls"
+      ],
+      "mdl": {
+        "delta_bits_vs_ordered_lookup": 130.2359041909851,
+        "delta_bits_vs_previous_lossless_model": -8.192645077942444,
+        "description_bits": 246.69223309271771,
+        "lossless_bits": 246.69223309271771,
+        "residual_correction_bits": 0.0
+      },
+      "model_type": "upper_lookup_mirror_lower_with_diagonal_e_anchor_rule",
+      "name": "diagonal_E_anchors_plus_exceptions",
+      "predicted": 99,
+      "strict_accuracy": 1.0,
+      "total": 99,
+      "uncovered": [],
+      "uncovered_count": 0
+    },
+    {
+      "correct": 99,
+      "coverage": 1.0,
+      "covered_accuracy": 1.0,
+      "derives": [
+        "lower-triangle rendering except the two named residuals"
+      ],
+      "description": "Selected structural layer: upper lookup, mirror lower, and exactly the 91/93 exceptions.",
+      "error_count": 0,
+      "errors": [],
+      "leaves_lookup": [
+        "upper/unordered symbol identities are not derived; this is not a matrix-origin formula"
+      ],
+      "mdl": {
+        "delta_bits_vs_ordered_lookup": 138.42854926892755,
+        "delta_bits_vs_previous_lossless_model": 8.192645077942444,
+        "description_bits": 238.49958801477527,
+        "lossless_bits": 238.49958801477527,
+        "residual_correction_bits": 0.0
+      },
+      "model_type": "selected_compact_structural_layer",
+      "name": "mirror_lower_plus_exceptions",
+      "predicted": 99,
+      "strict_accuracy": 1.0,
+      "total": 99,
+      "uncovered": [],
+      "uncovered_count": 0
+    }
+  ],
+  "random_seed": 46920260619,
+  "schema": "structural_exception_layer_search.v1",
+  "scope": "mechanical_ordered_code_table_and_render_layers_only_no_semantics",
+  "selected_model": {
+    "correct": 99,
+    "coverage": 1.0,
+    "covered_accuracy": 1.0,
+    "derives": [
+      "lower-triangle rendering except the two named residuals"
+    ],
+    "description": "Selected structural layer: upper lookup, mirror lower, and exactly the 91/93 exceptions.",
+    "error_count": 0,
+    "errors": [],
+    "leaves_lookup": [
+      "upper/unordered symbol identities are not derived; this is not a matrix-origin formula"
+    ],
+    "mdl": {
+      "delta_bits_vs_ordered_lookup": 138.42854926892755,
+      "delta_bits_vs_previous_lossless_model": 8.192645077942444,
+      "description_bits": 238.49958801477527,
+      "lossless_bits": 238.49958801477527,
+      "residual_correction_bits": 0.0
+    },
+    "model_type": "selected_compact_structural_layer",
+    "name": "mirror_lower_plus_exceptions",
+    "predicted": 99,
+    "strict_accuracy": 1.0,
+    "total": 99,
+    "uncovered": [],
+    "uncovered_count": 0
+  },
+  "source_files": {
+    "directed_surface": "analysis/generator_search_20260618/directed_pair_surface_results.json",
+    "mechanical_formula": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+    "tape_literal_exception": "analysis/generator_search_20260618/tape_literal_exception_results.json",
+    "zero_compact_rule": "analysis/generator_search_20260618/zero_compact_rule_results.json"
+  },
+  "translation_delta": "NONE"
+}

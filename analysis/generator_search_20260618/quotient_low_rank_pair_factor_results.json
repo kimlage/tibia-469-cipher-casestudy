@@ -1,0 +1,4477 @@
+{
+  "baselines": {
+    "quotient_endpoint_marginal": {
+      "accuracy": 0.08695652173913043,
+      "correct": 4,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.06521739130434782,
+          "correct": 3,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.07272727272727272,
+          "correct": 4,
+          "total": 55
+        }
+      },
+      "macro_recall": 0.03163265306122449
+    },
+    "quotient_neighbor_label": {
+      "accuracy": 0.10869565217391304,
+      "correct": 5,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.08695652173913043,
+          "correct": 4,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.09090909090909091,
+          "correct": 5,
+          "total": 55
+        }
+      },
+      "macro_recall": 0.04047619047619048
+    },
+    "symbol_frequency_top": {
+      "accuracy": 0.21739130434782608,
+      "correct": 10,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.21739130434782608,
+          "correct": 10,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.2,
+          "correct": 11,
+          "total": 55
+        }
+      },
+      "macro_recall": 0.07142857142857142
+    }
+  },
+  "best_by_loo": {
+    "all_orbit_acceptable_accuracy": {
+      "accuracy": 0.2391304347826087,
+      "correct": 11,
+      "count": 46
+    },
+    "centered": false,
+    "fill_mode": "zero",
+    "in_sample_accuracy": 0.717391304347826,
+    "in_sample_correct": 33,
+    "in_sample_macro_recall": 0.7702380952380953,
+    "label_inventory": {
+      "*": 1,
+      "A": 5,
+      "B": 1,
+      "C": 1,
+      "E": 10,
+      "F": 3,
+      "I": 7,
+      "L": 2,
+      "N": 6,
+      "O": 1,
+      "R": 1,
+      "S": 1,
+      "T": 3,
+      "V": 4
+    },
+    "loo_accuracy": 0.2391304347826087,
+    "loo_correct": 11,
+    "loo_macro_recall": 0.1520408163265306,
+    "lossless_diagnostics": {
+      "lossless_orbit_exact_without_mixed_layer": {
+        "accuracy": 0.1956521739130435,
+        "correct": 9,
+        "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+        "total": 46
+      },
+      "mixed_orbit_acceptable": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "mixed_orbit_count": 4,
+      "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+        "accuracy": 0.2,
+        "correct": 11,
+        "total": 55
+      }
+    },
+    "mixed_orbit_primary_accuracy": {
+      "accuracy": 0.5,
+      "correct": 2,
+      "count": 4
+    },
+    "non_singleton_orbit_accuracy": {
+      "accuracy": 0.2222222222222222,
+      "correct": 2,
+      "count": 9
+    },
+    "parameter_count": 294,
+    "pure_orbit_accuracy": {
+      "accuracy": 0.24324324324324326,
+      "correct": 9,
+      "count": 37
+    },
+    "rank": 1,
+    "special_predictions": {
+      "33": {
+        "acceptable_symbols": [
+          "V"
+        ],
+        "is_mixed_orbit": false,
+        "pairs": [
+          "69"
+        ],
+        "predicted": "*",
+        "qcoord": "QQx",
+        "true": "V"
+      },
+      "37": {
+        "acceptable_symbols": [
+          "I",
+          "T"
+        ],
+        "is_mixed_orbit": true,
+        "pairs": [
+          "06",
+          "09"
+        ],
+        "predicted": "I",
+        "qcoord": "0Q",
+        "true": "I"
+      },
+      "38": {
+        "acceptable_symbols": [
+          "I",
+          "T"
+        ],
+        "is_mixed_orbit": true,
+        "pairs": [
+          "16",
+          "19"
+        ],
+        "predicted": "I",
+        "qcoord": "1Q",
+        "true": "I"
+      },
+      "40": {
+        "acceptable_symbols": [
+          "N",
+          "V"
+        ],
+        "is_mixed_orbit": true,
+        "pairs": [
+          "36",
+          "39"
+        ],
+        "predicted": "*",
+        "qcoord": "3Q",
+        "true": "N"
+      },
+      "43": {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "is_mixed_orbit": false,
+        "pairs": [
+          "66",
+          "99"
+        ],
+        "predicted": "*",
+        "qcoord": "QQ",
+        "true": "E"
+      },
+      "45": {
+        "acceptable_symbols": [
+          "C",
+          "T"
+        ],
+        "is_mixed_orbit": true,
+        "pairs": [
+          "68",
+          "89"
+        ],
+        "predicted": "I",
+        "qcoord": "Q8",
+        "true": "C"
+      }
+    }
+  },
+  "centered_variants": [
+    false,
+    true
+  ],
+  "control_trials": {
+    "label_shuffle": 100,
+    "stratified_mixedness_shuffle": 60
+  },
+  "controls": {
+    "label_shuffle": {
+      "best_config_selection": "best LOO accuracy over rank/fill/centering in each trial",
+      "loo_accuracy": {
+        "max": 0.391304347826087,
+        "mean": 0.23434782608695653,
+        "min": 0.08695652173913043,
+        "observed": 0.2391304347826087,
+        "p_ge_observed": 0.5643564356435643,
+        "sd": 0.0600404667722218
+      },
+      "loo_macro_recall": {
+        "max": 0.17244897959183672,
+        "mean": 0.10227721088435374,
+        "min": 0.028571428571428574,
+        "observed": 0.1520408163265306,
+        "p_ge_observed": 0.06930693069306931,
+        "sd": 0.03039737780100785
+      },
+      "method": "quotient_base46_inventory_preserving_label_shuffle",
+      "trials": 100
+    },
+    "stratified_mixedness_shuffle": {
+      "best_config_selection": "best LOO accuracy over rank/fill/centering in each trial",
+      "loo_accuracy": {
+        "max": 0.2826086956521739,
+        "mean": 0.2217391304347826,
+        "min": 0.06521739130434782,
+        "observed": 0.2391304347826087,
+        "p_ge_observed": 0.5573770491803278,
+        "sd": 0.04507033510206633
+      },
+      "loo_macro_recall": {
+        "max": 0.1520408163265306,
+        "mean": 0.09558956916099773,
+        "min": 0.02142857142857143,
+        "observed": 0.1520408163265306,
+        "p_ge_observed": 0.03278688524590164,
+        "sd": 0.024902498065220803
+      },
+      "method": "quotient_primary_label_shuffle_stratified_by_orbit_mixedness",
+      "trials": 60
+    }
+  },
+  "fill_modes": [
+    "prior",
+    "zero"
+  ],
+  "mdl_context": {
+    "conditioned_lossless_lower_bound_bits": 2512.786049978634,
+    "conditioned_lower_bound_bits": 2357.3219280948874,
+    "conditioned_ratio_to_existing_split_lossless": 11.452378884395971,
+    "conditioned_ratio_to_inventory_lookup": 18.0546218404441,
+    "conditioned_ratio_to_quotient_lookup": 13.459771920589192,
+    "discovered_lower_bound_bits": 2362.813781191217,
+    "existing_split_lossless_bits": 205.83687912270977,
+    "fixed_cross_coordinate_bits": 1.0,
+    "lossless_lower_bound_ratio_to_existing_split_lossless": 12.207657153996369,
+    "lower_bound_parameter_bits": 2352,
+    "model_choice_bits": 4.321928094887363,
+    "note": "8 bits/parameter is a favorable lower bound; continuous factors are not a deployable formula without quantization",
+    "parameter_count": 294,
+    "quotient_choice_bits_if_discovered": 5.491853096329675,
+    "quotient_inventory_lookup_bits": 130.56612035009553,
+    "quotient_lookup_bits": 175.13832641464978,
+    "residual_orbit_correction_bits": 133.25742227201616
+  },
+  "random_seed": 46920260622,
+  "ranks": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "references": {
+    "quotient_pair_formula": {
+      "primary_accuracy": 0.34782608695652173,
+      "verdict": "rejected_no_compression"
+    },
+    "raw_low_rank": {
+      "loo_accuracy": 0.32727272727272727,
+      "loo_macro_recall": 0.14962121212121213,
+      "verdict": "weak_low_rank_signal_not_formula"
+    }
+  },
+  "rows": [
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.2391304347826087,
+        "correct": 11,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.717391304347826,
+      "in_sample_correct": 33,
+      "in_sample_macro_recall": 0.7702380952380953,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.2391304347826087,
+      "loo_correct": 11,
+      "loo_macro_recall": 0.1520408163265306,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.1956521739130435,
+          "correct": 9,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.2,
+          "correct": 11,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 294,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.24324324324324326,
+        "correct": 9,
+        "count": 37
+      },
+      "rank": 1,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "*",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "*",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "*",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.2391304347826087,
+        "correct": 11,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.9347826086956522,
+      "in_sample_correct": 43,
+      "in_sample_macro_recall": 0.9559523809523809,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.2391304347826087,
+      "loo_correct": 11,
+      "loo_macro_recall": 0.16122448979591836,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.1956521739130435,
+          "correct": 9,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.21818181818181817,
+          "correct": 12,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.3333333333333333,
+        "correct": 3,
+        "count": 9
+      },
+      "parameter_count": 1134,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.21621621621621623,
+        "correct": 8,
+        "count": 37
+      },
+      "rank": 4,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "*",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "*",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.21739130434782608,
+        "correct": 10,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.782608695652174,
+      "in_sample_correct": 36,
+      "in_sample_macro_recall": 0.827891156462585,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.21739130434782608,
+      "loo_correct": 10,
+      "loo_macro_recall": 0.08537414965986394,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.15217391304347827,
+          "correct": 7,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.75,
+          "correct": 3,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.2,
+          "correct": 11,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.75,
+        "correct": 3,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.4444444444444444,
+        "correct": 4,
+        "count": 9
+      },
+      "parameter_count": 294,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.16216216216216217,
+        "correct": 6,
+        "count": 37
+      },
+      "rank": 1,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "N",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.21739130434782608,
+        "correct": 10,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.9565217391304348,
+      "in_sample_correct": 44,
+      "in_sample_macro_recall": 0.9678571428571429,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.21739130434782608,
+      "loo_correct": 10,
+      "loo_macro_recall": 0.1510204081632653,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.17391304347826086,
+          "correct": 8,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.18181818181818182,
+          "correct": 10,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 1414,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.21621621621621623,
+        "correct": 8,
+        "count": 37
+      },
+      "rank": 5,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "*",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "*",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.1956521739130435,
+        "correct": 9,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.782608695652174,
+      "in_sample_correct": 36,
+      "in_sample_macro_recall": 0.8202380952380952,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.1956521739130435,
+      "loo_correct": 9,
+      "loo_macro_recall": 0.07517006802721089,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.15217391304347827,
+          "correct": 7,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.18181818181818182,
+          "correct": 10,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.3333333333333333,
+        "correct": 3,
+        "count": 9
+      },
+      "parameter_count": 294,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.16216216216216217,
+        "correct": 6,
+        "count": 37
+      },
+      "rank": 1,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "N",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.21739130434782608,
+        "correct": 10,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 1.0,
+      "in_sample_correct": 46,
+      "in_sample_macro_recall": 1.0,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.1956521739130435,
+      "loo_correct": 9,
+      "loo_macro_recall": 0.09183673469387754,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.17391304347826086,
+          "correct": 8,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.2,
+          "correct": 11,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.25,
+        "correct": 1,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 1414,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.1891891891891892,
+        "correct": 7,
+        "count": 37
+      },
+      "rank": 5,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "E",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "V",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "N",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.17391304347826086,
+        "correct": 8,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.8260869565217391,
+      "in_sample_correct": 38,
+      "in_sample_macro_recall": 0.8726190476190476,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.17391304347826086,
+      "loo_correct": 8,
+      "loo_macro_recall": 0.07346938775510203,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.15217391304347827,
+          "correct": 7,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.18181818181818182,
+          "correct": 10,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.25,
+        "correct": 1,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.3333333333333333,
+        "correct": 3,
+        "count": 9
+      },
+      "parameter_count": 574,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.13513513513513514,
+        "correct": 5,
+        "count": 37
+      },
+      "rank": 2,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "N",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "V",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.17391304347826086,
+        "correct": 8,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.9347826086956522,
+      "in_sample_correct": 43,
+      "in_sample_macro_recall": 0.9559523809523809,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.17391304347826086,
+      "loo_correct": 8,
+      "loo_macro_recall": 0.0663265306122449,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.15217391304347827,
+          "correct": 7,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.16363636363636364,
+          "correct": 9,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.25,
+        "correct": 1,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 854,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.16216216216216217,
+        "correct": 6,
+        "count": 37
+      },
+      "rank": 3,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "E",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.17391304347826086,
+        "correct": 8,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.8913043478260869,
+      "in_sample_correct": 41,
+      "in_sample_macro_recall": 0.9345238095238095,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.17391304347826086,
+      "loo_correct": 8,
+      "loo_macro_recall": 0.07244897959183673,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.13043478260869565,
+          "correct": 6,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.14545454545454545,
+          "correct": 8,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 854,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.16216216216216217,
+        "correct": 6,
+        "count": 37
+      },
+      "rank": 3,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "*",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "*",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "*",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.15217391304347827,
+        "correct": 7,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.6739130434782609,
+      "in_sample_correct": 31,
+      "in_sample_macro_recall": 0.7767006802721088,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.15217391304347827,
+      "loo_correct": 7,
+      "loo_macro_recall": 0.05612244897959184,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.13043478260869565,
+          "correct": 6,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.12727272727272726,
+          "correct": 7,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.25,
+        "correct": 1,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.1111111111111111,
+        "correct": 1,
+        "count": 9
+      },
+      "parameter_count": 294,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.16216216216216217,
+        "correct": 6,
+        "count": 37
+      },
+      "rank": 1,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "I",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "N",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "A",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "N",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.15217391304347827,
+        "correct": 7,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.8043478260869565,
+      "in_sample_correct": 37,
+      "in_sample_macro_recall": 0.8547619047619047,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.15217391304347827,
+      "loo_correct": 7,
+      "loo_macro_recall": 0.06224489795918368,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.10869565217391304,
+          "correct": 5,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.12727272727272726,
+          "correct": 7,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 574,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.13513513513513514,
+        "correct": 5,
+        "count": 37
+      },
+      "rank": 2,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "*",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "*",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "*",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.15217391304347827,
+        "correct": 7,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "zero",
+      "in_sample_accuracy": 0.9565217391304348,
+      "in_sample_correct": 44,
+      "in_sample_macro_recall": 0.9738095238095238,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.15217391304347827,
+      "loo_correct": 7,
+      "loo_macro_recall": 0.07346938775510203,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.13043478260869565,
+          "correct": 6,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.14545454545454545,
+          "correct": 8,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.25,
+        "correct": 1,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 1134,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.13513513513513514,
+        "correct": 5,
+        "count": 37
+      },
+      "rank": 4,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "E",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "I",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "F",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.15217391304347827,
+        "correct": 7,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.8043478260869565,
+      "in_sample_correct": 37,
+      "in_sample_macro_recall": 0.8547619047619047,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.13043478260869565,
+      "loo_correct": 6,
+      "loo_macro_recall": 0.05374149659863946,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.13043478260869565,
+          "correct": 6,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.16363636363636364,
+          "correct": 9,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 574,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.10810810810810811,
+        "correct": 4,
+        "count": 37
+      },
+      "rank": 2,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "N",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "V",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.13043478260869565,
+        "correct": 6,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.7608695652173914,
+      "in_sample_correct": 35,
+      "in_sample_macro_recall": 0.8404761904761904,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.13043478260869565,
+      "loo_correct": 6,
+      "loo_macro_recall": 0.05680272108843537,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.08695652173913043,
+          "correct": 4,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.10909090909090909,
+          "correct": 6,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.5,
+        "correct": 2,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.2222222222222222,
+        "correct": 2,
+        "count": 9
+      },
+      "parameter_count": 574,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.10810810810810811,
+        "correct": 4,
+        "count": 37
+      },
+      "rank": 2,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "I",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "I",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "N",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "V",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "A",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.10869565217391304,
+        "correct": 5,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 1.0,
+      "in_sample_correct": 46,
+      "in_sample_macro_recall": 1.0,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.10869565217391304,
+      "loo_correct": 5,
+      "loo_macro_recall": 0.03571428571428571,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.10869565217391304,
+          "correct": 5,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.09090909090909091,
+          "correct": 5,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 9
+      },
+      "parameter_count": 1414,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.13513513513513514,
+        "correct": 5,
+        "count": 37
+      },
+      "rank": 5,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "E",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "E",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "V",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "E",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.10869565217391304,
+        "correct": 5,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.9347826086956522,
+      "in_sample_correct": 43,
+      "in_sample_macro_recall": 0.9559523809523809,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.08695652173913043,
+      "loo_correct": 4,
+      "loo_macro_recall": 0.03469387755102041,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.08695652173913043,
+          "correct": 4,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.09090909090909091,
+          "correct": 5,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 9
+      },
+      "parameter_count": 854,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.10810810810810811,
+        "correct": 4,
+        "count": 37
+      },
+      "rank": 3,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "V",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "V",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "N",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.10869565217391304,
+        "correct": 5,
+        "count": 46
+      },
+      "centered": true,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.9782608695652174,
+      "in_sample_correct": 45,
+      "in_sample_macro_recall": 0.9880952380952381,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.08695652173913043,
+      "loo_correct": 4,
+      "loo_macro_recall": 0.03163265306122449,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.08695652173913043,
+          "correct": 4,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.10909090909090909,
+          "correct": 6,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.1111111111111111,
+        "correct": 1,
+        "count": 9
+      },
+      "parameter_count": 1134,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.08108108108108109,
+        "correct": 3,
+        "count": 37
+      },
+      "rank": 4,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "V",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "V",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "E",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.08695652173913043,
+        "correct": 4,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.8913043478260869,
+      "in_sample_correct": 41,
+      "in_sample_macro_recall": 0.9452380952380953,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.06521739130434782,
+      "loo_correct": 3,
+      "loo_macro_recall": 0.024489795918367346,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.06521739130434782,
+          "correct": 3,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.25,
+          "correct": 1,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.07272727272727272,
+          "correct": 4,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 9
+      },
+      "parameter_count": 854,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.08108108108108109,
+        "correct": 3,
+        "count": 37
+      },
+      "rank": 3,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "I",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "V",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "V",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "V",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "I",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.043478260869565216,
+        "correct": 2,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 0.9347826086956522,
+      "in_sample_correct": 43,
+      "in_sample_macro_recall": 0.9666666666666667,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.043478260869565216,
+      "loo_correct": 2,
+      "loo_macro_recall": 0.017346938775510204,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.043478260869565216,
+          "correct": 2,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.03636363636363636,
+          "correct": 2,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 9
+      },
+      "parameter_count": 1134,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.05405405405405406,
+        "correct": 2,
+        "count": 37
+      },
+      "rank": 4,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "V",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "V",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "N",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    },
+    {
+      "all_orbit_acceptable_accuracy": {
+        "accuracy": 0.043478260869565216,
+        "correct": 2,
+        "count": 46
+      },
+      "centered": false,
+      "fill_mode": "prior",
+      "in_sample_accuracy": 1.0,
+      "in_sample_correct": 46,
+      "in_sample_macro_recall": 1.0,
+      "label_inventory": {
+        "*": 1,
+        "A": 5,
+        "B": 1,
+        "C": 1,
+        "E": 10,
+        "F": 3,
+        "I": 7,
+        "L": 2,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 3,
+        "V": 4
+      },
+      "loo_accuracy": 0.043478260869565216,
+      "loo_correct": 2,
+      "loo_macro_recall": 0.017346938775510204,
+      "lossless_diagnostics": {
+        "lossless_orbit_exact_without_mixed_layer": {
+          "accuracy": 0.043478260869565216,
+          "correct": 2,
+          "note": "mixed orbits cannot be exact because this probe predicts no secondary/orientation metadata",
+          "total": 46
+        },
+        "mixed_orbit_acceptable": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "count": 4
+        },
+        "mixed_orbit_count": 4,
+        "raw_pair_hits_if_label_rendered_to_whole_orbit": {
+          "accuracy": 0.03636363636363636,
+          "correct": 2,
+          "total": 55
+        }
+      },
+      "mixed_orbit_primary_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 4
+      },
+      "non_singleton_orbit_accuracy": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "count": 9
+      },
+      "parameter_count": 1414,
+      "pure_orbit_accuracy": {
+        "accuracy": 0.05405405405405406,
+        "correct": 2,
+        "count": 37
+      },
+      "rank": 5,
+      "special_predictions": {
+        "33": {
+          "acceptable_symbols": [
+            "V"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "69"
+          ],
+          "predicted": "E",
+          "qcoord": "QQx",
+          "true": "V"
+        },
+        "37": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "06",
+            "09"
+          ],
+          "predicted": "V",
+          "qcoord": "0Q",
+          "true": "I"
+        },
+        "38": {
+          "acceptable_symbols": [
+            "I",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "16",
+            "19"
+          ],
+          "predicted": "V",
+          "qcoord": "1Q",
+          "true": "I"
+        },
+        "40": {
+          "acceptable_symbols": [
+            "N",
+            "V"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "36",
+            "39"
+          ],
+          "predicted": "E",
+          "qcoord": "3Q",
+          "true": "N"
+        },
+        "43": {
+          "acceptable_symbols": [
+            "E"
+          ],
+          "is_mixed_orbit": false,
+          "pairs": [
+            "66",
+            "99"
+          ],
+          "predicted": "V",
+          "qcoord": "QQ",
+          "true": "E"
+        },
+        "45": {
+          "acceptable_symbols": [
+            "C",
+            "T"
+          ],
+          "is_mixed_orbit": true,
+          "pairs": [
+            "68",
+            "89"
+          ],
+          "predicted": "E",
+          "qcoord": "Q8",
+          "true": "C"
+        }
+      }
+    }
+  ],
+  "schema": "quotient_low_rank_pair_factor_results.v1",
+  "source": {
+    "orbit_results": "analysis/generator_search_20260618/digit_orbit_quotient_results.json",
+    "quotient_formula_results": "analysis/generator_search_20260618/quotient_pair_formula_results.json",
+    "raw_low_rank_results": "analysis/generator_search_20260618/bilinear_low_rank_pair_factor_results.json"
+  },
+  "target": {
+    "coordinate_nodes": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "Q",
+      "7",
+      "8",
+      "Qx"
+    ],
+    "fixed_cross_collision_note": "`Qx` keeps orbit 69 distinct from orbit {66,99}; this is charged in MDL.",
+    "mixed_orbit_count": 4,
+    "mode": "base46_predictive",
+    "non_singleton_orbit_count": 9,
+    "orbit_count": 46,
+    "quotient_group": "swap_6_9",
+    "rows": [
+      {
+        "acceptable_symbols": [
+          "*"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "*": 1
+        },
+        "label_pair": [
+          "*"
+        ],
+        "orbit": 0,
+        "orbit_size": 1,
+        "pairs": [
+          "00"
+        ],
+        "primary_symbol": "*",
+        "qa": 0,
+        "qb": 0,
+        "qcoord": "00"
+      },
+      {
+        "acceptable_symbols": [
+          "N"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "N": 1
+        },
+        "label_pair": [
+          "N"
+        ],
+        "orbit": 1,
+        "orbit_size": 1,
+        "pairs": [
+          "01"
+        ],
+        "primary_symbol": "N",
+        "qa": 0,
+        "qb": 1,
+        "qcoord": "01"
+      },
+      {
+        "acceptable_symbols": [
+          "R"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "R": 1
+        },
+        "label_pair": [
+          "R"
+        ],
+        "orbit": 2,
+        "orbit_size": 1,
+        "pairs": [
+          "02"
+        ],
+        "primary_symbol": "R",
+        "qa": 0,
+        "qb": 2,
+        "qcoord": "02"
+      },
+      {
+        "acceptable_symbols": [
+          "V"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "V": 1
+        },
+        "label_pair": [
+          "V"
+        ],
+        "orbit": 3,
+        "orbit_size": 1,
+        "pairs": [
+          "03"
+        ],
+        "primary_symbol": "V",
+        "qa": 0,
+        "qb": 3,
+        "qcoord": "03"
+      },
+      {
+        "acceptable_symbols": [
+          "F"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "F": 1
+        },
+        "label_pair": [
+          "F"
+        ],
+        "orbit": 4,
+        "orbit_size": 1,
+        "pairs": [
+          "04"
+        ],
+        "primary_symbol": "F",
+        "qa": 0,
+        "qb": 4,
+        "qcoord": "04"
+      },
+      {
+        "acceptable_symbols": [
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "T": 1
+        },
+        "label_pair": [
+          "T"
+        ],
+        "orbit": 5,
+        "orbit_size": 1,
+        "pairs": [
+          "05"
+        ],
+        "primary_symbol": "T",
+        "qa": 0,
+        "qb": 5,
+        "qcoord": "05"
+      },
+      {
+        "acceptable_symbols": [
+          "I"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "I": 1
+        },
+        "label_pair": [
+          "I"
+        ],
+        "orbit": 6,
+        "orbit_size": 1,
+        "pairs": [
+          "07"
+        ],
+        "primary_symbol": "I",
+        "qa": 0,
+        "qb": 7,
+        "qcoord": "07"
+      },
+      {
+        "acceptable_symbols": [
+          "I"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "I": 1
+        },
+        "label_pair": [
+          "I"
+        ],
+        "orbit": 7,
+        "orbit_size": 1,
+        "pairs": [
+          "08"
+        ],
+        "primary_symbol": "I",
+        "qa": 0,
+        "qb": 8,
+        "qcoord": "08"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 8,
+        "orbit_size": 1,
+        "pairs": [
+          "11"
+        ],
+        "primary_symbol": "E",
+        "qa": 1,
+        "qb": 1,
+        "qcoord": "11"
+      },
+      {
+        "acceptable_symbols": [
+          "F"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "F": 1
+        },
+        "label_pair": [
+          "F"
+        ],
+        "orbit": 9,
+        "orbit_size": 1,
+        "pairs": [
+          "12"
+        ],
+        "primary_symbol": "F",
+        "qa": 1,
+        "qb": 2,
+        "qcoord": "12"
+      },
+      {
+        "acceptable_symbols": [
+          "N"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "N": 1
+        },
+        "label_pair": [
+          "N"
+        ],
+        "orbit": 10,
+        "orbit_size": 1,
+        "pairs": [
+          "13"
+        ],
+        "primary_symbol": "N",
+        "qa": 1,
+        "qb": 3,
+        "qcoord": "13"
+      },
+      {
+        "acceptable_symbols": [
+          "A"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "A": 1
+        },
+        "label_pair": [
+          "A"
+        ],
+        "orbit": 11,
+        "orbit_size": 1,
+        "pairs": [
+          "14"
+        ],
+        "primary_symbol": "A",
+        "qa": 1,
+        "qb": 4,
+        "qcoord": "14"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 12,
+        "orbit_size": 1,
+        "pairs": [
+          "15"
+        ],
+        "primary_symbol": "E",
+        "qa": 1,
+        "qb": 5,
+        "qcoord": "15"
+      },
+      {
+        "acceptable_symbols": [
+          "V"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "V": 1
+        },
+        "label_pair": [
+          "V"
+        ],
+        "orbit": 13,
+        "orbit_size": 1,
+        "pairs": [
+          "17"
+        ],
+        "primary_symbol": "V",
+        "qa": 1,
+        "qb": 7,
+        "qcoord": "17"
+      },
+      {
+        "acceptable_symbols": [
+          "I"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "I": 1
+        },
+        "label_pair": [
+          "I"
+        ],
+        "orbit": 14,
+        "orbit_size": 1,
+        "pairs": [
+          "18"
+        ],
+        "primary_symbol": "I",
+        "qa": 1,
+        "qb": 8,
+        "qcoord": "18"
+      },
+      {
+        "acceptable_symbols": [
+          "A"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "A": 1
+        },
+        "label_pair": [
+          "A"
+        ],
+        "orbit": 15,
+        "orbit_size": 1,
+        "pairs": [
+          "22"
+        ],
+        "primary_symbol": "A",
+        "qa": 2,
+        "qb": 2,
+        "qcoord": "22"
+      },
+      {
+        "acceptable_symbols": [
+          "O"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "O": 1
+        },
+        "label_pair": [
+          "O"
+        ],
+        "orbit": 16,
+        "orbit_size": 1,
+        "pairs": [
+          "23"
+        ],
+        "primary_symbol": "O",
+        "qa": 2,
+        "qb": 3,
+        "qcoord": "23"
+      },
+      {
+        "acceptable_symbols": [
+          "L"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "L": 1
+        },
+        "label_pair": [
+          "L"
+        ],
+        "orbit": 17,
+        "orbit_size": 1,
+        "pairs": [
+          "24"
+        ],
+        "primary_symbol": "L",
+        "qa": 2,
+        "qb": 4,
+        "qcoord": "24"
+      },
+      {
+        "acceptable_symbols": [
+          "I"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "I": 1
+        },
+        "label_pair": [
+          "I"
+        ],
+        "orbit": 18,
+        "orbit_size": 1,
+        "pairs": [
+          "25"
+        ],
+        "primary_symbol": "I",
+        "qa": 2,
+        "qb": 5,
+        "qcoord": "25"
+      },
+      {
+        "acceptable_symbols": [
+          "S"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "S": 1
+        },
+        "label_pair": [
+          "S"
+        ],
+        "orbit": 19,
+        "orbit_size": 1,
+        "pairs": [
+          "27"
+        ],
+        "primary_symbol": "S",
+        "qa": 2,
+        "qb": 7,
+        "qcoord": "27"
+      },
+      {
+        "acceptable_symbols": [
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "T": 1
+        },
+        "label_pair": [
+          "T"
+        ],
+        "orbit": 20,
+        "orbit_size": 1,
+        "pairs": [
+          "28"
+        ],
+        "primary_symbol": "T",
+        "qa": 2,
+        "qb": 8,
+        "qcoord": "28"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 21,
+        "orbit_size": 1,
+        "pairs": [
+          "33"
+        ],
+        "primary_symbol": "E",
+        "qa": 3,
+        "qb": 3,
+        "qcoord": "33"
+      },
+      {
+        "acceptable_symbols": [
+          "B"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "B": 1
+        },
+        "label_pair": [
+          "B"
+        ],
+        "orbit": 22,
+        "orbit_size": 1,
+        "pairs": [
+          "34"
+        ],
+        "primary_symbol": "B",
+        "qa": 3,
+        "qb": 4,
+        "qcoord": "34"
+      },
+      {
+        "acceptable_symbols": [
+          "L"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "L": 1
+        },
+        "label_pair": [
+          "L"
+        ],
+        "orbit": 23,
+        "orbit_size": 1,
+        "pairs": [
+          "35"
+        ],
+        "primary_symbol": "L",
+        "qa": 3,
+        "qb": 5,
+        "qcoord": "35"
+      },
+      {
+        "acceptable_symbols": [
+          "A"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "A": 1
+        },
+        "label_pair": [
+          "A"
+        ],
+        "orbit": 24,
+        "orbit_size": 1,
+        "pairs": [
+          "37"
+        ],
+        "primary_symbol": "A",
+        "qa": 3,
+        "qb": 7,
+        "qcoord": "37"
+      },
+      {
+        "acceptable_symbols": [
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "T": 1
+        },
+        "label_pair": [
+          "T"
+        ],
+        "orbit": 25,
+        "orbit_size": 1,
+        "pairs": [
+          "38"
+        ],
+        "primary_symbol": "T",
+        "qa": 3,
+        "qb": 8,
+        "qcoord": "38"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 26,
+        "orbit_size": 1,
+        "pairs": [
+          "44"
+        ],
+        "primary_symbol": "E",
+        "qa": 4,
+        "qb": 4,
+        "qcoord": "44"
+      },
+      {
+        "acceptable_symbols": [
+          "F"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "F": 1
+        },
+        "label_pair": [
+          "F"
+        ],
+        "orbit": 27,
+        "orbit_size": 1,
+        "pairs": [
+          "45"
+        ],
+        "primary_symbol": "F",
+        "qa": 4,
+        "qb": 5,
+        "qcoord": "45"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 28,
+        "orbit_size": 1,
+        "pairs": [
+          "47"
+        ],
+        "primary_symbol": "E",
+        "qa": 4,
+        "qb": 7,
+        "qcoord": "47"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 29,
+        "orbit_size": 1,
+        "pairs": [
+          "48"
+        ],
+        "primary_symbol": "E",
+        "qa": 4,
+        "qb": 8,
+        "qcoord": "48"
+      },
+      {
+        "acceptable_symbols": [
+          "V"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "V": 1
+        },
+        "label_pair": [
+          "V"
+        ],
+        "orbit": 30,
+        "orbit_size": 1,
+        "pairs": [
+          "55"
+        ],
+        "primary_symbol": "V",
+        "qa": 5,
+        "qb": 5,
+        "qcoord": "55"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 31,
+        "orbit_size": 1,
+        "pairs": [
+          "57"
+        ],
+        "primary_symbol": "E",
+        "qa": 5,
+        "qb": 7,
+        "qcoord": "57"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 32,
+        "orbit_size": 1,
+        "pairs": [
+          "58"
+        ],
+        "primary_symbol": "E",
+        "qa": 5,
+        "qb": 8,
+        "qcoord": "58"
+      },
+      {
+        "acceptable_symbols": [
+          "V"
+        ],
+        "fixed_cross_69": true,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "V": 1
+        },
+        "label_pair": [
+          "V"
+        ],
+        "orbit": 33,
+        "orbit_size": 1,
+        "pairs": [
+          "69"
+        ],
+        "primary_symbol": "V",
+        "qa": 6,
+        "qb": 9,
+        "qcoord": "QQx"
+      },
+      {
+        "acceptable_symbols": [
+          "N"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "N": 1
+        },
+        "label_pair": [
+          "N"
+        ],
+        "orbit": 34,
+        "orbit_size": 1,
+        "pairs": [
+          "77"
+        ],
+        "primary_symbol": "N",
+        "qa": 7,
+        "qb": 7,
+        "qcoord": "77"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "E": 1
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 35,
+        "orbit_size": 1,
+        "pairs": [
+          "78"
+        ],
+        "primary_symbol": "E",
+        "qa": 7,
+        "qb": 8,
+        "qcoord": "78"
+      },
+      {
+        "acceptable_symbols": [
+          "A"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": false,
+        "is_singleton": true,
+        "label_counts": {
+          "A": 1
+        },
+        "label_pair": [
+          "A"
+        ],
+        "orbit": 36,
+        "orbit_size": 1,
+        "pairs": [
+          "88"
+        ],
+        "primary_symbol": "A",
+        "qa": 8,
+        "qb": 8,
+        "qcoord": "88"
+      },
+      {
+        "acceptable_symbols": [
+          "I",
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": true,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "I": 1,
+          "T": 1
+        },
+        "label_pair": [
+          "I",
+          "T"
+        ],
+        "orbit": 37,
+        "orbit_size": 2,
+        "pairs": [
+          "06",
+          "09"
+        ],
+        "primary_symbol": "I",
+        "qa": 0,
+        "qb": 6,
+        "qcoord": "0Q"
+      },
+      {
+        "acceptable_symbols": [
+          "I",
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": true,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "I": 1,
+          "T": 1
+        },
+        "label_pair": [
+          "I",
+          "T"
+        ],
+        "orbit": 38,
+        "orbit_size": 2,
+        "pairs": [
+          "16",
+          "19"
+        ],
+        "primary_symbol": "I",
+        "qa": 1,
+        "qb": 6,
+        "qcoord": "1Q"
+      },
+      {
+        "acceptable_symbols": [
+          "N"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "N": 2
+        },
+        "label_pair": [
+          "N"
+        ],
+        "orbit": 39,
+        "orbit_size": 2,
+        "pairs": [
+          "26",
+          "29"
+        ],
+        "primary_symbol": "N",
+        "qa": 2,
+        "qb": 6,
+        "qcoord": "2Q"
+      },
+      {
+        "acceptable_symbols": [
+          "N",
+          "V"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": true,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "N": 1,
+          "V": 1
+        },
+        "label_pair": [
+          "N",
+          "V"
+        ],
+        "orbit": 40,
+        "orbit_size": 2,
+        "pairs": [
+          "36",
+          "39"
+        ],
+        "primary_symbol": "N",
+        "qa": 3,
+        "qb": 6,
+        "qcoord": "3Q"
+      },
+      {
+        "acceptable_symbols": [
+          "N"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "N": 2
+        },
+        "label_pair": [
+          "N"
+        ],
+        "orbit": 41,
+        "orbit_size": 2,
+        "pairs": [
+          "46",
+          "49"
+        ],
+        "primary_symbol": "N",
+        "qa": 4,
+        "qb": 6,
+        "qcoord": "4Q"
+      },
+      {
+        "acceptable_symbols": [
+          "I"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "I": 2
+        },
+        "label_pair": [
+          "I"
+        ],
+        "orbit": 42,
+        "orbit_size": 2,
+        "pairs": [
+          "56",
+          "59"
+        ],
+        "primary_symbol": "I",
+        "qa": 5,
+        "qb": 6,
+        "qcoord": "5Q"
+      },
+      {
+        "acceptable_symbols": [
+          "E"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "E": 2
+        },
+        "label_pair": [
+          "E"
+        ],
+        "orbit": 43,
+        "orbit_size": 2,
+        "pairs": [
+          "66",
+          "99"
+        ],
+        "primary_symbol": "E",
+        "qa": 6,
+        "qb": 6,
+        "qcoord": "QQ"
+      },
+      {
+        "acceptable_symbols": [
+          "A"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": false,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "A": 2
+        },
+        "label_pair": [
+          "A"
+        ],
+        "orbit": 44,
+        "orbit_size": 2,
+        "pairs": [
+          "67",
+          "79"
+        ],
+        "primary_symbol": "A",
+        "qa": 6,
+        "qb": 7,
+        "qcoord": "Q7"
+      },
+      {
+        "acceptable_symbols": [
+          "C",
+          "T"
+        ],
+        "fixed_cross_69": false,
+        "is_mixed_orbit": true,
+        "is_non_singleton": true,
+        "is_singleton": false,
+        "label_counts": {
+          "C": 1,
+          "T": 1
+        },
+        "label_pair": [
+          "C",
+          "T"
+        ],
+        "orbit": 45,
+        "orbit_size": 2,
+        "pairs": [
+          "68",
+          "89"
+        ],
+        "primary_symbol": "C",
+        "qa": 6,
+        "qb": 8,
+        "qcoord": "Q8"
+      }
+    ]
+  },
+  "translation_delta": "NONE",
+  "verdict": "technical_gap_closed_rejected_control"
+}

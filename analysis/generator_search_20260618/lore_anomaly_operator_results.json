@@ -1,0 +1,371 @@
+{
+  "best_by_target": {
+    "all_structural_anomaly_cells": {
+      "cells": [
+        "06",
+        "09",
+        "16",
+        "19",
+        "26",
+        "29",
+        "36",
+        "39",
+        "46",
+        "49",
+        "56",
+        "59",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "cost": 7.39231742277876,
+      "exact": false,
+      "f1": 0.6153846153846154,
+      "family": "quotient_6_9",
+      "fn": 2,
+      "fp": 8,
+      "lore_id": "tibia_469",
+      "name": "one_6_9_anchor_in_digits",
+      "precision": 0.5,
+      "recall": 0.8,
+      "rule_id": "tibia_469:quotient_6_9:one_6_9_anchor_in_digits",
+      "selected_count": 16,
+      "target_id": "all_structural_anomaly_cells",
+      "target_size": 10,
+      "tp": 8,
+      "value": "469"
+    },
+    "mixed_6_9_exception_cells": {
+      "cells": [
+        "06",
+        "09",
+        "16",
+        "19",
+        "26",
+        "29",
+        "36",
+        "39",
+        "46",
+        "49",
+        "56",
+        "59",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "cost": 7.39231742277876,
+      "exact": false,
+      "f1": 0.4,
+      "family": "quotient_6_9",
+      "fn": 0,
+      "fp": 12,
+      "lore_id": "tibia_469",
+      "name": "one_6_9_anchor_in_digits",
+      "precision": 0.25,
+      "recall": 1.0,
+      "rule_id": "tibia_469:quotient_6_9:one_6_9_anchor_in_digits",
+      "selected_count": 16,
+      "target_id": "mixed_6_9_exception_cells",
+      "target_size": 4,
+      "tp": 4,
+      "value": "469"
+    },
+    "mixed_6_9_orbit_cells": {
+      "cells": [
+        "06",
+        "09",
+        "16",
+        "19",
+        "26",
+        "29",
+        "36",
+        "39",
+        "46",
+        "49",
+        "56",
+        "59",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "cost": 7.39231742277876,
+      "exact": false,
+      "f1": 0.6666666666666666,
+      "family": "quotient_6_9",
+      "fn": 0,
+      "fp": 8,
+      "lore_id": "tibia_469",
+      "name": "one_6_9_anchor_in_digits",
+      "precision": 0.5,
+      "recall": 1.0,
+      "rule_id": "tibia_469:quotient_6_9:one_6_9_anchor_in_digits",
+      "selected_count": 16,
+      "target_id": "mixed_6_9_orbit_cells",
+      "target_size": 8,
+      "tp": 8,
+      "value": "469"
+    },
+    "ordered_exception_cells": {
+      "cells": [
+        "13",
+        "16",
+        "17",
+        "19",
+        "23",
+        "28",
+        "33",
+        "39",
+        "44",
+        "49",
+        "66",
+        "77",
+        "78",
+        "79"
+      ],
+      "cost": 8.729283016944967,
+      "exact": false,
+      "f1": 0.4444444444444445,
+      "family": "adjacent_diff_residues",
+      "fn": 0,
+      "fp": 10,
+      "lore_id": "number_74032",
+      "name": "product_mod10_in_residues",
+      "precision": 0.2857142857142857,
+      "recall": 1.0,
+      "rule_id": "number_74032:adjacent_diff_residues:product_mod10_in_residues",
+      "selected_count": 14,
+      "target_id": "ordered_exception_cells",
+      "target_size": 4,
+      "tp": 4,
+      "value": "74032"
+    },
+    "sevenseg_mixed_cells": {
+      "cells": [
+        "06",
+        "09",
+        "16",
+        "19",
+        "26",
+        "29",
+        "36",
+        "39",
+        "46",
+        "49",
+        "56",
+        "59",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "cost": 7.39231742277876,
+      "exact": false,
+      "f1": 0.4,
+      "family": "quotient_6_9",
+      "fn": 0,
+      "fp": 12,
+      "lore_id": "tibia_469",
+      "name": "one_6_9_anchor_in_digits",
+      "precision": 0.25,
+      "recall": 1.0,
+      "rule_id": "tibia_469:quotient_6_9:one_6_9_anchor_in_digits",
+      "selected_count": 16,
+      "target_id": "sevenseg_mixed_cells",
+      "target_size": 4,
+      "tp": 4,
+      "value": "469"
+    }
+  },
+  "controls": {
+    "all_structural_anomaly_cells": {
+      "digit_multiset_permutation": {
+        "max": 0.6206896551724138,
+        "mean": 0.6171671087533156,
+        "min": 0.6153846153846154,
+        "observed": 0.6153846153846154,
+        "p_good_direction": 1.0,
+        "sd": 0.0025060270683523616
+      },
+      "same_length_random_digits": {
+        "max": 0.888888888888889,
+        "mean": 0.687750472401162,
+        "min": 0.5,
+        "observed": 0.6153846153846154,
+        "p_good_direction": 0.9822035592881424,
+        "sd": 0.05575373038507572
+      },
+      "same_size_random_target": {
+        "max": 0.7,
+        "mean": 0.463451574920218,
+        "min": 0.3225806451612903,
+        "observed": 0.6153846153846154,
+        "p_good_direction": 0.005598880223955209,
+        "sd": 0.051860919551945904
+      }
+    },
+    "mixed_6_9_exception_cells": {
+      "digit_multiset_permutation": {
+        "max": 0.5714285714285715,
+        "mean": 0.4115452631578948,
+        "min": 0.4,
+        "observed": 0.4,
+        "p_good_direction": 1.0,
+        "sd": 0.03705668097142373
+      },
+      "same_length_random_digits": {
+        "max": 0.75,
+        "mean": 0.5122282006297796,
+        "min": 0.4,
+        "observed": 0.4,
+        "p_good_direction": 1.0,
+        "sd": 0.05589919555187145
+      },
+      "same_size_random_target": {
+        "max": 0.8571428571428571,
+        "mean": 0.4211760228894809,
+        "min": 0.24,
+        "observed": 0.4,
+        "p_good_direction": 0.8770245950809838,
+        "sd": 0.0662446933411136
+      }
+    },
+    "mixed_6_9_orbit_cells": {
+      "digit_multiset_permutation": {
+        "max": 0.6666666666666666,
+        "mean": 0.6666666666666666,
+        "min": 0.6666666666666666,
+        "observed": 0.6666666666666666,
+        "p_good_direction": 1.0,
+        "sd": 0.0
+      },
+      "same_length_random_digits": {
+        "max": 1.0,
+        "mean": 0.7598835907951698,
+        "min": 0.5555555555555556,
+        "observed": 0.6666666666666666,
+        "p_good_direction": 0.9858028394321136,
+        "sd": 0.0676160384578983
+      },
+      "same_size_random_target": {
+        "max": 0.7999999999999999,
+        "mean": 0.4433570950140117,
+        "min": 0.31999999999999995,
+        "observed": 0.6666666666666666,
+        "p_good_direction": 0.0015996800639872025,
+        "sd": 0.05865100458358427
+      }
+    },
+    "ordered_exception_cells": {
+      "digit_multiset_permutation": {
+        "max": 0.6666666666666665,
+        "mean": 0.40837592160184233,
+        "min": 0.3333333333333333,
+        "observed": 0.4444444444444445,
+        "p_good_direction": 0.22135572885422916,
+        "sd": 0.07926265390135497
+      },
+      "same_length_random_digits": {
+        "max": 0.8571428571428571,
+        "mean": 0.4732392722426664,
+        "min": 0.28571428571428575,
+        "observed": 0.4444444444444445,
+        "p_good_direction": 0.46690661867626476,
+        "sd": 0.0898521603490466
+      },
+      "same_size_random_target": {
+        "max": 1.0,
+        "mean": 0.42342774742436484,
+        "min": 0.25,
+        "observed": 0.4444444444444445,
+        "p_good_direction": 0.2519496100779844,
+        "sd": 0.06844216651939206
+      }
+    },
+    "sevenseg_mixed_cells": {
+      "digit_multiset_permutation": {
+        "max": 0.4,
+        "mean": 0.4,
+        "min": 0.4,
+        "observed": 0.4,
+        "p_good_direction": 1.0,
+        "sd": 0.0
+      },
+      "same_length_random_digits": {
+        "max": 1.0,
+        "mean": 0.616171270951271,
+        "min": 0.39999999999999997,
+        "observed": 0.4,
+        "p_good_direction": 0.9998000399920016,
+        "sd": 0.11015770637600004
+      },
+      "same_size_random_target": {
+        "max": 0.8571428571428571,
+        "mean": 0.4207958337125053,
+        "min": 0.25,
+        "observed": 0.4,
+        "p_good_direction": 0.8810237952409518,
+        "sd": 0.06438058606210029
+      }
+    },
+    "trials": 5000
+  },
+  "lore_strings": {
+    "honeminas_43153": "43153",
+    "magic_web_34784": "34784",
+    "number_45331": "45331",
+    "number_74032": "74032",
+    "one": "1",
+    "paradox_3478": "3478",
+    "tibia_469": "469"
+  },
+  "new_plaintext": false,
+  "rule_count": 112,
+  "schema": "lore_anomaly_operator_results.v1",
+  "targets": {
+    "all_structural_anomaly_cells": [
+      "06",
+      "09",
+      "16",
+      "19",
+      "33",
+      "36",
+      "39",
+      "66",
+      "68",
+      "89"
+    ],
+    "mixed_6_9_exception_cells": [
+      "09",
+      "16",
+      "36",
+      "89"
+    ],
+    "mixed_6_9_orbit_cells": [
+      "06",
+      "09",
+      "16",
+      "19",
+      "36",
+      "39",
+      "68",
+      "89"
+    ],
+    "ordered_exception_cells": [
+      "19",
+      "33",
+      "39",
+      "66"
+    ],
+    "sevenseg_mixed_cells": [
+      "06",
+      "09",
+      "68",
+      "89"
+    ]
+  },
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

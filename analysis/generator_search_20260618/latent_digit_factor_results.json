@@ -1,0 +1,206 @@
+{
+  "accepted_original_formula": null,
+  "best_exhaustive": {
+    "accuracy": 0.5454545454545454,
+    "assignment": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      3,
+      4,
+      2
+    ],
+    "correct": 30,
+    "k": 5,
+    "latent_pair_groups": 15,
+    "latent_pair_to_symbol": {
+      "00": "E",
+      "01": "F",
+      "02": "I",
+      "03": "I",
+      "04": "I",
+      "11": "E",
+      "12": "N",
+      "13": "S",
+      "14": "T",
+      "22": "E",
+      "23": "A",
+      "24": "C",
+      "33": "N",
+      "34": "E",
+      "44": "A"
+    },
+    "searched": 1020600
+  },
+  "exhaustive_by_k": [
+    {
+      "accuracy": 0.3090909090909091,
+      "assignment": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "correct": 17,
+      "k": 2,
+      "latent_pair_groups": 3,
+      "latent_pair_to_symbol": {
+        "00": "N",
+        "01": "I",
+        "11": "E"
+      },
+      "searched": 511
+    },
+    {
+      "accuracy": 0.4,
+      "assignment": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "correct": 22,
+      "k": 3,
+      "latent_pair_groups": 6,
+      "latent_pair_to_symbol": {
+        "00": "E",
+        "01": "I",
+        "02": "I",
+        "11": "E",
+        "12": "N",
+        "22": "E"
+      },
+      "searched": 18660
+    },
+    {
+      "accuracy": 0.4727272727272727,
+      "assignment": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        3,
+        3,
+        2
+      ],
+      "correct": 26,
+      "k": 4,
+      "latent_pair_groups": 10,
+      "latent_pair_to_symbol": {
+        "00": "E",
+        "01": "F",
+        "02": "I",
+        "03": "I",
+        "11": "E",
+        "12": "N",
+        "13": "T",
+        "22": "E",
+        "23": "A",
+        "33": "N"
+      },
+      "searched": 204630
+    },
+    {
+      "accuracy": 0.5454545454545454,
+      "assignment": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        2,
+        3,
+        4,
+        2
+      ],
+      "correct": 30,
+      "k": 5,
+      "latent_pair_groups": 15,
+      "latent_pair_to_symbol": {
+        "00": "E",
+        "01": "F",
+        "02": "I",
+        "03": "I",
+        "04": "I",
+        "11": "E",
+        "12": "N",
+        "13": "S",
+        "14": "T",
+        "22": "E",
+        "23": "A",
+        "24": "C",
+        "33": "N",
+        "34": "E",
+        "44": "A"
+      },
+      "searched": 1020600
+    }
+  ],
+  "sampled_control": {
+    "assignments_per_trial": 20000,
+    "control_max": 0.5636363636363636,
+    "control_mean": 0.5265454545454545,
+    "control_sd": 0.018620959388772385,
+    "observed_sample": {
+      "accuracy": 0.5454545454545454,
+      "assignment": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        4,
+        2,
+        3,
+        4
+      ],
+      "correct": 30,
+      "k": 5,
+      "latent_pair_groups": 15,
+      "latent_pair_to_symbol": {
+        "00": "E",
+        "01": "F",
+        "02": "S",
+        "03": "T",
+        "04": "N",
+        "11": "E",
+        "12": "I",
+        "13": "I",
+        "14": "I",
+        "22": "N",
+        "23": "E",
+        "24": "A",
+        "33": "A",
+        "34": "C",
+        "44": "E"
+      },
+      "searched": 76537
+    },
+    "p_ge_observed": 0.24752475247524752,
+    "trials": 100
+  },
+  "schema": "latent_digit_factor_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

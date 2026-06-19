@@ -1,0 +1,201 @@
+{
+  "alphabet": [
+    "*",
+    "A",
+    "B",
+    "C",
+    "E",
+    "F",
+    "I",
+    "L",
+    "N",
+    "O",
+    "R",
+    "S",
+    "T",
+    "V"
+  ],
+  "corpus_probabilities": {
+    "*": 0.020946063885494852,
+    "A": 0.08518065980101239,
+    "B": 0.033339151684412635,
+    "C": 0.008203875021818817,
+    "E": 0.17280502705533252,
+    "F": 0.09862105079420493,
+    "I": 0.2019549659626462,
+    "L": 0.037004712864374234,
+    "N": 0.12358177692441961,
+    "O": 0.0017455053237912376,
+    "R": 0.0055856170361319605,
+    "S": 0.042590329900506194,
+    "T": 0.10385756676557864,
+    "V": 0.06458369698027579
+  },
+  "corpus_symbol_counts": {
+    "*": 120,
+    "A": 488,
+    "B": 191,
+    "C": 47,
+    "E": 990,
+    "F": 565,
+    "I": 1157,
+    "L": 212,
+    "N": 708,
+    "O": 10,
+    "R": 32,
+    "S": 244,
+    "T": 595,
+    "V": 370
+  },
+  "expected_extra_counts": {
+    "*": 0.8587886193052889,
+    "A": 3.492407051841508,
+    "B": 1.366905219060918,
+    "C": 0.3363588758945715,
+    "E": 7.085006109268633,
+    "F": 4.043463082562402,
+    "I": 8.280153604468493,
+    "L": 1.5171932274393436,
+    "N": 5.066852853901204,
+    "O": 0.07156571827544074,
+    "R": 0.22901029848141038,
+    "S": 1.746203525920754,
+    "T": 4.258160237388724,
+    "V": 2.6479315761913074
+  },
+  "fit_metrics": {
+    "extra_l1_to_expected": {
+      "central_p_ge": 0.3981060189398106,
+      "central_p_le": 0.6020439795602044,
+      "central_two_sided_tail": 0.7962120378796212,
+      "control_max": 35.30773258858439,
+      "control_mean": 16.125693663815674,
+      "control_min": 4.375632745679875,
+      "control_sd": 3.7171930756206097,
+      "observed": 16.899284342817246,
+      "p_good_direction": 0.6020439795602044,
+      "z_good_direction": -0.20811151405483985
+    },
+    "extra_max_abs_to_expected": {
+      "control_max": 11.933147146098797,
+      "control_mean": 3.6529314470239136,
+      "control_min": 0.8587886193052889,
+      "control_sd": 1.2345940220147735,
+      "observed": 2.914993890731367,
+      "p_good_direction": 0.2816871831281687,
+      "z_good_direction": 0.5977167742058906
+    },
+    "pair_count_pearson_vs_corpus": {
+      "central_p_ge": 0.2051479485205148,
+      "central_p_le": 0.7948620513794862,
+      "central_two_sided_tail": 0.4102958970410296,
+      "control_max": 0.9928437243639954,
+      "control_mean": 0.8462640168504236,
+      "control_min": 0.2474512292717622,
+      "control_sd": 0.07803528570445233,
+      "observed": 0.9105628451558003,
+      "p_good_direction": 0.2051479485205148,
+      "z_good_direction": 0.8239712038589757
+    },
+    "pair_count_spearman_vs_corpus": {
+      "control_max": 0.9889499370655614,
+      "control_mean": 0.8537861567681659,
+      "control_min": 0.379812589130816,
+      "control_sd": 0.06871715540163555,
+      "observed": 0.9194974589712168,
+      "p_good_direction": 0.15920840791592084,
+      "z_good_direction": 0.9562576014531428
+    }
+  },
+  "formula_candidate": [
+    "Give each internal symbol one unordered pair cell.",
+    "Allocate the remaining 41 cells by corpus symbol frequency.",
+    "Place labels across unordered pair cells without a detected deterministic layout rule."
+  ],
+  "method_note": "Uses the primary label for conflict cell {19}; the mechanical formula still records the {19,91} I/N conflict explicitly.",
+  "model_comparison": {
+    "all_slots_frequency_bits_gain_vs_uniform": 20.110705203494835,
+    "all_slots_frequency_log2_probability": -31.77311277483714,
+    "all_slots_uniform_log2_probability": -51.883817978331976,
+    "floor_frequency_bits_gain_vs_uniform": 32.14915371866929,
+    "floor_frequency_log2_probability": -25.2240271003256,
+    "floor_uniform_log2_probability": -57.37318081899489
+  },
+  "observed_extra_counts_after_one_each": {
+    "*": 0,
+    "A": 5,
+    "B": 0,
+    "C": 0,
+    "E": 10,
+    "F": 2,
+    "I": 7,
+    "L": 1,
+    "N": 7,
+    "O": 0,
+    "R": 0,
+    "S": 0,
+    "T": 5,
+    "V": 4
+  },
+  "observed_primary_pair_counts": {
+    "*": 1,
+    "A": 6,
+    "B": 1,
+    "C": 1,
+    "E": 11,
+    "F": 3,
+    "I": 8,
+    "L": 2,
+    "N": 8,
+    "O": 1,
+    "R": 1,
+    "S": 1,
+    "T": 6,
+    "V": 5
+  },
+  "placement_randomness": {
+    "adjacent_same_fraction": {
+      "central_p_ge": 0.3327333633318334,
+      "central_p_le": 0.7821108944552773,
+      "central_two_sided_tail": 0.6654667266636668,
+      "control_max": 0.24444444444444444,
+      "control_mean": 0.104405,
+      "control_min": 0.0,
+      "control_sd": 0.03084301683902751,
+      "observed": 0.12222222222222222,
+      "p_good_direction": 0.3327333633318334,
+      "z_good_direction": 0.5776744316294321
+    },
+    "best_single_feature_accuracy": {
+      "control_max": 0.8363636363636363,
+      "control_mean": 0.7236336363636364,
+      "control_min": 0.6727272727272727,
+      "control_sd": 0.021276289099030978,
+      "observed": 0.7272727272727273,
+      "p_good_direction": 0.5622218889055547,
+      "z_good_direction": 0.17103973781107396
+    },
+    "mean_same_symbol_distance": {
+      "central_p_ge": 0.6955652217389131,
+      "central_p_le": 0.312134393280336,
+      "central_two_sided_tail": 0.624268786560672,
+      "control_max": 6.406451612903226,
+      "control_mean": 5.5973574193548385,
+      "control_min": 4.232258064516129,
+      "control_sd": 0.2740105134668446,
+      "observed": 5.470967741935484,
+      "p_good_direction": 0.312134393280336,
+      "z_good_direction": 0.46125849632644894
+    },
+    "observed": {
+      "adjacent_same_fraction": 0.12222222222222222,
+      "best_single_feature_accuracy": 0.7272727272727273,
+      "mean_same_symbol_distance": 5.470967741935484
+    }
+  },
+  "placement_trials": 20000,
+  "random_seed": 46920260620,
+  "schema": "frequency_weighted_stochastic_inventory_results.v1",
+  "trials": 100000,
+  "verdict": "candidate_generator_stochastic_inventory"
+}

@@ -1,0 +1,513 @@
+{
+  "best": {
+    "accuracy": 0.2909090909090909,
+    "correct": 16,
+    "errors": 39,
+    "feature_set": "tape_plus_grid",
+    "leaf_count": 2,
+    "predicate": {
+      "feature": "diff",
+      "id": "diff<=4",
+      "op": "<=",
+      "value": 4
+    },
+    "rule_class": "stump",
+    "rules": [
+      "diff<=4 => E (40 cells, 29 err)",
+      "NOT diff<=4 => T (15 cells, 10 err)"
+    ],
+    "total": 55
+  },
+  "control_trials": 3000,
+  "controls": {
+    "tape_only": {
+      "control_max": 0.34545454545454546,
+      "control_mean": 0.2725393939393939,
+      "control_min": 0.23636363636363636,
+      "control_sd": 0.015813779064680712,
+      "observed": 0.2727272727272727,
+      "p_good_direction": 0.7064311896034655
+    },
+    "tape_plus_grid": {
+      "control_max": 0.34545454545454546,
+      "control_mean": 0.27918181818181814,
+      "control_min": 0.23636363636363636,
+      "control_sd": 0.015043040313534347,
+      "observed": 0.2909090909090909,
+      "p_good_direction": 0.38853715428190605
+    }
+  },
+  "feature_sets": {
+    "tape_only": [
+      "boundary_cross_tokens",
+      "first_component",
+      "first_component_start_bin",
+      "first_tape_position",
+      "in_component_00",
+      "in_component_01",
+      "in_component_02",
+      "in_component_03",
+      "in_component_04",
+      "in_component_05",
+      "in_component_06",
+      "in_component_07",
+      "in_component_08",
+      "in_component_09",
+      "in_component_10",
+      "in_component_11",
+      "in_component_12",
+      "in_component_13",
+      "in_component_14",
+      "in_component_15",
+      "literal_only_tokens",
+      "mixed_tape_literal",
+      "omitted_zero_outside",
+      "omitted_zero_tape",
+      "only_outside",
+      "outside_fraction_pct",
+      "outside_tokens",
+      "tape_fraction_pct",
+      "tape_only",
+      "tape_tokens",
+      "total_tokens",
+      "unique_components"
+    ],
+    "tape_plus_grid": [
+      "boundary_cross_tokens",
+      "first_component",
+      "first_component_start_bin",
+      "first_tape_position",
+      "in_component_00",
+      "in_component_01",
+      "in_component_02",
+      "in_component_03",
+      "in_component_04",
+      "in_component_05",
+      "in_component_06",
+      "in_component_07",
+      "in_component_08",
+      "in_component_09",
+      "in_component_10",
+      "in_component_11",
+      "in_component_12",
+      "in_component_13",
+      "in_component_14",
+      "in_component_15",
+      "literal_only_tokens",
+      "mixed_tape_literal",
+      "omitted_zero_outside",
+      "omitted_zero_tape",
+      "only_outside",
+      "outside_fraction_pct",
+      "outside_tokens",
+      "tape_fraction_pct",
+      "tape_only",
+      "tape_tokens",
+      "total_tokens",
+      "unique_components",
+      "center_distance_x2",
+      "diagonal",
+      "diff",
+      "diff_mod2",
+      "diff_mod3",
+      "has_nine",
+      "has_one",
+      "has_zero",
+      "numeric_pair",
+      "product",
+      "same_parity",
+      "sum",
+      "sum_mod2",
+      "sum_mod3",
+      "triangular_index",
+      "x",
+      "y"
+    ]
+  },
+  "random_seed": 46920260624,
+  "rows": [
+    {
+      "accuracy": 0.2909090909090909,
+      "correct": 16,
+      "errors": 39,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "diff",
+        "id": "diff<=4",
+        "op": "<=",
+        "value": 4
+      },
+      "rule_class": "stump",
+      "rules": [
+        "diff<=4 => E (40 cells, 29 err)",
+        "NOT diff<=4 => T (15 cells, 10 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2909090909090909,
+      "correct": 16,
+      "errors": 39,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "diff",
+        "id": "diff<=5",
+        "op": "<=",
+        "value": 5
+      },
+      "rule_class": "stump",
+      "rules": [
+        "diff<=5 => E (45 cells, 34 err)",
+        "NOT diff<=5 => I (10 cells, 5 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => E (25 cells, 18 err)",
+        "NOT literal_only_tokens<=14 => I (30 cells, 22 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => E (27 cells, 20 err)",
+        "NOT literal_only_tokens<=16 => I (28 cells, 20 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => E (29 cells, 22 err)",
+        "NOT literal_only_tokens<=17 => I (26 cells, 18 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => E (30 cells, 23 err)",
+        "NOT literal_only_tokens<=18 => I (25 cells, 17 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=20",
+        "op": "<=",
+        "value": 20
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=20 => E (32 cells, 24 err)",
+        "NOT literal_only_tokens<=20 => I (23 cells, 16 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=23",
+        "op": "<=",
+        "value": 23
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=23 => E (43 cells, 34 err)",
+        "NOT literal_only_tokens<=23 => I (12 cells, 6 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=15",
+        "op": "<=",
+        "value": 15
+      },
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=15 => E (24 cells, 17 err)",
+        "NOT outside_tokens<=15 => I (31 cells, 23 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=17 => E (25 cells, 18 err)",
+        "NOT outside_tokens<=17 => I (30 cells, 22 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=18 => E (26 cells, 19 err)",
+        "NOT outside_tokens<=18 => I (29 cells, 21 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_only",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "outside_tokens",
+        "id": "outside_tokens<=25",
+        "op": "<=",
+        "value": 25
+      },
+      "rule_class": "stump",
+      "rules": [
+        "outside_tokens<=25 => E (42 cells, 33 err)",
+        "NOT outside_tokens<=25 => I (13 cells, 7 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "diff",
+        "id": "diff<=3",
+        "op": "<=",
+        "value": 3
+      },
+      "rule_class": "stump",
+      "rules": [
+        "diff<=3 => E (34 cells, 25 err)",
+        "NOT diff<=3 => I (21 cells, 15 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "diff",
+        "id": "diff<=6",
+        "op": "<=",
+        "value": 6
+      },
+      "rule_class": "stump",
+      "rules": [
+        "diff<=6 => E (49 cells, 38 err)",
+        "NOT diff<=6 => I (6 cells, 2 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=14",
+        "op": "<=",
+        "value": 14
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=14 => E (25 cells, 18 err)",
+        "NOT literal_only_tokens<=14 => I (30 cells, 22 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=16",
+        "op": "<=",
+        "value": 16
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=16 => E (27 cells, 20 err)",
+        "NOT literal_only_tokens<=16 => I (28 cells, 20 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=17",
+        "op": "<=",
+        "value": 17
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=17 => E (29 cells, 22 err)",
+        "NOT literal_only_tokens<=17 => I (26 cells, 18 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=18",
+        "op": "<=",
+        "value": 18
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=18 => E (30 cells, 23 err)",
+        "NOT literal_only_tokens<=18 => I (25 cells, 17 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=20",
+        "op": "<=",
+        "value": 20
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=20 => E (32 cells, 24 err)",
+        "NOT literal_only_tokens<=20 => I (23 cells, 16 err)"
+      ],
+      "total": 55
+    },
+    {
+      "accuracy": 0.2727272727272727,
+      "correct": 15,
+      "errors": 40,
+      "feature_set": "tape_plus_grid",
+      "leaf_count": 2,
+      "predicate": {
+        "feature": "literal_only_tokens",
+        "id": "literal_only_tokens<=23",
+        "op": "<=",
+        "value": 23
+      },
+      "rule_class": "stump",
+      "rules": [
+        "literal_only_tokens<=23 => E (43 cells, 34 err)",
+        "NOT literal_only_tokens<=23 => I (12 cells, 6 err)"
+      ],
+      "total": 55
+    }
+  ],
+  "schema": "tape_feature_pair_label_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

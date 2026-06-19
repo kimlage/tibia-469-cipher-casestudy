@@ -1,0 +1,315 @@
+{
+  "accepted_original_formula": null,
+  "control": {
+    "compressed_by_kind": {
+      "anti_diagonal_sum": {
+        "max": 66,
+        "mean": 63.4222,
+        "min": 61
+      },
+      "column": {
+        "max": 62,
+        "mean": 59.3678,
+        "min": 57
+      },
+      "diagonal_diff": {
+        "max": 62,
+        "mean": 59.3968,
+        "min": 57
+      },
+      "row": {
+        "max": 62,
+        "mean": 59.4014,
+        "min": 57
+      }
+    },
+    "edit_by_kind": {
+      "anti_diagonal_sum": {
+        "max": 1.0,
+        "mean": 0.8813018518518518,
+        "min": 0.6824074074074074
+      },
+      "column": {
+        "max": 1.0,
+        "mean": 0.8495574867724869,
+        "min": 0.6507936507936507
+      },
+      "diagonal_diff": {
+        "max": 0.9861111111111112,
+        "mean": 0.8489035008818342,
+        "min": 0.6830687830687832
+      },
+      "row": {
+        "max": 0.9765432098765433,
+        "mean": 0.8496533068783069,
+        "min": 0.6612874779541447
+      }
+    },
+    "long_hit_max": 4,
+    "long_hit_mean": 0.3888,
+    "long_hit_p_ge_observed": 1.0,
+    "trials": 5000
+  },
+  "observed": {
+    "kind_metrics": [
+      {
+        "adjacent_edit_mean": 0.8972222222222221,
+        "compressed_bytes": 63,
+        "kind": "anti_diagonal_sum",
+        "line_count": 19,
+        "texts": [
+          "*",
+          "N",
+          "RE",
+          "VF",
+          "FNA",
+          "TAO",
+          "IELE",
+          "ITIB",
+          "IVNLE",
+          "TISVF",
+          "ITANV",
+          "NTEI",
+          "NEEE",
+          "NEA",
+          "ICN",
+          "VE",
+          "AA",
+          "T",
+          "E"
+        ]
+      },
+      {
+        "adjacent_edit_mean": 0.8813492063492063,
+        "compressed_bytes": 58,
+        "kind": "column",
+        "line_count": 10,
+        "texts": [
+          "*",
+          "NE",
+          "RFA",
+          "VNOE",
+          "FALBE",
+          "TEILFV",
+          "ITNVNIE",
+          "IVSAEEAN",
+          "IITTEECEA",
+          "TINNNIVATE"
+        ]
+      },
+      {
+        "adjacent_edit_mean": 0.7727072310405644,
+        "compressed_bytes": 60,
+        "kind": "diagonal_diff",
+        "line_count": 10,
+        "texts": [
+          "*EAEEVENAE",
+          "NFOBFIAET",
+          "RNLLNECA",
+          "VAIVEEV",
+          "FENAEI",
+          "TTSTN",
+          "IVTN",
+          "IIN",
+          "II",
+          "T"
+        ]
+      },
+      {
+        "adjacent_edit_mean": 0.8284391534391534,
+        "compressed_bytes": 60,
+        "kind": "row",
+        "line_count": 10,
+        "texts": [
+          "*NRVFTIIIT",
+          "EFNAETVII",
+          "AOLINSTN",
+          "EBLVATN",
+          "EFNEEN",
+          "VIEEI",
+          "EACV",
+          "NEA",
+          "AT",
+          "E"
+        ]
+      }
+    ],
+    "long_hit_count": 0,
+    "long_lines": [
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 0,
+        "kind": "row",
+        "text": "*NRVFTIIIT"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 1,
+        "kind": "row",
+        "text": "EFNAETVII"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 2,
+        "kind": "row",
+        "text": "AOLINSTN"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 3,
+        "kind": "row",
+        "text": "EBLVATN"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 4,
+        "kind": "row",
+        "text": "EFNEEN"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 5,
+        "kind": "row",
+        "text": "VIEEI"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 4,
+        "kind": "column",
+        "text": "FALBE"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 5,
+        "kind": "column",
+        "text": "TEILFV"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 6,
+        "kind": "column",
+        "text": "ITNVNIE"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 7,
+        "kind": "column",
+        "text": "IVSAEEAN"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 8,
+        "kind": "column",
+        "text": "IITTEECEA"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 9,
+        "kind": "column",
+        "text": "TINNNIVATE"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 0,
+        "kind": "diagonal_diff",
+        "text": "*EAEEVENAE"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 1,
+        "kind": "diagonal_diff",
+        "text": "NFOBFIAET"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 2,
+        "kind": "diagonal_diff",
+        "text": "RNLLNECA"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 3,
+        "kind": "diagonal_diff",
+        "text": "VAIVEEV"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 4,
+        "kind": "diagonal_diff",
+        "text": "FENAEI"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 5,
+        "kind": "diagonal_diff",
+        "text": "TTSTN"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 8,
+        "kind": "anti_diagonal_sum",
+        "sum": 8,
+        "text": "IVNLE"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 9,
+        "kind": "anti_diagonal_sum",
+        "sum": 9,
+        "text": "TISVF"
+      },
+      {
+        "count_forward": 0,
+        "count_reverse": 0,
+        "hit": false,
+        "index": 10,
+        "kind": "anti_diagonal_sum",
+        "sum": 10,
+        "text": "ITANV"
+      }
+    ]
+  },
+  "schema": "triangular_line_pattern_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

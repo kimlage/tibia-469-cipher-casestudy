@@ -1,0 +1,4227 @@
+{
+  "best_global": {
+    "acceptable_accuracy": 0.509090909090909,
+    "acceptable_exceptions": [
+      "00",
+      "02",
+      "03",
+      "04",
+      "12",
+      "14",
+      "16",
+      "17",
+      "22",
+      "23",
+      "25",
+      "27",
+      "33",
+      "34",
+      "36",
+      "37",
+      "45",
+      "55",
+      "56",
+      "59",
+      "67",
+      "68",
+      "69",
+      "77",
+      "79",
+      "88",
+      "89"
+    ],
+    "acceptable_hits": 28,
+    "assigned_cells": 47,
+    "block_count": 4,
+    "blocks": [
+      {
+        "cells": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "13",
+          "16",
+          "19",
+          "23",
+          "26",
+          "29",
+          "33",
+          "34",
+          "36",
+          "39",
+          "46",
+          "49"
+        ],
+        "claim_cells": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "13",
+          "16",
+          "19",
+          "23",
+          "26",
+          "29",
+          "33",
+          "34",
+          "36",
+          "39",
+          "46",
+          "49"
+        ],
+        "claim_size": 16,
+        "cost_bits": 13.585,
+        "detail": {
+          "left": {
+            "cost_bits": 3.72,
+            "digits": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "family": "interval",
+            "name": "interval_1_4"
+          },
+          "right": {
+            "cost_bits": 4.385,
+            "digits": [
+              0,
+              3,
+              6,
+              9
+            ],
+            "family": "mod_class",
+            "name": "mod_3_0"
+          }
+        },
+        "false_hits": 9,
+        "family": "one_in_set_other_in_set",
+        "hits": 7,
+        "name": "one_in_interval_1_4_other_in_mod_3_0",
+        "size": 16,
+        "symbol": "N"
+      },
+      {
+        "cells": [
+          "06",
+          "07",
+          "08",
+          "16",
+          "17",
+          "18"
+        ],
+        "claim_cells": [
+          "06",
+          "07",
+          "08",
+          "17",
+          "18"
+        ],
+        "claim_size": 5,
+        "cost_bits": 10.78,
+        "detail": {
+          "left_interval": {
+            "cost_bits": 3.36,
+            "digits": [
+              0,
+              1
+            ],
+            "family": "interval",
+            "name": "interval_0_1"
+          },
+          "right_interval": {
+            "cost_bits": 3.54,
+            "digits": [
+              6,
+              7,
+              8
+            ],
+            "family": "interval",
+            "name": "interval_6_8"
+          }
+        },
+        "false_hits": 1,
+        "family": "interval_block",
+        "hits": 4,
+        "name": "interval_block_interval_0_1__interval_6_8",
+        "size": 6,
+        "symbol": "I"
+      },
+      {
+        "cells": [
+          "11",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "66",
+          "67",
+          "68",
+          "69",
+          "77",
+          "78",
+          "79",
+          "88",
+          "89",
+          "99"
+        ],
+        "claim_cells": [
+          "11",
+          "14",
+          "15",
+          "44",
+          "45",
+          "47",
+          "48",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "66",
+          "67",
+          "68",
+          "69",
+          "77",
+          "78",
+          "79",
+          "88",
+          "89",
+          "99"
+        ],
+        "claim_size": 22,
+        "cost_bits": 18.1058,
+        "detail": {
+          "set": {
+            "cost_bits": 12.3658,
+            "digits": [
+              1,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "family": "explicit_complement",
+            "name": "not_023"
+          }
+        },
+        "false_hits": 12,
+        "family": "both_in_set",
+        "hits": 10,
+        "name": "both_in_not_023",
+        "size": 28,
+        "symbol": "E"
+      },
+      {
+        "cells": [
+          "22",
+          "23",
+          "24",
+          "25",
+          "33",
+          "34",
+          "35",
+          "44",
+          "45",
+          "55"
+        ],
+        "claim_cells": [
+          "22",
+          "24",
+          "25",
+          "35"
+        ],
+        "claim_size": 4,
+        "cost_bits": 8.02,
+        "detail": {
+          "set": {
+            "cost_bits": 3.72,
+            "digits": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "family": "interval",
+            "name": "interval_2_5"
+          }
+        },
+        "false_hits": 2,
+        "family": "both_in_set",
+        "hits": 2,
+        "name": "both_in_interval_2_5",
+        "size": 10,
+        "symbol": "L"
+      }
+    ],
+    "default_cells": 8,
+    "default_symbol": "T",
+    "gain_vs_inventory_lookup_bits": -180.49088167175512,
+    "gain_vs_raw_lookup_bits": -128.60706369342316,
+    "inventory_lookup_bits": 157.52070273483628,
+    "max_blocks": 4,
+    "mdl_bits": 338.0115844065914,
+    "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+    "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+    "model_bits": 69.52757461028801,
+    "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+    "primary_accuracy": 0.4909090909090909,
+    "primary_errors": 28,
+    "primary_hits": 27,
+    "raw_lookup_bits": 209.40452071316824
+  },
+  "block_library": {
+    "candidate_count": 4554,
+    "family_counts": {
+      "both_in_set": 1023,
+      "diagonal_subset": 1189,
+      "exact_digit_star": 150,
+      "interval_block": 1427,
+      "one_in_set_other_in_set": 674,
+      "parity_mod_class_block": 91
+    }
+  },
+  "control": {
+    "summary": {
+      "global_inventory_gain_max": -143.05130370237674,
+      "global_inventory_gain_mean": -191.05534024059722,
+      "global_inventory_gain_p_ge": 0.30864197530864196,
+      "global_mdl_bits_mean": 348.5760429754335,
+      "global_mdl_bits_min": 300.572006437213,
+      "global_mdl_bits_p_le": 0.30864197530864196,
+      "global_primary_hits_max": 34,
+      "global_primary_hits_mean": 27.25,
+      "global_primary_hits_p_ge": 0.6049382716049383,
+      "global_raw_gain_max": -91.16748572404478,
+      "global_raw_gain_mean": -139.17152226226523,
+      "global_raw_gain_p_ge": 0.30864197530864196,
+      "independent_macro_f1_max": 0.7346532540141563,
+      "independent_macro_f1_mean": 0.4813216375757149,
+      "independent_macro_f1_p_ge": 0.2222222222222222,
+      "independent_total_cost_mean": 319.89379591889497,
+      "independent_total_cost_min": 292.2994136975425,
+      "independent_total_cost_p_le": 0.09876543209876543,
+      "independent_weighted_f1_max": 0.8124469469924015,
+      "independent_weighted_f1_mean": 0.7002737954242493,
+      "independent_weighted_f1_p_ge": 0.24691358024691357,
+      "trials": 80
+    },
+    "trial_rows": [
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -177.27864760912354,
+          "gain_vs_raw_lookup_bits": -125.39482963079158,
+          "max_blocks": 8,
+          "mdl_bits": 334.7993503439598,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 5.463970546313817,
+          "macro_f1": 0.5131083202511774,
+          "total_cost_bits": 312.5108136975425,
+          "weighted_f1": 0.7103296703296704
+        },
+        "trial": 0
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -193.203851229395,
+          "gain_vs_raw_lookup_bits": -141.32003325106305,
+          "max_blocks": 8,
+          "mdl_bits": 350.7245539642313,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": 4.347371978690489,
+          "macro_f1": 0.3501831501831502,
+          "total_cost_bits": 313.62741226516584,
+          "weighted_f1": 0.6208058608058609
+        },
+        "trial": 1
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -201.18622557850188,
+          "gain_vs_raw_lookup_bits": -149.30240760016991,
+          "max_blocks": 4,
+          "mdl_bits": 358.70692831333815,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 12.030649686887784,
+          "macro_f1": 0.4225881261595547,
+          "total_cost_bits": 305.94413455696855,
+          "weighted_f1": 0.7358874458874458
+        },
+        "trial": 2
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -183.26223297354124,
+          "gain_vs_raw_lookup_bits": -131.37841499520928,
+          "max_blocks": 8,
+          "mdl_bits": 340.7829357083775,
+          "primary_hits": 31
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -14.253048880735491,
+          "macro_f1": 0.4705812149421172,
+          "total_cost_bits": 332.2278331245918,
+          "weighted_f1": 0.6708741550846814
+        },
+        "trial": 3
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -170.27054760912358,
+          "gain_vs_raw_lookup_bits": -118.38672963079162,
+          "max_blocks": 8,
+          "mdl_bits": 327.79125034395986,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 7.600530259838479,
+          "macro_f1": 0.5296256847727436,
+          "total_cost_bits": 310.37425398401786,
+          "weighted_f1": 0.7336522776094969
+        },
+        "trial": 4
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -167.429718337959,
+          "gain_vs_raw_lookup_bits": -115.54590035962704,
+          "max_blocks": 8,
+          "mdl_bits": 324.9504210727953,
+          "primary_hits": 32
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 10.124588540986451,
+          "macro_f1": 0.449824778396207,
+          "total_cost_bits": 307.8501957028699,
+          "weighted_f1": 0.7832244523153614
+        },
+        "trial": 5
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -195.18495122939498,
+          "gain_vs_raw_lookup_bits": -143.30113325106302,
+          "max_blocks": 8,
+          "mdl_bits": 352.70565396423126,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -8.619929453686154,
+          "macro_f1": 0.5237244897959183,
+          "total_cost_bits": 326.5947136975425,
+          "weighted_f1": 0.7018181818181819
+        },
+        "trial": 6
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -169.47589268706594,
+          "gain_vs_raw_lookup_bits": -117.59207470873397,
+          "max_blocks": 8,
+          "mdl_bits": 326.9965954219022,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 4,
+          "gain_vs_membership_lookup_bits": 6.281869113937091,
+          "macro_f1": 0.6962973534402106,
+          "total_cost_bits": 311.69291512991924,
+          "weighted_f1": 0.7952463697918244
+        },
+        "trial": 7
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -173.47190732264818,
+          "gain_vs_raw_lookup_bits": -121.58808934431622,
+          "max_blocks": 8,
+          "mdl_bits": 330.99261005748446,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -9.67630859426015,
+          "macro_f1": 0.4487092272806558,
+          "total_cost_bits": 327.6510928381165,
+          "weighted_f1": 0.6664624264624264
+        },
+        "trial": 8
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -180.3207732600166,
+          "gain_vs_raw_lookup_bits": -128.43695528168465,
+          "max_blocks": 8,
+          "mdl_bits": 337.8414759948529,
+          "primary_hits": 32
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 0.015649686887797998,
+          "macro_f1": 0.4870879120879121,
+          "total_cost_bits": 317.95913455696854,
+          "weighted_f1": 0.7346153846153846
+        },
+        "trial": 9
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -206.65366586497726,
+          "gain_vs_raw_lookup_bits": -154.7698478866453,
+          "max_blocks": 8,
+          "mdl_bits": 364.17436859981353,
+          "primary_hits": 25
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -0.5292488807355085,
+          "macro_f1": 0.3877372627372627,
+          "total_cost_bits": 318.50403312459184,
+          "weighted_f1": 0.6705854751309297
+        },
+        "trial": 10
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -206.4568402140842,
+          "gain_vs_raw_lookup_bits": -154.57302223575223,
+          "max_blocks": 4,
+          "mdl_bits": 363.9775429489205,
+          "primary_hits": 23
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -4.536587734834143,
+          "macro_f1": 0.3233124018838304,
+          "total_cost_bits": 322.5113719786905,
+          "weighted_f1": 0.6014119214119215
+        },
+        "trial": 11
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -201.54185122939498,
+          "gain_vs_raw_lookup_bits": -149.65803325106302,
+          "max_blocks": 8,
+          "mdl_bits": 359.06255396423126,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -5.8493488807354765,
+          "macro_f1": 0.4594701038310061,
+          "total_cost_bits": 323.8241331245918,
+          "weighted_f1": 0.6555206197311461
+        },
+        "trial": 12
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -194.12974760912357,
+          "gain_vs_raw_lookup_bits": -142.2459296307916,
+          "max_blocks": 8,
+          "mdl_bits": 351.65045034395985,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 4,
+          "gain_vs_membership_lookup_bits": 14.499188540986438,
+          "macro_f1": 0.5261595547309833,
+          "total_cost_bits": 303.4755957028699,
+          "weighted_f1": 0.7911216056670601
+        },
+        "trial": 13
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -150.09691833795898,
+          "gain_vs_raw_lookup_bits": -98.21310035962702,
+          "max_blocks": 8,
+          "mdl_bits": 307.61762107279526,
+          "primary_hits": 32
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 25.369289973363152,
+          "macro_f1": 0.5323260073260073,
+          "total_cost_bits": 292.6054942704932,
+          "weighted_f1": 0.7352214452214452
+        },
+        "trial": 14
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -194.1170365938127,
+          "gain_vs_raw_lookup_bits": -142.23321861548075,
+          "max_blocks": 8,
+          "mdl_bits": 351.637739328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 3.9695705463138324,
+          "macro_f1": 0.5187565935465095,
+          "total_cost_bits": 314.0052136975425,
+          "weighted_f1": 0.7054582494154686
+        },
+        "trial": 15
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -210.12629151587032,
+          "gain_vs_raw_lookup_bits": -158.24247353753836,
+          "max_blocks": 8,
+          "mdl_bits": 367.6469942507066,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -7.331250313112207,
+          "macro_f1": 0.469983400058588,
+          "total_cost_bits": 325.30603455696854,
+          "weighted_f1": 0.7460361647921456
+        },
+        "trial": 16
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -192.44751094291962,
+          "gain_vs_raw_lookup_bits": -140.56369296458766,
+          "max_blocks": 4,
+          "mdl_bits": 349.9682136777559,
+          "primary_hits": 25
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -13.013048880735482,
+          "macro_f1": 0.5049450549450549,
+          "total_cost_bits": 330.9878331245918,
+          "weighted_f1": 0.684009324009324
+        },
+        "trial": 17
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -188.65823659381272,
+          "gain_vs_raw_lookup_bits": -136.77441861548076,
+          "max_blocks": 8,
+          "mdl_bits": 346.178939328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 4,
+          "gain_vs_membership_lookup_bits": 0.3806094004124816,
+          "macro_f1": 0.7346532540141563,
+          "total_cost_bits": 317.59417484344385,
+          "weighted_f1": 0.7883178225283488
+        },
+        "trial": 18
+      },
+      {
+        "global": {
+          "block_count": 8,
+          "gain_vs_inventory_lookup_bits": -192.88534281765646,
+          "gain_vs_raw_lookup_bits": -141.0015248393245,
+          "max_blocks": 8,
+          "mdl_bits": 350.40604555249274,
+          "primary_hits": 31
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -22.205089167210872,
+          "macro_f1": 0.4858974358974359,
+          "total_cost_bits": 340.1798734110672,
+          "weighted_f1": 0.6761305361305362
+        },
+        "trial": 19
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -209.8218402140842,
+          "gain_vs_raw_lookup_bits": -157.93802223575224,
+          "max_blocks": 4,
+          "mdl_bits": 367.3425429489205,
+          "primary_hits": 23
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -1.6539697401615285,
+          "macro_f1": 0.4933673469387755,
+          "total_cost_bits": 319.62875398401786,
+          "weighted_f1": 0.704978354978355
+        },
+        "trial": 20
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -193.29240253118115,
+          "gain_vs_raw_lookup_bits": -141.4085845528492,
+          "max_blocks": 8,
+          "mdl_bits": 350.81310526601743,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -15.764548880735504,
+          "macro_f1": 0.4411517054374197,
+          "total_cost_bits": 333.73933312459184,
+          "weighted_f1": 0.6790536735991282
+        },
+        "trial": 21
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -196.4569255785019,
+          "gain_vs_raw_lookup_bits": -144.57310760016995,
+          "max_blocks": 4,
+          "mdl_bits": 353.9776283133382,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": 1.1570719786905102,
+          "macro_f1": 0.35521840315073394,
+          "total_cost_bits": 316.8177122651658,
+          "weighted_f1": 0.6192868534973798
+        },
+        "trial": 22
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -191.9762365938127,
+          "gain_vs_raw_lookup_bits": -140.09241861548074,
+          "max_blocks": 8,
+          "mdl_bits": 349.496939328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 3.3734302598384716,
+          "macro_f1": 0.5659554730983303,
+          "total_cost_bits": 314.60135398401786,
+          "weighted_f1": 0.7220306965761512
+        },
+        "trial": 23
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -210.9139255785019,
+          "gain_vs_raw_lookup_bits": -159.03010760016994,
+          "max_blocks": 4,
+          "mdl_bits": 368.4346283133382,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -9.782650313112185,
+          "macro_f1": 0.5561046096760383,
+          "total_cost_bits": 327.7574345569685,
+          "weighted_f1": 0.7511915357369904
+        },
+        "trial": 24
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -179.2211622447058,
+          "gain_vs_raw_lookup_bits": -127.33734426637383,
+          "max_blocks": 8,
+          "mdl_bits": 336.7418649795421,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -1.4103294536861881,
+          "macro_f1": 0.5239617525331811,
+          "total_cost_bits": 319.3851136975425,
+          "weighted_f1": 0.7031828777283323
+        },
+        "trial": 25
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -165.2375586244343,
+          "gain_vs_raw_lookup_bits": -113.35374064610235,
+          "max_blocks": 8,
+          "mdl_bits": 322.7582613592706,
+          "primary_hits": 33
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 7.633370546313813,
+          "macro_f1": 0.5279736136878994,
+          "total_cost_bits": 310.3414136975425,
+          "weighted_f1": 0.696980191525646
+        },
+        "trial": 26
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -191.64860253118115,
+          "gain_vs_raw_lookup_bits": -139.7647845528492,
+          "max_blocks": 8,
+          "mdl_bits": 349.16930526601743,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 4.581309400412465,
+          "macro_f1": 0.5928571428571429,
+          "total_cost_bits": 313.39347484344387,
+          "weighted_f1": 0.7622510822510823
+        },
+        "trial": 27
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -179.48562195823047,
+          "gain_vs_raw_lookup_bits": -127.6018039798985,
+          "max_blocks": 8,
+          "mdl_bits": 337.00632469306674,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 14.046730259838455,
+          "macro_f1": 0.54564800279086,
+          "total_cost_bits": 303.9280539840179,
+          "weighted_f1": 0.7288000888000888
+        },
+        "trial": 28
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -197.799951229395,
+          "gain_vs_raw_lookup_bits": -145.91613325106303,
+          "max_blocks": 8,
+          "mdl_bits": 355.32065396423127,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -14.72792802130948,
+          "macro_f1": 0.4244937602080459,
+          "total_cost_bits": 332.7027122651658,
+          "weighted_f1": 0.64080303534849
+        },
+        "trial": 29
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -181.15813659381274,
+          "gain_vs_raw_lookup_bits": -129.27431861548078,
+          "max_blocks": 8,
+          "mdl_bits": 338.678839328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 4.3112094004124515,
+          "macro_f1": 0.6223330241187384,
+          "total_cost_bits": 313.6635748434439,
+          "weighted_f1": 0.7685242030696576
+        },
+        "trial": 30
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -198.298051229395,
+          "gain_vs_raw_lookup_bits": -146.41423325106305,
+          "max_blocks": 8,
+          "mdl_bits": 355.8187539642313,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 6,
+          "gain_vs_membership_lookup_bits": 6.81526911393712,
+          "macro_f1": 0.639795918367347,
+          "total_cost_bits": 311.1595151299192,
+          "weighted_f1": 0.7431168831168832
+        },
+        "trial": 31
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -187.47297688028806,
+          "gain_vs_raw_lookup_bits": -135.5891589019561,
+          "max_blocks": 8,
+          "mdl_bits": 344.99367961512434,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -24.584828021309477,
+          "macro_f1": 0.43570710335416213,
+          "total_cost_bits": 342.5596122651658,
+          "weighted_f1": 0.6348516842634491
+        },
+        "trial": 32
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -172.0157073226482,
+          "gain_vs_raw_lookup_bits": -120.13188934431625,
+          "max_blocks": 8,
+          "mdl_bits": 329.5364100574845,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -5.768168307784833,
+          "macro_f1": 0.4218875895346484,
+          "total_cost_bits": 323.74295255164117,
+          "weighted_f1": 0.6524401563973756
+        },
+        "trial": 33
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -187.63379630733743,
+          "gain_vs_raw_lookup_bits": -135.74997832900547,
+          "max_blocks": 4,
+          "mdl_bits": 345.1544990421737,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -5.438408594260181,
+          "macro_f1": 0.3868560011417154,
+          "total_cost_bits": 323.4131928381165,
+          "weighted_f1": 0.6703296703296704
+        },
+        "trial": 34
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -185.95515602086203,
+          "gain_vs_raw_lookup_bits": -134.07133804253007,
+          "max_blocks": 4,
+          "mdl_bits": 343.4758587556983,
+          "primary_hits": 25
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 13.34049140573984,
+          "macro_f1": 0.4338256981114124,
+          "total_cost_bits": 304.6342928381165,
+          "weighted_f1": 0.6641352586807133
+        },
+        "trial": 35
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -197.95656224470576,
+          "gain_vs_raw_lookup_bits": -146.0727442663738,
+          "max_blocks": 8,
+          "mdl_bits": 355.47726497954204,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 5.17130940041244,
+          "macro_f1": 0.5450710108604845,
+          "total_cost_bits": 312.8034748434439,
+          "weighted_f1": 0.7680170122275386
+        },
+        "trial": 36
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -184.14426224470583,
+          "gain_vs_raw_lookup_bits": -132.26044426637387,
+          "max_blocks": 8,
+          "mdl_bits": 341.6649649795421,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -5.93032945368617,
+          "macro_f1": 0.43741496598639457,
+          "total_cost_bits": 323.9051136975425,
+          "weighted_f1": 0.6925541125541127
+        },
+        "trial": 37
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -165.6457073226482,
+          "gain_vs_raw_lookup_bits": -113.76188934431624,
+          "max_blocks": 8,
+          "mdl_bits": 323.1664100574845,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 12.649130259838444,
+          "macro_f1": 0.6049486461251167,
+          "total_cost_bits": 305.3256539840179,
+          "weighted_f1": 0.7370647653000594
+        },
+        "trial": 38
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -180.5196073226482,
+          "gain_vs_raw_lookup_bits": -128.63578934431624,
+          "max_blocks": 8,
+          "mdl_bits": 338.0403100574845,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -7.033328021309501,
+          "macro_f1": 0.35655569920275804,
+          "total_cost_bits": 325.00811226516583,
+          "weighted_f1": 0.6297312491430139
+        },
+        "trial": 39
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -187.85256703617284,
+          "gain_vs_raw_lookup_bits": -135.96874905784088,
+          "max_blocks": 4,
+          "mdl_bits": 345.3732697710091,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": 8.845210832789178,
+          "macro_f1": 0.3786102786102786,
+          "total_cost_bits": 309.12957341106716,
+          "weighted_f1": 0.6793628593628595
+        },
+        "trial": 40
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -204.14369151587033,
+          "gain_vs_raw_lookup_bits": -152.25987353753837,
+          "max_blocks": 8,
+          "mdl_bits": 361.6643942507066,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -16.77250859426016,
+          "macro_f1": 0.4011189311941192,
+          "total_cost_bits": 334.7472928381165,
+          "weighted_f1": 0.6470151857711667
+        },
+        "trial": 41
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -214.96066586497722,
+          "gain_vs_raw_lookup_bits": -163.07684788664525,
+          "max_blocks": 8,
+          "mdl_bits": 372.4813685998135,
+          "primary_hits": 25
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -7.4930488807355005,
+          "macro_f1": 0.4323260073260073,
+          "total_cost_bits": 325.46783312459183,
+          "weighted_f1": 0.6806759906759906
+        },
+        "trial": 42
+      },
+      {
+        "global": {
+          "block_count": 8,
+          "gain_vs_inventory_lookup_bits": -179.487913546492,
+          "gain_vs_raw_lookup_bits": -127.60409556816003,
+          "max_blocks": 8,
+          "mdl_bits": 337.0086162813283,
+          "primary_hits": 33
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -10.886268307784803,
+          "macro_f1": 0.5253096110238967,
+          "total_cost_bits": 328.86105255164114,
+          "weighted_f1": 0.6458252858252859
+        },
+        "trial": 43
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -208.16184021408418,
+          "gain_vs_raw_lookup_bits": -156.27802223575222,
+          "max_blocks": 4,
+          "mdl_bits": 365.68254294892046,
+          "primary_hits": 23
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -3.150869740161511,
+          "macro_f1": 0.5355699855699856,
+          "total_cost_bits": 321.12565398401784,
+          "weighted_f1": 0.724830119375574
+        },
+        "trial": 44
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -218.12789992760884,
+          "gain_vs_raw_lookup_bits": -166.24408194927688,
+          "max_blocks": 4,
+          "mdl_bits": 375.6486026624451,
+          "primary_hits": 22
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 9.039410832789144,
+          "macro_f1": 0.4806122448979592,
+          "total_cost_bits": 308.9353734110672,
+          "weighted_f1": 0.6875324675324676
+        },
+        "trial": 45
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -207.98129992760886,
+          "gain_vs_raw_lookup_bits": -156.0974819492769,
+          "max_blocks": 4,
+          "mdl_bits": 365.50200266244514,
+          "primary_hits": 22
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -13.257247448358783,
+          "macro_f1": 0.33403976975405547,
+          "total_cost_bits": 331.2320316922151,
+          "weighted_f1": 0.5890576090576092
+        },
+        "trial": 46
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -212.14819992760886,
+          "gain_vs_raw_lookup_bits": -160.2643819492769,
+          "max_blocks": 4,
+          "mdl_bits": 369.66890266244513,
+          "primary_hits": 22
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -10.45249059958752,
+          "macro_f1": 0.5762602476888191,
+          "total_cost_bits": 328.42727484344385,
+          "weighted_f1": 0.7551204351204351
+        },
+        "trial": 47
+      },
+      {
+        "global": {
+          "block_count": 2,
+          "gain_vs_inventory_lookup_bits": -221.75217427671578,
+          "gain_vs_raw_lookup_bits": -169.86835629838382,
+          "max_blocks": 4,
+          "mdl_bits": 379.27287701155205,
+          "primary_hits": 20
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -16.217887734834164,
+          "macro_f1": 0.48788156288156287,
+          "total_cost_bits": 334.1926719786905,
+          "weighted_f1": 0.6144133644133645
+        },
+        "trial": 48
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -209.91582557850188,
+          "gain_vs_raw_lookup_bits": -158.03200760016992,
+          "max_blocks": 4,
+          "mdl_bits": 367.43652831333816,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -20.61668773483416,
+          "macro_f1": 0.3251831501831502,
+          "total_cost_bits": 338.5914719786905,
+          "weighted_f1": 0.617039627039627
+        },
+        "trial": 49
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -181.9111622447058,
+          "gain_vs_raw_lookup_bits": -130.02734426637383,
+          "max_blocks": 8,
+          "mdl_bits": 339.43186497954207,
+          "primary_hits": 29
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 25.01944968688781,
+          "macro_f1": 0.5113327149041434,
+          "total_cost_bits": 292.9553345569685,
+          "weighted_f1": 0.7415072805981897
+        },
+        "trial": 50
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -209.73566586497725,
+          "gain_vs_raw_lookup_bits": -157.8518478866453,
+          "max_blocks": 8,
+          "mdl_bits": 367.2563685998135,
+          "primary_hits": 25
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -0.061669740161505615,
+          "macro_f1": 0.4190327633936657,
+          "total_cost_bits": 318.03645398401784,
+          "weighted_f1": 0.7158752146311955
+        },
+        "trial": 51
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -212.24082557850193,
+          "gain_vs_raw_lookup_bits": -160.35700760016996,
+          "max_blocks": 4,
+          "mdl_bits": 369.7615283133382,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": 5.083310832789152,
+          "macro_f1": 0.3782443746729461,
+          "total_cost_bits": 312.8914734110672,
+          "weighted_f1": 0.6824941724941724
+        },
+        "trial": 52
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -189.82480253118115,
+          "gain_vs_raw_lookup_bits": -137.9409845528492,
+          "max_blocks": 8,
+          "mdl_bits": 347.3455052660174,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -7.375750313112178,
+          "macro_f1": 0.5161568694463431,
+          "total_cost_bits": 325.3505345569685,
+          "weighted_f1": 0.7306249093808903
+        },
+        "trial": 53
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -207.32169151587033,
+          "gain_vs_raw_lookup_bits": -155.43787353753837,
+          "max_blocks": 8,
+          "mdl_bits": 364.8423942507066,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 5.520051119264451,
+          "macro_f1": 0.39746206174777604,
+          "total_cost_bits": 312.4547331245919,
+          "weighted_f1": 0.6648751248751249
+        },
+        "trial": 54
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -182.42752195823044,
+          "gain_vs_raw_lookup_bits": -130.54370397989848,
+          "max_blocks": 8,
+          "mdl_bits": 339.9482246930667,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 2.3069691139371002,
+          "macro_f1": 0.5047619047619047,
+          "total_cost_bits": 315.66781512991923,
+          "weighted_f1": 0.7670995670995671
+        },
+        "trial": 55
+      },
+      {
+        "global": {
+          "block_count": 8,
+          "gain_vs_inventory_lookup_bits": -165.44379891090966,
+          "gain_vs_raw_lookup_bits": -113.5599809325777,
+          "max_blocks": 8,
+          "mdl_bits": 322.96450164574594,
+          "primary_hits": 34
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": 11.287948254511093,
+          "macro_f1": 0.5736216164787594,
+          "total_cost_bits": 306.68683598934524,
+          "weighted_f1": 0.8124469469924015
+        },
+        "trial": 56
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -235.76642919877338,
+          "gain_vs_raw_lookup_bits": -183.88261122044142,
+          "max_blocks": 4,
+          "mdl_bits": 393.28713193360966,
+          "primary_hits": 20
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -17.98652945368616,
+          "macro_f1": 0.4933106575963719,
+          "total_cost_bits": 335.9613136975425,
+          "weighted_f1": 0.7121789321789322
+        },
+        "trial": 57
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -184.9352329735413,
+          "gain_vs_raw_lookup_bits": -133.05141499520934,
+          "max_blocks": 8,
+          "mdl_bits": 342.4559357083776,
+          "primary_hits": 31
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -11.840910026636891,
+          "macro_f1": 0.5067539603253889,
+          "total_cost_bits": 329.8156942704932,
+          "weighted_f1": 0.7194559985469077
+        },
+        "trial": 58
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -196.95258529202658,
+          "gain_vs_raw_lookup_bits": -145.06876731369462,
+          "max_blocks": 4,
+          "mdl_bits": 354.47328802686286,
+          "primary_hits": 23
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -7.1920503131121905,
+          "macro_f1": 0.5572950858665144,
+          "total_cost_bits": 325.1668345569685,
+          "weighted_f1": 0.7492907092907093
+        },
+        "trial": 59
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -173.3068329735413,
+          "gain_vs_raw_lookup_bits": -121.42301499520934,
+          "max_blocks": 8,
+          "mdl_bits": 330.8275357083776,
+          "primary_hits": 31
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 6.014189973363159,
+          "macro_f1": 0.5360235003092145,
+          "total_cost_bits": 311.9605942704932,
+          "weighted_f1": 0.724887839433294
+        },
+        "trial": 60
+      },
+      {
+        "global": {
+          "block_count": 2,
+          "gain_vs_inventory_lookup_bits": -233.6877035478803,
+          "gain_vs_raw_lookup_bits": -181.80388556954833,
+          "max_blocks": 4,
+          "mdl_bits": 391.20840628271657,
+          "primary_hits": 18
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 7.733369113937101,
+          "macro_f1": 0.5587301587301587,
+          "total_cost_bits": 310.24141512991923,
+          "weighted_f1": 0.7784704184704185
+        },
+        "trial": 61
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -213.08209992760885,
+          "gain_vs_raw_lookup_bits": -161.1982819492769,
+          "max_blocks": 4,
+          "mdl_bits": 370.60280266244513,
+          "primary_hits": 22
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -5.984028021309484,
+          "macro_f1": 0.3407596371882086,
+          "total_cost_bits": 323.9588122651658,
+          "weighted_f1": 0.6153391053391054
+        },
+        "trial": 62
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -197.57710253118114,
+          "gain_vs_raw_lookup_bits": -145.69328455284918,
+          "max_blocks": 8,
+          "mdl_bits": 355.0978052660174,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 5.930609400412493,
+          "macro_f1": 0.5004741290455577,
+          "total_cost_bits": 312.04417484344384,
+          "weighted_f1": 0.7713236258690804
+        },
+        "trial": 63
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -175.00559268706593,
+          "gain_vs_raw_lookup_bits": -123.12177470873397,
+          "max_blocks": 8,
+          "mdl_bits": 332.5262954219022,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -10.928529453686167,
+          "macro_f1": 0.516469057258531,
+          "total_cost_bits": 328.9033136975425,
+          "weighted_f1": 0.7167427309532572
+        },
+        "trial": 64
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -169.07434760912355,
+          "gain_vs_raw_lookup_bits": -117.19052963079159,
+          "max_blocks": 8,
+          "mdl_bits": 326.5950503439598,
+          "primary_hits": 30
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": 3.5663108327891564,
+          "macro_f1": 0.5100470957613815,
+          "total_cost_bits": 314.4084734110672,
+          "weighted_f1": 0.6868664668664669
+        },
+        "trial": 65
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -178.2508816717551,
+          "gain_vs_raw_lookup_bits": -126.36706369342315,
+          "max_blocks": 4,
+          "mdl_bits": 335.7715844065914,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 3,
+          "gain_vs_membership_lookup_bits": -11.929789167210856,
+          "macro_f1": 0.5446275946275946,
+          "total_cost_bits": 329.9045734110672,
+          "weighted_f1": 0.6951204351204351
+        },
+        "trial": 66
+      },
+      {
+        "global": {
+          "block_count": 3,
+          "gain_vs_inventory_lookup_bits": -191.4388706564443,
+          "gain_vs_raw_lookup_bits": -139.55505267811233,
+          "max_blocks": 4,
+          "mdl_bits": 348.95957339128057,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -8.76354888073547,
+          "macro_f1": 0.4278293135435992,
+          "total_cost_bits": 326.7383331245918,
+          "weighted_f1": 0.6656670602125148
+        },
+        "trial": 67
+      },
+      {
+        "global": {
+          "block_count": 8,
+          "gain_vs_inventory_lookup_bits": -177.48981354649197,
+          "gain_vs_raw_lookup_bits": -125.60599556816001,
+          "max_blocks": 8,
+          "mdl_bits": 335.01051628132825,
+          "primary_hits": 33
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -2.324350313112177,
+          "macro_f1": 0.46261119832548403,
+          "total_cost_bits": 320.2991345569685,
+          "weighted_f1": 0.7417848817848818
+        },
+        "trial": 68
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -170.84216703617284,
+          "gain_vs_raw_lookup_bits": -118.95834905784088,
+          "max_blocks": 4,
+          "mdl_bits": 328.3628697710091,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -9.155168307784834,
+          "macro_f1": 0.4210347296813462,
+          "total_cost_bits": 327.12995255164117,
+          "weighted_f1": 0.6509318751424015
+        },
+        "trial": 69
+      },
+      {
+        "global": {
+          "block_count": 7,
+          "gain_vs_inventory_lookup_bits": -169.03857326001662,
+          "gain_vs_raw_lookup_bits": -117.15475528168466,
+          "max_blocks": 8,
+          "mdl_bits": 326.5592759948529,
+          "primary_hits": 32
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 25.675370546313843,
+          "macro_f1": 0.4616496598639456,
+          "total_cost_bits": 292.2994136975425,
+          "weighted_f1": 0.703008658008658
+        },
+        "trial": 70
+      },
+      {
+        "global": {
+          "block_count": 8,
+          "gain_vs_inventory_lookup_bits": -189.0255281820742,
+          "gain_vs_raw_lookup_bits": -137.14171020374224,
+          "max_blocks": 8,
+          "mdl_bits": 346.5462309169105,
+          "primary_hits": 32
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -13.938428021309505,
+          "macro_f1": 0.45991305613154354,
+          "total_cost_bits": 331.91321226516584,
+          "weighted_f1": 0.6147223186795379
+        },
+        "trial": 71
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -201.3881255785019,
+          "gain_vs_raw_lookup_bits": -149.50430760016994,
+          "max_blocks": 4,
+          "mdl_bits": 358.9088283133382,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -10.028969740161529,
+          "macro_f1": 0.4166357452071737,
+          "total_cost_bits": 328.00375398401786,
+          "weighted_f1": 0.7074852420306965
+        },
+        "trial": 72
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -179.6093365938127,
+          "gain_vs_raw_lookup_bits": -127.72551861548075,
+          "max_blocks": 8,
+          "mdl_bits": 337.130039328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": 13.152810832789157,
+          "macro_f1": 0.3953903239617525,
+          "total_cost_bits": 304.8219734110672,
+          "weighted_f1": 0.6777283322737869
+        },
+        "trial": 73
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -208.1977255785019,
+          "gain_vs_raw_lookup_bits": -156.31390760016993,
+          "max_blocks": 4,
+          "mdl_bits": 365.71842831333817,
+          "primary_hits": 24
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -8.820868307784849,
+          "macro_f1": 0.47534311970402193,
+          "total_cost_bits": 326.7956525516412,
+          "weighted_f1": 0.6411771853877116
+        },
+        "trial": 74
+      },
+      {
+        "global": {
+          "block_count": 6,
+          "gain_vs_inventory_lookup_bits": -143.05130370237674,
+          "gain_vs_raw_lookup_bits": -91.16748572404478,
+          "max_blocks": 8,
+          "mdl_bits": 300.572006437213,
+          "primary_hits": 33
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -5.097369740161525,
+          "macro_f1": 0.5902549364734239,
+          "total_cost_bits": 323.07215398401786,
+          "weighted_f1": 0.734691238648458
+        },
+        "trial": 75
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -197.86029630733742,
+          "gain_vs_raw_lookup_bits": -145.97647832900546,
+          "max_blocks": 4,
+          "mdl_bits": 355.3809990421737,
+          "primary_hits": 26
+        },
+        "independent": {
+          "exact_symbol_covers": 0,
+          "gain_vs_membership_lookup_bits": -11.61938916721084,
+          "macro_f1": 0.3820891514500537,
+          "total_cost_bits": 329.5941734110672,
+          "weighted_f1": 0.6843084985190249
+        },
+        "trial": 76
+      },
+      {
+        "global": {
+          "block_count": 5,
+          "gain_vs_inventory_lookup_bits": -194.72083659381275,
+          "gain_vs_raw_lookup_bits": -142.8370186154808,
+          "max_blocks": 8,
+          "mdl_bits": 352.241539328649,
+          "primary_hits": 27
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -14.05439059958752,
+          "macro_f1": 0.5556380127808699,
+          "total_cost_bits": 332.02917484344385,
+          "weighted_f1": 0.7735747081201627
+        },
+        "trial": 77
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -178.28406703617281,
+          "gain_vs_raw_lookup_bits": -126.40024905784085,
+          "max_blocks": 4,
+          "mdl_bits": 335.8047697710091,
+          "primary_hits": 28
+        },
+        "independent": {
+          "exact_symbol_covers": 1,
+          "gain_vs_membership_lookup_bits": -1.899787734834149,
+          "macro_f1": 0.37586580086580085,
+          "total_cost_bits": 319.8745719786905,
+          "weighted_f1": 0.6008539944903581
+        },
+        "trial": 78
+      },
+      {
+        "global": {
+          "block_count": 4,
+          "gain_vs_inventory_lookup_bits": -207.55184021408417,
+          "gain_vs_raw_lookup_bits": -155.6680222357522,
+          "max_blocks": 4,
+          "mdl_bits": 365.07254294892044,
+          "primary_hits": 23
+        },
+        "independent": {
+          "exact_symbol_covers": 2,
+          "gain_vs_membership_lookup_bits": -9.901669740161537,
+          "macro_f1": 0.49336219336219334,
+          "total_cost_bits": 327.87645398401787,
+          "weighted_f1": 0.7244444444444446
+        },
+        "trial": 79
+      }
+    ]
+  },
+  "control_trials": 80,
+  "cost_model": {
+    "block_overhead_bits": 1.0,
+    "block_size_weight": 0.08,
+    "cell_bits": 5.78135971352466,
+    "family_base_bits": {
+      "both_in_set": 2.5,
+      "diagonal_subset": 3.0,
+      "exact_digit_star": 2.8,
+      "interval_block": 2.4,
+      "one_in_set_other_in_set": 3.2,
+      "parity_mod_class_block": 2.8
+    },
+    "inventory_lookup_bits": 157.52070273483628,
+    "label_exception_bits": 9.588714635582264,
+    "membership_exception_bits": 6.78135971352466,
+    "raw_lookup_bits": 209.40452071316824,
+    "symbol_bits": 3.807354922057604
+  },
+  "global_by_budget": [
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 4,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    },
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 8,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    },
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 12,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    },
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 18,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    },
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 24,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    },
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "12",
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "25",
+        "27",
+        "33",
+        "34",
+        "36",
+        "37",
+        "45",
+        "55",
+        "56",
+        "59",
+        "67",
+        "68",
+        "69",
+        "77",
+        "79",
+        "88",
+        "89"
+      ],
+      "acceptable_hits": 28,
+      "assigned_cells": 47,
+      "block_count": 4,
+      "blocks": [
+        {
+          "cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_cells": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "13",
+            "16",
+            "19",
+            "23",
+            "26",
+            "29",
+            "33",
+            "34",
+            "36",
+            "39",
+            "46",
+            "49"
+          ],
+          "claim_size": 16,
+          "cost_bits": 13.585,
+          "detail": {
+            "left": {
+              "cost_bits": 3.72,
+              "digits": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "family": "interval",
+              "name": "interval_1_4"
+            },
+            "right": {
+              "cost_bits": 4.385,
+              "digits": [
+                0,
+                3,
+                6,
+                9
+              ],
+              "family": "mod_class",
+              "name": "mod_3_0"
+            }
+          },
+          "false_hits": 9,
+          "family": "one_in_set_other_in_set",
+          "hits": 7,
+          "name": "one_in_interval_1_4_other_in_mod_3_0",
+          "size": 16,
+          "symbol": "N"
+        },
+        {
+          "cells": [
+            "06",
+            "07",
+            "08",
+            "16",
+            "17",
+            "18"
+          ],
+          "claim_cells": [
+            "06",
+            "07",
+            "08",
+            "17",
+            "18"
+          ],
+          "claim_size": 5,
+          "cost_bits": 10.78,
+          "detail": {
+            "left_interval": {
+              "cost_bits": 3.36,
+              "digits": [
+                0,
+                1
+              ],
+              "family": "interval",
+              "name": "interval_0_1"
+            },
+            "right_interval": {
+              "cost_bits": 3.54,
+              "digits": [
+                6,
+                7,
+                8
+              ],
+              "family": "interval",
+              "name": "interval_6_8"
+            }
+          },
+          "false_hits": 1,
+          "family": "interval_block",
+          "hits": 4,
+          "name": "interval_block_interval_0_1__interval_6_8",
+          "size": 6,
+          "symbol": "I"
+        },
+        {
+          "cells": [
+            "11",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_cells": [
+            "11",
+            "14",
+            "15",
+            "44",
+            "45",
+            "47",
+            "48",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "66",
+            "67",
+            "68",
+            "69",
+            "77",
+            "78",
+            "79",
+            "88",
+            "89",
+            "99"
+          ],
+          "claim_size": 22,
+          "cost_bits": 18.1058,
+          "detail": {
+            "set": {
+              "cost_bits": 12.3658,
+              "digits": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "family": "explicit_complement",
+              "name": "not_023"
+            }
+          },
+          "false_hits": 12,
+          "family": "both_in_set",
+          "hits": 10,
+          "name": "both_in_not_023",
+          "size": 28,
+          "symbol": "E"
+        },
+        {
+          "cells": [
+            "22",
+            "23",
+            "24",
+            "25",
+            "33",
+            "34",
+            "35",
+            "44",
+            "45",
+            "55"
+          ],
+          "claim_cells": [
+            "22",
+            "24",
+            "25",
+            "35"
+          ],
+          "claim_size": 4,
+          "cost_bits": 8.02,
+          "detail": {
+            "set": {
+              "cost_bits": 3.72,
+              "digits": [
+                2,
+                3,
+                4,
+                5
+              ],
+              "family": "interval",
+              "name": "interval_2_5"
+            }
+          },
+          "false_hits": 2,
+          "family": "both_in_set",
+          "hits": 2,
+          "name": "both_in_interval_2_5",
+          "size": 10,
+          "symbol": "L"
+        }
+      ],
+      "default_cells": 8,
+      "default_symbol": "T",
+      "gain_vs_inventory_lookup_bits": -180.49088167175512,
+      "gain_vs_raw_lookup_bits": -128.60706369342316,
+      "inventory_lookup_bits": 157.52070273483628,
+      "max_blocks": 28,
+      "mdl_bits": 338.0115844065914,
+      "mdl_ratio_vs_inventory_lookup": 2.145823238076749,
+      "mdl_ratio_vs_raw_lookup": 1.6141560996650242,
+      "model_bits": 69.52757461028801,
+      "predicted": "TNNNNTIIITETNEENIINLNLLNTTNNNLNTTNEENEENEEEEEEEEEEEEEEE",
+      "primary_accuracy": 0.4909090909090909,
+      "primary_errors": 28,
+      "primary_hits": 27,
+      "raw_lookup_bits": 209.40452071316824
+    }
+  ],
+  "independent_cover": {
+    "exact_symbol_covers": 2,
+    "gain_vs_membership_lookup_bits": 12.972789973363149,
+    "macro_f1": 0.5373015873015873,
+    "symbol_rows": [
+      {
+        "block_count": 1,
+        "blocks": [
+          {
+            "cells": [
+              "00"
+            ],
+            "cost_bits": 6.76,
+            "detail": {
+              "set": {
+                "cost_bits": 3.18,
+                "digits": [
+                  0
+                ],
+                "family": "interval",
+                "name": "interval_0_0"
+              }
+            },
+            "family": "both_in_set",
+            "name": "both_in_interval_0_0",
+            "size": 1
+          }
+        ],
+        "cost_bits": 6.76,
+        "cover_cells": [
+          "00"
+        ],
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -0.9786402864753398,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 1.0,
+        "recall": 1.0,
+        "symbol": "*",
+        "target_count": 1,
+        "tp": 1
+      },
+      {
+        "block_count": 3,
+        "blocks": [
+          {
+            "cells": [
+              "07",
+              "37",
+              "67",
+              "79"
+            ],
+            "cost_bits": 11.8269,
+            "detail": {
+              "center": 7,
+              "leaves": {
+                "cost_bits": 4.385,
+                "digits": [
+                  0,
+                  3,
+                  6,
+                  9
+                ],
+                "family": "mod_class",
+                "name": "mod_3_0"
+              }
+            },
+            "family": "exact_digit_star",
+            "name": "star_7_to_mod_3_0",
+            "size": 4
+          },
+          {
+            "cells": [
+              "22"
+            ],
+            "cost_bits": 6.76,
+            "detail": {
+              "set": {
+                "cost_bits": 3.18,
+                "digits": [
+                  2
+                ],
+                "family": "interval",
+                "name": "interval_2_2"
+              }
+            },
+            "family": "both_in_set",
+            "name": "both_in_interval_2_2",
+            "size": 1
+          },
+          {
+            "cells": [
+              "88"
+            ],
+            "cost_bits": 6.76,
+            "detail": {
+              "set": {
+                "cost_bits": 3.18,
+                "digits": [
+                  8
+                ],
+                "family": "interval",
+                "name": "interval_8_8"
+              }
+            },
+            "family": "both_in_set",
+            "name": "both_in_interval_8_8",
+            "size": 1
+          }
+        ],
+        "cost_bits": 38.90961942704932,
+        "cover_cells": [
+          "07",
+          "22",
+          "37",
+          "67",
+          "79",
+          "88"
+        ],
+        "f1": 0.8333333333333334,
+        "fn": 1,
+        "fp": 1,
+        "gain_vs_membership_lookup_bits": -4.221461145901358,
+        "lookup_membership_bits": 34.68815828114796,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "symbol": "A",
+        "target_count": 6,
+        "tp": 5
+      },
+      {
+        "block_count": 0,
+        "blocks": [],
+        "cost_bits": 6.78135971352466,
+        "cover_cells": [],
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.0,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 0.0,
+        "recall": 0.0,
+        "symbol": "B",
+        "target_count": 1,
+        "tp": 0
+      },
+      {
+        "block_count": 0,
+        "blocks": [],
+        "cost_bits": 6.78135971352466,
+        "cover_cells": [],
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.0,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 0.0,
+        "recall": 0.0,
+        "symbol": "C",
+        "target_count": 1,
+        "tp": 0
+      },
+      {
+        "block_count": 2,
+        "blocks": [
+          {
+            "cells": [
+              "47",
+              "48",
+              "57",
+              "58"
+            ],
+            "cost_bits": 10.44,
+            "detail": {
+              "left_interval": {
+                "cost_bits": 3.36,
+                "digits": [
+                  4,
+                  5
+                ],
+                "family": "interval",
+                "name": "interval_4_5"
+              },
+              "right_interval": {
+                "cost_bits": 3.36,
+                "digits": [
+                  7,
+                  8
+                ],
+                "family": "interval",
+                "name": "interval_7_8"
+              }
+            },
+            "family": "interval_block",
+            "name": "interval_block_interval_4_5__interval_7_8",
+            "size": 4
+          },
+          {
+            "cells": [
+              "11",
+              "33",
+              "44",
+              "66",
+              "99"
+            ],
+            "cost_bits": 25.7315,
+            "detail": {
+              "diff": 0,
+              "starts": {
+                "cost_bits": 18.0096,
+                "digits": [
+                  1,
+                  3,
+                  4,
+                  6,
+                  9
+                ],
+                "family": "explicit_set",
+                "name": "set_13469"
+              }
+            },
+            "family": "diagonal_subset",
+            "name": "diag_diff_0_starts_set_13469",
+            "size": 5
+          }
+        ],
+        "cost_bits": 49.734219427049325,
+        "cover_cells": [
+          "11",
+          "33",
+          "44",
+          "47",
+          "48",
+          "57",
+          "58",
+          "66",
+          "99"
+        ],
+        "f1": 0.9,
+        "fn": 2,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": 13.860737421721936,
+        "lookup_membership_bits": 63.59495684877126,
+        "precision": 1.0,
+        "recall": 0.8181818181818182,
+        "symbol": "E",
+        "target_count": 11,
+        "tp": 9
+      },
+      {
+        "block_count": 1,
+        "blocks": [
+          {
+            "cells": [
+              "04",
+              "45"
+            ],
+            "cost_bits": 12.4038,
+            "detail": {
+              "center": 4,
+              "leaves": {
+                "cost_bits": 5.1219,
+                "digits": [
+                  0,
+                  5
+                ],
+                "family": "mod_class",
+                "name": "mod_5_0"
+              }
+            },
+            "family": "exact_digit_star",
+            "name": "star_4_to_mod_5_0",
+            "size": 2
+          }
+        ],
+        "cost_bits": 19.185159713524662,
+        "cover_cells": [
+          "04",
+          "45"
+        ],
+        "f1": 0.8,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.8410805729506805,
+        "lookup_membership_bits": 17.34407914057398,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "symbol": "F",
+        "target_count": 3,
+        "tp": 2
+      },
+      {
+        "block_count": 3,
+        "blocks": [
+          {
+            "cells": [
+              "06",
+              "07",
+              "08"
+            ],
+            "cost_bits": 10.36,
+            "detail": {
+              "left_interval": {
+                "cost_bits": 3.18,
+                "digits": [
+                  0
+                ],
+                "family": "interval",
+                "name": "interval_0_0"
+              },
+              "right_interval": {
+                "cost_bits": 3.54,
+                "digits": [
+                  6,
+                  7,
+                  8
+                ],
+                "family": "interval",
+                "name": "interval_6_8"
+              }
+            },
+            "family": "interval_block",
+            "name": "interval_block_interval_0_0__interval_6_8",
+            "size": 3
+          },
+          {
+            "cells": [
+              "18",
+              "19"
+            ],
+            "cost_bits": 10.1,
+            "detail": {
+              "left_interval": {
+                "cost_bits": 3.18,
+                "digits": [
+                  1
+                ],
+                "family": "interval",
+                "name": "interval_1_1"
+              },
+              "right_interval": {
+                "cost_bits": 3.36,
+                "digits": [
+                  8,
+                  9
+                ],
+                "family": "interval",
+                "name": "interval_8_9"
+              }
+            },
+            "family": "interval_block",
+            "name": "interval_block_interval_1_1__interval_8_9",
+            "size": 2
+          },
+          {
+            "cells": [
+              "25",
+              "56"
+            ],
+            "cost_bits": 12.0819,
+            "detail": {
+              "center": 5,
+              "leaves": {
+                "cost_bits": 4.8,
+                "digits": [
+                  2,
+                  6
+                ],
+                "family": "mod_class",
+                "name": "mod_4_2"
+              }
+            },
+            "family": "exact_digit_star",
+            "name": "star_5_to_mod_4_2",
+            "size": 2
+          }
+        ],
+        "cost_bits": 39.323259713524656,
+        "cover_cells": [
+          "06",
+          "07",
+          "08",
+          "18",
+          "19",
+          "25",
+          "56"
+        ],
+        "f1": 0.9333333333333333,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": 6.927617994672623,
+        "lookup_membership_bits": 46.25087770819728,
+        "precision": 1.0,
+        "recall": 0.875,
+        "symbol": "I",
+        "target_count": 8,
+        "tp": 7
+      },
+      {
+        "block_count": 1,
+        "blocks": [
+          {
+            "cells": [
+              "24",
+              "35"
+            ],
+            "cost_bits": 10.8419,
+            "detail": {
+              "diff": 2,
+              "starts": {
+                "cost_bits": 3.36,
+                "digits": [
+                  2,
+                  3
+                ],
+                "family": "interval",
+                "name": "interval_2_3"
+              }
+            },
+            "family": "diagonal_subset",
+            "name": "diag_diff_2_starts_interval_2_3",
+            "size": 2
+          }
+        ],
+        "cost_bits": 10.8419,
+        "cover_cells": [
+          "24",
+          "35"
+        ],
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": 0.7208194270493191,
+        "lookup_membership_bits": 11.56271942704932,
+        "precision": 1.0,
+        "recall": 1.0,
+        "symbol": "L",
+        "target_count": 2,
+        "tp": 2
+      },
+      {
+        "block_count": 2,
+        "blocks": [
+          {
+            "cells": [
+              "29",
+              "39",
+              "49"
+            ],
+            "cost_bits": 10.36,
+            "detail": {
+              "left_interval": {
+                "cost_bits": 3.54,
+                "digits": [
+                  2,
+                  3,
+                  4
+                ],
+                "family": "interval",
+                "name": "interval_2_4"
+              },
+              "right_interval": {
+                "cost_bits": 3.18,
+                "digits": [
+                  9
+                ],
+                "family": "interval",
+                "name": "interval_9_9"
+              }
+            },
+            "family": "interval_block",
+            "name": "interval_block_interval_2_4__interval_9_9",
+            "size": 3
+          },
+          {
+            "cells": [
+              "77"
+            ],
+            "cost_bits": 6.76,
+            "detail": {
+              "set": {
+                "cost_bits": 3.18,
+                "digits": [
+                  7
+                ],
+                "family": "interval",
+                "name": "interval_7_7"
+              }
+            },
+            "family": "both_in_set",
+            "name": "both_in_interval_7_7",
+            "size": 1
+          }
+        ],
+        "cost_bits": 44.24543885409864,
+        "cover_cells": [
+          "29",
+          "39",
+          "49",
+          "77"
+        ],
+        "f1": 0.6666666666666666,
+        "fn": 4,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": 2.0054388540986423,
+        "lookup_membership_bits": 46.25087770819728,
+        "precision": 1.0,
+        "recall": 0.5,
+        "symbol": "N",
+        "target_count": 8,
+        "tp": 4
+      },
+      {
+        "block_count": 0,
+        "blocks": [],
+        "cost_bits": 6.78135971352466,
+        "cover_cells": [],
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.0,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 0.0,
+        "recall": 0.0,
+        "symbol": "O",
+        "target_count": 1,
+        "tp": 0
+      },
+      {
+        "block_count": 0,
+        "blocks": [],
+        "cost_bits": 6.78135971352466,
+        "cover_cells": [],
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.0,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 0.0,
+        "recall": 0.0,
+        "symbol": "R",
+        "target_count": 1,
+        "tp": 0
+      },
+      {
+        "block_count": 0,
+        "blocks": [],
+        "cost_bits": 6.78135971352466,
+        "cover_cells": [],
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.0,
+        "lookup_membership_bits": 5.78135971352466,
+        "precision": 0.0,
+        "recall": 0.0,
+        "symbol": "S",
+        "target_count": 1,
+        "tp": 0
+      },
+      {
+        "block_count": 1,
+        "blocks": [
+          {
+            "cells": [
+              "16",
+              "38"
+            ],
+            "cost_bits": 9.4819,
+            "detail": {
+              "diff": 5,
+              "starts": {
+                "cost_bits": 2.0,
+                "digits": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9
+                ],
+                "family": "mod_class",
+                "name": "parity_odd"
+              }
+            },
+            "family": "diagonal_subset",
+            "name": "diag_diff_5_starts_parity_odd",
+            "size": 2
+          }
+        ],
+        "cost_bits": 36.60733885409864,
+        "cover_cells": [
+          "16",
+          "38"
+        ],
+        "f1": 0.5,
+        "fn": 4,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": -1.9191805729506797,
+        "lookup_membership_bits": 34.68815828114796,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "symbol": "T",
+        "target_count": 6,
+        "tp": 2
+      },
+      {
+        "block_count": 2,
+        "blocks": [
+          {
+            "cells": [
+              "03",
+              "36",
+              "69"
+            ],
+            "cost_bits": 11.9469,
+            "detail": {
+              "diff": 3,
+              "starts": {
+                "cost_bits": 4.385,
+                "digits": [
+                  0,
+                  3,
+                  6,
+                  9
+                ],
+                "family": "mod_class",
+                "name": "mod_3_0"
+              }
+            },
+            "family": "diagonal_subset",
+            "name": "diag_diff_3_starts_mod_3_0",
+            "size": 3
+          },
+          {
+            "cells": [
+              "55"
+            ],
+            "cost_bits": 6.76,
+            "detail": {
+              "set": {
+                "cost_bits": 3.18,
+                "digits": [
+                  5
+                ],
+                "family": "interval",
+                "name": "interval_5_5"
+              }
+            },
+            "family": "both_in_set",
+            "name": "both_in_interval_5_5",
+            "size": 1
+          }
+        ],
+        "cost_bits": 25.488259713524656,
+        "cover_cells": [
+          "03",
+          "36",
+          "55",
+          "69"
+        ],
+        "f1": 0.888888888888889,
+        "fn": 1,
+        "fp": 0,
+        "gain_vs_membership_lookup_bits": 3.4185388540986423,
+        "lookup_membership_bits": 28.906798567623298,
+        "precision": 1.0,
+        "recall": 0.8,
+        "symbol": "V",
+        "target_count": 5,
+        "tp": 4
+      }
+    ],
+    "total_cost_bits": 305.0019942704932,
+    "total_membership_lookup_bits": 317.97478424385633,
+    "weighted_f1": 0.7371717171717171
+  },
+  "interpretation": {
+    "mechanical_scope": "No plaintext or semantic symbol meanings are inferred.",
+    "new_vs_pair_rule_cover": "This is a set/block decomposition test, not a predicate decision-list. It asks whether whole symbol classes are compact unions of digit-set bicliques/stars/diagonals."
+  },
+  "random_seed": 46920260619,
+  "schema": "block_biclique_cover_results.v1",
+  "script": "block_biclique_cover_search.py",
+  "symbol_inventory": {
+    "*": 1,
+    "A": 6,
+    "B": 1,
+    "C": 1,
+    "E": 11,
+    "F": 3,
+    "I": 8,
+    "L": 2,
+    "N": 8,
+    "O": 1,
+    "R": 1,
+    "S": 1,
+    "T": 6,
+    "V": 5
+  },
+  "translation_delta": "NONE",
+  "verdict": "lookup_disguise"
+}

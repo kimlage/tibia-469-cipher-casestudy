@@ -1,0 +1,35 @@
+{
+  "holdout_books": [
+    "0",
+    "7",
+    "14",
+    "21",
+    "28",
+    "35",
+    "42",
+    "49",
+    "56",
+    "63"
+  ],
+  "rows": [
+    {
+      "holdout_accuracy": 0.27855477855477856,
+      "hypothesis_id": "homophone_symbol_top",
+      "model": "symbol_top",
+      "targets_explained": [
+        "F"
+      ],
+      "verdict": "baseline"
+    },
+    {
+      "holdout_accuracy": 0.7727272727272727,
+      "hypothesis_id": "homophone_prev_code",
+      "model": "prev_code_symbol",
+      "targets_explained": [
+        "G"
+      ],
+      "verdict": "supporting_homophone_channel"
+    }
+  ],
+  "schema": "homophone_holdout_report.v1"
+}

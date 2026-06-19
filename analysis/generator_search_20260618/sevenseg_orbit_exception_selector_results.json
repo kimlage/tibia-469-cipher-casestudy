@@ -1,0 +1,863 @@
+{
+  "best_orientation_rule": {
+    "correct": 2,
+    "cost": 0.3,
+    "family": "constant",
+    "name": "side6_low_always",
+    "predictions": [
+      true,
+      true
+    ],
+    "total": 2
+  },
+  "best_selector": {
+    "correct": 5,
+    "cost": 1.8,
+    "exact": true,
+    "family": "glyph_or_lore_set",
+    "fn": 0,
+    "fp": 0,
+    "mask": [
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    "name": "edge_defined",
+    "predicted_true_count": 2,
+    "tn": 3,
+    "tp": 2
+  },
+  "controls": {
+    "mixed_rule_correct": {
+      "max": 5,
+      "mean": 5.0,
+      "min": 5,
+      "observed": 5,
+      "p_good_direction": 1.0,
+      "sd": 0.0
+    },
+    "mixed_rule_exact_cost": {
+      "control_mean_cost": 2.33472,
+      "control_min_cost": 1.6,
+      "max": 4.4,
+      "mean": 2.33472,
+      "min": 1.6,
+      "observed": 1.8,
+      "observed_cost": 1.8,
+      "p_good_direction": 0.40371925614877024,
+      "sd": 0.9293735893889662
+    },
+    "orientation_rule_correct": {
+      "max": 2,
+      "mean": 2.0,
+      "min": 2,
+      "observed": 2,
+      "p_good_direction": 1.0,
+      "sd": 0.0
+    },
+    "trials": 5000
+  },
+  "mdl": {
+    "components": {
+      "mixed_label_pair_bits": 13.428491035332245,
+      "orientation_rule_cost_bits": 0.3,
+      "selector_cost_bits": 1.8,
+      "uniform_component_label_bits": 187.53074858920888
+    },
+    "gain_vs_raw_lookup_bits": 7.571815620483818,
+    "gain_vs_visual_best_bits": 11.735791355594955,
+    "lookup_cost_ratio": 0.9647624187192155,
+    "model_bits": 207.30716713798472,
+    "raw_lookup_bits": 214.87898275846854,
+    "visual_best_model_bits": 219.04295849357968
+  },
+  "new_plaintext": false,
+  "orbit_rows": [
+    {
+      "anchor": 0,
+      "anchor_distance_from_4_6_9": 4,
+      "anchor_in_19": false,
+      "anchor_in_33_66": false,
+      "anchor_in_3478": false,
+      "anchor_in_39": false,
+      "anchor_in_469": false,
+      "closed_loop": true,
+      "edge_defined": true,
+      "endpoint_fixed": true,
+      "even": true,
+      "is_diagonal_orbit": false,
+      "label6": "I",
+      "label9": "T",
+      "label_pair_sorted": [
+        "I",
+        "T"
+      ],
+      "middle_defined": false,
+      "mixed": true,
+      "pair6": "06",
+      "pair9": "09",
+      "prime": false,
+      "segment_count": 6,
+      "side6_is_low_symbol": true,
+      "two_loops": false,
+      "two_or_five": false,
+      "zero_or_eight": true
+    },
+    {
+      "anchor": 2,
+      "anchor_distance_from_4_6_9": 2,
+      "anchor_in_19": false,
+      "anchor_in_33_66": false,
+      "anchor_in_3478": false,
+      "anchor_in_39": false,
+      "anchor_in_469": false,
+      "closed_loop": false,
+      "edge_defined": false,
+      "endpoint_fixed": true,
+      "even": true,
+      "is_diagonal_orbit": false,
+      "label6": "N",
+      "label9": "N",
+      "label_pair_sorted": [
+        "N",
+        "N"
+      ],
+      "middle_defined": true,
+      "mixed": false,
+      "pair6": "26",
+      "pair9": "29",
+      "prime": true,
+      "segment_count": 5,
+      "side6_is_low_symbol": true,
+      "two_loops": false,
+      "two_or_five": true,
+      "zero_or_eight": false
+    },
+    {
+      "anchor": 5,
+      "anchor_distance_from_4_6_9": 1,
+      "anchor_in_19": false,
+      "anchor_in_33_66": false,
+      "anchor_in_3478": false,
+      "anchor_in_39": false,
+      "anchor_in_469": false,
+      "closed_loop": false,
+      "edge_defined": false,
+      "endpoint_fixed": true,
+      "even": false,
+      "is_diagonal_orbit": false,
+      "label6": "I",
+      "label9": "I",
+      "label_pair_sorted": [
+        "I",
+        "I"
+      ],
+      "middle_defined": true,
+      "mixed": false,
+      "pair6": "56",
+      "pair9": "59",
+      "prime": true,
+      "segment_count": 5,
+      "side6_is_low_symbol": true,
+      "two_loops": false,
+      "two_or_five": true,
+      "zero_or_eight": false
+    },
+    {
+      "anchor": 6,
+      "anchor_distance_from_4_6_9": 0,
+      "anchor_in_19": false,
+      "anchor_in_33_66": true,
+      "anchor_in_3478": false,
+      "anchor_in_39": false,
+      "anchor_in_469": true,
+      "closed_loop": true,
+      "edge_defined": false,
+      "endpoint_fixed": false,
+      "even": true,
+      "is_diagonal_orbit": true,
+      "label6": "E",
+      "label9": "E",
+      "label_pair_sorted": [
+        "E",
+        "E"
+      ],
+      "middle_defined": false,
+      "mixed": false,
+      "pair6": "66",
+      "pair9": "99",
+      "prime": false,
+      "segment_count": 6,
+      "side6_is_low_symbol": true,
+      "two_loops": false,
+      "two_or_five": false,
+      "zero_or_eight": false
+    },
+    {
+      "anchor": 8,
+      "anchor_distance_from_4_6_9": 1,
+      "anchor_in_19": false,
+      "anchor_in_33_66": false,
+      "anchor_in_3478": true,
+      "anchor_in_39": false,
+      "anchor_in_469": false,
+      "closed_loop": true,
+      "edge_defined": true,
+      "endpoint_fixed": true,
+      "even": true,
+      "is_diagonal_orbit": false,
+      "label6": "C",
+      "label9": "T",
+      "label_pair_sorted": [
+        "C",
+        "T"
+      ],
+      "middle_defined": false,
+      "mixed": true,
+      "pair6": "68",
+      "pair9": "89",
+      "prime": false,
+      "segment_count": 7,
+      "side6_is_low_symbol": true,
+      "two_loops": true,
+      "two_or_five": false,
+      "zero_or_eight": true
+    }
+  ],
+  "schema": "sevenseg_orbit_exception_selector_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "top_orientation_rules": [
+    {
+      "correct": 2,
+      "cost": 0.3,
+      "family": "constant",
+      "name": "side6_low_always",
+      "predictions": [
+        true,
+        true
+      ],
+      "total": 2
+    },
+    {
+      "correct": 2,
+      "cost": 1.0,
+      "family": "parity",
+      "name": "side6_low_if_anchor_even",
+      "predictions": [
+        true,
+        true
+      ],
+      "total": 2
+    },
+    {
+      "correct": 1,
+      "cost": 1.3,
+      "family": "range",
+      "name": "side6_low_if_anchor_ge_8",
+      "predictions": [
+        false,
+        true
+      ],
+      "total": 2
+    },
+    {
+      "correct": 1,
+      "cost": 1.3,
+      "family": "range",
+      "name": "side6_low_if_anchor_le_0",
+      "predictions": [
+        true,
+        false
+      ],
+      "total": 2
+    },
+    {
+      "correct": 0,
+      "cost": 0.3,
+      "family": "constant",
+      "name": "side6_high_always",
+      "predictions": [
+        false,
+        false
+      ],
+      "total": 2
+    }
+  ],
+  "top_selectors": [
+    {
+      "correct": 5,
+      "cost": 1.8,
+      "exact": true,
+      "family": "glyph_or_lore_set",
+      "fn": 0,
+      "fp": 0,
+      "mask": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "name": "edge_defined",
+      "predicted_true_count": 2,
+      "tn": 3,
+      "tp": 2
+    },
+    {
+      "correct": 4,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 0,
+      "mask": [
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "name": "anchor_ge_8",
+      "predicted_true_count": 1,
+      "tn": 3,
+      "tp": 1
+    },
+    {
+      "correct": 4,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 0,
+      "mask": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "name": "anchor_le_0",
+      "predicted_true_count": 1,
+      "tn": 3,
+      "tp": 1
+    },
+    {
+      "correct": 4,
+      "cost": 1.8,
+      "exact": false,
+      "family": "glyph_or_lore_set",
+      "fn": 0,
+      "fp": 1,
+      "mask": [
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "name": "closed_loop",
+      "predicted_true_count": 3,
+      "tn": 2,
+      "tp": 2
+    },
+    {
+      "correct": 4,
+      "cost": 4.0,
+      "exact": false,
+      "family": "compound_or",
+      "fn": 0,
+      "fp": 1,
+      "mask": [
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "name": "or(anchor_le_2,anchor_ge_8)",
+      "predicted_true_count": 3,
+      "tn": 2,
+      "tp": 2
+    },
+    {
+      "correct": 4,
+      "cost": 4.4,
+      "exact": false,
+      "family": "compound_or",
+      "fn": 0,
+      "fp": 1,
+      "mask": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "name": "or(anchor_ge_8,anchor_mod_5_0)",
+      "predicted_true_count": 3,
+      "tn": 2,
+      "tp": 2
+    },
+    {
+      "correct": 3,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "name": "anchor_ge_6",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 3,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "name": "anchor_le_2",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 3,
+      "cost": 1.8,
+      "exact": false,
+      "family": "glyph_or_lore_set",
+      "fn": 0,
+      "fp": 2,
+      "mask": [
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "name": "endpoint_fixed",
+      "predicted_true_count": 4,
+      "tn": 1,
+      "tp": 2
+    },
+    {
+      "correct": 3,
+      "cost": 1.8,
+      "exact": false,
+      "family": "glyph_or_lore_set",
+      "fn": 0,
+      "fp": 2,
+      "mask": [
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "name": "even",
+      "predicted_true_count": 4,
+      "tn": 1,
+      "tp": 2
+    },
+    {
+      "correct": 3,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "name": "anchor_mod_3_0",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 3,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "name": "anchor_mod_5_0",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 3,
+      "cost": 2.4,
+      "exact": false,
+      "family": "numeric_glyph",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "name": "anchor_distance_from_4_6_9_eq_1",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 3,
+      "cost": 4.0,
+      "exact": false,
+      "family": "compound_or",
+      "fn": 0,
+      "fp": 2,
+      "mask": [
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "name": "or(anchor_le_0,anchor_ge_5)",
+      "predicted_true_count": 4,
+      "tn": 1,
+      "tp": 2
+    },
+    {
+      "correct": 3,
+      "cost": 4.4,
+      "exact": false,
+      "family": "compound_or",
+      "fn": 1,
+      "fp": 1,
+      "mask": [
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "name": "or(anchor_ge_8,anchor_mod_5_2)",
+      "predicted_true_count": 2,
+      "tn": 2,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "name": "anchor_ge_5",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "name": "anchor_le_5",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 1.8,
+      "exact": false,
+      "family": "glyph_or_lore_set",
+      "fn": 2,
+      "fp": 1,
+      "mask": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "name": "anchor_in_33_66",
+      "predicted_true_count": 1,
+      "tn": 2,
+      "tp": 0
+    },
+    {
+      "correct": 2,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 2,
+      "fp": 1,
+      "mask": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "name": "anchor_mod_2_1",
+      "predicted_true_count": 1,
+      "tn": 2,
+      "tp": 0
+    },
+    {
+      "correct": 2,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "name": "anchor_mod_3_2",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 2,
+      "fp": 1,
+      "mask": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "name": "anchor_mod_5_2",
+      "predicted_true_count": 1,
+      "tn": 2,
+      "tp": 0
+    },
+    {
+      "correct": 2,
+      "cost": 4.2,
+      "exact": false,
+      "family": "compound_and",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "name": "and(anchor_ge_2,even)",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 4.2,
+      "exact": false,
+      "family": "compound_and",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "name": "and(anchor_le_6,even)",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 2,
+      "cost": 4.6,
+      "exact": false,
+      "family": "compound_or",
+      "fn": 1,
+      "fp": 2,
+      "mask": [
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "name": "or(anchor_mod_5_0,anchor_in_33_66)",
+      "predicted_true_count": 3,
+      "tn": 1,
+      "tp": 1
+    },
+    {
+      "correct": 1,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 3,
+      "mask": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "name": "anchor_ge_2",
+      "predicted_true_count": 4,
+      "tn": 0,
+      "tp": 1
+    },
+    {
+      "correct": 1,
+      "cost": 1.6,
+      "exact": false,
+      "family": "range",
+      "fn": 1,
+      "fp": 3,
+      "mask": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "name": "anchor_le_6",
+      "predicted_true_count": 4,
+      "tn": 0,
+      "tp": 1
+    },
+    {
+      "correct": 1,
+      "cost": 1.8,
+      "exact": false,
+      "family": "glyph_or_lore_set",
+      "fn": 2,
+      "fp": 2,
+      "mask": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "name": "middle_defined",
+      "predicted_true_count": 2,
+      "tn": 1,
+      "tp": 0
+    },
+    {
+      "correct": 1,
+      "cost": 2.0,
+      "exact": false,
+      "family": "modular",
+      "fn": 2,
+      "fp": 2,
+      "mask": [
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "name": "anchor_mod_4_2",
+      "predicted_true_count": 2,
+      "tn": 1,
+      "tp": 0
+    },
+    {
+      "correct": 1,
+      "cost": 4.0,
+      "exact": false,
+      "family": "compound_and",
+      "fn": 2,
+      "fp": 2,
+      "mask": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "name": "and(anchor_ge_5,anchor_le_6)",
+      "predicted_true_count": 2,
+      "tn": 1,
+      "tp": 0
+    },
+    {
+      "correct": 0,
+      "cost": 4.0,
+      "exact": false,
+      "family": "compound_and",
+      "fn": 2,
+      "fp": 3,
+      "mask": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "name": "and(anchor_ge_2,anchor_le_6)",
+      "predicted_true_count": 3,
+      "tn": 0,
+      "tp": 0
+    }
+  ],
+  "translation_delta": "NONE",
+  "verdict": "weak_visual_exception_microfit_not_formula",
+  "visual_source": "analysis/generator_search_20260618/digit_visual_symmetry_results.json"
+}

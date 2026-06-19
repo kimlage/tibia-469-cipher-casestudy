@@ -1,0 +1,197 @@
+{
+  "binary_features": [
+    "contains_0",
+    "contains_6_or_9",
+    "diag",
+    "even_sum",
+    "high_sum",
+    "wide_diff",
+    "zero_product"
+  ],
+  "control_trials": 500,
+  "random_seed": 46920260620,
+  "schema": "endpoint_affinity_assignment_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "variants": [
+    {
+      "controls": {
+        "inventory_label_shuffle": {
+          "exact_inventory_assignment_accuracy": {
+            "max": 0.6909090909090909,
+            "mean": 0.5094181818181818,
+            "min": 0.32727272727272727,
+            "observed": 0.4727272727272727,
+            "p": 0.7604790419161677,
+            "sd": 0.06226877032826386,
+            "z": -0.5892345215343848
+          },
+          "leave_one_pair_out_accuracy": {
+            "max": 0.3090909090909091,
+            "mean": 0.12494545454545454,
+            "min": 0.0,
+            "observed": 0.05454545454545454,
+            "p": 0.9500998003992016,
+            "sd": 0.0488480596033358,
+            "z": -1.4412036132381485
+          }
+        }
+      },
+      "exact_inventory_assignment": {
+        "accuracy": 0.4727272727272727,
+        "correct": 26,
+        "solver": "scipy_linear_sum_assignment",
+        "total": 55,
+        "total_score": -337.59061466889426
+      },
+      "leave_one_pair_out": {
+        "accuracy": 0.05454545454545454,
+        "correct": 3,
+        "total": 55
+      },
+      "model": "endpoint_only",
+      "special_predictions": {
+        "06": {
+          "predicted": "V",
+          "score": -6.570650431237502,
+          "true": "I"
+        },
+        "09": {
+          "predicted": "I",
+          "score": -5.978255614071631,
+          "true": "T"
+        },
+        "16": {
+          "predicted": "E",
+          "score": -6.138235758242308,
+          "true": "T"
+        },
+        "19": {
+          "predicted": "N",
+          "score": -5.978255614071632,
+          "true": "I"
+        },
+        "33": {
+          "predicted": "V",
+          "score": -6.118665307494445,
+          "true": "E"
+        },
+        "36": {
+          "predicted": "N",
+          "score": -6.288410542375471,
+          "true": "V"
+        },
+        "39": {
+          "predicted": "E",
+          "score": -6.448390686546146,
+          "true": "N"
+        },
+        "66": {
+          "predicted": "V",
+          "score": -6.118665307494445,
+          "true": "E"
+        },
+        "68": {
+          "predicted": "E",
+          "score": -6.138235758242307,
+          "true": "C"
+        },
+        "89": {
+          "predicted": "E",
+          "score": -6.138235758242308,
+          "true": "T"
+        }
+      }
+    },
+    {
+      "controls": {
+        "inventory_label_shuffle": {
+          "exact_inventory_assignment_accuracy": {
+            "max": 0.7818181818181819,
+            "mean": 0.5810545454545454,
+            "min": 0.32727272727272727,
+            "observed": 0.5454545454545454,
+            "p": 0.7584830339321357,
+            "sd": 0.06635460398680923,
+            "z": -0.5365113776743655
+          },
+          "leave_one_pair_out_accuracy": {
+            "max": 0.2909090909090909,
+            "mean": 0.11047272727272726,
+            "min": 0.0,
+            "observed": 0.14545454545454545,
+            "p": 0.2934131736526946,
+            "sd": 0.051187796041359035,
+            "z": 0.6834015309733859
+          }
+        }
+      },
+      "exact_inventory_assignment": {
+        "accuracy": 0.5454545454545454,
+        "correct": 30,
+        "solver": "scipy_linear_sum_assignment",
+        "total": 55,
+        "total_score": -508.29722614617054
+      },
+      "leave_one_pair_out": {
+        "accuracy": 0.14545454545454545,
+        "correct": 8,
+        "total": 55
+      },
+      "model": "endpoint_plus_binary_features",
+      "special_predictions": {
+        "06": {
+          "predicted": "I",
+          "score": -11.482231225945853,
+          "true": "I"
+        },
+        "09": {
+          "predicted": "I",
+          "score": -10.01155088971532,
+          "true": "T"
+        },
+        "16": {
+          "predicted": "N",
+          "score": -9.174676548039894,
+          "true": "T"
+        },
+        "19": {
+          "predicted": "N",
+          "score": -9.335019198115074,
+          "true": "I"
+        },
+        "33": {
+          "predicted": "L",
+          "score": -9.907944188839288,
+          "true": "E"
+        },
+        "36": {
+          "predicted": "N",
+          "score": -9.174676548039894,
+          "true": "V"
+        },
+        "39": {
+          "predicted": "N",
+          "score": -11.248191245203378,
+          "true": "N"
+        },
+        "66": {
+          "predicted": "C",
+          "score": -10.334423925166778,
+          "true": "E"
+        },
+        "68": {
+          "predicted": "E",
+          "score": -9.427036924812711,
+          "true": "C"
+        },
+        "89": {
+          "predicted": "A",
+          "score": -10.099326298199498,
+          "true": "T"
+        }
+      }
+    }
+  ],
+  "verdict": "rejected_endpoint_affinity"
+}

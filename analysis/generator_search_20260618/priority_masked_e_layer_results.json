@@ -1,0 +1,245 @@
+{
+  "claims": [
+    {
+      "pair": "11",
+      "rule": "selected_e_diagonal",
+      "symbol": "E"
+    },
+    {
+      "pair": "15",
+      "rule": "prod_eq_5",
+      "symbol": "E"
+    },
+    {
+      "pair": "33",
+      "rule": "selected_e_diagonal",
+      "symbol": "E"
+    },
+    {
+      "pair": "44",
+      "rule": "selected_e_diagonal",
+      "symbol": "E"
+    },
+    {
+      "pair": "45",
+      "rule": "priority_blocker",
+      "symbol": "F"
+    },
+    {
+      "pair": "47",
+      "rule": "both_in_4578_after_blockers",
+      "symbol": "E"
+    },
+    {
+      "pair": "48",
+      "rule": "both_in_4578_after_blockers",
+      "symbol": "E"
+    },
+    {
+      "pair": "55",
+      "rule": "priority_blocker",
+      "symbol": "V"
+    },
+    {
+      "pair": "57",
+      "rule": "both_in_4578_after_blockers",
+      "symbol": "E"
+    },
+    {
+      "pair": "58",
+      "rule": "both_in_4578_after_blockers",
+      "symbol": "E"
+    },
+    {
+      "pair": "66",
+      "rule": "selected_e_diagonal",
+      "symbol": "E"
+    },
+    {
+      "pair": "77",
+      "rule": "priority_blocker",
+      "symbol": "N"
+    },
+    {
+      "pair": "78",
+      "rule": "both_in_4578_after_blockers",
+      "symbol": "E"
+    },
+    {
+      "pair": "88",
+      "rule": "priority_blocker",
+      "symbol": "A"
+    },
+    {
+      "pair": "99",
+      "rule": "selected_e_diagonal",
+      "symbol": "E"
+    }
+  ],
+  "controls": {
+    "claim_hits": {
+      "max": 9,
+      "mean": 2.641,
+      "min": 0,
+      "observed": 15,
+      "p_good_direction": 0.0001999600079984003,
+      "sd": 1.3691215792542881,
+      "z_good_direction": 9.02695581405671
+    },
+    "gain_vs_inventory_lookup_bits": {
+      "max": -311.08744900682717,
+      "mean": -351.7397635758417,
+      "min": -387.79716609148534,
+      "observed": -243.96644655775134,
+      "p_good_direction": 0.0001999600079984003,
+      "sd": 10.093293652368047,
+      "z_good_direction": 10.677715394994483
+    },
+    "total_hits": {
+      "max": 15,
+      "mean": 10.7604,
+      "min": 7,
+      "observed": 22,
+      "p_good_direction": 0.0001999600079984003,
+      "sd": 1.0526221747087308,
+      "z_good_direction": 10.677715394994495
+    },
+    "trials": 5000
+  },
+  "costs": {
+    "both_in_4578_bits": 16.287712379549447,
+    "priority_blockers_bits": 38.354858542329055,
+    "priority_order_bits": 4.0,
+    "prod_eq_5_bits": 5.0,
+    "selected_diagonal_set_bits": 20.609640474436812,
+    "total_model_bits": 84.25221139631532
+  },
+  "new_plaintext": false,
+  "observed": {
+    "claim_accuracy": 1.0,
+    "claim_count": 15,
+    "claim_hits": 15,
+    "claims": [
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "11",
+        "rule": "selected_e_diagonal",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "15",
+        "rule": "prod_eq_5",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "33",
+        "rule": "selected_e_diagonal",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "44",
+        "rule": "selected_e_diagonal",
+        "symbol": "E"
+      },
+      {
+        "actual": "F",
+        "hit": true,
+        "pair": "45",
+        "rule": "priority_blocker",
+        "symbol": "F"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "47",
+        "rule": "both_in_4578_after_blockers",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "48",
+        "rule": "both_in_4578_after_blockers",
+        "symbol": "E"
+      },
+      {
+        "actual": "V",
+        "hit": true,
+        "pair": "55",
+        "rule": "priority_blocker",
+        "symbol": "V"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "57",
+        "rule": "both_in_4578_after_blockers",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "58",
+        "rule": "both_in_4578_after_blockers",
+        "symbol": "E"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "66",
+        "rule": "selected_e_diagonal",
+        "symbol": "E"
+      },
+      {
+        "actual": "N",
+        "hit": true,
+        "pair": "77",
+        "rule": "priority_blocker",
+        "symbol": "N"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "78",
+        "rule": "both_in_4578_after_blockers",
+        "symbol": "E"
+      },
+      {
+        "actual": "A",
+        "hit": true,
+        "pair": "88",
+        "rule": "priority_blocker",
+        "symbol": "A"
+      },
+      {
+        "actual": "E",
+        "hit": true,
+        "pair": "99",
+        "rule": "selected_e_diagonal",
+        "symbol": "E"
+      }
+    ],
+    "default_symbol": "N",
+    "errors_after_default": 33,
+    "gain_vs_inventory_lookup_bits": -243.96644655775134,
+    "inventory_lookup_bits": 160.52070273483628,
+    "mdl_bits": 404.4871492925876,
+    "mdl_ratio_vs_inventory_lookup": 2.519844122292181,
+    "model_cost_bits": 88.05956631837292,
+    "predicted": "NNNNNNNNNNENNNENNNNNNNNNNNNENNNNNNEFNEENVNEENENNNNENANE",
+    "raw_lookup_bits": 209.40452071316824,
+    "total_accuracy": 0.4,
+    "total_hits": 22
+  },
+  "schema": "priority_masked_e_layer_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "verdict": "exact_local_e_priority_layer_not_global_formula"
+}

@@ -1,0 +1,1369 @@
+{
+  "best": {
+    "acceptable_accuracy": 0.6181818181818182,
+    "acceptable_hits": 34,
+    "default_symbol": "E",
+    "exceptions": [
+      "00",
+      "02",
+      "03",
+      "04",
+      "05",
+      "09",
+      "12",
+      "13",
+      "14",
+      "16",
+      "17",
+      "28",
+      "35",
+      "36",
+      "45",
+      "57",
+      "58",
+      "67",
+      "68",
+      "79",
+      "89"
+    ],
+    "lookup_cost_bits": 209.40452071316824,
+    "lookup_cost_ratio": 1.3144124613569181,
+    "max_rules": 12,
+    "mdl_cost_bits": 275.2439114898612,
+    "mdl_gain_vs_lookup_bits": -65.83939077669297,
+    "predicted": "VNIIINIIIIEIIIEIIIIAOLINSANEBINATNEINEENVIIIIENNVNENANE",
+    "primary_accuracy": 0.6181818181818182,
+    "primary_hits": 34,
+    "primary_lookup_cost_ratio": 1.3144124613569181,
+    "primary_mdl_cost_bits": 275.2439114898612,
+    "primary_mdl_gain_vs_lookup_bits": -65.83939077669297,
+    "rule_cost_bits": 73.88090414263364,
+    "rule_count": 10,
+    "rules": [
+      {
+        "cost": 8.607354922057604,
+        "cover_size": 21,
+        "false_hits": 13,
+        "family": "digit_set",
+        "hits": 8,
+        "predicate": "exactly_one_in_set_015_015",
+        "symbol": "I"
+      },
+      {
+        "cost": 8.607354922057604,
+        "cover_size": 12,
+        "false_hits": 6,
+        "family": "digit_set",
+        "hits": 6,
+        "predicate": "exactly_one_in_set_069_069",
+        "symbol": "N"
+      },
+      {
+        "cost": 8.907354922057603,
+        "cover_size": 4,
+        "false_hits": 1,
+        "family": "compound",
+        "hits": 3,
+        "predicate": "and(not_has_5,sum_mod_6_4)",
+        "symbol": "A"
+      },
+      {
+        "cost": 9.607354922057604,
+        "cover_size": 3,
+        "false_hits": 1,
+        "family": "compound",
+        "hits": 2,
+        "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+        "symbol": "V"
+      },
+      {
+        "cost": 5.807354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "arithmetic",
+        "hits": 1,
+        "predicate": "diff_2",
+        "symbol": "L"
+      },
+      {
+        "cost": 5.807354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "digit_incidence",
+        "hits": 1,
+        "predicate": "loop_7",
+        "symbol": "N"
+      },
+      {
+        "cost": 5.807354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "arithmetic",
+        "hits": 1,
+        "predicate": "sum_5",
+        "symbol": "O"
+      },
+      {
+        "cost": 5.307354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "digit_incidence",
+        "hits": 1,
+        "predicate": "has_2",
+        "symbol": "S"
+      },
+      {
+        "cost": 5.807354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "arithmetic",
+        "hits": 1,
+        "predicate": "diff_5",
+        "symbol": "T"
+      },
+      {
+        "cost": 5.807354922057604,
+        "cover_size": 1,
+        "false_hits": 0,
+        "family": "arithmetic",
+        "hits": 1,
+        "predicate": "sum_7",
+        "symbol": "B"
+      }
+    ],
+    "trace": [
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 21,
+          "false_hits": 13,
+          "family": "digit_set",
+          "hits": 8,
+          "predicate": "exactly_one_in_set_015_015",
+          "symbol": "I"
+        },
+        "primary_hits_with_default": 17,
+        "rule_count": 1
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 12,
+          "false_hits": 6,
+          "family": "digit_set",
+          "hits": 6,
+          "predicate": "exactly_one_in_set_069_069",
+          "symbol": "N"
+        },
+        "primary_hits_with_default": 23,
+        "rule_count": 2
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 4,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 3,
+          "predicate": "and(not_has_5,sum_mod_6_4)",
+          "symbol": "A"
+        },
+        "primary_hits_with_default": 26,
+        "rule_count": 3
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 3,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 2,
+          "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+          "symbol": "V"
+        },
+        "primary_hits_with_default": 28,
+        "rule_count": 4
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_2",
+          "symbol": "L"
+        },
+        "primary_hits_with_default": 29,
+        "rule_count": 5
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "loop_7",
+          "symbol": "N"
+        },
+        "primary_hits_with_default": 30,
+        "rule_count": 6
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_5",
+          "symbol": "O"
+        },
+        "primary_hits_with_default": 31,
+        "rule_count": 7
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "has_2",
+          "symbol": "S"
+        },
+        "primary_hits_with_default": 32,
+        "rule_count": 8
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_5",
+          "symbol": "T"
+        },
+        "primary_hits_with_default": 33,
+        "rule_count": 9
+      },
+      {
+        "default_symbol": "E",
+        "last_rule": {
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_7",
+          "symbol": "B"
+        },
+        "primary_hits_with_default": 34,
+        "rule_count": 10
+      }
+    ]
+  },
+  "by_rule_budget": [
+    {
+      "acceptable_accuracy": 0.509090909090909,
+      "acceptable_hits": 28,
+      "default_symbol": "E",
+      "exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "05",
+        "09",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "23",
+        "24",
+        "27",
+        "28",
+        "34",
+        "35",
+        "36",
+        "38",
+        "45",
+        "57",
+        "58",
+        "67",
+        "68",
+        "77",
+        "79",
+        "89"
+      ],
+      "lookup_cost_bits": 209.40452071316824,
+      "lookup_cost_ratio": 1.425146261191688,
+      "max_rules": 4,
+      "mdl_cost_bits": 298.43206977100914,
+      "mdl_gain_vs_lookup_bits": -89.0275490578409,
+      "predicted": "VNIIINIIIIEIIIEIIIIAEEINEANEEINAENEINEENVIIIIENNVEENANE",
+      "primary_accuracy": 0.509090909090909,
+      "primary_hits": 28,
+      "primary_lookup_cost_ratio": 1.425146261191688,
+      "primary_mdl_cost_bits": 298.43206977100914,
+      "primary_mdl_gain_vs_lookup_bits": -89.0275490578409,
+      "rule_cost_bits": 39.53677461028802,
+      "rule_count": 4,
+      "rules": [
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 21,
+          "false_hits": 13,
+          "family": "digit_set",
+          "hits": 8,
+          "predicate": "exactly_one_in_set_015_015",
+          "symbol": "I"
+        },
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 12,
+          "false_hits": 6,
+          "family": "digit_set",
+          "hits": 6,
+          "predicate": "exactly_one_in_set_069_069",
+          "symbol": "N"
+        },
+        {
+          "cost": 8.907354922057603,
+          "cover_size": 4,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 3,
+          "predicate": "and(not_has_5,sum_mod_6_4)",
+          "symbol": "A"
+        },
+        {
+          "cost": 9.607354922057604,
+          "cover_size": 3,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 2,
+          "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+          "symbol": "V"
+        }
+      ],
+      "trace": [
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 21,
+            "false_hits": 13,
+            "family": "digit_set",
+            "hits": 8,
+            "predicate": "exactly_one_in_set_015_015",
+            "symbol": "I"
+          },
+          "primary_hits_with_default": 17,
+          "rule_count": 1
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 12,
+            "false_hits": 6,
+            "family": "digit_set",
+            "hits": 6,
+            "predicate": "exactly_one_in_set_069_069",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 23,
+          "rule_count": 2
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 4,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 3,
+            "predicate": "and(not_has_5,sum_mod_6_4)",
+            "symbol": "A"
+          },
+          "primary_hits_with_default": 26,
+          "rule_count": 3
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 3,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 2,
+            "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+            "symbol": "V"
+          },
+          "primary_hits_with_default": 28,
+          "rule_count": 4
+        }
+      ]
+    },
+    {
+      "acceptable_accuracy": 0.5818181818181818,
+      "acceptable_hits": 32,
+      "default_symbol": "E",
+      "exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "05",
+        "09",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "28",
+        "34",
+        "35",
+        "36",
+        "38",
+        "45",
+        "57",
+        "58",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "lookup_cost_bits": 209.40452071316824,
+      "lookup_cost_ratio": 1.3505278202865771,
+      "max_rules": 8,
+      "mdl_cost_bits": 282.8066309169105,
+      "mdl_gain_vs_lookup_bits": -73.40211020374224,
+      "predicted": "VNIIINIIIIEIIIEIIIIAOLINSANEEINAENEINEENVIIIIENNVNENANE",
+      "primary_accuracy": 0.5818181818181818,
+      "primary_hits": 32,
+      "primary_lookup_cost_ratio": 1.3505278202865771,
+      "primary_mdl_cost_bits": 282.8066309169105,
+      "primary_mdl_gain_vs_lookup_bits": -73.40211020374224,
+      "rule_cost_bits": 62.26619429851844,
+      "rule_count": 8,
+      "rules": [
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 21,
+          "false_hits": 13,
+          "family": "digit_set",
+          "hits": 8,
+          "predicate": "exactly_one_in_set_015_015",
+          "symbol": "I"
+        },
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 12,
+          "false_hits": 6,
+          "family": "digit_set",
+          "hits": 6,
+          "predicate": "exactly_one_in_set_069_069",
+          "symbol": "N"
+        },
+        {
+          "cost": 8.907354922057603,
+          "cover_size": 4,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 3,
+          "predicate": "and(not_has_5,sum_mod_6_4)",
+          "symbol": "A"
+        },
+        {
+          "cost": 9.607354922057604,
+          "cover_size": 3,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 2,
+          "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+          "symbol": "V"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_2",
+          "symbol": "L"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "loop_7",
+          "symbol": "N"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_5",
+          "symbol": "O"
+        },
+        {
+          "cost": 5.307354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "has_2",
+          "symbol": "S"
+        }
+      ],
+      "trace": [
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 21,
+            "false_hits": 13,
+            "family": "digit_set",
+            "hits": 8,
+            "predicate": "exactly_one_in_set_015_015",
+            "symbol": "I"
+          },
+          "primary_hits_with_default": 17,
+          "rule_count": 1
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 12,
+            "false_hits": 6,
+            "family": "digit_set",
+            "hits": 6,
+            "predicate": "exactly_one_in_set_069_069",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 23,
+          "rule_count": 2
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 4,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 3,
+            "predicate": "and(not_has_5,sum_mod_6_4)",
+            "symbol": "A"
+          },
+          "primary_hits_with_default": 26,
+          "rule_count": 3
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 3,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 2,
+            "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+            "symbol": "V"
+          },
+          "primary_hits_with_default": 28,
+          "rule_count": 4
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "diff_2",
+            "symbol": "L"
+          },
+          "primary_hits_with_default": 29,
+          "rule_count": 5
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "loop_7",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 30,
+          "rule_count": 6
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "sum_5",
+            "symbol": "O"
+          },
+          "primary_hits_with_default": 31,
+          "rule_count": 7
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "has_2",
+            "symbol": "S"
+          },
+          "primary_hits_with_default": 32,
+          "rule_count": 8
+        }
+      ]
+    },
+    {
+      "acceptable_accuracy": 0.6181818181818182,
+      "acceptable_hits": 34,
+      "default_symbol": "E",
+      "exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "05",
+        "09",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "28",
+        "35",
+        "36",
+        "45",
+        "57",
+        "58",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "lookup_cost_bits": 209.40452071316824,
+      "lookup_cost_ratio": 1.3144124613569181,
+      "max_rules": 12,
+      "mdl_cost_bits": 275.2439114898612,
+      "mdl_gain_vs_lookup_bits": -65.83939077669297,
+      "predicted": "VNIIINIIIIEIIIEIIIIAOLINSANEBINATNEINEENVIIIIENNVNENANE",
+      "primary_accuracy": 0.6181818181818182,
+      "primary_hits": 34,
+      "primary_lookup_cost_ratio": 1.3144124613569181,
+      "primary_mdl_cost_bits": 275.2439114898612,
+      "primary_mdl_gain_vs_lookup_bits": -65.83939077669297,
+      "rule_cost_bits": 73.88090414263364,
+      "rule_count": 10,
+      "rules": [
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 21,
+          "false_hits": 13,
+          "family": "digit_set",
+          "hits": 8,
+          "predicate": "exactly_one_in_set_015_015",
+          "symbol": "I"
+        },
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 12,
+          "false_hits": 6,
+          "family": "digit_set",
+          "hits": 6,
+          "predicate": "exactly_one_in_set_069_069",
+          "symbol": "N"
+        },
+        {
+          "cost": 8.907354922057603,
+          "cover_size": 4,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 3,
+          "predicate": "and(not_has_5,sum_mod_6_4)",
+          "symbol": "A"
+        },
+        {
+          "cost": 9.607354922057604,
+          "cover_size": 3,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 2,
+          "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+          "symbol": "V"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_2",
+          "symbol": "L"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "loop_7",
+          "symbol": "N"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_5",
+          "symbol": "O"
+        },
+        {
+          "cost": 5.307354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "has_2",
+          "symbol": "S"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_5",
+          "symbol": "T"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_7",
+          "symbol": "B"
+        }
+      ],
+      "trace": [
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 21,
+            "false_hits": 13,
+            "family": "digit_set",
+            "hits": 8,
+            "predicate": "exactly_one_in_set_015_015",
+            "symbol": "I"
+          },
+          "primary_hits_with_default": 17,
+          "rule_count": 1
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 12,
+            "false_hits": 6,
+            "family": "digit_set",
+            "hits": 6,
+            "predicate": "exactly_one_in_set_069_069",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 23,
+          "rule_count": 2
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 4,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 3,
+            "predicate": "and(not_has_5,sum_mod_6_4)",
+            "symbol": "A"
+          },
+          "primary_hits_with_default": 26,
+          "rule_count": 3
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 3,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 2,
+            "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+            "symbol": "V"
+          },
+          "primary_hits_with_default": 28,
+          "rule_count": 4
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "diff_2",
+            "symbol": "L"
+          },
+          "primary_hits_with_default": 29,
+          "rule_count": 5
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "loop_7",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 30,
+          "rule_count": 6
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "sum_5",
+            "symbol": "O"
+          },
+          "primary_hits_with_default": 31,
+          "rule_count": 7
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "has_2",
+            "symbol": "S"
+          },
+          "primary_hits_with_default": 32,
+          "rule_count": 8
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "diff_5",
+            "symbol": "T"
+          },
+          "primary_hits_with_default": 33,
+          "rule_count": 9
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "sum_7",
+            "symbol": "B"
+          },
+          "primary_hits_with_default": 34,
+          "rule_count": 10
+        }
+      ]
+    },
+    {
+      "acceptable_accuracy": 0.6181818181818182,
+      "acceptable_hits": 34,
+      "default_symbol": "E",
+      "exceptions": [
+        "00",
+        "02",
+        "03",
+        "04",
+        "05",
+        "09",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "28",
+        "35",
+        "36",
+        "45",
+        "57",
+        "58",
+        "67",
+        "68",
+        "79",
+        "89"
+      ],
+      "lookup_cost_bits": 209.40452071316824,
+      "lookup_cost_ratio": 1.3144124613569181,
+      "max_rules": 18,
+      "mdl_cost_bits": 275.2439114898612,
+      "mdl_gain_vs_lookup_bits": -65.83939077669297,
+      "predicted": "VNIIINIIIIEIIIEIIIIAOLINSANEBINATNEINEENVIIIIENNVNENANE",
+      "primary_accuracy": 0.6181818181818182,
+      "primary_hits": 34,
+      "primary_lookup_cost_ratio": 1.3144124613569181,
+      "primary_mdl_cost_bits": 275.2439114898612,
+      "primary_mdl_gain_vs_lookup_bits": -65.83939077669297,
+      "rule_cost_bits": 73.88090414263364,
+      "rule_count": 10,
+      "rules": [
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 21,
+          "false_hits": 13,
+          "family": "digit_set",
+          "hits": 8,
+          "predicate": "exactly_one_in_set_015_015",
+          "symbol": "I"
+        },
+        {
+          "cost": 8.607354922057604,
+          "cover_size": 12,
+          "false_hits": 6,
+          "family": "digit_set",
+          "hits": 6,
+          "predicate": "exactly_one_in_set_069_069",
+          "symbol": "N"
+        },
+        {
+          "cost": 8.907354922057603,
+          "cover_size": 4,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 3,
+          "predicate": "and(not_has_5,sum_mod_6_4)",
+          "symbol": "A"
+        },
+        {
+          "cost": 9.607354922057604,
+          "cover_size": 3,
+          "false_hits": 1,
+          "family": "compound",
+          "hits": 2,
+          "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+          "symbol": "V"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_2",
+          "symbol": "L"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "loop_7",
+          "symbol": "N"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_5",
+          "symbol": "O"
+        },
+        {
+          "cost": 5.307354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "digit_incidence",
+          "hits": 1,
+          "predicate": "has_2",
+          "symbol": "S"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "diff_5",
+          "symbol": "T"
+        },
+        {
+          "cost": 5.807354922057604,
+          "cover_size": 1,
+          "false_hits": 0,
+          "family": "arithmetic",
+          "hits": 1,
+          "predicate": "sum_7",
+          "symbol": "B"
+        }
+      ],
+      "trace": [
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 21,
+            "false_hits": 13,
+            "family": "digit_set",
+            "hits": 8,
+            "predicate": "exactly_one_in_set_015_015",
+            "symbol": "I"
+          },
+          "primary_hits_with_default": 17,
+          "rule_count": 1
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 12,
+            "false_hits": 6,
+            "family": "digit_set",
+            "hits": 6,
+            "predicate": "exactly_one_in_set_069_069",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 23,
+          "rule_count": 2
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 4,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 3,
+            "predicate": "and(not_has_5,sum_mod_6_4)",
+            "symbol": "A"
+          },
+          "primary_hits_with_default": 26,
+          "rule_count": 3
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 3,
+            "false_hits": 1,
+            "family": "compound",
+            "hits": 2,
+            "predicate": "and(diff_mod_3_0,sum_mod_5_0)",
+            "symbol": "V"
+          },
+          "primary_hits_with_default": 28,
+          "rule_count": 4
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "diff_2",
+            "symbol": "L"
+          },
+          "primary_hits_with_default": 29,
+          "rule_count": 5
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "loop_7",
+            "symbol": "N"
+          },
+          "primary_hits_with_default": 30,
+          "rule_count": 6
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "sum_5",
+            "symbol": "O"
+          },
+          "primary_hits_with_default": 31,
+          "rule_count": 7
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "digit_incidence",
+            "hits": 1,
+            "predicate": "has_2",
+            "symbol": "S"
+          },
+          "primary_hits_with_default": 32,
+          "rule_count": 8
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "diff_5",
+            "symbol": "T"
+          },
+          "primary_hits_with_default": 33,
+          "rule_count": 9
+        },
+        {
+          "default_symbol": "E",
+          "last_rule": {
+            "cover_size": 1,
+            "false_hits": 0,
+            "family": "arithmetic",
+            "hits": 1,
+            "predicate": "sum_7",
+            "symbol": "B"
+          },
+          "primary_hits_with_default": 34,
+          "rule_count": 10
+        }
+      ]
+    }
+  ],
+  "control": {
+    "primary_hits_max": 45,
+    "primary_hits_mean": 35.608333333333334,
+    "primary_hits_p_ge": 0.7272727272727273,
+    "primary_mdl_gain_max": -0.48166410910067725,
+    "primary_mdl_gain_mean": -63.398734042195215,
+    "primary_mdl_gain_p_ge": 0.5454545454545454,
+    "trials": 120
+  },
+  "control_trials": 120,
+  "predicate_count": 10461,
+  "schema": "pair_rule_cover_results.v1",
+  "symbol_cover_rows": [
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "*",
+      "target_count": 1,
+      "terms": [
+        "loop_0"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "B",
+      "target_count": 1,
+      "terms": [
+        "and(has_3,has_4)"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "C",
+      "target_count": 1,
+      "terms": [
+        "and(has_6,has_8)"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "F",
+      "target_count": 3,
+      "terms": [
+        "and(has_4,product_last_0)",
+        "and(has_1,has_2)"
+      ],
+      "tp": 3
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "L",
+      "target_count": 2,
+      "terms": [
+        "and(has_2,has_4)",
+        "and(has_3,has_5)"
+      ],
+      "tp": 2
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "O",
+      "target_count": 1,
+      "terms": [
+        "and(has_2,has_3)"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "R",
+      "target_count": 1,
+      "terms": [
+        "and(has_0,has_2)"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "S",
+      "target_count": 1,
+      "terms": [
+        "and(has_2,has_7)"
+      ],
+      "tp": 1
+    },
+    {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "symbol": "V",
+      "target_count": 5,
+      "terms": [
+        "and(diff_3,sum_mod_3_0)",
+        "loop_5",
+        "and(has_1,has_7)"
+      ],
+      "tp": 5
+    },
+    {
+      "f1": 0.923076923076923,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "symbol": "T",
+      "target_count": 6,
+      "terms": [
+        "and(diff_5,not_has_2)",
+        "and(diff_mod_4_1,has_9)",
+        "and(has_2,has_8)"
+      ],
+      "tp": 6
+    },
+    {
+      "f1": 0.8571428571428571,
+      "fn": 0,
+      "fp": 2,
+      "precision": 0.75,
+      "recall": 1.0,
+      "symbol": "A",
+      "target_count": 6,
+      "terms": [
+        "and(has_7,sum_mod_3_1)",
+        "and(diff_mod_3_0,product_last_4)"
+      ],
+      "tp": 6
+    },
+    {
+      "f1": 0.7857142857142858,
+      "fn": 0,
+      "fp": 6,
+      "precision": 0.6470588235294118,
+      "recall": 1.0,
+      "symbol": "E",
+      "target_count": 11,
+      "terms": [
+        "and(not_has_0,sum_mod_6_0)",
+        "both_in_set_4578_4578",
+        "loop_1"
+      ],
+      "tp": 11
+    },
+    {
+      "f1": 0.5517241379310345,
+      "fn": 0,
+      "fp": 13,
+      "precision": 0.38095238095238093,
+      "recall": 1.0,
+      "symbol": "I",
+      "target_count": 8,
+      "terms": [
+        "exactly_one_in_set_015_015"
+      ],
+      "tp": 8
+    },
+    {
+      "f1": 0.5333333333333333,
+      "fn": 0,
+      "fp": 14,
+      "precision": 0.36363636363636365,
+      "recall": 1.0,
+      "symbol": "N",
+      "target_count": 8,
+      "terms": [
+        "exactly_one_in_set_169_169",
+        "loop_7"
+      ],
+      "tp": 8
+    }
+  ],
+  "translation_delta": "NONE",
+  "verdict": "lookup_disguise"
+}

@@ -1,0 +1,836 @@
+{
+  "book_holdouts": [
+    "0",
+    "7",
+    "14",
+    "21",
+    "28",
+    "35",
+    "42",
+    "49",
+    "56",
+    "63"
+  ],
+  "control_trials": 500,
+  "occ_streams": "analysis/audit_20260609/homophone_channel/occ_streams.json",
+  "random_seed": 46920260619,
+  "schema": "zero_homophone_transition_origin_probe_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "variants": [
+    {
+      "centroid_leave_one_pair_out": {
+        "accuracy": 0.14545454545454545,
+        "correct": 8,
+        "total": 55
+      },
+      "cluster_count": 14,
+      "cluster_pair_link": {
+        "f1": 0.13909774436090228,
+        "fn": 118,
+        "fp": 340,
+        "precision": 0.09814323607427056,
+        "recall": 0.23870967741935484,
+        "tn": 990,
+        "tp": 37
+      },
+      "controls": {
+        "label_shuffle_preserving_inventory": {
+          "centroid_accuracy": {
+            "max": 0.2909090909090909,
+            "mean": 0.0997090909090909,
+            "min": 0.0,
+            "observed": 0.14545454545454545,
+            "p": 0.22954091816367264,
+            "sd": 0.05109556458296232,
+            "z": 0.8952920849162757
+          },
+          "cluster_f1": {
+            "max": 0.24436090225563914,
+            "mean": 0.14929323308270676,
+            "min": 0.10150375939849623,
+            "observed": 0.13909774436090228,
+            "p": 0.6846307385229541,
+            "sd": 0.022249513426324464,
+            "z": -0.4582342331020017
+          }
+        }
+      },
+      "include_mode": "all_occurrences",
+      "meta": {
+        "feature_dimensions": 320,
+        "include_mode": "all_occurrences",
+        "nonzero_pairs": 55,
+        "train_books": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69"
+        ]
+      },
+      "sample_centroid_predictions": {
+        "00": {
+          "distance": 0.04154813109203437,
+          "predicted": "E"
+        },
+        "01": {
+          "distance": 0.01580347801985771,
+          "predicted": "F"
+        },
+        "02": {
+          "distance": 0.04826054524494883,
+          "predicted": "I"
+        },
+        "03": {
+          "distance": 0.020865433774567066,
+          "predicted": "F"
+        },
+        "04": {
+          "distance": 0.023803200127960333,
+          "predicted": "T"
+        },
+        "05": {
+          "distance": 0.014059441254911431,
+          "predicted": "I"
+        },
+        "06": {
+          "distance": 0.010978400370933228,
+          "predicted": "I"
+        },
+        "07": {
+          "distance": 0.01901160645748845,
+          "predicted": "I"
+        },
+        "08": {
+          "distance": 0.014459876525461435,
+          "predicted": "I"
+        },
+        "09": {
+          "distance": 0.013963321003144458,
+          "predicted": "I"
+        },
+        "11": {
+          "distance": 0.028248450103147138,
+          "predicted": "E"
+        },
+        "12": {
+          "distance": 0.007120972109075807,
+          "predicted": "I"
+        },
+        "13": {
+          "distance": 0.03485360138670501,
+          "predicted": "B"
+        },
+        "14": {
+          "distance": 0.023667664667124555,
+          "predicted": "F"
+        },
+        "15": {
+          "distance": 0.007908441801236066,
+          "predicted": "I"
+        },
+        "16": {
+          "distance": 0.01035923045915399,
+          "predicted": "B"
+        },
+        "17": {
+          "distance": 0.017644341644220574,
+          "predicted": "I"
+        },
+        "18": {
+          "distance": 0.01630912133354978,
+          "predicted": "F"
+        },
+        "19": {
+          "distance": 0.009013284406888866,
+          "predicted": "F"
+        },
+        "22": {
+          "distance": 0.15508838945421322,
+          "predicted": "*"
+        }
+      },
+      "special_pairs": {
+        "06": {
+          "centroid_prediction": {
+            "distance": 0.010978400370933228,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "09": {
+          "centroid_prediction": {
+            "distance": 0.013963321003144458,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "16": {
+          "centroid_prediction": {
+            "distance": 0.01035923045915399,
+            "predicted": "B"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "19": {
+          "centroid_prediction": {
+            "distance": 0.009013284406888866,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "33": {
+          "centroid_prediction": {
+            "distance": 0.6446276894039198,
+            "predicted": "*"
+          },
+          "cluster": 4,
+          "true_label": "E"
+        },
+        "36": {
+          "centroid_prediction": {
+            "distance": 0.021437566593938806,
+            "predicted": "F"
+          },
+          "cluster": 12,
+          "true_label": "V"
+        },
+        "39": {
+          "centroid_prediction": {
+            "distance": 0.23088917897610972,
+            "predicted": "I"
+          },
+          "cluster": 7,
+          "true_label": "N"
+        },
+        "66": {
+          "centroid_prediction": {
+            "distance": 0.6589674386174869,
+            "predicted": "R"
+          },
+          "cluster": 9,
+          "true_label": "E"
+        },
+        "68": {
+          "centroid_prediction": {
+            "distance": 0.03414818326397062,
+            "predicted": "T"
+          },
+          "cluster": 12,
+          "true_label": "C"
+        },
+        "89": {
+          "centroid_prediction": {
+            "distance": 0.015368745345990975,
+            "predicted": "F"
+          },
+          "cluster": 12,
+          "true_label": "T"
+        }
+      }
+    },
+    {
+      "centroid_leave_one_pair_out": {
+        "accuracy": 0.12727272727272726,
+        "correct": 7,
+        "total": 55
+      },
+      "cluster_count": 14,
+      "cluster_pair_link": {
+        "f1": 0.17548076923076925,
+        "fn": 82,
+        "fp": 604,
+        "precision": 0.10782865583456426,
+        "recall": 0.47096774193548385,
+        "tn": 726,
+        "tp": 73
+      },
+      "controls": {
+        "label_shuffle_preserving_inventory": {
+          "centroid_accuracy": {
+            "max": 0.2545454545454545,
+            "mean": 0.09887272727272728,
+            "min": 0.0,
+            "observed": 0.12727272727272726,
+            "p": 0.2894211576846307,
+            "sd": 0.046522901144594946,
+            "z": 0.6104520419251521
+          },
+          "cluster_f1": {
+            "max": 0.23557692307692307,
+            "mean": 0.17096153846153844,
+            "min": 0.125,
+            "observed": 0.17548076923076925,
+            "p": 0.4091816367265469,
+            "sd": 0.01859920418446848,
+            "z": 0.24297979227544847
+          }
+        }
+      },
+      "include_mode": "novel_only",
+      "meta": {
+        "feature_dimensions": 303,
+        "include_mode": "novel_only",
+        "nonzero_pairs": 53,
+        "train_books": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69"
+        ]
+      },
+      "sample_centroid_predictions": {
+        "00": {
+          "distance": 0.08477101500877338,
+          "predicted": "E"
+        },
+        "01": {
+          "distance": 0.03991891961230987,
+          "predicted": "F"
+        },
+        "02": {
+          "distance": 0.2303699315330413,
+          "predicted": "I"
+        },
+        "03": {
+          "distance": 0.03946215545110909,
+          "predicted": "F"
+        },
+        "04": {
+          "distance": 0.03866925245201369,
+          "predicted": "V"
+        },
+        "05": {
+          "distance": 0.027966665259469337,
+          "predicted": "I"
+        },
+        "06": {
+          "distance": 0.02934044962352289,
+          "predicted": "F"
+        },
+        "07": {
+          "distance": 0.03714579487564673,
+          "predicted": "I"
+        },
+        "08": {
+          "distance": 0.025915115641172326,
+          "predicted": "I"
+        },
+        "09": {
+          "distance": 0.03398943970133861,
+          "predicted": "I"
+        },
+        "11": {
+          "distance": 0.06806687362534869,
+          "predicted": "E"
+        },
+        "12": {
+          "distance": 0.015667010669949355,
+          "predicted": "I"
+        },
+        "13": {
+          "distance": 0.06956766926997116,
+          "predicted": "B"
+        },
+        "14": {
+          "distance": 0.057430412164110045,
+          "predicted": "F"
+        },
+        "15": {
+          "distance": 0.015678698238278943,
+          "predicted": "I"
+        },
+        "16": {
+          "distance": 0.022533812447125157,
+          "predicted": "I"
+        },
+        "17": {
+          "distance": 0.10747575713694169,
+          "predicted": "F"
+        },
+        "18": {
+          "distance": 0.03655462622194594,
+          "predicted": "T"
+        },
+        "19": {
+          "distance": 0.022734125136354977,
+          "predicted": "F"
+        },
+        "22": {
+          "distance": 0.3601773138632105,
+          "predicted": "*"
+        }
+      },
+      "special_pairs": {
+        "06": {
+          "centroid_prediction": {
+            "distance": 0.02934044962352289,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "09": {
+          "centroid_prediction": {
+            "distance": 0.03398943970133861,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "16": {
+          "centroid_prediction": {
+            "distance": 0.022533812447125157,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "19": {
+          "centroid_prediction": {
+            "distance": 0.022734125136354977,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "33": {
+          "centroid_prediction": {
+            "distance": 1.0,
+            "predicted": "*"
+          },
+          "cluster": 5,
+          "true_label": "E"
+        },
+        "36": {
+          "centroid_prediction": {
+            "distance": 0.05314339777870891,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "V"
+        },
+        "39": {
+          "centroid_prediction": {
+            "distance": 1.0,
+            "predicted": "*"
+          },
+          "cluster": 6,
+          "true_label": "N"
+        },
+        "66": {
+          "centroid_prediction": {
+            "distance": 0.6321274181470002,
+            "predicted": "R"
+          },
+          "cluster": 8,
+          "true_label": "E"
+        },
+        "68": {
+          "centroid_prediction": {
+            "distance": 0.1362984122591836,
+            "predicted": "I"
+          },
+          "cluster": 9,
+          "true_label": "C"
+        },
+        "89": {
+          "centroid_prediction": {
+            "distance": 0.03867729913435958,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        }
+      }
+    },
+    {
+      "centroid_leave_one_pair_out": {
+        "accuracy": 0.2,
+        "correct": 11,
+        "total": 55
+      },
+      "cluster_count": 14,
+      "cluster_pair_link": {
+        "f1": 0.1909448818897638,
+        "fn": 58,
+        "fp": 764,
+        "precision": 0.11265969802555169,
+        "recall": 0.6258064516129033,
+        "tn": 566,
+        "tp": 97
+      },
+      "controls": {
+        "label_shuffle_preserving_inventory": {
+          "centroid_accuracy": {
+            "max": 0.2727272727272727,
+            "mean": 0.09305454545454545,
+            "min": 0.0,
+            "observed": 0.2,
+            "p": 0.03992015968063872,
+            "sd": 0.04879534242075053,
+            "z": 2.191714398134346
+          },
+          "cluster_f1": {
+            "max": 0.23031496062992127,
+            "mean": 0.17757874015748032,
+            "min": 0.13779527559055116,
+            "observed": 0.1909448818897638,
+            "p": 0.22355289421157684,
+            "sd": 0.016400926198392854,
+            "z": 0.8149626167815599
+          }
+        }
+      },
+      "include_mode": "xuniq_only",
+      "meta": {
+        "feature_dimensions": 286,
+        "include_mode": "xuniq_only",
+        "nonzero_pairs": 51,
+        "train_books": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69"
+        ]
+      },
+      "sample_centroid_predictions": {
+        "00": {
+          "distance": 0.34500637802671974,
+          "predicted": "E"
+        },
+        "01": {
+          "distance": 0.0651722008145521,
+          "predicted": "F"
+        },
+        "02": {
+          "distance": 0.5811866266577727,
+          "predicted": "L"
+        },
+        "03": {
+          "distance": 0.07004966135776869,
+          "predicted": "T"
+        },
+        "04": {
+          "distance": 0.09082215815416939,
+          "predicted": "T"
+        },
+        "05": {
+          "distance": 0.1372572710783979,
+          "predicted": "I"
+        },
+        "06": {
+          "distance": 0.06858036921941735,
+          "predicted": "T"
+        },
+        "07": {
+          "distance": 0.08723017393641741,
+          "predicted": "I"
+        },
+        "08": {
+          "distance": 0.04653307255880501,
+          "predicted": "I"
+        },
+        "09": {
+          "distance": 0.11997610200855102,
+          "predicted": "I"
+        },
+        "11": {
+          "distance": 0.15466464356395282,
+          "predicted": "E"
+        },
+        "12": {
+          "distance": 0.0393206790471724,
+          "predicted": "I"
+        },
+        "13": {
+          "distance": 0.15845498728242313,
+          "predicted": "I"
+        },
+        "14": {
+          "distance": 0.09978841209768141,
+          "predicted": "F"
+        },
+        "15": {
+          "distance": 0.037105503482300906,
+          "predicted": "I"
+        },
+        "16": {
+          "distance": 0.049143976207220996,
+          "predicted": "I"
+        },
+        "17": {
+          "distance": 0.22229202617372468,
+          "predicted": "T"
+        },
+        "18": {
+          "distance": 0.07761826295141683,
+          "predicted": "I"
+        },
+        "19": {
+          "distance": 0.13935643042792778,
+          "predicted": "I"
+        },
+        "22": {
+          "distance": 0.610954559720895,
+          "predicted": "*"
+        }
+      },
+      "special_pairs": {
+        "06": {
+          "centroid_prediction": {
+            "distance": 0.06858036921941735,
+            "predicted": "T"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "09": {
+          "centroid_prediction": {
+            "distance": 0.11997610200855102,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "16": {
+          "centroid_prediction": {
+            "distance": 0.049143976207220996,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        },
+        "19": {
+          "centroid_prediction": {
+            "distance": 0.13935643042792778,
+            "predicted": "I"
+          },
+          "cluster": 13,
+          "true_label": "I"
+        },
+        "33": {
+          "centroid_prediction": {
+            "distance": 1.0,
+            "predicted": "*"
+          },
+          "cluster": 5,
+          "true_label": "E"
+        },
+        "36": {
+          "centroid_prediction": {
+            "distance": 0.22857696131092942,
+            "predicted": "T"
+          },
+          "cluster": 13,
+          "true_label": "V"
+        },
+        "39": {
+          "centroid_prediction": {
+            "distance": 1.0,
+            "predicted": "*"
+          },
+          "cluster": 8,
+          "true_label": "N"
+        },
+        "66": {
+          "centroid_prediction": {
+            "distance": 0.6550244349912528,
+            "predicted": "E"
+          },
+          "cluster": 11,
+          "true_label": "E"
+        },
+        "68": {
+          "centroid_prediction": {
+            "distance": 0.6107694970578887,
+            "predicted": "N"
+          },
+          "cluster": 12,
+          "true_label": "C"
+        },
+        "89": {
+          "centroid_prediction": {
+            "distance": 0.08463638941835527,
+            "predicted": "F"
+          },
+          "cluster": 13,
+          "true_label": "T"
+        }
+      }
+    }
+  ],
+  "verdict": "weak_context_signal_not_matrix_formula"
+}

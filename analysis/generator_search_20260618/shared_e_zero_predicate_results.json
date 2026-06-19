@@ -1,0 +1,161 @@
+{
+  "control_trials": 10000,
+  "controls": {
+    "anchor_33_66_e_count": {
+      "max": 2,
+      "mean": 0.4032,
+      "min": 0,
+      "observed": 2,
+      "p_good_direction": 0.036096390360963904,
+      "sd": 0.559161001950789,
+      "z_good_direction": 2.8557070225375485
+    },
+    "diagonal_e_count": {
+      "max": 7,
+      "mean": 1.9955,
+      "min": 0,
+      "observed": 5,
+      "p_good_direction": 0.019998000199980003,
+      "sd": 1.1545618438633465,
+      "z_good_direction": 2.6022858939686317
+    },
+    "joint_diag_fraction_plus_zero_delta": {
+      "max": 0.7,
+      "mean": 0.19956022551296942,
+      "min": 0.0,
+      "observed": 0.5030810427151889,
+      "p_good_direction": 0.0027997200279972004,
+      "sd": 0.11546031247368278,
+      "z_good_direction": 2.6287891544672712
+    },
+    "trials": 10000,
+    "zero_train_delta_balanced_accuracy": {
+      "max": 0.01619563814685765,
+      "mean": -0.04843396244676736,
+      "min": -0.1193218479803847,
+      "observed": 0.003081042715188942,
+      "p_good_direction": 0.001999800019998,
+      "sd": 0.016370924247421276,
+      "z_good_direction": 3.1467377396282847
+    }
+  },
+  "new_plaintext": false,
+  "pair_side": {
+    "anchor_33_66_e_count": 2,
+    "diagonal_e_cells": [
+      "11",
+      "33",
+      "44",
+      "66",
+      "99"
+    ],
+    "diagonal_e_count": 5,
+    "offdiag_e_cells": [
+      "15",
+      "47",
+      "48",
+      "57",
+      "58",
+      "78"
+    ],
+    "offdiag_e_count": 6,
+    "score_diagonal_predicts_e": {
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.6704545454545454,
+      "f1": 0.47619047619047616,
+      "fn": 6,
+      "fp": 5,
+      "precision": 0.5,
+      "predicted_positive": 10,
+      "recall": 0.45454545454545453,
+      "specificity": 0.8863636363636364,
+      "support_positive": 11,
+      "tn": 39,
+      "tp": 5
+    },
+    "unordered_e_cells": [
+      "11",
+      "15",
+      "33",
+      "44",
+      "47",
+      "48",
+      "57",
+      "58",
+      "66",
+      "78",
+      "99"
+    ]
+  },
+  "predicate": "i>=j",
+  "schema": "shared_e_zero_predicate_results.v1",
+  "source": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+  "translation_delta": "NONE",
+  "verdict": "shared_predicate_signal_only",
+  "zero_side": {
+    "holdout_code_only": {
+      "accuracy": 0.7717391304347826,
+      "balanced_accuracy": 0.6692226335272342,
+      "f1": 0.5116279069767442,
+      "fn": 20,
+      "fp": 1,
+      "precision": 0.9166666666666666,
+      "predicted_positive": 12,
+      "recall": 0.3548387096774194,
+      "specificity": 0.9836065573770492,
+      "support_positive": 31,
+      "tn": 60,
+      "tp": 11
+    },
+    "holdout_delta_balanced_accuracy": 0.11977789529349558,
+    "holdout_error_delta_vs_code_only": 3,
+    "holdout_predicate_omitted": 15,
+    "holdout_predicate_support": 25,
+    "holdout_rule": {
+      "accuracy": 0.8043478260869565,
+      "balanced_accuracy": 0.7890005288207298,
+      "f1": 0.71875,
+      "fn": 8,
+      "fp": 10,
+      "precision": 0.696969696969697,
+      "predicted_positive": 33,
+      "recall": 0.7419354838709677,
+      "specificity": 0.8360655737704918,
+      "support_positive": 31,
+      "tn": 51,
+      "tp": 23
+    },
+    "rough_holdout_error_gain_bits": 19.617476433324093,
+    "train_code_only": {
+      "accuracy": 0.8007380073800738,
+      "balanced_accuracy": 0.7052522906181443,
+      "f1": 0.5846153846153846,
+      "fn": 88,
+      "fp": 20,
+      "precision": 0.7916666666666666,
+      "predicted_positive": 96,
+      "recall": 0.4634146341463415,
+      "specificity": 0.9470899470899471,
+      "support_positive": 164,
+      "tn": 358,
+      "tp": 76
+    },
+    "train_delta_balanced_accuracy": 0.003081042715188942,
+    "train_predicate_omitted": 101,
+    "train_predicate_support": 221,
+    "train_rule": {
+      "accuracy": 0.6918819188191881,
+      "balanced_accuracy": 0.7083333333333333,
+      "f1": 0.5956416464891041,
+      "fn": 41,
+      "fp": 126,
+      "precision": 0.4939759036144578,
+      "predicted_positive": 249,
+      "recall": 0.75,
+      "specificity": 0.6666666666666666,
+      "support_positive": 164,
+      "tn": 252,
+      "tp": 123
+    }
+  }
+}

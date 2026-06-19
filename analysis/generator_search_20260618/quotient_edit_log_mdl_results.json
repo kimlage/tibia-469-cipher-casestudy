@@ -1,0 +1,4510 @@
+{
+  "best_non_leaky": {
+    "acceptable_accuracy": 0.30434782608695654,
+    "acceptable_hits": 14,
+    "edit_log": {
+      "copies": [
+        14,
+        17,
+        21,
+        23,
+        26,
+        30,
+        31,
+        33,
+        39
+      ],
+      "copy_neighbor_count": 9,
+      "edit_bits": 234.73675867113013,
+      "gain_vs_lookup_bits": -82.78273739792184,
+      "lookup_bits": 175.13832641464978,
+      "lookup_ratio": 1.4726705975363101,
+      "manual_label_count": 7,
+      "manuals": [
+        8,
+        9,
+        10,
+        11,
+        16,
+        22,
+        24
+      ],
+      "mismatch_count": 32,
+      "model_bits": 23.18430514144147,
+      "swap_count": 8,
+      "swaps": [
+        {
+          "left": 6,
+          "right": 28
+        },
+        {
+          "left": 7,
+          "right": 36
+        },
+        {
+          "left": 12,
+          "right": 45
+        },
+        {
+          "left": 15,
+          "right": 25
+        },
+        {
+          "left": 18,
+          "right": 44
+        },
+        {
+          "left": 20,
+          "right": 41
+        },
+        {
+          "left": 34,
+          "right": 38
+        },
+        {
+          "left": 40,
+          "right": 42
+        }
+      ],
+      "total_bits": 257.9210638125716
+    },
+    "exact_accuracy": 0.30434782608695654,
+    "exact_hits": 14,
+    "fill_order_family": "rows",
+    "fill_order_id": "natural_collapsed|cross_then_same|rows|major",
+    "fill_order_source": "quotient_line_order",
+    "inventory_counts": {
+      "*": 1,
+      "A": 4,
+      "B": 1,
+      "C": 1,
+      "E": 8,
+      "F": 4,
+      "I": 9,
+      "L": 2,
+      "N": 5,
+      "O": 1,
+      "R": 1,
+      "S": 2,
+      "T": 4,
+      "V": 3
+    },
+    "inventory_family": "frequency_weighted_apportionment",
+    "inventory_id": "code_usage|power|a=1.03|shift=0|hill",
+    "inventory_source": "code_usage",
+    "lookup_cost_bits": 175.13832641464978,
+    "lookup_cost_ratio": 1.8600934010858476,
+    "mdl_cost_bits": 325.77364524110925,
+    "mdl_gain_vs_lookup_bits": -150.63531882645947,
+    "mismatch_count": 32,
+    "mismatch_literal_bits": 298.58934009966777,
+    "model_selection_bits": 23.18430514144147,
+    "residual_literal_count": 28,
+    "sequence": "*NRVFTIEAOLSBCNVFTIEALSNVFTIEANFTIEANIEIEIEIEI",
+    "sequence_family": "round_robin",
+    "sequence_method": "round_robin",
+    "sequence_offset": null,
+    "sequence_step": null,
+    "small_exception_count": 4,
+    "small_exception_overhead_bits": 4.0,
+    "symbol_order": "*NRVFTIEAOLSBC",
+    "symbol_order_family": "row0_first_use",
+    "symbol_order_id": "first_code_table",
+    "target_derived": false
+  },
+  "controls": {
+    "candidate_limit": 500,
+    "inventory_label_shuffle": {
+      "best_gain_vs_lookup_bits": {
+        "max": -87.32943520484827,
+        "mean": -114.36029180307023,
+        "min": -136.3080944300072,
+        "observed": -82.78273739792184,
+        "p_good_direction": 0.008264462809917356,
+        "sd": 9.682154382886234,
+        "z_good_direction": 3.2614181881837725
+      },
+      "best_manual_label_count": {
+        "max": 20,
+        "mean": 13.625,
+        "min": 7,
+        "observed": 7,
+        "p_good_direction": 0.01652892561983471,
+        "sd": 2.453132108724914,
+        "z_good_direction": 2.7006291167268337
+      },
+      "best_total_bits": {
+        "max": 311.446420844657,
+        "mean": 289.49861821772004,
+        "min": 262.46776161949805,
+        "observed": 257.9210638125716,
+        "p_good_direction": 0.008264462809917356,
+        "sd": 9.682154382886234,
+        "z_good_direction": 3.261418188183775
+      }
+    },
+    "trials": 120
+  },
+  "schema": "quotient_edit_log_mdl_results.v1",
+  "search_parameters": {
+    "candidate_rows": 661286,
+    "control_prediction_limit": 500,
+    "control_trials": 120
+  },
+  "top_non_leaky": [
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          14,
+          17,
+          21,
+          23,
+          26,
+          30,
+          31,
+          33,
+          39
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 234.73675867113013,
+        "gain_vs_lookup_bits": -82.78273739792184,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4726705975363101,
+        "manual_label_count": 7,
+        "manuals": [
+          8,
+          9,
+          10,
+          11,
+          16,
+          22,
+          24
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 28
+          },
+          {
+            "left": 7,
+            "right": 36
+          },
+          {
+            "left": 12,
+            "right": 45
+          },
+          {
+            "left": 15,
+            "right": 25
+          },
+          {
+            "left": 18,
+            "right": 44
+          },
+          {
+            "left": 20,
+            "right": 41
+          },
+          {
+            "left": 34,
+            "right": 38
+          },
+          {
+            "left": 40,
+            "right": 42
+          }
+        ],
+        "total_bits": 257.9210638125716
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows",
+      "fill_order_id": "natural_collapsed|cross_then_same|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.03|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEALSNVFTIEANFTIEANIEIEIEIEI",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          20,
+          23,
+          29,
+          32,
+          33,
+          37,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 234.73675867113013,
+        "gain_vs_lookup_bits": -82.78273739792184,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4726705975363101,
+        "manual_label_count": 7,
+        "manuals": [
+          2,
+          12,
+          13,
+          16,
+          19,
+          35,
+          44
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 0,
+            "right": 17
+          },
+          {
+            "left": 4,
+            "right": 18
+          },
+          {
+            "left": 7,
+            "right": 24
+          },
+          {
+            "left": 25,
+            "right": 26
+          },
+          {
+            "left": 27,
+            "right": 45
+          },
+          {
+            "left": 30,
+            "right": 38
+          },
+          {
+            "left": 34,
+            "right": 43
+          },
+          {
+            "left": 36,
+            "right": 42
+          }
+        ],
+        "total_bits": 257.9210638125716
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|cross_then_same|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "TRIA*BCEFLNSVTIAEFLNSVTIAEFNVTIAEFNIENIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "TRIA*BCEFLNOSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_tridiag",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.34782608695652173,
+      "acceptable_hits": 16,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          23,
+          29,
+          30,
+          32,
+          33,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 12,
+        "edit_bits": 235.23853496409825,
+        "gain_vs_lookup_bits": -83.28451369088992,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4755356260154568,
+        "manual_label_count": 10,
+        "manuals": [
+          0,
+          2,
+          12,
+          13,
+          16,
+          19,
+          27,
+          35,
+          36,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 4,
+        "swaps": [
+          {
+            "left": 4,
+            "right": 18
+          },
+          {
+            "left": 7,
+            "right": 24
+          },
+          {
+            "left": 25,
+            "right": 26
+          },
+          {
+            "left": 34,
+            "right": 43
+          }
+        ],
+        "total_bits": 258.4228401055397
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|cross_then_same|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "TRIA*BCEFLNOSVTIAEFNSVTIAEFNVTIAEFNIENIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "TRIA*BCEFLNOSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_tridiag",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.34782608695652173,
+      "acceptable_hits": 16,
+      "edit_log": {
+        "copies": [
+          23,
+          25,
+          31,
+          33,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 238.12889087054373,
+        "gain_vs_lookup_bits": -86.17486959733543,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4920389006876291,
+        "manual_label_count": 13,
+        "manuals": [
+          0,
+          1,
+          2,
+          3,
+          11,
+          13,
+          16,
+          18,
+          19,
+          22,
+          24,
+          44,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 32
+          },
+          {
+            "left": 6,
+            "right": 36
+          },
+          {
+            "left": 9,
+            "right": 30
+          },
+          {
+            "left": 14,
+            "right": 27
+          },
+          {
+            "left": 15,
+            "right": 28
+          }
+        ],
+        "total_bits": 261.3131960119852
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "rows",
+      "fill_order_id": "q_center|cross_then_same|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "E": 11,
+        "F": 4,
+        "I": 13,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "IENTIFEAIEVNITEIFENILSATEIINEFIETIVNEIAEFITNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          29,
+          32,
+          33,
+          38,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 238.3514685152453,
+        "gain_vs_lookup_bits": -86.397447242037,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4933097684026408,
+        "manual_label_count": 9,
+        "manuals": [
+          0,
+          2,
+          4,
+          5,
+          13,
+          15,
+          22,
+          36,
+          43
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 3,
+            "right": 45
+          },
+          {
+            "left": 7,
+            "right": 25
+          },
+          {
+            "left": 8,
+            "right": 20
+          },
+          {
+            "left": 9,
+            "right": 16
+          },
+          {
+            "left": 11,
+            "right": 37
+          },
+          {
+            "left": 18,
+            "right": 26
+          },
+          {
+            "left": 21,
+            "right": 41
+          },
+          {
+            "left": 27,
+            "right": 31
+          }
+        ],
+        "total_bits": 261.5357736566868
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum",
+      "fill_order_id": "469_anchor|cross_then_same|anti_diagonal_sum|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=0|adams",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENFTIAVEISLNEIFTEICO*ABNRVIEFTIENISLEAVIFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "CISOFT*ABELNRV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_cipsoft",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          29,
+          32,
+          33,
+          38,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 238.3514685152453,
+        "gain_vs_lookup_bits": -86.397447242037,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4933097684026408,
+        "manual_label_count": 9,
+        "manuals": [
+          0,
+          2,
+          4,
+          5,
+          13,
+          15,
+          22,
+          36,
+          43
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 3,
+            "right": 45
+          },
+          {
+            "left": 7,
+            "right": 25
+          },
+          {
+            "left": 8,
+            "right": 20
+          },
+          {
+            "left": 9,
+            "right": 16
+          },
+          {
+            "left": 11,
+            "right": 37
+          },
+          {
+            "left": 18,
+            "right": 26
+          },
+          {
+            "left": 21,
+            "right": 41
+          },
+          {
+            "left": 27,
+            "right": 31
+          }
+        ],
+        "total_bits": 261.5357736566868
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum",
+      "fill_order_id": "469_anchor|same_then_cross|anti_diagonal_sum|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=0|adams",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENFTIAVEISLNEIFTEICO*ABNRVIEFTIENISLEAVIFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "CISOFT*ABELNRV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_cipsoft",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          23,
+          30,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 5,
+        "edit_bits": 238.78168018508848,
+        "gain_vs_lookup_bits": -86.82765891188018,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.4957661791646384,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          2,
+          3,
+          5,
+          11,
+          16,
+          19,
+          22,
+          24,
+          27,
+          36,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 8,
+            "right": 34
+          },
+          {
+            "left": 9,
+            "right": 10
+          },
+          {
+            "left": 12,
+            "right": 33
+          },
+          {
+            "left": 13,
+            "right": 37
+          },
+          {
+            "left": 15,
+            "right": 17
+          },
+          {
+            "left": 21,
+            "right": 44
+          },
+          {
+            "left": 26,
+            "right": 42
+          }
+        ],
+        "total_bits": 261.96598532652996
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "anti_diagonal_sum_snake",
+      "fill_order_id": "reverse_collapsed|same_then_cross|anti_diagonal_sum|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "E": 11,
+        "F": 4,
+        "I": 13,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "SEEEEEEEEEEETTTTTIIIIIIIIIIIIIVVAAAFFFFLNNNNNN",
+      "sequence_family": "blocks",
+      "sequence_method": "blocks",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "SBECTIVR*AFLNO",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_subjective_viewer",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.34782608695652173,
+      "acceptable_hits": 16,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          23,
+          29,
+          30,
+          32,
+          37,
+          38,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 10,
+        "edit_bits": 238.85324480821345,
+        "gain_vs_lookup_bits": -86.89922353500515,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.496174796881788,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          2,
+          12,
+          13,
+          16,
+          19,
+          27,
+          34,
+          35,
+          36,
+          43,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 4,
+        "swaps": [
+          {
+            "left": 4,
+            "right": 18
+          },
+          {
+            "left": 7,
+            "right": 24
+          },
+          {
+            "left": 25,
+            "right": 26
+          },
+          {
+            "left": 33,
+            "right": 39
+          }
+        ],
+        "total_bits": 262.03754994965493
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "TRIA*BCEFLNOSVTIAEFNSVTIAEFNVTIAEFNIENIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "TRIA*BCEFLNOSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_tridiag",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.3695652173913043,
+      "acceptable_hits": 17,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          21,
+          23,
+          29,
+          32,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 10,
+        "edit_bits": 238.85324480821345,
+        "gain_vs_lookup_bits": -86.89922353500515,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.496174796881788,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          3,
+          4,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          42,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 4,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 7,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          }
+        ],
+        "total_bits": 262.03754994965493
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|same_then_cross|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "IENTFAVIESLBINETFAIERCINV*EITFAENISLBEIVTFANEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "VTSRONLIFECBA*",
+      "symbol_order_family": "alphabet",
+      "symbol_order_id": "alphabet_reverse",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          25,
+          29,
+          31,
+          33,
+          41
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 240.15882343730294,
+        "gain_vs_lookup_bits": -88.20480216409464,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5036293538358065,
+        "manual_label_count": 10,
+        "manuals": [
+          0,
+          2,
+          5,
+          9,
+          13,
+          15,
+          16,
+          22,
+          36,
+          43
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 1,
+            "right": 8
+          },
+          {
+            "left": 3,
+            "right": 45
+          },
+          {
+            "left": 4,
+            "right": 40
+          },
+          {
+            "left": 7,
+            "right": 27
+          },
+          {
+            "left": 10,
+            "right": 23
+          },
+          {
+            "left": 11,
+            "right": 37
+          },
+          {
+            "left": 20,
+            "right": 32
+          },
+          {
+            "left": 26,
+            "right": 38
+          }
+        ],
+        "total_bits": 263.3431285787444
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum",
+      "fill_order_id": "469_anchor|cross_then_same|anti_diagonal_sum|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=25|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENFTIAVEISNEIFTNEICO*ABLRVIENFTIEISNEAVIFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "CISOFT*ABELNRV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_cipsoft",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          25,
+          29,
+          31,
+          33,
+          41
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 240.15882343730294,
+        "gain_vs_lookup_bits": -88.20480216409464,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5036293538358065,
+        "manual_label_count": 10,
+        "manuals": [
+          0,
+          2,
+          5,
+          9,
+          13,
+          15,
+          16,
+          22,
+          36,
+          43
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 8,
+        "swaps": [
+          {
+            "left": 1,
+            "right": 8
+          },
+          {
+            "left": 3,
+            "right": 45
+          },
+          {
+            "left": 4,
+            "right": 40
+          },
+          {
+            "left": 7,
+            "right": 27
+          },
+          {
+            "left": 10,
+            "right": 23
+          },
+          {
+            "left": 11,
+            "right": 37
+          },
+          {
+            "left": 20,
+            "right": 32
+          },
+          {
+            "left": 26,
+            "right": 38
+          }
+        ],
+        "total_bits": 263.3431285787444
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum",
+      "fill_order_id": "469_anchor|same_then_cross|anti_diagonal_sum|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=25|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENFTIAVEISNEIFTNEICO*ABLRVIENFTIEISNEAVIFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "CISOFT*ABELNRV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_cipsoft",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          20,
+          23,
+          29,
+          32,
+          33,
+          37,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 240.88317737497266,
+        "gain_vs_lookup_bits": -88.92915610176436,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5077652500299654,
+        "manual_label_count": 9,
+        "manuals": [
+          2,
+          12,
+          13,
+          16,
+          19,
+          34,
+          35,
+          43,
+          44
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 0,
+            "right": 17
+          },
+          {
+            "left": 4,
+            "right": 18
+          },
+          {
+            "left": 7,
+            "right": 24
+          },
+          {
+            "left": 25,
+            "right": 26
+          },
+          {
+            "left": 27,
+            "right": 45
+          },
+          {
+            "left": 30,
+            "right": 38
+          },
+          {
+            "left": 36,
+            "right": 42
+          }
+        ],
+        "total_bits": 264.06748251641415
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "TRIA*BCEFLNSVTIAEFLNSVTIAEFNVTIAEFNIENIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "TRIA*BCEFLNOSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_tridiag",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          14,
+          17,
+          28,
+          30,
+          31,
+          32,
+          33,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 240.88317737497266,
+        "gain_vs_lookup_bits": -88.92915610176436,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5077652500299654,
+        "manual_label_count": 9,
+        "manuals": [
+          0,
+          2,
+          4,
+          13,
+          15,
+          16,
+          22,
+          34,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 3,
+            "right": 29
+          },
+          {
+            "left": 9,
+            "right": 36
+          },
+          {
+            "left": 10,
+            "right": 18
+          },
+          {
+            "left": 12,
+            "right": 44
+          },
+          {
+            "left": 20,
+            "right": 27
+          },
+          {
+            "left": 21,
+            "right": 25
+          },
+          {
+            "left": 23,
+            "right": 42
+          }
+        ],
+        "total_bits": 264.06748251641415
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "lore_seed_hash",
+      "fill_order_id": "seed_cell_order_3478",
+      "fill_order_source": "cell_hash",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IBFLTRSNCVE*AIFLTSNVEAIFTNVEAIFTNEAINEIEIEIEII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=9|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 9,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "IENTFAVSLB*CRO",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_desc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.34782608695652173,
+      "acceptable_hits": 16,
+      "edit_log": {
+        "copies": [
+          21,
+          29,
+          32,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 241.31338904481578,
+        "gain_vs_lookup_bits": -89.35936777160748,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5102216607919627,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          3,
+          4,
+          13,
+          16,
+          19,
+          22,
+          24,
+          34,
+          36,
+          42,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 6,
+            "right": 17
+          },
+          {
+            "left": 7,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 11,
+            "right": 23
+          },
+          {
+            "left": 20,
+            "right": 30
+          }
+        ],
+        "total_bits": 264.49769418625726
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|same_then_cross|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "IENTFAVIEBSLINETFAIERCINV*EITFAENIBSLEIVTFANEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "RNBSCLOTF*EVAI",
+      "symbol_order_family": "seed_hash_order",
+      "symbol_order_id": "seed_symbol_order_74032",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.2826086956521739,
+      "acceptable_hits": 13,
+      "edit_log": {
+        "copies": [
+          14,
+          17,
+          23,
+          26,
+          30,
+          31,
+          39
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 241.53596668951738,
+        "gain_vs_lookup_bits": -89.58194541630905,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5114925285069745,
+        "manual_label_count": 8,
+        "manuals": [
+          8,
+          9,
+          10,
+          11,
+          16,
+          22,
+          24,
+          43
+        ],
+        "mismatch_count": 33,
+        "model_bits": 23.18430514144147,
+        "swap_count": 9,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 28
+          },
+          {
+            "left": 7,
+            "right": 36
+          },
+          {
+            "left": 12,
+            "right": 45
+          },
+          {
+            "left": 15,
+            "right": 25
+          },
+          {
+            "left": 18,
+            "right": 44
+          },
+          {
+            "left": 20,
+            "right": 41
+          },
+          {
+            "left": 21,
+            "right": 33
+          },
+          {
+            "left": 34,
+            "right": 38
+          },
+          {
+            "left": 40,
+            "right": 42
+          }
+        ],
+        "total_bits": 264.72027183095884
+      },
+      "exact_accuracy": 0.2826086956521739,
+      "exact_hits": 13,
+      "fill_order_family": "rows",
+      "fill_order_id": "natural_collapsed|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.03|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.913370813683837,
+      "mdl_cost_bits": 335.1045621192239,
+      "mdl_gain_vs_lookup_bits": -159.9662357045741,
+      "mismatch_count": 33,
+      "mismatch_literal_bits": 307.9202569777824,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 29,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEALSNVFTIEANFTIEANIEIEIEIEI",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          23,
+          25,
+          28,
+          30,
+          33,
+          40
+        ],
+        "copy_neighbor_count": 8,
+        "edit_bits": 242.69053229703027,
+        "gain_vs_lookup_bits": -90.73651102382195,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5180848354631309,
+        "manual_label_count": 10,
+        "manuals": [
+          2,
+          3,
+          8,
+          9,
+          16,
+          22,
+          27,
+          36,
+          44,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 1,
+            "right": 4
+          },
+          {
+            "left": 5,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 24
+          },
+          {
+            "left": 13,
+            "right": 31
+          },
+          {
+            "left": 14,
+            "right": 21
+          },
+          {
+            "left": 19,
+            "right": 26
+          },
+          {
+            "left": 39,
+            "right": 42
+          }
+        ],
+        "total_bits": 265.87483743847173
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "diagonal_diff",
+      "fill_order_id": "reverse_collapsed|same_then_cross|diagonal_diff|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "E": 9,
+        "F": 4,
+        "I": 11,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "VNTLBSIAF*EVNTSIAFEVNTIAFENTIAFENIENIEIEIEIEII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=5|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 5,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "VTSRONLIFECBA*",
+      "symbol_order_family": "alphabet",
+      "symbol_order_id": "alphabet_reverse",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.3695652173913043,
+      "acceptable_hits": 17,
+      "edit_log": {
+        "copies": [
+          6,
+          7,
+          17,
+          21,
+          23,
+          29,
+          32,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 11,
+        "edit_bits": 243.1923085899984,
+        "gain_vs_lookup_bits": -91.23828731679009,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.520949863942278,
+        "manual_label_count": 13,
+        "manuals": [
+          0,
+          3,
+          4,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          42,
+          43,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 3,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          }
+        ],
+        "total_bits": 266.3766137314399
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|cross_then_same|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "IENTFAVIESLBINETFAIERCINV*EITFAENISLBEIVTFANEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "VTSRONLIFECBA*",
+      "symbol_order_family": "alphabet",
+      "symbol_order_id": "alphabet_reverse",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.3695652173913043,
+      "acceptable_hits": 17,
+      "edit_log": {
+        "copies": [
+          14,
+          17,
+          23,
+          26,
+          28,
+          30,
+          32,
+          33,
+          38
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 243.62252025984154,
+        "gain_vs_lookup_bits": -91.66849898663321,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5234062747042751,
+        "manual_label_count": 16,
+        "manuals": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          15,
+          16,
+          18,
+          19,
+          22,
+          24,
+          27,
+          34,
+          35,
+          44,
+          45
+        ],
+        "mismatch_count": 29,
+        "model_bits": 23.18430514144147,
+        "swap_count": 2,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 21
+          },
+          {
+            "left": 7,
+            "right": 36
+          }
+        ],
+        "total_bits": 266.806825401283
+      },
+      "exact_accuracy": 0.3695652173913043,
+      "exact_hits": 17,
+      "fill_order_family": "rows",
+      "fill_order_id": "natural_collapsed|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 9,
+        "F": 4,
+        "I": 11,
+        "L": 1,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 1,
+        "T": 4,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7002611632918798,
+      "mdl_cost_bits": 297.7808946067654,
+      "mdl_gain_vs_lookup_bits": -122.64256819211562,
+      "mismatch_count": 29,
+      "mismatch_literal_bits": 270.5965894653239,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 25,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEANFTIEANFTIENIENIEIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          23,
+          29,
+          32,
+          33,
+          38,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 243.84509790454314,
+        "gain_vs_lookup_bits": -91.89107663133484,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5246771424192873,
+        "manual_label_count": 12,
+        "manuals": [
+          2,
+          3,
+          4,
+          5,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 0,
+            "right": 37
+          },
+          {
+            "left": 7,
+            "right": 21
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          },
+          {
+            "left": 42,
+            "right": 43
+          }
+        ],
+        "total_bits": 267.0294030459846
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "reverse_collapsed|cross_then_same|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "IENAFTVIEBLSINEAFTIENRVC*IEIAFTENIBLSEVIAFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "OBENRAVFLTSC*I",
+      "symbol_order_family": "seed_hash_order",
+      "symbol_order_id": "seed_symbol_order_3478",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          17,
+          25,
+          26,
+          29,
+          30,
+          31,
+          37,
+          38,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 243.84509790454314,
+        "gain_vs_lookup_bits": -91.89107663133484,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5246771424192873,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          2,
+          4,
+          12,
+          13,
+          15,
+          16,
+          19,
+          24,
+          27,
+          34,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 7,
+            "right": 36
+          },
+          {
+            "left": 14,
+            "right": 21
+          },
+          {
+            "left": 20,
+            "right": 40
+          },
+          {
+            "left": 23,
+            "right": 43
+          },
+          {
+            "left": 33,
+            "right": 39
+          }
+        ],
+        "total_bits": 267.0294030459846
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 9,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 6,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "TRIA*BCEFLNOSVTIAEFNSVTIAEFNTIEFNIENIENIEIEIEI",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "TRIA*BCEFLNOSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_tridiag",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.3695652173913043,
+      "acceptable_hits": 17,
+      "edit_log": {
+        "copies": [
+          20,
+          23,
+          25,
+          26,
+          31,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 244.27530957438626,
+        "gain_vs_lookup_bits": -92.32128830117796,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5271335531812844,
+        "manual_label_count": 15,
+        "manuals": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          16,
+          18,
+          19,
+          22,
+          35,
+          36,
+          43,
+          44,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 4,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 42
+          },
+          {
+            "left": 8,
+            "right": 11
+          },
+          {
+            "left": 17,
+            "right": 34
+          },
+          {
+            "left": 21,
+            "right": 24
+          }
+        ],
+        "total_bits": 267.45961471582774
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "diagonal_diff_snake",
+      "fill_order_id": "reverse_collapsed|same_then_cross|diagonal_diff|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "E": 9,
+        "F": 5,
+        "I": 11,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "BLSVVVAAAAFFFFFTTTTTNNNNNNEEEEEEEEEIIIIIIIIIII",
+      "sequence_family": "blocks",
+      "sequence_method": "blocks",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          23,
+          25,
+          26,
+          30,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 244.49788721908786,
+        "gain_vs_lookup_bits": -92.54386594587953,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5284044208962964,
+        "manual_label_count": 11,
+        "manuals": [
+          0,
+          2,
+          3,
+          11,
+          16,
+          19,
+          22,
+          27,
+          36,
+          42,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 24
+          },
+          {
+            "left": 8,
+            "right": 34
+          },
+          {
+            "left": 9,
+            "right": 10
+          },
+          {
+            "left": 12,
+            "right": 33
+          },
+          {
+            "left": 13,
+            "right": 37
+          },
+          {
+            "left": 15,
+            "right": 17
+          },
+          {
+            "left": 21,
+            "right": 44
+          }
+        ],
+        "total_bits": 267.6821923605293
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum",
+      "fill_order_id": "reverse_collapsed|same_then_cross|anti_diagonal_sum|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "E": 11,
+        "F": 4,
+        "I": 13,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "SEEEEEEEEEEETTTTTIIIIIIIIIIIIIVVAAAFFFFLNNNNNN",
+      "sequence_family": "blocks",
+      "sequence_method": "blocks",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "SBECTIVR*AFLNO",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_subjective_viewer",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          17,
+          23,
+          25,
+          26,
+          30
+        ],
+        "copy_neighbor_count": 5,
+        "edit_bits": 244.928098888931,
+        "gain_vs_lookup_bits": -92.9740776157227,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.530860831658294,
+        "manual_label_count": 14,
+        "manuals": [
+          0,
+          2,
+          3,
+          4,
+          10,
+          15,
+          16,
+          19,
+          22,
+          24,
+          27,
+          36,
+          44,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 1,
+            "right": 12
+          },
+          {
+            "left": 5,
+            "right": 21
+          },
+          {
+            "left": 13,
+            "right": 42
+          },
+          {
+            "left": 20,
+            "right": 32
+          },
+          {
+            "left": 29,
+            "right": 39
+          },
+          {
+            "left": 37,
+            "right": 43
+          }
+        ],
+        "total_bits": 268.1124040303725
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "diagonal_diff",
+      "fill_order_id": "natural_collapsed|same_then_cross|diagonal_diff|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "E": 10,
+        "F": 4,
+        "I": 12,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "BEFTLAIVNSEFTAIVNEFTAINEFTAINETINEINEIEIEIEIII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=3|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 3,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "BONELR*ACFISTV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_bonelord",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.3695652173913043,
+      "acceptable_hits": 17,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          21,
+          23,
+          29,
+          32,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 10,
+        "edit_bits": 244.99966351205597,
+        "gain_vs_lookup_bits": -93.04564223884768,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5312694493754435,
+        "manual_label_count": 14,
+        "manuals": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          42,
+          45
+        ],
+        "mismatch_count": 30,
+        "model_bits": 23.18430514144147,
+        "swap_count": 3,
+        "swaps": [
+          {
+            "left": 7,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          }
+        ],
+        "total_bits": 268.18396865349746
+      },
+      "exact_accuracy": 0.34782608695652173,
+      "exact_hits": 16,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|same_then_cross|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.7535385758898692,
+      "mdl_cost_bits": 307.11181148488004,
+      "mdl_gain_vs_lookup_bits": -131.97348507023025,
+      "mismatch_count": 30,
+      "mismatch_literal_bits": 279.92750634343855,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 26,
+      "sequence": "IENTFAVIESLBINETFAIE*CINVREITFAENISLBEIVTFANEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "IENTFAVSLB*CRO",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_desc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          21,
+          25,
+          29,
+          30,
+          32,
+          33,
+          37,
+          38
+        ],
+        "copy_neighbor_count": 10,
+        "edit_bits": 245.2222411567576,
+        "gain_vs_lookup_bits": -93.2682198835493,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5325403170904557,
+        "manual_label_count": 10,
+        "manuals": [
+          0,
+          1,
+          2,
+          12,
+          19,
+          27,
+          34,
+          35,
+          36,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 4,
+            "right": 18
+          },
+          {
+            "left": 5,
+            "right": 10
+          },
+          {
+            "left": 7,
+            "right": 24
+          },
+          {
+            "left": 13,
+            "right": 39
+          },
+          {
+            "left": 16,
+            "right": 26
+          },
+          {
+            "left": 23,
+            "right": 43
+          }
+        ],
+        "total_bits": 268.4065462981991
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows",
+      "fill_order_id": "469_anchor|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 1,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "ONIA*BCEFLRSTVNIAEFSTVNIAEFTVNIAEFTNIEIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ONIA*BCEFLRSTV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_donina",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          21,
+          23,
+          25,
+          26,
+          30,
+          38,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 10,
+        "edit_bits": 245.2222411567576,
+        "gain_vs_lookup_bits": -93.2682198835493,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5325403170904557,
+        "manual_label_count": 10,
+        "manuals": [
+          3,
+          4,
+          5,
+          8,
+          11,
+          13,
+          24,
+          34,
+          44,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 12
+          },
+          {
+            "left": 7,
+            "right": 36
+          },
+          {
+            "left": 10,
+            "right": 43
+          },
+          {
+            "left": 14,
+            "right": 29
+          },
+          {
+            "left": 18,
+            "right": 19
+          },
+          {
+            "left": 27,
+            "right": 42
+          }
+        ],
+        "total_bits": 268.4065462981991
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "anti_diagonal_sum_snake",
+      "fill_order_id": "q_center|same_then_cross|anti_diagonal_sum|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=100|adams",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEALSBNVFTIEANFTIENIEIEIEIEI",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.34782608695652173,
+      "acceptable_hits": 16,
+      "edit_log": {
+        "copies": [
+          7,
+          21,
+          29,
+          32,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 8,
+        "edit_bits": 245.65245282660072,
+        "gain_vs_lookup_bits": -93.69843155339242,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5349967278524528,
+        "manual_label_count": 13,
+        "manuals": [
+          0,
+          3,
+          4,
+          13,
+          16,
+          19,
+          22,
+          24,
+          34,
+          36,
+          42,
+          43,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 6,
+            "right": 17
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 11,
+            "right": 23
+          },
+          {
+            "left": 20,
+            "right": 30
+          }
+        ],
+        "total_bits": 268.8367579680422
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|cross_then_same|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "IENTFAVIEBSLINETFAIERCINV*EITFAENIBSLEIVTFANEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "RNBSCLOTF*EVAI",
+      "symbol_order_family": "seed_hash_order",
+      "symbol_order_id": "seed_symbol_order_74032",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          23,
+          25,
+          26,
+          31,
+          33,
+          41
+        ],
+        "copy_neighbor_count": 8,
+        "edit_bits": 245.65245282660072,
+        "gain_vs_lookup_bits": -93.69843155339242,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5349967278524528,
+        "manual_label_count": 13,
+        "manuals": [
+          2,
+          3,
+          4,
+          11,
+          13,
+          15,
+          16,
+          22,
+          24,
+          27,
+          34,
+          35,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 32
+          },
+          {
+            "left": 8,
+            "right": 19
+          },
+          {
+            "left": 10,
+            "right": 12
+          },
+          {
+            "left": 29,
+            "right": 39
+          },
+          {
+            "left": 37,
+            "right": 43
+          }
+        ],
+        "total_bits": 268.8367579680422
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "diagonal_diff",
+      "fill_order_id": "natural_collapsed|cross_then_same|diagonal_diff|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 0,
+        "E": 10,
+        "F": 4,
+        "I": 12,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "*SFEBVTILANFEVTIANFETIANFETINETINEINEIEIEIEIII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=3|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 3,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          17,
+          23,
+          25,
+          26,
+          31,
+          33,
+          37,
+          41
+        ],
+        "copy_neighbor_count": 8,
+        "edit_bits": 245.65245282660072,
+        "gain_vs_lookup_bits": -93.69843155339242,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5349967278524528,
+        "manual_label_count": 13,
+        "manuals": [
+          2,
+          3,
+          4,
+          11,
+          13,
+          15,
+          16,
+          22,
+          24,
+          27,
+          34,
+          35,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 32
+          },
+          {
+            "left": 8,
+            "right": 19
+          },
+          {
+            "left": 10,
+            "right": 12
+          },
+          {
+            "left": 20,
+            "right": 43
+          },
+          {
+            "left": 29,
+            "right": 39
+          }
+        ],
+        "total_bits": 268.8367579680422
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "diagonal_diff",
+      "fill_order_id": "natural_collapsed|same_then_cross|diagonal_diff|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 0,
+        "E": 10,
+        "F": 4,
+        "I": 12,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "*SFEBVTILANFEVTIANFETIANFETINETINEINEIEIEIEIII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=3|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 3,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          14,
+          23,
+          30,
+          33,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 246.30524214114547,
+        "gain_vs_lookup_bits": -94.35122086793717,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.538724006329462,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          2,
+          5,
+          10,
+          12,
+          15,
+          16,
+          27,
+          34,
+          36,
+          44,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 3,
+            "right": 17
+          },
+          {
+            "left": 4,
+            "right": 19
+          },
+          {
+            "left": 6,
+            "right": 29
+          },
+          {
+            "left": 7,
+            "right": 22
+          },
+          {
+            "left": 11,
+            "right": 13
+          },
+          {
+            "left": 20,
+            "right": 43
+          },
+          {
+            "left": 32,
+            "right": 42
+          }
+        ],
+        "total_bits": 269.48954728258695
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "q_center|same_then_cross|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "E": 9,
+        "F": 4,
+        "I": 11,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 2,
+        "T": 5,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=25|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "ANVLISFEBTANVISFETANVIFETANIFETNIETNIEIEIEIEII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=9|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 9,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ATEIC*BFLNORSV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_mathemagic",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          23,
+          25,
+          29,
+          33,
+          41
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 246.30524214114547,
+        "gain_vs_lookup_bits": -94.35122086793717,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.538724006329462,
+        "manual_label_count": 12,
+        "manuals": [
+          2,
+          4,
+          8,
+          11,
+          13,
+          15,
+          16,
+          19,
+          24,
+          27,
+          34,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 0,
+            "right": 36
+          },
+          {
+            "left": 3,
+            "right": 26
+          },
+          {
+            "left": 5,
+            "right": 21
+          },
+          {
+            "left": 12,
+            "right": 37
+          },
+          {
+            "left": 20,
+            "right": 32
+          },
+          {
+            "left": 22,
+            "right": 30
+          },
+          {
+            "left": 35,
+            "right": 39
+          }
+        ],
+        "total_bits": 269.48954728258695
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "diagonal_diff_snake",
+      "fill_order_id": "reverse_collapsed|cross_then_same|diagonal_diff|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 0,
+        "E": 10,
+        "F": 4,
+        "I": 12,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "*SFEBVTILANFEVTIANFETIANFETINETINEINEIEIEIEIII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=3|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 3,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          25,
+          32,
+          33,
+          37,
+          39
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 246.30524214114547,
+        "gain_vs_lookup_bits": -94.35122086793717,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.538724006329462,
+        "manual_label_count": 12,
+        "manuals": [
+          0,
+          2,
+          10,
+          13,
+          16,
+          19,
+          22,
+          24,
+          34,
+          36,
+          44,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 4,
+            "right": 29
+          },
+          {
+            "left": 5,
+            "right": 40
+          },
+          {
+            "left": 6,
+            "right": 30
+          },
+          {
+            "left": 11,
+            "right": 41
+          },
+          {
+            "left": 12,
+            "right": 18
+          },
+          {
+            "left": 14,
+            "right": 15
+          },
+          {
+            "left": 20,
+            "right": 28
+          }
+        ],
+        "total_bits": 269.48954728258695
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "natural_collapsed|same_then_cross|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "E": 11,
+        "F": 4,
+        "I": 13,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENTFIEAIVENITEIFLEINSIETAIENFIETINEVIAEIFTNEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*ABCEFILNORSTV",
+      "symbol_order_family": "alphabet",
+      "symbol_order_id": "alphabet",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.2608695652173913,
+      "acceptable_hits": 12,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          21,
+          23,
+          26,
+          30
+        ],
+        "copy_neighbor_count": 6,
+        "edit_bits": 246.52781978584707,
+        "gain_vs_lookup_bits": -94.57379851263875,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5399948740444738,
+        "manual_label_count": 8,
+        "manuals": [
+          1,
+          2,
+          3,
+          8,
+          16,
+          22,
+          24,
+          45
+        ],
+        "mismatch_count": 34,
+        "model_bits": 23.18430514144147,
+        "swap_count": 10,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 28
+          },
+          {
+            "left": 9,
+            "right": 33
+          },
+          {
+            "left": 12,
+            "right": 41
+          },
+          {
+            "left": 13,
+            "right": 39
+          },
+          {
+            "left": 14,
+            "right": 32
+          },
+          {
+            "left": 18,
+            "right": 35
+          },
+          {
+            "left": 19,
+            "right": 38
+          },
+          {
+            "left": 25,
+            "right": 43
+          },
+          {
+            "left": 36,
+            "right": 42
+          },
+          {
+            "left": 40,
+            "right": 44
+          }
+        ],
+        "total_bits": 269.7121249272885
+      },
+      "exact_accuracy": 0.2608695652173913,
+      "exact_hits": 12,
+      "fill_order_family": "cols_snake",
+      "fill_order_id": "q_center|cross_then_same|cols|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 0,
+        "E": 9,
+        "F": 4,
+        "I": 11,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.966648226281826,
+      "mdl_cost_bits": 344.43547899733846,
+      "mdl_gain_vs_lookup_bits": -169.29715258268868,
+      "mismatch_count": 34,
+      "mismatch_literal_bits": 317.251173855897,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 30,
+      "sequence": "*BLSVAFTNEISVAFTNEIVAFTNEIAFTNEINEINEIEIEIEIII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.2826086956521739,
+      "acceptable_hits": 13,
+      "edit_log": {
+        "copies": [
+          17,
+          21,
+          23,
+          25,
+          30,
+          31,
+          32,
+          33,
+          38,
+          39,
+          41
+        ],
+        "copy_neighbor_count": 11,
+        "edit_bits": 246.59938440897204,
+        "gain_vs_lookup_bits": -94.64536313576372,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.5404034917616234,
+        "manual_label_count": 8,
+        "manuals": [
+          8,
+          9,
+          11,
+          13,
+          15,
+          24,
+          35,
+          45
+        ],
+        "mismatch_count": 33,
+        "model_bits": 23.18430514144147,
+        "swap_count": 7,
+        "swaps": [
+          {
+            "left": 6,
+            "right": 28
+          },
+          {
+            "left": 7,
+            "right": 36
+          },
+          {
+            "left": 12,
+            "right": 22
+          },
+          {
+            "left": 14,
+            "right": 16
+          },
+          {
+            "left": 18,
+            "right": 44
+          },
+          {
+            "left": 20,
+            "right": 40
+          },
+          {
+            "left": 26,
+            "right": 34
+          }
+        ],
+        "total_bits": 269.7836895504135
+      },
+      "exact_accuracy": 0.2826086956521739,
+      "exact_hits": 13,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "natural_collapsed|cross_then_same|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.03|shift=0|hill",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.913370813683837,
+      "mdl_cost_bits": 335.1045621192239,
+      "mdl_gain_vs_lookup_bits": -159.9662357045741,
+      "mismatch_count": 33,
+      "mismatch_literal_bits": 307.9202569777824,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 29,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEALSNVFTIEANFTIEANIEIEIEIEI",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          21,
+          23,
+          29,
+          32,
+          33,
+          37,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 247.02959607881522,
+        "gain_vs_lookup_bits": -95.07557480560689,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.542859902523621,
+        "manual_label_count": 11,
+        "manuals": [
+          0,
+          3,
+          4,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          42
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 7,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          },
+          {
+            "left": 38,
+            "right": 39
+          },
+          {
+            "left": 40,
+            "right": 45
+          }
+        ],
+        "total_bits": 270.2139012202567
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "reverse_collapsed|cross_then_same|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENAFTVIEBLSINEAFTIE*CINVREIAFTENIBLSEIVAFTNEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*ABCEFILNORSTV",
+      "symbol_order_family": "alphabet",
+      "symbol_order_id": "alphabet",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          21,
+          23,
+          29,
+          32,
+          33,
+          37,
+          40
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 247.02959607881522,
+        "gain_vs_lookup_bits": -95.07557480560689,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.542859902523621,
+        "manual_label_count": 11,
+        "manuals": [
+          0,
+          3,
+          4,
+          11,
+          13,
+          16,
+          22,
+          24,
+          34,
+          36,
+          42
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 7,
+            "right": 43
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          },
+          {
+            "left": 38,
+            "right": 39
+          },
+          {
+            "left": 41,
+            "right": 45
+          }
+        ],
+        "total_bits": 270.2139012202567
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "reverse_collapsed|cross_then_same|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENAFTVIEBLSINEAFTIEC*INVREIAFTENIBLSEIVAFTNEI",
+      "sequence_family": "largest_deficit",
+      "sequence_method": "largest_deficit",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "AICEB*FLNORSTV",
+      "symbol_order_family": "lore_text_order",
+      "symbol_order_id": "lore_order_magic_web",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          6,
+          17,
+          23,
+          29,
+          32,
+          33,
+          38,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 247.02959607881522,
+        "gain_vs_lookup_bits": -95.07557480560689,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.542859902523621,
+        "manual_label_count": 11,
+        "manuals": [
+          3,
+          4,
+          11,
+          13,
+          16,
+          19,
+          22,
+          24,
+          34,
+          36,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 0,
+            "right": 37
+          },
+          {
+            "left": 2,
+            "right": 5
+          },
+          {
+            "left": 7,
+            "right": 21
+          },
+          {
+            "left": 10,
+            "right": 28
+          },
+          {
+            "left": 20,
+            "right": 30
+          },
+          {
+            "left": 42,
+            "right": 43
+          }
+        ],
+        "total_bits": 270.2139012202567
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "rows_snake",
+      "fill_order_id": "reverse_collapsed|cross_then_same|rows|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 9,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.15|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "IENAFTVIESLBINEAFTIENVIC*REIAFTENISLBEVIAFTNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "SOLANFTBEVIC*R",
+      "symbol_order_family": "seed_hash_order",
+      "symbol_order_id": "seed_symbol_order_45331",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.30434782608695654,
+      "acceptable_hits": 14,
+      "edit_log": {
+        "copies": [
+          17,
+          23,
+          25,
+          29,
+          30,
+          33,
+          37,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 247.02959607881522,
+        "gain_vs_lookup_bits": -95.07557480560689,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.542859902523621,
+        "manual_label_count": 11,
+        "manuals": [
+          8,
+          10,
+          11,
+          12,
+          13,
+          15,
+          22,
+          27,
+          36,
+          44,
+          45
+        ],
+        "mismatch_count": 32,
+        "model_bits": 23.18430514144147,
+        "swap_count": 6,
+        "swaps": [
+          {
+            "left": 7,
+            "right": 31
+          },
+          {
+            "left": 9,
+            "right": 16
+          },
+          {
+            "left": 14,
+            "right": 34
+          },
+          {
+            "left": 19,
+            "right": 21
+          },
+          {
+            "left": 20,
+            "right": 24
+          },
+          {
+            "left": 28,
+            "right": 39
+          }
+        ],
+        "total_bits": 270.2139012202567
+      },
+      "exact_accuracy": 0.30434782608695654,
+      "exact_hits": 14,
+      "fill_order_family": "orbit_index",
+      "fill_order_id": "orbit_index",
+      "fill_order_source": "quotient_orbit_number",
+      "inventory_counts": {
+        "*": 1,
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "E": 9,
+        "F": 4,
+        "I": 11,
+        "L": 1,
+        "N": 5,
+        "O": 1,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|adams",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8600934010858476,
+      "mdl_cost_bits": 325.77364524110925,
+      "mdl_gain_vs_lookup_bits": -150.63531882645947,
+      "mismatch_count": 32,
+      "mismatch_literal_bits": 298.58934009966777,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 28,
+      "sequence": "*NRVFTIEAOLSBCNVFTIEASNFTIEANFTIENIEIEIEIEIEII",
+      "sequence_family": "round_robin",
+      "sequence_method": "round_robin",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.2608695652173913,
+      "acceptable_hits": 12,
+      "edit_log": {
+        "copies": [
+          17,
+          20,
+          21,
+          23,
+          31,
+          32,
+          33,
+          39,
+          40
+        ],
+        "copy_neighbor_count": 9,
+        "edit_bits": 247.25217372351682,
+        "gain_vs_lookup_bits": -95.29815245030852,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.544130770238633,
+        "manual_label_count": 7,
+        "manuals": [
+          2,
+          15,
+          16,
+          19,
+          22,
+          36,
+          42
+        ],
+        "mismatch_count": 34,
+        "model_bits": 23.18430514144147,
+        "swap_count": 9,
+        "swaps": [
+          {
+            "left": 1,
+            "right": 26
+          },
+          {
+            "left": 3,
+            "right": 41
+          },
+          {
+            "left": 5,
+            "right": 35
+          },
+          {
+            "left": 8,
+            "right": 13
+          },
+          {
+            "left": 10,
+            "right": 25
+          },
+          {
+            "left": 11,
+            "right": 18
+          },
+          {
+            "left": 14,
+            "right": 29
+          },
+          {
+            "left": 27,
+            "right": 30
+          },
+          {
+            "left": 34,
+            "right": 45
+          }
+        ],
+        "total_bits": 270.4364788649583
+      },
+      "exact_accuracy": 0.2608695652173913,
+      "exact_hits": 12,
+      "fill_order_family": "diagonal_diff_snake",
+      "fill_order_id": "natural_collapsed|same_then_cross|diagonal_diff|snake",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 1,
+        "A": 4,
+        "B": 1,
+        "C": 1,
+        "E": 8,
+        "F": 4,
+        "I": 10,
+        "L": 2,
+        "N": 5,
+        "O": 0,
+        "R": 1,
+        "S": 2,
+        "T": 4,
+        "V": 3
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.285|shift=100|hamilton",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.966648226281826,
+      "mdl_cost_bits": 344.43547899733846,
+      "mdl_gain_vs_lookup_bits": -169.29715258268868,
+      "mismatch_count": 34,
+      "mismatch_literal_bits": 317.251173855897,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 30,
+      "sequence": "*VIBNFELCRTASVINFELTASVINFETAINFETAINEIEIEIEII",
+      "sequence_family": "cycle_round_robin",
+      "sequence_method": "cycle_round_robin|step=3|offset=0",
+      "sequence_offset": 0,
+      "sequence_step": 3,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "*NRVFTIEAOLSBC",
+      "symbol_order_family": "row0_first_use",
+      "symbol_order_id": "first_code_table",
+      "target_derived": false
+    },
+    {
+      "acceptable_accuracy": 0.32608695652173914,
+      "acceptable_hits": 15,
+      "edit_log": {
+        "copies": [
+          23,
+          25,
+          31,
+          33,
+          39,
+          40,
+          41
+        ],
+        "copy_neighbor_count": 7,
+        "edit_bits": 247.4598077486583,
+        "gain_vs_lookup_bits": -95.50578647545001,
+        "lookup_bits": 175.13832641464978,
+        "lookup_ratio": 1.545316313285618,
+        "manual_label_count": 14,
+        "manuals": [
+          0,
+          1,
+          2,
+          3,
+          11,
+          13,
+          16,
+          18,
+          19,
+          22,
+          24,
+          43,
+          44,
+          45
+        ],
+        "mismatch_count": 31,
+        "model_bits": 23.18430514144147,
+        "swap_count": 5,
+        "swaps": [
+          {
+            "left": 5,
+            "right": 32
+          },
+          {
+            "left": 6,
+            "right": 36
+          },
+          {
+            "left": 9,
+            "right": 30
+          },
+          {
+            "left": 14,
+            "right": 27
+          },
+          {
+            "left": 15,
+            "right": 28
+          }
+        ],
+        "total_bits": 270.6441128900998
+      },
+      "exact_accuracy": 0.32608695652173914,
+      "exact_hits": 15,
+      "fill_order_family": "rows",
+      "fill_order_id": "q_center|same_then_cross|rows|major",
+      "fill_order_source": "quotient_line_order",
+      "inventory_counts": {
+        "*": 0,
+        "A": 3,
+        "B": 0,
+        "C": 0,
+        "E": 11,
+        "F": 4,
+        "I": 13,
+        "L": 1,
+        "N": 6,
+        "O": 0,
+        "R": 0,
+        "S": 1,
+        "T": 5,
+        "V": 2
+      },
+      "inventory_family": "frequency_weighted_apportionment",
+      "inventory_id": "code_usage|power|a=1.5|shift=0|jefferson",
+      "inventory_source": "code_usage",
+      "lookup_cost_bits": 175.13832641464978,
+      "lookup_cost_ratio": 1.8068159884878583,
+      "mdl_cost_bits": 316.4427283629946,
+      "mdl_gain_vs_lookup_bits": -141.30440194834483,
+      "mismatch_count": 31,
+      "mismatch_literal_bits": 289.25842322155313,
+      "model_selection_bits": 23.18430514144147,
+      "residual_literal_count": 27,
+      "sequence": "IENTIFEAIEVNITEIFENILSATEIINEFIETIVNEIAEFITNEI",
+      "sequence_family": "ideal_spread",
+      "sequence_method": "ideal_spread",
+      "sequence_offset": null,
+      "sequence_step": null,
+      "small_exception_count": 4,
+      "small_exception_overhead_bits": 4.0,
+      "symbol_order": "ORC*BLSVAFTNEI",
+      "symbol_order_family": "frequency_rank",
+      "symbol_order_id": "code_usage_asc",
+      "target_derived": false
+    }
+  ],
+  "translation_delta": "NONE",
+  "verdict": "edit_log_not_promoted"
+}

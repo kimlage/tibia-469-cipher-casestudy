@@ -4,14 +4,14 @@ page_type: open_questions
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-13
+updated_at: 2026-06-19
 moc_parent: README.md
 source_refs: [docs/469_final_report.md]
 ---
 
 # 9. Open Questions & The Only Unlock
 
-[← Lessons & Process](08-lessons-and-process.md) · [Wiki home](README.md)
+[← Lessons & Process](08-lessons-and-process.md) · [Wiki home](README.md) · Next: [Lore Source Audit →](10-lore-source-audit.md)
 
 ---
 
@@ -20,6 +20,23 @@ source_refs: [docs/469_final_report.md]
 ## The binding constraint
 
 The plateau is **data-starvation**, not effort or tooling. No internal statistic can manufacture a natural-language reading from a symbol channel that fails every language test ([page 5](05-book-layer-non-linguistic.md)). The only thing that can move the needle is **new, CipSoft-attested ground truth** that ties digits to meaning.
+
+The 2026-06-18 [Lore Source Audit](10-lore-source-audit.md) did not change this
+constraint. It organizes Great Calculator, formula/Magic Web, pair/mirror, and
+other sources as mechanism/context/watchlist material, confirms `74032 45331`
+as an unglossed Secret Library book, but records no new official
+number<->plaintext pair.
+
+The 2026-06-18/19 [Generator-Origin Search](12-generator-origin-search.md)
+also does not change the semantic constraint. It improves the mechanical
+manufacturing model, but its no-hard-gate matrix ledger tops out at 21/55
+pair-cell hits and classifies as lookup-disguise. The exact original
+pair-cell placement formula remains unfound.
+
+The 2026-06-19 [Mechanical Origin Model v1](13-mechanical-origin-model-v1.md)
+freezes the current public state: accepted mechanical fabrication layers,
+weak clues, and rejected origin formulas. It is a plateau report, not a
+semantic reopening.
 
 ## Ranked: what would unlock progress
 
@@ -32,6 +49,7 @@ The plateau is **data-starvation**, not effort or tooling. No internal statistic
 
 - **Is the book layer non-linguistic *by design* (flavor text) or info-insufficient (too short to decode)?** The five disqualifiers strongly favor *non-linguistic*; the strict fallback is *info-insufficient* only if one insists 5,729 symbols is too small a sample. Either way the practical conclusion (NO-GO without external GT) is the same.
 - **What is the role of the reversal-invariant digit-pair lookup?** It is a real, novel mechanical property ([page 5](05-book-layer-non-linguistic.md), disqualifier #5) — a description of how the alphabet is built, but its *purpose* (if any beyond obfuscation) is unknown.
+- **Was there a compact original formula for exact pair-cell placement?** The current answer is still unknown. Exhaustive generator ledgers now cover matrix paths, symbol orders, lore seeds, anomaly overlays, and weak compositions, but no tested rule recovers the exact 55-cell placement below lookup cost.
 - **Why do the two layers share the B/E/A substitution but nothing else?** The anchors triangulate across three sources, yet the layers diverge immediately after. Whether this is a shared seed alphabet or coincidence on three symbols is unresolved.
 
 ## What is explicitly NOT worth re-trying (covered, NULL)
@@ -48,6 +66,12 @@ To prevent the project from re-litigating dead ground (the Outcome-Ledger discip
 
 **Stop internal decoding work.** Preserve the three real assets — (1) the [two-cipher finding](03-two-cipher-systems.md), (2) the [phrase codebook](04-phrase-codebook.md), (3) the [non-linguistic verdict](05-book-layer-non-linguistic.md) — and the structural positives (B/E/A anchors, the digit-pair lookup). Watch official CipSoft channels (anniversary events, new Bonelord NPCs/items) for the only category of evidence that could overturn the verdict. This wiki is the record to publish and to build on if that evidence ever appears.
 
+For mechanical-origin work, use
+[Mechanical Origin Model v1](13-mechanical-origin-model-v1.md) as the frozen
+baseline. Any future internal work should improve the matrix-origin rule, the
+tape/module/literal formula, or source-official evidence; otherwise it is
+activity, not progress.
+
 ---
 
-[← Lessons & Process](08-lessons-and-process.md) · [Wiki home](README.md)
+[← Lessons & Process](08-lessons-and-process.md) · [Wiki home](README.md) · Next: [Lore Source Audit →](10-lore-source-audit.md)

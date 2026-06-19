@@ -4,7 +4,7 @@ page_type: reference
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-13
+updated_at: 2026-06-19
 moc_parent: README.md
 ---
 
@@ -28,8 +28,12 @@ Coined terms and shorthand used across this wiki and the
 | **pareidolia** | Seeing meaning (here, language) in noise. The failure mode the whole method is built to refuse. |
 | **Outcome Ledger** | The reform that measures progress by *outcome* (cribs reproduced under holdout, externally-confirmed codes), explicitly **not** by activity (iterations, scripts, tables). See [page 8](08-lessons-and-process.md). |
 | **NO-GO** | The verdict that no internal method can decode the books to language; only external CipSoft ground truth could reopen it. |
-| **reversal-invariant lookup** | A map property: swapping a code's two digits yields the same symbol (86/89 non-palindromic codes). A constructed-table fingerprint, not a letter-cipher behaviour. |
+| **reversal-invariant lookup** | A map property: swapping a code's two digits usually yields the same symbol (86/88 reverse-available non-palindromic codes; 89 non-palindromic codes are present in total). A constructed-table fingerprint, not a letter-cipher behaviour. |
 | **generative / MDL proof** | The result that a two-part recombination code (module inventory + assembly) describes the corpus more cheaply than any competing model — and only on the real corpus, never on language controls. |
+| **mechanical_partial_not_final** | Current generator-origin state: the book manufacture model has useful mechanical layers, but the exact original pair-cell placement formula is not recovered. |
+| **mechanical_origin_model_v1** | Frozen 2026-06-19 public summary of the best mechanical fabrication model: row0, pair/mirror geometry, directed render exceptions, tapes/slices, exact residual repeats, and zero-render support. It is not a translation. |
+| **supporting_render_layer** | A rule or signal that helps explain final numeric rendering, especially zero omission or orientation, without explaining the underlying 10x10/pair matrix. |
+| **lookup_disguise** | A candidate whose exact repair cost is table-like under rough MDL; it may be logged as a hypothesis, but it is not a compact generator. |
 | **BENNA / TELBENNA / ENNAI** | Strings that dominate the books' `decodedbase` but have **no** external attestation — internal decode artifacts, not Bonelord vocabulary. |
 | **HONEMINAS** | The closest *real* lore handle (the Honeminas formula contains `3478`); the likely true origin of the project's "BENNA_FORMULA_FRAME" label. |
 | **Bonelord** | An in-game *Tibia* race (floating, many-eyed; called *Beholders* before a 2010 rename) that "speaks" 469. Trademark of [CipSoft GmbH](entities/cipsoft.md). |

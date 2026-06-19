@@ -1,0 +1,217 @@
+{
+  "actual_token_code_stats": {
+    "digit_distribution": {
+      "0": 0.09163902949903997,
+      "1": 0.16311747250829114,
+      "2": 0.08247512654913597,
+      "3": 0.05681619828940478,
+      "4": 0.11083958806074358,
+      "5": 0.12716006283819165,
+      "6": 0.09905742712515272,
+      "7": 0.08369698027578984,
+      "8": 0.09748647233374062,
+      "9": 0.08771164252050968
+    },
+    "repeat_token_fraction": 0.08413335660673765,
+    "token_count": 5729,
+    "zero_digit_fraction": 0.09163902949903997
+  },
+  "method_note": "pair-cell model uses primary label for conflict cell {19}; ordered-code model uses exact 99 code labels.",
+  "ordered_code_model": {
+    "metric_summaries": {
+      "chi_square_uniform": {
+        "control_max": 0.022571317807114237,
+        "control_mean": 0.006763867351375411,
+        "control_min": 0.0004765917222752611,
+        "control_sd": 0.002990408061452762,
+        "observed": 0.012237457498323159,
+        "p_good_direction": 0.9471526423678817,
+        "z_good_direction": -1.8303823540017605
+      },
+      "entropy_bits": {
+        "control_max": 3.3215854820023516,
+        "control_mean": 3.3170463434307567,
+        "control_min": 3.3059214977198232,
+        "control_sd": 0.0021551241960883834,
+        "observed": 3.3130034628024774,
+        "p_good_direction": 0.9505524723763812,
+        "z_good_direction": -1.8759385819236036
+      },
+      "l1_to_raw_digits": {
+        "control_max": 0.3184445943877782,
+        "control_mean": 0.2234946585437689,
+        "control_min": 0.13732927249940519,
+        "control_sd": 0.023069351118175253,
+        "observed": 0.19376679531170124,
+        "p_good_direction": 0.10049497525123743,
+        "z_good_direction": 1.2886302297703762
+      },
+      "max_abs_delta_to_raw_digits": {
+        "control_max": 0.09504154815948186,
+        "control_mean": 0.06494940729964704,
+        "control_min": 0.03696131309809825,
+        "control_sd": 0.008013671897806185,
+        "observed": 0.06403344467953749,
+        "p_good_direction": 0.4470776461176941,
+        "z_good_direction": 0.1142999902903819
+      },
+      "repeat_abs_error_to_tokens": {
+        "control_max": 0.06716704485948682,
+        "control_mean": 0.017476681326629693,
+        "control_min": 5.818351079281414e-06,
+        "control_sd": 0.010477313721180626,
+        "observed": 0.020088598655846834,
+        "p_good_direction": 0.6201689915504225,
+        "z_good_direction": -0.24929265255625277
+      },
+      "zero_abs_error_to_tokens": {
+        "control_max": 0.0421282843736203,
+        "control_mean": 0.010227720849205467,
+        "control_min": 4.5634126111249174e-07,
+        "control_sd": 0.0068846997820605675,
+        "observed": 0.02165202381645044,
+        "p_good_direction": 0.9319534023298836,
+        "z_good_direction": -1.6593756196912508
+      }
+    },
+    "observed": {
+      "chi_square_uniform": 0.012237457498323159,
+      "digit_distribution": {
+        "0": 0.1132910533154904,
+        "1": 0.10190813394072355,
+        "2": 0.09776284401000755,
+        "3": 0.08084148187697723,
+        "4": 0.1142850786675292,
+        "5": 0.11240478154373405,
+        "6": 0.08919663402685796,
+        "7": 0.10622278352197338,
+        "8": 0.09600672875189524,
+        "9": 0.08808048034481146
+      },
+      "entropy_bits": 3.3130034628024774,
+      "l1_to_raw_digits": 0.19376679531170124,
+      "max_abs_delta_to_raw_digits": 0.06403344467953749,
+      "repeat_abs_error_to_tokens": 0.020088598655846834,
+      "repeat_code_fraction": 0.10422195526258449,
+      "zero_abs_error_to_tokens": 0.02165202381645044,
+      "zero_digit_fraction": 0.11329105331549041
+    },
+    "strongest": {
+      "control_max": 0.3184445943877782,
+      "control_mean": 0.2234946585437689,
+      "control_min": 0.13732927249940519,
+      "control_sd": 0.023069351118175253,
+      "metric": "l1_to_raw_digits",
+      "observed": 0.19376679531170124,
+      "p_good_direction": 0.10049497525123743,
+      "z_good_direction": 1.2886302297703762
+    }
+  },
+  "pair_cell_model": {
+    "metric_summaries": {
+      "chi_square_uniform": {
+        "control_max": 0.04407734761664213,
+        "control_mean": 0.013845356146471949,
+        "control_min": 0.0008730879673544271,
+        "control_sd": 0.005816957786568453,
+        "observed": 0.0070990123795058825,
+        "p_good_direction": 0.10989450527473626,
+        "z_good_direction": 1.159771828247335
+      },
+      "entropy_bits": {
+        "control_max": 3.3213009941612546,
+        "control_mean": 3.311996516553256,
+        "control_min": 3.292092022767631,
+        "control_sd": 0.004115233906610357,
+        "observed": 3.3167844941664333,
+        "p_good_direction": 0.11049447527623618,
+        "z_good_direction": 1.1634764200125784
+      },
+      "l1_to_raw_digits": {
+        "control_max": 0.3519700928747381,
+        "control_mean": 0.24007778311374164,
+        "control_min": 0.11356595731704561,
+        "control_sd": 0.03268351454818222,
+        "observed": 0.20281877064321957,
+        "p_good_direction": 0.12764361781910905,
+        "z_good_direction": 1.1399940607854344
+      },
+      "max_abs_delta_to_raw_digits": {
+        "control_max": 0.10380158909329298,
+        "control_mean": 0.06641145214256942,
+        "control_min": 0.02389789715193756,
+        "control_sd": 0.011106949739569206,
+        "observed": 0.06303676684391844,
+        "p_good_direction": 0.37398130093495324,
+        "z_good_direction": 0.3038354703837772
+      },
+      "repeat_abs_error_to_tokens": {
+        "control_max": 0.18691452842264505,
+        "control_mean": 0.0974882345668238,
+        "control_min": 0.031215453540466634,
+        "control_sd": 0.020607379109375545,
+        "observed": 0.07211846162797467,
+        "p_good_direction": 0.10454477276136193,
+        "z_good_direction": 1.2311013838390972
+      },
+      "zero_abs_error_to_tokens": {
+        "control_max": 0.059619916215744514,
+        "control_mean": 0.01130873407226393,
+        "control_min": 1.3877787807814457e-17,
+        "control_sd": 0.00888809240120411,
+        "observed": 0.01789506603828475,
+        "p_good_direction": 0.7939603019849008,
+        "z_good_direction": -0.7410287459577425
+      }
+    },
+    "observed": {
+      "chi_square_uniform": 0.0070990123795058825,
+      "digit_distribution": {
+        "0": 0.10953409553732471,
+        "1": 0.1029048117763426,
+        "2": 0.10157022749752723,
+        "3": 0.08662070169314018,
+        "4": 0.11275964391691394,
+        "5": 0.10869043463082563,
+        "6": 0.08917350322918485,
+        "7": 0.10068292895793332,
+        "8": 0.09307179845231862,
+        "9": 0.09499185430848898
+      },
+      "entropy_bits": 3.3167844941664333,
+      "l1_to_raw_digits": 0.20281877064321957,
+      "max_abs_delta_to_raw_digits": 0.06303676684391844,
+      "repeat_abs_error_to_tokens": 0.07211846162797467,
+      "repeat_pair_fraction": 0.15625181823471232,
+      "zero_abs_error_to_tokens": 0.01789506603828475,
+      "zero_digit_fraction": 0.10953409553732472
+    },
+    "strongest": {
+      "control_max": 0.18691452842264505,
+      "control_mean": 0.0974882345668238,
+      "control_min": 0.031215453540466634,
+      "control_sd": 0.020607379109375545,
+      "metric": "repeat_abs_error_to_tokens",
+      "observed": 0.07211846162797467,
+      "p_good_direction": 0.10454477276136193,
+      "z_good_direction": 1.2311013838390972
+    }
+  },
+  "promotion_rule": "requires pair-cell and ordered-code strongest metrics both p<=0.01 and z>=2.5 in good direction",
+  "random_seed": 46920260620,
+  "schema": "digit_shape_pressure_results.v1",
+  "target_raw_digit_distribution": {
+    "0": 0.07591227914410015,
+    "1": 0.16594157862026104,
+    "2": 0.0839030453697949,
+    "3": 0.057799875699192045,
+    "4": 0.11275859007369263,
+    "5": 0.1293616265648584,
+    "6": 0.10077244073515049,
+    "7": 0.08514605344934742,
+    "8": 0.09917428749001155,
+    "9": 0.0892302228535914
+  },
+  "trials": 20000,
+  "verdict": "rejected_control"
+}

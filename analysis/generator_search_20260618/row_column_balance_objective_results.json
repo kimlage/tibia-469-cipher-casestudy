@@ -1,0 +1,837 @@
+{
+  "control_trials": 5000,
+  "metrics": [
+    {
+      "control": {
+        "control_max": 147.99999999999997,
+        "control_mean": 96.85960000000004,
+        "control_min": 53.999999999999936,
+        "control_sd": 13.656353357957913,
+        "observed": 73.99999999999999,
+        "p_good_direction": 0.04019196160767846,
+        "z_good_direction": 1.673916850333927
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 25.99999999999996,
+        "metric": "incident_l2_expected_loop_twice",
+        "swap_count": 11,
+        "swaps": [
+          {
+            "swap": [
+              "29",
+              "58"
+            ],
+            "value": 63.99999999999991
+          },
+          {
+            "swap": [
+              "06",
+              "47"
+            ],
+            "value": 53.99999999999992
+          },
+          {
+            "swap": [
+              "45",
+              "89"
+            ],
+            "value": 47.999999999999915
+          },
+          {
+            "swap": [
+              "05",
+              "37"
+            ],
+            "value": 41.99999999999992
+          },
+          {
+            "swap": [
+              "03",
+              "08"
+            ],
+            "value": 37.99999999999993
+          },
+          {
+            "swap": [
+              "00",
+              "06"
+            ],
+            "value": 33.99999999999995
+          },
+          {
+            "swap": [
+              "22",
+              "25"
+            ],
+            "value": 31.999999999999964
+          },
+          {
+            "swap": [
+              "23",
+              "25"
+            ],
+            "value": 29.999999999999964
+          },
+          {
+            "swap": [
+              "24",
+              "69"
+            ],
+            "value": 27.99999999999996
+          },
+          {
+            "swap": [
+              "15",
+              "25"
+            ],
+            "value": 25.999999999999964
+          },
+          {
+            "swap": [
+              "12",
+              "27"
+            ],
+            "value": 25.99999999999996
+          }
+        ]
+      },
+      "metric": "incident_l2_expected_loop_twice",
+      "one_swap": {
+        "best_one_swap": 63.99999999999991,
+        "direction": "low",
+        "improved": true,
+        "metric": "incident_l2_expected_loop_twice",
+        "observed": 73.99999999999999,
+        "swap": [
+          "29",
+          "58"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 3.6,
+        "control_mean": 2.87098,
+        "control_min": 2.2,
+        "control_sd": 0.20505669764689466,
+        "observed": 2.6,
+        "p_good_direction": 0.13597280543891221,
+        "z_good_direction": 1.3214881694165597
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 2.2,
+        "metric": "incident_max_share_sum",
+        "swap_count": 2,
+        "swaps": [
+          {
+            "swap": [
+              "00",
+              "29"
+            ],
+            "value": 2.4
+          },
+          {
+            "swap": [
+              "06",
+              "44"
+            ],
+            "value": 2.2
+          }
+        ]
+      },
+      "metric": "incident_max_share_sum",
+      "one_swap": {
+        "best_one_swap": 2.4,
+        "direction": "low",
+        "improved": true,
+        "metric": "incident_max_share_sum",
+        "observed": 2.6,
+        "swap": [
+          "00",
+          "29"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 67.0,
+        "control_mean": 47.0606,
+        "control_min": 30.0,
+        "control_sd": 5.475483889553959,
+        "observed": 42.0,
+        "p_good_direction": 0.20515896820635873,
+        "z_good_direction": 0.9242288174118333
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 19.0,
+        "metric": "same_symbol_shared_digit",
+        "swap_count": 8,
+        "swaps": [
+          {
+            "swap": [
+              "29",
+              "58"
+            ],
+            "value": 36.0
+          },
+          {
+            "swap": [
+              "06",
+              "47"
+            ],
+            "value": 31.0
+          },
+          {
+            "swap": [
+              "09",
+              "79"
+            ],
+            "value": 28.0
+          },
+          {
+            "swap": [
+              "04",
+              "89"
+            ],
+            "value": 25.0
+          },
+          {
+            "swap": [
+              "03",
+              "08"
+            ],
+            "value": 23.0
+          },
+          {
+            "swap": [
+              "22",
+              "25"
+            ],
+            "value": 21.0
+          },
+          {
+            "swap": [
+              "00",
+              "01"
+            ],
+            "value": 20.0
+          },
+          {
+            "swap": [
+              "23",
+              "36"
+            ],
+            "value": 19.0
+          }
+        ]
+      },
+      "metric": "same_symbol_shared_digit",
+      "one_swap": {
+        "best_one_swap": 36.0,
+        "direction": "low",
+        "improved": true,
+        "metric": "same_symbol_shared_digit",
+        "observed": 42.0,
+        "swap": [
+          "29",
+          "58"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 27.592814698224583,
+        "control_mean": 25.416094103798365,
+        "control_min": 23.054406899699167,
+        "control_sd": 0.6644898662920342,
+        "observed": 25.9398821969265,
+        "p_good_direction": 0.22255548890221954,
+        "z_good_direction": 0.7882559534744482
+      },
+      "direction": "high",
+      "greedy": {
+        "final_value": 29.419280948873624,
+        "metric": "incident_entropy_sum",
+        "swap_count": 8,
+        "swaps": [
+          {
+            "swap": [
+              "29",
+              "58"
+            ],
+            "value": 26.76634844757554
+          },
+          {
+            "swap": [
+              "09",
+              "47"
+            ],
+            "value": 27.44183719779189
+          },
+          {
+            "swap": [
+              "06",
+              "34"
+            ],
+            "value": 27.917325948008237
+          },
+          {
+            "swap": [
+              "03",
+              "04"
+            ],
+            "value": 28.317325948008236
+          },
+          {
+            "swap": [
+              "56",
+              "67"
+            ],
+            "value": 28.66830344844093
+          },
+          {
+            "swap": [
+              "00",
+              "09"
+            ],
+            "value": 28.943792198657277
+          },
+          {
+            "swap": [
+              "36",
+              "38"
+            ],
+            "value": 29.219280948873624
+          },
+          {
+            "swap": [
+              "03",
+              "37"
+            ],
+            "value": 29.419280948873624
+          }
+        ]
+      },
+      "metric": "incident_entropy_sum",
+      "one_swap": {
+        "best_one_swap": 26.76634844757554,
+        "direction": "high",
+        "improved": true,
+        "metric": "incident_entropy_sum",
+        "observed": 25.9398821969265,
+        "swap": [
+          "29",
+          "58"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 2.4464393446710155,
+        "control_mean": 2.0623935055976093,
+        "control_min": 0.8812908992306927,
+        "control_sd": 0.19654399078994536,
+        "observed": 2.1709505944546685,
+        "p_good_direction": 0.32793441311737653,
+        "z_good_direction": 0.5523297274098738
+      },
+      "direction": "high",
+      "greedy": {
+        "final_value": 2.3709505944546687,
+        "metric": "incident_min_entropy",
+        "swap_count": 1,
+        "swaps": [
+          {
+            "swap": [
+              "00",
+              "08"
+            ],
+            "value": 2.3709505944546687
+          }
+        ]
+      },
+      "metric": "incident_min_entropy",
+      "one_swap": {
+        "best_one_swap": 2.3709505944546687,
+        "direction": "high",
+        "improved": true,
+        "metric": "incident_min_entropy",
+        "observed": 2.1709505944546685,
+        "swap": [
+          "00",
+          "08"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 109.02479338842983,
+        "control_mean": 73.40839338842979,
+        "control_min": 41.75206611570249,
+        "control_sd": 10.458377604084315,
+        "observed": 68.6611570247934,
+        "p_good_direction": 0.34433113377324537,
+        "z_good_direction": 0.45391709339146913
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 17.388429752066116,
+        "metric": "incident_l2_expected",
+        "swap_count": 17,
+        "swaps": [
+          {
+            "swap": [
+              "29",
+              "58"
+            ],
+            "value": 56.6611570247934
+          },
+          {
+            "swap": [
+              "06",
+              "47"
+            ],
+            "value": 46.66115702479337
+          },
+          {
+            "swap": [
+              "09",
+              "79"
+            ],
+            "value": 40.66115702479338
+          },
+          {
+            "swap": [
+              "04",
+              "89"
+            ],
+            "value": 34.66115702479337
+          },
+          {
+            "swap": [
+              "03",
+              "08"
+            ],
+            "value": 30.66115702479338
+          },
+          {
+            "swap": [
+              "22",
+              "25"
+            ],
+            "value": 27.38842975206611
+          },
+          {
+            "swap": [
+              "23",
+              "36"
+            ],
+            "value": 25.388429752066116
+          },
+          {
+            "swap": [
+              "04",
+              "44"
+            ],
+            "value": 23.570247933884303
+          },
+          {
+            "swap": [
+              "36",
+              "66"
+            ],
+            "value": 21.93388429752067
+          },
+          {
+            "swap": [
+              "11",
+              "12"
+            ],
+            "value": 21.024793388429764
+          },
+          {
+            "swap": [
+              "02",
+              "11"
+            ],
+            "value": 20.297520661157034
+          },
+          {
+            "swap": [
+              "45",
+              "55"
+            ],
+            "value": 19.570247933884303
+          },
+          {
+            "swap": [
+              "34",
+              "55"
+            ],
+            "value": 18.842975206611573
+          },
+          {
+            "swap": [
+              "22",
+              "28"
+            ],
+            "value": 18.11570247933885
+          },
+          {
+            "swap": [
+              "27",
+              "77"
+            ],
+            "value": 17.570247933884303
+          },
+          {
+            "swap": [
+              "66",
+              "67"
+            ],
+            "value": 17.38842975206612
+          },
+          {
+            "swap": [
+              "11",
+              "55"
+            ],
+            "value": 17.388429752066116
+          }
+        ]
+      },
+      "metric": "incident_l2_expected",
+      "one_swap": {
+        "best_one_swap": 56.6611570247934,
+        "direction": "low",
+        "improved": true,
+        "metric": "incident_l2_expected",
+        "observed": 68.6611570247934,
+        "swap": [
+          "29",
+          "58"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 249.62644628099224,
+        "control_mean": 193.66023537190125,
+        "control_min": 146.64462809917404,
+        "control_sd": 14.520097930844873,
+        "observed": 203.62644628099207,
+        "p_good_direction": 0.7596480703859229,
+        "z_good_direction": -0.6863735325035043
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 89.15371900826435,
+        "metric": "line_l2_expected",
+        "swap_count": 31,
+        "swaps": [
+          {
+            "swap": [
+              "08",
+              "44"
+            ],
+            "value": 174.64462809917399
+          },
+          {
+            "swap": [
+              "05",
+              "66"
+            ],
+            "value": 157.1900826446286
+          },
+          {
+            "swap": [
+              "29",
+              "58"
+            ],
+            "value": 145.00826446281033
+          },
+          {
+            "swap": [
+              "36",
+              "48"
+            ],
+            "value": 134.79008264462848
+          },
+          {
+            "swap": [
+              "06",
+              "88"
+            ],
+            "value": 127.59008264462815
+          },
+          {
+            "swap": [
+              "35",
+              "38"
+            ],
+            "value": 121.44462809917357
+          },
+          {
+            "swap": [
+              "11",
+              "12"
+            ],
+            "value": 116.35371900826445
+          },
+          {
+            "swap": [
+              "13",
+              "18"
+            ],
+            "value": 112.35371900826446
+          },
+          {
+            "swap": [
+              "45",
+              "67"
+            ],
+            "value": 110.13553719008262
+          },
+          {
+            "swap": [
+              "24",
+              "69"
+            ],
+            "value": 107.99008264462805
+          },
+          {
+            "swap": [
+              "00",
+              "49"
+            ],
+            "value": 105.95371900826436
+          },
+          {
+            "swap": [
+              "03",
+              "09"
+            ],
+            "value": 104.06280991735528
+          },
+          {
+            "swap": [
+              "68",
+              "78"
+            ],
+            "value": 103.69917355371894
+          },
+          {
+            "swap": [
+              "33",
+              "34"
+            ],
+            "value": 103.33553719008256
+          },
+          {
+            "swap": [
+              "00",
+              "05"
+            ],
+            "value": 100.46280991735529
+          },
+          {
+            "swap": [
+              "47",
+              "49"
+            ],
+            "value": 99.91735537190073
+          },
+          {
+            "swap": [
+              "11",
+              "99"
+            ],
+            "value": 99.15371900826442
+          },
+          {
+            "swap": [
+              "12",
+              "23"
+            ],
+            "value": 96.79008264462804
+          },
+          {
+            "swap": [
+              "33",
+              "99"
+            ],
+            "value": 95.95371900826443
+          },
+          {
+            "swap": [
+              "69",
+              "99"
+            ],
+            "value": 95.62644628099164
+          },
+          {
+            "swap": [
+              "25",
+              "27"
+            ],
+            "value": 95.37190082644618
+          },
+          {
+            "swap": [
+              "59",
+              "69"
+            ],
+            "value": 93.62644628099166
+          },
+          {
+            "swap": [
+              "59",
+              "89"
+            ],
+            "value": 93.2628099173553
+          },
+          {
+            "swap": [
+              "25",
+              "67"
+            ],
+            "value": 93.190082644628
+          },
+          {
+            "swap": [
+              "38",
+              "48"
+            ],
+            "value": 93.19008264462798
+          },
+          {
+            "swap": [
+              "66",
+              "67"
+            ],
+            "value": 93.19008264462795
+          },
+          {
+            "swap": [
+              "35",
+              "44"
+            ],
+            "value": 91.91735537190067
+          },
+          {
+            "swap": [
+              "13",
+              "48"
+            ],
+            "value": 89.69917355371885
+          },
+          {
+            "swap": [
+              "33",
+              "88"
+            ],
+            "value": 89.33553719008253
+          },
+          {
+            "swap": [
+              "66",
+              "88"
+            ],
+            "value": 89.190082644628
+          }
+        ]
+      },
+      "metric": "line_l2_expected",
+      "one_swap": {
+        "best_one_swap": 174.64462809917399,
+        "direction": "low",
+        "improved": true,
+        "metric": "line_l2_expected",
+        "observed": 203.62644628099207,
+        "swap": [
+          "08",
+          "44"
+        ]
+      }
+    },
+    {
+      "control": {
+        "control_max": 28.0,
+        "control_mean": 14.126,
+        "control_min": 4.0,
+        "control_sd": 3.3962377546598876,
+        "observed": 17.0,
+        "p_good_direction": 0.8396320735852829,
+        "z_good_direction": -0.8462305078779192
+      },
+      "direction": "low",
+      "greedy": {
+        "final_value": 0.0,
+        "metric": "same_symbol_line_runs",
+        "swap_count": 6,
+        "swaps": [
+          {
+            "swap": [
+              "07",
+              "47"
+            ],
+            "value": 11.0
+          },
+          {
+            "swap": [
+              "08",
+              "39"
+            ],
+            "value": 7.0
+          },
+          {
+            "swap": [
+              "24",
+              "58"
+            ],
+            "value": 4.0
+          },
+          {
+            "swap": [
+              "19",
+              "33"
+            ],
+            "value": 2.0
+          },
+          {
+            "swap": [
+              "00",
+              "05"
+            ],
+            "value": 1.0
+          },
+          {
+            "swap": [
+              "02",
+              "28"
+            ],
+            "value": 0.0
+          }
+        ]
+      },
+      "metric": "same_symbol_line_runs",
+      "one_swap": {
+        "best_one_swap": 11.0,
+        "direction": "low",
+        "improved": true,
+        "metric": "same_symbol_line_runs",
+        "observed": 17.0,
+        "swap": [
+          "07",
+          "47"
+        ]
+      }
+    }
+  ],
+  "schema": "row_column_balance_objective_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

@@ -1,0 +1,646 @@
+{
+  "avar_tar_control": {
+    "available_negative_copy_control": {
+      "covered_digits": 0,
+      "covered_fraction": 0.0,
+      "length": 115,
+      "min_len": 8,
+      "name": "avar_tar"
+    },
+    "supervised_zero_omission_control": "not_applicable_without_attested_underlying_zero_labels"
+  },
+  "code_only_rule": {
+    "accuracy": 0.7717391304347826,
+    "balanced_accuracy": 0.6692226335272342,
+    "errors": 21,
+    "features": [
+      "code"
+    ],
+    "groups": 10,
+    "mdl_bits": 181.9166512196416
+  },
+  "control_trials": 2000,
+  "linear_ridge_probe": {
+    "accuracy": 0.9021739130434783,
+    "balanced_accuracy": 0.8707033315705975,
+    "top_negative_not_omitted": [
+      {
+        "feature": "prev_code=45",
+        "weight": -0.976290115586619
+      },
+      {
+        "feature": "prev_code=55",
+        "weight": -0.9644474458196742
+      },
+      {
+        "feature": "prev_code=47",
+        "weight": -0.8953003104907068
+      },
+      {
+        "feature": "prev_code=83",
+        "weight": -0.8395238785375411
+      },
+      {
+        "feature": "prev_code=78",
+        "weight": -0.8352874391209223
+      },
+      {
+        "feature": "prev_code=51",
+        "weight": -0.8340764635245866
+      },
+      {
+        "feature": "prev_code=09",
+        "weight": -0.8324646522329575
+      },
+      {
+        "feature": "next_symbol=C",
+        "weight": -0.7804247123377812
+      },
+      {
+        "feature": "prev_code=60",
+        "weight": -0.7692126799639342
+      },
+      {
+        "feature": "prev_code=77",
+        "weight": -0.752809000141058
+      },
+      {
+        "feature": "next_symbol=B",
+        "weight": -0.7479063887442697
+      },
+      {
+        "feature": "prev_code=80",
+        "weight": -0.6615976217784574
+      },
+      {
+        "feature": "prev_code=04",
+        "weight": -0.6039464231434623
+      },
+      {
+        "feature": "prev_code=14",
+        "weight": -0.5894568702847878
+      },
+      {
+        "feature": "prev_code=02",
+        "weight": -0.5359130194433416
+      }
+    ],
+    "top_positive_omitted": [
+      {
+        "feature": "prev_code=76",
+        "weight": 1.3810795500370805
+      },
+      {
+        "feature": "prev_code=65",
+        "weight": 1.3096489885183842
+      },
+      {
+        "feature": "prev_code=91",
+        "weight": 1.060108518367194
+      },
+      {
+        "feature": "prev_code=89",
+        "weight": 0.9659885768818993
+      },
+      {
+        "feature": "prev_code=96",
+        "weight": 0.9055510574808783
+      },
+      {
+        "feature": "prev_code=54",
+        "weight": 0.8449316571697724
+      },
+      {
+        "feature": "prev_code=50",
+        "weight": 0.81782046556137
+      },
+      {
+        "feature": "prev_code=21",
+        "weight": 0.8156706078072005
+      },
+      {
+        "feature": "prev_code=11",
+        "weight": 0.8064548201586688
+      },
+      {
+        "feature": "code=07",
+        "weight": 0.6736230098673414
+      },
+      {
+        "feature": "prev_code=75",
+        "weight": 0.6305447370149987
+      },
+      {
+        "feature": "prev_code=71",
+        "weight": 0.5739600299963157
+      },
+      {
+        "feature": "prev_code=95",
+        "weight": 0.5644306126822032
+      },
+      {
+        "feature": "next_symbol=</s>",
+        "weight": 0.5495206199678081
+      },
+      {
+        "feature": "prev_code=64",
+        "weight": 0.5249545370333113
+      }
+    ]
+  },
+  "random_seed": 46920260621,
+  "rough_mdl_gain_vs_code_only_bits": -1048.3264585184502,
+  "schema": "zero_omission_rule_explainer_results.v1",
+  "selected_group_rule": {
+    "accuracy": 0.8804347826086957,
+    "balanced_accuracy": 0.8225806451612903,
+    "errors": 11,
+    "features": [
+      "code",
+      "prev_code"
+    ],
+    "groups": 112,
+    "mdl_bits": 1230.2431097380918
+  },
+  "selected_vs_code_preserving_shuffle": {
+    "control_max": 0.7337387625594923,
+    "control_mean": 0.6399830777366475,
+    "control_min": 0.5393971443680592,
+    "control_sd": 0.031405209758029115,
+    "observed": 0.8225806451612903,
+    "p_good_direction": 0.0004997501249375312,
+    "z_good_direction": 5.814244478273529
+  },
+  "test_examples": 92,
+  "top_group_rules": [
+    {
+      "accuracy": 0.8804347826086957,
+      "balanced_accuracy": 0.8225806451612903,
+      "errors": 11,
+      "features": [
+        "code",
+        "prev_code"
+      ],
+      "groups": 112,
+      "mdl_bits": 1230.2431097380918
+    },
+    {
+      "accuracy": 0.8804347826086957,
+      "balanced_accuracy": 0.8225806451612903,
+      "errors": 11,
+      "features": [
+        "code",
+        "symbol",
+        "prev_code"
+      ],
+      "groups": 112,
+      "mdl_bits": 1566.2431097380918
+    },
+    {
+      "accuracy": 0.8804347826086957,
+      "balanced_accuracy": 0.8225806451612903,
+      "errors": 11,
+      "features": [
+        "code",
+        "prev_code",
+        "prev_symbol"
+      ],
+      "groups": 112,
+      "mdl_bits": 1656.6668610085435
+    },
+    {
+      "accuracy": 0.8695652173913043,
+      "balanced_accuracy": 0.814383923849815,
+      "errors": 12,
+      "features": [
+        "code",
+        "prev_symbol"
+      ],
+      "groups": 65,
+      "mdl_bits": 615.811030878465
+    },
+    {
+      "accuracy": 0.8695652173913043,
+      "balanced_accuracy": 0.814383923849815,
+      "errors": 12,
+      "features": [
+        "code",
+        "symbol",
+        "prev_symbol"
+      ],
+      "groups": 65,
+      "mdl_bits": 810.811030878465
+    },
+    {
+      "accuracy": 0.8695652173913043,
+      "balanced_accuracy": 0.814383923849815,
+      "errors": 12,
+      "features": [
+        "symbol",
+        "prev_code",
+        "token_mod3"
+      ],
+      "groups": 189,
+      "mdl_bits": 2324.2894420626844
+    },
+    {
+      "accuracy": 0.8695652173913043,
+      "balanced_accuracy": 0.8064516129032258,
+      "errors": 12,
+      "features": [
+        "code",
+        "prev_code",
+        "token_mod3"
+      ],
+      "groups": 202,
+      "mdl_bits": 2571.5689886691225
+    },
+    {
+      "accuracy": 0.8586956521739131,
+      "balanced_accuracy": 0.7982548915917504,
+      "errors": 13,
+      "features": [
+        "symbol",
+        "prev_code"
+      ],
+      "groups": 100,
+      "mdl_bits": 1073.2733694805886
+    },
+    {
+      "accuracy": 0.8586956521739131,
+      "balanced_accuracy": 0.7982548915917504,
+      "errors": 13,
+      "features": [
+        "symbol",
+        "prev_code",
+        "prev_symbol"
+      ],
+      "groups": 100,
+      "mdl_bits": 1454.008861686349
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7979904812268641,
+      "errors": 14,
+      "features": [
+        "symbol",
+        "prev_symbol",
+        "next_symbol"
+      ],
+      "groups": 117,
+      "mdl_bits": 1462.1149489224488
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7979904812268641,
+      "errors": 14,
+      "features": [
+        "code",
+        "prev_symbol",
+        "token_mod3"
+      ],
+      "groups": 140,
+      "mdl_bits": 1528.8983390527987
+    },
+    {
+      "accuracy": 0.8586956521739131,
+      "balanced_accuracy": 0.7903225806451613,
+      "errors": 13,
+      "features": [
+        "code",
+        "prev_code",
+        "token_mod2"
+      ],
+      "groups": 170,
+      "mdl_bits": 2112.6053832268544
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.782125859333686,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "next_symbol"
+      ],
+      "groups": 128,
+      "mdl_bits": 1472.6085299117185
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.782125859333686,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "prev_symbol",
+        "next_symbol"
+      ],
+      "groups": 128,
+      "mdl_bits": 1959.9499599350918
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.782125859333686,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "token_mod3"
+      ],
+      "groups": 129,
+      "mdl_bits": 1237.40917672319
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.782125859333686,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "prev_symbol",
+        "token_mod3"
+      ],
+      "groups": 129,
+      "mdl_bits": 1728.557961668621
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7818614489687996,
+      "errors": 15,
+      "features": [
+        "symbol",
+        "prev_symbol",
+        "token_mod3"
+      ],
+      "groups": 109,
+      "mdl_bits": 1167.0890686708992
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7815970386039133,
+      "errors": 16,
+      "features": [
+        "symbol",
+        "next_symbol"
+      ],
+      "groups": 56,
+      "mdl_bits": 547.4124143318056
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7741935483870968,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "token_mod2"
+      ],
+      "groups": 99,
+      "mdl_bits": 929.841172813729
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7741935483870968,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "prev_symbol",
+        "token_mod2"
+      ],
+      "groups": 99,
+      "mdl_bits": 1306.769310097432
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7741935483870968,
+      "errors": 14,
+      "features": [
+        "symbol",
+        "prev_code",
+        "raw_mod2"
+      ],
+      "groups": 151,
+      "mdl_bits": 1823.156661418045
+    },
+    {
+      "accuracy": 0.8478260869565217,
+      "balanced_accuracy": 0.7741935483870968,
+      "errors": 14,
+      "features": [
+        "prev_code",
+        "token_mod2",
+        "raw_mod2"
+      ],
+      "groups": 161,
+      "mdl_bits": 1710.0116795349813
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7736647276573242,
+      "errors": 16,
+      "features": [
+        "prev_code"
+      ],
+      "groups": 58,
+      "mdl_bits": 503.8198378407153
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7736647276573242,
+      "errors": 16,
+      "features": [
+        "prev_code",
+        "prev_symbol"
+      ],
+      "groups": 58,
+      "mdl_bits": 724.6464233200563
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7659968270756213,
+      "errors": 15,
+      "features": [
+        "symbol",
+        "prev_code",
+        "next_symbol"
+      ],
+      "groups": 148,
+      "mdl_bits": 2138.9383616222335
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7659968270756213,
+      "errors": 15,
+      "features": [
+        "symbol",
+        "prev_code",
+        "token_mod2"
+      ],
+      "groups": 156,
+      "mdl_bits": 1887.033847979568
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7659968270756213,
+      "errors": 15,
+      "features": [
+        "prev_code",
+        "next_symbol",
+        "token_mod3"
+      ],
+      "groups": 234,
+      "mdl_bits": 3090.838255089685
+    },
+    {
+      "accuracy": 0.8152173913043478,
+      "balanced_accuracy": 0.7654680063458488,
+      "errors": 17,
+      "features": [
+        "code",
+        "next_symbol"
+      ],
+      "groups": 71,
+      "mdl_bits": 705.1745770002894
+    },
+    {
+      "accuracy": 0.8152173913043478,
+      "balanced_accuracy": 0.7654680063458488,
+      "errors": 17,
+      "features": [
+        "code",
+        "symbol",
+        "next_symbol"
+      ],
+      "groups": 71,
+      "mdl_bits": 918.1745770002894
+    },
+    {
+      "accuracy": 0.8043478260869565,
+      "balanced_accuracy": 0.7652035959809624,
+      "errors": 18,
+      "features": [
+        "symbol",
+        "next_symbol",
+        "token_mod2"
+      ],
+      "groups": 94,
+      "mdl_bits": 1009.9390496549339
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7580645161290323,
+      "errors": 15,
+      "features": [
+        "code",
+        "prev_code",
+        "raw_mod2"
+      ],
+      "groups": 165,
+      "mdl_bits": 2066.048515005469
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7580645161290323,
+      "errors": 15,
+      "features": [
+        "prev_code",
+        "next_symbol",
+        "token_mod2"
+      ],
+      "groups": 190,
+      "mdl_bits": 2449.241649848009
+    },
+    {
+      "accuracy": 0.8369565217391305,
+      "balanced_accuracy": 0.7580645161290323,
+      "errors": 15,
+      "features": [
+        "code",
+        "prev_code",
+        "raw_mod5"
+      ],
+      "groups": 264,
+      "mdl_bits": 3510.8251947087783
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7578001057641459,
+      "errors": 16,
+      "features": [
+        "prev_code",
+        "raw_mod2"
+      ],
+      "groups": 96,
+      "mdl_bits": 917.5166737856962
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7578001057641459,
+      "errors": 16,
+      "features": [
+        "prev_code",
+        "prev_symbol",
+        "raw_mod2"
+      ],
+      "groups": 96,
+      "mdl_bits": 1283.022746303226
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7578001057641459,
+      "errors": 16,
+      "features": [
+        "prev_code",
+        "raw_mod3"
+      ],
+      "groups": 131,
+      "mdl_bits": 1268.2527804441297
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7578001057641459,
+      "errors": 16,
+      "features": [
+        "prev_code",
+        "prev_symbol",
+        "raw_mod3"
+      ],
+      "groups": 131,
+      "mdl_bits": 1767.016275233676
+    },
+    {
+      "accuracy": 0.8152173913043478,
+      "balanced_accuracy": 0.7575356953992597,
+      "errors": 17,
+      "features": [
+        "code",
+        "prev_symbol",
+        "raw_mod2"
+      ],
+      "groups": 104,
+      "mdl_bits": 1135.7476000961065
+    },
+    {
+      "accuracy": 0.782608695652174,
+      "balanced_accuracy": 0.7567424643046008,
+      "errors": 20,
+      "features": [
+        "symbol",
+        "next_symbol",
+        "token_mod3"
+      ],
+      "groups": 123,
+      "mdl_bits": 1349.3307194820086
+    },
+    {
+      "accuracy": 0.8260869565217391,
+      "balanced_accuracy": 0.7498677948175568,
+      "errors": 16,
+      "features": [
+        "symbol",
+        "prev_symbol"
+      ],
+      "groups": 47,
+      "mdl_bits": 471.57222231443586
+    }
+  ],
+  "train_examples": 542,
+  "translation_delta": "NONE",
+  "verdict": "candidate_zero_render_rule_signal_only"
+}

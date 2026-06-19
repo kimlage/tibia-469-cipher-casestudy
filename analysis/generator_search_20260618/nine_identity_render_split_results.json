@@ -1,0 +1,914 @@
+{
+  "baselines": {
+    "quotient_46_split_gain_bits": 3.5676415904584644,
+    "raw_lookup_bits": 209.40452071316824,
+    "symbol_bits": 3.807354922057604,
+    "transform_bits": 8.491853096329674
+  },
+  "controls": {
+    "global_inventory_shuffle": {
+      "generic_gain_vs_raw_lookup_bits": {
+        "max": 3.3749965125160486,
+        "mean": -15.248077467263865,
+        "min": -18.076815597050825,
+        "observed": -2.0173209102627254,
+        "p_good_direction": 0.001999600079984003,
+        "sd": 2.745114196465085,
+        "z_good_direction": 4.819747234573533
+      },
+      "generic_total_bits": {
+        "max": 227.48133631021906,
+        "mean": 224.6525981804321,
+        "min": 206.0295242006522,
+        "observed": 211.42184162343096,
+        "p_good_direction": 0.001999600079984003,
+        "sd": 2.745114196465085,
+        "z_good_direction": 4.819747234573534
+      },
+      "renderer_gain_vs_raw_lookup_bits": {
+        "max": 4.222993419071003,
+        "mean": -14.493772188710055,
+        "min": -17.491853096329663,
+        "observed": -0.58436150298661,
+        "p_good_direction": 0.001999600079984003,
+        "sd": 2.9011166209205186,
+        "z_good_direction": 4.794502428968201
+      },
+      "renderer_mixed_xq_group_count": {
+        "max": 8,
+        "mean": 7.1512,
+        "min": 3,
+        "observed": 4,
+        "p_good_direction": 0.004399120175964807,
+        "sd": 0.8497546567070515,
+        "z_good_direction": 3.7083644968907303
+      },
+      "renderer_residual_label_count": {
+        "max": 10,
+        "mean": 8.8576,
+        "min": 4,
+        "observed": 5,
+        "p_good_direction": 0.001999600079984003,
+        "sd": 0.9734021483171639,
+        "z_good_direction": 3.9630074853123056
+      },
+      "renderer_total_bits": {
+        "max": 226.8963738094979,
+        "mean": 223.89829290187828,
+        "min": 205.18152729409724,
+        "observed": 209.98888221615485,
+        "p_good_direction": 0.001999600079984003,
+        "sd": 2.9011166209205186,
+        "z_good_direction": 4.794502428968196
+      }
+    },
+    "trials": 5000
+  },
+  "observed": {
+    "generic": {
+      "base_cell_count": 45,
+      "expandable_group_count": 9,
+      "gain_vs_raw_lookup_bits": -2.0173209102627254,
+      "id": "generic_45_base_plus_expandable_split_metadata",
+      "label_slots": 50,
+      "lookup_ratio": 1.0096336072563874,
+      "mixed_group_count": 5,
+      "position_bits": 5.584962500721156,
+      "residual_label_count": 5,
+      "selector_bits": 6.977279923499917,
+      "total_bits": 211.42184162343096,
+      "transform_bits": 8.491853096329674
+    },
+    "groups": [
+      {
+        "base_label": "*",
+        "identity_pair": "00",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "*"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "00"
+        ],
+        "residuals": [],
+        "right": "0"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "01",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "N"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "01"
+        ],
+        "residuals": [],
+        "right": "1"
+      },
+      {
+        "base_label": "R",
+        "identity_pair": "02",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "R"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "02"
+        ],
+        "residuals": [],
+        "right": "2"
+      },
+      {
+        "base_label": "V",
+        "identity_pair": "03",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "V"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "03"
+        ],
+        "residuals": [],
+        "right": "3"
+      },
+      {
+        "base_label": "F",
+        "identity_pair": "04",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "F"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "04"
+        ],
+        "residuals": [],
+        "right": "4"
+      },
+      {
+        "base_label": "T",
+        "identity_pair": "05",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "T"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "05"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "0Q",
+        "is_expandable": true,
+        "is_mixed": true,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "I",
+          "T"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "06",
+          "09"
+        ],
+        "residuals": [
+          {
+            "label": "T",
+            "pair": "09"
+          }
+        ],
+        "right": "Q"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "07",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "I"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "07"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "08",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "I"
+        ],
+        "left": "0",
+        "original_pairs": [
+          "08"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "11",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "11"
+        ],
+        "residuals": [],
+        "right": "1"
+      },
+      {
+        "base_label": "F",
+        "identity_pair": "12",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "F"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "12"
+        ],
+        "residuals": [],
+        "right": "2"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "13",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "N"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "13"
+        ],
+        "residuals": [],
+        "right": "3"
+      },
+      {
+        "base_label": "A",
+        "identity_pair": "14",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "A"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "14"
+        ],
+        "residuals": [],
+        "right": "4"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "15",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "15"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "1Q",
+        "is_expandable": true,
+        "is_mixed": true,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "T",
+          "I"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "16",
+          "19"
+        ],
+        "residuals": [
+          {
+            "label": "T",
+            "pair": "16"
+          }
+        ],
+        "right": "Q"
+      },
+      {
+        "base_label": "V",
+        "identity_pair": "17",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "V"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "17"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "18",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "I"
+        ],
+        "left": "1",
+        "original_pairs": [
+          "18"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "A",
+        "identity_pair": "22",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "A"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "22"
+        ],
+        "residuals": [],
+        "right": "2"
+      },
+      {
+        "base_label": "O",
+        "identity_pair": "23",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "O"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "23"
+        ],
+        "residuals": [],
+        "right": "3"
+      },
+      {
+        "base_label": "L",
+        "identity_pair": "24",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "L"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "24"
+        ],
+        "residuals": [],
+        "right": "4"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "25",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "I"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "25"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "2Q",
+        "is_expandable": true,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "N",
+          "N"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "26",
+          "29"
+        ],
+        "residuals": [],
+        "right": "Q"
+      },
+      {
+        "base_label": "S",
+        "identity_pair": "27",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "S"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "27"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "T",
+        "identity_pair": "28",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "T"
+        ],
+        "left": "2",
+        "original_pairs": [
+          "28"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "33",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "33"
+        ],
+        "residuals": [],
+        "right": "3"
+      },
+      {
+        "base_label": "B",
+        "identity_pair": "34",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "B"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "34"
+        ],
+        "residuals": [],
+        "right": "4"
+      },
+      {
+        "base_label": "L",
+        "identity_pair": "35",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "L"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "35"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "3Q",
+        "is_expandable": true,
+        "is_mixed": true,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "V",
+          "N"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "36",
+          "39"
+        ],
+        "residuals": [
+          {
+            "label": "V",
+            "pair": "36"
+          }
+        ],
+        "right": "Q"
+      },
+      {
+        "base_label": "A",
+        "identity_pair": "37",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "A"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "37"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "T",
+        "identity_pair": "38",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "T"
+        ],
+        "left": "3",
+        "original_pairs": [
+          "38"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "44",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "4",
+        "original_pairs": [
+          "44"
+        ],
+        "residuals": [],
+        "right": "4"
+      },
+      {
+        "base_label": "F",
+        "identity_pair": "45",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "F"
+        ],
+        "left": "4",
+        "original_pairs": [
+          "45"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "4Q",
+        "is_expandable": true,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "N",
+          "N"
+        ],
+        "left": "4",
+        "original_pairs": [
+          "46",
+          "49"
+        ],
+        "residuals": [],
+        "right": "Q"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "47",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "4",
+        "original_pairs": [
+          "47"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "48",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "4",
+        "original_pairs": [
+          "48"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "V",
+        "identity_pair": "55",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "V"
+        ],
+        "left": "5",
+        "original_pairs": [
+          "55"
+        ],
+        "residuals": [],
+        "right": "5"
+      },
+      {
+        "base_label": "I",
+        "identity_pair": "5Q",
+        "is_expandable": true,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "I",
+          "I"
+        ],
+        "left": "5",
+        "original_pairs": [
+          "56",
+          "59"
+        ],
+        "residuals": [],
+        "right": "Q"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "57",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "5",
+        "original_pairs": [
+          "57"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "58",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "5",
+        "original_pairs": [
+          "58"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "QQ",
+        "is_expandable": true,
+        "is_mixed": true,
+        "is_qq": true,
+        "is_xq": false,
+        "labels": [
+          "E",
+          "V",
+          "E"
+        ],
+        "left": "Q",
+        "original_pairs": [
+          "66",
+          "69",
+          "99"
+        ],
+        "residuals": [
+          {
+            "label": "V",
+            "pair": "69"
+          }
+        ],
+        "right": "Q"
+      },
+      {
+        "base_label": "A",
+        "identity_pair": "Q7",
+        "is_expandable": true,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "A",
+          "A"
+        ],
+        "left": "Q",
+        "original_pairs": [
+          "67",
+          "79"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "C",
+        "identity_pair": "Q8",
+        "is_expandable": true,
+        "is_mixed": true,
+        "is_qq": false,
+        "is_xq": true,
+        "labels": [
+          "C",
+          "T"
+        ],
+        "left": "Q",
+        "original_pairs": [
+          "68",
+          "89"
+        ],
+        "residuals": [
+          {
+            "label": "T",
+            "pair": "89"
+          }
+        ],
+        "right": "8"
+      },
+      {
+        "base_label": "N",
+        "identity_pair": "77",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "N"
+        ],
+        "left": "7",
+        "original_pairs": [
+          "77"
+        ],
+        "residuals": [],
+        "right": "7"
+      },
+      {
+        "base_label": "E",
+        "identity_pair": "78",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "E"
+        ],
+        "left": "7",
+        "original_pairs": [
+          "78"
+        ],
+        "residuals": [],
+        "right": "8"
+      },
+      {
+        "base_label": "A",
+        "identity_pair": "88",
+        "is_expandable": false,
+        "is_mixed": false,
+        "is_qq": false,
+        "is_xq": false,
+        "labels": [
+          "A"
+        ],
+        "left": "8",
+        "original_pairs": [
+          "88"
+        ],
+        "residuals": [],
+        "right": "8"
+      }
+    ],
+    "renderer_aware": {
+      "base_cell_count": 45,
+      "gain_vs_raw_lookup_bits": -0.58436150298661,
+      "id": "renderer_aware_45_base_Q_to_6_9_split",
+      "label_slots": 50,
+      "lookup_ratio": 1.0027905868555103,
+      "mixed_xq_group_count": 4,
+      "qq_cross_marker_bits": 1.0,
+      "qq_is_mixed": true,
+      "residual_label_count": 5,
+      "total_bits": 209.98888221615485,
+      "transform_bits": 8.491853096329674,
+      "xq_group_count": 8,
+      "xq_selector_bits": 6.129283016944966,
+      "xq_side_bits": 4
+    }
+  },
+  "schema": "nine_identity_render_split_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "base45_renderer_not_promoted"
+}

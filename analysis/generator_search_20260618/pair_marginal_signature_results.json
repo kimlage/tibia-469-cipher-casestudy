@@ -1,0 +1,1132 @@
+{
+  "control": {
+    "best": {
+      "bonferroni_p": 0.161994600179994,
+      "control_max": 7,
+      "control_mean": 2.004,
+      "control_min": 0,
+      "control_sd": 1.1506931837636414,
+      "direction": "high",
+      "metric": "diagonal_e_count",
+      "observed": 5,
+      "p_good_direction": 0.017999400019999334,
+      "z_good_direction": 2.6036479943339916
+    },
+    "metric_rows": [
+      {
+        "bonferroni_p": 0.161994600179994,
+        "control_max": 7,
+        "control_mean": 2.004,
+        "control_min": 0,
+        "control_sd": 1.1506931837636414,
+        "direction": "high",
+        "metric": "diagonal_e_count",
+        "observed": 5,
+        "p_good_direction": 0.017999400019999334,
+        "z_good_direction": 2.6036479943339916
+      },
+      {
+        "bonferroni_p": 0.2264924502516583,
+        "control_max": 7,
+        "control_mean": 2.8679,
+        "control_min": 1,
+        "control_sd": 0.7642877258320947,
+        "direction": "high",
+        "metric": "diagonal_max_symbol_count",
+        "observed": 5,
+        "p_good_direction": 0.02516582780573981,
+        "z_good_direction": 2.789656209222439
+      },
+      {
+        "bonferroni_p": 0.3059898003399887,
+        "control_max": 3.321928094887362,
+        "control_mean": 2.5412202715281436,
+        "control_min": 1.295461844238322,
+        "control_sd": 0.2843226462444269,
+        "direction": "low",
+        "metric": "diagonal_entropy",
+        "observed": 1.9609640474436814,
+        "p_good_direction": 0.03399886670444319,
+        "z_good_direction": 2.0408371677352313
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 10,
+        "control_mean": 6.526666666666666,
+        "control_min": 3,
+        "control_sd": 1.0828948752914969,
+        "direction": "low",
+        "metric": "diagonal_distinct_symbols",
+        "observed": 5,
+        "p_good_direction": 0.16479450684977168,
+        "z_good_direction": 1.409801358839854
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 1.0,
+        "control_mean": 0.5619931746031746,
+        "control_min": 0.4,
+        "control_sd": 0.08786222874374029,
+        "direction": "high",
+        "metric": "best_long_line_max_fraction",
+        "observed": 0.6,
+        "p_good_direction": 0.5429152361587947,
+        "z_good_direction": 0.4325729718019839
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 2.5322040937961927,
+        "control_mean": 2.3296622975758057,
+        "control_min": 2.131351679773529,
+        "control_sd": 0.04985470614725857,
+        "direction": "low",
+        "metric": "mean_long_line_entropy",
+        "observed": 2.3863242230079282,
+        "p_good_direction": 0.8722042598580048,
+        "z_good_direction": -1.1365411575139392
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 6,
+        "control_mean": 0.9340666666666667,
+        "control_min": 0,
+        "control_sd": 0.9061347388188941,
+        "direction": "high",
+        "metric": "low_entropy_line_count",
+        "observed": 2,
+        "p_good_direction": 0.23585880470650977,
+        "z_good_direction": 1.1763519128763669
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 9,
+        "control_mean": 3.7943333333333333,
+        "control_min": 0,
+        "control_sd": 1.4296046124251107,
+        "direction": "high",
+        "metric": "border_e_count",
+        "observed": 1,
+        "p_good_direction": 0.9945001833272225,
+        "z_good_direction": -1.9546196962761362
+      },
+      {
+        "bonferroni_p": 1.0,
+        "control_max": 3.616348566075164,
+        "control_mean": 2.936447888132227,
+        "control_min": 1.9248240667373948,
+        "control_sd": 0.2150104638399952,
+        "direction": "low",
+        "metric": "border_entropy",
+        "observed": 2.860320777833044,
+        "p_good_direction": 0.35628812372920904,
+        "z_good_direction": 0.35406235091811555
+      }
+    ]
+  },
+  "control_trials": 30000,
+  "observed": {
+    "best_long_line": {
+      "entropy": 1.3709505944546687,
+      "kind": "diagonal_diff",
+      "labels": "TTSTN",
+      "length": 5,
+      "line_id": "5",
+      "max_count": 3,
+      "max_fraction": 0.6,
+      "pairs": [
+        "05",
+        "16",
+        "27",
+        "38",
+        "49"
+      ]
+    },
+    "best_long_line_max_fraction": 0.6,
+    "border_e_count": 1,
+    "border_entropy": 2.860320777833044,
+    "diagonal_distinct_symbols": 5,
+    "diagonal_e_count": 5,
+    "diagonal_entropy": 1.9609640474436814,
+    "diagonal_max_symbol_count": 5,
+    "diagonal_sequence": "*EAEEVENAE",
+    "interior_e_count": 10,
+    "interior_entropy": 3.195103225614511,
+    "line_rows": [
+      {
+        "entropy": 2.6464393446710157,
+        "kind": "row",
+        "labels": "*NRVFTIIIT",
+        "length": 10,
+        "line_id": "0",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ]
+      },
+      {
+        "entropy": 2.725480556997868,
+        "kind": "row",
+        "labels": "EFNAETVII",
+        "length": 9,
+        "line_id": "1",
+        "max_count": 2,
+        "max_fraction": 0.2222222222222222,
+        "pairs": [
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19"
+        ]
+      },
+      {
+        "entropy": 2.75,
+        "kind": "row",
+        "labels": "AOLINSTN",
+        "length": 8,
+        "line_id": "2",
+        "max_count": 2,
+        "max_fraction": 0.25,
+        "pairs": [
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ]
+      },
+      {
+        "entropy": 2.807354922057604,
+        "kind": "row",
+        "labels": "EBLVATN",
+        "length": 7,
+        "line_id": "3",
+        "max_count": 1,
+        "max_fraction": 0.14285714285714285,
+        "pairs": [
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39"
+        ]
+      },
+      {
+        "entropy": 1.4591479170272446,
+        "kind": "row",
+        "labels": "EFNEEN",
+        "length": 6,
+        "line_id": "4",
+        "max_count": 3,
+        "max_fraction": 0.5,
+        "pairs": [
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49"
+        ]
+      },
+      {
+        "entropy": 1.5219280948873621,
+        "kind": "row",
+        "labels": "VIEEI",
+        "length": 5,
+        "line_id": "5",
+        "max_count": 2,
+        "max_fraction": 0.4,
+        "pairs": [
+          "55",
+          "56",
+          "57",
+          "58",
+          "59"
+        ]
+      },
+      {
+        "entropy": 2.0,
+        "kind": "row",
+        "labels": "EACV",
+        "length": 4,
+        "line_id": "6",
+        "max_count": 1,
+        "max_fraction": 0.25,
+        "pairs": [
+          "66",
+          "67",
+          "68",
+          "69"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "row",
+        "labels": "NEA",
+        "length": 3,
+        "line_id": "7",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "77",
+          "78",
+          "79"
+        ]
+      },
+      {
+        "entropy": 1.0,
+        "kind": "row",
+        "labels": "AT",
+        "length": 2,
+        "line_id": "8",
+        "max_count": 1,
+        "max_fraction": 0.5,
+        "pairs": [
+          "88",
+          "89"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "row",
+        "labels": "E",
+        "length": 1,
+        "line_id": "9",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "99"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "column",
+        "labels": "*",
+        "length": 1,
+        "line_id": "0",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "00"
+        ]
+      },
+      {
+        "entropy": 1.0,
+        "kind": "column",
+        "labels": "NE",
+        "length": 2,
+        "line_id": "1",
+        "max_count": 1,
+        "max_fraction": 0.5,
+        "pairs": [
+          "01",
+          "11"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "column",
+        "labels": "RFA",
+        "length": 3,
+        "line_id": "2",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "02",
+          "12",
+          "22"
+        ]
+      },
+      {
+        "entropy": 2.0,
+        "kind": "column",
+        "labels": "VNOE",
+        "length": 4,
+        "line_id": "3",
+        "max_count": 1,
+        "max_fraction": 0.25,
+        "pairs": [
+          "03",
+          "13",
+          "23",
+          "33"
+        ]
+      },
+      {
+        "entropy": 2.321928094887362,
+        "kind": "column",
+        "labels": "FALBE",
+        "length": 5,
+        "line_id": "4",
+        "max_count": 1,
+        "max_fraction": 0.2,
+        "pairs": [
+          "04",
+          "14",
+          "24",
+          "34",
+          "44"
+        ]
+      },
+      {
+        "entropy": 2.584962500721156,
+        "kind": "column",
+        "labels": "TEILFV",
+        "length": 6,
+        "line_id": "5",
+        "max_count": 1,
+        "max_fraction": 0.16666666666666666,
+        "pairs": [
+          "05",
+          "15",
+          "25",
+          "35",
+          "45",
+          "55"
+        ]
+      },
+      {
+        "entropy": 2.2359263506290326,
+        "kind": "column",
+        "labels": "ITNVNIE",
+        "length": 7,
+        "line_id": "6",
+        "max_count": 2,
+        "max_fraction": 0.2857142857142857,
+        "pairs": [
+          "06",
+          "16",
+          "26",
+          "36",
+          "46",
+          "56",
+          "66"
+        ]
+      },
+      {
+        "entropy": 2.5,
+        "kind": "column",
+        "labels": "IVSAEEAN",
+        "length": 8,
+        "line_id": "7",
+        "max_count": 2,
+        "max_fraction": 0.25,
+        "pairs": [
+          "07",
+          "17",
+          "27",
+          "37",
+          "47",
+          "57",
+          "67",
+          "77"
+        ]
+      },
+      {
+        "entropy": 2.197159723424149,
+        "kind": "column",
+        "labels": "IITTEECEA",
+        "length": 9,
+        "line_id": "8",
+        "max_count": 3,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "08",
+          "18",
+          "28",
+          "38",
+          "48",
+          "58",
+          "68",
+          "78",
+          "88"
+        ]
+      },
+      {
+        "entropy": 2.4464393446710155,
+        "kind": "column",
+        "labels": "TINNNIVATE",
+        "length": 10,
+        "line_id": "9",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "09",
+          "19",
+          "29",
+          "39",
+          "49",
+          "59",
+          "69",
+          "79",
+          "89",
+          "99"
+        ]
+      },
+      {
+        "entropy": 1.9609640474436814,
+        "kind": "diagonal_diff",
+        "labels": "*EAEEVENAE",
+        "length": 10,
+        "line_id": "0",
+        "max_count": 5,
+        "max_fraction": 0.5,
+        "pairs": [
+          "00",
+          "11",
+          "22",
+          "33",
+          "44",
+          "55",
+          "66",
+          "77",
+          "88",
+          "99"
+        ]
+      },
+      {
+        "entropy": 2.94770277922009,
+        "kind": "diagonal_diff",
+        "labels": "NFOBFIAET",
+        "length": 9,
+        "line_id": "1",
+        "max_count": 2,
+        "max_fraction": 0.2222222222222222,
+        "pairs": [
+          "01",
+          "12",
+          "23",
+          "34",
+          "45",
+          "56",
+          "67",
+          "78",
+          "89"
+        ]
+      },
+      {
+        "entropy": 2.5,
+        "kind": "diagonal_diff",
+        "labels": "RNLLNECA",
+        "length": 8,
+        "line_id": "2",
+        "max_count": 2,
+        "max_fraction": 0.25,
+        "pairs": [
+          "02",
+          "13",
+          "24",
+          "35",
+          "46",
+          "57",
+          "68",
+          "79"
+        ]
+      },
+      {
+        "entropy": 1.8423709931771084,
+        "kind": "diagonal_diff",
+        "labels": "VAIVEEV",
+        "length": 7,
+        "line_id": "3",
+        "max_count": 3,
+        "max_fraction": 0.42857142857142855,
+        "pairs": [
+          "03",
+          "14",
+          "25",
+          "36",
+          "47",
+          "58",
+          "69"
+        ]
+      },
+      {
+        "entropy": 2.2516291673878226,
+        "kind": "diagonal_diff",
+        "labels": "FENAEI",
+        "length": 6,
+        "line_id": "4",
+        "max_count": 2,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "04",
+          "15",
+          "26",
+          "37",
+          "48",
+          "59"
+        ]
+      },
+      {
+        "entropy": 1.3709505944546687,
+        "kind": "diagonal_diff",
+        "labels": "TTSTN",
+        "length": 5,
+        "line_id": "5",
+        "max_count": 3,
+        "max_fraction": 0.6,
+        "pairs": [
+          "05",
+          "16",
+          "27",
+          "38",
+          "49"
+        ]
+      },
+      {
+        "entropy": 2.0,
+        "kind": "diagonal_diff",
+        "labels": "IVTN",
+        "length": 4,
+        "line_id": "6",
+        "max_count": 1,
+        "max_fraction": 0.25,
+        "pairs": [
+          "06",
+          "17",
+          "28",
+          "39"
+        ]
+      },
+      {
+        "entropy": 0.9182958340544896,
+        "kind": "diagonal_diff",
+        "labels": "IIN",
+        "length": 3,
+        "line_id": "7",
+        "max_count": 2,
+        "max_fraction": 0.6666666666666666,
+        "pairs": [
+          "07",
+          "18",
+          "29"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "diagonal_diff",
+        "labels": "II",
+        "length": 2,
+        "line_id": "8",
+        "max_count": 2,
+        "max_fraction": 1.0,
+        "pairs": [
+          "08",
+          "19"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "diagonal_diff",
+        "labels": "T",
+        "length": 1,
+        "line_id": "9",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "09"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "*",
+        "length": 1,
+        "line_id": "0",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "00"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "N",
+        "length": 1,
+        "line_id": "1",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "01"
+        ]
+      },
+      {
+        "entropy": 1.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "RE",
+        "length": 2,
+        "line_id": "2",
+        "max_count": 1,
+        "max_fraction": 0.5,
+        "pairs": [
+          "02",
+          "11"
+        ]
+      },
+      {
+        "entropy": 1.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "VF",
+        "length": 2,
+        "line_id": "3",
+        "max_count": 1,
+        "max_fraction": 0.5,
+        "pairs": [
+          "03",
+          "12"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "anti_diagonal_sum",
+        "labels": "FNA",
+        "length": 3,
+        "line_id": "4",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "04",
+          "13",
+          "22"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "anti_diagonal_sum",
+        "labels": "TAO",
+        "length": 3,
+        "line_id": "5",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "05",
+          "14",
+          "23"
+        ]
+      },
+      {
+        "entropy": 1.5,
+        "kind": "anti_diagonal_sum",
+        "labels": "IELE",
+        "length": 4,
+        "line_id": "6",
+        "max_count": 2,
+        "max_fraction": 0.5,
+        "pairs": [
+          "06",
+          "15",
+          "24",
+          "33"
+        ]
+      },
+      {
+        "entropy": 1.5,
+        "kind": "anti_diagonal_sum",
+        "labels": "ITIB",
+        "length": 4,
+        "line_id": "7",
+        "max_count": 2,
+        "max_fraction": 0.5,
+        "pairs": [
+          "07",
+          "16",
+          "25",
+          "34"
+        ]
+      },
+      {
+        "entropy": 2.321928094887362,
+        "kind": "anti_diagonal_sum",
+        "labels": "IVNLE",
+        "length": 5,
+        "line_id": "8",
+        "max_count": 1,
+        "max_fraction": 0.2,
+        "pairs": [
+          "08",
+          "17",
+          "26",
+          "35",
+          "44"
+        ]
+      },
+      {
+        "entropy": 2.321928094887362,
+        "kind": "anti_diagonal_sum",
+        "labels": "TISVF",
+        "length": 5,
+        "line_id": "9",
+        "max_count": 1,
+        "max_fraction": 0.2,
+        "pairs": [
+          "09",
+          "18",
+          "27",
+          "36",
+          "45"
+        ]
+      },
+      {
+        "entropy": 2.321928094887362,
+        "kind": "anti_diagonal_sum",
+        "labels": "ITANV",
+        "length": 5,
+        "line_id": "10",
+        "max_count": 1,
+        "max_fraction": 0.2,
+        "pairs": [
+          "19",
+          "28",
+          "37",
+          "46",
+          "55"
+        ]
+      },
+      {
+        "entropy": 2.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "NTEI",
+        "length": 4,
+        "line_id": "11",
+        "max_count": 1,
+        "max_fraction": 0.25,
+        "pairs": [
+          "29",
+          "38",
+          "47",
+          "56"
+        ]
+      },
+      {
+        "entropy": 0.8112781244591328,
+        "kind": "anti_diagonal_sum",
+        "labels": "NEEE",
+        "length": 4,
+        "line_id": "12",
+        "max_count": 3,
+        "max_fraction": 0.75,
+        "pairs": [
+          "39",
+          "48",
+          "57",
+          "66"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "anti_diagonal_sum",
+        "labels": "NEA",
+        "length": 3,
+        "line_id": "13",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "49",
+          "58",
+          "67"
+        ]
+      },
+      {
+        "entropy": 1.584962500721156,
+        "kind": "anti_diagonal_sum",
+        "labels": "ICN",
+        "length": 3,
+        "line_id": "14",
+        "max_count": 1,
+        "max_fraction": 0.3333333333333333,
+        "pairs": [
+          "59",
+          "68",
+          "77"
+        ]
+      },
+      {
+        "entropy": 1.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "VE",
+        "length": 2,
+        "line_id": "15",
+        "max_count": 1,
+        "max_fraction": 0.5,
+        "pairs": [
+          "69",
+          "78"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "AA",
+        "length": 2,
+        "line_id": "16",
+        "max_count": 2,
+        "max_fraction": 1.0,
+        "pairs": [
+          "79",
+          "88"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "T",
+        "length": 1,
+        "line_id": "17",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "89"
+        ]
+      },
+      {
+        "entropy": 0.0,
+        "kind": "anti_diagonal_sum",
+        "labels": "E",
+        "length": 1,
+        "line_id": "18",
+        "max_count": 1,
+        "max_fraction": 1.0,
+        "pairs": [
+          "99"
+        ]
+      },
+      {
+        "entropy": 2.6464393446710157,
+        "kind": "digit_incidence",
+        "labels": "*NRVFTIIIT",
+        "length": 10,
+        "line_id": "0",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "00",
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09"
+        ]
+      },
+      {
+        "entropy": 2.7219280948873625,
+        "kind": "digit_incidence",
+        "labels": "NEFNAETVII",
+        "length": 10,
+        "line_id": "1",
+        "max_count": 2,
+        "max_fraction": 0.2,
+        "pairs": [
+          "01",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19"
+        ]
+      },
+      {
+        "entropy": 3.1219280948873624,
+        "kind": "digit_incidence",
+        "labels": "RFAOLINSTN",
+        "length": 10,
+        "line_id": "2",
+        "max_count": 2,
+        "max_fraction": 0.2,
+        "pairs": [
+          "02",
+          "12",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ]
+      },
+      {
+        "entropy": 2.9219280948873623,
+        "kind": "digit_incidence",
+        "labels": "VNOEBLVATN",
+        "length": 10,
+        "line_id": "3",
+        "max_count": 2,
+        "max_fraction": 0.2,
+        "pairs": [
+          "03",
+          "13",
+          "23",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39"
+        ]
+      },
+      {
+        "entropy": 2.4464393446710155,
+        "kind": "digit_incidence",
+        "labels": "FALBEFNEEN",
+        "length": 10,
+        "line_id": "4",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "04",
+          "14",
+          "24",
+          "34",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49"
+        ]
+      },
+      {
+        "entropy": 2.3709505944546687,
+        "kind": "digit_incidence",
+        "labels": "TEILFVIEEI",
+        "length": 10,
+        "line_id": "5",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "05",
+          "15",
+          "25",
+          "35",
+          "45",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59"
+        ]
+      },
+      {
+        "entropy": 2.721928094887362,
+        "kind": "digit_incidence",
+        "labels": "ITNVNIEACV",
+        "length": 10,
+        "line_id": "6",
+        "max_count": 2,
+        "max_fraction": 0.2,
+        "pairs": [
+          "06",
+          "16",
+          "26",
+          "36",
+          "46",
+          "56",
+          "66",
+          "67",
+          "68",
+          "69"
+        ]
+      },
+      {
+        "entropy": 2.3709505944546687,
+        "kind": "digit_incidence",
+        "labels": "IVSAEEANEA",
+        "length": 10,
+        "line_id": "7",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "07",
+          "17",
+          "27",
+          "37",
+          "47",
+          "57",
+          "67",
+          "77",
+          "78",
+          "79"
+        ]
+      },
+      {
+        "entropy": 2.1709505944546685,
+        "kind": "digit_incidence",
+        "labels": "IITTEECEAT",
+        "length": 10,
+        "line_id": "8",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "08",
+          "18",
+          "28",
+          "38",
+          "48",
+          "58",
+          "68",
+          "78",
+          "88",
+          "89"
+        ]
+      },
+      {
+        "entropy": 2.4464393446710155,
+        "kind": "digit_incidence",
+        "labels": "TINNNIVATE",
+        "length": 10,
+        "line_id": "9",
+        "max_count": 3,
+        "max_fraction": 0.3,
+        "pairs": [
+          "09",
+          "19",
+          "29",
+          "39",
+          "49",
+          "59",
+          "69",
+          "79",
+          "89",
+          "99"
+        ]
+      }
+    ],
+    "low_entropy_line_count": 2,
+    "mean_long_line_entropy": 2.3863242230079282
+  },
+  "random_seed": 46920260624,
+  "schema": "pair_marginal_signature_results.v1",
+  "translation_delta": "NONE",
+  "verdict": "rejected_control"
+}

@@ -1,0 +1,107 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "great_calculator_assemble",
+      "operational_hypothesis": "book strings are assembled from precomputed numeric pieces",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "Great Calculator / assemble language",
+      "source_url": "https://tibia.fandom.com/wiki/You_Cannot_Even_Imagine_%28Book%29",
+      "targets": [
+        "G",
+        "H",
+        "I"
+      ],
+      "tests": [
+        "module_grammar_induction",
+        "module_overlap_grammar_search",
+        "module_tape_origin_search",
+        "module_tape_order_search",
+        "tape_based_formula_compile",
+        "tape_tokenization_analysis",
+        "tape_first_use_pair_order_search",
+        "tape_literal_exception_analysis",
+        "tape_feature_pair_label_search",
+        "residual_exact_repeat"
+      ]
+    },
+    {
+      "hypothesis_id": "subjective_viewer",
+      "operational_hypothesis": "observer changes pair orientation or matrix view",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "formula changes for the subjective viewer",
+      "source_url": "https://tibia.fandom.com/wiki/A_Wrinkled_Bonelord/Transcripts",
+      "targets": [
+        "B",
+        "C"
+      ],
+      "tests": [
+        "grid_formula_search",
+        "matrix_generator_exhaustive_search",
+        "pair_reverse_variant"
+      ]
+    },
+    {
+      "hypothesis_id": "honeminas_vectors",
+      "operational_hypothesis": "lore numbers act as vector/seed/operator over the 10x10 grid",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "43153 / 34784 / 3478 / Magic Web",
+      "source_url": "https://tibia.fandom.com/wiki/The_Honeminas_Formula_%28Book%29",
+      "targets": [
+        "A",
+        "B",
+        "H",
+        "K"
+      ],
+      "tests": [
+        "magic_web_formula_search",
+        "matrix_generator_exhaustive_search",
+        "seed_generator_search"
+      ]
+    },
+    {
+      "hypothesis_id": "one_equals_tibia",
+      "operational_hypothesis": "digit 1 or pairs {1,x} have structural role",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "1 = Tibia",
+      "source_url": "https://tibia.fandom.com/wiki/A_Wrinkled_Bonelord/Transcripts",
+      "targets": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "J"
+      ],
+      "tests": [
+        "one_equals_tibia_tests",
+        "matrix_generator_exhaustive_search"
+      ]
+    },
+    {
+      "hypothesis_id": "chayenne_2009",
+      "operational_hypothesis": "external string should be covered by real book copy/generator operators",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "Chayenne reply contains genuine book substrings",
+      "source_url": "https://forum.portaltibia.com.br/topic/11420-entrevista-com-chayenne/",
+      "targets": [
+        "K"
+      ],
+      "tests": [
+        "external_holdout_chayenne_ytc"
+      ]
+    },
+    {
+      "hypothesis_id": "avar_tar",
+      "operational_hypothesis": "real generator should not cover it better than controls",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "Avar Tar poem is attested but not true 469",
+      "source_url": "https://tibia.fandom.com/wiki/Avar_Tar/Transcripts",
+      "targets": [
+        "L"
+      ],
+      "tests": [
+        "negative_control_suite"
+      ]
+    }
+  ],
+  "schema": "generator_hypothesis_registry.v1"
+}
