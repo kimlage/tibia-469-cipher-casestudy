@@ -1,0 +1,416 @@
+{
+  "best_e_rule": {
+    "anomaly_relations": {
+      "06": "disjoint_edges",
+      "09": "disjoint_edges",
+      "19": "disjoint_edges",
+      "33": "same_edge",
+      "39": "disjoint_edges",
+      "66": "same_edge",
+      "69": "adjacent_edges",
+      "99": "same_edge"
+    },
+    "digit_to_edge": {
+      "0": [
+        0,
+        1
+      ],
+      "1": [
+        0,
+        2
+      ],
+      "2": [
+        0,
+        3
+      ],
+      "3": [
+        1,
+        2
+      ],
+      "4": [
+        0,
+        4
+      ],
+      "5": [
+        1,
+        4
+      ],
+      "6": [
+        2,
+        4
+      ],
+      "7": [
+        1,
+        3
+      ],
+      "8": [
+        2,
+        3
+      ],
+      "9": [
+        3,
+        4
+      ]
+    },
+    "f1": 0.5,
+    "fn": 2,
+    "fp": 16,
+    "mdl": {
+      "exception_bits": 122.06447484344388,
+      "gain_vs_lookup": -84.94864536255233,
+      "lookup_bits": 55.0,
+      "mapping_bits": 14.884170519108435,
+      "rule_bits": 3,
+      "total_bits": 139.94864536255233
+    },
+    "precision": 0.36,
+    "recall": 0.8181818181818182,
+    "relation_6_9": "adjacent_edges",
+    "selected": [
+      "00",
+      "06",
+      "08",
+      "09",
+      "11",
+      "15",
+      "17",
+      "19",
+      "22",
+      "23",
+      "25",
+      "26",
+      "33",
+      "34",
+      "39",
+      "44",
+      "47",
+      "48",
+      "55",
+      "58",
+      "66",
+      "67",
+      "77",
+      "88",
+      "99"
+    ],
+    "selected_feature_values": [
+      "disjoint_edges",
+      "same_edge"
+    ],
+    "tn": 28,
+    "tp": 9
+  },
+  "best_label_rule": {
+    "accuracy": 0.32727272727272727,
+    "anomaly_relations": {
+      "06": "adjacent_edges",
+      "09": "disjoint_edges",
+      "19": "disjoint_edges",
+      "33": "same_edge",
+      "39": "adjacent_edges",
+      "66": "same_edge",
+      "69": "adjacent_edges",
+      "99": "same_edge"
+    },
+    "digit_to_edge": {
+      "0": [
+        0,
+        1
+      ],
+      "1": [
+        0,
+        2
+      ],
+      "2": [
+        0,
+        3
+      ],
+      "3": [
+        0,
+        4
+      ],
+      "4": [
+        1,
+        4
+      ],
+      "5": [
+        2,
+        3
+      ],
+      "6": [
+        1,
+        3
+      ],
+      "7": [
+        2,
+        4
+      ],
+      "8": [
+        1,
+        2
+      ],
+      "9": [
+        3,
+        4
+      ]
+    },
+    "exceptions": [
+      {
+        "actual": "*",
+        "cell": "00",
+        "feature": "same_edge",
+        "predicted": "E"
+      },
+      {
+        "actual": "R",
+        "cell": "02",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "V",
+        "cell": "03",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "F",
+        "cell": "04",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "I",
+        "cell": "06",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "I",
+        "cell": "07",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "I",
+        "cell": "08",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "F",
+        "cell": "12",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "A",
+        "cell": "14",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "E",
+        "cell": "15",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "V",
+        "cell": "17",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "I",
+        "cell": "18",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "I+N",
+        "cell": "19",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "A",
+        "cell": "22",
+        "feature": "same_edge",
+        "predicted": "E"
+      },
+      {
+        "actual": "O",
+        "cell": "23",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "L",
+        "cell": "24",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "I",
+        "cell": "25",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "S",
+        "cell": "27",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "B",
+        "cell": "34",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "L",
+        "cell": "35",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "V",
+        "cell": "36",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "A",
+        "cell": "37",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "F",
+        "cell": "45",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "E",
+        "cell": "47",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "E",
+        "cell": "48",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "V",
+        "cell": "55",
+        "feature": "same_edge",
+        "predicted": "E"
+      },
+      {
+        "actual": "I",
+        "cell": "56",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "E",
+        "cell": "57",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "E",
+        "cell": "58",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "I",
+        "cell": "59",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "A",
+        "cell": "67",
+        "feature": "disjoint_edges",
+        "predicted": "T"
+      },
+      {
+        "actual": "C",
+        "cell": "68",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "V",
+        "cell": "69",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "N",
+        "cell": "77",
+        "feature": "same_edge",
+        "predicted": "E"
+      },
+      {
+        "actual": "E",
+        "cell": "78",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "A",
+        "cell": "79",
+        "feature": "adjacent_edges",
+        "predicted": "N"
+      },
+      {
+        "actual": "A",
+        "cell": "88",
+        "feature": "same_edge",
+        "predicted": "E"
+      }
+    ],
+    "feature_majority_labels": {
+      "adjacent_edges": "N",
+      "disjoint_edges": "T",
+      "same_edge": "E"
+    },
+    "hits": 18,
+    "mdl": {
+      "exception_bits": 358.46526143792755,
+      "gain_vs_lookup": -170.19112098539298,
+      "lookup_bits": 214.87898275846854,
+      "mapping_bits": 14.884170519108435,
+      "rule_bits": 11.720671786825555,
+      "total_bits": 385.0701037438615
+    },
+    "relation_6_9": "adjacent_edges"
+  },
+  "controls": {
+    "e_f1_control_max": 0.6923076923076923,
+    "e_f1_control_mean": 0.586068376068376,
+    "e_f1_p": 1.0,
+    "e_gain_control_max": -17.135048227305717,
+    "e_gain_control_mean": -43.98923269286337,
+    "e_gain_p": 1.0,
+    "feature_rows_per_trial": 2000,
+    "label_gain_control_max": -150.81462036712665,
+    "label_gain_control_mean": -176.00407117087292,
+    "label_gain_p": 0.45098039215686275,
+    "mode": "sampled_feature_rows",
+    "trials": 50
+  },
+  "family": "k5_eye_pair",
+  "feature_rows": 30240,
+  "mapping_bits_charged": 14.884170519108435,
+  "schema": "k5_eye_pair_model_results.v1",
+  "translation_delta": "NONE"
+}

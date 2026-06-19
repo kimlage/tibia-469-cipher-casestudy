@@ -1540,6 +1540,36 @@
         "B"
       ],
       "verdict": "technical_gap_closed_rejected_control"
+    },
+    {
+      "control_leakage": 0.45098039215686275,
+      "hypothesis_id": "k5_eye_pair_model_search",
+      "lore_fit": 0.75,
+      "mdl_gain": -0.170191120985393,
+      "prediction_score": 0.32727272727272727,
+      "rule_complexity": 0.65,
+      "score_total": -0.19389878586952847,
+      "targets_explained": [
+        "B",
+        "C",
+        "F"
+      ],
+      "verdict": "rejected_as_pair_matrix_formula_contextual_lore_bridge"
+    },
+    {
+      "control_leakage": 0.17647058823529413,
+      "hypothesis_id": "eye_state_5x2_model_search",
+      "lore_fit": 0.55,
+      "mdl_gain": -0.1537215109627352,
+      "prediction_score": 0.36363636363636365,
+      "rule_complexity": 0.7,
+      "score_total": -0.11655573556166568,
+      "targets_explained": [
+        "B",
+        "C",
+        "F"
+      ],
+      "verdict": "rejected_as_pair_matrix_formula_control"
     }
   ],
   "schema": "accepted_rejected_hypotheses.v1"

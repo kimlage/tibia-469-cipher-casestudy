@@ -51,6 +51,7 @@ Start at the top and follow the path, or jump to what you need:
 | 11 | [Mechanism & Origin Model](11-mechanism-origin-model.md) | Production model: numeric index table, pair geometry, homophone classes, and chunk assembly |
 | 12 | [Generator-Origin Search](12-generator-origin-search.md) | Formula-generator search: scoring contract, targets, holdouts, front reports, and MDL leaderboard |
 | 13 | [Mechanical Origin Model v1](13-mechanical-origin-model-v1.md) | Frozen public summary of the best mechanical fabrication model and plateau |
+| 14 | [Eye/Blink Arity Model](14-eye-blink-arity-model.md) | Post-review eye/sprite arity hypothesis tested as mechanism-only, with K5 and 5x2 controls |
 | — | [Glossary](GLOSSARY.md) | Definitions of the coined terms (Layer A/B, row0, disqualifier, …) |
 | — | [CipSoft](entities/cipsoft.md) | The external ground-truth holder — the only thing that could reopen the verdict |
 
@@ -75,6 +76,7 @@ mindmap
       11 Mechanism origin model
       12 Generator origin search
       13 Mechanical origin model v1
+      14 Eye blink arity model
     Reference
       Glossary
       CipSoft
@@ -181,6 +183,15 @@ zero signal. Rejected origin formulas include broad 10x10 matrix searches,
 PRNG/seeds, lore-number masks, high-block blocker strokes, and render-origin
 E-priority probes. → [page 13](13-mechanical-origin-model-v1.md)
 
+**Eye/blink arity review (2026-06-19):** the post-review hypothesis that
+Bonelord eyes could define digit arity was integrated and tested. The arity
+match is elegant: `5 eyes -> C(5,2)=10` eye-pair events and therefore 55
+unordered two-event cells, exactly the row0 table scale. Actual K5 and `5x2`
+tests reject the hypothesis as the pair-cell label formula (`18/55` and
+`20/55` best label hits, both worse than lookup after MDL cost). It remains a
+mechanism-only lore bridge for arity/orientation, not a semantic decoder.
+→ [page 14](14-eye-blink-arity-model.md)
+
 ## Reproduce / verify
 
 Every quantitative claim is re-derivable from committed evidence: the audit
@@ -211,6 +222,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
 - **Mechanical origin model v1:** [docs/wiki/13-mechanical-origin-model-v1.md](13-mechanical-origin-model-v1.md) —
   freezes the current best fabrication model as accepted mechanics, weak
   clues, and rejected origin formulas, with translation delta still zero.
+- **Eye/blink arity review:** [docs/wiki/14-eye-blink-arity-model.md](14-eye-blink-arity-model.md)
+  and [`analysis/eye_model_20260619/`](../../analysis/eye_model_20260619/) —
+  tests the post-review eye/sprite hypothesis as K5 and `5x2` arity models;
+  keeps it as mechanism-only context and rejects it as a row0 label formula.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

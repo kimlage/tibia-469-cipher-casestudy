@@ -38,6 +38,11 @@ freezes the current public state: accepted mechanical fabrication layers,
 weak clues, and rejected origin formulas. It is a plateau report, not a
 semantic reopening.
 
+The 2026-06-19 [Eye/Blink Arity Model](14-eye-blink-arity-model.md) integrates
+the post-review eye/sprite hypothesis as a mechanism-only clue. The arity
+match is useful context, but K5 and `5x2` tests reject it as the row0
+pair-cell label formula.
+
 ## Ranked: what would unlock progress
 
 1. **A single book-crib** — the actual plaintext of *one* of the 70 books, tied to its digit string. This is the highest-value item by far: it would either (a) supply the symbol→meaning key directly, or (b) confirm the non-linguistic verdict definitively. The project's own frontier flags this gap: `PRIMARY_SOURCE_LONG_GLOSS = OPEN_BUT_EMPTY`.

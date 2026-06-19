@@ -1,0 +1,55 @@
+# Eye/sprite source registry for mechanism-only follow-up.
+#
+# This file intentionally stores no sprite-derived counts as facts until a
+# frame/orientation/image is captured and reviewed. The review hypothesis is
+# useful because of lore arity, not because an unverified sprite count proves a
+# decoder.
+
+schema: eye_count_source_registry.v1
+created_at: 2026-06-19
+translation_delta: NONE
+policy:
+  - Count visible eyes only from a named frame, orientation, and source image.
+  - Separate visible sprite count from lore/anatomy claims.
+  - Treat sprite changes as source cues or controls, not semantic proof.
+  - Do not promote plaintext, glossaries, or number-to-word pairs.
+
+sources:
+  bonelord_current:
+    source: TibiaWiki Bonelord
+    source_class: creature_sprite
+    pre_post_2010_rename: post_2010
+    visible_eye_count: TBD_manual
+    confidence: unverified
+    notes: Current sprite should be captured before any count is used.
+  bonelord_nostalgia:
+    source: TibiaWiki Bonelord (Nostalgia)
+    source_class: creature_sprite
+    pre_post_2010_rename: old_beholder_preserved_as_event_variant
+    visible_eye_count: TBD_manual
+    confidence: unverified
+    notes: Use as old-Beholder visual control, not proof of a 469 rule.
+  elder_bonelord:
+    source: TibiaWiki Elder Bonelord
+    source_class: creature_sprite
+    pre_post_2010_rename: post_2010
+    visible_eye_count: TBD_manual
+    confidence: unverified
+  gazer:
+    source: TibiaWiki Gazer
+    source_class: creature_sprite
+    pre_post_2010_rename: post_2010
+    visible_eye_count: TBD_manual
+    confidence: unverified
+  evil_eye:
+    source: TibiaWiki The Evil Eye
+    source_class: creature_or_npc_source
+    pre_post_2010_rename: mixed_or_unknown
+    visible_eye_count: TBD_manual
+    confidence: unverified
+  eye_of_the_seven:
+    source: TibiaWiki Eye of the Seven
+    source_class: creature_or_lore_source
+    pre_post_2010_rename: mixed_or_unknown
+    visible_eye_count: TBD_manual
+    confidence: unverified

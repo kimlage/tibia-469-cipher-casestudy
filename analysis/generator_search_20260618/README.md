@@ -113,6 +113,8 @@ front uses the same holdouts, scoring schema, and controls.
 | `priority_anchored_quotient_residual_fill_report.md` / `priority_anchored_quotient_residual_fill_results.json` | Quotient-correct ablation: preserve E-priority anchors and shuffle/fill only residual quotient labels. |
 | `lore_zero_phase_mask_report.md` / `lore_zero_phase_mask_results.json` | Tests whether lore numbers such as 3478/Honeminas/Magic Web act as cyclic leading-zero omission masks. |
 | `zero_homophone_transition_origin_probe_report.md` / `zero_homophone_transition_origin_probe_results.json` | Joint probe testing whether zero omission, orientation, and prev/next code context reconstruct the pair-table homophone partition. |
+| `../eye_model_20260619/k5_eye_pair_model_report.md` / `../eye_model_20260619/k5_eye_pair_model_results.json` | Post-review K5 eye-pair arity test: `5 eyes -> C(5,2)=10`; rejected as row0 label formula. |
+| `../eye_model_20260619/eye_state_5x2_model_report.md` / `../eye_model_20260619/eye_state_5x2_model_results.json` | Alternative `5 eyes x 2 states` arity control; rejected as row0 label formula. |
 | `module_template_report.md` / `module_mdl_comparison.json` | Module grammar/MDL comparison. |
 | `module_overlap_grammar_report.md` / `module_overlap_grammar_results.json` | Overlap-tape/slice grammar search for the 62 literal modules, with digit-shuffle controls. |
 | `module_tape_origin_report.md` / `module_tape_origin_results.json` | Tests whether overlap-tape components occur in books and absorb residual literal gaps in recipes. |

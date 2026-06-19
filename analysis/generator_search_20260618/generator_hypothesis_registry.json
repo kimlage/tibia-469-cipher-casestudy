@@ -101,6 +101,22 @@
       "tests": [
         "negative_control_suite"
       ]
+    },
+    {
+      "hypothesis_id": "eye_count_blink_arity",
+      "operational_hypothesis": "Bonelord eye/blink lore may explain digit arity or pair geometry: 5 eyes -> C(5,2)=10 digit tokens -> 55 unordered row0 cells",
+      "promotion_policy": "mechanical_only_no_plaintext",
+      "source_clue": "blinking code with each eye / enough eyes to blink 469 / subjective viewer",
+      "source_url": "https://tibia.fandom.com/wiki/A_Wrinkled_Bonelord/Transcripts",
+      "targets": [
+        "B",
+        "C",
+        "F"
+      ],
+      "tests": [
+        "k5_eye_pair_model_search",
+        "eye_state_5x2_model_search"
+      ]
     }
   ],
   "schema": "generator_hypothesis_registry.v1"

@@ -76,6 +76,7 @@ the origin formula.
 | Orientation/render | ordered `ab` vs `ba` has strong context signal, but does not generalize as a grid formula |
 | Chayenne | compatible with 469 module/copy layer, but not an attested plaintext or training source |
 | ML zero signal | confirms local render predictability; does not discover a matrix formula |
+| Eye/blink arity | `5 eyes -> C(5,2)=10 -> 55 cells` matches the row0 scale, but K5/5x2 tests reject it as the pair-cell formula |
 
 ## Rejected As Origin Formula
 
@@ -90,11 +91,16 @@ The following remain documented but not promoted:
 - ML pair-cell formula: it does not beat the simple/mechanical baselines.
 - High-block blocker drawing/stroke and render-origin E-priority probes:
   both explain local patterns descriptively but fail controls.
+- Eye/blink K5 and `5x2` arity models as row0 label generators: both are
+  useful lore bridges but cost more than lookup and are ordinary under
+  controls.
 
 Primary sources:
 [matrix_generator_exhaustive_report.md](../../analysis/generator_search_20260618/matrix_generator_exhaustive_report.md),
 [generator_model_final_report.md](../../analysis/generator_search_20260618/generator_model_final_report.md),
-[accepted_rejected_hypotheses.json](../../analysis/generator_search_20260618/accepted_rejected_hypotheses.json).
+[accepted_rejected_hypotheses.json](../../analysis/generator_search_20260618/accepted_rejected_hypotheses.json),
+[k5_eye_pair_model_report.md](../../analysis/eye_model_20260619/k5_eye_pair_model_report.md),
+[eye_state_5x2_model_report.md](../../analysis/eye_model_20260619/eye_state_5x2_model_report.md).
 
 ## What Counts As Future Progress
 
