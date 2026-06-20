@@ -346,6 +346,10 @@ Coverage of the remaining report recommendations and follow-on refinements:
   after the midpoint context, copy-length `alpha=1` improves the bound from
   `8574.407` to `8572.267` bits. Literal length, literal payload, and item-type
   parameters remain unchanged.
+- post-midpoint alpha1 local frontier is now covered by
+  [`87_post_midpoint_alpha1_local_frontier.py`](scripts/87_post_midpoint_alpha1_local_frontier.py);
+  after the alpha change, the best one-edit local repair is still `+0.971`
+  bits worse, so the immediate literal/copy recipe frontier remains closed.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

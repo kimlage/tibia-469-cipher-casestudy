@@ -425,5 +425,9 @@ Generated audits in this directory should be treated as the current state:
   midpoint context and local-frontier closure. Copy-length `alpha=1` improves
   the bound from `8574.407` to `8572.267` bits; literal length, literal
   payload, and item-type parameters remain unchanged.
+- `87_post_midpoint_alpha1_local_frontier`: retests the immediate one-edit
+  literal/copy frontier after the alpha change. The same literal-to-copy
+  `477090` in book `17` is still worse by `+0.971` bits, so no recipe edit is
+  promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

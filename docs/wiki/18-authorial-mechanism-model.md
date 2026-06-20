@@ -573,6 +573,11 @@ beats the previous `alpha=2`, lowering the active bound from `8574.407` to
 `8572.267` bits. Literal-run Rice `k=3`, literal-payload order `2` /
 `alpha=1`, and item-type order `3` / `alpha=2` remain fixed.
 
+The post-midpoint alpha1 local frontier then retests one-step recipe edits
+again under the promoted `alpha=1` cost. It still closes: the best
+literal-to-copy repair, again `477090` in book `17`, is `+0.971` bits worse
+than the active formula.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -672,6 +677,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CA | `controlled_post_adaptive_copy_length_midpoint_context_improvement` |
 | H-GEN3CB | `post_midpoint_local_frontier_closed` |
 | H-GEN3CC | `controlled_post_midpoint_copy_length_alpha_improvement` |
+| H-GEN3CD | `post_midpoint_alpha1_local_frontier_closed` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -766,6 +772,7 @@ book generation, not row0 pair-cell placement.
 - [Post-adaptive copy-length context search](../../analysis/authorial_mechanism_20260620/reports/test_results/84_post_adaptive_copy_length_context_search.md)
 - [Post-midpoint local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/85_post_midpoint_local_frontier.md)
 - [Post-midpoint parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/86_post_midpoint_parameter_resweep.md)
+- [Post-midpoint alpha1 local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/87_post_midpoint_alpha1_local_frontier.md)
 
 ## Boundary
 
@@ -789,6 +796,7 @@ immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
 resweeps, plus post-repair2 copy-order and post-adaptive local-frontier retests,
 plus post-adaptive parameter, pair-frontier, address-model, and copy-order
-resweeps, and the post-midpoint local frontier do not improve the current
-frontier. Continue testing matrix origin, topology holdouts, and official
-source watchlists under the same Outcome Ledger.
+resweeps, the post-midpoint local frontier, and the post-midpoint alpha1 local
+frontier do not improve the current frontier. Continue testing matrix origin,
+topology holdouts, and official source watchlists under the same Outcome
+Ledger.

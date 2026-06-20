@@ -109,6 +109,7 @@ does not promote plaintext.
 | `H-GEN3CA` | `controlled_post_adaptive_copy_length_midpoint_context_improvement` | `True` |
 | `H-GEN3CB` | `post_midpoint_local_frontier_closed` | `True` |
 | `H-GEN3CC` | `controlled_post_midpoint_copy_length_alpha_improvement` | `True` |
+| `H-GEN3CD` | `post_midpoint_alpha1_local_frontier_closed` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |
