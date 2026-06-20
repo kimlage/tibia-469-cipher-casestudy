@@ -108,7 +108,8 @@ Encoding the fixed literal/copy item-type stream with a declared adaptive
 two-symbol ledger then lowers the bound to `8996.2` bits, and conditioning the
 same item-type stream on the previous item lowers it again to `8977.6` bits.
 Using declared book starts as item-type context lowers it again to `8972.2`
-bits. No plaintext, pair-table origin,
+bits, and a charged deterministic literal-to-copy item rule lowers it to
+`8966.7` bits. No plaintext, pair-table origin,
 physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).

@@ -88,6 +88,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ item-type ledger formula | fixed one-bit literal/copy tags are replaced by a declared adaptive two-symbol item-type ledger; total bound drops to `8996.2` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ Markov item-type ledger formula | the literal/copy tag stream is conditioned on the previous item type; total bound drops to `8977.6` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ book-start item-type ledger formula | declared book starts are used as `BOS` context in the item-type ledger; total bound drops to `8972.2` bits with 70/70 roundtrip | strongest copy/reference upper bound |
+| Sequential LZ literal-force item-type ledger formula | a charged deterministic rule makes literal items force the next in-book item to copy; total bound drops to `8966.7` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -131,6 +132,7 @@ Primary sources:
 [item_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/40_item_type_ledger_compile.md),
 [markov_item_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/41_markov_item_type_ledger_compile.md),
 [book_start_item_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/42_book_start_item_type_ledger_compile.md),
+[literal_forces_copy_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/43_literal_forces_copy_type_ledger_compile.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

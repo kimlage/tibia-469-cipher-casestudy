@@ -239,5 +239,10 @@ Generated audits in this directory should be treated as the current state:
   boundaries as `BOS` context in that item-type ledger. The same fixed recipe
   roundtrips 70/70 books and improves the current bound from `8977.6` to
   `8972.2` bits; `alpha=1` costs `267.2` item-type bits.
+- `43_literal_forces_copy_type_ledger_compile`: charges an explicit one-bit
+  deterministic rule that a literal item is followed by copy when the declared
+  book length is not complete. The same fixed recipe roundtrips 70/70 books and
+  improves the current bound from `8972.2` to `8966.7` bits; `alpha=2` costs
+  `261.7` item-type bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -217,6 +217,11 @@ hypotheses:
     status: controlled_book_start_item_type_ledger_improvement
     target: "literal/copy item-type stream conditioned on declared book starts and previous item type"
     promotion_rule: "must beat the global Markov item-type ledger using only declared book boundaries while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AL:
+    name: "literal-forces-copy item-type ledger compile"
+    status: controlled_literal_forces_copy_type_ledger_improvement
+    target: "deterministic literal-to-copy transition rule inside the declared book-start item-type ledger"
+    promotion_rule: "must beat the book-start item-type ledger after charging the deterministic rule and preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
