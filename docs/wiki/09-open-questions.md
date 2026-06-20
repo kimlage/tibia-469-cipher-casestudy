@@ -158,7 +158,9 @@ and best-order no-mode is only a `-3.539` bit optimistic lower bound. The
 next productive refinement is adaptive bounded copy-length coding: `alpha=2`
 lowers the mechanical bound to `8575.986` bits with no recipe or semantic
 change. Retesting one-edit local repairs under that scorer closes the immediate
-frontier again: the best candidate is `+1.084` bits worse.
+frontier again: the best candidate is `+1.084` bits worse. A post-adaptive
+parameter resweep retains the declared settings, including copy-length
+`alpha=2`.
 
 ## Ranked: what would unlock progress
 

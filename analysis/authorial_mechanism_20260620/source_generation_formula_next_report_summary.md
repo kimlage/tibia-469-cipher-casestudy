@@ -309,6 +309,11 @@ Still open from the report:
   the best one-edit repair is copy-to-literal `45765` in book `34`, but it is
   `+1.084` bits worse, so the immediate local recipe frontier is closed under
   the active adaptive scorer.
+- post-adaptive parameter resweep is now covered by
+  [`80_post_adaptive_parameter_resweep.py`](scripts/80_post_adaptive_parameter_resweep.py);
+  the active declared parameters remain best: copy-length `alpha=2`, literal
+  Rice `k=3`, payload order `2` / `alpha=1`, and item-type order `3` /
+  `alpha=2`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

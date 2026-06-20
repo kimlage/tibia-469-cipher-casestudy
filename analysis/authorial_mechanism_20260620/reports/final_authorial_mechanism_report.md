@@ -397,5 +397,9 @@ Generated audits in this directory should be treated as the current state:
   under the adaptive copy-length scorer. The best candidate, copy-to-literal
   `45765` in book `34`, is `+1.084` bits worse, so no recipe change is
   promoted.
+- `80_post_adaptive_parameter_resweep`: retests declared parameters after the
+  adaptive copy-length improvement. Current settings remain best: copy-length
+  `alpha=2`, literal Rice `k=3`, payload order `2` / `alpha=1`, and item-type
+  order `3` / `alpha=2`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
