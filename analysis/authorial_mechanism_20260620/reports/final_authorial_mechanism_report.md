@@ -231,5 +231,9 @@ Generated audits in this directory should be treated as the current state:
   The same fixed recipe roundtrips 70/70 books and improves the current bound
   from `9070.1` to `8996.2` bits; `alpha=2` costs `291.2` item-type bits
   versus `365.0` fixed type bits.
+- `41_markov_item_type_ledger_compile`: retells the same literal/copy type
+  stream with a declared previous-type Markov ledger. The same fixed recipe
+  roundtrips 70/70 books and improves the current bound from `8996.2` to
+  `8977.6` bits; `alpha=1` costs `272.5` item-type bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

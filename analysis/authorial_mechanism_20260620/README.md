@@ -118,6 +118,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   ledgers after the digit-address literal-to-copy repair.
 - `scripts/40_item_type_ledger_compile.py` - replaces fixed one-bit
   literal/copy item tags with a decodable adaptive item-type ledger.
+- `scripts/41_markov_item_type_ledger_compile.py` - replaces the adaptive iid
+  item-type ledger with a decodable previous-type Markov ledger.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

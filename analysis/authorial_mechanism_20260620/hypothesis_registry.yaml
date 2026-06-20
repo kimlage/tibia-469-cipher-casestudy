@@ -207,6 +207,11 @@ hypotheses:
     status: controlled_item_type_ledger_improvement
     target: "literal/copy item-type stream for the current repaired sequential LZ formula"
     promotion_rule: "must beat one fixed type bit per item with a decodable declared type ledger while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AJ:
+    name: "Markov item-type ledger compile"
+    status: controlled_markov_item_type_ledger_improvement
+    target: "literal/copy item-type stream conditioned on previous item type"
+    promotion_rule: "must beat the adaptive iid item-type ledger with a decodable declared Markov ledger while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

@@ -86,6 +86,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post digit-address repair payload alpha sweep | adaptive literal-payload `alpha=14` remains best after the latest repair; nearest alternate `alpha=13` is slightly worse | retained parameter |
 | Post digit-address repair address models | absolute `source_digit_pos` remains best decodable at `9070.1`; literal-seed no-mode reaches `9005.5` but sparse decodable seed-run costs `9080.8` | rejected refinement / optimistic clue |
 | Sequential LZ item-type ledger formula | fixed one-bit literal/copy tags are replaced by a declared adaptive two-symbol item-type ledger; total bound drops to `8996.2` bits with 70/70 roundtrip | strongest copy/reference upper bound |
+| Sequential LZ Markov item-type ledger formula | the literal/copy tag stream is conditioned on the previous item type; total bound drops to `8977.6` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -127,6 +128,7 @@ Primary sources:
 [post_digit_repair_payload_alpha_sweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/38_post_digit_repair_payload_alpha_sweep.md),
 [post_digit_repair_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/39_post_digit_repair_address_model_search.md),
 [item_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/40_item_type_ledger_compile.md),
+[markov_item_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/41_markov_item_type_ledger_compile.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

@@ -128,6 +128,10 @@ Still open from the report:
   replacing fixed literal/copy item tags with a declared adaptive two-symbol
   ledger improves the current bound to `8996.2` bits while preserving 70/70
   roundtrip.
+- Markov item-type ledger coding is now covered by
+  [`41_markov_item_type_ledger_compile.py`](scripts/41_markov_item_type_ledger_compile.py);
+  conditioning each item tag on the previous item tag improves the current
+  bound to `8977.6` bits while preserving 70/70 roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

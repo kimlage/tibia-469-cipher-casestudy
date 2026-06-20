@@ -66,6 +66,7 @@ def main() -> None:
         "H-GEN3AG",
         "H-GEN3AH",
         "H-GEN3AI",
+        "H-GEN3AJ",
         "H-GEN4",
         "H-GEN4A",
         "H-GEN5",
