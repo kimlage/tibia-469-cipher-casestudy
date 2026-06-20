@@ -524,7 +524,7 @@ Coverage of the remaining report recommendations and follow-on refinements:
   with both components changed is `+10.809` bits worse.
 - prequential generation validation is now covered by
   [`118_prequential_generation_model_audit.py`](scripts/118_prequential_generation_model_audit.py);
-  the active `8561.792` bit formula is frozen as `compression_bound`, not as a
+  the then-active `8561.792` bit formula was frozen as `compression_bound`, not as a
   final authorial method. Across train cutoffs `10/20/35/50/60`, prefix-online
   and prefix-frozen learned-component scoring both beat uniform on every
   holdout, but the result is classified
@@ -547,13 +547,18 @@ Coverage of the remaining report recommendations and follow-on refinements:
   [`121_prequential_component_ablation_audit.py`](scripts/121_prequential_component_ablation_audit.py);
   copy-length midpoint survives, but literal payload generalizes better with
   previous-one-digit context and item type generalizes better with split-only
-  context. The active `8561.792` bit code remains the compression bound, while
+  context. The then-active `8561.792` bit code remained the compression bound at that stage, while
   the generation explanation is simplified.
 - simplified generation-profile compilation is now covered by
   [`122_simplified_generation_profile_compile.py`](scripts/122_simplified_generation_profile_compile.py);
   the holdout-preferred profile roundtrips `70/70` but costs `8613.581` bits,
   `+51.789` versus the active bound. It is retained as
   `generation_explanation_profile`, not as a stronger compressor.
+- split-only item-type formula compilation is now covered by
+  [`123_item_type_split_only_formula_compile.py`](scripts/123_item_type_split_only_formula_compile.py);
+  the same recipe and forced rules roundtrip `70/70` at `8558.667` bits,
+  `3.125` bits below the prior `8561.792` bound. This is promoted as the new
+  `compression_bound`, still with `translation_delta: NONE`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

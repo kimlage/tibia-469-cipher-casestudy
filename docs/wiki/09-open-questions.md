@@ -192,7 +192,7 @@ The item-type context search then promotes a decodable searched split at book
 `6`, lowering the active mechanical bound to `8569.652` bits; the cheaper
 current-item-length row is retained only as non-decodable lower-bound evidence.
 A post-itemctx parameter resweep then promotes item-type extra-context order
-`1` with `alpha=2`, lowering the active mechanical bound again to `8561.792`
+`1` with `alpha=2`, lowering the then-active mechanical bound again to `8561.792`
 bits while leaving literal-run length, literal payload, and midpoint
 copy-length parameters unchanged. The immediate local frontier after that
 promotion is closed: the best one-step edit is `+0.957` bits worse. The
@@ -269,6 +269,10 @@ details.
 The simplified generation profile compile keeps the same recipe and validates
 `70/70` roundtrip, but costs `8613.581` bits (`+51.789` versus the active
 bound), so it is an explanatory profile rather than a stronger compressor.
+The item-type split-only compile then promotes the one simplified component
+that also improves full-corpus coding: the same recipe and forced rules
+roundtrip `70/70` at `8558.667` bits, lowering the active mechanical bound by
+`3.125` bits without changing row0 or semantics.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

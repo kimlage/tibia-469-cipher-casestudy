@@ -16,8 +16,8 @@ report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
 bound is the adaptive bounded copy-length sequential LZ formula with a fixed
 book-midpoint copy-length context, `alpha=1`, declared item-type split at book
-`6`, and item-type extra-context order `1` / `alpha=2`, at roughly `8561.8`
-bits. Treat this as `compression_bound`, not as a final authorial method.
+`6`, and split-only item-type coding at roughly `8558.7` bits. Treat this as
+`compression_bound`, not as a final authorial method.
 
 ## Gates
 
@@ -316,6 +316,9 @@ bits. Treat this as `compression_bound`, not as a final authorial method.
 - `scripts/122_simplified_generation_profile_compile.py` - compiles the
   simplified holdout-preferred generation profile against the full corpus and
   confirms it is explanatory, not a lower compression bound.
+- `scripts/123_item_type_split_only_formula_compile.py` - promotes split-only
+  item-type coding as a decodable formula improvement after conservative
+  full-corpus rescoring.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

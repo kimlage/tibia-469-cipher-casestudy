@@ -1,0 +1,46 @@
+{
+  "active_compression_bound_bits": 8561.791947641772,
+  "active_context_counts": {
+    "[\"after_split\", [\"BOS\"]]": 64,
+    "[\"after_split\", [\"copy\"]]": 182,
+    "[\"before_split\", [\"BOS\"]]": 6,
+    "[\"before_split\", [\"copy\"]]": 35
+  },
+  "active_item_type_bits": 223.4118788124663,
+  "boundary": {
+    "authorial_intent_claim": false,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "candidate_gain_bits": 3.1251413583377143,
+  "candidate_total_bits": 8558.666806283434,
+  "classification": "controlled_item_type_split_only_formula_improvement",
+  "conservative_candidate_gain_bits": 2.1251413583377143,
+  "conservative_candidate_total_bits": 8559.666806283434,
+  "conservative_extra_decl_bits": 1,
+  "item_stats": {
+    "coded_items": 287,
+    "forced_literal_to_copy": 73,
+    "forced_remaining_short_to_literal": 8,
+    "forced_rule_violations": []
+  },
+  "item_type_component_gain_bits": 3.125141358336805,
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json",
+  "promoted_even_with_one_extra_declaration_bit": true,
+  "promoted_under_same_declaration_charge": true,
+  "promotion_rule": "Promote only if split-only item-type coding improves the active validated total while preserving the same recipe, same fixed item-type declaration charge, forced-rule validity, 70/70 roundtrip, and translation_delta NONE.",
+  "schema": "item_type_split_only_formula_compile.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469.json",
+  "split_only_context_counts": {
+    "[\"after_split\", []]": 246,
+    "[\"before_split\", []]": 41
+  },
+  "split_only_item_type_bits": 220.2867374541295,
+  "test": "123_item_type_split_only_formula_compile",
+  "translation_delta": "NONE",
+  "validation": {
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "errors": []
+  }
+}

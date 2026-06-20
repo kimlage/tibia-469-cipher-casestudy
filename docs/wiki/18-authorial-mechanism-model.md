@@ -94,8 +94,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_minaddr_repair2_formula_469` | `8572.3` | `2.1` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_minaddr_repair2_formula_469` | `8569.7` | `2.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469` | `8561.8` | `7.9` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469` | `8558.7` | `3.1` |
 
-The `8561.8` row is the current `compression_bound`, not a final authorial
+The `8558.7` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -799,7 +800,7 @@ book-midpoint `alpha=1`, `+1.749` bits worse; the best decodable pair with both
 components changed is `+10.809` bits worse.
 
 The prequential generation model audit then changes the validation unit. It
-does not search another formula. It freezes the active `8561.792` bit model as
+does not search another formula. It freezes the then-active `8561.792` bit model as
 `compression_bound` and tests learned copy-length, literal-payload, and
 item-type components on train/holdout cuts. Prefix-online and prefix-frozen
 scoring beat uniform at all cutoffs `10/20/35/50/60`; for example, with `35`
@@ -832,6 +833,13 @@ components on the full corpus. The profile keeps the same recipe and validates
 `70/70` roundtrip, but costs `8613.581` bits, `+51.789` versus the active
 compression bound. It is therefore useful as `generation_explanation_profile`,
 not as a promoted lower MDL code.
+
+The item-type split-only formula compile then tests the one component from that
+profile that also improves the full-corpus code. Keeping the recipe, forced
+rules, and item-type declaration charge fixed, split-only item-type coding
+validates `70/70` and lowers the active bound from `8561.792` to `8558.667`
+bits. This is a mechanical book-generation improvement only; it does not
+explain row0 or add semantics.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1101,6 +1109,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/120_prequential_order_control_audit.md)
 - [Prequential component ablation audit](../../analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.md)
 - [Simplified generation profile compile](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md)
+- [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
 
 ## Boundary
 
@@ -1117,10 +1126,9 @@ the previous-emitted-digit literal payload context model with declared order
 contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
-copy-length prior and final `alpha=1`, as the current strongest copy/reference
-fabrication bound, plus a declared item-type prior split at book `6` and
-item-type extra-context order `1` / `alpha=2`, as the current strongest
-copy/reference fabrication bound at roughly `8561.8` bits.
+copy-length prior and final `alpha=1`, plus a declared item-type prior split at
+book `6` with split-only item-type coding, as the current strongest
+copy/reference fabrication bound at roughly `8558.7` bits.
 Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address

@@ -568,7 +568,7 @@ Generated audits in this directory should be treated as the current state:
   pairs. The best overall pair is nondecodable because it uses the literal-seed
   no-mode address lower bound; the active pair remains the best decodable row,
   and the best changed decodable pair is `+1.749` bits worse.
-- `118_prequential_generation_model_audit`: freezes the active `8561.792` bit
+- `118_prequential_generation_model_audit`: freezes the then-active `8561.792` bit
   formula as `compression_bound` and tests learned-component generalization on
   prefix/holdout cuts. Prefix-online and prefix-frozen scoring beat uniform on
   all five cutoffs, but the result remains
@@ -594,5 +594,9 @@ Generated audits in this directory should be treated as the current state:
   simplified profile on the full corpus. It roundtrips `70/70` at `8613.581`
   bits, `+51.789` versus the active compression bound, so it is retained as
   `generation_explanation_profile` rather than promoted as a lower MDL code.
+- `123_item_type_split_only_formula_compile`: promotes the item-type
+  `split6_only` result as a decodable formula improvement under the same
+  declaration charge. The same recipe and forced rules roundtrip `70/70` at
+  `8558.667` bits, `3.125` bits below the previous `8561.792` bound.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

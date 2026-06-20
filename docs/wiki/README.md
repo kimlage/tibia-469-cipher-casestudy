@@ -358,7 +358,7 @@ pairs and retains the active decodable copy-cost ledger; the only better row is
 nondecodable. The address/item-type pair search closes `170240` pairs and also
 retains the active decodable pair. The address/payload context-alpha pair search
 closes `49280` pairs and also retains the active decodable pair. The
-prequential audit then freezes `8561.792` as `compression_bound`; learned
+prequential audit then froze the prior `8561.792` as `compression_bound`; learned
 components beat uniform on all prefix/holdout cuts, but this remains partial
 predictive validation rather than row0 origin or final authorial method. No
 semantic claim is promoted.
@@ -371,6 +371,9 @@ split-only, leaving the compression bound unchanged.
 The simplified generation profile compile then measures that profile at
 `8613.581` bits with `70/70` roundtrip, useful as explanation but not as a
 lower MDL code.
+The item-type split-only compile then promotes the split-only item-type
+component itself, lowering the active bound to `8558.667` bits with `70/70`
+roundtrip and no semantic claim.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
