@@ -140,6 +140,11 @@ Still open from the report:
   [`43_literal_forces_copy_type_ledger_compile.py`](scripts/43_literal_forces_copy_type_ledger_compile.py);
   after charging a deterministic rule bit, literal-to-copy forcing improves the
   current bound to `8966.7` bits while preserving 70/70 roundtrip.
+- remaining-short-forces-literal item-type coding is now covered by
+  [`44_remaining_short_forces_literal_type_ledger_compile.py`](scripts/44_remaining_short_forces_literal_type_ledger_compile.py);
+  after charging a second deterministic rule bit, suffixes shorter than
+  `min_len=5` force literal item type and improve the current bound to
+  `8953.9` bits while preserving 70/70 roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

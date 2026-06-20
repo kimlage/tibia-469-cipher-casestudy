@@ -222,6 +222,11 @@ hypotheses:
     status: controlled_literal_forces_copy_type_ledger_improvement
     target: "deterministic literal-to-copy transition rule inside the declared book-start item-type ledger"
     promotion_rule: "must beat the book-start item-type ledger after charging the deterministic rule and preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AM:
+    name: "remaining-short-forces-literal item-type ledger compile"
+    status: controlled_remaining_short_forces_literal_type_ledger_improvement
+    target: "deterministic remaining-book-suffix shorter than min_len forces literal rule inside the item-type ledger"
+    promotion_rule: "must beat the literal-forces-copy item-type ledger after charging the deterministic rule and preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

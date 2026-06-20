@@ -78,6 +78,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_markov_type_formula_469` | `8977.6` | `18.6` |
 | `sequential_lz_digit_address_book_start_type_formula_469` | `8972.2` | `5.3` |
 | `sequential_lz_digit_address_literal_force_type_formula_469` | `8966.7` | `5.5` |
+| `sequential_lz_digit_address_remaining_force_type_formula_469` | `8953.9` | `12.8` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -311,6 +312,13 @@ the fixed recipe. After charging the rule and `alpha=2`, item-type cost drops
 from `267.2` to `261.7` bits, lowering the total bound from `8972.2` to
 `8966.7` bits.
 
+The remaining-short item-type ledger adds one more charged deterministic rule:
+if fewer than `min_len=5` digits remain in the declared book, a copy item cannot
+legally fit, so the type is forced to literal. This rule applies `8` times with
+`0` violations. After charging both rules and `alpha=2`, item-type cost drops
+from `261.7` to `248.9` bits, lowering the total bound from `8966.7` to
+`8953.9` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -367,6 +375,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AJ | `controlled_markov_item_type_ledger_improvement` |
 | H-GEN3AK | `controlled_book_start_item_type_ledger_improvement` |
 | H-GEN3AL | `controlled_literal_forces_copy_type_ledger_improvement` |
+| H-GEN3AM | `controlled_remaining_short_forces_literal_type_ledger_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -418,6 +427,7 @@ book generation, not row0 pair-cell placement.
 - [Markov item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/41_markov_item_type_ledger_compile.md)
 - [Book-start item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/42_book_start_item_type_ledger_compile.md)
 - [Literal-forces-copy item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/43_literal_forces_copy_type_ledger_compile.md)
+- [Remaining-short-forces-literal item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/44_remaining_short_forces_literal_type_ledger_compile.md)
 
 ## Boundary
 
@@ -426,6 +436,6 @@ should treat the Rice copy-length plus Rice literal-length sequential LZ formula
 with adaptive literal-payload coding, the one-step literal-to-copy repair, the
 signed-Rice book-length ledger, digit-only copy addresses, and the digit-address
 literal repair, plus the adaptive/Markov/book-start/literal-force item-type
-ledgers, as the current strongest copy/reference fabrication bound and continue
-testing matrix origin, topology holdouts, and official source watchlists under
-the same Outcome Ledger.
+ledgers and remaining-short forced-literal rule, as the current strongest
+copy/reference fabrication bound and continue testing matrix origin, topology
+holdouts, and official source watchlists under the same Outcome Ledger.

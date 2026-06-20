@@ -275,7 +275,8 @@ parameters. Encoding the fixed literal/copy item-type stream with a declared
 adaptive two-symbol ledger lowers the bound again to roughly `8996.2` bits,
 and Markov/book-start item-type ledgers lower it further to roughly `8972.2`
 bits. A charged deterministic literal-to-copy item rule lowers it again to
-roughly `8966.7` bits.
+roughly `8966.7` bits, and a second rule for too-short book suffixes lowers
+it to roughly `8953.9` bits.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

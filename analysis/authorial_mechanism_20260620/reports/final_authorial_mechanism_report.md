@@ -244,5 +244,10 @@ Generated audits in this directory should be treated as the current state:
   book length is not complete. The same fixed recipe roundtrips 70/70 books and
   improves the current bound from `8972.2` to `8966.7` bits; `alpha=2` costs
   `261.7` item-type bits.
+- `44_remaining_short_forces_literal_type_ledger_compile`: adds a second
+  charged deterministic rule: if fewer than `min_len=5` digits remain in the
+  declared book, a copy item cannot fit and the type is forced to literal. The
+  same fixed recipe roundtrips 70/70 books and improves the current bound from
+  `8966.7` to `8953.9` bits; `alpha=2` costs `248.9` item-type bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
