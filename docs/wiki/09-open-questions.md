@@ -152,7 +152,9 @@ and item-type order `3` / `alpha=2`. A compatible-pair frontier also closes:
 the best of `17663` valid pairs is still `+0.692` bits worse. A post-repair2
 address-model retest keeps the min_len-bounded absolute address ledger as the
 best decodable option; literal-seed no-mode is `-69.4` bits better only as a
-non-decodable optimistic lower bound.
+non-decodable optimistic lower bound. A copy-order retest also keeps the active
+source-address-then-length order: pure length-first is `+18.295` bits worse,
+and best-order no-mode is only a `-3.539` bit optimistic lower bound.
 
 ## Ranked: what would unlock progress
 

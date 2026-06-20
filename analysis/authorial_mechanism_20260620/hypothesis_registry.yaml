@@ -387,6 +387,11 @@ hypotheses:
     status: post_repair2_address_optimistic_only_not_promoted
     target: "alternate copy-source address ledgers after the second minaddr local repair"
     promotion_rule: "must beat the active min_len-bounded absolute digit source positions under full rescoring while preserving decodability, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3BT:
+    name: "post repair2 copy order search"
+    status: post_repair2_copy_order_optimistic_only_not_promoted
+    target: "within-copy source-address/length coding order after the second minaddr local repair"
+    promotion_rule: "must beat active source-address-then-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

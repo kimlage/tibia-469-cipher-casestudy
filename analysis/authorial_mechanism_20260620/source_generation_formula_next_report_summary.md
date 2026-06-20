@@ -294,6 +294,11 @@ Still open from the report:
   the active min_len-bounded absolute address ledger remains the best decodable
   row at `8609.8` bits. Literal-seed no-mode reaches `8540.4` bits, but it is
   non-decodable without source-mode bits and is not promoted.
+- post-repair2 copy order is now covered by
+  [`77_post_repair2_copy_order_search.py`](scripts/77_post_repair2_copy_order_search.py);
+  pure length-first coding is `+18.295` bits worse, while best-order no-mode is
+  `-3.539` bits optimistic only. Decodable order ledgers do not beat the active
+  source-address-then-length order.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

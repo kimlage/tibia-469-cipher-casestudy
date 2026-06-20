@@ -509,6 +509,12 @@ the best decodable row at `8609.8` bits. Literal-seed no-mode reaches `8540.4`
 bits, but that row is not decodable without source-mode bits, while the sparse
 decodable seed-run version costs `8618.8` bits.
 
+The post-repair2 copy-order search then checks whether copy length should be
+coded before source address. Pure length-first coding is `+18.295` bits worse.
+Picking the cheaper order per copy would be `-3.539` bits cheaper only if the
+mode were free, so it remains an optimistic lower bound. The tested decodable
+mode ledgers do not beat the active source-address-then-length order.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -598,6 +604,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BQ | `post_repair2_parameter_resweep_retains_current` |
 | H-GEN3BR | `post_repair2_pair_frontier_closed` |
 | H-GEN3BS | `post_repair2_address_optimistic_only_not_promoted` |
+| H-GEN3BT | `post_repair2_copy_order_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -682,6 +689,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair2 parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/74_post_repair2_parameter_resweep.md)
 - [Post-repair2 pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/75_post_repair2_pair_frontier.md)
 - [Post-repair2 address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/76_post_repair2_address_model_search.md)
+- [Post-repair2 copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/77_post_repair2_copy_order_search.md)
 
 ## Boundary
 
@@ -701,7 +709,7 @@ copy/reference fabrication bound at roughly `8609.8` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
-resweeps do not improve the current
+resweeps, plus post-repair2 copy-order retests, do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

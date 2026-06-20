@@ -386,5 +386,9 @@ Generated audits in this directory should be treated as the current state:
   address ledgers after the post-repair2 formula. The min_len-bounded absolute
   address ledger remains the best decodable row; literal-seed no-mode is
   `-69.4` bits optimistic but not decodable without source-mode bits.
+- `77_post_repair2_copy_order_search`: retests whether copy length should be
+  coded before source address. Pure length-first is `+18.295` bits worse; the
+  best per-copy order is `-3.539` bits optimistic only because mode bits are
+  undeclared. Decodable order ledgers do not improve the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

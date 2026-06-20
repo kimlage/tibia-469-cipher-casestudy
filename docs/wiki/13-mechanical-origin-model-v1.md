@@ -121,6 +121,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-repair2 parameter resweep | literal Rice `k=3`, payload order `2` / `alpha=1`, and item-type order `3` / `alpha=2` remain best | retained parameter frontier |
 | Post-repair2 pair frontier | `17663` valid compatible local-edit pairs are rescored; the best pair is `+0.692` bits worse | rejected refinement / pair frontier closed |
 | Post-repair2 address model search | min_len-bounded absolute addresses remain best decodable at `8609.8`; literal-seed no-mode reaches `8540.4` but is not decodable without source-mode bits | rejected refinement / optimistic clue |
+| Post-repair2 copy order search | source-address-then-length remains best decodable; pure length-first is `+18.295` bits worse and best-order no-mode is `-3.539` bits optimistic only | rejected refinement / optimistic clue |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -191,6 +192,7 @@ Primary sources:
 [post_repair2_parameter_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/74_post_repair2_parameter_resweep.md),
 [post_repair2_pair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/75_post_repair2_pair_frontier.md),
 [post_repair2_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/76_post_repair2_address_model_search.md),
+[post_repair2_copy_order_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/77_post_repair2_copy_order_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
