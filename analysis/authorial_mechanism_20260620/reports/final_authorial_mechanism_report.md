@@ -404,5 +404,9 @@ Generated audits in this directory should be treated as the current state:
 - `81_post_adaptive_pair_frontier`: retests compatible pairs under the adaptive
   copy-length scorer. `17663` valid pairs are rescored; the best pair,
   copy-to-literal `71288` plus `45765`, is `+2.516` bits worse.
+- `82_post_adaptive_address_model_search`: retests alternate copy-source
+  address ledgers under the adaptive scorer. Min_len-bounded absolute addresses
+  remain best decodable; literal-seed no-mode is `-69.4` bits optimistic but
+  still not decodable without source-mode bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

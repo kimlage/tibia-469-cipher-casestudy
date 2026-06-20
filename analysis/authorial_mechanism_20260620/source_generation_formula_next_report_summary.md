@@ -318,6 +318,11 @@ Still open from the report:
   [`81_post_adaptive_pair_frontier.py`](scripts/81_post_adaptive_pair_frontier.py);
   `17663` valid compatible pairs are fully rescored. The best pair,
   copy-to-literal `71288` plus `45765`, is still `+2.516` bits worse.
+- post-adaptive address models are now covered by
+  [`82_post_adaptive_address_model_search.py`](scripts/82_post_adaptive_address_model_search.py);
+  min_len-bounded absolute addresses remain the best decodable ledger at
+  `8576.0` bits. Literal-seed no-mode reaches `8506.6` bits, but remains
+  non-decodable without source-mode bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -161,7 +161,9 @@ change. Retesting one-edit local repairs under that scorer closes the immediate
 frontier again: the best candidate is `+1.084` bits worse. A post-adaptive
 parameter resweep retains the declared settings, including copy-length
 `alpha=2`. A compatible-pair retest also closes: the best of `17663` valid
-pairs is `+2.516` bits worse.
+pairs is `+2.516` bits worse. A post-adaptive address retest keeps absolute
+minaddr as the best decodable address ledger; literal-seed remains optimistic
+only.
 
 ## Ranked: what would unlock progress
 

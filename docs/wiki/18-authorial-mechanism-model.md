@@ -539,6 +539,12 @@ improve together after the adaptive scorer closes the one-step frontier. It
 scores `17663` valid compatible pairs; the best pair, copy-to-literal `71288`
 plus `45765`, remains `+2.516` bits worse than the active adaptive formula.
 
+The post-adaptive address model search retests relative, delta, per-book, mixed
+same-book, and literal-seed address ledgers after adaptive copy lengths. The
+active min_len-bounded absolute source address ledger remains the best decodable
+row at `8576.0` bits. Literal-seed no-mode reaches `8506.6` bits, but it is
+still not decodable without source-mode bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -633,6 +639,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BV | `post_adaptive_copy_length_local_frontier_closed` |
 | H-GEN3BW | `post_adaptive_parameter_resweep_retains_current` |
 | H-GEN3BX | `post_adaptive_pair_frontier_closed` |
+| H-GEN3BY | `post_adaptive_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -722,6 +729,7 @@ book generation, not row0 pair-cell placement.
 - [Post-adaptive-copy-length local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/79_post_adaptive_copy_length_local_frontier.md)
 - [Post-adaptive parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/80_post_adaptive_parameter_resweep.md)
 - [Post-adaptive pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/81_post_adaptive_pair_frontier.md)
+- [Post-adaptive address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/82_post_adaptive_address_model_search.md)
 
 ## Boundary
 
@@ -743,7 +751,7 @@ literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
 resweeps, plus post-repair2 copy-order and post-adaptive local-frontier retests,
-plus post-adaptive parameter and pair-frontier resweeps, do not improve the current
+plus post-adaptive parameter, pair-frontier, and address-model resweeps, do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

@@ -206,6 +206,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   parameters after adaptive copy-length coding is active.
 - `scripts/81_post_adaptive_pair_frontier.py` - retests compatible pairs of
   local recipe edits after adaptive copy-length coding is active.
+- `scripts/82_post_adaptive_address_model_search.py` - retests alternate
+  copy-source address ledgers after adaptive copy-length coding is active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
