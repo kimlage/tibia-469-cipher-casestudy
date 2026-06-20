@@ -447,6 +447,11 @@ hypotheses:
     status: post_midpoint_alpha1_pair_frontier_closed
     target: "compatible pairs of local literal-to-copy and copy-to-literal edits after midpoint-context alpha=1 copy-length coding"
     promotion_rule: "must beat the active midpoint alpha=1 formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CF:
+    name: "post midpoint alpha1 address model search"
+    status: post_midpoint_alpha1_address_optimistic_only_not_promoted
+    target: "alternate copy-source address ledgers after midpoint-context alpha=1 copy-length coding"
+    promotion_rule: "must beat active min_len-bounded absolute digit source positions under full rescoring while preserving decodability, 70/70 roundtrip, and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

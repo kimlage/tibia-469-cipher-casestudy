@@ -432,5 +432,10 @@ Generated audits in this directory should be treated as the current state:
 - `88_post_midpoint_alpha1_pair_frontier`: retests compatible pairs after the
   midpoint alpha=1 local frontier closes. `17663` valid pairs are fully
   rescored; the best pair is still `+2.501` bits worse.
+- `89_post_midpoint_alpha1_address_model_search`: retests copy-source address
+  ledgers after the midpoint alpha=1 formula becomes active. Literal-seed
+  addressing reaches `8502.9` bits only as an undecodable no-mode lower bound;
+  the best decodable row remains the active min_len-bounded absolute ledger at
+  `8572.267` bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

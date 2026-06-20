@@ -173,6 +173,9 @@ then lowers the active bound to `8572.267` bits by changing the midpoint
 copy-length alpha from `2` to `1`. The immediate local frontier after that
 alpha change closes again; the best one-edit repair is `+0.971` bits worse. A
 compatible-pair retest also closes, with the best pair `+2.501` bits worse.
+The current address-ledger retest also keeps min_len-bounded absolute
+addresses as the best decodable row; literal-seed addressing reaches `8502.9`
+bits only as an undecodable no-mode lower bound.
 
 ## Ranked: what would unlock progress
 

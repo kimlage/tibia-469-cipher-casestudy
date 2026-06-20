@@ -355,6 +355,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `17663` valid compatible pairs are fully rescored, and the best pair is
   still `+2.501` bits worse, so compatible pairs do not improve the active
   formula.
+- the external next-formula report's address-ledger recommendation is now
+  revalidated against the stronger midpoint alpha=1 formula by
+  [`89_post_midpoint_alpha1_address_model_search.py`](scripts/89_post_midpoint_alpha1_address_model_search.py);
+  literal-seed addressing reaches `8502.9` bits only as an undecodable no-mode
+  lower bound, while the best decodable row remains the active min_len-bounded
+  absolute ledger at `8572.267` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
