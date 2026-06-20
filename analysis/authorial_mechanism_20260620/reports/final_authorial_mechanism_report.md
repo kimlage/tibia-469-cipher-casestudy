@@ -458,5 +458,9 @@ Generated audits in this directory should be treated as the current state:
   among the top `60` local single-edit candidates. `33588` valid triples are
   checked; the best triple remains `+3.914` bits worse. This is bounded
   negative evidence, not exhaustive closure of all `189` single candidates.
+- `95_post_midpoint_alpha1_item_type_context_search`: retests item-type
+  contexts. The current-item-length row is cheaper but non-decodable in the
+  active item-order contract. The best decodable row declares split book `6`
+  and lowers the bound from `8572.267` to `8569.652` bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

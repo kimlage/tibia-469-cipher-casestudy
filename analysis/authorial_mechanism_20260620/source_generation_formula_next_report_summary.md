@@ -387,6 +387,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   triples are rescored and the best remains `+3.914` bits worse. This is
   negative evidence inside the bounded top60 scope, not an exhaustive triple
   frontier over all `189` candidates.
+- item-type context search is now covered by
+  [`95_post_midpoint_alpha1_item_type_context_search.py`](scripts/95_post_midpoint_alpha1_item_type_context_search.py);
+  the non-decodable current-item-length context is recorded only as a lower
+  bound, while a declared book split at `6` is decodable and lowers the active
+  bound from `8572.267` to `8569.652` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

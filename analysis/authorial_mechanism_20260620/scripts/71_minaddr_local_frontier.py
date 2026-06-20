@@ -106,6 +106,27 @@ def item_type_context_bits(formula: dict) -> tuple[float, dict]:
     forced_remaining_short_to_literal = 0
     violations = []
 
+    def extra_context_label(book: str, op_index: int, remaining: int, length: int) -> str:
+        family = model.get("extra_context_family", "global")
+        if family in ("global", "active_global", None):
+            return "global"
+        if family == "fixed_book_midpoint":
+            return "first_half" if int(book) < 35 else "second_half"
+        if family == "fixed_book_quartile":
+            return str(min(3, int(book) // 18))
+        if family == "fixed_book_decade":
+            return str(int(book) // 10)
+        if family == "fixed_book_parity":
+            return str(int(book) % 2)
+        if family == "op_index":
+            return str(min(6, int(math.floor(math.log2(max(1, op_index + 1))))))
+        if family == "declared_remaining":
+            return str(min(8, int(math.floor(math.log2(max(1, remaining))))))
+        if family == "searched_single_book_split":
+            split_book = int(model["split_book"])
+            return "before_split" if int(book) < split_book else "after_split"
+        raise ValueError(f"unsupported item-type extra_context_family: {family}")
+
     for book in map(str, formula["policy"]["book_order"]):
         ops = formula["book_recipes"][book]["ops"]
         book_length = sum(int(op["length"]) for op in ops)
@@ -131,12 +152,14 @@ def item_type_context_bits(formula: dict) -> tuple[float, dict]:
                         }
                     )
             else:
-                context = tuple(([BOS_ITEM] * order + history)[-order:])
+                history_context = tuple(([BOS_ITEM] * order + history)[-order:])
+                extra_context = extra_context_label(book, op_index, remaining, int(op["length"]))
+                context = (extra_context, history_context)
                 probability = (counts[context][item_type] + alpha) / (totals[context] + len(ITEM_TYPES) * alpha)
                 bits += -math.log2(probability)
                 counts[context][item_type] += 1.0
                 totals[context] += 1.0
-                context_uses["|".join(context)] += 1
+                context_uses[f"{extra_context}::{'|'.join(history_context)}"] += 1
                 coded_items += 1
             history.append(item_type)
             position += int(op["length"])

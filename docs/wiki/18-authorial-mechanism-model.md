@@ -92,6 +92,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_minaddr_repair2_formula_469` | `8576.0` | `33.8` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_minaddr_repair2_formula_469` | `8574.4` | `1.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_minaddr_repair2_formula_469` | `8572.3` | `2.1` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_minaddr_repair2_formula_469` | `8569.7` | `2.6` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -621,6 +622,14 @@ repair surface. It rescored `33588` valid compatible triples among the top
 bits worse. This is evidence against the most plausible triple combinations,
 not exhaustive closure of all triples over the `189` local candidates.
 
+The post-midpoint alpha1 item-type context search then finds the next
+controlled mechanical improvement. A context based on the current item length
+is cheaper but is not decodable before the item contract is known, so it is
+recorded only as a lower bound. The best decodable row declares a searched
+book split at `6` for the item-type prior, reducing item-type bits from
+`238.887` to `227.272` and lowering the full bound from `8572.267` to
+`8569.652` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -728,6 +737,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CI | `post_midpoint_alpha_by_context_not_promoted` |
 | H-GEN3CJ | `post_midpoint_literal_payload_context_not_promoted` |
 | H-GEN3CK | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` |
+| H-GEN3CL | `controlled_post_midpoint_item_type_context_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -830,6 +840,7 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 context alpha grid](../../analysis/authorial_mechanism_20260620/reports/test_results/92_post_midpoint_alpha1_context_alpha_grid.md)
 - [Post-midpoint alpha1 literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/93_post_midpoint_alpha1_literal_payload_context_search.md)
 - [Post-midpoint alpha1 top60 triple probe](../../analysis/authorial_mechanism_20260620/reports/test_results/94_post_midpoint_alpha1_top60_triple_probe.md)
+- [Post-midpoint alpha1 item-type context search](../../analysis/authorial_mechanism_20260620/reports/test_results/95_post_midpoint_alpha1_item_type_context_search.md)
 
 ## Boundary
 
@@ -847,7 +858,9 @@ contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
 copy-length prior and final `alpha=1`, as the current strongest copy/reference
-fabrication bound at roughly `8572.3` bits. Follow-up
+fabrication bound, plus a declared item-type prior split at book `6`, as the
+current strongest copy/reference fabrication bound at roughly `8569.7` bits.
+Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter

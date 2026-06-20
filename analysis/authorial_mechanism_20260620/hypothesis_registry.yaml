@@ -477,6 +477,11 @@ hypotheses:
     status: bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted
     target: "compatible triples among the top 60 local single-edit candidates after midpoint-context alpha=1 copy-length coding"
     promotion_rule: "candidate only if a bounded top60 compatible triple beats the active midpoint alpha=1 formula under full rescoring; non-promotion is not exhaustive closure outside the bounded top60 scope"
+  H-GEN3CL:
+    name: "post midpoint alpha1 item-type context search"
+    status: controlled_post_midpoint_item_type_context_improvement
+    target: "simple contexts for the adaptive item-type previous-item model"
+    promotion_rule: "must beat active global item-type model after charged context declaration bits while preserving forced rules, 70/70 roundtrip, and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

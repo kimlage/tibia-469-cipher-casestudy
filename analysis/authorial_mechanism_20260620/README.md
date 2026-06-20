@@ -236,6 +236,8 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   retests simple contexts for the adaptive literal-payload model.
 - `scripts/94_post_midpoint_alpha1_top60_triple_probe.py` - probes compatible
   triples among the top 60 local single-edit candidates after pair closure.
+- `scripts/95_post_midpoint_alpha1_item_type_context_search.py` - tests
+  simple contexts for the adaptive item-type model and promotes split book `6`.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

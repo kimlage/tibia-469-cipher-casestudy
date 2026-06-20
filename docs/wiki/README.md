@@ -327,7 +327,9 @@ The post-alpha1 copy-length context resweep also keeps the fixed book-midpoint
 context as the best fully declared context, and the context-specific alpha grid
 keeps shared `alpha=1`. A literal-payload context search keeps the global
 previous-emitted-digit payload model. A bounded top60 triple probe also fails
-to improve the formula inside its declared scope. No
+to improve the formula inside its declared scope. An item-type context search
+then promotes a declared split at book `6`, lowering the active bound to
+`8569.652` bits. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

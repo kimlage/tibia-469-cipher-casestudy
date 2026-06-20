@@ -117,6 +117,7 @@ does not promote plaintext.
 | `H-GEN3CI` | `post_midpoint_alpha_by_context_not_promoted` | `True` |
 | `H-GEN3CJ` | `post_midpoint_literal_payload_context_not_promoted` | `True` |
 | `H-GEN3CK` | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` | `True` |
+| `H-GEN3CL` | `controlled_post_midpoint_item_type_context_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

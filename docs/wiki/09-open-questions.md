@@ -188,6 +188,9 @@ previous-emitted-digit payload model; book-midpoint payload context saves
 `2.251` component bits but is `+1.749` bits worse after declaration. A bounded
 top60 triple probe checks `33588` valid compatible triples and finds the best
 still `+3.914` bits worse; this is not an exhaustive closure outside top60.
+The item-type context search then promotes a decodable searched split at book
+`6`, lowering the active mechanical bound to `8569.652` bits; the cheaper
+current-item-length row is retained only as non-decodable lower-bound evidence.
 
 ## Ranked: what would unlock progress
 
