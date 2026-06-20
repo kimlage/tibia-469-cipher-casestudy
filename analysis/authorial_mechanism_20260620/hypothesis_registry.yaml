@@ -237,6 +237,11 @@ hypotheses:
     status: controlled_forced_length_literal_repair_improvement
     target: "local literal-to-copy repairs after forced short-suffix literal lengths"
     promotion_rule: "must beat the active forced-literal-length formula under exact rescoring and preserve 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AP:
+    name: "post forced-length repair literal payload alpha sweep"
+    status: post_forced_repair_payload_alpha_retains_14
+    target: "adaptive literal-payload alpha after the forced-length literal-to-copy repair"
+    promotion_rule: "must beat alpha=14 after declaration cost on the current literal payload stream"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

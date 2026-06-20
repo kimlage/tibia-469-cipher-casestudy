@@ -279,6 +279,7 @@ roughly `8966.7` bits, and a second rule for too-short book suffixes lowers
 it to roughly `8953.9` bits. Removing redundant forced short-suffix literal
 length bits lowers it further to roughly `8922.9` bits, and one final
 forced-length local literal-to-copy repair lowers it to roughly `8922.8` bits.
+The post-repair payload alpha sweep retains `alpha=14`.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

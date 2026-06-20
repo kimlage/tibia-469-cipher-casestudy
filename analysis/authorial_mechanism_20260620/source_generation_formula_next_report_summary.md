@@ -155,6 +155,10 @@ Still open from the report:
   one further local repair replaces `65128` in book `12` with a valid prior
   copy, improving the current bound to `8922.8` bits. A follow-up one-step
   search after applying it is worse.
+- post-forced-repair payload alpha is now covered by
+  [`47_post_forced_repair_payload_alpha_sweep.py`](scripts/47_post_forced_repair_payload_alpha_sweep.py);
+  `alpha=14` remains the best declared adaptive payload parameter after the
+  forced-length local repair, with `alpha=13` `+0.1` bit worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

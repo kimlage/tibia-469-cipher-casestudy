@@ -259,5 +259,8 @@ Generated audits in this directory should be treated as the current state:
   replaces `65128` in book `12` with a prior copy from digit position `50`,
   lowering the bound from `8922.9` to `8922.8` bits. A follow-up one-step
   search after applying it is worse.
+- `47_post_forced_repair_payload_alpha_sweep`: retests adaptive literal-payload
+  alpha after the forced-length repair. `alpha=14` remains best; `alpha=13` is
+  the nearest alternate at `+0.1` bit, so no newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

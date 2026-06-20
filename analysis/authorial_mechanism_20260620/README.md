@@ -130,6 +130,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   literal-run length bits for forced short book suffixes.
 - `scripts/46_forced_length_literal_repair_search.py` - retests one-step
   literal-to-copy repairs after forced suffix literal lengths.
+- `scripts/47_post_forced_repair_payload_alpha_sweep.py` - retests adaptive
+  literal-payload alpha after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

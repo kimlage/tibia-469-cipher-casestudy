@@ -333,6 +333,11 @@ book `12` with a valid prior copy from digit position `50`, lowering the bound
 from `8922.9` to `8922.8` bits. This is a marginal recipe improvement only; the
 follow-up one-step repair search after applying it is worse.
 
+The post-forced-repair payload alpha sweep then checks whether that final
+payload-stream change requires retuning the adaptive Dirichlet parameter. It
+does not: `alpha=14` remains best at `2575.7` payload-plus-model bits, with
+`alpha=13` next at `+0.1` bit. No newer formula is promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -392,6 +397,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AM | `controlled_remaining_short_forces_literal_type_ledger_improvement` |
 | H-GEN3AN | `controlled_remaining_short_literal_length_improvement` |
 | H-GEN3AO | `controlled_forced_length_literal_repair_improvement` |
+| H-GEN3AP | `post_forced_repair_payload_alpha_retains_14` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -446,6 +452,7 @@ book generation, not row0 pair-cell placement.
 - [Remaining-short-forces-literal item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/44_remaining_short_forces_literal_type_ledger_compile.md)
 - [Remaining-short literal-length compile](../../analysis/authorial_mechanism_20260620/reports/test_results/45_remaining_short_literal_length_compile.md)
 - [Forced-length literal repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/46_forced_length_literal_repair_search.md)
+- [Post-forced-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/47_post_forced_repair_payload_alpha_sweep.md)
 
 ## Boundary
 
@@ -455,6 +462,7 @@ with adaptive literal-payload coding, the one-step literal-to-copy repair, the
 signed-Rice book-length ledger, digit-only copy addresses, and the digit-address
 literal repair, plus the adaptive/Markov/book-start/literal-force item-type
 ledgers, remaining-short forced-literal rule, and forced short-suffix literal
-lengths, and the final forced-length local repair, as the current strongest
-copy/reference fabrication bound and continue testing matrix origin, topology
-holdouts, and official source watchlists under the same Outcome Ledger.
+lengths, and the final forced-length local repair with retained payload
+`alpha=14`, as the current strongest copy/reference fabrication bound and
+continue testing matrix origin, topology holdouts, and official source
+watchlists under the same Outcome Ledger.
