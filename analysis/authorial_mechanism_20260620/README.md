@@ -108,6 +108,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/35_digit_only_copy_address_compile.py` - recompiles absolute copy
   addresses over the digit-only stream after book lengths make separators
   reconstructable.
+- `scripts/36_digit_address_model_search.py` - retests address ledgers in the
+  promoted digit-only coordinate system.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

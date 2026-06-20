@@ -268,7 +268,7 @@ Replacing independent gamma-coded book lengths with a declared signed-Rice
 residual ledger then lowers the mechanical bound to roughly `9073.3` bits; a
 multi-anchor length ledger is tested and rejected after mode costs. Recompiling
 copy addresses over the digit-only stream lowers the bound again to roughly
-`9070.8` bits.
+`9070.8` bits; alternate digit-only address ledgers are retested and rejected.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

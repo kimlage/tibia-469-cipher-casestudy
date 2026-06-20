@@ -207,5 +207,10 @@ Generated audits in this directory should be treated as the current state:
   stream. This reduces copy-address cost from `3257.3` to `3254.9` bits and
   improves the total formula from `9073.3` to `9070.8` bits with 70/70
   roundtrip. The recipe and emitted books are unchanged.
+- `36_digit_address_model_search`: retests alternate address ledgers in the
+  digit-only coordinate system. Absolute `source_digit_pos` remains the best
+  decodable ledger at `9070.8` bits. Literal-seed addressing reaches `9006.2`
+  bits only as an undecodable no-mode lower bound; the best decodable sparse
+  seed-run ledger costs `9081.5` bits, so no address model is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

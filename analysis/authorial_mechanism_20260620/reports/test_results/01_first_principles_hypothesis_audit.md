@@ -58,6 +58,7 @@ does not promote plaintext.
 | `H-GEN3AB` | `controlled_book_length_ledger_improvement` | `True` |
 | `H-GEN3AC` | `multi_anchor_book_length_ledger_not_promoted` | `True` |
 | `H-GEN3AD` | `controlled_digit_only_copy_address_improvement` | `True` |
+| `H-GEN3AE` | `digit_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

@@ -107,6 +107,10 @@ Still open from the report:
   [`35_digit_only_copy_address_compile.py`](scripts/35_digit_only_copy_address_compile.py);
   after book lengths make separators reconstructable, excluding separators from
   the absolute address space improves the bound to `9070.8` bits.
+- digit-only address alternatives are now covered by
+  [`36_digit_address_model_search.py`](scripts/36_digit_address_model_search.py);
+  absolute `source_digit_pos` remains the best decodable ledger in the
+  digit-only coordinate system.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

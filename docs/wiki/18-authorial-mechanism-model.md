@@ -257,6 +257,11 @@ the previously emitted digit stream rather than the digit-plus-separator stream,
 reducing copy-address cost from `3257.3` to `3254.9` bits. The total bound
 drops from `9073.3` to `9070.8` bits with 70/70 roundtrip.
 
+The digit-only address-model follow-up keeps that result. Absolute
+`source_digit_pos` remains the best decodable ledger at `9070.8` bits.
+Literal-seed addressing reaches `9006.2` bits only as an undecodable lower
+bound; the best decodable sparse seed-run ledger costs `9081.5` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -305,6 +310,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AB | `controlled_book_length_ledger_improvement` |
 | H-GEN3AC | `multi_anchor_book_length_ledger_not_promoted` |
 | H-GEN3AD | `controlled_digit_only_copy_address_improvement` |
+| H-GEN3AE | `digit_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -348,6 +354,7 @@ book generation, not row0 pair-cell placement.
 - [Book length ledger search](../../analysis/authorial_mechanism_20260620/reports/test_results/33_book_length_ledger_search.md)
 - [Book length multi-anchor search](../../analysis/authorial_mechanism_20260620/reports/test_results/34_book_length_multi_anchor_search.md)
 - [Digit-only copy address compile](../../analysis/authorial_mechanism_20260620/reports/test_results/35_digit_only_copy_address_compile.md)
+- [Digit address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/36_digit_address_model_search.md)
 
 ## Boundary
 
