@@ -85,7 +85,9 @@ using model). A DP `min_len` sweep keeps the current `min_len=6` parameter
 improves the mechanical generator to `9596.5` bits with Rice `k=4` and
 `min_len=5`; a broader length-code grid retains that setting, with nearest
 alternate `9600.0` bits. Retesting address ledgers on the Rice parse keeps
-absolute `source_pos` as the best decodable ledger. No plaintext,
+absolute `source_pos` as the best decodable ledger. A literal-run length reparse
+then improves the current mechanical upper bound to `9545.5` bits by using Rice
+`k=3` for literal lengths while preserving 70/70 roundtrip. No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0

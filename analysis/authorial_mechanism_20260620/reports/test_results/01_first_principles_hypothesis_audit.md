@@ -47,6 +47,7 @@ does not promote plaintext.
 | `H-GEN3Q` | `controlled_copy_length_code_improvement` | `True` |
 | `H-GEN3R` | `copy_length_grid_retains_rice_k4_min_len_5` | `True` |
 | `H-GEN3S` | `rice_copy_address_optimistic_only_not_promoted` | `True` |
+| `H-GEN3T` | `controlled_literal_length_code_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

@@ -64,6 +64,10 @@ Still open from the report:
   [`24_rice_copy_address_model_search.py`](scripts/24_rice_copy_address_model_search.py);
   absolute `source_pos` remains best decodable, while literal-seed addressing
   remains optimistic-only.
+- literal-run length coding is now covered by
+  [`25_literal_run_length_code_reparse.py`](scripts/25_literal_run_length_code_reparse.py);
+  Rice `k=3` for literal lengths improves the current mechanical bound to
+  `9545.5` bits with 70/70 roundtrip and `translation_delta: NONE`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

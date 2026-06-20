@@ -68,6 +68,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_run_literal_formula_469` | `9944.0` | `246.0` |
 | `sequential_lz_dp_parse_formula_469` | `9823.3` | `120.7` |
 | `sequential_lz_rice_length_formula_469` | `9596.5` | `226.8` |
+| `sequential_lz_rice_literal_length_formula_469` | `9545.5` | `51.0` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -184,6 +185,13 @@ addressing reaches `9549.5` bits only as an undecodable optimistic no-mode
 ledger; the best decodable sparse seed-run ledger costs `9607.1` bits, so it
 remains an optimistic clue rather than a promoted formula change.
 
+The literal-run length reparse improves the current mechanical frontier.
+Keeping copy lengths at Rice `k=4`, source addresses absolute, and `min_len=5`,
+but coding literal-run lengths with Rice `k=3`, yields a 70/70 roundtrip
+formula at `9545.5` bits. This saves `51.0` bits after charging both Rice
+parameters. Digit-shuffle controls remain far worse and sampled book-order
+controls do not beat the observed formula.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -221,6 +229,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3Q | `controlled_copy_length_code_improvement` |
 | H-GEN3R | `copy_length_grid_retains_rice_k4_min_len_5` |
 | H-GEN3S | `rice_copy_address_optimistic_only_not_promoted` |
+| H-GEN3T | `controlled_literal_length_code_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -253,10 +262,12 @@ book generation, not row0 pair-cell placement.
 - [Copy length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md)
 - [Copy length grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md)
 - [Rice copy address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md)
+- [Literal run length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/25_literal_run_length_code_reparse.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the dynamic-parse sequential LZ formula as the current strongest
-copy/reference fabrication bound and continue testing matrix origin, topology
-holdouts, and official source watchlists under the same Outcome Ledger.
+should treat the Rice copy-length plus Rice literal-length sequential LZ formula
+as the current strongest copy/reference fabrication bound and continue testing
+matrix origin, topology holdouts, and official source watchlists under the same
+Outcome Ledger.

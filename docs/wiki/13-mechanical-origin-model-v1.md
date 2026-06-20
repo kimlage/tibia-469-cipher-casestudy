@@ -70,6 +70,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ Rice-length formula | copy lengths are encoded with Rice `k=4` after reparsing at `min_len=5`; `9596.5` rough bits, 70/70 roundtrip, `226.8` bits better than gamma-length DP | strongest copy/reference upper bound |
 | Copy length grid sweep | broader `min_len=3..12` and Rice `k=0..10` grid retains Rice `k=4`, `min_len=5`; nearest alternate is `9600.0` bits | retained parameter |
 | Rice parse copy address models | absolute `source_pos` remains best decodable at `9596.5`; literal-seed no-mode reaches `9549.5` but sparse decodable seed-run costs `9607.1` | rejected refinement / optimistic clue |
+| Sequential LZ Rice literal-length formula | literal-run lengths are encoded with Rice `k=3` while copy lengths remain Rice `k=4`; `9545.5` rough bits, 70/70 roundtrip, `51.0` bits better than the prior Rice-length formula | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -95,6 +96,7 @@ Primary sources:
 [copy_length_code_reparse.md](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md),
 [copy_length_grid_sweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md),
 [rice_copy_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md),
+[literal_run_length_code_reparse.md](../../analysis/authorial_mechanism_20260620/reports/test_results/25_literal_run_length_code_reparse.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
@@ -177,6 +179,8 @@ claims remain inadmissible.
   [sequential_lz_dp_parse_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_dp_parse_formula_469.json)
 - Sequential LZ Rice-length formula:
   [sequential_lz_rice_length_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_rice_length_formula_469.json)
+- Sequential LZ Rice literal-length formula:
+  [sequential_lz_rice_literal_length_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_rice_literal_length_formula_469.json)
 - DP LZ copy graph:
   [dp_lz_copy_graph_edges.csv](../../analysis/authorial_mechanism_20260620/tables/dp_lz_copy_graph_edges.csv)
 - DP LZ literal seed atlas:

@@ -150,5 +150,11 @@ Generated audits in this directory should be treated as the current state:
   `9549.5` bits, but it is not decodable; the best decodable sparse seed-run
   ledger is `9607.1` bits and per-copy mode is `9827.5` bits, so no address
   model is promoted.
+- `25_literal_run_length_code_reparse`: reparses the promoted Rice-length
+  formula while varying only literal-run length coding. Rice `k=3` for literal
+  lengths, with copy lengths still Rice `k=4` and `min_len=5`, roundtrips 70/70
+  at `9545.5` bits. This is a `51.0` bit improvement over the prior `9596.5`
+  bit formula after charging both Rice parameters. Digit-shuffle and book-order
+  controls do not beat the observed formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

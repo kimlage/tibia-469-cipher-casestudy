@@ -85,6 +85,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   sweep across `min_len=3..12` and Rice `k=0..10`.
 - `scripts/24_rice_copy_address_model_search.py` - retests copy-source
   address ledgers on the promoted Rice-length parse.
+- `scripts/25_literal_run_length_code_reparse.py` - reparses the promoted
+  Rice-length formula while sweeping literal-run length codes.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
