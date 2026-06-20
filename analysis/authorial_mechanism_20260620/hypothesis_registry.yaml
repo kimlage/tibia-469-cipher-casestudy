@@ -377,6 +377,11 @@ hypotheses:
     status: post_repair2_parameter_resweep_retains_current
     target: "literal-run length, literal-payload context, and item-type context parameters after the second minaddr local repair"
     promotion_rule: "must beat the active post-minaddr-repair2 formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BR:
+    name: "post repair2 pair frontier"
+    status: post_repair2_pair_frontier_closed
+    target: "compatible pairs of local literal-to-copy and copy-to-literal edits after the second minaddr local repair"
+    promotion_rule: "must beat the active post-minaddr-repair2 formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

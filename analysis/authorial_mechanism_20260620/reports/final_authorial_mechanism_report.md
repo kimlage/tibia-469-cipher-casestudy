@@ -379,5 +379,8 @@ Generated audits in this directory should be treated as the current state:
   context, and item-type context parameters after the two minaddr local
   repairs. The current parameters remain best: literal Rice `k=3`, payload
   order `2` / `alpha=1`, and item-type order `3` / `alpha=2`.
+- `75_post_repair2_pair_frontier`: tests compatible pairs after the one-step
+  post-repair2 frontier is closed. `17663` valid pairs are rescored; the best
+  pair, copy-to-literal `71288` plus `94343`, is still `+0.692` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -285,6 +285,10 @@ Still open from the report:
   [`74_post_repair2_parameter_resweep.py`](scripts/74_post_repair2_parameter_resweep.py);
   literal Rice `k=3`, literal payload order `2` / `alpha=1`, and item-type
   order `3` / `alpha=2` all remain best after the two minaddr local repairs.
+- post-repair2 pair frontier is now covered by
+  [`75_post_repair2_pair_frontier.py`](scripts/75_post_repair2_pair_frontier.py);
+  `17663` valid compatible pairs are fully rescored. The best pair is still
+  `+0.692` bits worse, so compatible pairs do not improve the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

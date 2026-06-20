@@ -148,7 +148,8 @@ back into a valid prior copy under the new cost model, lowering the bound to
 `8609.8` bits. A further one-step local-frontier pass closes this immediate
 repair space: the best candidate is `+0.121` bits worse. A parameter resweep
 after those repairs retains literal Rice `k=3`, payload order `2` / `alpha=1`,
-and item-type order `3` / `alpha=2`.
+and item-type order `3` / `alpha=2`. A compatible-pair frontier also closes:
+the best of `17663` valid pairs is still `+0.692` bits worse.
 
 ## Ranked: what would unlock progress
 

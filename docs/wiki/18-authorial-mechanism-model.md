@@ -496,6 +496,12 @@ repairs changed the best declared parameters. They do not: literal Rice `k=3`,
 literal-payload context order `2` / `alpha=1`, and item-type context order `3`
 / `alpha=2` all remain best under full rescoring.
 
+The compatible-pair frontier then checks whether two local edits improve
+together after the one-step frontier closes. It scores `17663` valid compatible
+pairs; the best pair, copy-to-literal `71288` plus `94343`, remains `+0.692`
+bits worse than the active formula. This closes the immediate pair frontier
+under the current cost model.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -583,6 +589,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BO | `controlled_post_minaddr_repair_local_improvement` |
 | H-GEN3BP | `post_minaddr_repair2_local_frontier_closed` |
 | H-GEN3BQ | `post_repair2_parameter_resweep_retains_current` |
+| H-GEN3BR | `post_repair2_pair_frontier_closed` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -665,6 +672,7 @@ book generation, not row0 pair-cell placement.
 - [Post-minaddr-repair local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/72_post_minaddr_repair_local_frontier.md)
 - [Post-minaddr-repair2 local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/73_post_minaddr_repair2_local_frontier.md)
 - [Post-repair2 parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/74_post_repair2_parameter_resweep.md)
+- [Post-repair2 pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/75_post_repair2_pair_frontier.md)
 
 ## Boundary
 

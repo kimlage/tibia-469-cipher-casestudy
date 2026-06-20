@@ -192,6 +192,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/74_post_repair2_parameter_resweep.py` - retests literal-run,
   literal-payload context, and item-type context parameters after the second
   minaddr local repair.
+- `scripts/75_post_repair2_pair_frontier.py` - tests compatible pairs of local
+  edits after the post-repair2 one-step frontier is closed.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

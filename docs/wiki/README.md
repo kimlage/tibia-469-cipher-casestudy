@@ -304,7 +304,8 @@ impossible final source positions and lowers it slightly again to roughly
 `8611.4` bits. A follow-up local repair turns `45765` in book `34` into a prior
 copy and lowers the bound to roughly `8609.8` bits. A further one-step local
 frontier pass closes that immediate repair space, and a parameter resweep
-retains the current declared settings. No semantic claim is promoted.
+retains the current declared settings. A compatible-pair local frontier also
+closes. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
