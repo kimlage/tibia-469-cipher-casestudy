@@ -572,6 +572,11 @@ hypotheses:
     status: post_itemctx_param_copy_payload_context_alpha_pair_not_promoted
     target: "joint copy-length context/shared-alpha rows plus literal-payload context/shared-alpha rows after both complete component frontiers"
     promotion_rule: "must beat active fixed book-midpoint copy-length alpha=1 and active global literal-payload alpha=1 under charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3DE:
+    name: "post itemctx_param copy-length, literal-payload, and item-type context-alpha triple search"
+    status: post_itemctx_param_copy_payload_item_context_alpha_triple_not_promoted
+    target: "joint copy-length context/shared-alpha rows plus literal-payload context/shared-alpha rows plus item-type context/order/alpha rows after all three complete component frontiers"
+    promotion_rule: "must beat active fixed book-midpoint copy-length alpha=1, active global literal-payload alpha=1, and active item-type split at book 6/order 1/alpha 2 under charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

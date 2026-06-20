@@ -237,7 +237,10 @@ global payload model with `alpha=1` stays best, with the best context change
 `+1.749` bits worse and the best active-context alpha change `+17.859` bits
 worse. A copy/payload context-alpha pair search then closes `24915968` implied
 pairs; the best changed pair is `+1.749` bits worse, and the best pair with
-both components changed is `+3.690` bits worse.
+both components changed is `+3.690` bits worse. A copy/payload/item
+context-alpha triple search then closes `424169439232` implied triples; the
+best changed triple is `+0.415` bits worse, and the best triple with all three
+components changed is `+4.106` bits worse.
 
 ## Ranked: what would unlock progress
 

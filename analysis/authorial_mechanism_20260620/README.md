@@ -288,6 +288,9 @@ bits.
 - `scripts/113_post_itemctx_param_copy_payload_context_alpha_pair_search.py` -
   combines copy-length context/shared-alpha and literal-payload context/shared-
   alpha frontiers after both component sweeps.
+- `scripts/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.py` -
+  combines copy-length context/shared-alpha, literal-payload context/shared-
+  alpha, and item-type context/order/alpha frontiers.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

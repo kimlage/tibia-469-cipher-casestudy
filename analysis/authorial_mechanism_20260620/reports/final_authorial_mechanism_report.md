@@ -547,5 +547,11 @@ Generated audits in this directory should be treated as the current state:
   context/shared-alpha rows into `24915968` implied pairs. Component minima keep
   the active pair best; the best changed pair is `+1.749` bits worse and the
   best pair with both components changed is `+3.690` bits worse.
+- `114_post_itemctx_param_copy_payload_item_context_alpha_triple_search`:
+  combines `5056` copy-length context/shared-alpha rows, `4928`
+  literal-payload context/shared-alpha rows, and `17024` item-type candidates
+  into `424169439232` implied triples. Component minima keep the active triple
+  best; the best changed triple is `+0.415` bits worse and the best triple with
+  all three components changed is `+4.106` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

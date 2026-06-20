@@ -493,6 +493,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   context/alpha rows imply `24915968` pairs. Component minima keep the active
   pair best; the best changed pair is `+1.749` bits worse and the best pair
   with both components changed is `+3.690` bits worse.
+- post-itemctx_param copy/payload/item context-alpha triple search is now
+  covered by
+  [`114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.py`](scripts/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.py);
+  `5056` copy-length context/alpha rows, `4928` literal-payload context/alpha
+  rows, and `17024` item-type candidates imply `424169439232` triples.
+  Component minima keep the active triple best; the best changed triple is
+  `+0.415` bits worse and the best triple with all three components changed is
+  `+4.106` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
