@@ -238,6 +238,11 @@ Still open from the report:
   [`65_contextual_copy_to_literal_repair_search.py`](scripts/65_contextual_copy_to_literal_repair_search.py);
   one short copy in book `34` becomes cheaper as an explicit literal, improving
   the active formula from `8803.5` to `8803.1` bits.
+- post-copy-to-literal local frontier is now covered by
+  [`66_post_copy_literal_local_frontier.py`](scripts/66_post_copy_literal_local_frontier.py);
+  after applying that repair, the best literal-to-copy edit is `+0.4` bits
+  worse, the best copy-to-literal edit is `+1.5` bits worse, and the best of
+  `13530` copy-to-literal pairs is `+3.5` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

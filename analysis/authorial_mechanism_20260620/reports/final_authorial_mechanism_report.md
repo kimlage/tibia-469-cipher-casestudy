@@ -337,5 +337,10 @@ Generated audits in this directory should be treated as the current state:
   under the same contextual cost model. Replacing a short copy of `45765` in
   book `34` with a literal improves the active mechanical bound from `8803.5`
   to `8803.1` bits with 70/70 roundtrip and `translation_delta: NONE`.
+- `66_post_copy_literal_local_frontier`: retests the immediate local frontier
+  after that copy-to-literal repair. No further local edit promotes: the best
+  literal-to-copy edit is `+0.4` bits worse, the best copy-to-literal edit is
+  `+1.5` bits worse, and the best of `13530` copy-to-literal pairs is `+3.5`
+  bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

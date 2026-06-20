@@ -332,6 +332,11 @@ hypotheses:
     status: controlled_contextual_copy_to_literal_improvement
     target: "single copy-to-literal replacements after contextual payload and item-type ledgers"
     promotion_rule: "must beat the active contextual formula under exact rescoring while preserving forced-rule validation and 70/70 roundtrip"
+  H-GEN3BI:
+    name: "post copy-to-literal local frontier"
+    status: post_copy_literal_local_frontier_closed
+    target: "single literal-to-copy, single copy-to-literal, and copy-to-literal pair edits after the contextual copy-to-literal repair"
+    promotion_rule: "must beat the active contextual copy-to-literal formula under exact rescoring while preserving forced-rule validation and 70/70 roundtrip"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

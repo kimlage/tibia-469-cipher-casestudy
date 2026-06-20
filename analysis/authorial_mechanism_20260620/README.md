@@ -169,6 +169,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/65_contextual_copy_to_literal_repair_search.py` - tests whether
   short copy items should become explicit literals under the contextual cost
   model.
+- `scripts/66_post_copy_literal_local_frontier.py` - retests the immediate
+  local frontier after the contextual copy-to-literal repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -129,7 +129,9 @@ declaration bits. A follow-up context-order sweep lowers it again to `8805.7`
 bits with a declared order-2 previous-emitted-digit context. This does not
 change the semantic state. A later item-type context-order sweep lowers the
 mechanical bound to `8803.5` bits, and a contextual copy-to-literal repair
-lowers it to `8803.1` bits while retaining the same no-plaintext state.
+lowers it to `8803.1` bits while retaining the same no-plaintext state. The
+post-repair local frontier is now closed for single edits and copy-to-literal
+pairs under the current cost model.
 
 ## Ranked: what would unlock progress
 
