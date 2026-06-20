@@ -133,6 +133,13 @@ has only `64` resolved unique books, `6` ambiguous rows, one duplicate resolved
 row, and no fine tile/slot/orientation/read-order layer, no physical or
 authorial order is promoted.
 
+Literal-seed addressing is also only an optimistic clue. If copy sources are
+allowed to address prior literal runs without paying a source-mode cost, the
+ledger reaches `9752.8` bits. That ledger is not a decodable mixed address
+model. Once mode bits are charged, the same refinement costs `10033.8` bits,
+worse than the current `9823.3` absolute `source_pos` formula, so H-GEN3L is
+not promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -162,6 +169,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3I | `copy_source_address_absolute_retained` |
 | H-GEN3J | `copy_graph_literal_seed_atlas_compiled_no_formula_promotion` |
 | H-GEN3K | `structured_physical_order_not_better_than_numeric` |
+| H-GEN3L | `literal_seed_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -186,6 +194,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/14_copy_source_address_model_search.md)
 - [Copy graph provenance audit](../../analysis/authorial_mechanism_20260620/reports/test_results/15_copy_graph_provenance_audit.md)
 - [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
+- [Literal seed address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/17_literal_seed_address_model_search.md)
 
 ## Boundary
 

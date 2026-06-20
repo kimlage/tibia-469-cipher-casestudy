@@ -69,6 +69,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   graph and literal seed atlas for provenance analysis.
 - `scripts/16_structured_physical_order_lz_test.py` - tests partial public
   Hellgate/bookcase orders against the DP sequential LZ generator.
+- `scripts/17_literal_seed_address_model_search.py` - tests literal-seed
+  addressing against absolute source positions in the DP copy ledger.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

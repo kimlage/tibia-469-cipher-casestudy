@@ -245,7 +245,8 @@ run-literal vocabulary tightens it further to roughly `9823.3` bits, still
 with translation delta zero. Follow-up address models do not improve it, but
 the committed copy graph/literal atlas now records source hubs and literal-seed
 reuse. Structured public Hellgate/bookcase orders were tested under DP LZ and
-do not beat numeric order.
+do not beat numeric order. Literal-seed addressing is not promoted because
+mode bits erase the apparent gain.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

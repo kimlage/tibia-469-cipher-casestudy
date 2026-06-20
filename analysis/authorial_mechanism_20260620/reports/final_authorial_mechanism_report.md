@@ -101,5 +101,12 @@ Generated audits in this directory should be treated as the current state:
   candidate-resolved ambiguous orders cost still more. The manifest has 71
   rows, 64 resolved unique books, 6 ambiguous rows, and no fine tile/slot/order
   layer, so no physical or authorial order is promoted.
+- `17_literal_seed_address_model_search`: tests whether copy sources can be
+  addressed through earlier literal seed runs instead of absolute `source_pos`.
+  An optimistic no-mode ledger reaches `9752.8` bits (`-70.5`), but it does not
+  pay to distinguish seed addresses from absolute stream addresses. Once a
+  source-mode bit is charged for a decodable mixed ledger, the total becomes
+  `10033.8` bits (`+210.5`). The model is therefore a useful provenance clue,
+  not a promoted formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

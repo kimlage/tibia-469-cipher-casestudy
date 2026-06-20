@@ -34,6 +34,10 @@ Still open from the report:
 - structured public/topology order tests under the DP parser are now covered by
   [`16_structured_physical_order_lz_test.py`](scripts/16_structured_physical_order_lz_test.py);
   the tested public/bookcase orders do not beat numeric order.
+- literal-seed source addressing is now covered by
+  [`17_literal_seed_address_model_search.py`](scripts/17_literal_seed_address_model_search.py);
+  it improves only in an optimistic no-mode ledger and is rejected once
+  source-mode bits are charged for decodability.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
