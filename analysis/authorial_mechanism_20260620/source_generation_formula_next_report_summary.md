@@ -563,6 +563,15 @@ Coverage of the remaining report recommendations and follow-on refinements:
   [`124_item_type_split_only_alpha_resweep.py`](scripts/124_item_type_split_only_alpha_resweep.py);
   `alpha=2` remains best at `8558.667` bits after alpha declaration deltas.
   The nearest alternate is `alpha=1`, `+0.309` bits worse.
+- prequential and row0-origin audit is now covered by
+  [`125_prequential_and_row0_origin_audit.py`](scripts/125_prequential_and_row0_origin_audit.py);
+  the `8558.667` bit bound is frozen as `compression_bound`. Prefix
+  future-suffix learned-component scoring beats uniform on all five cutoffs,
+  but random same-size train-book controls are usually stronger, so numeric
+  order is not promoted. Row0 origin remains exogenous: manual lookup,
+  permutation/group, 10x10 grid, order/frequency, external-text, and
+  workbook/script-artifact hypotheses yield no charged controlled origin
+  formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

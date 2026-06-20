@@ -1,0 +1,4691 @@
+{
+  "active_component_reproduction": {
+    "copy_length_bits": 1631.4941403059527,
+    "item_type_split_only_bits": 220.2867374541295,
+    "literal_payload_bits": 2434.0947004221503,
+    "recomputed_total_bits": 8558.666806283434,
+    "roundtrip_books": 70
+  },
+  "boundary": {
+    "case_reopened": false,
+    "compression_bound_changed": false,
+    "plaintext_claim": false,
+    "row0_origin_changed": false,
+    "translation_claim": false
+  },
+  "classification": "analysis_only_predictive_component_audit_row0_origin_exogenous",
+  "compression_bound_bits_confirmed": 8558.666806283434,
+  "predictive_validation": {
+    "classification": "predictive_component_signal_retained_analysis_only",
+    "contiguous_block_holdouts": [
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 36.46832089663167,
+          "online_train_test_gap_bits_per_event": -0.26584990176105805,
+          "test_frozen_bits": 2060.236533829804,
+          "test_frozen_gain_vs_uniform_bits": 129.6371281249135,
+          "test_online_bits": 2023.7682129331724,
+          "test_online_gain_vs_uniform_bits": 166.10544902154516,
+          "test_uniform_bits": 2189.8736619547176,
+          "train_bits": 2256.437638770004
+        },
+        "event_counts": {
+          "test_copy": 62,
+          "test_item_type": 66,
+          "test_literal_payload": 535,
+          "train_copy": 221,
+          "train_item_type": 221,
+          "train_literal_payload": 238
+        },
+        "label": "holdout_block_00_09",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 62
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 41,
+            "present_context_events": 25
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 54,
+            "present_context_events": 481
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 2075.7884255558824,
+          "item_type_uniform_only": 2024.3652637404193,
+          "literal_payload_uniform_only": 2137.2563985247607
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 301.05277038308327,
+          "item_type": 67.56247556287245,
+          "literal_payload": 1691.6212878838483
+        },
+        "test_online_cost_bits": {
+          "copy_length": 294.62191856726884,
+          "item_type": 65.4029491927529,
+          "literal_payload": 1663.7433451731506
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 346.64213118997867,
+          "item_type": 66.0,
+          "literal_payload": 1777.2315307647389
+        },
+        "train_books": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1331.2024952596319,
+          "item_type": 154.88378826137682,
+          "literal_payload": 770.3513552489953
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.28949769840164663,
+          "online_train_test_gap_bits_per_event": -0.140101794786748,
+          "test_frozen_bits": 735.2108236495659,
+          "test_frozen_gain_vs_uniform_bits": 71.10080593408827,
+          "test_online_bits": 734.9213259511642,
+          "test_online_gain_vs_uniform_bits": 71.39030363248992,
+          "test_uniform_bits": 806.3116295836542,
+          "train_bits": 3549.4554101060144
+        },
+        "event_counts": {
+          "test_copy": 59,
+          "test_item_type": 59,
+          "test_literal_payload": 121,
+          "train_copy": 224,
+          "train_item_type": 228,
+          "train_literal_payload": 652
+        },
+        "label": "holdout_block_10_19",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 59
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 59
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 121
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 755.6141079264877,
+          "item_type_uniform_only": 735.6924541863443,
+          "literal_payload_uniform_only": 784.8477193731507
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 322.5276453333099,
+          "item_type": 59.55298264273494,
+          "literal_payload": 353.1301956735211
+        },
+        "test_online_cost_bits": {
+          "copy_length": 324.66554812695983,
+          "item_type": 58.22887176481989,
+          "literal_payload": 352.0269060593845
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 345.3583301022833,
+          "item_type": 59.0,
+          "literal_payload": 401.95329948137083
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1305.3297500539436,
+          "item_type": 162.0578656893097,
+          "literal_payload": 2082.067794362761
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.31913553947379114,
+          "online_train_test_gap_bits_per_event": -0.16315099178020098,
+          "test_frozen_bits": 297.6085616863856,
+          "test_frozen_gain_vs_uniform_bits": 30.754884435884946,
+          "test_online_bits": 297.9276972258594,
+          "test_online_gain_vs_uniform_bits": 30.435748896411155,
+          "test_uniform_bits": 328.36344612227055,
+          "train_bits": 3988.0207709520128
+        },
+        "event_counts": {
+          "test_copy": 37,
+          "test_item_type": 37,
+          "test_literal_payload": 24,
+          "train_copy": 246,
+          "train_item_type": 250,
+          "train_literal_payload": 749
+        },
+        "label": "holdout_block_20_29",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 37
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 37
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 24
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 304.0231577476046,
+          "item_type_uniform_only": 312.7086573009077,
+          "literal_payload_uniform_only": 307.48702552547707
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 205.13681590210743,
+          "item_type": 22.287908808901268,
+          "literal_payload": 70.1838369753769
+        },
+        "test_online_cost_bits": {
+          "copy_length": 205.54171132322864,
+          "item_type": 22.219039924951737,
+          "literal_payload": 70.16694597767903
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 211.63717184497384,
+          "item_type": 37.0,
+          "literal_payload": 79.7262742772967
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1426.0253189783657,
+          "item_type": 198.06769752917785,
+          "literal_payload": 2363.9277544444694
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.16999837015254116,
+          "online_train_test_gap_bits_per_event": 0.14268531787430083,
+          "test_frozen_bits": 309.1339268729918,
+          "test_frozen_gain_vs_uniform_bits": 23.547657780550594,
+          "test_online_bits": 308.9639285028393,
+          "test_online_gain_vs_uniform_bits": 23.717656150703135,
+          "test_uniform_bits": 332.6815846535424,
+          "train_bits": 3974.384327157652
+        },
+        "event_counts": {
+          "test_copy": 39,
+          "test_item_type": 39,
+          "test_literal_payload": 15,
+          "train_copy": 244,
+          "train_item_type": 248,
+          "train_literal_payload": 758
+        },
+        "label": "holdout_block_30_39",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 39
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 39
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 15
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 313.85490048631266,
+          "item_type_uniform_only": 323.16276146229376,
+          "literal_payload_uniform_only": 313.5917797106146
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 239.13740811030306,
+          "item_type": 24.795448547153665,
+          "literal_payload": 45.201070215535125
+        },
+        "test_online_cost_bits": {
+          "copy_length": 238.96169124675865,
+          "item_type": 24.801167040545526,
+          "literal_payload": 45.201070215535125
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 243.852663230232,
+          "item_type": 39.0,
+          "literal_payload": 49.82892142331043
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1390.0051265374536,
+          "item_type": 195.4855704135841,
+          "literal_payload": 2388.8936302066145
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.8090065197355898,
+          "online_train_test_gap_bits_per_event": 0.14909467875890714,
+          "test_frozen_bits": 326.9308376166519,
+          "test_frozen_gain_vs_uniform_bits": 8.417840370923443,
+          "test_online_bits": 326.1218310969163,
+          "test_online_gain_vs_uniform_bits": 9.226846890659033,
+          "test_uniform_bits": 335.34867798757534,
+          "train_bits": 3957.455489390679
+        },
+        "event_counts": {
+          "test_copy": 33,
+          "test_item_type": 33,
+          "test_literal_payload": 32,
+          "train_copy": 250,
+          "train_item_type": 254,
+          "train_literal_payload": 741
+        },
+        "label": "holdout_block_40_49",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 33
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 33
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 1,
+            "present_context_events": 31
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 332.0962491279407,
+          "item_type_uniform_only": 336.36975662411555,
+          "literal_payload_uniform_only": 319.1263344293517
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 191.18106945307315,
+          "item_type": 22.670923715733124,
+          "literal_payload": 113.07884444784563
+        },
+        "test_online_cost_bits": {
+          "copy_length": 190.07256092015535,
+          "item_type": 22.752074472800746,
+          "literal_payload": 113.2971957039602
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 196.04697895117977,
+          "item_type": 33.0,
+          "literal_payload": 106.30169903639559
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1439.1233216911633,
+          "item_type": 197.5346629813288,
+          "literal_payload": 2320.7975047181867
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 1.5353688956000155,
+          "online_train_test_gap_bits_per_event": 0.208059954726024,
+          "test_frozen_bits": 373.49540029507386,
+          "test_frozen_gain_vs_uniform_bits": 28.60725887461342,
+          "test_online_bits": 371.96003139947385,
+          "test_online_gain_vs_uniform_bits": 30.142627770213437,
+          "test_uniform_bits": 402.1026591696873,
+          "train_bits": 3912.7958823278236
+        },
+        "event_counts": {
+          "test_copy": 34,
+          "test_item_type": 34,
+          "test_literal_payload": 42,
+          "train_copy": 249,
+          "train_item_type": 253,
+          "train_literal_payload": 731
+        },
+        "label": "holdout_block_50_59",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 34
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 34
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 42
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 377.03404665696894,
+          "item_type_uniform_only": 388.5035058305299,
+          "literal_payload_uniform_only": 380.48516948113627
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 222.85680464284124,
+          "item_type": 17.749447465252892,
+          "literal_payload": 132.88914818697975
+        },
+        "test_online_cost_bits": {
+          "copy_length": 223.50766392692304,
+          "item_type": 17.456525568944002,
+          "literal_payload": 130.99584190360682
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 228.5816791844181,
+          "item_type": 34.0,
+          "literal_payload": 139.5209799852692
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1406.866811924096,
+          "item_type": 202.8302118851856,
+          "literal_payload": 2303.098858518542
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.6790725878405226,
+          "online_train_test_gap_bits_per_event": 0.2641648940186605,
+          "test_frozen_bits": 144.1022173768813,
+          "test_frozen_gain_vs_uniform_bits": 11.078379023643208,
+          "test_online_bits": 144.78128996472182,
+          "test_online_gain_vs_uniform_bits": 10.399306435802686,
+          "test_uniform_bits": 155.1805964005245,
+          "train_bits": 4141.09428821751
+        },
+        "event_counts": {
+          "test_copy": 19,
+          "test_item_type": 19,
+          "test_literal_payload": 4,
+          "train_copy": 264,
+          "train_item_type": 268,
+          "train_literal_payload": 769
+        },
+        "label": "holdout_block_60_69",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 19
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 19
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 4
+          }
+        },
+        "split_type": "contiguous_block_holdout",
+        "test_books": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 141.74117359206107,
+          "item_type_uniform_only": 155.38060025191575,
+          "literal_payload_uniform_only": 147.62140248599133
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 125.11246788896868,
+          "item_type": 8.542149629632675,
+          "literal_payload": 10.447599858279949
+        },
+        "test_online_cost_bits": {
+          "copy_length": 125.93300039363581,
+          "item_type": 8.400689712806058,
+          "literal_payload": 10.447599858279949
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 122.89288402097505,
+          "item_type": 19.0,
+          "literal_payload": 13.287712379549449
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "train_cost_bits": {
+          "copy_length": 1505.5611399123168,
+          "item_type": 211.8860477413235,
+          "literal_payload": 2423.64710056387
+        }
+      }
+    ],
+    "prefix_future_suffix_splits": [
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 35.198282255425056,
+          "online_train_test_gap_bits_per_event": 0.09800077561139497,
+          "test_frozen_bits": 2238.160354363062,
+          "test_frozen_gain_vs_uniform_bits": 121.8282395541919,
+          "test_online_bits": 2202.962072107637,
+          "test_online_gain_vs_uniform_bits": 157.02652180961695,
+          "test_uniform_bits": 2359.988593917254,
+          "train_bits": 2082.9135060745916
+        },
+        "event_counts": {
+          "test_copy": 221,
+          "test_item_type": 221,
+          "test_literal_payload": 238,
+          "train_copy": 62,
+          "train_item_type": 66,
+          "train_literal_payload": 535
+        },
+        "label": "prefix_10_future_suffix",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 101,
+            "present_context_events": 120
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 221
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 6,
+            "present_context_events": 232
+          }
+        },
+        "split_type": "prefix_future_suffix",
+        "test_books": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 2230.702865556824,
+          "item_type_uniform_only": 2267.9701199817287,
+          "literal_payload_uniform_only": 2267.239752593977
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 1324.0616170827295,
+          "item_type": 180.48010991664233,
+          "literal_payload": 733.6186273636905
+        },
+        "test_online_cost_bits": {
+          "copy_length": 1320.6289138848756,
+          "item_type": 155.9919521259087,
+          "literal_payload": 726.341206096853
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 1348.369707334062,
+          "item_type": 221.0,
+          "literal_payload": 790.6188865831922
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "train_cost_bits": {
+          "copy_length": 310.8652264210774,
+          "item_type": 64.29478532822084,
+          "literal_payload": 1707.7534943252933
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 23.626612512226302,
+          "online_train_test_gap_bits_per_event": 0.19971032872236094,
+          "test_frozen_bits": 1490.1287003440955,
+          "test_frozen_gain_vs_uniform_bits": 63.548263989504676,
+          "test_online_bits": 1466.5020878318692,
+          "test_online_gain_vs_uniform_bits": 87.17487650173098,
+          "test_uniform_bits": 1553.6769643336002,
+          "train_bits": 2819.3734903503578
+        },
+        "event_counts": {
+          "test_copy": 162,
+          "test_item_type": 162,
+          "test_literal_payload": 117,
+          "train_copy": 121,
+          "train_item_type": 125,
+          "train_literal_payload": 656
+        },
+        "label": "prefix_20_future_suffix",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 101,
+            "present_context_events": 61
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 162
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 1,
+            "present_context_events": 116
+          }
+        },
+        "split_type": "prefix_future_suffix",
+        "test_books": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 1477.8341110387992,
+          "item_type_uniform_only": 1526.9772291839079,
+          "literal_payload_uniform_only": 1481.8697997746315
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 994.6557313623242,
+          "item_type": 117.40789939847532,
+          "literal_payload": 378.0650695832959
+        },
+        "test_online_cost_bits": {
+          "copy_length": 991.6793540248489,
+          "item_type": 101.52485864796135,
+          "literal_payload": 373.29787515905906
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 1003.0113772317787,
+          "item_type": 162.0,
+          "literal_payload": 388.66558710182136
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "train_cost_bits": {
+          "copy_length": 639.8147862811034,
+          "item_type": 118.76187880616823,
+          "literal_payload": 2060.7968252630862
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 11.450483430407758,
+          "online_train_test_gap_bits_per_event": 0.2598561753583346,
+          "test_frozen_bits": 979.3052655136049,
+          "test_frozen_gain_vs_uniform_bits": 37.01410740929407,
+          "test_online_bits": 967.8547820831972,
+          "test_online_gain_vs_uniform_bits": 48.46459083970183,
+          "test_uniform_bits": 1016.319372922899,
+          "train_bits": 3318.0207960990315
+        },
+        "event_counts": {
+          "test_copy": 101,
+          "test_item_type": 101,
+          "test_literal_payload": 83,
+          "train_copy": 182,
+          "train_item_type": 186,
+          "train_literal_payload": 690
+        },
+        "label": "prefix_35_future_suffix",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 101,
+            "present_context_events": 0
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 101
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 1,
+            "present_context_events": 82
+          }
+        },
+        "split_type": "prefix_future_suffix",
+        "test_books": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 972.5202733118415,
+          "item_type_uniform_only": 1008.184400911834,
+          "literal_payload_uniform_only": 971.3242628656176
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 639.5993410472479,
+          "item_type": 63.00436665310234,
+          "literal_payload": 276.70155781325474
+        },
+        "test_online_cost_bits": {
+          "copy_length": 634.9338498186034,
+          "item_type": 60.67038117136307,
+          "literal_payload": 272.2505510932306
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 639.5993410472479,
+          "item_type": 101.0,
+          "literal_payload": 275.72003187565105
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "train_cost_bits": {
+          "copy_length": 996.5602904873492,
+          "item_type": 159.6163562827665,
+          "literal_payload": 2161.8441493289156
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 2.4577125412289433,
+          "online_train_test_gap_bits_per_event": 0.25655276243353287,
+          "test_frozen_bits": 522.11322078588,
+          "test_frozen_gain_vs_uniform_bits": 35.17003478433185,
+          "test_online_bits": 519.6555082446511,
+          "test_online_gain_vs_uniform_bits": 37.62774732556079,
+          "test_uniform_bits": 557.2832555702118,
+          "train_bits": 3766.2200699375794
+        },
+        "event_counts": {
+          "test_copy": 53,
+          "test_item_type": 53,
+          "test_literal_payload": 46,
+          "train_copy": 230,
+          "train_item_type": 234,
+          "train_literal_payload": 727
+        },
+        "label": "prefix_50_future_suffix",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 53
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 53
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 46
+          }
+        },
+        "split_type": "prefix_future_suffix",
+        "test_books": [
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 521.1708627311323,
+          "item_type_uniform_only": 546.2559342688243,
+          "literal_payload_uniform_only": 529.1674750595574
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 347.5336103385182,
+          "item_type": 27.538275190179245,
+          "literal_payload": 147.0413352571825
+        },
+        "test_online_cost_bits": {
+          "copy_length": 349.95920871891195,
+          "item_type": 26.399573975826797,
+          "literal_payload": 143.29672554991228
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 351.47456320539317,
+          "item_type": 53.0,
+          "literal_payload": 152.80869236481865
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "train_cost_bits": {
+          "copy_length": 1281.5349315870405,
+          "item_type": 193.88716347830274,
+          "literal_payload": 2290.797974872236
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.6790725878405226,
+          "online_train_test_gap_bits_per_event": 0.2641648940186605,
+          "test_frozen_bits": 144.1022173768813,
+          "test_frozen_gain_vs_uniform_bits": 11.078379023643208,
+          "test_online_bits": 144.78128996472182,
+          "test_online_gain_vs_uniform_bits": 10.399306435802686,
+          "test_uniform_bits": 155.1805964005245,
+          "train_bits": 4141.09428821751
+        },
+        "event_counts": {
+          "test_copy": 19,
+          "test_item_type": 19,
+          "test_literal_payload": 4,
+          "train_copy": 264,
+          "train_item_type": 268,
+          "train_literal_payload": 769
+        },
+        "label": "prefix_60_future_suffix",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 19
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 19
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 4
+          }
+        },
+        "split_type": "prefix_future_suffix",
+        "test_books": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 141.74117359206107,
+          "item_type_uniform_only": 155.38060025191575,
+          "literal_payload_uniform_only": 147.62140248599133
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 125.11246788896868,
+          "item_type": 8.542149629632675,
+          "literal_payload": 10.447599858279949
+        },
+        "test_online_cost_bits": {
+          "copy_length": 125.93300039363581,
+          "item_type": 8.400689712806058,
+          "literal_payload": 10.447599858279949
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 122.89288402097505,
+          "item_type": 19.0,
+          "literal_payload": 13.287712379549449
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "train_cost_bits": {
+          "copy_length": 1505.5611399123168,
+          "item_type": 211.8860477413235,
+          "literal_payload": 2423.64710056387
+        }
+      }
+    ],
+    "public_bookcase_family_holdouts": [
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.3619950665533338,
+          "online_train_test_gap_bits_per_event": -0.3584769745918166,
+          "test_frozen_bits": 245.10984319940377,
+          "test_frozen_gain_vs_uniform_bits": 37.08837492291548,
+          "test_online_bits": 245.4718382659571,
+          "test_online_gain_vs_uniform_bits": 36.72637985636214,
+          "test_uniform_bits": 282.19821812231925,
+          "train_bits": 4038.4904489259607
+        },
+        "event_counts": {
+          "test_copy": 16,
+          "test_item_type": 16,
+          "test_literal_payload": 54,
+          "train_copy": 267,
+          "train_item_type": 271,
+          "train_literal_payload": 719
+        },
+        "label": "hellgate_public_bookcase_1",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 16
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 16
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 54
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          12,
+          14
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 255.54271864311875,
+          "item_type_uniform_only": 246.25855083378502,
+          "literal_payload_uniform_only": 271.3406251773297
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 76.35379636717185,
+          "item_type": 15.207548364595397,
+          "literal_payload": 153.5484984676365
+        },
+        "test_online_cost_bits": {
+          "copy_length": 76.74322062124006,
+          "item_type": 15.213287432172066,
+          "literal_payload": 153.51533021254497
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 86.81410099840171,
+          "item_type": 16.0,
+          "literal_payload": 179.38411712391755
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1552.8376286944003,
+          "item_type": 205.07345002195743,
+          "literal_payload": 2280.579370209603
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 14.947448964566092,
+          "online_train_test_gap_bits_per_event": -0.33092855873202565,
+          "test_frozen_bits": 1088.981275736935,
+          "test_frozen_gain_vs_uniform_bits": 101.94797436949102,
+          "test_online_bits": 1074.033826772369,
+          "test_online_gain_vs_uniform_bits": 116.89542333405711,
+          "test_uniform_bits": 1190.929250106426,
+          "train_bits": 3212.6579502353266
+        },
+        "event_counts": {
+          "test_copy": 13,
+          "test_item_type": 16,
+          "test_literal_payload": 335,
+          "train_copy": 270,
+          "train_item_type": 271,
+          "train_literal_payload": 438
+        },
+        "label": "hellgate_public_bookcase_10",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 13
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 16
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 10,
+            "present_context_events": 325
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          0,
+          1,
+          2
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 1090.6870776984429,
+          "item_type_uniform_only": 1077.2432478153723,
+          "literal_payload_uniform_only": 1171.0665781373482
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 46.642359634114335,
+          "item_type": 14.326816485758973,
+          "literal_payload": 1028.0120996170617
+        },
+        "test_online_cost_bits": {
+          "copy_length": 45.43008739308566,
+          "item_type": 12.79057895699644,
+          "literal_payload": 1015.8131604222867
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 62.08333831915981,
+          "item_type": 16.0,
+          "literal_payload": 1112.8459117872662
+        },
+        "train_books": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1586.8802517383324,
+          "item_type": 207.49615849713305,
+          "literal_payload": 1418.2815399998613
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 1.6499019858795236,
+          "online_train_test_gap_bits_per_event": -0.16265445914425536,
+          "test_frozen_bits": 348.32401474876605,
+          "test_frozen_gain_vs_uniform_bits": 28.58297472253878,
+          "test_online_bits": 346.6741127628865,
+          "test_online_gain_vs_uniform_bits": 30.232876708418303,
+          "test_uniform_bits": 376.9069894713048,
+          "train_bits": 3937.292545951338
+        },
+        "event_counts": {
+          "test_copy": 18,
+          "test_item_type": 19,
+          "test_literal_payload": 77,
+          "train_copy": 265,
+          "train_item_type": 268,
+          "train_literal_payload": 696
+        },
+        "label": "hellgate_public_bookcase_12",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 18
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 19
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 1,
+            "present_context_events": 76
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          3,
+          4
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 369.1500300747587,
+          "item_type_uniform_only": 344.0441009458586,
+          "literal_payload_uniform_only": 357.06108397646057
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 79.93752468200452,
+          "item_type": 22.82441118931672,
+          "literal_payload": 245.5620788774448
+        },
+        "test_online_cost_bits": {
+          "copy_length": 79.64260885310573,
+          "item_type": 21.630011817027956,
+          "literal_payload": 245.40149209275285
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 102.11852616497792,
+          "item_type": 19.0,
+          "literal_payload": 255.7884633063269
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1549.9426119848429,
+          "item_type": 198.65672563710157,
+          "literal_payload": 2188.6932083293937
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.44227821940648937,
+          "online_train_test_gap_bits_per_event": 0.15306561731462054,
+          "test_frozen_bits": 103.10529484298381,
+          "test_frozen_gain_vs_uniform_bits": 1.2743339454488307,
+          "test_online_bits": 103.5475730623903,
+          "test_online_gain_vs_uniform_bits": 0.8320557260423413,
+          "test_uniform_bits": 104.37962878843264,
+          "train_bits": 4181.578421626962
+        },
+        "event_counts": {
+          "test_copy": 12,
+          "test_item_type": 12,
+          "test_literal_payload": 7,
+          "train_copy": 271,
+          "train_item_type": 275,
+          "train_literal_payload": 766
+        },
+        "label": "hellgate_public_bookcase_13",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 12
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 12
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 7
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          40,
+          41,
+          42
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 103.28524208713964,
+          "item_type_uniform_only": 107.6348514344933,
+          "literal_payload_uniform_only": 100.55468139158032
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 68.97293727870812,
+          "item_type": 7.885969229254179,
+          "literal_payload": 26.246388335021518
+        },
+        "test_online_cost_bits": {
+          "copy_length": 69.38846309947178,
+          "item_type": 7.912721627897007,
+          "literal_payload": 26.246388335021518
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 69.1261321242211,
+          "item_type": 12.0,
+          "literal_payload": 23.253496664211536
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1561.3560937136015,
+          "item_type": 212.37401582623258,
+          "literal_payload": 2407.848312087128
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.1540117371366705,
+          "online_train_test_gap_bits_per_event": -0.2995412252840812,
+          "test_frozen_bits": 130.70613212313899,
+          "test_frozen_gain_vs_uniform_bits": 15.466973936097247,
+          "test_online_bits": 130.55212038600231,
+          "test_online_gain_vs_uniform_bits": 15.620985673233918,
+          "test_uniform_bits": 146.17310605923623,
+          "train_bits": 4154.5078939972045
+        },
+        "event_counts": {
+          "test_copy": 16,
+          "test_item_type": 16,
+          "test_literal_payload": 13,
+          "train_copy": 267,
+          "train_item_type": 271,
+          "train_literal_payload": 760
+        },
+        "label": "hellgate_public_bookcase_2",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 16
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 16
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 13
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          15,
+          16
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 137.05768408341842,
+          "item_type_uniform_only": 131.33883295383023,
+          "literal_payload_uniform_only": 138.8808297939922
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 80.68953364777612,
+          "item_type": 15.207548364595397,
+          "literal_payload": 34.809050110767465
+        },
+        "test_online_cost_bits": {
+          "copy_length": 80.48247712828442,
+          "item_type": 15.213287432172068,
+          "literal_payload": 34.85635582554582
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 86.98804082570052,
+          "item_type": 16.0,
+          "literal_payload": 43.18506523353571
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1550.1960993786436,
+          "item_type": 205.07345002195743,
+          "literal_payload": 2399.238344596604
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.051629850631602636,
+          "online_train_test_gap_bits_per_event": -0.06691657335365209,
+          "test_frozen_bits": 31.19621113935729,
+          "test_frozen_gain_vs_uniform_bits": 7.342926323552774,
+          "test_online_bits": 31.24784098998889,
+          "test_online_gain_vs_uniform_bits": 7.291296472921172,
+          "test_uniform_bits": 38.53913746291006,
+          "train_bits": 4254.536996245937
+        },
+        "event_counts": {
+          "test_copy": 5,
+          "test_item_type": 5,
+          "test_literal_payload": 0,
+          "train_copy": 278,
+          "train_item_type": 282,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_20",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          44,
+          45
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 35.207493941703575,
+          "item_type_uniform_only": 34.579484511195375,
+          "literal_payload_uniform_only": 31.24784098998889
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 29.512585655280073,
+          "item_type": 1.683625484077215,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 29.57948451119538,
+          "item_type": 1.668356478793512,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 33.53913746291006,
+          "item_type": 5.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1601.8239148484508,
+          "item_type": 218.61838097533607,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.029582451253801878,
+          "online_train_test_gap_bits_per_event": 0.4885166323313195,
+          "test_frozen_bits": 36.731751191198384,
+          "test_frozen_gain_vs_uniform_bits": 1.707961638764317,
+          "test_online_bits": 36.761333642452186,
+          "test_online_gain_vs_uniform_bits": 1.6783791875105152,
+          "test_uniform_bits": 38.4397128299627,
+          "train_bits": 4249.093103641228
+        },
+        "event_counts": {
+          "test_copy": 5,
+          "test_item_type": 5,
+          "test_literal_payload": 0,
+          "train_copy": 278,
+          "train_item_type": 282,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_21",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          62,
+          63,
+          64
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 35.108069308756214,
+          "item_type_uniform_only": 40.092977163658674,
+          "literal_payload_uniform_only": 36.761333642452186
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 35.04812570712117,
+          "item_type": 1.683625484077215,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 35.092977163658674,
+          "item_type": 1.668356478793512,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 33.4397128299627,
+          "item_type": 5.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1596.3800222437412,
+          "item_type": 218.618380975336,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 1.2944582213708031,
+          "online_train_test_gap_bits_per_event": 0.0425125500775585,
+          "test_frozen_bits": 407.95816971058576,
+          "test_frozen_gain_vs_uniform_bits": 23.598590484941553,
+          "test_online_bits": 406.66371148921496,
+          "test_online_gain_vs_uniform_bits": 24.893048706312356,
+          "test_uniform_bits": 431.5567601955273,
+          "train_bits": 3876.117281177632
+        },
+        "event_counts": {
+          "test_copy": 22,
+          "test_item_type": 22,
+          "test_literal_payload": 82,
+          "train_copy": 261,
+          "train_item_type": 265,
+          "train_literal_payload": 691
+        },
+        "label": "hellgate_public_bookcase_22",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 22
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 22
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 82
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          5,
+          6,
+          7
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 423.6055189482629,
+          "item_type_uniform_only": 407.83598572024545,
+          "literal_payload_uniform_only": 413.44267850544884
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 119.37899623004606,
+          "item_type": 20.717323368922333,
+          "literal_payload": 267.8618501116174
+        },
+        "test_online_cost_bits": {
+          "copy_length": 120.21684895571572,
+          "item_type": 20.827725768969486,
+          "literal_payload": 265.61913676452974
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 137.15865641476364,
+          "item_type": 22.0,
+          "literal_payload": 272.3981037807637
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1508.1827058348556,
+          "item_type": 199.45901168516005,
+          "literal_payload": 2168.475563657616
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.13357157579591927,
+          "online_train_test_gap_bits_per_event": -0.3212409675241714,
+          "test_frozen_bits": 51.604183005131155,
+          "test_frozen_gain_vs_uniform_bits": 3.2753210154226835,
+          "test_online_bits": 51.737754580927074,
+          "test_online_gain_vs_uniform_bits": 3.1417494396267642,
+          "test_uniform_bits": 54.87950402055384,
+          "train_bits": 4234.117883065548
+        },
+        "event_counts": {
+          "test_copy": 9,
+          "test_item_type": 9,
+          "test_literal_payload": 0,
+          "train_copy": 274,
+          "train_item_type": 278,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_23",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 9
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 9
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          28,
+          29
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 48.91045893966464,
+          "item_type_uniform_only": 57.70679966181627,
+          "literal_payload_uniform_only": 51.737754580927074
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 48.51687945404003,
+          "item_type": 3.0873035510911238,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 48.70679966181627,
+          "item_type": 3.0309549191108016,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 45.87950402055384,
+          "item_type": 9.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1582.7674001083785,
+          "item_type": 217.25578253501888,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.025372193767552176,
+          "online_train_test_gap_bits_per_event": 0.25629802518766676,
+          "test_frozen_bits": 27.54564846213171,
+          "test_frozen_gain_vs_uniform_bits": 4.143728512455752,
+          "test_online_bits": 27.57102065589926,
+          "test_online_gain_vs_uniform_bits": 4.1183563186882,
+          "test_uniform_bits": 31.68937697458746,
+          "train_bits": 4258.756208327654
+        },
+        "event_counts": {
+          "test_copy": 4,
+          "test_item_type": 4,
+          "test_literal_payload": 0,
+          "train_copy": 279,
+          "train_item_type": 283,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_27",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 4
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 4
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          46,
+          47
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 29.02100835656553,
+          "item_type_uniform_only": 30.23938927392119,
+          "literal_payload_uniform_only": 27.57102065589926
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 26.20491169577319,
+          "item_type": 1.3407367663585166,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 26.23938927392119,
+          "item_type": 1.3316313819780687,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 27.68937697458746,
+          "item_type": 4.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1605.7064018333524,
+          "item_type": 218.9551060721515,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.13744779731440104,
+          "online_train_test_gap_bits_per_event": -0.6559247007911848,
+          "test_frozen_bits": 51.03544542967561,
+          "test_frozen_gain_vs_uniform_bits": 11.495562524602143,
+          "test_online_bits": 50.89799763236121,
+          "test_online_gain_vs_uniform_bits": 11.633010321916544,
+          "test_uniform_bits": 62.531007954277754,
+          "train_bits": 4234.690922527431
+        },
+        "event_counts": {
+          "test_copy": 10,
+          "test_item_type": 10,
+          "test_literal_payload": 0,
+          "train_copy": 273,
+          "train_item_type": 277,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_3",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 10
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 10
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          20,
+          21
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 55.906611044776,
+          "item_type_uniform_only": 57.522394541862965,
+          "literal_payload_uniform_only": 50.89799763236121
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 47.58896371580115,
+          "item_type": 3.446481713874459,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 47.522394541862965,
+          "item_type": 3.3756030904982475,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 52.531007954277754,
+          "item_type": 10.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1583.68508774165,
+          "item_type": 216.91113436363136,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.024506892636352973,
+          "online_train_test_gap_bits_per_event": 0.5199471875878845,
+          "test_frozen_bits": 33.345380855249395,
+          "test_frozen_gain_vs_uniform_bits": 0.5928714412502814,
+          "test_online_bits": 33.36988774788575,
+          "test_online_gain_vs_uniform_bits": 0.5683645486139284,
+          "test_uniform_bits": 33.93825229649968,
+          "train_bits": 4252.549369055494
+        },
+        "event_counts": {
+          "test_copy": 3,
+          "test_item_type": 3,
+          "test_literal_payload": 3,
+          "train_copy": 280,
+          "train_item_type": 284,
+          "train_literal_payload": 770
+        },
+        "label": "hellgate_public_bookcase_30",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 3
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 3
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 3
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          32,
+          33
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 33.06905187351148,
+          "item_type_uniform_only": 33.40258690315683,
+          "literal_payload_uniform_only": 34.20638901560287
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 21.258955972237874,
+          "item_type": 2.957141866066556,
+          "literal_payload": 9.129283016944967
+        },
+        "test_online_cost_bits": {
+          "copy_length": 21.27330388621186,
+          "item_type": 2.967300844728923,
+          "literal_payload": 9.129283016944967
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 20.972468011837588,
+          "item_type": 3.0,
+          "literal_payload": 9.965784284662087
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1610.264515040888,
+          "item_type": 217.3194366094006,
+          "literal_payload": 2424.9654174052052
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.026032787935619695,
+          "online_train_test_gap_bits_per_event": 0.6621199547433125,
+          "test_frozen_bits": 38.462437990865624,
+          "test_frozen_gain_vs_uniform_bits": -2.9397073262090743,
+          "test_online_bits": 38.48847077880124,
+          "test_online_gain_vs_uniform_bits": -2.965740114144694,
+          "test_uniform_bits": 35.52273066465655,
+          "train_bits": 4247.90725514137
+        },
+        "event_counts": {
+          "test_copy": 5,
+          "test_item_type": 5,
+          "test_literal_payload": 0,
+          "train_copy": 278,
+          "train_item_type": 282,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_33",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          18,
+          19
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 32.19108714345006,
+          "item_type_uniform_only": 41.82011430000773,
+          "literal_payload_uniform_only": 38.48847077880124
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 36.77881250678841,
+          "item_type": 1.683625484077215,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 36.82011430000773,
+          "item_type": 1.668356478793512,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 30.52273066465655,
+          "item_type": 5.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1595.1941737438838,
+          "item_type": 218.61838097533615,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.2063130663892423,
+          "online_train_test_gap_bits_per_event": -0.12526011772317025,
+          "test_frozen_bits": 181.0117598927002,
+          "test_frozen_gain_vs_uniform_bits": 9.468902288758926,
+          "test_online_bits": 181.21807295908945,
+          "test_online_gain_vs_uniform_bits": 9.262589222369684,
+          "test_uniform_bits": 190.48066218145914,
+          "train_bits": 4104.63069758826
+        },
+        "event_counts": {
+          "test_copy": 9,
+          "test_item_type": 9,
+          "test_literal_payload": 41,
+          "train_copy": 274,
+          "train_item_type": 278,
+          "train_literal_payload": 732
+        },
+        "label": "hellgate_public_bookcase_36",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 9
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 9
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 41
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          8,
+          9
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 181.75688470218316,
+          "item_type_uniform_only": 179.26053145191145,
+          "literal_payload_uniform_only": 191.89939194554347
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 44.79201993902173,
+          "item_type": 10.998084408423468,
+          "literal_payload": 125.22165554525502
+        },
+        "test_online_cost_bits": {
+          "copy_length": 44.74279854798361,
+          "item_type": 10.957541507178007,
+          "literal_payload": 125.51773290392785
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 45.28161029107731,
+          "item_type": 9.0,
+          "literal_payload": 136.19905189038184
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1586.7245341230869,
+          "item_type": 209.32919594695156,
+          "literal_payload": 2308.576967518222
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.12170952611775476,
+          "online_train_test_gap_bits_per_event": -0.02593893357056265,
+          "test_frozen_bits": 60.02617713477217,
+          "test_frozen_gain_vs_uniform_bits": 7.856588814650067,
+          "test_online_bits": 60.147886660889924,
+          "test_online_gain_vs_uniform_bits": 7.734879288532312,
+          "test_uniform_bits": 67.88276594942224,
+          "train_bits": 4225.70114483786
+        },
+        "event_counts": {
+          "test_copy": 8,
+          "test_item_type": 8,
+          "test_literal_payload": 3,
+          "train_copy": 275,
+          "train_item_type": 279,
+          "train_literal_payload": 770
+        },
+        "label": "hellgate_public_bookcase_4",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 8
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 8
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 3
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          24,
+          25,
+          26
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 62.10071791845402,
+          "item_type_uniform_only": 63.52639283141711,
+          "literal_payload_uniform_only": 62.551428521330934
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 47.85162250717716,
+          "item_type": 4.612312203373937,
+          "literal_payload": 7.562242424221072
+        },
+        "test_online_cost_bits": {
+          "copy_length": 47.96415040719604,
+          "item_type": 4.621493829472811,
+          "literal_payload": 7.562242424221072
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 49.916981664760144,
+          "item_type": 8.0,
+          "literal_payload": 9.965784284662087
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1583.5034432152734,
+          "item_type": 215.6652436246568,
+          "literal_payload": 2426.532457997929
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.33364390621866846,
+          "online_train_test_gap_bits_per_event": 0.4086362915390427,
+          "test_frozen_bits": 57.85938198009938,
+          "test_frozen_gain_vs_uniform_bits": 9.341303873015995,
+          "test_online_bits": 57.52573807388071,
+          "test_online_gain_vs_uniform_bits": 9.674947779234664,
+          "test_uniform_bits": 67.20068585311537,
+          "train_bits": 4228.780542630172
+        },
+        "event_counts": {
+          "test_copy": 8,
+          "test_item_type": 8,
+          "test_literal_payload": 0,
+          "train_copy": 275,
+          "train_item_type": 279,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_40",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 8
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 8
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          50,
+          51,
+          52,
+          53
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 61.888607044327166,
+          "item_type_uniform_only": 62.837816882668925,
+          "literal_payload_uniform_only": 57.52573807388071
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 55.12790670618861,
+          "item_type": 2.7314752739107666,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 54.837816882668925,
+          "item_type": 2.687921191211788,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 59.20068585311538,
+          "item_type": 8.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1577.0870259451037,
+          "item_type": 217.59881626291786,
+          "literal_payload": 2434.0947004221503
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.5562618612005394,
+          "online_train_test_gap_bits_per_event": -0.20556508749186087,
+          "test_frozen_bits": 45.36703924988018,
+          "test_frozen_gain_vs_uniform_bits": -0.3951809595302933,
+          "test_online_bits": 44.81077738867964,
+          "test_online_gain_vs_uniform_bits": 0.16108090167024613,
+          "test_uniform_bits": 44.971858290349886,
+          "train_bits": 4240.237927666962
+        },
+        "event_counts": {
+          "test_copy": 5,
+          "test_item_type": 5,
+          "test_literal_payload": 5,
+          "train_copy": 278,
+          "train_item_type": 282,
+          "train_literal_payload": 768
+        },
+        "label": "hellgate_public_bookcase_6",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 5
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          38,
+          39
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 45.712253493895595,
+          "item_type_uniform_only": 42.163996444445274,
+          "literal_payload_uniform_only": 46.71716312936831
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 22.979585962195397,
+          "item_type": 7.684198553936633,
+          "literal_payload": 14.703254733748148
+        },
+        "test_online_cost_bits": {
+          "copy_length": 22.460741710697125,
+          "item_type": 7.6467809442343695,
+          "literal_payload": 14.703254733748148
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 23.362217815913077,
+          "item_type": 5.0,
+          "literal_payload": 16.609640474436812
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1608.2065254686647,
+          "item_type": 212.63995650989506,
+          "literal_payload": 2419.3914456884017
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": -0.5272901275426847,
+          "online_train_test_gap_bits_per_event": -0.06624978918106672,
+          "test_frozen_bits": 108.87678606145082,
+          "test_frozen_gain_vs_uniform_bits": 13.504741188252183,
+          "test_online_bits": 109.4040761889935,
+          "test_online_gain_vs_uniform_bits": 12.977451060709498,
+          "test_uniform_bits": 122.381527249703,
+          "train_bits": 4175.241342968935
+        },
+        "event_counts": {
+          "test_copy": 14,
+          "test_item_type": 14,
+          "test_literal_payload": 7,
+          "train_copy": 269,
+          "train_item_type": 273,
+          "train_literal_payload": 766
+        },
+        "label": "hellgate_public_bookcase_7",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 14
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 14
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 7
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          54,
+          55,
+          56
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 113.1006066485602,
+          "item_type_uniform_only": 116.74590054139449,
+          "literal_payload_uniform_only": 111.3431724377353
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 80.92869301698583,
+          "item_type": 6.704081956886643,
+          "literal_payload": 21.24401108757834
+        },
+        "test_online_cost_bits": {
+          "copy_length": 81.43150012592476,
+          "item_type": 6.65817564759901,
+          "literal_payload": 21.314400415469738
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 85.12803058549146,
+          "item_type": 14.0,
+          "literal_payload": 23.253496664211536
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "train_cost_bits": {
+          "copy_length": 1548.8324811557234,
+          "item_type": 213.6285618065306,
+          "literal_payload": 2412.7803000066806
+        }
+      },
+      {
+        "aggregate": {
+          "frozen_minus_online_bits": 0.0014991789420299995,
+          "online_train_test_gap_bits_per_event": 0.9045136106060401,
+          "test_frozen_bits": 16.373857489541347,
+          "test_frozen_gain_vs_uniform_bits": -0.1674535755674995,
+          "test_online_bits": 16.372358310599317,
+          "test_online_gain_vs_uniform_bits": -0.1659543966254695,
+          "test_uniform_bits": 16.206403913973848,
+          "train_bits": 4269.5032198716335
+        },
+        "event_counts": {
+          "test_copy": 2,
+          "test_item_type": 2,
+          "test_literal_payload": 0,
+          "train_copy": 281,
+          "train_item_type": 285,
+          "train_literal_payload": 773
+        },
+        "label": "hellgate_public_bookcase_8",
+        "parameter_stability": {
+          "copy_length_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 2
+          },
+          "declared_parameters_frozen": {
+            "copy_length_alpha": 1,
+            "copy_length_context": "book_id < 35 versus book_id >= 35",
+            "item_type_alpha": 2.0,
+            "item_type_order": 0,
+            "item_type_split_book": 6,
+            "literal_payload_alpha": 1.0,
+            "literal_payload_order": 2
+          },
+          "item_type_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 2
+          },
+          "literal_payload_context_coverage": {
+            "missing_context_events": 0,
+            "present_context_events": 0
+          }
+        },
+        "split_type": "public_bookcase_family_holdout",
+        "test_books": [
+          68,
+          69
+        ],
+        "test_component_ablation_totals_bits": {
+          "copy_length_uniform_only": 14.869193716892818,
+          "item_type_uniform_only": 17.70956850768035,
+          "literal_payload_uniform_only": 16.372358310599317
+        },
+        "test_frozen_cost_bits": {
+          "copy_length": 15.709568507680348,
+          "item_type": 0.664288981860998,
+          "literal_payload": 0.0
+        },
+        "test_online_cost_bits": {
+          "copy_length": 15.709568507680348,
+          "item_type": 0.6627898029189703,
+          "literal_payload": 0.0
+        },
+        "test_uniform_baseline_bits": {
+          "copy_length": 14.206403913973848,
+          "item_type": 2.0,
+          "literal_payload": 0.0
+        },
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67
+        ],
+        "train_cost_bits": {
+          "copy_length": 1615.7845717982723,
+          "item_type": 219.62394765121056,
+          "literal_payload": 2434.0947004221503
+        }
+      }
+    ],
+    "random_train_set_controls": [
+      {
+        "cutoff": 10,
+        "observed_prefix_online_gain_vs_uniform_bits": 157.02652180961695,
+        "p_random_gain_ge_observed": 1.0,
+        "random_gain_summary_bits": {
+          "max": 269.366456922417,
+          "mean": 248.6487711444758,
+          "median": 251.74775422628682,
+          "min": 196.3645140597955,
+          "n": 200
+        },
+        "trials": 200
+      },
+      {
+        "cutoff": 20,
+        "observed_prefix_online_gain_vs_uniform_bits": 87.17487650173098,
+        "p_random_gain_ge_observed": 1.0,
+        "random_gain_summary_bits": {
+          "max": 253.48352344506839,
+          "mean": 219.7768586558476,
+          "median": 225.9230766620542,
+          "min": 134.49212410938117,
+          "n": 200
+        },
+        "trials": 200
+      },
+      {
+        "cutoff": 35,
+        "observed_prefix_online_gain_vs_uniform_bits": 48.46459083970183,
+        "p_random_gain_ge_observed": 1.0,
+        "random_gain_summary_bits": {
+          "max": 242.13890661163987,
+          "mean": 168.82605763501655,
+          "median": 172.87570255870844,
+          "min": 88.15043067012107,
+          "n": 200
+        },
+        "trials": 200
+      },
+      {
+        "cutoff": 50,
+        "observed_prefix_online_gain_vs_uniform_bits": 37.62774732556079,
+        "p_random_gain_ge_observed": 0.9800995024875622,
+        "random_gain_summary_bits": {
+          "max": 200.1049163780567,
+          "mean": 101.29071482565647,
+          "median": 99.69850685331414,
+          "min": 18.08682529727662,
+          "n": 200
+        },
+        "trials": 200
+      },
+      {
+        "cutoff": 60,
+        "observed_prefix_online_gain_vs_uniform_bits": 10.399306435802686,
+        "p_random_gain_ge_observed": 0.9601990049751243,
+        "random_gain_summary_bits": {
+          "max": 134.8163189652646,
+          "mean": 49.72669598741357,
+          "median": 46.331723251114454,
+          "min": 1.2599581463276763,
+          "n": 200
+        },
+        "trials": 200
+      }
+    ],
+    "scope_limit": "The audit freezes the active recipe and tests learned component streams. It does not prove that the LZ recipe itself can be discovered from prefix books.",
+    "summary": {
+      "block_online_gain_vs_uniform_bits": {
+        "max": 166.10544902154516,
+        "mean": 48.77399125683207,
+        "median": 30.142627770213437,
+        "min": 9.226846890659033,
+        "n": 7
+      },
+      "failure_count_prefix_frozen_nonpositive": 0,
+      "failure_count_prefix_online_nonpositive": 0,
+      "family_online_gain_vs_uniform_bits": {
+        "max": 116.89542333405711,
+        "mean": 15.279535791339448,
+        "median": 7.734879288532312,
+        "min": -2.965740114144694,
+        "n": 19
+      },
+      "prefix_frozen_gain_vs_uniform_bits": {
+        "max": 121.8282395541919,
+        "mean": 53.72780495219314,
+        "median": 37.01410740929407,
+        "min": 11.078379023643208,
+        "n": 5
+      },
+      "prefix_online_gain_vs_uniform_bits": {
+        "max": 157.02652180961695,
+        "mean": 68.13860858248265,
+        "median": 48.46459083970183,
+        "min": 10.399306435802686,
+        "n": 5
+      }
+    }
+  },
+  "progress_criterion": {
+    "counts_as_progress": [
+      "Predictive validation or falsification under prefix/family holdout.",
+      "Clearer row0 boundary and exogenous-dependency accounting.",
+      "Rejected origin families with algorithm/cost/coverage/control ledger."
+    ],
+    "does_not_count_as_progress": [
+      "Number of scripts.",
+      "Number of sweeps.",
+      "Lower posthoc compression without predictive or structural gain."
+    ]
+  },
+  "row0_origin": {
+    "classification": "row0_origin_remains_exogenous_under_current_evidence",
+    "hypotheses": [
+      {
+        "algorithm": "Declare unordered-pair -> row0-symbol inventory directly.",
+        "contradictions": "none inside inventory; explains no compact origin",
+        "coverage": "55/55 by definition",
+        "descriptive_cost_bits": 209.40452071316824,
+        "hypothesis": "manual_authorial_lookup",
+        "negative_controls": "not meaningful because this is the lookup baseline",
+        "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+        "status": "accepted_as_exogenous_substrate_not_origin_formula"
+      },
+      {
+        "algorithm": "Finite-group / cyclic / hash-like formulas over pair indices and digit permutations.",
+        "contradictions": "best exact row is classified lookup_disguise; hash rows are low-coverage and do not compress",
+        "coverage": "55/55 hits for the best finite-group row, but it uses one group per cell",
+        "descriptive_cost_bits": 254.40822783567893,
+        "hypothesis": "simple_permutation_or_group_rule",
+        "negative_controls": 1.0,
+        "source": "analysis/generator_search_20260618/finite_group_pair_formula_results.json",
+        "status": "rejected_lookup_disguise"
+      },
+      {
+        "algorithm": "Local 2D propagation, quotient/orbit formulas, matrix seed overlays, and table-grid order rules.",
+        "contradictions": "partial hits require many exceptions or posthoc overlays; no lossless compact grid algorithm",
+        "coverage": "21/55 best matrix hits; 15/55 best local-2D hits",
+        "descriptive_cost_bits": 366.1843428780211,
+        "hypothesis": "grid_10x10_mechanism",
+        "negative_controls": {
+          "local_2d_primary_mdl_gain_control": null,
+          "matrix_control_p": 2.1032806543283516e-09
+        },
+        "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+        "status": "rejected_as_origin_formula"
+      },
+      {
+        "algorithm": "Derive pair labels/order from book usage, first-use order, symbol streams, or marginal signatures.",
+        "contradictions": "train and stream signals do not survive as a controlled row0 generator",
+        "coverage": "6/55 holdout same-rule hits",
+        "descriptive_cost_bits": "not promoted; tested as accuracy/control signals",
+        "hypothesis": "order_or_frequency_derivation",
+        "negative_controls": {
+          "pair_marginal_verdict": "rejected_control",
+          "tape_first_use_bonferroni": 1.0,
+          "usage_train_p_ge_observed": 0.6534488503832055
+        },
+        "source": "analysis/generator_search_20260618/usage_driven_pair_placement_results.json",
+        "status": "rejected_holdout_or_control"
+      },
+      {
+        "algorithm": "Map pair labels to known lore/textual seeds or external phrase order.",
+        "contradictions": "lore/textual seeds behave as searched symbol orders, not primary row0 evidence",
+        "coverage": "21/55 at best when lore-word symbol orders are allowed inside matrix search",
+        "descriptive_cost_bits": "no promoted external source ledger",
+        "hypothesis": "known_external_text_source",
+        "negative_controls": 0.0001999600079984003,
+        "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+        "status": "not_attested_rejected_as_source_formula"
+      },
+      {
+        "algorithm": "Treat row0 as an artifact of workbook export, SQLite ingestion, or local scripts.",
+        "contradictions": "export scripts preserve source cells and do not synthesize a compact row0 formula",
+        "coverage": "explains where the project reads row0-like tables from, not why CipSoft/game data has that table",
+        "descriptive_cost_bits": "provenance-preserving ingestion, not a generator",
+        "hypothesis": "workbook_or_script_artifact",
+        "negative_controls": "manual code inspection of ingestion scripts; no generated table algorithm found",
+        "source": "scripts/export_workbook_to_sqlite.py",
+        "status": "rejected_as_origin_explanation_for_in_game_table"
+      }
+    ],
+    "promoted_row0_origin_formula_count": 0,
+    "what_remains_exogenous": [
+      "Why those unordered pair labels occupy the 10x10 table cells.",
+      "A compact lossless algorithm for the pair labels after rule/search/exception costs.",
+      "A primary CipSoft/in-game plaintext, symbol table, or book->meaning crib.",
+      "A derivation of row0 from the active LZ book-generation formula."
+    ],
+    "what_row0_explains": [
+      "Supplies the code->symbol substrate used to reconstruct the 70 book digit strings byte-exactly.",
+      "Supports unordered pair/mirror geometry and render-exception audits.",
+      "Allows the book-generation formula to operate on digit strings."
+    ]
+  },
+  "schema": "prequential_and_row0_origin_audit.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json",
+  "test": "125_prequential_and_row0_origin_audit",
+  "translation_delta": "NONE"
+}

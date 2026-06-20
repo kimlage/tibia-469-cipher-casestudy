@@ -321,6 +321,9 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
   full-corpus rescoring.
 - `scripts/124_item_type_split_only_alpha_resweep.py` - retests the split-only
   item-type smoothing alpha and retains the promoted `alpha=2` bound.
+- `scripts/125_prequential_and_row0_origin_audit.py` - freezes `8558.667` as
+  the current `compression_bound`, tests learned components under
+  prefix/block/family holdout, and records that row0 origin remains exogenous.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -602,5 +602,12 @@ Generated audits in this directory should be treated as the current state:
   the split-only promotion. Active `alpha=2` remains best at `8558.667` bits;
   `alpha=1` is nearest at `+0.309` bits, so no follow-up parameter promotion is
   justified.
+- `125_prequential_and_row0_origin_audit`: stops the compression micro-sweep
+  line and freezes `8558.667` as `compression_bound`. Learned components keep
+  positive prefix future-suffix advantage over uniform at all five cutoffs, but
+  random same-size train-book controls are usually stronger, so this is
+  predictive component evidence only. Row0 origin remains exogenous under the
+  manual lookup, permutation/group, grid, order/frequency, external-text, and
+  workbook/script-artifact hypothesis ledger.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -376,6 +376,10 @@ component itself, lowering the active bound to `8558.667` bits with `70/70`
 roundtrip and no semantic claim.
 The split-only alpha resweep retains `alpha=2`; `alpha=1` is the nearest
 alternate at `+0.309` bits.
+The prequential and row0-origin audit freezes `8558.667` as
+`compression_bound`: learned components beat uniform on prefix future-suffix
+splits, but random same-size train controls are usually stronger, and row0
+origin remains exogenous.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

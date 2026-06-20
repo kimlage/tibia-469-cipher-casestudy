@@ -846,6 +846,15 @@ frontier for that promoted model. `alpha=2` remains best at `8558.667` bits
 after charging alpha declaration deltas; `alpha=1` is nearest at `+0.309` bits
 worse, and no alternate alpha is promoted.
 
+The prequential and row0-origin audit then changes direction away from
+compression micro-sweeps. It freezes `8558.667` as the current
+`compression_bound`: learned components beat uniform on all prefix
+future-suffix splits, but random same-size train-book controls are usually
+stronger, so numeric order and final authorial method are not promoted. The
+same audit records row0 as still exogenous across manual lookup,
+permutation/group, 10x10 grid, order/frequency, external-text, and
+workbook/script-artifact hypotheses.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1116,6 +1125,7 @@ book generation, not row0 pair-cell placement.
 - [Simplified generation profile compile](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md)
 - [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
+- [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
 
 ## Boundary
 
