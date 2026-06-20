@@ -325,7 +325,8 @@ bound. A post-alpha1 copy-order retest keeps source-first as the best decodable
 order; length-first variants remain optimistic-only or worse after mode costs.
 The post-alpha1 copy-length context resweep also keeps the fixed book-midpoint
 context as the best fully declared context, and the context-specific alpha grid
-keeps shared `alpha=1`. No
+keeps shared `alpha=1`. A literal-payload context search keeps the global
+previous-emitted-digit payload model. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

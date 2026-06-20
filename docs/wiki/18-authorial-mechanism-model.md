@@ -609,6 +609,12 @@ first-half `alpha=1` and sets second-half `alpha=2`, saving `1.611` component
 bits, but the extra declarations make it `+1.389` bits worse overall. The
 shared `alpha=1` midpoint model remains active.
 
+The post-midpoint alpha1 literal-payload context search then checks whether the
+remaining literal digits need a book-level payload prior instead of the global
+previous-emitted-digit model. They do not under full MDL: book-midpoint payload
+context saves `2.251` component bits but is `+1.749` bits worse after
+declaration, and the best searched split, book `39`, is `+11.613` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -714,6 +720,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CG | `post_midpoint_alpha1_copy_order_optimistic_only_not_promoted` |
 | H-GEN3CH | `post_midpoint_alpha1_copy_length_context_retains_midpoint` |
 | H-GEN3CI | `post_midpoint_alpha_by_context_not_promoted` |
+| H-GEN3CJ | `post_midpoint_literal_payload_context_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -814,6 +821,7 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/90_post_midpoint_alpha1_copy_order_search.md)
 - [Post-midpoint alpha1 copy-length context resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/91_post_midpoint_alpha1_copy_length_context_resweep.md)
 - [Post-midpoint alpha1 context alpha grid](../../analysis/authorial_mechanism_20260620/reports/test_results/92_post_midpoint_alpha1_context_alpha_grid.md)
+- [Post-midpoint alpha1 literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/93_post_midpoint_alpha1_literal_payload_context_search.md)
 
 ## Boundary
 
@@ -841,6 +849,7 @@ resweeps, the post-midpoint local frontier, and the post-midpoint alpha1 local
 frontier plus pair frontier, address-model retest, and copy-order retest do
 not improve the current frontier; the post-alpha1 context resweep retains the
 midpoint context, and the per-context alpha grid retains shared `alpha=1`.
+The literal-payload context search also retains the global payload model.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

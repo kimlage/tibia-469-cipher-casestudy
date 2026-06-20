@@ -467,6 +467,11 @@ hypotheses:
     status: post_midpoint_alpha_by_context_not_promoted
     target: "separate midpoint first-half and second-half copy-length smoothing alphas"
     promotion_rule: "must beat active shared alpha=1 midpoint context after charged per-context alpha declarations while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CJ:
+    name: "post midpoint alpha1 literal payload context search"
+    status: post_midpoint_literal_payload_context_not_promoted
+    target: "simple contexts for the adaptive literal-payload previous-emitted-digit model"
+    promotion_rule: "must beat active global literal-payload model after charged context declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

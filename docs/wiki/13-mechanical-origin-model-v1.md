@@ -137,6 +137,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-midpoint alpha1 copy order search | source-address-then-length remains best decodable; pure length-first is `+12.194` bits worse and best-order no-mode is `-3.539` bits optimistic only | rejected refinement / optimistic clue |
 | Post-midpoint alpha1 copy-length context resweep | fixed book-midpoint context remains best at `8572.267`; book quartiles are `+1.941` bits worse and the best searched split is `+2.296` bits worse | retained context frontier |
 | Post-midpoint alpha1 context alpha grid | first-half `alpha=1` plus second-half `alpha=2` saves `1.611` length bits but is `+1.389` bits worse after per-context alpha declarations | rejected refinement / retained shared alpha |
+| Post-midpoint alpha1 literal payload context search | book-midpoint payload context saves `2.251` bits but is `+1.749` bits worse after declaration; searched split book `39` is `+11.613` bits worse | rejected refinement / retained global payload model |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -223,6 +224,7 @@ Primary sources:
 [post_midpoint_alpha1_copy_order_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/90_post_midpoint_alpha1_copy_order_search.md),
 [post_midpoint_alpha1_copy_length_context_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/91_post_midpoint_alpha1_copy_length_context_resweep.md),
 [post_midpoint_alpha1_context_alpha_grid.md](../../analysis/authorial_mechanism_20260620/reports/test_results/92_post_midpoint_alpha1_context_alpha_grid.md),
+[post_midpoint_alpha1_literal_payload_context_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/93_post_midpoint_alpha1_literal_payload_context_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

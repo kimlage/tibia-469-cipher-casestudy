@@ -376,6 +376,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   the best per-context row, first-half `alpha=1` and second-half `alpha=2`,
   saves `1.611` component bits but is still `+1.389` bits worse after the
   extra alpha declarations.
+- literal-payload contexts are now covered by
+  [`93_post_midpoint_alpha1_literal_payload_context_search.py`](scripts/93_post_midpoint_alpha1_literal_payload_context_search.py);
+  book-midpoint payload context saves `2.251` component bits but is still
+  `+1.749` bits worse after declaration, so the global previous-emitted-digit
+  payload model remains active.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

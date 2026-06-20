@@ -450,5 +450,9 @@ Generated audits in this directory should be treated as the current state:
   smoothing parameters. The best per-context row, first-half `alpha=1` and
   second-half `alpha=2`, saves `1.611` component bits but remains `+1.389`
   bits worse after extra alpha declarations.
+- `93_post_midpoint_alpha1_literal_payload_context_search`: retests simple
+  contexts for the adaptive literal-payload model. Book-midpoint context saves
+  `2.251` payload bits but remains `+1.749` bits worse after declaration, so
+  the global previous-emitted-digit payload model is retained.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -183,7 +183,9 @@ keeps the fixed book-midpoint context; book quartiles are `+1.941` bits worse
 and the best searched split is `+2.296` bits worse after declaration costs. A
 context-specific alpha grid also retains shared `alpha=1`; the best split
 alpha row saves `1.611` component bits but is `+1.389` bits worse after
-declaration.
+declaration. A literal-payload context search also retains the global
+previous-emitted-digit payload model; book-midpoint payload context saves
+`2.251` component bits but is `+1.749` bits worse after declaration.
 
 ## Ranked: what would unlock progress
 
