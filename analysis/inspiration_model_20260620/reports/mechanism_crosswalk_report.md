@@ -29,6 +29,8 @@ several source families negatively.
 | Inspiration | Existing mechanical target | New result | Classification |
 |---|---|---|---|
 | Great Calculator / assembly | Tape/module/literal formula | Already accepted by tape formula and residual exact-repeat model. | `accepted_mechanical` |
+| Tridiag / incomplete formula | diagonal/E cells, 33/66 anchors, blockers | Existing E-layer audits plus deep row0 anomaly statistics keep it as local pressure only. | `weak_clue` |
+| Donina / red light / controller | zero omission, 19/91, 39/93, render priority | Existing render/zero audits plus row0 anomaly statistics support render metadata, not a formula. | `weak_clue` |
 | Subjective viewer | Mirror, ab/ba, 19/91, 39/93, zero/render context | Wrapper confirms accepted render/orientation layer; not matrix formula. | `accepted_mechanical` |
 | D&D 10 eye rays | 10 digit channels, homophone inventory, pair table | Existing K5/5x2 models fail controls as row0 origin. | `weak_clue` |
 | Central eye / suppression | zero, `*`, omitted zero, mask symbol | Existing zero audit supports local render context, not final formula. | `weak_clue` |
@@ -40,6 +42,11 @@ several source families negatively.
 | PoI thrones | 7/14 order, module/symbol ordering | Analogy only; no fixed order prediction. | `watchlist_only` |
 | Library/book entities | books as objects, Secret Library, 70-book inventory | Useful ontology; no semantic payload. | `weak_clue` |
 | Authorial classifier | source-class routing | Accepted as process guard for future sources. | `accepted_mechanical` |
+| Paradox / mirror books | mirror/viewer/riddle false-positive control | Closed as negative-control calibration; no new mechanism. | `rejected_control` |
+| Spirit Grounds / Gate Keeper | weird language + gate motif | Closed as negative control: source ambience is not numeric GT. | `rejected_control` |
+| Evil Mastermind fake dictionaries | fake dictionary warning | Closed as process guard against unsupported fan glosses and dictionary overfit. | `rejected_control` |
+| Dreadeye difficulty | alien/multilayered communication hook | Watchlist only; no direct formula target. | `watchlist_only` |
+| First Dragon memoir | possible future official reveal | Watchlist only; official-source gate required. | `watchlist_only` |
 
 ## Controls Preserved
 

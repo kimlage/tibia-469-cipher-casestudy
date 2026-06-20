@@ -33,5 +33,10 @@ for mechanical tests only. It does not reopen semantic decoding.
   policy.
 - `tests/` - conservative test/audit wrappers for H19-H24.
 - `reports/` - consolidated reports.
+- `reports/test_results/14_deep_statistical_exhaustion.md` - direct
+  statistical controls for lore seeds, external strings, row0 seed models,
+  quest motifs, E/render anomalies, and identity co-occurrence.
+- `reports/test_results/15_plan_exhaustion_audit.md` - current-state
+  requirement audit against the execution plan.
 
 Translation delta: `NONE`.

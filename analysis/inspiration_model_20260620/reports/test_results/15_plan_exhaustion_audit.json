@@ -1,0 +1,252 @@
+{
+  "all_required_artifacts_verified": true,
+  "classification": "source_family_closed_negative",
+  "h19_h24_status_present": {
+    "H19": true,
+    "H20": true,
+    "H21": true,
+    "H22": true,
+    "H23": true,
+    "H24": true
+  },
+  "mechanical_fronts_covered": {
+    "chayenne": true,
+    "demona_honeminas": true,
+    "dnd_beholder": true,
+    "donina_red_light_controller": true,
+    "dreadeye": true,
+    "dreamer": true,
+    "evil_mastermind": true,
+    "excalibug": true,
+    "eyes_blink": true,
+    "first_dragon": true,
+    "great_calculator_assemble": true,
+    "knightmare": true,
+    "library_entity": true,
+    "magic_web_gates": true,
+    "paradox_mirror": true,
+    "poi": true,
+    "secret_library": true,
+    "spirit_grounds_gate_keeper": true,
+    "subjective_viewer": true,
+    "tridiag": true,
+    "yalahar": true
+  },
+  "reports": [
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/reports/source_corpus_report.md"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/reports/mechanism_crosswalk_report.md"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/reports/inspiration_model_leaderboard.md"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/reports/final_inspiration_model_report.md"
+    }
+  ],
+  "root_files": [
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/README.md"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/source_registry.yaml"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/dnd_beholder_mechanism_registry.yaml"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/knightmare_design_corpus.yaml"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/quest_mechanism_ontology.yaml"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/source_inspiration_glossary.md"
+    },
+    {
+      "exists": true,
+      "path": "analysis/inspiration_model_20260620/source_attribution_confidence.md"
+    }
+  ],
+  "schema": "plan_exhaustion_audit.v1",
+  "semantic_gates": {
+    "deep_statistics_present": true,
+    "no_official_gt": true,
+    "outcome_ledger_zero": true,
+    "translation_delta_none": true
+  },
+  "source_lanes_covered": {
+    "de_other": true,
+    "en_global": true,
+    "es_latam": true,
+    "official": true,
+    "pl": true,
+    "pt_br": true
+  },
+  "test": "15_plan_exhaustion_audit",
+  "tests": [
+    {
+      "classification": "accepted_mechanical",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/01_build_source_corpus.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/01_build_source_corpus.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/01_build_source_corpus.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "accepted_mechanical",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/02_extract_quest_mechanisms.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/02_extract_quest_mechanisms.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/02_extract_quest_mechanisms.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "weak_clue",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/dnd_eye_ray_d10_channel_test.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/dnd_eye_ray_d10_channel_test.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/dnd_eye_ray_d10_channel_test.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "weak_clue",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/central_eye_zero_suppression_test.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/central_eye_zero_suppression_test.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/central_eye_zero_suppression_test.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "accepted_mechanical",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/subjective_viewer_render_transform_suite.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/subjective_viewer_render_transform_suite.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/subjective_viewer_render_transform_suite.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "weak_clue",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/npc_keyword_trigger_mechanism_audit.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/npc_keyword_trigger_mechanism_audit.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/npc_keyword_trigger_mechanism_audit.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "blocked_waiting_for_official_source",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/excalibug_bonelord_language_anchor_audit.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/excalibug_bonelord_language_anchor_audit.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/excalibug_bonelord_language_anchor_audit.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "watchlist_only",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/numeric_identity_key_seed_search.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/numeric_identity_key_seed_search.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/numeric_identity_key_seed_search.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "watchlist_only",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/yalahar_quarter_block_model.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/yalahar_quarter_block_model.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/yalahar_quarter_block_model.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "watchlist_only",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/dreamer_duality_layer_split_test.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/dreamer_duality_layer_split_test.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/dreamer_duality_layer_split_test.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "watchlist_only",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/poi_throne_order_motif_test.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/poi_throne_order_motif_test.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/poi_throne_order_motif_test.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "weak_clue",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/library_entity_ontology_crosswalk.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/library_entity_ontology_crosswalk.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/library_entity_ontology_crosswalk.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "accepted_mechanical",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/authorial_source_classifier.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/authorial_source_classifier.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/authorial_source_classifier.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "source_family_closed_negative",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/14_deep_statistical_exhaustion.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/14_deep_statistical_exhaustion.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/14_deep_statistical_exhaustion.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    },
+    {
+      "classification": "source_family_closed_negative",
+      "json": "analysis/inspiration_model_20260620/reports/test_results/15_plan_exhaustion_audit.json",
+      "json_exists": true,
+      "md": "analysis/inspiration_model_20260620/reports/test_results/15_plan_exhaustion_audit.md",
+      "md_exists": true,
+      "script": "analysis/inspiration_model_20260620/tests/15_plan_exhaustion_audit.py",
+      "script_exists": true,
+      "translation_delta_none": true
+    }
+  ],
+  "translation_delta": "NONE"
+}

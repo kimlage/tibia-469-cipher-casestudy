@@ -9,11 +9,11 @@ Translation delta: `NONE`
 | Front | Sources checked | Result |
 |---|---|---|
 | Official / CipSoft / in-game | Tibia.com indexed news, archived Your True Colour, in-game NPC/book transcripts via high-trust mirrors | No official number-to-text, book-to-text, or symbol table found. |
-| EN / global | TibiaWiki EN, TibiaQA, TibiaSecrets, GitHub/fan claims, Portal mirror | Only known external strings and rejected fan claims. |
+| EN/global | TibiaWiki EN, TibiaQA, TibiaSecrets, GitHub/fan claims, Portal mirror | Only known external strings and rejected fan claims. |
 | PT-BR / BR | TibiaWiki BR, PortalTibia, Tibia Life, Linguagem469 blog, Secret Library pages, Bonelord Tome | Source hygiene improved; no semantic novelty. |
 | PL | Tibia-Wiki.net, Tibia.pl, TORG, Polish forum history | Independent no-proof posture; rejected numerology/German-pun routes documented. |
-| ES / LATAM | Tibia Wiki ES, Diario del Yaqui, Reddit/TibiaHispano, LATAM/PT-BR crosslinks | Duplicate inventory and fan-claim pointers only. |
-| DE / other promoted languages | Current promoted/source lists, German-language searches, other-language source leads | No official/promoted German GT; only fan vocabulary claims. |
+| ES/LATAM / Spanish | Tibia Wiki ES, Diario del Yaqui, Reddit/TibiaHispano, LATAM/PT-BR crosslinks | Duplicate inventory and fan-claim pointers only. |
+| DE/other / German | Current promoted/source lists, German-language searches, other-language source leads | No official/promoted German GT; only fan vocabulary claims. |
 | D&D / Beholder | Public Beholder mechanism references | Inspiration only; no Tibia provenance or semantic value. |
 
 ## Evidence Table
@@ -34,6 +34,11 @@ Translation delta: `NONE`
 | Polish source lane | `https://www.tibia-wiki.net/wiki/J%C4%99zyk_Bonelord%C3%B3w` | `rejected` / source closure | source hygiene | Rejected-claim provenance. |
 | Spanish/LATAM lane | `https://tibia.fandom.com/es/wiki/469` | `rejected` / source closure | source hygiene | Duplicate inventory; eye-count variant already covered. |
 | Unsupported fan solutions | `https://github.com/arturoornelasb/tibia-bonelord-469-cipher` | `rejected` | no | Negative audit examples only. |
+| Paradox / mirror books | local baseline and lore source audit | `negative_control` | no | False-positive calibration; not plaintext. |
+| Spirit Grounds / Gate Keeper | local baseline and lore source audit | `negative_control` | no | Weird language plus gate is insufficient. |
+| Evil Mastermind fake dictionaries | local baseline and fan-claim audit | `rejected` | no | Process guard against dictionary overfit. |
+| Dreadeye difficulty hook | local baseline and watchlist audit | `watchlist_only` | no | Multilayered/alien communication context only. |
+| First Dragon memoir hook | local baseline and watchlist audit | `watchlist_only` | no | Future-source monitoring only. |
 
 ## Source-Family Closure
 

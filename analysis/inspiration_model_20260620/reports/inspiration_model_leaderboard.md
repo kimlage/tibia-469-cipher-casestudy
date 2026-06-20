@@ -17,7 +17,12 @@ Translation delta: `NONE`
 | 10 | Dreamer duality split | `watchlist_only` | Existing source-class split already covers it | No independent prediction. |
 | 11 | PoI throne order motif | `watchlist_only` | 7/14 analogy only | No controlled order model. |
 | 12 | Excalibug route | `blocked_waiting_for_official_source` | Keyword-gate clue but no official GT pair | Wait for source. |
-| 13 | Avar Tar / fan glosses / German-MHG claims | `rejected_control` | Leaky, unsupported, or contradicted by controls | Keep as negative examples. |
+| 13 | Tridiag / Donina E-render clues | `weak_clue` | Local E/zero/render anomaly statistics only | Not a formula. |
+| 14 | Paradox / Spirit Grounds / Evil Mastermind | `rejected_control` | Negative controls and anti-dictionary guardrails | Keep as false-positive calibration. |
+| 15 | Dreadeye / First Dragon | `watchlist_only` | Future/alien-communication hooks only | Official-source gate. |
+| 16 | Avar Tar / fan glosses / German-MHG claims | `rejected_control` | Leaky, unsupported, or contradicted by controls | Keep as negative examples. |
+| 17 | Deep statistical exhaustion | `source_family_closed_negative` | 2000-control probes for seeds, external strings, row0 models, book phases, E/render anomalies, co-occurrence | No formula or official GT. |
+| 18 | Plan exhaustion audit | `source_family_closed_negative` | Current-state audit verifies artifacts, tests, lanes, H19-H24, semantic gates, and fronts | Execution complete as negative closure. |
 
 ## What Counts As Future Promotion
 

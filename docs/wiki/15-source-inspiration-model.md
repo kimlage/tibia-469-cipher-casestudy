@@ -39,6 +39,9 @@ The pass searched and consolidated:
   `486486`, Bonelord Tome, Beware of the Bonelords, Secret Library
   `74032 45331`, Honeminas/Magic Web, and Excalibug;
 - H19-H24 mechanism tests with controls or explicit blockers.
+- deep statistical controls for lore seeds, external-string coverage, row0
+  seed-derived models, book phase motifs, E/render anomalies, and identity
+  co-occurrence.
 
 The main artifact directory is
 [`analysis/inspiration_model_20260620/`](../../analysis/inspiration_model_20260620/).
@@ -55,6 +58,9 @@ The main artifact directory is
 | Excalibug | blocked pending official Bonelord-language prompt/answer or gloss |
 | Avar Tar | remains a negative control |
 | Secret Library `74032 45331` | remains an unglossed external numeric anchor |
+| Tridiag / Donina | local E/render clue only; no formula |
+| Paradox / Spirit Grounds / Evil Mastermind | rejected controls / anti-overfit guardrails |
+| Dreadeye / First Dragon | watchlist only |
 
 ## H19-H24 Classification
 
@@ -74,6 +80,8 @@ The main artifact directory is
 - [Mechanism crosswalk report](../../analysis/inspiration_model_20260620/reports/mechanism_crosswalk_report.md)
 - [Inspiration model leaderboard](../../analysis/inspiration_model_20260620/reports/inspiration_model_leaderboard.md)
 - [Source registry](../../analysis/inspiration_model_20260620/source_registry.yaml)
+- [Deep statistical exhaustion](../../analysis/inspiration_model_20260620/reports/test_results/14_deep_statistical_exhaustion.md)
+- [Plan exhaustion audit](../../analysis/inspiration_model_20260620/reports/test_results/15_plan_exhaustion_audit.md)
 
 ## What Counts As Future Progress
 
