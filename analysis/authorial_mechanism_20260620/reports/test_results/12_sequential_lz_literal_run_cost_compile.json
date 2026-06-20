@@ -1,0 +1,77 @@
+{
+  "baseline_sequential_lz_v1_bits": 10189.982315133097,
+  "best_encoding": {
+    "baseline_bits": 37414.87613271636,
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "copied_digits": 10451,
+    "copy_items": 279,
+    "errors": [],
+    "gain_vs_raw_digits_bits": 27224.893817583263,
+    "literal_digits": 812,
+    "literal_runs": 85,
+    "min_len": 6,
+    "run_literal_cost": {
+      "book_header_bits": 1030,
+      "copied_digits": 10451,
+      "copy_bits": 5637.576702084611,
+      "copy_items": 279,
+      "literal_bits": 3263.405613048539,
+      "literal_digits": 812,
+      "literal_runs": 85,
+      "total_bits": 9943.982315133155
+    },
+    "search_space": {
+      "min_lens": [
+        6,
+        8,
+        10,
+        12,
+        15,
+        20
+      ]
+    },
+    "total_bits": 10189.982315133097
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_sequential_lz_run_literal_formula",
+  "controls": {
+    "book_order_shuffle_bits": {
+      "max": 10516.28085331117,
+      "mean": 10233.91945162604,
+      "min": 9991.187150542592,
+      "p_bits_le_observed": 0.006211180124223602,
+      "runs": 160,
+      "sd": 110.50872140306448
+    },
+    "random_same_lengths_bits": {
+      "max": 39557.876132716374,
+      "mean": 39556.76958870697,
+      "min": 39537.24605028802,
+      "p_bits_le_observed": 0.006211180124223602,
+      "runs": 160,
+      "sd": 3.0782596668793323
+    },
+    "within_book_digit_shuffle_bits": {
+      "max": 39557.876132716374,
+      "mean": 39555.51050114283,
+      "min": 39540.711665174946,
+      "p_bits_le_observed": 0.006211180124223602,
+      "runs": 160,
+      "sd": 3.5261906464801065
+    }
+  },
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_run_literal_formula_469.json",
+  "schema": "sequential_lz_literal_run_cost_compile.v1",
+  "test": "12_sequential_lz_literal_run_cost_compile",
+  "translation_delta": "NONE",
+  "validation": {
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "errors": []
+  }
+}

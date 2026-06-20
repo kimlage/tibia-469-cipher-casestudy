@@ -69,5 +69,12 @@ Generated audits in this directory should be treated as the current state:
   sampled orders improves gross cost by `186.0` bits, but `log2(70!)` order
   cost is `332.5` bits, leaving `-146.5` net bits. Non-numeric order is not
   promoted without an external physical/source order supplied for free.
+- `12_sequential_lz_literal_run_cost_compile`: re-costs the same sequential
+  copy/reference generator by charging literal runs instead of a literal flag
+  per digit. It reconstructs 70/70 books at `9944.0` bits, a `246.0` bit gain
+  over sequential LZ v1, with `85` literal runs, `812` literal digits, `279`
+  copy items, and `10451` copied digits. Digit-shuffle, random same-length,
+  and book-order controls are all worse than the observed corpus
+  (`p=0.0062` each).
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

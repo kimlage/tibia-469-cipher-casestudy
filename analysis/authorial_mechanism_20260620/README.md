@@ -54,6 +54,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   hierarchical formula and negative controls.
 - `scripts/11_sequential_lz_order_search.py` - tests whether non-numeric book
   emission orders improve the sequential LZ formula after charging order cost.
+- `scripts/12_sequential_lz_literal_run_cost_compile.py` - re-costs the
+  sequential LZ generator with literal runs instead of per-digit literal flags.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

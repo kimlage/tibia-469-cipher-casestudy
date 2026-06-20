@@ -65,6 +65,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `literal_reference_formula_469` | `16586.1` | `1167.4` |
 | `hierarchical_reference_formula_469` | `13858.5` | `2727.7` |
 | `sequential_lz_book_formula_469` | `10190.0` | `3668.5` |
+| `sequential_lz_run_literal_formula_469` | `9944.0` | `246.0` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -96,6 +97,15 @@ about `332.5` bits (`log2(70!)`). Net gain is therefore `-146.5` bits. Numeric
 order remains the default unless a physical/source order supplies the order
 without charging it as a searched permutation.
 
+The cost-model refinement keeps the same sequential copy/reference generator
+but charges literal runs as runs rather than as one flag per literal digit. It
+roundtrips 70/70 books at `9944.0` bits, a further `246.0` bit gain over
+sequential LZ v1, with `85` literal runs, `812` literal digits, `279` copy
+items, and `10451` copied digits. Within-book digit shuffles, random
+same-length books, and book-order shuffles remain worse than the observed
+corpus (`p=0.0062` each). This tightens the fabrication-cost upper bound; it
+does not explain row0 or add plaintext.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -120,6 +130,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3D | `hierarchical_reference_formula_roundtrips_no_semantics` |
 | H-GEN3E | `controlled_sequential_lz_book_formula` |
 | H-GEN3F | `order_search_not_promoted_after_permutation_cost` |
+| H-GEN3G | `controlled_sequential_lz_run_literal_formula` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -139,10 +150,11 @@ book generation, not row0 pair-cell placement.
 - [Hierarchical provenance pair-label audit](../../analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.md)
 - [Sequential LZ book formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/10_sequential_lz_book_formula_compile.md)
 - [Sequential LZ book order search](../../analysis/authorial_mechanism_20260620/reports/test_results/11_sequential_lz_order_search.md)
+- [Sequential LZ literal-run cost compile](../../analysis/authorial_mechanism_20260620/reports/test_results/12_sequential_lz_literal_run_cost_compile.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the literal-reference formula as a controlled improvement over the
-tape formula and continue testing matrix origin, topology holdouts, and official
-source watchlists under the same Outcome Ledger.
+should treat the run-literal sequential LZ formula as the current strongest
+copy/reference fabrication bound and continue testing matrix origin, topology
+holdouts, and official source watchlists under the same Outcome Ledger.

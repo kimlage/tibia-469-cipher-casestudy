@@ -62,6 +62,11 @@ hypotheses:
     status: order_search_not_promoted_after_permutation_cost
     target: "book emission order for sequential LZ"
     promotion_rule: "must beat numeric order after charging order/permutation cost or be supplied by external physical/source order"
+  H-GEN3G:
+    name: "sequential LZ literal-run cost formula"
+    status: controlled_sequential_lz_run_literal_formula
+    target: "literal-run cost model for the sequential LZ book generator"
+    promotion_rule: "must beat sequential LZ v1, roundtrip 70/70, and beat digit-shuffle/random controls without semantic claims"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
