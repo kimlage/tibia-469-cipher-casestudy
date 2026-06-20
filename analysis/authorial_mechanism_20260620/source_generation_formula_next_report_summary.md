@@ -80,6 +80,10 @@ Still open from the report:
   [`28_current_formula_address_model_search.py`](scripts/28_current_formula_address_model_search.py);
   absolute `source_pos` remains the best decodable ledger after the current
   parse and payload model are fixed.
+- local literal-to-copy repair is now covered by
+  [`29_literal_to_copy_repair_search.py`](scripts/29_literal_to_copy_repair_search.py);
+  replacing one current literal substring with a valid prior copy improves the
+  bound to `9537.3` bits and no second one-step repair improves it further.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

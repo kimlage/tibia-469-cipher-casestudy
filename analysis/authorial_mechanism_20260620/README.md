@@ -93,6 +93,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   coding for the current recipe.
 - `scripts/28_current_formula_address_model_search.py` - retests copy-source
   address ledgers on the current best literal-payload formula.
+- `scripts/29_literal_to_copy_repair_search.py` - searches for a local
+  literal-to-copy recipe repair after adaptive literal-payload coding.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -147,6 +147,11 @@ hypotheses:
     status: current_formula_address_optimistic_only_not_promoted
     target: "copy source-address ledgers on the current literal-payload formula"
     promotion_rule: "must beat absolute source_pos in a decodable ledger after the current parse and payload model are fixed"
+  H-GEN3X:
+    name: "literal-to-copy local repair"
+    status: controlled_literal_to_copy_single_repair_improvement
+    target: "single local replacement of a current literal substring by a valid earlier copy"
+    promotion_rule: "must reduce exact current formula cost, roundtrip 70/70, and preserve translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

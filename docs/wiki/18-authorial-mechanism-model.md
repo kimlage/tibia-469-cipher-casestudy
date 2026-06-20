@@ -70,6 +70,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_rice_length_formula_469` | `9596.5` | `226.8` |
 | `sequential_lz_rice_literal_length_formula_469` | `9545.5` | `51.0` |
 | `sequential_lz_literal_payload_formula_469` | `9538.0` | `7.5` |
+| `sequential_lz_literal_copy_repair_formula_469` | `9537.3` | `0.7` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -212,6 +213,12 @@ reaches `9478.6` bits only as a no-mode lower bound; the best decodable sparse
 seed-run ledger is `9548.7` bits (`+10.7`), so this remains an optimistic clue
 rather than a formula promotion.
 
+The literal-to-copy repair search then changes the recipe itself by one local
+operation. A literal `972783` in book `8` can be replaced by a prior copy from
+source position `370`, reducing the exact current formula from `9538.0` to
+`9537.3` bits. A follow-up one-step repair search after applying it finds no
+second local improvement.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -253,6 +260,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3U | `joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5` |
 | H-GEN3V | `controlled_literal_payload_adaptive_improvement` |
 | H-GEN3W | `current_formula_address_optimistic_only_not_promoted` |
+| H-GEN3X | `controlled_literal_to_copy_single_repair_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -289,11 +297,13 @@ book generation, not row0 pair-cell placement.
 - [Joint length code grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/26_joint_length_code_grid_sweep.md)
 - [Literal payload model search](../../analysis/authorial_mechanism_20260620/reports/test_results/27_literal_payload_model_search.md)
 - [Current formula address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/28_current_formula_address_model_search.md)
+- [Literal-to-copy repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/29_literal_to_copy_repair_search.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
-with adaptive literal-payload coding as the current strongest copy/reference
-fabrication bound and continue testing matrix origin, topology holdouts, and
-official source watchlists under the same Outcome Ledger.
+with adaptive literal-payload coding and the one-step literal-to-copy repair as
+the current strongest copy/reference fabrication bound and continue testing
+matrix origin, topology holdouts, and official source watchlists under the same
+Outcome Ledger.
