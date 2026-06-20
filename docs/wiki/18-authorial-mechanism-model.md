@@ -85,6 +85,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_forced_length_literal_context_order_formula_469` | `8805.7` | `36.3` |
 | `sequential_lz_digit_address_forced_length_literal_context_order_type_context_formula_469` | `8803.5` | `2.2` |
 | `sequential_lz_digit_address_contextual_copy_to_literal_formula_469` | `8803.1` | `0.4` |
+| `sequential_lz_digit_address_contextual_bounded_copy_length_formula_469` | `8614.1` | `189.0` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -456,6 +457,13 @@ literal-run length Rice `k=3`, literal-payload context order `2` / `alpha=1`,
 and item-type context order `3` / `alpha=2` all remain best after charged
 declarations. The current `8803.1` bit formula is therefore retained.
 
+The bounded copy-length compile then improves the cost ledger without changing
+the recipe. After a copy source address is decoded, the legal copy length range
+is already bounded by the declared remaining book length and the number of
+emitted digits available after that source. Coding copy lengths with canonical
+truncated binary over that range reduces copy-length bits from `1860.0` to
+`1671.0`, lowering the active 70/70 formula from `8803.1` to `8614.1` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -537,6 +545,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BI | `post_copy_literal_local_frontier_closed` |
 | H-GEN3BJ | `contextual_address_optimistic_only_not_promoted` |
 | H-GEN3BK | `post_contextual_parameter_resweep_retains_current` |
+| H-GEN3BL | `controlled_bounded_copy_length_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -613,11 +622,12 @@ book generation, not row0 pair-cell placement.
 - [Post copy-to-literal local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/66_post_copy_literal_local_frontier.md)
 - [Contextual address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/67_contextual_address_model_search.md)
 - [Post-contextual parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/68_post_contextual_parameter_resweep.md)
+- [Bounded copy-length code compile](../../analysis/authorial_mechanism_20260620/reports/test_results/69_bounded_copy_length_code_compile.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the Rice copy-length plus Rice literal-length sequential LZ formula,
+should treat the bounded copy-length plus Rice literal-length sequential LZ formula,
 the one-step literal-to-copy repair, the signed-Rice book-length ledger,
 digit-only copy addresses, and the digit-address literal repair, plus the
 adaptive/Markov/book-start/literal-force item-type ledgers, remaining-short
@@ -626,9 +636,9 @@ forced-length local repair, retained absolute `source_digit_pos` addresses, and
 the previous-emitted-digit literal payload context model with declared order
 `2`, the item-type context-order ledger with declared order `3`, and the
 contextual copy-to-literal repair as the current strongest copy/reference
-fabrication bound at roughly `8803.1` bits. Follow-up literal-to-copy repairs,
+fabrication bound at roughly `8614.1` bits. Follow-up literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
-ledgers, and post-contextual parameter resweeps do not improve it under the
-current cost model; continue
+ledgers, and post-contextual parameter resweeps do not improve the prior
+`8803.1` bit formula; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

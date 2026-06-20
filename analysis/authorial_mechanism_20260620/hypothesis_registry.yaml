@@ -347,6 +347,11 @@ hypotheses:
     status: post_contextual_parameter_resweep_retains_current
     target: "declared copy length, literal length, literal payload context, and item-type context parameters after contextual copy-to-literal repair"
     promotion_rule: "must beat the active contextual copy-to-literal formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BL:
+    name: "bounded copy-length code compile"
+    status: controlled_bounded_copy_length_improvement
+    target: "copy length coding bounded by declared remaining book length and emitted digits after the decoded source address"
+    promotion_rule: "must preserve 70/70 roundtrip and beat Rice k=4 copy lengths after declaration bits while preserving translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

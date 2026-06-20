@@ -254,6 +254,12 @@ Still open from the report:
   copy length Rice `k=4`, literal-run length Rice `k=3`, literal payload
   order `2` / `alpha=1`, and item-type order `3` / `alpha=2` all remain best
   after charged declarations. No newer formula is promoted.
+- bounded copy-length coding is now covered by
+  [`69_bounded_copy_length_code_compile.py`](scripts/69_bounded_copy_length_code_compile.py);
+  after each source address is decoded, the legal copy length is bounded by
+  declared remaining book digits and available emitted source digits. Replacing
+  unbounded Rice `k=4` lengths with truncated binary over that range improves
+  the active 70/70 formula from `8803.1` to `8614.1` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

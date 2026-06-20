@@ -351,5 +351,10 @@ Generated audits in this directory should be treated as the current state:
   contextual copy-to-literal repair. The current parameters remain best:
   copy Rice `k=4`, literal Rice `k=3`, payload order `2` / `alpha=1`, and
   item-type order `3` / `alpha=2`. No newer formula is promoted.
+- `69_bounded_copy_length_code_compile`: replaces unbounded Rice `k=4` copy
+  lengths with a decodable truncated-binary code over the legal length range
+  known after decoding the copy source address. This reduces copy-length bits
+  from `1860.0` to `1671.0` and improves the active 70/70 formula from
+  `8803.1` to `8614.1` bits with `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -135,7 +135,11 @@ pairs under the current cost model. A current address-model retest keeps
 absolute `source_digit_pos` as the best decodable address ledger; literal-seed
 addressing is still optimistic-only. A post-contextual parameter resweep keeps
 the current declared parameters unchanged: copy Rice `k=4`, literal Rice `k=3`,
-payload order `2` / `alpha=1`, and item-type order `3` / `alpha=2`.
+payload order `2` / `alpha=1`, and item-type order `3` / `alpha=2`. A bounded
+copy-length compile then improves only the mechanical cost ledger: once a copy
+source address is known, the legal copy length is bounded by declared remaining
+book digits and emitted source digits, lowering the active 70/70 formula to
+`8614.1` bits with no semantic change.
 
 ## Ranked: what would unlock progress
 

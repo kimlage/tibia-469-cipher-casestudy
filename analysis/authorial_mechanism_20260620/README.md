@@ -176,6 +176,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/68_post_contextual_parameter_resweep.py` - retests declared length,
   literal-payload context, and item-type context parameters after the
   contextual copy-to-literal repair.
+- `scripts/69_bounded_copy_length_code_compile.py` - replaces unbounded Rice
+  copy lengths with a decodable truncated-binary code bounded by declared book
+  remaining length and emitted digits after the decoded source address.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
