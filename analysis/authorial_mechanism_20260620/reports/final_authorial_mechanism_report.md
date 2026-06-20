@@ -580,5 +580,10 @@ Generated audits in this directory should be treated as the current state:
   covers, `6<->9` orbit, tape features, low-rank factors, render exceptions,
   eye/blink arity, and hierarchical provenance still produce no charged,
   controlled pair-label formula.
+- `120_prequential_order_control_audit`: compares numeric prefix training with
+  random same-size train-book sets. Prefix-trained components still beat
+  uniform, but controls usually save more bits, so the classification is
+  `prequential_predictive_not_numeric_order_specific`; no numeric authorial
+  order is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

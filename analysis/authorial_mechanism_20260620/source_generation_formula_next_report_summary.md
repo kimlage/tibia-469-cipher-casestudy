@@ -537,6 +537,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `row0_origin_frontier_saturated_current_corpus`. This does not solve row0;
   it records that the current corpus has no charged, controlled, holdout-ready
   pair-label formula.
+- prequential numeric-order control is now covered by
+  [`120_prequential_order_control_audit.py`](scripts/120_prequential_order_control_audit.py);
+  the prefix-trained components beat uniform, but random same-size train-book
+  sets usually save more bits. The result is classified
+  `prequential_predictive_not_numeric_order_specific`: useful learned-component
+  evidence, not proof of numeric book-order generation.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

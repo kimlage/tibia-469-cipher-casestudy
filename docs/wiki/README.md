@@ -362,6 +362,9 @@ prequential audit then freezes `8561.792` as `compression_bound`; learned
 components beat uniform on all prefix/holdout cuts, but this remains partial
 predictive validation rather than row0 origin or final authorial method. No
 semantic claim is promoted.
+The prequential order control adds that numeric prefixes are not special:
+random same-size train-book sets usually save more bits, so the signal is
+`prequential_predictive_not_numeric_order_specific`.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

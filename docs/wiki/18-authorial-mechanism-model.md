@@ -809,6 +809,15 @@ train books and `35` holdout books, learned-component uniform cost is
 is `prequential_generation_partial_not_final`: it still does not explain row0
 or establish a final authorial generation method.
 
+The prequential order control audit then checks whether the prefix result is
+specific to numeric book order. It compares each numeric prefix against `1000`
+random same-size train-book sets. Prefix training still beats uniform on every
+cutoff, but random train sets usually save more bits; for example, at `35`
+train books the numeric prefix saves `48.145` bits online versus uniform, while
+random train sets average `165.553` bits saved. The classification is
+`prequential_predictive_not_numeric_order_specific`: the learned components are
+real distributional evidence, not a promoted numeric-order generation proof.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1074,6 +1083,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param address/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/117_post_itemctx_param_address_payload_context_alpha_pair_search.md)
 - [Prequential generation model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.md)
 - [Row0 origin frontier audit](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md)
+- [Prequential order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/120_prequential_order_control_audit.md)
 
 ## Boundary
 

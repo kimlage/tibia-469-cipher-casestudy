@@ -258,6 +258,10 @@ The prequential generation audit then freezes `8561.792` as
 beat uniform on all train cutoffs `10/20/35/50/60`, but the classification
 remains `prequential_generation_partial_not_final` because this validates
 partial predictive structure, not row0 origin or a final authorial method.
+The prequential order control then rejects the stronger numeric-order reading:
+random same-size train-book sets usually save more bits than numeric prefixes,
+so the learned-component signal is
+`prequential_predictive_not_numeric_order_specific`.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank
