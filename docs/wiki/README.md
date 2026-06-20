@@ -305,7 +305,8 @@ impossible final source positions and lowers it slightly again to roughly
 copy and lowers the bound to roughly `8609.8` bits. A further one-step local
 frontier pass closes that immediate repair space, and a parameter resweep
 retains the current declared settings. A compatible-pair local frontier also
-closes. No semantic claim is promoted.
+closes; a post-repair2 address-model retest keeps the absolute minaddr ledger
+as the best decodable address model. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

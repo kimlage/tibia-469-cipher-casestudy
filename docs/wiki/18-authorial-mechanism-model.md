@@ -502,6 +502,13 @@ pairs; the best pair, copy-to-literal `71288` plus `94343`, remains `+0.692`
 bits worse than the active formula. This closes the immediate pair frontier
 under the current cost model.
 
+The post-repair2 address model search then retests relative, delta, per-book,
+mixed same-book, and literal-seed address ledgers against the active
+min_len-bounded absolute source address model. The active address ledger remains
+the best decodable row at `8609.8` bits. Literal-seed no-mode reaches `8540.4`
+bits, but that row is not decodable without source-mode bits, while the sparse
+decodable seed-run version costs `8618.8` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -590,6 +597,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BP | `post_minaddr_repair2_local_frontier_closed` |
 | H-GEN3BQ | `post_repair2_parameter_resweep_retains_current` |
 | H-GEN3BR | `post_repair2_pair_frontier_closed` |
+| H-GEN3BS | `post_repair2_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -673,6 +681,7 @@ book generation, not row0 pair-cell placement.
 - [Post-minaddr-repair2 local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/73_post_minaddr_repair2_local_frontier.md)
 - [Post-repair2 parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/74_post_repair2_parameter_resweep.md)
 - [Post-repair2 pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/75_post_repair2_pair_frontier.md)
+- [Post-repair2 address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/76_post_repair2_address_model_search.md)
 
 ## Boundary
 
@@ -691,7 +700,8 @@ and one post-minaddr local literal-to-copy repair as the current strongest
 copy/reference fabrication bound at roughly `8609.8` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
-ledgers, and post-repair2 parameter resweeps do not improve the current
+ledgers, post-repair2 address-model retests, and post-repair2 parameter
+resweeps do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

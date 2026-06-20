@@ -382,6 +382,11 @@ hypotheses:
     status: post_repair2_pair_frontier_closed
     target: "compatible pairs of local literal-to-copy and copy-to-literal edits after the second minaddr local repair"
     promotion_rule: "must beat the active post-minaddr-repair2 formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BS:
+    name: "post repair2 address model search"
+    status: post_repair2_address_optimistic_only_not_promoted
+    target: "alternate copy-source address ledgers after the second minaddr local repair"
+    promotion_rule: "must beat the active min_len-bounded absolute digit source positions under full rescoring while preserving decodability, 70/70 roundtrip, and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

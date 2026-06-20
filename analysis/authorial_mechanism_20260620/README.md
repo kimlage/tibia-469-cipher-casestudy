@@ -194,6 +194,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   minaddr local repair.
 - `scripts/75_post_repair2_pair_frontier.py` - tests compatible pairs of local
   edits after the post-repair2 one-step frontier is closed.
+- `scripts/76_post_repair2_address_model_search.py` - retests alternate
+  copy-source address ledgers after the post-repair2 formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

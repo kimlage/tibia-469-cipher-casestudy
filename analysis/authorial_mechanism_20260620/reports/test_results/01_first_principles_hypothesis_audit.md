@@ -98,6 +98,7 @@ does not promote plaintext.
 | `H-GEN3BP` | `post_minaddr_repair2_local_frontier_closed` | `True` |
 | `H-GEN3BQ` | `post_repair2_parameter_resweep_retains_current` | `True` |
 | `H-GEN3BR` | `post_repair2_pair_frontier_closed` | `True` |
+| `H-GEN3BS` | `post_repair2_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

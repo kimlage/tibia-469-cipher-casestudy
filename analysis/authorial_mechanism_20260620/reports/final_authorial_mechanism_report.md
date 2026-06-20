@@ -382,5 +382,9 @@ Generated audits in this directory should be treated as the current state:
 - `75_post_repair2_pair_frontier`: tests compatible pairs after the one-step
   post-repair2 frontier is closed. `17663` valid pairs are rescored; the best
   pair, copy-to-literal `71288` plus `94343`, is still `+0.692` bits worse.
+- `76_post_repair2_address_model_search`: retests alternate copy-source
+  address ledgers after the post-repair2 formula. The min_len-bounded absolute
+  address ledger remains the best decodable row; literal-seed no-mode is
+  `-69.4` bits optimistic but not decodable without source-mode bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

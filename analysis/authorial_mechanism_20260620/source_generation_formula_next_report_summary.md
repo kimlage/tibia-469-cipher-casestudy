@@ -289,6 +289,11 @@ Still open from the report:
   [`75_post_repair2_pair_frontier.py`](scripts/75_post_repair2_pair_frontier.py);
   `17663` valid compatible pairs are fully rescored. The best pair is still
   `+0.692` bits worse, so compatible pairs do not improve the active formula.
+- post-repair2 address models are now covered by
+  [`76_post_repair2_address_model_search.py`](scripts/76_post_repair2_address_model_search.py);
+  the active min_len-bounded absolute address ledger remains the best decodable
+  row at `8609.8` bits. Literal-seed no-mode reaches `8540.4` bits, but it is
+  non-decodable without source-mode bits and is not promoted.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

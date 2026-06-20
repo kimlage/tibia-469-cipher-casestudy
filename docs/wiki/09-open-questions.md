@@ -149,7 +149,10 @@ back into a valid prior copy under the new cost model, lowering the bound to
 repair space: the best candidate is `+0.121` bits worse. A parameter resweep
 after those repairs retains literal Rice `k=3`, payload order `2` / `alpha=1`,
 and item-type order `3` / `alpha=2`. A compatible-pair frontier also closes:
-the best of `17663` valid pairs is still `+0.692` bits worse.
+the best of `17663` valid pairs is still `+0.692` bits worse. A post-repair2
+address-model retest keeps the min_len-bounded absolute address ledger as the
+best decodable option; literal-seed no-mode is `-69.4` bits better only as a
+non-decodable optimistic lower bound.
 
 ## Ranked: what would unlock progress
 
