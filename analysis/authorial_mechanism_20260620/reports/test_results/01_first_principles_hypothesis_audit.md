@@ -93,6 +93,7 @@ does not promote plaintext.
 | `H-GEN3BK` | `post_contextual_parameter_resweep_retains_current` | `True` |
 | `H-GEN3BL` | `controlled_bounded_copy_length_improvement` | `True` |
 | `H-GEN3BM` | `controlled_min_len_bounded_copy_address_improvement` | `True` |
+| `H-GEN3BN` | `controlled_minaddr_local_repair_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

@@ -141,7 +141,9 @@ source address is known, the legal copy length is bounded by declared remaining
 book digits and emitted source digits, lowering the active 70/70 formula to
 `8614.1` bits with no semantic change. A min_len-bounded address follow-up
 then excludes impossible final source positions and lowers the bound slightly
-again to `8613.1` bits.
+again to `8613.1` bits. A local repair retest under that cost model then turns
+literal `11216` in book `2` into a valid prior copy and lowers the bound to
+`8611.4` bits.
 
 ## Ranked: what would unlock progress
 

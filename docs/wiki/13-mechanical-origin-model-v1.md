@@ -115,6 +115,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-contextual parameter resweep | current declared parameters remain best after the copy-to-literal repair: copy Rice `k=4`, literal Rice `k=3`, payload order `2` / `alpha=1`, item-type order `3` / `alpha=2` | retained parameter frontier |
 | Sequential LZ bounded copy-length formula | copy lengths are coded with truncated binary over the legal range known after the source address is decoded; total bound drops from `8803.1` to `8614.1` bits | strongest copy/reference upper bound |
 | Sequential LZ min_len-bounded address formula | absolute copy source addresses exclude impossible last `min_len - 1` emitted positions; total bound drops from `8614.133` to `8613.067` bits | strongest copy/reference upper bound |
+| Sequential LZ minaddr local-repair formula | one literal `11216` in book `2` becomes a valid prior copy from source digit position `225`; total bound drops from `8613.067` to `8611.408` bits | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -179,6 +180,7 @@ Primary sources:
 [post_contextual_parameter_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/68_post_contextual_parameter_resweep.md),
 [bounded_copy_length_code_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/69_bounded_copy_length_code_compile.md),
 [min_len_bounded_copy_address_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/70_min_len_bounded_copy_address_compile.md),
+[minaddr_local_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/71_minaddr_local_frontier.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
@@ -285,6 +287,8 @@ claims remain inadmissible.
   [sequential_lz_digit_address_contextual_bounded_copy_length_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_copy_length_formula_469.json)
 - Sequential LZ min_len-bounded address formula:
   [sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_formula_469.json)
+- Sequential LZ minaddr local-repair formula:
+  [sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair_formula_469.json)
 - DP LZ copy graph:
   [dp_lz_copy_graph_edges.csv](../../analysis/authorial_mechanism_20260620/tables/dp_lz_copy_graph_edges.csv)
 - DP LZ literal seed atlas:

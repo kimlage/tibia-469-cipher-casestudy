@@ -182,6 +182,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/70_min_len_bounded_copy_address_compile.py` - tightens absolute
   copy source addresses by excluding the impossible last `min_len - 1` emitted
   digit positions.
+- `scripts/71_minaddr_local_frontier.py` - retests single literal-to-copy and
+  copy-to-literal repairs under the bounded copy-length and min_len-bounded
+  address cost model.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

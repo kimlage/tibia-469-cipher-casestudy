@@ -87,6 +87,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_copy_to_literal_formula_469` | `8803.1` | `0.4` |
 | `sequential_lz_digit_address_contextual_bounded_copy_length_formula_469` | `8614.1` | `189.0` |
 | `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_formula_469` | `8613.1` | `1.1` |
+| `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair_formula_469` | `8611.4` | `1.7` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -472,6 +473,12 @@ cannot be legal source starts. Excluding them reduces copy-address bits from
 `3264.817` to `3263.751`, lowering the active formula from `8614.133` to
 `8613.067` bits.
 
+The minaddr local-frontier pass then retests one-step recipe edits under the
+new cost model. A single literal-to-copy edit promotes: literal `11216` in book
+`2` becomes a copy from source digit position `225`, lowering the active
+formula from `8613.067` to `8611.408` bits. This is still a mechanical recipe
+repair only.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -555,6 +562,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BK | `post_contextual_parameter_resweep_retains_current` |
 | H-GEN3BL | `controlled_bounded_copy_length_improvement` |
 | H-GEN3BM | `controlled_min_len_bounded_copy_address_improvement` |
+| H-GEN3BN | `controlled_minaddr_local_repair_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -633,6 +641,7 @@ book generation, not row0 pair-cell placement.
 - [Post-contextual parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/68_post_contextual_parameter_resweep.md)
 - [Bounded copy-length code compile](../../analysis/authorial_mechanism_20260620/reports/test_results/69_bounded_copy_length_code_compile.md)
 - [Min-length-bounded copy address compile](../../analysis/authorial_mechanism_20260620/reports/test_results/70_min_len_bounded_copy_address_compile.md)
+- [Minaddr local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/71_minaddr_local_frontier.md)
 
 ## Boundary
 
@@ -646,8 +655,9 @@ final forced-length local repair, retained absolute `source_digit_pos`
 addresses, and
 the previous-emitted-digit literal payload context model with declared order
 `2`, the item-type context-order ledger with declared order `3`, and the
-contextual copy-to-literal repair as the current strongest copy/reference
-fabrication bound at roughly `8613.1` bits. Follow-up literal-to-copy repairs,
+contextual copy-to-literal repair plus one minaddr local literal-to-copy repair
+as the current strongest copy/reference fabrication bound at roughly `8611.4`
+bits. Follow-up literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, and post-contextual parameter resweeps do not improve the prior
 `8803.1` bit formula; continue

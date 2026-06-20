@@ -266,6 +266,11 @@ Still open from the report:
   available, the last `min_len - 1` emitted positions are impossible source
   starts. Excluding them improves the active formula from `8614.133` to
   `8613.067` bits.
+- minaddr local repair frontier is now covered by
+  [`71_minaddr_local_frontier.py`](scripts/71_minaddr_local_frontier.py);
+  after the address-bound cost change, a single literal-to-copy edit promotes:
+  `11216` in book `2` becomes a valid prior copy from source digit position
+  `225`, improving the active formula from `8613.067` to `8611.408` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

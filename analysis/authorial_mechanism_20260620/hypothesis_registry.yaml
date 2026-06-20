@@ -357,6 +357,11 @@ hypotheses:
     status: controlled_min_len_bounded_copy_address_improvement
     target: "absolute digit-only copy source address space excluding impossible last min_len minus one emitted positions"
     promotion_rule: "must preserve 70/70 roundtrip and lower the active bounded-copy-length formula while preserving translation_delta NONE"
+  H-GEN3BN:
+    name: "minaddr local repair frontier"
+    status: controlled_minaddr_local_repair_improvement
+    target: "single literal-to-copy and copy-to-literal edits after bounded copy lengths and min_len-bounded copy addresses"
+    promotion_rule: "must beat the active min_len-bounded address formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

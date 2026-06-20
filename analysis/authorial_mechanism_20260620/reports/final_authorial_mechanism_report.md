@@ -361,5 +361,10 @@ Generated audits in this directory should be treated as the current state:
   positions. This reduces copy-address bits from `3264.817` to `3263.751` and
   improves the active 70/70 formula from `8614.133` to `8613.067` bits with
   `translation_delta: NONE`.
+- `71_minaddr_local_frontier`: retests single literal-to-copy and
+  copy-to-literal edits after bounded copy lengths and min_len-bounded copy
+  addresses. One literal-to-copy edit promotes: `11216` in book `2` becomes a
+  copy from source digit position `225`, improving the active 70/70 formula
+  from `8613.067` to `8611.408` bits with `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
