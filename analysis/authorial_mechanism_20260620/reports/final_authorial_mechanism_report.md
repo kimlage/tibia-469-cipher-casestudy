@@ -249,5 +249,10 @@ Generated audits in this directory should be treated as the current state:
   declared book, a copy item cannot fit and the type is forced to literal. The
   same fixed recipe roundtrips 70/70 books and improves the current bound from
   `8966.7` to `8953.9` bits; `alpha=2` costs `248.9` item-type bits.
+- `45_remaining_short_literal_length_compile`: once those short suffixes are
+  forced to literal, their literal length is forced to consume the remaining
+  declared book suffix. After charging a one-bit length rule, the same fixed
+  recipe roundtrips 70/70 books and improves the current bound from `8953.9` to
+  `8922.9` bits by removing `32.0` redundant literal-length bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -110,7 +110,8 @@ same item-type stream on the previous item lowers it again to `8977.6` bits.
 Using declared book starts as item-type context lowers it again to `8972.2`
 bits, and a charged deterministic literal-to-copy item rule lowers it to
 `8966.7` bits. A second charged rule for suffixes shorter than `min_len=5`
-lowers it to `8953.9` bits. No plaintext, pair-table origin,
+lowers it to `8953.9` bits, and removing redundant forced short-suffix literal
+length bits lowers it to `8922.9` bits. No plaintext, pair-table origin,
 physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).

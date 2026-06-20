@@ -126,6 +126,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   deterministic literal-to-copy item-type rule inside the book-start ledger.
 - `scripts/44_remaining_short_forces_literal_type_ledger_compile.py` - tests a
   charged rule that a too-short remaining book suffix forces literal item type.
+- `scripts/45_remaining_short_literal_length_compile.py` - removes redundant
+  literal-run length bits for forced short book suffixes.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

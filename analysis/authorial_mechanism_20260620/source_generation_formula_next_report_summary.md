@@ -145,6 +145,11 @@ Still open from the report:
   after charging a second deterministic rule bit, suffixes shorter than
   `min_len=5` force literal item type and improve the current bound to
   `8953.9` bits while preserving 70/70 roundtrip.
+- remaining-short literal length coding is now covered by
+  [`45_remaining_short_literal_length_compile.py`](scripts/45_remaining_short_literal_length_compile.py);
+  once such suffixes are forced literal, their lengths are forced to consume
+  the rest of the declared book, improving the current bound to `8922.9` bits
+  while preserving 70/70 roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
