@@ -159,6 +159,11 @@ Still open from the report:
   [`47_post_forced_repair_payload_alpha_sweep.py`](scripts/47_post_forced_repair_payload_alpha_sweep.py);
   `alpha=14` remains the best declared adaptive payload parameter after the
   forced-length local repair, with `alpha=13` `+0.1` bit worse.
+- post-forced-repair copy-source address ledgers are now covered by
+  [`48_post_forced_repair_address_model_search.py`](scripts/48_post_forced_repair_address_model_search.py);
+  absolute `source_digit_pos` remains the best decodable ledger. Literal-seed
+  addressing reaches `8855.5` bits only as an optimistic no-mode lower bound;
+  the best decodable sparse seed-run ledger costs `8933.5` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

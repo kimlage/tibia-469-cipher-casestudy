@@ -262,5 +262,10 @@ Generated audits in this directory should be treated as the current state:
 - `47_post_forced_repair_payload_alpha_sweep`: retests adaptive literal-payload
   alpha after the forced-length repair. `alpha=14` remains best; `alpha=13` is
   the nearest alternate at `+0.1` bit, so no newer formula is promoted.
+- `48_post_forced_repair_address_model_search`: retests copy-source address
+  ledgers after the forced-length repair. Literal-seed addressing reaches
+  `8855.5` bits only as an undecodable no-mode lower bound; the best decodable
+  sparse seed-run ledger costs `8933.5` bits, so absolute `source_digit_pos`
+  remains the active address ledger.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

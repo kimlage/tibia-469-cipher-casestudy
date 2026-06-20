@@ -132,6 +132,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   literal-to-copy repairs after forced suffix literal lengths.
 - `scripts/47_post_forced_repair_payload_alpha_sweep.py` - retests adaptive
   literal-payload alpha after the forced-length repair.
+- `scripts/48_post_forced_repair_address_model_search.py` - retests copy
+  source-address ledgers after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -1,0 +1,105 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "post_forced_repair_address_optimistic_only_not_promoted",
+  "copy_items": 282,
+  "current_formula_bits": 8922.803053595282,
+  "fixed_noncopy_bits": 3780.5850901092426,
+  "models": [
+    {
+      "copy_bits": 5074.922136995381,
+      "decodable": false,
+      "delta_vs_current_bits": -67.29582649065924,
+      "model": "literal_seed_address_optimistic_no_mode",
+      "seed_copy_count": 27,
+      "total_bits": 8855.507227104623
+    },
+    {
+      "copy_bits": 5142.2179634860395,
+      "decodable": true,
+      "delta_vs_current_bits": 0.0,
+      "model": "absolute_digit_source_pos",
+      "total_bits": 8922.803053595282
+    },
+    {
+      "copy_bits": 5152.932561267177,
+      "decodable": true,
+      "delta_vs_current_bits": 10.714597781137854,
+      "details": {
+        "net_extra_bits": 10.714597781137751,
+        "seed_copy_count": 1,
+        "seed_run_count": 1,
+        "selected_seed_savings_bits": -1.7145977811377513
+      },
+      "model": "literal_seed_sparse_run_list_seed_required",
+      "seed_copy_count": 1,
+      "total_bits": 8933.51765137642
+    },
+    {
+      "copy_bits": 5356.922136995381,
+      "decodable": true,
+      "delta_vs_current_bits": 214.70417350934076,
+      "model": "literal_seed_address_conservative_mode_per_copy",
+      "seed_copy_count": 27,
+      "total_bits": 9137.507227104623
+    },
+    {
+      "copy_bits": 6857.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1714.7820365139596,
+      "model": "book_delta_digit_offset_delta_gamma",
+      "total_bits": 10637.585090109242
+    },
+    {
+      "copy_bits": 7007,
+      "decodable": true,
+      "delta_vs_current_bits": 1864.7820365139596,
+      "model": "book_delta_digit_offset_gamma",
+      "total_bits": 10787.585090109242
+    },
+    {
+      "copy_bits": 7025.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1882.7820365139596,
+      "model": "digit_back_distance_delta_gamma",
+      "total_bits": 10805.585090109242
+    },
+    {
+      "copy_bits": 7112.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1969.7820365139596,
+      "model": "source_digit_pos_delta_gamma",
+      "total_bits": 10892.585090109242
+    },
+    {
+      "copy_bits": 7274,
+      "decodable": true,
+      "delta_vs_current_bits": 2131.7820365139596,
+      "model": "mixed_same_book_digit_distance_else_book_offset",
+      "total_bits": 11054.585090109242
+    },
+    {
+      "copy_bits": 7917,
+      "decodable": true,
+      "delta_vs_current_bits": 2774.7820365139596,
+      "model": "digit_back_distance_gamma",
+      "total_bits": 11697.585090109242
+    }
+  ],
+  "same_book_copy_items": 7,
+  "schema": "post_forced_repair_address_model_search.v1",
+  "seed_stats": {
+    "best_sparse_seed_copy_count": 1,
+    "best_sparse_seed_extra_bits": 10.714597781137751,
+    "best_sparse_seed_run_count": 1,
+    "optimistic_seed_address_savings_bits": 67.29582649065571,
+    "seed_positive_saving_copy_items": 27,
+    "seed_usable_copy_items": 70
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_repair_formula_469.json",
+  "test": "48_post_forced_repair_address_model_search",
+  "translation_delta": "NONE"
+}
