@@ -1,0 +1,87 @@
+{
+  "best_decodable_model": {
+    "alpha": 14,
+    "decodable": true,
+    "family": "adaptive_dirichlet_integer_alpha",
+    "model": "adaptive_dirichlet_alpha_14",
+    "model_declaration_bits": 7,
+    "payload_bits": 2623.082839146822,
+    "payload_delta_vs_uniform_bits": -7.5280681937433656
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_literal_payload_adaptive_improvement",
+  "controls": {
+    "random_uniform_literal_payloads": {
+      "best_alpha_histogram": {
+        "14": 1,
+        "30": 87,
+        "62": 112
+      },
+      "count_le_observed": 0,
+      "max_delta_bits": 15.899996294977882,
+      "mean_delta_bits": 12.561303759310952,
+      "min_delta_bits": 5.401728286757589,
+      "pstdev_delta_bits": 1.8337756252247468,
+      "runs": 200
+    }
+  },
+  "current_formula_bits": 9545.533571629898,
+  "literal_digit_histogram": {
+    "0": 68,
+    "1": 112,
+    "2": 61,
+    "3": 47,
+    "4": 92,
+    "5": 102,
+    "6": 88,
+    "7": 80,
+    "8": 71,
+    "9": 73
+  },
+  "literal_digits": 794,
+  "models": [
+    {
+      "decodable": false,
+      "model": "static_literal_histogram_oracle_no_table",
+      "model_declaration_bits": 0,
+      "payload_bits": 2605.957755283366,
+      "payload_delta_vs_uniform_bits": -31.65315205719935,
+      "total_bits": 9513.880419572697
+    },
+    {
+      "alpha": 14,
+      "decodable": true,
+      "family": "adaptive_dirichlet_integer_alpha",
+      "model": "adaptive_dirichlet_alpha_14",
+      "model_declaration_bits": 7,
+      "payload_bits": 2623.082839146822,
+      "payload_delta_vs_uniform_bits": -7.5280681937433656,
+      "total_bits": 9538.005503436154
+    },
+    {
+      "decodable": true,
+      "model": "uniform_decimal_payload",
+      "model_declaration_bits": 0,
+      "payload_bits": 2637.6109073405655,
+      "payload_delta_vs_uniform_bits": 0.0,
+      "total_bits": 9545.533571629898
+    },
+    {
+      "decodable": true,
+      "model": "static_literal_histogram_with_counts",
+      "model_declaration_bits": 145,
+      "payload_bits": 2605.957755283366,
+      "payload_delta_vs_uniform_bits": 113.34684794280065,
+      "total_bits": 9658.880419572697
+    }
+  ],
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_literal_payload_formula_469.json",
+  "schema": "literal_payload_model_search.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_rice_literal_length_formula_469.json",
+  "test": "27_literal_payload_model_search",
+  "translation_delta": "NONE"
+}

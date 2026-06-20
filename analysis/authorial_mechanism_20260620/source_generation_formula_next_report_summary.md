@@ -72,6 +72,10 @@ Still open from the report:
   [`26_joint_length_code_grid_sweep.py`](scripts/26_joint_length_code_grid_sweep.py);
   `605` DP reparses retain copy Rice `k=4`, literal Rice `k=3`, and
   `min_len=5` as the best tested parameter set.
+- literal digit payload coding is now covered by
+  [`27_literal_payload_model_search.py`](scripts/27_literal_payload_model_search.py);
+  a decodable adaptive Dirichlet payload model improves the current bound to
+  `9538.0` bits; the cheaper static histogram oracle is not promoted.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -89,6 +89,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   Rice-length formula while sweeping literal-run length codes.
 - `scripts/26_joint_length_code_grid_sweep.py` - tests the interaction between
   copy-length and literal-run length codes around the current best formula.
+- `scripts/27_literal_payload_model_search.py` - tests literal digit payload
+  coding for the current recipe.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

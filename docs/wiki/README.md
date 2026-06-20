@@ -257,7 +257,8 @@ length-code grid retains that setting. Retesting address ledgers on the Rice
 parse keeps absolute `source_pos` as the best decodable source ledger.
 Re-encoding literal-run lengths with Rice `k=3` improves the current bound
 again to roughly `9545.5` bits, and a joint length-code grid retains that exact
-parameter set.
+parameter set. Adaptive literal-payload coding lowers the bound again to
+roughly `9538.0` bits without changing the recipe.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

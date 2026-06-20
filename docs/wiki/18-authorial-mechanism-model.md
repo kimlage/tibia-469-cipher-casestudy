@@ -69,6 +69,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_dp_parse_formula_469` | `9823.3` | `120.7` |
 | `sequential_lz_rice_length_formula_469` | `9596.5` | `226.8` |
 | `sequential_lz_rice_literal_length_formula_469` | `9545.5` | `51.0` |
+| `sequential_lz_literal_payload_formula_469` | `9538.0` | `7.5` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -198,6 +199,13 @@ The joint length-code grid keeps that frontier. Testing `605` combinations of
 `min_len=5` best at `9545.5` bits. The nearest alternate is `rice_k4` copy /
 `rice_k2` literal at `9552.2` bits (`+6.7`).
 
+The literal-payload model search improves the formula again without changing
+the recipe. Replacing uniform decimal payload cost for literal digits with a
+decodable adaptive Dirichlet model (`alpha=14`, charged at `7` declaration
+bits) yields `9538.0` bits, a `7.5` bit improvement. A static literal histogram
+oracle reaches `9513.9` bits but is not promoted because it omits a decodable
+table; the charged static table is worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -237,6 +245,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3S | `rice_copy_address_optimistic_only_not_promoted` |
 | H-GEN3T | `controlled_literal_length_code_improvement` |
 | H-GEN3U | `joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5` |
+| H-GEN3V | `controlled_literal_payload_adaptive_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -271,11 +280,12 @@ book generation, not row0 pair-cell placement.
 - [Rice copy address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md)
 - [Literal run length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/25_literal_run_length_code_reparse.md)
 - [Joint length code grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/26_joint_length_code_grid_sweep.md)
+- [Literal payload model search](../../analysis/authorial_mechanism_20260620/reports/test_results/27_literal_payload_model_search.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
-as the current strongest copy/reference fabrication bound and continue testing
-matrix origin, topology holdouts, and official source watchlists under the same
-Outcome Ledger.
+with adaptive literal-payload coding as the current strongest copy/reference
+fabrication bound and continue testing matrix origin, topology holdouts, and
+official source watchlists under the same Outcome Ledger.

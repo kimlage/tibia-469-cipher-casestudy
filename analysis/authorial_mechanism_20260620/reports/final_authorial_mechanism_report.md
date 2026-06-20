@@ -161,5 +161,11 @@ Generated audits in this directory should be treated as the current state:
   `rice_k4` copy / `rice_k3` literal / `min_len=5` formula remains best at
   `9545.5` bits. The nearest alternate is `rice_k4` copy / `rice_k2` literal /
   `min_len=5` at `9552.2` bits (`+6.7`), so no newer formula is promoted.
+- `27_literal_payload_model_search`: keeps the current recipe fixed and tests
+  literal digit payload coding. A decodable adaptive Dirichlet payload model
+  with integer `alpha=14` improves the formula from `9545.5` to `9538.0` bits
+  after charging `7` bits to declare alpha. Random uniform literal-payload
+  controls do not beat the observed distribution. A cheaper static histogram
+  oracle is recorded as non-decodable and not promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
