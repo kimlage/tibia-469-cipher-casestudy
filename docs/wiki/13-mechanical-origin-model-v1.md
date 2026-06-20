@@ -111,6 +111,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ item-type context-order formula | the literal/copy item-type ledger uses a declared order-3 previous item-type context while retaining forced rules; total bound drops from `8805.7` to `8803.5` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ contextual copy-to-literal repair formula | one short copy of `45765` in book `34` is cheaper as an explicit literal under contextual payload coding; total bound drops from `8803.5` to `8803.1` bits | strongest copy/reference upper bound |
 | Post copy-to-literal local frontier | after the contextual copy-to-literal repair, single literal-to-copy, single copy-to-literal, and `13530` copy-to-literal pair edits are all worse | rejected refinement / local frontier closed |
+| Contextual copy-address model search | absolute `source_digit_pos` remains best decodable at `8803.1`; literal-seed no-mode reaches `8739.3` but sparse decodable seed-run costs `8813.8` | rejected refinement / optimistic clue |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |

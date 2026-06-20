@@ -89,6 +89,7 @@ does not promote plaintext.
 | `H-GEN3BG` | `contextual_local_repair_not_promoted` | `True` |
 | `H-GEN3BH` | `controlled_contextual_copy_to_literal_improvement` | `True` |
 | `H-GEN3BI` | `post_copy_literal_local_frontier_closed` | `True` |
+| `H-GEN3BJ` | `contextual_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

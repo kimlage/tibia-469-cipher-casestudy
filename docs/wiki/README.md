@@ -290,7 +290,9 @@ digit, and a context-order sweep lowers it again to roughly `8805.7` bits with
 a declared order-2 previous-emitted-digit context. An item-type context-order
 sweep lowers it to roughly `8803.5` bits, and one contextual copy-to-literal
 repair lowers it to roughly `8803.1` bits. The immediate local frontier after
-that repair is closed. No semantic claim is promoted.
+that repair is closed, and the current address-model retest keeps absolute
+`source_digit_pos` as the best decodable address ledger. No semantic claim is
+promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

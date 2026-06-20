@@ -243,6 +243,12 @@ Still open from the report:
   after applying that repair, the best literal-to-copy edit is `+0.4` bits
   worse, the best copy-to-literal edit is `+1.5` bits worse, and the best of
   `13530` copy-to-literal pairs is `+3.5` bits worse.
+- contextual address-model retest is now covered by
+  [`67_contextual_address_model_search.py`](scripts/67_contextual_address_model_search.py);
+  absolute `source_digit_pos` remains the best decodable copy-source address
+  ledger. Literal-seed addressing reaches `8739.3` bits only as an optimistic
+  no-mode lower bound; the best decodable sparse seed-run ledger costs
+  `8813.8` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

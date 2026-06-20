@@ -337,6 +337,11 @@ hypotheses:
     status: post_copy_literal_local_frontier_closed
     target: "single literal-to-copy, single copy-to-literal, and copy-to-literal pair edits after the contextual copy-to-literal repair"
     promotion_rule: "must beat the active contextual copy-to-literal formula under exact rescoring while preserving forced-rule validation and 70/70 roundtrip"
+  H-GEN3BJ:
+    name: "contextual copy-address model search"
+    status: contextual_address_optimistic_only_not_promoted
+    target: "copy source-address ledgers after the contextual copy-to-literal repair"
+    promotion_rule: "must beat absolute source_digit_pos in a decodable ledger under the active contextual formula"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

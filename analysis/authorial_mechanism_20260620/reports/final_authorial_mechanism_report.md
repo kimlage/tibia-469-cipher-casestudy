@@ -342,5 +342,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy edit is `+0.4` bits worse, the best copy-to-literal edit is
   `+1.5` bits worse, and the best of `13530` copy-to-literal pairs is `+3.5`
   bits worse.
+- `67_contextual_address_model_search`: retests copy-source address ledgers on
+  the active contextual formula. Absolute `source_digit_pos` remains the best
+  decodable ledger at `8803.1` bits; literal-seed addressing reaches `8739.3`
+  bits only as an optimistic no-mode lower bound.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
