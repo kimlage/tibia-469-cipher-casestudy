@@ -446,5 +446,9 @@ Generated audits in this directory should be treated as the current state:
   context families after `alpha=1`. The active fixed midpoint context remains
   best at `8572.267` bits; book quartiles are `+1.941` bits worse and the best
   searched split is `+2.296` bits worse after declaration costs.
+- `92_post_midpoint_alpha1_context_alpha_grid`: tests separate midpoint
+  smoothing parameters. The best per-context row, first-half `alpha=1` and
+  second-half `alpha=2`, saves `1.611` component bits but remains `+1.389`
+  bits worse after extra alpha declarations.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

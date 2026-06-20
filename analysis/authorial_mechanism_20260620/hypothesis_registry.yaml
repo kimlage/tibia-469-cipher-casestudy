@@ -462,6 +462,11 @@ hypotheses:
     status: post_midpoint_alpha1_copy_length_context_retains_midpoint
     target: "simple copy-length contexts after midpoint-context alpha=1 copy-length coding"
     promotion_rule: "must beat active fixed book-midpoint context after charged declaration bits while preserving alpha=1, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3CI:
+    name: "post midpoint context-specific alpha grid"
+    status: post_midpoint_alpha_by_context_not_promoted
+    target: "separate midpoint first-half and second-half copy-length smoothing alphas"
+    promotion_rule: "must beat active shared alpha=1 midpoint context after charged per-context alpha declarations while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

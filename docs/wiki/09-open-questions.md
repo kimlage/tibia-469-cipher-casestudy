@@ -180,7 +180,10 @@ also keeps source-first as the best decodable order; pure length-first is
 `+12.194` bits worse and the best sparse decodable mixed-order ledger is
 `+8.979` bits worse. The copy-length context resweep after `alpha=1` also
 keeps the fixed book-midpoint context; book quartiles are `+1.941` bits worse
-and the best searched split is `+2.296` bits worse after declaration costs.
+and the best searched split is `+2.296` bits worse after declaration costs. A
+context-specific alpha grid also retains shared `alpha=1`; the best split
+alpha row saves `1.611` component bits but is `+1.389` bits worse after
+declaration.
 
 ## Ranked: what would unlock progress
 

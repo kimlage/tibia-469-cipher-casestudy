@@ -371,6 +371,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   the active fixed midpoint context remains best at `8572.267` bits. Book
   quartiles are only `+1.941` bits worse after declaration, and the best
   searched split is still `+2.296` bits worse after charging the split index.
+- midpoint context-specific smoothing is now covered by
+  [`92_post_midpoint_alpha1_context_alpha_grid.py`](scripts/92_post_midpoint_alpha1_context_alpha_grid.py);
+  the best per-context row, first-half `alpha=1` and second-half `alpha=2`,
+  saves `1.611` component bits but is still `+1.389` bits worse after the
+  extra alpha declarations.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

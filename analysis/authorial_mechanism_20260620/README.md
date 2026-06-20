@@ -230,6 +230,8 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   active.
 - `scripts/91_post_midpoint_alpha1_copy_length_context_resweep.py` - retests
   copy-length context families after midpoint alpha=1 becomes active.
+- `scripts/92_post_midpoint_alpha1_context_alpha_grid.py` - tests separate
+  midpoint first-half and second-half copy-length smoothing alphas.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
