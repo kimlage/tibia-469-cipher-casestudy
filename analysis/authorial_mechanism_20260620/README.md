@@ -200,6 +200,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   length-first within-copy coding order after the post-repair2 formula.
 - `scripts/78_post_repair2_adaptive_copy_length_compile.py` - promotes an
   adaptive bounded copy-length index ledger after the post-repair2 formula.
+- `scripts/79_post_adaptive_copy_length_local_frontier.py` - retests the
+  one-edit local recipe frontier after adaptive copy-length coding is active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

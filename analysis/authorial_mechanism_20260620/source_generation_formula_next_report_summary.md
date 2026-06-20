@@ -304,6 +304,11 @@ Still open from the report:
   adaptive bounded copy-length index coding with `alpha=2` lowers the active
   bound from `8609.773` to `8575.986` bits after charged declaration bits, with
   no recipe or semantic change.
+- post-adaptive-copy-length local frontier is now covered by
+  [`79_post_adaptive_copy_length_local_frontier.py`](scripts/79_post_adaptive_copy_length_local_frontier.py);
+  the best one-edit repair is copy-to-literal `45765` in book `34`, but it is
+  `+1.084` bits worse, so the immediate local recipe frontier is closed under
+  the active adaptive scorer.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -393,5 +393,9 @@ Generated audits in this directory should be treated as the current state:
 - `78_post_repair2_adaptive_copy_length_compile`: promotes a bounded adaptive
   copy-length index ledger with `alpha=2`. It lowers the active mechanical
   bound from `8609.773` to `8575.986` bits after charged declaration bits.
+- `79_post_adaptive_copy_length_local_frontier`: retests one-edit local repairs
+  under the adaptive copy-length scorer. The best candidate, copy-to-literal
+  `45765` in book `34`, is `+1.084` bits worse, so no recipe change is
+  promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

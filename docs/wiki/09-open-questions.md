@@ -157,7 +157,8 @@ source-address-then-length order: pure length-first is `+18.295` bits worse,
 and best-order no-mode is only a `-3.539` bit optimistic lower bound. The
 next productive refinement is adaptive bounded copy-length coding: `alpha=2`
 lowers the mechanical bound to `8575.986` bits with no recipe or semantic
-change.
+change. Retesting one-edit local repairs under that scorer closes the immediate
+frontier again: the best candidate is `+1.084` bits worse.
 
 ## Ranked: what would unlock progress
 

@@ -523,6 +523,12 @@ bound from `8609.773` to `8575.986` bits. This is a copy-length cost refinement
 only: recipe, addresses, payload model, item-type model, row0, and semantic
 verdict are unchanged.
 
+The post-adaptive-copy-length local frontier then checks whether that new cost
+model reopens one-step recipe edits. It does not: the best candidate is
+copy-to-literal `45765` in book `34`, still `+1.084` bits worse than the active
+adaptive formula. The immediate local recipe frontier is closed again under
+the adaptive scorer.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -614,6 +620,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BS | `post_repair2_address_optimistic_only_not_promoted` |
 | H-GEN3BT | `post_repair2_copy_order_optimistic_only_not_promoted` |
 | H-GEN3BU | `controlled_post_repair2_adaptive_copy_length_improvement` |
+| H-GEN3BV | `post_adaptive_copy_length_local_frontier_closed` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -700,6 +707,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair2 address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/76_post_repair2_address_model_search.md)
 - [Post-repair2 copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/77_post_repair2_copy_order_search.md)
 - [Post-repair2 adaptive copy-length compile](../../analysis/authorial_mechanism_20260620/reports/test_results/78_post_repair2_adaptive_copy_length_compile.md)
+- [Post-adaptive-copy-length local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/79_post_adaptive_copy_length_local_frontier.md)
 
 ## Boundary
 
@@ -720,7 +728,8 @@ fabrication bound at roughly `8576.0` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
-resweeps, plus post-repair2 copy-order retests, do not improve the current
+resweeps, plus post-repair2 copy-order and post-adaptive local-frontier retests,
+do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.
