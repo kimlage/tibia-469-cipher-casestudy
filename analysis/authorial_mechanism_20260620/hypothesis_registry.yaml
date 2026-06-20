@@ -562,6 +562,11 @@ hypotheses:
     status: post_itemctx_param_copy_length_context_alpha_not_promoted
     target: "joint copy-length context family/split candidates and shared alpha values after separate post-itemctx_param context and alpha retests"
     promotion_rule: "must beat active fixed book-midpoint copy-length context with shared alpha=1 under charged context/alpha/split declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3DC:
+    name: "post itemctx_param literal-payload context and shared-alpha resweep"
+    status: post_itemctx_param_literal_payload_context_alpha_not_promoted
+    target: "joint literal-payload context family/split candidates and shared alpha values after the separate post-itemctx_param payload context retest"
+    promotion_rule: "must beat active global previous-emitted-digit literal-payload model with shared alpha=1 under charged context/alpha/split declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

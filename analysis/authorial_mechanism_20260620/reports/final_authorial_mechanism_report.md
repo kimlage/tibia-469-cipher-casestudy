@@ -536,5 +536,11 @@ Generated audits in this directory should be treated as the current state:
   context/alpha rows. The active fixed book-midpoint context with shared
   `alpha=1` remains best; the best context change is `+1.941` bits worse and
   the best alpha change on the active context is `+2.140` bits worse.
+- `112_post_itemctx_param_literal_payload_context_alpha_resweep`: tests `77`
+  literal-payload context candidates times `64` shared alpha values, for
+  `4928` context/alpha rows. The active global previous-emitted-digit payload
+  model with shared `alpha=1` remains best; the best context change is `+1.749`
+  bits worse and the best alpha change on the active context is `+17.859` bits
+  worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

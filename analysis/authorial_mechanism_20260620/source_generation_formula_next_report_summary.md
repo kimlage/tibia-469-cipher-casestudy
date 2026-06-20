@@ -479,6 +479,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `5056` context/alpha rows. The active fixed book-midpoint context with
   shared `alpha=1` remains best; the best context change is `+1.941` bits
   worse and the best alpha change on the active context is `+2.140` bits worse.
+- post-itemctx_param literal-payload context/shared-alpha resweep is now covered
+  by
+  [`112_post_itemctx_param_literal_payload_context_alpha_resweep.py`](scripts/112_post_itemctx_param_literal_payload_context_alpha_resweep.py);
+  `77` literal-payload context candidates times `64` shared alpha values test
+  `4928` context/alpha rows. The active global previous-emitted-digit payload
+  model with shared `alpha=1` remains best; the best context change is
+  `+1.749` bits worse and the best alpha change on the active context is
+  `+17.859` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

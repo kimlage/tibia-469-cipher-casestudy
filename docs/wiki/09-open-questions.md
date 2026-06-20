@@ -231,7 +231,11 @@ implied triples; the best changed triple is `+0.415` bits worse, and the best
 triple with all three components changed is `+3.553` bits worse. A copy-length
 context/shared-alpha resweep then tests `5056` rows; the active book-midpoint
 context with `alpha=1` stays best, with the best context change `+1.941` bits
-worse and the best active-context alpha change `+2.140` bits worse.
+worse and the best active-context alpha change `+2.140` bits worse. A
+literal-payload context/shared-alpha resweep tests `4928` rows; the active
+global payload model with `alpha=1` stays best, with the best context change
+`+1.749` bits worse and the best active-context alpha change `+17.859` bits
+worse.
 
 ## Ranked: what would unlock progress
 
