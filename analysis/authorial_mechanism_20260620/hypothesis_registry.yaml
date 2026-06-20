@@ -197,6 +197,11 @@ hypotheses:
     status: post_digit_repair_payload_alpha_retains_14
     target: "adaptive literal-payload alpha after the digit-address literal-to-copy repair"
     promotion_rule: "must beat alpha=14 after declaration cost on the current literal payload stream"
+  H-GEN3AH:
+    name: "post digit-address repair address model search"
+    status: post_digit_repair_address_optimistic_only_not_promoted
+    target: "alternate copy source-address ledgers after the digit-address literal-to-copy repair"
+    promotion_rule: "must beat absolute source_digit_pos in a decodable ledger after the latest repair"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

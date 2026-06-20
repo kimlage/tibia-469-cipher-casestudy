@@ -114,6 +114,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   literal-to-copy repairs after digit-only address costing.
 - `scripts/38_post_digit_repair_payload_alpha_sweep.py` - retests adaptive
   literal-payload alpha after the digit-address repair.
+- `scripts/39_post_digit_repair_address_model_search.py` - retests address
+  ledgers after the digit-address literal-to-copy repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

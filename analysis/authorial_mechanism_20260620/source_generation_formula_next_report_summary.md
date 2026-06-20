@@ -119,6 +119,10 @@ Still open from the report:
   [`38_post_digit_repair_payload_alpha_sweep.py`](scripts/38_post_digit_repair_payload_alpha_sweep.py);
   `alpha=14` remains the best declared adaptive payload parameter after the
   latest repair.
+- post-digit-repair address alternatives are now covered by
+  [`39_post_digit_repair_address_model_search.py`](scripts/39_post_digit_repair_address_model_search.py);
+  absolute `source_digit_pos` remains the best decodable ledger after the
+  latest repair.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

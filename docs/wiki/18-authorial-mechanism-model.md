@@ -273,6 +273,11 @@ After the digit-address repair, `alpha=14` remains best at `2592.0`
 payload-plus-model bits; the nearest alternate, `alpha=13`, costs `2592.1`
 bits. No formula is promoted by this parameter sweep.
 
+The post-repair address-model follow-up also keeps the formula unchanged.
+Absolute `source_digit_pos` remains the best decodable ledger at `9070.1` bits.
+Literal-seed addressing reaches `9005.5` bits only as an undecodable lower
+bound; the best decodable sparse seed-run ledger costs `9080.8` bits.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -324,6 +329,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AE | `digit_address_optimistic_only_not_promoted` |
 | H-GEN3AF | `controlled_digit_address_literal_repair_improvement` |
 | H-GEN3AG | `post_digit_repair_payload_alpha_retains_14` |
+| H-GEN3AH | `post_digit_repair_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -370,6 +376,7 @@ book generation, not row0 pair-cell placement.
 - [Digit address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/36_digit_address_model_search.md)
 - [Digit-address literal repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/37_digit_address_literal_repair_search.md)
 - [Post-digit-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/38_post_digit_repair_payload_alpha_sweep.md)
+- [Post-digit-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/39_post_digit_repair_address_model_search.md)
 
 ## Boundary
 
