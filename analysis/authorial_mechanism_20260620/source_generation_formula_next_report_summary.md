@@ -111,6 +111,10 @@ Still open from the report:
   [`36_digit_address_model_search.py`](scripts/36_digit_address_model_search.py);
   absolute `source_digit_pos` remains the best decodable ledger in the
   digit-only coordinate system.
+- digit-address literal-to-copy repair is now covered by
+  [`37_digit_address_literal_repair_search.py`](scripts/37_digit_address_literal_repair_search.py);
+  one local repair improves the current bound to `9070.1` bits, with no second
+  one-step repair after applying it.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

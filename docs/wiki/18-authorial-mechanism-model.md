@@ -73,6 +73,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_literal_copy_repair_formula_469` | `9537.3` | `0.7` |
 | `sequential_lz_length_ledger_formula_469` | `9073.3` | `464.0` |
 | `sequential_lz_digit_address_formula_469` | `9070.8` | `2.4` |
+| `sequential_lz_digit_address_literal_repair_formula_469` | `9070.1` | `0.8` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -262,6 +263,11 @@ The digit-only address-model follow-up keeps that result. Absolute
 Literal-seed addressing reaches `9006.2` bits only as an undecodable lower
 bound; the best decodable sparse seed-run ledger costs `9081.5` bits.
 
+Retesting local repairs under the digit-only address cost yields one more small
+recipe improvement. Literal `57928` in book `13` can be replaced by a prior copy
+from digit position `1976`, lowering the bound from `9070.8` to `9070.1` bits.
+A follow-up one-step search after applying it finds no second improvement.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -311,6 +317,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AC | `multi_anchor_book_length_ledger_not_promoted` |
 | H-GEN3AD | `controlled_digit_only_copy_address_improvement` |
 | H-GEN3AE | `digit_address_optimistic_only_not_promoted` |
+| H-GEN3AF | `controlled_digit_address_literal_repair_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -355,12 +362,14 @@ book generation, not row0 pair-cell placement.
 - [Book length multi-anchor search](../../analysis/authorial_mechanism_20260620/reports/test_results/34_book_length_multi_anchor_search.md)
 - [Digit-only copy address compile](../../analysis/authorial_mechanism_20260620/reports/test_results/35_digit_only_copy_address_compile.md)
 - [Digit address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/36_digit_address_model_search.md)
+- [Digit-address literal repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/37_digit_address_literal_repair_search.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
 with adaptive literal-payload coding, the one-step literal-to-copy repair, the
-signed-Rice book-length ledger, and digit-only copy addresses as the current
-strongest copy/reference fabrication bound and continue testing matrix origin,
-topology holdouts, and official source watchlists under the same Outcome Ledger.
+signed-Rice book-length ledger, digit-only copy addresses, and the digit-address
+literal repair as the current strongest copy/reference fabrication bound and
+continue testing matrix origin, topology holdouts, and official source
+watchlists under the same Outcome Ledger.

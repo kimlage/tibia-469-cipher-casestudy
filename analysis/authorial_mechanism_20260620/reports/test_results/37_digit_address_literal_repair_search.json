@@ -1,0 +1,56 @@
+{
+  "best_single_repair": {
+    "book": "13",
+    "book_pos": 69,
+    "chunk": "57928",
+    "delta_vs_current_bits": -0.7553643473675038,
+    "length": 5,
+    "literal_offset": 6,
+    "op_index": 6,
+    "source_digit_pos": 1976,
+    "total_bits": 9070.055148136933
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "candidates_tested": 24,
+  "classification": "controlled_digit_address_literal_repair_improvement",
+  "current_formula_bits": 9070.8105124843,
+  "current_score": {
+    "copied_digits": 10475,
+    "copy_address_bits": 3254.901185892165,
+    "copy_bits": 5389.901185892165,
+    "copy_items": 280,
+    "copy_length_code_bits": 1855,
+    "fixed_bits": 596,
+    "literal_bits_no_payload": 483.0,
+    "literal_digits": 788,
+    "literal_payload_bits": 2601.9093265921315,
+    "literal_runs": 84,
+    "total_bits": 9070.810512484297,
+    "validation": {
+      "book_count": 70,
+      "books_roundtrip_ok": 70,
+      "errors": []
+    }
+  },
+  "followup_best_after_best_repair": {
+    "book": "12",
+    "book_pos": 130,
+    "chunk": "65128",
+    "delta_vs_current_bits": 0.8900632678705733,
+    "length": 5,
+    "literal_offset": 2,
+    "op_index": 12,
+    "source_digit_pos": 50,
+    "total_bits": 9070.945211404804
+  },
+  "followup_candidates_tested_after_best_repair": 23,
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_literal_repair_formula_469.json",
+  "schema": "digit_address_literal_repair_search.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_formula_469.json",
+  "test": "37_digit_address_literal_repair_search",
+  "translation_delta": "NONE"
+}

@@ -101,8 +101,9 @@ signed Rice residuals from a declared anchor; a multi-anchor follow-up is
 tested and rejected after mode costs. Digit-only copy addressing then lowers
 the bound to `9070.8` bits by excluding reconstructable book separators from
 the address space; alternate digit-only address ledgers are retested and still
-do not promote. No plaintext, pair-table origin, physical-topology mechanism,
-or authorial-intent claim is promoted. A direct
+do not promote. Retesting local repairs under digit-only address cost then
+lowers the bound to `9070.1` bits. No plaintext, pair-table origin,
+physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).
 

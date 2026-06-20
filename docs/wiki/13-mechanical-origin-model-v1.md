@@ -82,6 +82,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Multi-anchor book-length ledger search | best decodable multi-anchor length mixture costs `581.0` length bits, `+15.0` worse than the single-anchor ledger | rejected refinement |
 | Sequential LZ digit-address formula | book separators are removed from the absolute copy-address space after lengths make them reconstructable; total bound drops to `9070.8` bits | strongest copy/reference upper bound |
 | Digit-only copy address models | absolute `source_digit_pos` remains best decodable at `9070.8`; literal-seed no-mode reaches `9006.2` but sparse decodable seed-run costs `9081.5` | rejected refinement / optimistic clue |
+| Sequential LZ digit-address literal-repair formula | one local replacement turns literal `57928` in book `13` into a valid prior copy; total bound drops to `9070.1` bits and follow-up one-step repair is worse | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -119,6 +120,7 @@ Primary sources:
 [book_length_multi_anchor_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/34_book_length_multi_anchor_search.md),
 [digit_only_copy_address_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/35_digit_only_copy_address_compile.md),
 [digit_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/36_digit_address_model_search.md),
+[digit_address_literal_repair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/37_digit_address_literal_repair_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
@@ -211,6 +213,8 @@ claims remain inadmissible.
   [sequential_lz_length_ledger_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_length_ledger_formula_469.json)
 - Sequential LZ digit-address formula:
   [sequential_lz_digit_address_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_formula_469.json)
+- Sequential LZ digit-address literal-repair formula:
+  [sequential_lz_digit_address_literal_repair_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_literal_repair_formula_469.json)
 - DP LZ copy graph:
   [dp_lz_copy_graph_edges.csv](../../analysis/authorial_mechanism_20260620/tables/dp_lz_copy_graph_edges.csv)
 - DP LZ literal seed atlas:

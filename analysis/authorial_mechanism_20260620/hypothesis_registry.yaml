@@ -187,6 +187,11 @@ hypotheses:
     status: digit_address_optimistic_only_not_promoted
     target: "alternate copy source-address ledgers in the digit-only coordinate system"
     promotion_rule: "must beat absolute source_digit_pos in a decodable ledger"
+  H-GEN3AF:
+    name: "digit-address literal-to-copy repair"
+    status: controlled_digit_address_literal_repair_improvement
+    target: "local literal-to-copy repairs after digit-only address costing"
+    promotion_rule: "must beat the active digit-address formula under exact rescoring and preserve 70/70 roundtrip"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

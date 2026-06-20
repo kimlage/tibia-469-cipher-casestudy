@@ -212,5 +212,10 @@ Generated audits in this directory should be treated as the current state:
   decodable ledger at `9070.8` bits. Literal-seed addressing reaches `9006.2`
   bits only as an undecodable no-mode lower bound; the best decodable sparse
   seed-run ledger costs `9081.5` bits, so no address model is promoted.
+- `37_digit_address_literal_repair_search`: retests local literal-to-copy
+  repairs under the digit-only address cost. One new repair replaces literal
+  `57928` in book `13` with a prior copy from digit position `1976`, improving
+  the total formula from `9070.8` to `9070.1` bits. A follow-up one-step search
+  after applying it finds no second improvement.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
