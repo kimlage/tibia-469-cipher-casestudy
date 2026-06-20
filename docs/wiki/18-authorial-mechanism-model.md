@@ -116,6 +116,15 @@ remain much worse (`p=0.0099`); book-order shuffles are only moderately worse
 (`p=0.0396`), so this promotes a tighter copy/reference fabrication bound, not
 an original-order claim.
 
+The follow-up address search rejects a tempting refinement from the generation
+formula report: back-distance, delta, and book-relative source addresses are
+not cheaper under the fixed DP parse. Absolute `source_pos` remains the best
+ledger at `9823.3` bits; the next-best tested address model costs `11507.9`
+bits. The copy-graph audit is therefore diagnostic rather than compressive: it
+materializes `281` copy edges, only `5` same-book copies, `32` source books,
+and `52/84` literal runs reused later as source material. That atlas is useful
+for future structured-order or seed-provenance tests, not a new formula.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -142,6 +151,8 @@ book generation, not row0 pair-cell placement.
 | H-GEN3F | `order_search_not_promoted_after_permutation_cost` |
 | H-GEN3G | `controlled_sequential_lz_run_literal_formula` |
 | H-GEN3H | `controlled_sequential_lz_dp_parse_formula` |
+| H-GEN3I | `copy_source_address_absolute_retained` |
+| H-GEN3J | `copy_graph_literal_seed_atlas_compiled_no_formula_promotion` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -163,6 +174,8 @@ book generation, not row0 pair-cell placement.
 - [Sequential LZ book order search](../../analysis/authorial_mechanism_20260620/reports/test_results/11_sequential_lz_order_search.md)
 - [Sequential LZ literal-run cost compile](../../analysis/authorial_mechanism_20260620/reports/test_results/12_sequential_lz_literal_run_cost_compile.md)
 - [Sequential LZ dynamic-parse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/13_sequential_lz_dp_parse_compile.md)
+- [Copy source address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/14_copy_source_address_model_search.md)
+- [Copy graph provenance audit](../../analysis/authorial_mechanism_20260620/reports/test_results/15_copy_graph_provenance_audit.md)
 
 ## Boundary
 

@@ -84,5 +84,15 @@ Generated audits in this directory should be treated as the current state:
   and random same-length controls are much worse (`p=0.0099`); book-order
   shuffles are only moderately worse (`p=0.0396`), so the accepted claim is a
   tighter copy/reference bound, not original order.
+- `14_copy_source_address_model_search`: tests whether copy sources become
+  cheaper as back-distances, source deltas, or book-relative offsets. They do
+  not. The current absolute `source_pos` ledger remains cheapest at `9823.3`
+  total bits; the next-best tested address model costs `11507.9` bits.
+- `15_copy_graph_provenance_audit`: materializes the DP LZ formula as copy
+  edges and literal seed runs. It confirms `281` copy items over `10468` copied
+  digits, only `5` same-book copies, `32` source books, `84` literal runs, and
+  `52/84` literal runs reused later as source material. It also emits the copy
+  graph and literal seed atlas for future formula work, with no formula or
+  semantic promotion.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

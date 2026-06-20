@@ -25,7 +25,10 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 
 ## Contents
 
-- `source_research_summary.md` - distilled incorporation of the provided report.
+- `source_research_summary.md` - distilled incorporation of the first
+  first-principles report.
+- `source_generation_formula_next_report_summary.md` - incorporation status for
+  the follow-up generation-formula report and its recommended tests.
 - `hypothesis_registry.yaml` - H-AUTH/H-GEN hypothesis registry.
 - `scripts/01_first_principles_hypothesis_audit.py` - checks that the report's
   claims are bucketed without semantic promotion.
@@ -59,6 +62,11 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/13_sequential_lz_dp_parse_compile.py` - replaces the greedy
   sequential LZ parse with a dynamic-programming parse under the same
   run-literal cost.
+- `scripts/14_copy_source_address_model_search.py` - tests whether source
+  positions are cheaper as absolute addresses, back-distances, deltas, or
+  book-relative offsets.
+- `scripts/15_copy_graph_provenance_audit.py` - materializes the DP LZ copy
+  graph and literal seed atlas for provenance analysis.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

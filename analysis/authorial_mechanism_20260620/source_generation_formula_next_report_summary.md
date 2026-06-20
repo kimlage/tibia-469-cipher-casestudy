@@ -1,0 +1,38 @@
+---
+title: "Research summary: generation formula next steps"
+date: 2026-06-20
+source_note: "/Users/sargam/Downloads/469_generation_formula_next_report.md"
+status: incorporated_as_generation_tests
+translation_delta: NONE
+---
+
+# Research Summary: Generation Formula Next Steps
+
+The report reviewed the current public `main` state and proposed the next
+mechanical improvements for the 70-book generator. Its central recommendation
+was to replace the greedy sequential LZ parser with a dynamic-programming
+parser under the final run-literal cost.
+
+That recommendation is now implemented by
+[`13_sequential_lz_dp_parse_compile.py`](scripts/13_sequential_lz_dp_parse_compile.py):
+the best generator moved from `9944.0` bits to `9823.3` bits while preserving
+70/70 roundtrip and `translation_delta: NONE`.
+
+Additional recommendations were converted into bounded tests:
+
+- source-address alternatives are tested by
+  [`14_copy_source_address_model_search.py`](scripts/14_copy_source_address_model_search.py);
+  absolute `source_pos` remains cheapest, so no alternate address model is
+  promoted.
+- copy-graph provenance and the literal seed atlas are materialized by
+  [`15_copy_graph_provenance_audit.py`](scripts/15_copy_graph_provenance_audit.py);
+  this is diagnostic context for future formula work, not a new lower-cost
+  generator.
+
+Still open from the report:
+
+- structured public/topology order tests under the DP parser;
+- DP plus externally supplied physical order, if a source gives order at zero
+  search cost.
+
+No semantic or authorial-intent claim is promoted.

@@ -242,7 +242,9 @@ charging permutation cost. Re-costing the same generator with literal runs
 instead of per-digit literal flags tightens the current mechanical upper bound
 again to roughly `9944.0` bits. A dynamic-programming parse under the same
 run-literal vocabulary tightens it further to roughly `9823.3` bits, still
-with translation delta zero.
+with translation delta zero. Follow-up address models do not improve it, but
+the committed copy graph/literal atlas now records source hubs and literal-seed
+reuse for future structured-order tests.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -302,8 +304,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   and [`analysis/authorial_mechanism_20260620/`](../../analysis/authorial_mechanism_20260620/) —
   incorporates the first-principles/Knightmare report as mechanism prior and
   compiles and control-tests literal-reference, hierarchical reference, and
-  sequential LZ book/run-literal/dynamic-parse formulas; keeps translation
-  delta at zero.
+  sequential LZ book/run-literal/dynamic-parse formulas, plus copy-address and
+  copy-graph audits; keeps translation delta at zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

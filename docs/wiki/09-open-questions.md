@@ -69,8 +69,11 @@ runs instead of per-digit literal flags reaches `9944.0` rough bits with the
 same 70/70 roundtrip and `10451` copied digits. Replacing the greedy parse
 with a dynamic-programming parse under the same run-literal vocabulary reaches
 `9823.3` rough bits with 70/70 roundtrip and `10468` copied digits. This is
-mechanical progress only: no plaintext, pair-table origin, physical-topology
-mechanism, or authorial-intent claim is promoted. A direct
+mechanical progress only: alternate copy-address ledgers were tested and
+rejected, while the copy graph/literal atlas now records `32` source books,
+`5` same-book copies, and `52/84` literal runs reused later. No plaintext,
+pair-table origin, physical-topology mechanism, or authorial-intent claim is
+promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).
 
