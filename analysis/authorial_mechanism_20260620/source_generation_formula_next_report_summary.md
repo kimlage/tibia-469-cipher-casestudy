@@ -196,6 +196,10 @@ Still open from the report:
   [`56_post_forced_repair_nonet_search.py`](scripts/56_post_forced_repair_nonet_search.py);
   the same `22` single candidates yield `262548` compatible nonets, and the
   best nonet is `+12.9` bits worse than the active formula.
+- post-forced-repair decet search is now covered by
+  [`57_post_forced_repair_decet_search.py`](scripts/57_post_forced_repair_decet_search.py);
+  the same `22` single candidates yield `286858` compatible decets, and the
+  best decet is `+15.1` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

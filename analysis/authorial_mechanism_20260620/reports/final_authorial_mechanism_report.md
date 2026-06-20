@@ -299,5 +299,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `262548` compatible nonets, and the best nonet is
   `+12.9` bits worse than the active formula.
+- `57_post_forced_repair_decet_search`: tests whether ten compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `286858` compatible decets, and the best decet is
+  `+15.1` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
