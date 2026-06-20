@@ -235,7 +235,9 @@ worse and the best active-context alpha change `+2.140` bits worse. A
 literal-payload context/shared-alpha resweep tests `4928` rows; the active
 global payload model with `alpha=1` stays best, with the best context change
 `+1.749` bits worse and the best active-context alpha change `+17.859` bits
-worse.
+worse. A copy/payload context-alpha pair search then closes `24915968` implied
+pairs; the best changed pair is `+1.749` bits worse, and the best pair with
+both components changed is `+3.690` bits worse.
 
 ## Ranked: what would unlock progress
 

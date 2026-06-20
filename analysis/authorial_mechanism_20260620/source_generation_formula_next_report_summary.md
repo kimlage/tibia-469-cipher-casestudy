@@ -487,6 +487,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   model with shared `alpha=1` remains best; the best context change is
   `+1.749` bits worse and the best alpha change on the active context is
   `+17.859` bits worse.
+- post-itemctx_param copy/payload context-alpha pair search is now covered by
+  [`113_post_itemctx_param_copy_payload_context_alpha_pair_search.py`](scripts/113_post_itemctx_param_copy_payload_context_alpha_pair_search.py);
+  `5056` copy-length context/alpha rows and `4928` literal-payload
+  context/alpha rows imply `24915968` pairs. Component minima keep the active
+  pair best; the best changed pair is `+1.749` bits worse and the best pair
+  with both components changed is `+3.690` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

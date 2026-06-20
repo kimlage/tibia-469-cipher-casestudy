@@ -542,5 +542,10 @@ Generated audits in this directory should be treated as the current state:
   model with shared `alpha=1` remains best; the best context change is `+1.749`
   bits worse and the best alpha change on the active context is `+17.859` bits
   worse.
+- `113_post_itemctx_param_copy_payload_context_alpha_pair_search`: combines
+  `5056` copy-length context/shared-alpha rows with `4928` literal-payload
+  context/shared-alpha rows into `24915968` implied pairs. Component minima keep
+  the active pair best; the best changed pair is `+1.749` bits worse and the
+  best pair with both components changed is `+3.690` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

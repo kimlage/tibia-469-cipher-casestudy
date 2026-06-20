@@ -350,7 +350,8 @@ copy-alpha/payload/item-type triple sweep closes `5370544256` implied
 combinations by component minima. The copy-length context/shared-alpha resweep
 tests `5056` rows and retains the active book-midpoint `alpha=1` context. The
 literal-payload context/shared-alpha resweep tests `4928` rows and retains the
-active global `alpha=1` payload model. No
+active global `alpha=1` payload model. The copy/payload context-alpha pair
+search closes `24915968` implied pairs by component minima. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

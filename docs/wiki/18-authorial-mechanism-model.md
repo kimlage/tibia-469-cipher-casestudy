@@ -745,6 +745,15 @@ previous-emitted-digit payload model with shared `alpha=1` remains best at
 `alpha=1`, still `+1.749` bits worse, and the best alpha change on the active
 context is `alpha=2`, `+17.859` bits worse.
 
+The post-itemctx_param copy/payload context-alpha pair search then combines the
+`5056` copy-length context/shared-alpha rows with the `4928` literal-payload
+context/shared-alpha rows into `24915968` implied pairs. Component minima keep
+the active book-midpoint copy-length `alpha=1` plus global payload `alpha=1`
+pair best at `8561.792` bits. The best changed pair is the payload
+book-midpoint `alpha=1` row at `+1.749` bits, and the best pair with both
+components changed is copy-length book-quartile `alpha=1` plus payload
+book-midpoint `alpha=1`, `+3.690` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -870,6 +879,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3DA | `post_itemctx_param_copy_alpha_payload_item_type_triple_not_promoted` |
 | H-GEN3DB | `post_itemctx_param_copy_length_context_alpha_not_promoted` |
 | H-GEN3DC | `post_itemctx_param_literal_payload_context_alpha_not_promoted` |
+| H-GEN3DD | `post_itemctx_param_copy_payload_context_alpha_pair_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -990,6 +1000,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param copy-alpha/payload/item-type triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/110_post_itemctx_param_copy_alpha_payload_item_type_triple_search.md)
 - [Post-itemctx param copy-length context/shared-alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/111_post_itemctx_param_copy_length_context_alpha_resweep.md)
 - [Post-itemctx param literal-payload context/shared-alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/112_post_itemctx_param_literal_payload_context_alpha_resweep.md)
+- [Post-itemctx param copy/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/113_post_itemctx_param_copy_payload_context_alpha_pair_search.md)
 
 ## Boundary
 
@@ -1037,7 +1048,8 @@ the copy-length alpha/item-type and alpha/payload sweeps retain the same active
 pair. The copy-alpha/payload/item-type triple sweep retains the same active
 triple. The copy-length context/shared-alpha resweep retains the same active
 book-midpoint `alpha=1` context. The literal-payload context/shared-alpha
-resweep retains the same active global `alpha=1` payload model.
+resweep retains the same active global `alpha=1` payload model. The
+copy/payload context-alpha pair search retains the same active pair.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

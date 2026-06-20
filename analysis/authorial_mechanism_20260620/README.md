@@ -285,6 +285,9 @@ bits.
 - `scripts/112_post_itemctx_param_literal_payload_context_alpha_resweep.py` -
   retests literal-payload context candidates with shared alpha values after the
   post-itemctx_param payload context frontier.
+- `scripts/113_post_itemctx_param_copy_payload_context_alpha_pair_search.py` -
+  combines copy-length context/shared-alpha and literal-payload context/shared-
+  alpha frontiers after both component sweeps.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
