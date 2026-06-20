@@ -128,7 +128,8 @@ lowers the best 70/70 generator from `8922.8` to `8842.0` bits after charged
 declaration bits. A follow-up context-order sweep lowers it again to `8805.7`
 bits with a declared order-2 previous-emitted-digit context. This does not
 change the semantic state. A later item-type context-order sweep lowers the
-mechanical bound to `8803.5` bits while retaining the same no-plaintext state.
+mechanical bound to `8803.5` bits, and a contextual copy-to-literal repair
+lowers it to `8803.1` bits while retaining the same no-plaintext state.
 
 ## Ranked: what would unlock progress
 

@@ -288,7 +288,8 @@ sets. A final literal-payload context audit improves the mechanical bound to
 roughly `8842.0` bits by coding literal digits from the previously emitted
 digit, and a context-order sweep lowers it again to roughly `8805.7` bits with
 a declared order-2 previous-emitted-digit context. An item-type context-order
-sweep lowers it to roughly `8803.5` bits. No semantic claim is promoted.
+sweep lowers it to roughly `8803.5` bits, and one contextual copy-to-literal
+repair lowers it to roughly `8803.1` bits. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

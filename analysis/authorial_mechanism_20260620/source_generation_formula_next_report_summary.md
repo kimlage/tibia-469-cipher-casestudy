@@ -229,6 +229,15 @@ Still open from the report:
   a declared previous item-type context of order `3` with `alpha=2` further
   improves the active formula from `8805.7` to `8803.5` bits after charged
   order bits and retained forced-type rules.
+- contextual literal-to-copy local repair is now covered by
+  [`64_contextual_local_repair_search.py`](scripts/64_contextual_local_repair_search.py);
+  after exact rescoring under contextual payload and item-type ledgers, `22`
+  candidate literal-to-copy repairs are tested and the best remains `+1.0` bit
+  worse than the active formula.
+- contextual copy-to-literal local repair is now covered by
+  [`65_contextual_copy_to_literal_repair_search.py`](scripts/65_contextual_copy_to_literal_repair_search.py);
+  one short copy in book `34` becomes cheaper as an explicit literal, improving
+  the active formula from `8803.5` to `8803.1` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

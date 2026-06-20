@@ -322,6 +322,16 @@ hypotheses:
     status: controlled_item_type_context_order_improvement
     target: "literal/copy item-type ledger conditioned on declared previous item-type context order"
     promotion_rule: "must beat the active order-1 book-start Markov item-type ledger after charged alpha, forced-rule, and order declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BG:
+    name: "contextual literal-to-copy local repair search"
+    status: contextual_local_repair_not_promoted
+    target: "single literal-to-copy replacements after contextual payload and item-type ledgers"
+    promotion_rule: "must beat the active contextual formula under exact rescoring while preserving forced-rule validation and 70/70 roundtrip"
+  H-GEN3BH:
+    name: "contextual copy-to-literal local repair search"
+    status: controlled_contextual_copy_to_literal_improvement
+    target: "single copy-to-literal replacements after contextual payload and item-type ledgers"
+    promotion_rule: "must beat the active contextual formula under exact rescoring while preserving forced-rule validation and 70/70 roundtrip"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

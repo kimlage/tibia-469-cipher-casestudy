@@ -164,6 +164,11 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   previous-emitted-digit context order for the final literal payload model.
 - `scripts/63_item_type_context_order_sweep.py` - sweeps declared previous
   item-type context order for the final literal/copy item-type ledger.
+- `scripts/64_contextual_local_repair_search.py` - retests literal-to-copy
+  repairs under the current contextual cost model.
+- `scripts/65_contextual_copy_to_literal_repair_search.py` - tests whether
+  short copy items should become explicit literals under the contextual cost
+  model.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

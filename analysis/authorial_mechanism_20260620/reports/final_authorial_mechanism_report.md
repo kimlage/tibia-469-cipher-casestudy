@@ -330,5 +330,12 @@ Generated audits in this directory should be treated as the current state:
   with `alpha=2` improves the active mechanical bound from `8805.7` to
   `8803.5` bits after charged order bits, with 70/70 roundtrip and
   `translation_delta: NONE`.
+- `64_contextual_local_repair_search`: retests literal-to-copy repairs under
+  the current contextual cost model. It tests `22` candidates; the best remains
+  `+1.0` bit worse, so no literal-to-copy repair is promoted.
+- `65_contextual_copy_to_literal_repair_search`: tests the reverse direction
+  under the same contextual cost model. Replacing a short copy of `45765` in
+  book `34` with a literal improves the active mechanical bound from `8803.5`
+  to `8803.1` bits with 70/70 roundtrip and `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
