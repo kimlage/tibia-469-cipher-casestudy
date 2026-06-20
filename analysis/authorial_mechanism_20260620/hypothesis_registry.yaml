@@ -527,6 +527,11 @@ hypotheses:
     status: post_itemctx_param_item_type_context_family_not_promoted
     target: "item-type extra-context families with order/alpha sweep after itemctx_param promotion"
     promotion_rule: "must beat active searched split at book 6 with a decodable family/order/alpha ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CV:
+    name: "post itemctx_param payload and item-type pair context search"
+    status: post_itemctx_param_payload_item_type_pair_not_promoted
+    target: "joint literal-payload context plus item-type context family/order/alpha pairs after separate post-itemctx_param frontiers"
+    promotion_rule: "must beat active global payload plus searched item-type split at book 6 under charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

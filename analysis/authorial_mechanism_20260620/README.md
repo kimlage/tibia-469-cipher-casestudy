@@ -261,6 +261,9 @@ bits.
 - `scripts/104_post_itemctx_param_item_type_context_family_search.py` -
   retests item-type extra-context families with order/alpha sweep after the
   itemctx_param promotion.
+- `scripts/105_post_itemctx_param_payload_item_type_pair_context_search.py` -
+  retests joint literal-payload and item-type context pairs after the separate
+  post-itemctx_param frontiers.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

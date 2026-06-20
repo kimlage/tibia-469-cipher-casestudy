@@ -212,7 +212,10 @@ payload context saves `2.251` component bits but remains `+1.749` bits worse
 after declaration. A broader item-type context family search then rescored
 `17024` family/order/alpha candidates and still retained the active searched
 split at book `6`, order `1`, alpha `2`; the nearest alternate is `+1.335`
-bits worse.
+bits worse. A joint payload/item-type pair sweep then enumerated `1310848`
+pairs and also retained the active pair; the best changed pair is `+0.415`
+bits worse, and the best pair with both components changed is `+2.164` bits
+worse.
 
 ## Ranked: what would unlock progress
 

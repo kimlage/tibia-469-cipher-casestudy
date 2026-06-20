@@ -436,6 +436,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   at book `6`, order `1`, alpha `2` remains best at `8561.792` bits; the
   nearest alternate is split `9`, order `1`, alpha `2`, still `+1.335` bits
   worse.
+- post-itemctx_param payload/item-type pair context search is now covered by
+  [`105_post_itemctx_param_payload_item_type_pair_context_search.py`](scripts/105_post_itemctx_param_payload_item_type_pair_context_search.py);
+  `77` payload contexts and `17024` item-type candidates form `1310848` pairs.
+  The active global payload plus split `6`, order `1`, alpha `2` item-type model
+  remains best; the best changed pair is `+0.415` bits worse and the best pair
+  with both components changed is `+2.164` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

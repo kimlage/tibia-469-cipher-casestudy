@@ -499,5 +499,10 @@ Generated audits in this directory should be treated as the current state:
   searched split at book `6`, order `1`, alpha `2` remains best at `8561.792`
   bits; the nearest alternate, split `9`, order `1`, alpha `2`, is `+1.335`
   bits worse.
+- `105_post_itemctx_param_payload_item_type_pair_context_search`: combines
+  `77` literal-payload context candidates with `17024` item-type candidates
+  into `1310848` pairs. The active pair remains best; the best changed pair is
+  `+0.415` bits worse, and the best pair with both components changed is
+  `+2.164` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
