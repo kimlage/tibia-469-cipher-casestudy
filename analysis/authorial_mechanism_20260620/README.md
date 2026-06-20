@@ -319,6 +319,8 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 - `scripts/123_item_type_split_only_formula_compile.py` - promotes split-only
   item-type coding as a decodable formula improvement after conservative
   full-corpus rescoring.
+- `scripts/124_item_type_split_only_alpha_resweep.py` - retests the split-only
+  item-type smoothing alpha and retains the promoted `alpha=2` bound.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

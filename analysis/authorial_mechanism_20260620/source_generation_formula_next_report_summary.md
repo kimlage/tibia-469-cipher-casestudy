@@ -559,6 +559,10 @@ Coverage of the remaining report recommendations and follow-on refinements:
   the same recipe and forced rules roundtrip `70/70` at `8558.667` bits,
   `3.125` bits below the prior `8561.792` bound. This is promoted as the new
   `compression_bound`, still with `translation_delta: NONE`.
+- split-only item-type alpha validation is now covered by
+  [`124_item_type_split_only_alpha_resweep.py`](scripts/124_item_type_split_only_alpha_resweep.py);
+  `alpha=2` remains best at `8558.667` bits after alpha declaration deltas.
+  The nearest alternate is `alpha=1`, `+0.309` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

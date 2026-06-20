@@ -841,6 +841,11 @@ validates `70/70` and lowers the active bound from `8561.792` to `8558.667`
 bits. This is a mechanical book-generation improvement only; it does not
 explain row0 or add semantics.
 
+The item-type split-only alpha resweep then closes the immediate parameter
+frontier for that promoted model. `alpha=2` remains best at `8558.667` bits
+after charging alpha declaration deltas; `alpha=1` is nearest at `+0.309` bits
+worse, and no alternate alpha is promoted.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1110,6 +1115,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential component ablation audit](../../analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.md)
 - [Simplified generation profile compile](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md)
 - [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
+- [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
 
 ## Boundary
 

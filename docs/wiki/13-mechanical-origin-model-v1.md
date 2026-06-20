@@ -167,6 +167,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Prequential component ablation audit | copy-length midpoint generalizes; literal payload order-1 beats active order-2 and item-type split-only beats active split+previous item on prefix holdout | generation explanation simplified / compression bound unchanged |
 | Simplified generation profile compile | holdout-preferred component profile roundtrips `70/70` at `8613.581` bits, `+51.789` versus the active bound | explanatory profile / not lower MDL code |
 | Item-type split-only formula compile | split-only item-type coding keeps the same recipe and forced rules, validates `70/70`, and lowers the bound from `8561.792` to `8558.667` | strongest copy/reference upper bound |
+| Item-type split-only alpha resweep | after the split-only promotion, `alpha=2` remains best at `8558.667`; nearest alternate `alpha=1` is `+0.309` bits worse | retained parameter frontier |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
@@ -285,6 +286,7 @@ Primary sources:
 [prequential_component_ablation_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.md),
 [simplified_generation_profile_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md),
 [item_type_split_only_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md),
+[item_type_split_only_alpha_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

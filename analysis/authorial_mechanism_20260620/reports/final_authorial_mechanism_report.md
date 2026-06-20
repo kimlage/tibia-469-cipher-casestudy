@@ -598,5 +598,9 @@ Generated audits in this directory should be treated as the current state:
   `split6_only` result as a decodable formula improvement under the same
   declaration charge. The same recipe and forced rules roundtrip `70/70` at
   `8558.667` bits, `3.125` bits below the previous `8561.792` bound.
+- `124_item_type_split_only_alpha_resweep`: retests the smoothing alpha after
+  the split-only promotion. Active `alpha=2` remains best at `8558.667` bits;
+  `alpha=1` is nearest at `+0.309` bits, so no follow-up parameter promotion is
+  justified.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

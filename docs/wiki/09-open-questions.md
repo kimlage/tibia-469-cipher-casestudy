@@ -273,6 +273,8 @@ The item-type split-only compile then promotes the one simplified component
 that also improves full-corpus coding: the same recipe and forced rules
 roundtrip `70/70` at `8558.667` bits, lowering the active mechanical bound by
 `3.125` bits without changing row0 or semantics.
+The split-only alpha resweep then retains `alpha=2`; the nearest alternate
+`alpha=1` is `+0.309` bits worse, so the new parameter frontier is closed.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank
