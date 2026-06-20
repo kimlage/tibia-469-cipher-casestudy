@@ -253,7 +253,8 @@ not beat the DP LZ baseline. Sweeping the DP `min_len` parameter keeps
 `min_len=6` as the best tested setting under gamma length coding. Replacing
 gamma copy-length coding with Rice `k=4` and reparsing at `min_len=5` improves
 the current mechanical upper bound to roughly `9596.5` bits; a broader
-length-code grid retains that setting.
+length-code grid retains that setting. Retesting address ledgers on the Rice
+parse keeps absolute `source_pos` as the best decodable source ledger.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -313,8 +314,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   and [`analysis/authorial_mechanism_20260620/`](../../analysis/authorial_mechanism_20260620/) —
   incorporates the first-principles/Knightmare report as mechanism prior and
   compiles and control-tests literal-reference, hierarchical reference, and
-  sequential LZ book/run-literal/dynamic-parse formulas, plus copy-address and
-  copy-graph/order audits; keeps translation delta at zero.
+  sequential LZ book/run-literal/dynamic-parse/Rice-length formulas, plus
+  copy-address and copy-graph/order audits; keeps translation delta at zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

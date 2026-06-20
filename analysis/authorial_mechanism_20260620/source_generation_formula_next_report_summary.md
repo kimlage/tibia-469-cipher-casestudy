@@ -60,6 +60,10 @@ Still open from the report:
   [`23_copy_length_grid_sweep.py`](scripts/23_copy_length_grid_sweep.py);
   it retains Rice `k=4`, `min_len=5`, with the nearest alternate at `9600.0`
   bits.
+- Rice-parse copy address models are now covered by
+  [`24_rice_copy_address_model_search.py`](scripts/24_rice_copy_address_model_search.py);
+  absolute `source_pos` remains best decodable, while literal-seed addressing
+  remains optimistic-only.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

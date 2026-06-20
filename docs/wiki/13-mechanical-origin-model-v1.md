@@ -69,6 +69,7 @@ The model is mechanical only. It is not a semantic decoder.
 | DP min_len sweep | `min_len=6` remains best in the modern DP sequential LZ sweep; `min_len=5` is nearest at `9827.7` bits, `+4.4` worse | retained parameter |
 | Sequential LZ Rice-length formula | copy lengths are encoded with Rice `k=4` after reparsing at `min_len=5`; `9596.5` rough bits, 70/70 roundtrip, `226.8` bits better than gamma-length DP | strongest copy/reference upper bound |
 | Copy length grid sweep | broader `min_len=3..12` and Rice `k=0..10` grid retains Rice `k=4`, `min_len=5`; nearest alternate is `9600.0` bits | retained parameter |
+| Rice parse copy address models | absolute `source_pos` remains best decodable at `9596.5`; literal-seed no-mode reaches `9549.5` but sparse decodable seed-run costs `9607.1` | rejected refinement / optimistic clue |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -93,6 +94,7 @@ Primary sources:
 [dp_min_len_sweep_control.md](../../analysis/authorial_mechanism_20260620/reports/test_results/21_dp_min_len_sweep_control.md),
 [copy_length_code_reparse.md](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md),
 [copy_length_grid_sweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md),
+[rice_copy_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

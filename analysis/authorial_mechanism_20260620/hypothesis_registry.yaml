@@ -122,6 +122,11 @@ hypotheses:
     status: copy_length_grid_retains_rice_k4_min_len_5
     target: "joint min_len and copy length-code parameter grid around the Rice-length formula"
     promotion_rule: "must roundtrip 70/70 and beat Rice k=4 min_len=5 under the same DP cost model"
+  H-GEN3S:
+    name: "Rice parse copy address models"
+    status: rice_copy_address_optimistic_only_not_promoted
+    target: "copy source address ledgers on the promoted Rice-length formula"
+    promotion_rule: "must beat absolute source_pos in a decodable ledger on the Rice-length parse"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

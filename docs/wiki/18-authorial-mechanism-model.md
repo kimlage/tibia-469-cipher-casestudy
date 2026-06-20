@@ -178,6 +178,12 @@ gamma, delta, unary, and Rice `k=0..10` leaves `rice_k4` / `min_len=5` best at
 `9596.5` bits. The nearest non-current model is `rice_k4` / `min_len=4` at
 `9600.0` bits (`+3.5`).
 
+Retesting copy-source address ledgers on the Rice-length parse keeps absolute
+`source_pos` as the best decodable ledger at `9596.5` bits. Literal-seed
+addressing reaches `9549.5` bits only as an undecodable optimistic no-mode
+ledger; the best decodable sparse seed-run ledger costs `9607.1` bits, so it
+remains an optimistic clue rather than a promoted formula change.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -214,6 +220,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3P | `dp_min_len_sweep_retains_min_len_6` |
 | H-GEN3Q | `controlled_copy_length_code_improvement` |
 | H-GEN3R | `copy_length_grid_retains_rice_k4_min_len_5` |
+| H-GEN3S | `rice_copy_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -245,6 +252,7 @@ book generation, not row0 pair-cell placement.
 - [DP min-length sweep control](../../analysis/authorial_mechanism_20260620/reports/test_results/21_dp_min_len_sweep_control.md)
 - [Copy length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md)
 - [Copy length grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md)
+- [Rice copy address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md)
 
 ## Boundary
 

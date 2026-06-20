@@ -144,5 +144,11 @@ Generated audits in this directory should be treated as the current state:
   `min_len=5` model at `9596.5` bits. The nearest non-current model is
   `rice_k4` / `min_len=4` at `9600.0` bits (`+3.5`), so no newer formula is
   promoted.
+- `24_rice_copy_address_model_search`: retests copy-source address ledgers on
+  the Rice-length parse. Absolute `source_pos` remains the best decodable
+  ledger at `9596.5` bits. A literal-seed optimistic no-mode ledger reaches
+  `9549.5` bits, but it is not decodable; the best decodable sparse seed-run
+  ledger is `9607.1` bits and per-copy mode is `9827.5` bits, so no address
+  model is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

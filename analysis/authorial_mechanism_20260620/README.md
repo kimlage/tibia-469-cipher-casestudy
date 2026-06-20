@@ -83,6 +83,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   generator with alternate copy-length codes and emits the Rice-length formula.
 - `scripts/23_copy_length_grid_sweep.py` - broadens the Rice-length parameter
   sweep across `min_len=3..12` and Rice `k=0..10`.
+- `scripts/24_rice_copy_address_model_search.py` - retests copy-source
+  address ledgers on the promoted Rice-length parse.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
