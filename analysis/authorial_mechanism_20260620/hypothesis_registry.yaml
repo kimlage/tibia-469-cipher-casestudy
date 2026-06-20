@@ -282,6 +282,11 @@ hypotheses:
     status: post_forced_repair_oct_not_promoted
     target: "compatible octets of literal-to-copy repairs after the forced-length local repair"
     promotion_rule: "must beat the active forced-length repaired formula after exact rescoring"
+  H-GEN3AY:
+    name: "post forced-length repair nonet search"
+    status: post_forced_repair_nonet_not_promoted
+    target: "compatible nonets of literal-to-copy repairs after the forced-length local repair"
+    promotion_rule: "must beat the active forced-length repaired formula after exact rescoring"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

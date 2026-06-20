@@ -295,5 +295,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `195806` compatible octets, and the best octet is
   `+11.0` bits worse than the active formula.
+- `56_post_forced_repair_nonet_search`: tests whether nine compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `262548` compatible nonets, and the best nonet is
+  `+12.9` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
