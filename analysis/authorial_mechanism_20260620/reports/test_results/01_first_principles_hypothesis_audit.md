@@ -38,6 +38,7 @@ does not promote plaintext.
 | `H-GEN3H` | `controlled_sequential_lz_dp_parse_formula` | `True` |
 | `H-GEN3I` | `copy_source_address_absolute_retained` | `True` |
 | `H-GEN3J` | `copy_graph_literal_seed_atlas_compiled_no_formula_promotion` | `True` |
+| `H-GEN3K` | `structured_physical_order_not_better_than_numeric` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

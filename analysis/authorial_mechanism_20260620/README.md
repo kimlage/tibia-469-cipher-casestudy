@@ -67,6 +67,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   book-relative offsets.
 - `scripts/15_copy_graph_provenance_audit.py` - materializes the DP LZ copy
   graph and literal seed atlas for provenance analysis.
+- `scripts/16_structured_physical_order_lz_test.py` - tests partial public
+  Hellgate/bookcase orders against the DP sequential LZ generator.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

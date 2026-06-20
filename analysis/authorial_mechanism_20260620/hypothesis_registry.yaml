@@ -82,6 +82,11 @@ hypotheses:
     status: copy_graph_literal_seed_atlas_compiled_no_formula_promotion
     target: "DP LZ copy edges, source hubs, literal seed reuse, and row0-overlap diagnostics"
     promotion_rule: "diagnostic only unless it yields a lower-cost formula or externally validated order/provenance rule"
+  H-GEN3K:
+    name: "structured public physical order under DP LZ"
+    status: structured_physical_order_not_better_than_numeric
+    target: "partial public Hellgate overview/bookcase order as a zero-search-cost DP LZ book order"
+    promotion_rule: "must beat numeric order with 70/70 roundtrip and a non-ambiguous externally supplied order; no authorial-order or semantic promotion"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

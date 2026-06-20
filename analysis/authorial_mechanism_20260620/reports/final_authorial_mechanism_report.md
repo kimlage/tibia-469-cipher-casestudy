@@ -94,5 +94,12 @@ Generated audits in this directory should be treated as the current state:
   `52/84` literal runs reused later as source material. It also emits the copy
   graph and literal seed atlas for future formula work, with no formula or
   semantic promotion.
+- `16_structured_physical_order_lz_test`: tests whether the partial public
+  Hellgate overview/bookcase order is a cheaper zero-search-cost book order for
+  the DP LZ generator. It is not: numeric order remains best at `9823.3` bits.
+  The best public structured orders cost `9993.1` bits (`+169.8`), while
+  candidate-resolved ambiguous orders cost still more. The manifest has 71
+  rows, 64 resolved unique books, 6 ambiguous rows, and no fine tile/slot/order
+  layer, so no physical or authorial order is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

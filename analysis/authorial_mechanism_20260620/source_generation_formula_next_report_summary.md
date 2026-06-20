@@ -31,8 +31,11 @@ Additional recommendations were converted into bounded tests:
 
 Still open from the report:
 
-- structured public/topology order tests under the DP parser;
-- DP plus externally supplied physical order, if a source gives order at zero
-  search cost.
+- structured public/topology order tests under the DP parser are now covered by
+  [`16_structured_physical_order_lz_test.py`](scripts/16_structured_physical_order_lz_test.py);
+  the tested public/bookcase orders do not beat numeric order.
+- DP plus externally supplied fine physical order remains open only if a source
+  gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
+  cost.
 
 No semantic or authorial-intent claim is promoted.

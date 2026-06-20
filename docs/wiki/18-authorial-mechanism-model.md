@@ -125,6 +125,14 @@ materializes `281` copy edges, only `5` same-book copies, `32` source books,
 and `52/84` literal runs reused later as source material. That atlas is useful
 for future structured-order or seed-provenance tests, not a new formula.
 
+The structured-order test closes the next public-topology variant for this
+front. Numeric order remains best at `9823.3` bits. The partial public
+Hellgate/bookcase orders cost at least `9993.1` bits (`+169.8`), and candidate
+orders that fill ambiguous public rows cost still more. Because the manifest
+has only `64` resolved unique books, `6` ambiguous rows, one duplicate resolved
+row, and no fine tile/slot/orientation/read-order layer, no physical or
+authorial order is promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -153,6 +161,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3H | `controlled_sequential_lz_dp_parse_formula` |
 | H-GEN3I | `copy_source_address_absolute_retained` |
 | H-GEN3J | `copy_graph_literal_seed_atlas_compiled_no_formula_promotion` |
+| H-GEN3K | `structured_physical_order_not_better_than_numeric` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -176,6 +185,7 @@ book generation, not row0 pair-cell placement.
 - [Sequential LZ dynamic-parse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/13_sequential_lz_dp_parse_compile.md)
 - [Copy source address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/14_copy_source_address_model_search.md)
 - [Copy graph provenance audit](../../analysis/authorial_mechanism_20260620/reports/test_results/15_copy_graph_provenance_audit.md)
+- [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
 
 ## Boundary
 

@@ -68,12 +68,20 @@ The mechanical-signal audit tested public order adjacency and bookcase grouping
 against deterministic shuffles over row0 similarity. It did not promote a
 physical-order mechanism.
 
+The later DP LZ order test used the same public manifest as a possible
+zero-search-cost book order for the strongest current generator. Numeric order
+still wins at `9823.3` bits. The best public/bookcase order costs `9993.1`
+bits (`+169.8`), and candidate-filled ambiguous orders cost more. This further
+supports the blocker: the public overview/bookcase seed is not an accepted
+authorial read order.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
 - [Final physical topology report](../../analysis/physical_topology_20260620/reports/final_physical_topology_report.md)
 - [Public topology manifest audit](../../analysis/physical_topology_20260620/reports/test_results/01_public_topology_manifest_audit.md)
 - [Topology mechanical signal audit](../../analysis/physical_topology_20260620/reports/test_results/02_topology_mechanical_signal_audit.md)
+- [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
 
 ## What Counts As Future Progress
 

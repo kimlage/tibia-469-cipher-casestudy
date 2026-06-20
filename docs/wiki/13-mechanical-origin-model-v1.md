@@ -61,6 +61,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ dynamic-parse formula | the same run-literal vocabulary is parsed by dynamic programming at fixed `min_len=6`; `9823.3` rough bits, 70/70 roundtrip, digit-shuffle/random controls fail, and book-order support is only moderate (`p=0.0396`) | strongest copy/reference upper bound |
 | Copy address model search | back-distance, source-delta, and book-relative source addresses all cost more than absolute `source_pos`; next-best tested address model is `11507.9` bits | rejected refinement |
 | Copy graph / literal seed atlas | DP LZ edges and literal runs are materialized; `32` source books, `5` same-book copies, and `52/84` literal runs reused later | diagnostic provenance atlas |
+| Structured public physical order | partial Hellgate/bookcase orders under DP LZ cost at least `9993.1` bits, worse than numeric `9823.3`; manifest ambiguity blocks authorial-order promotion | rejected refinement |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -77,6 +78,7 @@ Primary sources:
 [sequential_lz_dp_parse_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/13_sequential_lz_dp_parse_compile.md),
 [copy_source_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/14_copy_source_address_model_search.md),
 [copy_graph_provenance_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/15_copy_graph_provenance_audit.md),
+[structured_physical_order_lz_test.md](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

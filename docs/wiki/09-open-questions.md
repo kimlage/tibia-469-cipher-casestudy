@@ -71,7 +71,9 @@ with a dynamic-programming parse under the same run-literal vocabulary reaches
 `9823.3` rough bits with 70/70 roundtrip and `10468` copied digits. This is
 mechanical progress only: alternate copy-address ledgers were tested and
 rejected, while the copy graph/literal atlas now records `32` source books,
-`5` same-book copies, and `52/84` literal runs reused later. No plaintext,
+`5` same-book copies, and `52/84` literal runs reused later. Structured public
+Hellgate/bookcase orders were also tested under DP LZ and rejected: numeric
+order remains best (`9823.3` bits versus at least `9993.1`). No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
