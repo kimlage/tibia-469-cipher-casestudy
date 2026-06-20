@@ -42,9 +42,9 @@ roundtrip all 70 books.
 
 The restricted hybrid vocabulary does not improve the current formula.
 The best dictionary-using optimistic reparse is still above the current
-DP LZ baseline after the raw motif table is charged, and the decodable
-source-type variants are further away. The current `9823.3` bit
-sequential DP LZ formula remains the active mechanical upper bound.
+then-current gamma-length DP LZ baseline after the raw motif table is
+charged, and the decodable source-type variants are further away.
+That result was later superseded by the Rice-length reparse.
 
 ## Boundary
 

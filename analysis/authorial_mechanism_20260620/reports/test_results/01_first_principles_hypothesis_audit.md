@@ -44,6 +44,7 @@ does not promote plaintext.
 | `H-GEN3N` | `copy_hub_macro_model_not_promoted` | `True` |
 | `H-GEN3O` | `restricted_hybrid_vocabulary_not_promoted` | `True` |
 | `H-GEN3P` | `dp_min_len_sweep_retains_min_len_6` | `True` |
+| `H-GEN3Q` | `controlled_copy_length_code_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

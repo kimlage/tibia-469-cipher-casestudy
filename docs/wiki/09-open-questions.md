@@ -81,7 +81,9 @@ ledger). Source-book hub and target-default source macro ledgers are also worse
 (`10326.9` bits optimistic lower bound). A restricted hybrid motif dictionary
 reparse roundtrips 70/70 but is still worse (`9840.7` bits best dictionary-
 using model). A DP `min_len` sweep keeps the current `min_len=6` parameter
-(`9827.7` bits for nearest alternate `min_len=5`). No plaintext,
+(`9827.7` bits for nearest alternate `min_len=5`). A copy-length reparse then
+improves the mechanical generator to `9596.5` bits with Rice `k=4` and
+`min_len=5`. No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0

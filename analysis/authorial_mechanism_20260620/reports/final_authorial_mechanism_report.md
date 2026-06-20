@@ -86,8 +86,9 @@ Generated audits in this directory should be treated as the current state:
   tighter copy/reference bound, not original order.
 - `14_copy_source_address_model_search`: tests whether copy sources become
   cheaper as back-distances, source deltas, or book-relative offsets. They do
-  not. The current absolute `source_pos` ledger remains cheapest at `9823.3`
-  total bits; the next-best tested address model costs `11507.9` bits.
+  not. Within that fixed gamma-length DP parse, the absolute `source_pos` ledger
+  remains cheapest at `9823.3` total bits; the next-best tested address model
+  costs `11507.9` bits.
 - `15_copy_graph_provenance_audit`: materializes the DP LZ formula as copy
   edges and literal seed runs. It confirms `281` copy items over `10468` copied
   digits, only `5` same-book copies, `32` source books, `84` literal runs, and
@@ -112,8 +113,8 @@ Generated audits in this directory should be treated as the current state:
   paid by grouped ledgers instead of once per copy. The best seed-using
   decodable ledger is a sparse seed-run list at `9830.0` bits (`+6.7`), while
   the RLE seed-required mask costs `9843.0` bits (`+19.7`). Grouping narrows the
-  penalty but still does not beat the current `9823.3` absolute-address
-  formula.
+  penalty but still does not beat the previous `9823.3` gamma-length
+  absolute-address formula.
 - `19_copy_hub_macro_model_search`: tests whether copy sources can be declared
   as global or target-local source-book hubs, or as a target-default source with
   exceptions. This is not cheaper: the optimistic default-source lower bound is
@@ -132,5 +133,11 @@ Generated audits in this directory should be treated as the current state:
   (`+4.4`). Focused digit-shuffle controls are far worse; book-order shuffle
   wins remain diagnostic only because they do not supply a zero-cost external
   order or pay permutation cost.
+- `22_copy_length_code_reparse`: reparses the same sequential LZ family with
+  alternate copy-length codes. Rice coding with `k=4` and `min_len=5` is a
+  controlled mechanical improvement: it roundtrips 70/70 at `9596.5` bits,
+  improving the previous gamma-length DP baseline by `226.8` bits after
+  charging `5` parameter bits. Digit-shuffle and book-order-shuffle controls do
+  not beat the observed formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

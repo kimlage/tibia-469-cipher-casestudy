@@ -79,6 +79,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   with a restricted declared motif dictionary plus LZ copies.
 - `scripts/21_dp_min_len_sweep_control.py` - sweeps the modern DP sequential
   LZ `min_len` parameter and focused controls.
+- `scripts/22_copy_length_code_reparse.py` - reparses the DP sequential LZ
+  generator with alternate copy-length codes and emits the Rice-length formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

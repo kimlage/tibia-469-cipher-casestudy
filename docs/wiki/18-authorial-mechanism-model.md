@@ -67,6 +67,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_book_formula_469` | `10190.0` | `3668.5` |
 | `sequential_lz_run_literal_formula_469` | `9944.0` | `246.0` |
 | `sequential_lz_dp_parse_formula_469` | `9823.3` | `120.7` |
+| `sequential_lz_rice_length_formula_469` | `9596.5` | `226.8` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -137,8 +138,8 @@ Literal-seed addressing is also only an optimistic clue. If copy sources are
 allowed to address prior literal runs without paying a source-mode cost, the
 ledger reaches `9752.8` bits. That ledger is not a decodable mixed address
 model. Once mode bits are charged, the same refinement costs `10033.8` bits,
-worse than the current `9823.3` absolute `source_pos` formula, so H-GEN3L is
-not promoted.
+worse than the previous `9823.3` gamma-length absolute `source_pos` formula, so
+H-GEN3L is not promoted.
 
 The grouped-mode follow-up closes the obvious objection to that rejection. A
 sparse seed-run list is the best seed-using decodable grouped ledger, but it
@@ -164,6 +165,13 @@ through `12` leaves `min_len=6` as the best setting at `9823.3` bits; the
 nearest alternate is `min_len=5` at `9827.7` bits (`+4.4`). Order-shuffle gross
 wins remain order-search diagnostics, not promoted formula changes, unless an
 external zero-cost order appears.
+
+The copy-length code reparse improves this front. Replacing gamma length
+coding with Rice coding (`k=4`) and reparsing at `min_len=5` yields a new 70/70
+roundtrip formula at `9596.5` bits, a `226.8` bit gain over the previous
+`9823.3` DP baseline even after charging `5` bits for the Rice parameter. This
+is a mechanical generation improvement only; it does not alter row0 or add
+plaintext.
 
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
@@ -199,6 +207,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3N | `copy_hub_macro_model_not_promoted` |
 | H-GEN3O | `restricted_hybrid_vocabulary_not_promoted` |
 | H-GEN3P | `dp_min_len_sweep_retains_min_len_6` |
+| H-GEN3Q | `controlled_copy_length_code_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -228,6 +237,7 @@ book generation, not row0 pair-cell placement.
 - [Copy hub macro model search](../../analysis/authorial_mechanism_20260620/reports/test_results/19_copy_hub_macro_model_search.md)
 - [Restricted hybrid vocabulary reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/20_restricted_hybrid_vocabulary_reparse.md)
 - [DP min-length sweep control](../../analysis/authorial_mechanism_20260620/reports/test_results/21_dp_min_len_sweep_control.md)
+- [Copy length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md)
 
 ## Boundary
 

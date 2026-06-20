@@ -239,8 +239,8 @@ features as row0 origin (`16/55`, control `p=0.4194`). A later sequential LZ
 book formula tightens the copy/reference upper bound to roughly `10190.0` bits
 with 70/70 roundtrip; arbitrary non-numeric book orders are not promoted after
 charging permutation cost. Re-costing the same generator with literal runs
-instead of per-digit literal flags tightens the current mechanical upper bound
-again to roughly `9944.0` bits. A dynamic-programming parse under the same
+instead of per-digit literal flags tightened the mechanical upper bound at that
+stage to roughly `9944.0` bits. A dynamic-programming parse under the same
 run-literal vocabulary tightens it further to roughly `9823.3` bits, still
 with translation delta zero. Follow-up address models do not improve it, but
 the committed copy graph/literal atlas now records source hubs and literal-seed
@@ -250,7 +250,9 @@ mode bits erase the apparent gain; grouped mode coding narrows but does not
 reverse that result. Copy-hub macro ledgers are also worse than absolute
 `source_pos`. A restricted motif-dictionary reparse roundtrips 70/70 but does
 not beat the DP LZ baseline. Sweeping the DP `min_len` parameter keeps
-`min_len=6` as the best tested setting.
+`min_len=6` as the best tested setting under gamma length coding. Replacing
+gamma copy-length coding with Rice `k=4` and reparsing at `min_len=5` improves
+the current mechanical upper bound to roughly `9596.5` bits.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
