@@ -78,7 +78,9 @@ addressing was tested; only an undecodable optimistic ledger beats the current
 formula, while the decodable mixed ledger is worse. Grouped source-mode ledgers
 were also tested and remain worse (`9830.0` bits best seed-using decodable
 ledger). Source-book hub and target-default source macro ledgers are also worse
-(`10326.9` bits optimistic lower bound). No plaintext,
+(`10326.9` bits optimistic lower bound). A restricted hybrid motif dictionary
+reparse roundtrips 70/70 but is still worse (`9840.7` bits best dictionary-
+using model). No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0

@@ -152,6 +152,13 @@ optimistic target-default source lower bound costs `10326.9` bits (`+503.6`),
 and the best decodable default-source model costs `10430.2` bits (`+606.9`).
 The current absolute `source_pos` ledger remains the compact baseline.
 
+The restricted hybrid-vocabulary reparse closes the next obvious route:
+declare a small repeated digit-motif dictionary, then parse with literal runs,
+prior-copy LZ references, and motif references. It roundtrips 70/70, but still
+does not beat the DP LZ baseline. The nearest dictionary-using model is an
+optimistic non-decodable `K=4` filtered motif set at `9840.7` bits (`+17.4`);
+the nearest decodable dictionary model costs `10123.2` bits (`+299.9`).
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -184,6 +191,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3L | `literal_seed_address_optimistic_only_not_promoted` |
 | H-GEN3M | `literal_seed_grouped_mode_optimistic_only_not_promoted` |
 | H-GEN3N | `copy_hub_macro_model_not_promoted` |
+| H-GEN3O | `restricted_hybrid_vocabulary_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -211,6 +219,7 @@ book generation, not row0 pair-cell placement.
 - [Literal seed address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/17_literal_seed_address_model_search.md)
 - [Literal seed grouped-mode search](../../analysis/authorial_mechanism_20260620/reports/test_results/18_literal_seed_grouped_mode_search.md)
 - [Copy hub macro model search](../../analysis/authorial_mechanism_20260620/reports/test_results/19_copy_hub_macro_model_search.md)
+- [Restricted hybrid vocabulary reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/20_restricted_hybrid_vocabulary_reparse.md)
 
 ## Boundary
 

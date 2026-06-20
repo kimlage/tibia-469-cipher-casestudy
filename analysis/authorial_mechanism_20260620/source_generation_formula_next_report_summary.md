@@ -45,6 +45,10 @@ Still open from the report:
 - source-book hub/default-source macro addressing is now covered by
   [`19_copy_hub_macro_model_search.py`](scripts/19_copy_hub_macro_model_search.py);
   even the optimistic target-default source lower bound costs `10326.9` bits.
+- restricted hybrid vocabulary reparsing is now covered by
+  [`20_restricted_hybrid_vocabulary_reparse.py`](scripts/20_restricted_hybrid_vocabulary_reparse.py);
+  it roundtrips 70/70 but the best dictionary-using motif model still costs
+  `9840.7` bits, worse than the current `9823.3`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

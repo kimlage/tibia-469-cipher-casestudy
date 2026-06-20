@@ -75,6 +75,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   source-mode ledgers rescue literal-seed addressing.
 - `scripts/19_copy_hub_macro_model_search.py` - tests source-book hub and
   default-source macro ledgers against absolute source positions.
+- `scripts/20_restricted_hybrid_vocabulary_reparse.py` - reparses the books
+  with a restricted declared motif dictionary plus LZ copies.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

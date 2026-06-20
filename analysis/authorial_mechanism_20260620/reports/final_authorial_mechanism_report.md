@@ -120,5 +120,11 @@ Generated audits in this directory should be treated as the current state:
   `10326.9` bits (`+503.6`), and the best decodable default-source ledger is
   `10430.2` bits (`+606.9`). The source-hub macro path is therefore not
   promoted.
+- `20_restricted_hybrid_vocabulary_reparse`: reparses all 70 books with a
+  declared dictionary of repeated digit motifs plus the existing literal-run and
+  prior-copy vocabulary. It roundtrips 70/70, but no dictionary model beats the
+  DP LZ baseline. The closest dictionary-using model is an optimistic non-
+  decodable `K=4` redundancy-filtered motif set at `9840.7` bits (`+17.4`); the
+  closest decodable dictionary model costs `10123.2` bits (`+299.9`).
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

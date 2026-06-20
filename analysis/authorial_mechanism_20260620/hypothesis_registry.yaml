@@ -102,6 +102,11 @@ hypotheses:
     status: copy_hub_macro_model_not_promoted
     target: "source-book hubs and target-default source macros for DP LZ copy addresses"
     promotion_rule: "must beat absolute source_pos after charging hub/default declarations and any source-selection bits"
+  H-GEN3O:
+    name: "restricted hybrid vocabulary reparse"
+    status: restricted_hybrid_vocabulary_not_promoted
+    target: "declared repeated digit motifs plus literal runs and prior-copy LZ references"
+    promotion_rule: "must roundtrip 70/70 and beat sequential DP LZ after charging raw motif table and decodable reference selection"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
