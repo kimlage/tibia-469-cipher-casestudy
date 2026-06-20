@@ -117,6 +117,11 @@ hypotheses:
     status: controlled_copy_length_code_improvement
     target: "copy length code family for the DP sequential LZ formula"
     promotion_rule: "must roundtrip 70/70, beat gamma length coding after charging parameter bits, and preserve translation_delta NONE"
+  H-GEN3R:
+    name: "copy length grid sweep"
+    status: copy_length_grid_retains_rice_k4_min_len_5
+    target: "joint min_len and copy length-code parameter grid around the Rice-length formula"
+    promotion_rule: "must roundtrip 70/70 and beat Rice k=4 min_len=5 under the same DP cost model"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

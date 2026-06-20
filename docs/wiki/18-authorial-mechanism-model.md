@@ -173,6 +173,11 @@ roundtrip formula at `9596.5` bits, a `226.8` bit gain over the previous
 is a mechanical generation improvement only; it does not alter row0 or add
 plaintext.
 
+The broader length-code grid keeps that formula. Testing `min_len=3..12`,
+gamma, delta, unary, and Rice `k=0..10` leaves `rice_k4` / `min_len=5` best at
+`9596.5` bits. The nearest non-current model is `rice_k4` / `min_len=4` at
+`9600.0` bits (`+3.5`).
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -208,6 +213,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3O | `restricted_hybrid_vocabulary_not_promoted` |
 | H-GEN3P | `dp_min_len_sweep_retains_min_len_6` |
 | H-GEN3Q | `controlled_copy_length_code_improvement` |
+| H-GEN3R | `copy_length_grid_retains_rice_k4_min_len_5` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -238,6 +244,7 @@ book generation, not row0 pair-cell placement.
 - [Restricted hybrid vocabulary reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/20_restricted_hybrid_vocabulary_reparse.md)
 - [DP min-length sweep control](../../analysis/authorial_mechanism_20260620/reports/test_results/21_dp_min_len_sweep_control.md)
 - [Copy length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/22_copy_length_code_reparse.md)
+- [Copy length grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md)
 
 ## Boundary
 

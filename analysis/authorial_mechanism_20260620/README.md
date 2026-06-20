@@ -81,6 +81,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   LZ `min_len` parameter and focused controls.
 - `scripts/22_copy_length_code_reparse.py` - reparses the DP sequential LZ
   generator with alternate copy-length codes and emits the Rice-length formula.
+- `scripts/23_copy_length_grid_sweep.py` - broadens the Rice-length parameter
+  sweep across `min_len=3..12` and Rice `k=0..10`.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

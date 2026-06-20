@@ -139,5 +139,10 @@ Generated audits in this directory should be treated as the current state:
   improving the previous gamma-length DP baseline by `226.8` bits after
   charging `5` parameter bits. Digit-shuffle and book-order-shuffle controls do
   not beat the observed formula.
+- `23_copy_length_grid_sweep`: broadens that search to `min_len=3..12`, gamma,
+  delta, unary, and Rice `k=0..10`. It retains the promoted `rice_k4` /
+  `min_len=5` model at `9596.5` bits. The nearest non-current model is
+  `rice_k4` / `min_len=4` at `9600.0` bits (`+3.5`), so no newer formula is
+  promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

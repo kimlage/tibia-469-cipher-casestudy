@@ -56,6 +56,10 @@ Still open from the report:
   [`22_copy_length_code_reparse.py`](scripts/22_copy_length_code_reparse.py);
   Rice `k=4` with `min_len=5` improves the generator to `9596.5` bits with
   70/70 roundtrip and `translation_delta: NONE`.
+- broader copy-length grid sweep is now covered by
+  [`23_copy_length_grid_sweep.py`](scripts/23_copy_length_grid_sweep.py);
+  it retains Rice `k=4`, `min_len=5`, with the nearest alternate at `9600.0`
+  bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

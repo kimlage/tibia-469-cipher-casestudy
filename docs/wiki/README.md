@@ -252,7 +252,8 @@ reverse that result. Copy-hub macro ledgers are also worse than absolute
 not beat the DP LZ baseline. Sweeping the DP `min_len` parameter keeps
 `min_len=6` as the best tested setting under gamma length coding. Replacing
 gamma copy-length coding with Rice `k=4` and reparsing at `min_len=5` improves
-the current mechanical upper bound to roughly `9596.5` bits.
+the current mechanical upper bound to roughly `9596.5` bits; a broader
+length-code grid retains that setting.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
