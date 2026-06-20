@@ -225,6 +225,9 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   pairs of local edits after the midpoint alpha=1 one-edit frontier closes.
 - `scripts/89_post_midpoint_alpha1_address_model_search.py` - retests
   alternate copy-source address ledgers after midpoint alpha=1 becomes active.
+- `scripts/90_post_midpoint_alpha1_copy_order_search.py` - retests
+  source-first versus length-first copy order after midpoint alpha=1 becomes
+  active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

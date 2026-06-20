@@ -452,6 +452,11 @@ hypotheses:
     status: post_midpoint_alpha1_address_optimistic_only_not_promoted
     target: "alternate copy-source address ledgers after midpoint-context alpha=1 copy-length coding"
     promotion_rule: "must beat active min_len-bounded absolute digit source positions under full rescoring while preserving decodability, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3CG:
+    name: "post midpoint alpha1 copy order search"
+    status: post_midpoint_alpha1_copy_order_optimistic_only_not_promoted
+    target: "within-copy source-address/midpoint-alpha1-length coding order after midpoint-context alpha=1 copy-length coding"
+    promotion_rule: "must beat active source-address-then-midpoint-alpha1-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

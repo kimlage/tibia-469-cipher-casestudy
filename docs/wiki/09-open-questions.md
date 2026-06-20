@@ -175,7 +175,10 @@ alpha change closes again; the best one-edit repair is `+0.971` bits worse. A
 compatible-pair retest also closes, with the best pair `+2.501` bits worse.
 The current address-ledger retest also keeps min_len-bounded absolute
 addresses as the best decodable row; literal-seed addressing reaches `8502.9`
-bits only as an undecodable no-mode lower bound.
+bits only as an undecodable no-mode lower bound. The current copy-order retest
+also keeps source-first as the best decodable order; pure length-first is
+`+12.194` bits worse and the best sparse decodable mixed-order ledger is
+`+8.979` bits worse.
 
 ## Ranked: what would unlock progress
 

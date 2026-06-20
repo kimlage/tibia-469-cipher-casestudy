@@ -361,6 +361,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   literal-seed addressing reaches `8502.9` bits only as an undecodable no-mode
   lower bound, while the best decodable row remains the active min_len-bounded
   absolute ledger at `8572.267` bits.
+- post-midpoint alpha1 copy-order alternatives are now covered by
+  [`90_post_midpoint_alpha1_copy_order_search.py`](scripts/90_post_midpoint_alpha1_copy_order_search.py);
+  pure length-first coding is `+12.194` bits worse, the best no-mode mixed
+  order is `-3.539` bits optimistic-only, and the best sparse decodable mode
+  ledger is still `+8.979` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

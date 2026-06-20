@@ -112,6 +112,7 @@ does not promote plaintext.
 | `H-GEN3CD` | `post_midpoint_alpha1_local_frontier_closed` | `True` |
 | `H-GEN3CE` | `post_midpoint_alpha1_pair_frontier_closed` | `True` |
 | `H-GEN3CF` | `post_midpoint_alpha1_address_optimistic_only_not_promoted` | `True` |
+| `H-GEN3CG` | `post_midpoint_alpha1_copy_order_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

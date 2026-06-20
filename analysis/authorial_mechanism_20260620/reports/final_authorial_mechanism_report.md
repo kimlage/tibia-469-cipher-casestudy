@@ -437,5 +437,10 @@ Generated audits in this directory should be treated as the current state:
   addressing reaches `8502.9` bits only as an undecodable no-mode lower bound;
   the best decodable row remains the active min_len-bounded absolute ledger at
   `8572.267` bits.
+- `90_post_midpoint_alpha1_copy_order_search`: retests source-first versus
+  length-first copy order after midpoint alpha=1. Pure length-first is
+  `+12.194` bits worse, the best mixed no-mode row is `-3.539` bits
+  optimistic-only, and the best sparse decodable mode ledger remains `+8.979`
+  bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
