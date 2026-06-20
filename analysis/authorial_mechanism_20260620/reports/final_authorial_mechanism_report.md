@@ -202,5 +202,10 @@ Generated audits in this directory should be treated as the current state:
   not: the best multi-anchor model uses `2` clusters at `k=4`, costs `581.0`
   book-length bits, and is `+15.0` bits worse than the active `anchor=151`,
   `k=5` ledger. No newer formula is promoted.
+- `35_digit_only_copy_address_compile`: after book lengths make separators
+  reconstructable, recompiles copy addresses over the digit-only emitted
+  stream. This reduces copy-address cost from `3257.3` to `3254.9` bits and
+  improves the total formula from `9073.3` to `9070.8` bits with 70/70
+  roundtrip. The recipe and emitted books are unchanged.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

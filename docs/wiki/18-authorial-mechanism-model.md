@@ -72,6 +72,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_literal_payload_formula_469` | `9538.0` | `7.5` |
 | `sequential_lz_literal_copy_repair_formula_469` | `9537.3` | `0.7` |
 | `sequential_lz_length_ledger_formula_469` | `9073.3` | `464.0` |
+| `sequential_lz_digit_address_formula_469` | `9070.8` | `2.4` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -250,6 +251,12 @@ best decodable multi-anchor ledger uses `2` clusters at `k=4`, but costs
 worse than the single-anchor `anchor=151`, `k=5` ledger, so no newer length
 model is promoted.
 
+The digit-only address compile then uses the new length ledger to remove book
+separators from the absolute copy-address space. Copy operations now point into
+the previously emitted digit stream rather than the digit-plus-separator stream,
+reducing copy-address cost from `3257.3` to `3254.9` bits. The total bound
+drops from `9073.3` to `9070.8` bits with 70/70 roundtrip.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -297,6 +304,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AA | `literal_to_copy_pair_repair_not_promoted` |
 | H-GEN3AB | `controlled_book_length_ledger_improvement` |
 | H-GEN3AC | `multi_anchor_book_length_ledger_not_promoted` |
+| H-GEN3AD | `controlled_digit_only_copy_address_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -339,12 +347,13 @@ book generation, not row0 pair-cell placement.
 - [Literal-to-copy pair repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/32_literal_to_copy_pair_repair_search.md)
 - [Book length ledger search](../../analysis/authorial_mechanism_20260620/reports/test_results/33_book_length_ledger_search.md)
 - [Book length multi-anchor search](../../analysis/authorial_mechanism_20260620/reports/test_results/34_book_length_multi_anchor_search.md)
+- [Digit-only copy address compile](../../analysis/authorial_mechanism_20260620/reports/test_results/35_digit_only_copy_address_compile.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
-with adaptive literal-payload coding, the one-step literal-to-copy repair, and
-the signed-Rice book-length ledger as the current strongest copy/reference
-fabrication bound and continue testing matrix origin, topology holdouts, and
-official source watchlists under the same Outcome Ledger.
+with adaptive literal-payload coding, the one-step literal-to-copy repair, the
+signed-Rice book-length ledger, and digit-only copy addresses as the current
+strongest copy/reference fabrication bound and continue testing matrix origin,
+topology holdouts, and official source watchlists under the same Outcome Ledger.

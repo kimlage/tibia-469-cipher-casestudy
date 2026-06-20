@@ -103,6 +103,10 @@ Still open from the report:
   [`34_book_length_multi_anchor_search.py`](scripts/34_book_length_multi_anchor_search.py);
   the best multi-anchor mixture is worse once per-book mode bits and extra
   anchor declarations are charged.
+- digit-only copy-source addressing is now covered by
+  [`35_digit_only_copy_address_compile.py`](scripts/35_digit_only_copy_address_compile.py);
+  after book lengths make separators reconstructable, excluding separators from
+  the absolute address space improves the bound to `9070.8` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

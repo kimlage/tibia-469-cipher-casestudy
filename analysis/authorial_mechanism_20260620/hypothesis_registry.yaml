@@ -177,6 +177,11 @@ hypotheses:
     status: multi_anchor_book_length_ledger_not_promoted
     target: "multi-anchor signed-Rice mixture for book lengths"
     promotion_rule: "must beat the single-anchor length ledger after charging anchors, k, and per-book mode bits"
+  H-GEN3AD:
+    name: "digit-only copy address compile"
+    status: controlled_digit_only_copy_address_improvement
+    target: "absolute copy source addresses after book lengths make separators reconstructable"
+    promotion_rule: "must preserve 70/70 roundtrip and reduce address cost by excluding book separators from the address space"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
