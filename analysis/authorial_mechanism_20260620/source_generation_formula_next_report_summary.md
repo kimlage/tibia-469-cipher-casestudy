@@ -406,6 +406,16 @@ Coverage of the remaining report recommendations and follow-on refinements:
   [`98_post_itemctx_param_pair_frontier.py`](scripts/98_post_itemctx_param_pair_frontier.py);
   `17663` valid compatible pairs are rescored and the best pair remains
   `+1.809` bits worse.
+- post-itemctx_param address models are now covered by
+  [`99_post_itemctx_param_address_model_search.py`](scripts/99_post_itemctx_param_address_model_search.py);
+  min_len-bounded absolute addresses remain the best decodable ledger at
+  `8561.792` bits. Literal-seed no-mode reaches `8492.396` bits but is not
+  decodable without source-mode bits, and the best sparse decodable seed-run
+  ledger is `+9.060` bits worse.
+- post-itemctx_param copy order is now covered by
+  [`100_post_itemctx_param_copy_order_search.py`](scripts/100_post_itemctx_param_copy_order_search.py);
+  source-first remains best decodable, pure length-first is `+12.194` bits
+  worse, and the best no-mode mixed order is `-3.539` bits optimistic-only.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

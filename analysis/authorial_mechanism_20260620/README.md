@@ -247,6 +247,11 @@ bits.
   recipe edits after the itemctx_param promotion.
 - `scripts/98_post_itemctx_param_pair_frontier.py` - retests compatible local
   repair pairs after the itemctx_param one-step frontier closes.
+- `scripts/99_post_itemctx_param_address_model_search.py` - retests alternate
+  copy-source address ledgers after the itemctx_param promotion.
+- `scripts/100_post_itemctx_param_copy_order_search.py` - retests
+  source-first versus length-first copy order after the itemctx_param
+  promotion.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

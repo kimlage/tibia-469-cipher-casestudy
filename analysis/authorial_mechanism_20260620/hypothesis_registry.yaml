@@ -497,6 +497,16 @@ hypotheses:
     status: post_itemctx_param_pair_frontier_closed
     target: "two compatible local recipe edits after itemctx_param one-step frontier closure"
     promotion_rule: "must beat active itemctx_param formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CP:
+    name: "post itemctx_param address model search"
+    status: post_itemctx_param_address_optimistic_only_not_promoted
+    target: "alternate copy-source address ledgers after itemctx_param promotion"
+    promotion_rule: "must beat active min_len-bounded absolute digit source positions with a decodable address ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CQ:
+    name: "post itemctx_param copy order search"
+    status: post_itemctx_param_copy_order_optimistic_only_not_promoted
+    target: "within-copy source-address/midpoint-alpha1-length coding order after itemctx_param promotion"
+    promotion_rule: "must beat active source-address-then-midpoint-alpha1-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

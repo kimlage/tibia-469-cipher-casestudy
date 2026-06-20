@@ -645,6 +645,15 @@ literal-to-copy `60199` in book `3`, is still `+0.957` bits worse. The
 post-itemctx_param pair frontier then checks compatible pairs: `17663` valid
 pairs are rescored and the best pair remains `+1.809` bits worse.
 
+The post-itemctx_param address-model retest then keeps min_len-bounded absolute
+source addresses as the best decodable ledger at `8561.792` bits. Literal-seed
+addressing still has the same shape: it reaches `8492.396` bits only as a
+no-mode lower bound, while the best sparse decodable seed-run ledger is
+`+9.060` bits worse. The post-itemctx_param copy-order retest likewise keeps
+source-address-then-length order as the best decodable contract; pure
+length-first is `+12.194` bits worse, and the best mixed no-mode row is
+`-3.539` bits optimistic-only.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -756,6 +765,8 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CM | `controlled_post_itemctx_parameter_improvement` |
 | H-GEN3CN | `post_itemctx_param_local_frontier_closed` |
 | H-GEN3CO | `post_itemctx_param_pair_frontier_closed` |
+| H-GEN3CP | `post_itemctx_param_address_optimistic_only_not_promoted` |
+| H-GEN3CQ | `post_itemctx_param_copy_order_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -862,6 +873,8 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/96_post_itemctx_parameter_resweep.md)
 - [Post-itemctx param local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/97_post_itemctx_param_local_frontier.md)
 - [Post-itemctx param pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/98_post_itemctx_param_pair_frontier.md)
+- [Post-itemctx param address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/99_post_itemctx_param_address_model_search.md)
+- [Post-itemctx param copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/100_post_itemctx_param_copy_order_search.md)
 
 ## Boundary
 
@@ -897,7 +910,8 @@ bounded top60 triple probe does not improve the current frontier inside its
 declared scope. The post-itemctx parameter resweep promotes only the item-type
 extra-context parameter, not a new recipe, row0 origin, or semantic reading.
 The post-itemctx_param local and pair frontiers do not improve the current
-frontier.
+frontier. The post-itemctx_param address and copy-order retests also remain
+optimistic-only or worse after decodable mode/address costs.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

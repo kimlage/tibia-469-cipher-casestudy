@@ -473,5 +473,13 @@ Generated audits in this directory should be treated as the current state:
 - `98_post_itemctx_param_pair_frontier`: retests compatible pairs after that
   one-step frontier closes. `17663` valid pairs are rescored; the best pair is
   still `+1.809` bits worse.
+- `99_post_itemctx_param_address_model_search`: retests address ledgers after
+  itemctx_param. Min_len-bounded absolute addresses remain best decodable at
+  `8561.792` bits; literal-seed no-mode reaches `8492.396` bits but is not
+  decodable, and sparse decodable seed-run addressing is `+9.060` bits worse.
+- `100_post_itemctx_param_copy_order_search`: retests source-first versus
+  length-first coding after itemctx_param. Source-first remains best decodable;
+  pure length-first is `+12.194` bits worse and best-order no-mode is `-3.539`
+  bits optimistic-only.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

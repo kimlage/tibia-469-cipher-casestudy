@@ -121,6 +121,8 @@ does not promote plaintext.
 | `H-GEN3CM` | `controlled_post_itemctx_parameter_improvement` | `True` |
 | `H-GEN3CN` | `post_itemctx_param_local_frontier_closed` | `True` |
 | `H-GEN3CO` | `post_itemctx_param_pair_frontier_closed` | `True` |
+| `H-GEN3CP` | `post_itemctx_param_address_optimistic_only_not_promoted` | `True` |
+| `H-GEN3CQ` | `post_itemctx_param_copy_order_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

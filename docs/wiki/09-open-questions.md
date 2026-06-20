@@ -197,7 +197,12 @@ bits while leaving literal-run length, literal payload, and midpoint
 copy-length parameters unchanged. The immediate local frontier after that
 promotion is closed: the best one-step edit is `+0.957` bits worse. The
 compatible-pair frontier is also closed: `17663` valid pairs are rescored and
-the best pair remains `+1.809` bits worse.
+the best pair remains `+1.809` bits worse. The post-itemctx_param address and
+copy-order retests also reject promoted changes: literal-seed addressing
+reaches `8492.396` bits only without source-mode bits, while the best decodable
+seed-run address ledger is `+9.060` bits worse; mixed copy order is `-3.539`
+bits only with free mode bits, while the best decodable order ledger is
+`+8.979` bits worse.
 
 ## Ranked: what would unlock progress
 

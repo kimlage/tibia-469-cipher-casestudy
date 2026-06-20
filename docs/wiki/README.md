@@ -333,7 +333,10 @@ then promotes a declared split at book `6`, lowering the active bound to
 extra-context order `1` / `alpha=2`, lowering the active bound again to
 `8561.792` bits. The subsequent local and compatible-pair frontiers close
 again, with the best one-step edit `+0.957` bits worse and the best pair
-`+1.809` bits worse. No
+`+1.809` bits worse. Post-itemctx_param address and copy-order retests also
+remain optimistic-only: literal-seed no-mode reaches `8492.396` bits but the
+best decodable seed-run ledger is worse, and mixed copy order needs free mode
+bits. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
