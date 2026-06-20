@@ -375,5 +375,9 @@ Generated audits in this directory should be treated as the current state:
   the `45765` repair. No further one-step edit promotes: the best candidate is
   copy-to-literal `94343` in book `26`, but it is `+0.121` bits worse than the
   active `8609.773` bit formula.
+- `74_post_repair2_parameter_resweep`: retests literal-run, literal-payload
+  context, and item-type context parameters after the two minaddr local
+  repairs. The current parameters remain best: literal Rice `k=3`, payload
+  order `2` / `alpha=1`, and item-type order `3` / `alpha=2`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

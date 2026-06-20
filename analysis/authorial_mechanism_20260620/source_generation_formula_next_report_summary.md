@@ -281,6 +281,10 @@ Still open from the report:
   after those two repairs, the best one-step edit is copy-to-literal `94343`
   in book `26`, but it is `+0.121` bits worse, so the local one-step frontier
   is closed under the current cost model.
+- post-repair2 parameter resweep is now covered by
+  [`74_post_repair2_parameter_resweep.py`](scripts/74_post_repair2_parameter_resweep.py);
+  literal Rice `k=3`, literal payload order `2` / `alpha=1`, and item-type
+  order `3` / `alpha=2` all remain best after the two minaddr local repairs.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

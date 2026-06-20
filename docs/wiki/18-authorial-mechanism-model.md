@@ -491,6 +491,11 @@ space under this cost model. It tests `21` literal-to-copy and `283`
 copy-to-literal candidates; the best candidate is copy-to-literal `94343` in
 book `26`, still `+0.121` bits worse than the active formula.
 
+The post-repair2 parameter resweep then checks whether the two minaddr local
+repairs changed the best declared parameters. They do not: literal Rice `k=3`,
+literal-payload context order `2` / `alpha=1`, and item-type context order `3`
+/ `alpha=2` all remain best under full rescoring.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -577,6 +582,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BN | `controlled_minaddr_local_repair_improvement` |
 | H-GEN3BO | `controlled_post_minaddr_repair_local_improvement` |
 | H-GEN3BP | `post_minaddr_repair2_local_frontier_closed` |
+| H-GEN3BQ | `post_repair2_parameter_resweep_retains_current` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -658,6 +664,7 @@ book generation, not row0 pair-cell placement.
 - [Minaddr local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/71_minaddr_local_frontier.md)
 - [Post-minaddr-repair local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/72_post_minaddr_repair_local_frontier.md)
 - [Post-minaddr-repair2 local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/73_post_minaddr_repair2_local_frontier.md)
+- [Post-repair2 parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/74_post_repair2_parameter_resweep.md)
 
 ## Boundary
 
@@ -676,7 +683,7 @@ and one post-minaddr local literal-to-copy repair as the current strongest
 copy/reference fabrication bound at roughly `8609.8` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
-ledgers, and post-contextual parameter resweeps do not improve the current
+ledgers, and post-repair2 parameter resweeps do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

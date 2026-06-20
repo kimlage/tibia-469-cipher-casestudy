@@ -96,6 +96,7 @@ does not promote plaintext.
 | `H-GEN3BN` | `controlled_minaddr_local_repair_improvement` | `True` |
 | `H-GEN3BO` | `controlled_post_minaddr_repair_local_improvement` | `True` |
 | `H-GEN3BP` | `post_minaddr_repair2_local_frontier_closed` | `True` |
+| `H-GEN3BQ` | `post_repair2_parameter_resweep_retains_current` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

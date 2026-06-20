@@ -189,6 +189,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   frontier after the first minaddr literal-to-copy repair changes the recipe.
 - `scripts/73_post_minaddr_repair2_local_frontier.py` - retests the local
   frontier after the second minaddr literal-to-copy repair and records closure.
+- `scripts/74_post_repair2_parameter_resweep.py` - retests literal-run,
+  literal-payload context, and item-type context parameters after the second
+  minaddr local repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
