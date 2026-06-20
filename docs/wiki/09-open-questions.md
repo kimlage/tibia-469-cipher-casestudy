@@ -241,6 +241,10 @@ both components changed is `+3.690` bits worse. A copy/payload/item
 context-alpha triple search then closes `424169439232` implied triples; the
 best changed triple is `+0.415` bits worse, and the best triple with all three
 components changed is `+4.106` bits worse.
+A post-itemctx_param address/copy-order pair search then tests `50` pairs. The
+best overall pair is `-72.935` bits but is nondecodable because it combines two
+free-mode lower bounds; the active pair remains best among decodable rows, and
+the best changed decodable pair is `+8.979` bits worse.
 
 ## Ranked: what would unlock progress
 

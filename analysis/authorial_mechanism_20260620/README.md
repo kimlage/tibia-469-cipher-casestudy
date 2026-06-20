@@ -291,6 +291,9 @@ bits.
 - `scripts/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.py` -
   combines copy-length context/shared-alpha, literal-payload context/shared-
   alpha, and item-type context/order/alpha frontiers.
+- `scripts/115_post_itemctx_param_address_copy_order_pair_search.py` -
+  combines copy-source address ledgers with within-copy source/length order
+  ledgers after the separate post-itemctx_param copy-cost frontiers.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

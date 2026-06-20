@@ -353,7 +353,9 @@ literal-payload context/shared-alpha resweep tests `4928` rows and retains the
 active global `alpha=1` payload model. The copy/payload context-alpha pair
 search closes `24915968` implied pairs by component minima. The
 copy/payload/item context-alpha triple search closes `424169439232` implied
-triples by component minima. No
+triples by component minima. The address/copy-order pair search closes `50`
+pairs and retains the active decodable copy-cost ledger; the only better row is
+nondecodable. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

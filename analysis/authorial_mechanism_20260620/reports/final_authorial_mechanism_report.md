@@ -553,5 +553,10 @@ Generated audits in this directory should be treated as the current state:
   into `424169439232` implied triples. Component minima keep the active triple
   best; the best changed triple is `+0.415` bits worse and the best triple with
   all three components changed is `+4.106` bits worse.
+- `115_post_itemctx_param_address_copy_order_pair_search`: combines `10`
+  address rows with `5` copy-order rows into `50` pairs. The best overall pair
+  is `-72.935` bits but is nondecodable because it combines no-mode lower
+  bounds; the active pair remains the best decodable row, and the best changed
+  decodable pair is `+8.979` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

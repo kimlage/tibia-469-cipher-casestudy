@@ -765,6 +765,16 @@ best triple with all three components changed is copy-length book-quartile
 `alpha=1`, payload book-midpoint `alpha=1`, and item-type alpha `1`,
 `+4.106` bits worse.
 
+The post-itemctx_param address/copy-order pair search then combines the `10`
+copy-source address ledger rows with the `5` within-copy order rows into `50`
+pairs. The best overall pair is `-72.935` bits, but it is nondecodable because
+it combines the literal-seed address no-mode lower bound with the copy-order
+no-mode lower bound. The active min_len-bounded absolute address plus
+source-first copy order pair remains the best decodable row at `8561.792`
+bits. The best changed decodable pair is the sparse run-list copy-order row,
+still `+8.979` bits worse; the best decodable pair with both components
+changed is `+18.039` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -892,6 +902,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3DC | `post_itemctx_param_literal_payload_context_alpha_not_promoted` |
 | H-GEN3DD | `post_itemctx_param_copy_payload_context_alpha_pair_not_promoted` |
 | H-GEN3DE | `post_itemctx_param_copy_payload_item_context_alpha_triple_not_promoted` |
+| H-GEN3DF | `post_itemctx_param_address_copy_order_pair_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -1014,6 +1025,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param literal-payload context/shared-alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/112_post_itemctx_param_literal_payload_context_alpha_resweep.md)
 - [Post-itemctx param copy/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/113_post_itemctx_param_copy_payload_context_alpha_pair_search.md)
 - [Post-itemctx param copy/payload/item context-alpha triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.md)
+- [Post-itemctx param address/copy-order pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/115_post_itemctx_param_address_copy_order_pair_search.md)
 
 ## Boundary
 
@@ -1064,6 +1076,8 @@ book-midpoint `alpha=1` context. The literal-payload context/shared-alpha
 resweep retains the same active global `alpha=1` payload model. The
 copy/payload context-alpha pair search retains the same active pair. The
 copy/payload/item context-alpha triple search retains the same active triple.
+The address/copy-order pair search retains the same active decodable copy-cost
+ledger and records only a nondecodable lower bound.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

@@ -159,6 +159,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-itemctx_param literal-payload context/shared-alpha resweep | `77` literal-payload contexts times `64` shared alpha values test `4928` rows; active global payload model with `alpha=1` remains best, best context change is `+1.749` bits worse, and best active-context alpha change is `+17.859` bits worse | rejected refinement / payload context-alpha frontier closed |
 | Post-itemctx_param copy/payload context-alpha pair search | `5056` copy-length context-alpha rows and `4928` literal-payload context-alpha rows imply `24915968` pairs; active pair remains best, best changed pair is `+1.749` bits worse, and best pair with both components changed is `+3.690` bits worse | rejected refinement / context-alpha pair frontier closed |
 | Post-itemctx_param copy/payload/item context-alpha triple search | `5056` copy-length context-alpha rows, `4928` literal-payload context-alpha rows, and `17024` item-type candidates imply `424169439232` triples; active triple remains best, best changed triple is `+0.415` bits worse, and best triple with all three components changed is `+4.106` bits worse | rejected refinement / context-alpha triple frontier closed |
+| Post-itemctx_param address/copy-order pair search | `10` address rows and `5` copy-order rows form `50` pairs; best overall pair is `-72.935` bits but nondecodable, active pair remains best decodable, and best changed decodable pair is `+8.979` bits worse | rejected refinement / optimistic lower bound only |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -267,6 +268,7 @@ Primary sources:
 [post_itemctx_param_literal_payload_context_alpha_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/112_post_itemctx_param_literal_payload_context_alpha_resweep.md),
 [post_itemctx_param_copy_payload_context_alpha_pair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/113_post_itemctx_param_copy_payload_context_alpha_pair_search.md),
 [post_itemctx_param_copy_payload_item_context_alpha_triple_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.md),
+[post_itemctx_param_address_copy_order_pair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/115_post_itemctx_param_address_copy_order_pair_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

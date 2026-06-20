@@ -501,6 +501,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   Component minima keep the active triple best; the best changed triple is
   `+0.415` bits worse and the best triple with all three components changed is
   `+4.106` bits worse.
+- post-itemctx_param address/copy-order pair search is now covered by
+  [`115_post_itemctx_param_address_copy_order_pair_search.py`](scripts/115_post_itemctx_param_address_copy_order_pair_search.py);
+  `10` address rows and `5` copy-order rows form `50` pairs. The best overall
+  pair is `-72.935` bits but is nondecodable because both sides require free
+  mode bits; the active pair remains the best decodable row, and the best
+  changed decodable pair is `+8.979` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
