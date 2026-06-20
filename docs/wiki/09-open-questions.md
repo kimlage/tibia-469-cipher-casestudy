@@ -202,7 +202,11 @@ copy-order retests also reject promoted changes: literal-seed addressing
 reaches `8492.396` bits only without source-mode bits, while the best decodable
 seed-run address ledger is `+9.060` bits worse; mixed copy order is `-3.539`
 bits only with free mode bits, while the best decodable order ledger is
-`+8.979` bits worse.
+`+8.979` bits worse. Post-itemctx_param copy-length context and alpha-grid
+retests also retain the current midpoint `alpha=1` contract: book quartiles are
+`+1.941` bits worse, the best searched split is `+2.296` bits worse, and
+first-half `alpha=1` plus second-half `alpha=2` remains `+1.389` bits worse
+after declaration cost.
 
 ## Ranked: what would unlock progress
 

@@ -654,6 +654,15 @@ source-address-then-length order as the best decodable contract; pure
 length-first is `+12.194` bits worse, and the best mixed no-mode row is
 `-3.539` bits optimistic-only.
 
+The post-itemctx_param copy-length context resweep then checks whether the
+midpoint copy-length context still holds after the item-type parameter change.
+It does: the active fixed book-midpoint context remains best at `8561.792`
+bits. Book quartiles are `+1.941` bits worse, and the best searched split,
+book `18`, is `+2.296` bits worse after charging the split declaration. The
+post-itemctx_param context alpha grid also retains shared `alpha=1`; first-half
+`alpha=1` plus second-half `alpha=2` saves `1.611` component bits but is still
+`+1.389` bits worse after extra alpha declarations.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -767,6 +776,8 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CO | `post_itemctx_param_pair_frontier_closed` |
 | H-GEN3CP | `post_itemctx_param_address_optimistic_only_not_promoted` |
 | H-GEN3CQ | `post_itemctx_param_copy_order_optimistic_only_not_promoted` |
+| H-GEN3CR | `post_itemctx_param_copy_length_context_retains_midpoint` |
+| H-GEN3CS | `post_itemctx_param_alpha_by_context_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -875,6 +886,8 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/98_post_itemctx_param_pair_frontier.md)
 - [Post-itemctx param address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/99_post_itemctx_param_address_model_search.md)
 - [Post-itemctx param copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/100_post_itemctx_param_copy_order_search.md)
+- [Post-itemctx param copy-length context resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/101_post_itemctx_param_copy_length_context_resweep.md)
+- [Post-itemctx param context alpha grid](../../analysis/authorial_mechanism_20260620/reports/test_results/102_post_itemctx_param_context_alpha_grid.md)
 
 ## Boundary
 
@@ -911,7 +924,9 @@ declared scope. The post-itemctx parameter resweep promotes only the item-type
 extra-context parameter, not a new recipe, row0 origin, or semantic reading.
 The post-itemctx_param local and pair frontiers do not improve the current
 frontier. The post-itemctx_param address and copy-order retests also remain
-optimistic-only or worse after decodable mode/address costs.
+optimistic-only or worse after decodable mode/address costs. The
+post-itemctx_param copy-length context and context-alpha retests retain the
+fixed midpoint `alpha=1` model.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

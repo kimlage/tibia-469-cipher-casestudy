@@ -145,6 +145,8 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-itemctx_param pair frontier | `17663` valid compatible pairs are rescored after the itemctx_param local frontier closes; the best pair is still `+1.809` bits worse | rejected refinement / pair frontier closed |
 | Post-itemctx_param address model search | min_len-bounded absolute addresses remain best decodable at `8561.792`; literal-seed no-mode reaches `8492.396` but is not decodable without source-mode bits | rejected refinement / optimistic clue |
 | Post-itemctx_param copy order search | source-address-then-length remains best decodable; pure length-first is `+12.194` bits worse and best-order no-mode is `-3.539` bits optimistic only | rejected refinement / optimistic clue |
+| Post-itemctx_param copy-length context resweep | fixed book-midpoint context remains best at `8561.792`; book quartiles are `+1.941` bits worse and the best searched split is `+2.296` bits worse | retained context frontier |
+| Post-itemctx_param context alpha grid | first-half `alpha=1` plus second-half `alpha=2` saves `1.611` length bits but is `+1.389` bits worse after per-context alpha declarations | rejected refinement / retained shared alpha |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -239,6 +241,8 @@ Primary sources:
 [post_itemctx_param_pair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/98_post_itemctx_param_pair_frontier.md),
 [post_itemctx_param_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/99_post_itemctx_param_address_model_search.md),
 [post_itemctx_param_copy_order_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/100_post_itemctx_param_copy_order_search.md),
+[post_itemctx_param_copy_length_context_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/101_post_itemctx_param_copy_length_context_resweep.md),
+[post_itemctx_param_context_alpha_grid.md](../../analysis/authorial_mechanism_20260620/reports/test_results/102_post_itemctx_param_context_alpha_grid.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

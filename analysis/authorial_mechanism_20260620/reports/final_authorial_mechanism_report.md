@@ -481,5 +481,13 @@ Generated audits in this directory should be treated as the current state:
   length-first coding after itemctx_param. Source-first remains best decodable;
   pure length-first is `+12.194` bits worse and best-order no-mode is `-3.539`
   bits optimistic-only.
+- `101_post_itemctx_param_copy_length_context_resweep`: retests copy-length
+  contexts after itemctx_param. The fixed book-midpoint context remains best at
+  `8561.792` bits; book quartiles are `+1.941` bits worse and the best searched
+  split is `+2.296` bits worse.
+- `102_post_itemctx_param_context_alpha_grid`: retests separate smoothing
+  alphas for the midpoint context. First-half `alpha=1` plus second-half
+  `alpha=2` saves `1.611` component bits but remains `+1.389` bits worse after
+  extra declarations.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

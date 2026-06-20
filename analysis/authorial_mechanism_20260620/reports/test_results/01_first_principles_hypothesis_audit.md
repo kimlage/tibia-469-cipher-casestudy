@@ -123,6 +123,8 @@ does not promote plaintext.
 | `H-GEN3CO` | `post_itemctx_param_pair_frontier_closed` | `True` |
 | `H-GEN3CP` | `post_itemctx_param_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN3CQ` | `post_itemctx_param_copy_order_optimistic_only_not_promoted` | `True` |
+| `H-GEN3CR` | `post_itemctx_param_copy_length_context_retains_midpoint` | `True` |
+| `H-GEN3CS` | `post_itemctx_param_alpha_by_context_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

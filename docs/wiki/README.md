@@ -336,7 +336,8 @@ again, with the best one-step edit `+0.957` bits worse and the best pair
 `+1.809` bits worse. Post-itemctx_param address and copy-order retests also
 remain optimistic-only: literal-seed no-mode reaches `8492.396` bits but the
 best decodable seed-run ledger is worse, and mixed copy order needs free mode
-bits. No
+bits. Post-itemctx_param copy-length context and alpha-grid retests also retain
+the fixed midpoint `alpha=1` model. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

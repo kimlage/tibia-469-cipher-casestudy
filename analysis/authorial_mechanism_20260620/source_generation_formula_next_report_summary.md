@@ -416,6 +416,15 @@ Coverage of the remaining report recommendations and follow-on refinements:
   [`100_post_itemctx_param_copy_order_search.py`](scripts/100_post_itemctx_param_copy_order_search.py);
   source-first remains best decodable, pure length-first is `+12.194` bits
   worse, and the best no-mode mixed order is `-3.539` bits optimistic-only.
+- post-itemctx_param copy-length context resweep is now covered by
+  [`101_post_itemctx_param_copy_length_context_resweep.py`](scripts/101_post_itemctx_param_copy_length_context_resweep.py);
+  the active fixed book-midpoint context remains best at `8561.792` bits.
+  Book quartiles are `+1.941` bits worse and the best searched split is
+  `+2.296` bits worse after declaration.
+- post-itemctx_param context alpha grid is now covered by
+  [`102_post_itemctx_param_context_alpha_grid.py`](scripts/102_post_itemctx_param_context_alpha_grid.py);
+  first-half `alpha=1` plus second-half `alpha=2` saves `1.611` component
+  bits but remains `+1.389` bits worse after per-context alpha declarations.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

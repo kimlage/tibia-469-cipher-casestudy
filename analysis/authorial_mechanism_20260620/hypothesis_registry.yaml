@@ -507,6 +507,16 @@ hypotheses:
     status: post_itemctx_param_copy_order_optimistic_only_not_promoted
     target: "within-copy source-address/midpoint-alpha1-length coding order after itemctx_param promotion"
     promotion_rule: "must beat active source-address-then-midpoint-alpha1-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CR:
+    name: "post itemctx_param copy-length context resweep"
+    status: post_itemctx_param_copy_length_context_retains_midpoint
+    target: "simple copy-length contexts after itemctx_param promotion"
+    promotion_rule: "must beat active fixed book-midpoint context after charged declaration bits while preserving alpha=1, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3CS:
+    name: "post itemctx_param context alpha grid"
+    status: post_itemctx_param_alpha_by_context_not_promoted
+    target: "separate midpoint first-half and second-half copy-length smoothing alphas after itemctx_param promotion"
+    promotion_rule: "must beat active shared alpha=1 midpoint context after charged per-context alpha declarations while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

@@ -252,6 +252,10 @@ bits.
 - `scripts/100_post_itemctx_param_copy_order_search.py` - retests
   source-first versus length-first copy order after the itemctx_param
   promotion.
+- `scripts/101_post_itemctx_param_copy_length_context_resweep.py` - retests
+  copy-length context families after the itemctx_param promotion.
+- `scripts/102_post_itemctx_param_context_alpha_grid.py` - retests separate
+  midpoint smoothing alphas after the itemctx_param promotion.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
