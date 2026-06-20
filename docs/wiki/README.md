@@ -301,7 +301,9 @@ to roughly `8614.1` bits. A min_len-bounded address pass then excludes
 impossible final source positions and lowers it slightly again to roughly
 `8613.1` bits. A local repair retest under that cost model turns literal
 `11216` in book `2` into a prior copy and lowers the bound to roughly
-`8611.4` bits. No semantic claim is promoted.
+`8611.4` bits. A follow-up local repair turns `45765` in book `34` into a prior
+copy and lowers the bound to roughly `8609.8` bits. No semantic claim is
+promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

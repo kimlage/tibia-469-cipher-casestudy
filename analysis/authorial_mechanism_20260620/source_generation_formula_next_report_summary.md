@@ -271,6 +271,11 @@ Still open from the report:
   after the address-bound cost change, a single literal-to-copy edit promotes:
   `11216` in book `2` becomes a valid prior copy from source digit position
   `225`, improving the active formula from `8613.067` to `8611.408` bits.
+- post-minaddr-repair local frontier is now covered by
+  [`72_post_minaddr_repair_local_frontier.py`](scripts/72_post_minaddr_repair_local_frontier.py);
+  after the `11216` repair, a second literal-to-copy edit promotes: `45765` in
+  book `34` becomes a valid prior copy from source digit position `183`,
+  improving the active formula from `8611.408` to `8609.773` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

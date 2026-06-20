@@ -366,5 +366,10 @@ Generated audits in this directory should be treated as the current state:
   addresses. One literal-to-copy edit promotes: `11216` in book `2` becomes a
   copy from source digit position `225`, improving the active 70/70 formula
   from `8613.067` to `8611.408` bits with `translation_delta: NONE`.
+- `72_post_minaddr_repair_local_frontier`: retests that local frontier after
+  the `11216` repair changes the recipe. A second literal-to-copy edit
+  promotes: `45765` in book `34` becomes a copy from source digit position
+  `183`, improving the active 70/70 formula from `8611.408` to `8609.773` bits
+  with `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

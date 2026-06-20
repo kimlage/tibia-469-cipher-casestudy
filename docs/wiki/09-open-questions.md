@@ -143,7 +143,9 @@ book digits and emitted source digits, lowering the active 70/70 formula to
 then excludes impossible final source positions and lowers the bound slightly
 again to `8613.1` bits. A local repair retest under that cost model then turns
 literal `11216` in book `2` into a valid prior copy and lowers the bound to
-`8611.4` bits.
+`8611.4` bits. A follow-up local-frontier pass then turns `45765` in book `34`
+back into a valid prior copy under the new cost model, lowering the bound to
+`8609.8` bits.
 
 ## Ranked: what would unlock progress
 

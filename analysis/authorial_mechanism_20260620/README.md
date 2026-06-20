@@ -185,6 +185,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/71_minaddr_local_frontier.py` - retests single literal-to-copy and
   copy-to-literal repairs under the bounded copy-length and min_len-bounded
   address cost model.
+- `scripts/72_post_minaddr_repair_local_frontier.py` - retests the same local
+  frontier after the first minaddr literal-to-copy repair changes the recipe.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

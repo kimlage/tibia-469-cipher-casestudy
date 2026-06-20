@@ -362,6 +362,11 @@ hypotheses:
     status: controlled_minaddr_local_repair_improvement
     target: "single literal-to-copy and copy-to-literal edits after bounded copy lengths and min_len-bounded copy addresses"
     promotion_rule: "must beat the active min_len-bounded address formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BO:
+    name: "post minaddr-repair local frontier"
+    status: controlled_post_minaddr_repair_local_improvement
+    target: "single local edits after the first minaddr literal-to-copy repair"
+    promotion_rule: "must beat the active minaddr-repaired formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
