@@ -582,6 +582,11 @@ hypotheses:
     status: post_itemctx_param_address_copy_order_pair_optimistic_only_not_promoted
     target: "joint copy-source address ledger rows plus within-copy order rows after separate post-itemctx_param copy-cost frontiers"
     promotion_rule: "must beat active min_len-bounded absolute source address plus source-first copy order with a decodable pair under charged mode/declaration bits while preserving 70/70 roundtrip and translation_delta NONE; no-mode rows are lower bounds only"
+  H-GEN3DG:
+    name: "post itemctx_param address-model and item-type pair search"
+    status: post_itemctx_param_address_item_type_pair_optimistic_only_not_promoted
+    target: "joint copy-source address ledger rows plus item-type context/order/alpha rows after separate post-itemctx_param frontiers"
+    promotion_rule: "must beat active min_len-bounded absolute source address plus active item-type split at book 6/order 1/alpha 2 with a decodable address row under charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE; no-mode address rows are lower bounds only"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

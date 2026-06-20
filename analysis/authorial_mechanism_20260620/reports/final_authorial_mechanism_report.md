@@ -558,5 +558,10 @@ Generated audits in this directory should be treated as the current state:
   is `-72.935` bits but is nondecodable because it combines no-mode lower
   bounds; the active pair remains the best decodable row, and the best changed
   decodable pair is `+8.979` bits worse.
+- `116_post_itemctx_param_address_item_type_pair_search`: combines `10`
+  address rows with `17024` item-type rows into `170240` pairs. The best
+  overall pair is nondecodable because it uses the literal-seed no-mode address
+  lower bound; the active pair remains the best decodable row, and the best
+  changed decodable pair is `+0.415` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

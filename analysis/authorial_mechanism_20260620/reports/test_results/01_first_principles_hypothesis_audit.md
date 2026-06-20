@@ -138,6 +138,7 @@ does not promote plaintext.
 | `H-GEN3DD` | `post_itemctx_param_copy_payload_context_alpha_pair_not_promoted` | `True` |
 | `H-GEN3DE` | `post_itemctx_param_copy_payload_item_context_alpha_triple_not_promoted` | `True` |
 | `H-GEN3DF` | `post_itemctx_param_address_copy_order_pair_optimistic_only_not_promoted` | `True` |
+| `H-GEN3DG` | `post_itemctx_param_address_item_type_pair_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

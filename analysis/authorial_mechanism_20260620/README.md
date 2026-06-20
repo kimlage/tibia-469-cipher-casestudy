@@ -294,6 +294,9 @@ bits.
 - `scripts/115_post_itemctx_param_address_copy_order_pair_search.py` -
   combines copy-source address ledgers with within-copy source/length order
   ledgers after the separate post-itemctx_param copy-cost frontiers.
+- `scripts/116_post_itemctx_param_address_item_type_pair_search.py` -
+  combines copy-source address ledgers with item-type context/order/alpha
+  rows after the separate post-itemctx_param frontiers.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

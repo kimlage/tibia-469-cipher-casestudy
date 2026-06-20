@@ -245,6 +245,10 @@ A post-itemctx_param address/copy-order pair search then tests `50` pairs. The
 best overall pair is `-72.935` bits but is nondecodable because it combines two
 free-mode lower bounds; the active pair remains best among decodable rows, and
 the best changed decodable pair is `+8.979` bits worse.
+A post-itemctx_param address/item-type pair search then tests `170240` pairs.
+The best overall pair is again nondecodable because it uses literal-seed
+no-mode addressing; the active pair remains best among decodable rows, and the
+best changed decodable pair is `+0.415` bits worse.
 
 ## Ranked: what would unlock progress
 
