@@ -585,5 +585,10 @@ Generated audits in this directory should be treated as the current state:
   uniform, but controls usually save more bits, so the classification is
   `prequential_predictive_not_numeric_order_specific`; no numeric authorial
   order is promoted.
+- `121_prequential_component_ablation_audit`: ablates the learned component
+  contexts on the same prefix holdouts. Copy-length midpoint remains best, but
+  literal payload `order1_previous_digit` beats active order-2 and item-type
+  `split6_only` beats active split-plus-previous-item. The result simplifies
+  generation explanation without changing the `8561.792` compression bound.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

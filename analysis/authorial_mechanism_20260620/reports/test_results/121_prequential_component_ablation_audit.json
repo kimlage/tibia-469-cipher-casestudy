@@ -1,0 +1,558 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "compression_bound_changed": false,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "prequential_component_ablation_simplifies_generation_explanation",
+  "component_results": [
+    {
+      "active_is_best_frozen": true,
+      "active_is_best_online": true,
+      "active_variant": "active_midpoint",
+      "best_frozen_variant": "active_midpoint",
+      "best_online_variant": "active_midpoint",
+      "component": "copy_length",
+      "variants": [
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 1344.5684727512994,
+              "frozen_vs_uniform_bits": -3.8012345827626177,
+              "holdout_event_count": 221,
+              "online_bits": 1335.7582563383487,
+              "online_vs_uniform_bits": -12.611450995713312,
+              "train_book_count": 10,
+              "uniform_bits": 1348.369707334062
+            },
+            {
+              "frozen_bits": 1015.6670930523702,
+              "frozen_vs_uniform_bits": 12.655715820591467,
+              "holdout_event_count": 162,
+              "online_bits": 1006.8086964783218,
+              "online_vs_uniform_bits": 3.797319246543111,
+              "train_book_count": 20,
+              "uniform_bits": 1003.0113772317787
+            },
+            {
+              "frozen_bits": 652.2281772690313,
+              "frozen_vs_uniform_bits": 12.628836221783445,
+              "holdout_event_count": 101,
+              "online_bits": 650.0631922720759,
+              "online_vs_uniform_bits": 10.463851224827977,
+              "train_book_count": 35,
+              "uniform_bits": 639.5993410472479
+            },
+            {
+              "frozen_bits": 361.7836855126417,
+              "frozen_vs_uniform_bits": 10.309122307248515,
+              "holdout_event_count": 53,
+              "online_bits": 361.6804677510974,
+              "online_vs_uniform_bits": 10.205904545704243,
+              "train_book_count": 50,
+              "uniform_bits": 351.47456320539317
+            },
+            {
+              "frozen_bits": 135.17854775836932,
+              "frozen_vs_uniform_bits": 12.285663737394273,
+              "holdout_event_count": 19,
+              "online_bits": 135.5433288378668,
+              "online_vs_uniform_bits": 12.65044481689175,
+              "train_book_count": 60,
+              "uniform_bits": 122.89288402097505
+            }
+          ],
+          "description": "single global bounded length-index distribution",
+          "frozen_delta_vs_active_bits": 78.46320862392342,
+          "online_delta_vs_active_bits": 66.71961483683495,
+          "total_frozen_vs_uniform_bits": 44.07810350425508,
+          "total_online_vs_uniform_bits": 24.506068838253768,
+          "variant": "global"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 1324.0616170827295,
+              "frozen_vs_uniform_bits": -24.308090251332487,
+              "holdout_event_count": 221,
+              "online_bits": 1320.6289138848756,
+              "online_vs_uniform_bits": -27.740793449186413,
+              "train_book_count": 10,
+              "uniform_bits": 1348.369707334062
+            },
+            {
+              "frozen_bits": 994.6557313623242,
+              "frozen_vs_uniform_bits": -8.35564586945452,
+              "holdout_event_count": 162,
+              "online_bits": 991.6793540248489,
+              "online_vs_uniform_bits": -11.332023206929875,
+              "train_book_count": 20,
+              "uniform_bits": 1003.0113772317787
+            },
+            {
+              "frozen_bits": 639.5993410472479,
+              "frozen_vs_uniform_bits": 0.0,
+              "holdout_event_count": 101,
+              "online_bits": 634.9338498186034,
+              "online_vs_uniform_bits": -4.665491228644441,
+              "train_book_count": 35,
+              "uniform_bits": 639.5993410472479
+            },
+            {
+              "frozen_bits": 347.5336103385182,
+              "frozen_vs_uniform_bits": -3.940952866874966,
+              "holdout_event_count": 53,
+              "online_bits": 349.95920871891195,
+              "online_vs_uniform_bits": -1.5153544864812147,
+              "train_book_count": 50,
+              "uniform_bits": 351.47456320539317
+            },
+            {
+              "frozen_bits": 125.11246788896868,
+              "frozen_vs_uniform_bits": 2.2195838679936344,
+              "holdout_event_count": 19,
+              "online_bits": 125.93300039363581,
+              "online_vs_uniform_bits": 3.040116372660762,
+              "train_book_count": 60,
+              "uniform_bits": 122.89288402097505
+            }
+          ],
+          "description": "book_id < 35 versus book_id >= 35",
+          "frozen_delta_vs_active_bits": 0.0,
+          "online_delta_vs_active_bits": 0.0,
+          "total_frozen_vs_uniform_bits": -34.38510511966834,
+          "total_online_vs_uniform_bits": -42.21354599858118,
+          "variant": "active_midpoint"
+        }
+      ]
+    },
+    {
+      "active_is_best_frozen": false,
+      "active_is_best_online": false,
+      "active_variant": "active_order2",
+      "best_frozen_variant": "order1_previous_digit",
+      "best_online_variant": "order1_previous_digit",
+      "component": "literal_payload",
+      "variants": [
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 794.6049774121724,
+              "frozen_vs_uniform_bits": 3.9860908289801955,
+              "holdout_event_count": 238,
+              "online_bits": 792.9151629174456,
+              "online_vs_uniform_bits": 2.2962763342534345,
+              "train_book_count": 10,
+              "uniform_bits": 790.6188865831922
+            },
+            {
+              "frozen_bits": 383.40748351149085,
+              "frozen_vs_uniform_bits": -5.2581035903305064,
+              "holdout_event_count": 117,
+              "online_bits": 383.44968596061506,
+              "online_vs_uniform_bits": -5.215901141206302,
+              "train_book_count": 20,
+              "uniform_bits": 388.66558710182136
+            },
+            {
+              "frozen_bits": 270.01696069526747,
+              "frozen_vs_uniform_bits": -5.703071180383574,
+              "holdout_event_count": 83,
+              "online_bits": 269.5672095550445,
+              "online_vs_uniform_bits": -6.15282232060656,
+              "train_book_count": 35,
+              "uniform_bits": 275.72003187565105
+            },
+            {
+              "frozen_bits": 150.44103360608491,
+              "frozen_vs_uniform_bits": -2.3676587587337394,
+              "holdout_event_count": 46,
+              "online_bits": 149.9213175928519,
+              "online_vs_uniform_bits": -2.887374771966762,
+              "train_book_count": 50,
+              "uniform_bits": 152.80869236481865
+            },
+            {
+              "frozen_bits": 12.830316917642504,
+              "frozen_vs_uniform_bits": -0.4573954619069447,
+              "holdout_event_count": 4,
+              "online_bits": 12.825644896798122,
+              "online_vs_uniform_bits": -0.46206748275132625,
+              "train_book_count": 60,
+              "uniform_bits": 13.287712379549449
+            }
+          ],
+          "description": "single global digit distribution",
+          "frozen_delta_vs_active_bits": 65.42658226695454,
+          "online_delta_vs_active_bits": 83.04506316542022,
+          "total_frozen_vs_uniform_bits": -9.80013816237457,
+          "total_online_vs_uniform_bits": -12.421889382277516,
+          "variant": "order0_global"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 742.4487772376763,
+              "frozen_vs_uniform_bits": -48.170109345515925,
+              "holdout_event_count": 238,
+              "online_bits": 738.8869111352668,
+              "online_vs_uniform_bits": -51.73197544792538,
+              "train_book_count": 10,
+              "uniform_bits": 790.6188865831922
+            },
+            {
+              "frozen_bits": 360.2293159261795,
+              "frozen_vs_uniform_bits": -28.436271175641878,
+              "holdout_event_count": 117,
+              "online_bits": 359.6877180694981,
+              "online_vs_uniform_bits": -28.97786903232327,
+              "train_book_count": 20,
+              "uniform_bits": 388.66558710182136
+            },
+            {
+              "frozen_bits": 260.0063561733679,
+              "frozen_vs_uniform_bits": -15.713675702283126,
+              "holdout_event_count": 83,
+              "online_bits": 259.4902181608913,
+              "online_vs_uniform_bits": -16.229813714759757,
+              "train_book_count": 35,
+              "uniform_bits": 275.72003187565105
+            },
+            {
+              "frozen_bits": 141.10137233977466,
+              "frozen_vs_uniform_bits": -11.707320025043998,
+              "holdout_event_count": 46,
+              "online_bits": 139.81006757042252,
+              "online_vs_uniform_bits": -12.998624794396136,
+              "train_book_count": 50,
+              "uniform_bits": 152.80869236481865
+            },
+            {
+              "frozen_bits": 11.272803850901823,
+              "frozen_vs_uniform_bits": -2.0149085286476254,
+              "holdout_event_count": 4,
+              "online_bits": 11.272803850901823,
+              "online_vs_uniform_bits": -2.0149085286476254,
+              "train_book_count": 60,
+              "uniform_bits": 13.287712379549449
+            }
+          ],
+          "description": "previous one emitted digit",
+          "frozen_delta_vs_active_bits": -30.815564347803445,
+          "online_delta_vs_active_bits": -16.486238970354435,
+          "total_frozen_vs_uniform_bits": -106.04228477713255,
+          "total_online_vs_uniform_bits": -111.95319151805217,
+          "variant": "order1_previous_digit"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 733.6186273636905,
+              "frozen_vs_uniform_bits": -57.000259219501686,
+              "holdout_event_count": 238,
+              "online_bits": 726.341206096853,
+              "online_vs_uniform_bits": -64.27768048633914,
+              "train_book_count": 10,
+              "uniform_bits": 790.6188865831922
+            },
+            {
+              "frozen_bits": 378.0650695832959,
+              "frozen_vs_uniform_bits": -10.600517518525464,
+              "holdout_event_count": 117,
+              "online_bits": 373.29787515905906,
+              "online_vs_uniform_bits": -15.367711942762298,
+              "train_book_count": 20,
+              "uniform_bits": 388.66558710182136
+            },
+            {
+              "frozen_bits": 276.70155781325474,
+              "frozen_vs_uniform_bits": 0.981525937603692,
+              "holdout_event_count": 83,
+              "online_bits": 272.2505510932306,
+              "online_vs_uniform_bits": -3.469480782420419,
+              "train_book_count": 35,
+              "uniform_bits": 275.72003187565105
+            },
+            {
+              "frozen_bits": 147.0413352571825,
+              "frozen_vs_uniform_bits": -5.767357107636144,
+              "holdout_event_count": 46,
+              "online_bits": 143.29672554991228,
+              "online_vs_uniform_bits": -9.511966814906373,
+              "train_book_count": 50,
+              "uniform_bits": 152.80869236481865
+            },
+            {
+              "frozen_bits": 10.447599858279949,
+              "frozen_vs_uniform_bits": -2.8401125212695,
+              "holdout_event_count": 4,
+              "online_bits": 10.447599858279949,
+              "online_vs_uniform_bits": -2.8401125212695,
+              "train_book_count": 60,
+              "uniform_bits": 13.287712379549449
+            }
+          ],
+          "description": "previous two emitted digits",
+          "frozen_delta_vs_active_bits": 0.0,
+          "online_delta_vs_active_bits": 0.0,
+          "total_frozen_vs_uniform_bits": -75.2267204293291,
+          "total_online_vs_uniform_bits": -95.46695254769773,
+          "variant": "active_order2"
+        }
+      ]
+    },
+    {
+      "active_is_best_frozen": false,
+      "active_is_best_online": false,
+      "active_variant": "active_split6_prev1",
+      "best_frozen_variant": "split6_only",
+      "best_online_variant": "split6_only",
+      "component": "item_type",
+      "variants": [
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 246.4459258103232,
+              "frozen_vs_uniform_bits": 25.44592581032319,
+              "holdout_event_count": 221,
+              "online_bits": 177.01369289188256,
+              "online_vs_uniform_bits": -43.986307108117444,
+              "train_book_count": 10,
+              "uniform_bits": 221.0
+            },
+            {
+              "frozen_bits": 145.686870630728,
+              "frozen_vs_uniform_bits": -16.31312936927199,
+              "holdout_event_count": 162,
+              "online_bits": 117.85385742817421,
+              "online_vs_uniform_bits": -44.14614257182579,
+              "train_book_count": 20,
+              "uniform_bits": 162.0
+            },
+            {
+              "frozen_bits": 74.00901757572083,
+              "frozen_vs_uniform_bits": -26.990982424279167,
+              "holdout_event_count": 101,
+              "online_bits": 68.66822620018444,
+              "online_vs_uniform_bits": -32.331773799815565,
+              "train_book_count": 35,
+              "uniform_bits": 101.0
+            },
+            {
+              "frozen_bits": 33.42238713601468,
+              "frozen_vs_uniform_bits": -19.577612863985323,
+              "holdout_event_count": 53,
+              "online_bits": 31.600580598862603,
+              "online_vs_uniform_bits": -21.399419401137397,
+              "train_book_count": 50,
+              "uniform_bits": 53.0
+            },
+            {
+              "frozen_bits": 10.5779606055259,
+              "frozen_vs_uniform_bits": -8.4220393944741,
+              "holdout_event_count": 19,
+              "online_bits": 10.36001103664893,
+              "online_vs_uniform_bits": -8.63998896335107,
+              "train_book_count": 60,
+              "uniform_bits": 19.0
+            }
+          ],
+          "description": "single global item-type distribution",
+          "frozen_delta_vs_active_bits": 105.62409448649053,
+          "online_delta_vs_active_bits": 48.29867942098929,
+          "total_frozen_vs_uniform_bits": -45.85783824168739,
+          "total_online_vs_uniform_bits": -150.50363184424728,
+          "variant": "order0_global"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 241.37740484037826,
+              "frozen_vs_uniform_bits": 20.37740484037826,
+              "holdout_event_count": 221,
+              "online_bits": 178.08606882462888,
+              "online_vs_uniform_bits": -42.91393117537112,
+              "train_book_count": 10,
+              "uniform_bits": 221.0
+            },
+            {
+              "frozen_bits": 144.55536563649497,
+              "frozen_vs_uniform_bits": -17.44463436350503,
+              "holdout_event_count": 162,
+              "online_bits": 117.848047737331,
+              "online_vs_uniform_bits": -44.151952262669,
+              "train_book_count": 20,
+              "uniform_bits": 162.0
+            },
+            {
+              "frozen_bits": 73.82835451070902,
+              "frozen_vs_uniform_bits": -27.17164548929098,
+              "holdout_event_count": 101,
+              "online_bits": 68.0893214354465,
+              "online_vs_uniform_bits": -32.91067856455351,
+              "train_book_count": 35,
+              "uniform_bits": 101.0
+            },
+            {
+              "frozen_bits": 32.88866275848207,
+              "frozen_vs_uniform_bits": -20.11133724151793,
+              "holdout_event_count": 53,
+              "online_bits": 31.069458334022436,
+              "online_vs_uniform_bits": -21.930541665977564,
+              "train_book_count": 50,
+              "uniform_bits": 53.0
+            },
+            {
+              "frozen_bits": 10.314953794896123,
+              "frozen_vs_uniform_bits": -8.685046205103877,
+              "holdout_event_count": 19,
+              "online_bits": 10.174199601996994,
+              "online_vs_uniform_bits": -8.825800398003006,
+              "train_book_count": 60,
+              "uniform_bits": 19.0
+            }
+          ],
+          "description": "previous charged item type only",
+          "frozen_delta_vs_active_bits": 98.44667426913837,
+          "online_delta_vs_active_bits": 48.06940719866236,
+          "total_frozen_vs_uniform_bits": -53.035258459039554,
+          "total_online_vs_uniform_bits": -150.7329040665742,
+          "variant": "prev1_global"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 180.48010991664233,
+              "frozen_vs_uniform_bits": -40.519890083357666,
+              "holdout_event_count": 221,
+              "online_bits": 155.9919521259087,
+              "online_vs_uniform_bits": -65.00804787409129,
+              "train_book_count": 10,
+              "uniform_bits": 221.0
+            },
+            {
+              "frozen_bits": 117.40789939847532,
+              "frozen_vs_uniform_bits": -44.59210060152468,
+              "holdout_event_count": 162,
+              "online_bits": 101.52485864796135,
+              "online_vs_uniform_bits": -60.47514135203865,
+              "train_book_count": 20,
+              "uniform_bits": 162.0
+            },
+            {
+              "frozen_bits": 63.00436665310234,
+              "frozen_vs_uniform_bits": -37.99563334689766,
+              "holdout_event_count": 101,
+              "online_bits": 60.67038117136307,
+              "online_vs_uniform_bits": -40.32961882863693,
+              "train_book_count": 35,
+              "uniform_bits": 101.0
+            },
+            {
+              "frozen_bits": 27.538275190179245,
+              "frozen_vs_uniform_bits": -25.461724809820755,
+              "holdout_event_count": 53,
+              "online_bits": 26.399573975826797,
+              "online_vs_uniform_bits": -26.600426024173203,
+              "train_book_count": 50,
+              "uniform_bits": 53.0
+            },
+            {
+              "frozen_bits": 8.542149629632675,
+              "frozen_vs_uniform_bits": -10.457850370367325,
+              "holdout_event_count": 19,
+              "online_bits": 8.400689712806058,
+              "online_vs_uniform_bits": -10.599310287193942,
+              "train_book_count": 60,
+              "uniform_bits": 19.0
+            }
+          ],
+          "description": "book_id < 6 versus book_id >= 6 without previous item",
+          "frozen_delta_vs_active_bits": -7.545266483790158,
+          "online_delta_vs_active_bits": -4.2102331008974545,
+          "total_frozen_vs_uniform_bits": -159.02719921196808,
+          "total_online_vs_uniform_bits": -203.01254436613402,
+          "variant": "split6_only"
+        },
+        {
+          "cutoffs": [
+            {
+              "frozen_bits": 185.86627816900804,
+              "frozen_vs_uniform_bits": -35.13372183099196,
+              "holdout_event_count": 221,
+              "online_bits": 158.63668944942708,
+              "online_vs_uniform_bits": -62.36331055057292,
+              "train_book_count": 10,
+              "uniform_bits": 221.0
+            },
+            {
+              "frozen_bits": 118.45894364443197,
+              "frozen_vs_uniform_bits": -43.54105635556803,
+              "holdout_event_count": 162,
+              "online_bits": 102.64284932068777,
+              "online_vs_uniform_bits": -59.35715067931223,
+              "train_book_count": 20,
+              "uniform_bits": 162.0
+            },
+            {
+              "frozen_bits": 63.99696322231717,
+              "frozen_vs_uniform_bits": -37.00303677768283,
+              "holdout_event_count": 101,
+              "online_bits": 60.99029254675039,
+              "online_vs_uniform_bits": -40.00970745324961,
+              "train_book_count": 35,
+              "uniform_bits": 101.0
+            },
+            {
+              "frozen_bits": 27.645519189031276,
+              "frozen_vs_uniform_bits": -25.354480810968724,
+              "holdout_event_count": 53,
+              "online_bits": 26.443906462794917,
+              "online_vs_uniform_bits": -26.556093537205083,
+              "train_book_count": 50,
+              "uniform_bits": 53.0
+            },
+            {
+              "frozen_bits": 8.550363047033612,
+              "frozen_vs_uniform_bits": -10.449636952966388,
+              "holdout_event_count": 19,
+              "online_bits": 8.48395095510326,
+              "online_vs_uniform_bits": -10.51604904489674,
+              "train_book_count": 60,
+              "uniform_bits": 19.0
+            }
+          ],
+          "description": "split at book 6 plus previous item",
+          "frozen_delta_vs_active_bits": 0.0,
+          "online_delta_vs_active_bits": 0.0,
+          "total_frozen_vs_uniform_bits": -151.48193272817792,
+          "total_online_vs_uniform_bits": -198.80231126523657,
+          "variant": "active_split6_prev1"
+        }
+      ]
+    }
+  ],
+  "compression_bound_bits": 8561.791947641772,
+  "schema": "prequential_component_ablation_audit.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469.json",
+  "source_prequential_audit": "analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.json",
+  "summary": {
+    "active_best_online_and_frozen_components": 1,
+    "components_tested": 3,
+    "components_where_simpler_variant_beats_active": [
+      "literal_payload",
+      "item_type"
+    ],
+    "interpretation": "This audit tests generation-explanation simplicity only. It does not change the active compression bound, because the bound remains the fully charged best corpus code. Simpler holdout winners should be preferred when describing what mechanically generalizes."
+  },
+  "test": "121_prequential_component_ablation_audit",
+  "train_cutoffs": [
+    10,
+    20,
+    35,
+    50,
+    60
+  ],
+  "translation_delta": "NONE"
+}

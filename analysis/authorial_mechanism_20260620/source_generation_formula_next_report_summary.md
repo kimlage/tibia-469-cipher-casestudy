@@ -543,6 +543,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   sets usually save more bits. The result is classified
   `prequential_predictive_not_numeric_order_specific`: useful learned-component
   evidence, not proof of numeric book-order generation.
+- component-level prequential ablation is now covered by
+  [`121_prequential_component_ablation_audit.py`](scripts/121_prequential_component_ablation_audit.py);
+  copy-length midpoint survives, but literal payload generalizes better with
+  previous-one-digit context and item type generalizes better with split-only
+  context. The active `8561.792` bit code remains the compression bound, while
+  the generation explanation is simplified.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

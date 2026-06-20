@@ -818,6 +818,15 @@ random train sets average `165.553` bits saved. The classification is
 `prequential_predictive_not_numeric_order_specific`: the learned components are
 real distributional evidence, not a promoted numeric-order generation proof.
 
+The prequential component ablation audit then separates robust learned
+components from compression-bound detail. The copy-length midpoint context
+remains best on both online and frozen prefix holdouts. Literal payload,
+however, generalizes better with previous-one-digit context than with the
+active previous-two-digit context; item type generalizes better with the
+book-6 split alone than with the active split plus previous-item context.
+Therefore the `8561.792` code remains the compression bound, but the simpler
+holdout winners are the cleaner generation-explanation components.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1084,6 +1093,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential generation model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.md)
 - [Row0 origin frontier audit](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md)
 - [Prequential order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/120_prequential_order_control_audit.md)
+- [Prequential component ablation audit](../../analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.md)
 
 ## Boundary
 

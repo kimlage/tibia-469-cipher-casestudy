@@ -310,6 +310,9 @@ bits. Treat this as `compression_bound`, not as a final authorial method.
 - `scripts/120_prequential_order_control_audit.py` - controls the prequential
   result against random same-size train-book sets and rejects numeric order as
   a promoted generation signal.
+- `scripts/121_prequential_component_ablation_audit.py` - ablates learned
+  component contexts under prefix holdout and separates compression-bound
+  refinements from simpler generation-explanation components.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

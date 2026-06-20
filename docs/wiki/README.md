@@ -365,6 +365,9 @@ semantic claim is promoted.
 The prequential order control adds that numeric prefixes are not special:
 random same-size train-book sets usually save more bits, so the signal is
 `prequential_predictive_not_numeric_order_specific`.
+The component ablation audit then keeps copy-length midpoint as predictive but
+simplifies generation explanation toward literal payload order-1 and item-type
+split-only, leaving the compression bound unchanged.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
