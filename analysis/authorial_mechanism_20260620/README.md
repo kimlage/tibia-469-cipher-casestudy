@@ -243,6 +243,10 @@ bits.
 - `scripts/96_post_itemctx_parameter_resweep.py` - retests declared
   parameters after split book `6` is active and promotes item-type
   extra-context order `1` / `alpha=2`.
+- `scripts/97_post_itemctx_param_local_frontier.py` - retests one-step local
+  recipe edits after the itemctx_param promotion.
+- `scripts/98_post_itemctx_param_pair_frontier.py` - retests compatible local
+  repair pairs after the itemctx_param one-step frontier closes.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

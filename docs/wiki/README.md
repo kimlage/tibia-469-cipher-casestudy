@@ -331,7 +331,9 @@ to improve the formula inside its declared scope. An item-type context search
 then promotes a declared split at book `6`, lowering the active bound to
 `8569.652` bits. A post-itemctx parameter resweep then promotes item-type
 extra-context order `1` / `alpha=2`, lowering the active bound again to
-`8561.792` bits. No
+`8561.792` bits. The subsequent local and compatible-pair frontiers close
+again, with the best one-step edit `+0.957` bits worse and the best pair
+`+1.809` bits worse. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

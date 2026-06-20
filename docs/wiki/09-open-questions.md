@@ -194,7 +194,10 @@ current-item-length row is retained only as non-decodable lower-bound evidence.
 A post-itemctx parameter resweep then promotes item-type extra-context order
 `1` with `alpha=2`, lowering the active mechanical bound again to `8561.792`
 bits while leaving literal-run length, literal payload, and midpoint
-copy-length parameters unchanged.
+copy-length parameters unchanged. The immediate local frontier after that
+promotion is closed: the best one-step edit is `+0.957` bits worse. The
+compatible-pair frontier is also closed: `17663` valid pairs are rescored and
+the best pair remains `+1.809` bits worse.
 
 ## Ranked: what would unlock progress
 

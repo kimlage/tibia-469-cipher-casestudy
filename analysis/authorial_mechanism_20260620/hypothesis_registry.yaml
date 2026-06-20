@@ -487,6 +487,16 @@ hypotheses:
     status: controlled_post_itemctx_parameter_improvement
     target: "declared literal length, literal payload, item-type extra-context, and midpoint copy-length parameters after item-type split context"
     promotion_rule: "must beat active itemctx formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CN:
+    name: "post itemctx_param local frontier"
+    status: post_itemctx_param_local_frontier_closed
+    target: "one-step literal-to-copy and copy-to-literal local recipe edits after itemctx_param promotion"
+    promotion_rule: "must beat active itemctx_param formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CO:
+    name: "post itemctx_param pair frontier"
+    status: post_itemctx_param_pair_frontier_closed
+    target: "two compatible local recipe edits after itemctx_param one-step frontier closure"
+    promotion_rule: "must beat active itemctx_param formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

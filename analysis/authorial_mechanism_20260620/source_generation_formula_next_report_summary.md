@@ -398,6 +398,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `alpha=2` lowers the active bound again from `8569.652` to `8561.792` bits.
   Literal-run length, literal payload, and midpoint copy-length parameters
   remain unchanged.
+- post-itemctx_param local frontier is now covered by
+  [`97_post_itemctx_param_local_frontier.py`](scripts/97_post_itemctx_param_local_frontier.py);
+  the best one-step edit is literal-to-copy `60199` in book `3`, still
+  `+0.957` bits worse than the active formula.
+- post-itemctx_param pair frontier is now covered by
+  [`98_post_itemctx_param_pair_frontier.py`](scripts/98_post_itemctx_param_pair_frontier.py);
+  `17663` valid compatible pairs are rescored and the best pair remains
+  `+1.809` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

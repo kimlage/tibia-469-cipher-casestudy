@@ -467,5 +467,11 @@ Generated audits in this directory should be treated as the current state:
   promotes, lowering the bound from `8569.652` to `8561.792` bits. Literal-run
   length, literal payload, and midpoint copy-length parameters remain
   unchanged.
+- `97_post_itemctx_param_local_frontier`: retests one-step recipe edits after
+  the itemctx_param promotion. The best single edit, literal-to-copy `60199`
+  in book `3`, is still `+0.957` bits worse.
+- `98_post_itemctx_param_pair_frontier`: retests compatible pairs after that
+  one-step frontier closes. `17663` valid pairs are rescored; the best pair is
+  still `+1.809` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

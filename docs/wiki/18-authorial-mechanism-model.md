@@ -638,6 +638,13 @@ reduces item-type bits again to `223.412`, lowering the full bound from
 context order `2` / `alpha=1`, and midpoint copy-length `alpha=1` remain
 unchanged.
 
+The post-itemctx_param local frontier then checks whether the changed item-type
+prior reopens one-step recipe edits. It does not: `21` literal-to-copy and
+`283` copy-to-literal candidates are tested, and the best candidate,
+literal-to-copy `60199` in book `3`, is still `+0.957` bits worse. The
+post-itemctx_param pair frontier then checks compatible pairs: `17663` valid
+pairs are rescored and the best pair remains `+1.809` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -747,6 +754,8 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CK | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` |
 | H-GEN3CL | `controlled_post_midpoint_item_type_context_improvement` |
 | H-GEN3CM | `controlled_post_itemctx_parameter_improvement` |
+| H-GEN3CN | `post_itemctx_param_local_frontier_closed` |
+| H-GEN3CO | `post_itemctx_param_pair_frontier_closed` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -851,6 +860,8 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 top60 triple probe](../../analysis/authorial_mechanism_20260620/reports/test_results/94_post_midpoint_alpha1_top60_triple_probe.md)
 - [Post-midpoint alpha1 item-type context search](../../analysis/authorial_mechanism_20260620/reports/test_results/95_post_midpoint_alpha1_item_type_context_search.md)
 - [Post-itemctx parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/96_post_itemctx_parameter_resweep.md)
+- [Post-itemctx param local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/97_post_itemctx_param_local_frontier.md)
+- [Post-itemctx param pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/98_post_itemctx_param_pair_frontier.md)
 
 ## Boundary
 
@@ -885,6 +896,8 @@ The literal-payload context search also retains the global payload model; the
 bounded top60 triple probe does not improve the current frontier inside its
 declared scope. The post-itemctx parameter resweep promotes only the item-type
 extra-context parameter, not a new recipe, row0 origin, or semantic reading.
+The post-itemctx_param local and pair frontiers do not improve the current
+frontier.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.
