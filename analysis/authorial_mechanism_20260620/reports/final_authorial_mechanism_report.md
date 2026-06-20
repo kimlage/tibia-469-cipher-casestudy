@@ -287,5 +287,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `57596` compatible sextets, and the best sextet is
   `+7.3` bits worse than the active formula.
+- `54_post_forced_repair_sept_search`: tests whether seven compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `118456` compatible septets, and the best septet is
+  `+9.0` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

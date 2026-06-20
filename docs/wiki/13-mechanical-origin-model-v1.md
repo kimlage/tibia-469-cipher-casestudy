@@ -99,6 +99,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair quad search | the same `22` candidates produce `6596` compatible quartets, but the best quartet is `+3.9` bits worse than the active formula | rejected refinement |
 | Post forced-length repair quint search | the same `22` candidates produce `22168` compatible quintets, but the best quintet is `+5.5` bits worse than the active formula | rejected refinement |
 | Post forced-length repair sext search | the same `22` candidates produce `57596` compatible sextets, but the best sextet is `+7.3` bits worse than the active formula | rejected refinement |
+| Post forced-length repair sept search | the same `22` candidates produce `118456` compatible septets, but the best septet is `+9.0` bits worse than the active formula | rejected refinement |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -153,6 +154,7 @@ Primary sources:
 [post_forced_repair_quad_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/51_post_forced_repair_quad_search.md),
 [post_forced_repair_quint_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/52_post_forced_repair_quint_search.md),
 [post_forced_repair_sext_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/53_post_forced_repair_sext_search.md),
+[post_forced_repair_sept_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/54_post_forced_repair_sept_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
