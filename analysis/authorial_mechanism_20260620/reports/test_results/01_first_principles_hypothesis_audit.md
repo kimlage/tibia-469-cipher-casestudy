@@ -62,6 +62,7 @@ does not promote plaintext.
 | `H-GEN3AF` | `controlled_digit_address_literal_repair_improvement` | `True` |
 | `H-GEN3AG` | `post_digit_repair_payload_alpha_retains_14` | `True` |
 | `H-GEN3AH` | `post_digit_repair_address_optimistic_only_not_promoted` | `True` |
+| `H-GEN3AI` | `controlled_item_type_ledger_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

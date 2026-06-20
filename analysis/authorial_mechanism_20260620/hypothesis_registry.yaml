@@ -202,6 +202,11 @@ hypotheses:
     status: post_digit_repair_address_optimistic_only_not_promoted
     target: "alternate copy source-address ledgers after the digit-address literal-to-copy repair"
     promotion_rule: "must beat absolute source_digit_pos in a decodable ledger after the latest repair"
+  H-GEN3AI:
+    name: "item-type ledger compile"
+    status: controlled_item_type_ledger_improvement
+    target: "literal/copy item-type stream for the current repaired sequential LZ formula"
+    promotion_rule: "must beat one fixed type bit per item with a decodable declared type ledger while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

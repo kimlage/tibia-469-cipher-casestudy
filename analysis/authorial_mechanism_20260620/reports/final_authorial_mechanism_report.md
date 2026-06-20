@@ -226,5 +226,10 @@ Generated audits in this directory should be treated as the current state:
   `source_digit_pos` remains the best decodable ledger at `9070.1` bits.
   Literal-seed addressing reaches `9005.5` bits only as an undecodable no-mode
   lower bound; the best decodable sparse seed-run ledger costs `9080.8` bits.
+- `40_item_type_ledger_compile`: replaces the one fixed literal/copy type bit
+  charged per recipe item with a declared two-symbol adaptive item-type ledger.
+  The same fixed recipe roundtrips 70/70 books and improves the current bound
+  from `9070.1` to `8996.2` bits; `alpha=2` costs `291.2` item-type bits
+  versus `365.0` fixed type bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

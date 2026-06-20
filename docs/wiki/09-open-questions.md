@@ -104,7 +104,9 @@ the address space; alternate digit-only address ledgers are retested and still
 do not promote. Retesting local repairs under digit-only address cost then
 lowers the bound to `9070.1` bits, and a post-repair payload sweep retains
 `alpha=14`. Post-repair address ledgers are retested and still do not promote.
-No plaintext, pair-table origin,
+Encoding the fixed literal/copy item-type stream with a declared adaptive
+two-symbol ledger then lowers the bound to `8996.2` bits. No plaintext,
+pair-table origin,
 physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).

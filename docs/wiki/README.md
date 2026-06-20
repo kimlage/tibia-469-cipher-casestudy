@@ -271,7 +271,8 @@ copy addresses over the digit-only stream lowers the bound again to roughly
 `9070.8` bits; alternate digit-only address ledgers are retested and rejected.
 A digit-address local repair lowers the bound again to roughly `9070.1` bits.
 The follow-up payload alpha and address-model sweeps retain the current
-parameters.
+parameters. Encoding the fixed literal/copy item-type stream with a declared
+adaptive two-symbol ledger lowers the bound again to roughly `8996.2` bits.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

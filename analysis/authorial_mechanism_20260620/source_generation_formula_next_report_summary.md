@@ -123,6 +123,11 @@ Still open from the report:
   [`39_post_digit_repair_address_model_search.py`](scripts/39_post_digit_repair_address_model_search.py);
   absolute `source_digit_pos` remains the best decodable ledger after the
   latest repair.
+- item-type ledger coding is now covered by
+  [`40_item_type_ledger_compile.py`](scripts/40_item_type_ledger_compile.py);
+  replacing fixed literal/copy item tags with a declared adaptive two-symbol
+  ledger improves the current bound to `8996.2` bits while preserving 70/70
+  roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
