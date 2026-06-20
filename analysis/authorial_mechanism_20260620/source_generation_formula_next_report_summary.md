@@ -448,6 +448,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   pairs. The active midpoint copy-length plus split `6`, order `1`, alpha `2`
   item-type model remains best; the best changed pair is `+0.415` bits worse
   and the best pair with both components changed is `+2.357` bits worse.
+- post-itemctx_param payload/copy-length/item-type triple context search is now
+  covered by
+  [`107_post_itemctx_param_payload_copy_length_item_type_triple_context_search.py`](scripts/107_post_itemctx_param_payload_copy_length_item_type_triple_context_search.py);
+  `77` payload contexts, `79` copy-length contexts, and `17024` item-type
+  candidates imply `103556992` triples. Component minima keep the active triple
+  best; the best changed triple is `+0.415` bits worse and the best triple with
+  all three components changed is `+4.106` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

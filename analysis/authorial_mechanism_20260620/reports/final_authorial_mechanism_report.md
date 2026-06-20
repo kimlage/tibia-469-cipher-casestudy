@@ -509,5 +509,11 @@ Generated audits in this directory should be treated as the current state:
   `1344896` pairs. The active pair remains best; the best changed pair is
   `+0.415` bits worse, and the best pair with both components changed is
   `+2.357` bits worse.
+- `107_post_itemctx_param_payload_copy_length_item_type_triple_context_search`:
+  combines `77` literal-payload context candidates, `79` copy-length context
+  candidates, and `17024` item-type candidates into `103556992` implied triples.
+  Component minima keep the active triple best; the best changed triple is
+  `+0.415` bits worse, and the best triple with all three components changed is
+  `+4.106` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

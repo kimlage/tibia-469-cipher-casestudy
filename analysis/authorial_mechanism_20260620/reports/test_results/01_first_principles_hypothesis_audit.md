@@ -129,6 +129,7 @@ does not promote plaintext.
 | `H-GEN3CU` | `post_itemctx_param_item_type_context_family_not_promoted` | `True` |
 | `H-GEN3CV` | `post_itemctx_param_payload_item_type_pair_not_promoted` | `True` |
 | `H-GEN3CW` | `post_itemctx_param_copy_length_item_type_pair_not_promoted` | `True` |
+| `H-GEN3CX` | `post_itemctx_param_payload_copy_length_item_type_triple_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |
