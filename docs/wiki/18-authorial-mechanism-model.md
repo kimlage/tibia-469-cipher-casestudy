@@ -206,6 +206,12 @@ bits) yields `9538.0` bits, a `7.5` bit improvement. A static literal histogram
 oracle reaches `9513.9` bits but is not promoted because it omits a decodable
 table; the charged static table is worse.
 
+Retesting copy-source address ledgers on that current formula keeps absolute
+`source_pos` as the best decodable address ledger. Literal-seed addressing
+reaches `9478.6` bits only as a no-mode lower bound; the best decodable sparse
+seed-run ledger is `9548.7` bits (`+10.7`), so this remains an optimistic clue
+rather than a formula promotion.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -246,6 +252,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3T | `controlled_literal_length_code_improvement` |
 | H-GEN3U | `joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5` |
 | H-GEN3V | `controlled_literal_payload_adaptive_improvement` |
+| H-GEN3W | `current_formula_address_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -281,6 +288,7 @@ book generation, not row0 pair-cell placement.
 - [Literal run length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/25_literal_run_length_code_reparse.md)
 - [Joint length code grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/26_joint_length_code_grid_sweep.md)
 - [Literal payload model search](../../analysis/authorial_mechanism_20260620/reports/test_results/27_literal_payload_model_search.md)
+- [Current formula address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/28_current_formula_address_model_search.md)
 
 ## Boundary
 

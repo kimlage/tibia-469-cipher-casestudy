@@ -167,5 +167,10 @@ Generated audits in this directory should be treated as the current state:
   after charging `7` bits to declare alpha. Random uniform literal-payload
   controls do not beat the observed distribution. A cheaper static histogram
   oracle is recorded as non-decodable and not promoted.
+- `28_current_formula_address_model_search`: retests copy-source address
+  ledgers on the current `9538.0` bit formula. Absolute `source_pos` remains
+  the best decodable ledger. Literal-seed addressing reaches `9478.6` bits only
+  as an undecodable no-mode lower bound; the best decodable sparse seed-run
+  ledger is `9548.7` bits (`+10.7`), so no address model is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

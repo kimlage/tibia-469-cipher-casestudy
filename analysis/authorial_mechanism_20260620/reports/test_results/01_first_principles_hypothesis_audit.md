@@ -50,6 +50,7 @@ does not promote plaintext.
 | `H-GEN3T` | `controlled_literal_length_code_improvement` | `True` |
 | `H-GEN3U` | `joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5` | `True` |
 | `H-GEN3V` | `controlled_literal_payload_adaptive_improvement` | `True` |
+| `H-GEN3W` | `current_formula_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

@@ -142,6 +142,11 @@ hypotheses:
     status: controlled_literal_payload_adaptive_improvement
     target: "literal digit payload coding for the current sequential LZ recipe"
     promotion_rule: "must beat uniform decimal payload cost after model declaration, remain decodable, and beat random uniform literal-payload controls"
+  H-GEN3W:
+    name: "current formula copy address models"
+    status: current_formula_address_optimistic_only_not_promoted
+    target: "copy source-address ledgers on the current literal-payload formula"
+    promotion_rule: "must beat absolute source_pos in a decodable ledger after the current parse and payload model are fixed"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

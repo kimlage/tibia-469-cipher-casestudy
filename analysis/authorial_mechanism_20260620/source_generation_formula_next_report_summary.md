@@ -76,6 +76,10 @@ Still open from the report:
   [`27_literal_payload_model_search.py`](scripts/27_literal_payload_model_search.py);
   a decodable adaptive Dirichlet payload model improves the current bound to
   `9538.0` bits; the cheaper static histogram oracle is not promoted.
+- current-formula copy-address ledgers are now covered by
+  [`28_current_formula_address_model_search.py`](scripts/28_current_formula_address_model_search.py);
+  absolute `source_pos` remains the best decodable ledger after the current
+  parse and payload model are fixed.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

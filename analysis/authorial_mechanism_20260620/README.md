@@ -91,6 +91,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   copy-length and literal-run length codes around the current best formula.
 - `scripts/27_literal_payload_model_search.py` - tests literal digit payload
   coding for the current recipe.
+- `scripts/28_current_formula_address_model_search.py` - retests copy-source
+  address ledgers on the current best literal-payload formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
