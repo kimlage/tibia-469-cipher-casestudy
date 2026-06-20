@@ -197,5 +197,10 @@ Generated audits in this directory should be treated as the current state:
   from `1030.0` to `566.0` bits, improving the total formula from `9537.3` to
   `9073.3` bits with 70/70 roundtrip. This is a cost-ledger improvement, not a
   semantic or pair-table result.
+- `34_book_length_multi_anchor_search`: tests whether a decodable multi-anchor
+  signed-Rice length mixture beats the promoted single-anchor ledger. It does
+  not: the best multi-anchor model uses `2` clusters at `k=4`, costs `581.0`
+  book-length bits, and is `+15.0` bits worse than the active `anchor=151`,
+  `k=5` ledger. No newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

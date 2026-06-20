@@ -172,6 +172,11 @@ hypotheses:
     status: controlled_book_length_ledger_improvement
     target: "decodable ledger for the 70 book lengths in the current sequential LZ formula"
     promotion_rule: "must beat independent gamma-coded book lengths after charging declared parameters and preserving 70/70 roundtrip"
+  H-GEN3AC:
+    name: "multi-anchor book length ledger search"
+    status: multi_anchor_book_length_ledger_not_promoted
+    target: "multi-anchor signed-Rice mixture for book lengths"
+    promotion_rule: "must beat the single-anchor length ledger after charging anchors, k, and per-book mode bits"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

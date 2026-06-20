@@ -244,6 +244,12 @@ declared `anchor=151`, `k=5`. Book-length cost drops from `1030.0` to `566.0`
 bits, and the total bound drops from `9537.3` to `9073.3` bits with 70/70
 roundtrip. This is a ledger improvement, not a new semantic channel.
 
+The multi-anchor length follow-up rejects the obvious mixture extension. The
+best decodable multi-anchor ledger uses `2` clusters at `k=4`, but costs
+`581.0` book-length bits after mode and anchor charges. That is `+15.0` bits
+worse than the single-anchor `anchor=151`, `k=5` ledger, so no newer length
+model is promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -290,6 +296,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3Z | `post_repair_address_optimistic_only_not_promoted` |
 | H-GEN3AA | `literal_to_copy_pair_repair_not_promoted` |
 | H-GEN3AB | `controlled_book_length_ledger_improvement` |
+| H-GEN3AC | `multi_anchor_book_length_ledger_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -331,6 +338,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/31_post_repair_address_model_search.md)
 - [Literal-to-copy pair repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/32_literal_to_copy_pair_repair_search.md)
 - [Book length ledger search](../../analysis/authorial_mechanism_20260620/reports/test_results/33_book_length_ledger_search.md)
+- [Book length multi-anchor search](../../analysis/authorial_mechanism_20260620/reports/test_results/34_book_length_multi_anchor_search.md)
 
 ## Boundary
 

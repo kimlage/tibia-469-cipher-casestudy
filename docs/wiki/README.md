@@ -265,7 +265,8 @@ bits, a post-repair payload alpha sweep retains `alpha=14`, and a post-repair
 address retest again rejects literal-seed addressing as optimistic-only. A
 compatible pair-repair search also fails to improve on the one-step repair.
 Replacing independent gamma-coded book lengths with a declared signed-Rice
-residual ledger then lowers the mechanical bound to roughly `9073.3` bits.
+residual ledger then lowers the mechanical bound to roughly `9073.3` bits; a
+multi-anchor length ledger is tested and rejected after mode costs.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

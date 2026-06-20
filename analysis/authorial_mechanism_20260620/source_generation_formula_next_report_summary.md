@@ -99,6 +99,10 @@ Still open from the report:
   [`33_book_length_ledger_search.py`](scripts/33_book_length_ledger_search.py);
   a declared signed-Rice residual ledger improves the current bound to
   `9073.3` bits while preserving 70/70 roundtrip.
+- multi-anchor book-length ledgers are now covered by
+  [`34_book_length_multi_anchor_search.py`](scripts/34_book_length_multi_anchor_search.py);
+  the best multi-anchor mixture is worse once per-book mode bits and extra
+  anchor declarations are charged.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

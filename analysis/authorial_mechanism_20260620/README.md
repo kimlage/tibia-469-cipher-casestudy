@@ -103,6 +103,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   two-repair literal-to-copy recipes under the adaptive payload model.
 - `scripts/33_book_length_ledger_search.py` - replaces independent gamma-coded
   book lengths with a cheaper declared signed-Rice residual ledger.
+- `scripts/34_book_length_multi_anchor_search.py` - tests multi-anchor
+  signed-Rice book-length ledgers after charging mode and anchor costs.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
