@@ -192,6 +192,12 @@ formula at `9545.5` bits. This saves `51.0` bits after charging both Rice
 parameters. Digit-shuffle controls remain far worse and sampled book-order
 controls do not beat the observed formula.
 
+The joint length-code grid keeps that frontier. Testing `605` combinations of
+`min_len=3..7`, copy gamma/delta/Rice `k=0..8`, and literal gamma/delta/Rice
+`k=0..8` leaves `rice_k4` copy lengths, `rice_k3` literal-run lengths, and
+`min_len=5` best at `9545.5` bits. The nearest alternate is `rice_k4` copy /
+`rice_k2` literal at `9552.2` bits (`+6.7`).
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -230,6 +236,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3R | `copy_length_grid_retains_rice_k4_min_len_5` |
 | H-GEN3S | `rice_copy_address_optimistic_only_not_promoted` |
 | H-GEN3T | `controlled_literal_length_code_improvement` |
+| H-GEN3U | `joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -263,6 +270,7 @@ book generation, not row0 pair-cell placement.
 - [Copy length grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/23_copy_length_grid_sweep.md)
 - [Rice copy address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/24_rice_copy_address_model_search.md)
 - [Literal run length code reparse](../../analysis/authorial_mechanism_20260620/reports/test_results/25_literal_run_length_code_reparse.md)
+- [Joint length code grid sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/26_joint_length_code_grid_sweep.md)
 
 ## Boundary
 

@@ -132,6 +132,11 @@ hypotheses:
     status: controlled_literal_length_code_improvement
     target: "literal-run length coding on the promoted Rice-length formula"
     promotion_rule: "must roundtrip 70/70, beat gamma literal-run length coding after parameter cost, and preserve translation_delta NONE"
+  H-GEN3U:
+    name: "joint copy and literal length code grid"
+    status: joint_length_grid_retains_rice_k4_literal_rice_k3_min_len_5
+    target: "joint copy-length and literal-run length coding around the current best formula"
+    promotion_rule: "must roundtrip 70/70 and beat Rice copy k=4 plus Rice literal k=3 at min_len=5 under the same DP cost model"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

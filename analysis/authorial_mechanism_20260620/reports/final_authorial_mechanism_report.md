@@ -156,5 +156,10 @@ Generated audits in this directory should be treated as the current state:
   at `9545.5` bits. This is a `51.0` bit improvement over the prior `9596.5`
   bit formula after charging both Rice parameters. Digit-shuffle and book-order
   controls do not beat the observed formula.
+- `26_joint_length_code_grid_sweep`: tests the interaction between copy-length
+  and literal-run length codes over `605` joint DP reparses. The current
+  `rice_k4` copy / `rice_k3` literal / `min_len=5` formula remains best at
+  `9545.5` bits. The nearest alternate is `rice_k4` copy / `rice_k2` literal /
+  `min_len=5` at `9552.2` bits (`+6.7`), so no newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

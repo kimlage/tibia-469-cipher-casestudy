@@ -68,6 +68,10 @@ Still open from the report:
   [`25_literal_run_length_code_reparse.py`](scripts/25_literal_run_length_code_reparse.py);
   Rice `k=3` for literal lengths improves the current mechanical bound to
   `9545.5` bits with 70/70 roundtrip and `translation_delta: NONE`.
+- joint copy/literal length-code interaction is now covered by
+  [`26_joint_length_code_grid_sweep.py`](scripts/26_joint_length_code_grid_sweep.py);
+  `605` DP reparses retain copy Rice `k=4`, literal Rice `k=3`, and
+  `min_len=5` as the best tested parameter set.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

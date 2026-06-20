@@ -87,6 +87,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   address ledgers on the promoted Rice-length parse.
 - `scripts/25_literal_run_length_code_reparse.py` - reparses the promoted
   Rice-length formula while sweeping literal-run length codes.
+- `scripts/26_joint_length_code_grid_sweep.py` - tests the interaction between
+  copy-length and literal-run length codes around the current best formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
