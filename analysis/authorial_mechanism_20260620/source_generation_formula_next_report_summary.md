@@ -92,6 +92,9 @@ Still open from the report:
   [`31_post_repair_address_model_search.py`](scripts/31_post_repair_address_model_search.py);
   absolute `source_pos` remains the best decodable ledger, while the cheaper
   literal-seed lower bound is still undecodable.
+- compatible two-repair literal-to-copy recipes are now covered by
+  [`32_literal_to_copy_pair_repair_search.py`](scripts/32_literal_to_copy_pair_repair_search.py);
+  no pair beats the current one-step repaired formula after exact rescoring.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

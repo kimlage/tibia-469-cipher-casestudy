@@ -186,5 +186,10 @@ Generated audits in this directory should be treated as the current state:
   decodable ledger at `9537.3` bits. Literal-seed addressing reaches `9472.4`
   bits only as an undecodable no-mode lower bound; the best decodable sparse
   seed-run ledger costs `9548.0` bits, so no address model is promoted.
+- `32_literal_to_copy_pair_repair_search`: tests whether compatible pairs of
+  literal-to-copy repairs become cheaper together under adaptive payload
+  coding. They do not: `25` single candidates yield `293` compatible pairs,
+  and the best pair costs `9538.2` bits, `+0.9` worse than the one-step
+  repaired formula. No newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

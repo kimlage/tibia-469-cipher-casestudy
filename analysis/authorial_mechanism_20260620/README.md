@@ -99,6 +99,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   payload alpha after the local copy repair.
 - `scripts/31_post_repair_address_model_search.py` - retests copy-source
   address ledgers after the local copy repair.
+- `scripts/32_literal_to_copy_pair_repair_search.py` - tests compatible
+  two-repair literal-to-copy recipes under the adaptive payload model.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

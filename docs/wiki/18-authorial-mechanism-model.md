@@ -230,6 +230,12 @@ Literal-seed addressing reaches `9472.4` bits only as an undecodable no-mode
 lower bound; the best decodable sparse seed-run ledger costs `9548.0` bits.
 That preserves literal-seed provenance as an optimistic clue, not a formula.
 
+The compatible pair-repair search closes the immediate combinatorial objection
+to the one-step repair. There are `25` single literal-to-copy repair candidates
+and `293` compatible pairs. The best pair costs `9538.2` bits, which is `+0.9`
+bits worse than the one-step repaired formula, so no two-repair recipe is
+promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -274,6 +280,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3X | `controlled_literal_to_copy_single_repair_improvement` |
 | H-GEN3Y | `post_repair_payload_alpha_retains_14` |
 | H-GEN3Z | `post_repair_address_optimistic_only_not_promoted` |
+| H-GEN3AA | `literal_to_copy_pair_repair_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -313,6 +320,7 @@ book generation, not row0 pair-cell placement.
 - [Literal-to-copy repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/29_literal_to_copy_repair_search.md)
 - [Post-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/30_post_repair_payload_alpha_sweep.md)
 - [Post-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/31_post_repair_address_model_search.md)
+- [Literal-to-copy pair repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/32_literal_to_copy_pair_repair_search.md)
 
 ## Boundary
 
