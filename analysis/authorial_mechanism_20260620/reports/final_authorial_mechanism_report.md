@@ -235,5 +235,9 @@ Generated audits in this directory should be treated as the current state:
   stream with a declared previous-type Markov ledger. The same fixed recipe
   roundtrips 70/70 books and improves the current bound from `8996.2` to
   `8977.6` bits; `alpha=1` costs `272.5` item-type bits.
+- `42_book_start_item_type_ledger_compile`: uses already-declared book
+  boundaries as `BOS` context in that item-type ledger. The same fixed recipe
+  roundtrips 70/70 books and improves the current bound from `8977.6` to
+  `8972.2` bits; `alpha=1` costs `267.2` item-type bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

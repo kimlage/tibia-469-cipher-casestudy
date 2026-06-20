@@ -1,0 +1,446 @@
+{
+  "best_model": {
+    "alpha": 1,
+    "delta_vs_current_bits": -5.33040920311214,
+    "item_type_bits": 267.1814403627321,
+    "item_type_stream_bits": 264.1814403627321,
+    "model_declaration_bits": 3,
+    "total_bits": 8972.236588499665,
+    "transition_histogram": {
+      "BOS->copy": 56,
+      "BOS->literal": 14,
+      "copy->copy": 154,
+      "copy->literal": 70,
+      "literal->copy": 71
+    }
+  },
+  "book_count": 70,
+  "book_start_histogram": {
+    "copy": 56,
+    "literal": 14
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_book_start_item_type_ledger_improvement",
+  "current_formula_bits": 8977.566997702777,
+  "current_item_type_bits": 272.5118495658446,
+  "current_item_type_stream_bits": 269.5118495658446,
+  "diagnostic_models": [
+    {
+      "alpha": 1,
+      "book_start_markov_type_bits": 267.1814403627321,
+      "book_start_order2_type_bits": 268.49456287829327,
+      "global_markov_type_bits": 272.5118495658446
+    },
+    {
+      "alpha": 2,
+      "book_start_markov_type_bits": 270.49673065911117,
+      "book_start_order2_type_bits": 272.88685726775316,
+      "global_markov_type_bits": 274.14688871150213
+    },
+    {
+      "alpha": 3,
+      "book_start_markov_type_bits": 275.614925662463,
+      "book_start_order2_type_bits": 279.0251724163258,
+      "global_markov_type_bits": 278.03003178628364
+    },
+    {
+      "alpha": 4,
+      "book_start_markov_type_bits": 278.46292323977576,
+      "book_start_order2_type_bits": 282.74658891447757,
+      "global_markov_type_bits": 279.8920176715613
+    },
+    {
+      "alpha": 5,
+      "book_start_markov_type_bits": 281.0713387839816,
+      "book_start_order2_type_bits": 286.0986835207089,
+      "global_markov_type_bits": 281.678250496839
+    },
+    {
+      "alpha": 6,
+      "book_start_markov_type_bits": 283.47466787903744,
+      "book_start_order2_type_bits": 289.13909940295855,
+      "global_markov_type_bits": 283.3773365519257
+    },
+    {
+      "alpha": 7,
+      "book_start_markov_type_bits": 287.70184176010713,
+      "book_start_order2_type_bits": 293.91613208774174,
+      "global_markov_type_bits": 286.99020509411986
+    },
+    {
+      "alpha": 8,
+      "book_start_markov_type_bits": 289.7762254544913,
+      "book_start_order2_type_bits": 296.46834904306013,
+      "global_markov_type_bits": 288.52165353342605
+    },
+    {
+      "alpha": 9,
+      "book_start_markov_type_bits": 291.71673563905415,
+      "book_start_order2_type_bits": 298.8265478412375,
+      "global_markov_type_bits": 289.9775316234991
+    },
+    {
+      "alpha": 10,
+      "book_start_markov_type_bits": 293.5388636530073,
+      "book_start_order2_type_bits": 301.01559303830453,
+      "global_markov_type_bits": 291.363714503214
+    },
+    {
+      "alpha": 11,
+      "book_start_markov_type_bits": 295.2554604613256,
+      "book_start_order2_type_bits": 303.05582543113684,
+      "global_markov_type_bits": 292.6857264781584
+    },
+    {
+      "alpha": 12,
+      "book_start_markov_type_bits": 296.87731839532245,
+      "book_start_order2_type_bits": 304.9641000263758,
+      "global_markov_type_bits": 293.9486212600605
+    },
+    {
+      "alpha": 13,
+      "book_start_markov_type_bits": 298.41360221225324,
+      "book_start_order2_type_bits": 306.75454866533346,
+      "global_markov_type_bits": 295.156966837451
+    },
+    {
+      "alpha": 14,
+      "book_start_markov_type_bits": 299.872171904327,
+      "book_start_order2_type_bits": 308.43914574709123,
+      "global_markov_type_bits": 296.31487225433216
+    },
+    {
+      "alpha": 15,
+      "book_start_markov_type_bits": 303.2598278146054,
+      "book_start_order2_type_bits": 312.0281335638164,
+      "global_markov_type_bits": 299.426029273604
+    },
+    {
+      "alpha": 16,
+      "book_start_markov_type_bits": 304.58249945378816,
+      "book_start_order2_type_bits": 313.53034667767486,
+      "global_markov_type_bits": 300.4937571244775
+    }
+  ],
+  "item_count": 365,
+  "item_type_histogram": {
+    "copy": 281,
+    "literal": 84
+  },
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_book_start_type_formula_469.json",
+  "schema": "book_start_item_type_ledger_compile.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_markov_type_formula_469.json",
+  "test": "42_book_start_item_type_ledger_compile",
+  "top_models": [
+    {
+      "alpha": 1,
+      "delta_vs_current_bits": -5.33040920311214,
+      "item_type_bits": 267.1814403627321,
+      "item_type_stream_bits": 264.1814403627321,
+      "model_declaration_bits": 3,
+      "total_bits": 8972.236588499665,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 2,
+      "delta_vs_current_bits": -2.0151189067328232,
+      "item_type_bits": 270.49673065911117,
+      "item_type_stream_bits": 267.49673065911117,
+      "model_declaration_bits": 3,
+      "total_bits": 8975.551878796045,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 3,
+      "delta_vs_current_bits": 3.103076096618679,
+      "item_type_bits": 275.614925662463,
+      "item_type_stream_bits": 270.614925662463,
+      "model_declaration_bits": 5,
+      "total_bits": 8980.670073799396,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 4,
+      "delta_vs_current_bits": 5.951073673932115,
+      "item_type_bits": 278.46292323977576,
+      "item_type_stream_bits": 273.46292323977576,
+      "model_declaration_bits": 5,
+      "total_bits": 8983.51807137671,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 5,
+      "delta_vs_current_bits": 8.55948921813797,
+      "item_type_bits": 281.0713387839816,
+      "item_type_stream_bits": 276.0713387839816,
+      "model_declaration_bits": 5,
+      "total_bits": 8986.126486920915,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 6,
+      "delta_vs_current_bits": 10.962818313193566,
+      "item_type_bits": 283.47466787903744,
+      "item_type_stream_bits": 278.47466787903744,
+      "model_declaration_bits": 5,
+      "total_bits": 8988.529816015971,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 7,
+      "delta_vs_current_bits": 15.189992194262231,
+      "item_type_bits": 287.70184176010713,
+      "item_type_stream_bits": 280.70184176010713,
+      "model_declaration_bits": 7,
+      "total_bits": 8992.75698989704,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 8,
+      "delta_vs_current_bits": 17.2643758886461,
+      "item_type_bits": 289.7762254544913,
+      "item_type_stream_bits": 282.7762254544913,
+      "model_declaration_bits": 7,
+      "total_bits": 8994.831373591423,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 9,
+      "delta_vs_current_bits": 19.20488607321022,
+      "item_type_bits": 291.71673563905415,
+      "item_type_stream_bits": 284.71673563905415,
+      "model_declaration_bits": 7,
+      "total_bits": 8996.771883775988,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 10,
+      "delta_vs_current_bits": 21.02701408716348,
+      "item_type_bits": 293.5388636530073,
+      "item_type_stream_bits": 286.5388636530073,
+      "model_declaration_bits": 7,
+      "total_bits": 8998.59401178994,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 11,
+      "delta_vs_current_bits": 22.743610895480742,
+      "item_type_bits": 295.2554604613256,
+      "item_type_stream_bits": 288.2554604613256,
+      "model_declaration_bits": 7,
+      "total_bits": 9000.310608598258,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 12,
+      "delta_vs_current_bits": 24.365468829477322,
+      "item_type_bits": 296.87731839532245,
+      "item_type_stream_bits": 289.87731839532245,
+      "model_declaration_bits": 7,
+      "total_bits": 9001.932466532255,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 13,
+      "delta_vs_current_bits": 25.901752646408568,
+      "item_type_bits": 298.41360221225324,
+      "item_type_stream_bits": 291.41360221225324,
+      "model_declaration_bits": 7,
+      "total_bits": 9003.468750349186,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 14,
+      "delta_vs_current_bits": 27.360322338483456,
+      "item_type_bits": 299.872171904327,
+      "item_type_stream_bits": 292.872171904327,
+      "model_declaration_bits": 7,
+      "total_bits": 9004.92732004126,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 15,
+      "delta_vs_current_bits": 30.747978248760774,
+      "item_type_bits": 303.2598278146054,
+      "item_type_stream_bits": 294.2598278146054,
+      "model_declaration_bits": 9,
+      "total_bits": 9008.314975951538,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 16,
+      "delta_vs_current_bits": 32.070649887944455,
+      "item_type_bits": 304.58249945378816,
+      "item_type_stream_bits": 295.58249945378816,
+      "model_declaration_bits": 9,
+      "total_bits": 9009.637647590722,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 17,
+      "delta_vs_current_bits": 33.33354340980259,
+      "item_type_bits": 305.8453929756461,
+      "item_type_stream_bits": 296.8453929756461,
+      "model_declaration_bits": 9,
+      "total_bits": 9010.90054111258,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 18,
+      "delta_vs_current_bits": 34.54125829397526,
+      "item_type_bits": 307.05310785982,
+      "item_type_stream_bits": 298.05310785982,
+      "model_declaration_bits": 9,
+      "total_bits": 9012.108255996753,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 19,
+      "delta_vs_current_bits": 35.69788076916666,
+      "item_type_bits": 308.2097303350102,
+      "item_type_stream_bits": 299.2097303350102,
+      "model_declaration_bits": 9,
+      "total_bits": 9013.264878471944,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    },
+    {
+      "alpha": 20,
+      "delta_vs_current_bits": 36.80705943075009,
+      "item_type_bits": 309.31890899659504,
+      "item_type_stream_bits": 300.31890899659504,
+      "model_declaration_bits": 9,
+      "total_bits": 9014.374057133527,
+      "transition_histogram": {
+        "BOS->copy": 56,
+        "BOS->literal": 14,
+        "copy->copy": 154,
+        "copy->literal": 70,
+        "literal->copy": 71
+      }
+    }
+  ],
+  "translation_delta": "NONE",
+  "validation": {
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "errors": []
+  }
+}

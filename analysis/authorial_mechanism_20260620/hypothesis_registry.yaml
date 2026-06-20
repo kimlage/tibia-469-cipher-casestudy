@@ -212,6 +212,11 @@ hypotheses:
     status: controlled_markov_item_type_ledger_improvement
     target: "literal/copy item-type stream conditioned on previous item type"
     promotion_rule: "must beat the adaptive iid item-type ledger with a decodable declared Markov ledger while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AK:
+    name: "book-start item-type ledger compile"
+    status: controlled_book_start_item_type_ledger_improvement
+    target: "literal/copy item-type stream conditioned on declared book starts and previous item type"
+    promotion_rule: "must beat the global Markov item-type ledger using only declared book boundaries while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

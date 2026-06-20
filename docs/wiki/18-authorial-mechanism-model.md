@@ -76,6 +76,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_literal_repair_formula_469` | `9070.1` | `0.8` |
 | `sequential_lz_digit_address_type_coded_formula_469` | `8996.2` | `73.8` |
 | `sequential_lz_digit_address_markov_type_formula_469` | `8977.6` | `18.6` |
+| `sequential_lz_digit_address_book_start_type_formula_469` | `8972.2` | `5.3` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -295,6 +296,13 @@ bits. The transition counts (`copy->copy=200`, `copy->literal=80`,
 `literal->copy=81`, `literal->literal=3`) explain the gain as local item-type
 persistence/alternation, not semantics.
 
+The book-start item-type ledger uses the already-declared 70 book boundaries as
+a `BOS` context in that same Markov ledger. Books start with copy items much
+more often than literal items (`56` versus `14`), and inside-book transitions
+remain copy-heavy. This lowers the item-type cost from `272.5` to `267.2` bits
+and the total 70/70 bound from `8977.6` to `8972.2` bits without adding a new
+order or text channel.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -349,6 +357,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AH | `post_digit_repair_address_optimistic_only_not_promoted` |
 | H-GEN3AI | `controlled_item_type_ledger_improvement` |
 | H-GEN3AJ | `controlled_markov_item_type_ledger_improvement` |
+| H-GEN3AK | `controlled_book_start_item_type_ledger_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -398,6 +407,7 @@ book generation, not row0 pair-cell placement.
 - [Post-digit-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/39_post_digit_repair_address_model_search.md)
 - [Item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/40_item_type_ledger_compile.md)
 - [Markov item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/41_markov_item_type_ledger_compile.md)
+- [Book-start item-type ledger compile](../../analysis/authorial_mechanism_20260620/reports/test_results/42_book_start_item_type_ledger_compile.md)
 
 ## Boundary
 
@@ -405,6 +415,7 @@ This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
 with adaptive literal-payload coding, the one-step literal-to-copy repair, the
 signed-Rice book-length ledger, digit-only copy addresses, and the digit-address
-literal repair, plus the adaptive/Markov item-type ledgers, as the current
-strongest copy/reference fabrication bound and continue testing matrix origin,
-topology holdouts, and official source watchlists under the same Outcome Ledger.
+literal repair, plus the adaptive/Markov/book-start item-type ledgers, as the
+current strongest copy/reference fabrication bound and continue testing matrix
+origin, topology holdouts, and official source watchlists under the same
+Outcome Ledger.

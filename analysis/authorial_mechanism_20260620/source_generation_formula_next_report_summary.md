@@ -132,6 +132,10 @@ Still open from the report:
   [`41_markov_item_type_ledger_compile.py`](scripts/41_markov_item_type_ledger_compile.py);
   conditioning each item tag on the previous item tag improves the current
   bound to `8977.6` bits while preserving 70/70 roundtrip.
+- book-start item-type ledger coding is now covered by
+  [`42_book_start_item_type_ledger_compile.py`](scripts/42_book_start_item_type_ledger_compile.py);
+  using declared book starts as an item-type context improves the current bound
+  to `8972.2` bits while preserving 70/70 roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
