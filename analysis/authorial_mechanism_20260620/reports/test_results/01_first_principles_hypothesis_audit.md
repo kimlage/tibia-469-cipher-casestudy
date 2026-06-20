@@ -75,6 +75,7 @@ does not promote plaintext.
 | `H-GEN3AS` | `post_forced_repair_triple_not_promoted` | `True` |
 | `H-GEN3AT` | `post_forced_repair_quad_not_promoted` | `True` |
 | `H-GEN3AU` | `post_forced_repair_quint_not_promoted` | `True` |
+| `H-GEN3AV` | `post_forced_repair_sext_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

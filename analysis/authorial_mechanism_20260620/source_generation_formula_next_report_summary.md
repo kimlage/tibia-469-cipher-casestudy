@@ -180,6 +180,10 @@ Still open from the report:
   [`52_post_forced_repair_quint_search.py`](scripts/52_post_forced_repair_quint_search.py);
   the same `22` single candidates yield `22168` compatible quintets, and the
   best quintet is `+5.5` bits worse than the active formula.
+- post-forced-repair sext search is now covered by
+  [`53_post_forced_repair_sext_search.py`](scripts/53_post_forced_repair_sext_search.py);
+  the same `22` single candidates yield `57596` compatible sextets, and the
+  best sextet is `+7.3` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

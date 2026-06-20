@@ -1,0 +1,124 @@
+{
+  "best_sext_repair": {
+    "delta_vs_current_bits": 7.255585097418589,
+    "repairs": [
+      {
+        "book": "0",
+        "book_pos": 60,
+        "chunk": "11800",
+        "length": 5,
+        "literal_offset": 56,
+        "op_index": 2,
+        "single_delta_vs_current_bits": 1.3495485751263914,
+        "single_total_bits": 8924.152602170408,
+        "source_digit_pos": 57
+      },
+      {
+        "book": "2",
+        "book_pos": 36,
+        "chunk": "65128",
+        "length": 5,
+        "literal_offset": 2,
+        "op_index": 7,
+        "single_delta_vs_current_bits": 1.5990893315392896,
+        "single_total_bits": 8924.402142926821,
+        "source_digit_pos": 50
+      },
+      {
+        "book": "2",
+        "book_pos": 71,
+        "chunk": "18003",
+        "length": 5,
+        "literal_offset": 2,
+        "op_index": 9,
+        "single_delta_vs_current_bits": 0.7031591519225913,
+        "single_total_bits": 8923.506212747205,
+        "source_digit_pos": 58
+      },
+      {
+        "book": "2",
+        "book_pos": 137,
+        "chunk": "11216",
+        "length": 5,
+        "literal_offset": 30,
+        "op_index": 11,
+        "single_delta_vs_current_bits": 1.8689161547117692,
+        "single_total_bits": 8924.671969749994,
+        "source_digit_pos": 225
+      },
+      {
+        "book": "3",
+        "book_pos": 29,
+        "chunk": "60199",
+        "length": 5,
+        "literal_offset": 12,
+        "op_index": 4,
+        "single_delta_vs_current_bits": 1.1250365080759366,
+        "single_total_bits": 8923.928090103358,
+        "source_digit_pos": 22
+      },
+      {
+        "book": "17",
+        "book_pos": 7,
+        "chunk": "477090",
+        "length": 6,
+        "literal_offset": 1,
+        "op_index": 1,
+        "single_delta_vs_current_bits": 0.9730124189045455,
+        "single_total_bits": 8923.776066014187,
+        "source_digit_pos": 208
+      }
+    ],
+    "total_bits": 8930.0586386927
+  },
+  "best_single_repair": {
+    "book": "2",
+    "book_pos": 71,
+    "chunk": "18003",
+    "length": 5,
+    "literal_offset": 2,
+    "op_index": 9,
+    "single_delta_vs_current_bits": 0.7031591519225913,
+    "single_total_bits": 8923.506212747205,
+    "source_digit_pos": 58
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "post_forced_repair_sext_not_promoted",
+  "compatible_sexts_tested": 57596,
+  "current_formula_bits": 8922.803053595282,
+  "current_score": {
+    "copied_digits": 10485,
+    "copy_address_bits": 3277.2179634860386,
+    "copy_bits": 5142.2179634860395,
+    "copy_items": 282,
+    "copy_length_code_bits": 1865,
+    "fixed_bits": 602.0,
+    "forced_literal_length_count": 8,
+    "forced_literal_length_saved_bits": 32,
+    "forced_literal_to_copy": 72,
+    "forced_remaining_short_to_literal": 8,
+    "forced_rule_violations": [],
+    "item_type_stream_bits": 243.85784219047886,
+    "literal_bits_no_payload": 366.0,
+    "literal_digits": 778,
+    "literal_payload_bits": 2568.7272479187645,
+    "literal_runs": 84,
+    "total_bits": 8922.803053595282,
+    "validation": {
+      "book_count": 70,
+      "books_roundtrip_ok": 70,
+      "errors": []
+    }
+  },
+  "incompatible_sexts_skipped": 17017,
+  "schema": "post_forced_repair_sext_search.v1",
+  "single_candidates": 22,
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_repair_formula_469.json",
+  "test": "53_post_forced_repair_sext_search",
+  "total_sexts_considered": 74613,
+  "translation_delta": "NONE"
+}

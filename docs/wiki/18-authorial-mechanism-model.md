@@ -366,6 +366,11 @@ compatible repairs. It tests `22168` compatible quintets, and the best quintet
 remains `+5.5` bits worse than the active formula. No quintet recipe is
 promoted.
 
+The post-forced-repair sext search extends the local frontier to six
+compatible repairs. It tests `57596` compatible sextets, and the best sextet
+remains `+7.3` bits worse than the active formula. No sextet recipe is
+promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -431,6 +436,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AS | `post_forced_repair_triple_not_promoted` |
 | H-GEN3AT | `post_forced_repair_quad_not_promoted` |
 | H-GEN3AU | `post_forced_repair_quint_not_promoted` |
+| H-GEN3AV | `post_forced_repair_sext_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -491,6 +497,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/50_post_forced_repair_triple_search.md)
 - [Post-forced-repair quad search](../../analysis/authorial_mechanism_20260620/reports/test_results/51_post_forced_repair_quad_search.md)
 - [Post-forced-repair quint search](../../analysis/authorial_mechanism_20260620/reports/test_results/52_post_forced_repair_quint_search.md)
+- [Post-forced-repair sext search](../../analysis/authorial_mechanism_20260620/reports/test_results/53_post_forced_repair_sext_search.md)
 
 ## Boundary
 
@@ -503,6 +510,6 @@ ledgers, remaining-short forced-literal rule, and forced short-suffix literal
 lengths, and the final forced-length local repair with retained payload
 `alpha=14` and retained absolute `source_digit_pos` addresses, as the current
 strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-and compatible triple/quartet/quintet repairs do not improve it; continue
+and compatible triple/quartet/quintet/sextet repairs do not improve it; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.
