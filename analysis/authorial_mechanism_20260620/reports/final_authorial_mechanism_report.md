@@ -401,5 +401,8 @@ Generated audits in this directory should be treated as the current state:
   adaptive copy-length improvement. Current settings remain best: copy-length
   `alpha=2`, literal Rice `k=3`, payload order `2` / `alpha=1`, and item-type
   order `3` / `alpha=2`.
+- `81_post_adaptive_pair_frontier`: retests compatible pairs under the adaptive
+  copy-length scorer. `17663` valid pairs are rescored; the best pair,
+  copy-to-literal `71288` plus `45765`, is `+2.516` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -407,6 +407,11 @@ hypotheses:
     status: post_adaptive_parameter_resweep_retains_current
     target: "literal-run length, literal-payload context, item-type context, and adaptive copy-length alpha after adaptive bounded copy-length coding"
     promotion_rule: "must beat the active adaptive copy-length formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BX:
+    name: "post adaptive pair frontier"
+    status: post_adaptive_pair_frontier_closed
+    target: "compatible pairs of local literal-to-copy and copy-to-literal edits after adaptive bounded copy-length coding"
+    promotion_rule: "must beat the active adaptive copy-length formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

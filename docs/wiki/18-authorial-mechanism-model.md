@@ -534,6 +534,11 @@ improvement changes the best declared parameters. It does not: copy-length
 `alpha=2`, literal Rice `k=3`, literal-payload context order `2` / `alpha=1`,
 and item-type context order `3` / `alpha=2` all remain best under full rescoring.
 
+The post-adaptive pair frontier then tests whether two local recipe edits
+improve together after the adaptive scorer closes the one-step frontier. It
+scores `17663` valid compatible pairs; the best pair, copy-to-literal `71288`
+plus `45765`, remains `+2.516` bits worse than the active adaptive formula.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -627,6 +632,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BU | `controlled_post_repair2_adaptive_copy_length_improvement` |
 | H-GEN3BV | `post_adaptive_copy_length_local_frontier_closed` |
 | H-GEN3BW | `post_adaptive_parameter_resweep_retains_current` |
+| H-GEN3BX | `post_adaptive_pair_frontier_closed` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -715,6 +721,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair2 adaptive copy-length compile](../../analysis/authorial_mechanism_20260620/reports/test_results/78_post_repair2_adaptive_copy_length_compile.md)
 - [Post-adaptive-copy-length local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/79_post_adaptive_copy_length_local_frontier.md)
 - [Post-adaptive parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/80_post_adaptive_parameter_resweep.md)
+- [Post-adaptive pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/81_post_adaptive_pair_frontier.md)
 
 ## Boundary
 
@@ -736,7 +743,7 @@ literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
 resweeps, plus post-repair2 copy-order and post-adaptive local-frontier retests,
-plus post-adaptive parameter resweeps, do not improve the current
+plus post-adaptive parameter and pair-frontier resweeps, do not improve the current
 frontier; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

@@ -310,8 +310,9 @@ as the best decodable address model, and a copy-order retest keeps source-first
 coding as the best decodable within-copy order. An adaptive bounded copy-length
 ledger then lowers the strongest mechanical bound to roughly `8576.0` bits;
 the immediate local recipe frontier closes again under that scorer, and the
-post-adaptive parameter resweep retains the declared settings. No semantic claim
-is promoted.
+post-adaptive parameter resweep retains the declared settings. The compatible
+pair frontier also closes under the adaptive scorer. No semantic claim is
+promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

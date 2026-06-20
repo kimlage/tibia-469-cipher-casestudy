@@ -314,6 +314,10 @@ Still open from the report:
   the active declared parameters remain best: copy-length `alpha=2`, literal
   Rice `k=3`, payload order `2` / `alpha=1`, and item-type order `3` /
   `alpha=2`.
+- post-adaptive pair frontier is now covered by
+  [`81_post_adaptive_pair_frontier.py`](scripts/81_post_adaptive_pair_frontier.py);
+  `17663` valid compatible pairs are fully rescored. The best pair,
+  copy-to-literal `71288` plus `45765`, is still `+2.516` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

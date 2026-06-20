@@ -204,6 +204,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   one-edit local recipe frontier after adaptive copy-length coding is active.
 - `scripts/80_post_adaptive_parameter_resweep.py` - retests declared
   parameters after adaptive copy-length coding is active.
+- `scripts/81_post_adaptive_pair_frontier.py` - retests compatible pairs of
+  local recipe edits after adaptive copy-length coding is active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

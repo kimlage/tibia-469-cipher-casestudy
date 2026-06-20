@@ -103,6 +103,7 @@ does not promote plaintext.
 | `H-GEN3BU` | `controlled_post_repair2_adaptive_copy_length_improvement` | `True` |
 | `H-GEN3BV` | `post_adaptive_copy_length_local_frontier_closed` | `True` |
 | `H-GEN3BW` | `post_adaptive_parameter_resweep_retains_current` | `True` |
+| `H-GEN3BX` | `post_adaptive_pair_frontier_closed` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |
