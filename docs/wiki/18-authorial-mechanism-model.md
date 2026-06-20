@@ -356,6 +356,11 @@ compatible repairs. It tests `1462` compatible triples from the same `22`
 single candidates, and the best triple remains `+2.7` bits worse than the
 active formula. No triple recipe is promoted.
 
+The post-forced-repair quad search extends the same local frontier to four
+compatible repairs. It tests `6596` compatible quartets, and the best quartet
+remains `+3.9` bits worse than the active formula. No quartet recipe is
+promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -419,6 +424,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AQ | `post_forced_repair_address_optimistic_only_not_promoted` |
 | H-GEN3AR | `post_forced_repair_pair_not_promoted` |
 | H-GEN3AS | `post_forced_repair_triple_not_promoted` |
+| H-GEN3AT | `post_forced_repair_quad_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -477,6 +483,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/48_post_forced_repair_address_model_search.md)
 - [Post-forced-repair pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/49_post_forced_repair_pair_search.md)
 - [Post-forced-repair triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/50_post_forced_repair_triple_search.md)
+- [Post-forced-repair quad search](../../analysis/authorial_mechanism_20260620/reports/test_results/51_post_forced_repair_quad_search.md)
 
 ## Boundary
 
@@ -489,5 +496,5 @@ ledgers, remaining-short forced-literal rule, and forced short-suffix literal
 lengths, and the final forced-length local repair with retained payload
 `alpha=14` and retained absolute `source_digit_pos` addresses, as the current
 strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-and compatible triples do not improve it; continue testing matrix origin,
+and compatible triple/quartet repairs do not improve it; continue testing matrix origin,
 topology holdouts, and official source watchlists under the same Outcome Ledger.

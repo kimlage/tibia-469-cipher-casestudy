@@ -257,6 +257,11 @@ hypotheses:
     status: post_forced_repair_triple_not_promoted
     target: "compatible triples of literal-to-copy repairs after the forced-length local repair"
     promotion_rule: "must beat the active forced-length repaired formula after exact rescoring"
+  H-GEN3AT:
+    name: "post forced-length repair quad search"
+    status: post_forced_repair_quad_not_promoted
+    target: "compatible quartets of literal-to-copy repairs after the forced-length local repair"
+    promotion_rule: "must beat the active forced-length repaired formula after exact rescoring"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
