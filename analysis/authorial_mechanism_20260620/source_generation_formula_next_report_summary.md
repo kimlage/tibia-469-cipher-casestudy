@@ -88,6 +88,10 @@ Still open from the report:
   [`30_post_repair_payload_alpha_sweep.py`](scripts/30_post_repair_payload_alpha_sweep.py);
   `alpha=14` remains the best declared adaptive payload parameter after the
   local repair.
+- post-repair copy-source address ledgers are now covered by
+  [`31_post_repair_address_model_search.py`](scripts/31_post_repair_address_model_search.py);
+  absolute `source_pos` remains the best decodable ledger, while the cheaper
+  literal-seed lower bound is still undecodable.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

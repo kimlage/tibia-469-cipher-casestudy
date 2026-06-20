@@ -181,5 +181,10 @@ Generated audits in this directory should be treated as the current state:
   alpha after the literal-to-copy repair changes the literal payload stream.
   `alpha=14` remains best at `2608.9` payload-plus-model bits; the nearest
   alternate is `alpha=13` at `2609.0` bits. No newer formula is promoted.
+- `31_post_repair_address_model_search`: retests copy-source address ledgers
+  after the literal-to-copy repair. Absolute `source_pos` remains the best
+  decodable ledger at `9537.3` bits. Literal-seed addressing reaches `9472.4`
+  bits only as an undecodable no-mode lower bound; the best decodable sparse
+  seed-run ledger costs `9548.0` bits, so no address model is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

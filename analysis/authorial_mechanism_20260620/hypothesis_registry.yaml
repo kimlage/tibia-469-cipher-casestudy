@@ -157,6 +157,11 @@ hypotheses:
     status: post_repair_payload_alpha_retains_14
     target: "adaptive literal-payload alpha after the literal-to-copy repair"
     promotion_rule: "must beat alpha=14 after declaration cost on the repaired literal payload stream"
+  H-GEN3Z:
+    name: "post-repair copy address models"
+    status: post_repair_address_optimistic_only_not_promoted
+    target: "copy source-address ledgers after the literal-to-copy repair"
+    promotion_rule: "must beat absolute source_pos in a decodable ledger on the repaired formula"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

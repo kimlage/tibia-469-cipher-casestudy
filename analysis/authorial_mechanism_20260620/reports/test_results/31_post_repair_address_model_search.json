@@ -1,0 +1,105 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "post_repair_address_optimistic_only_not_promoted",
+  "copy_items": 280,
+  "current_formula_bits": 9537.259303725601,
+  "fixed_nonaddress_bits": 4144.909326592135,
+  "models": [
+    {
+      "copy_bits": 5327.5318082534595,
+      "decodable": false,
+      "delta_vs_current_bits": -64.81816888000685,
+      "model": "literal_seed_address_optimistic_no_mode",
+      "seed_copy_count": 26,
+      "total_bits": 9472.441134845594
+    },
+    {
+      "copy_bits": 5392.349977133466,
+      "decodable": true,
+      "delta_vs_current_bits": 0.0,
+      "model": "absolute_flat_source_pos",
+      "total_bits": 9537.259303725601
+    },
+    {
+      "copy_bits": 5403.055356384575,
+      "decodable": true,
+      "delta_vs_current_bits": 10.705379251108752,
+      "details": {
+        "net_extra_bits": 10.705379251108372,
+        "seed_copy_count": 1,
+        "seed_run_count": 1,
+        "selected_seed_savings_bits": -1.705379251108373
+      },
+      "model": "literal_seed_sparse_run_list_seed_required",
+      "seed_copy_count": 1,
+      "total_bits": 9547.96468297671
+    },
+    {
+      "copy_bits": 5607.531808253461,
+      "decodable": true,
+      "delta_vs_current_bits": 215.18183111999497,
+      "model": "literal_seed_address_conservative_mode_per_copy",
+      "seed_copy_count": 26,
+      "total_bits": 9752.441134845596
+    },
+    {
+      "copy_bits": 7085.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1692.6500228665336,
+      "model": "book_delta_offset_delta_gamma",
+      "total_bits": 11229.909326592135
+    },
+    {
+      "copy_bits": 7237,
+      "decodable": true,
+      "delta_vs_current_bits": 1844.6500228665336,
+      "model": "book_delta_offset_gamma",
+      "total_bits": 11381.909326592135
+    },
+    {
+      "copy_bits": 7284.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1891.6500228665336,
+      "model": "back_distance_delta_gamma",
+      "total_bits": 11428.909326592135
+    },
+    {
+      "copy_bits": 7340.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1947.6500228665336,
+      "model": "source_pos_delta_gamma",
+      "total_bits": 11484.909326592135
+    },
+    {
+      "copy_bits": 7502,
+      "decodable": true,
+      "delta_vs_current_bits": 2109.6500228665336,
+      "model": "mixed_same_book_distance_else_book_offset",
+      "total_bits": 11646.909326592135
+    },
+    {
+      "copy_bits": 8147,
+      "decodable": true,
+      "delta_vs_current_bits": 2754.6500228665336,
+      "model": "back_distance_gamma",
+      "total_bits": 12291.909326592135
+    }
+  ],
+  "same_book_copy_items": 7,
+  "schema": "post_repair_address_model_search.v1",
+  "seed_stats": {
+    "best_sparse_seed_copy_count": 1,
+    "best_sparse_seed_extra_bits": 10.705379251108372,
+    "best_sparse_seed_run_count": 1,
+    "optimistic_seed_savings_bits": 64.81816888000739,
+    "seed_positive_saving_copy_items": 26,
+    "seed_usable_copy_items": 69
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_literal_copy_repair_formula_469.json",
+  "test": "31_post_repair_address_model_search",
+  "translation_delta": "NONE"
+}

@@ -261,7 +261,8 @@ parameter set. Adaptive literal-payload coding lowers the bound again to
 roughly `9538.0` bits without changing the recipe; retesting address ledgers on
 that formula keeps absolute `source_pos` as the best decodable source ledger.
 A one-step literal-to-copy repair lowers the current bound to roughly `9537.3`
-bits, and a post-repair payload alpha sweep retains `alpha=14`.
+bits, a post-repair payload alpha sweep retains `alpha=14`, and a post-repair
+address retest again rejects literal-seed addressing as optimistic-only.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
