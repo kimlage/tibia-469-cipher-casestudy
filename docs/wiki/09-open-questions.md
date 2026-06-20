@@ -92,7 +92,7 @@ grid then retains that exact parameter set. Adaptive literal-payload coding
 improves the bound again to `9538.0` bits without changing the recipe. Retesting
 address ledgers on that formula keeps absolute `source_pos` as the best
 decodable ledger. A one-step literal-to-copy repair then improves the bound to
-`9537.3` bits. No plaintext,
+`9537.3` bits, and a post-repair payload sweep retains `alpha=14`. No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0

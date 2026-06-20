@@ -177,5 +177,9 @@ Generated audits in this directory should be treated as the current state:
   `972783` in book `8` with a prior copy from source position `370`, improving
   the formula from `9538.0` to `9537.3` bits. A follow-up one-step repair search
   after applying it finds no second improvement.
+- `30_post_repair_payload_alpha_sweep`: retests the adaptive literal-payload
+  alpha after the literal-to-copy repair changes the literal payload stream.
+  `alpha=14` remains best at `2608.9` payload-plus-model bits; the nearest
+  alternate is `alpha=13` at `2609.0` bits. No newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

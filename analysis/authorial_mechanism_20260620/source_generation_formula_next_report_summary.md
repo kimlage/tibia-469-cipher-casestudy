@@ -84,6 +84,10 @@ Still open from the report:
   [`29_literal_to_copy_repair_search.py`](scripts/29_literal_to_copy_repair_search.py);
   replacing one current literal substring with a valid prior copy improves the
   bound to `9537.3` bits and no second one-step repair improves it further.
+- post-repair payload alpha is now covered by
+  [`30_post_repair_payload_alpha_sweep.py`](scripts/30_post_repair_payload_alpha_sweep.py);
+  `alpha=14` remains the best declared adaptive payload parameter after the
+  local repair.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

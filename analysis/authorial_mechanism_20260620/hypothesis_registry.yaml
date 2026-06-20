@@ -152,6 +152,11 @@ hypotheses:
     status: controlled_literal_to_copy_single_repair_improvement
     target: "single local replacement of a current literal substring by a valid earlier copy"
     promotion_rule: "must reduce exact current formula cost, roundtrip 70/70, and preserve translation_delta NONE"
+  H-GEN3Y:
+    name: "post-repair literal payload alpha sweep"
+    status: post_repair_payload_alpha_retains_14
+    target: "adaptive literal-payload alpha after the literal-to-copy repair"
+    promotion_rule: "must beat alpha=14 after declaration cost on the repaired literal payload stream"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
