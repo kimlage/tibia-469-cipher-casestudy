@@ -276,6 +276,9 @@ bits.
 - `scripts/109_post_itemctx_param_copy_length_alpha_payload_pair_search.py` -
   retests joint copy-length alpha-by-context and literal-payload context pairs
   after the separate post-itemctx_param frontiers.
+- `scripts/110_post_itemctx_param_copy_alpha_payload_item_type_triple_search.py` -
+  retests joint copy-length alpha-by-context, literal-payload, and item-type
+  context triples after the separate post-itemctx_param frontiers.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

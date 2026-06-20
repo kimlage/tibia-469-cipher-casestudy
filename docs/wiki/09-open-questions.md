@@ -4,7 +4,7 @@ page_type: open_questions
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-19
+updated_at: 2026-06-20
 moc_parent: README.md
 source_refs: [docs/469_final_report.md]
 ---
@@ -226,7 +226,9 @@ the best changed pair is `+0.415` bits worse, and the best pair with both
 components changed is `+1.804` bits worse. A copy-length alpha/payload pair
 sweep then closes `315469` implied pairs; the best changed pair is `+1.389`
 bits worse, and the best pair with both components changed is `+3.138` bits
-worse.
+worse. A copy-alpha/payload/item-type triple sweep then closes `5370544256`
+implied triples; the best changed triple is `+0.415` bits worse, and the best
+triple with all three components changed is `+3.553` bits worse.
 
 ## Ranked: what would unlock progress
 

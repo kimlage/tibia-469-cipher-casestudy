@@ -467,6 +467,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `315469` pairs. Component minima keep the active pair best; the best changed
   pair is `+1.389` bits worse and the best pair with both components changed is
   `+3.138` bits worse.
+- post-itemctx_param copy-alpha/payload/item-type triple search is now covered by
+  [`110_post_itemctx_param_copy_alpha_payload_item_type_triple_search.py`](scripts/110_post_itemctx_param_copy_alpha_payload_item_type_triple_search.py);
+  `4097` copy-length alpha rows, `77` literal-payload contexts, and `17024`
+  item-type candidates imply `5370544256` triples. Component minima keep the
+  active triple best; the best changed triple is `+0.415` bits worse and the
+  best triple with all three components changed is `+3.553` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
