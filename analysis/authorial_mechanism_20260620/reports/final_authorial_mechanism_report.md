@@ -320,5 +320,10 @@ Generated audits in this directory should be treated as the current state:
   previously emitted digit improves the active mechanical bound from `8922.8`
   to `8842.0` bits after charged declaration bits, with 70/70 roundtrip and
   `translation_delta: NONE`.
+- `62_literal_payload_context_order_sweep`: sweeps deterministic
+  previous-emitted-digit context orders on the same fixed recipe. A declared
+  order-2 context with `alpha=1` improves the active mechanical bound from
+  `8842.0` to `8805.7` bits after charged order bits, with 70/70 roundtrip and
+  `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

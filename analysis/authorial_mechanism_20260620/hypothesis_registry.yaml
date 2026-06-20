@@ -312,6 +312,11 @@ hypotheses:
     status: controlled_literal_payload_context_improvement
     target: "literal payload coding conditioned on the previously emitted digit after the forced-length local repair"
     promotion_rule: "must beat the active zero-order literal payload model after charged alpha and context-family declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BE:
+    name: "literal payload context order sweep"
+    status: controlled_literal_payload_context_order_improvement
+    target: "literal payload coding conditioned on a declared previous-emitted-digit context order"
+    promotion_rule: "must beat the active order-1 context model after charged alpha, family, and context-order declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

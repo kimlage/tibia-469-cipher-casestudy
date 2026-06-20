@@ -219,6 +219,11 @@ Still open from the report:
   conditioning each literal payload digit on the previously emitted digit in
   the already generated stream is decodable and improves the active formula
   from `8922.8` to `8842.0` bits after charged alpha and context-family bits.
+- literal payload context-order sweep is now covered by
+  [`62_literal_payload_context_order_sweep.py`](scripts/62_literal_payload_context_order_sweep.py);
+  a declared previous-emitted-digit context of order `2` with `alpha=1`
+  further improves the active formula from `8842.0` to `8805.7` bits after
+  charged order bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

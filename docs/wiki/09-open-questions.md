@@ -125,7 +125,9 @@ origin (`16/55`, control `p=0.4194`).
 A later literal-payload context audit improves only the mechanical fabrication
 bound: coding each literal payload digit from the previously emitted digit
 lowers the best 70/70 generator from `8922.8` to `8842.0` bits after charged
-declaration bits. This does not change the semantic state.
+declaration bits. A follow-up context-order sweep lowers it again to `8805.7`
+bits with a declared order-2 previous-emitted-digit context. This does not
+change the semantic state.
 
 ## Ranked: what would unlock progress
 
