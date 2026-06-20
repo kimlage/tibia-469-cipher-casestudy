@@ -307,5 +307,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `255476` compatible eleven-repair sets, and the
   best set is `+17.8` bits worse than the active formula.
+- `59_post_forced_repair_twelve_search`: tests whether twelve compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `184756` compatible twelve-repair sets, and the
+  best set is `+20.6` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
