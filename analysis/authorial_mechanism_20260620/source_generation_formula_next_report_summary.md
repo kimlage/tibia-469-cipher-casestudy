@@ -430,6 +430,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   book-midpoint payload context saves `2.251` component bits but remains
   `+1.749` bits worse after declaration, so the global previous-emitted-digit
   payload model remains active.
+- post-itemctx_param item-type context family search is now covered by
+  [`104_post_itemctx_param_item_type_context_family_search.py`](scripts/104_post_itemctx_param_item_type_context_family_search.py);
+  `17024` family/order/alpha candidates are rescored. The active searched split
+  at book `6`, order `1`, alpha `2` remains best at `8561.792` bits; the
+  nearest alternate is split `9`, order `1`, alpha `2`, still `+1.335` bits
+  worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

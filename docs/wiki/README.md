@@ -338,8 +338,9 @@ remain optimistic-only: literal-seed no-mode reaches `8492.396` bits but the
 best decodable seed-run ledger is worse, and mixed copy order needs free mode
 bits. Post-itemctx_param copy-length context and alpha-grid retests also retain
 the fixed midpoint `alpha=1` model. Literal-payload context retesting keeps the
-global previous-emitted-digit payload model. No
-semantic claim is promoted.
+global previous-emitted-digit payload model. A broader item-type context family
+sweep also keeps the active split `6`, order `1`, alpha `2` model. No semantic
+claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

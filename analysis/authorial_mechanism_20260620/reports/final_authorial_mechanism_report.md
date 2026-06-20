@@ -494,5 +494,10 @@ Generated audits in this directory should be treated as the current state:
   context saves `2.251` component bits but remains `+1.749` bits worse after
   declaration, so the global previous-emitted-digit payload model remains
   active.
+- `104_post_itemctx_param_item_type_context_family_search`: rescored `17024`
+  item-type family/order/alpha candidates after itemctx_param. The active
+  searched split at book `6`, order `1`, alpha `2` remains best at `8561.792`
+  bits; the nearest alternate, split `9`, order `1`, alpha `2`, is `+1.335`
+  bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

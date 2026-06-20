@@ -258,6 +258,9 @@ bits.
   midpoint smoothing alphas after the itemctx_param promotion.
 - `scripts/103_post_itemctx_param_literal_payload_context_search.py` -
   retests simple literal-payload contexts after the itemctx_param promotion.
+- `scripts/104_post_itemctx_param_item_type_context_family_search.py` -
+  retests item-type extra-context families with order/alpha sweep after the
+  itemctx_param promotion.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

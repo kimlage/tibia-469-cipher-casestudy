@@ -209,7 +209,10 @@ first-half `alpha=1` plus second-half `alpha=2` remains `+1.389` bits worse
 after declaration cost. The post-itemctx_param literal-payload context search
 also retains the global previous-emitted-digit payload model; book-midpoint
 payload context saves `2.251` component bits but remains `+1.749` bits worse
-after declaration.
+after declaration. A broader item-type context family search then rescored
+`17024` family/order/alpha candidates and still retained the active searched
+split at book `6`, order `1`, alpha `2`; the nearest alternate is `+1.335`
+bits worse.
 
 ## Ranked: what would unlock progress
 
