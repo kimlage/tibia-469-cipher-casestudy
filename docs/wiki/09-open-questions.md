@@ -191,6 +191,10 @@ still `+3.914` bits worse; this is not an exhaustive closure outside top60.
 The item-type context search then promotes a decodable searched split at book
 `6`, lowering the active mechanical bound to `8569.652` bits; the cheaper
 current-item-length row is retained only as non-decodable lower-bound evidence.
+A post-itemctx parameter resweep then promotes item-type extra-context order
+`1` with `alpha=2`, lowering the active mechanical bound again to `8561.792`
+bits while leaving literal-run length, literal payload, and midpoint
+copy-length parameters unchanged.
 
 ## Ranked: what would unlock progress
 

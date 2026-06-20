@@ -462,5 +462,10 @@ Generated audits in this directory should be treated as the current state:
   contexts. The current-item-length row is cheaper but non-decodable in the
   active item-order contract. The best decodable row declares split book `6`
   and lowers the bound from `8572.267` to `8569.652` bits.
+- `96_post_itemctx_parameter_resweep`: retests declared parameters after split
+  book `6` is active. Item-type extra-context order `1` with `alpha=2`
+  promotes, lowering the bound from `8569.652` to `8561.792` bits. Literal-run
+  length, literal payload, and midpoint copy-length parameters remain
+  unchanged.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -482,6 +482,11 @@ hypotheses:
     status: controlled_post_midpoint_item_type_context_improvement
     target: "simple contexts for the adaptive item-type previous-item model"
     promotion_rule: "must beat active global item-type model after charged context declaration bits while preserving forced rules, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3CM:
+    name: "post itemctx parameter resweep"
+    status: controlled_post_itemctx_parameter_improvement
+    target: "declared literal length, literal payload, item-type extra-context, and midpoint copy-length parameters after item-type split context"
+    promotion_rule: "must beat active itemctx formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

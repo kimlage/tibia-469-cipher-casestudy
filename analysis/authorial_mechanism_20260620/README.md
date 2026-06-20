@@ -15,7 +15,9 @@ The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
 bound is the adaptive bounded copy-length sequential LZ formula with a fixed
-book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
+book-midpoint copy-length context, `alpha=1`, declared item-type split at book
+`6`, and item-type extra-context order `1` / `alpha=2`, at roughly `8561.8`
+bits.
 
 ## Gates
 
@@ -238,6 +240,9 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   triples among the top 60 local single-edit candidates after pair closure.
 - `scripts/95_post_midpoint_alpha1_item_type_context_search.py` - tests
   simple contexts for the adaptive item-type model and promotes split book `6`.
+- `scripts/96_post_itemctx_parameter_resweep.py` - retests declared
+  parameters after split book `6` is active and promotes item-type
+  extra-context order `1` / `alpha=2`.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

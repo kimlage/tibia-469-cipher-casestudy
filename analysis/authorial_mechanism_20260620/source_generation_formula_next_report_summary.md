@@ -392,6 +392,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   the non-decodable current-item-length context is recorded only as a lower
   bound, while a declared book split at `6` is decodable and lowers the active
   bound from `8572.267` to `8569.652` bits.
+- post-itemctx parameter resweep is now covered by
+  [`96_post_itemctx_parameter_resweep.py`](scripts/96_post_itemctx_parameter_resweep.py);
+  after split book `6` is active, item-type extra-context order `1` with
+  `alpha=2` lowers the active bound again from `8569.652` to `8561.792` bits.
+  Literal-run length, literal payload, and midpoint copy-length parameters
+  remain unchanged.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

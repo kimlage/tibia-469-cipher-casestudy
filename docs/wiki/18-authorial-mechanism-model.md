@@ -93,6 +93,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_minaddr_repair2_formula_469` | `8574.4` | `1.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_minaddr_repair2_formula_469` | `8572.3` | `2.1` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_minaddr_repair2_formula_469` | `8569.7` | `2.6` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469` | `8561.8` | `7.9` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -630,6 +631,13 @@ book split at `6` for the item-type prior, reducing item-type bits from
 `238.887` to `227.272` and lowering the full bound from `8572.267` to
 `8569.652` bits.
 
+The post-itemctx parameter resweep then retests declared parameters after that
+split context is active. Item-type extra-context order `1` with `alpha=2`
+reduces item-type bits again to `223.412`, lowering the full bound from
+`8569.652` to `8561.792` bits. Literal-run length Rice `k=3`, literal-payload
+context order `2` / `alpha=1`, and midpoint copy-length `alpha=1` remain
+unchanged.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -738,6 +746,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CJ | `post_midpoint_literal_payload_context_not_promoted` |
 | H-GEN3CK | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` |
 | H-GEN3CL | `controlled_post_midpoint_item_type_context_improvement` |
+| H-GEN3CM | `controlled_post_itemctx_parameter_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -841,6 +850,7 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/93_post_midpoint_alpha1_literal_payload_context_search.md)
 - [Post-midpoint alpha1 top60 triple probe](../../analysis/authorial_mechanism_20260620/reports/test_results/94_post_midpoint_alpha1_top60_triple_probe.md)
 - [Post-midpoint alpha1 item-type context search](../../analysis/authorial_mechanism_20260620/reports/test_results/95_post_midpoint_alpha1_item_type_context_search.md)
+- [Post-itemctx parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/96_post_itemctx_parameter_resweep.md)
 
 ## Boundary
 
@@ -858,8 +868,9 @@ contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
 copy-length prior and final `alpha=1`, as the current strongest copy/reference
-fabrication bound, plus a declared item-type prior split at book `6`, as the
-current strongest copy/reference fabrication bound at roughly `8569.7` bits.
+fabrication bound, plus a declared item-type prior split at book `6` and
+item-type extra-context order `1` / `alpha=2`, as the current strongest
+copy/reference fabrication bound at roughly `8561.8` bits.
 Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
@@ -872,7 +883,8 @@ not improve the current frontier; the post-alpha1 context resweep retains the
 midpoint context, and the per-context alpha grid retains shared `alpha=1`.
 The literal-payload context search also retains the global payload model; the
 bounded top60 triple probe does not improve the current frontier inside its
-declared scope.
+declared scope. The post-itemctx parameter resweep promotes only the item-type
+extra-context parameter, not a new recipe, row0 origin, or semantic reading.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.
