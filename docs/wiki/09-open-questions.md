@@ -266,6 +266,9 @@ The component ablation audit then simplifies the generation explanation:
 copy-length midpoint survives, but literal payload order-1 and item-type
 split-only generalize better than the active higher-context compression-bound
 details.
+The simplified generation profile compile keeps the same recipe and validates
+`70/70` roundtrip, but costs `8613.581` bits (`+51.789` versus the active
+bound), so it is an explanatory profile rather than a stronger compressor.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

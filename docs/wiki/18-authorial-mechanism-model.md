@@ -827,6 +827,12 @@ book-6 split alone than with the active split plus previous-item context.
 Therefore the `8561.792` code remains the compression bound, but the simpler
 holdout winners are the cleaner generation-explanation components.
 
+The simplified generation profile compile then measures those holdout-preferred
+components on the full corpus. The profile keeps the same recipe and validates
+`70/70` roundtrip, but costs `8613.581` bits, `+51.789` versus the active
+compression bound. It is therefore useful as `generation_explanation_profile`,
+not as a promoted lower MDL code.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1094,6 +1100,7 @@ book generation, not row0 pair-cell placement.
 - [Row0 origin frontier audit](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md)
 - [Prequential order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/120_prequential_order_control_audit.md)
 - [Prequential component ablation audit](../../analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.md)
+- [Simplified generation profile compile](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md)
 
 ## Boundary
 

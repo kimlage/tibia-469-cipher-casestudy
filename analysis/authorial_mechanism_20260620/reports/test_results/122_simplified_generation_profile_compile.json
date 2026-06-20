@@ -1,0 +1,47 @@
+{
+  "active_compression_bound_bits": 8561.791947641772,
+  "boundary": {
+    "authorial_intent_claim": false,
+    "compression_bound_changed": false,
+    "generation_explanation_profile_compiled": true,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "simplified_generation_profile_costs_more_than_compression_bound",
+  "components": {
+    "copy_length": {
+      "bits": 1631.4941403059527,
+      "profile": "active_midpoint",
+      "reason": "Best online and frozen holdout component in audit 121."
+    },
+    "item_type": {
+      "active_bits": 223.4118788124663,
+      "active_profile": "active_split6_prev1",
+      "delta_bits": -3.125141358336805,
+      "reason": "Split-only wins prefix holdout in audit 121, despite costing more on the full corpus.",
+      "simplified_bits": 220.2867374541295,
+      "simplified_profile": "split6_only"
+    },
+    "literal_payload": {
+      "active_bits": 2434.0947004221503,
+      "active_profile": "active_order2",
+      "delta_bits": 54.91444309233111,
+      "reason": "Order-1 wins prefix holdout in audit 121, despite costing more on the full corpus.",
+      "simplified_bits": 2489.0091435144814,
+      "simplified_profile": "order1_previous_digit"
+    }
+  },
+  "cost_basis": "Stream-substitution profile using the active validated recipe and active fixed declaration ledger. This is intentionally not promoted as a fully re-declared compression formula.",
+  "delta_vs_compression_bound_bits": 51.78930173399385,
+  "schema": "simplified_generation_profile_compile.v1",
+  "simplified_generation_profile_bits": 8613.581249375766,
+  "source_ablation_audit": "analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.json",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469.json",
+  "test": "122_simplified_generation_profile_compile",
+  "translation_delta": "NONE",
+  "validation": {
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "errors": []
+  }
+}

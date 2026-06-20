@@ -368,6 +368,9 @@ random same-size train-book sets usually save more bits, so the signal is
 The component ablation audit then keeps copy-length midpoint as predictive but
 simplifies generation explanation toward literal payload order-1 and item-type
 split-only, leaving the compression bound unchanged.
+The simplified generation profile compile then measures that profile at
+`8613.581` bits with `70/70` roundtrip, useful as explanation but not as a
+lower MDL code.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

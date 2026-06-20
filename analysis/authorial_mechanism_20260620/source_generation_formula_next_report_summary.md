@@ -549,6 +549,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   previous-one-digit context and item type generalizes better with split-only
   context. The active `8561.792` bit code remains the compression bound, while
   the generation explanation is simplified.
+- simplified generation-profile compilation is now covered by
+  [`122_simplified_generation_profile_compile.py`](scripts/122_simplified_generation_profile_compile.py);
+  the holdout-preferred profile roundtrips `70/70` but costs `8613.581` bits,
+  `+51.789` versus the active bound. It is retained as
+  `generation_explanation_profile`, not as a stronger compressor.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

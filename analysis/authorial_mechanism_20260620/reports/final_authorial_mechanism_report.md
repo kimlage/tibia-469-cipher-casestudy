@@ -590,5 +590,9 @@ Generated audits in this directory should be treated as the current state:
   literal payload `order1_previous_digit` beats active order-2 and item-type
   `split6_only` beats active split-plus-previous-item. The result simplifies
   generation explanation without changing the `8561.792` compression bound.
+- `122_simplified_generation_profile_compile`: measures the holdout-preferred
+  simplified profile on the full corpus. It roundtrips `70/70` at `8613.581`
+  bits, `+51.789` versus the active compression bound, so it is retained as
+  `generation_explanation_profile` rather than promoted as a lower MDL code.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

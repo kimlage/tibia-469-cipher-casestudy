@@ -313,6 +313,9 @@ bits. Treat this as `compression_bound`, not as a final authorial method.
 - `scripts/121_prequential_component_ablation_audit.py` - ablates learned
   component contexts under prefix holdout and separates compression-bound
   refinements from simpler generation-explanation components.
+- `scripts/122_simplified_generation_profile_compile.py` - compiles the
+  simplified holdout-preferred generation profile against the full corpus and
+  confirms it is explanatory, not a lower compression bound.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
