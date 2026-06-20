@@ -371,5 +371,9 @@ Generated audits in this directory should be treated as the current state:
   promotes: `45765` in book `34` becomes a copy from source digit position
   `183`, improving the active 70/70 formula from `8611.408` to `8609.773` bits
   with `translation_delta: NONE`.
+- `73_post_minaddr_repair2_local_frontier`: retests the same frontier after
+  the `45765` repair. No further one-step edit promotes: the best candidate is
+  copy-to-literal `94343` in book `26`, but it is `+0.121` bits worse than the
+  active `8609.773` bit formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

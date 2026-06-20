@@ -145,7 +145,8 @@ again to `8613.1` bits. A local repair retest under that cost model then turns
 literal `11216` in book `2` into a valid prior copy and lowers the bound to
 `8611.4` bits. A follow-up local-frontier pass then turns `45765` in book `34`
 back into a valid prior copy under the new cost model, lowering the bound to
-`8609.8` bits.
+`8609.8` bits. A further one-step local-frontier pass closes this immediate
+repair space: the best candidate is `+0.121` bits worse.
 
 ## Ranked: what would unlock progress
 

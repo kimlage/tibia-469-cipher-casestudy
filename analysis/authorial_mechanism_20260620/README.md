@@ -187,6 +187,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   address cost model.
 - `scripts/72_post_minaddr_repair_local_frontier.py` - retests the same local
   frontier after the first minaddr literal-to-copy repair changes the recipe.
+- `scripts/73_post_minaddr_repair2_local_frontier.py` - retests the local
+  frontier after the second minaddr literal-to-copy repair and records closure.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
