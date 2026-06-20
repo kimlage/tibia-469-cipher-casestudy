@@ -71,6 +71,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   Hellgate/bookcase orders against the DP sequential LZ generator.
 - `scripts/17_literal_seed_address_model_search.py` - tests literal-seed
   addressing against absolute source positions in the DP copy ledger.
+- `scripts/18_literal_seed_grouped_mode_search.py` - tests whether grouped
+  source-mode ledgers rescue literal-seed addressing.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

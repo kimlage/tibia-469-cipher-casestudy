@@ -108,5 +108,11 @@ Generated audits in this directory should be treated as the current state:
   source-mode bit is charged for a decodable mixed ledger, the total becomes
   `10033.8` bits (`+210.5`). The model is therefore a useful provenance clue,
   not a promoted formula.
+- `18_literal_seed_grouped_mode_search`: tests whether that mode cost can be
+  paid by grouped ledgers instead of once per copy. The best seed-using
+  decodable ledger is a sparse seed-run list at `9830.0` bits (`+6.7`), while
+  the RLE seed-required mask costs `9843.0` bits (`+19.7`). Grouping narrows the
+  penalty but still does not beat the current `9823.3` absolute-address
+  formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

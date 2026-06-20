@@ -246,7 +246,8 @@ with translation delta zero. Follow-up address models do not improve it, but
 the committed copy graph/literal atlas now records source hubs and literal-seed
 reuse. Structured public Hellgate/bookcase orders were tested under DP LZ and
 do not beat numeric order. Literal-seed addressing is not promoted because
-mode bits erase the apparent gain.
+mode bits erase the apparent gain; grouped mode coding narrows but does not
+reverse that result.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

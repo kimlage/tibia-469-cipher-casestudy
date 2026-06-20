@@ -38,6 +38,10 @@ Still open from the report:
   [`17_literal_seed_address_model_search.py`](scripts/17_literal_seed_address_model_search.py);
   it improves only in an optimistic no-mode ledger and is rejected once
   source-mode bits are charged for decodability.
+- grouped source-mode coding for literal-seed addresses is now covered by
+  [`18_literal_seed_grouped_mode_search.py`](scripts/18_literal_seed_grouped_mode_search.py);
+  the best seed-using decodable grouped ledger still costs `9830.0` bits,
+  worse than the current `9823.3` absolute-address formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

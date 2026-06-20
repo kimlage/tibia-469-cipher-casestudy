@@ -92,6 +92,11 @@ hypotheses:
     status: literal_seed_address_optimistic_only_not_promoted
     target: "copy source addresses through prior literal seed runs"
     promotion_rule: "must beat absolute source_pos after charging source-mode bits for a decodable mixed ledger"
+  H-GEN3M:
+    name: "literal seed grouped source-mode ledger"
+    status: literal_seed_grouped_mode_optimistic_only_not_promoted
+    target: "RLE or sparse-run source-mode coding for literal-seed copy addresses"
+    promotion_rule: "must beat absolute source_pos using at least one literal-seed address in a decodable grouped-mode ledger"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
