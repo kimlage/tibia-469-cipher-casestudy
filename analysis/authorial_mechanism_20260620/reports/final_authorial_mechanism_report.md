@@ -303,5 +303,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `286858` compatible decets, and the best decet is
   `+15.1` bits worse than the active formula.
+- `58_post_forced_repair_eleven_search`: tests whether eleven compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `255476` compatible eleven-repair sets, and the
+  best set is `+17.8` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

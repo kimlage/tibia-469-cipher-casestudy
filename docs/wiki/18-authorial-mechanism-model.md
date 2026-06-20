@@ -391,6 +391,11 @@ compatible repairs. It tests `286858` compatible decets, and the best decet
 remains `+15.1` bits worse than the active formula. No decet recipe is
 promoted.
 
+The post-forced-repair eleven-repair search extends the local frontier to
+eleven compatible repairs. It tests `255476` compatible eleven-repair sets, and
+the best set remains `+17.8` bits worse than the active formula. No
+eleven-repair recipe is promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -461,6 +466,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AX | `post_forced_repair_oct_not_promoted` |
 | H-GEN3AY | `post_forced_repair_nonet_not_promoted` |
 | H-GEN3AZ | `post_forced_repair_decet_not_promoted` |
+| H-GEN3BA | `post_forced_repair_eleven_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -526,6 +532,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair oct search](../../analysis/authorial_mechanism_20260620/reports/test_results/55_post_forced_repair_oct_search.md)
 - [Post-forced-repair nonet search](../../analysis/authorial_mechanism_20260620/reports/test_results/56_post_forced_repair_nonet_search.md)
 - [Post-forced-repair decet search](../../analysis/authorial_mechanism_20260620/reports/test_results/57_post_forced_repair_decet_search.md)
+- [Post-forced-repair eleven-repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md)
 
 ## Boundary
 
@@ -538,6 +545,6 @@ ledgers, remaining-short forced-literal rule, and forced short-suffix literal
 lengths, and the final forced-length local repair with retained payload
 `alpha=14` and retained absolute `source_digit_pos` addresses, as the current
 strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-and compatible triple/quartet/quintet/sextet/septet/octet/nonet/decet repairs do not improve it; continue
+and compatible triple/quartet/quintet/sextet/septet/octet/nonet/decet/eleven-repair sets do not improve it; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

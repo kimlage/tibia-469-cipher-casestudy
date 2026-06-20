@@ -200,6 +200,10 @@ Still open from the report:
   [`57_post_forced_repair_decet_search.py`](scripts/57_post_forced_repair_decet_search.py);
   the same `22` single candidates yield `286858` compatible decets, and the
   best decet is `+15.1` bits worse than the active formula.
+- post-forced-repair eleven-repair search is now covered by
+  [`58_post_forced_repair_eleven_search.py`](scripts/58_post_forced_repair_eleven_search.py);
+  the same `22` single candidates yield `255476` compatible eleven-repair
+  sets, and the best set is `+17.8` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

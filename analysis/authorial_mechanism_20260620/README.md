@@ -152,6 +152,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   of literal-to-copy repairs after the forced-length repair.
 - `scripts/57_post_forced_repair_decet_search.py` - tests compatible decets
   of literal-to-copy repairs after the forced-length repair.
+- `scripts/58_post_forced_repair_eleven_search.py` - tests compatible
+  eleven-repair sets after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

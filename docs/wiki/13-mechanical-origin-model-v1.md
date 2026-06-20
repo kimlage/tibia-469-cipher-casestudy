@@ -103,6 +103,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair oct search | the same `22` candidates produce `195806` compatible octets, but the best octet is `+11.0` bits worse than the active formula | rejected refinement |
 | Post forced-length repair nonet search | the same `22` candidates produce `262548` compatible nonets, but the best nonet is `+12.9` bits worse than the active formula | rejected refinement |
 | Post forced-length repair decet search | the same `22` candidates produce `286858` compatible decets, but the best decet is `+15.1` bits worse than the active formula | rejected refinement |
+| Post forced-length repair eleven-repair search | the same `22` candidates produce `255476` compatible eleven-repair sets, but the best set is `+17.8` bits worse than the active formula | rejected refinement |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -161,6 +162,7 @@ Primary sources:
 [post_forced_repair_oct_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/55_post_forced_repair_oct_search.md),
 [post_forced_repair_nonet_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/56_post_forced_repair_nonet_search.md),
 [post_forced_repair_decet_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/57_post_forced_repair_decet_search.md),
+[post_forced_repair_eleven_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
