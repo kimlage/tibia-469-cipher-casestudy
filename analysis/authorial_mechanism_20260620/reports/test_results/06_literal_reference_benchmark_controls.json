@@ -1,0 +1,387 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_mechanical_improvement_no_semantics",
+  "controls": {
+    "component_digit_shuffle": {
+      "max": 0,
+      "mean": 0,
+      "min": 0,
+      "p_ge_observed": 0.0024937655860349127,
+      "reference_items_max": 0,
+      "reference_items_mean": 0,
+      "runs": 400,
+      "sd": 0.0
+    },
+    "random_length_matched_literals": {
+      "max": 0,
+      "mean": 0,
+      "min": 0,
+      "p_ge_observed": 0.0024937655860349127,
+      "reference_items_max": 0,
+      "reference_items_mean": 0,
+      "runs": 400,
+      "sd": 0.0
+    },
+    "shuffled_book_exclusion": {
+      "max": 1002.1351260203706,
+      "mean": 759.564507348895,
+      "min": 614.3047027435053,
+      "p_ge_observed": 0.9850374064837906,
+      "reference_items_max": 29,
+      "reference_items_mean": 23.9275,
+      "runs": 400,
+      "sd": 64.30455808033892
+    }
+  },
+  "inputs": {
+    "base_formula": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+    "reference_formula": "analysis/authorial_mechanism_20260620/literal_reference_formula_469.json",
+    "tape_formula": "analysis/generator_search_20260618/tape_based_formula_469.json"
+  },
+  "model_costs": [
+    {
+      "delta_vs_previous_bits": 0.0,
+      "inventory_bits": 14829.087015577185,
+      "literal_digits": 2083,
+      "model": "mechanical_formula_469",
+      "recipe_bits_rough": 9521.576221650375,
+      "roundtrip": true,
+      "schema": "mechanical_469_formula.v1",
+      "total_bits_rough": 24350.66323722756
+    },
+    {
+      "delta_vs_previous_bits": 6597.13442105809,
+      "inventory_bits": 8653.39890067204,
+      "literal_digits": 1976,
+      "model": "tape_based_formula_469",
+      "recipe_bits_rough": 9100.129915497428,
+      "roundtrip": true,
+      "schema": "tape_based_469_formula.v1",
+      "total_bits_rough": 17753.52881616947
+    },
+    {
+      "delta_vs_previous_bits": 1167.3963669397817,
+      "inventory_bits": 8653.39890067204,
+      "literal_digits": 1397,
+      "model": "literal_reference_formula_469",
+      "recipe_bits_rough": 7932.733548557645,
+      "roundtrip": true,
+      "schema": "literal_reference_tape_formula.v1",
+      "total_bits_rough": 16586.132449229688
+    }
+  ],
+  "real_scores": {
+    "exclude_touched_book_components": {
+      "considered_digits": 1894,
+      "considered_items": 79,
+      "reference_items": 20,
+      "referenced_digits": 321,
+      "saved_bits": 646.3389184588433,
+      "top_hits": [
+        {
+          "book": "29",
+          "component_id": "T02",
+          "length": 34,
+          "ordinal": 1,
+          "saved_bits": 91.94555522617031
+        },
+        {
+          "book": "33",
+          "component_id": "T01",
+          "length": 29,
+          "ordinal": 0,
+          "saved_bits": 75.3359147517335
+        },
+        {
+          "book": "44",
+          "component_id": "T02",
+          "length": 28,
+          "ordinal": 2,
+          "saved_bits": 72.01398665684614
+        },
+        {
+          "book": "36",
+          "component_id": "T01",
+          "length": 25,
+          "ordinal": 4,
+          "saved_bits": 62.04820237218405
+        },
+        {
+          "book": "65",
+          "component_id": "T01",
+          "length": 21,
+          "ordinal": 2,
+          "saved_bits": 48.760489992634604
+        },
+        {
+          "book": "8",
+          "component_id": "T01",
+          "length": 21,
+          "ordinal": 1,
+          "saved_bits": 48.760489992634604
+        },
+        {
+          "book": "19",
+          "component_id": "T01",
+          "length": 19,
+          "ordinal": 3,
+          "saved_bits": 42.11663380285988
+        },
+        {
+          "book": "41",
+          "component_id": "T06",
+          "length": 16,
+          "ordinal": 2,
+          "saved_bits": 32.150849518197795
+        },
+        {
+          "book": "39",
+          "component_id": "T04",
+          "length": 15,
+          "ordinal": 2,
+          "saved_bits": 28.828921423310433
+        },
+        {
+          "book": "11",
+          "component_id": "T00",
+          "length": 14,
+          "ordinal": 1,
+          "saved_bits": 25.50699332842307
+        },
+        {
+          "book": "32",
+          "component_id": "T00",
+          "length": 14,
+          "ordinal": 0,
+          "saved_bits": 25.50699332842307
+        },
+        {
+          "book": "31",
+          "component_id": "T05",
+          "length": 13,
+          "ordinal": 7,
+          "saved_bits": 22.18506523353571
+        },
+        {
+          "book": "18",
+          "component_id": "T10",
+          "length": 12,
+          "ordinal": 2,
+          "saved_bits": 18.863137138648348
+        },
+        {
+          "book": "37",
+          "component_id": "T00",
+          "length": 10,
+          "ordinal": 0,
+          "saved_bits": 12.219280948873624
+        },
+        {
+          "book": "44",
+          "component_id": "T03",
+          "length": 10,
+          "ordinal": 0,
+          "saved_bits": 12.219280948873624
+        },
+        {
+          "book": "66",
+          "component_id": "T10",
+          "length": 9,
+          "ordinal": 2,
+          "saved_bits": 8.89735285398626
+        },
+        {
+          "book": "69",
+          "component_id": "T11",
+          "length": 9,
+          "ordinal": 1,
+          "saved_bits": 8.89735285398626
+        },
+        {
+          "book": "52",
+          "component_id": "T07",
+          "length": 8,
+          "ordinal": 0,
+          "saved_bits": 5.5754247590988975
+        },
+        {
+          "book": "35",
+          "component_id": "T04",
+          "length": 7,
+          "ordinal": 0,
+          "saved_bits": 2.2534966642115357
+        },
+        {
+          "book": "64",
+          "component_id": "T02",
+          "length": 7,
+          "ordinal": 3,
+          "saved_bits": 2.2534966642115357
+        }
+      ]
+    },
+    "unrestricted": {
+      "considered_digits": 1894,
+      "considered_items": 79,
+      "reference_items": 36,
+      "referenced_digits": 579,
+      "saved_bits": 1167.3963669397826,
+      "top_hits": [
+        {
+          "book": "29",
+          "component_id": "T02",
+          "length": 34,
+          "ordinal": 1,
+          "saved_bits": 91.94555522617031
+        },
+        {
+          "book": "33",
+          "component_id": "T01",
+          "length": 29,
+          "ordinal": 0,
+          "saved_bits": 75.3359147517335
+        },
+        {
+          "book": "44",
+          "component_id": "T02",
+          "length": 28,
+          "ordinal": 2,
+          "saved_bits": 72.01398665684614
+        },
+        {
+          "book": "18",
+          "component_id": "T00",
+          "length": 26,
+          "ordinal": 0,
+          "saved_bits": 65.37013046707142
+        },
+        {
+          "book": "33",
+          "component_id": "T00",
+          "length": 26,
+          "ordinal": 2,
+          "saved_bits": 65.37013046707142
+        },
+        {
+          "book": "53",
+          "component_id": "T00",
+          "length": 26,
+          "ordinal": 1,
+          "saved_bits": 65.37013046707142
+        },
+        {
+          "book": "36",
+          "component_id": "T01",
+          "length": 25,
+          "ordinal": 4,
+          "saved_bits": 62.04820237218405
+        },
+        {
+          "book": "48",
+          "component_id": "T00",
+          "length": 23,
+          "ordinal": 0,
+          "saved_bits": 55.40434618240933
+        },
+        {
+          "book": "42",
+          "component_id": "T00",
+          "length": 22,
+          "ordinal": 0,
+          "saved_bits": 52.08241808752197
+        },
+        {
+          "book": "65",
+          "component_id": "T01",
+          "length": 21,
+          "ordinal": 2,
+          "saved_bits": 48.760489992634604
+        },
+        {
+          "book": "8",
+          "component_id": "T05",
+          "length": 21,
+          "ordinal": 1,
+          "saved_bits": 48.760489992634604
+        },
+        {
+          "book": "19",
+          "component_id": "T01",
+          "length": 19,
+          "ordinal": 3,
+          "saved_bits": 42.11663380285988
+        },
+        {
+          "book": "41",
+          "component_id": "T00",
+          "length": 18,
+          "ordinal": 0,
+          "saved_bits": 38.79470570797252
+        },
+        {
+          "book": "41",
+          "component_id": "T00",
+          "length": 17,
+          "ordinal": 4,
+          "saved_bits": 35.47277761308516
+        },
+        {
+          "book": "41",
+          "component_id": "T06",
+          "length": 16,
+          "ordinal": 2,
+          "saved_bits": 32.150849518197795
+        },
+        {
+          "book": "67",
+          "component_id": "T00",
+          "length": 16,
+          "ordinal": 2,
+          "saved_bits": 32.150849518197795
+        },
+        {
+          "book": "17",
+          "component_id": "T00",
+          "length": 15,
+          "ordinal": 3,
+          "saved_bits": 28.828921423310433
+        },
+        {
+          "book": "39",
+          "component_id": "T04",
+          "length": 15,
+          "ordinal": 2,
+          "saved_bits": 28.828921423310433
+        },
+        {
+          "book": "11",
+          "component_id": "T01",
+          "length": 14,
+          "ordinal": 1,
+          "saved_bits": 25.50699332842307
+        },
+        {
+          "book": "32",
+          "component_id": "T01",
+          "length": 14,
+          "ordinal": 0,
+          "saved_bits": 25.50699332842307
+        }
+      ]
+    }
+  },
+  "reference_policy": {
+    "component_count": 16,
+    "item_overhead_policy": "neutral_between_literal_and_reference_items",
+    "max_component_len": 953,
+    "max_literal_len": 115,
+    "per_reference_bits": 21
+  },
+  "schema": "literal_reference_benchmark_controls.v1",
+  "test": "06_literal_reference_benchmark_controls",
+  "translation_delta": "NONE"
+}

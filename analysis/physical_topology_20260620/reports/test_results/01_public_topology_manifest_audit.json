@@ -1,0 +1,65 @@
+{
+  "ambiguous_entries": 6,
+  "ambiguous_public_entries": [
+    "2",
+    "19",
+    "24",
+    "34",
+    "56",
+    "66"
+  ],
+  "classification": "partial_public_topology_ready_fine_topology_blocked",
+  "fine_topology_available": false,
+  "local_books_covered_by_any_candidate": 70,
+  "local_db_books": 70,
+  "manifest_path": "analysis/physical_topology_20260620/tables/hellgate_public_bookcase_manifest.csv",
+  "required_fine_fields": [
+    "book_id",
+    "source_location",
+    "room_or_library",
+    "shelf_or_container",
+    "tile_or_position",
+    "read_order",
+    "capture_source_url_or_commit",
+    "verification_date"
+  ],
+  "resolved_unique_entries": 65,
+  "schema": "public_topology_manifest_audit.v1",
+  "seed_entries": 71,
+  "source_checks": {
+    "hellgate_library_fandom": {
+      "blocked_use_present": true,
+      "community_not_official_gt": true,
+      "url_present": true,
+      "verified_on": "2026-06-20"
+    },
+    "isle_library_fandom": {
+      "blocked_use_present": true,
+      "community_not_official_gt": true,
+      "url_present": true,
+      "verified_on": "2026-06-20"
+    },
+    "kharos_fandom": {
+      "blocked_use_present": true,
+      "community_not_official_gt": true,
+      "url_present": true,
+      "verified_on": "2026-06-20"
+    },
+    "tibiasecrets_article166": {
+      "blocked_use_present": true,
+      "community_not_official_gt": true,
+      "url_present": true,
+      "verified_on": "2026-06-20"
+    },
+    "tibiawiki_br_469": {
+      "blocked_use_present": true,
+      "community_not_official_gt": true,
+      "url_present": true,
+      "verified_on": "2026-06-20"
+    }
+  },
+  "test": "01_public_topology_manifest_audit",
+  "translation_delta": "NONE",
+  "unmatched_entries": 0,
+  "unmatched_public_entries": []
+}

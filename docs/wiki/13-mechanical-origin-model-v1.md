@@ -53,6 +53,10 @@ The model is mechanical only. It is not a semantic decoder.
 | `row0` code table | 99-entry code->symbol substrate; byte-exact 70/70 reconstruction | accepted mechanical substrate |
 | Pair/mirror geometry | 54/55 unordered pairs pure; one conflict `{19,91}`; ordered surface has only missing `39` | accepted render/geometry layer |
 | Tape formula | 16 tape components, 62 module slices, 12 tape spans, 70/70 book roundtrip | accepted mechanical formula |
+| Literal-reference formula | 36 remaining literal items are replaced by references into existing tape components, saving roughly `1167.4` bits with 70/70 book roundtrip; component-shuffle and random-literal controls save `0.0` bits in 400 runs | controlled mechanical improvement |
+| Hierarchical reference formula | 16 tape components are themselves reconstructed by literal runs plus self-references, then the improved book recipes reconstruct 70/70 books at roughly `13858.5` bits | strongest structured tape/module generator |
+| Sequential LZ book formula | 70 books are emitted in numeric order as literal runs plus earlier/current-prefix digit references; `10190.0` rough bits, 70/70 roundtrip, digit-shuffle/random controls fail | strongest copy/reference upper bound |
+| Non-numeric LZ order search | best sampled order saves `186.0` gross bits but costs `332.5` bits to describe as a permutation | rejected unless externally supplied |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -60,6 +64,11 @@ The model is mechanical only. It is not a semantic decoder.
 
 Primary sources:
 [tape_based_formula_report.md](../../analysis/generator_search_20260618/tape_based_formula_report.md),
+[literal_reference_benchmark_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/06_literal_reference_benchmark_controls.md),
+[tape_inventory_self_reference_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/07_tape_inventory_self_reference_search.md),
+[hierarchical_reference_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/08_hierarchical_reference_formula_compile.md),
+[sequential_lz_book_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/10_sequential_lz_book_formula_compile.md),
+[sequential_lz_order_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/11_sequential_lz_order_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
@@ -77,6 +86,7 @@ the origin formula.
 | Chayenne | compatible with 469 module/copy layer, but not an attested plaintext or training source |
 | ML zero signal | confirms local render predictability; does not discover a matrix formula |
 | Eye/blink arity | `5 eyes -> C(5,2)=10 -> 55 cells` matches the row0 scale, but K5/5x2 tests reject it as the pair-cell formula |
+| Hierarchical provenance | book/tape/inventory provenance improves generation, but does not predict pair labels (`16/55`, control `p=0.4194`) |
 
 ## Rejected As Origin Formula
 
@@ -94,10 +104,13 @@ The following remain documented but not promoted:
 - Eye/blink K5 and `5x2` arity models as row0 label generators: both are
   useful lore bridges but cost more than lookup and are ordinary under
   controls.
+- Hierarchical provenance as row0 pair-label generator: the best feature stump
+  costs more than lookup and is ordinary under inventory-preserving controls.
 
 Primary sources:
 [matrix_generator_exhaustive_report.md](../../analysis/generator_search_20260618/matrix_generator_exhaustive_report.md),
 [generator_model_final_report.md](../../analysis/generator_search_20260618/generator_model_final_report.md),
+[hierarchical_provenance_pair_label_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.md),
 [accepted_rejected_hypotheses.json](../../analysis/generator_search_20260618/accepted_rejected_hypotheses.json),
 [k5_eye_pair_model_report.md](../../analysis/eye_model_20260619/k5_eye_pair_model_report.md),
 [eye_state_5x2_model_report.md](../../analysis/eye_model_20260619/eye_state_5x2_model_report.md).
@@ -126,5 +139,11 @@ claims remain inadmissible.
   [tape_based_formula_469.json](../../analysis/generator_search_20260618/tape_based_formula_469.json)
 - Base mechanism formula:
   [mechanical_formula_469.json](../../analysis/mechanism_model_20260618/mechanical_formula_469.json)
+- Literal-reference follow-up:
+  [literal_reference_formula_469.json](../../analysis/authorial_mechanism_20260620/literal_reference_formula_469.json)
+- Hierarchical reference follow-up:
+  [hierarchical_reference_formula_469.json](../../analysis/authorial_mechanism_20260620/hierarchical_reference_formula_469.json)
+- Sequential LZ book formula:
+  [sequential_lz_book_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_book_formula_469.json)
 
 Translation delta: `NONE`.

@@ -1,0 +1,79 @@
+{
+  "best_order_fill": {
+    "accuracy": 0.2,
+    "feature": "top_source_component_frac",
+    "hits": 11,
+    "reverse": true
+  },
+  "best_stump": {
+    "accuracy": 0.2909090909090909,
+    "errors": 39,
+    "feature": "diff",
+    "gain_vs_lookup_bits": -196.12101724153146,
+    "hits": 16,
+    "left_label": "E",
+    "lookup_bits": 214.87898275846854,
+    "model_bits_rough": 411,
+    "right_label": "T",
+    "threshold": 4.5
+  },
+  "boundary": {
+    "book_generation_changed": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "hierarchical_provenance_not_pair_table_formula",
+  "controls": {
+    "order_fill_hits": {
+      "max": 19,
+      "mean": 12.032857142857143,
+      "min": 9,
+      "p_ge_observed": 0.8815977175463623,
+      "runs": 700,
+      "sd": 1.3991039406472607
+    },
+    "stump_gain_vs_lookup_bits": {
+      "max": -176.12101724153146,
+      "mean": -202.30673152724574,
+      "min": -216.12101724153146,
+      "p_ge_observed": 0.0014265335235378032,
+      "runs": 700,
+      "sd": 8.325164703892577
+    },
+    "stump_hits": {
+      "max": 18,
+      "mean": 15.381428571428572,
+      "min": 14,
+      "p_ge_observed": 0.4194008559201141,
+      "runs": 700,
+      "sd": 0.8325164703892577
+    }
+  },
+  "feature_count": 31,
+  "inputs": {
+    "base_formula": "analysis/mechanism_model_20260618/mechanical_formula_469.json",
+    "hierarchical_formula": "analysis/authorial_mechanism_20260620/hierarchical_reference_formula_469.json",
+    "occ_streams": "analysis/audit_20260609/homophone_channel/occ_streams.json"
+  },
+  "label_inventory": {
+    "*": 1,
+    "A": 6,
+    "B": 1,
+    "C": 1,
+    "E": 11,
+    "F": 3,
+    "I": 7,
+    "I|N": 1,
+    "L": 2,
+    "N": 8,
+    "O": 1,
+    "R": 1,
+    "S": 1,
+    "T": 6,
+    "V": 5
+  },
+  "pair_count": 55,
+  "schema": "hierarchical_provenance_pair_label_audit.v1",
+  "test": "09_hierarchical_provenance_pair_label_audit",
+  "translation_delta": "NONE"
+}

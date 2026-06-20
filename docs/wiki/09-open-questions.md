@@ -43,6 +43,32 @@ the post-review eye/sprite hypothesis as a mechanism-only clue. The arity
 match is useful context, but K5 and `5x2` tests reject it as the row0
 pair-cell label formula.
 
+The 2026-06-20 [Language Comparanda](16-language-comparanda.md) pass also does
+not change the semantic constraint. It registers Jekhr/Deepling, Orcish,
+Chakoya, Gharonk, Elven, KAPLAR, spell formulae, and Caveman watchlist material
+as future controls for intermediate-script or conlang claims. Those sources are
+community comparanda, not official 469 ground truth.
+
+The 2026-06-20 [Physical Library Topology](17-physical-library-topology.md) pass
+adds a partial public Hellgate/Isle topology seed and tests public order/bookcase
+signals. It still does not change the semantic constraint: exact tile, slot,
+orientation, and authorial read-order remain unavailable.
+
+The 2026-06-20 [Authorial Mechanism Model](18-authorial-mechanism-model.md)
+pass integrates the first-principles/Knightmare report as a design prior and
+adds a controlled literal-reference formula improvement. It moves the rough
+cost ladder from `17753.5` bits for the tape formula to `16586.1` bits. The
+follow-up hierarchical reference formula then reconstructs the tape inventory
+itself and reaches `13858.5` rough bits while preserving 16/16 component and
+70/70 book roundtrip. A later sequential LZ book formula reaches `10190.0`
+rough bits with 70/70 roundtrip by copying `10451` of `11263` digits from
+already emitted material. A non-numeric order search did not promote: the best
+sampled order gains `186.0` bits but costs `332.5` bits to describe as an
+arbitrary permutation. This is mechanical progress only: no plaintext,
+pair-table origin, physical-topology mechanism, or authorial-intent claim is
+promoted. A direct hierarchical-provenance pair-label audit was run and
+rejected as the row0 origin (`16/55`, control `p=0.4194`).
+
 ## Ranked: what would unlock progress
 
 1. **A single book-crib** — the actual plaintext of *one* of the 70 books, tied to its digit string. This is the highest-value item by far: it would either (a) supply the symbol→meaning key directly, or (b) confirm the non-linguistic verdict definitively. The project's own frontier flags this gap: `PRIMARY_SOURCE_LONG_GLOSS = OPEN_BUT_EMPTY`.
@@ -66,6 +92,12 @@ To prevent the project from re-litigating dead ground (the Outcome-Ledger discip
 - More mathemagic / number-system operators — covered, ~56 tables all NULL.
 - More reduced-alphabet / abjad variants — covered, random merge beats structured.
 - More external book-crib searching of *existing* community sources — covered, CLOSED-NEGATIVE; the community has the same wall.
+- Directly mapping row0 to Jekhr, Orcish, Chakoya, Gharonk, Elven, or KAPLAR
+  without held-out controls and MDL gain — now registered as a comparanda
+  benchmark, not a promotion path.
+- Treating Hellgate public overview order, Isle shelf numbers, or Kharos article
+  screenshots as a translation key — now registered as topology evidence, but
+  the first shuffle-tested row0 signal did not promote it.
 
 ## The honest recommendation
 

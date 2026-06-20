@@ -1,0 +1,106 @@
+{
+  "benchmark_checks": {
+    "chakoya_language": true,
+    "deepling_jekhr": true,
+    "gharonk_language": true,
+    "kaplar_minotaur": true,
+    "orc_language": true
+  },
+  "blocked_direct_decode": {
+    "bonelord_469": true,
+    "caveman_language": true,
+    "chakoya_language": true,
+    "deepling_jekhr": true,
+    "elven_language": true,
+    "gharonk_language": true,
+    "human_tibia_language": true,
+    "kaplar_minotaur": true,
+    "orc_language": true
+  },
+  "classification": "comparanda_registry_ready",
+  "extra_languages": [],
+  "hypothesis_status": {
+    "H25": "open_mechanism_only",
+    "H26": "speculative_control_only",
+    "H27": "plausible_phrase_only",
+    "H28": "accepted_process_guard",
+    "H29": "mechanism_alert_only",
+    "H30": "accepted_benchmark"
+  },
+  "missing_languages": [],
+  "row0_check": {
+    "alphabet": "*ABCEFILNORSTV",
+    "alphabet_ok": true,
+    "class_code_total": 99,
+    "code_count_ok": true,
+    "expected_alphabet": "*ABCEFILNORSTV",
+    "occ_streams_path": "analysis/audit_20260609/homophone_channel/occ_streams.json",
+    "symbol_count": 14
+  },
+  "schema": "language_registry_audit.v1",
+  "semantic_gates": {
+    "all_direct_decode_blocked": true,
+    "confidence_translation_delta_none": true,
+    "h25_h30_present": true,
+    "official_gt_present_for_469_false": true,
+    "registry_translation_delta_none": true
+  },
+  "source_checks": {
+    "bonelord_469": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "caveman_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "chakoya_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "deepling_jekhr": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "elven_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "gharonk_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "human_tibia_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "kaplar_minotaur": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 2
+    },
+    "orc_language": {
+      "all_have_url": true,
+      "all_verified": true,
+      "no_official_gt_claimed": true,
+      "source_count": 3
+    }
+  },
+  "test": "01_language_registry_audit",
+  "translation_delta": "NONE"
+}

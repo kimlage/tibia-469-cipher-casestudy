@@ -1,0 +1,85 @@
+schema: physical_topology_sources.v1
+date: "2026-06-20"
+translation_delta: NONE
+global_stop_rule: >-
+  Use public topology as a mechanical benchmark only. Exact topology claims
+  require book_id, source_location, room_or_library, shelf_or_container,
+  tile_or_position, read_order, capture_source_url_or_commit, and
+  verification_date. Semantic claims require CipSoft/in-game ground truth.
+
+sources:
+  hellgate_library_fandom:
+    url: "https://tibia.fandom.com/wiki/Hellgate_Library"
+    source_type: community_wiki
+    verified_on: "2026-06-20"
+    evidence_strength: high_for_bookcase_order_medium_for_authorial_order
+    supports:
+      - "70 Hellgate Library books are listed"
+      - "texts collected in the Library overview order"
+      - "bookcases without numbers are empty"
+    blocked_use:
+      - "do_not_treat_public_order_as_authorial_order"
+      - "do_not_infer_tile_or_slot"
+  tibiawiki_br_469:
+    url: "https://www.tibiawiki.com.br/wiki/469"
+    source_type: community_wiki
+    verified_on: "2026-06-20"
+    evidence_strength: high_for_isle_21_39_summary
+    supports:
+      - "Isle shelf 21 contains Beware of the Bonelords"
+      - "Isle shelf 39 contains a book in 469"
+    blocked_use:
+      - "do_not_promote_translation_claims"
+  isle_library_fandom:
+    url: "https://tibia.fandom.com/wiki/Isle_of_the_Kings_Library"
+    source_type: community_wiki
+    verified_on: "2026-06-20"
+    evidence_strength: high_for_shelf_numbering
+    supports:
+      - "shelf numbers correspond to map numbers"
+      - "bookcase 21 contains Beware of the Bonelords"
+      - "bookcase 39 contains 6512889672 (Book)"
+      - "many books are secondary copies"
+    blocked_use:
+      - "do_not_infer_relation_to_hellgate_without_string_test"
+  tibiasecrets_article166:
+    url: "https://tibiasecrets.com/article166"
+    source_type: community_article
+    verified_on: "2026-06-20"
+    evidence_strength: medium_for_external_locations_low_for_math_promotion
+    supports:
+      - "Book 9 is described as shelf 6 in the article image"
+      - "two 469 books outside Hellgate are claimed: Isle and Ferumbras/Kharos"
+      - "Isle book is claimed as copy of Hellgate Book 35"
+      - "Ferumbras and Isle books are claimed to share arithmetic average"
+    blocked_use:
+      - "audit_claims_before_accepting"
+      - "do_not_promote_mathematical_translation"
+  kharos_fandom:
+    url: "https://tibia.fandom.com/wiki/Kharos"
+    source_type: community_wiki
+    verified_on: "2026-06-20"
+    evidence_strength: medium_for_geographic_context
+    supports:
+      - "Kharos/Ferumbras Citadel geography"
+    blocked_use:
+      - "does_not_independently_index_the_469_book"
+
+external_anchors:
+  isle_shelf_21:
+    location: "Isle of the Kings Library"
+    bookcase_public: 21
+    item: "Beware of the Bonelords"
+    role: metatext_context
+    confidence: high_community_wiki
+  isle_shelf_39:
+    location: "Isle of the Kings Library"
+    bookcase_public: 39
+    item: "6512889672 (Book)"
+    role: external_469_holdout
+    confidence: high_community_wiki
+  kharos_ferumbras:
+    location: "Kharos / Ferumbras Tower"
+    item: "469 book reported by TibiaSecrets"
+    role: weak_external_holdout_watchlist
+    confidence: medium_community_article

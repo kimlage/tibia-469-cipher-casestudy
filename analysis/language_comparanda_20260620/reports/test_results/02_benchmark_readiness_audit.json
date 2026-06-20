@@ -1,0 +1,107 @@
+{
+  "all_non_official_labels_block_promotion": true,
+  "classification": "benchmark_ready_control_only",
+  "lexica": {
+    "chakoya_lexicon.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/chakoya_lexicon.tsv",
+      "rows": 5
+    },
+    "elven_lexicon.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/elven_lexicon.tsv",
+      "rows": 3
+    },
+    "gharonk_lexicon.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/gharonk_lexicon.tsv",
+      "rows": 7
+    },
+    "jekhr_lexicon.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/jekhr_lexicon.tsv",
+      "rows": 9
+    },
+    "kaplar_anchor.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/kaplar_anchor.tsv",
+      "rows": 2
+    },
+    "orcish_lexicon.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/orcish_lexicon.tsv",
+      "rows": 7
+    },
+    "tibia_spell_formulae.tsv": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/lexica/tibia_spell_formulae.tsv",
+      "rows": 4
+    }
+  },
+  "official_gt_gate": true,
+  "reports": {
+    "final_language_comparanda_report.md": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/reports/final_language_comparanda_report.md"
+    },
+    "intermediate_script_test_report.md": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/reports/intermediate_script_test_report.md"
+    },
+    "language_inventory_report.md": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/reports/language_inventory_report.md"
+    },
+    "lexicon_confidence_report.md": {
+      "exists": true,
+      "path": "analysis/language_comparanda_20260620/reports/lexicon_confidence_report.md"
+    }
+  },
+  "schema": "benchmark_readiness_audit.v1",
+  "source_roles": {
+    "bonelord_469": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "caveman_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "chakoya_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "deepling_jekhr": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "elven_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "gharonk_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "human_tibia_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "kaplar_minotaur": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    },
+    "orc_language": {
+      "blocked_use_present": true,
+      "positive_or_control": true
+    }
+  },
+  "stop_rules": {
+    "community_labels_present": true,
+    "mdl_required": true,
+    "no_plaintext_promotion": true,
+    "official_gt_required": true
+  },
+  "test": "02_benchmark_readiness_audit",
+  "translation_delta": "NONE"
+}

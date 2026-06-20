@@ -53,6 +53,9 @@ Start at the top and follow the path, or jump to what you need:
 | 13 | [Mechanical Origin Model v1](13-mechanical-origin-model-v1.md) | Frozen public summary of the best mechanical fabrication model and plateau |
 | 14 | [Eye/Blink Arity Model](14-eye-blink-arity-model.md) | Post-review eye/sprite arity hypothesis tested as mechanism-only, with K5 and 5x2 controls |
 | 15 | [Source-Inspiration Model](15-source-inspiration-model.md) | Multi-language source lanes, Knightmare/D&D inspiration, H19-H24 tests, and plateau closure |
+| 16 | [Language Comparanda](16-language-comparanda.md) | Tibia conlang/pseudo-language benchmark registry, H25-H30, confidence labels, and controls |
+| 17 | [Physical Library Topology](17-physical-library-topology.md) | Hellgate/Isle/Kharos public topology, H-TOP tests, and fine-topology blocker |
+| 18 | [Authorial Mechanism Model](18-authorial-mechanism-model.md) | First-principles/Knightmare mechanism prior, literal references, and hierarchical generator improvement |
 | — | [Glossary](GLOSSARY.md) | Definitions of the coined terms (Layer A/B, row0, disqualifier, …) |
 | — | [CipSoft](entities/cipsoft.md) | The external ground-truth holder — the only thing that could reopen the verdict |
 
@@ -79,6 +82,9 @@ mindmap
       13 Mechanical origin model v1
       14 Eye blink arity model
       15 Source inspiration model
+      16 Language comparanda
+      17 Physical library topology
+      18 Authorial mechanism model
     Reference
       Glossary
       CipSoft
@@ -203,6 +209,38 @@ Beholder parallels, Bonelord Tome, `3478`, `486486`, Secret Library
 Its value is source hygiene, rejected-claim provenance, explicit blockers, and
 controlled watchlist/weak-clue classifications. → [page 15](15-source-inspiration-model.md)
 
+**Language-comparanda addendum (2026-06-20):** a separate pass incorporated
+Tibia constructed/pseudo-language material as controls: Jekhr/Deepling,
+Orcish, Chakoya, Gharonk, Elven, KAPLAR, spell formulae, and Caveman watchlist
+material. Jekhr is the important positive control because it has an explicit
+written-symbol to Latin/pronunciation/vocabulary pipeline, but no known Tibia
+language is promoted as the 469 key. The result is a future benchmark and
+confidence-label registry only; `translation_delta = NONE`. → [page 16](16-language-comparanda.md)
+
+**Physical-topology addendum (2026-06-20):** a public topology pass incorporated
+Hellgate overview/bookcase order, Isle shelf 21/39 anchors, and the
+Kharos/Ferumbras watchlist. It built a partial Hellgate bookcase manifest and
+tested public order/bookcase grouping against row0 similarity shuffles. The
+result did not promote a topology mechanism (`translation_delta = NONE`);
+fine-grained tile/slot/orientation/read-order evidence remains blocked.
+→ [page 17](17-physical-library-topology.md)
+
+**Authorial/mechanism addendum (2026-06-20):** a first-principles Knightmare
+design report was integrated as a mechanism-search prior, not an intent claim.
+It reinforces the small phrase-code plus mechanical book-layer model and adds
+one mechanical improvement: a literal-reference tape formula that replaces 36
+remaining literal items with existing tape-component references, saves roughly
+`1167.4` bits under the local screen, survives component-shuffle and
+random-literal controls, and still roundtrips 70/70 books. A follow-up
+hierarchical formula reconstructs the tape inventory by self-reference and then
+renders all books, reaching roughly `13858.5` bits with 16/16 component and
+70/70 book roundtrip. A direct provenance-to-pair-table audit rejects the same
+features as row0 origin (`16/55`, control `p=0.4194`). A later sequential LZ
+book formula tightens the copy/reference upper bound to roughly `10190.0` bits
+with 70/70 roundtrip; arbitrary non-numeric book orders are not promoted after
+charging permutation cost.
+Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
+
 **Post-review closure (2026-06-19):** the remaining review action items are
 compiled in [`analysis/post_review_20260619/`](../../analysis/post_review_20260619/):
 observer/render audit, E-layer lore bridge, external numeric classifier,
@@ -248,6 +286,19 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   and [`analysis/inspiration_model_20260620/`](../../analysis/inspiration_model_20260620/) —
   consolidates multi-language source lanes, Knightmare/D&D/quest inspiration,
   H19-H24 tests, and blocked/rejected claims; keeps translation delta at zero.
+- **Language comparanda:** [docs/wiki/16-language-comparanda.md](16-language-comparanda.md)
+  and [`analysis/language_comparanda_20260620/`](../../analysis/language_comparanda_20260620/) —
+  registers Tibia conlang/pseudo-language controls, H25-H30, confidence labels,
+  and benchmark stop rules; keeps translation delta at zero.
+- **Physical library topology:** [docs/wiki/17-physical-library-topology.md](17-physical-library-topology.md)
+  and [`analysis/physical_topology_20260620/`](../../analysis/physical_topology_20260620/) —
+  registers partial public topology, H-TOP1-H-TOP5, and shuffle-tested
+  order/bookcase signals; keeps translation delta at zero.
+- **Authorial mechanism model:** [docs/wiki/18-authorial-mechanism-model.md](18-authorial-mechanism-model.md)
+  and [`analysis/authorial_mechanism_20260620/`](../../analysis/authorial_mechanism_20260620/) —
+  incorporates the first-principles/Knightmare report as mechanism prior and
+  compiles and control-tests literal-reference, hierarchical reference, and
+  sequential LZ book formulas; keeps translation delta at zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

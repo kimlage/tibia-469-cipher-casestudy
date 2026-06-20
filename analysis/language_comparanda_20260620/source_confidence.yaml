@@ -1,0 +1,80 @@
+schema: language_comparanda_confidence.v1
+date: "2026-06-20"
+translation_delta: NONE
+
+labels:
+  official_gt:
+    meaning: "CipSoft or in-game source directly maps 469 numbers/symbols to meaning."
+    promotion_allowed: true
+    present_for_469: false
+  in_game_functional:
+    meaning: "A token has observable game function, such as an NPC trade keyword."
+    promotion_allowed: false
+    allowed_use: "positive control for known-language recovery"
+  reciprocal_dialogue_confirmed:
+    meaning: "Meaning is supported by reciprocal NPC dialogue or quest exchange."
+    promotion_allowed: false
+    allowed_use: "partial lexicon control"
+  context_deduced:
+    meaning: "Meaning inferred from context, books, or community logic."
+    promotion_allowed: false
+    allowed_use: "uncertainty calibration only"
+  probable:
+    meaning: "Likely but not independently proven."
+    promotion_allowed: false
+    allowed_use: "soft control only"
+  uncertain:
+    meaning: "Marked uncertain, partial, or question-marked."
+    promotion_allowed: false
+    allowed_use: "negative/unknown label"
+  fan_claim:
+    meaning: "Claimed by community without reproducible official backing."
+    promotion_allowed: false
+    allowed_use: "rejected-control provenance"
+  rejected_control:
+    meaning: "Known false-positive or anti-overfit control."
+    promotion_allowed: false
+    allowed_use: "negative control"
+  community_reconstruction:
+    meaning: "Project or community-inferred reconstruction without official GT."
+    promotion_allowed: false
+    allowed_use: "validation-only shadow candidate"
+
+policy:
+  - "A method that cannot recover Jekhr/Orcish/Chakoya/Gharonk where seed lexica exist cannot be trusted on 469."
+  - "A method that translates KAPLAR-like single anchors into a full system is overfitting."
+  - "A method that translates gibberish controls, Avar Tar controls, or shuffled conlang lexica is rejected."
+  - "Row0 similarity to any Tibia conlang is at most mechanism-only unless it beats controls and improves MDL."
+  - "No item in this directory changes Outcome Ledger semantic metrics."
+
+hypotheses:
+  H25:
+    name: "Intermediate Script Layer"
+    status: open_mechanism_only
+    test: "469_intermediate_script_hypothesis"
+    promotion_rule: "Must beat script/conlang/gibberish controls and improve MDL; no plaintext promotion."
+  H26:
+    name: "Known Tibia Conlang Match"
+    status: speculative_control_only
+    test: "469_to_tibia_conlang_match"
+    promotion_rule: "Must outperform symbol-label shuffles, self-anagrams, and random conlang lexica."
+  H27:
+    name: "Phrase / Keyword Formula Layer"
+    status: plausible_phrase_only
+    test: "spell_keyword_formula_control"
+    promotion_rule: "Can affect phrase-layer classification only; does not apply to the 70 books."
+  H28:
+    name: "Community Translation Confidence Audit"
+    status: accepted_process_guard
+    test: "community_translation_validator"
+    promotion_rule: "Labels claims; does not promote claims."
+  H29:
+    name: "Non-Numeric Number Words"
+    status: mechanism_alert_only
+    test: "non_numeric_number_words_control"
+    promotion_rule: "Useful caution against direct number semantics only."
+  H30:
+    name: "Glyph / Latin / Meaning Multi-Hop Benchmark"
+    status: accepted_benchmark
+    test: "known_language_recovery_benchmark"
+    promotion_rule: "Benchmark route only; not a 469 mapping."

@@ -1,0 +1,211 @@
+schema: language_comparanda_registry.v1
+date: "2026-06-20"
+translation_delta: NONE
+project_status: closed_archival
+global_stop_rule: >-
+  Comparanda may define controls and benchmarks only. Do not promote 469
+  plaintext, symbol-letter mappings, or code-word claims unless CipSoft/in-game
+  ground truth provides number-to-text, book-to-text, or symbol-to-meaning
+  evidence. Mechanism-only hypotheses must beat controls and improve MDL.
+
+languages:
+  human_tibia_language:
+    name: "Human / Tibia Language"
+    race_or_source: "Players, spell incantations, shorthand"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Languages"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Tibia_Language"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: latin_spell_formula_and_player_shorthand
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: false
+    has_dialogue_context: true
+    has_books: false
+    translation_status: known_formulae_and_slang
+    confidence: medium
+    known_uncertainty_markers: ["not_a_lore_race_language", "player_slang_mixed_with_spell_formulae"]
+    allowed_use: ["spell_keyword_formula_control", "formula_morphology_control"]
+    blocked_use: ["do_not_use_as_direct_469_plaintext_language"]
+
+  bonelord_469:
+    name: "Bonelord Language / 469"
+    race_or_source: "Bonelords"
+    primary_sources:
+      - url: "https://www.tibiawiki.com.br/wiki/469"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Languages"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: numeric_surface_to_row0_symbols
+    has_orthography: false
+    has_vocabulary: false
+    has_numbers: true
+    has_dialogue_context: true
+    has_books: true
+    translation_status: unsolved_no_public_solid_proof
+    confidence: high_for_surface_low_for_semantics
+    known_uncertainty_markers: ["no_official_gt", "fan_claims_exhausted", "book_layer_non_linguistic"]
+    allowed_use: ["target_corpus", "row0_substrate_for_controlled_tests"]
+    blocked_use: ["do_not_use_as_positive_language_control", "do_not_promote_internal_decoder_output_as_gt"]
+
+  deepling_jekhr:
+    name: "Jekhr / Deepling Language"
+    race_or_source: "Deeplings"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Jekhr"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Jekhr_Numbers_(Book)"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: glyph_to_latin_to_pronunciation_to_meaning
+    has_orthography: true
+    has_vocabulary: true
+    has_numbers: true
+    has_dialogue_context: false
+    has_books: true
+    translation_status: wiki_lexicon_with_orthography
+    confidence: medium_high
+    known_uncertainty_markers: ["community_transcription", "not_cipsoft_symbol_table_for_469"]
+    allowed_use: ["primary_positive_control_for_intermediate_script", "glyph_latin_meaning_pipeline_benchmark"]
+    blocked_use: ["do_not_map_469_to_jekhr_without_controls", "do_not_promote_jekhr_similarity_as_translation"]
+
+  orc_language:
+    name: "Orc Language"
+    race_or_source: "Orcs / Rookgaard Blind Orc trade"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Orc_Language"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Blind_Orc"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://www.tibiawiki.com.br/wiki/Orc_Language"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: latin_words_for_npc_trade_and_books
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: true
+    has_dialogue_context: true
+    has_books: true
+    translation_status: functional_npc_trade_language_with_partial_inference
+    confidence: medium_high_for_trade_medium_for_glosses
+    known_uncertainty_markers: ["some_words_functional", "some_translations_probable", "numbers_need_context"]
+    allowed_use: ["positive_control_for_keyword_trade_language", "partial_lexicon_recovery_benchmark"]
+    blocked_use: ["do_not_project_orcish_words_onto_469_without_holdouts"]
+
+  chakoya_language:
+    name: "Chakoya Language"
+    race_or_source: "Chakoya / Sinatuki"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Chakoya_Language"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Sinatuki"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: latin_dialogue_tokens
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: false
+    has_dialogue_context: true
+    has_books: false
+    translation_status: partial_dialogue_lexicon_with_uncertainty
+    confidence: medium
+    known_uncertainty_markers: ["question_mark_glosses", "community_inference", "small_corpus"]
+    allowed_use: ["partial_lexicon_confidence_control", "dialogue_inference_benchmark"]
+    blocked_use: ["do_not_treat_uncertain_glosses_as_gt"]
+
+  gharonk_language:
+    name: "Gharonk"
+    race_or_source: "Desert Dungeon Library"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Gharonk"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://www.tibiaqa.com/22110/how-to-speak-gharonk-language"
+        source_type: community_qa
+        verified_on: "2026-06-20"
+    script_type: latin_library_language_with_number_words
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: true
+    has_dialogue_context: false
+    has_books: true
+    translation_status: partial_deduced_library_lexicon
+    confidence: medium_low
+    known_uncertainty_markers: ["deduced_logically", "maybe_glosses", "partial_corpus"]
+    allowed_use: ["deduction_confidence_control", "non_numeric_number_words_control"]
+    blocked_use: ["do_not_promote_deduced_meanings_without_context"]
+
+  elven_language:
+    name: "Elven Language"
+    race_or_source: "Elves"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Elven_Language"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Elf_Guard/Transcripts"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: tiny_latin_lexicon
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: false
+    has_dialogue_context: true
+    has_books: false
+    translation_status: tiny_lore_lexicon
+    confidence: medium
+    known_uncertainty_markers: ["too_small_for_statistics", "stub_page"]
+    allowed_use: ["small_corpus_reference_only", "small_corpus_control"]
+    blocked_use: ["do_not_run_heavy_statistics", "do_not_expand_into_full_language"]
+
+  kaplar_minotaur:
+    name: "KAPLAR"
+    race_or_source: "Minotaur battlecry / Markwin context"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/KAPLAR"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://www.tibiawiki.com.br/wiki/KAPLAR"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: single_word_phrase_anchor
+    has_orthography: false
+    has_vocabulary: true
+    has_numbers: false
+    has_dialogue_context: true
+    has_books: true
+    translation_status: contextual_single_word_anchor
+    confidence: medium
+    known_uncertainty_markers: ["possible_allusion", "not_a_full_language"]
+    allowed_use: ["single_word_lore_anchor_control", "false_expansion_control"]
+    blocked_use: ["do_not_generalize_single_anchor_into_system"]
+
+  caveman_language:
+    name: "Caveman Language"
+    race_or_source: "Zao Mountain cavemen"
+    primary_sources:
+      - url: "https://tibia.fandom.com/wiki/Languages"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+      - url: "https://tibia.fandom.com/wiki/Zao_Mountain_NPCs"
+        source_type: community_wiki
+        verified_on: "2026-06-20"
+    script_type: npc_dialogue_watchlist
+    has_orthography: false
+    has_vocabulary: false
+    has_numbers: false
+    has_dialogue_context: true
+    has_books: false
+    translation_status: watchlist_source_family_only
+    confidence: low
+    known_uncertainty_markers: ["no_structured_lexicon_verified", "transcripts_needed"]
+    allowed_use: ["watchlist", "future_dialogue_extraction"]
+    blocked_use: ["do_not_use_as_current_benchmark"]

@@ -105,3 +105,14 @@ move the verdict. More lore, fan vocabulary, or unglossed numbers do not.
 No new semantic formula-discovery direction emerged from the source-inspiration
 pass. Remaining mechanical-only routes require external order/metadata or
 lower-cost formula improvements.
+
+The follow-up [Language Comparanda](16-language-comparanda.md) pass separates
+Tibia language material from this source-inspiration ledger. Jekhr, Orcish,
+Chakoya, Gharonk, Elven, KAPLAR, and spell formulae are now benchmark/control
+families for future tests, not a reopened decode route.
+
+The follow-up [Physical Library Topology](17-physical-library-topology.md) pass
+partially advances the earlier physical-metadata blocker: macro/bookcase
+topology is now registered for Hellgate and Isle, but exact tile/slot/orientation
+and authorial read-order remain blocked. The first row0 similarity tests do not
+promote public order or bookcase grouping as a mechanism.

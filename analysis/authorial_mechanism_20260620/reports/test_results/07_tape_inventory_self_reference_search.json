@@ -1,0 +1,386 @@
+{
+  "best_encoding": {
+    "baseline_bits": 7165.39890067204,
+    "baseline_digits": 2157,
+    "encoded_bits": 4437.741527800272,
+    "errors": [],
+    "gain_bits": 2727.6573728717685,
+    "len_bits": 8,
+    "literal_digits": 841,
+    "literal_run_overhead_bits": 9,
+    "literal_runs": 38,
+    "max_ref_len": 128,
+    "min_len": 8,
+    "pos_bits": 12,
+    "ref_bits": 21,
+    "reference_items": 62,
+    "referenced_digits": 1316,
+    "roundtrip_ok": true,
+    "search_space": {
+      "max_ref_len": 128,
+      "min_lens": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        15,
+        20
+      ]
+    },
+    "top_refs": [
+      {
+        "component_id": "T00",
+        "length": 128,
+        "source_pos": 293,
+        "target_start": 768,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T02",
+        "length": 88,
+        "source_pos": 48,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 73,
+        "source_pos": 450,
+        "target_start": 120,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 53,
+        "source_pos": 635,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T06",
+        "length": 52,
+        "source_pos": 356,
+        "target_start": 63,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T00",
+        "length": 41,
+        "source_pos": 143,
+        "target_start": 594,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T02",
+        "length": 40,
+        "source_pos": 184,
+        "target_start": 105,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T10",
+        "length": 40,
+        "source_pos": 651,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T11",
+        "length": 36,
+        "source_pos": 535,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T09",
+        "length": 35,
+        "source_pos": 717,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 34,
+        "source_pos": 719,
+        "target_start": 53,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T04",
+        "length": 33,
+        "source_pos": 56,
+        "target_start": 25,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T08",
+        "length": 30,
+        "source_pos": 628,
+        "target_start": 11,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 29,
+        "source_pos": 421,
+        "target_start": 54,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 24,
+        "source_pos": 218,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 23,
+        "source_pos": 260,
+        "target_start": 24,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T03",
+        "length": 22,
+        "source_pos": 731,
+        "target_start": 114,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 22,
+        "source_pos": 1442,
+        "target_start": 88,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 22,
+        "source_pos": 1052,
+        "target_start": 110,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T06",
+        "length": 20,
+        "source_pos": 270,
+        "target_start": 43,
+        "type": "self_ref"
+      }
+    ]
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "compression_note": "This is a tape-inventory generator refinement, not a plaintext model.",
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_inventory_reuse_order_not_promoted",
+  "controls": {
+    "component_digit_shuffle": {
+      "max": -141.74650333578847,
+      "mean": -143.96995337781053,
+      "min": -144.0,
+      "p_ge_observed": 0.0033222591362126247,
+      "runs": 300,
+      "sd": 0.25847081724990767
+    },
+    "component_order_shuffle": {
+      "max": 2777.8082223899664,
+      "mean": 2635.1596454736837,
+      "min": 2469.07420385747,
+      "p_ge_observed": 0.15614617940199335,
+      "runs": 300,
+      "sd": 78.50364218838334
+    },
+    "random_same_lengths": {
+      "max": -141.74650333578847,
+      "mean": -143.97746503335787,
+      "min": -144.0,
+      "p_ge_observed": 0.0033222591362126247,
+      "runs": 300,
+      "sd": 0.22422008704521426
+    }
+  },
+  "input_formula": "analysis/generator_search_20260618/tape_based_formula_469.json",
+  "output_formula": "analysis/authorial_mechanism_20260620/tape_inventory_self_reference_formula.json",
+  "previous_components_only": {
+    "baseline_bits": 7165.39890067204,
+    "baseline_digits": 2157,
+    "encoded_bits": 4993.189335806774,
+    "errors": [],
+    "gain_bits": 2172.2095648652667,
+    "len_bits": 8,
+    "literal_digits": 1094,
+    "literal_run_overhead_bits": 9,
+    "literal_runs": 25,
+    "max_ref_len": 128,
+    "min_len": 6,
+    "pos_bits": 12,
+    "ref_bits": 21,
+    "reference_items": 54,
+    "referenced_digits": 1063,
+    "roundtrip_ok": true,
+    "search_space": {
+      "max_ref_len": 128,
+      "min_lens": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        15,
+        20
+      ]
+    },
+    "top_refs": [
+      {
+        "component_id": "T02",
+        "length": 88,
+        "source_pos": 48,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 73,
+        "source_pos": 450,
+        "target_start": 120,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 53,
+        "source_pos": 635,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T06",
+        "length": 52,
+        "source_pos": 356,
+        "target_start": 63,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T02",
+        "length": 40,
+        "source_pos": 184,
+        "target_start": 105,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T10",
+        "length": 40,
+        "source_pos": 651,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T11",
+        "length": 36,
+        "source_pos": 535,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T09",
+        "length": 35,
+        "source_pos": 717,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 34,
+        "source_pos": 719,
+        "target_start": 53,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T04",
+        "length": 33,
+        "source_pos": 56,
+        "target_start": 25,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T08",
+        "length": 30,
+        "source_pos": 628,
+        "target_start": 11,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 29,
+        "source_pos": 421,
+        "target_start": 54,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 24,
+        "source_pos": 218,
+        "target_start": 0,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T01",
+        "length": 23,
+        "source_pos": 260,
+        "target_start": 24,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T03",
+        "length": 22,
+        "source_pos": 731,
+        "target_start": 114,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T05",
+        "length": 22,
+        "source_pos": 1052,
+        "target_start": 110,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T06",
+        "length": 20,
+        "source_pos": 270,
+        "target_start": 43,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T03",
+        "length": 19,
+        "source_pos": 320,
+        "target_start": 9,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T06",
+        "length": 19,
+        "source_pos": 114,
+        "target_start": 2,
+        "type": "self_ref"
+      },
+      {
+        "component_id": "T15",
+        "length": 17,
+        "source_pos": 1236,
+        "target_start": 0,
+        "type": "self_ref"
+      }
+    ]
+  },
+  "schema": "tape_inventory_self_reference_search.v1",
+  "test": "07_tape_inventory_self_reference_search",
+  "translation_delta": "NONE"
+}

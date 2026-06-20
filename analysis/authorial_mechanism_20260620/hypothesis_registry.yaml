@@ -1,0 +1,85 @@
+schema: authorial_mechanism_hypotheses.v1
+date: "2026-06-20"
+translation_delta: NONE
+baseline_formula: "analysis/generator_search_20260618/tape_based_formula_469.json"
+
+hypotheses:
+  H-AUTH1:
+    name: "small real phrase-code plus mechanical book-layer"
+    status: best_design_model_no_intent_claim
+    evidence_class: synthesis
+    allowed_use: ["public_summary", "mechanical_search_prior"]
+    blocked_use: ["claim_private_intent", "promote_plaintext"]
+  H-AUTH2:
+    name: "mathemagic as production metaphor"
+    status: plausible_mechanism_frame
+    evidence_class: lore_to_mechanism
+    allowed_use: ["generate_mechanical_tests"]
+    blocked_use: ["treat_math_as_translation"]
+  H-AUTH3:
+    name: "mystery as persistent atmosphere rather than complete puzzle"
+    status: plausible_design_interpretation
+    evidence_class: interpretation_only
+    allowed_use: ["retrospective", "anti_pareidolia_context"]
+    blocked_use: ["claim_authorial_fact"]
+  H-GEN1:
+    name: "higher-order recipe supermodules"
+    status: tested_in_this_front
+    target: "book_recipes from tape_based_formula_469.json"
+    promotion_rule: "must reduce item/MDL cost beyond naming overhead"
+  H-GEN2:
+    name: "public topology predicts module/component sharing"
+    status: tested_in_this_front
+    target: "physical topology manifest plus tape recipes"
+    promotion_rule: "must beat deterministic shuffles"
+  H-GEN3:
+    name: "remaining literals can be absorbed into existing tape components"
+    status: candidate_compiled_in_this_front
+    target: "remaining literal items in tape formula"
+    promotion_rule: "must absorb enough digits to justify new addressing cost"
+  H-GEN3B:
+    name: "literal-reference tape formula"
+    status: controlled_mechanical_improvement_no_semantics
+    target: "cost-positive literal substring references"
+    promotion_rule: "roundtrips 70/70, improves rough MDL, and beats component-shuffle/random-literal controls; no semantic or authorial-intent promotion"
+  H-GEN3C:
+    name: "tape inventory self-reference"
+    status: controlled_inventory_reuse_order_not_promoted
+    target: "16 tape component payloads"
+    promotion_rule: "must roundtrip 16/16 components and beat digit-shuffle/random controls; component order is not promoted unless order-shuffle controls fail"
+  H-GEN3D:
+    name: "hierarchical reference formula"
+    status: hierarchical_reference_formula_roundtrips_no_semantics
+    target: "component generation plus 70 book recipes"
+    promotion_rule: "must reconstruct components and all books exactly while keeping translation_delta NONE"
+  H-GEN3E:
+    name: "sequential LZ book formula"
+    status: controlled_sequential_lz_book_formula
+    target: "70 raw digit books in numeric order"
+    promotion_rule: "must beat hierarchical formula, roundtrip 70/70, and beat digit-shuffle/random controls without semantic claims"
+  H-GEN3F:
+    name: "non-numeric sequential LZ book order"
+    status: order_search_not_promoted_after_permutation_cost
+    target: "book emission order for sequential LZ"
+    promotion_rule: "must beat numeric order after charging order/permutation cost or be supplied by external physical/source order"
+  H-GEN4:
+    name: "matrix origin compact formula"
+    status: open_low_expectation
+    target: "55 unordered pair labels"
+    promotion_rule: "must beat lookup under MDL and controls"
+  H-GEN4A:
+    name: "hierarchical provenance predicts pair labels"
+    status: hierarchical_provenance_not_pair_table_formula
+    target: "55 unordered pair labels from book/tape/inventory provenance"
+    promotion_rule: "must beat inventory-preserving controls and rough lookup cost"
+  H-GEN5:
+    name: "external official source reopens semantics"
+    status: watchlist_only
+    target: "CipSoft/in-game number-to-text or symbol table"
+    promotion_rule: "official_gt required"
+
+semantic_policy:
+  translation_delta: NONE
+  no_plaintext_from_authorial_model: true
+  no_fan_gloss_as_ground_truth: true
+  no_llm_prose_as_evidence: true
