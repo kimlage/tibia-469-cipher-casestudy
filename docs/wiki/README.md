@@ -247,7 +247,8 @@ the committed copy graph/literal atlas now records source hubs and literal-seed
 reuse. Structured public Hellgate/bookcase orders were tested under DP LZ and
 do not beat numeric order. Literal-seed addressing is not promoted because
 mode bits erase the apparent gain; grouped mode coding narrows but does not
-reverse that result.
+reverse that result. Copy-hub macro ledgers are also worse than absolute
+`source_pos`.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

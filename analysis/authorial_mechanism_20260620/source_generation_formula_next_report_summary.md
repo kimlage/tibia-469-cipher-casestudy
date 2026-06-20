@@ -42,6 +42,9 @@ Still open from the report:
   [`18_literal_seed_grouped_mode_search.py`](scripts/18_literal_seed_grouped_mode_search.py);
   the best seed-using decodable grouped ledger still costs `9830.0` bits,
   worse than the current `9823.3` absolute-address formula.
+- source-book hub/default-source macro addressing is now covered by
+  [`19_copy_hub_macro_model_search.py`](scripts/19_copy_hub_macro_model_search.py);
+  even the optimistic target-default source lower bound costs `10326.9` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

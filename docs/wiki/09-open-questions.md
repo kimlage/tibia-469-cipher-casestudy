@@ -77,7 +77,8 @@ order remains best (`9823.3` bits versus at least `9993.1`). Literal-seed
 addressing was tested; only an undecodable optimistic ledger beats the current
 formula, while the decodable mixed ledger is worse. Grouped source-mode ledgers
 were also tested and remain worse (`9830.0` bits best seed-using decodable
-ledger). No plaintext,
+ledger). Source-book hub and target-default source macro ledgers are also worse
+(`10326.9` bits optimistic lower bound). No plaintext,
 pair-table origin, physical-topology mechanism, or authorial-intent claim is
 promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0

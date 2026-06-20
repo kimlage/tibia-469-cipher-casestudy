@@ -146,6 +146,12 @@ still costs `9830.0` bits (`+6.7`). A seed-required RLE mask costs `9843.0`
 bits (`+19.7`). Source-mode grouping therefore reduces the penalty versus
 per-copy mode bits, but does not rescue literal-seed addressing.
 
+The copy-hub macro follow-up is also rejected. Declaring source-book hubs or
+target-default source books makes the address ledger larger, not smaller. The
+optimistic target-default source lower bound costs `10326.9` bits (`+503.6`),
+and the best decodable default-source model costs `10430.2` bits (`+606.9`).
+The current absolute `source_pos` ledger remains the compact baseline.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -177,6 +183,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3K | `structured_physical_order_not_better_than_numeric` |
 | H-GEN3L | `literal_seed_address_optimistic_only_not_promoted` |
 | H-GEN3M | `literal_seed_grouped_mode_optimistic_only_not_promoted` |
+| H-GEN3N | `copy_hub_macro_model_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -203,6 +210,7 @@ book generation, not row0 pair-cell placement.
 - [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
 - [Literal seed address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/17_literal_seed_address_model_search.md)
 - [Literal seed grouped-mode search](../../analysis/authorial_mechanism_20260620/reports/test_results/18_literal_seed_grouped_mode_search.md)
+- [Copy hub macro model search](../../analysis/authorial_mechanism_20260620/reports/test_results/19_copy_hub_macro_model_search.md)
 
 ## Boundary
 

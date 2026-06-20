@@ -41,6 +41,7 @@ does not promote plaintext.
 | `H-GEN3K` | `structured_physical_order_not_better_than_numeric` | `True` |
 | `H-GEN3L` | `literal_seed_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN3M` | `literal_seed_grouped_mode_optimistic_only_not_promoted` | `True` |
+| `H-GEN3N` | `copy_hub_macro_model_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

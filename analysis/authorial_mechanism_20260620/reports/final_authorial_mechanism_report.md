@@ -114,5 +114,11 @@ Generated audits in this directory should be treated as the current state:
   the RLE seed-required mask costs `9843.0` bits (`+19.7`). Grouping narrows the
   penalty but still does not beat the current `9823.3` absolute-address
   formula.
+- `19_copy_hub_macro_model_search`: tests whether copy sources can be declared
+  as global or target-local source-book hubs, or as a target-default source with
+  exceptions. This is not cheaper: the optimistic default-source lower bound is
+  `10326.9` bits (`+503.6`), and the best decodable default-source ledger is
+  `10430.2` bits (`+606.9`). The source-hub macro path is therefore not
+  promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

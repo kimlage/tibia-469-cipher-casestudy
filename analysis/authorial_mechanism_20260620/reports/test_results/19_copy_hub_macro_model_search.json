@@ -1,0 +1,265 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "copy_hub_macro_model_not_promoted",
+  "current_formula_bits": 9823.307615564663,
+  "fixed_noncopy_bits": 4231.932835435455,
+  "models": [
+    {
+      "copy_bits": 5591.374780129205,
+      "decodable": true,
+      "delta_vs_current_bits": -3.637978807091713e-12,
+      "model": "absolute_flat_source_pos",
+      "table_bits": 0.0,
+      "total_bits": 9823.30761556466
+    },
+    {
+      "copy_bits": 5514.9974795697935,
+      "decodable": false,
+      "default_copy_count": 146,
+      "delta_vs_current_bits": 503.62269944058426,
+      "exception_copy_count": 135,
+      "model": "target_default_source_optimistic_no_mode",
+      "table_bits": 580.0,
+      "total_bits": 10326.930315005247
+    },
+    {
+      "copy_bits": 5618.231773130539,
+      "decodable": true,
+      "default_copy_count": 67,
+      "delta_vs_current_bits": 606.8569930013309,
+      "exception_copy_count": 214,
+      "model": "target_default_source_mode_per_copy",
+      "table_bits": 580.0,
+      "total_bits": 10430.164608565994
+    },
+    {
+      "copy_bits": 5514.9974795697935,
+      "decodable": true,
+      "default_copy_count": 146,
+      "delta_vs_current_bits": 992.6226994405843,
+      "exception_copy_count": 135,
+      "model": "target_default_source_sparse_exception_list",
+      "table_bits": 1069.0,
+      "total_bits": 10815.930315005247
+    },
+    {
+      "copy_bits": 6696.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1379.6252198707916,
+      "hub_count": 32,
+      "hub_index_bits": 5.0,
+      "model": "global_source_book_hub_offset_gamma",
+      "table_bits": 275,
+      "total_bits": 11202.932835435455
+    },
+    {
+      "copy_bits": 5721.793353370641,
+      "decodable": true,
+      "delta_vs_current_bits": 1916.4185732414335,
+      "model": "target_source_book_hub_offset_log2",
+      "single_source_targets": 13,
+      "table_bits": 1786.0,
+      "target_books_with_copies": 70,
+      "target_source_hubs_total": 188,
+      "total_bits": 11739.726188806097
+    },
+    {
+      "copy_bits": 5793.0,
+      "decodable": true,
+      "delta_vs_current_bits": 1987.6252198707916,
+      "model": "target_source_book_hub_offset_ceil",
+      "single_source_targets": 13,
+      "table_bits": 1786.0,
+      "target_books_with_copies": 70,
+      "target_source_hubs_total": 188,
+      "total_bits": 11810.932835435455
+    }
+  ],
+  "schema": "copy_hub_macro_model_search.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_dp_parse_formula_469.json",
+  "stats": {
+    "copy_items": 281,
+    "global_source_book_count": 32,
+    "max_copy_items_in_target": 11,
+    "max_source_hubs_in_target": 7,
+    "single_source_targets": 13,
+    "target_books_with_copies": 70,
+    "target_source_hubs_total": 188,
+    "top_target_books_by_copy_count": [
+      {
+        "copy_items": 11,
+        "source_hub_count": 3,
+        "target_book": "6",
+        "top_sources": [
+          [
+            "5",
+            5
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "0",
+            3
+          ]
+        ]
+      },
+      {
+        "copy_items": 10,
+        "source_hub_count": 6,
+        "target_book": "12",
+        "top_sources": [
+          [
+            "3",
+            3
+          ],
+          [
+            "2",
+            2
+          ],
+          [
+            "0",
+            2
+          ],
+          [
+            "5",
+            1
+          ],
+          [
+            "1",
+            1
+          ]
+        ]
+      },
+      {
+        "copy_items": 9,
+        "source_hub_count": 3,
+        "target_book": "3",
+        "top_sources": [
+          [
+            "0",
+            4
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1",
+            2
+          ]
+        ]
+      },
+      {
+        "copy_items": 9,
+        "source_hub_count": 6,
+        "target_book": "15",
+        "top_sources": [
+          [
+            "3",
+            3
+          ],
+          [
+            "8",
+            2
+          ],
+          [
+            "0",
+            1
+          ],
+          [
+            "10",
+            1
+          ],
+          [
+            "5",
+            1
+          ]
+        ]
+      },
+      {
+        "copy_items": 9,
+        "source_hub_count": 7,
+        "target_book": "17",
+        "top_sources": [
+          [
+            "14",
+            3
+          ],
+          [
+            "0",
+            1
+          ],
+          [
+            "1",
+            1
+          ],
+          [
+            "3",
+            1
+          ],
+          [
+            "11",
+            1
+          ]
+        ]
+      },
+      {
+        "copy_items": 9,
+        "source_hub_count": 5,
+        "target_book": "56",
+        "top_sources": [
+          [
+            "12",
+            4
+          ],
+          [
+            "13",
+            2
+          ],
+          [
+            "26",
+            1
+          ],
+          [
+            "38",
+            1
+          ],
+          [
+            "2",
+            1
+          ]
+        ]
+      },
+      {
+        "copy_items": 8,
+        "source_hub_count": 1,
+        "target_book": "4",
+        "top_sources": [
+          [
+            "3",
+            8
+          ]
+        ]
+      },
+      {
+        "copy_items": 8,
+        "source_hub_count": 1,
+        "target_book": "23",
+        "top_sources": [
+          [
+            "2",
+            8
+          ]
+        ]
+      }
+    ]
+  },
+  "test": "19_copy_hub_macro_model_search",
+  "translation_delta": "NONE"
+}

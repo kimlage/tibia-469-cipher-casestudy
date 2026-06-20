@@ -73,6 +73,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   addressing against absolute source positions in the DP copy ledger.
 - `scripts/18_literal_seed_grouped_mode_search.py` - tests whether grouped
   source-mode ledgers rescue literal-seed addressing.
+- `scripts/19_copy_hub_macro_model_search.py` - tests source-book hub and
+  default-source macro ledgers against absolute source positions.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -64,6 +64,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Structured public physical order | partial Hellgate/bookcase orders under DP LZ cost at least `9993.1` bits, worse than numeric `9823.3`; manifest ambiguity blocks authorial-order promotion | rejected refinement |
 | Literal seed address model | prior literal-run addressing can reach `9752.8` only without mode bits; decodable mixed ledger costs `10033.8`, worse than numeric `9823.3` | rejected refinement / optimistic clue |
 | Literal seed grouped-mode model | grouped mode coding reduces the seed-address penalty, but the best decodable seed-using sparse-run ledger is still `9830.0` bits versus current `9823.3` | rejected refinement |
+| Copy hub macro model | source-book hubs and target-default source macros cost at least `10326.9` bits even in the optimistic lower bound, worse than current `9823.3` | rejected refinement |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -83,6 +84,7 @@ Primary sources:
 [structured_physical_order_lz_test.md](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md),
 [literal_seed_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/17_literal_seed_address_model_search.md),
 [literal_seed_grouped_mode_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/18_literal_seed_grouped_mode_search.md),
+[copy_hub_macro_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/19_copy_hub_macro_model_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
