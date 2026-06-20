@@ -473,6 +473,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   item-type candidates imply `5370544256` triples. Component minima keep the
   active triple best; the best changed triple is `+0.415` bits worse and the
   best triple with all three components changed is `+3.553` bits worse.
+- post-itemctx_param copy-length context/shared-alpha resweep is now covered by
+  [`111_post_itemctx_param_copy_length_context_alpha_resweep.py`](scripts/111_post_itemctx_param_copy_length_context_alpha_resweep.py);
+  `79` copy-length context candidates times `64` shared alpha values test
+  `5056` context/alpha rows. The active fixed book-midpoint context with
+  shared `alpha=1` remains best; the best context change is `+1.941` bits
+  worse and the best alpha change on the active context is `+2.140` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

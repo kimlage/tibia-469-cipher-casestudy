@@ -531,5 +531,10 @@ Generated audits in this directory should be treated as the current state:
   triples. Component minima keep the active triple best; the best changed triple
   is `+0.415` bits worse, and the best triple with all three components changed
   is `+3.553` bits worse.
+- `111_post_itemctx_param_copy_length_context_alpha_resweep`: tests `79`
+  copy-length context candidates times `64` shared alpha values, for `5056`
+  context/alpha rows. The active fixed book-midpoint context with shared
+  `alpha=1` remains best; the best context change is `+1.941` bits worse and
+  the best alpha change on the active context is `+2.140` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

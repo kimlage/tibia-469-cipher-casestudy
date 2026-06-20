@@ -133,6 +133,7 @@ does not promote plaintext.
 | `H-GEN3CY` | `post_itemctx_param_copy_length_alpha_item_type_pair_not_promoted` | `True` |
 | `H-GEN3CZ` | `post_itemctx_param_copy_length_alpha_payload_pair_not_promoted` | `True` |
 | `H-GEN3DA` | `post_itemctx_param_copy_alpha_payload_item_type_triple_not_promoted` | `True` |
+| `H-GEN3DB` | `post_itemctx_param_copy_length_context_alpha_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

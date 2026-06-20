@@ -228,7 +228,10 @@ sweep then closes `315469` implied pairs; the best changed pair is `+1.389`
 bits worse, and the best pair with both components changed is `+3.138` bits
 worse. A copy-alpha/payload/item-type triple sweep then closes `5370544256`
 implied triples; the best changed triple is `+0.415` bits worse, and the best
-triple with all three components changed is `+3.553` bits worse.
+triple with all three components changed is `+3.553` bits worse. A copy-length
+context/shared-alpha resweep then tests `5056` rows; the active book-midpoint
+context with `alpha=1` stays best, with the best context change `+1.941` bits
+worse and the best active-context alpha change `+2.140` bits worse.
 
 ## Ranked: what would unlock progress
 
