@@ -20,7 +20,7 @@ source_refs:
 ## Verdict
 
 The lore/source-inspiration pass found no new official ground truth and no new
-real formula-discovery direction. It closes source families and preserves
+semantic formula-discovery direction. It closes source families and preserves
 mechanism hypotheses as controlled comparanda, but it does not reopen semantic
 decoding.
 
@@ -39,9 +39,13 @@ The pass searched and consolidated:
   `486486`, Bonelord Tome, Beware of the Bonelords, Secret Library
   `74032 45331`, Honeminas/Magic Web, and Excalibug;
 - H19-H24 mechanism tests with controls or explicit blockers.
-- deep statistical controls for lore seeds, external-string coverage, row0
+- deep statistical closure for current source-inspiration families: lore seeds,
+  external-string coverage, row0
   seed-derived models, book phase motifs, E/render anomalies, and identity
   co-occurrence.
+- critical gap audits for per-book boundary-safe anchors, 2-digit row0
+  alignment, missing physical topology, tape assembly path inference,
+  normalized source snapshot, and expanded negative controls.
 
 The main artifact directory is
 [`analysis/inspiration_model_20260620/`](../../analysis/inspiration_model_20260620/).
@@ -51,7 +55,7 @@ The main artifact directory is
 | Front | Result |
 |---|---|
 | Official ground truth | none found |
-| Source registry | 18 evidence families, each with allowed and blocked uses |
+| Source registry | 18 evidence families, each with text presence, officiality, interpretation risk, semantic authority, allowed uses, and blocked uses |
 | Language lanes | source hygiene and rejected-claim provenance; no semantic novelty |
 | D&D/Beholder | weak clue only; cannot prove intent or semantics |
 | Knightmare/quest mechanisms | useful ontology/source classifier only |
@@ -61,6 +65,10 @@ The main artifact directory is
 | Tridiag / Donina | local E/render clue only; no formula |
 | Paradox / Spirit Grounds / Evil Mastermind | rejected controls / anti-overfit guardrails |
 | Dreadeye / First Dragon | watchlist only |
+| Boundary-safe anchors | `3478` has 24 per-book hits and 0 cross-book false hits; several lore anchors are absent |
+| 2-digit anchor alignment | `3478` splits 12/12 across row0 phase; no clean code-aligned key emerges |
+| Physical/topological metadata | blocked until an authoritative per-book shelf/tile/read-order manifest exists |
+| Assembly path inference | no independent holdout-predictive direction beyond tape reconstruction |
 
 ## H19-H24 Classification
 
@@ -81,6 +89,11 @@ The main artifact directory is
 - [Inspiration model leaderboard](../../analysis/inspiration_model_20260620/reports/inspiration_model_leaderboard.md)
 - [Source registry](../../analysis/inspiration_model_20260620/source_registry.yaml)
 - [Deep statistical exhaustion](../../analysis/inspiration_model_20260620/reports/test_results/14_deep_statistical_exhaustion.md)
+- [Boundary-safe anchor audit](../../analysis/inspiration_model_20260620/reports/test_results/boundary_safe_anchor_audit.md)
+- [Aligned numeric anchor audit](../../analysis/inspiration_model_20260620/reports/test_results/aligned_numeric_anchor_audit.md)
+- [Physical library topology audit](../../analysis/inspiration_model_20260620/reports/test_results/physical_library_topology_audit.md)
+- [Assembly path inference audit](../../analysis/inspiration_model_20260620/reports/test_results/assembly_path_inference_audit.md)
+- [Official source snapshot audit](../../analysis/inspiration_model_20260620/reports/test_results/official_source_snapshot_audit.md)
 - [Plan exhaustion audit](../../analysis/inspiration_model_20260620/reports/test_results/15_plan_exhaustion_audit.md)
 
 ## What Counts As Future Progress
@@ -88,3 +101,7 @@ The main artifact directory is
 Only a CipSoft/in-game number-to-text pair, book-to-text pair, symbol table, or
 a lower-cost mechanical formula that beats the current controlled baselines can
 move the verdict. More lore, fan vocabulary, or unglossed numbers do not.
+
+No new semantic formula-discovery direction emerged from the source-inspiration
+pass. Remaining mechanical-only routes require external order/metadata or
+lower-cost formula improvements.

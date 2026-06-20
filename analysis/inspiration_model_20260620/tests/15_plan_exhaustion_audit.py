@@ -37,6 +37,16 @@ REQUIRED_TESTS = [
     "library_entity_ontology_crosswalk.py",
     "authorial_source_classifier.py",
     "14_deep_statistical_exhaustion.py",
+    "boundary_safe_anchor_audit.py",
+    "aligned_numeric_anchor_audit.py",
+    "physical_library_topology_audit.py",
+    "assembly_path_inference_audit.py",
+    "numeric_identity_graph_motif_real.py",
+    "official_source_snapshot_audit.py",
+    "dnd_central_eye_formal_model.py",
+    "dnd_eye_ray_order_model.py",
+    "quest_mechanism_feature_matrix.py",
+    "expanded_negative_control_suite.py",
     "15_plan_exhaustion_audit.py",
 ]
 

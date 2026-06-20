@@ -43,8 +43,16 @@ Translation delta: `NONE`
 ## Source-Family Closure
 
 The parallel lanes found no new `official_gt`. The registry contains 18
-deduplicated evidence families. Current useful material is
-source provenance, not semantic evidence:
+deduplicated evidence families. The registry now separates:
+
+- `text_presence`: whether the cited text/string is present in the source.
+- `officiality`: official CipSoft, in-game reported, promoted fansite,
+  community wiki, fan claim, external reference, or local reproducible report.
+- `interpretation_risk`: low/medium/high/severe.
+- `semantic_authority`: `none` or `official_gt`.
+
+All 18 current entries have `semantic_authority: none`. Current useful material
+is source provenance, not semantic evidence:
 
 - `official_unglossed_numeric`: Your True Colour, Secret Library `74032 45331`.
 - `mechanism_lore`: A Wrinkled Bonelord, Honeminas/Magic Web, Bonelord Tome,

@@ -1,12 +1,28 @@
 schema: source_registry.v1
 retrieval_date: "2026-06-19"
 translation_delta: NONE
+normalized_fields:
+  text_presence_values: [confirmed, absent, indirect, unknown]
+  officiality_values:
+    - official_cipsoft
+    - in_game_reported
+    - promoted_fansite
+    - community_wiki
+    - fan_claim
+    - external_reference
+    - local_reproducible_report
+  interpretation_risk_values: [low, medium, high, severe]
+  semantic_authority_values: [none, official_gt]
 sources:
   - id: wrinkled_bonelord_transcript
     title: "A Wrinkled Bonelord transcript"
     source_url: "https://tibiasecrets.com/A-Wrinkled-Bonelord"
     source_type: transcript
     source_status: fansite_transcript
+    text_presence: confirmed
+    officiality: in_game_reported
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game NPC transcript; author not directly attested here"
@@ -30,6 +46,10 @@ sources:
     source_url: "https://www.tibiawiki.com.br/wiki/469"
     source_type: community_wiki
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: pt-BR
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "community compilation with links to in-game/fansite sources"
@@ -56,6 +76,10 @@ sources:
     source_url: "https://www.tibiaqa.com/25010/what-is-the-name-of-a-wrinkled-bonelord-in-language-469"
     source_type: community_q_and_a
     source_status: fansite
+    text_presence: confirmed
+    officiality: community_wiki
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "player-reported transcript line"
@@ -75,6 +99,10 @@ sources:
     source_url: "https://www.tibia.com/news/?id=3704&subtopic=latestnews"
     source_type: official_news
     source_status: official
+    text_presence: confirmed
+    officiality: official_cipsoft
+    interpretation_risk: low
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "CipSoft official news post"
@@ -94,6 +122,10 @@ sources:
     source_url: "https://web.archive.org/web/20120224031702/http://www.tibia.com:80/news/?subtopic=latestnews&id=1975"
     source_type: official_news_archive
     source_status: archived_official
+    text_presence: confirmed
+    officiality: official_cipsoft
+    interpretation_risk: low
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "CipSoft official article, mirrored/archived"
@@ -113,6 +145,10 @@ sources:
     source_url: "https://www.tibiawiki.com.br/wiki/Bonelord_Tome"
     source_type: item_page
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: pt-BR
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game fansite item context, transcribed by TibiaWiki BR"
@@ -133,6 +169,10 @@ sources:
     source_url: "https://www.tibiaqa.com/25041/is-avar-tar-lying-about-his-stories"
     source_type: npc_transcript_discussion
     source_status: fansite
+    text_presence: confirmed
+    officiality: in_game_reported
+    interpretation_risk: high
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game NPC transcript/discussion"
@@ -152,6 +192,10 @@ sources:
     source_url: "https://tibia.fandom.com/wiki/The_Honeminas_Formula_%28Book%29"
     source_type: in_game_book_transcript
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game book transcript"
@@ -172,6 +216,10 @@ sources:
     source_url: "https://www.tibiasecrets.com/article166"
     source_type: fansite_article
     source_status: fansite
+    text_presence: confirmed
+    officiality: fan_claim
+    interpretation_risk: high
+    semantic_authority: none
     language: en
     confidence: MECHANISM_CORPUS
     authorial_attribution: "community analysis"
@@ -193,6 +241,10 @@ sources:
     source_url: "https://www.tibia-wiki.net/wiki/J%C4%99zyk_Bonelord%C3%B3w"
     source_type: community_wiki_and_forums
     source_status: former_promoted_or_community
+    text_presence: confirmed
+    officiality: community_wiki
+    interpretation_risk: high
+    semantic_authority: none
     language: pl
     confidence: MECHANISM_CORPUS
     authorial_attribution: "community synthesis and forum history"
@@ -213,6 +265,10 @@ sources:
     source_url: "https://tibia.fandom.com/es/wiki/469"
     source_type: community_wiki_and_forums
     source_status: community
+    text_presence: confirmed
+    officiality: community_wiki
+    interpretation_risk: high
+    semantic_authority: none
     language: es
     confidence: MECHANISM_CORPUS
     authorial_attribution: "community inventory"
@@ -233,6 +289,10 @@ sources:
     source_url: "https://github.com/arturoornelasb/tibia-bonelord-469-cipher"
     source_type: fan_solution_claim
     source_status: community
+    text_presence: confirmed
+    officiality: fan_claim
+    interpretation_risk: severe
+    semantic_authority: none
     language: mixed
     confidence: PAREIDOLIA_RISK
     authorial_attribution: "fan repositories/forums/videos"
@@ -253,6 +313,10 @@ sources:
     source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
     source_type: external_reference
     source_status: non_tibia_reference
+    text_presence: confirmed
+    officiality: external_reference
+    interpretation_risk: high
+    semantic_authority: none
     language: en
     confidence: DND_PARALLEL
     authorial_attribution: "D&D creature mechanics; not a Tibia source"
@@ -273,6 +337,10 @@ sources:
     source_url: "https://tibia.fandom.com/wiki/Knightmare"
     source_type: profile
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: AUTHORIAL_ASSOCIATED
     authorial_attribution: "Arndt Bednarzik / Knightmare profile context; not a direct 469 authorship proof"
@@ -293,6 +361,10 @@ sources:
     source_url: "https://tibia.fandom.com/wiki/Bonelord"
     source_type: historical_context
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "Tibia creature history/community documentation"
@@ -313,6 +385,10 @@ sources:
     source_url: "https://tibia.fandom.com/wiki/Bonelord"
     source_type: creature_lore
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game/lore context via community transcript"
@@ -333,6 +409,10 @@ sources:
     source_url: "https://tibia.fandom.com/wiki/Beware_of_the_Bonelords_%28Book%29"
     source_type: in_game_book_transcript
     source_status: promoted_fansite
+    text_presence: confirmed
+    officiality: promoted_fansite
+    interpretation_risk: medium
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "in-game book transcript"
@@ -353,6 +433,10 @@ sources:
     source_url: "../../docs/wiki/13-mechanical-origin-model-v1.md"
     source_type: local_report
     source_status: repo_canonical
+    text_presence: confirmed
+    officiality: local_reproducible_report
+    interpretation_risk: low
+    semantic_authority: none
     language: en
     confidence: CONFIRMED_SOURCE
     authorial_attribution: "local reproducible audit"

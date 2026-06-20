@@ -40,6 +40,16 @@ not evidence of semantic decoding.
 | `analysis/inspiration_model_20260620/tests/library_entity_ontology_crosswalk.py` | `True` | `True` | `True` | `weak_clue` |
 | `analysis/inspiration_model_20260620/tests/authorial_source_classifier.py` | `True` | `True` | `True` | `accepted_mechanical` |
 | `analysis/inspiration_model_20260620/tests/14_deep_statistical_exhaustion.py` | `True` | `True` | `True` | `source_family_closed_negative` |
+| `analysis/inspiration_model_20260620/tests/boundary_safe_anchor_audit.py` | `True` | `True` | `True` | `rejected_control` |
+| `analysis/inspiration_model_20260620/tests/aligned_numeric_anchor_audit.py` | `True` | `True` | `True` | `rejected_control` |
+| `analysis/inspiration_model_20260620/tests/physical_library_topology_audit.py` | `True` | `True` | `True` | `blocked_waiting_for_physical_metadata` |
+| `analysis/inspiration_model_20260620/tests/assembly_path_inference_audit.py` | `True` | `True` | `True` | `rejected_control` |
+| `analysis/inspiration_model_20260620/tests/numeric_identity_graph_motif_real.py` | `True` | `True` | `True` | `rejected_control` |
+| `analysis/inspiration_model_20260620/tests/official_source_snapshot_audit.py` | `True` | `True` | `True` | `source_registry` |
+| `analysis/inspiration_model_20260620/tests/dnd_central_eye_formal_model.py` | `True` | `True` | `True` | `weak_clue` |
+| `analysis/inspiration_model_20260620/tests/dnd_eye_ray_order_model.py` | `True` | `True` | `True` | `blocked_waiting_for_fixed_external_order` |
+| `analysis/inspiration_model_20260620/tests/quest_mechanism_feature_matrix.py` | `True` | `True` | `True` | `watchlist_only` |
+| `analysis/inspiration_model_20260620/tests/expanded_negative_control_suite.py` | `True` | `True` | `True` | `partial_negative_control_suite` |
 | `analysis/inspiration_model_20260620/tests/15_plan_exhaustion_audit.py` | `True` | `True` | `True` | `source_family_closed_negative` |
 
 ## Source Lanes

@@ -1,0 +1,95 @@
+{
+  "classification": "rejected_control",
+  "distinct_tokens": 166,
+  "distinct_transitions": 145,
+  "holdout_transition_accuracy": {
+    "control_max": 0.0,
+    "control_mean": 0.0,
+    "control_min": 0.0,
+    "control_sd": 0.0,
+    "observed": 0.0,
+    "p_ge": 1.0
+  },
+  "schema": "critical_gap_audit.v1",
+  "scope_note": "Assembly transitions describe the accepted tape reconstruction but do not improve semantic formula discovery.",
+  "sequence_count": 70,
+  "test": "assembly_path_inference_audit",
+  "top_transitions": [
+    {
+      "count": 1,
+      "from": "LITERAL:3:229",
+      "to": "T00:M18"
+    },
+    {
+      "count": 1,
+      "from": "T00:M00",
+      "to": "LITERAL:2:65"
+    },
+    {
+      "count": 1,
+      "from": "T01:M12",
+      "to": "LITERAL:14:19288952160199"
+    },
+    {
+      "count": 1,
+      "from": "LITERAL:29:18003646889521991180065128895",
+      "to": "T06:M14"
+    },
+    {
+      "count": 1,
+      "from": "LITERAL:1:7",
+      "to": "T00:M57"
+    },
+    {
+      "count": 1,
+      "from": "T00:M57",
+      "to": "LITERAL:28:3464651800911464600364671288"
+    },
+    {
+      "count": 1,
+      "from": "LITERAL:28:3464651800911464600364671288",
+      "to": "T11:M37"
+    },
+    {
+      "count": 1,
+      "from": "T11:M37",
+      "to": "T00:M53"
+    },
+    {
+      "count": 1,
+      "from": "T00:M53",
+      "to": "LITERAL:21:190421595604215857652"
+    },
+    {
+      "count": 1,
+      "from": "T12:M40",
+      "to": "T04:M16"
+    },
+    {
+      "count": 1,
+      "from": "T04:M16",
+      "to": "LITERAL:44:14364585611451904509118003158604215857651288"
+    },
+    {
+      "count": 1,
+      "from": "LITERAL:44:14364585611451904509118003158604215857651288",
+      "to": "T00:M51"
+    },
+    {
+      "count": 1,
+      "from": "LITERAL:27:781670574770909612164800658",
+      "to": "T00:None"
+    },
+    {
+      "count": 1,
+      "from": "T00:None",
+      "to": "T00:M20"
+    },
+    {
+      "count": 1,
+      "from": "T00:M20",
+      "to": "LITERAL:15:346465180099673"
+    }
+  ],
+  "translation_delta": "NONE"
+}

@@ -1,0 +1,79 @@
+{
+  "classification": "partial_negative_control_suite",
+  "controls": [
+    {
+      "control_summary": {
+        "control_max": 0.28695652173913044,
+        "control_mean": 0.074,
+        "control_min": 0.0,
+        "control_sd": 0.05584876960294265,
+        "observed": 0.08695652173913043,
+        "p_ge": 0.48502994011976047
+      },
+      "coverage": 0.08695652173913043,
+      "name": "avar_tar",
+      "status": "tested"
+    },
+    {
+      "control_summary": {
+        "control_max": 0.5238095238095238,
+        "control_mean": 0.062285714285714285,
+        "control_min": 0.0,
+        "control_sd": 0.12208632312746821,
+        "observed": 0.0,
+        "p_ge": 1.0
+      },
+      "coverage": 0.0,
+      "name": "your_true_colour",
+      "status": "tested"
+    },
+    {
+      "control_summary": {
+        "control_max": 0.7,
+        "control_mean": 0.0406,
+        "control_min": 0.0,
+        "control_sd": 0.14032690404908105,
+        "observed": 0.0,
+        "p_ge": 1.0
+      },
+      "coverage": 0.0,
+      "name": "secret_library_74032_45331",
+      "status": "tested"
+    },
+    {
+      "control_summary": {
+        "control_max": 0.7,
+        "control_mean": 0.044,
+        "control_min": 0.0,
+        "control_sd": 0.1462326912834473,
+        "observed": 0.0,
+        "p_ge": 1.0
+      },
+      "coverage": 0.0,
+      "name": "honeminas_vectors",
+      "status": "tested"
+    },
+    {
+      "control_summary": null,
+      "coverage": null,
+      "name": "spirit_grounds_gate_keeper",
+      "status": "blocked_missing_numeric_source"
+    },
+    {
+      "control_summary": null,
+      "coverage": null,
+      "name": "paradox_mirror",
+      "status": "blocked_missing_numeric_source"
+    },
+    {
+      "control_summary": null,
+      "coverage": null,
+      "name": "evil_mastermind_dictionary",
+      "status": "blocked_missing_numeric_source"
+    }
+  ],
+  "schema": "critical_gap_audit.v1",
+  "scope_note": "Available numeric controls are tested; lore-only controls stay blocked until numeric sources are committed.",
+  "test": "expanded_negative_control_suite",
+  "translation_delta": "NONE"
+}

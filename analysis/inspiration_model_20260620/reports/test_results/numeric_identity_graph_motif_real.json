@@ -1,0 +1,541 @@
+{
+  "classification": "rejected_control",
+  "motif_codes": [
+    "00",
+    "33",
+    "34",
+    "39",
+    "48",
+    "64",
+    "66",
+    "78",
+    "86",
+    "93"
+  ],
+  "schema": "critical_gap_audit.v1",
+  "seeds": [
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.20525,
+        "control_min": 1.0,
+        "control_sd": 0.30770917682123167,
+        "observed": 2.0,
+        "p_ge": 0.08045977011494253
+      },
+      "parses": [
+        {
+          "codes": [
+            "34",
+            "78"
+          ],
+          "known_codes": 2,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "",
+          "symbols": [
+            "B",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "47"
+          ],
+          "known_codes": 1,
+          "phase": 1,
+          "prefix": "3",
+          "suffix": "8",
+          "symbols": [
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 2.0,
+      "seed": "3478"
+    },
+    {
+      "classification": "weak_clue",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.2137499999999999,
+        "control_min": 1.0,
+        "control_sd": 0.22363435869492165,
+        "observed": 2.0,
+        "p_ge": 0.00399800099950025
+      },
+      "parses": [
+        {
+          "codes": [
+            "48",
+            "64",
+            "86"
+          ],
+          "known_codes": 3,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "",
+          "symbols": [
+            "E",
+            "N",
+            "C"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "86",
+            "48"
+          ],
+          "known_codes": 2,
+          "phase": 1,
+          "prefix": "4",
+          "suffix": "6",
+          "symbols": [
+            "C",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 2.0,
+      "seed": "486486"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.1785,
+        "control_min": 1.0,
+        "control_sd": 0.34133964024121194,
+        "observed": 2.0,
+        "p_ge": 0.12843578210894552
+      },
+      "parses": [
+        {
+          "codes": [
+            "48"
+          ],
+          "known_codes": 1,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "6",
+          "symbols": [
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "86"
+          ],
+          "known_codes": 1,
+          "phase": 1,
+          "prefix": "4",
+          "suffix": "",
+          "symbols": [
+            "C"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 2.0,
+      "seed": "486"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.205875,
+        "control_min": 1.0,
+        "control_sd": 0.24664596971164965,
+        "observed": 1.25,
+        "p_ge": 0.5037481259370314
+      },
+      "parses": [
+        {
+          "codes": [
+            "74",
+            "03"
+          ],
+          "known_codes": 2,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "2",
+          "symbols": [
+            "E",
+            "V"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": true,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "40",
+            "32"
+          ],
+          "known_codes": 2,
+          "phase": 1,
+          "prefix": "7",
+          "suffix": "",
+          "symbols": [
+            "F",
+            "O"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": true,
+          "unknown_codes": []
+        }
+      ],
+      "score": 1.25,
+      "seed": "74032"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.19875,
+        "control_min": 1.0,
+        "control_sd": 0.23939702901247542,
+        "observed": 1.5,
+        "p_ge": 0.24437781109445278
+      },
+      "parses": [
+        {
+          "codes": [
+            "45",
+            "33"
+          ],
+          "known_codes": 2,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "1",
+          "symbols": [
+            "F",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "53",
+            "31"
+          ],
+          "known_codes": 2,
+          "phase": 1,
+          "prefix": "4",
+          "suffix": "",
+          "symbols": [
+            "L",
+            "N"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 1.5,
+      "seed": "45331"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.202625,
+        "control_min": 1.0,
+        "control_sd": 0.23803751673843349,
+        "observed": 1.0,
+        "p_ge": 1.0
+      },
+      "parses": [
+        {
+          "codes": [
+            "43",
+            "15"
+          ],
+          "known_codes": 2,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "3",
+          "symbols": [
+            "B",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "31",
+            "53"
+          ],
+          "known_codes": 2,
+          "phase": 1,
+          "prefix": "4",
+          "suffix": "",
+          "symbols": [
+            "N",
+            "L"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 1.0,
+      "seed": "43153"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.211875,
+        "control_min": 1.0,
+        "control_sd": 0.24840035099612884,
+        "observed": 2.0,
+        "p_ge": 0.01199400299850075
+      },
+      "parses": [
+        {
+          "codes": [
+            "34",
+            "78"
+          ],
+          "known_codes": 2,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "4",
+          "symbols": [
+            "B",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "47",
+            "84"
+          ],
+          "known_codes": 2,
+          "phase": 1,
+          "prefix": "3",
+          "suffix": "",
+          "symbols": [
+            "E",
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 2.0,
+      "seed": "34784"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.183125,
+        "control_min": 1.0,
+        "control_sd": 0.33947972601467674,
+        "observed": 1.0,
+        "p_ge": 1.0
+      },
+      "parses": [
+        {
+          "codes": [
+            "46"
+          ],
+          "known_codes": 1,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "9",
+          "symbols": [
+            "N"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [
+            "69"
+          ],
+          "known_codes": 1,
+          "phase": 1,
+          "prefix": "4",
+          "suffix": "",
+          "symbols": [
+            "V"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 1.0,
+      "seed": "469"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 2.25,
+        "control_mean": 1.1095,
+        "control_min": 1.0,
+        "control_sd": 0.27410718706374704,
+        "observed": 1.0,
+        "p_ge": 1.0
+      },
+      "parses": [
+        {
+          "codes": [
+            "99"
+          ],
+          "known_codes": 1,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "",
+          "symbols": [
+            "E"
+          ],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [],
+          "known_codes": 0,
+          "phase": 1,
+          "prefix": "9",
+          "suffix": "9",
+          "symbols": [],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 1.0,
+      "seed": "99"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 0.0,
+        "control_mean": 0.0,
+        "control_min": 0.0,
+        "control_sd": 0.0,
+        "observed": 0.0,
+        "p_ge": 1.0
+      },
+      "parses": [
+        {
+          "codes": [],
+          "known_codes": 0,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "1",
+          "symbols": [],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [],
+          "known_codes": 0,
+          "phase": 1,
+          "prefix": "1",
+          "suffix": "",
+          "symbols": [],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 0.0,
+      "seed": "1"
+    },
+    {
+      "classification": "rejected_control",
+      "control_summary": {
+        "control_max": 0.0,
+        "control_mean": 0.0,
+        "control_min": 0.0,
+        "control_sd": 0.0,
+        "observed": 0.0,
+        "p_ge": 1.0
+      },
+      "parses": [
+        {
+          "codes": [],
+          "known_codes": 0,
+          "phase": 0,
+          "prefix": "",
+          "suffix": "0",
+          "symbols": [],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        },
+        {
+          "codes": [],
+          "known_codes": 0,
+          "phase": 1,
+          "prefix": "0",
+          "suffix": "",
+          "symbols": [],
+          "touches_missing_39": false,
+          "touches_orphan_93": false,
+          "touches_zero": false,
+          "unknown_codes": []
+        }
+      ],
+      "score": 0.0,
+      "seed": "0"
+    }
+  ],
+  "test": "numeric_identity_graph_motif_real",
+  "translation_delta": "NONE"
+}

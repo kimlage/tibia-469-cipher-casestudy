@@ -5,8 +5,8 @@ Translation delta: `NONE`
 
 ## Verdict
 
-No new official ground truth and no new real direction toward discovering a
-translation formula were found.
+No new official ground truth and no new semantic formula-discovery direction
+were found.
 
 The pass was still useful because it closed source lanes and turned the
 Knightmare/D&D/lore material into a controlled mechanism library. It did not
@@ -36,7 +36,8 @@ No new semantic evidence. New value is limited to source hygiene and closure:
 | PL negative-consensus pages/forums | Better rejected-route provenance; no new evidence. |
 | ES/LATAM inventory | Duplicate known strings; no new evidence. |
 | DE/other-language search | Source family closed negative for current pass. |
-| Deep statistical exhaustion | Direct controls for lore seeds, external coverage, row0 seed models, book phase motifs, E/render anomalies, and identity co-occurrence. |
+| Deep statistical closure for current source-inspiration families | Direct controls for lore seeds, external coverage, row0 seed models, book phase motifs, E/render anomalies, and identity co-occurrence. |
+| Critical gap audits | Boundary-safe anchor counts, 2-digit alignment checks, physical-topology blocker, assembly-path holdout test, normalized source snapshot, and expanded negative controls. |
 
 ## Hypotheses Tested
 
@@ -64,7 +65,7 @@ Additional closure fronts:
 ## Test Results
 
 All new scripts ran successfully with `translation_delta = NONE`, including the
-deep statistical exhaustion and plan-exhaustion audit.
+deep statistical closure pass, critical gap audits, and plan-exhaustion audit.
 
 Highlights:
 
@@ -76,9 +77,22 @@ Highlights:
 - Excalibug is blocked until an official Bonelord-language prompt/answer or
   gloss appears.
 - Yalahar/Dreamer/PoI remain watchlist analogies without fixed predictions.
-- Deep statistical exhaustion rejects lore seeds as row0 formulas, rejects
+- Deep statistical closure rejects lore seeds as row0 formulas, rejects
   Yalahar/PoI/Dreamer phase motifs, keeps Chayenne as secondary copy-holdout
   compatibility, and leaves Secret Library/Honeminas/YTC unsupported.
+- Boundary-safe anchor audit confirms that `3478` has 24 per-book hits and no
+  cross-book false hits; `486486`, `74032`, `45331`, `43153`, and `34784` are
+  absent from the 70-book corpus.
+- Aligned numeric anchor audit shows `3478` split evenly across 2-digit phases
+  and therefore rejects it as a clean row0/code-aligned key.
+- Physical library topology remains blocked: no committed authoritative
+  per-book shelf/tile/read-order manifest exists.
+- Assembly path inference does not provide an independent holdout predictor
+  beyond the accepted tape reconstruction.
+- The source registry now separates text presence, officiality, interpretation
+  risk, and semantic authority; all sources retain `semantic_authority: none`.
+- Expanded negative controls test available numeric controls and explicitly
+  block lore-only controls until numeric source text is committed.
 - The plan-exhaustion audit verifies all required root artifacts, aggregate
   reports, test outputs, source lanes, H19-H24 classifications, semantic gates,
   and mechanical fronts in the current tree.
@@ -100,6 +114,12 @@ No contradiction invalidates the frozen report. Repeated community claims that
 - A reusable mechanism ontology for quest/lore comparanda.
 - Executable audit wrappers that preserve existing controls and blockers.
 - Direct statistical controls for the previously too-thin wrapper fronts.
+- Boundary-safe and row0-aligned critical checks for source/lore numeric
+  anchors.
+- A normalized source registry that separates officiality from semantic
+  authority.
+- Explicit blocked states for physical topology and fixed external D&D ray
+  order instead of fitting those variables from the target corpus.
 - A machine-readable completion audit proving all plan lanes/fronts are now
   explicitly closed in the current artifact state.
 
@@ -135,4 +155,6 @@ Only falsifiable routes remain:
 3. Run no broad decode search unless a new official source supplies a concrete
    target, control, and stop rule.
 
-Conclusion: no new real formula-discovery direction emerged.
+Conclusion: No new semantic formula-discovery direction emerged from the
+source-inspiration pass. Remaining mechanical-only routes require external
+order/metadata or lower-cost formula improvements.

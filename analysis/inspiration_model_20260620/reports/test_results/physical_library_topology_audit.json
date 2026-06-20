@@ -1,0 +1,24 @@
+{
+  "blocker": "No committed, authoritative per-book physical topology/order manifest is present.",
+  "classification": "blocked_waiting_for_physical_metadata",
+  "found_manifests": [],
+  "manifest_candidates": [
+    "analysis/inspiration_model_20260620/physical_library_topology_manifest.yaml",
+    "analysis/inspiration_model_20260620/physical_library_topology_manifest.json",
+    "data/physical_library_topology_manifest.yaml",
+    "data/physical_library_topology_manifest.json"
+  ],
+  "required_fields": [
+    "book_id",
+    "source_location",
+    "room_or_library",
+    "shelf_or_container",
+    "tile_or_position",
+    "read_order",
+    "capture_source_url_or_commit",
+    "verification_date"
+  ],
+  "schema": "critical_gap_audit.v1",
+  "test": "physical_library_topology_audit",
+  "translation_delta": "NONE"
+}
