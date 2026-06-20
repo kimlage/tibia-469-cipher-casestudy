@@ -712,6 +712,14 @@ searched item-type split at book `6`, order `1`, alpha `2` remains best at
 alpha `{'first_half': 1, 'second_half': 2}` plus that item-type alpha `1` row
 and is `+1.804` bits worse.
 
+The post-itemctx_param copy-length alpha/payload pair sweep then combines the
+`4097` midpoint alpha-by-context rows with the `77` literal-payload context
+candidates, for `315469` implied pairs. The active shared copy-length alpha `1`
+plus global literal-payload model remains best at `8561.792` bits. The best
+changed pair is copy-length alpha `{'first_half': 1, 'second_half': 2}` with
+global payload, still `+1.389` bits worse. The best pair with both components
+changed adds book-midpoint payload context and is `+3.138` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -833,6 +841,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CW | `post_itemctx_param_copy_length_item_type_pair_not_promoted` |
 | H-GEN3CX | `post_itemctx_param_payload_copy_length_item_type_triple_not_promoted` |
 | H-GEN3CY | `post_itemctx_param_copy_length_alpha_item_type_pair_not_promoted` |
+| H-GEN3CZ | `post_itemctx_param_copy_length_alpha_payload_pair_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -949,6 +958,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param copy-length/item-type pair context search](../../analysis/authorial_mechanism_20260620/reports/test_results/106_post_itemctx_param_copy_length_item_type_pair_context_search.md)
 - [Post-itemctx param payload/copy-length/item-type triple context search](../../analysis/authorial_mechanism_20260620/reports/test_results/107_post_itemctx_param_payload_copy_length_item_type_triple_context_search.md)
 - [Post-itemctx param copy-length alpha/item-type pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/108_post_itemctx_param_copy_length_alpha_item_type_pair_search.md)
+- [Post-itemctx param copy-length alpha/payload pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/109_post_itemctx_param_copy_length_alpha_payload_pair_search.md)
 
 ## Boundary
 
@@ -992,7 +1002,8 @@ search also retains the global payload model. The post-itemctx_param item-type
 context family sweep retains the active split `6`, order `1`, alpha `2` model.
 The joint payload/item-type and copy-length/item-type context sweeps also
 retain that active pair, the triple sweep retains the same active triple, and
-the copy-length alpha/item-type sweep retains the same active pair.
+the copy-length alpha/item-type and alpha/payload sweeps retain the same active
+pair.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

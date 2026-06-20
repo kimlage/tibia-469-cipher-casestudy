@@ -223,7 +223,10 @@ triples by component minima; the best changed triple is `+0.415` bits worse,
 and the best triple with all three components changed is `+4.106` bits worse.
 A copy-length alpha/item-type pair sweep then closes `69747328` implied pairs;
 the best changed pair is `+0.415` bits worse, and the best pair with both
-components changed is `+1.804` bits worse.
+components changed is `+1.804` bits worse. A copy-length alpha/payload pair
+sweep then closes `315469` implied pairs; the best changed pair is `+1.389`
+bits worse, and the best pair with both components changed is `+3.138` bits
+worse.
 
 ## Ranked: what would unlock progress
 

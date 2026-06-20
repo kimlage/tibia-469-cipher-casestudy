@@ -520,5 +520,10 @@ Generated audits in this directory should be treated as the current state:
   into `69747328` implied pairs. Component minima keep the active pair best;
   the best changed pair is `+0.415` bits worse, and the best pair with both
   components changed is `+1.804` bits worse.
+- `109_post_itemctx_param_copy_length_alpha_payload_pair_search`: combines
+  `4097` copy-length alpha-by-context rows with `77` literal-payload context
+  candidates into `315469` implied pairs. Component minima keep the active pair
+  best; the best changed pair is `+1.389` bits worse, and the best pair with
+  both components changed is `+3.138` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
