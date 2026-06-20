@@ -56,6 +56,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   emission orders improve the sequential LZ formula after charging order cost.
 - `scripts/12_sequential_lz_literal_run_cost_compile.py` - re-costs the
   sequential LZ generator with literal runs instead of per-digit literal flags.
+- `scripts/13_sequential_lz_dp_parse_compile.py` - replaces the greedy
+  sequential LZ parse with a dynamic-programming parse under the same
+  run-literal cost.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -1,0 +1,66 @@
+{
+  "baseline_sequential_lz_run_literal_bits": 9943.982315133155,
+  "best_encoding": {
+    "baseline_bits": 37414.87613271636,
+    "book_count": 70,
+    "book_header_bits": 1030,
+    "books_roundtrip_ok": 70,
+    "copied_digits": 10468,
+    "copy_bits": 5591.374780129207,
+    "copy_items": 281,
+    "errors": [],
+    "gain_vs_raw_digits_bits": 27591.568517151696,
+    "literal_bits": 3188.9328354354543,
+    "literal_digits": 795,
+    "literal_runs": 84,
+    "min_len": 6,
+    "search_space": {
+      "min_lens": [
+        6
+      ],
+      "parse": "dynamic_programming"
+    },
+    "total_bits": 9823.307615564663
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "controlled_sequential_lz_dp_parse_formula",
+  "controls": {
+    "book_order_shuffle_bits": {
+      "max": 10346.485221958437,
+      "mean": 10063.777217111548,
+      "min": 9776.916518936207,
+      "p_bits_le_observed": 0.039603960396039604,
+      "runs": 100,
+      "sd": 114.01364424853432
+    },
+    "random_same_lengths_bits": {
+      "max": 39557.876132716374,
+      "mean": 39549.835171938765,
+      "min": 39535.6093858804,
+      "p_bits_le_observed": 0.009900990099009901,
+      "runs": 100,
+      "sd": 5.282491999433915
+    },
+    "within_book_digit_shuffle_bits": {
+      "max": 39555.802117725936,
+      "mean": 39542.26839938492,
+      "min": 39520.24739376114,
+      "p_bits_le_observed": 0.009900990099009901,
+      "runs": 100,
+      "sd": 7.969185312300169
+    }
+  },
+  "output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_dp_parse_formula_469.json",
+  "schema": "sequential_lz_dp_parse_compile.v1",
+  "test": "13_sequential_lz_dp_parse_compile",
+  "translation_delta": "NONE",
+  "validation": {
+    "book_count": 70,
+    "books_roundtrip_ok": 70,
+    "errors": []
+  }
+}

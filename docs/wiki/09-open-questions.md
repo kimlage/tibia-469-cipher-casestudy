@@ -66,10 +66,13 @@ already emitted material. A non-numeric order search did not promote: the best
 sampled order gains `186.0` bits but costs `332.5` bits to describe as an
 arbitrary permutation. Re-costing the same sequential generator by literal
 runs instead of per-digit literal flags reaches `9944.0` rough bits with the
-same 70/70 roundtrip and `10451` copied digits. This is mechanical progress
-only: no plaintext, pair-table origin, physical-topology mechanism, or
-authorial-intent claim is promoted. A direct hierarchical-provenance pair-label
-audit was run and rejected as the row0 origin (`16/55`, control `p=0.4194`).
+same 70/70 roundtrip and `10451` copied digits. Replacing the greedy parse
+with a dynamic-programming parse under the same run-literal vocabulary reaches
+`9823.3` rough bits with 70/70 roundtrip and `10468` copied digits. This is
+mechanical progress only: no plaintext, pair-table origin, physical-topology
+mechanism, or authorial-intent claim is promoted. A direct
+hierarchical-provenance pair-label audit was run and rejected as the row0
+origin (`16/55`, control `p=0.4194`).
 
 ## Ranked: what would unlock progress
 

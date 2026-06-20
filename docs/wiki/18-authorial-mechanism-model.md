@@ -66,6 +66,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `hierarchical_reference_formula_469` | `13858.5` | `2727.7` |
 | `sequential_lz_book_formula_469` | `10190.0` | `3668.5` |
 | `sequential_lz_run_literal_formula_469` | `9944.0` | `246.0` |
+| `sequential_lz_dp_parse_formula_469` | `9823.3` | `120.7` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -106,6 +107,15 @@ same-length books, and book-order shuffles remain worse than the observed
 corpus (`p=0.0062` each). This tightens the fabrication-cost upper bound; it
 does not explain row0 or add plaintext.
 
+The dynamic-parse refinement keeps that same vocabulary and fixed `min_len=6`
+but replaces the greedy parse with a dynamic-programming parse under the
+run-literal cost. It roundtrips 70/70 books at `9823.3` bits, a further
+`120.7` bit gain, with `84` literal runs, `795` literal digits, `281` copy
+items, and `10468` copied digits. Digit-shuffle and random same-length controls
+remain much worse (`p=0.0099`); book-order shuffles are only moderately worse
+(`p=0.0396`), so this promotes a tighter copy/reference fabrication bound, not
+an original-order claim.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -131,6 +141,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3E | `controlled_sequential_lz_book_formula` |
 | H-GEN3F | `order_search_not_promoted_after_permutation_cost` |
 | H-GEN3G | `controlled_sequential_lz_run_literal_formula` |
+| H-GEN3H | `controlled_sequential_lz_dp_parse_formula` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -151,10 +162,11 @@ book generation, not row0 pair-cell placement.
 - [Sequential LZ book formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/10_sequential_lz_book_formula_compile.md)
 - [Sequential LZ book order search](../../analysis/authorial_mechanism_20260620/reports/test_results/11_sequential_lz_order_search.md)
 - [Sequential LZ literal-run cost compile](../../analysis/authorial_mechanism_20260620/reports/test_results/12_sequential_lz_literal_run_cost_compile.md)
+- [Sequential LZ dynamic-parse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/13_sequential_lz_dp_parse_compile.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the run-literal sequential LZ formula as the current strongest
+should treat the dynamic-parse sequential LZ formula as the current strongest
 copy/reference fabrication bound and continue testing matrix origin, topology
 holdouts, and official source watchlists under the same Outcome Ledger.

@@ -76,5 +76,13 @@ Generated audits in this directory should be treated as the current state:
   copy items, and `10451` copied digits. Digit-shuffle, random same-length,
   and book-order controls are all worse than the observed corpus
   (`p=0.0062` each).
+- `13_sequential_lz_dp_parse_compile`: keeps the same run-literal
+  copy/reference vocabulary, fixes the prior best `min_len=6`, and replaces the
+  greedy parse with a dynamic-programming parse. It reconstructs 70/70 books at
+  `9823.3` bits, a further `120.7` bit gain, with `84` literal runs, `795`
+  literal digits, `281` copy items, and `10468` copied digits. Digit-shuffle
+  and random same-length controls are much worse (`p=0.0099`); book-order
+  shuffles are only moderately worse (`p=0.0396`), so the accepted claim is a
+  tighter copy/reference bound, not original order.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

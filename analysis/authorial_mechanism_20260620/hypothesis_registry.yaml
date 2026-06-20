@@ -67,6 +67,11 @@ hypotheses:
     status: controlled_sequential_lz_run_literal_formula
     target: "literal-run cost model for the sequential LZ book generator"
     promotion_rule: "must beat sequential LZ v1, roundtrip 70/70, and beat digit-shuffle/random controls without semantic claims"
+  H-GEN3H:
+    name: "sequential LZ dynamic parse formula"
+    status: controlled_sequential_lz_dp_parse_formula
+    target: "dynamic-programming parse under the sequential LZ run-literal cost model"
+    promotion_rule: "must beat the greedy run-literal formula, roundtrip 70/70, and beat digit-shuffle/random controls without promoting book order or semantics"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

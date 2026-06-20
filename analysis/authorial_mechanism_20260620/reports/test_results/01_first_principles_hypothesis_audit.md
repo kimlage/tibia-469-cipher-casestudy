@@ -35,6 +35,7 @@ does not promote plaintext.
 | `H-GEN3E` | `controlled_sequential_lz_book_formula` | `True` |
 | `H-GEN3F` | `order_search_not_promoted_after_permutation_cost` | `True` |
 | `H-GEN3G` | `controlled_sequential_lz_run_literal_formula` | `True` |
+| `H-GEN3H` | `controlled_sequential_lz_dp_parse_formula` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |
