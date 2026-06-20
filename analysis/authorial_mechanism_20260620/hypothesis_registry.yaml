@@ -417,6 +417,11 @@ hypotheses:
     status: post_adaptive_address_optimistic_only_not_promoted
     target: "alternate copy-source address ledgers after adaptive bounded copy-length coding"
     promotion_rule: "must beat the active min_len-bounded absolute digit source positions under full rescoring while preserving decodability, 70/70 roundtrip, and translation_delta NONE"
+  H-GEN3BZ:
+    name: "post adaptive copy order search"
+    status: post_adaptive_copy_order_optimistic_only_not_promoted
+    target: "within-copy source-address/adaptive-length coding order after adaptive bounded copy-length coding"
+    promotion_rule: "must beat active source-address-then-adaptive-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

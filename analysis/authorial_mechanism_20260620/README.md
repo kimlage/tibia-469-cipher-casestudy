@@ -13,7 +13,9 @@ books.
 
 The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
-tests against the current best baseline: `tape_based_formula_469.json`.
+tests. The original tape baseline is now historical; the current strongest
+bound is the adaptive bounded copy-length sequential LZ formula at roughly
+`8576.0` bits.
 
 ## Gates
 
@@ -208,6 +210,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   local recipe edits after adaptive copy-length coding is active.
 - `scripts/82_post_adaptive_address_model_search.py` - retests alternate
   copy-source address ledgers after adaptive copy-length coding is active.
+- `scripts/83_post_adaptive_copy_order_search.py` - retests source-first
+  versus length-first copy order after adaptive copy-length coding is active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

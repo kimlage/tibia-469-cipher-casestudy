@@ -408,5 +408,9 @@ Generated audits in this directory should be treated as the current state:
   address ledgers under the adaptive scorer. Min_len-bounded absolute addresses
   remain best decodable; literal-seed no-mode is `-69.4` bits optimistic but
   still not decodable without source-mode bits.
+- `83_post_adaptive_copy_order_search`: retests whether adaptive copy length
+  should be coded before source address. Pure length-first is `+13.664` bits
+  worse; best-order no-mode is `-3.539` bits optimistic only. Decodable order
+  ledgers do not improve the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

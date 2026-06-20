@@ -8,10 +8,13 @@ translation_delta: NONE
 
 # Research Summary: Generation Formula Next Steps
 
-The report reviewed the current public `main` state and proposed the next
-mechanical improvements for the 70-book generator. Its central recommendation
-was to replace the greedy sequential LZ parser with a dynamic-programming
-parser under the final run-literal cost.
+The report reviewed an earlier public `main` state and proposed the next
+mechanical improvements for the 70-book generator. Because the repository has
+advanced beyond that snapshot, its numeric baseline is treated as historical;
+the report is incorporated as a hypothesis queue and reconciliation checklist,
+not as the current frontier. Its central recommendation was to replace the
+greedy sequential LZ parser with a dynamic-programming parser under the final
+run-literal cost.
 
 That recommendation is now implemented by
 [`13_sequential_lz_dp_parse_compile.py`](scripts/13_sequential_lz_dp_parse_compile.py):
@@ -29,7 +32,7 @@ Additional recommendations were converted into bounded tests:
   this is diagnostic context for future formula work, not a new lower-cost
   generator.
 
-Still open from the report:
+Coverage of the remaining report recommendations and follow-on refinements:
 
 - structured public/topology order tests under the DP parser are now covered by
   [`16_structured_physical_order_lz_test.py`](scripts/16_structured_physical_order_lz_test.py);
@@ -323,6 +326,11 @@ Still open from the report:
   min_len-bounded absolute addresses remain the best decodable ledger at
   `8576.0` bits. Literal-seed no-mode reaches `8506.6` bits, but remains
   non-decodable without source-mode bits.
+- post-adaptive copy order is now covered by
+  [`83_post_adaptive_copy_order_search.py`](scripts/83_post_adaptive_copy_order_search.py);
+  pure length-first adaptive coding is `+13.664` bits worse, while best-order
+  no-mode remains `-3.539` bits optimistic only. Decodable order ledgers do not
+  beat the active source-address-then-adaptive-length order.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
