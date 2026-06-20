@@ -1,0 +1,152 @@
+{
+  "advancement_requirements": [
+    "Predict pair-cell labels under holdout or prequential scoring, not after seeing the whole table.",
+    "Beat direct unordered-pair inventory lookup after charging rule, mapping, exception, and search costs.",
+    "Explain the special ordered-surface facts, including the {19,91} conflict and missing 39, without ad hoc posthoc overrides.",
+    "Generalize against inventory-preserving, label-shuffle, and topology/control baselines.",
+    "Or supply CipSoft/in-game primary evidence for a symbol table or exact book-to-plaintext crib."
+  ],
+  "classification": "row0_origin_frontier_saturated_current_corpus",
+  "families": [
+    {
+      "family": "matrix_generator_exhaustive",
+      "interpretation": "Large candidate sweep finds above-control partial matches, but every tested candidate is more expensive than lookup and classified as lookup disguise.",
+      "key_result": {
+        "best_hits": 21,
+        "classification_count_lookup_disguise": 294528,
+        "coverage_fraction": 0.38181818181818183,
+        "mdl_gain_vs_lookup_bits": -195.77982216485285,
+        "pair_count": 55
+      },
+      "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+      "status": "rejected_lookup_disguise"
+    },
+    {
+      "family": "pair_rule_cover",
+      "interpretation": "Predicate covers can describe frequent labels, but the exception burden exceeds direct lookup cost.",
+      "key_result": {
+        "accuracy": 0.6181818181818182,
+        "best_hits": 34,
+        "mdl_gain_vs_lookup_bits": -65.83939077669297,
+        "pair_count": 55,
+        "rule_count": 10
+      },
+      "source": "analysis/generator_search_20260618/pair_rule_cover_results.json",
+      "status": "rejected_lookup_disguise"
+    },
+    {
+      "family": "digit_orbit_6_9",
+      "interpretation": "The 6/9 swap has robust weak structure, but it compresses only a quotient layer and does not derive the full table.",
+      "key_result": {
+        "fixed_swap_control_p": 0.015249237538123094,
+        "mixed_non_singleton_orbit_count": 4,
+        "pair_count": 55,
+        "primary_hits": 51
+      },
+      "source": "analysis/generator_search_20260618/digit_orbit_robust_control_results.json",
+      "status": "weak_signal_not_formula"
+    },
+    {
+      "family": "tape_feature_pair_label",
+      "interpretation": "Tape/grid features do not predict row0 labels strongly enough to bridge book generation back to table origin.",
+      "key_result": {
+        "accuracy": 0.2909090909090909,
+        "best_hits": 16,
+        "pair_count": 55,
+        "predicate": "diff<=4",
+        "rule_class": "stump"
+      },
+      "source": "analysis/generator_search_20260618/tape_feature_pair_label_results.json",
+      "status": "rejected_control"
+    },
+    {
+      "family": "bilinear_low_rank_pair_factor",
+      "interpretation": "A rank-1 surface is a real weak signal, but even a favorable parameter lower bound is far costlier than inventory lookup.",
+      "key_result": {
+        "control_p_ge_observed": 0.025974025974025976,
+        "loo_accuracy": 0.32727272727272727,
+        "loo_hits": 18,
+        "pair_count": 55,
+        "parameter_ratio_to_inventory_lookup": 14.931370665348402
+      },
+      "source": "analysis/generator_search_20260618/bilinear_low_rank_pair_factor_results.json",
+      "status": "weak_low_rank_signal_not_formula"
+    },
+    {
+      "family": "structural_exception_layer",
+      "interpretation": "Exception/render geometry helps explain the ordered surface, not the unordered pair-label origin.",
+      "key_result": {
+        "classification": "compact_render_layer_over_lookup_not_new_matrix_formula",
+        "delta_vs_unordered_lookup_lossless_bits": -18.64385618977471
+      },
+      "source": "analysis/generator_search_20260618/structural_exception_layer_results.json",
+      "status": "supporting_render_layer_not_origin_formula"
+    },
+    {
+      "family": "k5_eye_pair_model",
+      "interpretation": "The five-eye combinatoric scale matches 55 cells, but the actual label generator is ordinary under controls.",
+      "key_result": {
+        "accuracy": 0.32727272727272727,
+        "label_gain_control_p": 0.45098039215686275,
+        "label_hits": 18,
+        "pair_count": 55
+      },
+      "source": "analysis/eye_model_20260619/k5_eye_pair_model_results.json",
+      "status": "rejected_control"
+    },
+    {
+      "family": "eye_state_5x2_model",
+      "interpretation": "Adding binary state improves raw hits slightly but still fails as a promoted pair-cell formula.",
+      "key_result": {
+        "accuracy": 0.36363636363636365,
+        "label_gain_control_p": 0.17647058823529413,
+        "label_hits": 20,
+        "pair_count": 55
+      },
+      "source": "analysis/eye_model_20260619/eye_state_5x2_model_results.json",
+      "status": "rejected_control"
+    },
+    {
+      "family": "hierarchical_provenance_pair_label",
+      "interpretation": "The best book-generation provenance feature is ordinary under hit controls and much more expensive than lookup.",
+      "key_result": {
+        "accuracy": 0.2909090909090909,
+        "best_hits": 16,
+        "gain_vs_lookup_bits": -196.12101724153146,
+        "pair_count": 55,
+        "stump_hit_control_p": 0.4194008559201141
+      },
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.json",
+      "status": "rejected_as_row0_origin"
+    }
+  ],
+  "inputs": {
+    "bilinear_low_rank": "analysis/generator_search_20260618/bilinear_low_rank_pair_factor_results.json",
+    "digit_orbit": "analysis/generator_search_20260618/digit_orbit_robust_control_results.json",
+    "eye_state_5x2": "analysis/eye_model_20260619/eye_state_5x2_model_results.json",
+    "hierarchical_provenance": "analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.json",
+    "k5_eye": "analysis/eye_model_20260619/k5_eye_pair_model_results.json",
+    "matrix_exhaustive": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+    "pair_rule_cover": "analysis/generator_search_20260618/pair_rule_cover_results.json",
+    "prequential": "analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.json",
+    "structural_exception": "analysis/generator_search_20260618/structural_exception_layer_results.json",
+    "tape_feature": "analysis/generator_search_20260618/tape_feature_pair_label_results.json"
+  },
+  "schema": "row0_origin_frontier_audit.v1",
+  "status": {
+    "classification": "row0_origin_frontier_saturated_current_corpus",
+    "compression_bound_bits": 8561.791947641772,
+    "frontier_decision": "Do not continue broad row0 origin brute force on the current corpus unless the next test supplies a new structural mechanism, external evidence, holdout-predictive table labels, or a simpler charged rule that beats lookup and controls.",
+    "generation_explanation": "partial_predictive_book_generator_not_row0_origin",
+    "row0_dependency": "The active sequential LZ formula assumes the row0 code table as substrate; it does not derive the 10x10 pair table.",
+    "translation_delta": "NONE"
+  },
+  "summary": {
+    "families_indexed": 9,
+    "promoted_row0_origin_formula_count": 0,
+    "rejected_or_supporting_count": 7,
+    "weak_signal_count": 2
+  },
+  "test": "119_row0_origin_frontier_audit",
+  "translation_delta": "NONE"
+}

@@ -530,6 +530,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   holdout, but the result is classified
   `prequential_generation_partial_not_final` because row0/table origin remains
   open and no new structural mechanism is promoted.
+- row0/table-origin consolidation is now covered by
+  [`119_row0_origin_frontier_audit.py`](scripts/119_row0_origin_frontier_audit.py);
+  the indexed matrix, pair-rule, orbit, tape-feature, low-rank, render,
+  eye/blink, and provenance tests leave the frontier at
+  `row0_origin_frontier_saturated_current_corpus`. This does not solve row0;
+  it records that the current corpus has no charged, controlled, holdout-ready
+  pair-label formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

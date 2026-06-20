@@ -259,6 +259,13 @@ beat uniform on all train cutoffs `10/20/35/50/60`, but the classification
 remains `prequential_generation_partial_not_final` because this validates
 partial predictive structure, not row0 origin or a final authorial method.
 
+The row0 origin frontier audit consolidates the current table-origin evidence:
+matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank
+factors, render exceptions, eye/blink arity, and hierarchical provenance still
+do not yield a charged, controlled, holdout-capable pair-label formula. Row0
+origin remains an open technical question, but broad current-corpus brute force
+is now classified `row0_origin_frontier_saturated_current_corpus`.
+
 ## Ranked: what would unlock progress
 
 1. **A single book-crib** — the actual plaintext of *one* of the 70 books, tied to its digit string. This is the highest-value item by far: it would either (a) supply the symbol→meaning key directly, or (b) confirm the non-linguistic verdict definitively. The project's own frontier flags this gap: `PRIMARY_SOURCE_LONG_GLOSS = OPEN_BUT_EMPTY`.

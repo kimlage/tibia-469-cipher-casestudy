@@ -163,6 +163,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-itemctx_param address/item-type pair search | `10` address rows and `17024` item-type candidates form `170240` pairs; best overall pair is nondecodable via literal-seed no-mode addressing, active pair remains best decodable, and best changed decodable pair is `+0.415` bits worse | rejected refinement / optimistic lower bound only |
 | Post-itemctx_param address/payload context-alpha pair search | `10` address rows and `4928` literal-payload context/alpha rows form `49280` pairs; best overall pair is nondecodable via literal-seed no-mode addressing, active pair remains best decodable, and best changed decodable pair is `+1.749` bits worse | rejected refinement / optimistic lower bound only |
 | Prequential generation model audit | prefix-online and prefix-frozen learned-component scoring beat uniform on all train cutoffs `10/20/35/50/60`; `8561.792` is retained as `compression_bound`, not final authorial method | partial predictive validation / generation explanation not final |
+| Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -275,6 +276,7 @@ Primary sources:
 [post_itemctx_param_address_item_type_pair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/116_post_itemctx_param_address_item_type_pair_search.md),
 [post_itemctx_param_address_payload_context_alpha_pair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/117_post_itemctx_param_address_payload_context_alpha_pair_search.md),
 [prequential_generation_model_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.md),
+[row0_origin_frontier_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
@@ -312,11 +314,16 @@ The following remain documented but not promoted:
   controls.
 - Hierarchical provenance as row0 pair-label generator: the best feature stump
   costs more than lookup and is ordinary under inventory-preserving controls.
+- Consolidated row0 origin frontier: existing matrix, rule-cover, orbit,
+  tape-feature, low-rank, render, eye/blink, and provenance tests are now
+  indexed together as `row0_origin_frontier_saturated_current_corpus`; this is
+  a frontier statement, not a solved-origin claim.
 
 Primary sources:
 [matrix_generator_exhaustive_report.md](../../analysis/generator_search_20260618/matrix_generator_exhaustive_report.md),
 [generator_model_final_report.md](../../analysis/generator_search_20260618/generator_model_final_report.md),
 [hierarchical_provenance_pair_label_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.md),
+[row0_origin_frontier_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md),
 [accepted_rejected_hypotheses.json](../../analysis/generator_search_20260618/accepted_rejected_hypotheses.json),
 [k5_eye_pair_model_report.md](../../analysis/eye_model_20260619/k5_eye_pair_model_report.md),
 [eye_state_5x2_model_report.md](../../analysis/eye_model_20260619/eye_state_5x2_model_report.md).

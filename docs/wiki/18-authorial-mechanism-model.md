@@ -809,6 +809,14 @@ train books and `35` holdout books, learned-component uniform cost is
 is `prequential_generation_partial_not_final`: it still does not explain row0
 or establish a final authorial generation method.
 
+The row0 origin frontier audit then indexes the existing table-origin tests
+directly instead of tuning the book compressor again. Matrix generators, pair
+rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
+exception/render layers, K5 and `5x2` eye models, and hierarchical provenance
+still produce no charged, controlled, holdout-capable pair-label formula. The
+classification is `row0_origin_frontier_saturated_current_corpus`: row0 origin
+remains open, but broad current-corpus brute force is no longer the mainline.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -1065,6 +1073,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param address/item-type pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/116_post_itemctx_param_address_item_type_pair_search.md)
 - [Post-itemctx param address/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/117_post_itemctx_param_address_payload_context_alpha_pair_search.md)
 - [Prequential generation model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.md)
+- [Row0 origin frontier audit](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md)
 
 ## Boundary
 

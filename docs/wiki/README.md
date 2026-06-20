@@ -362,6 +362,10 @@ prequential audit then freezes `8561.792` as `compression_bound`; learned
 components beat uniform on all prefix/holdout cuts, but this remains partial
 predictive validation rather than row0 origin or final authorial method. No
 semantic claim is promoted.
+The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
+low-rank/render/eye/provenance tests and classifies that front as
+`row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
+charged controlled pair-label formula is available in the current corpus.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

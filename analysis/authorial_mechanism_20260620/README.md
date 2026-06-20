@@ -304,6 +304,9 @@ bits. Treat this as `compression_bound`, not as a final authorial method.
   `compression_bound` from `generation_explanation` by training adaptive
   component counts on prefix books and scoring future books without parameter
   search.
+- `scripts/119_row0_origin_frontier_audit.py` - indexes existing row0/table
+  origin tests and freezes the current frontier as saturated under the current
+  corpus, with no promoted pair-label formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

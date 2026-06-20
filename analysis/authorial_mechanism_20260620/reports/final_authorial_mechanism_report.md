@@ -574,5 +574,11 @@ Generated audits in this directory should be treated as the current state:
   all five cutoffs, but the result remains
   `prequential_generation_partial_not_final`; it is evidence of partial
   predictive structure, not row0 origin or final authorial method.
+- `119_row0_origin_frontier_audit`: indexes the existing row0/table-origin
+  families and classifies the current state as
+  `row0_origin_frontier_saturated_current_corpus`. Matrix generators, rule
+  covers, `6<->9` orbit, tape features, low-rank factors, render exceptions,
+  eye/blink arity, and hierarchical provenance still produce no charged,
+  controlled pair-label formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
