@@ -343,8 +343,9 @@ sweep also keeps the active split `6`, order `1`, alpha `2` model. A joint
 payload/item-type context sweep keeps the same active pair after checking
 `1310848` combinations, and a copy-length/item-type context sweep keeps it
 after checking `1344896` combinations. A triple payload/copy-length/item-type
-sweep closes `103556992` implied combinations by component minima. No semantic
-claim is promoted.
+sweep closes `103556992` implied combinations by component minima, and a
+copy-length alpha/item-type sweep closes `69747328` implied combinations. No
+semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

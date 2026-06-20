@@ -515,5 +515,10 @@ Generated audits in this directory should be treated as the current state:
   Component minima keep the active triple best; the best changed triple is
   `+0.415` bits worse, and the best triple with all three components changed is
   `+4.106` bits worse.
+- `108_post_itemctx_param_copy_length_alpha_item_type_pair_search`: combines
+  `4097` copy-length alpha-by-context rows with `17024` item-type candidates
+  into `69747328` implied pairs. Component minima keep the active pair best;
+  the best changed pair is `+0.415` bits worse, and the best pair with both
+  components changed is `+1.804` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
