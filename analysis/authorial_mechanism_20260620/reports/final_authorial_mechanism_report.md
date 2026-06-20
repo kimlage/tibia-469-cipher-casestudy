@@ -504,5 +504,10 @@ Generated audits in this directory should be treated as the current state:
   into `1310848` pairs. The active pair remains best; the best changed pair is
   `+0.415` bits worse, and the best pair with both components changed is
   `+2.164` bits worse.
+- `106_post_itemctx_param_copy_length_item_type_pair_context_search`: combines
+  `79` copy-length context candidates with `17024` item-type candidates into
+  `1344896` pairs. The active pair remains best; the best changed pair is
+  `+0.415` bits worse, and the best pair with both components changed is
+  `+2.357` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

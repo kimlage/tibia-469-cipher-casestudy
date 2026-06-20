@@ -442,6 +442,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   The active global payload plus split `6`, order `1`, alpha `2` item-type model
   remains best; the best changed pair is `+0.415` bits worse and the best pair
   with both components changed is `+2.164` bits worse.
+- post-itemctx_param copy-length/item-type pair context search is now covered by
+  [`106_post_itemctx_param_copy_length_item_type_pair_context_search.py`](scripts/106_post_itemctx_param_copy_length_item_type_pair_context_search.py);
+  `79` copy-length contexts and `17024` item-type candidates form `1344896`
+  pairs. The active midpoint copy-length plus split `6`, order `1`, alpha `2`
+  item-type model remains best; the best changed pair is `+0.415` bits worse
+  and the best pair with both components changed is `+2.357` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

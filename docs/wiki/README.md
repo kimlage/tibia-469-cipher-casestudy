@@ -341,7 +341,8 @@ the fixed midpoint `alpha=1` model. Literal-payload context retesting keeps the
 global previous-emitted-digit payload model. A broader item-type context family
 sweep also keeps the active split `6`, order `1`, alpha `2` model. A joint
 payload/item-type context sweep keeps the same active pair after checking
-`1310848` combinations. No semantic claim is promoted.
+`1310848` combinations, and a copy-length/item-type context sweep keeps it
+after checking `1344896` combinations. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
