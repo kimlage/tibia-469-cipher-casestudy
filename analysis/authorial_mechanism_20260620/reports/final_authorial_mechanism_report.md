@@ -279,5 +279,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `6596` compatible quartets, and the best quartet is
   `+3.9` bits worse than the active formula.
+- `52_post_forced_repair_quint_search`: tests whether five compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `22168` compatible quintets, and the best quintet is
+  `+5.5` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

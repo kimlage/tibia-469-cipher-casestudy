@@ -140,6 +140,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   of literal-to-copy repairs after the forced-length repair.
 - `scripts/51_post_forced_repair_quad_search.py` - tests compatible quartets
   of literal-to-copy repairs after the forced-length repair.
+- `scripts/52_post_forced_repair_quint_search.py` - tests compatible quintets
+  of literal-to-copy repairs after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

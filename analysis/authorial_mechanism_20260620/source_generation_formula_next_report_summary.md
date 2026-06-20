@@ -176,6 +176,10 @@ Still open from the report:
   [`51_post_forced_repair_quad_search.py`](scripts/51_post_forced_repair_quad_search.py);
   the same `22` single candidates yield `6596` compatible quartets, and the
   best quartet is `+3.9` bits worse than the active formula.
+- post-forced-repair quint search is now covered by
+  [`52_post_forced_repair_quint_search.py`](scripts/52_post_forced_repair_quint_search.py);
+  the same `22` single candidates yield `22168` compatible quintets, and the
+  best quintet is `+5.5` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
