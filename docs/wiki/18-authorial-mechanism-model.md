@@ -351,6 +351,11 @@ best pair remains `+1.6` bits worse than the active formula. The local
 literal-to-copy frontier is therefore closed under compatible pairs for this
 cost model.
 
+The post-forced-repair triple search extends that local check to three
+compatible repairs. It tests `1462` compatible triples from the same `22`
+single candidates, and the best triple remains `+2.7` bits worse than the
+active formula. No triple recipe is promoted.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -413,6 +418,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AP | `post_forced_repair_payload_alpha_retains_14` |
 | H-GEN3AQ | `post_forced_repair_address_optimistic_only_not_promoted` |
 | H-GEN3AR | `post_forced_repair_pair_not_promoted` |
+| H-GEN3AS | `post_forced_repair_triple_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -470,6 +476,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/47_post_forced_repair_payload_alpha_sweep.md)
 - [Post-forced-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/48_post_forced_repair_address_model_search.md)
 - [Post-forced-repair pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/49_post_forced_repair_pair_search.md)
+- [Post-forced-repair triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/50_post_forced_repair_triple_search.md)
 
 ## Boundary
 
@@ -482,5 +489,5 @@ ledgers, remaining-short forced-literal rule, and forced short-suffix literal
 lengths, and the final forced-length local repair with retained payload
 `alpha=14` and retained absolute `source_digit_pos` addresses, as the current
 strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-do not improve it; continue testing matrix origin, topology holdouts, and
-official source watchlists under the same Outcome Ledger.
+and compatible triples do not improve it; continue testing matrix origin,
+topology holdouts, and official source watchlists under the same Outcome Ledger.

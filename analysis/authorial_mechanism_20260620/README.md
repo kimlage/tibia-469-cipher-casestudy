@@ -136,6 +136,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   source-address ledgers after the forced-length repair.
 - `scripts/49_post_forced_repair_pair_search.py` - tests compatible pairs of
   literal-to-copy repairs after the forced-length repair.
+- `scripts/50_post_forced_repair_triple_search.py` - tests compatible triples
+  of literal-to-copy repairs after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

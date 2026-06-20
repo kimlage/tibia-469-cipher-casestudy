@@ -271,5 +271,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together after the forced-length local
   repair. They do not: `22` single candidates produce `227` compatible pairs,
   and the best pair is `+1.6` bits worse than the active formula.
+- `50_post_forced_repair_triple_search`: tests whether three compatible
+  literal-to-copy repairs become cheaper together. They do not: the same `22`
+  single candidates produce `1462` compatible triples, and the best triple is
+  `+2.7` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -95,6 +95,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair payload alpha sweep | adaptive literal-payload `alpha=14` remains best after the latest repair; nearest alternate `alpha=13` is `+0.1` bit worse | retained parameter |
 | Post forced-length repair copy address models | absolute `source_digit_pos` remains best decodable at `8922.8`; literal-seed no-mode reaches `8855.5` but sparse decodable seed-run costs `8933.5` | rejected refinement / optimistic clue |
 | Post forced-length repair pair search | `22` single literal-to-copy candidates produce `227` compatible pairs, but the best pair is `+1.6` bits worse than the active formula | rejected refinement |
+| Post forced-length repair triple search | the same `22` candidates produce `1462` compatible triples, but the best triple is `+2.7` bits worse than the active formula | rejected refinement |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -145,6 +146,7 @@ Primary sources:
 [post_forced_repair_payload_alpha_sweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/47_post_forced_repair_payload_alpha_sweep.md),
 [post_forced_repair_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/48_post_forced_repair_address_model_search.md),
 [post_forced_repair_pair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/49_post_forced_repair_pair_search.md),
+[post_forced_repair_triple_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/50_post_forced_repair_triple_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

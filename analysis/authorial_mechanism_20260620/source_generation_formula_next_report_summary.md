@@ -168,6 +168,10 @@ Still open from the report:
   [`49_post_forced_repair_pair_search.py`](scripts/49_post_forced_repair_pair_search.py);
   `22` single candidates yield `227` compatible pairs, and the best pair is
   still `+1.6` bits worse than the active formula.
+- post-forced-repair triple search is now covered by
+  [`50_post_forced_repair_triple_search.py`](scripts/50_post_forced_repair_triple_search.py);
+  the same `22` single candidates yield `1462` compatible triples, and the best
+  triple is `+2.7` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

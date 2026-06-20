@@ -115,7 +115,8 @@ length bits lowers it to `8922.9` bits, and one final forced-length local
 literal-to-copy repair lowers it to `8922.8` bits. A post-repair payload alpha
 sweep retains `alpha=14`, and a post-repair address retest again rejects
 literal-seed addressing as optimistic-only. A compatible pair-repair search is
-also worse than the active formula. No plaintext, pair-table origin,
+also worse than the active formula, and a compatible triple search is worse as
+well. No plaintext, pair-table origin,
 physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).
