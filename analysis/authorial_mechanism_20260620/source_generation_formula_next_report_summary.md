@@ -115,6 +115,10 @@ Still open from the report:
   [`37_digit_address_literal_repair_search.py`](scripts/37_digit_address_literal_repair_search.py);
   one local repair improves the current bound to `9070.1` bits, with no second
   one-step repair after applying it.
+- post-digit-repair literal-payload alpha is now covered by
+  [`38_post_digit_repair_payload_alpha_sweep.py`](scripts/38_post_digit_repair_payload_alpha_sweep.py);
+  `alpha=14` remains the best declared adaptive payload parameter after the
+  latest repair.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

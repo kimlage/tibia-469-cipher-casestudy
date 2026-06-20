@@ -217,5 +217,9 @@ Generated audits in this directory should be treated as the current state:
   `57928` in book `13` with a prior copy from digit position `1976`, improving
   the total formula from `9070.8` to `9070.1` bits. A follow-up one-step search
   after applying it finds no second improvement.
+- `38_post_digit_repair_payload_alpha_sweep`: retests adaptive literal-payload
+  alpha after the digit-address repair changes the literal payload stream.
+  `alpha=14` remains best at `2592.0` payload-plus-model bits; the nearest
+  alternate is `alpha=13` at `2592.1` bits. No newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

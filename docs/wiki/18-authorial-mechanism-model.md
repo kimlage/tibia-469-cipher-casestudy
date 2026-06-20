@@ -268,6 +268,11 @@ recipe improvement. Literal `57928` in book `13` can be replaced by a prior copy
 from digit position `1976`, lowering the bound from `9070.8` to `9070.1` bits.
 A follow-up one-step search after applying it finds no second improvement.
 
+The post-repair payload alpha sweep keeps the payload parameter unchanged.
+After the digit-address repair, `alpha=14` remains best at `2592.0`
+payload-plus-model bits; the nearest alternate, `alpha=13`, costs `2592.1`
+bits. No formula is promoted by this parameter sweep.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -318,6 +323,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AD | `controlled_digit_only_copy_address_improvement` |
 | H-GEN3AE | `digit_address_optimistic_only_not_promoted` |
 | H-GEN3AF | `controlled_digit_address_literal_repair_improvement` |
+| H-GEN3AG | `post_digit_repair_payload_alpha_retains_14` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -363,6 +369,7 @@ book generation, not row0 pair-cell placement.
 - [Digit-only copy address compile](../../analysis/authorial_mechanism_20260620/reports/test_results/35_digit_only_copy_address_compile.md)
 - [Digit address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/36_digit_address_model_search.md)
 - [Digit-address literal repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/37_digit_address_literal_repair_search.md)
+- [Post-digit-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/38_post_digit_repair_payload_alpha_sweep.md)
 
 ## Boundary
 

@@ -192,6 +192,11 @@ hypotheses:
     status: controlled_digit_address_literal_repair_improvement
     target: "local literal-to-copy repairs after digit-only address costing"
     promotion_rule: "must beat the active digit-address formula under exact rescoring and preserve 70/70 roundtrip"
+  H-GEN3AG:
+    name: "post digit-address repair literal payload alpha sweep"
+    status: post_digit_repair_payload_alpha_retains_14
+    target: "adaptive literal-payload alpha after the digit-address literal-to-copy repair"
+    promotion_rule: "must beat alpha=14 after declaration cost on the current literal payload stream"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
