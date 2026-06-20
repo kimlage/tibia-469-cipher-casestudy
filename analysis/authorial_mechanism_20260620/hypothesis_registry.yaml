@@ -167,6 +167,11 @@ hypotheses:
     status: literal_to_copy_pair_repair_not_promoted
     target: "compatible pairs of literal-to-copy repairs under adaptive literal payload coding"
     promotion_rule: "must beat the current one-step repaired formula after exact rescoring"
+  H-GEN3AB:
+    name: "book length ledger search"
+    status: controlled_book_length_ledger_improvement
+    target: "decodable ledger for the 70 book lengths in the current sequential LZ formula"
+    promotion_rule: "must beat independent gamma-coded book lengths after charging declared parameters and preserving 70/70 roundtrip"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

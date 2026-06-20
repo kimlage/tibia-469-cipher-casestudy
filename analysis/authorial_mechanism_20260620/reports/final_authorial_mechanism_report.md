@@ -191,5 +191,11 @@ Generated audits in this directory should be treated as the current state:
   coding. They do not: `25` single candidates yield `293` compatible pairs,
   and the best pair costs `9538.2` bits, `+0.9` worse than the one-step
   repaired formula. No newer formula is promoted.
+- `33_book_length_ledger_search`: keeps the repaired recipe fixed but replaces
+  independent `gamma(length+1)` book lengths with a decodable signed-Rice
+  residual ledger around declared `anchor=151`, `k=5`. Book-length cost drops
+  from `1030.0` to `566.0` bits, improving the total formula from `9537.3` to
+  `9073.3` bits with 70/70 roundtrip. This is a cost-ledger improvement, not a
+  semantic or pair-table result.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

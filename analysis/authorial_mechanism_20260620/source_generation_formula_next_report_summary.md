@@ -95,6 +95,10 @@ Still open from the report:
 - compatible two-repair literal-to-copy recipes are now covered by
   [`32_literal_to_copy_pair_repair_search.py`](scripts/32_literal_to_copy_pair_repair_search.py);
   no pair beats the current one-step repaired formula after exact rescoring.
+- book-length ledger coding is now covered by
+  [`33_book_length_ledger_search.py`](scripts/33_book_length_ledger_search.py);
+  a declared signed-Rice residual ledger improves the current bound to
+  `9073.3` bits while preserving 70/70 roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

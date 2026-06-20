@@ -71,6 +71,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_rice_literal_length_formula_469` | `9545.5` | `51.0` |
 | `sequential_lz_literal_payload_formula_469` | `9538.0` | `7.5` |
 | `sequential_lz_literal_copy_repair_formula_469` | `9537.3` | `0.7` |
+| `sequential_lz_length_ledger_formula_469` | `9073.3` | `464.0` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -236,6 +237,13 @@ and `293` compatible pairs. The best pair costs `9538.2` bits, which is `+0.9`
 bits worse than the one-step repaired formula, so no two-repair recipe is
 promoted.
 
+The book-length ledger search improves the cost accounting without changing the
+recipe. Instead of charging each of the 70 book lengths independently with
+`gamma(length+1)`, the promoted ledger stores signed Rice residuals from a
+declared `anchor=151`, `k=5`. Book-length cost drops from `1030.0` to `566.0`
+bits, and the total bound drops from `9537.3` to `9073.3` bits with 70/70
+roundtrip. This is a ledger improvement, not a new semantic channel.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -281,6 +289,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3Y | `post_repair_payload_alpha_retains_14` |
 | H-GEN3Z | `post_repair_address_optimistic_only_not_promoted` |
 | H-GEN3AA | `literal_to_copy_pair_repair_not_promoted` |
+| H-GEN3AB | `controlled_book_length_ledger_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -321,12 +330,13 @@ book generation, not row0 pair-cell placement.
 - [Post-repair payload alpha sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/30_post_repair_payload_alpha_sweep.md)
 - [Post-repair address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/31_post_repair_address_model_search.md)
 - [Literal-to-copy pair repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/32_literal_to_copy_pair_repair_search.md)
+- [Book length ledger search](../../analysis/authorial_mechanism_20260620/reports/test_results/33_book_length_ledger_search.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
 should treat the Rice copy-length plus Rice literal-length sequential LZ formula
-with adaptive literal-payload coding and the one-step literal-to-copy repair as
-the current strongest copy/reference fabrication bound and continue testing
-matrix origin, topology holdouts, and official source watchlists under the same
-Outcome Ledger.
+with adaptive literal-payload coding, the one-step literal-to-copy repair, and
+the signed-Rice book-length ledger as the current strongest copy/reference
+fabrication bound and continue testing matrix origin, topology holdouts, and
+official source watchlists under the same Outcome Ledger.

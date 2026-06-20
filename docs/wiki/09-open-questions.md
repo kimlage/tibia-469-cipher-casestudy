@@ -95,8 +95,10 @@ decodable ledger. A one-step literal-to-copy repair then improves the bound to
 `9537.3` bits, a post-repair payload sweep retains `alpha=14`, and a
 post-repair address retest again keeps absolute `source_pos` as the best
 decodable ledger. A compatible pair-repair search also fails to beat the
-one-step repaired formula. No plaintext, pair-table origin, physical-topology
-mechanism, or authorial-intent claim is promoted. A direct
+one-step repaired formula. A book-length ledger search then improves cost
+accounting to `9073.3` bits by replacing independent gamma-coded lengths with
+signed Rice residuals from a declared anchor. No plaintext, pair-table origin,
+physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).
 
