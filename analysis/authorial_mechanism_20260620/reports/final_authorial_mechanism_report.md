@@ -390,5 +390,8 @@ Generated audits in this directory should be treated as the current state:
   coded before source address. Pure length-first is `+18.295` bits worse; the
   best per-copy order is `-3.539` bits optimistic only because mode bits are
   undeclared. Decodable order ledgers do not improve the active formula.
+- `78_post_repair2_adaptive_copy_length_compile`: promotes a bounded adaptive
+  copy-length index ledger with `alpha=2`. It lowers the active mechanical
+  bound from `8609.773` to `8575.986` bits after charged declaration bits.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

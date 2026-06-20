@@ -299,6 +299,11 @@ Still open from the report:
   pure length-first coding is `+18.295` bits worse, while best-order no-mode is
   `-3.539` bits optimistic only. Decodable order ledgers do not beat the active
   source-address-then-length order.
+- post-repair2 adaptive copy length is now covered by
+  [`78_post_repair2_adaptive_copy_length_compile.py`](scripts/78_post_repair2_adaptive_copy_length_compile.py);
+  adaptive bounded copy-length index coding with `alpha=2` lowers the active
+  bound from `8609.773` to `8575.986` bits after charged declaration bits, with
+  no recipe or semantic change.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

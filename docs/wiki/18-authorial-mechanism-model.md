@@ -515,6 +515,14 @@ Picking the cheaper order per copy would be `-3.539` bits cheaper only if the
 mode were free, so it remains an optimistic lower bound. The tested decodable
 mode ledgers do not beat the active source-address-then-length order.
 
+The post-repair2 adaptive copy-length compile then replaces the uniform
+truncated-binary length index with an adaptive global length-index ledger,
+restricted to the currently legal length range after the source address is
+decoded. With charged declaration bits, `alpha=2` lowers the active mechanical
+bound from `8609.773` to `8575.986` bits. This is a copy-length cost refinement
+only: recipe, addresses, payload model, item-type model, row0, and semantic
+verdict are unchanged.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -605,6 +613,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BR | `post_repair2_pair_frontier_closed` |
 | H-GEN3BS | `post_repair2_address_optimistic_only_not_promoted` |
 | H-GEN3BT | `post_repair2_copy_order_optimistic_only_not_promoted` |
+| H-GEN3BU | `controlled_post_repair2_adaptive_copy_length_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -690,11 +699,12 @@ book generation, not row0 pair-cell placement.
 - [Post-repair2 pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/75_post_repair2_pair_frontier.md)
 - [Post-repair2 address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/76_post_repair2_address_model_search.md)
 - [Post-repair2 copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/77_post_repair2_copy_order_search.md)
+- [Post-repair2 adaptive copy-length compile](../../analysis/authorial_mechanism_20260620/reports/test_results/78_post_repair2_adaptive_copy_length_compile.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the bounded copy-length plus Rice literal-length sequential LZ formula,
+should treat the adaptive bounded copy-length plus Rice literal-length sequential LZ formula,
 the one-step literal-to-copy repair, the signed-Rice book-length ledger,
 min_len-bounded digit-only copy addresses, and the digit-address literal repair,
 plus the adaptive/Markov/book-start/literal-force item-type ledgers,
@@ -703,9 +713,10 @@ final forced-length local repair, retained absolute `source_digit_pos`
 addresses, and
 the previous-emitted-digit literal payload context model with declared order
 `2`, the item-type context-order ledger with declared order `3`, and the
-contextual copy-to-literal repair plus one minaddr local literal-to-copy repair
-and one post-minaddr local literal-to-copy repair as the current strongest
-copy/reference fabrication bound at roughly `8609.8` bits. Follow-up
+contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
+one post-minaddr local literal-to-copy repair, and the adaptive copy-length
+index ledger with `alpha=2` as the current strongest copy/reference
+fabrication bound at roughly `8576.0` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter

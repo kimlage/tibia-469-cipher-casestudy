@@ -392,6 +392,11 @@ hypotheses:
     status: post_repair2_copy_order_optimistic_only_not_promoted
     target: "within-copy source-address/length coding order after the second minaddr local repair"
     promotion_rule: "must beat active source-address-then-length coding with a decodable order ledger under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BU:
+    name: "post repair2 adaptive copy-length compile"
+    status: controlled_post_repair2_adaptive_copy_length_improvement
+    target: "adaptive bounded copy-length index ledger after the second minaddr local repair"
+    promotion_rule: "must beat active truncated-binary copy lengths after charged alpha declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

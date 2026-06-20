@@ -198,6 +198,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   copy-source address ledgers after the post-repair2 formula.
 - `scripts/77_post_repair2_copy_order_search.py` - retests source-first versus
   length-first within-copy coding order after the post-repair2 formula.
+- `scripts/78_post_repair2_adaptive_copy_length_compile.py` - promotes an
+  adaptive bounded copy-length index ledger after the post-repair2 formula.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
