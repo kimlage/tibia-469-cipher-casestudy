@@ -311,5 +311,9 @@ Generated audits in this directory should be treated as the current state:
   literal-to-copy repairs become cheaper together. They do not: the same `22`
   single candidates produce `184756` compatible twelve-repair sets, and the
   best set is `+20.6` bits worse than the active formula.
+- `60_post_forced_repair_high_order_exhaustion`: closes the remaining
+  high-order compatible local repair frontier. Exact rescoring of sizes
+  `13..19` finds the best remaining set at size `13`, still `+23.7` bits worse
+  than the active formula; sizes `20..22` have no compatible sets.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

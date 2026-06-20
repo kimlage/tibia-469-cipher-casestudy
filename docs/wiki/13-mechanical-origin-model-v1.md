@@ -105,6 +105,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair decet search | the same `22` candidates produce `286858` compatible decets, but the best decet is `+15.1` bits worse than the active formula | rejected refinement |
 | Post forced-length repair eleven-repair search | the same `22` candidates produce `255476` compatible eleven-repair sets, but the best set is `+17.8` bits worse than the active formula | rejected refinement |
 | Post forced-length repair twelve-repair search | the same `22` candidates produce `184756` compatible twelve-repair sets, but the best set is `+20.6` bits worse than the active formula | rejected refinement |
+| Post forced-length repair high-order exhaustion | compatible set sizes `13..19` are exactly rescored and sizes `20..22` checked; the best remaining set is size `13` at `+23.7` bits and sizes `20..22` have no compatible sets | rejected refinement / frontier closed |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -165,6 +166,7 @@ Primary sources:
 [post_forced_repair_decet_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/57_post_forced_repair_decet_search.md),
 [post_forced_repair_eleven_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md),
 [post_forced_repair_twelve_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/59_post_forced_repair_twelve_search.md),
+[post_forced_repair_high_order_exhaustion.md](../../analysis/authorial_mechanism_20260620/reports/test_results/60_post_forced_repair_high_order_exhaustion.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

@@ -208,6 +208,12 @@ Still open from the report:
   [`59_post_forced_repair_twelve_search.py`](scripts/59_post_forced_repair_twelve_search.py);
   the same `22` single candidates yield `184756` compatible twelve-repair
   sets, and the best set is `+20.6` bits worse than the active formula.
+- post-forced-repair high-order exhaustion is now covered by
+  [`60_post_forced_repair_high_order_exhaustion.py`](scripts/60_post_forced_repair_high_order_exhaustion.py);
+  exact rescoring of compatible set sizes `13..19` and compatibility checks for
+  `20..22` close the remaining local frontier. The best remaining high-order
+  set is size `13` at `+23.7` bits worse than the active formula; sizes
+  `20..22` have no compatible sets.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

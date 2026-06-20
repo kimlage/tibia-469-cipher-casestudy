@@ -156,6 +156,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   eleven-repair sets after the forced-length repair.
 - `scripts/59_post_forced_repair_twelve_search.py` - tests compatible
   twelve-repair sets after the forced-length repair.
+- `scripts/60_post_forced_repair_high_order_exhaustion.py` - closes the
+  remaining compatible high-order repair sets from size 13 through 22.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

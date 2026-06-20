@@ -1,0 +1,1549 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "post_forced_repair_high_order_not_promoted",
+  "compatible_sets_tested": 180892,
+  "current_formula_bits": 8922.803053595282,
+  "current_score": {
+    "copied_digits": 10485,
+    "copy_address_bits": 3277.2179634860386,
+    "copy_bits": 5142.2179634860395,
+    "copy_items": 282,
+    "copy_length_code_bits": 1865,
+    "fixed_bits": 602.0,
+    "forced_literal_length_count": 8,
+    "forced_literal_length_saved_bits": 32,
+    "forced_literal_to_copy": 72,
+    "forced_remaining_short_to_literal": 8,
+    "forced_rule_violations": [],
+    "item_type_stream_bits": 243.85784219047886,
+    "literal_bits_no_payload": 366.0,
+    "literal_digits": 778,
+    "literal_payload_bits": 2568.7272479187645,
+    "literal_runs": 84,
+    "total_bits": 8922.803053595282,
+    "validation": {
+      "book_count": 70,
+      "books_roundtrip_ok": 70,
+      "errors": []
+    }
+  },
+  "incompatible_sets_skipped": 916898,
+  "overall_best_set": {
+    "delta_vs_current_bits": 23.682165682805135,
+    "repairs": [
+      {
+        "book": "0",
+        "book_pos": 60,
+        "chunk": "11800",
+        "length": 5,
+        "literal_offset": 56,
+        "op_index": 2,
+        "single_delta_vs_current_bits": 1.3495485751263914,
+        "single_total_bits": 8924.152602170408,
+        "source_digit_pos": 57
+      },
+      {
+        "book": "1",
+        "book_pos": 34,
+        "chunk": "57651",
+        "length": 5,
+        "literal_offset": 6,
+        "op_index": 4,
+        "single_delta_vs_current_bits": 1.8342301006341586,
+        "single_total_bits": 8924.637283695916,
+        "source_digit_pos": 92
+      },
+      {
+        "book": "2",
+        "book_pos": 36,
+        "chunk": "65128",
+        "length": 5,
+        "literal_offset": 2,
+        "op_index": 7,
+        "single_delta_vs_current_bits": 1.5990893315392896,
+        "single_total_bits": 8924.402142926821,
+        "source_digit_pos": 50
+      },
+      {
+        "book": "2",
+        "book_pos": 71,
+        "chunk": "18003",
+        "length": 5,
+        "literal_offset": 2,
+        "op_index": 9,
+        "single_delta_vs_current_bits": 0.7031591519225913,
+        "single_total_bits": 8923.506212747205,
+        "source_digit_pos": 58
+      },
+      {
+        "book": "2",
+        "book_pos": 71,
+        "chunk": "72611",
+        "length": 5,
+        "literal_offset": 16,
+        "op_index": 9,
+        "single_delta_vs_current_bits": 2.1107862396438577,
+        "single_total_bits": 8924.913839834926,
+        "source_digit_pos": 68
+      },
+      {
+        "book": "2",
+        "book_pos": 137,
+        "chunk": "14519",
+        "length": 5,
+        "literal_offset": 19,
+        "op_index": 11,
+        "single_delta_vs_current_bits": 3.0313912263209204,
+        "single_total_bits": 8925.834444821603,
+        "source_digit_pos": 164
+      },
+      {
+        "book": "2",
+        "book_pos": 137,
+        "chunk": "11216",
+        "length": 5,
+        "literal_offset": 30,
+        "op_index": 11,
+        "single_delta_vs_current_bits": 1.8689161547117692,
+        "single_total_bits": 8924.671969749994,
+        "source_digit_pos": 225
+      },
+      {
+        "book": "3",
+        "book_pos": 29,
+        "chunk": "60199",
+        "length": 5,
+        "literal_offset": 12,
+        "op_index": 4,
+        "single_delta_vs_current_bits": 1.1250365080759366,
+        "single_total_bits": 8923.928090103358,
+        "source_digit_pos": 22
+      },
+      {
+        "book": "3",
+        "book_pos": 73,
+        "chunk": "04648",
+        "length": 5,
+        "literal_offset": 5,
+        "op_index": 7,
+        "single_delta_vs_current_bits": 2.271049309281807,
+        "single_total_bits": 8925.074102904564,
+        "source_digit_pos": 374
+      },
+      {
+        "book": "3",
+        "book_pos": 107,
+        "chunk": "45765",
+        "length": 5,
+        "literal_offset": 2,
+        "op_index": 12,
+        "single_delta_vs_current_bits": 3.0986233484291006,
+        "single_total_bits": 8925.901676943711,
+        "source_digit_pos": 183
+      },
+      {
+        "book": "17",
+        "book_pos": 7,
+        "chunk": "477090",
+        "length": 6,
+        "literal_offset": 1,
+        "op_index": 1,
+        "single_delta_vs_current_bits": 0.9730124189045455,
+        "single_total_bits": 8923.776066014187,
+        "source_digit_pos": 208
+      },
+      {
+        "book": "57",
+        "book_pos": 69,
+        "chunk": "91186",
+        "length": 5,
+        "literal_offset": 18,
+        "op_index": 2,
+        "single_delta_vs_current_bits": 7.020306555026764,
+        "single_total_bits": 8929.823360150309,
+        "source_digit_pos": 46
+      },
+      {
+        "book": "57",
+        "book_pos": 69,
+        "chunk": "74519",
+        "length": 5,
+        "literal_offset": 23,
+        "op_index": 2,
+        "single_delta_vs_current_bits": 1.8357522091901046,
+        "single_total_bits": 8924.638805804472,
+        "source_digit_pos": 3292
+      }
+    ],
+    "size": 13,
+    "total_bits": 8946.485219278087
+  },
+  "schema": "post_forced_repair_high_order_exhaustion.v1",
+  "single_candidates": 22,
+  "size_results": [
+    {
+      "best_set": {
+        "delta_vs_current_bits": 23.682165682805135,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 13,
+        "total_bits": 8946.485219278087
+      },
+      "compatible_sets_tested": 107576,
+      "incompatible_sets_skipped": 389844,
+      "size": 13,
+      "total_sets_considered": 497420
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 27.039828990271417,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 14,
+        "total_bits": 8949.842882585554
+      },
+      "compatible_sets_tested": 49708,
+      "incompatible_sets_skipped": 270062,
+      "size": 14,
+      "total_sets_considered": 319770
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 31.320287571845256,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "51800",
+            "length": 5,
+            "literal_offset": 27,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.6094270910525665,
+            "single_total_bits": 8927.412480686335,
+            "source_digit_pos": 645
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 15,
+        "total_bits": 8954.123341167127
+      },
+      "compatible_sets_tested": 17816,
+      "incompatible_sets_skipped": 152728,
+      "size": 15,
+      "total_sets_considered": 170544
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 34.774490890513334,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "94343",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.375672797807056,
+            "single_total_bits": 8927.17872639309,
+            "source_digit_pos": 1386
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "51800",
+            "length": 5,
+            "literal_offset": 27,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.6094270910525665,
+            "single_total_bits": 8927.412480686335,
+            "source_digit_pos": 645
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 16,
+        "total_bits": 8957.577544485795
+      },
+      "compatible_sets_tested": 4777,
+      "incompatible_sets_skipped": 69836,
+      "size": 16,
+      "total_sets_considered": 74613
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 40.499070371004564,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "94343",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.375672797807056,
+            "single_total_bits": 8927.17872639309,
+            "source_digit_pos": 1386
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "51800",
+            "length": 5,
+            "literal_offset": 27,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.6094270910525665,
+            "single_total_bits": 8927.412480686335,
+            "source_digit_pos": 645
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "23",
+            "book_pos": 110,
+            "chunk": "03645",
+            "length": 5,
+            "literal_offset": 1,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 5.895246418189345,
+            "single_total_bits": 8928.698300013471,
+            "source_digit_pos": 3397
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 17,
+        "total_bits": 8963.302123966287
+      },
+      "compatible_sets_tested": 902,
+      "incompatible_sets_skipped": 25432,
+      "size": 17,
+      "total_sets_considered": 26334
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 47.04345415627722,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "94343",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.375672797807056,
+            "single_total_bits": 8927.17872639309,
+            "source_digit_pos": 1386
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "51800",
+            "length": 5,
+            "literal_offset": 27,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.6094270910525665,
+            "single_total_bits": 8927.412480686335,
+            "source_digit_pos": 645
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "23",
+            "book_pos": 110,
+            "chunk": "03645",
+            "length": 5,
+            "literal_offset": 1,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 5.895246418189345,
+            "single_total_bits": 8928.698300013471,
+            "source_digit_pos": 3397
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "64991",
+            "length": 5,
+            "literal_offset": 11,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 6.826118874259919,
+            "single_total_bits": 8929.629172469542,
+            "source_digit_pos": 3389
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 18,
+        "total_bits": 8969.84650775156
+      },
+      "compatible_sets_tested": 107,
+      "incompatible_sets_skipped": 7208,
+      "size": 18,
+      "total_sets_considered": 7315
+    },
+    {
+      "best_set": {
+        "delta_vs_current_bits": 54.64747234263996,
+        "repairs": [
+          {
+            "book": "0",
+            "book_pos": 60,
+            "chunk": "11800",
+            "length": 5,
+            "literal_offset": 56,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.3495485751263914,
+            "single_total_bits": 8924.152602170408,
+            "source_digit_pos": 57
+          },
+          {
+            "book": "1",
+            "book_pos": 34,
+            "chunk": "57651",
+            "length": 5,
+            "literal_offset": 6,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.8342301006341586,
+            "single_total_bits": 8924.637283695916,
+            "source_digit_pos": 92
+          },
+          {
+            "book": "2",
+            "book_pos": 36,
+            "chunk": "65128",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 1.5990893315392896,
+            "single_total_bits": 8924.402142926821,
+            "source_digit_pos": 50
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "18003",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 0.7031591519225913,
+            "single_total_bits": 8923.506212747205,
+            "source_digit_pos": 58
+          },
+          {
+            "book": "2",
+            "book_pos": 71,
+            "chunk": "72611",
+            "length": 5,
+            "literal_offset": 16,
+            "op_index": 9,
+            "single_delta_vs_current_bits": 2.1107862396438577,
+            "single_total_bits": 8924.913839834926,
+            "source_digit_pos": 68
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "14519",
+            "length": 5,
+            "literal_offset": 19,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 3.0313912263209204,
+            "single_total_bits": 8925.834444821603,
+            "source_digit_pos": 164
+          },
+          {
+            "book": "2",
+            "book_pos": 137,
+            "chunk": "11216",
+            "length": 5,
+            "literal_offset": 30,
+            "op_index": 11,
+            "single_delta_vs_current_bits": 1.8689161547117692,
+            "single_total_bits": 8924.671969749994,
+            "source_digit_pos": 225
+          },
+          {
+            "book": "3",
+            "book_pos": 29,
+            "chunk": "60199",
+            "length": 5,
+            "literal_offset": 12,
+            "op_index": 4,
+            "single_delta_vs_current_bits": 1.1250365080759366,
+            "single_total_bits": 8923.928090103358,
+            "source_digit_pos": 22
+          },
+          {
+            "book": "3",
+            "book_pos": 73,
+            "chunk": "04648",
+            "length": 5,
+            "literal_offset": 5,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 2.271049309281807,
+            "single_total_bits": 8925.074102904564,
+            "source_digit_pos": 374
+          },
+          {
+            "book": "3",
+            "book_pos": 107,
+            "chunk": "45765",
+            "length": 5,
+            "literal_offset": 2,
+            "op_index": 12,
+            "single_delta_vs_current_bits": 3.0986233484291006,
+            "single_total_bits": 8925.901676943711,
+            "source_digit_pos": 183
+          },
+          {
+            "book": "5",
+            "book_pos": 168,
+            "chunk": "45190",
+            "length": 5,
+            "literal_offset": 20,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 3.597015088671469,
+            "single_total_bits": 8926.400068683954,
+            "source_digit_pos": 175
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "94343",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.375672797807056,
+            "single_total_bits": 8927.17872639309,
+            "source_digit_pos": 1386
+          },
+          {
+            "book": "14",
+            "book_pos": 0,
+            "chunk": "51800",
+            "length": 5,
+            "literal_offset": 27,
+            "op_index": 0,
+            "single_delta_vs_current_bits": 4.6094270910525665,
+            "single_total_bits": 8927.412480686335,
+            "source_digit_pos": 645
+          },
+          {
+            "book": "17",
+            "book_pos": 7,
+            "chunk": "477090",
+            "length": 6,
+            "literal_offset": 1,
+            "op_index": 1,
+            "single_delta_vs_current_bits": 0.9730124189045455,
+            "single_total_bits": 8923.776066014187,
+            "source_digit_pos": 208
+          },
+          {
+            "book": "23",
+            "book_pos": 110,
+            "chunk": "03645",
+            "length": 5,
+            "literal_offset": 1,
+            "op_index": 7,
+            "single_delta_vs_current_bits": 5.895246418189345,
+            "single_total_bits": 8928.698300013471,
+            "source_digit_pos": 3397
+          },
+          {
+            "book": "49",
+            "book_pos": 18,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 1,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.8725348180414585,
+            "single_total_bits": 8930.675588413324,
+            "source_digit_pos": 3292
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "64991",
+            "length": 5,
+            "literal_offset": 11,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 6.826118874259919,
+            "single_total_bits": 8929.629172469542,
+            "source_digit_pos": 3389
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "91186",
+            "length": 5,
+            "literal_offset": 18,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 7.020306555026764,
+            "single_total_bits": 8929.823360150309,
+            "source_digit_pos": 46
+          },
+          {
+            "book": "57",
+            "book_pos": 69,
+            "chunk": "74519",
+            "length": 5,
+            "literal_offset": 23,
+            "op_index": 2,
+            "single_delta_vs_current_bits": 1.8357522091901046,
+            "single_total_bits": 8924.638805804472,
+            "source_digit_pos": 3292
+          }
+        ],
+        "size": 19,
+        "total_bits": 8977.450525937922
+      },
+      "compatible_sets_tested": 6,
+      "incompatible_sets_skipped": 1534,
+      "size": 19,
+      "total_sets_considered": 1540
+    },
+    {
+      "best_set": null,
+      "compatible_sets_tested": 0,
+      "incompatible_sets_skipped": 231,
+      "size": 20,
+      "total_sets_considered": 231
+    },
+    {
+      "best_set": null,
+      "compatible_sets_tested": 0,
+      "incompatible_sets_skipped": 22,
+      "size": 21,
+      "total_sets_considered": 22
+    },
+    {
+      "best_set": null,
+      "compatible_sets_tested": 0,
+      "incompatible_sets_skipped": 1,
+      "size": 22,
+      "total_sets_considered": 1
+    }
+  ],
+  "sizes_tested": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_repair_formula_469.json",
+  "test": "60_post_forced_repair_high_order_exhaustion",
+  "total_sets_considered": 1097790,
+  "translation_delta": "NONE"
+}

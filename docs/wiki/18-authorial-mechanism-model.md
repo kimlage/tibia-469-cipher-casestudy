@@ -401,6 +401,12 @@ twelve compatible repairs. It tests `184756` compatible twelve-repair sets, and
 the best set remains `+20.6` bits worse than the active formula. No
 twelve-repair recipe is promoted.
 
+The high-order exhaustion pass closes the remaining local frontier under this
+cost model. It exactly rescores compatible set sizes `13..19`, checks sizes
+`20..22`, and finds no improvement: the best remaining set is size `13` at
+`+23.7` bits worse than the active formula, while sizes `20..22` have no
+compatible sets.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -473,6 +479,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3AZ | `post_forced_repair_decet_not_promoted` |
 | H-GEN3BA | `post_forced_repair_eleven_not_promoted` |
 | H-GEN3BB | `post_forced_repair_twelve_not_promoted` |
+| H-GEN3BC | `post_forced_repair_high_order_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -540,6 +547,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair decet search](../../analysis/authorial_mechanism_20260620/reports/test_results/57_post_forced_repair_decet_search.md)
 - [Post-forced-repair eleven-repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md)
 - [Post-forced-repair twelve-repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/59_post_forced_repair_twelve_search.md)
+- [Post-forced-repair high-order exhaustion](../../analysis/authorial_mechanism_20260620/reports/test_results/60_post_forced_repair_high_order_exhaustion.md)
 
 ## Boundary
 
@@ -552,6 +560,7 @@ ledgers, remaining-short forced-literal rule, and forced short-suffix literal
 lengths, and the final forced-length local repair with retained payload
 `alpha=14` and retained absolute `source_digit_pos` addresses, as the current
 strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-and compatible triple/quartet/quintet/sextet/septet/octet/nonet/decet/eleven/twelve-repair sets do not improve it; continue
+and all compatible local repair sets above one do not improve it under the
+current cost model; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.
