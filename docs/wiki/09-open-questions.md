@@ -133,7 +133,9 @@ lowers it to `8803.1` bits while retaining the same no-plaintext state. The
 post-repair local frontier is now closed for single edits and copy-to-literal
 pairs under the current cost model. A current address-model retest keeps
 absolute `source_digit_pos` as the best decodable address ledger; literal-seed
-addressing is still optimistic-only.
+addressing is still optimistic-only. A post-contextual parameter resweep keeps
+the current declared parameters unchanged: copy Rice `k=4`, literal Rice `k=3`,
+payload order `2` / `alpha=1`, and item-type order `3` / `alpha=2`.
 
 ## Ranked: what would unlock progress
 

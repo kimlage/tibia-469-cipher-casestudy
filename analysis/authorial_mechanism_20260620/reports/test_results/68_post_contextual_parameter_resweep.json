@@ -1,0 +1,4956 @@
+{
+  "best_by_family": {
+    "copy_length_rice_k": {
+      "component_bits": 1860,
+      "delta_vs_current_bits": 0.0,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 4,
+      "total_bits": 8803.132872018637
+    },
+    "item_type_context_order_alpha": {
+      "component_bits": 239.22710825435698,
+      "delta_vs_current_bits": 0.0,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 2,
+        "order": 3
+      },
+      "total_bits": 8803.132872018637
+    },
+    "literal_payload_context_order_alpha": {
+      "component_bits": 2461.089213156956,
+      "delta_vs_current_bits": 0.0,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 1,
+        "order": 2
+      },
+      "total_bits": 8803.132872018637
+    },
+    "literal_run_length_rice_k": {
+      "component_bits": 370.0,
+      "delta_vs_current_bits": 0.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 3,
+      "total_bits": 8803.132872018637
+    }
+  },
+  "best_model": {
+    "component_bits": 1860,
+    "delta_vs_current_bits": 0.0,
+    "family": "copy_length_rice_k",
+    "model_declaration_bits": 5,
+    "parameter": 4,
+    "total_bits": 8803.132872018637
+  },
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "post_contextual_parameter_resweep_retains_current",
+  "current_formula_bits": 8803.132872018637,
+  "current_score_audit": {
+    "copied_digits": 10480,
+    "copy_address_bits": 3264.8165506073246,
+    "copy_bits": 5124.816550607325,
+    "copy_items": 281,
+    "copy_length_code_bits": 1860,
+    "fixed_bits": 608.0,
+    "forced_literal_length_count": 8,
+    "forced_literal_length_saved_bits": 32,
+    "item_type_context_stats": {
+      "coded_items": 285,
+      "context_count": 7,
+      "context_histogram": {
+        "BOS|BOS|BOS": 70,
+        "BOS|BOS|copy": 47,
+        "BOS|copy|copy": 26,
+        "BOS|literal|copy": 13,
+        "copy|copy|copy": 49,
+        "copy|literal|copy": 52,
+        "literal|copy|copy": 28
+      },
+      "forced_literal_to_copy": 73,
+      "forced_remaining_short_to_literal": 8,
+      "forced_rule_violations": []
+    },
+    "item_type_stream_bits": 239.22710825435698,
+    "literal_bits_no_payload": 370.0,
+    "literal_digits": 783,
+    "literal_payload_bits": 2461.089213156956,
+    "literal_payload_context_stats": {
+      "context_count": 98,
+      "context_histogram": {
+        "00": 10,
+        "01": 9,
+        "02": 3,
+        "03": 11,
+        "04": 10,
+        "05": 6,
+        "06": 5,
+        "08": 5,
+        "09": 7,
+        "10": 4,
+        "11": 22,
+        "12": 13,
+        "13": 4,
+        "14": 15,
+        "15": 14,
+        "16": 7,
+        "17": 4,
+        "18": 17,
+        "19": 24,
+        "20": 4,
+        "21": 19,
+        "22": 4,
+        "24": 5,
+        "25": 4,
+        "26": 2,
+        "27": 9,
+        "28": 10,
+        "29": 3,
+        "30": 3,
+        "31": 6,
+        "32": 1,
+        "34": 11,
+        "35": 9,
+        "36": 11,
+        "38": 3,
+        "39": 2,
+        "40": 3,
+        "41": 1,
+        "42": 5,
+        "43": 14,
+        "44": 5,
+        "45": 23,
+        "46": 19,
+        "47": 7,
+        "48": 8,
+        "49": 4,
+        "50": 6,
+        "51": 26,
+        "52": 13,
+        "53": 4,
+        "54": 6,
+        "55": 5,
+        "56": 9,
+        "57": 18,
+        "58": 9,
+        "59": 6,
+        "60": 7,
+        "61": 15,
+        "62": 4,
+        "63": 1,
+        "64": 19,
+        "65": 15,
+        "66": 1,
+        "67": 14,
+        "68": 3,
+        "69": 1,
+        "70": 7,
+        "71": 5,
+        "72": 10,
+        "73": 5,
+        "74": 7,
+        "75": 10,
+        "76": 10,
+        "77": 7,
+        "78": 9,
+        "79": 3,
+        "80": 12,
+        "81": 6,
+        "82": 2,
+        "83": 6,
+        "84": 5,
+        "85": 9,
+        "86": 7,
+        "87": 2,
+        "88": 9,
+        "89": 10,
+        "90": 7,
+        "91": 9,
+        "92": 4,
+        "93": 1,
+        "94": 12,
+        "95": 9,
+        "96": 9,
+        "97": 10,
+        "98": 2,
+        "99": 10,
+        "^9": 1,
+        "^^": 1
+      }
+    },
+    "literal_runs": 85,
+    "total_bits": 8803.132872018637,
+    "validation": {
+      "book_count": 70,
+      "books_roundtrip_ok": 70,
+      "errors": []
+    }
+  },
+  "models": [
+    {
+      "component_bits": 1860,
+      "delta_vs_current_bits": 0.0,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 4,
+      "total_bits": 8803.132872018637
+    },
+    {
+      "component_bits": 370.0,
+      "delta_vs_current_bits": 0.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 3,
+      "total_bits": 8803.132872018637
+    },
+    {
+      "component_bits": 2461.089213156956,
+      "delta_vs_current_bits": 0.0,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 1,
+        "order": 2
+      },
+      "total_bits": 8803.132872018637
+    },
+    {
+      "component_bits": 239.22710825435698,
+      "delta_vs_current_bits": 0.0,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 2,
+        "order": 3
+      },
+      "total_bits": 8803.132872018637
+    },
+    {
+      "component_bits": 240.12528754012848,
+      "delta_vs_current_bits": 0.8981792857703113,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 1,
+        "order": 3
+      },
+      "total_bits": 8804.031051304408
+    },
+    {
+      "component_bits": 244.62596607684694,
+      "delta_vs_current_bits": 1.3988578224889352,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 5,
+      "parameter": {
+        "alpha": 2,
+        "order": 1
+      },
+      "total_bits": 8804.531729841126
+    },
+    {
+      "component_bits": 244.90357441321157,
+      "delta_vs_current_bits": 1.6764661588549643,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 5,
+      "parameter": {
+        "alpha": 1,
+        "order": 1
+      },
+      "total_bits": 8804.809338177492
+    },
+    {
+      "component_bits": 239.829408586723,
+      "delta_vs_current_bits": 2.6023003323662124,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 3,
+        "order": 3
+      },
+      "total_bits": 8805.735172351004
+    },
+    {
+      "component_bits": 242.52847937299168,
+      "delta_vs_current_bits": 3.3013711186340515,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 2,
+        "order": 2
+      },
+      "total_bits": 8806.434243137272
+    },
+    {
+      "component_bits": 244.82939336747208,
+      "delta_vs_current_bits": 3.6022851131147036,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 7,
+      "parameter": {
+        "alpha": 3,
+        "order": 1
+      },
+      "total_bits": 8806.735157131752
+    },
+    {
+      "component_bits": 240.85064399202278,
+      "delta_vs_current_bits": 3.623535737664497,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 4,
+        "order": 3
+      },
+      "total_bits": 8806.756407756302
+    },
+    {
+      "component_bits": 242.98009481914232,
+      "delta_vs_current_bits": 3.7529865647848055,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 1,
+        "order": 2
+      },
+      "total_bits": 8806.885858583422
+    },
+    {
+      "component_bits": 245.1910165894342,
+      "delta_vs_current_bits": 3.9639083350775763,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 7,
+      "parameter": {
+        "alpha": 4,
+        "order": 1
+      },
+      "total_bits": 8807.096780353715
+    },
+    {
+      "component_bits": 241.3907283736125,
+      "delta_vs_current_bits": 4.163620119254119,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 4
+      },
+      "total_bits": 8807.296492137892
+    },
+    {
+      "component_bits": 245.62029736919607,
+      "delta_vs_current_bits": 4.393189114838606,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 7,
+      "parameter": {
+        "alpha": 5,
+        "order": 1
+      },
+      "total_bits": 8807.526061133476
+    },
+    {
+      "component_bits": 242.00752014821964,
+      "delta_vs_current_bits": 4.780411893862038,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 5,
+        "order": 3
+      },
+      "total_bits": 8807.9132839125
+    },
+    {
+      "component_bits": 246.08028013195218,
+      "delta_vs_current_bits": 4.8531718775939225,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 7,
+      "parameter": {
+        "alpha": 6,
+        "order": 1
+      },
+      "total_bits": 8807.986043896231
+    },
+    {
+      "component_bits": 242.9838097387731,
+      "delta_vs_current_bits": 5.756701484415316,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 3,
+        "order": 2
+      },
+      "total_bits": 8808.889573503053
+    },
+    {
+      "component_bits": 243.14930519257067,
+      "delta_vs_current_bits": 5.922196938212437,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 5
+      },
+      "total_bits": 8809.05506895685
+    },
+    {
+      "component_bits": 243.1948804296715,
+      "delta_vs_current_bits": 5.967772175314167,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 6,
+        "order": 3
+      },
+      "total_bits": 8809.100644193952
+    },
+    {
+      "component_bits": 243.46808693933278,
+      "delta_vs_current_bits": 6.240978684974834,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 4
+      },
+      "total_bits": 8809.373850703612
+    },
+    {
+      "component_bits": 243.71145034241786,
+      "delta_vs_current_bits": 6.484342088060657,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 4,
+        "order": 2
+      },
+      "total_bits": 8809.617214106698
+    },
+    {
+      "component_bits": 241.735391118186,
+      "delta_vs_current_bits": 6.508282863827844,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 4
+      },
+      "total_bits": 8809.641154882465
+    },
+    {
+      "component_bits": 244.5387077464752,
+      "delta_vs_current_bits": 7.311599492117239,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 5,
+        "order": 2
+      },
+      "total_bits": 8810.444471510755
+    },
+    {
+      "component_bits": 246.5529260243033,
+      "delta_vs_current_bits": 7.325817769946298,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 7,
+        "order": 1
+      },
+      "total_bits": 8810.458689788584
+    },
+    {
+      "component_bits": 242.7295221824889,
+      "delta_vs_current_bits": 7.502413928132228,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 4
+      },
+      "total_bits": 8810.63528594677
+    },
+    {
+      "component_bits": 247.0284935566511,
+      "delta_vs_current_bits": 7.801385302293056,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 8,
+        "order": 1
+      },
+      "total_bits": 8810.93425732093
+    },
+    {
+      "component_bits": 245.3981691468725,
+      "delta_vs_current_bits": 8.171060892515015,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 6,
+        "order": 2
+      },
+      "total_bits": 8811.303932911153
+    },
+    {
+      "component_bits": 247.5013993282156,
+      "delta_vs_current_bits": 8.274291073857967,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 9,
+        "order": 1
+      },
+      "total_bits": 8811.407163092495
+    },
+    {
+      "component_bits": 243.556700530412,
+      "delta_vs_current_bits": 8.329592276055337,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 5
+      },
+      "total_bits": 8811.462464294693
+    },
+    {
+      "component_bits": 245.7872542461301,
+      "delta_vs_current_bits": 8.560145991772515,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 5
+      },
+      "total_bits": 8811.69301801041
+    },
+    {
+      "component_bits": 243.92996170830077,
+      "delta_vs_current_bits": 8.702853453944044,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 4
+      },
+      "total_bits": 8811.835725472582
+    },
+    {
+      "component_bits": 247.96833856941214,
+      "delta_vs_current_bits": 8.741230315054054,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 10,
+        "order": 1
+      },
+      "total_bits": 8811.874102333692
+    },
+    {
+      "component_bits": 244.3674985962085,
+      "delta_vs_current_bits": 9.140390341850434,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 7,
+        "order": 3
+      },
+      "total_bits": 8812.273262360488
+    },
+    {
+      "component_bits": 248.4273364642402,
+      "delta_vs_current_bits": 9.20022820988197,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 11,
+        "order": 1
+      },
+      "total_bits": 8812.33310022852
+    },
+    {
+      "component_bits": 244.66080907412598,
+      "delta_vs_current_bits": 9.433700819769001,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 5
+      },
+      "total_bits": 8812.566572838407
+    },
+    {
+      "component_bits": 248.87723066867946,
+      "delta_vs_current_bits": 9.650122414321231,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 12,
+        "order": 1
+      },
+      "total_bits": 8812.782994432959
+    },
+    {
+      "component_bits": 245.179973316025,
+      "delta_vs_current_bits": 9.952865061666671,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 4
+      },
+      "total_bits": 8813.085737080304
+    },
+    {
+      "component_bits": 249.3173718996649,
+      "delta_vs_current_bits": 10.09026364530655,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 13,
+        "order": 1
+      },
+      "total_bits": 8813.223135663944
+    },
+    {
+      "component_bits": 245.50483312104473,
+      "delta_vs_current_bits": 10.277724866688004,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 8,
+        "order": 3
+      },
+      "total_bits": 8813.410596885326
+    },
+    {
+      "component_bits": 247.6125877502357,
+      "delta_vs_current_bits": 10.385479495878826,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 6
+      },
+      "total_bits": 8813.518351514516
+    },
+    {
+      "component_bits": 249.74744256140175,
+      "delta_vs_current_bits": 10.520334307044322,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 14,
+        "order": 1
+      },
+      "total_bits": 8813.653206325682
+    },
+    {
+      "component_bits": 247.9043500942841,
+      "delta_vs_current_bits": 10.677241839926864,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 7
+      },
+      "total_bits": 8813.810113858564
+    },
+    {
+      "component_bits": 245.94453233811555,
+      "delta_vs_current_bits": 10.717424083757578,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 5
+      },
+      "total_bits": 8813.850296102395
+    },
+    {
+      "component_bits": 246.25888223445682,
+      "delta_vs_current_bits": 11.031773980099388,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 7,
+        "order": 2
+      },
+      "total_bits": 8814.164645998737
+    },
+    {
+      "component_bits": 246.5977802494968,
+      "delta_vs_current_bits": 11.370671995138764,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 9,
+        "order": 3
+      },
+      "total_bits": 8814.503544013776
+    },
+    {
+      "component_bits": 247.1054660972083,
+      "delta_vs_current_bits": 11.878357842850164,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 8,
+        "order": 2
+      },
+      "total_bits": 8815.011229861488
+    },
+    {
+      "component_bits": 247.24564438537664,
+      "delta_vs_current_bits": 12.018536131019573,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 5
+      },
+      "total_bits": 8815.151408149657
+    },
+    {
+      "component_bits": 247.39851764314986,
+      "delta_vs_current_bits": 12.171409388793109,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 6
+      },
+      "total_bits": 8815.30428140743
+    },
+    {
+      "component_bits": 247.64292758091582,
+      "delta_vs_current_bits": 12.41581932655754,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 10,
+        "order": 3
+      },
+      "total_bits": 8815.548691345195
+    },
+    {
+      "component_bits": 247.77180023586612,
+      "delta_vs_current_bits": 12.544691981509459,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 7
+      },
+      "total_bits": 8815.677564000147
+    },
+    {
+      "component_bits": 247.9300782144608,
+      "delta_vs_current_bits": 12.702969960102564,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 9,
+        "order": 2
+      },
+      "total_bits": 8815.83584197874
+    },
+    {
+      "component_bits": 248.0712254425073,
+      "delta_vs_current_bits": 12.84411718814954,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 6
+      },
+      "total_bits": 8815.976989206787
+    },
+    {
+      "component_bits": 250.1673428095809,
+      "delta_vs_current_bits": 12.94023455522256,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 15,
+        "order": 1
+      },
+      "total_bits": 8816.07310657386
+    },
+    {
+      "component_bits": 246.41545340619513,
+      "delta_vs_current_bits": 13.188345151836984,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 4
+      },
+      "total_bits": 8816.321217170474
+    },
+    {
+      "component_bits": 248.4683710356056,
+      "delta_vs_current_bits": 13.241262781248224,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 7
+      },
+      "total_bits": 8816.374134799886
+    },
+    {
+      "component_bits": 250.57711687092396,
+      "delta_vs_current_bits": 13.350008616565901,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 16,
+        "order": 1
+      },
+      "total_bits": 8816.482880635203
+    },
+    {
+      "component_bits": 248.6398088512031,
+      "delta_vs_current_bits": 13.412700596845752,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 11,
+        "order": 3
+      },
+      "total_bits": 8816.545572615483
+    },
+    {
+      "component_bits": 248.72883216629813,
+      "delta_vs_current_bits": 13.501723911940644,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 10,
+        "order": 2
+      },
+      "total_bits": 8816.634595930578
+    },
+    {
+      "component_bits": 250.9769042753267,
+      "delta_vs_current_bits": 13.74979602096937,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 17,
+        "order": 1
+      },
+      "total_bits": 8816.882668039607
+    },
+    {
+      "component_bits": 249.02239210856231,
+      "delta_vs_current_bits": 13.795283854204172,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 6
+      },
+      "total_bits": 8816.928155872842
+    },
+    {
+      "component_bits": 386.0,
+      "delta_vs_current_bits": 14.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 3,
+      "parameter": 2,
+      "total_bits": 8817.132872018637
+    },
+    {
+      "component_bits": 251.36690697603865,
+      "delta_vs_current_bits": 14.139798721680563,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 18,
+        "order": 1
+      },
+      "total_bits": 8817.272670740318
+    },
+    {
+      "component_bits": 249.41915361055337,
+      "delta_vs_current_bits": 14.192045356196104,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 7
+      },
+      "total_bits": 8817.324917374834
+    },
+    {
+      "component_bits": 251.49076670045355,
+      "delta_vs_current_bits": 14.263658446096088,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 6
+      },
+      "total_bits": 8817.396530464734
+    },
+    {
+      "component_bits": 249.50002997043916,
+      "delta_vs_current_bits": 14.272921716081328,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 11,
+        "order": 2
+      },
+      "total_bits": 8817.405793734719
+    },
+    {
+      "component_bits": 251.57651904139212,
+      "delta_vs_current_bits": 14.349410787033776,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 7
+      },
+      "total_bits": 8817.482282805671
+    },
+    {
+      "component_bits": 249.58950089474564,
+      "delta_vs_current_bits": 14.362392640388862,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 12,
+        "order": 3
+      },
+      "total_bits": 8817.495264659026
+    },
+    {
+      "component_bits": 247.60888202785853,
+      "delta_vs_current_bits": 14.381773773500754,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 4
+      },
+      "total_bits": 8817.514645792138
+    },
+    {
+      "component_bits": 251.747366861429,
+      "delta_vs_current_bits": 14.52025860707181,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 19,
+        "order": 1
+      },
+      "total_bits": 8817.65313062571
+    },
+    {
+      "component_bits": 250.05457133322477,
+      "delta_vs_current_bits": 14.827463078867368,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 6
+      },
+      "total_bits": 8817.960335097505
+    },
+    {
+      "component_bits": 252.11855020964026,
+      "delta_vs_current_bits": 14.891441955282062,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 20,
+        "order": 1
+      },
+      "total_bits": 8818.02431397392
+    },
+    {
+      "component_bits": 250.24322407206634,
+      "delta_vs_current_bits": 15.016115817708851,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 12,
+        "order": 2
+      },
+      "total_bits": 8818.148987836346
+    },
+    {
+      "component_bits": 250.44061809382785,
+      "delta_vs_current_bits": 15.213509839470134,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 7
+      },
+      "total_bits": 8818.346381858108
+    },
+    {
+      "component_bits": 252.48073686616928,
+      "delta_vs_current_bits": 15.253628611812019,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 21,
+        "order": 1
+      },
+      "total_bits": 8818.38650063045
+    },
+    {
+      "component_bits": 250.49387172955667,
+      "delta_vs_current_bits": 15.266763475199696,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 13,
+        "order": 3
+      },
+      "total_bits": 8818.399635493837
+    },
+    {
+      "component_bits": 248.5059660403676,
+      "delta_vs_current_bits": 15.278857786010121,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 5
+      },
+      "total_bits": 8818.411729804648
+    },
+    {
+      "component_bits": 248.7489515010463,
+      "delta_vs_current_bits": 15.52184324668815,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 4
+      },
+      "total_bits": 8818.654715265326
+    },
+    {
+      "component_bits": 252.83421268335738,
+      "delta_vs_current_bits": 15.607104429000174,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 22,
+        "order": 1
+      },
+      "total_bits": 8818.739976447638
+    },
+    {
+      "component_bits": 250.95869215194284,
+      "delta_vs_current_bits": 15.731583897584642,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 13,
+        "order": 2
+      },
+      "total_bits": 8818.864455916222
+    },
+    {
+      "component_bits": 253.1792642415056,
+      "delta_vs_current_bits": 15.952155987148217,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 23,
+        "order": 1
+      },
+      "total_bits": 8819.085028005786
+    },
+    {
+      "component_bits": 251.35516450508564,
+      "delta_vs_current_bits": 16.12805625072724,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 14,
+        "order": 3
+      },
+      "total_bits": 8819.260928269365
+    },
+    {
+      "component_bits": 253.51617518274196,
+      "delta_vs_current_bits": 16.289066928384273,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 24,
+        "order": 1
+      },
+      "total_bits": 8819.421938947022
+    },
+    {
+      "component_bits": 251.64713108409921,
+      "delta_vs_current_bits": 16.420022829741356,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 14,
+        "order": 2
+      },
+      "total_bits": 8819.552894848379
+    },
+    {
+      "component_bits": 249.70467396376114,
+      "delta_vs_current_bits": 16.47756570940328,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 5
+      },
+      "total_bits": 8819.61043772804
+    },
+    {
+      "component_bits": 249.83203995087246,
+      "delta_vs_current_bits": 16.60493169651454,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 4
+      },
+      "total_bits": 8819.737803715152
+    },
+    {
+      "component_bits": 253.84522369445742,
+      "delta_vs_current_bits": 16.618115440100155,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 25,
+        "order": 1
+      },
+      "total_bits": 8819.750987458738
+    },
+    {
+      "component_bits": 254.16668081743182,
+      "delta_vs_current_bits": 16.939572563074762,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 26,
+        "order": 1
+      },
+      "total_bits": 8820.072444581712
+    },
+    {
+      "component_bits": 254.4808093481967,
+      "delta_vs_current_bits": 17.25370109383948,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 27,
+        "order": 1
+      },
+      "total_bits": 8820.386573112477
+    },
+    {
+      "component_bits": 254.78786317057185,
+      "delta_vs_current_bits": 17.560754916214137,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 28,
+        "order": 1
+      },
+      "total_bits": 8820.693626934852
+    },
+    {
+      "component_bits": 250.8359329530815,
+      "delta_vs_current_bits": 17.608824698723765,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 5
+      },
+      "total_bits": 8820.741696717361
+    },
+    {
+      "component_bits": 250.85828936221088,
+      "delta_vs_current_bits": 17.63118110785399,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 4
+      },
+      "total_bits": 8820.764053126491
+    },
+    {
+      "component_bits": 255.08808689714806,
+      "delta_vs_current_bits": 17.860978642789632,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 29,
+        "order": 1
+      },
+      "total_bits": 8820.993850661427
+    },
+    {
+      "component_bits": 251.0912238387286,
+      "delta_vs_current_bits": 17.864115584370666,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 6
+      },
+      "total_bits": 8820.996987603008
+    },
+    {
+      "component_bits": 255.38171573400325,
+      "delta_vs_current_bits": 18.154607479646074,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 30,
+        "order": 1
+      },
+      "total_bits": 8821.287479498284
+    },
+    {
+      "component_bits": 251.46234495492524,
+      "delta_vs_current_bits": 18.23523670056784,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 7
+      },
+      "total_bits": 8821.368108719205
+    },
+    {
+      "component_bits": 251.82968053085008,
+      "delta_vs_current_bits": 18.602572276493447,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 4
+      },
+      "total_bits": 8821.735444295131
+    },
+    {
+      "component_bits": 251.90024487405543,
+      "delta_vs_current_bits": 18.673136619698198,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 5
+      },
+      "total_bits": 8821.806008638336
+    },
+    {
+      "component_bits": 252.10028950536523,
+      "delta_vs_current_bits": 18.873181251006827,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 6
+      },
+      "total_bits": 8822.006053269644
+    },
+    {
+      "component_bits": 252.17576302680106,
+      "delta_vs_current_bits": 18.94865477244275,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 15,
+        "order": 3
+      },
+      "total_bits": 8822.08152679108
+    },
+    {
+      "component_bits": 252.30947328359173,
+      "delta_vs_current_bits": 19.082365029235007,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 15,
+        "order": 2
+      },
+      "total_bits": 8822.215237047873
+    },
+    {
+      "component_bits": 2480.172885937425,
+      "delta_vs_current_bits": 19.083672780468987,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 2,
+        "order": 2
+      },
+      "total_bits": 8822.216544799106
+    },
+    {
+      "component_bits": 252.45510027022286,
+      "delta_vs_current_bits": 19.22799201586531,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 7
+      },
+      "total_bits": 8822.360864034503
+    },
+    {
+      "component_bits": 252.74904585047355,
+      "delta_vs_current_bits": 19.521937596116913,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 4
+      },
+      "total_bits": 8822.654809614754
+    },
+    {
+      "component_bits": 252.9007782893701,
+      "delta_vs_current_bits": 19.673670035012037,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 5
+      },
+      "total_bits": 8822.80654205365
+    },
+    {
+      "component_bits": 252.94677421783322,
+      "delta_vs_current_bits": 19.719665963475563,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 16,
+        "order": 2
+      },
+      "total_bits": 8822.852537982113
+    },
+    {
+      "component_bits": 252.958059040143,
+      "delta_vs_current_bits": 19.730950785786263,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 16,
+        "order": 3
+      },
+      "total_bits": 8822.863822804424
+    },
+    {
+      "component_bits": 253.06839770304114,
+      "delta_vs_current_bits": 19.8412894486828,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 6
+      },
+      "total_bits": 8822.97416146732
+    },
+    {
+      "component_bits": 253.40685116250154,
+      "delta_vs_current_bits": 20.179742908143453,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 7
+      },
+      "total_bits": 8823.312614926781
+    },
+    {
+      "component_bits": 253.56014265253185,
+      "delta_vs_current_bits": 20.333034398174277,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 17,
+        "order": 2
+      },
+      "total_bits": 8823.465906416812
+    },
+    {
+      "component_bits": 253.61954955655733,
+      "delta_vs_current_bits": 20.392441302199586,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 4
+      },
+      "total_bits": 8823.525313320837
+    },
+    {
+      "component_bits": 255.6689755052043,
+      "delta_vs_current_bits": 20.44186725084728,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 31,
+        "order": 1
+      },
+      "total_bits": 8823.574739269485
+    },
+    {
+      "component_bits": 253.70437809964258,
+      "delta_vs_current_bits": 20.477269845285264,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 17,
+        "order": 3
+      },
+      "total_bits": 8823.610141863923
+    },
+    {
+      "component_bits": 253.8417173276409,
+      "delta_vs_current_bits": 20.614609073283646,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 5
+      },
+      "total_bits": 8823.747481091921
+    },
+    {
+      "component_bits": 255.95008279047047,
+      "delta_vs_current_bits": 20.722974536112815,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 32,
+        "order": 1
+      },
+      "total_bits": 8823.85584655475
+    },
+    {
+      "component_bits": 253.9907015021301,
+      "delta_vs_current_bits": 20.763593247773315,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 6
+      },
+      "total_bits": 8823.89646526641
+    },
+    {
+      "component_bits": 254.15069723008597,
+      "delta_vs_current_bits": 20.923588975729217,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 18,
+        "order": 2
+      },
+      "total_bits": 8824.056460994367
+    },
+    {
+      "component_bits": 254.31337858054104,
+      "delta_vs_current_bits": 21.086270326182785,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 7
+      },
+      "total_bits": 8824.21914234482
+    },
+    {
+      "component_bits": 254.41693981264845,
+      "delta_vs_current_bits": 21.18983155829119,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 18,
+        "order": 3
+      },
+      "total_bits": 8824.322703576929
+    },
+    {
+      "component_bits": 254.71953960616787,
+      "delta_vs_current_bits": 21.4924313518095,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 19,
+        "order": 2
+      },
+      "total_bits": 8824.625303370447
+    },
+    {
+      "component_bits": 254.7274962271161,
+      "delta_vs_current_bits": 21.5003879727592,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 5
+      },
+      "total_bits": 8824.633259991397
+    },
+    {
+      "component_bits": 254.8664233569079,
+      "delta_vs_current_bits": 21.639315102549517,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 6
+      },
+      "total_bits": 8824.772187121187
+    },
+    {
+      "component_bits": 255.0978384798504,
+      "delta_vs_current_bits": 21.87073022549339,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 19,
+        "order": 3
+      },
+      "total_bits": 8825.00360224413
+    },
+    {
+      "component_bits": 255.1741812323146,
+      "delta_vs_current_bits": 21.94707297795685,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 7
+      },
+      "total_bits": 8825.079944996594
+    },
+    {
+      "component_bits": 1882,
+      "delta_vs_current_bits": 22.0,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 5,
+      "total_bits": 8825.132872018637
+    },
+    {
+      "component_bits": 255.26773816009327,
+      "delta_vs_current_bits": 22.04062990573584,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 20,
+        "order": 2
+      },
+      "total_bits": 8825.173501924373
+    },
+    {
+      "component_bits": 255.56244482614503,
+      "delta_vs_current_bits": 22.335336571786684,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 5
+      },
+      "total_bits": 8825.468208590424
+    },
+    {
+      "component_bits": 255.69675264188925,
+      "delta_vs_current_bits": 22.469644387530934,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 6
+      },
+      "total_bits": 8825.602516406168
+    },
+    {
+      "component_bits": 255.74903587251592,
+      "delta_vs_current_bits": 22.52192761815786,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 20,
+        "order": 3
+      },
+      "total_bits": 8825.654799636795
+    },
+    {
+      "component_bits": 255.79631853091684,
+      "delta_vs_current_bits": 22.569210276558806,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 21,
+        "order": 2
+      },
+      "total_bits": 8825.702082295196
+    },
+    {
+      "component_bits": 255.99054678283358,
+      "delta_vs_current_bits": 22.7634385284764,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 7
+      },
+      "total_bits": 8825.896310547114
+    },
+    {
+      "component_bits": 256.306258587003,
+      "delta_vs_current_bits": 23.07915033264544,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 22,
+        "order": 2
+      },
+      "total_bits": 8826.212022351283
+    },
+    {
+      "component_bits": 256.37236117616857,
+      "delta_vs_current_bits": 23.145252921811334,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 21,
+        "order": 3
+      },
+      "total_bits": 8826.278124940449
+    },
+    {
+      "component_bits": 254.444411618325,
+      "delta_vs_current_bits": 23.217303363968313,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 4
+      },
+      "total_bits": 8826.350175382606
+    },
+    {
+      "component_bits": 256.48380037748353,
+      "delta_vs_current_bits": 23.256692123126413,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 6
+      },
+      "total_bits": 8826.389564141764
+    },
+    {
+      "component_bits": 256.7645942218874,
+      "delta_vs_current_bits": 23.5374859675303,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 7
+      },
+      "total_bits": 8826.670357986168
+    },
+    {
+      "component_bits": 256.7984862781297,
+      "delta_vs_current_bits": 23.571378023772922,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 23,
+        "order": 2
+      },
+      "total_bits": 8826.70425004241
+    },
+    {
+      "component_bits": 256.9695150704313,
+      "delta_vs_current_bits": 23.742406816074435,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 22,
+        "order": 3
+      },
+      "total_bits": 8826.875278834712
+    },
+    {
+      "component_bits": 255.22676286920807,
+      "delta_vs_current_bits": 23.999654614850442,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 4
+      },
+      "total_bits": 8827.132526633488
+    },
+    {
+      "component_bits": 257.23006174248025,
+      "delta_vs_current_bits": 24.00295348812324,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 6
+      },
+      "total_bits": 8827.13582550676
+    },
+    {
+      "component_bits": 257.27387935192945,
+      "delta_vs_current_bits": 24.046771097571764,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 24,
+        "order": 2
+      },
+      "total_bits": 8827.17964311621
+    },
+    {
+      "component_bits": 257.4987819276479,
+      "delta_vs_current_bits": 24.271673673290934,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 7
+      },
+      "total_bits": 8827.404545691928
+    },
+    {
+      "component_bits": 257.5420760824232,
+      "delta_vs_current_bits": 24.314967828066074,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 23,
+        "order": 3
+      },
+      "total_bits": 8827.447839846704
+    },
+    {
+      "component_bits": 257.7332662596691,
+      "delta_vs_current_bits": 24.50615800531159,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 25,
+        "order": 2
+      },
+      "total_bits": 8827.639030023949
+    },
+    {
+      "component_bits": 255.9695724397675,
+      "delta_vs_current_bits": 24.742464185410427,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 4
+      },
+      "total_bits": 8827.875336204048
+    },
+    {
+      "component_bits": 258.0915080658639,
+      "delta_vs_current_bits": 24.86439981150579,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 24,
+        "order": 3
+      },
+      "total_bits": 8827.997271830143
+    },
+    {
+      "component_bits": 258.1774278008676,
+      "delta_vs_current_bits": 24.95031954650949,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 26,
+        "order": 2
+      },
+      "total_bits": 8828.083191565147
+    },
+    {
+      "component_bits": 256.3506321345413,
+      "delta_vs_current_bits": 25.12352388018371,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 5
+      },
+      "total_bits": 8828.256395898821
+    },
+    {
+      "component_bits": 258.6070992049322,
+      "delta_vs_current_bits": 25.37999095057421,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 27,
+        "order": 2
+      },
+      "total_bits": 8828.512862969212
+    },
+    {
+      "component_bits": 258.61916810144726,
+      "delta_vs_current_bits": 25.392059847090422,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 25,
+        "order": 3
+      },
+      "total_bits": 8828.524931865728
+    },
+    {
+      "component_bits": 256.67561552247554,
+      "delta_vs_current_bits": 25.448507268118192,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 4
+      },
+      "total_bits": 8828.581379286756
+    },
+    {
+      "component_bits": 259.02297244757057,
+      "delta_vs_current_bits": 25.795864193212765,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 28,
+        "order": 2
+      },
+      "total_bits": 8828.92873621185
+    },
+    {
+      "component_bits": 257.09580742066885,
+      "delta_vs_current_bits": 25.868699166310762,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 5
+      },
+      "total_bits": 8829.001571184948
+    },
+    {
+      "component_bits": 259.1263143919165,
+      "delta_vs_current_bits": 25.899206137559304,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 26,
+        "order": 3
+      },
+      "total_bits": 8829.032078156197
+    },
+    {
+      "component_bits": 257.3474636584481,
+      "delta_vs_current_bits": 26.120355404091242,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 4
+      },
+      "total_bits": 8829.253227422729
+    },
+    {
+      "component_bits": 259.42569866697545,
+      "delta_vs_current_bits": 26.198590412617705,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 29,
+        "order": 2
+      },
+      "total_bits": 8829.331462431255
+    },
+    {
+      "component_bits": 259.6141139005276,
+      "delta_vs_current_bits": 26.3870056461692,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 27,
+        "order": 3
+      },
+      "total_bits": 8829.519877664807
+    },
+    {
+      "component_bits": 257.80138940011784,
+      "delta_vs_current_bits": 26.574281145760324,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 5
+      },
+      "total_bits": 8829.707153164398
+    },
+    {
+      "component_bits": 259.81589059053,
+      "delta_vs_current_bits": 26.58878233617179,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 30,
+        "order": 2
+      },
+      "total_bits": 8829.72165435481
+    },
+    {
+      "component_bits": 257.9381351225537,
+      "delta_vs_current_bits": 26.711026868195404,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 6
+      },
+      "total_bits": 8829.843898886833
+    },
+    {
+      "component_bits": 257.9874874258503,
+      "delta_vs_current_bits": 26.760379171491877,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 4
+      },
+      "total_bits": 8829.89325119013
+    },
+    {
+      "component_bits": 260.0836495924517,
+      "delta_vs_current_bits": 26.856541338094758,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 28,
+        "order": 3
+      },
+      "total_bits": 8829.989413356732
+    },
+    {
+      "component_bits": 258.1956508390137,
+      "delta_vs_current_bits": 26.96854258465646,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 7
+      },
+      "total_bits": 8830.101414603294
+    },
+    {
+      "component_bits": 258.4704785589624,
+      "delta_vs_current_bits": 27.24337030460447,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 5
+      },
+      "total_bits": 8830.376242323242
+    },
+    {
+      "component_bits": 260.53592720862036,
+      "delta_vs_current_bits": 27.308818954263188,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 29,
+        "order": 3
+      },
+      "total_bits": 8830.4416909729
+    },
+    {
+      "component_bits": 258.5978657021326,
+      "delta_vs_current_bits": 27.37075744777576,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 4
+      },
+      "total_bits": 8830.503629466413
+    },
+    {
+      "component_bits": 258.6105757819492,
+      "delta_vs_current_bits": 27.383467527592074,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 6
+      },
+      "total_bits": 8830.51633954623
+    },
+    {
+      "component_bits": 258.8576909947241,
+      "delta_vs_current_bits": 27.630582740366663,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 7
+      },
+      "total_bits": 8830.763454759004
+    },
+    {
+      "component_bits": 260.97188154535513,
+      "delta_vs_current_bits": 27.744773290996818,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 30,
+        "order": 3
+      },
+      "total_bits": 8830.877645309634
+    },
+    {
+      "component_bits": 259.1058797851058,
+      "delta_vs_current_bits": 27.878771530748054,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 5
+      },
+      "total_bits": 8831.011643549386
+    },
+    {
+      "component_bits": 259.18059812276465,
+      "delta_vs_current_bits": 27.953489868406905,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 4
+      },
+      "total_bits": 8831.086361887044
+    },
+    {
+      "component_bits": 259.2498221307385,
+      "delta_vs_current_bits": 28.022713876380294,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 6
+      },
+      "total_bits": 8831.155585895018
+    },
+    {
+      "component_bits": 259.48727461109496,
+      "delta_vs_current_bits": 28.26016635673659,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 7
+      },
+      "total_bits": 8831.393038375374
+    },
+    {
+      "component_bits": 259.7101286928253,
+      "delta_vs_current_bits": 28.483020438467065,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 5
+      },
+      "total_bits": 8831.615892457105
+    },
+    {
+      "component_bits": 259.7375187831254,
+      "delta_vs_current_bits": 28.51041052876826,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 4
+      },
+      "total_bits": 8831.643282547406
+    },
+    {
+      "component_bits": 259.8581618066676,
+      "delta_vs_current_bits": 28.631053552309822,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 6
+      },
+      "total_bits": 8831.763925570947
+    },
+    {
+      "component_bits": 260.08662566025333,
+      "delta_vs_current_bits": 28.85951740589553,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 7
+      },
+      "total_bits": 8831.992389424533
+    },
+    {
+      "component_bits": 260.19412491402295,
+      "delta_vs_current_bits": 28.967016659666115,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 31,
+        "order": 2
+      },
+      "total_bits": 8832.099888678304
+    },
+    {
+      "component_bits": 260.27031006875603,
+      "delta_vs_current_bits": 29.043201814398344,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 4
+      },
+      "total_bits": 8832.176073833036
+    },
+    {
+      "component_bits": 260.2855182743861,
+      "delta_vs_current_bits": 29.058410020028532,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 5
+      },
+      "total_bits": 8832.191282038666
+    },
+    {
+      "component_bits": 260.43771971807263,
+      "delta_vs_current_bits": 29.210611463715395,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 6
+      },
+      "total_bits": 8832.343483482353
+    },
+    {
+      "component_bits": 260.5609445967899,
+      "delta_vs_current_bits": 29.333836342431823,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 32,
+        "order": 2
+      },
+      "total_bits": 8832.46670836107
+    },
+    {
+      "component_bits": 260.65780957989375,
+      "delta_vs_current_bits": 29.430701325536575,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 7
+      },
+      "total_bits": 8832.563573344174
+    },
+    {
+      "component_bits": 260.78051599714007,
+      "delta_vs_current_bits": 29.55340774278193,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 4
+      },
+      "total_bits": 8832.68627976142
+    },
+    {
+      "component_bits": 260.8341242357497,
+      "delta_vs_current_bits": 29.60701598139167,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 5
+      },
+      "total_bits": 8832.73988800003
+    },
+    {
+      "component_bits": 260.9904580977024,
+      "delta_vs_current_bits": 29.76334984334426,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 6
+      },
+      "total_bits": 8832.896221861982
+    },
+    {
+      "component_bits": 261.2027339843997,
+      "delta_vs_current_bits": 29.97562573004143,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 7
+      },
+      "total_bits": 8833.108497748679
+    },
+    {
+      "component_bits": 261.2695547509235,
+      "delta_vs_current_bits": 30.04244649656539,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 4
+      },
+      "total_bits": 8833.175318515203
+    },
+    {
+      "component_bits": 261.3578282919332,
+      "delta_vs_current_bits": 30.130720037575884,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 5
+      },
+      "total_bits": 8833.263592056213
+    },
+    {
+      "component_bits": 261.39238224010285,
+      "delta_vs_current_bits": 30.165273985745443,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 31,
+        "order": 3
+      },
+      "total_bits": 8833.298146004383
+    },
+    {
+      "component_bits": 261.5181829309252,
+      "delta_vs_current_bits": 30.291074676568314,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 6
+      },
+      "total_bits": 8833.423946695206
+    },
+    {
+      "component_bits": 261.72315520061676,
+      "delta_vs_current_bits": 30.496046946258502,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 7
+      },
+      "total_bits": 8833.628918964896
+    },
+    {
+      "component_bits": 261.73873025870927,
+      "delta_vs_current_bits": 30.51162200435101,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 4
+      },
+      "total_bits": 8833.644494022989
+    },
+    {
+      "component_bits": 261.79823907973827,
+      "delta_vs_current_bits": 30.57113082538126,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 32,
+        "order": 3
+      },
+      "total_bits": 8833.704002844019
+    },
+    {
+      "component_bits": 261.858339183979,
+      "delta_vs_current_bits": 30.63123092962087,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 5
+      },
+      "total_bits": 8833.764102948258
+    },
+    {
+      "component_bits": 262.0225535357415,
+      "delta_vs_current_bits": 30.795445281384673,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 6
+      },
+      "total_bits": 8833.928317300022
+    },
+    {
+      "component_bits": 262.18924278299926,
+      "delta_vs_current_bits": 30.9621345286414,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 4
+      },
+      "total_bits": 8834.095006547279
+    },
+    {
+      "component_bits": 262.2206876660246,
+      "delta_vs_current_bits": 30.99357941166636,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 7
+      },
+      "total_bits": 8834.126451430304
+    },
+    {
+      "component_bits": 262.337211430893,
+      "delta_vs_current_bits": 31.11010317653563,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 5
+      },
+      "total_bits": 8834.242975195173
+    },
+    {
+      "component_bits": 262.5050934502539,
+      "delta_vs_current_bits": 31.27798519589669,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 6
+      },
+      "total_bits": 8834.410857214534
+    },
+    {
+      "component_bits": 262.62219853404326,
+      "delta_vs_current_bits": 31.395090279685974,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 4
+      },
+      "total_bits": 8834.527962298323
+    },
+    {
+      "component_bits": 262.69681449280773,
+      "delta_vs_current_bits": 31.469706238449362,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 7
+      },
+      "total_bits": 8834.602578257087
+    },
+    {
+      "component_bits": 262.7958619528379,
+      "delta_vs_current_bits": 31.568753698480577,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 5
+      },
+      "total_bits": 8834.701625717118
+    },
+    {
+      "component_bits": 262.9672015823376,
+      "delta_vs_current_bits": 31.740093327980503,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 6
+      },
+      "total_bits": 8834.872965346618
+    },
+    {
+      "component_bits": 263.0386183605968,
+      "delta_vs_current_bits": 31.81151010623944,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 4
+      },
+      "total_bits": 8834.944382124877
+    },
+    {
+      "component_bits": 263.15289823613375,
+      "delta_vs_current_bits": 31.92578998177669,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 7
+      },
+      "total_bits": 8835.058662000414
+    },
+    {
+      "component_bits": 263.23558475468957,
+      "delta_vs_current_bits": 32.00847650033211,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 5
+      },
+      "total_bits": 8835.14134851897
+    },
+    {
+      "component_bits": 263.4101630444176,
+      "delta_vs_current_bits": 32.18305479006085,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 6
+      },
+      "total_bits": 8835.315926808698
+    },
+    {
+      "component_bits": 263.5901913360096,
+      "delta_vs_current_bits": 32.3630830816528,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 7
+      },
+      "total_bits": 8835.49595510029
+    },
+    {
+      "component_bits": 263.6575638742207,
+      "delta_vs_current_bits": 32.430455619864006,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 5
+      },
+      "total_bits": 8835.563327638502
+    },
+    {
+      "component_bits": 263.8351593720396,
+      "delta_vs_current_bits": 32.60805111768241,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 6
+      },
+      "total_bits": 8835.74092313632
+    },
+    {
+      "component_bits": 264.0098459563435,
+      "delta_vs_current_bits": 32.78273770198575,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 7
+      },
+      "total_bits": 8835.915609720623
+    },
+    {
+      "component_bits": 264.06288479472624,
+      "delta_vs_current_bits": 32.8357765403689,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 5
+      },
+      "total_bits": 8835.968648559006
+    },
+    {
+      "component_bits": 264.243277987124,
+      "delta_vs_current_bits": 33.016169732765775,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 6
+      },
+      "total_bits": 8836.149041751403
+    },
+    {
+      "component_bits": 264.4129230945556,
+      "delta_vs_current_bits": 33.18581484019887,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 7
+      },
+      "total_bits": 8836.318686858836
+    },
+    {
+      "component_bits": 264.4525445079401,
+      "delta_vs_current_bits": 33.2254362535823,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 5
+      },
+      "total_bits": 8836.35830827222
+    },
+    {
+      "component_bits": 264.63552086131773,
+      "delta_vs_current_bits": 33.408412606961065,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 6
+      },
+      "total_bits": 8836.541284625599
+    },
+    {
+      "component_bits": 264.8004009224314,
+      "delta_vs_current_bits": 33.57329266807392,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 7
+      },
+      "total_bits": 8836.706164686711
+    },
+    {
+      "component_bits": 265.012812388678,
+      "delta_vs_current_bits": 33.78570413432135,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 6
+      },
+      "total_bits": 8836.918576152959
+    },
+    {
+      "component_bits": 265.173182368664,
+      "delta_vs_current_bits": 33.94607411430661,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 7
+      },
+      "total_bits": 8837.078946132944
+    },
+    {
+      "component_bits": 265.37600650626314,
+      "delta_vs_current_bits": 34.14889825190585,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 6
+      },
+      "total_bits": 8837.281770270543
+    },
+    {
+      "component_bits": 263.43944558449795,
+      "delta_vs_current_bits": 34.212337330140144,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 4
+      },
+      "total_bits": 8837.345209348778
+    },
+    {
+      "component_bits": 265.53210198066046,
+      "delta_vs_current_bits": 34.3049937263022,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 7
+      },
+      "total_bits": 8837.43786574494
+    },
+    {
+      "component_bits": 263.8255530520677,
+      "delta_vs_current_bits": 34.59844479770982,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 4
+      },
+      "total_bits": 8837.731316816347
+    },
+    {
+      "component_bits": 264.8274603952019,
+      "delta_vs_current_bits": 35.600352140843825,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 5
+      },
+      "total_bits": 8838.733224159481
+    },
+    {
+      "component_bits": 265.1884780760461,
+      "delta_vs_current_bits": 35.961369821689004,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 5
+      },
+      "total_bits": 8839.094241840327
+    },
+    {
+      "component_bits": 265.72589311577786,
+      "delta_vs_current_bits": 36.49878486142006,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 6
+      },
+      "total_bits": 8839.631656880058
+    },
+    {
+      "component_bits": 265.8779321166391,
+      "delta_vs_current_bits": 36.65082386228096,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 7
+      },
+      "total_bits": 8839.783695880918
+    },
+    {
+      "component_bits": 266.0632038652571,
+      "delta_vs_current_bits": 36.836095610899065,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 6
+      },
+      "total_bits": 8839.968967629537
+    },
+    {
+      "component_bits": 266.21138852438395,
+      "delta_vs_current_bits": 36.98428027002592,
+      "family": "item_type_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 7
+      },
+      "total_bits": 8840.117152288663
+    },
+    {
+      "component_bits": 407.0,
+      "delta_vs_current_bits": 37.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 4,
+      "total_bits": 8840.132872018637
+    },
+    {
+      "component_bits": 2503.44035332224,
+      "delta_vs_current_bits": 39.35114016528496,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 6,
+      "parameter": {
+        "alpha": 2,
+        "order": 1
+      },
+      "total_bits": 8842.484012183922
+    },
+    {
+      "component_bits": 2499.3754121957595,
+      "delta_vs_current_bits": 40.286199038804625,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 3,
+        "order": 2
+      },
+      "total_bits": 8843.419071057442
+    },
+    {
+      "component_bits": 2503.1041520882995,
+      "delta_vs_current_bits": 41.01493893134466,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 8,
+      "parameter": {
+        "alpha": 3,
+        "order": 1
+      },
+      "total_bits": 8844.147810949982
+    },
+    {
+      "component_bits": 2506.1861841494565,
+      "delta_vs_current_bits": 44.096970992501156,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 8,
+      "parameter": {
+        "alpha": 4,
+        "order": 1
+      },
+      "total_bits": 8847.229843011139
+    },
+    {
+      "component_bits": 2510.230265289282,
+      "delta_vs_current_bits": 48.14105213232688,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 8,
+      "parameter": {
+        "alpha": 5,
+        "order": 1
+      },
+      "total_bits": 8851.273924150964
+    },
+    {
+      "component_bits": 2514.4401616905766,
+      "delta_vs_current_bits": 52.350948533621704,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 8,
+      "parameter": {
+        "alpha": 6,
+        "order": 1
+      },
+      "total_bits": 8855.48382055226
+    },
+    {
+      "component_bits": 2517.7997854528858,
+      "delta_vs_current_bits": 53.71057229593134,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 6,
+      "parameter": {
+        "alpha": 1,
+        "order": 1
+      },
+      "total_bits": 8856.843444314569
+    },
+    {
+      "component_bits": 2513.882365799886,
+      "delta_vs_current_bits": 54.79315264293109,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 4,
+        "order": 2
+      },
+      "total_bits": 8857.926024661569
+    },
+    {
+      "component_bits": 2518.52362355631,
+      "delta_vs_current_bits": 58.43441039935533,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 7,
+        "order": 1
+      },
+      "total_bits": 8861.567282417993
+    },
+    {
+      "component_bits": 2522.373613236551,
+      "delta_vs_current_bits": 62.2844000795958,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 8,
+        "order": 1
+      },
+      "total_bits": 8865.417272098233
+    },
+    {
+      "component_bits": 2524.889325970333,
+      "delta_vs_current_bits": 65.80011281337829,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 5,
+        "order": 2
+      },
+      "total_bits": 8868.932984832016
+    },
+    {
+      "component_bits": 2525.958467590749,
+      "delta_vs_current_bits": 65.86925443379369,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 9,
+        "order": 1
+      },
+      "total_bits": 8869.002126452431
+    },
+    {
+      "component_bits": 2529.278602502561,
+      "delta_vs_current_bits": 69.18938934560538,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 10,
+        "order": 1
+      },
+      "total_bits": 8872.322261364243
+    },
+    {
+      "component_bits": 2531.4172639727635,
+      "delta_vs_current_bits": 70.32805081580773,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 1,
+        "order": 3
+      },
+      "total_bits": 8873.460922834445
+    },
+    {
+      "component_bits": 2532.347922407892,
+      "delta_vs_current_bits": 72.25870925093659,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 11,
+        "order": 1
+      },
+      "total_bits": 8875.391581269574
+    },
+    {
+      "component_bits": 2533.4605135609395,
+      "delta_vs_current_bits": 74.3713004039837,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 6,
+        "order": 2
+      },
+      "total_bits": 8877.504172422621
+    },
+    {
+      "component_bits": 2535.1854112885076,
+      "delta_vs_current_bits": 75.09619813155223,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 12,
+        "order": 1
+      },
+      "total_bits": 8878.22907015019
+    },
+    {
+      "component_bits": 2537.8112392710327,
+      "delta_vs_current_bits": 77.72202611407738,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 13,
+        "order": 1
+      },
+      "total_bits": 8880.854898132715
+    },
+    {
+      "component_bits": 2540.2449770593357,
+      "delta_vs_current_bits": 80.1557639023813,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 10,
+      "parameter": {
+        "alpha": 14,
+        "order": 1
+      },
+      "total_bits": 8883.288635921019
+    },
+    {
+      "component_bits": 2540.306258247592,
+      "delta_vs_current_bits": 83.21704509063602,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 7,
+        "order": 2
+      },
+      "total_bits": 8886.349917109274
+    },
+    {
+      "component_bits": 2542.5048271609517,
+      "delta_vs_current_bits": 84.41561400399587,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 15,
+        "order": 1
+      },
+      "total_bits": 8887.548486022633
+    },
+    {
+      "component_bits": 2544.6073530935955,
+      "delta_vs_current_bits": 86.51813993664109,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 16,
+        "order": 1
+      },
+      "total_bits": 8889.651011955279
+    },
+    {
+      "component_bits": 2548.9867641234196,
+      "delta_vs_current_bits": 87.89755096646331,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 9,
+      "parameter": {
+        "alpha": 2,
+        "order": 3
+      },
+      "total_bits": 8891.0304229851
+    },
+    {
+      "component_bits": 2546.567451016458,
+      "delta_vs_current_bits": 88.47823785950277,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 17,
+        "order": 1
+      },
+      "total_bits": 8891.61110987814
+    },
+    {
+      "component_bits": 2545.8944248175953,
+      "delta_vs_current_bits": 88.80521166063954,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 8,
+        "order": 2
+      },
+      "total_bits": 8891.938083679277
+    },
+    {
+      "component_bits": 2548.3984349137186,
+      "delta_vs_current_bits": 90.30922175676278,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 18,
+        "order": 1
+      },
+      "total_bits": 8893.4420937754
+    },
+    {
+      "component_bits": 2550.112169596164,
+      "delta_vs_current_bits": 92.02295643920843,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 19,
+        "order": 1
+      },
+      "total_bits": 8895.155828457846
+    },
+    {
+      "component_bits": 2550.540556569678,
+      "delta_vs_current_bits": 93.45134341272205,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 9,
+        "order": 2
+      },
+      "total_bits": 8896.58421543136
+    },
+    {
+      "component_bits": 2551.71921809831,
+      "delta_vs_current_bits": 93.63000494135485,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 20,
+        "order": 1
+      },
+      "total_bits": 8896.762876959992
+    },
+    {
+      "component_bits": 2553.2289868879234,
+      "delta_vs_current_bits": 95.13977373096714,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 21,
+        "order": 1
+      },
+      "total_bits": 8898.272645749605
+    },
+    {
+      "component_bits": 2554.6498611639927,
+      "delta_vs_current_bits": 96.56064800703825,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 22,
+        "order": 1
+      },
+      "total_bits": 8899.693520025676
+    },
+    {
+      "component_bits": 2554.463745449662,
+      "delta_vs_current_bits": 97.37453229270614,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 10,
+        "order": 2
+      },
+      "total_bits": 8900.507404311344
+    },
+    {
+      "component_bits": 2555.989327175349,
+      "delta_vs_current_bits": 97.90011401839365,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 23,
+        "order": 1
+      },
+      "total_bits": 8901.032986037031
+    },
+    {
+      "component_bits": 2557.2540809003867,
+      "delta_vs_current_bits": 99.16486774343139,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 24,
+        "order": 1
+      },
+      "total_bits": 8902.297739762069
+    },
+    {
+      "component_bits": 470.0,
+      "delta_vs_current_bits": 100.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 5,
+      "total_bits": 8903.132872018637
+    },
+    {
+      "component_bits": 2558.4501236253477,
+      "delta_vs_current_bits": 100.36091046839283,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 25,
+        "order": 1
+      },
+      "total_bits": 8903.49378248703
+    },
+    {
+      "component_bits": 2557.8203894989547,
+      "delta_vs_current_bits": 100.73117634200025,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 11,
+        "order": 2
+      },
+      "total_bits": 8903.864048360638
+    },
+    {
+      "component_bits": 2560.1834288274927,
+      "delta_vs_current_bits": 101.09421567053687,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 3,
+        "order": 3
+      },
+      "total_bits": 8904.227087689174
+    },
+    {
+      "component_bits": 2559.5828455018914,
+      "delta_vs_current_bits": 101.49363234493649,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 26,
+        "order": 1
+      },
+      "total_bits": 8904.626504363574
+    },
+    {
+      "component_bits": 2560.6570983592524,
+      "delta_vs_current_bits": 102.56788520229748,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 27,
+        "order": 1
+      },
+      "total_bits": 8905.700757220935
+    },
+    {
+      "component_bits": 2561.677259059384,
+      "delta_vs_current_bits": 103.58804590242835,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 28,
+        "order": 1
+      },
+      "total_bits": 8906.720917921066
+    },
+    {
+      "component_bits": 2560.7249454741814,
+      "delta_vs_current_bits": 103.63573231722694,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 12,
+        "order": 2
+      },
+      "total_bits": 8906.768604335864
+    },
+    {
+      "component_bits": 2562.647284607526,
+      "delta_vs_current_bits": 104.55807145057042,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 29,
+        "order": 1
+      },
+      "total_bits": 8907.690943469208
+    },
+    {
+      "component_bits": 2563.5707601158956,
+      "delta_vs_current_bits": 105.48154695894118,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 12,
+      "parameter": {
+        "alpha": 30,
+        "order": 1
+      },
+      "total_bits": 8908.614418977579
+    },
+    {
+      "component_bits": 2563.263035869888,
+      "delta_vs_current_bits": 106.17382271293172,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 13,
+        "order": 2
+      },
+      "total_bits": 8909.30669473157
+    },
+    {
+      "component_bits": 2564.450940592225,
+      "delta_vs_current_bits": 108.36172743526913,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 14,
+      "parameter": {
+        "alpha": 31,
+        "order": 1
+      },
+      "total_bits": 8911.494599453907
+    },
+    {
+      "component_bits": 2567.478469362784,
+      "delta_vs_current_bits": 108.38925620582813,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 4,
+        "order": 3
+      },
+      "total_bits": 8911.522128224466
+    },
+    {
+      "component_bits": 2565.4999626535296,
+      "delta_vs_current_bits": 108.41074949657377,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 14,
+        "order": 2
+      },
+      "total_bits": 8911.543621515211
+    },
+    {
+      "component_bits": 2565.2907874010766,
+      "delta_vs_current_bits": 109.20157424412173,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 14,
+      "parameter": {
+        "alpha": 32,
+        "order": 1
+      },
+      "total_bits": 8912.33444626276
+    },
+    {
+      "component_bits": 2567.4863860448354,
+      "delta_vs_current_bits": 112.39717288788052,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 15,
+        "order": 2
+      },
+      "total_bits": 8915.530044906518
+    },
+    {
+      "component_bits": 2572.5702182268733,
+      "delta_vs_current_bits": 113.48100506991796,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 5,
+        "order": 3
+      },
+      "total_bits": 8916.613877088555
+    },
+    {
+      "component_bits": 2569.2622054407234,
+      "delta_vs_current_bits": 114.1729922837676,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 16,
+        "order": 2
+      },
+      "total_bits": 8917.305864302405
+    },
+    {
+      "component_bits": 2570.859270601027,
+      "delta_vs_current_bits": 115.77005744407143,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 17,
+        "order": 2
+      },
+      "total_bits": 8918.902929462709
+    },
+    {
+      "component_bits": 2572.3033135862815,
+      "delta_vs_current_bits": 117.21410042932621,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 18,
+        "order": 2
+      },
+      "total_bits": 8920.346972447964
+    },
+    {
+      "component_bits": 2576.320088498867,
+      "delta_vs_current_bits": 117.23087534191109,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 6,
+        "order": 3
+      },
+      "total_bits": 8920.363747360549
+    },
+    {
+      "component_bits": 2573.615350274526,
+      "delta_vs_current_bits": 118.52613711757112,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 19,
+        "order": 2
+      },
+      "total_bits": 8921.659009136209
+    },
+    {
+      "component_bits": 2574.8127136785297,
+      "delta_vs_current_bits": 119.72350052157344,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 20,
+        "order": 2
+      },
+      "total_bits": 8922.856372540211
+    },
+    {
+      "component_bits": 2575.9098270682143,
+      "delta_vs_current_bits": 120.82061391125899,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 21,
+        "order": 2
+      },
+      "total_bits": 8923.953485929896
+    },
+    {
+      "component_bits": 2576.918790204195,
+      "delta_vs_current_bits": 121.82957704723958,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 22,
+        "order": 2
+      },
+      "total_bits": 8924.962449065877
+    },
+    {
+      "component_bits": 2579.195885238653,
+      "delta_vs_current_bits": 122.10667208169798,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 7,
+        "order": 3
+      },
+      "total_bits": 8925.239544100335
+    },
+    {
+      "component_bits": 2577.8498293234175,
+      "delta_vs_current_bits": 122.76061616646257,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 23,
+        "order": 2
+      },
+      "total_bits": 8925.8934881851
+    },
+    {
+      "component_bits": 2578.711646432543,
+      "delta_vs_current_bits": 123.62243327558826,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 24,
+        "order": 2
+      },
+      "total_bits": 8926.755305294226
+    },
+    {
+      "component_bits": 2581.4713301106776,
+      "delta_vs_current_bits": 124.38211695372229,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 8,
+        "order": 3
+      },
+      "total_bits": 8927.51498897236
+    },
+    {
+      "component_bits": 2579.5116932471215,
+      "delta_vs_current_bits": 124.42248009016657,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 25,
+        "order": 2
+      },
+      "total_bits": 8927.555352108804
+    },
+    {
+      "component_bits": 2580.2563880838147,
+      "delta_vs_current_bits": 125.16717492685893,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 26,
+        "order": 2
+      },
+      "total_bits": 8928.300046945496
+    },
+    {
+      "component_bits": 2584.5782732452935,
+      "delta_vs_current_bits": 125.48906008833728,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 4
+      },
+      "total_bits": 8928.621932106975
+    },
+    {
+      "component_bits": 2580.9512891012655,
+      "delta_vs_current_bits": 125.86207594431107,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 27,
+        "order": 2
+      },
+      "total_bits": 8928.994947962949
+    },
+    {
+      "component_bits": 2583.3168029753056,
+      "delta_vs_current_bits": 126.22758981835068,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 9,
+        "order": 3
+      },
+      "total_bits": 8929.360461836988
+    },
+    {
+      "component_bits": 2581.6012338078376,
+      "delta_vs_current_bits": 126.51202065088182,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 28,
+        "order": 2
+      },
+      "total_bits": 8929.64489266952
+    },
+    {
+      "component_bits": 2582.210452259714,
+      "delta_vs_current_bits": 127.12123910275841,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 29,
+        "order": 2
+      },
+      "total_bits": 8930.254111121396
+    },
+    {
+      "component_bits": 2582.782659563136,
+      "delta_vs_current_bits": 127.69344640618147,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 30,
+        "order": 2
+      },
+      "total_bits": 8930.826318424819
+    },
+    {
+      "component_bits": 2584.8437999194225,
+      "delta_vs_current_bits": 127.75458676246672,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 10,
+        "order": 3
+      },
+      "total_bits": 8930.887458781104
+    },
+    {
+      "component_bits": 2586.1283230438466,
+      "delta_vs_current_bits": 129.0391098868913,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 11,
+        "order": 3
+      },
+      "total_bits": 8932.171981905529
+    },
+    {
+      "component_bits": 2588.5745039595895,
+      "delta_vs_current_bits": 129.48529080263324,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 4
+      },
+      "total_bits": 8932.61816282127
+    },
+    {
+      "component_bits": 2587.2239587082095,
+      "delta_vs_current_bits": 130.13474555125504,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 12,
+        "order": 3
+      },
+      "total_bits": 8933.267617569893
+    },
+    {
+      "component_bits": 2583.3211319655775,
+      "delta_vs_current_bits": 130.23191880862214,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 31,
+        "order": 2
+      },
+      "total_bits": 8933.36479082726
+    },
+    {
+      "component_bits": 2583.828769836164,
+      "delta_vs_current_bits": 130.73955667920927,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 32,
+        "order": 2
+      },
+      "total_bits": 8933.872428697847
+    },
+    {
+      "component_bits": 2588.1695745701923,
+      "delta_vs_current_bits": 131.08036141323646,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 13,
+        "order": 3
+      },
+      "total_bits": 8934.213233431874
+    },
+    {
+      "component_bits": 2588.9940499170157,
+      "delta_vs_current_bits": 131.9048367600608,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 14,
+        "order": 3
+      },
+      "total_bits": 8935.037708778698
+    },
+    {
+      "component_bits": 2591.380115936641,
+      "delta_vs_current_bits": 134.29090277968498,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 4
+      },
+      "total_bits": 8937.423774798322
+    },
+    {
+      "component_bits": 2589.7192919674217,
+      "delta_vs_current_bits": 134.63007881046724,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 15,
+        "order": 3
+      },
+      "total_bits": 8937.762950829105
+    },
+    {
+      "component_bits": 2590.362221238195,
+      "delta_vs_current_bits": 135.27300808123982,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 16,
+        "order": 3
+      },
+      "total_bits": 8938.405880099877
+    },
+    {
+      "component_bits": 2594.730679563262,
+      "delta_vs_current_bits": 135.6414664063068,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 5
+      },
+      "total_bits": 8938.774338424944
+    },
+    {
+      "component_bits": 2590.9361148661774,
+      "delta_vs_current_bits": 135.84690170922113,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 17,
+        "order": 3
+      },
+      "total_bits": 8938.979773727859
+    },
+    {
+      "component_bits": 2593.2005540345044,
+      "delta_vs_current_bits": 136.11134087754908,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 4
+      },
+      "total_bits": 8939.244212896187
+    },
+    {
+      "component_bits": 2591.451537743529,
+      "delta_vs_current_bits": 136.3623245865747,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 18,
+        "order": 3
+      },
+      "total_bits": 8939.495196605212
+    },
+    {
+      "component_bits": 2591.9170018642844,
+      "delta_vs_current_bits": 136.8277887073291,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 19,
+        "order": 3
+      },
+      "total_bits": 8939.960660725967
+    },
+    {
+      "component_bits": 2596.1043151872564,
+      "delta_vs_current_bits": 137.01510203030193,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 5
+      },
+      "total_bits": 8940.14797404894
+    },
+    {
+      "component_bits": 2592.339442162969,
+      "delta_vs_current_bits": 137.2502290060147,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 20,
+        "order": 3
+      },
+      "total_bits": 8940.383101024652
+    },
+    {
+      "component_bits": 2594.455791840602,
+      "delta_vs_current_bits": 137.36657868364637,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 4
+      },
+      "total_bits": 8940.499450702284
+    },
+    {
+      "component_bits": 2592.7245658055767,
+      "delta_vs_current_bits": 137.63535264862185,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 21,
+        "order": 3
+      },
+      "total_bits": 8940.76822466726
+    },
+    {
+      "component_bits": 2597.0363406745014,
+      "delta_vs_current_bits": 137.9471275175456,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 1,
+        "order": 6
+      },
+      "total_bits": 8941.079999536183
+    },
+    {
+      "component_bits": 2593.0771125423116,
+      "delta_vs_current_bits": 137.9878993853563,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 22,
+        "order": 3
+      },
+      "total_bits": 8941.120771403994
+    },
+    {
+      "component_bits": 2595.369243427429,
+      "delta_vs_current_bits": 138.28003027047453,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 4
+      },
+      "total_bits": 8941.412902289112
+    },
+    {
+      "component_bits": 2593.4010514750885,
+      "delta_vs_current_bits": 138.3118383181336,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 23,
+        "order": 3
+      },
+      "total_bits": 8941.444710336771
+    },
+    {
+      "component_bits": 2593.6997316549123,
+      "delta_vs_current_bits": 138.61051849795695,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 24,
+        "order": 3
+      },
+      "total_bits": 8941.743390516594
+    },
+    {
+      "component_bits": 2597.8180824422634,
+      "delta_vs_current_bits": 138.72886928530716,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 11,
+      "parameter": {
+        "alpha": 2,
+        "order": 6
+      },
+      "total_bits": 8941.861741303945
+    },
+    {
+      "component_bits": 2593.975998676745,
+      "delta_vs_current_bits": 138.88678551978956,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 25,
+        "order": 3
+      },
+      "total_bits": 8942.019657538427
+    },
+    {
+      "component_bits": 2594.2322859069277,
+      "delta_vs_current_bits": 139.1430727499719,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 26,
+        "order": 3
+      },
+      "total_bits": 8942.27594476861
+    },
+    {
+      "component_bits": 2594.4706865591597,
+      "delta_vs_current_bits": 139.3814734022053,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 27,
+        "order": 3
+      },
+      "total_bits": 8942.514345420843
+    },
+    {
+      "component_bits": 2594.6930111526663,
+      "delta_vs_current_bits": 139.60379799571092,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 28,
+        "order": 3
+      },
+      "total_bits": 8942.736670014348
+    },
+    {
+      "component_bits": 2594.9008336991433,
+      "delta_vs_current_bits": 139.8116205421884,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 29,
+        "order": 3
+      },
+      "total_bits": 8942.944492560826
+    },
+    {
+      "component_bits": 2595.0955291176174,
+      "delta_vs_current_bits": 140.0063159606616,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 30,
+        "order": 3
+      },
+      "total_bits": 8943.1391879793
+    },
+    {
+      "component_bits": 2597.2114075447616,
+      "delta_vs_current_bits": 140.1221943878063,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 5
+      },
+      "total_bits": 8943.255066406444
+    },
+    {
+      "component_bits": 2597.940058661555,
+      "delta_vs_current_bits": 140.85084550459942,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 5
+      },
+      "total_bits": 8943.983717523237
+    },
+    {
+      "component_bits": 2596.062461788659,
+      "delta_vs_current_bits": 140.97324863170434,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 4
+      },
+      "total_bits": 8944.106120650342
+    },
+    {
+      "component_bits": 2598.4434819461535,
+      "delta_vs_current_bits": 141.3542687891986,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 5
+      },
+      "total_bits": 8944.487140807836
+    },
+    {
+      "component_bits": 2598.5256462892335,
+      "delta_vs_current_bits": 141.43643313227767,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 3,
+        "order": 6
+      },
+      "total_bits": 8944.569305150915
+    },
+    {
+      "component_bits": 2596.6060428996793,
+      "delta_vs_current_bits": 141.51682974272444,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 4
+      },
+      "total_bits": 8944.649701761362
+    },
+    {
+      "component_bits": 2598.809560588018,
+      "delta_vs_current_bits": 141.7203474310627,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 5
+      },
+      "total_bits": 8944.8532194497
+    },
+    {
+      "component_bits": 2598.999767402484,
+      "delta_vs_current_bits": 141.91055424552906,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 4,
+        "order": 6
+      },
+      "total_bits": 8945.043426264167
+    },
+    {
+      "component_bits": 2597.0435127737733,
+      "delta_vs_current_bits": 141.9542996168184,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 4
+      },
+      "total_bits": 8945.087171635456
+    },
+    {
+      "component_bits": 514.0,
+      "delta_vs_current_bits": 142.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 3,
+      "parameter": 1,
+      "total_bits": 8945.132872018637
+    },
+    {
+      "component_bits": 2595.278303761614,
+      "delta_vs_current_bits": 142.1890906046592,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 31,
+        "order": 3
+      },
+      "total_bits": 8945.321962623297
+    },
+    {
+      "component_bits": 2599.3297198968357,
+      "delta_vs_current_bits": 142.2405067398795,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 5,
+        "order": 6
+      },
+      "total_bits": 8945.373378758517
+    },
+    {
+      "component_bits": 2597.403082320739,
+      "delta_vs_current_bits": 142.31386916378324,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 4
+      },
+      "total_bits": 8945.44674118242
+    },
+    {
+      "component_bits": 2595.4502204943774,
+      "delta_vs_current_bits": 142.36100733742205,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 32,
+        "order": 3
+      },
+      "total_bits": 8945.49387935606
+    },
+    {
+      "component_bits": 2599.5705962073753,
+      "delta_vs_current_bits": 142.48138305042085,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 13,
+      "parameter": {
+        "alpha": 6,
+        "order": 6
+      },
+      "total_bits": 8945.614255069058
+    },
+    {
+      "component_bits": 2597.703808371948,
+      "delta_vs_current_bits": 142.61459521499273,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 4
+      },
+      "total_bits": 8945.74746723363
+    },
+    {
+      "component_bits": 2597.9590158233214,
+      "delta_vs_current_bits": 142.869802666366,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 4
+      },
+      "total_bits": 8946.002674685004
+    },
+    {
+      "component_bits": 2598.1782965674074,
+      "delta_vs_current_bits": 143.08908341045208,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 4
+      },
+      "total_bits": 8946.22195542909
+    },
+    {
+      "component_bits": 2598.3687285972496,
+      "delta_vs_current_bits": 143.27951544029384,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 4
+      },
+      "total_bits": 8946.412387458931
+    },
+    {
+      "component_bits": 2599.0869818464685,
+      "delta_vs_current_bits": 143.99776868951267,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 5
+      },
+      "total_bits": 8947.13064070815
+    },
+    {
+      "component_bits": 2599.3041845866155,
+      "delta_vs_current_bits": 144.2149714296611,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 5
+      },
+      "total_bits": 8947.347843448299
+    },
+    {
+      "component_bits": 2599.4787306828166,
+      "delta_vs_current_bits": 144.38951752586217,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 5
+      },
+      "total_bits": 8947.5223895445
+    },
+    {
+      "component_bits": 2599.622002008348,
+      "delta_vs_current_bits": 144.53278885139298,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 5
+      },
+      "total_bits": 8947.66566087003
+    },
+    {
+      "component_bits": 2599.7416812989804,
+      "delta_vs_current_bits": 144.6524681420251,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 5
+      },
+      "total_bits": 8947.785340160663
+    },
+    {
+      "component_bits": 2599.753585093462,
+      "delta_vs_current_bits": 144.66437193650563,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 7,
+        "order": 6
+      },
+      "total_bits": 8947.797243955143
+    },
+    {
+      "component_bits": 2599.843134771021,
+      "delta_vs_current_bits": 144.7539216140649,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 5
+      },
+      "total_bits": 8947.886793632702
+    },
+    {
+      "component_bits": 2599.8970943085424,
+      "delta_vs_current_bits": 144.80788115158794,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 8,
+        "order": 6
+      },
+      "total_bits": 8947.940753170225
+    },
+    {
+      "component_bits": 2599.9302207683872,
+      "delta_vs_current_bits": 144.84100761143236,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 5
+      },
+      "total_bits": 8947.97387963007
+    },
+    {
+      "component_bits": 2600.0057830473957,
+      "delta_vs_current_bits": 144.91656989043986,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 5
+      },
+      "total_bits": 8948.049441909077
+    },
+    {
+      "component_bits": 2600.0125606610754,
+      "delta_vs_current_bits": 144.9233475041201,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 9,
+        "order": 6
+      },
+      "total_bits": 8948.056219522758
+    },
+    {
+      "component_bits": 2600.1074261229746,
+      "delta_vs_current_bits": 145.01821296601884,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 10,
+        "order": 6
+      },
+      "total_bits": 8948.151084984656
+    },
+    {
+      "component_bits": 2600.186728275585,
+      "delta_vs_current_bits": 145.09751511863033,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 11,
+        "order": 6
+      },
+      "total_bits": 8948.230387137268
+    },
+    {
+      "component_bits": 2600.253993199671,
+      "delta_vs_current_bits": 145.1647800427163,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 12,
+        "order": 6
+      },
+      "total_bits": 8948.297652061354
+    },
+    {
+      "component_bits": 2600.3117603203764,
+      "delta_vs_current_bits": 145.22254716342104,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 13,
+        "order": 6
+      },
+      "total_bits": 8948.355419182059
+    },
+    {
+      "component_bits": 2600.361903738615,
+      "delta_vs_current_bits": 145.27269058165984,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 15,
+      "parameter": {
+        "alpha": 14,
+        "order": 6
+      },
+      "total_bits": 8948.405562600297
+    },
+    {
+      "component_bits": 2598.5356476142906,
+      "delta_vs_current_bits": 145.44643445733527,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 4
+      },
+      "total_bits": 8948.579306475973
+    },
+    {
+      "component_bits": 2598.68315133647,
+      "delta_vs_current_bits": 145.59393817951423,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 4
+      },
+      "total_bits": 8948.726810198152
+    },
+    {
+      "component_bits": 2598.814438460691,
+      "delta_vs_current_bits": 145.725225303735,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 4
+      },
+      "total_bits": 8948.858097322372
+    },
+    {
+      "component_bits": 2598.9320421627026,
+      "delta_vs_current_bits": 145.84282900574726,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 4
+      },
+      "total_bits": 8948.975701024385
+    },
+    {
+      "component_bits": 2599.037994484987,
+      "delta_vs_current_bits": 145.94878132803206,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 4
+      },
+      "total_bits": 8949.08165334667
+    },
+    {
+      "component_bits": 2599.133944332699,
+      "delta_vs_current_bits": 146.04473117574344,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 4
+      },
+      "total_bits": 8949.177603194381
+    },
+    {
+      "component_bits": 2599.221243653158,
+      "delta_vs_current_bits": 146.1320304962028,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 4
+      },
+      "total_bits": 8949.26490251484
+    },
+    {
+      "component_bits": 2599.3010113699575,
+      "delta_vs_current_bits": 146.2117982130021,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 4
+      },
+      "total_bits": 8949.34467023164
+    },
+    {
+      "component_bits": 2599.374181490253,
+      "delta_vs_current_bits": 146.284968333297,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 4
+      },
+      "total_bits": 8949.417840351935
+    },
+    {
+      "component_bits": 2599.4415397725306,
+      "delta_vs_current_bits": 146.3523266155753,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 4
+      },
+      "total_bits": 8949.485198634213
+    },
+    {
+      "component_bits": 2599.503752005836,
+      "delta_vs_current_bits": 146.4145388488796,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 4
+      },
+      "total_bits": 8949.547410867517
+    },
+    {
+      "component_bits": 2599.561386056092,
+      "delta_vs_current_bits": 146.47217289913715,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 4
+      },
+      "total_bits": 8949.605044917775
+    },
+    {
+      "component_bits": 2599.6149292249306,
+      "delta_vs_current_bits": 146.52571606797574,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 4
+      },
+      "total_bits": 8949.658588086613
+    },
+    {
+      "component_bits": 2599.664802043502,
+      "delta_vs_current_bits": 146.57558888654603,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 4
+      },
+      "total_bits": 8949.708460905184
+    },
+    {
+      "component_bits": 2599.711369326799,
+      "delta_vs_current_bits": 146.62215616984395,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 4
+      },
+      "total_bits": 8949.755028188481
+    },
+    {
+      "component_bits": 2599.7549491029513,
+      "delta_vs_current_bits": 146.66573594599686,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 4
+      },
+      "total_bits": 8949.798607964634
+    },
+    {
+      "component_bits": 2600.0719628830857,
+      "delta_vs_current_bits": 146.98274972613035,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 5
+      },
+      "total_bits": 8950.115621744768
+    },
+    {
+      "component_bits": 2600.1304029220223,
+      "delta_vs_current_bits": 147.04118976506652,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 5
+      },
+      "total_bits": 8950.174061783704
+    },
+    {
+      "component_bits": 2600.182384086192,
+      "delta_vs_current_bits": 147.0931709292363,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 5
+      },
+      "total_bits": 8950.226042947874
+    },
+    {
+      "component_bits": 2600.22891979662,
+      "delta_vs_current_bits": 147.13970663966393,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 5
+      },
+      "total_bits": 8950.272578658301
+    },
+    {
+      "component_bits": 2600.2708222466135,
+      "delta_vs_current_bits": 147.1816090896573,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 5
+      },
+      "total_bits": 8950.314481108295
+    },
+    {
+      "component_bits": 2600.308749927633,
+      "delta_vs_current_bits": 147.21953677067722,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 5
+      },
+      "total_bits": 8950.352408789315
+    },
+    {
+      "component_bits": 2600.3432423084937,
+      "delta_vs_current_bits": 147.2540291515379,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 5
+      },
+      "total_bits": 8950.386901170175
+    },
+    {
+      "component_bits": 2600.3747455399857,
+      "delta_vs_current_bits": 147.28553238302993,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 5
+      },
+      "total_bits": 8950.418404401667
+    },
+    {
+      "component_bits": 2600.4036317797495,
+      "delta_vs_current_bits": 147.31441862279462,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 5
+      },
+      "total_bits": 8950.447290641432
+    },
+    {
+      "component_bits": 2600.4058361050793,
+      "delta_vs_current_bits": 147.31662294812486,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 15,
+        "order": 6
+      },
+      "total_bits": 8950.449494966762
+    },
+    {
+      "component_bits": 2600.430213909747,
+      "delta_vs_current_bits": 147.34100075279275,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 5
+      },
+      "total_bits": 8950.47387277143
+    },
+    {
+      "component_bits": 2600.444642071343,
+      "delta_vs_current_bits": 147.35542891438672,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 16,
+        "order": 6
+      },
+      "total_bits": 8950.488300933024
+    },
+    {
+      "component_bits": 2600.454756877883,
+      "delta_vs_current_bits": 147.36554372092723,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 5
+      },
+      "total_bits": 8950.498415739565
+    },
+    {
+      "component_bits": 2600.4774865331965,
+      "delta_vs_current_bits": 147.38827337624025,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 5
+      },
+      "total_bits": 8950.521145394878
+    },
+    {
+      "component_bits": 2600.4791680709027,
+      "delta_vs_current_bits": 147.3899549139478,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 17,
+        "order": 6
+      },
+      "total_bits": 8950.522826932585
+    },
+    {
+      "component_bits": 2600.4985965775845,
+      "delta_vs_current_bits": 147.40938342062873,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 5
+      },
+      "total_bits": 8950.542255439266
+    },
+    {
+      "component_bits": 2600.5100842002043,
+      "delta_vs_current_bits": 147.42087104324855,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 18,
+        "order": 6
+      },
+      "total_bits": 8950.553743061886
+    },
+    {
+      "component_bits": 2600.518254086064,
+      "delta_vs_current_bits": 147.42904092910976,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 5
+      },
+      "total_bits": 8950.561912947747
+    },
+    {
+      "component_bits": 2600.5366039277797,
+      "delta_vs_current_bits": 147.4473907708234,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 5
+      },
+      "total_bits": 8950.58026278946
+    },
+    {
+      "component_bits": 2600.537927796193,
+      "delta_vs_current_bits": 147.44871463923846,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 19,
+        "order": 6
+      },
+      "total_bits": 8950.581586657876
+    },
+    {
+      "component_bits": 2600.5537723350017,
+      "delta_vs_current_bits": 147.46455917804633,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 5
+      },
+      "total_bits": 8950.597431196684
+    },
+    {
+      "component_bits": 2600.5631347189205,
+      "delta_vs_current_bits": 147.47392156196474,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 20,
+        "order": 6
+      },
+      "total_bits": 8950.606793580602
+    },
+    {
+      "component_bits": 2600.586062198441,
+      "delta_vs_current_bits": 147.4968490414867,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 21,
+        "order": 6
+      },
+      "total_bits": 8950.629721060124
+    },
+    {
+      "component_bits": 2600.607005782293,
+      "delta_vs_current_bits": 147.5177926253382,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 22,
+        "order": 6
+      },
+      "total_bits": 8950.650664643976
+    },
+    {
+      "component_bits": 2600.6262120853353,
+      "delta_vs_current_bits": 147.53699892837903,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 23,
+        "order": 6
+      },
+      "total_bits": 8950.669870947017
+    },
+    {
+      "component_bits": 2600.6438885056214,
+      "delta_vs_current_bits": 147.55467534866693,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 24,
+        "order": 6
+      },
+      "total_bits": 8950.687547367304
+    },
+    {
+      "component_bits": 2600.660210715675,
+      "delta_vs_current_bits": 147.57099755871968,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 25,
+        "order": 6
+      },
+      "total_bits": 8950.703869577357
+    },
+    {
+      "component_bits": 2600.6753285010286,
+      "delta_vs_current_bits": 147.58611534407282,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 26,
+        "order": 6
+      },
+      "total_bits": 8950.71898736271
+    },
+    {
+      "component_bits": 2600.6893703561173,
+      "delta_vs_current_bits": 147.6001571991619,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 27,
+        "order": 6
+      },
+      "total_bits": 8950.7330292178
+    },
+    {
+      "component_bits": 2600.7024471352242,
+      "delta_vs_current_bits": 147.6132339782689,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 28,
+        "order": 6
+      },
+      "total_bits": 8950.746105996906
+    },
+    {
+      "component_bits": 2600.714654977454,
+      "delta_vs_current_bits": 147.62544182049896,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 29,
+        "order": 6
+      },
+      "total_bits": 8950.758313839136
+    },
+    {
+      "component_bits": 2600.7260776687936,
+      "delta_vs_current_bits": 147.6368645118382,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 17,
+      "parameter": {
+        "alpha": 30,
+        "order": 6
+      },
+      "total_bits": 8950.769736530476
+    },
+    {
+      "component_bits": 2599.795819878974,
+      "delta_vs_current_bits": 148.70660672201848,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 4
+      },
+      "total_bits": 8951.839478740656
+    },
+    {
+      "component_bits": 2599.8342265935535,
+      "delta_vs_current_bits": 148.74501343659722,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 4
+      },
+      "total_bits": 8951.877885455235
+    },
+    {
+      "component_bits": 2600.569869805463,
+      "delta_vs_current_bits": 149.48065664850765,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 5
+      },
+      "total_bits": 8952.613528667145
+    },
+    {
+      "component_bits": 2600.584993478892,
+      "delta_vs_current_bits": 149.49578032193676,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 5
+      },
+      "total_bits": 8952.628652340574
+    },
+    {
+      "component_bits": 2600.7367885635103,
+      "delta_vs_current_bits": 149.6475754065541,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 31,
+        "order": 6
+      },
+      "total_bits": 8952.780447425192
+    },
+    {
+      "component_bits": 2600.7468521579244,
+      "delta_vs_current_bits": 149.65763900096863,
+      "family": "literal_payload_context_order_alpha",
+      "model_declaration_bits": 19,
+      "parameter": {
+        "alpha": 32,
+        "order": 6
+      },
+      "total_bits": 8952.790511019606
+    },
+    {
+      "component_bits": 540.0,
+      "delta_vs_current_bits": 170.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 6,
+      "total_bits": 8973.132872018637
+    },
+    {
+      "component_bits": 2033,
+      "delta_vs_current_bits": 173.0,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 6,
+      "total_bits": 8976.132872018637
+    },
+    {
+      "component_bits": 616.0,
+      "delta_vs_current_bits": 248.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 7,
+      "total_bits": 9051.132872018637
+    },
+    {
+      "component_bits": 2140,
+      "delta_vs_current_bits": 280.0,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 5,
+      "parameter": 3,
+      "total_bits": 9083.132872018637
+    },
+    {
+      "component_bits": 693.0,
+      "delta_vs_current_bits": 325.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 8,
+      "total_bits": 9128.132872018637
+    },
+    {
+      "component_bits": 770.0,
+      "delta_vs_current_bits": 402.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 9,
+      "total_bits": 9205.132872018637
+    },
+    {
+      "component_bits": 2262,
+      "delta_vs_current_bits": 404.0000000000018,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 7,
+      "total_bits": 9207.13287201864
+    },
+    {
+      "component_bits": 836.0,
+      "delta_vs_current_bits": 462.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 1,
+      "parameter": 0,
+      "total_bits": 9265.132872018637
+    },
+    {
+      "component_bits": 847.0,
+      "delta_vs_current_bits": 479.0,
+      "family": "literal_run_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 10,
+      "total_bits": 9282.132872018637
+    },
+    {
+      "component_bits": 2530,
+      "delta_vs_current_bits": 672.0000000000018,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 8,
+      "total_bits": 9475.13287201864
+    },
+    {
+      "component_bits": 2810,
+      "delta_vs_current_bits": 952.0000000000018,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 9,
+      "total_bits": 9755.13287201864
+    },
+    {
+      "component_bits": 3009,
+      "delta_vs_current_bits": 1147.0000000000018,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 3,
+      "parameter": 2,
+      "total_bits": 9950.13287201864
+    },
+    {
+      "component_bits": 3091,
+      "delta_vs_current_bits": 1233.0000000000018,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 7,
+      "parameter": 10,
+      "total_bits": 10036.13287201864
+    },
+    {
+      "component_bits": 5026,
+      "delta_vs_current_bits": 3164.0000000000036,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 3,
+      "parameter": 1,
+      "total_bits": 11967.132872018641
+    },
+    {
+      "component_bits": 9356,
+      "delta_vs_current_bits": 7491.999999999998,
+      "family": "copy_length_rice_k",
+      "model_declaration_bits": 1,
+      "parameter": 0,
+      "total_bits": 16295.132872018636
+    }
+  ],
+  "promotion_rule": "promote only if a declared parameter value for copy length, literal length, literal payload context, or item-type context beats the active contextual formula",
+  "schema": "post_contextual_parameter_resweep.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_copy_to_literal_formula_469.json",
+  "test": "68_post_contextual_parameter_resweep",
+  "translation_delta": "NONE"
+}

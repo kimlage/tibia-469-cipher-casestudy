@@ -342,6 +342,11 @@ hypotheses:
     status: contextual_address_optimistic_only_not_promoted
     target: "copy source-address ledgers after the contextual copy-to-literal repair"
     promotion_rule: "must beat absolute source_digit_pos in a decodable ledger under the active contextual formula"
+  H-GEN3BK:
+    name: "post contextual parameter resweep"
+    status: post_contextual_parameter_resweep_retains_current
+    target: "declared copy length, literal length, literal payload context, and item-type context parameters after contextual copy-to-literal repair"
+    promotion_rule: "must beat the active contextual copy-to-literal formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

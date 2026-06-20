@@ -291,8 +291,10 @@ a declared order-2 previous-emitted-digit context. An item-type context-order
 sweep lowers it to roughly `8803.5` bits, and one contextual copy-to-literal
 repair lowers it to roughly `8803.1` bits. The immediate local frontier after
 that repair is closed, and the current address-model retest keeps absolute
-`source_digit_pos` as the best decodable address ledger. No semantic claim is
-promoted.
+`source_digit_pos` as the best decodable address ledger. A post-contextual
+parameter resweep keeps copy Rice `k=4`, literal Rice `k=3`, payload order `2`
+/ `alpha=1`, and item-type order `3` / `alpha=2` as the active parameter
+frontier. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

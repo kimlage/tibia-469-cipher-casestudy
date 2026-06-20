@@ -173,6 +173,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   local frontier after the contextual copy-to-literal repair.
 - `scripts/67_contextual_address_model_search.py` - retests copy-source
   address ledgers on the current contextual formula.
+- `scripts/68_post_contextual_parameter_resweep.py` - retests declared length,
+  literal-payload context, and item-type context parameters after the
+  contextual copy-to-literal repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

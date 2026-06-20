@@ -450,6 +450,12 @@ ledger at `8803.1` bits. Literal-seed addressing reaches `8739.3` bits only as
 an optimistic no-mode lower bound; once decodable sparse seed-run mode bits are
 charged, it costs `8813.8` bits and does not promote.
 
+The post-contextual parameter resweep then retests the declared parameters
+after the copy-to-literal repair changes the recipe. Copy length Rice `k=4`,
+literal-run length Rice `k=3`, literal-payload context order `2` / `alpha=1`,
+and item-type context order `3` / `alpha=2` all remain best after charged
+declarations. The current `8803.1` bit formula is therefore retained.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -530,6 +536,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BH | `controlled_contextual_copy_to_literal_improvement` |
 | H-GEN3BI | `post_copy_literal_local_frontier_closed` |
 | H-GEN3BJ | `contextual_address_optimistic_only_not_promoted` |
+| H-GEN3BK | `post_contextual_parameter_resweep_retains_current` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -605,6 +612,7 @@ book generation, not row0 pair-cell placement.
 - [Contextual copy-to-literal repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/65_contextual_copy_to_literal_repair_search.md)
 - [Post copy-to-literal local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/66_post_copy_literal_local_frontier.md)
 - [Contextual address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/67_contextual_address_model_search.md)
+- [Post-contextual parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/68_post_contextual_parameter_resweep.md)
 
 ## Boundary
 
@@ -619,7 +627,8 @@ the previous-emitted-digit literal payload context model with declared order
 `2`, the item-type context-order ledger with declared order `3`, and the
 contextual copy-to-literal repair as the current strongest copy/reference
 fabrication bound at roughly `8803.1` bits. Follow-up literal-to-copy repairs,
-immediate copy-to-literal repairs or pairs, and alternate decodable address
-ledgers do not improve it under the current cost model; continue
+immediate copy-to-literal repairs or pairs, alternate decodable address
+ledgers, and post-contextual parameter resweeps do not improve it under the
+current cost model; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

@@ -249,6 +249,11 @@ Still open from the report:
   ledger. Literal-seed addressing reaches `8739.3` bits only as an optimistic
   no-mode lower bound; the best decodable sparse seed-run ledger costs
   `8813.8` bits.
+- post-contextual parameter resweep is now covered by
+  [`68_post_contextual_parameter_resweep.py`](scripts/68_post_contextual_parameter_resweep.py);
+  copy length Rice `k=4`, literal-run length Rice `k=3`, literal payload
+  order `2` / `alpha=1`, and item-type order `3` / `alpha=2` all remain best
+  after charged declarations. No newer formula is promoted.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

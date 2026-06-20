@@ -112,6 +112,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ contextual copy-to-literal repair formula | one short copy of `45765` in book `34` is cheaper as an explicit literal under contextual payload coding; total bound drops from `8803.5` to `8803.1` bits | strongest copy/reference upper bound |
 | Post copy-to-literal local frontier | after the contextual copy-to-literal repair, single literal-to-copy, single copy-to-literal, and `13530` copy-to-literal pair edits are all worse | rejected refinement / local frontier closed |
 | Contextual copy-address model search | absolute `source_digit_pos` remains best decodable at `8803.1`; literal-seed no-mode reaches `8739.3` but sparse decodable seed-run costs `8813.8` | rejected refinement / optimistic clue |
+| Post-contextual parameter resweep | current declared parameters remain best after the copy-to-literal repair: copy Rice `k=4`, literal Rice `k=3`, payload order `2` / `alpha=1`, item-type order `3` / `alpha=2` | retained parameter frontier |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -173,6 +174,7 @@ Primary sources:
 [post_forced_repair_eleven_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md),
 [post_forced_repair_twelve_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/59_post_forced_repair_twelve_search.md),
 [post_forced_repair_high_order_exhaustion.md](../../analysis/authorial_mechanism_20260620/reports/test_results/60_post_forced_repair_high_order_exhaustion.md),
+[post_contextual_parameter_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/68_post_contextual_parameter_resweep.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

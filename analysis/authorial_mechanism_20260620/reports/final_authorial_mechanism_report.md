@@ -346,5 +346,10 @@ Generated audits in this directory should be treated as the current state:
   the active contextual formula. Absolute `source_digit_pos` remains the best
   decodable ledger at `8803.1` bits; literal-seed addressing reaches `8739.3`
   bits only as an optimistic no-mode lower bound.
+- `68_post_contextual_parameter_resweep`: retests the declared length,
+  literal-payload context, and item-type context parameters after the
+  contextual copy-to-literal repair. The current parameters remain best:
+  copy Rice `k=4`, literal Rice `k=3`, payload order `2` / `alpha=1`, and
+  item-type order `3` / `alpha=2`. No newer formula is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
