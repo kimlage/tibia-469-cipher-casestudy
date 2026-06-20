@@ -83,6 +83,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_forced_length_literal_repair_formula_469` | `8922.8` | `0.1` |
 | `sequential_lz_digit_address_forced_length_literal_context_formula_469` | `8842.0` | `80.8` |
 | `sequential_lz_digit_address_forced_length_literal_context_order_formula_469` | `8805.7` | `36.3` |
+| `sequential_lz_digit_address_forced_length_literal_context_order_type_context_formula_469` | `8803.5` | `2.2` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -422,6 +423,13 @@ lowering the bound again from `8842.0` to `8805.7` bits. Orders `3..5` are
 worse after sparsity and declaration cost. This is still payload coding only,
 not a semantic or row0-origin claim.
 
+The item-type context-order sweep then retests only the literal/copy item-type
+ledger. It preserves the deterministic forced-copy and forced-short-suffix
+rules, keeps forced emissions in context history, and codes only unforced item
+types. Order `3` with `alpha=2` improves the bound from `8805.7` to `8803.5`
+bits after charged order bits. This is a small mechanical ledger improvement
+only.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -497,6 +505,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BC | `post_forced_repair_high_order_not_promoted` |
 | H-GEN3BD | `controlled_literal_payload_context_improvement` |
 | H-GEN3BE | `controlled_literal_payload_context_order_improvement` |
+| H-GEN3BF | `controlled_item_type_context_order_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -567,6 +576,7 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair high-order exhaustion](../../analysis/authorial_mechanism_20260620/reports/test_results/60_post_forced_repair_high_order_exhaustion.md)
 - [Post-forced-repair literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/61_post_forced_repair_literal_payload_context_search.md)
 - [Literal payload context order sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/62_literal_payload_context_order_sweep.md)
+- [Item-type context order sweep](../../analysis/authorial_mechanism_20260620/reports/test_results/63_item_type_context_order_sweep.md)
 
 ## Boundary
 
@@ -578,9 +588,10 @@ adaptive/Markov/book-start/literal-force item-type ledgers, remaining-short
 forced-literal rule, forced short-suffix literal lengths, the final
 forced-length local repair, retained absolute `source_digit_pos` addresses, and
 the previous-emitted-digit literal payload context model with declared order
-`2`, as the current strongest copy/reference fabrication bound at roughly
-`8805.7` bits. Follow-up single/pair local repairs and all compatible local
-repair sets above one do not
+`2`, and the item-type context-order ledger with declared order `3`, as the
+current strongest copy/reference fabrication bound at roughly `8803.5` bits.
+Follow-up single/pair local repairs and all compatible local repair sets above
+one do not
 improve it under the current cost model; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

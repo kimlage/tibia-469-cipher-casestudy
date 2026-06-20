@@ -224,6 +224,11 @@ Still open from the report:
   a declared previous-emitted-digit context of order `2` with `alpha=1`
   further improves the active formula from `8842.0` to `8805.7` bits after
   charged order bits.
+- item-type context-order sweep is now covered by
+  [`63_item_type_context_order_sweep.py`](scripts/63_item_type_context_order_sweep.py);
+  a declared previous item-type context of order `3` with `alpha=2` further
+  improves the active formula from `8805.7` to `8803.5` bits after charged
+  order bits and retained forced-type rules.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

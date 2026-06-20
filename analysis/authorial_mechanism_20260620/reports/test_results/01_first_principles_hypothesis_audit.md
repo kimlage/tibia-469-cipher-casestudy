@@ -85,6 +85,7 @@ does not promote plaintext.
 | `H-GEN3BC` | `post_forced_repair_high_order_not_promoted` | `True` |
 | `H-GEN3BD` | `controlled_literal_payload_context_improvement` | `True` |
 | `H-GEN3BE` | `controlled_literal_payload_context_order_improvement` | `True` |
+| `H-GEN3BF` | `controlled_item_type_context_order_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

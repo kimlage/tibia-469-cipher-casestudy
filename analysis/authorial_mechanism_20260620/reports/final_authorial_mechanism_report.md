@@ -325,5 +325,10 @@ Generated audits in this directory should be treated as the current state:
   order-2 context with `alpha=1` improves the active mechanical bound from
   `8842.0` to `8805.7` bits after charged order bits, with 70/70 roundtrip and
   `translation_delta: NONE`.
+- `63_item_type_context_order_sweep`: sweeps declared previous item-type
+  context orders while retaining the deterministic item-type rules. Order `3`
+  with `alpha=2` improves the active mechanical bound from `8805.7` to
+  `8803.5` bits after charged order bits, with 70/70 roundtrip and
+  `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

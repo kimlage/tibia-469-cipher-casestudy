@@ -162,6 +162,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   contextual literal-payload coding after the forced-length repair.
 - `scripts/62_literal_payload_context_order_sweep.py` - sweeps deterministic
   previous-emitted-digit context order for the final literal payload model.
+- `scripts/63_item_type_context_order_sweep.py` - sweeps declared previous
+  item-type context order for the final literal/copy item-type ledger.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

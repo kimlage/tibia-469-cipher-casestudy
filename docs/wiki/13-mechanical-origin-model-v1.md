@@ -108,6 +108,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair high-order exhaustion | compatible set sizes `13..19` are exactly rescored and sizes `20..22` checked; the best remaining set is size `13` at `+23.7` bits and sizes `20..22` have no compatible sets | rejected refinement / frontier closed |
 | Sequential LZ literal-payload context formula | final literal payload digits are coded by an adaptive previous-emitted-digit context; total bound drops from `8922.8` to `8842.0` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ literal-payload context-order formula | final literal payload digits are coded by a declared order-2 previous-emitted-digit context; total bound drops from `8842.0` to `8805.7` bits with 70/70 roundtrip | strongest copy/reference upper bound |
+| Sequential LZ item-type context-order formula | the literal/copy item-type ledger uses a declared order-3 previous item-type context while retaining forced rules; total bound drops from `8805.7` to `8803.5` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -267,6 +268,8 @@ claims remain inadmissible.
   [sequential_lz_digit_address_forced_length_literal_context_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_context_formula_469.json)
 - Sequential LZ forced-length literal-context-order formula:
   [sequential_lz_digit_address_forced_length_literal_context_order_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_context_order_formula_469.json)
+- Sequential LZ forced-length literal-context-order plus type-context formula:
+  [sequential_lz_digit_address_forced_length_literal_context_order_type_context_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_context_order_type_context_formula_469.json)
 - DP LZ copy graph:
   [dp_lz_copy_graph_edges.csv](../../analysis/authorial_mechanism_20260620/tables/dp_lz_copy_graph_edges.csv)
 - DP LZ literal seed atlas:

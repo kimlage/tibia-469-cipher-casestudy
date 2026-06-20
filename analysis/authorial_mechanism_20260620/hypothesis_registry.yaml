@@ -317,6 +317,11 @@ hypotheses:
     status: controlled_literal_payload_context_order_improvement
     target: "literal payload coding conditioned on a declared previous-emitted-digit context order"
     promotion_rule: "must beat the active order-1 context model after charged alpha, family, and context-order declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3BF:
+    name: "item-type context order sweep"
+    status: controlled_item_type_context_order_improvement
+    target: "literal/copy item-type ledger conditioned on declared previous item-type context order"
+    promotion_rule: "must beat the active order-1 book-start Markov item-type ledger after charged alpha, forced-rule, and order declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
