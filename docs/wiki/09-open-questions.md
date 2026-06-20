@@ -178,7 +178,9 @@ addresses as the best decodable row; literal-seed addressing reaches `8502.9`
 bits only as an undecodable no-mode lower bound. The current copy-order retest
 also keeps source-first as the best decodable order; pure length-first is
 `+12.194` bits worse and the best sparse decodable mixed-order ledger is
-`+8.979` bits worse.
+`+8.979` bits worse. The copy-length context resweep after `alpha=1` also
+keeps the fixed book-midpoint context; book quartiles are `+1.941` bits worse
+and the best searched split is `+2.296` bits worse after declaration costs.
 
 ## Ranked: what would unlock progress
 

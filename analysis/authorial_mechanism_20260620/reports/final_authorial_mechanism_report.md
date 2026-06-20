@@ -442,5 +442,9 @@ Generated audits in this directory should be treated as the current state:
   `+12.194` bits worse, the best mixed no-mode row is `-3.539` bits
   optimistic-only, and the best sparse decodable mode ledger remains `+8.979`
   bits worse.
+- `91_post_midpoint_alpha1_copy_length_context_resweep`: retests copy-length
+  context families after `alpha=1`. The active fixed midpoint context remains
+  best at `8572.267` bits; book quartiles are `+1.941` bits worse and the best
+  searched split is `+2.296` bits worse after declaration costs.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

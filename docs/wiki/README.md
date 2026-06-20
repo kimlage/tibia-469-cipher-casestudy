@@ -323,7 +323,8 @@ post-alpha1 address retest keeps min_len-bounded absolute addresses as the best
 decodable ledger; literal-seed addressing remains an optimistic-only lower
 bound. A post-alpha1 copy-order retest keeps source-first as the best decodable
 order; length-first variants remain optimistic-only or worse after mode costs.
-No
+The post-alpha1 copy-length context resweep also keeps the fixed book-midpoint
+context as the best fully declared context. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

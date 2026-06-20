@@ -597,6 +597,12 @@ bits worse, the best no-mode mixed order is `-3.539` bits optimistic-only, and
 the best sparse decodable mixed-order ledger is still `+8.979` bits worse.
 Source-address-then-length remains active.
 
+The post-midpoint alpha1 copy-length context resweep then checks whether the
+midpoint context still holds after `alpha=1` is active. It does. Book quartiles
+save only `0.059` component bits and are `+1.941` bits worse after declaration.
+The best searched split, book `18`, saves `6.704` component bits but is still
+`+2.296` bits worse after charging the split index.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -700,6 +706,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CE | `post_midpoint_alpha1_pair_frontier_closed` |
 | H-GEN3CF | `post_midpoint_alpha1_address_optimistic_only_not_promoted` |
 | H-GEN3CG | `post_midpoint_alpha1_copy_order_optimistic_only_not_promoted` |
+| H-GEN3CH | `post_midpoint_alpha1_copy_length_context_retains_midpoint` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -798,6 +805,7 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/88_post_midpoint_alpha1_pair_frontier.md)
 - [Post-midpoint alpha1 address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/89_post_midpoint_alpha1_address_model_search.md)
 - [Post-midpoint alpha1 copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/90_post_midpoint_alpha1_copy_order_search.md)
+- [Post-midpoint alpha1 copy-length context resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/91_post_midpoint_alpha1_copy_length_context_resweep.md)
 
 ## Boundary
 
@@ -823,6 +831,7 @@ resweeps, plus post-repair2 copy-order and post-adaptive local-frontier retests,
 plus post-adaptive parameter, pair-frontier, address-model, and copy-order
 resweeps, the post-midpoint local frontier, and the post-midpoint alpha1 local
 frontier plus pair frontier, address-model retest, and copy-order retest do
-not improve the current frontier. Continue
+not improve the current frontier; the post-alpha1 context resweep retains the
+midpoint context. Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

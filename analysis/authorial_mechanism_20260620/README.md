@@ -228,6 +228,8 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
 - `scripts/90_post_midpoint_alpha1_copy_order_search.py` - retests
   source-first versus length-first copy order after midpoint alpha=1 becomes
   active.
+- `scripts/91_post_midpoint_alpha1_copy_length_context_resweep.py` - retests
+  copy-length context families after midpoint alpha=1 becomes active.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

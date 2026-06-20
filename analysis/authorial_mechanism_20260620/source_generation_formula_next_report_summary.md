@@ -366,6 +366,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   pure length-first coding is `+12.194` bits worse, the best no-mode mixed
   order is `-3.539` bits optimistic-only, and the best sparse decodable mode
   ledger is still `+8.979` bits worse.
+- post-midpoint alpha1 copy-length contexts are now reswept by
+  [`91_post_midpoint_alpha1_copy_length_context_resweep.py`](scripts/91_post_midpoint_alpha1_copy_length_context_resweep.py);
+  the active fixed midpoint context remains best at `8572.267` bits. Book
+  quartiles are only `+1.941` bits worse after declaration, and the best
+  searched split is still `+2.296` bits worse after charging the split index.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
