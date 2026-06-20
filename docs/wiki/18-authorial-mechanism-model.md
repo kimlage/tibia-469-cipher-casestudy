@@ -663,6 +663,12 @@ post-itemctx_param context alpha grid also retains shared `alpha=1`; first-half
 `alpha=1` plus second-half `alpha=2` saves `1.611` component bits but is still
 `+1.389` bits worse after extra alpha declarations.
 
+The post-itemctx_param literal-payload context search then checks whether the
+remaining literal digits need a book-level payload prior after the item-type
+parameter change. They still do not under full MDL: book-midpoint payload
+context saves `2.251` component bits but is `+1.749` bits worse after
+declaration, and the best searched split, book `39`, is `+11.613` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -778,6 +784,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CQ | `post_itemctx_param_copy_order_optimistic_only_not_promoted` |
 | H-GEN3CR | `post_itemctx_param_copy_length_context_retains_midpoint` |
 | H-GEN3CS | `post_itemctx_param_alpha_by_context_not_promoted` |
+| H-GEN3CT | `post_itemctx_param_literal_payload_context_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -888,6 +895,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/100_post_itemctx_param_copy_order_search.md)
 - [Post-itemctx param copy-length context resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/101_post_itemctx_param_copy_length_context_resweep.md)
 - [Post-itemctx param context alpha grid](../../analysis/authorial_mechanism_20260620/reports/test_results/102_post_itemctx_param_context_alpha_grid.md)
+- [Post-itemctx param literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/103_post_itemctx_param_literal_payload_context_search.md)
 
 ## Boundary
 
@@ -926,7 +934,8 @@ The post-itemctx_param local and pair frontiers do not improve the current
 frontier. The post-itemctx_param address and copy-order retests also remain
 optimistic-only or worse after decodable mode/address costs. The
 post-itemctx_param copy-length context and context-alpha retests retain the
-fixed midpoint `alpha=1` model.
+fixed midpoint `alpha=1` model. The post-itemctx_param literal-payload context
+search also retains the global payload model.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

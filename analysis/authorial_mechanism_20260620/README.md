@@ -256,6 +256,8 @@ bits.
   copy-length context families after the itemctx_param promotion.
 - `scripts/102_post_itemctx_param_context_alpha_grid.py` - retests separate
   midpoint smoothing alphas after the itemctx_param promotion.
+- `scripts/103_post_itemctx_param_literal_payload_context_search.py` -
+  retests simple literal-payload contexts after the itemctx_param promotion.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -206,7 +206,10 @@ bits only with free mode bits, while the best decodable order ledger is
 retests also retain the current midpoint `alpha=1` contract: book quartiles are
 `+1.941` bits worse, the best searched split is `+2.296` bits worse, and
 first-half `alpha=1` plus second-half `alpha=2` remains `+1.389` bits worse
-after declaration cost.
+after declaration cost. The post-itemctx_param literal-payload context search
+also retains the global previous-emitted-digit payload model; book-midpoint
+payload context saves `2.251` component bits but remains `+1.749` bits worse
+after declaration.
 
 ## Ranked: what would unlock progress
 
