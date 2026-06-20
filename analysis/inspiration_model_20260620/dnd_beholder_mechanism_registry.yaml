@@ -1,0 +1,39 @@
+schema: dnd_beholder_mechanism_registry.v1
+translation_delta: NONE
+entries:
+  beholder_10_eyestalks:
+    mechanism: "10 peripheral eye channels"
+    confidence: DND_PARALLEL
+    source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
+    469_target: ["digits_0_9", "homophone_inventory", "pair_table"]
+    required_controls: ["10! digit permutations sampled", "inventory-preserving label shuffles", "random 10-channel ontologies"]
+    current_result: "Existing K5/5x2 eye models are weak/rejected as row0 label generators."
+    status: weak_clue
+    blocked_use: "No semantic decoding; no proof of Tibia authorial intent."
+  central_eye:
+    mechanism: "suppression / anti-magic / central gaze"
+    confidence: DND_PARALLEL
+    source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
+    469_target: ["zero", "mask_symbol", "zero_omission"]
+    required_controls: ["digit relabel", "code-preserving zero shuffle", "source-layer split"]
+    current_result: "Zero has local render-context support but does not beat code-only under rough MDL as a final formula."
+    status: weak_clue
+    blocked_use: "Do not claim 0 means central eye."
+  beholder_variants:
+    mechanism: "entity-specific formulas / viewer variants"
+    confidence: DND_PARALLEL
+    source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
+    469_target: ["numeric_identity", "subjective_viewer", "source_classifier"]
+    required_controls: ["same-length random identity numbers", "lore decoy seeds", "negative source seeds"]
+    current_result: "Subjective viewer is supported as render/orientation lore, not as row0 formula."
+    status: watchlist_only
+    blocked_use: "Cannot promote identity numbers as lexical keys."
+  xenophobia_identity:
+    mechanism: "identity/self-name variation"
+    confidence: DND_PARALLEL
+    source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
+    469_target: ["3478", "486486", "subjective_name_formula"]
+    required_controls: ["source-class discrimination", "identity seed controls", "phrase/book layer split"]
+    current_result: "3478/486486 remain identity anchors only."
+    status: watchlist_only
+    blocked_use: "No word-level codebook extension."

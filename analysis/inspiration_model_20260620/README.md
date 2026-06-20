@@ -1,0 +1,37 @@
+---
+title: "469 source-inspiration model"
+date: 2026-06-20
+status: evidence_search_and_mechanism_only
+translation_delta: NONE
+---
+
+# 469 Source-Inspiration Model
+
+This directory is a frozen-artifact extension of the 469 case study. It
+collects lore, authorial, community, and D&D/Beholder inspiration as hypotheses
+for mechanical tests only. It does not reopen semantic decoding.
+
+## Gates
+
+- No plaintext, symbol-letter, book translation, or code-word claim is promoted
+  without CipSoft/in-game number-to-text, book-to-text, or symbol-to-meaning
+  ground truth.
+- Lore can inspire a test only when the target, control, metric, and stop rule
+  are explicit.
+- Existing accepted baselines remain controlling:
+  `mechanical_origin_model_v1`, the tape formula, observer/render audit, zero
+  context audit, and Avar Tar negative-control boundary.
+
+## Contents
+
+- `source_registry.yaml` - source registry with confidence and blocked uses.
+- `dnd_beholder_mechanism_registry.yaml` - D&D/Beholder inspiration registry.
+- `knightmare_design_corpus.yaml` - Knightmare/quest mechanism corpus.
+- `quest_mechanism_ontology.yaml` - quest mechanics as comparanda.
+- `source_inspiration_glossary.md` - operational glossary.
+- `source_attribution_confidence.md` - source confidence and contradiction
+  policy.
+- `tests/` - conservative test/audit wrappers for H19-H24.
+- `reports/` - consolidated reports.
+
+Translation delta: `NONE`.

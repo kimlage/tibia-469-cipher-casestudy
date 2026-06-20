@@ -1,0 +1,373 @@
+schema: source_registry.v1
+retrieval_date: "2026-06-19"
+translation_delta: NONE
+sources:
+  - id: wrinkled_bonelord_transcript
+    title: "A Wrinkled Bonelord transcript"
+    source_url: "https://tibiasecrets.com/A-Wrinkled-Bonelord"
+    source_type: transcript
+    source_status: fansite_transcript
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game NPC transcript; author not directly attested here"
+    relation_to_knightmare: "mechanism-lore source used by existing repo baselines"
+    relation_to_469: "direct 469 lore: books, language, enough eyes, subjective viewer, 486486, 0 taboo, 1=Tibia"
+    mechanisms:
+      - subjective_viewer
+      - enough_eyes_to_blink
+      - mathemagic
+      - zero_taboo
+      - numeric_identity
+      - library_as_knowledge_storage
+    numbers: ["469", "486486", "0", "1"]
+    keywords: ["books", "language", "bonelord", "name", "numbers", "tibia", "excalibug"]
+    evidence_class: mechanism_lore
+    risk_level: low_source_risk_high_interpretation_risk
+    allowed_use: "Generate render/orientation, zero suppression, eye-arity, and numeric-identity tests."
+    blocked_use: "Do not infer plaintext, code-word mappings, or a symbol-letter alphabet."
+  - id: tibiawiki_br_469
+    title: "469 - Tibia Wiki BR"
+    source_url: "https://www.tibiawiki.com.br/wiki/469"
+    source_type: community_wiki
+    source_status: promoted_fansite
+    language: pt-BR
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "community compilation with links to in-game/fansite sources"
+    relation_to_knightmare: "mentions Knightmare event/NPC phrase and Excalibug keyword gate"
+    relation_to_469: "central source inventory for Bonelord language, Chayenne, Avar Tar, Wyrdin, A Prisoner, A Wrinkled Bonelord"
+    mechanisms:
+      - npc_keyword_trigger
+      - phrase_layer_trigger
+      - external_holdout_chayenne
+      - negative_control_avar_tar
+      - mathemagic
+    numbers:
+      - "3478 67 90871 97664 3466 0 345"
+      - "114514519485611451908304576512282177"
+      - "6612527570584"
+      - "29639 46781"
+    keywords: ["Excalibug", "Chayenne", "Avar Tar", "Wyrdin", "mathemagics"]
+    evidence_class: mechanism_lore
+    risk_level: medium_compilation_risk
+    allowed_use: "Source discovery, phrase-trigger audit, external holdout inventory."
+    blocked_use: "Do not treat explanatory prose or fan theories as official plaintext."
+  - id: tibiaqa_486486
+    title: "TibiaQA report of A Wrinkled Bonelord name"
+    source_url: "https://www.tibiaqa.com/25010/what-is-the-name-of-a-wrinkled-bonelord-in-language-469"
+    source_type: community_q_and_a
+    source_status: fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "player-reported transcript line"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "confirms 486486 as the NPC self-name in transcript context"
+    mechanisms:
+      - numeric_identity
+      - subjective_name_formula
+    numbers: ["486486"]
+    keywords: ["name", "Blinky", "numbers"]
+    evidence_class: mechanism_lore
+    risk_level: medium_transcript_context
+    allowed_use: "Numeric identity seed control and source classifier."
+    blocked_use: "Do not promote 486486 as a word key beyond the NPC self-name context."
+  - id: tibia_official_news_blinky
+    title: "Tibia.com official news mentioning 486486 and 469"
+    source_url: "https://www.tibia.com/news/?id=3704&subtopic=latestnews"
+    source_type: official_news
+    source_status: official
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "CipSoft official news post"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "official watchlist/source confirmation for 486486/Blinky and reluctance to reveal 469 secrets"
+    mechanisms:
+      - numeric_identity
+      - watchlist_official_source
+    numbers: ["486486", "469"]
+    keywords: ["Blinky", "wrinkled bonelord", "secrets"]
+    evidence_class: watchlist_only
+    risk_level: low_source_risk
+    allowed_use: "Official provenance for 486486/469 lore context."
+    blocked_use: "Does not provide number-to-text, book plaintext, or formula."
+  - id: your_true_colour_2012
+    title: "Your True Colour official article string"
+    source_url: "https://web.archive.org/web/20120224031702/http://www.tibia.com:80/news/?subtopic=latestnews&id=1975"
+    source_type: official_news_archive
+    source_status: archived_official
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "CipSoft official article, mirrored/archived"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "official unglossed short external numeric string"
+    mechanisms:
+      - external_numeric_event
+      - source_classifier
+    numbers: ["78567", "34334", "989", "135", "65142"]
+    keywords: ["Your True Colour", "official article", "quiz"]
+    evidence_class: official_unglossed_numeric
+    risk_level: low_source_risk
+    allowed_use: "External holdout/source-class control."
+    blocked_use: "No official gloss; cannot map to plaintext."
+  - id: bonelord_tome
+    title: "Bonelord Tome"
+    source_url: "https://www.tibiawiki.com.br/wiki/Bonelord_Tome"
+    source_type: item_page
+    source_status: promoted_fansite
+    language: pt-BR
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game fansite item context, transcribed by TibiaWiki BR"
+    relation_to_knightmare: "repeats Knightmare phrase material and 486486 lore"
+    relation_to_469: "official item/source-status signal; phrase-layer provenance only"
+    mechanisms:
+      - phrase_layer_trigger
+      - numeric_identity
+      - official_fansite_item
+    numbers: ["46.90", "3478", "67", "90871", "97664", "3466", "0", "345", "486486"]
+    keywords: ["Bonelord Tome", "TibiaSecrets", "sounds"]
+    evidence_class: mechanism_lore
+    risk_level: low_source_risk_medium_interpretation_risk
+    allowed_use: "Phrase/source provenance and source-class classification."
+    blocked_use: "Does not add a new gloss or book translation."
+  - id: avar_tar_poem
+    title: "Avar Tar Bonelord-language poem"
+    source_url: "https://www.tibiaqa.com/25041/is-avar-tar-lying-about-his-stories"
+    source_type: npc_transcript_discussion
+    source_status: fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game NPC transcript/discussion"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "attested numeric utterance explicitly treated as unreliable/non-true-469 control"
+    mechanisms:
+      - negative_control
+      - source_classifier
+    numbers: ["29639", "46781", "9063376290", "3222011", "677", "80322429", "67538", "14805394", "6880326", "63378129", "337011", "72683", "149630", "4378", "453", "639", "578300", "986372", "2953639"]
+    keywords: ["Avar Tar", "poem", "Bonelord language"]
+    evidence_class: negative_control
+    risk_level: high_promotion_risk
+    allowed_use: "Negative control; leakage detector."
+    blocked_use: "Never use to promote book semantics without official correction."
+  - id: honeminas_formula
+    title: "The Honeminas Formula"
+    source_url: "https://tibia.fandom.com/wiki/The_Honeminas_Formula_%28Book%29"
+    source_type: in_game_book_transcript
+    source_status: promoted_fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game book transcript"
+    relation_to_knightmare: "mechanism corpus only"
+    relation_to_469: "formula/Magic Web source-lore already tested as generator context"
+    mechanisms:
+      - magic_web
+      - numeric_vector
+      - generator_selector_hypothesis
+    numbers: ["43153", "34784", "3478", "3", "2"]
+    keywords: ["Honeminas", "Magic Web", "formula", "Demona"]
+    evidence_class: mechanism_lore
+    risk_level: medium_pareidolia_risk
+    allowed_use: "Mechanism-lore test seed with controls."
+    blocked_use: "Do not treat vector numbers as plaintext keys."
+  - id: tibiasecrets_article_166
+    title: "TibiaSecrets article on Hellgate averages and outside books"
+    source_url: "https://www.tibiasecrets.com/article166"
+    source_type: fansite_article
+    source_status: fansite
+    language: en
+    confidence: MECHANISM_CORPUS
+    authorial_attribution: "community analysis"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "records outside 469 books, Avar Tar negative assessment, Secret Library 74032 45331 claim"
+    mechanisms:
+      - outside_books
+      - secret_library_numeric_anchor
+      - negative_control_avar_tar
+      - arithmetic_pareidolia_risk
+    numbers: ["74032 45331"]
+    keywords: ["Hellgate", "Isle of Kings", "Ferumbras", "Avar Tar", "Secret Library"]
+    evidence_class: mechanism_lore
+    risk_level: high_interpretation_risk
+    allowed_use: "Source leads and negative-control/source-family closure."
+    blocked_use: "Arithmetic-average solution claims are not accepted without controls and official ground truth."
+  - id: polish_negative_consensus
+    title: "Polish Bonelord-language source lane"
+    source_url: "https://www.tibia-wiki.net/wiki/J%C4%99zyk_Bonelord%C3%B3w"
+    source_type: community_wiki_and_forums
+    source_status: former_promoted_or_community
+    language: pl
+    confidence: MECHANISM_CORPUS
+    authorial_attribution: "community synthesis and forum history"
+    relation_to_knightmare: "includes Excalibug/Knightmare forum crosslinks as source leads"
+    relation_to_469: "independent no-proof posture and rejected fan-claim provenance"
+    mechanisms:
+      - source_family_closed_negative
+      - rejected_fan_claims
+      - excalibug_watchlist
+    numbers: ["469", "1", "486486", "3478", "74032", "45331"]
+    keywords: ["Język Bonelordów", "Excalibug", "Avar Tar", "Paradox", "Wyrdin"]
+    evidence_class: rejected
+    risk_level: high_fan_claim_risk
+    allowed_use: "Audit trail for rejected PL/German-pun/numerology routes."
+    blocked_use: "No promotion without external ground truth or reproducible controlled result."
+  - id: spanish_latam_inventory
+    title: "Spanish/LATAM 469 inventory lane"
+    source_url: "https://tibia.fandom.com/es/wiki/469"
+    source_type: community_wiki_and_forums
+    source_status: community
+    language: es
+    confidence: MECHANISM_CORPUS
+    authorial_attribution: "community inventory"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "duplicates known NPC anchors and fan-claim pointers"
+    mechanisms:
+      - source_family_closed_negative
+      - eye_count_variant
+      - rejected_fan_claims
+    numbers: ["469", "486486", "1", "0", "659978", "54764", "653768764"]
+    keywords: ["idioma Bonelord", "lenguaje Bonelord", "Elder Bonelord"]
+    evidence_class: rejected
+    risk_level: high_fan_claim_risk
+    allowed_use: "Language-lane source closure and eye-count variant as already-covered weak clue."
+    blocked_use: "No fan glossary promotion."
+  - id: unsupported_fan_solution_family
+    title: "Unsupported 469 solution claims"
+    source_url: "https://github.com/arturoornelasb/tibia-bonelord-469-cipher"
+    source_type: fan_solution_claim
+    source_status: community
+    language: mixed
+    confidence: PAREIDOLIA_RISK
+    authorial_attribution: "fan repositories/forums/videos"
+    relation_to_knightmare: "claims use Knightmare/Bible/German/MHG-style readings as overfit inputs"
+    relation_to_469: "rejected source family"
+    mechanisms:
+      - rejected_overfit
+      - no_holdout_ground_truth
+      - no_official_attestation
+    numbers: ["469", "3478", "486486", "74032", "45331"]
+    keywords: ["94.6%", "German", "MHG", "NARCISSIST", "FOOL", "love"]
+    evidence_class: rejected
+    risk_level: severe_pareidolia_risk
+    allowed_use: "Negative audit examples only."
+    blocked_use: "No use as evidence or training truth."
+  - id: dnd_beholder_srd
+    title: "D&D Beholder mechanism family"
+    source_url: "https://www.dndbeyond.com/monsters/17099-beholder"
+    source_type: external_reference
+    source_status: non_tibia_reference
+    language: en
+    confidence: DND_PARALLEL
+    authorial_attribution: "D&D creature mechanics; not a Tibia source"
+    relation_to_knightmare: "possible inspiration only, no authorship proof"
+    relation_to_469: "10 eye rays and central eye inspire H19/H20 controls"
+    mechanisms:
+      - ten_eye_rays
+      - central_eye_suppression
+      - viewer_identity
+    numbers: ["10"]
+    keywords: ["beholder", "eye rays", "central eye"]
+    evidence_class: mechanism_lore
+    risk_level: pareidolia_risk
+    allowed_use: "Generate negative-controlled digit-channel and zero-suppression tests."
+    blocked_use: "Cannot move semantic verdict or prove Tibia authorial intent."
+  - id: knightmare_profile
+    title: "Knightmare profile / design-role context"
+    source_url: "https://tibia.fandom.com/wiki/Knightmare"
+    source_type: profile
+    source_status: promoted_fansite
+    language: en
+    confidence: AUTHORIAL_ASSOCIATED
+    authorial_attribution: "Arndt Bednarzik / Knightmare profile context; not a direct 469 authorship proof"
+    relation_to_knightmare: "design-role and content-team context"
+    relation_to_469: "authorial/style corpus only"
+    mechanisms:
+      - world_building
+      - quest_design
+      - npc_keywords
+    numbers: []
+    keywords: ["Knightmare", "Content Team", "quest designer", "world-builder"]
+    evidence_class: mechanism_lore
+    risk_level: medium_attribution_risk
+    allowed_use: "Authorial/style comparandum with attribution caveats."
+    blocked_use: "Do not claim Knightmare authored 469 from this profile alone."
+  - id: beholder_to_bonelord_rename
+    title: "Beholder to Bonelord rename/product-identity context"
+    source_url: "https://tibia.fandom.com/wiki/Bonelord"
+    source_type: historical_context
+    source_status: promoted_fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "Tibia creature history/community documentation"
+    relation_to_knightmare: "none direct"
+    relation_to_469: "supports Beholder substrate as source-inspiration only"
+    mechanisms:
+      - product_identity_pressure
+      - dnd_parallel_boundary
+      - creature_rename_context
+    numbers: ["469"]
+    keywords: ["Beholder", "Bonelord", "rename"]
+    evidence_class: mechanism_lore
+    risk_level: medium_interpretation_risk
+    allowed_use: "Boundary evidence for why D&D parallels are inspiration-only."
+    blocked_use: "Does not prove D&D mechanics were used in 469."
+  - id: bonelord_nostalgia_3478
+    title: "Bonelord/Nostalgia 3478 identity anchor"
+    source_url: "https://tibia.fandom.com/wiki/Bonelord"
+    source_type: creature_lore
+    source_status: promoted_fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game/lore context via community transcript"
+    relation_to_knightmare: "phrase-layer adjacent"
+    relation_to_469: "3478 identity/phrase anchor, not book-layer key"
+    mechanisms:
+      - numeric_identity
+      - phrase_layer_trigger
+      - source_classifier
+    numbers: ["3478"]
+    keywords: ["3478", "Bonelord", "Nostalgia"]
+    evidence_class: external_holdout
+    risk_level: medium_promotion_risk
+    allowed_use: "Identity/phrase anchor and classifier feature."
+    blocked_use: "Do not promote 3478 as a reusable plaintext word."
+  - id: beware_of_the_bonelords
+    title: "Beware of the Bonelords"
+    source_url: "https://tibia.fandom.com/wiki/Beware_of_the_Bonelords_%28Book%29"
+    source_type: in_game_book_transcript
+    source_status: promoted_fansite
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "in-game book transcript"
+    relation_to_knightmare: "mechanism corpus only"
+    relation_to_469: "eye/blink language and variable granularity lore"
+    mechanisms:
+      - blinking_code
+      - eye_channel
+      - variable_granularity
+    numbers: ["469"]
+    keywords: ["blink", "eye", "syllable", "letter", "word"]
+    evidence_class: mechanism_lore
+    risk_level: medium_interpretation_risk
+    allowed_use: "Eye/blink arity and granularity tests with controls."
+    blocked_use: "No direct mapping from eye blinks to codebook entries."
+  - id: existing_mechanical_origin_model_v1
+    title: "Mechanical Origin Model v1"
+    source_url: "../../docs/wiki/13-mechanical-origin-model-v1.md"
+    source_type: local_report
+    source_status: repo_canonical
+    language: en
+    confidence: CONFIRMED_SOURCE
+    authorial_attribution: "local reproducible audit"
+    relation_to_knightmare: "baseline for lore-derived mechanical claims"
+    relation_to_469: "accepted mechanical substrate and rejected formula fronts"
+    mechanisms:
+      - row0
+      - pair_mirror_geometry
+      - tape_formula
+      - residual_exact_repeats
+      - zero_rendering
+      - avar_tar_negative_control
+    numbers: ["70", "99", "62", "16", "45/49", "0/115"]
+    keywords: ["row0", "tape", "Chayenne", "Avar Tar", "zero"]
+    evidence_class: mechanism_lore
+    risk_level: low
+    allowed_use: "Baseline and contradiction audit."
+    blocked_use: "Does not supply translation or plaintext."

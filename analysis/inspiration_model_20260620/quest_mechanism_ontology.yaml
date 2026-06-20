@@ -1,0 +1,35 @@
+schema: quest_mechanism_ontology.v1
+translation_delta: NONE
+mechanisms:
+  keys:
+    examples: ["Pits of Inferno key 3700", "old-key quest mechanics"]
+    469_targets: ["selector", "access gate", "module activation"]
+    status: watchlist_only
+  levers_and_forcefields:
+    examples: ["Serpentine Tower", "quest forcefields"]
+    469_targets: ["binary activation", "masked visibility", "partial formula"]
+    status: watchlist_only
+  npc_keywords:
+    examples: ["Knightmare Excalibug line", "old NPC spellcasting by keyword"]
+    469_targets: ["phrase_trigger", "not sentence translation"]
+    status: weak_clue
+  teleport_networks:
+    examples: ["Dreamer's Challenge", "Magic Web/gates"]
+    469_targets: ["route selector", "source/destination endpoints"]
+    status: watchlist_only
+  vocation_or_role_gates:
+    examples: ["Pits of Inferno vocation gates", "faction choices"]
+    469_targets: ["role-conditioned module choice"]
+    status: watchlist_only
+  libraries_and_book_entities:
+    examples: ["Hellgate library", "Secret Library", "Bonelord Tome"]
+    469_targets: ["book-as-object", "knowledge storage", "module inventory"]
+    status: weak_clue
+  ordered_rituals:
+    examples: ["PoI thrones", "ritual sequences"]
+    469_targets: ["symbol order", "module order", "14 symbols vs 7 pairs"]
+    status: watchlist_only
+  city_quarters:
+    examples: ["Yalahar quarters"]
+    469_targets: ["row/column blocks", "module/tape components"]
+    status: watchlist_only

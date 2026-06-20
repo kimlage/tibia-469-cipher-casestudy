@@ -1,0 +1,104 @@
+schema: knightmare_design_corpus.v1
+translation_delta: NONE
+entries:
+  knightmare_npc_transcript:
+    confidence: AUTHORIAL_DIRECT_NPC
+    source_url: "https://www.tibiawiki.com.br/wiki/469"
+    caveat: "Direct in-game NPC text, not standalone real-world developer self-attestation."
+    mechanisms:
+      - world_builder_statement
+      - npc_keyword_spellcasting
+      - early_runes
+      - old_keys
+      - city_design
+      - excalibug_language_gate
+      - dice_1_99
+      - 3478_phrase
+    numbers: ["3478", "67", "90871", "97664", "3466", "0", "345"]
+    allowed_use: "Phrase-trigger and source-class tests."
+    blocked_use: "No plaintext promotion from event joke/context."
+  paradox_tower:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["riddle_entrance", "paradox_math", "godhood_death", "tower"]
+    469_crosswalk: ["false-positive calibration", "arithmetic-puzzle controls"]
+  serpentine_tower:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["forcefield_activation", "possible_continuation", "ankrahmun_pyramid_context"]
+    469_crosswalk: ["partial mechanisms", "blocked-source controls"]
+  pits_of_inferno:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["key_3700", "blood_access", "oil_bridge", "vocation_gate", "seven_thrones", "maze"]
+    469_crosswalk: ["module order", "7-vs-14 relation", "role gates"]
+  dreamers_challenge:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["faction_duality", "dream_realm", "teleport_network"]
+    469_crosswalk: ["phrase/book split", "dual layer analogy"]
+  yalahar:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["city_quarters", "mechanism_unlocks", "decision_faction", "decaying_advanced_race"]
+    469_crosswalk: ["pair-table blocks", "module components", "source/literal spans"]
+  secret_library:
+    confidence: CONFIRMED_SOURCE
+    mechanisms: ["books_as_entities", "knowledge_theft", "external_numeric_anchor"]
+    numbers: ["74032", "45331"]
+    469_crosswalk: ["book-as-object model", "external numeric classifier"]
+  thais:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["npc_rewriting", "base_city", "historical_memory"]
+    469_crosswalk: ["source-layer rewriting", "NPC keyword conventions"]
+  kazordoon:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["mountain_city", "hidden_culture", "dwarven_culture"]
+    469_crosswalk: ["hidden/cultural encoding", "city-as-container"]
+  carlin:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["npc_culture", "history_construction"]
+    469_crosswalk: ["NPC/culture as data layer"]
+  abdendriel:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["black_pyramid_relocation", "dragon_cemetery"]
+    469_crosswalk: ["relocation/recombination motifs"]
+  venore:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["draft_reuse", "swamp_pyramid"]
+    469_crosswalk: ["source reuse", "recombination"]
+  edron:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["compact_premium_area", "multi_level_area"]
+    469_crosswalk: ["compact multi-layer design"]
+  liberty_bay:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["discarded_magic_version", "mythology_recombination"]
+    469_crosswalk: ["source inspiration vs actual origin controls"]
+  port_hope:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["ape_theme", "perceived_king_kong_coincidence"]
+    469_crosswalk: ["inspiration perception controls"]
+  ankrahmun:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["desert", "pyramid", "necromancy"]
+    469_crosswalk: ["Serpentine/Demona/Pyramid overlap"]
+  darashia:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["landmass", "transport_limits", "hints"]
+    469_crosswalk: ["access/hint/transport constraints"]
+  svargrond:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["partial_authorship", "boss_context", "ice_dragon_context"]
+    469_crosswalk: ["authorship confidence controls"]
+  farmine_zao:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["staged_unlock", "foreign_base", "lizard_context"]
+    469_crosswalk: ["progression", "source classifier", "constructed-language comparandum"]
+  rookgaard:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["tutorial", "safe_haven", "challenge_calibration"]
+    469_crosswalk: ["gated learning", "basic puzzle controls"]
+  inquisition:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["mission_chain", "boss_sequence", "poi_dependency", "purifier_banish"]
+    469_crosswalk: ["module dependency graph", "containment chains"]
+  children_of_the_revolution_zao:
+    confidence: MECHANISM_CORPUS
+    mechanisms: ["altered_speech", "staged_tasks", "military_faction_progress"]
+    469_crosswalk: ["constructed-language control", "source classifier"]

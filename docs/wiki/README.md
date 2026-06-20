@@ -4,7 +4,7 @@ page_type: root_index
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-19
+updated_at: 2026-06-20
 ---
 
 # The Bonelord "469" Cipher — Project Wiki
@@ -52,6 +52,7 @@ Start at the top and follow the path, or jump to what you need:
 | 12 | [Generator-Origin Search](12-generator-origin-search.md) | Formula-generator search: scoring contract, targets, holdouts, front reports, and MDL leaderboard |
 | 13 | [Mechanical Origin Model v1](13-mechanical-origin-model-v1.md) | Frozen public summary of the best mechanical fabrication model and plateau |
 | 14 | [Eye/Blink Arity Model](14-eye-blink-arity-model.md) | Post-review eye/sprite arity hypothesis tested as mechanism-only, with K5 and 5x2 controls |
+| 15 | [Source-Inspiration Model](15-source-inspiration-model.md) | Multi-language source lanes, Knightmare/D&D inspiration, H19-H24 tests, and plateau closure |
 | — | [Glossary](GLOSSARY.md) | Definitions of the coined terms (Layer A/B, row0, disqualifier, …) |
 | — | [CipSoft](entities/cipsoft.md) | The external ground-truth holder — the only thing that could reopen the verdict |
 
@@ -77,6 +78,7 @@ mindmap
       12 Generator origin search
       13 Mechanical origin model v1
       14 Eye blink arity model
+      15 Source inspiration model
     Reference
       Glossary
       CipSoft
@@ -192,6 +194,15 @@ tests reject the hypothesis as the pair-cell label formula (`18/55` and
 mechanism-only lore bridge for arity/orientation, not a semantic decoder.
 → [page 14](14-eye-blink-arity-model.md)
 
+**Source-inspiration model (2026-06-20):** a parallel multi-language source pass
+and mechanism-inspiration audit covered official/in-game material, EN/global,
+PT-BR/BR, PL, ES/LATAM, DE/other lanes, Knightmare/quest mechanisms, D&D
+Beholder parallels, Bonelord Tome, `3478`, `486486`, Secret Library
+`74032 45331`, Honeminas/Magic Web, Excalibug, and H19-H24. It found no
+`official_gt`, no new plaintext, and no new real formula-discovery direction.
+Its value is source hygiene, rejected-claim provenance, explicit blockers, and
+controlled watchlist/weak-clue classifications. → [page 15](15-source-inspiration-model.md)
+
 **Post-review closure (2026-06-19):** the remaining review action items are
 compiled in [`analysis/post_review_20260619/`](../../analysis/post_review_20260619/):
 observer/render audit, E-layer lore bridge, external numeric classifier,
@@ -233,6 +244,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   and [`analysis/eye_model_20260619/`](../../analysis/eye_model_20260619/) —
   tests the post-review eye/sprite hypothesis as K5 and `5x2` arity models;
   keeps it as mechanism-only context and rejects it as a row0 label formula.
+- **Source-inspiration model:** [docs/wiki/15-source-inspiration-model.md](15-source-inspiration-model.md)
+  and [`analysis/inspiration_model_20260620/`](../../analysis/inspiration_model_20260620/) —
+  consolidates multi-language source lanes, Knightmare/D&D/quest inspiration,
+  H19-H24 tests, and blocked/rejected claims; keeps translation delta at zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures
