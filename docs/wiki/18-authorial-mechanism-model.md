@@ -784,6 +784,15 @@ rows at `8561.792` bits. The best changed decodable pair is item-type alpha
 `1`, `+0.415` bits worse; the best decodable pair with both components changed
 is `+9.476` bits worse.
 
+The post-itemctx_param address/payload context-alpha pair search then combines
+the `10` copy-source address rows with the `4928` literal-payload context/alpha
+rows into `49280` pairs. The best overall pair is nondecodable because it uses
+the literal-seed address no-mode lower bound. The active min_len-bounded
+absolute address plus global literal-payload `alpha=1` remains best among
+decodable rows at `8561.792` bits. The best changed decodable pair is payload
+book-midpoint `alpha=1`, `+1.749` bits worse; the best decodable pair with both
+components changed is `+10.809` bits worse.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -913,6 +922,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3DE | `post_itemctx_param_copy_payload_item_context_alpha_triple_not_promoted` |
 | H-GEN3DF | `post_itemctx_param_address_copy_order_pair_optimistic_only_not_promoted` |
 | H-GEN3DG | `post_itemctx_param_address_item_type_pair_optimistic_only_not_promoted` |
+| H-GEN3DH | `post_itemctx_param_address_payload_context_alpha_pair_optimistic_only_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -1037,6 +1047,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param copy/payload/item context-alpha triple search](../../analysis/authorial_mechanism_20260620/reports/test_results/114_post_itemctx_param_copy_payload_item_context_alpha_triple_search.md)
 - [Post-itemctx param address/copy-order pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/115_post_itemctx_param_address_copy_order_pair_search.md)
 - [Post-itemctx param address/item-type pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/116_post_itemctx_param_address_item_type_pair_search.md)
+- [Post-itemctx param address/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/117_post_itemctx_param_address_payload_context_alpha_pair_search.md)
 
 ## Boundary
 
@@ -1090,7 +1101,9 @@ copy/payload/item context-alpha triple search retains the same active triple.
 The address/copy-order pair search retains the same active decodable copy-cost
 ledger and records only a nondecodable lower bound. The address/item-type pair
 search also retains the same active decodable pair and records only a
-nondecodable lower bound.
+nondecodable lower bound. The address/payload context-alpha pair search also
+retains the same active decodable pair and records only a nondecodable lower
+bound.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

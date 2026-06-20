@@ -563,5 +563,10 @@ Generated audits in this directory should be treated as the current state:
   overall pair is nondecodable because it uses the literal-seed no-mode address
   lower bound; the active pair remains the best decodable row, and the best
   changed decodable pair is `+0.415` bits worse.
+- `117_post_itemctx_param_address_payload_context_alpha_pair_search`: combines
+  `10` address rows with `4928` literal-payload context/alpha rows into `49280`
+  pairs. The best overall pair is nondecodable because it uses the literal-seed
+  no-mode address lower bound; the active pair remains the best decodable row,
+  and the best changed decodable pair is `+1.749` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

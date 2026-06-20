@@ -514,6 +514,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   addressing; the active pair remains the best decodable row, the best changed
   decodable pair is `+0.415` bits worse, and the best decodable pair with both
   components changed is `+9.476` bits worse.
+- post-itemctx_param address/payload context-alpha pair search is now covered
+  by
+  [`117_post_itemctx_param_address_payload_context_alpha_pair_search.py`](scripts/117_post_itemctx_param_address_payload_context_alpha_pair_search.py);
+  `10` address rows and `4928` literal-payload context/alpha rows form `49280`
+  pairs. The best overall pair is a nondecodable lower bound from literal-seed
+  no-mode addressing; the active pair remains the best decodable row, the best
+  changed decodable pair is `+1.749` bits worse, and the best decodable pair
+  with both components changed is `+10.809` bits worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

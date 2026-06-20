@@ -356,7 +356,8 @@ copy/payload/item context-alpha triple search closes `424169439232` implied
 triples by component minima. The address/copy-order pair search closes `50`
 pairs and retains the active decodable copy-cost ledger; the only better row is
 nondecodable. The address/item-type pair search closes `170240` pairs and also
-retains the active decodable pair. No
+retains the active decodable pair. The address/payload context-alpha pair search
+closes `49280` pairs and also retains the active decodable pair. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

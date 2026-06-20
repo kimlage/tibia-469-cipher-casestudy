@@ -249,6 +249,10 @@ A post-itemctx_param address/item-type pair search then tests `170240` pairs.
 The best overall pair is again nondecodable because it uses literal-seed
 no-mode addressing; the active pair remains best among decodable rows, and the
 best changed decodable pair is `+0.415` bits worse.
+A post-itemctx_param address/payload context-alpha pair search then tests
+`49280` pairs. The best overall pair is also nondecodable because it uses
+literal-seed no-mode addressing; the active pair remains best among decodable
+rows, and the best changed decodable pair is `+1.749` bits worse.
 
 ## Ranked: what would unlock progress
 
