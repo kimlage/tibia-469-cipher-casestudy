@@ -68,6 +68,7 @@ does not promote plaintext.
 | `H-GEN3AL` | `controlled_literal_forces_copy_type_ledger_improvement` | `True` |
 | `H-GEN3AM` | `controlled_remaining_short_forces_literal_type_ledger_improvement` | `True` |
 | `H-GEN3AN` | `controlled_remaining_short_literal_length_improvement` | `True` |
+| `H-GEN3AO` | `controlled_forced_length_literal_repair_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

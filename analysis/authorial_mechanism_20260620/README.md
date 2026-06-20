@@ -128,6 +128,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   charged rule that a too-short remaining book suffix forces literal item type.
 - `scripts/45_remaining_short_literal_length_compile.py` - removes redundant
   literal-run length bits for forced short book suffixes.
+- `scripts/46_forced_length_literal_repair_search.py` - retests one-step
+  literal-to-copy repairs after forced suffix literal lengths.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

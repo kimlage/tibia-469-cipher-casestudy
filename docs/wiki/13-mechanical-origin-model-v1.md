@@ -91,6 +91,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sequential LZ literal-force item-type ledger formula | a charged deterministic rule makes literal items force the next in-book item to copy; total bound drops to `8966.7` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ remaining-short item-type ledger formula | a charged deterministic rule makes book suffixes shorter than `min_len=5` force literal item type; total bound drops to `8953.9` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Sequential LZ forced short-suffix literal-length formula | the 8 forced short-suffix literals consume the remaining declared book length, removing redundant length bits; total bound drops to `8922.9` bits with 70/70 roundtrip | strongest copy/reference upper bound |
+| Sequential LZ forced-length literal-repair formula | one additional local repair turns `65128` in book `12` into a valid prior copy; total bound drops to `8922.8` bits and follow-up one-step repair is worse | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -137,6 +138,7 @@ Primary sources:
 [literal_forces_copy_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/43_literal_forces_copy_type_ledger_compile.md),
 [remaining_short_forces_literal_type_ledger_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/44_remaining_short_forces_literal_type_ledger_compile.md),
 [remaining_short_literal_length_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/45_remaining_short_literal_length_compile.md),
+[forced_length_literal_repair_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/46_forced_length_literal_repair_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

@@ -232,6 +232,11 @@ hypotheses:
     status: controlled_remaining_short_literal_length_improvement
     target: "literal-run length coding for remaining-book suffixes shorter than min_len"
     promotion_rule: "must beat the remaining-force type formula after charging the deterministic forced-length rule and preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3AO:
+    name: "forced-length literal-to-copy repair search"
+    status: controlled_forced_length_literal_repair_improvement
+    target: "local literal-to-copy repairs after forced short-suffix literal lengths"
+    promotion_rule: "must beat the active forced-literal-length formula under exact rescoring and preserve 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

@@ -254,5 +254,10 @@ Generated audits in this directory should be treated as the current state:
   declared book suffix. After charging a one-bit length rule, the same fixed
   recipe roundtrips 70/70 books and improves the current bound from `8953.9` to
   `8922.9` bits by removing `32.0` redundant literal-length bits.
+- `46_forced_length_literal_repair_search`: retests local literal-to-copy
+  repairs under the current forced-length cost model. One additional repair
+  replaces `65128` in book `12` with a prior copy from digit position `50`,
+  lowering the bound from `8922.9` to `8922.8` bits. A follow-up one-step
+  search after applying it is worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

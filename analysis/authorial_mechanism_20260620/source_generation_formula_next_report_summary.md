@@ -150,6 +150,11 @@ Still open from the report:
   once such suffixes are forced literal, their lengths are forced to consume
   the rest of the declared book, improving the current bound to `8922.9` bits
   while preserving 70/70 roundtrip.
+- forced-length literal-to-copy repair is now covered by
+  [`46_forced_length_literal_repair_search.py`](scripts/46_forced_length_literal_repair_search.py);
+  one further local repair replaces `65128` in book `12` with a valid prior
+  copy, improving the current bound to `8922.8` bits. A follow-up one-step
+  search after applying it is worse.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
