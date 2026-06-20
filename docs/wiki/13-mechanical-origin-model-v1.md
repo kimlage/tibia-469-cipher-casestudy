@@ -128,6 +128,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-adaptive pair frontier | `17663` valid compatible pairs are rescored; the best pair, copy-to-literal `71288` plus `45765`, is `+2.516` bits worse | rejected refinement / pair frontier closed |
 | Post-adaptive address model search | min_len-bounded absolute addresses remain best decodable at `8576.0`; literal-seed no-mode reaches `8506.6` but is not decodable without source-mode bits | rejected refinement / optimistic clue |
 | Post-adaptive copy order search | source-address-then-adaptive-length remains best decodable; pure length-first is `+13.664` bits worse and best-order no-mode is `-3.539` bits optimistic only | rejected refinement / optimistic clue |
+| Post-adaptive copy-length context formula | a fixed book-midpoint context for the adaptive copy-length prior lowers the bound from `8575.986` to `8574.407` bits after charged context declaration bits | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -205,6 +206,7 @@ Primary sources:
 [post_adaptive_pair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/81_post_adaptive_pair_frontier.md),
 [post_adaptive_address_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/82_post_adaptive_address_model_search.md),
 [post_adaptive_copy_order_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/83_post_adaptive_copy_order_search.md),
+[post_adaptive_copy_length_context_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/84_post_adaptive_copy_length_context_search.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

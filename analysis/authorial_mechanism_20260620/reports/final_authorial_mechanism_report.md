@@ -412,5 +412,10 @@ Generated audits in this directory should be treated as the current state:
   should be coded before source address. Pure length-first is `+13.664` bits
   worse; best-order no-mode is `-3.539` bits optimistic only. Decodable order
   ledgers do not improve the active formula.
+- `84_post_adaptive_copy_length_context_search`: retests simple contexts for
+  the adaptive copy-length ledger. A fixed book-midpoint context improves the
+  bound from `8575.986` to `8574.407` bits after charged context declaration
+  bits; searched split points remain non-promoted once the split index is
+  charged.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

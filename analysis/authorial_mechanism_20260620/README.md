@@ -14,8 +14,8 @@ books.
 The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
-bound is the adaptive bounded copy-length sequential LZ formula at roughly
-`8576.0` bits.
+bound is the adaptive bounded copy-length sequential LZ formula with a fixed
+book-midpoint copy-length context at roughly `8574.4` bits.
 
 ## Gates
 
@@ -212,6 +212,9 @@ bound is the adaptive bounded copy-length sequential LZ formula at roughly
   copy-source address ledgers after adaptive copy-length coding is active.
 - `scripts/83_post_adaptive_copy_order_search.py` - retests source-first
   versus length-first copy order after adaptive copy-length coding is active.
+- `scripts/84_post_adaptive_copy_length_context_search.py` - retests simple
+  decodable contexts for the adaptive copy-length ledger after copy-order
+  closure.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

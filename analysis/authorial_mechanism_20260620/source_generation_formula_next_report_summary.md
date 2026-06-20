@@ -331,6 +331,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   pure length-first adaptive coding is `+13.664` bits worse, while best-order
   no-mode remains `-3.539` bits optimistic only. Decodable order ledgers do not
   beat the active source-address-then-adaptive-length order.
+- post-adaptive copy-length context is now covered by
+  [`84_post_adaptive_copy_length_context_search.py`](scripts/84_post_adaptive_copy_length_context_search.py);
+  a fixed book-midpoint context for the adaptive length-index prior lowers the
+  bound from `8575.986` to `8574.407` bits after charged context declaration
+  bits. Searched single splits show larger component savings but are not
+  promoted once the split index is charged.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

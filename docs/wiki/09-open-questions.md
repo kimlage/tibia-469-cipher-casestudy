@@ -164,7 +164,9 @@ parameter resweep retains the declared settings, including copy-length
 pairs is `+2.516` bits worse. A post-adaptive address retest keeps absolute
 minaddr as the best decodable address ledger; literal-seed remains optimistic
 only. A post-adaptive copy-order retest keeps source-first as the best
-decodable order; length-first is `+13.664` bits worse.
+decodable order; length-first is `+13.664` bits worse. A follow-up
+post-adaptive copy-length context test promotes only a small mechanical
+refinement: a fixed book-midpoint context lowers the bound to `8574.407` bits.
 
 ## Ranked: what would unlock progress
 

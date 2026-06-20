@@ -89,6 +89,8 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_formula_469` | `8613.1` | `1.1` |
 | `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair_formula_469` | `8611.4` | `1.7` |
 | `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair2_formula_469` | `8609.8` | `1.6` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_minaddr_repair2_formula_469` | `8576.0` | `33.8` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_minaddr_repair2_formula_469` | `8574.4` | `1.6` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -551,6 +553,14 @@ bits worse. Choosing the cheaper order per copy would be `-3.539` bits cheaper
 only if mode bits were free, so it remains an optimistic lower bound. The
 decodable mode ledgers do not beat source-address-then-adaptive-length.
 
+The post-adaptive copy-length context search then tests whether the adaptive
+length-index prior should be split by simple contexts available before length
+decoding. A fixed book-midpoint context is decodable from the declared numeric
+book order and lowers the bound from `8575.986` to `8574.407` bits after
+charged context declaration bits. Exhaustive single-split search finds larger
+component savings, but those rows are not promoted once the split index is
+charged.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -647,6 +657,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BX | `post_adaptive_pair_frontier_closed` |
 | H-GEN3BY | `post_adaptive_address_optimistic_only_not_promoted` |
 | H-GEN3BZ | `post_adaptive_copy_order_optimistic_only_not_promoted` |
+| H-GEN3CA | `controlled_post_adaptive_copy_length_midpoint_context_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -738,6 +749,7 @@ book generation, not row0 pair-cell placement.
 - [Post-adaptive pair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/81_post_adaptive_pair_frontier.md)
 - [Post-adaptive address model search](../../analysis/authorial_mechanism_20260620/reports/test_results/82_post_adaptive_address_model_search.md)
 - [Post-adaptive copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/83_post_adaptive_copy_order_search.md)
+- [Post-adaptive copy-length context search](../../analysis/authorial_mechanism_20260620/reports/test_results/84_post_adaptive_copy_length_context_search.md)
 
 ## Boundary
 
@@ -753,8 +765,9 @@ the previous-emitted-digit literal payload context model with declared order
 `2`, the item-type context-order ledger with declared order `3`, and the
 contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
-index ledger with `alpha=2` as the current strongest copy/reference
-fabrication bound at roughly `8576.0` bits. Follow-up
+index ledger with `alpha=2`, plus a fixed book-midpoint context for that
+copy-length prior, as the current strongest copy/reference fabrication bound at
+roughly `8574.4` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter
