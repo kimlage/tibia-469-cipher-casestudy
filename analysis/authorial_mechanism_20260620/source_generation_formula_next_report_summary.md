@@ -260,6 +260,12 @@ Still open from the report:
   declared remaining book digits and available emitted source digits. Replacing
   unbounded Rice `k=4` lengths with truncated binary over that range improves
   the active 70/70 formula from `8803.1` to `8614.1` bits.
+- min_len-bounded copy addressing is now covered by
+  [`70_min_len_bounded_copy_address_compile.py`](scripts/70_min_len_bounded_copy_address_compile.py);
+  since every copy source must leave at least `min_len` emitted digits
+  available, the last `min_len - 1` emitted positions are impossible source
+  starts. Excluding them improves the active formula from `8614.133` to
+  `8613.067` bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

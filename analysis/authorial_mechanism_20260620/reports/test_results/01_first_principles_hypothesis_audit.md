@@ -92,6 +92,7 @@ does not promote plaintext.
 | `H-GEN3BJ` | `contextual_address_optimistic_only_not_promoted` | `True` |
 | `H-GEN3BK` | `post_contextual_parameter_resweep_retains_current` | `True` |
 | `H-GEN3BL` | `controlled_bounded_copy_length_improvement` | `True` |
+| `H-GEN3BM` | `controlled_min_len_bounded_copy_address_improvement` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

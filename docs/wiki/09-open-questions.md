@@ -139,7 +139,9 @@ payload order `2` / `alpha=1`, and item-type order `3` / `alpha=2`. A bounded
 copy-length compile then improves only the mechanical cost ledger: once a copy
 source address is known, the legal copy length is bounded by declared remaining
 book digits and emitted source digits, lowering the active 70/70 formula to
-`8614.1` bits with no semantic change.
+`8614.1` bits with no semantic change. A min_len-bounded address follow-up
+then excludes impossible final source positions and lowers the bound slightly
+again to `8613.1` bits.
 
 ## Ranked: what would unlock progress
 

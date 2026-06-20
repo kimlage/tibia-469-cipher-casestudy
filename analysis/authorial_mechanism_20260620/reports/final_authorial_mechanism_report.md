@@ -356,5 +356,10 @@ Generated audits in this directory should be treated as the current state:
   known after decoding the copy source address. This reduces copy-length bits
   from `1860.0` to `1671.0` and improves the active 70/70 formula from
   `8803.1` to `8614.1` bits with `translation_delta: NONE`.
+- `70_min_len_bounded_copy_address_compile`: tightens the absolute source
+  address space by excluding the impossible last `min_len - 1` emitted digit
+  positions. This reduces copy-address bits from `3264.817` to `3263.751` and
+  improves the active 70/70 formula from `8614.133` to `8613.067` bits with
+  `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

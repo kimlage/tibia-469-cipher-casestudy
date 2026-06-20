@@ -297,7 +297,9 @@ parameter resweep keeps copy Rice `k=4`, literal Rice `k=3`, payload order `2`
 frontier. A bounded copy-length compile then replaces unbounded Rice copy
 lengths with a decodable truncated-binary code over the legal length range
 known after the source address is decoded, lowering the active mechanical bound
-to roughly `8614.1` bits. No semantic claim is promoted.
+to roughly `8614.1` bits. A min_len-bounded address pass then excludes
+impossible final source positions and lowers it slightly again to roughly
+`8613.1` bits. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

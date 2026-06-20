@@ -179,6 +179,9 @@ tests against the current best baseline: `tape_based_formula_469.json`.
 - `scripts/69_bounded_copy_length_code_compile.py` - replaces unbounded Rice
   copy lengths with a decodable truncated-binary code bounded by declared book
   remaining length and emitted digits after the decoded source address.
+- `scripts/70_min_len_bounded_copy_address_compile.py` - tightens absolute
+  copy source addresses by excluding the impossible last `min_len - 1` emitted
+  digit positions.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

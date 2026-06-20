@@ -352,6 +352,11 @@ hypotheses:
     status: controlled_bounded_copy_length_improvement
     target: "copy length coding bounded by declared remaining book length and emitted digits after the decoded source address"
     promotion_rule: "must preserve 70/70 roundtrip and beat Rice k=4 copy lengths after declaration bits while preserving translation_delta NONE"
+  H-GEN3BM:
+    name: "min_len-bounded copy address compile"
+    status: controlled_min_len_bounded_copy_address_improvement
+    target: "absolute digit-only copy source address space excluding impossible last min_len minus one emitted positions"
+    promotion_rule: "must preserve 70/70 roundtrip and lower the active bounded-copy-length formula while preserving translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation
