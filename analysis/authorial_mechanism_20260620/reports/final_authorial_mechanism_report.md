@@ -267,5 +267,9 @@ Generated audits in this directory should be treated as the current state:
   `8855.5` bits only as an undecodable no-mode lower bound; the best decodable
   sparse seed-run ledger costs `8933.5` bits, so absolute `source_digit_pos`
   remains the active address ledger.
+- `49_post_forced_repair_pair_search`: tests whether two compatible
+  literal-to-copy repairs become cheaper together after the forced-length local
+  repair. They do not: `22` single candidates produce `227` compatible pairs,
+  and the best pair is `+1.6` bits worse than the active formula.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

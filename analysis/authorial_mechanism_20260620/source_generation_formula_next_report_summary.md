@@ -164,6 +164,10 @@ Still open from the report:
   absolute `source_digit_pos` remains the best decodable ledger. Literal-seed
   addressing reaches `8855.5` bits only as an optimistic no-mode lower bound;
   the best decodable sparse seed-run ledger costs `8933.5` bits.
+- post-forced-repair pair search is now covered by
+  [`49_post_forced_repair_pair_search.py`](scripts/49_post_forced_repair_pair_search.py);
+  `22` single candidates yield `227` compatible pairs, and the best pair is
+  still `+1.6` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
