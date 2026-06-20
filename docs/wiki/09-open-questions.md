@@ -253,6 +253,11 @@ A post-itemctx_param address/payload context-alpha pair search then tests
 `49280` pairs. The best overall pair is also nondecodable because it uses
 literal-seed no-mode addressing; the active pair remains best among decodable
 rows, and the best changed decodable pair is `+1.749` bits worse.
+The prequential generation audit then freezes `8561.792` as
+`compression_bound`: prefix-online and prefix-frozen learned-component scoring
+beat uniform on all train cutoffs `10/20/35/50/60`, but the classification
+remains `prequential_generation_partial_not_final` because this validates
+partial predictive structure, not row0 origin or a final authorial method.
 
 ## Ranked: what would unlock progress
 

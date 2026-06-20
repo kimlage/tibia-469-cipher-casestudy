@@ -357,7 +357,10 @@ triples by component minima. The address/copy-order pair search closes `50`
 pairs and retains the active decodable copy-cost ledger; the only better row is
 nondecodable. The address/item-type pair search closes `170240` pairs and also
 retains the active decodable pair. The address/payload context-alpha pair search
-closes `49280` pairs and also retains the active decodable pair. No
+closes `49280` pairs and also retains the active decodable pair. The
+prequential audit then freezes `8561.792` as `compression_bound`; learned
+components beat uniform on all prefix/holdout cuts, but this remains partial
+predictive validation rather than row0 origin or final authorial method. No
 semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 

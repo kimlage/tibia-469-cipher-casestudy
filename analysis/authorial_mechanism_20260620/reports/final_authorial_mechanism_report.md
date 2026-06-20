@@ -568,5 +568,11 @@ Generated audits in this directory should be treated as the current state:
   pairs. The best overall pair is nondecodable because it uses the literal-seed
   no-mode address lower bound; the active pair remains the best decodable row,
   and the best changed decodable pair is `+1.749` bits worse.
+- `118_prequential_generation_model_audit`: freezes the active `8561.792` bit
+  formula as `compression_bound` and tests learned-component generalization on
+  prefix/holdout cuts. Prefix-online and prefix-frozen scoring beat uniform on
+  all five cutoffs, but the result remains
+  `prequential_generation_partial_not_final`; it is evidence of partial
+  predictive structure, not row0 origin or final authorial method.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

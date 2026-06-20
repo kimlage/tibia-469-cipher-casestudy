@@ -17,7 +17,7 @@ tests. The original tape baseline is now historical; the current strongest
 bound is the adaptive bounded copy-length sequential LZ formula with a fixed
 book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 `6`, and item-type extra-context order `1` / `alpha=2`, at roughly `8561.8`
-bits.
+bits. Treat this as `compression_bound`, not as a final authorial method.
 
 ## Gates
 
@@ -300,6 +300,10 @@ bits.
 - `scripts/117_post_itemctx_param_address_payload_context_alpha_pair_search.py` -
   combines copy-source address ledgers with literal-payload context/shared-alpha
   rows after the separate post-itemctx_param frontiers.
+- `scripts/118_prequential_generation_model_audit.py` - separates
+  `compression_bound` from `generation_explanation` by training adaptive
+  component counts on prefix books and scoring future books without parameter
+  search.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -95,6 +95,11 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_minaddr_repair2_formula_469` | `8569.7` | `2.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469` | `8561.8` | `7.9` |
 
+The `8561.8` row is the current `compression_bound`, not a final authorial
+method. From this point, mainline progress requires holdout behavior,
+structural mechanism, simplification, or row0/table-origin evidence rather than
+more small post-hoc component sweeps.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`
@@ -793,6 +798,17 @@ decodable rows at `8561.792` bits. The best changed decodable pair is payload
 book-midpoint `alpha=1`, `+1.749` bits worse; the best decodable pair with both
 components changed is `+10.809` bits worse.
 
+The prequential generation model audit then changes the validation unit. It
+does not search another formula. It freezes the active `8561.792` bit model as
+`compression_bound` and tests learned copy-length, literal-payload, and
+item-type components on train/holdout cuts. Prefix-online and prefix-frozen
+scoring beat uniform at all cutoffs `10/20/35/50/60`; for example, with `35`
+train books and `35` holdout books, learned-component uniform cost is
+`1016.319` bits, prefix-online cost is `968.175`, and prefix-frozen cost is
+`980.298`. This supports partial predictive structure, but the classification
+is `prequential_generation_partial_not_final`: it still does not explain row0
+or establish a final authorial generation method.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -1048,6 +1064,7 @@ book generation, not row0 pair-cell placement.
 - [Post-itemctx param address/copy-order pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/115_post_itemctx_param_address_copy_order_pair_search.md)
 - [Post-itemctx param address/item-type pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/116_post_itemctx_param_address_item_type_pair_search.md)
 - [Post-itemctx param address/payload context-alpha pair search](../../analysis/authorial_mechanism_20260620/reports/test_results/117_post_itemctx_param_address_payload_context_alpha_pair_search.md)
+- [Prequential generation model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/118_prequential_generation_model_audit.md)
 
 ## Boundary
 
@@ -1103,7 +1120,9 @@ ledger and records only a nondecodable lower bound. The address/item-type pair
 search also retains the same active decodable pair and records only a
 nondecodable lower bound. The address/payload context-alpha pair search also
 retains the same active decodable pair and records only a nondecodable lower
-bound.
+bound. The prequential audit freezes this state as `compression_bound` and
+moves the mainline progress bar to holdout behavior, structural mechanism,
+simplification, or row0 origin evidence.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

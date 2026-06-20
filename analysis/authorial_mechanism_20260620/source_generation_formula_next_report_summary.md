@@ -522,6 +522,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   no-mode addressing; the active pair remains the best decodable row, the best
   changed decodable pair is `+1.749` bits worse, and the best decodable pair
   with both components changed is `+10.809` bits worse.
+- prequential generation validation is now covered by
+  [`118_prequential_generation_model_audit.py`](scripts/118_prequential_generation_model_audit.py);
+  the active `8561.792` bit formula is frozen as `compression_bound`, not as a
+  final authorial method. Across train cutoffs `10/20/35/50/60`, prefix-online
+  and prefix-frozen learned-component scoring both beat uniform on every
+  holdout, but the result is classified
+  `prequential_generation_partial_not_final` because row0/table origin remains
+  open and no new structural mechanism is promoted.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
