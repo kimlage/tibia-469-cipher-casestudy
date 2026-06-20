@@ -122,6 +122,11 @@ physical-topology mechanism, or authorial-intent claim is promoted. A direct
 hierarchical-provenance pair-label audit was run and rejected as the row0
 origin (`16/55`, control `p=0.4194`).
 
+A later literal-payload context audit improves only the mechanical fabrication
+bound: coding each literal payload digit from the previously emitted digit
+lowers the best 70/70 generator from `8922.8` to `8842.0` bits after charged
+declaration bits. This does not change the semantic state.
+
 ## Ranked: what would unlock progress
 
 1. **A single book-crib** — the actual plaintext of *one* of the 70 books, tied to its digit string. This is the highest-value item by far: it would either (a) supply the symbol→meaning key directly, or (b) confirm the non-linguistic verdict definitively. The project's own frontier flags this gap: `PRIMARY_SOURCE_LONG_GLOSS = OPEN_BUT_EMPTY`.

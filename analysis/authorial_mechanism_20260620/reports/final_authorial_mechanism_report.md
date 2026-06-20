@@ -315,5 +315,10 @@ Generated audits in this directory should be treated as the current state:
   high-order compatible local repair frontier. Exact rescoring of sizes
   `13..19` finds the best remaining set at size `13`, still `+23.7` bits worse
   than the active formula; sizes `20..22` have no compatible sets.
+- `61_post_forced_repair_literal_payload_context_search`: retests the final
+  literal payload with decodable previous-digit contexts. Conditioning on the
+  previously emitted digit improves the active mechanical bound from `8922.8`
+  to `8842.0` bits after charged declaration bits, with 70/70 roundtrip and
+  `translation_delta: NONE`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

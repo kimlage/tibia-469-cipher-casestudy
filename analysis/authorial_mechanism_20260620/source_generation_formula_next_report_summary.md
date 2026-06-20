@@ -214,6 +214,11 @@ Still open from the report:
   `20..22` close the remaining local frontier. The best remaining high-order
   set is size `13` at `+23.7` bits worse than the active formula; sizes
   `20..22` have no compatible sets.
+- post-forced-repair literal payload context coding is now covered by
+  [`61_post_forced_repair_literal_payload_context_search.py`](scripts/61_post_forced_repair_literal_payload_context_search.py);
+  conditioning each literal payload digit on the previously emitted digit in
+  the already generated stream is decodable and improves the active formula
+  from `8922.8` to `8842.0` bits after charged alpha and context-family bits.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

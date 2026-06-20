@@ -307,6 +307,11 @@ hypotheses:
     status: post_forced_repair_high_order_not_promoted
     target: "compatible repair sets of size 13 through 22 after the forced-length local repair"
     promotion_rule: "must beat the active forced-length repaired formula after exact rescoring; sizes with no compatible sets cannot promote"
+  H-GEN3BD:
+    name: "post forced-length repair literal payload context model"
+    status: controlled_literal_payload_context_improvement
+    target: "literal payload coding conditioned on the previously emitted digit after the forced-length local repair"
+    promotion_rule: "must beat the active zero-order literal payload model after charged alpha and context-family declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

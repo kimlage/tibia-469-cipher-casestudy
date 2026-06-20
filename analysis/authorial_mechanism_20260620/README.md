@@ -158,6 +158,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   twelve-repair sets after the forced-length repair.
 - `scripts/60_post_forced_repair_high_order_exhaustion.py` - closes the
   remaining compatible high-order repair sets from size 13 through 22.
+- `scripts/61_post_forced_repair_literal_payload_context_search.py` - tests
+  contextual literal-payload coding after the forced-length repair.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

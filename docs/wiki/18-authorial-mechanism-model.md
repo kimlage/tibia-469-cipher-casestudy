@@ -81,6 +81,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_remaining_force_type_formula_469` | `8953.9` | `12.8` |
 | `sequential_lz_digit_address_forced_literal_length_formula_469` | `8922.9` | `31.0` |
 | `sequential_lz_digit_address_forced_length_literal_repair_formula_469` | `8922.8` | `0.1` |
+| `sequential_lz_digit_address_forced_length_literal_context_formula_469` | `8842.0` | `80.8` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -407,6 +408,13 @@ cost model. It exactly rescores compatible set sizes `13..19`, checks sizes
 `+23.7` bits worse than the active formula, while sizes `20..22` have no
 compatible sets.
 
+The literal payload context search then shifts from recipe repair to payload
+coding. With the recipe and all ledgers fixed, an adaptive context model that
+conditions each literal digit on the previously emitted digit is decodable from
+the generated stream and improves the 70/70 bound from `8922.8` to `8842.0`
+bits after charged alpha and context-family bits. This is the new strongest
+mechanical book-layer generator, with `translation_delta: NONE`.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -480,6 +488,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BA | `post_forced_repair_eleven_not_promoted` |
 | H-GEN3BB | `post_forced_repair_twelve_not_promoted` |
 | H-GEN3BC | `post_forced_repair_high_order_not_promoted` |
+| H-GEN3BD | `controlled_literal_payload_context_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -548,19 +557,20 @@ book generation, not row0 pair-cell placement.
 - [Post-forced-repair eleven-repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/58_post_forced_repair_eleven_search.md)
 - [Post-forced-repair twelve-repair search](../../analysis/authorial_mechanism_20260620/reports/test_results/59_post_forced_repair_twelve_search.md)
 - [Post-forced-repair high-order exhaustion](../../analysis/authorial_mechanism_20260620/reports/test_results/60_post_forced_repair_high_order_exhaustion.md)
+- [Post-forced-repair literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/61_post_forced_repair_literal_payload_context_search.md)
 
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
-should treat the Rice copy-length plus Rice literal-length sequential LZ formula
-with adaptive literal-payload coding, the one-step literal-to-copy repair, the
-signed-Rice book-length ledger, digit-only copy addresses, and the digit-address
-literal repair, plus the adaptive/Markov/book-start/literal-force item-type
-ledgers, remaining-short forced-literal rule, and forced short-suffix literal
-lengths, and the final forced-length local repair with retained payload
-`alpha=14` and retained absolute `source_digit_pos` addresses, as the current
-strongest copy/reference fabrication bound. Follow-up single/pair local repairs
-and all compatible local repair sets above one do not improve it under the
-current cost model; continue
+should treat the Rice copy-length plus Rice literal-length sequential LZ formula,
+the one-step literal-to-copy repair, the signed-Rice book-length ledger,
+digit-only copy addresses, and the digit-address literal repair, plus the
+adaptive/Markov/book-start/literal-force item-type ledgers, remaining-short
+forced-literal rule, forced short-suffix literal lengths, the final
+forced-length local repair, retained absolute `source_digit_pos` addresses, and
+the previous-emitted-digit literal payload context model, as the current
+strongest copy/reference fabrication bound at roughly `8842.0` bits. Follow-up
+single/pair local repairs and all compatible local repair sets above one do not
+improve it under the current cost model; continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

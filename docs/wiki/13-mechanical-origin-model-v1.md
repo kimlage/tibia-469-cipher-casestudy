@@ -106,6 +106,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post forced-length repair eleven-repair search | the same `22` candidates produce `255476` compatible eleven-repair sets, but the best set is `+17.8` bits worse than the active formula | rejected refinement |
 | Post forced-length repair twelve-repair search | the same `22` candidates produce `184756` compatible twelve-repair sets, but the best set is `+20.6` bits worse than the active formula | rejected refinement |
 | Post forced-length repair high-order exhaustion | compatible set sizes `13..19` are exactly rescored and sizes `20..22` checked; the best remaining set is size `13` at `+23.7` bits and sizes `20..22` have no compatible sets | rejected refinement / frontier closed |
+| Sequential LZ literal-payload context formula | final literal payload digits are coded by an adaptive previous-emitted-digit context; total bound drops from `8922.8` to `8842.0` bits with 70/70 roundtrip | strongest copy/reference upper bound |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -261,6 +262,8 @@ claims remain inadmissible.
   [sequential_lz_digit_address_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_formula_469.json)
 - Sequential LZ digit-address literal-repair formula:
   [sequential_lz_digit_address_literal_repair_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_literal_repair_formula_469.json)
+- Sequential LZ forced-length literal-context formula:
+  [sequential_lz_digit_address_forced_length_literal_context_formula_469.json](../../analysis/authorial_mechanism_20260620/sequential_lz_digit_address_forced_length_literal_context_formula_469.json)
 - DP LZ copy graph:
   [dp_lz_copy_graph_edges.csv](../../analysis/authorial_mechanism_20260620/tables/dp_lz_copy_graph_edges.csv)
 - DP LZ literal seed atlas:

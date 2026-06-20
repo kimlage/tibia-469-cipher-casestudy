@@ -284,7 +284,9 @@ retest keeps absolute `source_digit_pos` as the best decodable ledger; a
 compatible pair-repair search, triple search, and quartet search are still
 worse than the active formula. The remaining high-order local repair frontier
 is now closed: sizes `13..19` are worse and sizes `20..22` have no compatible
-sets.
+sets. A final literal-payload context audit improves the mechanical bound to
+roughly `8842.0` bits by coding literal digits from the previously emitted
+digit. No semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
