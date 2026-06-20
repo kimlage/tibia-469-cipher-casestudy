@@ -442,6 +442,11 @@ hypotheses:
     status: post_midpoint_alpha1_local_frontier_closed
     target: "single literal-to-copy and copy-to-literal edits after midpoint-context alpha=1 copy-length coding"
     promotion_rule: "must beat the active midpoint alpha=1 formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CE:
+    name: "post midpoint alpha1 pair frontier"
+    status: post_midpoint_alpha1_pair_frontier_closed
+    target: "compatible pairs of local literal-to-copy and copy-to-literal edits after midpoint-context alpha=1 copy-length coding"
+    promotion_rule: "must beat the active midpoint alpha=1 formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

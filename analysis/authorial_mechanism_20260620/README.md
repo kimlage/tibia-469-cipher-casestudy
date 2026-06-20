@@ -221,6 +221,8 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   parameters after the midpoint copy-length context and local-frontier closure.
 - `scripts/87_post_midpoint_alpha1_local_frontier.py` - retests the immediate
   literal/copy local frontier after the midpoint copy-length alpha becomes `1`.
+- `scripts/88_post_midpoint_alpha1_pair_frontier.py` - retests compatible
+  pairs of local edits after the midpoint alpha=1 one-edit frontier closes.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

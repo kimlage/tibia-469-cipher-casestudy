@@ -132,6 +132,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Post-midpoint local frontier | after the midpoint context, the best one-edit local repair is literal-to-copy `477090` in book `17`, still `+1.537` bits worse | rejected refinement / local frontier closed |
 | Post-midpoint parameter resweep | after the midpoint context, copy-length `alpha=1` lowers the bound from `8574.407` to `8572.267` bits while literal length, payload, and item-type parameters stay fixed | strongest copy/reference upper bound |
 | Post-midpoint alpha1 local frontier | after `alpha=1`, the best one-edit local repair remains literal-to-copy `477090` in book `17`, still `+0.971` bits worse | rejected refinement / local frontier closed |
+| Post-midpoint alpha1 pair frontier | `17663` valid compatible pairs are rescored after the alpha1 local frontier closes; the best pair is still `+2.501` bits worse | rejected refinement / pair frontier closed |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -213,6 +214,7 @@ Primary sources:
 [post_midpoint_local_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/85_post_midpoint_local_frontier.md),
 [post_midpoint_parameter_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/86_post_midpoint_parameter_resweep.md),
 [post_midpoint_alpha1_local_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/87_post_midpoint_alpha1_local_frontier.md),
+[post_midpoint_alpha1_pair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/88_post_midpoint_alpha1_pair_frontier.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

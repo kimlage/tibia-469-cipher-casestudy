@@ -171,7 +171,8 @@ The immediate local literal/copy frontier after that refinement is closed
 again; the best one-edit repair is `+1.537` bits worse. A parameter resweep
 then lowers the active bound to `8572.267` bits by changing the midpoint
 copy-length alpha from `2` to `1`. The immediate local frontier after that
-alpha change closes again; the best one-edit repair is `+0.971` bits worse.
+alpha change closes again; the best one-edit repair is `+0.971` bits worse. A
+compatible-pair retest also closes, with the best pair `+2.501` bits worse.
 
 ## Ranked: what would unlock progress
 

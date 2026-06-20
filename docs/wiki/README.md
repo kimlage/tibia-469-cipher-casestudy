@@ -318,7 +318,8 @@ book-midpoint context for adaptive copy lengths then lowers the mechanical
 bound to `8574.407` bits; the immediate local frontier after that refinement
 closes again. A post-midpoint parameter resweep lowers the bound to `8572.267`
 bits by changing copy-length `alpha` from `2` to `1`; the immediate local
-frontier after that alpha change closes again. No semantic claim is promoted.
+frontier and compatible-pair frontier after that alpha change close again. No
+semantic claim is promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
