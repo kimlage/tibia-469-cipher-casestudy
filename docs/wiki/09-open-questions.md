@@ -185,7 +185,9 @@ context-specific alpha grid also retains shared `alpha=1`; the best split
 alpha row saves `1.611` component bits but is `+1.389` bits worse after
 declaration. A literal-payload context search also retains the global
 previous-emitted-digit payload model; book-midpoint payload context saves
-`2.251` component bits but is `+1.749` bits worse after declaration.
+`2.251` component bits but is `+1.749` bits worse after declaration. A bounded
+top60 triple probe checks `33588` valid compatible triples and finds the best
+still `+3.914` bits worse; this is not an exhaustive closure outside top60.
 
 ## Ranked: what would unlock progress
 

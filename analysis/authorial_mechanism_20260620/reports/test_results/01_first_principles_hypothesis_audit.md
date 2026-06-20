@@ -116,6 +116,7 @@ does not promote plaintext.
 | `H-GEN3CH` | `post_midpoint_alpha1_copy_length_context_retains_midpoint` | `True` |
 | `H-GEN3CI` | `post_midpoint_alpha_by_context_not_promoted` | `True` |
 | `H-GEN3CJ` | `post_midpoint_literal_payload_context_not_promoted` | `True` |
+| `H-GEN3CK` | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` | `True` |
 | `H-GEN4` | `open_low_expectation` | `True` |
 | `H-GEN4A` | `hierarchical_provenance_not_pair_table_formula` | `True` |
 | `H-GEN5` | `watchlist_only` | `True` |

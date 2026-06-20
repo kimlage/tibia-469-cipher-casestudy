@@ -472,6 +472,11 @@ hypotheses:
     status: post_midpoint_literal_payload_context_not_promoted
     target: "simple contexts for the adaptive literal-payload previous-emitted-digit model"
     promotion_rule: "must beat active global literal-payload model after charged context declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CK:
+    name: "post midpoint alpha1 top60 triple repair probe"
+    status: bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted
+    target: "compatible triples among the top 60 local single-edit candidates after midpoint-context alpha=1 copy-length coding"
+    promotion_rule: "candidate only if a bounded top60 compatible triple beats the active midpoint alpha=1 formula under full rescoring; non-promotion is not exhaustive closure outside the bounded top60 scope"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

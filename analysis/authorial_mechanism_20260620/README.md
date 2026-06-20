@@ -234,6 +234,8 @@ book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
   midpoint first-half and second-half copy-length smoothing alphas.
 - `scripts/93_post_midpoint_alpha1_literal_payload_context_search.py` -
   retests simple contexts for the adaptive literal-payload model.
+- `scripts/94_post_midpoint_alpha1_top60_triple_probe.py` - probes compatible
+  triples among the top 60 local single-edit candidates after pair closure.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

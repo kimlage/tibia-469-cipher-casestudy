@@ -615,6 +615,12 @@ previous-emitted-digit model. They do not under full MDL: book-midpoint payload
 context saves `2.251` component bits but is `+1.749` bits worse after
 declaration, and the best searched split, book `39`, is `+11.613` bits worse.
 
+The post-midpoint alpha1 top60 triple probe then checks a bounded higher-order
+repair surface. It rescored `33588` valid compatible triples among the top
+`60` local single-edit candidates. The best bounded triple is still `+3.914`
+bits worse. This is evidence against the most plausible triple combinations,
+not exhaustive closure of all triples over the `189` local candidates.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -721,6 +727,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3CH | `post_midpoint_alpha1_copy_length_context_retains_midpoint` |
 | H-GEN3CI | `post_midpoint_alpha_by_context_not_promoted` |
 | H-GEN3CJ | `post_midpoint_literal_payload_context_not_promoted` |
+| H-GEN3CK | `bounded_post_midpoint_alpha1_top60_triple_probe_not_promoted` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -822,6 +829,7 @@ book generation, not row0 pair-cell placement.
 - [Post-midpoint alpha1 copy-length context resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/91_post_midpoint_alpha1_copy_length_context_resweep.md)
 - [Post-midpoint alpha1 context alpha grid](../../analysis/authorial_mechanism_20260620/reports/test_results/92_post_midpoint_alpha1_context_alpha_grid.md)
 - [Post-midpoint alpha1 literal payload context search](../../analysis/authorial_mechanism_20260620/reports/test_results/93_post_midpoint_alpha1_literal_payload_context_search.md)
+- [Post-midpoint alpha1 top60 triple probe](../../analysis/authorial_mechanism_20260620/reports/test_results/94_post_midpoint_alpha1_top60_triple_probe.md)
 
 ## Boundary
 
@@ -849,7 +857,9 @@ resweeps, the post-midpoint local frontier, and the post-midpoint alpha1 local
 frontier plus pair frontier, address-model retest, and copy-order retest do
 not improve the current frontier; the post-alpha1 context resweep retains the
 midpoint context, and the per-context alpha grid retains shared `alpha=1`.
-The literal-payload context search also retains the global payload model.
+The literal-payload context search also retains the global payload model; the
+bounded top60 triple probe does not improve the current frontier inside its
+declared scope.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

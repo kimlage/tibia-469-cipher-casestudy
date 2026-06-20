@@ -454,5 +454,9 @@ Generated audits in this directory should be treated as the current state:
   contexts for the adaptive literal-payload model. Book-midpoint context saves
   `2.251` payload bits but remains `+1.749` bits worse after declaration, so
   the global previous-emitted-digit payload model is retained.
+- `94_post_midpoint_alpha1_top60_triple_probe`: rescored compatible triples
+  among the top `60` local single-edit candidates. `33588` valid triples are
+  checked; the best triple remains `+3.914` bits worse. This is bounded
+  negative evidence, not exhaustive closure of all `189` single candidates.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

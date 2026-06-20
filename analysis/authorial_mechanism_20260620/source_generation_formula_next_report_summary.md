@@ -381,6 +381,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   book-midpoint payload context saves `2.251` component bits but is still
   `+1.749` bits worse after declaration, so the global previous-emitted-digit
   payload model remains active.
+- bounded triple probing is now covered by
+  [`94_post_midpoint_alpha1_top60_triple_probe.py`](scripts/94_post_midpoint_alpha1_top60_triple_probe.py);
+  among the top `60` local single-edit candidates, `33588` valid compatible
+  triples are rescored and the best remains `+3.914` bits worse. This is
+  negative evidence inside the bounded top60 scope, not an exhaustive triple
+  frontier over all `189` candidates.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
