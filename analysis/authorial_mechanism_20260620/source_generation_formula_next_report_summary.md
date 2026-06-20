@@ -337,6 +337,10 @@ Coverage of the remaining report recommendations and follow-on refinements:
   bound from `8575.986` to `8574.407` bits after charged context declaration
   bits. Searched single splits show larger component savings but are not
   promoted once the split index is charged.
+- post-midpoint local frontier is now covered by
+  [`85_post_midpoint_local_frontier.py`](scripts/85_post_midpoint_local_frontier.py);
+  after the midpoint context, the best one-edit local repair is still `+1.537`
+  bits worse, so the immediate literal/copy recipe frontier remains closed.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

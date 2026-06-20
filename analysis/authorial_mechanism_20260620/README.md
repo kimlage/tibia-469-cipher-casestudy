@@ -215,6 +215,8 @@ book-midpoint copy-length context at roughly `8574.4` bits.
 - `scripts/84_post_adaptive_copy_length_context_search.py` - retests simple
   decodable contexts for the adaptive copy-length ledger after copy-order
   closure.
+- `scripts/85_post_midpoint_local_frontier.py` - retests the immediate
+  literal/copy local frontier after the midpoint copy-length context.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

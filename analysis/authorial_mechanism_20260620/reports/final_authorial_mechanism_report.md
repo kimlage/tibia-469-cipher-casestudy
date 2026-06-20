@@ -417,5 +417,9 @@ Generated audits in this directory should be treated as the current state:
   bound from `8575.986` to `8574.407` bits after charged context declaration
   bits; searched split points remain non-promoted once the split index is
   charged.
+- `85_post_midpoint_local_frontier`: retests the immediate one-edit
+  literal/copy frontier after the midpoint context. The best repair is
+  literal-to-copy `477090` in book `17`, still `+1.537` bits worse, so no
+  recipe edit is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
