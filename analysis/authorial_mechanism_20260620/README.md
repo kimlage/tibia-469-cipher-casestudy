@@ -15,7 +15,7 @@ The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
 bound is the adaptive bounded copy-length sequential LZ formula with a fixed
-book-midpoint copy-length context at roughly `8574.4` bits.
+book-midpoint copy-length context and `alpha=1` at roughly `8572.3` bits.
 
 ## Gates
 
@@ -217,6 +217,8 @@ book-midpoint copy-length context at roughly `8574.4` bits.
   closure.
 - `scripts/85_post_midpoint_local_frontier.py` - retests the immediate
   literal/copy local frontier after the midpoint copy-length context.
+- `scripts/86_post_midpoint_parameter_resweep.py` - retests declared
+  parameters after the midpoint copy-length context and local-frontier closure.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

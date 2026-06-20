@@ -91,6 +91,7 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_copy_length_minaddr_repair2_formula_469` | `8609.8` | `1.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_minaddr_repair2_formula_469` | `8576.0` | `33.8` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_minaddr_repair2_formula_469` | `8574.4` | `1.6` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_minaddr_repair2_formula_469` | `8572.3` | `2.1` |
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -566,6 +567,12 @@ reopens one-step recipe edits. It does not: the best literal-to-copy repair,
 `477090` in book `17`, is still `+1.537` bits worse than the active midpoint
 formula. The immediate local literal/copy frontier is closed again.
 
+The post-midpoint parameter resweep then checks whether the new midpoint
+context changes the declared parameter frontier. It does: copy-length `alpha=1`
+beats the previous `alpha=2`, lowering the active bound from `8574.407` to
+`8572.267` bits. Literal-run Rice `k=3`, literal-payload order `2` /
+`alpha=1`, and item-type order `3` / `alpha=2` remain fixed.
+
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
 book operations, tape component references, inventory self-references,
@@ -664,6 +671,7 @@ book generation, not row0 pair-cell placement.
 | H-GEN3BZ | `post_adaptive_copy_order_optimistic_only_not_promoted` |
 | H-GEN3CA | `controlled_post_adaptive_copy_length_midpoint_context_improvement` |
 | H-GEN3CB | `post_midpoint_local_frontier_closed` |
+| H-GEN3CC | `controlled_post_midpoint_copy_length_alpha_improvement` |
 | H-GEN4 | `open_low_expectation` |
 | H-GEN4A | `hierarchical_provenance_not_pair_table_formula` |
 | H-GEN5 | `watchlist_only` |
@@ -757,6 +765,7 @@ book generation, not row0 pair-cell placement.
 - [Post-adaptive copy order search](../../analysis/authorial_mechanism_20260620/reports/test_results/83_post_adaptive_copy_order_search.md)
 - [Post-adaptive copy-length context search](../../analysis/authorial_mechanism_20260620/reports/test_results/84_post_adaptive_copy_length_context_search.md)
 - [Post-midpoint local frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/85_post_midpoint_local_frontier.md)
+- [Post-midpoint parameter resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/86_post_midpoint_parameter_resweep.md)
 
 ## Boundary
 
@@ -773,8 +782,8 @@ the previous-emitted-digit literal payload context model with declared order
 contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
-copy-length prior, as the current strongest copy/reference fabrication bound at
-roughly `8574.4` bits. Follow-up
+copy-length prior and final `alpha=1`, as the current strongest copy/reference
+fabrication bound at roughly `8572.3` bits. Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address
 ledgers, post-repair2 address-model retests, and post-repair2 parameter

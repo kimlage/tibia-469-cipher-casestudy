@@ -316,7 +316,9 @@ address retest keeps absolute minaddr as the best decodable address ledger. The
 post-adaptive copy-order retest also keeps source-first coding. A fixed
 book-midpoint context for adaptive copy lengths then lowers the mechanical
 bound to `8574.407` bits; the immediate local frontier after that refinement
-closes again. No semantic claim is promoted.
+closes again. A post-midpoint parameter resweep lowers the bound to `8572.267`
+bits by changing copy-length `alpha` from `2` to `1`. No semantic claim is
+promoted.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

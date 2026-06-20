@@ -421,5 +421,9 @@ Generated audits in this directory should be treated as the current state:
   literal/copy frontier after the midpoint context. The best repair is
   literal-to-copy `477090` in book `17`, still `+1.537` bits worse, so no
   recipe edit is promoted.
+- `86_post_midpoint_parameter_resweep`: retests declared parameters after the
+  midpoint context and local-frontier closure. Copy-length `alpha=1` improves
+  the bound from `8574.407` to `8572.267` bits; literal length, literal
+  payload, and item-type parameters remain unchanged.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

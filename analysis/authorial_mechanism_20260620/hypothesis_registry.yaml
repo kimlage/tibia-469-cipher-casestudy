@@ -432,6 +432,11 @@ hypotheses:
     status: post_midpoint_local_frontier_closed
     target: "single literal-to-copy and copy-to-literal edits after midpoint-context adaptive copy-length coding"
     promotion_rule: "must beat the active midpoint-context adaptive copy-length formula under full rescoring while preserving 70/70 roundtrip and translation_delta NONE"
+  H-GEN3CC:
+    name: "post midpoint parameter resweep"
+    status: controlled_post_midpoint_copy_length_alpha_improvement
+    target: "declared literal length, payload, item-type, and midpoint copy-length parameters after midpoint-context adaptive copy-length coding"
+    promotion_rule: "must beat the active midpoint-context formula after charged declaration bits while preserving 70/70 roundtrip and translation_delta NONE"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

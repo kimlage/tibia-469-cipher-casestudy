@@ -168,7 +168,9 @@ decodable order; length-first is `+13.664` bits worse. A follow-up
 post-adaptive copy-length context test promotes only a small mechanical
 refinement: a fixed book-midpoint context lowers the bound to `8574.407` bits.
 The immediate local literal/copy frontier after that refinement is closed
-again; the best one-edit repair is `+1.537` bits worse.
+again; the best one-edit repair is `+1.537` bits worse. A parameter resweep
+then lowers the active bound to `8572.267` bits by changing the midpoint
+copy-length alpha from `2` to `1`.
 
 ## Ranked: what would unlock progress
 
