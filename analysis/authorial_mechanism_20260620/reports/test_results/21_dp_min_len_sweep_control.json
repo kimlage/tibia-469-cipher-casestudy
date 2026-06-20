@@ -1,0 +1,189 @@
+{
+  "boundary": {
+    "authorial_intent_claim": false,
+    "pair_table_origin_explained": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "dp_min_len_sweep_retains_min_len_6",
+  "controls": {
+    "5": {
+      "book_order_shuffle": {
+        "count_le_observed": 1,
+        "max_bits": 10207.534902960968,
+        "mean_bits": 10021.255339589852,
+        "min_bits": 9761.329631956323,
+        "pstdev_bits": 115.71862109747485,
+        "runs": 20
+      },
+      "digit_shuffle_preserve_book_lengths": {
+        "count_le_observed": 0,
+        "max_bits": 39539.71828415326,
+        "mean_bits": 39526.20509243738,
+        "min_bits": 39508.38993335823,
+        "pstdev_bits": 9.261686860464945,
+        "runs": 20
+      },
+      "observed_bits": 9827.726319645453
+    },
+    "6": {
+      "book_order_shuffle": {
+        "count_le_observed": 1,
+        "max_bits": 10220.020169262316,
+        "mean_bits": 10039.46424033787,
+        "min_bits": 9744.946666779062,
+        "pstdev_bits": 117.25231561868783,
+        "runs": 20
+      },
+      "digit_shuffle_preserve_book_lengths": {
+        "count_le_observed": 0,
+        "max_bits": 39556.0343456354,
+        "mean_bits": 39546.80251882582,
+        "min_bits": 39532.99393612576,
+        "pstdev_bits": 5.8572179469347185,
+        "runs": 20
+      },
+      "observed_bits": 9823.307615564663
+    }
+  },
+  "current_formula_bits": 9823.307615564663,
+  "current_min_len": 6,
+  "nearest_non_best": {
+    "books_roundtrip_ok": 70,
+    "copied_digits": 10580,
+    "copy_items": 305,
+    "delta_vs_current_bits": 4.418704080790121,
+    "errors": [],
+    "literal_digits": 683,
+    "literal_runs": 86,
+    "min_len": 5,
+    "total_bits": 9827.726319645453
+  },
+  "schema": "dp_min_len_sweep_control.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_dp_parse_formula_469.json",
+  "sweep": [
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10468,
+      "copy_items": 281,
+      "delta_vs_current_bits": 0.0,
+      "errors": [],
+      "literal_digits": 795,
+      "literal_runs": 84,
+      "min_len": 6,
+      "total_bits": 9823.307615564663
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10580,
+      "copy_items": 305,
+      "delta_vs_current_bits": 4.418704080790121,
+      "errors": [],
+      "literal_digits": 683,
+      "literal_runs": 86,
+      "min_len": 5,
+      "total_bits": 9827.726319645453
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10687,
+      "copy_items": 334,
+      "delta_vs_current_bits": 43.96315508517728,
+      "errors": [],
+      "literal_digits": 576,
+      "literal_runs": 80,
+      "min_len": 4,
+      "total_bits": 9867.27077064984
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10334,
+      "copy_items": 257,
+      "delta_vs_current_bits": 48.30400775054659,
+      "errors": [],
+      "literal_digits": 929,
+      "literal_runs": 78,
+      "min_len": 7,
+      "total_bits": 9871.61162331521
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10206,
+      "copy_items": 237,
+      "delta_vs_current_bits": 154.15935516801255,
+      "errors": [],
+      "literal_digits": 1057,
+      "literal_runs": 77,
+      "min_len": 8,
+      "total_bits": 9977.466970732676
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10681,
+      "copy_items": 341,
+      "delta_vs_current_bits": 158.86570187015786,
+      "errors": [],
+      "literal_digits": 582,
+      "literal_runs": 63,
+      "min_len": 3,
+      "total_bits": 9982.173317434821
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 10125,
+      "copy_items": 226,
+      "delta_vs_current_bits": 232.25151266716057,
+      "errors": [],
+      "literal_digits": 1138,
+      "literal_runs": 78,
+      "min_len": 9,
+      "total_bits": 10055.559128231824
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 9971,
+      "copy_items": 208,
+      "delta_vs_current_bits": 489.2635374949332,
+      "errors": [],
+      "literal_digits": 1292,
+      "literal_runs": 81,
+      "min_len": 10,
+      "total_bits": 10312.571153059596
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 9855,
+      "copy_items": 194,
+      "delta_vs_current_bits": 639.6146999838656,
+      "errors": [],
+      "literal_digits": 1408,
+      "literal_runs": 79,
+      "min_len": 11,
+      "total_bits": 10462.922315548529
+    },
+    {
+      "books_roundtrip_ok": 70,
+      "copied_digits": 9734,
+      "copy_items": 183,
+      "delta_vs_current_bits": 871.0059830757582,
+      "errors": [],
+      "literal_digits": 1529,
+      "literal_runs": 79,
+      "min_len": 12,
+      "total_bits": 10694.313598640421
+    }
+  ],
+  "sweep_range": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "test": "21_dp_min_len_sweep_control",
+  "translation_delta": "NONE"
+}

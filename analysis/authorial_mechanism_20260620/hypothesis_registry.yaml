@@ -107,6 +107,11 @@ hypotheses:
     status: restricted_hybrid_vocabulary_not_promoted
     target: "declared repeated digit motifs plus literal runs and prior-copy LZ references"
     promotion_rule: "must roundtrip 70/70 and beat sequential DP LZ after charging raw motif table and decodable reference selection"
+  H-GEN3P:
+    name: "DP sequential LZ min_len parameter sweep"
+    status: dp_min_len_sweep_retains_min_len_6
+    target: "min_len parameter for the modern DP sequential LZ formula"
+    promotion_rule: "must roundtrip 70/70 and beat min_len=6 under the same cost model; order wins require external zero-cost order or permutation charge"
   H-GEN4:
     name: "matrix origin compact formula"
     status: open_low_expectation

@@ -126,5 +126,11 @@ Generated audits in this directory should be treated as the current state:
   DP LZ baseline. The closest dictionary-using model is an optimistic non-
   decodable `K=4` redundancy-filtered motif set at `9840.7` bits (`+17.4`); the
   closest decodable dictionary model costs `10123.2` bits (`+299.9`).
+- `21_dp_min_len_sweep_control`: sweeps the modern DP sequential LZ `min_len`
+  parameter from `3` through `12`. The current `min_len=6` remains best at
+  `9823.3` bits; the nearest alternate is `min_len=5` at `9827.7` bits
+  (`+4.4`). Focused digit-shuffle controls are far worse; book-order shuffle
+  wins remain diagnostic only because they do not supply a zero-cost external
+  order or pay permutation cost.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

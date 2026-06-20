@@ -49,6 +49,9 @@ Still open from the report:
   [`20_restricted_hybrid_vocabulary_reparse.py`](scripts/20_restricted_hybrid_vocabulary_reparse.py);
   it roundtrips 70/70 but the best dictionary-using motif model still costs
   `9840.7` bits, worse than the current `9823.3`.
+- DP `min_len` parameter sweep is now covered by
+  [`21_dp_min_len_sweep_control.py`](scripts/21_dp_min_len_sweep_control.py);
+  `min_len=6` remains best at `9823.3`, with `min_len=5` nearest at `9827.7`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -66,6 +66,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Literal seed grouped-mode model | grouped mode coding reduces the seed-address penalty, but the best decodable seed-using sparse-run ledger is still `9830.0` bits versus current `9823.3` | rejected refinement |
 | Copy hub macro model | source-book hubs and target-default source macros cost at least `10326.9` bits even in the optimistic lower bound, worse than current `9823.3` | rejected refinement |
 | Restricted hybrid vocabulary reparse | declared repeated digit motifs plus LZ references roundtrip 70/70, but the best dictionary-using model is `9840.7` bits, worse than current `9823.3` | rejected refinement |
+| DP min_len sweep | `min_len=6` remains best in the modern DP sequential LZ sweep; `min_len=5` is nearest at `9827.7` bits, `+4.4` worse | retained parameter |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -87,6 +88,7 @@ Primary sources:
 [literal_seed_grouped_mode_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/18_literal_seed_grouped_mode_search.md),
 [copy_hub_macro_model_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/19_copy_hub_macro_model_search.md),
 [restricted_hybrid_vocabulary_reparse.md](../../analysis/authorial_mechanism_20260620/reports/test_results/20_restricted_hybrid_vocabulary_reparse.md),
+[dp_min_len_sweep_control.md](../../analysis/authorial_mechanism_20260620/reports/test_results/21_dp_min_len_sweep_control.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

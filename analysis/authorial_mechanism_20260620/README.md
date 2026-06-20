@@ -77,6 +77,8 @@ tests against the current best baseline: `tape_based_formula_469.json`.
   default-source macro ledgers against absolute source positions.
 - `scripts/20_restricted_hybrid_vocabulary_reparse.py` - reparses the books
   with a restricted declared motif dictionary plus LZ copies.
+- `scripts/21_dp_min_len_sweep_control.py` - sweeps the modern DP sequential
+  LZ `min_len` parameter and focused controls.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
