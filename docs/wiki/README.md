@@ -282,7 +282,7 @@ forced-length local literal-to-copy repair lowers it to roughly `8922.8` bits.
 The post-repair payload alpha sweep retains `alpha=14`; the post-repair address
 retest keeps absolute `source_digit_pos` as the best decodable ledger; a
 compatible pair-repair search, triple search, and quartet search are still
-worse than the active formula, and quintet/sextet/septet searches are worse too.
+worse than the active formula, and quintet/sextet/septet/octet searches are worse too.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

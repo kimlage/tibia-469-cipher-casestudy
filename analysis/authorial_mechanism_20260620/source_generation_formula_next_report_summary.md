@@ -188,6 +188,10 @@ Still open from the report:
   [`54_post_forced_repair_sept_search.py`](scripts/54_post_forced_repair_sept_search.py);
   the same `22` single candidates yield `118456` compatible septets, and the
   best septet is `+9.0` bits worse than the active formula.
+- post-forced-repair oct search is now covered by
+  [`55_post_forced_repair_oct_search.py`](scripts/55_post_forced_repair_oct_search.py);
+  the same `22` single candidates yield `195806` compatible octets, and the
+  best octet is `+11.0` bits worse than the active formula.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
