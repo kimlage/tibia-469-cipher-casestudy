@@ -58,6 +58,7 @@ OPERATION_NGRAM_GRAMMAR = TEST_RESULTS / "44_operation_ngram_grammar_gate.json"
 RESIDUAL_EXCEPTION_TRANSFER = (
     TEST_RESULTS / "45_residual_exception_transfer_gate.json"
 )
+BRANCH_RANK_POSITION = TEST_RESULTS / "46_branch_rank_position_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -206,6 +207,11 @@ def main() -> None:
         if RESIDUAL_EXCEPTION_TRANSFER.exists()
         else None
     )
+    branch_rank_position = (
+        load_json(BRANCH_RANK_POSITION)
+        if BRANCH_RANK_POSITION.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -296,6 +302,8 @@ def main() -> None:
         assert_boundary(
             "residual_exception_transfer_gate", residual_exception_transfer
         )
+    if branch_rank_position is not None:
+        assert_boundary("branch_rank_position_audit", branch_rank_position)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -412,6 +420,9 @@ def main() -> None:
         None
         if residual_exception_transfer is None
         else residual_exception_transfer["summary"]
+    )
+    branch_rank_position_summary = (
+        None if branch_rank_position is None else branch_rank_position["summary"]
     )
 
     lines = [
@@ -1630,6 +1641,38 @@ def main() -> None:
                 "",
             ]
         )
+    if branch_rank_position_summary is not None:
+        oracle_rank = branch_rank_position["oracle_rank_summary"]
+        lines.extend(
+            [
+                "## Branch Rank Position Audit",
+                "",
+                "Gate 46 ranks every observable candidate branch at the",
+                "remaining residual sites. It asks whether the stable branch is",
+                "simply top-ranked by a small observable ordering over type,",
+                "length, active/default status, immediate-copy/literal-stop",
+                "priority, or suffix continuation metrics.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Rankers tested | `{branch_rank_position_summary['ranker_count']}` |",
+                f"| Best top-1 ranker | `{branch_rank_position_summary['best_top1_ranker']}` |",
+                f"| Best top-1 residual hits | `{branch_rank_position_summary['best_top1_residual_hits']}/{branch_rank_position_summary['residual_count']}` |",
+                f"| Best top-1 clean false changes | `{branch_rank_position_summary['best_top1_clean_false_changes']}` |",
+                f"| Best top-3 ranker | `{branch_rank_position_summary['best_top3_ranker']}` |",
+                f"| Best top-3 residual coverage | `{branch_rank_position_summary['best_top3_residual_hits']}/{branch_rank_position_summary['residual_count']}` |",
+                f"| Best top-3 clean false changes | `{branch_rank_position_summary['best_top3_clean_false_changes']}` |",
+                f"| Residual branch count median | `{oracle_rank['branch_count_median']}` |",
+                f"| Rank-selector lower bound | `{oracle_rank['oracle_rank_selector_bits']:.3f}` bits |",
+                "",
+                "No branch-rank rule is promoted. The best observable top-1",
+                "ordering recovers only `6/10` residuals and changes `20` clean",
+                "controls; even top-3 coverage leaves two residuals outside the",
+                "near-top set. The rank view records a weak diagnostic signal,",
+                "not a parser rule.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1665,6 +1708,8 @@ def main() -> None:
             "with either false positives or unsupported residuals. Gate 45",
             "then rejects residual self-transfer: the `10` corrections do not",
             "predict one another under leave-one-residual-out feature matching.",
+            "Gate 46 rejects simple branch-rank orderings too: the best top-1",
+            "ranker gets `6/10` residuals but changes `20` clean controls.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1719,6 +1764,7 @@ def main() -> None:
             "- [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)",
             "- [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)",
             "- [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)",
+            "- [Branch rank position audit](test_results/46_branch_rank_position_audit.md)",
             "",
         ]
     )

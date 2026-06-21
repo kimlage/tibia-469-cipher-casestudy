@@ -1235,6 +1235,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   families; `0/10` residual hits; lowest-net unigram has `10` false positives),
   rejects residual exception transfer as well (`6` feature families, `k=1/3/5`,
   `0/10` leave-one-residual-out hits),
+  records a weak but rejected branch-rank signal (`balanced_ops_literals`
+  gets `6/10` residuals but `20` clean false changes),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

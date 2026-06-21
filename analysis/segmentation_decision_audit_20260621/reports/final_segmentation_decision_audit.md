@@ -975,6 +975,32 @@ corrections do not predict each other under the tested
 observable feature families, so the current residual set does
 not compress into a reusable exception class.
 
+## Branch Rank Position Audit
+
+Gate 46 ranks every observable candidate branch at the
+remaining residual sites. It asks whether the stable branch is
+simply top-ranked by a small observable ordering over type,
+length, active/default status, immediate-copy/literal-stop
+priority, or suffix continuation metrics.
+
+| Diagnostic | Value |
+|---|---:|
+| Rankers tested | `14` |
+| Best top-1 ranker | `balanced_ops_literals` |
+| Best top-1 residual hits | `6/10` |
+| Best top-1 clean false changes | `20` |
+| Best top-3 ranker | `balanced_ops_literals` |
+| Best top-3 residual coverage | `8/10` |
+| Best top-3 clean false changes | `20` |
+| Residual branch count median | `21.0` |
+| Rank-selector lower bound | `42.736` bits |
+
+No branch-rank rule is promoted. The best observable top-1
+ordering recovers only `6/10` residuals and changes `20` clean
+controls; even top-3 coverage leaves two residuals outside the
+near-top set. The rank view records a weak diagnostic signal,
+not a parser rule.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1008,6 +1034,8 @@ all tested operation-sequence contexts get `0/10` residual hits,
 with either false positives or unsupported residuals. Gate 45
 then rejects residual self-transfer: the `10` corrections do not
 predict one another under leave-one-residual-out feature matching.
+Gate 46 rejects simple branch-rank orderings too: the best top-1
+ranker gets `6/10` residuals but changes `20` clean controls.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1062,3 +1090,4 @@ or the stable projection as an oracle.
 - [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)
 - [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)
 - [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)
+- [Branch rank position audit](test_results/46_branch_rank_position_audit.md)
