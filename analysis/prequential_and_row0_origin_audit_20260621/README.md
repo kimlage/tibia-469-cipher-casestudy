@@ -325,6 +325,9 @@ exogenous.
 - [scripts/103_copy_availability_type_exception_ledger.py](scripts/103_copy_availability_type_exception_ledger.py) - tests target-dependent copy availability as an operation-type exception ledger.
 - [reports/test_results/103_copy_availability_type_exception_ledger.md](reports/test_results/103_copy_availability_type_exception_ledger.md) - copy-availability type exception result.
 - [reports/test_results/103_copy_availability_type_exception_ledger.json](reports/test_results/103_copy_availability_type_exception_ledger.json) - structured copy-availability type exception ledger.
+- [scripts/104_target_position_derivation_ledger.py](scripts/104_target_position_derivation_ledger.py) - checks whether target positions are derived from the length sequence.
+- [reports/test_results/104_target_position_derivation_ledger.md](reports/test_results/104_target_position_derivation_ledger.md) - target position derivation result.
+- [reports/test_results/104_target_position_derivation_ledger.json](reports/test_results/104_target_position_derivation_ledger.json) - structured target position derivation ledger.
 
 ## Boundary
 
@@ -380,6 +383,11 @@ exogenous.
   available-copy literal exceptions. This beats shuffled controls, but it still
   depends on target text/copy availability and yields `278` conditioned skeleton
   records (`+17` vs exact atlas), so it is `AUDIT_ONLY`.
+- Target-position derivation boundary: `target_start`, `remaining`, and
+  operation index are deterministic in `261/261` rows from the length sequence
+  and book length. This removes target position as an independent conceptual
+  dependency, but the exact atlas remains `261` one-row-per-operation records
+  because operation type and length are still not generated.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

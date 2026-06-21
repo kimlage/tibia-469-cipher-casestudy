@@ -370,6 +370,12 @@ target-dependent clue. Min-length copy availability contains every copy event
 literal exceptions; shuffled controls do not match that error level. The clue is
 still `AUDIT_ONLY`: it depends on target text/copy availability and the
 conditioned skeleton ledger is `278` records, `+17` versus the exact atlas.
+A target-position derivation ledger then removes one possible overcount:
+`target_start`, `remaining`, and operation index are all deterministic in
+`261/261` rows from the cumulative length sequence and book length. That
+sharpens the skeleton description from type/target/length to type/length with
+derived positions. It does not change the `261` atlas rows or derive operation
+types, lengths, copy sources, or literal payload.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -2018,6 +2024,7 @@ book generation, not row0 pair-cell placement.
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
 - [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
+- [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

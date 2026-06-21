@@ -306,6 +306,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Skeleton template reuse audit | exact skeleton reuse is sparse (`58` unique templates across `60` books; only pairs `43/50` and `47/62` repeat), while type-sequence motifs repeat without length-template reuse | template-library promotion rejected |
 | Type motif library ledger | type motifs repeat, but a type library has `193` entries plus `60` assignments and still leaves `261` length/target residual records; full representation is `514` records, `+253` vs exact atlas | type motif library rejected |
 | Copy availability type exception ledger | target-dependent copy availability contains every copy (`208/208`) and forces `36` literals, leaving `17` optional literal exceptions, but the conditioned ledger is `278` records (`+17` vs exact atlas) and depends on target text | `AUDIT_ONLY` mechanical clue |
+| Target position derivation ledger | `target_start`, `remaining`, and op index are derived in `261/261` rows from cumulative lengths/book length, so target position is not an independent skeleton dependency | ledger sharpened / atlas retained |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -478,6 +479,7 @@ Primary sources:
 [skeleton_template_reuse_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md),
 [type_motif_library_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md),
 [copy_availability_type_exception_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md),
+[target_position_derivation_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

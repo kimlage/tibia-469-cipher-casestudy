@@ -797,6 +797,10 @@ target-dependent min-length copy availability contains every copy (`208/208`)
 and forces `36` literals, leaving `17` optional literal exceptions. It remains
 `AUDIT_ONLY` because it depends on target text and costs `278` conditioned
 skeleton records (`+17` versus the exact atlas).
+A target-position derivation ledger then sharpens the atlas accounting:
+`target_start`, `remaining`, and operation index derive in `261/261` rows from
+cumulative lengths/book length, so target position is not an independent
+skeleton dependency even though the `261` type/length atlas rows remain.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1020,6 +1024,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects exact skeleton template reuse as too sparse for a small library,
   rejects type-sequence motif libraries after full residual accounting,
   records target-dependent copy availability as an `AUDIT_ONLY` op-type clue,
+  derives target positions from cumulative lengths while retaining the atlas,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
