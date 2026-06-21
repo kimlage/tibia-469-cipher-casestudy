@@ -301,6 +301,9 @@ exogenous.
 - [scripts/95_full_source_policy_invariance_boundary.py](scripts/95_full_source_policy_invariance_boundary.py) - checks whether all-policy stability demotes source choice itself.
 - [reports/test_results/95_full_source_policy_invariance_boundary.md](reports/test_results/95_full_source_policy_invariance_boundary.md) - source-policy invariance boundary result.
 - [reports/test_results/95_full_source_policy_invariance_boundary.json](reports/test_results/95_full_source_policy_invariance_boundary.json) - structured source-policy invariance boundary ledger.
+- [scripts/96_full_source_canonical_policy_boundary.py](scripts/96_full_source_canonical_policy_boundary.py) - tests whether any static source tie policy can be frozen without cost.
+- [reports/test_results/96_full_source_canonical_policy_boundary.md](reports/test_results/96_full_source_canonical_policy_boundary.md) - canonical source-policy boundary result.
+- [reports/test_results/96_full_source_canonical_policy_boundary.json](reports/test_results/96_full_source_canonical_policy_boundary.json) - structured canonical source-policy boundary ledger.
 
 ## Boundary
 
@@ -319,6 +322,11 @@ exogenous.
   shows exact source-bearing signatures are invariant in only `48/175` cases.
   Operation shape is invariant in `175/175`, so the result is shape robustness
   with `127/175` pure source-choice variants, not source-dependency removal.
+- Canonical source-policy boundary: no static tie policy is cost-safe across the
+  `175` gate-95 cases. `earliest_source` and
+  `prefer_previous_end_then_earliest` are min-cost in `170/175`, but
+  `latest_source` is cheaper on five book-`63` cases; freezing a static policy
+  would require either paying bits or adding a selector.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

@@ -765,6 +765,10 @@ A source-policy invariance boundary then prevents overclaiming that result:
 operation shape is invariant in `175/175` cases, but exact source-bearing
 signatures are invariant in only `48/175`; the remaining `127/175` are pure
 source-choice variants. Source choice therefore remains a declared dependency.
+A canonical source-policy boundary then rejects freezing any static source tie
+policy: earliest and previous-end-preferred are min-cost in `170/175` cases, but
+latest-source is cheaper in five book-`63` cases, so a static policy needs either
+extra bits or a selector.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -977,6 +981,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `50/50` multi-cutoff-stable books per policy,
   checks the stronger source-policy invariance condition and retains source
   choice as declared dependency (`48/175` exact-signature invariant),
+  rejects a static canonical source tie policy as cost-unsafe,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
