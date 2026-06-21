@@ -1266,6 +1266,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   adds short prior path memory to those signatures and rejects that too: all
   `10/10` residual queries are out of support under the tested sequential
   signatures,
+  prices the remaining latent path-state fallback and rejects it as lookup
+  repackaging: the best valid model is the existing `79.361`-bit residual
+  lookup, while cheaper rows require a residual-site oracle,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

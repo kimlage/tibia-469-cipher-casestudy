@@ -79,6 +79,9 @@ OBSERVABLE_SIGNATURE_SUPPORT = (
 SEQUENTIAL_SIGNATURE_SUPPORT = (
     TEST_RESULTS / "56_sequential_signature_support_gate.json"
 )
+LATENT_PATH_STATE_BUDGET = (
+    TEST_RESULTS / "57_latent_path_state_budget_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -280,6 +283,11 @@ def main() -> None:
         if SEQUENTIAL_SIGNATURE_SUPPORT.exists()
         else None
     )
+    latent_path_state_budget = (
+        load_json(LATENT_PATH_STATE_BUDGET)
+        if LATENT_PATH_STATE_BUDGET.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -399,6 +407,8 @@ def main() -> None:
         assert_boundary(
             "sequential_signature_support_gate", sequential_signature_support
         )
+    if latent_path_state_budget is not None:
+        assert_boundary("latent_path_state_budget_gate", latent_path_state_budget)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -566,6 +576,11 @@ def main() -> None:
         None
         if sequential_signature_support is None
         else sequential_signature_support["summary"]
+    )
+    latent_path_state_budget_summary = (
+        None
+        if latent_path_state_budget is None
+        else latent_path_state_budget["summary"]
     )
 
     lines = [
@@ -2120,6 +2135,39 @@ def main() -> None:
                 "",
             ]
         )
+    if latent_path_state_budget_summary is not None:
+        lines.extend(
+            [
+                "## Latent Path-State Budget Gate",
+                "",
+                "Gate 57 prices what remains if we say the missing mechanism is",
+                "a latent path state. After gates 55 and 56 fail to find observable",
+                "support, a valid latent model still has to pay for the residual",
+                "sites and their stable labels. Cheaper variants are marked",
+                "invalid when they grant residual sites for free.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Residual decisions | `{latent_path_state_budget_summary['residual_count']}` |",
+                f"| Unsupported under gate 56 | `{latent_path_state_budget_summary['unsupported_residuals_under_gate56_best']}/{latent_path_state_budget_summary['residual_count']}` |",
+                f"| Distinct stable shape labels | `{latent_path_state_budget_summary['distinct_stable_shape_labels']}` |",
+                f"| Site bits | `{latent_path_state_budget_summary['site_bits']:.3f}` |",
+                f"| Label-order bits | `{latent_path_state_budget_summary['label_order_bits']:.3f}` |",
+                f"| Baseline lookup bits | `{latent_path_state_budget_summary['baseline_lookup_bits']:.3f}` |",
+                f"| Best valid model | `{latent_path_state_budget_summary['best_valid_model']}` |",
+                f"| Best valid net vs lookup | `{latent_path_state_budget_summary['best_valid_net_vs_lookup_bits']:.3f}` |",
+                f"| Best invalid/oracle model | `{latent_path_state_budget_summary['best_invalid_model']}` |",
+                f"| Best invalid/oracle net vs lookup | `{latent_path_state_budget_summary['best_invalid_net_vs_lookup_bits']:.3f}` |",
+                f"| Gate 48 best zero-FP site detector TP | `{latent_path_state_budget_summary['gate48_best_zero_fp_tp']}/{latent_path_state_budget_summary['residual_count']}` |",
+                "",
+                "No latent path-state budget is promoted. The best valid accounting",
+                "is the explicit residual shape lookup itself at `79.361` bits.",
+                "The apparently cheaper rows become cheaper only by granting the",
+                "residual sites or ignoring the failed residual-site detector, so",
+                "they repackage lookup rather than explaining generation.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2194,6 +2242,10 @@ def main() -> None:
             "Gate 56 adds short prior path memory to those candidate signatures",
             "and rejects that too: every residual query is out of support under",
             "the tested sequential signatures.",
+            "Gate 57 then prices a latent path-state fallback and rejects it",
+            "as lookup repackaging: the best valid model is exactly the",
+            "`79.361`-bit residual shape lookup, while cheaper rows require",
+            "a residual-site oracle.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2259,6 +2311,7 @@ def main() -> None:
             "- [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)",
             "- [Observable signature support gate](test_results/55_observable_signature_support_gate.md)",
             "- [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)",
+            "- [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)",
             "",
         ]
     )

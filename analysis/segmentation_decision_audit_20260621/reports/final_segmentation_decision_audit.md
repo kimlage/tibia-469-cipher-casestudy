@@ -1255,6 +1255,34 @@ matches and `0/10` supported residuals, with `10/10` out of
 support. Prefix/holdout likewise has no deterministic held-out
 residual match.
 
+## Latent Path-State Budget Gate
+
+Gate 57 prices what remains if we say the missing mechanism is
+a latent path state. After gates 55 and 56 fail to find observable
+support, a valid latent model still has to pay for the residual
+sites and their stable labels. Cheaper variants are marked
+invalid when they grant residual sites for free.
+
+| Diagnostic | Value |
+|---|---:|
+| Residual decisions | `10` |
+| Unsupported under gate 56 | `10/10` |
+| Distinct stable shape labels | `9` |
+| Site bits | `58.570` |
+| Label-order bits | `20.791` |
+| Baseline lookup bits | `79.361` |
+| Best valid model | `explicit_residual_shape_lookup` |
+| Best valid net vs lookup | `0.000` |
+| Best invalid/oracle model | `residual_site_oracle_labels_only` |
+| Best invalid/oracle net vs lookup | `-58.570` |
+| Gate 48 best zero-FP site detector TP | `3/10` |
+
+No latent path-state budget is promoted. The best valid accounting
+is the explicit residual shape lookup itself at `79.361` bits.
+The apparently cheaper rows become cheaper only by granting the
+residual sites or ignoring the failed residual-site detector, so
+they repackage lookup rather than explaining generation.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1327,6 +1355,10 @@ cells containing any deterministic match.
 Gate 56 adds short prior path memory to those candidate signatures
 and rejects that too: every residual query is out of support under
 the tested sequential signatures.
+Gate 57 then prices a latent path-state fallback and rejects it
+as lookup repackaging: the best valid model is exactly the
+`79.361`-bit residual shape lookup, while cheaper rows require
+a residual-site oracle.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1392,3 +1424,4 @@ or the stable projection as an oracle.
 - [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)
 - [Observable signature support gate](test_results/55_observable_signature_support_gate.md)
 - [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)
+- [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)
