@@ -14,6 +14,7 @@ TRACE = TEST_RESULTS / "01_segmentation_decision_trace.json"
 STRUCTURAL = TEST_RESULTS / "02_structural_segmentation_hypothesis_audit.json"
 DEPENDENCY = TEST_RESULTS / "04_parser_dependency_reduction_ledger.json"
 LITERAL_GAP = TEST_RESULTS / "05_literal_gap_boundary_audit.json"
+ONLINE_LITERAL = TEST_RESULTS / "06_online_literal_stop_rule_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -44,12 +45,15 @@ def main() -> None:
     structural = load_json(STRUCTURAL)
     dependency = load_json(DEPENDENCY) if DEPENDENCY.exists() else None
     literal_gap = load_json(LITERAL_GAP) if LITERAL_GAP.exists() else None
+    online_literal = load_json(ONLINE_LITERAL) if ONLINE_LITERAL.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
         assert_boundary("parser_dependency_reduction_ledger", dependency)
     if literal_gap is not None:
         assert_boundary("literal_gap_boundary_audit", literal_gap)
+    if online_literal is not None:
+        assert_boundary("online_literal_stop_rule_audit", online_literal)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -57,6 +61,7 @@ def main() -> None:
     dep_ledger = None if dependency is None else dependency["ledger"]
     greedy = None if dependency is None else dependency["full_greedy_parser_control"]
     gap_summary = None if literal_gap is None else literal_gap["summary"]
+    online_summary = None if online_literal is None else online_literal["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -187,6 +192,27 @@ def main() -> None:
                 "",
             ]
         )
+    if online_summary is not None:
+        best = online_summary["best_policy"]
+        lines.extend(
+            [
+                "## Online Literal Stop Rule",
+                "",
+                "| Rule | Result | Boundary |",
+                "|---|---:|---|",
+                f"| First confirmed max-copy local peak, window `{best['confirm_window']}` | `{best['followed_by_copy_hits']}/{best['followed_by_copy_total']}` followed-by-copy gaps | partial online clue |",
+                f"| Same rule plus book-end default | `{best['all_literal_gap_hits_with_book_end_default']}/{best['all_literal_gap_total']}` literal gaps | partial parser rule |",
+                "",
+                f"- Prequential cells: `{online_summary['prequential_cells']}`.",
+                f"- Selected policy matches suffix oracle in `{online_summary['prequential_selected_matches_oracle_cells']}/{online_summary['prequential_cells']}` cells.",
+                f"- Promotes source-free literal stop rule: `{online_summary['promotes_source_free_literal_stop_rule']}`.",
+                "",
+                "This reduces the literal-window blocker further: most starts are now",
+                "explained by an online local-peak rule, but four followed-by-copy gaps",
+                "remain exceptions.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -203,6 +229,7 @@ def main() -> None:
             "- [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)",
             "- [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)",
             "- [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)",
+            "- [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)",
             "",
         ]
     )

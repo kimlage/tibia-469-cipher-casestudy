@@ -99,6 +99,21 @@ often wait for a better next copy. But the explanation is still
 conditioned on the declared literal window; it does not derive that
 window source-free.
 
+## Online Literal Stop Rule
+
+| Rule | Result | Boundary |
+|---|---:|---|
+| First confirmed max-copy local peak, window `6` | `45/49` followed-by-copy gaps | partial online clue |
+| Same rule plus book-end default | `50/54` literal gaps | partial parser rule |
+
+- Prequential cells: `5`.
+- Selected policy matches suffix oracle in `3/5` cells.
+- Promotes source-free literal stop rule: `False`.
+
+This reduces the literal-window blocker further: most starts are now
+explained by an online local-peak rule, but four followed-by-copy gaps
+remain exceptions.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -113,3 +128,4 @@ target text or changing the skeleton/literal accounting.
 - [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)
 - [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)
 - [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)
+- [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)

@@ -864,6 +864,10 @@ inside each declared literal window, the stable boundary maximizes
 literal-offset plus next-copy length in `54/54` gaps. But first available match
 explains only `23/54`, and full-suffix best advance explains only `11/49`
 followed-by-copy gaps, so the literal window itself is still retained.
+An online stop-rule audit reduces that retained surface further: first confirmed
+max-copy local peak with confirmation window `6` predicts `45/49`
+followed-by-copy literal stops and `50/54` gaps with book-end default. The same
+policy/window is prefix-selected in `5/5` cells, but four exceptions remain.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

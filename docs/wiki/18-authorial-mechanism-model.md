@@ -468,6 +468,12 @@ literal-offset plus next-copy length in `54/54` gaps; first available match
 explains only `23/54`, and full-suffix best advance explains only `11/49`
 followed-by-copy gaps. The local boundary clue is real, but the literal window
 itself remains retained.
+An online literal stop rule audit then removes part of that retained window:
+the first confirmed local peak in available copy length, using confirmation
+window `6`, predicts `45/49` followed-by-copy literal stops and `50/54` gaps
+with the book-end default. Prefix selection chooses the same policy/window in
+`5/5` cells, but the rule still has four followed-by-copy exceptions and is not
+a source-free generator.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2136,6 +2142,7 @@ book generation, not row0 pair-cell placement.
 - [Structural segmentation hypothesis audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.md)
 - [Parser dependency reduction ledger](../../analysis/segmentation_decision_audit_20260621/reports/test_results/04_parser_dependency_reduction_ledger.md)
 - [Literal gap boundary audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/05_literal_gap_boundary_audit.md)
+- [Online literal stop rule audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/06_online_literal_stop_rule_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
