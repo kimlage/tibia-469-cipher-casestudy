@@ -1215,6 +1215,13 @@ best rule is target-adjacent and not decoder-valid, with TP/FP/FN `11/53/8`,
 F1 `0.265060`, and permutation-control `p=0.160000`. The residual copy-length
 boundary therefore still needs richer nonlocal parser state rather than another
 local stop heuristic.
+The active exception finite-state model gate then tests a slightly richer
+family: `231` KT-coded context models over online decoder-valid features. The
+best model uses only `source_previous_end` and costs `112.749463` bits after
+descriptor cost, which is `+17.943077` bits worse than the explicit
+exception-list baseline (`94.806385` bits), with permutation `p=0.638000`.
+Small finite-state context is therefore not a controlled replacement for the
+remaining exception list.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in

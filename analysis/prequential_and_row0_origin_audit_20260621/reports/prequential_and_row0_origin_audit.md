@@ -795,6 +795,11 @@ The stop-rule separability gate then asks whether the same `19` residual stop-be
 The best decoder-valid rule is weaker, and the permutation control does not make the observed best rule exceptional (`p=0.160000`). So no simple promotable stop rule explains the residual boundary; a future parser would need richer nonlocal state.
 See [63_active_exception_stop_rule_separability_gate.md](test_results/63_active_exception_stop_rule_separability_gate.md).
 
+### Active Exception Finite-State Model Gate
+
+A follow-up finite-state gate then tests compact KT-coded context models over online decoder-valid features for the same residual exception stream. It tests `231` context models. The best model uses `['source_previous_end']` and costs `112.749463` bits after descriptor cost, which is worse than the explicit exception-list baseline `94.806385` bits by `+17.943077` bits. Permutation controls are also not favorable (`p=0.638000`). So a small online finite-state context is not a controlled replacement for the residual exception list.
+See [64_active_exception_finite_state_model_gate.md](test_results/64_active_exception_finite_state_model_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -896,6 +901,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](test_results/47_row0_parallel_
 - The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.
 - The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.
 - The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.
+- The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

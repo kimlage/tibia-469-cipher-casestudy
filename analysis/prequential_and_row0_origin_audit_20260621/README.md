@@ -205,6 +205,9 @@ exogenous.
 - [scripts/63_active_exception_stop_rule_separability_gate.py](scripts/63_active_exception_stop_rule_separability_gate.py) - tests whether simple stop rules separate the remaining active target-max exceptions.
 - [reports/test_results/63_active_exception_stop_rule_separability_gate.md](reports/test_results/63_active_exception_stop_rule_separability_gate.md) - active exception stop-rule separability result.
 - [reports/test_results/63_active_exception_stop_rule_separability_gate.json](reports/test_results/63_active_exception_stop_rule_separability_gate.json) - structured active exception stop-rule separability ledger.
+- [scripts/64_active_exception_finite_state_model_gate.py](scripts/64_active_exception_finite_state_model_gate.py) - tests compact finite-state context models for the residual target-max exceptions.
+- [reports/test_results/64_active_exception_finite_state_model_gate.md](reports/test_results/64_active_exception_finite_state_model_gate.md) - active exception finite-state model result.
+- [reports/test_results/64_active_exception_finite_state_model_gate.json](reports/test_results/64_active_exception_finite_state_model_gate.json) - structured active exception finite-state ledger.
 
 ## Boundary
 
@@ -375,7 +378,10 @@ exogenous.
   gate then tests simple single-feature and pairwise conjunction rules over all
   `261` copy events. It finds `0` exact separators for the `19` residual
   boundaries; the best rule has F1 `0.265060`, many false positives, and is not
-  decoder-valid.
+  decoder-valid. A finite-state follow-up then tests `231` compact online
+  context models over decoder-valid features; the best costs `112.749463` bits,
+  which is `+17.943077` bits worse than an explicit exception list, with
+  permutation `p=0.638000`.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

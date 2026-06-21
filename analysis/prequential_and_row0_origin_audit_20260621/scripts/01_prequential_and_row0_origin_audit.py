@@ -277,6 +277,14 @@ ACTIVE_EXCEPTION_STOP_RULE_SEPARABILITY_GATE = (
     / "test_results"
     / "63_active_exception_stop_rule_separability_gate.json"
 )
+ACTIVE_EXCEPTION_FINITE_STATE_MODEL_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "64_active_exception_finite_state_model_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -608,6 +616,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_exception_stop_rule_separability_gate",
         active_exception_stop_rule_separability,
+    )
+    active_exception_finite_state_model = load_json(
+        ACTIVE_EXCEPTION_FINITE_STATE_MODEL_GATE
+    )
+    assert_analysis_boundary(
+        "active_exception_finite_state_model_gate",
+        active_exception_finite_state_model,
     )
 
     predictive = legacy["predictive_validation"]
@@ -961,6 +976,15 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_exception_stop_rule_separability["summary"],
             "decision": active_exception_stop_rule_separability["decision"],
         },
+        "active_exception_finite_state_model": {
+            "classification": active_exception_finite_state_model[
+                "classification"
+            ],
+            "source": rel(ACTIVE_EXCEPTION_FINITE_STATE_MODEL_GATE),
+            "scope": active_exception_finite_state_model["scope"],
+            "summary": active_exception_finite_state_model["summary"],
+            "decision": active_exception_finite_state_model["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -1014,6 +1038,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
             "active_residual_targetmax_resegmentation_status": "local_extend_trim_saturated_no_improvements",
             "active_exception_stop_rule_status": "simple_stop_rules_do_not_separate_residual_boundaries",
+            "active_exception_finite_state_status": "finite_state_contexts_do_not_replace_explicit_exception_list",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1083,6 +1108,7 @@ def render_markdown(
     active_copy_length_exception_topology_gate_link: str,
     active_residual_targetmax_resegmentation_gate_link: str,
     active_exception_stop_rule_separability_gate_link: str,
+    active_exception_finite_state_model_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1168,6 +1194,7 @@ def render_markdown(
         "summary"
     ]
     stop_rule = result["active_exception_stop_rule_separability"]["summary"]
+    finite_state = result["active_exception_finite_state_model"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2112,6 +2139,24 @@ def render_markdown(
             "a future parser would need richer nonlocal state.",
             f"See [63_active_exception_stop_rule_separability_gate.md]({active_exception_stop_rule_separability_gate_link}).",
             "",
+            "### Active Exception Finite-State Model Gate",
+            "",
+            "A follow-up finite-state gate then tests compact KT-coded context "
+            "models over online decoder-valid features for the same residual "
+            "exception stream. It tests "
+            f"`{finite_state['model_count']}` context models. The best model "
+            f"uses `{finite_state['best_model']['features']}` and costs "
+            f"`{finite_state['best_model']['total_bits']:.6f}` bits after "
+            "descriptor cost, which is worse than the explicit exception-list "
+            f"baseline `{finite_state['explicit_exception_list_bits']:.6f}` "
+            "bits by "
+            f"`{finite_state['best_model']['delta_vs_explicit_list_bits']:+.6f}` "
+            "bits. Permutation controls are also not favorable "
+            f"(`p={finite_state['permutation_control']['p_permuted_total_bits_le_observed']:.6f}`). "
+            "So a small online finite-state context is not a controlled "
+            "replacement for the residual exception list.",
+            f"See [64_active_exception_finite_state_model_gate.md]({active_exception_finite_state_model_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2222,6 +2267,7 @@ def render_markdown(
             "- The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.",
             "- The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.",
             "- The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.",
+            "- The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2388,6 +2434,9 @@ def main() -> None:
             ),
             active_exception_stop_rule_separability_gate_link=(
                 "63_active_exception_stop_rule_separability_gate.md"
+            ),
+            active_exception_finite_state_model_gate_link=(
+                "64_active_exception_finite_state_model_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2560,6 +2609,9 @@ def main() -> None:
             ),
             active_exception_stop_rule_separability_gate_link=(
                 "test_results/63_active_exception_stop_rule_separability_gate.md"
+            ),
+            active_exception_finite_state_model_gate_link=(
+                "test_results/64_active_exception_finite_state_model_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
