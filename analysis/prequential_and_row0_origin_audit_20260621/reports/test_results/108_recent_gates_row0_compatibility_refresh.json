@@ -1,0 +1,504 @@
+{
+  "case_reopened": false,
+  "classification": "recent_formula_gates_76_107_row0_unchanged",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "recent_advances_status": "book_formula_and_parser_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "row0_scoreboard_status": "unchanged_no_origin_formula_promoted",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "recent_formula_gates": [
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/79_unstable_parser_path_decomposition_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/80_boundary_policy_stability_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/81_boundary_instability_cost_decomposition_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/82_component_neutralized_path_stability_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/83_component_neutralized_residual_tradeoff_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/84_residual_literal_payload_neutralization_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/85_book49_residual_split_cause_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/86_global_item_literal_length_control_gate.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/87_stable_path_projection_boundary_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/88_decoder_side_rule_coverage_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/89_source_tiebreak_artifact_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/90_source_candidate_collapse_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/91_full_source_exposure_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/92_full_source_latest_multicutoff_probe.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.json",
+      "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.json"
+    ],
+    "row0_deep_provenance": "analysis/row0_origin_parallel_20260621/reports/test_results/154_row0_deep_provenance_audit.json",
+    "row0_final_report": "analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md",
+    "row0_next_frontier_report": "analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md",
+    "row0_paid_anchor": "analysis/row0_origin_parallel_20260621/reports/test_results/159_row0_paid_anchor_reduction_gate.json",
+    "row0_partial_worksheet": "analysis/row0_origin_parallel_20260621/reports/test_results/156_row0_partial_worksheet_model.json",
+    "row0_scoreboard": "analysis/row0_origin_parallel_20260621/reports/test_results/155_row0_improvement_scoreboard.json",
+    "row0_surface_exception": "analysis/row0_origin_parallel_20260621/reports/test_results/157_row0_surface_exception_focus.json"
+  },
+  "plaintext_claim": false,
+  "schema": "recent_gates_row0_compatibility_refresh.v1",
+  "summary": {
+    "criteria": {
+      "adds_new_cipsoft_or_authorial_provenance": false,
+      "explains_39_93_19_91_beyond_existing_surface_clue": false,
+      "only_improves_book_formula_assuming_row0": true,
+      "predicts_row0_labels_under_holdout": false,
+      "reduces_bits_below_row0_lookup_after_rule_or_anchor_cost": false
+    },
+    "current_compression_bound_bits": 8154.676268216349,
+    "deep_provenance_decision": "project_row0_provenance_partially_traced_but_cipsoft_origin_untraced",
+    "gate_count_checked": 32,
+    "gate_family_counts": {
+      "decoder_rule_and_source_policy_controls": 10,
+      "parser_validation_and_stability": 12,
+      "skeleton_dependency_and_type_ledger": 10
+    },
+    "gate_range_checked": [
+      76,
+      107
+    ],
+    "gates_checked": [
+      {
+        "classification": "cutoff60_sparse_suffix_source_length_parser_roundtrips",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 76,
+        "generation_explanation_status": "parser_implementation_progress_not_corpus_wide_promotion",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json"
+      },
+      {
+        "classification": "multi_cutoff_sparse_suffix_parser_roundtrips",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 77,
+        "generation_explanation_status": "predictive_parser_validation_strengthened_not_final_method",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json",
+        "total_raw_positive_book_evaluations": 175,
+        "total_roundtrip_book_evaluations": 175,
+        "total_suffix_book_evaluations": 175
+      },
+      {
+        "classification": "multi_cutoff_parser_paths_partially_stable",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 78,
+        "generation_explanation_status": "parser_mechanism_supported_but_path_instability_remains",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.json",
+        "stable_exact_path_book_count": 38,
+        "unstable_exact_path_book_count": 12
+      },
+      {
+        "classification": "unstable_parser_paths_decomposed",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 79,
+        "generation_explanation_status": "next_work_is_boundary_stability_not_micro_sweep",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/79_unstable_parser_path_decomposition_audit.json"
+      },
+      {
+        "classification": "simple_boundary_policies_not_promoted",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 80,
+        "generation_explanation_status": "boundary_selection_still_exogenous_to_parser_costs",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/80_boundary_policy_stability_gate.json"
+      },
+      {
+        "classification": "boundary_instability_driven_by_learned_cost_components",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 81,
+        "generation_explanation_status": "boundary_selection_still_cost_driven_not_rule_driven",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/81_boundary_instability_cost_decomposition_gate.json"
+      },
+      {
+        "classification": "component_neutralization_improves_path_stability",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 82,
+        "generation_explanation_status": "component_neutralization_tested_for_path_stability",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/82_component_neutralized_path_stability_gate.json"
+      },
+      {
+        "classification": "component_neutralization_tradeoff_localized",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 83,
+        "generation_explanation_status": "simplification_candidate_with_two_residual_books",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/83_component_neutralized_residual_tradeoff_audit.json"
+      },
+      {
+        "classification": "literal_payload_neutralization_improves_residual_stability",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 84,
+        "generation_explanation_status": "literal_payload_neutralization_tested_for_residuals",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/84_residual_literal_payload_neutralization_gate.json"
+      },
+      {
+        "classification": "book49_residual_split_explained_by_fixed_control",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 85,
+        "generation_explanation_status": "book49_residual_localized_no_formula_promotion",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/85_book49_residual_split_cause_audit.json"
+      },
+      {
+        "best_stable_exact_path_book_count": 50,
+        "classification": "global_item_literal_control_closes_path_stability",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 86,
+        "generation_explanation_status": "global_item_literal_controls_tested_after_book49_localization",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/86_global_item_literal_length_control_gate.json"
+      },
+      {
+        "classification": "stable_path_projection_boundary_only",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "parser_validation_and_stability",
+        "gate": 87,
+        "generation_explanation_status": "stable_encoder_path_projection_only",
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/87_stable_path_projection_boundary_audit.json"
+      },
+      {
+        "classification": "decoder_side_rule_coverage_insufficient",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 88,
+        "generation_explanation_status": "decoder_side_rule_coverage_insufficient",
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/88_decoder_side_rule_coverage_audit.json"
+      },
+      {
+        "classification": "source_canonicality_tiebreak_not_resolved",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 89,
+        "generation_explanation_status": "source_canonicality_not_promoted",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/89_source_tiebreak_artifact_audit.json"
+      },
+      {
+        "classification": "source_canonicality_candidate_collapse_artifact",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 90,
+        "generation_explanation_status": "source_canonicality_demoted_to_candidate_generation_artifact",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/90_source_candidate_collapse_audit.json"
+      },
+      {
+        "classification": "full_source_exposure_preserves_stability_with_non_earliest_sources",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 91,
+        "generation_explanation_status": "full_source_exposure_tested_no_formula_promotion",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/91_full_source_exposure_audit.json"
+      },
+      {
+        "classification": "full_source_latest_multicutoff_stable",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 92,
+        "generation_explanation_status": "full_source_latest_multicutoff_probe_only",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/92_full_source_latest_multicutoff_probe.json"
+      },
+      {
+        "classification": "full_source_all_policy_multicutoff_stable",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 93,
+        "generation_explanation_status": "full_source_all_policy_multicutoff_probe_only",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.json"
+      },
+      {
+        "classification": "full_source_all_policy_fivecutoff_stable",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 94,
+        "generation_explanation_status": "full_source_all_policy_fivecutoff_probe_only",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.json"
+      },
+      {
+        "classification": "full_source_policy_stable_but_source_variant",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 95,
+        "generation_explanation_status": "source_tie_policy_robust_but_source_dependency_retained",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.json"
+      },
+      {
+        "classification": "no_static_canonical_source_policy_cost_safe",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 96,
+        "generation_explanation_status": "static_canonical_tie_policy_rejected_source_dependency_retained",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.json"
+      },
+      {
+        "classification": "book_specific_policy_selector_audit_only",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "decoder_rule_and_source_policy_controls",
+        "gate": 97,
+        "generation_explanation_status": "book_specific_policy_selector_rejected",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.json"
+      },
+      {
+        "classification": "source_free_skeleton_exactly_invariant",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 98,
+        "generation_explanation_status": "source_free_skeleton_atlas_only",
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.json"
+      },
+      {
+        "classification": "exact_skeleton_dependency_ledger_atlas_only",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 99,
+        "generation_explanation_status": "dependency_ledger_improved_generator_not_promoted",
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json"
+      },
+      {
+        "classification": "skeleton_simple_rule_coverage_insufficient",
+        "compression_bound_status": "unchanged_8154_676268",
+        "copy_count": 208,
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 100,
+        "generation_explanation_status": "skeleton_rule_coverage_insufficient",
+        "literal_count": 53,
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "simple_rule_covers_skeleton": false,
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json"
+      },
+      {
+        "classification": "skeleton_template_reuse_sparse",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 101,
+        "generation_explanation_status": "template_reuse_insufficient_atlas_retained",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.json"
+      },
+      {
+        "classification": "type_motif_library_not_promoted",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 102,
+        "generation_explanation_status": "type_motif_library_rejected",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.json"
+      },
+      {
+        "classification": "copy_availability_type_exception_audit_only",
+        "compression_bound_status": "unchanged_8154_676268",
+        "copy_count": 208,
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 103,
+        "generation_explanation_status": "target_dependent_type_clue_audit_only",
+        "literal_count": 53,
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.json"
+      },
+      {
+        "classification": "target_position_derived_from_length_sequence",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 104,
+        "generation_explanation_status": "target_position_derived_but_skeleton_atlas_retained",
+        "promotes_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.json"
+      },
+      {
+        "classification": "optional_literal_exception_rule_audit_only",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 105,
+        "generation_explanation_status": "optional_literal_exception_rule_audit_only",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.json"
+      },
+      {
+        "classification": "prequential_optional_literal_exception_rule_not_promoted",
+        "compression_bound_status": "unchanged_8154_676268",
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 106,
+        "generation_explanation_status": "prequential_exception_rule_partial_not_promoted",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.json"
+      },
+      {
+        "classification": "operation_type_dependency_reduced_not_promoted",
+        "compression_bound_status": "unchanged_8154_676268",
+        "copy_count": 208,
+        "explicit_op_type_residual_after_rule": 3,
+        "family": "skeleton_dependency_and_type_ledger",
+        "gate": 107,
+        "generation_explanation_status": "op_type_dependency_reduced_generator_not_promoted",
+        "length_atlas_records_retained": 261,
+        "literal_count": 53,
+        "operation_count": 261,
+        "promotes_type_generator": false,
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.json"
+      }
+    ],
+    "global_item_literal_control": {
+      "best_stable_exact_path_book_count": 50,
+      "promotes_global_control": true
+    },
+    "key_gate_sources": {
+      "global_item_literal_control": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/86_global_item_literal_length_control_gate.json",
+      "multi_cutoff_parser_validation": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json",
+      "operation_type_dependency": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.json",
+      "path_stability": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.json",
+      "skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json"
+    },
+    "lookup_baseline_bits": 160.52070273483628,
+    "multi_cutoff_parser_validation": {
+      "parser_minus_same_policy_reprice_bits": -12.180051585133407,
+      "total_raw_positive_book_evaluations": 175,
+      "total_roundtrip_book_evaluations": 175,
+      "total_suffix_book_evaluations": 175
+    },
+    "operation_type_boundary": {
+      "explicit_op_type_fields_before_rule": 261,
+      "explicit_op_type_residual_after_rule": 3,
+      "length_atlas_records_retained": 261,
+      "operation_count": 261,
+      "promotes_type_generator": false
+    },
+    "paid_anchor_decision": "explicit_paid_anchor_model_does_not_beat_lookup",
+    "paid_anchor_full_pair_label_net_bits": -11.851749041416053,
+    "partial_worksheet_decision": "not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid",
+    "path_stability_boundary": {
+      "stable_exact_path_book_count": 38,
+      "unstable_exact_path_book_count": 12
+    },
+    "rare_singletons_explicit_pair_label_net_bits": 1.0658141036401503e-14,
+    "recent_advances_are_book_formula_or_parser_only": true,
+    "recent_advances_are_row0_integration": false,
+    "row0_changed": false,
+    "row0_origin_status": "row0_origin_exogenous_under_current_evidence",
+    "skeleton_rule_boundary": {
+      "best_copy_length_rule": {
+        "coverage": 0.2644230769230769,
+        "hits": 55,
+        "rule": "copy_length_is_remaining_book",
+        "total": 208
+      },
+      "best_length_rule": {
+        "coverage": 0.4444444444444444,
+        "hits": 116,
+        "rule": "length_gte_20",
+        "total": 261
+      },
+      "best_literal_length_rule": {
+        "coverage": 0.09433962264150944,
+        "hits": 5,
+        "rule": "literal_length_is_remaining_book",
+        "total": 53
+      },
+      "best_op_type_rule": {
+        "coverage": 0.7969348659003831,
+        "hits": 208,
+        "rule": "always_copy",
+        "total": 261
+      },
+      "simple_rule_covers_skeleton": false
+    },
+    "surface_clue_status": "surface_ordered_asymmetry_is_real_but_label_origin_unresolved"
+  },
+  "taxonomy": {
+    "AUDIT_ONLY": [
+      {
+        "boundary": "row0 unchanged",
+        "evidence": "parser/skeleton/type evidence strengthens the book-generation method while assuming row0",
+        "name": "recent_formula_gates_76_107"
+      }
+    ],
+    "BLOCKED_NEEDS_EXTERNAL_SOURCE": [
+      {
+        "evidence": "local project provenance is partially traced, but primary origin remains untraced",
+        "name": "cipsoft_or_authorial_row0_origin"
+      }
+    ],
+    "PROMOTED_MECHANICAL_CLUE": [
+      {
+        "boundary": "surface clue only; no row0 pair-label origin",
+        "evidence": "39 absent, 93 present, and 19/91 directed conflict",
+        "name": "ordered_surface_render_layer"
+      }
+    ],
+    "PROMOTED_ORIGIN_FORMULA": [],
+    "REJECTED_CONTROL": [
+      {
+        "evidence": "explicit pair+label anchor data is worse than lookup",
+        "name": "paid_anchor_reduction_gate",
+        "net_bits": -11.851749041416053
+      },
+      {
+        "best_length_rule": {
+          "coverage": 0.4444444444444444,
+          "hits": 116,
+          "rule": "length_gte_20",
+          "total": 261
+        },
+        "evidence": "source-free simple rules do not cover operation lengths or skeleton",
+        "name": "skeleton_simple_rule_coverage"
+      }
+    ],
+    "WEAK_CLUE": [
+      {
+        "boundary": "plausible worksheet shape, not promoted",
+        "evidence": "13 anchors reduce lookup before paying source/anchor cost",
+        "name": "partial_worksheet_model"
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}

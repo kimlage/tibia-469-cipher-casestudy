@@ -337,6 +337,12 @@ exogenous.
 - [scripts/107_operation_type_dependency_ledger.py](scripts/107_operation_type_dependency_ledger.py) - consolidates operation-type dependency after availability and exception-rule gates.
 - [reports/test_results/107_operation_type_dependency_ledger.md](reports/test_results/107_operation_type_dependency_ledger.md) - operation-type dependency ledger result.
 - [reports/test_results/107_operation_type_dependency_ledger.json](reports/test_results/107_operation_type_dependency_ledger.json) - structured operation-type dependency ledger.
+- [scripts/108_recent_gates_row0_compatibility_refresh.py](scripts/108_recent_gates_row0_compatibility_refresh.py) - refreshes the row0 compatibility check across gates 76-107.
+- [reports/test_results/108_recent_gates_row0_compatibility_refresh.md](reports/test_results/108_recent_gates_row0_compatibility_refresh.md) - recent-gates row0 compatibility refresh.
+- [reports/test_results/108_recent_gates_row0_compatibility_refresh.json](reports/test_results/108_recent_gates_row0_compatibility_refresh.json) - structured recent-gates row0 compatibility ledger.
+- [scripts/109_seed_primacy_integration_audit.py](scripts/109_seed_primacy_integration_audit.py) - integrates the final seed-primacy audit into the main prequential/row0 boundary.
+- [reports/test_results/109_seed_primacy_integration_audit.md](reports/test_results/109_seed_primacy_integration_audit.md) - seed-primacy integration audit.
+- [reports/test_results/109_seed_primacy_integration_audit.json](reports/test_results/109_seed_primacy_integration_audit.json) - structured seed-primacy integration ledger.
 
 ## Boundary
 
@@ -408,11 +414,22 @@ exogenous.
   rule also beats baseline in `4/4`. Train-selected rules still lag suffix
   oracles in some splits and retain target/length-atlas dependencies, so this is
   predictive support for the clue, not generator promotion.
+- Recent-gates row0 compatibility refresh: gates `76..107` all preserve
+  `row0_origin_status = unchanged_exogenous`. The interval strengthens the
+  parser/skeleton/type account of book generation, but it does not predict row0
+  labels under holdout, beat the paid row0 lookup baseline, explain `39`/`93`/
+  `19/91` beyond the existing surface clue, or add CipSoft/authorial
+  provenance.
 - Operation-type dependency ledger: with target copy availability and the
   length atlas allowed, explicit op-type dependency drops conceptually from
   `261` fields to `3` residual errors. Materialized type+length records are
   still `264` (`+3` vs the exact skeleton atlas), so this is dependency
   clarification rather than a new generator or bound.
+- Seed-primacy integration: the final seed front is incorporated as
+  `AUDIT_ONLY_COMPRESSION`. Operational books `0..9` are rejected as privileged
+  seeds under seed-only controls, posthoc high-coverage seed sets are recorded
+  as compression clues only, and prefix-trained seed selection remains partial
+  predictive signal rather than a promoted generator.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

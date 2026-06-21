@@ -813,6 +813,11 @@ An operation-type dependency ledger consolidates that boundary: `op_type` drops
 conceptually from `261` explicit fields to `3` residual errors, but the retained
 length atlas leaves `264` type+length records, so this is dependency
 clarification rather than a promoted generator.
+A recent-gates row0 compatibility refresh then checks gates `76..107` together:
+the parser/skeleton/type advances remain compatible with row0 being an accepted
+substrate, but they do not predict row0 labels under holdout, beat the paid row0
+lookup baseline, explain `39`/`93`/`19/91` beyond the existing surface clue, or
+add CipSoft/authorial provenance. The result is still `row0 unchanged`.
 A seed primacy audit rejects treating operational books `0..9` as a special
 mechanical seed set: they cover `8664/9567` non-seed digits, below random k=10
 median `9005`, while a better k=10 seed exists only posthoc. The result is
@@ -821,6 +826,11 @@ A prequential seed-selection audit preserves the useful part of that signal
 without overclaiming it: prefix-trained greedy seeds beat random median in
 `7/7` cells and p95 in `6/7`, but operational prefixes beat random median in
 only `1/7` and train-greedy still trails suffix-oracle posthoc seeds.
+A seed-primacy integration audit records the final boundary in the main
+prequential/row0 front: operational `0..9` is rejected as seed-privileged,
+posthoc high-coverage cores remain compression-only, prequential seed selection
+is partial but not promoted, and both row0 and the compression bound remain
+unchanged.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

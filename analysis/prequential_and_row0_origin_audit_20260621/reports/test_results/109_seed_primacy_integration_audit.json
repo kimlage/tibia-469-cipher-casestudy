@@ -1,0 +1,116 @@
+{
+  "case_reopened": false,
+  "classification": "seed_primacy_integrated_audit_only_compression",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "operational_0_9_status": "not_mechanically_privileged_seed",
+    "prequential_seed_status": "partial_predictive_signal_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_primacy_status": "audit_only_compression",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "final_seed_report": "analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md",
+    "prequential_seed_selection_audit": "analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.json",
+    "row0_refresh": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.json",
+    "seed_coverage_audit": "analysis/seed_primacy_audit_20260621/reports/test_results/01_seed_coverage_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "seed_primacy_integration_audit.v1",
+  "summary": {
+    "best_k10_posthoc": {
+      "copied_digits_explained": 9734,
+      "coverage_rate": 0.9752529806632602,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_books": [
+        7,
+        8,
+        9,
+        13,
+        17,
+        20,
+        25,
+        39,
+        54,
+        67
+      ],
+      "target_digits": 9981
+    },
+    "criteria": {
+      "adds_plaintext_or_translation": false,
+      "changes_compression_bound": false,
+      "identifies_compression_core_posthoc": true,
+      "predicts_or_derives_row0": false,
+      "promotes_authorial_seed_claim": false,
+      "promotes_generation_formula": false
+    },
+    "current_compression_bound_bits": 8154.676268216349,
+    "decision_links": {
+      "authorial_seed_claim": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+      "coverage_generation_explanation_status": "seed_primacy_not_promoted_posthoc_coverage_only",
+      "mechanical_primary_core_signal": "not_promoted_posthoc_alternatives_exist",
+      "prequential_generation_explanation_status": "prequential_seed_selection_not_promoted"
+    },
+    "final_report_classification": "AUDIT_ONLY_COMPRESSION",
+    "operational_0_9": {
+      "copied_digits_explained": 8664,
+      "coverage_rate": 0.9056130448416432,
+      "gain_vs_random_median_after_declaration_bits": -1132.7774803565917,
+      "random_control_percentile_copied_digits": 0.21,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "special_as_seed": false,
+      "target_digits": 9567
+    },
+    "prequential_seed_selection": {
+      "evaluated_cells": 7,
+      "max_train_greedy_oracle_gap_coverage": 0.028849169018501097,
+      "mean_train_greedy_oracle_gap_coverage": 0.016639636067573967,
+      "operational_beats_random_median_cells": 1,
+      "promotes_prequential_seed_generator": false,
+      "train_greedy_beats_random_median_cells": 7,
+      "train_greedy_beats_random_p95_cells": 6
+    },
+    "row0_changed": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_front_classification": "AUDIT_ONLY_COMPRESSION"
+  },
+  "taxonomy": {
+    "AUDIT_ONLY_COMPRESSION": [
+      {
+        "evidence": "best k=10 posthoc greedy seed covers 9734 digits but is selected after seeing the corpus",
+        "name": "posthoc_high_coverage_seed_sets"
+      },
+      {
+        "evidence": "prefix-trained seeds beat random median in 7/7 cells and p95 in 6/7, but do not close suffix-oracle gap",
+        "name": "prequential_train_greedy_seed_selection"
+      }
+    ],
+    "BLOCKED_NEEDS_EXTERNAL_SOURCE": [
+      {
+        "evidence": "no external CipSoft/in-game source identifies a seed set",
+        "name": "authorial_seed_claim"
+      }
+    ],
+    "PROMOTED_MECHANICAL_SEED_CLUE": [],
+    "REJECTED_SEED_HYPOTHESIS": [
+      {
+        "evidence": "8664 copied digits is below the random k=10 median 9005 and percentile 0.21",
+        "name": "operational_books_0_9_seed_primacy"
+      }
+    ],
+    "WEAK_SEED_CLUE": []
+  },
+  "translation_delta": "NONE"
+}

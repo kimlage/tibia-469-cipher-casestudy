@@ -396,6 +396,14 @@ ledger is still `264` records, `+3` versus the exact skeleton atlas, and source
 choices plus literal payload remain external. This clarifies dependency; it
 does not promote a generator or change the bound.
 
+A recent-gates row0 compatibility refresh then checks gates `76..107` as one
+unit against the independent row0 provenance front. The result is unchanged:
+parser validation, path-stability controls, decoder/source-policy controls,
+skeleton ledgers, and operation-type derivation improve or clarify the book
+formula only. They do not predict row0 labels under holdout, beat the paid row0
+lookup baseline, explain `39`/`93`/`19/91` beyond the existing surface clue, or
+add CipSoft/authorial provenance.
+
 A seed primacy audit then tests whether the usual operational seed assumption
 itself has mechanical privilege. Under seed-only exact-copy coverage, books
 `0..9` cover `8664/9567` non-seed digits and sit below the random k=10 median
@@ -411,6 +419,13 @@ beat the random median in `7/7` prefix/k cells and p95 random train seeds in
 random median in only `1/7`, and train-greedy seeds still trail suffix-oracle
 posthoc seeds. Seed selection remains audit-only rather than a promoted
 generator.
+
+A seed-primacy integration audit incorporates that final report into the main
+prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
+the better posthoc cores are recorded as compression/redundancy clues only, and
+the prequential seed signal is kept as partial validation rather than a
+generation formula. It changes neither row0 nor the `8154.676268` compression
+bound.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -2063,8 +2078,10 @@ book generation, not row0 pair-cell placement.
 - [Optional literal exception rule audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md)
 - [Prequential optional literal rule validation](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.md)
 - [Operation type dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.md)
+- [Recent gates row0 compatibility refresh](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
+- [Seed primacy integration audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

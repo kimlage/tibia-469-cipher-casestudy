@@ -278,6 +278,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Book-local source/length parser probe | active source/length DP executes on cutoff-60 books `67` and `60`, both roundtrip and beat raw digits at `125.866` total parser bits, but ties the same-policy reprice and leaves hard book `66` unresolved | parser path executable / no bound promotion |
 | Sparse hard-book source/length parser | sparse Dijkstra over reachable states roundtrips cutoff-60 hard book `66` in `0.033s`, with `41,832` transitions versus the `26,096,904` transition proxy (`623.9x` reduction) | hard local parser blocker removed / no bound promotion |
 | Post-parser row0 compatibility audit | gates 71-74 are checked against the row0 front; none predicts row0 labels under holdout, beats paid lookup, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / parser-only progress |
+| Recent-gates row0 compatibility refresh | gates `76..107` are checked against the row0 front; multi-cutoff parser validation, path-stability controls, decoder/source-policy controls, skeleton ledgers, and operation-type derivation all remain downstream from row0 | row0 unchanged / book formula only |
 | Cutoff-60 sparse suffix parser | sparse Dijkstra parses books `60..69` sequentially with `previous_copy_end` carried between books; `10/10` roundtrip, `10/10` raw-positive, `368.531807` parser bits, and `383,548` transitions | suffix parser executable / no bound promotion |
 | Multi-cutoff sparse suffix validation | cutoffs `10/20/35/50/60` all execute with frozen prefix counts; `175/175` suffix book evaluations roundtrip and beat raw, with parser better/tie/worse than same-policy reprice in `12/163/0` cells | predictive parser evidence strengthened / no bound promotion |
 | Multi-cutoff parser path stability | exact operation signatures are replayed for the same book across frozen cutoffs; `38/50` multi-cutoff books keep one exact path, while `12/50` vary and book `65` has `4` signatures | parser mechanism supported / path instability remains |
@@ -312,6 +313,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Operation type dependency ledger | allowing target copy availability plus the retained length atlas reduces explicit op-type dependency from `261` fields to `3` residual errors, but type+length records are still `264` (`+3` vs exact atlas) | op-type mostly derived / generator not promoted |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
+| Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -488,8 +490,10 @@ Primary sources:
 [optional_literal_exception_rule_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md),
 [prequential_optional_literal_rule_validation.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.md),
 [operation_type_dependency_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.md),
+[recent_gates_row0_compatibility_refresh.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
+[seed_primacy_integration_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),
