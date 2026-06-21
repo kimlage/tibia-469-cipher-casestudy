@@ -30,6 +30,7 @@ CONDITIONAL_REPAIR = TEST_RESULTS / "18_conditional_repair_classifier_audit.json
 TWO_STAGE_REPAIR = TEST_RESULTS / "19_two_stage_conditional_repair_audit.json"
 POST_REPAIR_ORACLE = TEST_RESULTS / "20_post_repair_residual_oracle_audit.json"
 RESIDUAL_FEATURE = TEST_RESULTS / "21_post_repair_residual_feature_audit.json"
+BRANCH_CONTINUATION = TEST_RESULTS / "22_residual_branch_continuation_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -96,6 +97,9 @@ def main() -> None:
     residual_feature = (
         load_json(RESIDUAL_FEATURE) if RESIDUAL_FEATURE.exists() else None
     )
+    branch_continuation = (
+        load_json(BRANCH_CONTINUATION) if BRANCH_CONTINUATION.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -134,6 +138,8 @@ def main() -> None:
         assert_boundary("post_repair_residual_oracle_audit", post_repair_oracle)
     if residual_feature is not None:
         assert_boundary("post_repair_residual_feature_audit", residual_feature)
+    if branch_continuation is not None:
+        assert_boundary("residual_branch_continuation_audit", branch_continuation)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -178,6 +184,9 @@ def main() -> None:
     )
     residual_feature_summary = (
         None if residual_feature is None else residual_feature["summary"]
+    )
+    branch_continuation_summary = (
+        None if branch_continuation is None else branch_continuation["summary"]
     )
 
     lines = [
@@ -728,14 +737,45 @@ def main() -> None:
                 "",
             ]
         )
+    if branch_continuation_summary is not None:
+        lines.extend(
+            [
+                "## Residual Branch Continuation Control",
+                "",
+                "Gate 22 tests the next path-state hypothesis: maybe the",
+                "stable residual operation is selected by how the active",
+                "parser continues after a forced first branch. Non-oracle",
+                "objectives may select only observable local branches; the",
+                "stable projection is used only as the evaluation label.",
+                "",
+                "| Objective | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---|",
+                f"| Oracle stable-prefix diagnostic | `{branch_continuation_summary['oracle_residual_hits']}/{branch_continuation_summary['residual_decision_count']}` | `{branch_continuation_summary['oracle_clean_false_changes']}` | label-only upper bound |",
+                f"| Best non-oracle `{branch_continuation_summary['best_non_oracle_objective']}` | `{branch_continuation_summary['best_non_oracle_residual_hits']}/{branch_continuation_summary['residual_decision_count']}` | `{branch_continuation_summary['best_non_oracle_clean_false_changes']}` | rejected |",
+                "",
+                f"- Residual stable operations available as observable candidates: `{branch_continuation_summary['residual_stable_observable_candidates']}/{branch_continuation_summary['residual_decision_count']}`.",
+                f"- Clean controls: `{branch_continuation_summary['clean_control_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{branch_continuation_summary['prequential_zero_clean_false_change_cells']}/{branch_continuation_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{branch_continuation_summary['prequential_cover_all_test_residual_cells']}/{branch_continuation_summary['prequential_cells']}`.",
+                "",
+                "The branch grammar is broad enough to include every stable",
+                "residual operation, but simple continuation objectives still",
+                "fail: the best non-oracle objective repairs only part of the",
+                "residual set and changes already-correct controls. The missing",
+                "mechanism is therefore not just a first-branch objective over",
+                "operation count, literal mass, or copied mass.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy or",
-            "a single residual feature flag. It is a richer path/state",
-            "segmentation account for why the parser waits, copies, or",
-            "understops at the remaining mixed residual sites, or a source-free",
+            "a single residual feature flag, and not a simple first-branch",
+            "continuation objective. It is a richer path/state segmentation",
+            "account for why the parser waits, copies, or understops at the",
+            "remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -763,6 +803,7 @@ def main() -> None:
             "- [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)",
             "- [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)",
             "- [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)",
+            "- [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)",
             "",
         ]
     )

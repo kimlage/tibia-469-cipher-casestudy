@@ -929,6 +929,10 @@ observable predicate catches `6/10` residuals but also fires on `13` clean
 control decisions, while the best zero-false-positive predicate catches only
 `1/10`. The remaining segmentation blocker is path/state structure, not a
 single residual flag.
+A residual branch continuation audit then tests whether simple first-branch
+consequences explain the same choices. They do not: all `10/10` stable residual
+operations are available as observable branches, but the best non-oracle
+objective catches only `6/10` and changes `20` clean controls.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

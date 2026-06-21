@@ -427,12 +427,38 @@ the same signature fires on already-correct parser decisions.
 The remaining blocker therefore remains a richer path/state
 segmentation rule rather than a single residual predicate.
 
+## Residual Branch Continuation Control
+
+Gate 22 tests the next path-state hypothesis: maybe the
+stable residual operation is selected by how the active
+parser continues after a forced first branch. Non-oracle
+objectives may select only observable local branches; the
+stable projection is used only as the evaluation label.
+
+| Objective | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---|
+| Oracle stable-prefix diagnostic | `10/10` | `0` | label-only upper bound |
+| Best non-oracle `balanced_ops_literals` | `6/10` | `20` | rejected |
+
+- Residual stable operations available as observable candidates: `10/10`.
+- Clean controls: `224`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+The branch grammar is broad enough to include every stable
+residual operation, but simple continuation objectives still
+fail: the best non-oracle objective repairs only part of the
+residual set and changes already-correct controls. The missing
+mechanism is therefore not just a first-branch objective over
+operation count, literal mass, or copied mass.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
-a single residual feature flag. It is a richer path/state
-segmentation account for why the parser waits, copies, or
-understops at the remaining mixed residual sites, or a source-free
+a single residual feature flag, and not a simple first-branch
+continuation objective. It is a richer path/state segmentation
+account for why the parser waits, copies, or understops at the
+remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -460,3 +486,4 @@ or the stable projection as an oracle.
 - [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)
 - [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)
 - [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)
+- [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)

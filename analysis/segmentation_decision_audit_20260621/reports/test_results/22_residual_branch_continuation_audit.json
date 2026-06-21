@@ -1,0 +1,5314 @@
+{
+  "case_reopened": false,
+  "classification": "residual_branch_continuation_objectives_rejected",
+  "clean_control_sample_rows": [
+    {
+      "active_op": {
+        "length": 5,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 10,
+      "branch_count": 25,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 1595,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 47,
+            "source": 1595,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 94,
+            "source": 1595,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 95,
+            "source": 1595,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 2
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 5,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 276,
+        "source": 0,
+        "target_start": 5,
+        "type": "copy"
+      },
+      "book": 10,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 276,
+            "source": 0,
+            "target_start": 5,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 1,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 1
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 0,
+            "target_start": 5,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 138,
+            "source": 0,
+            "target_start": 5,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 275,
+            "source": 0,
+            "target_start": 5,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 5,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 2
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 276,
+        "source": 0,
+        "target_start": 5,
+        "type": "copy"
+      },
+      "target_start": 5
+    },
+    {
+      "active_op": {
+        "length": 6,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 11,
+      "branch_count": 19,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 6,
+          "suffix_exact": true,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 14,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 13,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 14,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 15,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 16,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 23,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 17,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 24,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 18,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 25,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 6,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 7,
+        "source": 1334,
+        "target_start": 6,
+        "type": "copy"
+      },
+      "book": 11,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 7,
+            "source": 1334,
+            "target_start": 6,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 5,
+          "suffix_exact": true,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 1334,
+            "target_start": 6,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 6,
+            "source": 1334,
+            "target_start": 6,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 14,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 14,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 17,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 6,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 18,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 7,
+        "source": 1334,
+        "target_start": 6,
+        "type": "copy"
+      },
+      "target_start": 6
+    },
+    {
+      "active_op": {
+        "length": 29,
+        "source": 833,
+        "target_start": 13,
+        "type": "copy"
+      },
+      "book": 11,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 29,
+            "source": 833,
+            "target_start": 13,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 4,
+          "suffix_exact": true,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 833,
+            "target_start": 13,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 14,
+            "source": 833,
+            "target_start": 13,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 28,
+            "source": 833,
+            "target_start": 13,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 11,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 12,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 13,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 29,
+        "source": 833,
+        "target_start": 13,
+        "type": "copy"
+      },
+      "target_start": 13
+    },
+    {
+      "active_op": {
+        "length": 7,
+        "source": null,
+        "target_start": 42,
+        "type": "literal"
+      },
+      "book": 11,
+      "branch_count": 18,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 3,
+          "suffix_exact": true,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 11,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 12,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 12,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 13,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 14,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 14,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 15,
+            "source": null,
+            "target_start": 42,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 3
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 7,
+        "source": null,
+        "target_start": 42,
+        "type": "literal"
+      },
+      "target_start": 42
+    },
+    {
+      "active_op": {
+        "length": 30,
+        "source": 1349,
+        "target_start": 49,
+        "type": "copy"
+      },
+      "book": 11,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 30,
+            "source": 1349,
+            "target_start": 49,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 1349,
+            "target_start": 49,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 15,
+            "source": 1349,
+            "target_start": 49,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 29,
+            "source": 1349,
+            "target_start": 49,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 49,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 3
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 30,
+        "source": 1349,
+        "target_start": 49,
+        "type": "copy"
+      },
+      "target_start": 49
+    },
+    {
+      "active_op": {
+        "length": 58,
+        "source": 862,
+        "target_start": 79,
+        "type": "copy"
+      },
+      "book": 11,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 58,
+            "source": 862,
+            "target_start": 79,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 1,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 1
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 862,
+            "target_start": 79,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 29,
+            "source": 862,
+            "target_start": 79,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 57,
+            "source": 862,
+            "target_start": 79,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 79,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 2
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 58,
+        "source": 862,
+        "target_start": 79,
+        "type": "copy"
+      },
+      "target_start": 79
+    },
+    {
+      "active_op": {
+        "length": 2,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 12,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 13,
+          "suffix_exact": true,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 171,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 6,
+            "source": 171,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 14
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 23,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 24,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 25,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 26,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 27,
+          "suffix_op_count": 13
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 2,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 19,
+        "source": 314,
+        "target_start": 2,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 19,
+            "source": 314,
+            "target_start": 2,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 12,
+          "suffix_exact": true,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 314,
+            "target_start": 2,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 9,
+            "source": 314,
+            "target_start": 2,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 18,
+            "source": 314,
+            "target_start": 2,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 23,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 24,
+          "suffix_op_count": 13
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 2,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 25,
+          "suffix_op_count": 13
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 19,
+        "source": 314,
+        "target_start": 2,
+        "type": "copy"
+      },
+      "target_start": 2
+    },
+    {
+      "active_op": {
+        "length": 12,
+        "source": 853,
+        "target_start": 21,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 21,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 12,
+            "source": 853,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 11,
+          "suffix_exact": true,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 11
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 853,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 6,
+            "source": 853,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 11,
+            "source": 853,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 11
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 23,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 24,
+          "suffix_op_count": 12
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 25,
+          "suffix_op_count": 12
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 12,
+        "source": 853,
+        "target_start": 21,
+        "type": "copy"
+      },
+      "target_start": 21
+    },
+    {
+      "active_op": {
+        "length": 4,
+        "source": null,
+        "target_start": 33,
+        "type": "literal"
+      },
+      "book": 12,
+      "branch_count": 19,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 10,
+          "suffix_exact": true,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 11
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 11
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 21,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 23,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 33,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 24,
+          "suffix_op_count": 10
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 4,
+        "source": null,
+        "target_start": 33,
+        "type": "literal"
+      },
+      "target_start": 33
+    },
+    {
+      "active_op": {
+        "length": 10,
+        "source": 12,
+        "target_start": 37,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 19,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 10,
+            "source": 12,
+            "target_start": 37,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 9,
+          "suffix_exact": true,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 12,
+            "target_start": 37,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 9,
+            "source": 12,
+            "target_start": 37,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 17,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 17,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 17,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 18,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 37,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 10
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 10,
+        "source": 12,
+        "target_start": 37,
+        "type": "copy"
+      },
+      "target_start": 37
+    },
+    {
+      "active_op": {
+        "length": 9,
+        "source": null,
+        "target_start": 47,
+        "type": "literal"
+      },
+      "book": 12,
+      "branch_count": 21,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 8,
+          "suffix_exact": true,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 17,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 12,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 18,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 13,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 19,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 14,
+            "source": null,
+            "target_start": 47,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 20,
+          "suffix_op_count": 8
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 9,
+        "source": null,
+        "target_start": 47,
+        "type": "literal"
+      },
+      "target_start": 47
+    },
+    {
+      "active_op": {
+        "length": 14,
+        "source": 446,
+        "target_start": 56,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 14,
+            "source": 446,
+            "target_start": 56,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 7,
+          "suffix_exact": true,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 446,
+            "target_start": 56,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 7,
+            "source": 446,
+            "target_start": 56,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 13,
+            "source": 446,
+            "target_start": 56,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 11,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 56,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 12,
+          "suffix_op_count": 8
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 14,
+        "source": 446,
+        "target_start": 56,
+        "type": "copy"
+      },
+      "target_start": 56
+    },
+    {
+      "active_op": {
+        "length": 12,
+        "source": 207,
+        "target_start": 70,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 23,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 12,
+            "source": 207,
+            "target_start": 70,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 6,
+          "suffix_exact": true,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 207,
+            "target_start": 70,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 13,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 6,
+            "source": 207,
+            "target_start": 70,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 12,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 11,
+            "source": 207,
+            "target_start": 70,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 18,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 70,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 18,
+          "suffix_op_count": 6
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 12,
+        "source": 207,
+        "target_start": 70,
+        "type": "copy"
+      },
+      "target_start": 70
+    },
+    {
+      "active_op": {
+        "length": 4,
+        "source": null,
+        "target_start": 82,
+        "type": "literal"
+      },
+      "book": 12,
+      "branch_count": 23,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 5,
+          "suffix_exact": true,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 102,
+            "target_start": 82,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 10,
+            "source": 102,
+            "target_start": 82,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 11,
+            "source": 102,
+            "target_start": 82,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 82,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 4,
+        "source": null,
+        "target_start": 82,
+        "type": "literal"
+      },
+      "target_start": 82
+    },
+    {
+      "active_op": {
+        "length": 13,
+        "source": 413,
+        "target_start": 86,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 22,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 13,
+            "source": 413,
+            "target_start": 86,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 4,
+          "suffix_exact": true,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 413,
+            "target_start": 86,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 6,
+            "source": 413,
+            "target_start": 86,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 12,
+            "source": 413,
+            "target_start": 86,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 86,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 15,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 13,
+        "source": 413,
+        "target_start": 86,
+        "type": "copy"
+      },
+      "target_start": 86
+    },
+    {
+      "active_op": {
+        "length": 31,
+        "source": 1304,
+        "target_start": 99,
+        "type": "copy"
+      },
+      "book": 12,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 31,
+            "source": 1304,
+            "target_start": 99,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 3,
+          "suffix_exact": true,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 1304,
+            "target_start": 99,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 15,
+            "source": 1304,
+            "target_start": 99,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 30,
+            "source": 1304,
+            "target_start": 99,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 99,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 4
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 31,
+        "source": 1304,
+        "target_start": 99,
+        "type": "copy"
+      },
+      "target_start": 99
+    },
+    {
+      "active_op": {
+        "length": 2,
+        "source": null,
+        "target_start": 130,
+        "type": "literal"
+      },
+      "book": 12,
+      "branch_count": 3,
+      "branches": [
+        {
+          "is_active": true,
+          "is_stable": true,
+          "label": "active_parser+observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 130,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 130,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 130,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 1
+        }
+      ],
+      "drift_class": null,
+      "kind": "clean_control",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 2,
+        "source": null,
+        "target_start": 130,
+        "type": "literal"
+      },
+      "target_start": 130
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "residual_branch_continuation_objectives_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "branch_continuation_objectives_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "post_repair_residual_feature_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/21_post_repair_residual_feature_audit.json"
+  },
+  "objective_scoreboard": [
+    {
+      "clean_false_changes": 0,
+      "clean_hits": 224,
+      "clean_total": 224,
+      "objective": "oracle_max_stable_prefix",
+      "residual_hits": 10,
+      "residual_miss_books": [],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 179,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 45,
+        "observable_immediate_copy+stable_projection_oracle": 7,
+        "observable_literal_stop+stable_projection_oracle": 3
+      },
+      "total_hits": 234,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 20,
+      "clean_hits": 204,
+      "clean_total": 224,
+      "objective": "balanced_ops_literals",
+      "residual_hits": 6,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21
+      ],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 175,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 29,
+        "observable_immediate_copy": 18,
+        "observable_immediate_copy+stable_projection_oracle": 5,
+        "observable_literal_stop": 6,
+        "observable_literal_stop+stable_projection_oracle": 1
+      },
+      "total_hits": 210,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 20,
+      "clean_hits": 204,
+      "clean_total": 224,
+      "objective": "max_suffix_copy_digits",
+      "residual_hits": 5,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        57
+      ],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 174,
+        "active_parser+observable_literal_stop": 1,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 30,
+        "observable_immediate_copy": 21,
+        "observable_immediate_copy+stable_projection_oracle": 5,
+        "observable_literal_stop": 3
+      },
+      "total_hits": 209,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 20,
+      "clean_hits": 204,
+      "clean_total": 224,
+      "objective": "min_suffix_literals",
+      "residual_hits": 5,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        57
+      ],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 174,
+        "active_parser+observable_literal_stop": 1,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 30,
+        "observable_immediate_copy": 21,
+        "observable_immediate_copy+stable_projection_oracle": 5,
+        "observable_literal_stop": 3
+      },
+      "total_hits": 209,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 155,
+      "clean_hits": 69,
+      "clean_total": 224,
+      "objective": "max_suffix_copy_count",
+      "residual_hits": 4,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        57
+      ],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 40,
+        "active_parser+observable_literal_stop": 1,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 29,
+        "observable_immediate_copy": 156,
+        "observable_immediate_copy+stable_projection_oracle": 4,
+        "observable_literal_stop": 4
+      },
+      "total_hits": 73,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 174,
+      "clean_hits": 50,
+      "clean_total": 224,
+      "objective": "min_suffix_ops",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "residual_total": 10,
+      "selected_branch_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 48,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 2,
+        "observable_literal_stop": 184
+      },
+      "total_hits": 50,
+      "total_total": 234
+    }
+  ],
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_objective": "balanced_ops_literals",
+      "oracle_test_residual_hits": 6,
+      "oracle_test_total_hits": 150,
+      "selected_matches_oracle_total_hits": false,
+      "selected_objective": "min_suffix_literals",
+      "test_clean_false_changes": 13,
+      "test_residual_hits": 5,
+      "test_residual_total": 8,
+      "test_total": 163,
+      "test_total_hits": 147,
+      "train_total": 71,
+      "train_total_hits": 62
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_objective": "balanced_ops_literals",
+      "oracle_test_residual_hits": 5,
+      "oracle_test_total_hits": 121,
+      "selected_matches_oracle_total_hits": false,
+      "selected_objective": "min_suffix_literals",
+      "test_clean_false_changes": 11,
+      "test_residual_hits": 4,
+      "test_residual_total": 5,
+      "test_total": 130,
+      "test_total_hits": 118,
+      "train_total": 104,
+      "train_total_hits": 91
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_objective": "balanced_ops_literals",
+      "oracle_test_residual_hits": 3,
+      "oracle_test_total_hits": 81,
+      "selected_matches_oracle_total_hits": false,
+      "selected_objective": "min_suffix_literals",
+      "test_clean_false_changes": 8,
+      "test_residual_hits": 2,
+      "test_residual_total": 3,
+      "test_total": 88,
+      "test_total_hits": 79,
+      "train_total": 146,
+      "train_total_hits": 130
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_objective": "balanced_ops_literals",
+      "oracle_test_residual_hits": 2,
+      "oracle_test_total_hits": 47,
+      "selected_matches_oracle_total_hits": false,
+      "selected_objective": "min_suffix_literals",
+      "test_clean_false_changes": 4,
+      "test_residual_hits": 1,
+      "test_residual_total": 2,
+      "test_total": 50,
+      "test_total_hits": 45,
+      "train_total": 184,
+      "train_total_hits": 164
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_objective": "min_suffix_literals",
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 19,
+      "selected_matches_oracle_total_hits": true,
+      "selected_objective": "balanced_ops_literals",
+      "test_clean_false_changes": 1,
+      "test_residual_hits": 0,
+      "test_residual_total": 0,
+      "test_total": 20,
+      "test_total_hits": 19,
+      "train_total": 214,
+      "train_total_hits": 191
+    }
+  ],
+  "residual_decision_rows": [
+    {
+      "active_op": {
+        "length": 27,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 14,
+      "branch_count": 19,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 39,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 8,
+          "suffix_exact": true,
+          "suffix_literal_digits": 47,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 27,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 42,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 42,
+          "suffix_op_count": 11
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 18,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 42,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 37,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 47,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 38,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 47,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 40,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 48,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 41,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 48,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 42,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 48,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 50,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 53,
+          "suffix_op_count": 6
+        }
+      ],
+      "drift_class": "literal_understop",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 39,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 8,
+        "source": 473,
+        "target_start": 164,
+        "type": "copy"
+      },
+      "book": 16,
+      "branch_count": 9,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 3,
+          "suffix_exact": true,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_immediate_copy",
+          "op": {
+            "length": 8,
+            "source": 473,
+            "target_start": 164,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 473,
+            "target_start": 164,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 7,
+            "source": 473,
+            "target_start": 164,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 164,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 1
+        }
+      ],
+      "drift_class": "copy_started_inside_stable_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 1,
+        "source": null,
+        "target_start": 164,
+        "type": "literal"
+      },
+      "target_start": 164
+    },
+    {
+      "active_op": {
+        "length": 3,
+        "source": null,
+        "target_start": 21,
+        "type": "literal"
+      },
+      "book": 20,
+      "branch_count": 24,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 10,
+            "source": 180,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 180,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 9,
+            "source": 180,
+            "target_start": 21,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 21,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 6
+        }
+      ],
+      "drift_class": "internal_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 10,
+        "source": 180,
+        "target_start": 21,
+        "type": "copy"
+      },
+      "target_start": 21
+    },
+    {
+      "active_op": {
+        "length": 7,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 21,
+      "branch_count": 26,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 9,
+            "source": 197,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 3,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 197,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 8,
+            "source": 197,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 4
+        }
+      ],
+      "drift_class": "book_start_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 9,
+        "source": 197,
+        "target_start": 0,
+        "type": "copy"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 1,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 26,
+      "branch_count": 22,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 11,
+            "source": 3054,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 4,
+          "suffix_exact": true,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 4
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 3054,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 10,
+            "source": 3054,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 5
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 16,
+          "suffix_op_count": 5
+        }
+      ],
+      "drift_class": "book_start_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 11,
+        "source": 3054,
+        "target_start": 0,
+        "type": "copy"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 5,
+        "source": null,
+        "target_start": 105,
+        "type": "literal"
+      },
+      "book": 34,
+      "branch_count": 13,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 5,
+            "source": 183,
+            "target_start": 105,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 10,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 105,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 11,
+          "suffix_op_count": 2
+        }
+      ],
+      "drift_class": "internal_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 5,
+        "source": 183,
+        "target_start": 105,
+        "type": "copy"
+      },
+      "target_start": 105
+    },
+    {
+      "active_op": {
+        "length": 7,
+        "source": null,
+        "target_start": 0,
+        "type": "literal"
+      },
+      "book": 39,
+      "branch_count": 24,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 5,
+            "source": 2520,
+            "target_start": 0,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 3,
+          "suffix_exact": true,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 8,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 9,
+            "source": null,
+            "target_start": 0,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 2
+        }
+      ],
+      "drift_class": "book_start_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 5,
+        "source": 2520,
+        "target_start": 0,
+        "type": "copy"
+      },
+      "target_start": 0
+    },
+    {
+      "active_op": {
+        "length": 1,
+        "source": null,
+        "target_start": 62,
+        "type": "literal"
+      },
+      "book": 45,
+      "branch_count": 25,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 8,
+            "source": 2850,
+            "target_start": 62,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 2850,
+            "target_start": 62,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 3,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 7,
+            "source": 2850,
+            "target_start": 62,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 1,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 2,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 7,
+            "source": null,
+            "target_start": 62,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        }
+      ],
+      "drift_class": "internal_copy_missed_as_literal",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 8,
+        "source": 2850,
+        "target_start": 62,
+        "type": "copy"
+      },
+      "target_start": 62
+    },
+    {
+      "active_op": {
+        "length": 45,
+        "source": 2757,
+        "target_start": 67,
+        "type": "copy"
+      },
+      "book": 55,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_immediate_copy+stable_projection_oracle",
+          "op": {
+            "length": 44,
+            "source": 2757,
+            "target_start": 67,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 2,
+          "suffix_exact": true,
+          "suffix_literal_digits": 0,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_immediate_copy",
+          "op": {
+            "length": 45,
+            "source": 2757,
+            "target_start": 67,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 2
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 5,
+            "source": 2757,
+            "target_start": 67,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_immediate_copy",
+          "op": {
+            "length": 22,
+            "source": 2757,
+            "target_start": 67,
+            "type": "copy"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 4,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 5,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 2,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 6,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 3,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 7,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 4,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 8,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 5,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 9,
+          "suffix_op_count": 3
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 6,
+            "source": null,
+            "target_start": 67,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 10,
+          "suffix_op_count": 3
+        }
+      ],
+      "drift_class": "copy_length_drift_same_source",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 44,
+        "source": 2757,
+        "target_start": 67,
+        "type": "copy"
+      },
+      "target_start": 67
+    },
+    {
+      "active_op": {
+        "length": 17,
+        "source": null,
+        "target_start": 69,
+        "type": "literal"
+      },
+      "book": 57,
+      "branch_count": 20,
+      "branches": [
+        {
+          "is_active": false,
+          "is_stable": true,
+          "label": "observable_literal_stop+stable_projection_oracle",
+          "op": {
+            "length": 28,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 6,
+          "suffix_exact": true,
+          "suffix_literal_digits": 32,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": true,
+          "is_stable": false,
+          "label": "active_parser+observable_literal_stop",
+          "op": {
+            "length": 17,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 27,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 1,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 27,
+          "suffix_op_count": 9
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 11,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 22,
+          "suffix_op_count": 10
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 18,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 27,
+          "suffix_op_count": 8
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 23,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 32,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 24,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 32,
+          "suffix_op_count": 7
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 29,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 33,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 30,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 34,
+          "suffix_op_count": 6
+        },
+        {
+          "is_active": false,
+          "is_stable": false,
+          "label": "observable_literal_stop",
+          "op": {
+            "length": 31,
+            "source": null,
+            "target_start": 69,
+            "type": "literal"
+          },
+          "stable_prefix_match_ops": 0,
+          "suffix_exact": false,
+          "suffix_literal_digits": 35,
+          "suffix_op_count": 6
+        }
+      ],
+      "drift_class": "literal_understop",
+      "kind": "residual_first_drift",
+      "stable_candidate_observable": true,
+      "stable_op": {
+        "length": 28,
+        "source": null,
+        "target_start": 69,
+        "type": "literal"
+      },
+      "target_start": 69
+    }
+  ],
+  "schema": "residual_branch_continuation_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "declared_literal_windows_granted": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "stable_projection_used_as_label_only": true,
+    "target_text_required": true
+  },
+  "summary": {
+    "active_classifier": "if_peak_len_le5_then_skip_to_next_peak_ge5",
+    "best_non_oracle_clean_false_changes": 20,
+    "best_non_oracle_objective": "balanced_ops_literals",
+    "best_non_oracle_residual_hits": 6,
+    "clean_control_count": 224,
+    "clean_stable_observable_candidates": 224,
+    "interpretation": "Gate 22 tests whether residual choices become mechanical when candidate first operations are scored by their active-parser continuation. Stable projection is used only as the scoring label; non-oracle objectives may select only observable branches.",
+    "objective_count": 6,
+    "oracle_clean_false_changes": 0,
+    "oracle_residual_hits": 10,
+    "prequential_cells": 5,
+    "prequential_cover_all_test_residual_cells": 1,
+    "prequential_selected_matches_oracle_cells": 1,
+    "prequential_zero_clean_false_change_cells": 0,
+    "promotes_branch_continuation_rule": false,
+    "residual_decision_count": 10,
+    "residual_stable_observable_candidates": 10
+  },
+  "translation_delta": "NONE"
+}

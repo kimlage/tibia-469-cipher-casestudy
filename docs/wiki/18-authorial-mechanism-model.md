@@ -559,6 +559,12 @@ only `6/10` residuals while firing on `13` clean control decisions, and the best
 zero-false-positive predicate captures only `1/10`. The next segmentation
 blocker is therefore not a single missed-copy/understop feature flag, but a
 richer path/state account.
+A residual branch continuation audit then tests a first version of that
+path-state idea. The observable branch grammar can express all `10/10` stable
+residual operations, and an oracle stable-prefix score chooses all of them, but
+the best non-oracle continuation objective (`balanced_ops_literals`) chooses
+only `6/10` while changing `20` clean controls. Simple branch consequences over
+operation count, literal mass, or copied mass are therefore rejected.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2243,6 +2249,7 @@ book generation, not row0 pair-cell placement.
 - [Two-stage conditional repair audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/19_two_stage_conditional_repair_audit.md)
 - [Post-repair residual oracle audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/20_post_repair_residual_oracle_audit.md)
 - [Post-repair residual feature audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/21_post_repair_residual_feature_audit.md)
+- [Residual branch continuation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
