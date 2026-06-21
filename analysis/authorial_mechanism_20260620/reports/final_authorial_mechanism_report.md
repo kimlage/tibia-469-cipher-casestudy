@@ -625,5 +625,9 @@ Generated audits in this directory should be treated as the current state:
   beats the random train-set mean, but one random inventory exceeds it
   (`p(random >= observed)=0.1538`). This keeps the recipe signal predictive but
   rejects numeric order as a promoted authorial generation order.
+- `129_online_deterministic_reparse_compile`: compiles that deterministic
+  online parser into a full-corpus formula. It roundtrips `70/70` and lowers
+  `compression_bound` from `8558.667` to `8343.062` bits (`-215.605`) without
+  changing row0 or opening a semantic route.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

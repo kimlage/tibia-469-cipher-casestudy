@@ -591,6 +591,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   but not all random inventories (`p(random >= observed)=0.1538`). The reparse
   signal remains predictive, but numeric order is not promoted as an authorial
   generation order.
+- deterministic online reparse compilation is now covered by
+  [`129_online_deterministic_reparse_compile.py`](scripts/129_online_deterministic_reparse_compile.py);
+  the same parser becomes a full-corpus formula, roundtrips `70/70`, and lowers
+  `compression_bound` from `8558.667` to `8343.062` bits (`-215.605`), with no
+  row0 or semantic claim.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

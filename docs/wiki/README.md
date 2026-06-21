@@ -390,6 +390,9 @@ suffixes keep large positive gains.
 The train-set control keeps that boundary honest: numeric prefix training beats
 the random train-set mean at cutoff `50`, but does not beat every random
 inventory, so numeric order is not promoted.
+The online deterministic reparse compile turns that parser into a full-corpus
+formula, lowering the bound to `8343.062` with `70/70` roundtrip; it still makes
+no row0 or semantic claim.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

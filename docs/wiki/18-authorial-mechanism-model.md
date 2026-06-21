@@ -95,8 +95,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_minaddr_repair2_formula_469` | `8569.7` | `2.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469` | `8561.8` | `7.9` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469` | `8558.7` | `3.1` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_formula_469` | `8343.1` | `215.6` |
 
-The `8558.7` row is the current `compression_bound`, not a final authorial
+The `8343.1` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -875,6 +876,11 @@ beats the random train-set mean, but one random inventory exceeds it
 (`p(random >= observed)=0.1538`). The copy/reference mechanism remains
 predictive; numeric order is not promoted as an authorial generation order.
 
+The online deterministic reparse compile then applies the same parser to the
+full corpus as a deterministic formula. It roundtrips `70/70` and lowers the
+bound from `8558.667` to `8343.062` bits, but it is still mechanical only:
+row0 origin and semantics are unchanged.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1149,6 +1155,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
+- [Online deterministic reparse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.md)
 
 ## Boundary
 
@@ -1166,8 +1173,9 @@ contextual copy-to-literal repair plus one minaddr local literal-to-copy repair,
 one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
 copy-length prior and final `alpha=1`, plus a declared item-type prior split at
-book `6` with split-only item-type coding, as the current strongest
-copy/reference fabrication bound at roughly `8558.7` bits.
+book `6` with split-only item-type coding, plus the deterministic online
+reparse compile, as the current strongest copy/reference fabrication bound at
+roughly `8343.1` bits.
 Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address

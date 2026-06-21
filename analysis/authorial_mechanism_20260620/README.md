@@ -14,10 +14,9 @@ books.
 The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
-bound is the adaptive bounded copy-length sequential LZ formula with a fixed
-book-midpoint copy-length context, `alpha=1`, declared item-type split at book
-`6`, and split-only item-type coding at roughly `8558.7` bits. Treat this as
-`compression_bound`, not as a final authorial method.
+bound is the deterministic online reparse formula compiled from the adaptive
+bounded copy-length sequential LZ family at roughly `8343.1` bits. Treat this
+as `compression_bound`, not as a final authorial method.
 
 ## Gates
 
@@ -333,6 +332,10 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 - `scripts/128_prequential_recipe_reparse_trainset_controls.py` - tests
   whether the deterministic suffix reparse is specific to numeric prefix
   training or also appears with random same-size training inventories.
+- `scripts/129_online_deterministic_reparse_compile.py` - compiles the
+  deterministic online parser into a full-corpus formula and promotes it only
+  if it beats the active split-only bound with `70/70` roundtrip and no
+  row0/semantic claim.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
