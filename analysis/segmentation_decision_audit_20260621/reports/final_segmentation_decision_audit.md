@@ -1045,6 +1045,34 @@ features do not identify the residual sites cleanly enough to
 make the residual-gated ranker source-free; the apparent
 saving remains lookup-dependent.
 
+## Book Skeleton Alignment Gate
+
+Gate 49 tests a broader book-level parser hypothesis: perhaps
+the remaining residual `(source,length)` decisions are selected
+by alignment to operation skeletons from exact books, rather
+than by local features or a residual-site detector.
+
+| Diagnostic | Value |
+|---|---:|
+| Configurations | `27` |
+| Exact skeleton books | `50` |
+| Best family | `full_edit_type_only` |
+| Best k | `5` |
+| Best residual unique-branch hits | `0/10` |
+| Best residual label hits | `0/10` |
+| Best clean false changes | `211` |
+| Non-unique branch predictions | `113` |
+| Prequential cover-all-residual cells | `0/4` |
+| Shuffle p(>= observed) | `1.000` |
+
+No book-skeleton alignment parser is promoted. The best full-fit
+alignment gets `0/10` residual unique-branch hits and `0/10`
+residual type/length label hits, while changing `211` clean
+controls. Prefix/holdout also gets `0` residual unique-branch
+hits in every split with held-out residuals. Whole-book skeleton
+similarity therefore does not remove the remaining source/length
+dependency.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1086,6 +1114,10 @@ win requires granting the residual-site lookup first.
 Gate 48 tests that missing site detector and rejects it: best
 full-fit rule is only `6/10` residuals with `6` false positives,
 and no prefix/holdout residual cell covers all residuals.
+Gate 49 then tests book-level skeleton alignment and rejects it
+more sharply: best full-fit alignment gets `0/10` residual
+unique-branch hits, `0/10` residual type/length hits, and
+`211` clean false changes.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1143,3 +1175,4 @@ or the stable projection as an oracle.
 - [Branch rank position audit](test_results/46_branch_rank_position_audit.md)
 - [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)
 - [Residual site detector gate](test_results/48_residual_site_detector_gate.md)
+- [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)

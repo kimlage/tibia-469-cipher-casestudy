@@ -1242,6 +1242,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   granting residual sites first,
   rejects observable residual-site detection (`4356` rules; best `6/10` with
   `6` false positives; `0/4` holdout cells cover all residuals),
+  rejects book-level skeleton alignment as well (`27` configs; best `0/10`
+  residual unique-branch hits, `0/10` residual type/length hits, and `211`
+  clean false changes),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

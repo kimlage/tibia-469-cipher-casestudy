@@ -284,6 +284,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Branch rank position audit | `14` observable branch orderings are tested; best top-1 ranker gets `6/10` residuals but changes `20` clean controls, and best top-3 coverage is `8/10` | weak rank signal / no parser rule |
 | Branch rank exception cost gate | pricing `balanced_ops_literals` against the `79.361`-bit residual lookup shows global ranker+corrections is `+96.497` bits worse; residual-gated ranker is `-4.684` bits only after granting residual-site lookup | rank signal audit-only / not source-free |
 | Residual site detector gate | `1196` observable branch-ambiguity predicates and `4356` single/pair rules are tested; best rule is `6/10` with `6` false positives, best zero-FP rule covers `3/10`, and prefix/holdout covers all residuals in `0/4` cells | residual-gated ranker remains lookup-dependent |
+| Book skeleton alignment gate | `27` whole-book skeleton alignment configs over `50` exact books are tested; best config gets `0/10` residual unique-branch hits, `0/10` residual type/length hits, and `211` clean false changes | book-level skeleton parser rejected |
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Recent formula row0 compatibility audit | partial-boundary book-formula improvements lower the downstream bound to `8154.676268`, but no gate predicts row0 labels under holdout, beats row0 lookup after costs, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / book formula only |
@@ -585,6 +586,7 @@ Primary sources:
 [context_nearest_branch_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/33_context_nearest_branch_audit.md),
 [structural_signal_consensus_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/34_structural_signal_consensus_audit.md),
 [structural_vote_residual_decomposition.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/35_structural_vote_residual_decomposition.md),
+[book_skeleton_alignment_gate.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/49_book_skeleton_alignment_gate.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),

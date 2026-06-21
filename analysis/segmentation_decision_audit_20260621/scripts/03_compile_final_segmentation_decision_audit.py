@@ -63,6 +63,7 @@ BRANCH_RANK_EXCEPTION_COST = (
     TEST_RESULTS / "47_branch_rank_exception_cost_gate.json"
 )
 RESIDUAL_SITE_DETECTOR = TEST_RESULTS / "48_residual_site_detector_gate.json"
+BOOK_SKELETON_ALIGNMENT = TEST_RESULTS / "49_book_skeleton_alignment_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -226,6 +227,11 @@ def main() -> None:
         if RESIDUAL_SITE_DETECTOR.exists()
         else None
     )
+    book_skeleton_alignment = (
+        load_json(BOOK_SKELETON_ALIGNMENT)
+        if BOOK_SKELETON_ALIGNMENT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -322,6 +328,8 @@ def main() -> None:
         assert_boundary("branch_rank_exception_cost_gate", branch_rank_exception_cost)
     if residual_site_detector is not None:
         assert_boundary("residual_site_detector_gate", residual_site_detector)
+    if book_skeleton_alignment is not None:
+        assert_boundary("book_skeleton_alignment_gate", book_skeleton_alignment)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -451,6 +459,11 @@ def main() -> None:
         None
         if residual_site_detector is None
         else residual_site_detector["summary"]
+    )
+    book_skeleton_alignment_summary = (
+        None
+        if book_skeleton_alignment is None
+        else book_skeleton_alignment["summary"]
     )
 
     lines = [
@@ -1755,6 +1768,39 @@ def main() -> None:
                 "",
             ]
         )
+    if book_skeleton_alignment_summary is not None:
+        lines.extend(
+            [
+                "## Book Skeleton Alignment Gate",
+                "",
+                "Gate 49 tests a broader book-level parser hypothesis: perhaps",
+                "the remaining residual `(source,length)` decisions are selected",
+                "by alignment to operation skeletons from exact books, rather",
+                "than by local features or a residual-site detector.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Configurations | `{book_skeleton_alignment_summary['config_count']}` |",
+                f"| Exact skeleton books | `{book_skeleton_alignment_summary['exact_book_count']}` |",
+                f"| Best family | `{book_skeleton_alignment_summary['best_family']}` |",
+                f"| Best k | `{book_skeleton_alignment_summary['best_k']}` |",
+                f"| Best residual unique-branch hits | `{book_skeleton_alignment_summary['best_residual_unique_branch_hits']}/{book_skeleton_alignment_summary['best_residual_total']}` |",
+                f"| Best residual label hits | `{book_skeleton_alignment_summary['best_residual_label_hits']}/{book_skeleton_alignment_summary['best_residual_total']}` |",
+                f"| Best clean false changes | `{book_skeleton_alignment_summary['best_clean_false_changes']}` |",
+                f"| Non-unique branch predictions | `{book_skeleton_alignment_summary['best_non_unique_branch_predictions']}` |",
+                f"| Prequential cover-all-residual cells | `{book_skeleton_alignment_summary['prequential_cover_all_residual_cells']}/{book_skeleton_alignment_summary['prequential_cells_with_residuals']}` |",
+                f"| Shuffle p(>= observed) | `{book_skeleton_alignment_summary['shuffle_p_ge_observed']:.3f}` |",
+                "",
+                "No book-skeleton alignment parser is promoted. The best full-fit",
+                "alignment gets `0/10` residual unique-branch hits and `0/10`",
+                "residual type/length label hits, while changing `211` clean",
+                "controls. Prefix/holdout also gets `0` residual unique-branch",
+                "hits in every split with held-out residuals. Whole-book skeleton",
+                "similarity therefore does not remove the remaining source/length",
+                "dependency.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1798,6 +1844,10 @@ def main() -> None:
             "Gate 48 tests that missing site detector and rejects it: best",
             "full-fit rule is only `6/10` residuals with `6` false positives,",
             "and no prefix/holdout residual cell covers all residuals.",
+            "Gate 49 then tests book-level skeleton alignment and rejects it",
+            "more sharply: best full-fit alignment gets `0/10` residual",
+            "unique-branch hits, `0/10` residual type/length hits, and",
+            "`211` clean false changes.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1855,6 +1905,7 @@ def main() -> None:
             "- [Branch rank position audit](test_results/46_branch_rank_position_audit.md)",
             "- [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)",
             "- [Residual site detector gate](test_results/48_residual_site_detector_gate.md)",
+            "- [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)",
             "",
         ]
     )
