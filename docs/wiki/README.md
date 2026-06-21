@@ -783,6 +783,12 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A generation-boundary closure audit then consolidates the current state:
+book order, book lengths, operation skeleton, copy sources, and literal payload
+all remain non-generated under their respective gates (`0/5` promoted
+generators). The materialized-unit floor is `593` (`1` order + `70` lengths +
+`261` skeleton records + `208` source fields + `53` literal chunks), so the
+state is a robust parser/atlas boundary, not a source-free generator.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and

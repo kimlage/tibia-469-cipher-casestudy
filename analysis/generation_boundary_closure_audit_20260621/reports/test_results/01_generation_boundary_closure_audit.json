@@ -1,0 +1,95 @@
+{
+  "case_reopened": false,
+  "classification": "generation_boundary_open_no_generator_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "generation_boundary_open_no_generator_promoted",
+    "next_work_status": "derive_operation_skeleton_or_find_stronger_target_stream_account",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "dependency_rows": [
+    {
+      "best_generator_signal": "numeric survives full formula controls",
+      "best_negative_control": "prefix order-specific cutoffs = 0; frontier perfect in 10 orders including 6 random",
+      "count": 1,
+      "dependency": "book_order",
+      "promoted_generator": false,
+      "status": "canonical_retained_not_generated"
+    },
+    {
+      "best_generator_signal": "active residual ledger 1030 -> 566 bits",
+      "best_negative_control": "best source-free policy 14/70 exact; holdout cover-all 0/6",
+      "count": 70,
+      "dependency": "book_lengths",
+      "promoted_generator": false,
+      "status": "declared_residuals"
+    },
+    {
+      "best_generator_signal": "exact skeleton invariant across exposed-source policy/cutoff cases",
+      "best_negative_control": "best grammar 3/60 books and 14/261 ops",
+      "count": 261,
+      "dependency": "operation_skeleton",
+      "promoted_generator": false,
+      "status": "atlas_retained"
+    },
+    {
+      "best_generator_signal": "target-aware controls hit 208/208",
+      "best_negative_control": "best decoder-visible policy 8/208; context holdout cover-all 0/5",
+      "count": 208,
+      "dependency": "copy_sources",
+      "promoted_generator": false,
+      "status": "declared_after_skeleton_and_payload"
+    },
+    {
+      "best_generator_signal": "266 digits across 53 chunks; 103 digits are in chunks seen before",
+      "best_negative_control": "paid context +44.588 bits vs raw; holdout any-exact chunks 0/5",
+      "count": 53,
+      "dependency": "literal_payload",
+      "promoted_generator": false,
+      "status": "declared_after_skeleton"
+    }
+  ],
+  "inputs": {
+    "book_length_gate": "analysis/book_length_generation_audit_20260621/reports/test_results/02_book_length_generation_gate.json",
+    "book_order_gate": "analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.json",
+    "copy_source_gate": "analysis/copy_source_generation_audit_20260621/reports/test_results/03_copy_source_context_gate.json",
+    "literal_gate": "analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.json",
+    "row0_compatibility_refresh": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.json",
+    "skeleton_gate": "analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.json",
+    "skeleton_ledger": "analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/01_hard_boundary_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "generation_boundary_closure_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "consolidates_existing_generation_gates": true,
+    "does_not_introduce_new_formula": true,
+    "does_not_search_plaintext": true,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "blocker_rank": [
+      "operation_skeleton",
+      "book_lengths",
+      "literal_payload",
+      "copy_sources",
+      "book_order"
+    ],
+    "book_length_status": "external_after_generation_gate",
+    "book_order_status": "canonical_numeric_order_retained_not_generated",
+    "compression_bound_status": "unchanged_8154_676268",
+    "copy_source_status": "external_after_context_gate",
+    "dependency_count": 5,
+    "interpretation": "The current work has a robust parser/atlas boundary, not a source-free generator. The exact operation skeleton remains the first blocker; book lengths, literal payload, and copy sources remain declared dependencies even after their local gates.",
+    "literal_payload_status": "external_after_context_gate",
+    "materialized_unit_definition": "book_order + 70 book lengths + 261 skeleton records + 208 source fields + 53 literal chunks",
+    "next_blocker": "operation_skeleton",
+    "promoted_generator_count": 0,
+    "row0_status": "unchanged_exogenous",
+    "skeleton_status": "source_free_skeleton_grammar_rejected",
+    "total_materialized_units_floor": 593
+  },
+  "translation_delta": "NONE"
+}

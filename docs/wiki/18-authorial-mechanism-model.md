@@ -359,6 +359,12 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A generation boundary closure audit then consolidates the current post-gate
+state across book order, book lengths, operation skeleton, copy sources, and
+literal payload. No dependency has a promoted generator (`0/5`), and the
+materialized-unit floor is `593`: `1` order, `70` lengths, `261` skeleton
+records, `208` source fields, and `53` literal chunks. This is the cleanest
+current summary of the boundary: robust parser/atlas, not source-free generator.
 A book order generation audit then consolidates the scattered order controls
 against the current boundary. Numeric order remains the compact canonical order
 used by the formula: full-formula and descriptor-cost gates promote no
@@ -2489,6 +2495,8 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Final generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/final_generation_boundary_closure_audit.md)
+- [Generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.md)
 - [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
 - [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
