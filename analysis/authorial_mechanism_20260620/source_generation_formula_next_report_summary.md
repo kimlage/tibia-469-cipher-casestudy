@@ -687,6 +687,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   (`family min frozen gain=6.269` bits), but random same-size train controls
   are usually stronger than numeric prefixes, so this is component-level
   predictive validation, not recipe discovery or authorial order evidence.
+- active reparse state-boundary auditing is now covered by
+  [`146_active_reparse_state_boundary_audit.py`](scripts/146_active_reparse_state_boundary_audit.py);
+  the current copy-source default makes exact active reparse path-dependent on
+  previous copy source plus length. The old reparse DP state
+  `(book_pos, previous_item)` is no longer sufficient; a direct state proxy
+  reaches `302879952` for cutoff 10 and a max book multiplier of `38968.0`.
+  The remaining recipe externality is therefore localized to a pruned/cached
+  path-dependent parser or a source-cost simplification.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -705,5 +705,12 @@ Generated audits in this directory should be treated as the current state:
   public-bookcase family holdouts. Random same-size train controls are usually
   stronger than numeric prefixes, so this strengthens component validation but
   does not prove recipe discovery or authorial book order.
+- `146_active_reparse_state_boundary_audit`: explains why exact active reparse
+  is harder than the earlier recipe-reparse audit. The active copy-source
+  default depends on the previous copy source plus previous copy length, so the
+  parser state must carry previous-copy state; the old `(book_pos,
+  previous_item)` state is insufficient. The audit records state proxies up to
+  `302879952` for cutoff 10 and keeps this as the next recipe-discovery
+  implementation boundary.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

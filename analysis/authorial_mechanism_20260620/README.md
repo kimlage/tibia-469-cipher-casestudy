@@ -387,6 +387,10 @@ authorial method: family/bookcase holdouts still have failures.
   bookcase family holdouts all beat uniform, while random same-size train
   controls show this is not numeric-order evidence and recipe discovery remains
   unproved.
+- `scripts/146_active_reparse_state_boundary_audit.py` - localizes the active
+  recipe-discovery blocker: exact reparse with the current copy-source model
+  must carry previous-copy source/length state, producing a large state proxy
+  rather than the old `(book_pos, previous_item)` DP state.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -974,6 +974,13 @@ family holdout; the weakest family frozen gain is still `6.269` bits. Random
 same-size train controls are usually stronger than numeric prefixes, so this
 strengthens component-level predictive validation without proving recipe
 discovery or authorial book order.
+The active reparse state-boundary audit then localizes the recipe-discovery
+blocker. The current copy-source default depends on the previous copy source
+plus previous copy length, so exact active reparse must carry
+`(book_pos, previous_item, previous_copy_source, previous_copy_length)` rather
+than the old `(book_pos, previous_item)` state. The largest cutoff-10 state
+proxy is `302879952`, and the max book-level multiplier is `38968.0`; no active
+reparse parser is promoted yet.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1277,6 +1284,7 @@ book generation, not row0 pair-cell placement.
 - [Current literal payload profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md)
 - [Copy source distance model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md)
 - [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
+- [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

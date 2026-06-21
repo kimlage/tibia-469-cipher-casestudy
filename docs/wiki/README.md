@@ -439,6 +439,11 @@ uniform in every tested prefix, block, and public-bookcase family holdout, but
 random same-size train controls are usually stronger than numeric prefixes.
 This strengthens component validation while leaving recipe discovery, row0
 origin, and semantics unchanged.
+The active reparse state-boundary audit then localizes the recipe-discovery
+blocker: the current copy-source default is path-dependent on previous copy
+source plus length. Exact active reparse needs an expanded previous-copy state,
+with a cutoff-10 state proxy of `302879952`, so no active reparse parser is
+promoted yet.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

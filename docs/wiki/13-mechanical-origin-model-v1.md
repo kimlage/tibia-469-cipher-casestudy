@@ -188,6 +188,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Current literal-payload profile audit | old order-1 profile does not transfer; order-1 is `+95.968` full-corpus and `+28.609` aggregate frozen-prefix bits worse | order-2 retained |
 | Copy source distance model audit | backward-distance source coding is decodable but the replacement is `+25.551` bits worse than active absolute-source default/exception | distance rejected |
 | Current active prequential profile audit | active learned streams cover `7157.317/8177.317` bits and beat uniform on all tested prefix, block, and public-bookcase family holdouts; random same-size train controls are usually stronger than numeric prefixes | component validation strengthened / recipe discovery not proved |
+| Active reparse state-boundary audit | active copy-source default is path-dependent on previous copy source/length; exact reparse needs expanded state and reaches a cutoff-10 state proxy of `302879952` | recipe-discovery blocker localized |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
 | Literal payload structural context audit | literal-run offset, run-length bucket, book half/parity, and bounded combinations with `prev2` all over-split the payload stream | rejected context / no new bound |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
@@ -329,6 +330,7 @@ Primary sources:
 [current_literal_payload_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md),
 [copy_source_distance_model_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md),
 [current_active_prequential_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md),
+[active_reparse_state_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md),
 [literal_payload_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md),
 [literal_payload_structural_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
