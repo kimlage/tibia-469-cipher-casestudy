@@ -150,6 +150,14 @@ instead of dense dynamic programming, book `66` roundtrips in `0.033s` with
 This moves the source/length parser toward a real generator, but still does not
 promote a corpus-wide parser or a new compression bound.
 
+The post-parser row0 compatibility audit checks the dependency refresh,
+parser-feasibility audit, two-book parser probe, and sparse hard-book gate
+against the independent row0 provenance front. None of those advances predicts
+row0 labels under holdout, beats paid lookup, explains `39`/`93`/`19/91`
+beyond the existing surface clue, or adds CipSoft/authorial provenance. The
+row0 conclusion is therefore unchanged: parser progress belongs to the book
+formula, not to the origin of the 10x10 table.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

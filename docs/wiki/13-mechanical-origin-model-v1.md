@@ -277,6 +277,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Final source/length parser feasibility | previous-end state compression keeps every tested book-level end-state proxy below `1,000,000`, but the copy-transition proxy totals `1,966,897,365` transitions (`23045.1x` old DP), with hardest books `53`, `51`, `35`, and `58` | parser needs pruning/caching before promotion |
 | Book-local source/length parser probe | active source/length DP executes on cutoff-60 books `67` and `60`, both roundtrip and beat raw digits at `125.866` total parser bits, but ties the same-policy reprice and leaves hard book `66` unresolved | parser path executable / no bound promotion |
 | Sparse hard-book source/length parser | sparse Dijkstra over reachable states roundtrips cutoff-60 hard book `66` in `0.033s`, with `41,832` transitions versus the `26,096,904` transition proxy (`623.9x` reduction) | hard local parser blocker removed / no bound promotion |
+| Post-parser row0 compatibility audit | gates 71-74 are checked against the row0 front; none predicts row0 labels under holdout, beats paid lookup, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / parser-only progress |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -420,6 +421,7 @@ Primary sources:
 [final_source_length_parser_feasibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.md),
 [book_local_source_length_parser_probe.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/73_book_local_source_length_parser_probe.md),
 [sparse_hard_book_source_length_parser_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/74_sparse_hard_book_source_length_parser_gate.md),
+[post_parser_row0_compatibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/75_post_parser_row0_compatibility_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

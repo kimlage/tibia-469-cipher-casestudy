@@ -238,6 +238,9 @@ exogenous.
 - [scripts/74_sparse_hard_book_source_length_parser_gate.py](scripts/74_sparse_hard_book_source_length_parser_gate.py) - replaces dense DP with sparse Dijkstra on the cutoff-60 hard book `66`.
 - [reports/test_results/74_sparse_hard_book_source_length_parser_gate.md](reports/test_results/74_sparse_hard_book_source_length_parser_gate.md) - sparse hard-book parser result.
 - [reports/test_results/74_sparse_hard_book_source_length_parser_gate.json](reports/test_results/74_sparse_hard_book_source_length_parser_gate.json) - structured sparse parser ledger.
+- [scripts/75_post_parser_row0_compatibility_audit.py](scripts/75_post_parser_row0_compatibility_audit.py) - checks whether gates 71-74 change row0 origin or only advance the downstream book formula/parser.
+- [reports/test_results/75_post_parser_row0_compatibility_audit.md](reports/test_results/75_post_parser_row0_compatibility_audit.md) - post-parser row0 compatibility result.
+- [reports/test_results/75_post_parser_row0_compatibility_audit.json](reports/test_results/75_post_parser_row0_compatibility_audit.json) - structured post-parser compatibility ledger.
 
 ## Boundary
 
@@ -468,6 +471,11 @@ exogenous.
   `20,932` states and evaluating `41,832` transitions, a `623.9x` reduction
   versus the gate-72 transition proxy. This is parser implementation progress,
   not a compression-bound promotion.
+- The post-parser row0 compatibility audit then consolidates gates 71-74
+  against the row0 provenance front: none predicts row0 labels under holdout,
+  beats the row0 lookup baseline after paid anchor/rule costs, explains `39`,
+  `93`, or `19/91` beyond the existing surface clue, or adds CipSoft/authorial
+  provenance. The result is explicitly `row0 unchanged`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

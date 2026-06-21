@@ -651,6 +651,11 @@ The sparse hard-book parser gate then removes that immediate blocker: book `66`
 roundtrips under sparse Dijkstra in `0.033s`, with `41,832` transition
 evaluations versus the prior `26,096,904` transition proxy. This is still a
 book-local parser result, not a corpus-wide generator promotion.
+The post-parser row0 compatibility audit then consolidates the dependency and
+parser gates against the independent row0 front: the recent advances do not
+predict row0 labels under holdout, beat paid row0 lookup, explain `39`/`93`/
+`19/91` beyond the existing surface clue, or add CipSoft/authorial provenance.
+The result is `row0 unchanged`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -817,6 +822,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   parser probe, while leaving book `66` as the hard case,
   resolves book `66` with sparse Dijkstra as the first hard-book source/length
   parser implementation,
+  checks gates 71-74 against row0 and records `row0 unchanged` because the
+  advances are book-formula/parser-only,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

@@ -1,0 +1,121 @@
+{
+  "case_reopened": false,
+  "classification": "post_parser_advances_row0_unchanged",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "recent_advances_status": "book_formula_and_parser_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "row0_scoreboard_status": "unchanged_no_origin_formula_promoted",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "main_formula_and_parser_inputs": {
+      "book_local_parser": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/73_book_local_source_length_parser_probe.json",
+      "final_formula_dependency": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json",
+      "parser_feasibility": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.json",
+      "recent_formula_row0_compatibility": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/70_recent_formula_row0_compatibility_audit.json",
+      "row0_parallel_bridge": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/47_row0_parallel_provenance_bridge_audit.json",
+      "sparse_hard_book_parser": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/74_sparse_hard_book_source_length_parser_gate.json"
+    },
+    "row0_inputs": {
+      "row0_deep_provenance": "analysis/row0_origin_parallel_20260621/reports/test_results/154_row0_deep_provenance_audit.json",
+      "row0_final_report": "analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md",
+      "row0_next_frontier_report": "analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md",
+      "row0_paid_anchor": "analysis/row0_origin_parallel_20260621/reports/test_results/159_row0_paid_anchor_reduction_gate.json",
+      "row0_partial_worksheet": "analysis/row0_origin_parallel_20260621/reports/test_results/156_row0_partial_worksheet_model.json",
+      "row0_scoreboard": "analysis/row0_origin_parallel_20260621/reports/test_results/155_row0_improvement_scoreboard.json",
+      "row0_surface_exception": "analysis/row0_origin_parallel_20260621/reports/test_results/157_row0_surface_exception_focus.json"
+    }
+  },
+  "plaintext_claim": false,
+  "schema": "post_parser_row0_compatibility_audit.v1",
+  "summary": {
+    "advances_are_book_formula_or_parser_only": true,
+    "advances_are_row0_integration": false,
+    "advances_checked": "post_partial_boundary_dependency_and_parser_gates_71_74",
+    "beats_row0_lookup_after_cost": false,
+    "current_compression_bound_bits": 8154.676268216349,
+    "deep_provenance_decision": "project_row0_provenance_partially_traced_but_cipsoft_origin_untraced",
+    "explains_39_93_19_91": false,
+    "lookup_baseline_bits": 160.52070273483628,
+    "new_cipsoft_or_authorial_provenance": false,
+    "paid_anchor_decision": "explicit_paid_anchor_model_does_not_beat_lookup",
+    "paid_anchor_full_pair_label_net_bits": -11.851749041416053,
+    "parser_gates_checked": [
+      {
+        "classification": "final_formula_dependency_refresh_decoder_boundary_unchanged",
+        "metric": "609 retained operation dependency fields",
+        "result": "dependency_boundary_unchanged",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json"
+      },
+      {
+        "classification": "final_source_length_parser_feasible_by_proxy_not_tractable_full_suffix",
+        "metric": "1,966,897,365 transition proxy",
+        "result": "parser_scoped_not_promoted",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.json"
+      },
+      {
+        "classification": "book_local_source_length_parser_probe_roundtrips_subset",
+        "metric": "2/2 books, 125.866 parser bits",
+        "result": "two_book_subset_roundtrips",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/73_book_local_source_length_parser_probe.json"
+      },
+      {
+        "classification": "sparse_hard_book_source_length_parser_roundtrips",
+        "metric": "book 66, 41,832 transitions, 623.9x proxy reduction",
+        "result": "hard_book_sparse_roundtrip",
+        "row0_origin_status": "unchanged_exogenous",
+        "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/74_sparse_hard_book_source_length_parser_gate.json"
+      }
+    ],
+    "partial_worksheet_decision": "not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid",
+    "predicts_row0_labels_under_holdout": false,
+    "promoted_origin_formula_count": 0,
+    "rare_singletons_explicit_pair_label_net_bits": 1.0658141036401503e-14,
+    "row0_changed": false,
+    "row0_scoreboard_decision": "score_row0_progress_separately_from_book_generation_bits",
+    "row0_status": "row0_origin_exogenous_under_current_evidence",
+    "surface_clue_status": "surface_ordered_asymmetry_is_real_but_label_origin_unresolved"
+  },
+  "taxonomy": {
+    "AUDIT_ONLY": [
+      {
+        "boundary": "row0 unchanged; no origin formula or provenance added",
+        "evidence": "dependency/parser implementation progress downstream from row0",
+        "name": "source_length_parser_gates_71_74"
+      }
+    ],
+    "BLOCKED_NEEDS_EXTERNAL_SOURCE": [
+      {
+        "evidence": "project provenance traced locally, but primary origin remains untraced",
+        "name": "cipsoft_or_authorial_row0_origin"
+      }
+    ],
+    "PROMOTED_MECHANICAL_CLUE": [
+      {
+        "boundary": "surface clue only; not a row0 label generator",
+        "evidence": "39 absent, 93 present, and 19/91 directed conflict",
+        "name": "ordered_surface_render_layer"
+      }
+    ],
+    "PROMOTED_ORIGIN_FORMULA": [],
+    "REJECTED_CONTROL": [
+      {
+        "evidence": "explicit pair+label anchor cost is worse than lookup",
+        "name": "paid_anchor_reduction_gate",
+        "net_bits": -11.851749041416053
+      }
+    ],
+    "WEAK_CLUE": [
+      {
+        "boundary": "plausible worksheet shape, not promoted",
+        "evidence": "13 anchors reduce lookup only before anchor/source costs",
+        "name": "partial_worksheet_model"
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}
