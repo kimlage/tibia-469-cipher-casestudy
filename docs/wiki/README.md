@@ -800,6 +800,11 @@ An operation shape-count generation audit then asks whether the coarse pair
 same context is best but weaker: `37/60` exact shapes, `58` paid records versus
 a `60`-record exact shape atlas, `23` missed books, and `0/5` promoting
 holdout cells.
+An operation type-sequence generation audit then grants those counts and tests
+literal/copy ordering. Exact full-fit is possible only as a paid template map:
+`template_book_mod5_x_shape` reaches `60/60` books and `261/261` type hits, but
+carries `235` template records and has `0/5` holdout cells beating random p95.
+The exact template is posthoc materialization, not a generator.
 An operation-length Markov audit then attacks the skeleton blocker directly.
 Even granting book lengths and operation types, `11` Markov/context grammars
 do not generate the `261` operation lengths: the best full-fit context gets
