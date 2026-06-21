@@ -645,6 +645,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   active categorical previous-emitted-digit order-2 model. The best
   default/exception candidate is `+38.049` bits worse, so no literal-payload
   fallback is promoted.
+- literal-payload structural context is now covered by
+  [`139_literal_payload_structural_context_audit.py`](scripts/139_literal_payload_structural_context_audit.py);
+  literal-run offset, run-length bucket, book half/parity, and bounded
+  combinations with `prev2` all over-split the stream. The active categorical
+  previous-emitted-digit order-2 model remains best.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

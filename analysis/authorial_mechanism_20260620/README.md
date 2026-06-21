@@ -363,6 +363,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/138_literal_payload_default_decodability_audit.py` - tests literal
   payload modal-default/exception candidates and rejects them; the active
   categorical previous-emitted-digit order-2 model remains best.
+- `scripts/139_literal_payload_structural_context_audit.py` - tests structural
+  literal-run contexts such as offset, run-length bucket, and book half/parity;
+  all over-split the stream, so no literal-payload context is promoted.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -943,6 +943,10 @@ remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
 the best default/exception candidate is `+38.049` bits worse. No
 literal-payload fallback is promoted.
+The literal-payload structural context audit then tests whether literal-run
+offset, run-length bucket, book half/parity, or bounded combinations with
+`prev2` improve payload coding. They all over-split the stream; the active
+`prev2` categorical model remains best.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1231,6 +1235,7 @@ book generation, not row0 pair-cell placement.
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
+- [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 
 ## Boundary
 

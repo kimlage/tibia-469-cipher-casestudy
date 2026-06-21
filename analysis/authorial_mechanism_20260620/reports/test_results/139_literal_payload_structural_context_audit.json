@@ -1,0 +1,100 @@
+{
+  "active_literal_payload_bits": 2613.660822752486,
+  "active_total_bits": 8177.3166531229235,
+  "best_candidate": {
+    "context_count": 98,
+    "declaration_bits": 0.0,
+    "decodable": true,
+    "label": "active_prev2",
+    "stream_bits": 2613.660822752486,
+    "total_bits": 2613.660822752486
+  },
+  "best_candidate_delta_vs_active_literal_bits": 0.0,
+  "boundary": {
+    "authorial_intent_claim": false,
+    "compression_bound_changed": false,
+    "literal_payload_dependency_removed": false,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "candidates": [
+    {
+      "context_count": 98,
+      "declaration_bits": 0.0,
+      "decodable": true,
+      "label": "active_prev2",
+      "stream_bits": 2613.660822752486,
+      "total_bits": 2613.660822752486
+    },
+    {
+      "context_count": 148,
+      "declaration_bits": 4.0,
+      "decodable": true,
+      "label": "prev2_plus_offset_first_rest",
+      "stream_bits": 2632.9136900811363,
+      "total_bits": 2636.9136900811363
+    },
+    {
+      "context_count": 239,
+      "declaration_bits": 6.0,
+      "decodable": true,
+      "label": "prev2_plus_offset_4bucket",
+      "stream_bits": 2685.4292677989038,
+      "total_bits": 2691.4292677989038
+    },
+    {
+      "context_count": 240,
+      "declaration_bits": 6.0,
+      "decodable": true,
+      "label": "prev2_plus_run_length_bucket",
+      "stream_bits": 2716.692058084326,
+      "total_bits": 2722.692058084326
+    },
+    {
+      "context_count": 152,
+      "declaration_bits": 4.0,
+      "decodable": true,
+      "label": "prev2_plus_book_half",
+      "stream_bits": 2628.8195714964922,
+      "total_bits": 2632.8195714964922
+    },
+    {
+      "context_count": 184,
+      "declaration_bits": 4.0,
+      "decodable": true,
+      "label": "prev2_plus_book_parity",
+      "stream_bits": 2679.7727399866685,
+      "total_bits": 2683.7727399866685
+    },
+    {
+      "context_count": 201,
+      "declaration_bits": 8.0,
+      "decodable": true,
+      "label": "prev2_plus_half_plus_offset_first_rest",
+      "stream_bits": 2652.850183500622,
+      "total_bits": 2660.850183500622
+    },
+    {
+      "context_count": 21,
+      "declaration_bits": 4.0,
+      "decodable": true,
+      "label": "prev1_plus_offset_first_rest",
+      "stream_bits": 2725.1730481877294,
+      "total_bits": 2729.1730481877294
+    },
+    {
+      "context_count": 2,
+      "declaration_bits": 4.0,
+      "decodable": true,
+      "label": "global_plus_offset_first_rest",
+      "stream_bits": 2850.9562032162958,
+      "total_bits": 2854.9562032162958
+    }
+  ],
+  "classification": "literal_payload_structural_context_not_promoted",
+  "literal_digit_count": 857,
+  "schema": "literal_payload_structural_context_audit.v1",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "139_literal_payload_structural_context_audit",
+  "translation_delta": "NONE"
+}

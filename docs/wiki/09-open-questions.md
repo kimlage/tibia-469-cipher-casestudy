@@ -316,6 +316,9 @@ The literal-payload default decodability audit then rejects a natural next
 fallback: modal-default/exception literal digit coding is decodable, but the
 best candidate is `+38.049` bits worse than the active categorical
 previous-emitted-digit order-2 model.
+The literal-payload structural context audit also rejects literal-run offset,
+run-length bucket, and book half/parity contexts; each over-splits the literal
+payload stream.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

@@ -670,5 +670,9 @@ Generated audits in this directory should be treated as the current state:
   active categorical previous-emitted-digit order-2 model; the best
   default/exception candidate is `+38.049` bits worse, so no literal-payload
   fallback is promoted.
+- `139_literal_payload_structural_context_audit`: tests whether literal-run
+  structure improves payload coding. Literal-run offset, run-length bucket,
+  book half/parity, and bounded combinations with `prev2` all over-split the
+  stream; no structural literal-payload context is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
