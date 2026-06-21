@@ -677,6 +677,11 @@ books: `9` are same-shape boundary shifts, `3` are segmentation-shape changes,
 and none is pure source-address drift. The next structural blocker is
 copy-boundary selection, especially book `65`, not another source-address
 micro-sweep.
+A boundary-policy stability gate then rejects the cheap shortcut: fixed simple
+boundary policies over the `12` unstable books and `37` cutoff observations do
+not stabilize the paths. The best structural rule reaches only `16/37` exact
+matches with `8.984788` regret bits, and even the audit-only average-reprice
+oracle reaches only `18/37`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -853,6 +858,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `12/50` prefix-sensitive),
   decomposes the `12` prefix-sensitive parser paths into `9` same-shape
   boundary shifts and `3` segmentation-shape changes,
+  rejects simple invariant boundary policies (`16/37` best structural exact
+  matches; `18/37` audit-only oracle),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

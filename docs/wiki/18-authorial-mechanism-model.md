@@ -192,6 +192,16 @@ swaps. The next structural mechanism question is therefore not which source
 address model to try, but how copy boundaries are selected and stabilized,
 with book `65` as the clearest stress case.
 
+A boundary-policy stability gate then tests the cheap version of that
+hypothesis. Fixed invariant policies such as front-loaded copy lengths,
+back-loaded copy lengths, earliest/latest sources, source-default preference,
+and literal/copy mass are repriced over the `12` unstable books and `37` cutoff
+observations. The best structural policy reaches only `16/37` exact matches
+with `8.984788` regret bits, and even an audit-only oracle that chooses the
+lowest average repriced observed variant reaches only `18/37`. Simple boundary
+rules are therefore rejected; boundary selection remains an exogenous parser
+cost choice rather than a closed authorial mechanism.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

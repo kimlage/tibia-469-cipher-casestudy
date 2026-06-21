@@ -253,6 +253,9 @@ exogenous.
 - [scripts/79_unstable_parser_path_decomposition_audit.py](scripts/79_unstable_parser_path_decomposition_audit.py) - decomposes the unstable parser paths into source-only, boundary-shift, or segmentation-change classes.
 - [reports/test_results/79_unstable_parser_path_decomposition_audit.md](reports/test_results/79_unstable_parser_path_decomposition_audit.md) - unstable path decomposition result.
 - [reports/test_results/79_unstable_parser_path_decomposition_audit.json](reports/test_results/79_unstable_parser_path_decomposition_audit.json) - structured unstable-path decomposition ledger.
+- [scripts/80_boundary_policy_stability_gate.py](scripts/80_boundary_policy_stability_gate.py) - tests fixed simple boundary policies against the unstable path variants with cross-cutoff repricing.
+- [reports/test_results/80_boundary_policy_stability_gate.md](reports/test_results/80_boundary_policy_stability_gate.md) - boundary policy stability result.
+- [reports/test_results/80_boundary_policy_stability_gate.json](reports/test_results/80_boundary_policy_stability_gate.json) - structured boundary-policy scoreboard.
 
 ## Boundary
 
@@ -511,6 +514,12 @@ exogenous.
   and `0/12` are pure source-address swaps. The next structural parser task is
   therefore boundary stabilization, especially book `65`, not another
   source-address micro-sweep.
+- The boundary-policy stability gate then tests fixed simple policies over the
+  `12` unstable books and `37` cutoff observations. Even the audit-only oracle
+  that chooses the lowest average repriced observed variant reaches only
+  `18/37` exact matches with `7.849662` regret bits, while the best structural
+  policy reaches `16/37` with `8.984788` regret bits. Simple invariant boundary
+  rules are therefore rejected rather than promoted.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

@@ -1,0 +1,4180 @@
+{
+  "case_reopened": false,
+  "classification": "simple_boundary_policies_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "boundary_selection_still_exogenous_to_parser_costs",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "simple_boundary_policy_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate77_context_loader": "analysis/prequential_and_row0_origin_audit_20260621/scripts/77_multi_cutoff_sparse_suffix_parser_validation.py",
+    "gate78_path_replay": "analysis/prequential_and_row0_origin_audit_20260621/scripts/78_multi_cutoff_parser_path_stability_audit.py",
+    "gate79_unstable_path_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/79_unstable_parser_path_decomposition_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "boundary_policy_stability_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "fixed_policy_no_parameter_sweep": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "unstable_books_only": true
+  },
+  "summary": {
+    "best_structural_policy": {
+      "book_count": 12,
+      "cutoff_observation_count": 37,
+      "exact_signature_match_rate": 0.43243243243243246,
+      "exact_signature_matches": 16,
+      "max_regret_bits": 1.1104958405292464,
+      "mean_regret_bits": 0.24283209955585447,
+      "policy": "lexicographic_length_min",
+      "total_regret_bits": 8.984787683566616,
+      "valid_observation_count": 37
+    },
+    "book_rows": [
+      {
+        "book": 21,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "max_regret_bits": 0.9538707720840236,
+            "observation_count": 2,
+            "signature": "3d67956f8f5b3285",
+            "total_regret_bits": 0.9538707720840165,
+            "type_sequence": "CCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "max_regret_bits": 0.9538707720840236,
+            "observation_count": 2,
+            "signature": "3d67956f8f5b3285",
+            "total_regret_bits": 0.9538707720840165,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "max_regret_bits": 0.9538707720840236,
+            "observation_count": 2,
+            "signature": "3d67956f8f5b3285",
+            "total_regret_bits": 0.9538707720840165,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "max_regret_bits": 1.051664584569636,
+            "observation_count": 2,
+            "signature": "45e96b26269960af",
+            "total_regret_bits": 1.0516645845696289,
+            "type_sequence": "CCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "max_regret_bits": 0.9538707720840236,
+            "observation_count": 2,
+            "signature": "3d67956f8f5b3285",
+            "total_regret_bits": 0.9538707720840165,
+            "type_sequence": "CCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "3d67956f8f5b3285": {
+            "10": {
+              "bits": 55.46153057563601,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 55.46153057563602,
+              "winner_match": true,
+              "winner_signature": "3d67956f8f5b3285"
+            },
+            "20": {
+              "bits": 55.88043471072883,
+              "reason": "ok",
+              "regret_bits": 0.9538707720840236,
+              "valid": true,
+              "winner_bits": 54.926563938644804,
+              "winner_match": false,
+              "winner_signature": "45e96b26269960af"
+            }
+          },
+          "45e96b26269960af": {
+            "10": {
+              "bits": 56.513195160205655,
+              "reason": "ok",
+              "regret_bits": 1.051664584569636,
+              "valid": true,
+              "winner_bits": 55.46153057563602,
+              "winner_match": false,
+              "winner_signature": "3d67956f8f5b3285"
+            },
+            "20": {
+              "bits": 54.9265639386448,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 54.926563938644804,
+              "winner_match": true,
+              "winner_signature": "45e96b26269960af"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 176,
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "literal_digits": 0,
+            "signature": "3d67956f8f5b3285",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 176,
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "literal_digits": 0,
+            "signature": "45e96b26269960af",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "3d67956f8f5b3285",
+          "20": "45e96b26269960af"
+        }
+      },
+      {
+        "book": 24,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              2119,
+              3507,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              37,
+              70,
+              12
+            ],
+            "max_regret_bits": 0.9924528351813819,
+            "observation_count": 2,
+            "signature": "e213fe1406e7f85b",
+            "total_regret_bits": 0.9924528351813748,
+            "type_sequence": "CCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              2119,
+              3507,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              37,
+              70,
+              12
+            ],
+            "max_regret_bits": 0.9924528351813819,
+            "observation_count": 2,
+            "signature": "e213fe1406e7f85b",
+            "total_regret_bits": 0.9924528351813748,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              2119,
+              3507,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              37,
+              70,
+              12
+            ],
+            "max_regret_bits": 0.9924528351813819,
+            "observation_count": 2,
+            "signature": "e213fe1406e7f85b",
+            "total_regret_bits": 0.9924528351813748,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "max_regret_bits": 0.010444223219309379,
+            "observation_count": 2,
+            "signature": "e1475f1a390e1c76",
+            "total_regret_bits": 0.010444223219302273,
+            "type_sequence": "CCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "e1475f1a390e1c76": {
+            "10": {
+              "bits": 56.28732987794092,
+              "reason": "ok",
+              "regret_bits": 0.010444223219309379,
+              "valid": true,
+              "winner_bits": 56.27688565472161,
+              "winner_match": false,
+              "winner_signature": "e213fe1406e7f85b"
+            },
+            "20": {
+              "bits": 55.80752488481985,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 55.807524884819856,
+              "winner_match": true,
+              "winner_signature": "e1475f1a390e1c76"
+            }
+          },
+          "e213fe1406e7f85b": {
+            "10": {
+              "bits": 56.2768856547216,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 56.27688565472161,
+              "winner_match": true,
+              "winner_signature": "e213fe1406e7f85b"
+            },
+            "20": {
+              "bits": 56.79997772000124,
+              "reason": "ok",
+              "regret_bits": 0.9924528351813819,
+              "valid": true,
+              "winner_bits": 55.807524884819856,
+              "winner_match": false,
+              "winner_signature": "e1475f1a390e1c76"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 119,
+            "copy_sources": [
+              2119,
+              3507,
+              3401
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              37,
+              70,
+              12
+            ],
+            "literal_digits": 0,
+            "signature": "e213fe1406e7f85b",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 119,
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "literal_digits": 0,
+            "signature": "e1475f1a390e1c76",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "e213fe1406e7f85b",
+          "20": "e1475f1a390e1c76"
+        }
+      },
+      {
+        "book": 28,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.02646397839230019,
+            "observation_count": 2,
+            "signature": "ee53cae37f654670",
+            "total_regret_bits": 0.02646397839228598,
+            "type_sequence": "CCCCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.02646397839230019,
+            "observation_count": 2,
+            "signature": "ee53cae37f654670",
+            "total_regret_bits": 0.02646397839228598,
+            "type_sequence": "CCCCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.02646397839230019,
+            "observation_count": 2,
+            "signature": "ee53cae37f654670",
+            "total_regret_bits": 0.02646397839228598,
+            "type_sequence": "CCCCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.4974925322175494,
+            "observation_count": 2,
+            "signature": "8cb38b3003324679",
+            "total_regret_bits": 0.4974925322175352,
+            "type_sequence": "CCCCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "max_regret_bits": 0.02646397839230019,
+            "observation_count": 2,
+            "signature": "ee53cae37f654670",
+            "total_regret_bits": 0.02646397839228598,
+            "type_sequence": "CCCCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "8cb38b3003324679": {
+            "10": {
+              "bits": 89.57426091119221,
+              "reason": "ok",
+              "regret_bits": -1.4210854715202004e-14,
+              "valid": true,
+              "winner_bits": 89.57426091119223,
+              "winner_match": true,
+              "winner_signature": "8cb38b3003324679"
+            },
+            "20": {
+              "bits": 91.14648031311856,
+              "reason": "ok",
+              "regret_bits": 0.4974925322175494,
+              "valid": true,
+              "winner_bits": 90.64898778090101,
+              "winner_match": false,
+              "winner_signature": "ee53cae37f654670"
+            }
+          },
+          "ee53cae37f654670": {
+            "10": {
+              "bits": 89.60072488958453,
+              "reason": "ok",
+              "regret_bits": 0.02646397839230019,
+              "valid": true,
+              "winner_bits": 89.57426091119223,
+              "winner_match": false,
+              "winner_signature": "8cb38b3003324679"
+            },
+            "20": {
+              "bits": 90.648987780901,
+              "reason": "ok",
+              "regret_bits": -1.4210854715202004e-14,
+              "valid": true,
+              "winner_bits": 90.64898778090101,
+              "winner_match": true,
+              "winner_signature": "ee53cae37f654670"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 146,
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "literal_digits": 0,
+            "signature": "8cb38b3003324679",
+            "source_default_count": 0,
+            "type_sequence": "CCCCC"
+          },
+          {
+            "copied_digits": 146,
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "literal_digits": 0,
+            "signature": "ee53cae37f654670",
+            "source_default_count": 0,
+            "type_sequence": "CCCCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "8cb38b3003324679",
+          "20": "ee53cae37f654670"
+        }
+      },
+      {
+        "book": 30,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "max_regret_bits": 2.7773110582554352,
+            "observation_count": 2,
+            "signature": "efd825fa783e1134",
+            "total_regret_bits": 2.777311058255407,
+            "type_sequence": "CCCCCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "max_regret_bits": 2.7773110582554352,
+            "observation_count": 2,
+            "signature": "efd825fa783e1134",
+            "total_regret_bits": 2.777311058255407,
+            "type_sequence": "CCCCCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "max_regret_bits": 2.7773110582554352,
+            "observation_count": 2,
+            "signature": "efd825fa783e1134",
+            "total_regret_bits": 2.777311058255407,
+            "type_sequence": "CCCCCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "max_regret_bits": 2.7773110582554352,
+            "observation_count": 2,
+            "signature": "efd825fa783e1134",
+            "total_regret_bits": 2.777311058255407,
+            "type_sequence": "CCCCCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "max_regret_bits": 0.03757370859841558,
+            "observation_count": 2,
+            "signature": "c6ce2b68e2686234",
+            "total_regret_bits": 0.03757370859841558,
+            "type_sequence": "CLCCCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "c6ce2b68e2686234": {
+            "10": {
+              "bits": 115.59548568186187,
+              "reason": "ok",
+              "regret_bits": 0.03757370859841558,
+              "valid": true,
+              "winner_bits": 115.55791197326346,
+              "winner_match": false,
+              "winner_signature": "efd825fa783e1134"
+            },
+            "20": {
+              "bits": 113.74653892208008,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 113.74653892208008,
+              "winner_match": true,
+              "winner_signature": "c6ce2b68e2686234"
+            }
+          },
+          "efd825fa783e1134": {
+            "10": {
+              "bits": 115.55791197326343,
+              "reason": "ok",
+              "regret_bits": -2.842170943040401e-14,
+              "valid": true,
+              "winner_bits": 115.55791197326346,
+              "winner_match": true,
+              "winner_signature": "efd825fa783e1134"
+            },
+            "20": {
+              "bits": 116.52384998033551,
+              "reason": "ok",
+              "regret_bits": 2.7773110582554352,
+              "valid": true,
+              "winner_bits": 113.74653892208008,
+              "winner_match": false,
+              "winner_signature": "c6ce2b68e2686234"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 150,
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "literal_digits": 0,
+            "signature": "efd825fa783e1134",
+            "source_default_count": 0,
+            "type_sequence": "CCCCCC"
+          },
+          {
+            "copied_digits": 144,
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "literal_digits": 6,
+            "signature": "c6ce2b68e2686234",
+            "source_default_count": 0,
+            "type_sequence": "CLCCCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "efd825fa783e1134",
+          "20": "c6ce2b68e2686234"
+        }
+      },
+      {
+        "book": 34,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.279061825194475,
+            "observation_count": 2,
+            "signature": "f82f5fc3fbe15a4a",
+            "total_regret_bits": 0.27906182519444656,
+            "type_sequence": "LCLCCCCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.7975041571532699,
+            "observation_count": 2,
+            "signature": "e99aa6f75bb6e35a",
+            "total_regret_bits": 0.7975041571532699,
+            "type_sequence": "LCCLCCCCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.7975041571532699,
+            "observation_count": 2,
+            "signature": "e99aa6f75bb6e35a",
+            "total_regret_bits": 0.7975041571532699,
+            "type_sequence": "LCCLCCCCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.279061825194475,
+            "observation_count": 2,
+            "signature": "f82f5fc3fbe15a4a",
+            "total_regret_bits": 0.27906182519444656,
+            "type_sequence": "LCLCCCCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.279061825194475,
+            "observation_count": 2,
+            "signature": "f82f5fc3fbe15a4a",
+            "total_regret_bits": 0.27906182519444656,
+            "type_sequence": "LCLCCCCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.279061825194475,
+            "observation_count": 2,
+            "signature": "f82f5fc3fbe15a4a",
+            "total_regret_bits": 0.27906182519444656,
+            "type_sequence": "LCLCCCCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.7975041571532699,
+            "observation_count": 2,
+            "signature": "e99aa6f75bb6e35a",
+            "total_regret_bits": 0.7975041571532699,
+            "type_sequence": "LCCLCCCCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.7975041571532699,
+            "observation_count": 2,
+            "signature": "e99aa6f75bb6e35a",
+            "total_regret_bits": 0.7975041571532699,
+            "type_sequence": "LCCLCCCCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.7975041571532699,
+            "observation_count": 2,
+            "signature": "e99aa6f75bb6e35a",
+            "total_regret_bits": 0.7975041571532699,
+            "type_sequence": "LCCLCCCCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "max_regret_bits": 0.279061825194475,
+            "observation_count": 2,
+            "signature": "f82f5fc3fbe15a4a",
+            "total_regret_bits": 0.27906182519444656,
+            "type_sequence": "LCLCCCCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "e99aa6f75bb6e35a": {
+            "10": {
+              "bits": 156.25307336072072,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 156.25307336072072,
+              "winner_match": true,
+              "winner_signature": "e99aa6f75bb6e35a"
+            },
+            "20": {
+              "bits": 154.91011034183637,
+              "reason": "ok",
+              "regret_bits": 0.7975041571532699,
+              "valid": true,
+              "winner_bits": 154.1126061846831,
+              "winner_match": false,
+              "winner_signature": "f82f5fc3fbe15a4a"
+            }
+          },
+          "f82f5fc3fbe15a4a": {
+            "10": {
+              "bits": 156.5321351859152,
+              "reason": "ok",
+              "regret_bits": 0.279061825194475,
+              "valid": true,
+              "winner_bits": 156.25307336072072,
+              "winner_match": false,
+              "winner_signature": "e99aa6f75bb6e35a"
+            },
+            "20": {
+              "bits": 154.11260618468307,
+              "reason": "ok",
+              "regret_bits": -2.842170943040401e-14,
+              "valid": true,
+              "winner_bits": 154.1126061846831,
+              "winner_match": true,
+              "winner_signature": "f82f5fc3fbe15a4a"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 116,
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "literal_digits": 7,
+            "signature": "e99aa6f75bb6e35a",
+            "source_default_count": 0,
+            "type_sequence": "LCCLCCCCC"
+          },
+          {
+            "copied_digits": 110,
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "literal_digits": 13,
+            "signature": "f82f5fc3fbe15a4a",
+            "source_default_count": 0,
+            "type_sequence": "LCLCCCCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "e99aa6f75bb6e35a",
+          "20": "f82f5fc3fbe15a4a"
+        }
+      },
+      {
+        "book": 35,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              5146,
+              147
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              159,
+              127
+            ],
+            "max_regret_bits": 1.9668287853859852,
+            "observation_count": 3,
+            "signature": "9503157fe0c3c10a",
+            "total_regret_bits": 2.933959107756195,
+            "type_sequence": "CC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              5146,
+              147
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              159,
+              127
+            ],
+            "max_regret_bits": 1.9668287853859852,
+            "observation_count": 3,
+            "signature": "9503157fe0c3c10a",
+            "total_regret_bits": 2.933959107756195,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              5146,
+              147
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              159,
+              127
+            ],
+            "max_regret_bits": 1.9668287853859852,
+            "observation_count": 3,
+            "signature": "9503157fe0c3c10a",
+            "total_regret_bits": 2.933959107756195,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              881,
+              16
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              28,
+              258
+            ],
+            "max_regret_bits": 0.033520202229496476,
+            "observation_count": 3,
+            "signature": "9ad7a00cacd455fa",
+            "total_regret_bits": 0.03352020222950358,
+            "type_sequence": "CC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "9503157fe0c3c10a": {
+            "10": {
+              "bits": 41.26682333322314,
+              "reason": "ok",
+              "regret_bits": 0.9671303223702026,
+              "valid": true,
+              "winner_bits": 40.299693010852934,
+              "winner_match": false,
+              "winner_signature": "9ad7a00cacd455fa"
+            },
+            "20": {
+              "bits": 41.346540943084584,
+              "reason": "ok",
+              "regret_bits": 1.9668287853859852,
+              "valid": true,
+              "winner_bits": 39.3797121576986,
+              "winner_match": false,
+              "winner_signature": "9ad7a00cacd455fa"
+            },
+            "35": {
+              "bits": 38.971506851453604,
+              "reason": "ok",
+              "regret_bits": 7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 38.9715068514536,
+              "winner_match": true,
+              "winner_signature": "9503157fe0c3c10a"
+            }
+          },
+          "9ad7a00cacd455fa": {
+            "10": {
+              "bits": 40.29969301085294,
+              "reason": "ok",
+              "regret_bits": 7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 40.299693010852934,
+              "winner_match": true,
+              "winner_signature": "9ad7a00cacd455fa"
+            },
+            "20": {
+              "bits": 39.3797121576986,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 39.3797121576986,
+              "winner_match": true,
+              "winner_signature": "9ad7a00cacd455fa"
+            },
+            "35": {
+              "bits": 39.005027053683094,
+              "reason": "ok",
+              "regret_bits": 0.033520202229496476,
+              "valid": true,
+              "winner_bits": 38.9715068514536,
+              "winner_match": false,
+              "winner_signature": "9503157fe0c3c10a"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 286,
+            "copy_sources": [
+              881,
+              16
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              28,
+              258
+            ],
+            "literal_digits": 0,
+            "signature": "9ad7a00cacd455fa",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 286,
+            "copy_sources": [
+              5146,
+              147
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              159,
+              127
+            ],
+            "literal_digits": 0,
+            "signature": "9503157fe0c3c10a",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "9ad7a00cacd455fa",
+          "20": "9ad7a00cacd455fa",
+          "35": "9503157fe0c3c10a"
+        }
+      },
+      {
+        "book": 39,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              2525
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              52
+            ],
+            "max_regret_bits": 1.3848350901434898,
+            "observation_count": 3,
+            "signature": "51d57fd93b8c610f",
+            "total_regret_bits": 2.124294307215635,
+            "type_sequence": "LC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              2525
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              52
+            ],
+            "max_regret_bits": 1.3848350901434898,
+            "observation_count": 3,
+            "signature": "51d57fd93b8c610f",
+            "total_regret_bits": 2.124294307215635,
+            "type_sequence": "LC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              2525
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              52
+            ],
+            "max_regret_bits": 1.3848350901434898,
+            "observation_count": 3,
+            "signature": "51d57fd93b8c610f",
+            "total_regret_bits": 2.124294307215635,
+            "type_sequence": "LC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              2525
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              7,
+              52
+            ],
+            "max_regret_bits": 1.3848350901434898,
+            "observation_count": 3,
+            "signature": "51d57fd93b8c610f",
+            "total_regret_bits": 2.124294307215635,
+            "type_sequence": "LC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "max_regret_bits": 0.6867577980511683,
+            "observation_count": 3,
+            "signature": "ce5b37868920b08f",
+            "total_regret_bits": 0.6867577980511612,
+            "type_sequence": "CLC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "51d57fd93b8c610f": {
+            "10": {
+              "bits": 40.96363590946371,
+              "reason": "ok",
+              "regret_bits": 1.3848350901434898,
+              "valid": true,
+              "winner_bits": 39.57880081932022,
+              "winner_match": false,
+              "winner_signature": "ce5b37868920b08f"
+            },
+            "20": {
+              "bits": 39.394271906964306,
+              "reason": "ok",
+              "regret_bits": 0.7394592170721452,
+              "valid": true,
+              "winner_bits": 38.65481268989216,
+              "winner_match": false,
+              "winner_signature": "ce5b37868920b08f"
+            },
+            "35": {
+              "bits": 38.47797464391341,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 38.47797464391341,
+              "winner_match": true,
+              "winner_signature": "51d57fd93b8c610f"
+            }
+          },
+          "ce5b37868920b08f": {
+            "10": {
+              "bits": 39.57880081932022,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 39.57880081932022,
+              "winner_match": true,
+              "winner_signature": "ce5b37868920b08f"
+            },
+            "20": {
+              "bits": 38.654812689892154,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 38.65481268989216,
+              "winner_match": true,
+              "winner_signature": "ce5b37868920b08f"
+            },
+            "35": {
+              "bits": 39.16473244196458,
+              "reason": "ok",
+              "regret_bits": 0.6867577980511683,
+              "valid": true,
+              "winner_bits": 38.47797464391341,
+              "winner_match": false,
+              "winner_signature": "51d57fd93b8c610f"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 57,
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "literal_digits": 2,
+            "signature": "ce5b37868920b08f",
+            "source_default_count": 1,
+            "type_sequence": "CLC"
+          },
+          {
+            "copied_digits": 52,
+            "copy_sources": [
+              2525
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              7,
+              52
+            ],
+            "literal_digits": 7,
+            "signature": "51d57fd93b8c610f",
+            "source_default_count": 0,
+            "type_sequence": "LC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "ce5b37868920b08f",
+          "20": "ce5b37868920b08f",
+          "35": "51d57fd93b8c610f"
+        }
+      },
+      {
+        "book": 46,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              6987,
+              2320,
+              701
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              124,
+              19,
+              110
+            ],
+            "max_regret_bits": 0.9217508222128714,
+            "observation_count": 3,
+            "signature": "082d332652d09d96",
+            "total_regret_bits": 0.9217508222128501,
+            "type_sequence": "CCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              6987,
+              2320,
+              701
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              124,
+              19,
+              110
+            ],
+            "max_regret_bits": 0.9217508222128714,
+            "observation_count": 3,
+            "signature": "082d332652d09d96",
+            "total_regret_bits": 0.9217508222128501,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              6987,
+              2320,
+              701
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              124,
+              19,
+              110
+            ],
+            "max_regret_bits": 0.9217508222128714,
+            "observation_count": 3,
+            "signature": "082d332652d09d96",
+            "total_regret_bits": 0.9217508222128501,
+            "type_sequence": "CCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "max_regret_bits": 0.07826660852003187,
+            "observation_count": 3,
+            "signature": "ed189d1ff20e1df0",
+            "total_regret_bits": 0.15652384621358095,
+            "type_sequence": "CCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "082d332652d09d96": {
+            "10": {
+              "bits": 61.059194799813774,
+              "reason": "ok",
+              "regret_bits": 0.9217508222128714,
+              "valid": true,
+              "winner_bits": 60.1374439776009,
+              "winner_match": false,
+              "winner_signature": "ed189d1ff20e1df0"
+            },
+            "20": {
+              "bits": 60.16975272884985,
+              "reason": "ok",
+              "regret_bits": -1.4210854715202004e-14,
+              "valid": true,
+              "winner_bits": 60.169752728849865,
+              "winner_match": true,
+              "winner_signature": "082d332652d09d96"
+            },
+            "35": {
+              "bits": 59.59674100668018,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 59.59674100668019,
+              "winner_match": true,
+              "winner_signature": "082d332652d09d96"
+            }
+          },
+          "ed189d1ff20e1df0": {
+            "10": {
+              "bits": 60.1374439776009,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 60.1374439776009,
+              "winner_match": true,
+              "winner_signature": "ed189d1ff20e1df0"
+            },
+            "20": {
+              "bits": 60.248009966543414,
+              "reason": "ok",
+              "regret_bits": 0.07825723769354909,
+              "valid": true,
+              "winner_bits": 60.169752728849865,
+              "winner_match": false,
+              "winner_signature": "082d332652d09d96"
+            },
+            "35": {
+              "bits": 59.67500761520022,
+              "reason": "ok",
+              "regret_bits": 0.07826660852003187,
+              "valid": true,
+              "winner_bits": 59.59674100668019,
+              "winner_match": false,
+              "winner_signature": "082d332652d09d96"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 253,
+            "copy_sources": [
+              6987,
+              2320,
+              701
+            ],
+            "cutoffs": [
+              20,
+              35
+            ],
+            "length_sequence": [
+              124,
+              19,
+              110
+            ],
+            "literal_digits": 0,
+            "signature": "082d332652d09d96",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 253,
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "literal_digits": 0,
+            "signature": "ed189d1ff20e1df0",
+            "source_default_count": 0,
+            "type_sequence": "CCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "ed189d1ff20e1df0",
+          "20": "082d332652d09d96",
+          "35": "082d332652d09d96"
+        }
+      },
+      {
+        "book": 51,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              6977,
+              7235
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              134,
+              134
+            ],
+            "max_regret_bits": 1.9360066681151693,
+            "observation_count": 4,
+            "signature": "3d8ce3a7f7ec8553",
+            "total_regret_bits": 1.9360066681151693,
+            "type_sequence": "CC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              6977,
+              7235
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              134,
+              134
+            ],
+            "max_regret_bits": 1.9360066681151693,
+            "observation_count": 4,
+            "signature": "3d8ce3a7f7ec8553",
+            "total_regret_bits": 1.9360066681151693,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              6977,
+              7235
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              134,
+              134
+            ],
+            "max_regret_bits": 1.9360066681151693,
+            "observation_count": 4,
+            "signature": "3d8ce3a7f7ec8553",
+            "total_regret_bits": 1.9360066681151693,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              127,
+              141
+            ],
+            "max_regret_bits": 0.07443367639055509,
+            "observation_count": 4,
+            "signature": "50e022dfd76cf1c8",
+            "total_regret_bits": 0.2232755528920336,
+            "type_sequence": "CC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "3d8ce3a7f7ec8553": {
+            "10": {
+              "bits": 42.33465103383144,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 42.33465103383144,
+              "winner_match": true,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "20": {
+              "bits": 42.40643227643134,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 42.40643227643134,
+              "winner_match": true,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "35": {
+              "bits": 42.02218610165427,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 42.02218610165427,
+              "winner_match": true,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "50": {
+              "bits": 42.65739365075578,
+              "reason": "ok",
+              "regret_bits": 1.9360066681151693,
+              "valid": true,
+              "winner_bits": 40.72138698264061,
+              "winner_match": false,
+              "winner_signature": "50e022dfd76cf1c8"
+            }
+          },
+          "50e022dfd76cf1c8": {
+            "10": {
+              "bits": 42.409068145268286,
+              "reason": "ok",
+              "regret_bits": 0.07441711143684415,
+              "valid": true,
+              "winner_bits": 42.33465103383144,
+              "winner_match": false,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "20": {
+              "bits": 42.48085704149598,
+              "reason": "ok",
+              "regret_bits": 0.07442476506464146,
+              "valid": true,
+              "winner_bits": 42.40643227643134,
+              "winner_match": false,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "35": {
+              "bits": 42.096619778044825,
+              "reason": "ok",
+              "regret_bits": 0.07443367639055509,
+              "valid": true,
+              "winner_bits": 42.02218610165427,
+              "winner_match": false,
+              "winner_signature": "3d8ce3a7f7ec8553"
+            },
+            "50": {
+              "bits": 40.7213869826406,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 40.72138698264061,
+              "winner_match": true,
+              "winner_signature": "50e022dfd76cf1c8"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 268,
+            "copy_sources": [
+              6977,
+              7235
+            ],
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "length_sequence": [
+              134,
+              134
+            ],
+            "literal_digits": 0,
+            "signature": "3d8ce3a7f7ec8553",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 268,
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              127,
+              141
+            ],
+            "literal_digits": 0,
+            "signature": "50e022dfd76cf1c8",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "3d8ce3a7f7ec8553",
+          "20": "3d8ce3a7f7ec8553",
+          "35": "3d8ce3a7f7ec8553",
+          "50": "50e022dfd76cf1c8"
+        }
+      },
+      {
+        "book": 56,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "max_regret_bits": 2.238461293129518,
+            "observation_count": 4,
+            "signature": "01a0656cc3c5fb37",
+            "total_regret_bits": 2.2384612931295464,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "max_regret_bits": 2.238461293129518,
+            "observation_count": 4,
+            "signature": "01a0656cc3c5fb37",
+            "total_regret_bits": 2.2384612931295464,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "max_regret_bits": 2.238461293129518,
+            "observation_count": 4,
+            "signature": "01a0656cc3c5fb37",
+            "total_regret_bits": 2.2384612931295464,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "max_regret_bits": 1.0954427331516001,
+            "observation_count": 4,
+            "signature": "fef1188b432b704b",
+            "total_regret_bits": 2.2863223170695335,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "max_regret_bits": 2.238461293129518,
+            "observation_count": 4,
+            "signature": "01a0656cc3c5fb37",
+            "total_regret_bits": 2.2384612931295464,
+            "type_sequence": "CCCCLCCCCC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "01a0656cc3c5fb37": {
+            "10": {
+              "bits": 198.24460159703182,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 198.24460159703182,
+              "winner_match": true,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "20": {
+              "bits": 198.0138074150748,
+              "reason": "ok",
+              "regret_bits": 2.842170943040401e-14,
+              "valid": true,
+              "winner_bits": 198.01380741507478,
+              "winner_match": true,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "35": {
+              "bits": 196.02292174658274,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 196.02292174658274,
+              "winner_match": true,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "50": {
+              "bits": 195.84954122560066,
+              "reason": "ok",
+              "regret_bits": 2.238461293129518,
+              "valid": true,
+              "winner_bits": 193.61107993247114,
+              "winner_match": false,
+              "winner_signature": "fef1188b432b704b"
+            }
+          },
+          "fef1188b432b704b": {
+            "10": {
+              "bits": 198.34004050622798,
+              "reason": "ok",
+              "regret_bits": 0.0954389091961616,
+              "valid": true,
+              "winner_bits": 198.24460159703182,
+              "winner_match": false,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "20": {
+              "bits": 199.10924808979652,
+              "reason": "ok",
+              "regret_bits": 1.0954406747217433,
+              "valid": true,
+              "winner_bits": 198.01380741507478,
+              "winner_match": false,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "35": {
+              "bits": 197.11836447973434,
+              "reason": "ok",
+              "regret_bits": 1.0954427331516001,
+              "valid": true,
+              "winner_bits": 196.02292174658274,
+              "winner_match": false,
+              "winner_signature": "01a0656cc3c5fb37"
+            },
+            "50": {
+              "bits": 193.61107993247117,
+              "reason": "ok",
+              "regret_bits": 2.842170943040401e-14,
+              "valid": true,
+              "winner_bits": 193.61107993247114,
+              "winner_match": true,
+              "winner_signature": "fef1188b432b704b"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 263,
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "literal_digits": 3,
+            "signature": "01a0656cc3c5fb37",
+            "source_default_count": 0,
+            "type_sequence": "CCCCLCCCCC"
+          },
+          {
+            "copied_digits": 263,
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "literal_digits": 3,
+            "signature": "fef1188b432b704b",
+            "source_default_count": 0,
+            "type_sequence": "CCCCLCCCCC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "01a0656cc3c5fb37",
+          "20": "01a0656cc3c5fb37",
+          "35": "01a0656cc3c5fb37",
+          "50": "fef1188b432b704b"
+        }
+      },
+      {
+        "book": 61,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              4514,
+              3043
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              122,
+              23
+            ],
+            "max_regret_bits": 3.8318385304681755,
+            "observation_count": 5,
+            "signature": "fdeb0d8988185207",
+            "total_regret_bits": 7.07965064149851,
+            "type_sequence": "CC"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              4514,
+              3043
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              122,
+              23
+            ],
+            "max_regret_bits": 3.8318385304681755,
+            "observation_count": 5,
+            "signature": "fdeb0d8988185207",
+            "total_regret_bits": 7.07965064149851,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              4514,
+              3043
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              122,
+              23
+            ],
+            "max_regret_bits": 3.8318385304681755,
+            "observation_count": 5,
+            "signature": "fdeb0d8988185207",
+            "total_regret_bits": 7.07965064149851,
+            "type_sequence": "CC"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "exact_matches": 3,
+            "length_sequence": [
+              112,
+              33
+            ],
+            "max_regret_bits": 0.6086354601024624,
+            "observation_count": 5,
+            "signature": "dc08d5469e078553",
+            "total_regret_bits": 1.2172639169363961,
+            "type_sequence": "CC"
+          }
+        },
+        "variant_count": 2,
+        "variant_scores": {
+          "dc08d5469e078553": {
+            "10": {
+              "bits": 39.91521731374742,
+              "reason": "ok",
+              "regret_bits": 0.6086284568339408,
+              "valid": true,
+              "winner_bits": 39.30658885691348,
+              "winner_match": false,
+              "winner_signature": "fdeb0d8988185207"
+            },
+            "20": {
+              "bits": 39.98339716896357,
+              "reason": "ok",
+              "regret_bits": 0.6086354601024624,
+              "valid": true,
+              "winner_bits": 39.37476170886111,
+              "winner_match": false,
+              "winner_signature": "fdeb0d8988185207"
+            },
+            "35": {
+              "bits": 38.594952581701975,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 38.594952581701975,
+              "winner_match": true,
+              "winner_signature": "dc08d5469e078553"
+            },
+            "50": {
+              "bits": 37.62422478549835,
+              "reason": "ok",
+              "regret_bits": -7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 37.624224785498356,
+              "winner_match": true,
+              "winner_signature": "dc08d5469e078553"
+            },
+            "60": {
+              "bits": 37.038697119479224,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 37.038697119479224,
+              "winner_match": true,
+              "winner_signature": "dc08d5469e078553"
+            }
+          },
+          "fdeb0d8988185207": {
+            "10": {
+              "bits": 39.30658885691348,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 39.30658885691348,
+              "winner_match": true,
+              "winner_signature": "fdeb0d8988185207"
+            },
+            "20": {
+              "bits": 39.37476170886111,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 39.37476170886111,
+              "winner_match": true,
+              "winner_signature": "fdeb0d8988185207"
+            },
+            "35": {
+              "bits": 38.986308945767725,
+              "reason": "ok",
+              "regret_bits": 0.39135636406575003,
+              "valid": true,
+              "winner_bits": 38.594952581701975,
+              "winner_match": false,
+              "winner_signature": "dc08d5469e078553"
+            },
+            "50": {
+              "bits": 40.48068053246294,
+              "reason": "ok",
+              "regret_bits": 2.856455746964585,
+              "valid": true,
+              "winner_bits": 37.624224785498356,
+              "winner_match": false,
+              "winner_signature": "dc08d5469e078553"
+            },
+            "60": {
+              "bits": 40.8705356499474,
+              "reason": "ok",
+              "regret_bits": 3.8318385304681755,
+              "valid": true,
+              "winner_bits": 37.038697119479224,
+              "winner_match": false,
+              "winner_signature": "dc08d5469e078553"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 145,
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "cutoffs": [
+              35,
+              50,
+              60
+            ],
+            "length_sequence": [
+              112,
+              33
+            ],
+            "literal_digits": 0,
+            "signature": "dc08d5469e078553",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 145,
+            "copy_sources": [
+              4514,
+              3043
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              122,
+              23
+            ],
+            "literal_digits": 0,
+            "signature": "fdeb0d8988185207",
+            "source_default_count": 0,
+            "type_sequence": "CC"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "fdeb0d8988185207",
+          "20": "fdeb0d8988185207",
+          "35": "dc08d5469e078553",
+          "50": "dc08d5469e078553",
+          "60": "dc08d5469e078553"
+        }
+      },
+      {
+        "book": 65,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "policy_choices": {
+          "back_loaded_copy_lengths": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          },
+          "earliest_sources": {
+            "copy_sources": [
+              4511,
+              3033
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              115,
+              51,
+              3
+            ],
+            "max_regret_bits": 0.9286082371725755,
+            "observation_count": 5,
+            "signature": "1792f6a37c523309",
+            "total_regret_bits": 2.462048288259318,
+            "type_sequence": "CCL"
+          },
+          "fewest_literal_digits": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          },
+          "front_loaded_copy_lengths": {
+            "copy_sources": [
+              4511,
+              3043
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              125,
+              41,
+              3
+            ],
+            "max_regret_bits": 2.211789083175802,
+            "observation_count": 5,
+            "signature": "eaf0b833144ee1c3",
+            "total_regret_bits": 4.1133167257796615,
+            "type_sequence": "CCL"
+          },
+          "latest_sources": {
+            "copy_sources": [
+              4511,
+              7029
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              112,
+              54,
+              3
+            ],
+            "max_regret_bits": 1.0836626795274569,
+            "observation_count": 5,
+            "signature": "5bea3cd9dc3c044a",
+            "total_regret_bits": 2.874787213716104,
+            "type_sequence": "CCL"
+          },
+          "lexicographic_length_max": {
+            "copy_sources": [
+              4511,
+              3043
+            ],
+            "exact_matches": 2,
+            "length_sequence": [
+              125,
+              41,
+              3
+            ],
+            "max_regret_bits": 2.211789083175802,
+            "observation_count": 5,
+            "signature": "eaf0b833144ee1c3",
+            "total_regret_bits": 4.1133167257796615,
+            "type_sequence": "CCL"
+          },
+          "lexicographic_length_min": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          },
+          "most_copied_digits": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          },
+          "most_source_defaults": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          },
+          "oracle_min_average_reprice": {
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "exact_matches": 1,
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "max_regret_bits": 1.1104958405292464,
+            "observation_count": 5,
+            "signature": "17f495347bea8db8",
+            "total_regret_bits": 1.9864448444162548,
+            "type_sequence": "CCL"
+          }
+        },
+        "variant_count": 4,
+        "variant_scores": {
+          "1792f6a37c523309": {
+            "10": {
+              "bits": 49.926763918610334,
+              "reason": "ok",
+              "regret_bits": 0.32057662402423404,
+              "valid": true,
+              "winner_bits": 49.6061872945861,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "20": {
+              "bits": 50.099999638955566,
+              "reason": "ok",
+              "regret_bits": 0.3205829245886207,
+              "valid": true,
+              "winner_bits": 49.779416714366945,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "35": {
+              "bits": 48.75799808684888,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 48.75799808684888,
+              "winner_match": true,
+              "winner_signature": "1792f6a37c523309"
+            },
+            "50": {
+              "bits": 49.13620379783941,
+              "reason": "ok",
+              "regret_bits": 0.8922805024738878,
+              "valid": true,
+              "winner_bits": 48.24392329536552,
+              "winner_match": false,
+              "winner_signature": "17f495347bea8db8"
+            },
+            "60": {
+              "bits": 47.75492201213414,
+              "reason": "ok",
+              "regret_bits": 0.9286082371725755,
+              "valid": true,
+              "winner_bits": 46.82631377496156,
+              "winner_match": false,
+              "winner_signature": "5bea3cd9dc3c044a"
+            }
+          },
+          "17f495347bea8db8": {
+            "10": {
+              "bits": 50.037254287970285,
+              "reason": "ok",
+              "regret_bits": 0.4310669933841851,
+              "valid": true,
+              "winner_bits": 49.6061872945861,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "20": {
+              "bits": 50.21049253184155,
+              "reason": "ok",
+              "regret_bits": 0.431075817474607,
+              "valid": true,
+              "winner_bits": 49.779416714366945,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "35": {
+              "bits": 49.868493927378125,
+              "reason": "ok",
+              "regret_bits": 1.1104958405292464,
+              "valid": true,
+              "winner_bits": 48.75799808684888,
+              "winner_match": false,
+              "winner_signature": "1792f6a37c523309"
+            },
+            "50": {
+              "bits": 48.24392329536552,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 48.24392329536552,
+              "winner_match": true,
+              "winner_signature": "17f495347bea8db8"
+            },
+            "60": {
+              "bits": 46.84011996798978,
+              "reason": "ok",
+              "regret_bits": 0.013806193028216285,
+              "valid": true,
+              "winner_bits": 46.82631377496156,
+              "winner_match": false,
+              "winner_signature": "5bea3cd9dc3c044a"
+            }
+          },
+          "5bea3cd9dc3c044a": {
+            "10": {
+              "bits": 50.01042249514355,
+              "reason": "ok",
+              "regret_bits": 0.40423520055745144,
+              "valid": true,
+              "winner_bits": 49.6061872945861,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "20": {
+              "bits": 50.18366010795629,
+              "reason": "ok",
+              "regret_bits": 0.404243393589347,
+              "valid": true,
+              "winner_bits": 49.779416714366945,
+              "winner_match": false,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "35": {
+              "bits": 49.841660766376336,
+              "reason": "ok",
+              "regret_bits": 1.0836626795274569,
+              "valid": true,
+              "winner_bits": 48.75799808684888,
+              "winner_match": false,
+              "winner_signature": "1792f6a37c523309"
+            },
+            "50": {
+              "bits": 49.22656923540737,
+              "reason": "ok",
+              "regret_bits": 0.9826459400418486,
+              "valid": true,
+              "winner_bits": 48.24392329536552,
+              "winner_match": false,
+              "winner_signature": "17f495347bea8db8"
+            },
+            "60": {
+              "bits": 46.82631377496156,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 46.82631377496156,
+              "winner_match": true,
+              "winner_signature": "5bea3cd9dc3c044a"
+            }
+          },
+          "eaf0b833144ee1c3": {
+            "10": {
+              "bits": 49.6061872945861,
+              "reason": "ok",
+              "regret_bits": 0.0,
+              "valid": true,
+              "winner_bits": 49.6061872945861,
+              "winner_match": true,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "20": {
+              "bits": 49.77941671436695,
+              "reason": "ok",
+              "regret_bits": 7.105427357601002e-15,
+              "valid": true,
+              "winner_bits": 49.779416714366945,
+              "winner_match": true,
+              "winner_signature": "eaf0b833144ee1c3"
+            },
+            "35": {
+              "bits": 49.4374078027407,
+              "reason": "ok",
+              "regret_bits": 0.679409715891822,
+              "valid": true,
+              "winner_bits": 48.75799808684888,
+              "winner_match": false,
+              "winner_signature": "1792f6a37c523309"
+            },
+            "50": {
+              "bits": 50.45571237854132,
+              "reason": "ok",
+              "regret_bits": 2.211789083175802,
+              "valid": true,
+              "winner_bits": 48.24392329536552,
+              "winner_match": false,
+              "winner_signature": "17f495347bea8db8"
+            },
+            "60": {
+              "bits": 48.04843170167359,
+              "reason": "ok",
+              "regret_bits": 1.2221179267120306,
+              "valid": true,
+              "winner_bits": 46.82631377496156,
+              "winner_match": false,
+              "winner_signature": "5bea3cd9dc3c044a"
+            }
+          }
+        },
+        "variants": [
+          {
+            "copied_digits": 166,
+            "copy_sources": [
+              4511,
+              3043
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              125,
+              41,
+              3
+            ],
+            "literal_digits": 3,
+            "signature": "eaf0b833144ee1c3",
+            "source_default_count": 0,
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_sources": [
+              4511,
+              3033
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              115,
+              51,
+              3
+            ],
+            "literal_digits": 3,
+            "signature": "1792f6a37c523309",
+            "source_default_count": 0,
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "literal_digits": 3,
+            "signature": "17f495347bea8db8",
+            "source_default_count": 0,
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_sources": [
+              4511,
+              7029
+            ],
+            "cutoffs": [
+              60
+            ],
+            "length_sequence": [
+              112,
+              54,
+              3
+            ],
+            "literal_digits": 3,
+            "signature": "5bea3cd9dc3c044a",
+            "source_default_count": 0,
+            "type_sequence": "CCL"
+          }
+        ],
+        "winner_signatures_by_cutoff": {
+          "10": "eaf0b833144ee1c3",
+          "20": "eaf0b833144ee1c3",
+          "35": "1792f6a37c523309",
+          "50": "17f495347bea8db8",
+          "60": "5bea3cd9dc3c044a"
+        }
+      }
+    ],
+    "cutoff_observation_count": 37,
+    "interpretation": "Every tested simple invariant boundary policy leaves exact path mismatches and positive regret against the per-cutoff parser winners. The observed instability is therefore not explained by a cheap global rule such as front-loading copy lengths, back-loading copy lengths, choosing earliest/latest sources, or preserving source-default choices. Boundary selection remains a structural blocker rather than a closed mechanism.",
+    "oracle_min_average_reprice": {
+      "book_count": 12,
+      "cutoff_observation_count": 37,
+      "exact_signature_match_rate": 0.4864864864864865,
+      "exact_signature_matches": 18,
+      "max_regret_bits": 2.238461293129518,
+      "mean_regret_bits": 0.2121530259826201,
+      "policy": "oracle_min_average_reprice",
+      "total_regret_bits": 7.849661961356944,
+      "valid_observation_count": 37
+    },
+    "policy_promoted": false,
+    "policy_rows": [
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.4864864864864865,
+        "exact_signature_matches": 18,
+        "max_regret_bits": 2.238461293129518,
+        "mean_regret_bits": 0.2121530259826201,
+        "policy": "oracle_min_average_reprice",
+        "total_regret_bits": 7.849661961356944,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.43243243243243246,
+        "exact_signature_matches": 16,
+        "max_regret_bits": 1.1104958405292464,
+        "mean_regret_bits": 0.24283209955585447,
+        "policy": "lexicographic_length_min",
+        "total_regret_bits": 8.984787683566616,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.43243243243243246,
+        "exact_signature_matches": 16,
+        "max_regret_bits": 1.1104958405292464,
+        "mean_regret_bits": 0.24283209955585447,
+        "policy": "most_source_defaults",
+        "total_regret_bits": 8.984787683566616,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.40540540540540543,
+        "exact_signature_matches": 15,
+        "max_regret_bits": 1.3848350901434898,
+        "mean_regret_bits": 0.26767248272357475,
+        "policy": "back_loaded_copy_lengths",
+        "total_regret_bits": 9.903881860772266,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.43243243243243246,
+        "exact_signature_matches": 16,
+        "max_regret_bits": 2.7773110582554352,
+        "mean_regret_bits": 0.31687905495198937,
+        "policy": "fewest_literal_digits",
+        "total_regret_bits": 11.724525033223607,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.43243243243243246,
+        "exact_signature_matches": 16,
+        "max_regret_bits": 2.7773110582554352,
+        "mean_regret_bits": 0.31687905495198937,
+        "policy": "most_copied_digits",
+        "total_regret_bits": 11.724525033223607,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.43243243243243246,
+        "exact_signature_matches": 16,
+        "max_regret_bits": 2.7773110582554352,
+        "mean_regret_bits": 0.329733202082883,
+        "policy": "earliest_sources",
+        "total_regret_bits": 12.20012847706667,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.4864864864864865,
+        "exact_signature_matches": 18,
+        "max_regret_bits": 3.8318385304681755,
+        "mean_regret_bits": 0.6053603560295824,
+        "policy": "latest_sources",
+        "total_regret_bits": 22.39833317309455,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.5135135135135135,
+        "exact_signature_matches": 19,
+        "max_regret_bits": 3.8318385304681755,
+        "mean_regret_bits": 0.6388341266258948,
+        "policy": "front_loaded_copy_lengths",
+        "total_regret_bits": 23.636862685158107,
+        "valid_observation_count": 37
+      },
+      {
+        "book_count": 12,
+        "cutoff_observation_count": 37,
+        "exact_signature_match_rate": 0.5135135135135135,
+        "exact_signature_matches": 19,
+        "max_regret_bits": 3.8318385304681755,
+        "mean_regret_bits": 0.7128810820220297,
+        "policy": "lexicographic_length_max",
+        "total_regret_bits": 26.376600034815098,
+        "valid_observation_count": 37
+      }
+    ],
+    "unstable_book_count": 12
+  },
+  "translation_delta": "NONE"
+}
