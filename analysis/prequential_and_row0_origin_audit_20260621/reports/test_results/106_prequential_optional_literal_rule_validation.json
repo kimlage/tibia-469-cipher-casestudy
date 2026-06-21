@@ -1,0 +1,395 @@
+{
+  "case_reopened": false,
+  "classification": "prequential_optional_literal_exception_rule_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "prequential_exception_rule_partial_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "exception_rule_partial_prequential_clue",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate105_optional_literal_exception_rule": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "prequential_optional_literal_rule_validation.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "control_trials": 500,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "prefix_cutoffs": [
+      20,
+      35,
+      50,
+      60
+    ],
+    "random_seed": 469106,
+    "row0_origin_changed": false,
+    "target_text_dependency_retained": true,
+    "tests_prequential_exception_rule_generalization": true
+  },
+  "splits": [
+    {
+      "cutoff": 20,
+      "fixed_full_corpus_rule_test": {
+        "errors": 3,
+        "f1": 0.8695652173913044,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 152,
+        "tp": 10
+      },
+      "fixed_full_corpus_rule_train": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 53,
+        "tp": 7
+      },
+      "no_exception_baseline_test": {
+        "errors": 10,
+        "f1": 0.0,
+        "fn": 10,
+        "fp": 0,
+        "kind": "baseline",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rule": "no_optional_exception",
+        "tn": 155,
+        "tp": 0
+      },
+      "random_train_label_control": {
+        "max": 69,
+        "mean": 19.072,
+        "median": 17.0,
+        "min": 2,
+        "train_selected_test_error_percentile": 0.026,
+        "trials": 500
+      },
+      "suffix_oracle_rule_test": {
+        "errors": 2,
+        "f1": 0.9090909090909091,
+        "fn": 0,
+        "fp": 2,
+        "kind": "pair",
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_20)",
+        "tn": 153,
+        "tp": 10
+      },
+      "test_exceptions": 10,
+      "test_rows": 165,
+      "train_exceptions": 7,
+      "train_rows": 60,
+      "train_selected_rule_test": {
+        "errors": 3,
+        "f1": 0.8695652173913044,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 152,
+        "tp": 10
+      },
+      "train_selected_rule_train": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 53,
+        "tp": 7
+      }
+    },
+    {
+      "cutoff": 35,
+      "fixed_full_corpus_rule_test": {
+        "errors": 1,
+        "f1": 0.9333333333333333,
+        "fn": 0,
+        "fp": 1,
+        "kind": "pair",
+        "precision": 0.875,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 94,
+        "tp": 7
+      },
+      "fixed_full_corpus_rule_train": {
+        "errors": 2,
+        "f1": 0.9090909090909091,
+        "fn": 0,
+        "fp": 2,
+        "kind": "pair",
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 111,
+        "tp": 10
+      },
+      "no_exception_baseline_test": {
+        "errors": 7,
+        "f1": 0.0,
+        "fn": 7,
+        "fp": 0,
+        "kind": "baseline",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rule": "no_optional_exception",
+        "tn": 95,
+        "tp": 0
+      },
+      "random_train_label_control": {
+        "max": 22,
+        "mean": 9.38,
+        "median": 9.0,
+        "min": 1,
+        "train_selected_test_error_percentile": 0.008,
+        "trials": 500
+      },
+      "suffix_oracle_rule_test": {
+        "errors": 1,
+        "f1": 0.9333333333333333,
+        "fn": 0,
+        "fp": 1,
+        "kind": "pair",
+        "precision": 0.875,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 94,
+        "tp": 7
+      },
+      "test_exceptions": 7,
+      "test_rows": 102,
+      "train_exceptions": 10,
+      "train_rows": 123,
+      "train_selected_rule_test": {
+        "errors": 2,
+        "f1": 0.8571428571428571,
+        "fn": 1,
+        "fp": 1,
+        "kind": "pair",
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "rule": "(length_le_5 and remaining_ge_24)",
+        "tn": 94,
+        "tp": 6
+      },
+      "train_selected_rule_train": {
+        "errors": 1,
+        "f1": 0.9473684210526316,
+        "fn": 1,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 0.9,
+        "rule": "(length_le_5 and remaining_ge_24)",
+        "tn": 113,
+        "tp": 9
+      }
+    },
+    {
+      "cutoff": 50,
+      "fixed_full_corpus_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 49,
+        "tp": 3
+      },
+      "fixed_full_corpus_rule_train": {
+        "errors": 3,
+        "f1": 0.9032258064516129,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.8235294117647058,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 156,
+        "tp": 14
+      },
+      "no_exception_baseline_test": {
+        "errors": 3,
+        "f1": 0.0,
+        "fn": 3,
+        "fp": 0,
+        "kind": "baseline",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rule": "no_optional_exception",
+        "tn": 49,
+        "tp": 0
+      },
+      "random_train_label_control": {
+        "max": 12,
+        "mean": 3.934,
+        "median": 3.0,
+        "min": 0,
+        "train_selected_test_error_percentile": 0.02,
+        "trials": 500
+      },
+      "suffix_oracle_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "primitive",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "length_le_3",
+        "tn": 49,
+        "tp": 3
+      },
+      "test_exceptions": 3,
+      "test_rows": 52,
+      "train_exceptions": 14,
+      "train_rows": 173,
+      "train_selected_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 49,
+        "tp": 3
+      },
+      "train_selected_rule_train": {
+        "errors": 3,
+        "f1": 0.9032258064516129,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.8235294117647058,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 156,
+        "tp": 14
+      }
+    },
+    {
+      "cutoff": 60,
+      "fixed_full_corpus_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 18,
+        "tp": 1
+      },
+      "fixed_full_corpus_rule_train": {
+        "errors": 3,
+        "f1": 0.9142857142857143,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.8421052631578947,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 187,
+        "tp": 16
+      },
+      "no_exception_baseline_test": {
+        "errors": 1,
+        "f1": 0.0,
+        "fn": 1,
+        "fp": 0,
+        "kind": "baseline",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rule": "no_optional_exception",
+        "tn": 18,
+        "tp": 0
+      },
+      "random_train_label_control": {
+        "max": 4,
+        "mean": 1.118,
+        "median": 1.0,
+        "min": 0,
+        "train_selected_test_error_percentile": 0.03,
+        "trials": 500
+      },
+      "suffix_oracle_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "primitive",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "length_le_3",
+        "tn": 18,
+        "tp": 1
+      },
+      "test_exceptions": 1,
+      "test_rows": 19,
+      "train_exceptions": 16,
+      "train_rows": 206,
+      "train_selected_rule_test": {
+        "errors": 0,
+        "f1": 1.0,
+        "fn": 0,
+        "fp": 0,
+        "kind": "pair",
+        "precision": 1.0,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 18,
+        "tp": 1
+      },
+      "train_selected_rule_train": {
+        "errors": 3,
+        "f1": 0.9142857142857143,
+        "fn": 0,
+        "fp": 3,
+        "kind": "pair",
+        "precision": 0.8421052631578947,
+        "recall": 1.0,
+        "rule": "(length_le_5 and remaining_ge_10)",
+        "tn": 187,
+        "tp": 16
+      }
+    }
+  ],
+  "summary": {
+    "evaluated_splits": 4,
+    "fixed_rule_better_than_baseline_splits": 4,
+    "interpretation": "Prefix-selected optional-literal rules generalize partially: they beat the no-exception baseline in every tested suffix, and the fixed corpus rule does too. But train-selected rules do not match suffix-oracle rule error in every split, and the whole family still depends on target copy availability and the length atlas. The result is predictive support for the clue, not a promoted generator.",
+    "max_train_selected_oracle_gap_errors": 1,
+    "mean_train_selected_oracle_gap_errors": 0.5,
+    "promotes_prequential_rule": false,
+    "train_selected_better_than_baseline_splits": 4
+  },
+  "translation_delta": "NONE"
+}

@@ -382,6 +382,12 @@ all `17` optional literal exceptions and leaves only `3` false-positive copy
 rows; shuffled-label controls have best-error minimum `12`. This is a real
 structural clue, but still not a generator because it depends on target copy
 availability and on the external length atlas.
+A prequential optional-literal validation then checks the clue without retuning
+on suffix rows. Prefix-selected rules beat the no-exception baseline in `4/4`
+suffix splits, and the fixed full-corpus rule also beats baseline in `4/4`.
+But train-selected rules trail suffix-oracle rules by up to `1` error, and the
+family still depends on target copy availability plus the length atlas. This is
+predictive support, not promotion.
 
 A seed primacy audit then tests whether the usual operational seed assumption
 itself has mechanical privilege. Under seed-only exact-copy coverage, books
@@ -2048,6 +2054,7 @@ book generation, not row0 pair-cell placement.
 - [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
 - [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
 - [Optional literal exception rule audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md)
+- [Prequential optional literal rule validation](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)

@@ -331,6 +331,9 @@ exogenous.
 - [scripts/105_optional_literal_exception_rule_audit.py](scripts/105_optional_literal_exception_rule_audit.py) - tests simple rules for available-copy literal exceptions.
 - [reports/test_results/105_optional_literal_exception_rule_audit.md](reports/test_results/105_optional_literal_exception_rule_audit.md) - optional literal exception rule result.
 - [reports/test_results/105_optional_literal_exception_rule_audit.json](reports/test_results/105_optional_literal_exception_rule_audit.json) - structured optional literal exception rule audit.
+- [scripts/106_prequential_optional_literal_rule_validation.py](scripts/106_prequential_optional_literal_rule_validation.py) - validates optional-literal exception rules on prefix/suffix splits.
+- [reports/test_results/106_prequential_optional_literal_rule_validation.md](reports/test_results/106_prequential_optional_literal_rule_validation.md) - prequential optional-literal rule result.
+- [reports/test_results/106_prequential_optional_literal_rule_validation.json](reports/test_results/106_prequential_optional_literal_rule_validation.json) - structured prequential optional-literal rule validation.
 
 ## Boundary
 
@@ -397,6 +400,11 @@ exogenous.
   `17` to `3`. Shuffled-label controls do not match it, but the rule still
   depends on target copy availability and the external length atlas, so it is
   `AUDIT_ONLY`.
+- Prequential optional-literal boundary: prefix-selected exception rules beat
+  the no-exception baseline in `4/4` suffix splits, and the fixed full-corpus
+  rule also beats baseline in `4/4`. Train-selected rules still lag suffix
+  oracles in some splits and retain target/length-atlas dependencies, so this is
+  predictive support for the clue, not generator promotion.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

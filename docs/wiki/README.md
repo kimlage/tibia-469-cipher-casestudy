@@ -805,6 +805,10 @@ An optional-literal exception rule audit reduces the available-copy literal
 exception surface: `length <= 5 and remaining >= 10` catches all `17` optional
 literal exceptions with `3` false-positive copies, far better than shuffled
 controls, but still target-dependent and length-atlas dependent.
+A prequential optional-literal validation shows that this signal generalizes
+partly: prefix-selected rules beat the no-exception baseline in `4/4` suffix
+splits, but they still trail suffix-oracle rules and retain the same
+target/length-atlas dependencies.
 A seed primacy audit rejects treating operational books `0..9` as a special
 mechanical seed set: they cover `8664/9567` non-seed digits, below random k=10
 median `9005`, while a better k=10 seed exists only posthoc. The result is
@@ -1038,6 +1042,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   records target-dependent copy availability as an `AUDIT_ONLY` op-type clue,
   derives target positions from cumulative lengths while retaining the atlas,
   reduces optional literal exceptions to a partial target-dependent rule,
+  validates that optional-literal rule prequentially as partial support only,
   rejects operational seed `0..9` as mechanically privileged under seed-only
   coverage controls,
   keeps prefix-trained seed selection as partial predictive signal only,
