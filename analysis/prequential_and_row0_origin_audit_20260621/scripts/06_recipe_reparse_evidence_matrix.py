@@ -71,6 +71,8 @@ SOURCES = {
     / "39_multicutoff_source_choice_optimizer_gate.json",
     "multicutoff_global_source_path_optimizer_gate": TEST_RESULTS
     / "40_multicutoff_global_source_path_optimizer_gate.json",
+    "full_corpus_source_path_formula_gate": TEST_RESULTS
+    / "41_full_corpus_source_path_formula_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -140,6 +142,9 @@ def make_result() -> dict[str, Any]:
     global_source_path_optimizer_gate = load_json(
         SOURCES["multicutoff_global_source_path_optimizer_gate"]
     )
+    full_corpus_source_path_formula_gate = load_json(
+        SOURCES["full_corpus_source_path_formula_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -187,6 +192,7 @@ def make_result() -> dict[str, Any]:
         ),
         ("multicutoff_source_choice_optimizer_gate", source_choice_optimizer_gate),
         ("multicutoff_global_source_path_optimizer_gate", global_source_path_optimizer_gate),
+        ("full_corpus_source_path_formula_gate", full_corpus_source_path_formula_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -1064,6 +1070,67 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "can_full_corpus_source_path_improve_formula_bound",
+            "source": rel(SOURCES["full_corpus_source_path_formula_gate"]),
+            "status": "passed_fixed_recipe_source_path_formula_improves_bound",
+            "evidence": {
+                "active_total_bits": full_corpus_source_path_formula_gate["summary"][
+                    "active_total_bits"
+                ],
+                "candidate_total_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["candidate_total_bits"],
+                "candidate_gain_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["candidate_gain_bits"],
+                "active_copy_source_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["active_copy_source_bits"],
+                "candidate_copy_source_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["candidate_copy_source_bits"],
+                "adaptive_copy_source_delta_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["adaptive_copy_source_delta_bits"],
+                "frozen_source_delta_bits": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["frozen_source_delta_bits"],
+                "changed_source_count": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["changed_source_count"],
+                "copy_event_count": full_corpus_source_path_formula_gate["summary"][
+                    "copy_event_count"
+                ],
+                "candidate_count": full_corpus_source_path_formula_gate["summary"][
+                    "candidate_count"
+                ],
+                "source_default_count": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["source_default_count"],
+                "source_exception_count": full_corpus_source_path_formula_gate[
+                    "summary"
+                ]["source_exception_count"],
+                "max_state_count": full_corpus_source_path_formula_gate["summary"][
+                    "max_state_count"
+                ],
+                "candidate_output_formula": full_corpus_source_path_formula_gate[
+                    "candidate_output_formula"
+                ],
+                "fixed_segmentation": full_corpus_source_path_formula_gate["scope"][
+                    "fixed_segmentation"
+                ],
+                "fixed_copy_lengths": full_corpus_source_path_formula_gate["scope"][
+                    "fixed_copy_lengths"
+                ],
+            },
+            "interpretation": (
+                "The full-corpus source-path candidate survives the real adaptive "
+                "source-stream rescore and lowers the compression bound. This is "
+                "a fixed-recipe source-path improvement, not complete parser "
+                "discovery."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1705,6 +1772,7 @@ def make_result() -> dict[str, Any]:
             "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
             "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
+            "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1998,6 +2066,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['max_state_count']}; segmentation reoptimized "
                 f"{not evidence['not_segmentation_reoptimization']}"
             )
+        elif row["question"] == "can_full_corpus_source_path_improve_formula_bound":
+            key = (
+                f"active {evidence['active_total_bits']:.3f}; candidate "
+                f"{evidence['candidate_total_bits']:.3f}; gain "
+                f"{evidence['candidate_gain_bits']:+.3f}; copy-source "
+                f"{evidence['active_copy_source_bits']:.3f} -> "
+                f"{evidence['candidate_copy_source_bits']:.3f}; changed "
+                f"{evidence['changed_source_count']}/{evidence['copy_event_count']}; "
+                f"defaults/exceptions {evidence['source_default_count']}/"
+                f"{evidence['source_exception_count']}; max states "
+                f"{evidence['max_state_count']}; fixed segmentation "
+                f"{evidence['fixed_segmentation']}; fixed lengths "
+                f"{evidence['fixed_copy_lengths']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2210,6 +2292,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Multi-cutoff source-state reprice: `{result['decision']['multicutoff_source_state_reprice_status']}`.",
             f"- Source-choice optimizer: `{result['decision']['source_choice_optimizer_status']}`.",
             f"- Global source-path optimizer: `{result['decision']['global_source_path_optimizer_status']}`.",
+            f"- Full-corpus source-path formula: `{result['decision']['full_corpus_source_path_formula_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

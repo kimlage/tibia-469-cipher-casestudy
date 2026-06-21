@@ -99,8 +99,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_formula_469` | `8343.1` | `215.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_default_exception_formula_469` | `8206.2` | `136.9` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469` | `8177.3` | `28.9` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_path_optimized_formula_469` | `8162.4` | `14.9` |
 
-The `8177.3` row is the current `compression_bound`, not a final authorial
+The `8162.4` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1093,7 +1094,7 @@ the current profile: it is `+95.968` bits on the full corpus and `+28.609`
 bits worse in aggregate frozen prefix tests, despite winning cutoffs
 `20/35/50`. The current profile therefore keeps order-2.
 The current active prequential profile audit then consolidates all learned
-streams in the active `8177.317` bit formula: copy length, copy source, literal
+streams in the then-active `8177.317` bit formula: copy length, copy source, literal
 payload, and item type. These streams account for `7157.317` bits (`87.526%`)
 and beat uniform on every tested prefix, contiguous-block, and public-bookcase
 family holdout; the weakest family frozen gain is still `6.269` bits. Random
@@ -1139,6 +1140,12 @@ sources, improves the repriced ledger by `-42.359` bits, beats repricing in
 `5/5` cutoffs, and uses max state count `14`. Segmentation and copy lengths
 remain fixed, so this is still a partial optimizer rather than a complete
 active parser.
+The full-corpus source-path formula gate then checks whether that path-state
+signal survives the real adaptive source-stream score. It does: changing
+`2/261` same-chunk source positions lowers copy-source cost from `3002.838` to
+`2987.933` bits and moves the active fixed-recipe bound from `8177.317` to
+`8162.412` bits. The recipe segmentation and copy lengths remain fixed, so
+this improves the compression bound without proving complete parser discovery.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

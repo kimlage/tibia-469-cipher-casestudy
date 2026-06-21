@@ -93,6 +93,14 @@ MULTICUTOFF_GLOBAL_SOURCE_PATH_OPTIMIZER_GATE = (
     / "test_results"
     / "40_multicutoff_global_source_path_optimizer_gate.json"
 )
+FULL_CORPUS_SOURCE_PATH_FORMULA_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "41_full_corpus_source_path_formula_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -276,6 +284,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "multicutoff_global_source_path_optimizer_gate",
         global_source_path_optimizer_gate,
     )
+    full_corpus_source_path_formula_gate = load_json(
+        FULL_CORPUS_SOURCE_PATH_FORMULA_GATE
+    )
+    assert_analysis_boundary(
+        "full_corpus_source_path_formula_gate",
+        full_corpus_source_path_formula_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -404,6 +419,16 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "scope": global_source_path_optimizer_gate["scope"],
             "decision": global_source_path_optimizer_gate["decision"],
         },
+        "full_corpus_source_path_formula": {
+            "classification": full_corpus_source_path_formula_gate["classification"],
+            "source": rel(FULL_CORPUS_SOURCE_PATH_FORMULA_GATE),
+            "summary": full_corpus_source_path_formula_gate["summary"],
+            "scope": full_corpus_source_path_formula_gate["scope"],
+            "decision": full_corpus_source_path_formula_gate["decision"],
+            "candidate_output_formula": full_corpus_source_path_formula_gate[
+                "candidate_output_formula"
+            ],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -434,6 +459,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
             "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
+            "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -473,6 +499,7 @@ def render_markdown(
     multicutoff_source_state_reparse_reprice_gate_link: str,
     multicutoff_source_choice_optimizer_gate_link: str,
     multicutoff_global_source_path_optimizer_gate_link: str,
+    full_corpus_source_path_formula_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -504,6 +531,7 @@ def render_markdown(
     ]
     source_choice_optimizer = result["multicutoff_source_choice_optimizer"]["summary"]
     global_source_path = result["multicutoff_global_source_path_optimizer"]["summary"]
+    full_corpus_source_path = result["full_corpus_source_path_formula"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -961,6 +989,25 @@ def render_markdown(
             "than a full active parser.",
             f"See [40_multicutoff_global_source_path_optimizer_gate.md]({multicutoff_global_source_path_optimizer_gate_link}).",
             "",
+            "### Full-Corpus Source Path Formula Gate",
+            "",
+            "The same source-path idea is then tested as a full-corpus fixed-recipe",
+            "formula improvement. The exact DP is used only to propose same-chunk",
+            "source substitutions; the candidate is accepted only after the real",
+            "adaptive source default/exception stream is rescored. It improves the",
+            "active formula from",
+            f"`{full_corpus_source_path['active_total_bits']:.3f}` to",
+            f"`{full_corpus_source_path['candidate_total_bits']:.3f}` bits, a",
+            f"gain of `{full_corpus_source_path['candidate_gain_bits']:+.3f}` bits,",
+            "by changing",
+            f"`{full_corpus_source_path['changed_source_count']}`/",
+            f"`{full_corpus_source_path['copy_event_count']}` sources. The",
+            "copy-source ledger drops from",
+            f"`{full_corpus_source_path['active_copy_source_bits']:.3f}` to",
+            f"`{full_corpus_source_path['candidate_copy_source_bits']:.3f}` bits.",
+            "Segmentation and copy lengths remain fixed.",
+            f"See [41_full_corpus_source_path_formula_gate.md]({full_corpus_source_path_formula_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -1141,6 +1188,7 @@ def render_markdown(
             "- Multi-cutoff source-state repricing generalizes that aggregate signal across cutoffs `10/20/35/50/60`: `5/5` cutoffs improve versus uniform-address reparse, totaling `-112.968` bits, while still not reoptimizing recipes.",
             "- Fixed-segmentation source-choice optimization finds `0/514` cheaper source substitutions, so the simple source-only improvement path is closed under the immediate `previous_copy_end` cost.",
             "- Global fixed-segmentation source-path optimization improves the repriced ledger by `-42.359` bits, changing `10/514` sources with max DP state count `14`; segmentation and copy lengths remain fixed.",
+            "- Full-corpus fixed-recipe source-path optimization survives adaptive rescore and lowers the active bound from `8177.317` to `8162.412` bits by changing `2/261` source positions; segmentation and copy lengths remain fixed.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -1222,6 +1270,9 @@ def main() -> None:
             ),
             multicutoff_global_source_path_optimizer_gate_link=(
                 "40_multicutoff_global_source_path_optimizer_gate.md"
+            ),
+            full_corpus_source_path_formula_gate_link=(
+                "41_full_corpus_source_path_formula_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1319,6 +1370,9 @@ def main() -> None:
             ),
             multicutoff_global_source_path_optimizer_gate_link=(
                 "test_results/40_multicutoff_global_source_path_optimizer_gate.md"
+            ),
+            full_corpus_source_path_formula_gate_link=(
+                "test_results/41_full_corpus_source_path_formula_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

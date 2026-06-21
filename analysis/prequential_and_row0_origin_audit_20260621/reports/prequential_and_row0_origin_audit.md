@@ -431,6 +431,25 @@ lengths remain fixed, so this is a partial source-path optimizer rather
 than a full active parser.
 See [40_multicutoff_global_source_path_optimizer_gate.md](test_results/40_multicutoff_global_source_path_optimizer_gate.md).
 
+### Full-Corpus Source Path Formula Gate
+
+The same source-path idea is then tested as a full-corpus fixed-recipe
+formula improvement. The exact DP is used only to propose same-chunk
+source substitutions; the candidate is accepted only after the real
+adaptive source default/exception stream is rescored. It improves the
+active formula from
+`8177.317` to
+`8162.412` bits, a
+gain of `+14.905` bits,
+by changing
+`2`/
+`261` sources. The
+copy-source ledger drops from
+`3002.838` to
+`2987.933` bits.
+Segmentation and copy lengths remain fixed.
+See [41_full_corpus_source_path_formula_gate.md](test_results/41_full_corpus_source_path_formula_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -602,6 +621,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - Multi-cutoff source-state repricing generalizes that aggregate signal across cutoffs `10/20/35/50/60`: `5/5` cutoffs improve versus uniform-address reparse, totaling `-112.968` bits, while still not reoptimizing recipes.
 - Fixed-segmentation source-choice optimization finds `0/514` cheaper source substitutions, so the simple source-only improvement path is closed under the immediate `previous_copy_end` cost.
 - Global fixed-segmentation source-path optimization improves the repriced ledger by `-42.359` bits, changing `10/514` sources with max DP state count `14`; segmentation and copy lengths remain fixed.
+- Full-corpus fixed-recipe source-path optimization survives adaptive rescore and lowers the active bound from `8177.317` to `8162.412` bits by changing `2/261` source positions; segmentation and copy lengths remain fixed.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

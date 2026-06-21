@@ -500,16 +500,17 @@ semantics unchanged.
 The default/exception prequential validation audit keeps that boundary honest:
 after the train-count freezing fix, prefix online and frozen gains stay
 positive (`min frozen aggregate=50.303` bits), but family holdouts include
-failures. A component-profile compile now records the split explicitly:
-`8177.317` bits is both the `compression_bound` and prefix-frozen generation
-profile for this layer, while the generation claim remains partial under
+failures. A component-profile compile then records the split explicitly:
+`8177.317` bits is both the then-current `compression_bound` and
+prefix-frozen generation profile for this layer, while the generation claim
+remains partial under
 family/bookcase holdout.
 The copy-source distance audit then rejects a decodable backward-distance
 source model: replacing the active absolute-source default/exception model
 would cost `+25.551` bits.
 The current active prequential profile audit then consolidates copy length,
-copy source, literal payload, and item type under the active `8177.317` bit
-formula. The learned streams account for `7157.317` bits (`87.526%`) and beat
+copy source, literal payload, and item type under the then-active `8177.317`
+bit formula. The learned streams account for `7157.317` bits (`87.526%`) and beat
 uniform in every tested prefix, block, and public-bookcase family holdout, but
 random same-size train controls are usually stronger than numeric prefixes.
 This strengthens component validation while leaving recipe discovery, row0
@@ -539,6 +540,10 @@ A global fixed-segmentation source-path DP then changes `10/514` sources and
 improves the repriced ledger by `-42.359` bits with max state count `14`,
 confirming path-state value while still leaving segmentation and copy lengths
 fixed.
+A full-corpus fixed-recipe source-path formula gate then verifies the same idea
+under the real adaptive source-stream rescore: changing `2/261` source
+positions lowers the active mechanical bound from `8177.317` to `8162.412`
+bits, while segmentation and copy lengths remain fixed.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

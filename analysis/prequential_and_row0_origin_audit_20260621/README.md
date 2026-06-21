@@ -136,6 +136,9 @@ exogenous.
 - [scripts/40_multicutoff_global_source_path_optimizer_gate.py](scripts/40_multicutoff_global_source_path_optimizer_gate.py) - optimizes fixed deterministic copy-source choices globally under `previous_copy_end`.
 - [reports/test_results/40_multicutoff_global_source_path_optimizer_gate.md](reports/test_results/40_multicutoff_global_source_path_optimizer_gate.md) - global source-path optimizer result.
 - [reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json](reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json) - structured global source-path optimizer ledger.
+- [scripts/41_full_corpus_source_path_formula_gate.py](scripts/41_full_corpus_source_path_formula_gate.py) - tests whether global source-path substitutions survive the full adaptive source-stream rescore.
+- [reports/test_results/41_full_corpus_source_path_formula_gate.md](reports/test_results/41_full_corpus_source_path_formula_gate.md) - full-corpus source-path formula result.
+- [reports/test_results/41_full_corpus_source_path_formula_gate.json](reports/test_results/41_full_corpus_source_path_formula_gate.json) - structured full-corpus source-path formula ledger.
 
 ## Boundary
 
@@ -236,6 +239,11 @@ exogenous.
   compressed source-state frontier is small enough for book-local prototyping by
   proxy: every tested book-level end-state proxy is below one million and
   cutoff `60` has `9/10` books below `250000`. The complete active parser is
+  still unpromoted. A full-corpus source-path formula gate then converts part
+  of that path-state signal into a fixed-recipe formula improvement: changing
+  `2/261` source positions lowers the adaptive copy-source stream enough to
+  move the active mechanical bound from `8177.317` to `8162.412` bits. This
+  remains fixed in segmentation and copy lengths, so the complete parser is
   still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

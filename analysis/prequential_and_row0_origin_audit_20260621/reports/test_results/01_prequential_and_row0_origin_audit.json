@@ -2136,6 +2136,7 @@
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
     "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
+    "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
     "generation_explanation_status": "predictive_signal_partial_not_generation_method",
     "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
     "item_type_boundary_status": "split_only_retained_op_type_field_derived",
@@ -2149,6 +2150,79 @@
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "translation_or_plaintext_status": "NONE"
+  },
+  "full_corpus_source_path_formula": {
+    "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_path_optimized_formula_469.json",
+    "classification": "full_corpus_source_path_formula_improves_bound",
+    "decision": {
+      "compression_bound_status": "improved_by_source_path_formula",
+      "recipe_discovery_status": "source_path_candidate_adaptively_rescored_fixed_recipe",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "fixed_copy_lengths": true,
+      "fixed_segmentation": true,
+      "optimization": "exact DP over fixed copy-source choices under frozen full-corpus source counts, then exact adaptive rescore",
+      "row0_origin_changed": false,
+      "same_chunk_source_choices_only": true
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/41_full_corpus_source_path_formula_gate.json",
+    "summary": {
+      "active_copy_source_bits": 3002.838060159001,
+      "active_source_default_count": 5,
+      "active_source_exception_count": 256,
+      "active_total_bits": 8177.3166531229235,
+      "adaptive_copy_source_delta_bits": -14.904598849259855,
+      "candidate_copy_source_bits": 2987.9334613097412,
+      "candidate_count": 637,
+      "candidate_gain_bits": 14.904598849259855,
+      "candidate_total_bits": 8162.412054273664,
+      "changed_source_count": 2,
+      "copy_event_count": 261,
+      "frozen_optimized_source_bits": 2730.723133805618,
+      "frozen_original_source_bits": 2741.8198305282563,
+      "frozen_source_delta_bits": -11.096696722638171,
+      "max_state_count": 14,
+      "remaining_blockers": [
+        "The candidate generator uses frozen full-corpus source counts, then verifies by adaptive rescore.",
+        "Segmentation and copy lengths remain fixed; this is not a complete active parser.",
+        "Row0 origin remains exogenous."
+      ],
+      "sample_changed_sources": [
+        {
+          "bits": 10.022925466714879,
+          "book": 17,
+          "candidate_count": 4,
+          "event_index": 97,
+          "exception_bits": 9.989631026616454,
+          "flag_bits": 0.0332944400984242,
+          "length": 7,
+          "op_index": 0,
+          "original_source_digit_pos": 106,
+          "source_changed": true,
+          "source_digit_pos": 413,
+          "source_is_default": false
+        },
+        {
+          "bits": 13.37077697146426,
+          "book": 62,
+          "candidate_count": 3,
+          "event_index": 250,
+          "exception_bits": 13.337482531365835,
+          "flag_bits": 0.0332944400984242,
+          "length": 126,
+          "op_index": 0,
+          "original_source_digit_pos": 424,
+          "source_changed": true,
+          "source_digit_pos": 6852,
+          "source_is_default": false
+        }
+      ],
+      "source_default_count": 7,
+      "source_exception_count": 254,
+      "transition_count": 1737
+    }
   },
   "item_type_op_shape_boundary": {
     "classification": "item_type_split_only_retained_op_type_shape_derived",
