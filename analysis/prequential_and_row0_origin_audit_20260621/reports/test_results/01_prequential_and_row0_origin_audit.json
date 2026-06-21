@@ -2151,6 +2151,7 @@
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
     "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
+    "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
     "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
     "translation_or_plaintext_status": "NONE"
@@ -18316,6 +18317,60 @@
     "reason_later_bound_not_used_here": "The requested method change freezes the 8558.667-bit formula as the predictive-validation target and stops treating later compression-only micro-improvements as generation evidence.",
     "scope_compression_bound_bits": 8558.666806283434,
     "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json"
+  },
+  "source_substitution_saturation": {
+    "classification": "local_source_substitution_frontier_saturated_stop_mainline",
+    "decision": {
+      "compression_bound_status": "8160_825608_retained_as_current_local_source_bound",
+      "generation_explanation_status": "local_same_chunk_source_substitution_no_longer_mainline",
+      "next_work": "Future progress should require a structural source/length derivation, holdout-predictive parser improvement, or row0-origin evidence rather than repeated unpriced local source edits.",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "analysis_only": true,
+      "does_not_search_fifth_pass": true,
+      "fixed_copy_lengths": true,
+      "fixed_segmentation": true,
+      "new_formula_emitted": false,
+      "same_chunk_source_choices_only": true,
+      "source_substitution_passes_considered": [
+        "source_substitution_frontier",
+        "source_substitution_second_pass",
+        "source_substitution_third_pass",
+        "source_substitution_fourth_pass"
+      ]
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/46_source_substitution_saturation_audit.json",
+    "summary": {
+      "active_bound_before_source_path_bits": 8177.3166531229235,
+      "current_compression_bound_bits": 8160.825607635859,
+      "first_substitution_frontier_gain_bits": 1.5849625007213035,
+      "frontier_saturated": true,
+      "last_pass_gain_bits": 0.0003095543997915229,
+      "last_pass_pair_candidates_per_gain_bit": 225643699.6115757,
+      "last_pass_positive_pair_fraction": 0.007287147990665579,
+      "minimum_pair_selector_floor_bits": 16.09195184084821,
+      "minimum_pair_selector_floor_minus_last_gain_bits": 16.09164228644842,
+      "source_path_gain_bits": 14.904598849259855,
+      "stop_rule": {
+        "last_gain_smaller_than_minimum_pair_selector_floor": true,
+        "last_three_cumulative_gain_below_0_002_bits": true,
+        "last_three_passes_all_below_0_001_bits": true,
+        "positive_pair_counts_strictly_decrease": true,
+        "positive_single_counts_strictly_decrease_after_second_pass": true,
+        "same_pair_search_size_each_pass": true,
+        "tail_gain_smaller_than_minimum_tail_selector_floor": true
+      },
+      "tail_cumulative_gain_bits": 0.0014841370830254164,
+      "tail_pass_gains_bits": [
+        0.0006711103651468875,
+        0.000503472318087006,
+        0.0003095543997915229
+      ],
+      "tail_selector_floor_bits": 48.27585552254463,
+      "tail_selector_floor_minus_tail_gain_bits": 48.274371385461606
+    }
   },
   "translation_delta": "NONE"
 }

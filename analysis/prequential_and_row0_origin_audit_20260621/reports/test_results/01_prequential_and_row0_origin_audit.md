@@ -503,6 +503,20 @@ This is compression-bound bookkeeping and local source-frontier
 saturation, not new generation evidence.
 See [45_full_corpus_source_substitution_fourth_pass_gate.md](45_full_corpus_source_substitution_fourth_pass_gate.md).
 
+### Source Substitution Saturation Audit
+
+The source-substitution series is then converted into an explicit
+stop-rule audit. The last three pass gains sum to only
+`0.001484` bits,
+and the last pass has positive pairs in only
+`0.007287`
+of searched pair candidates. A minimum pair-selector floor is
+`16.092`
+bits, dwarfing the latest unpriced gain. The local same-chunk source
+frontier is therefore saturated as a mainline path; future progress
+needs structure, holdout prediction, or row0-origin evidence.
+See [46_source_substitution_saturation_audit.md](46_source_substitution_saturation_audit.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -679,6 +693,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - A second single/pair source-substitution pass finds only a microscopic `+0.000671` bit gain, lowering the active bound to `8160.826421`; this is a compression-bound update, not stronger generation evidence.
 - A third single/pair source-substitution pass finds another microscopic `+0.000503` bit gain, lowering the active bound to `8160.825917`; local source substitutions are saturating.
 - A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.
+- The source-substitution saturation audit freezes repeated same-chunk local source edits as no longer mainline: the last three gains sum to `0.001484` bits and are dwarfed by selector-cost sanity checks.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

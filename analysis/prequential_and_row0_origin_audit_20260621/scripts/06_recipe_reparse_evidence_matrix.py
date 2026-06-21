@@ -81,6 +81,8 @@ SOURCES = {
     / "44_full_corpus_source_substitution_third_pass_gate.json",
     "full_corpus_source_substitution_fourth_pass_gate": TEST_RESULTS
     / "45_full_corpus_source_substitution_fourth_pass_gate.json",
+    "source_substitution_saturation_audit": TEST_RESULTS
+    / "46_source_substitution_saturation_audit.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -165,6 +167,9 @@ def make_result() -> dict[str, Any]:
     full_corpus_source_substitution_fourth_pass_gate = load_json(
         SOURCES["full_corpus_source_substitution_fourth_pass_gate"]
     )
+    source_substitution_saturation = load_json(
+        SOURCES["source_substitution_saturation_audit"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -228,6 +233,10 @@ def make_result() -> dict[str, Any]:
         (
             "full_corpus_source_substitution_fourth_pass_gate",
             full_corpus_source_substitution_fourth_pass_gate,
+        ),
+        (
+            "source_substitution_saturation_audit",
+            source_substitution_saturation,
         ),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
@@ -1338,6 +1347,45 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "is_repeated_local_source_substitution_now_saturated",
+            "source": rel(SOURCES["source_substitution_saturation_audit"]),
+            "status": "passed_stop_mainline_local_source_micro_sweeps",
+            "evidence": {
+                "current_compression_bound_bits": source_substitution_saturation[
+                    "summary"
+                ]["current_compression_bound_bits"],
+                "tail_pass_gains_bits": source_substitution_saturation["summary"][
+                    "tail_pass_gains_bits"
+                ],
+                "tail_cumulative_gain_bits": source_substitution_saturation[
+                    "summary"
+                ]["tail_cumulative_gain_bits"],
+                "last_pass_positive_pair_fraction": source_substitution_saturation[
+                    "summary"
+                ]["last_pass_positive_pair_fraction"],
+                "last_pass_pair_candidates_per_gain_bit": source_substitution_saturation[
+                    "summary"
+                ]["last_pass_pair_candidates_per_gain_bit"],
+                "minimum_pair_selector_floor_bits": source_substitution_saturation[
+                    "summary"
+                ]["minimum_pair_selector_floor_bits"],
+                "tail_selector_floor_minus_tail_gain_bits": source_substitution_saturation[
+                    "summary"
+                ]["tail_selector_floor_minus_tail_gain_bits"],
+                "stop_rule": source_substitution_saturation["summary"]["stop_rule"],
+                "frontier_saturated": source_substitution_saturation["summary"][
+                    "frontier_saturated"
+                ],
+            },
+            "interpretation": (
+                "The repeated local same-chunk source-substitution path is now "
+                "classified as saturated for mainline work. The latest gains are "
+                "far below even a minimal selector-cost sanity check, so future "
+                "progress should require structure, holdout prediction, or row0 "
+                "origin evidence."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1984,6 +2032,7 @@ def make_result() -> dict[str, Any]:
             "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
             "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
             "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
+            "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -2341,6 +2390,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['best_arity']}; triples searched "
                 f"{evidence['searched_triples_or_higher']}"
             )
+        elif row["question"] == "is_repeated_local_source_substitution_now_saturated":
+            key = (
+                f"bound {evidence['current_compression_bound_bits']:.6f}; "
+                f"tail gain {evidence['tail_cumulative_gain_bits']:.6f}; "
+                f"last positive-pair fraction "
+                f"{evidence['last_pass_positive_pair_fraction']:.6f}; "
+                f"pairs per gained bit "
+                f"{evidence['last_pass_pair_candidates_per_gain_bit']:.3f}; "
+                f"selector floor "
+                f"{evidence['minimum_pair_selector_floor_bits']:.3f}; "
+                f"tail selector floor minus gain "
+                f"{evidence['tail_selector_floor_minus_tail_gain_bits']:.3f}; "
+                f"saturated {evidence['frontier_saturated']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2558,6 +2621,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Source substitution second pass: `{result['decision']['source_substitution_second_pass_status']}`.",
             f"- Source substitution third pass: `{result['decision']['source_substitution_third_pass_status']}`.",
             f"- Source substitution fourth pass: `{result['decision']['source_substitution_fourth_pass_status']}`.",
+            f"- Source substitution saturation: `{result['decision']['source_substitution_saturation_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

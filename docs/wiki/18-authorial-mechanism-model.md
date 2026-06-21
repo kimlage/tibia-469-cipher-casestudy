@@ -1168,6 +1168,13 @@ A fourth pass still finds a positive pair, but it is smaller again: book `28`
 op `4` and book `56` op `5` lower the bound from `8160.825917` to
 `8160.825608` bits. This is compression-bound bookkeeping and local
 source-frontier saturation, not new generation evidence.
+The follow-up source-substitution saturation audit makes that stop rule
+explicit: the last three same-chunk local passes sum to only `0.001484` bits,
+the fourth-pass positive-pair fraction falls to `0.007287`, and a minimum
+pair-selector floor of `16.092` bits dwarfs the latest unpriced gain. Repeated
+local source micro-sweeps are therefore frozen as no longer mainline; progress
+now requires a structural source/length derivation, holdout-predictive parser
+improvement, or row0-origin evidence.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

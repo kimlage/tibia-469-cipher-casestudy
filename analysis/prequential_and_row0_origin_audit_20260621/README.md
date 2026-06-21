@@ -151,6 +151,9 @@ exogenous.
 - [scripts/45_full_corpus_source_substitution_fourth_pass_gate.py](scripts/45_full_corpus_source_substitution_fourth_pass_gate.py) - reruns the exact single/pair source-substitution frontier on the promoted `8160.825917` bit formula.
 - [reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.md](reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.md) - fourth-pass source substitution result.
 - [reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json](reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json) - structured fourth-pass source substitution ledger.
+- [scripts/46_source_substitution_saturation_audit.py](scripts/46_source_substitution_saturation_audit.py) - applies an explicit stop rule to repeated same-chunk source-substitution passes without running a fifth pass.
+- [reports/test_results/46_source_substitution_saturation_audit.md](reports/test_results/46_source_substitution_saturation_audit.md) - source-substitution saturation decision.
+- [reports/test_results/46_source_substitution_saturation_audit.json](reports/test_results/46_source_substitution_saturation_audit.json) - structured source-substitution saturation ledger.
 
 ## Boundary
 
@@ -265,7 +268,10 @@ exogenous.
   finds another microscopic `+0.000503` bit gain, lowering the bound to
   `8160.825917` and reinforcing local source-frontier saturation. A fourth
   pass adds only `+0.000310` bits, lowering the bound to `8160.825608`; this
-  further supports local source-frontier saturation. The complete
+  further supports local source-frontier saturation. A saturation audit then
+  freezes repeated local same-chunk source substitutions as no longer mainline:
+  the last three gains sum to only `0.001484` bits and are dwarfed by
+  selector-cost sanity checks. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

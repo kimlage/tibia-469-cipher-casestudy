@@ -555,6 +555,9 @@ A third pass still finds a positive pair, but only `+0.000503` bits, moving the
 bound to `8160.825917` bits and indicating local source-frontier saturation.
 A fourth pass adds only `+0.000310` bits, moving the bound to `8160.825608`;
 this further supports local source-frontier saturation.
+A source-substitution saturation audit then freezes repeated same-chunk local
+source micro-sweeps as no longer mainline: the last three gains sum to only
+`0.001484` bits and are dwarfed by selector-cost sanity checks.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

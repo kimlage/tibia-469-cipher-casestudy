@@ -25,6 +25,7 @@
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
     "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
+    "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
     "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
     "translation_or_plaintext_status": "NONE"
@@ -641,6 +642,35 @@
     },
     {
       "evidence": {
+        "current_compression_bound_bits": 8160.825607635859,
+        "frontier_saturated": true,
+        "last_pass_pair_candidates_per_gain_bit": 225643699.6115757,
+        "last_pass_positive_pair_fraction": 0.007287147990665579,
+        "minimum_pair_selector_floor_bits": 16.09195184084821,
+        "stop_rule": {
+          "last_gain_smaller_than_minimum_pair_selector_floor": true,
+          "last_three_cumulative_gain_below_0_002_bits": true,
+          "last_three_passes_all_below_0_001_bits": true,
+          "positive_pair_counts_strictly_decrease": true,
+          "positive_single_counts_strictly_decrease_after_second_pass": true,
+          "same_pair_search_size_each_pass": true,
+          "tail_gain_smaller_than_minimum_tail_selector_floor": true
+        },
+        "tail_cumulative_gain_bits": 0.0014841370830254164,
+        "tail_pass_gains_bits": [
+          0.0006711103651468875,
+          0.000503472318087006,
+          0.0003095543997915229
+        ],
+        "tail_selector_floor_minus_tail_gain_bits": 48.274371385461606
+      },
+      "interpretation": "The repeated local same-chunk source-substitution path is now classified as saturated for mainline work. The latest gains are far below even a minimal selector-cost sanity check, so future progress should require structure, holdout prediction, or row0 origin evidence.",
+      "question": "is_repeated_local_source_substitution_now_saturated",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/46_source_substitution_saturation_audit.json",
+      "status": "passed_stop_mainline_local_source_micro_sweeps"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -978,7 +1008,8 @@
     "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
     "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
     "source_selection_derivation_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.json",
-    "source_state_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json"
+    "source_state_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json",
+    "source_substitution_saturation_audit": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/46_source_substitution_saturation_audit.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",
