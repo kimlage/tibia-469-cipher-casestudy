@@ -1112,6 +1112,10 @@ granularity, `760/857` literal digits are forced by copy unavailability. The
 residual parser frontier is localized to `14` literal starts and `97` literal
 digit positions where a copy candidate exists but the cost parser chose
 literal text.
+A prequential-side literal availability gate consolidates the next checks:
+`74` in-literal repair candidates and `465` cross-op candidates are all worse,
+with best deltas `+1.180` and `+0.027` bits. Literal externality is reduced,
+not removed.
 The optional literal copy repair frontier then tests the simplest repair family
 for that residual set: replacing a prefix of one optional literal run with a
 legal prior copy. It scores `74` candidates across `5` eligible starts under
@@ -1488,6 +1492,7 @@ book generation, not row0 pair-cell placement.
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
 - [Copy length midpoint context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md)
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
+- [Literal copy availability gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.md)
 - [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)
 - [Cross-op optional literal copy frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md)
 - [Cross-op near-tie decomposition](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md)

@@ -330,6 +330,20 @@ promoted as a new boundary. This strengthens one learned mechanical
 component while leaving the full recipe and row0 origin unchanged.
 See [27_copy_length_midpoint_context_gate.md](27_copy_length_midpoint_context_gate.md).
 
+### Literal Copy Availability Gate
+
+The literal payload is then separated into forced literals and residual
+parser choices. Most literal operations are forced by copy
+unavailability: `73/87` literal starts and `760/857` literal digits
+have no legal `min_len` copy candidate. The optional frontier is
+localized to `14` starts and `97` digits. Simple in-literal copy
+repairs score `74` candidates and remain at least `+1.180` bits worse;
+cross-op repairs score `465` candidates and the best is still
+`+0.027` bits worse. The near tie saves literal/item bits but pays
+`+11.237` copy-source and `+1.639` copy-length bits, so literal
+externality is reduced but not removed.
+See [28_literal_copy_availability_gate.md](28_literal_copy_availability_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -382,6 +396,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.
 - Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.
 - Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.
+- Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

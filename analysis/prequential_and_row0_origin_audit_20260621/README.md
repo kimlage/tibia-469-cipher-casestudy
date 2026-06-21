@@ -97,6 +97,9 @@ exogenous.
 - [scripts/27_copy_length_midpoint_context_gate.py](scripts/27_copy_length_midpoint_context_gate.py) - checks whether the copy-length midpoint context generalizes without promoting a searched cutoff.
 - [reports/test_results/27_copy_length_midpoint_context_gate.md](reports/test_results/27_copy_length_midpoint_context_gate.md) - copy-length midpoint context gate result.
 - [reports/test_results/27_copy_length_midpoint_context_gate.json](reports/test_results/27_copy_length_midpoint_context_gate.json) - structured copy-length midpoint ledger.
+- [scripts/28_literal_copy_availability_gate.py](scripts/28_literal_copy_availability_gate.py) - checks how much literal payload is forced by copy unavailability and closes simple local repair families.
+- [reports/test_results/28_literal_copy_availability_gate.md](reports/test_results/28_literal_copy_availability_gate.md) - literal copy-availability gate result.
+- [reports/test_results/28_literal_copy_availability_gate.json](reports/test_results/28_literal_copy_availability_gate.json) - structured literal externality ledger.
 
 ## Boundary
 
@@ -169,7 +172,10 @@ exogenous.
   `+15.186` bits worse and loses all `5/5` prefix-frozen checks. A copy-length
   midpoint context gate then keeps the natural `book_id < 35` split: it beats
   global by `13.839` bits, wins all `5/5` prefix-frozen checks, passes
-  permutation controls (`p=0.0033`), and rejects searched cutoff `37`.
+  permutation controls (`p=0.0033`), and rejects searched cutoff `37`. A
+  literal copy-availability gate then reduces literal externality: `73/87`
+  literal starts and `760/857` literal digits are forced by no legal copy
+  candidate, while in-literal and cross-op local repairs remain worse.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

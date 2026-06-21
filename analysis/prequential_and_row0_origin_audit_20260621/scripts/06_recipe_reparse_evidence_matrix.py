@@ -51,6 +51,7 @@ SOURCES = {
     "source_state_dependency_gate": TEST_RESULTS / "26_source_state_dependency_gate.json",
     "copy_length_midpoint_context_gate": TEST_RESULTS
     / "27_copy_length_midpoint_context_gate.json",
+    "literal_copy_availability_gate": TEST_RESULTS / "28_literal_copy_availability_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -95,6 +96,7 @@ def make_result() -> dict[str, Any]:
     source_canonicality_gate = load_json(SOURCES["source_canonicality_decodability_gate"])
     source_state_gate = load_json(SOURCES["source_state_dependency_gate"])
     copy_length_midpoint_gate = load_json(SOURCES["copy_length_midpoint_context_gate"])
+    literal_copy_gate = load_json(SOURCES["literal_copy_availability_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -123,6 +125,7 @@ def make_result() -> dict[str, Any]:
         ("source_canonicality_decodability_gate", source_canonicality_gate),
         ("source_state_dependency_gate", source_state_gate),
         ("copy_length_midpoint_context_gate", copy_length_midpoint_gate),
+        ("literal_copy_availability_gate", literal_copy_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -921,6 +924,54 @@ def make_result() -> dict[str, Any]:
                 "as ad-hoc local tuning."
             ),
         },
+        {
+            "question": "how_much_literal_payload_is_forced_by_copy_unavailability",
+            "source": rel(SOURCES["literal_copy_availability_gate"]),
+            "status": "passed_literal_externality_reduced_not_removed",
+            "evidence": {
+                "forced_literal_items_no_copy_candidate": literal_copy_gate["summary"][
+                    "forced_literal_items_no_copy_candidate"
+                ],
+                "literal_items": literal_copy_gate["summary"]["literal_items"],
+                "forced_literal_digits_no_copy_candidate": literal_copy_gate["summary"][
+                    "forced_literal_digits_no_copy_candidate"
+                ],
+                "literal_digits": literal_copy_gate["summary"]["literal_digits"],
+                "optional_literal_items_copy_candidate_available": literal_copy_gate[
+                    "summary"
+                ]["optional_literal_items_copy_candidate_available"],
+                "optional_literal_digits_copy_candidate_available": literal_copy_gate[
+                    "summary"
+                ]["optional_literal_digits_copy_candidate_available"],
+                "in_literal_candidate_repairs_scored": literal_copy_gate["summary"][
+                    "in_literal_candidate_repairs_scored"
+                ],
+                "in_literal_best_delta_bits": literal_copy_gate["summary"][
+                    "in_literal_best_delta_bits"
+                ],
+                "cross_op_valid_candidate_count": literal_copy_gate["summary"][
+                    "cross_op_valid_candidate_count"
+                ],
+                "cross_op_best_delta_bits": literal_copy_gate["summary"][
+                    "cross_op_best_delta_bits"
+                ],
+                "near_tie_copy_source_penalty_bits": literal_copy_gate["summary"][
+                    "near_tie_copy_source_penalty_bits"
+                ],
+                "near_tie_copy_length_penalty_bits": literal_copy_gate["summary"][
+                    "near_tie_copy_length_penalty_bits"
+                ],
+                "local_repairs_closed": literal_copy_gate["summary"][
+                    "local_repairs_closed"
+                ],
+            },
+            "interpretation": (
+                "Most literal payload is forced by absence of legal copy candidates. "
+                "The residual optional literal frontier is small, and simple "
+                "in-literal/cross-op replacement repairs do not improve the active "
+                "ledger."
+            ),
+        },
     ]
 
     result = {
@@ -946,6 +997,7 @@ def make_result() -> dict[str, Any]:
             "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
             "source_state_status": "path_dependent_previous_copy_state_retained",
             "copy_length_context_status": "midpoint_context_retained",
+            "literal_externality_status": "reduced_not_removed",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1205,6 +1257,22 @@ def write_result(result: dict[str, Any]) -> None:
                 f"perm p={evidence['p_permuted_midpoint_gain_ge_observed']:.4f}; "
                 f"searched promoted {evidence['searched_boundary_promoted']}"
             )
+        elif row["question"] == "how_much_literal_payload_is_forced_by_copy_unavailability":
+            key = (
+                f"forced items {evidence['forced_literal_items_no_copy_candidate']}/"
+                f"{evidence['literal_items']}; forced digits "
+                f"{evidence['forced_literal_digits_no_copy_candidate']}/"
+                f"{evidence['literal_digits']}; optional starts "
+                f"{evidence['optional_literal_items_copy_candidate_available']}; "
+                f"optional digits {evidence['optional_literal_digits_copy_candidate_available']}; "
+                f"in-literal {evidence['in_literal_candidate_repairs_scored']} candidates "
+                f"best {evidence['in_literal_best_delta_bits']:+.3f}; cross-op "
+                f"{evidence['cross_op_valid_candidate_count']} candidates best "
+                f"{evidence['cross_op_best_delta_bits']:+.3f}; source/length penalties "
+                f"{evidence['near_tie_copy_source_penalty_bits']:+.3f}/"
+                f"{evidence['near_tie_copy_length_penalty_bits']:+.3f}; "
+                f"closed {evidence['local_repairs_closed']}"
+            )
         else:
             key = (
                 f"best raw `{evidence['best_raw']}`; best charged `{evidence['best_charged']}`; "
@@ -1222,6 +1290,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Numeric order: `{result['decision']['numeric_order_status']}`.",
             f"- Source state: `{result['decision']['source_state_status']}`.",
             f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
+            f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

@@ -47,6 +47,7 @@ claim.
 | `does_earliest_source_canonicality_remove_decoder_source` | `failed_encoder_side_only` | earliest 261/261; unique 123/261; ambiguous 138; decoder-computable False; dependency removed False; default/exception 5 defaults, 256 exceptions |
 | `can_state_free_source_defaults_remove_previous_copy_state` | `failed_state_dependency_retained` | required state `(book_pos, previous_item, previous_copy_source, previous_copy_length)`; best state-free `state_free_back_current_length` +15.186 bits; prefix losses 5/5; gap min/mean/max 7.652/14.615/22.840; canonicality removed dependency False; promoted False |
 | `does_copy_length_midpoint_context_generalize` | `passed_midpoint_retained_searched_cutoff_rejected` | midpoint gain 13.839 bits; rank 2; best cutoff 37 is 0.256 bits better; prefix wins 5/5; frozen gap min/mean/max -26.416/-15.415/-5.493; perm p=0.0033; searched promoted False |
+| `how_much_literal_payload_is_forced_by_copy_unavailability` | `passed_literal_externality_reduced_not_removed` | forced items 73/87; forced digits 760/857; optional starts 14; optional digits 97; in-literal 74 candidates best +1.180; cross-op 465 candidates best +0.027; source/length penalties +11.237/+1.639; closed True |
 
 ## Decision
 
@@ -55,5 +56,6 @@ claim.
 - Numeric order: `frontier_not_unique_and_control_orders_not_promotable`.
 - Source state: `path_dependent_previous_copy_state_retained`.
 - Copy-length context: `midpoint_context_retained`.
+- Literal externality: `reduced_not_removed`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

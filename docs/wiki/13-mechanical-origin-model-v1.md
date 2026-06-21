@@ -216,6 +216,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Copy length midpoint context audit | midpoint `book_id < 35` beats global by `13.839` bits, is rank `2/69` among one-cut boundaries, beats global in every prefix frozen split, and passes book-id permutation controls (`p=0.0033`) | midpoint context supported / no new bound |
 | Copy length midpoint context gate | natural midpoint context is retained as generalizing component; searched cutoff `37` is only `0.256` bits better and is rejected as ad-hoc | component validation strengthened / no bound promotion |
 | Literal copy availability boundary audit | `73/87` literal starts have no legal `min_len` copy candidate and `760/857` literal digits are forced at digit level; residual parser choice is localized to `14` literal starts / `97` digit positions | literal externality reduced / no new bound |
+| Literal copy availability gate | forced literals dominate (`73/87` starts, `760/857` digits); `74` in-literal and `465` cross-op repair candidates are all worse, with best deltas `+1.180` and `+0.027` bits | literal externality reduced / local repairs rejected |
 | Optional literal copy repair frontier | `74` single in-literal copy-prefix repairs across `5` eligible optional starts are scored under the active ledger; best candidate is still `+1.180` bits worse | simplest optional-literal repair rejected |
 | Cross-op optional literal copy frontier | allowing replacement copies to cross literal boundaries yields `465` valid candidates; none improves, and the best is only `+0.027` bits worse than active | cross-op optional-literal repair rejected |
 | Cross-op near-tie decomposition | best near miss saves literal/item bits but pays `+11.237` copy-source and `+1.639` copy-length bits, yielding a real `+0.027` bit loss | near tie explained / no promotion |
@@ -388,6 +389,7 @@ Primary sources:
 [copy_length_midpoint_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md),
 [copy_length_midpoint_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md),
 [literal_copy_availability_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md),
+[literal_copy_availability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.md),
 [optional_literal_copy_repair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md),
 [cross_op_optional_literal_copy_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md),
 [cross_op_near_tie_decomposition.md](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md),

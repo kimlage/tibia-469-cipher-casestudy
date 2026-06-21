@@ -526,6 +526,9 @@ recipe dependency: `73/87` literal starts have no legal `min_len` copy
 candidate, and `760/857` literal digits are forced at digit level. The residual
 choice frontier is now localized to `14` literal starts and `97` literal digit
 positions where copy candidates exist.
+A literal availability gate consolidates the repair checks: `74` in-literal
+and `465` cross-op candidate repairs are all worse, with best deltas `+1.180`
+and `+0.027` bits. Literal externality is reduced, not removed.
 The optional literal copy repair frontier then checks the simplest repair:
 single in-literal copy-prefix substitutions for eligible optional starts. It
 scores `74` candidates across `5` starts; none improves, and the best remains
