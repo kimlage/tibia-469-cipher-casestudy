@@ -685,5 +685,10 @@ Generated audits in this directory should be treated as the current state:
   prefix-10 scoring loses `-39.773` bits because copy-source prediction is
   sparse, and family splits include failures. No frozen generation-method
   promotion follows.
+- `142_default_exception_component_profile`: separates the ledgers after that
+  validation. The active `compression_bound` remains `8177.317` bits, while
+  the frozen-prefix generation-explanation profile is `8206.178` bits:
+  copy-length default/exception is retained for frozen explanation, but
+  copy-source default/exception is compression-bound-only.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

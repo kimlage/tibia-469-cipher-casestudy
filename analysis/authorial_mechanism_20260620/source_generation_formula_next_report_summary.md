@@ -663,6 +663,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   scoring loses `-39.773` bits versus legal uniform because copy-source
   prediction is sparse. Family holdouts also include nonpositive failures, so
   this is not a frozen generation method.
+- default/exception component profiling is now covered by
+  [`142_default_exception_component_profile.py`](scripts/142_default_exception_component_profile.py);
+  keep `8177.317` bits as `compression_bound`, but the frozen-prefix
+  generation-explanation profile is `8206.178` bits because copy-source
+  default/exception is retained only as compression-bound evidence.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -426,6 +426,9 @@ The default/exception prequential validation audit keeps that boundary honest:
 prefix online gains stay positive, but frozen prefix-10 loses `-39.773` bits
 and family holdouts include failures, so the default/exception ledgers are not
 promoted as a frozen generation method.
+A component-profile compile now records the split explicitly: `8177.317` bits
+is the `compression_bound`, while `8206.178` bits is the frozen-prefix
+generation-explanation profile for this layer.
 The literal-payload default/exception audit then rejects modal-default literal
 digit coding: the active categorical previous-emitted-digit order-2 model stays
 best, so no literal-payload fallback is promoted.

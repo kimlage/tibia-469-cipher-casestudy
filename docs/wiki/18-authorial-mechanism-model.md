@@ -954,6 +954,11 @@ future-suffix split (`min=43.582` bits), but frozen prefix-10 scoring loses
 `-39.773` bits versus legal uniform because copy-source prediction is sparse.
 Family holdouts also include nonpositive failures, so this remains
 online-predictive component evidence rather than a frozen generation method.
+A component-profile compile then separates the ledgers: `8177.317` bits remains
+the active `compression_bound`, while the frozen-prefix generation-explanation
+profile is `8206.178` bits. Copy-length default/exception is retained for the
+frozen explanation; copy-source default/exception is compression-bound-only
+until a train-frozen source model beats legal uniform.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1253,6 +1258,7 @@ book generation, not row0 pair-cell placement.
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)
+- [Default/exception component profile](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

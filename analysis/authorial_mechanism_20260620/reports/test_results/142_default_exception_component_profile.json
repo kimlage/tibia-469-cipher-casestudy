@@ -1,0 +1,229 @@
+{
+  "bit_ledgers": {
+    "compression_bound_with_copy_source_default_bits": 8177.3166531229235,
+    "copy_source_default_full_corpus_gain_bits": 28.861785641604,
+    "frozen_prefix_generation_profile_bits": 8206.178438764528,
+    "interpretation": "Keep the copy-source default/exception ledger in compression_bound, but do not count it as frozen-prefix generation explanation."
+  },
+  "case_reopened": false,
+  "classification": "copy_length_default_exception_frozen_profile_source_default_compression_only",
+  "component_summaries": {
+    "contiguous_block_holdouts": {
+      "copy_length": {
+        "frozen": {
+          "max": 38.93650999633658,
+          "mean": 8.826377139894971,
+          "min": -39.243537652969394,
+          "n": 7,
+          "nonpositive_count": 2,
+          "nonpositive_labels": [
+            "holdout_block_00_09",
+            "holdout_block_10_19"
+          ],
+          "total": 61.784639979264796
+        },
+        "online": {
+          "max": 37.67868334228511,
+          "mean": 22.841303410327612,
+          "min": 17.130812709606005,
+          "n": 7,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 159.88912387229328
+        }
+      },
+      "copy_source": {
+        "frozen": {
+          "max": 7.154987279180432,
+          "mean": -28.229784355074013,
+          "min": -56.80752999871902,
+          "n": 7,
+          "nonpositive_count": 6,
+          "nonpositive_labels": [
+            "holdout_block_00_09",
+            "holdout_block_10_19",
+            "holdout_block_20_29",
+            "holdout_block_30_39",
+            "holdout_block_50_59",
+            "holdout_block_60_69"
+          ],
+          "total": -197.6084904855181
+        },
+        "online": {
+          "max": 21.94691603736584,
+          "mean": 1.6248661974485077,
+          "min": -5.46552089434914,
+          "n": 7,
+          "nonpositive_count": 5,
+          "nonpositive_labels": [
+            "holdout_block_00_09",
+            "holdout_block_10_19",
+            "holdout_block_20_29",
+            "holdout_block_30_39",
+            "holdout_block_50_59"
+          ],
+          "total": 11.374063382139553
+        }
+      }
+    },
+    "prefix_future_suffix": {
+      "copy_length": {
+        "frozen": {
+          "max": 106.75402933845112,
+          "mean": 79.30586790072284,
+          "min": 38.93650999633658,
+          "n": 5,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 396.5293395036142
+        },
+        "online": {
+          "max": 171.44146766636686,
+          "mean": 101.57859275948881,
+          "min": 37.67868334228511,
+          "n": 5,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 507.89296379744405
+        }
+      },
+      "copy_source": {
+        "frozen": {
+          "max": -4.660550503096744,
+          "mean": -64.4182726254051,
+          "min": -140.8009604867998,
+          "n": 5,
+          "nonpositive_count": 5,
+          "nonpositive_labels": [
+            "prefix_10_future_suffix",
+            "prefix_20_future_suffix",
+            "prefix_35_future_suffix",
+            "prefix_50_future_suffix",
+            "prefix_60_future_suffix"
+          ],
+          "total": -322.0913631270255
+        },
+        "online": {
+          "max": 36.65361247909186,
+          "mean": 21.0656179851147,
+          "min": 2.986292712007753,
+          "n": 5,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 105.3280899255735
+        }
+      }
+    },
+    "public_bookcase_family_holdouts": {
+      "copy_length": {
+        "frozen": {
+          "max": 24.284603040703214,
+          "mean": 1.4577120434038626,
+          "min": -11.680201132714295,
+          "n": 19,
+          "nonpositive_count": 10,
+          "nonpositive_labels": [
+            "hellgate_public_bookcase_1",
+            "hellgate_public_bookcase_10",
+            "hellgate_public_bookcase_12",
+            "hellgate_public_bookcase_13",
+            "hellgate_public_bookcase_2",
+            "hellgate_public_bookcase_22",
+            "hellgate_public_bookcase_23",
+            "hellgate_public_bookcase_3",
+            "hellgate_public_bookcase_36",
+            "hellgate_public_bookcase_7"
+          ],
+          "total": 27.69652882467339
+        },
+        "online": {
+          "max": 24.377712445094694,
+          "mean": 4.463603946115933,
+          "min": -7.069033164705004,
+          "n": 19,
+          "nonpositive_count": 7,
+          "nonpositive_labels": [
+            "hellgate_public_bookcase_1",
+            "hellgate_public_bookcase_12",
+            "hellgate_public_bookcase_13",
+            "hellgate_public_bookcase_22",
+            "hellgate_public_bookcase_23",
+            "hellgate_public_bookcase_36",
+            "hellgate_public_bookcase_7"
+          ],
+          "total": 84.80847497620273
+        }
+      },
+      "copy_source": {
+        "frozen": {
+          "max": 13.305972704825194,
+          "mean": -5.559896256379746,
+          "min": -21.967565492016348,
+          "n": 19,
+          "nonpositive_count": 15,
+          "nonpositive_labels": [
+            "hellgate_public_bookcase_1",
+            "hellgate_public_bookcase_10",
+            "hellgate_public_bookcase_12",
+            "hellgate_public_bookcase_2",
+            "hellgate_public_bookcase_20",
+            "hellgate_public_bookcase_22",
+            "hellgate_public_bookcase_23",
+            "hellgate_public_bookcase_3",
+            "hellgate_public_bookcase_30",
+            "hellgate_public_bookcase_36",
+            "hellgate_public_bookcase_4",
+            "hellgate_public_bookcase_40",
+            "hellgate_public_bookcase_6",
+            "hellgate_public_bookcase_7",
+            "hellgate_public_bookcase_8"
+          ],
+          "total": -105.63802887121517
+        },
+        "online": {
+          "max": 15.551432384054749,
+          "mean": -0.44516949923446125,
+          "min": -4.795612999248817,
+          "n": 19,
+          "nonpositive_count": 15,
+          "nonpositive_labels": [
+            "hellgate_public_bookcase_1",
+            "hellgate_public_bookcase_10",
+            "hellgate_public_bookcase_12",
+            "hellgate_public_bookcase_2",
+            "hellgate_public_bookcase_20",
+            "hellgate_public_bookcase_22",
+            "hellgate_public_bookcase_23",
+            "hellgate_public_bookcase_3",
+            "hellgate_public_bookcase_30",
+            "hellgate_public_bookcase_36",
+            "hellgate_public_bookcase_4",
+            "hellgate_public_bookcase_40",
+            "hellgate_public_bookcase_6",
+            "hellgate_public_bookcase_7",
+            "hellgate_public_bookcase_8"
+          ],
+          "total": -8.458220485454763
+        }
+      }
+    }
+  },
+  "decision": {
+    "compression_bound_bits": 8177.3166531229235,
+    "compression_bound_changed": false,
+    "copy_length_default_exception_status": "retained_for_frozen_prefix_generation_profile",
+    "copy_source_default_exception_status": "compression_bound_only_not_frozen_generation_profile",
+    "generation_explanation_profile_bits": 8206.178438764528,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "plaintext_claim": false,
+  "schema": "default_exception_component_profile.v1",
+  "sources": {
+    "audit_141": "analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.json",
+    "copy_length_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_default_exception_formula_469.json",
+    "copy_source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json"
+  },
+  "test": "142_default_exception_component_profile",
+  "translation_delta": "NONE"
+}

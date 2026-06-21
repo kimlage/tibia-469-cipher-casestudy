@@ -372,6 +372,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/141_default_exception_prequential_validation.py` - tests the
   promoted copy-length/source default-exception ledgers under prefix, block,
   and family holdout; they are online-predictive but frozen/source-unstable.
+- `scripts/142_default_exception_component_profile.py` - separates
+  `compression_bound` (`8177.317` bits) from the frozen-prefix generation
+  profile (`8206.178` bits) after audit 141.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
