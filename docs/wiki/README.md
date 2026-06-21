@@ -901,6 +901,11 @@ declared copy sources start on prior operation boundaries only `28/208` times,
 end on them `29/208` times, and equal one prior chunk `0/208` times.
 Boundary-aware tie-breakers lose to the existing earliest-source rule (`206/208` vs
 `207/208`), so source-side operation chunking is not the missing parser rule.
+A single-drift repair oracle then shows where the residual really sits:
+replacing the first divergent operation with the stable projection repairs
+`11/12` residual books, and two oracle repairs reach `60/60`. This is not a
+new rule, but it narrows the next parser task to a non-oracle classifier for
+those first divergent decisions.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

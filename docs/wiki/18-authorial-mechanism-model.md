@@ -524,6 +524,13 @@ end on them `29/208` times, and equal one prior operation chunk `0/208` times.
 Boundary-aware source tie-breakers are worse than the existing earliest-source
 global-max rule (`206/208` vs `207/208`), so operation chunking is not the
 missing segmentation mechanism.
+A single-drift repair oracle then localizes the remaining parser blocker. If
+the first divergent operation in each residual book is replaced by the stable
+projection and the same `window5` parser resumes, `11/12` residual books become
+exact; allowing two such oracle repairs reaches `60/60`. This is strong
+diagnostic evidence that most residual drift is a first-decision classifier
+problem, but no rule is promoted because the repair is selected from the stable
+projection.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2202,6 +2209,7 @@ book generation, not row0 pair-cell placement.
 - [Global objective parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.md)
 - [Feature weighted global parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/14_feature_weighted_global_parser_audit.md)
 - [Source boundary alignment audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/15_source_boundary_alignment_audit.md)
+- [Single drift repair oracle audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/16_single_drift_repair_oracle_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

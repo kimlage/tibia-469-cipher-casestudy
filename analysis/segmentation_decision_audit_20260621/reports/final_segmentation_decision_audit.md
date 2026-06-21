@@ -290,13 +290,40 @@ segmentation. Boundary-aware tie-breakers are worse than the
 existing earliest-source global-max rule, so the block-copy
 hypothesis is rejected as a generation mechanism.
 
+## Single-Drift Repair Oracle
+
+Gate 16 asks whether the `12/60` integrated-parser drift
+books are first-decision failures or deeper path failures.
+It grants a stable-projection oracle only as a diagnostic
+repair, then resumes the same `window5` parser.
+
+| Oracle correction budget | Exact books | Residual repairs |
+|---:|---:|---:|
+| `0` | `48/60` | `0` |
+| `1` | `59/60` | `11` |
+| `2` | `60/60` | `12` |
+| `3` | `60/60` | `12` |
+| `4` | `60/60` | `12` |
+| `5` | `60/60` | `12` |
+
+- One oracle correction repairs `11/12` residual books.
+- Two oracle corrections repair all `12/12` residual books.
+- Full-oracle correction histogram: `{'1': 11, '2': 1}`.
+
+This is an important blocker localization: most remaining
+parser failures are isolated first-drift decisions, not
+long unstable paths. It is still not a promoted rule because
+the correction itself is chosen from the stable projection.
+
 ## Next Blocker
 
-The next real blocker is not another local length policy. It is a
-source-free account of why the target digit stream exists, or a
-parser integration that closes the remaining `12/60` drift cases
-without smuggling in declared literal windows, target text generation,
-or changed skeleton/literal accounting.
+The next real blocker is not another local length policy. It is
+a non-oracle classifier for the first-drift repair decisions,
+especially the mixed missed-copy and literal-understop classes,
+or a source-free account of why the target digit stream exists.
+Any promoted parser must close the residual drift without
+smuggling in declared literal windows, target text generation,
+or the stable projection as an oracle.
 
 ## Sources
 
@@ -314,3 +341,4 @@ or changed skeleton/literal accounting.
 - [Global objective parser audit](test_results/13_global_objective_parser_audit.md)
 - [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)
 - [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)
+- [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)
