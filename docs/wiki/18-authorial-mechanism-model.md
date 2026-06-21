@@ -1140,6 +1140,12 @@ legal occurrence raises the current total from `8160.825608` to `8177.316653`
 bits (`+16.491045`). The current formula remains the lower compression bound,
 while the all-earliest variant is the cleaner generation-explanation profile,
 not a promoted bound.
+The copy-length side then gets the same segmentation treatment. The target-max
+rule matches `238/261` copy events, but all `23` exceptions enter exactly one
+following operation and stop inside it; they absorb `0` complete following ops
+and reach book end `0` times. The exceptions are therefore resegmentation
+boundaries, not scalar length-default noise. Copy-length progress now requires
+a joint segmentation/source/length parser.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1586,6 +1592,7 @@ book generation, not row0 pair-cell placement.
 - [Current formula dependency scoreboard](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/48_current_formula_dependency_scoreboard.md)
 - [Source-length joint derivability audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.md)
 - [Source canonicality tradeoff audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/50_source_canonicality_tradeoff_audit.md)
+- [Copy length segmentation exception audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/51_copy_length_segmentation_exception_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

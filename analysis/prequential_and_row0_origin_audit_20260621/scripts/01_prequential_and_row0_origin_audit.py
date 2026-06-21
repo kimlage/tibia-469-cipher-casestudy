@@ -173,6 +173,14 @@ SOURCE_CANONICALITY_TRADEOFF_AUDIT = (
     / "test_results"
     / "50_source_canonicality_tradeoff_audit.json"
 )
+COPY_LENGTH_SEGMENTATION_EXCEPTION_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "51_copy_length_segmentation_exception_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -416,6 +424,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "source_canonicality_tradeoff_audit",
         source_canonicality_tradeoff,
     )
+    copy_length_segmentation_exception = load_json(
+        COPY_LENGTH_SEGMENTATION_EXCEPTION_AUDIT
+    )
+    assert_analysis_boundary(
+        "copy_length_segmentation_exception_audit",
+        copy_length_segmentation_exception,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -641,6 +656,14 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             ],
             "decision": source_canonicality_tradeoff["decision"],
         },
+        "copy_length_segmentation_exception": {
+            "classification": copy_length_segmentation_exception["classification"],
+            "source": rel(COPY_LENGTH_SEGMENTATION_EXCEPTION_AUDIT),
+            "scope": copy_length_segmentation_exception["scope"],
+            "summary": copy_length_segmentation_exception["summary"],
+            "exception_rows": copy_length_segmentation_exception["exception_rows"],
+            "decision": copy_length_segmentation_exception["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -681,6 +704,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
             "source_length_joint_derivability_status": "joint_encoder_regularities_confirmed_decoder_dependency_retained",
             "source_canonicality_tradeoff_status": "all_earliest_profile_costed_not_promoted",
+            "copy_length_segmentation_exception_status": "target_max_exceptions_are_partial_next_op_intrusions",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -737,6 +761,7 @@ def render_markdown(
     current_formula_dependency_scoreboard_link: str,
     source_length_joint_derivability_audit_link: str,
     source_canonicality_tradeoff_audit_link: str,
+    copy_length_segmentation_exception_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -785,6 +810,9 @@ def render_markdown(
     ]
     source_length_joint = result["source_length_joint_derivability"]["summary"]
     source_canonicality_tradeoff = result["source_canonicality_tradeoff"][
+        "summary"
+    ]
+    copy_length_segmentation = result["copy_length_segmentation_exception"][
         "summary"
     ]
 
@@ -1499,6 +1527,25 @@ def render_markdown(
             "bits worse than current.",
             f"See [50_source_canonicality_tradeoff_audit.md]({source_canonicality_tradeoff_audit_link}).",
             "",
+            "### Copy Length Segmentation Exception Audit",
+            "",
+            "The copy-length side then gets the same structural treatment. The",
+            "target-max length rule still matches",
+            f"`{copy_length_segmentation['target_max_match_count']}`/",
+            f"`{copy_length_segmentation['copy_event_count']}` copy events,",
+            "but the",
+            f"`{copy_length_segmentation['target_max_exception_count']}`",
+            "exceptions are not clean absorbable suffixes. In every exception,",
+            "extending to target-max enters exactly one following operation and",
+            "stops inside it; it absorbs `0` whole following ops and reaches book",
+            "end `0` times. The slack totals",
+            f"`{copy_length_segmentation['target_max_slack_digits_total']}`",
+            "digits, mostly into following copy ops",
+            f"`{copy_length_segmentation['covered_following_digits_by_type']}`.",
+            "This makes copy-length progress a resegmentation problem, not a",
+            "scalar default problem.",
+            f"See [51_copy_length_segmentation_exception_audit.md]({copy_length_segmentation_exception_audit_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1726,6 +1773,9 @@ def main() -> None:
             source_canonicality_tradeoff_audit_link=(
                 "50_source_canonicality_tradeoff_audit.md"
             ),
+            copy_length_segmentation_exception_audit_link=(
+                "51_copy_length_segmentation_exception_audit.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
                 "47_row0_parallel_provenance_bridge_audit.md"
@@ -1858,6 +1908,9 @@ def main() -> None:
             ),
             source_canonicality_tradeoff_audit_link=(
                 "test_results/50_source_canonicality_tradeoff_audit.md"
+            ),
+            copy_length_segmentation_exception_audit_link=(
+                "test_results/51_copy_length_segmentation_exception_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

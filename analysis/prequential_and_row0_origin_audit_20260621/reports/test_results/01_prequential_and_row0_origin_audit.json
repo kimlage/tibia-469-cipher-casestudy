@@ -511,6 +511,671 @@
   },
   "case_reopened": false,
   "classification": "analysis_only_falsifiable_audit_row0_origin_exogenous",
+  "copy_length_segmentation_exception": {
+    "classification": "copy_length_target_max_exceptions_are_partial_next_op_intrusions",
+    "decision": {
+      "compression_bound_status": "unchanged",
+      "copy_length_dependency_status": "declared_lengths_retained",
+      "copy_length_target_max_status": "encoder_oracle_high_coverage_but_segmentation_boundary_dependent",
+      "generation_explanation_status": "target_max_exceptions_mapped_to_segmentation_boundaries",
+      "next_mainline_status": "copy_length_progress_requires_joint_reparse_not_length_only_default",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "exception_rows": [
+      {
+        "book": 2,
+        "book_pos": 130,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 31,
+            "op_index": 10,
+            "type": "literal"
+          }
+        ],
+        "decoder_max_possible": 47,
+        "decoder_max_slack": 41,
+        "encoder_target_max": 7,
+        "first_covered_following_op_length": 31,
+        "first_covered_following_op_type": "literal",
+        "fully_covered_following_op_count": 0,
+        "length": 6,
+        "op_index": 9,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 101,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 9,
+        "book_pos": 0,
+        "covered_following_digits": 4,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 4,
+            "fully_covered": false,
+            "length": 21,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 294,
+        "decoder_max_slack": 27,
+        "encoder_target_max": 271,
+        "first_covered_following_op_length": 21,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 267,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 695,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 4
+      },
+      {
+        "book": 10,
+        "book_pos": 0,
+        "covered_following_digits": 72,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 72,
+            "fully_covered": false,
+            "length": 275,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 281,
+        "decoder_max_slack": 275,
+        "encoder_target_max": 78,
+        "first_covered_following_op_length": 275,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 6,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 888,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 72
+      },
+      {
+        "book": 13,
+        "book_pos": 48,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 14,
+            "op_index": 5,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 93,
+        "decoder_max_slack": 86,
+        "encoder_target_max": 8,
+        "first_covered_following_op_length": 14,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 7,
+        "op_index": 4,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 4,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 13,
+        "book_pos": 82,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 53,
+            "op_index": 9,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 59,
+        "decoder_max_slack": 53,
+        "encoder_target_max": 7,
+        "first_covered_following_op_length": 53,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 6,
+        "op_index": 8,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 90,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 14,
+        "book_pos": 115,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 9,
+            "op_index": 4,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 18,
+        "decoder_max_slack": 12,
+        "encoder_target_max": 7,
+        "first_covered_following_op_length": 9,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 6,
+        "op_index": 3,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 889,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 17,
+        "book_pos": 213,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 5,
+            "op_index": 8,
+            "type": "literal"
+          }
+        ],
+        "decoder_max_possible": 61,
+        "decoder_max_slack": 52,
+        "encoder_target_max": 10,
+        "first_covered_following_op_length": 5,
+        "first_covered_following_op_type": "literal",
+        "fully_covered_following_op_count": 0,
+        "length": 9,
+        "op_index": 7,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2514,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 20,
+        "book_pos": 21,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 9,
+            "op_index": 3,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 42,
+        "decoder_max_slack": 33,
+        "encoder_target_max": 10,
+        "first_covered_following_op_length": 9,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 9,
+        "op_index": 2,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 180,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 20,
+        "book_pos": 45,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 9,
+            "op_index": 6,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 18,
+        "decoder_max_slack": 9,
+        "encoder_target_max": 10,
+        "first_covered_following_op_length": 9,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 9,
+        "op_index": 5,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 459,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 21,
+        "book_pos": 9,
+        "covered_following_digits": 2,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 2,
+            "fully_covered": false,
+            "length": 34,
+            "op_index": 2,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 167,
+        "decoder_max_slack": 34,
+        "encoder_target_max": 135,
+        "first_covered_following_op_length": 34,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 133,
+        "op_index": 1,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2116,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 2
+      },
+      {
+        "book": 23,
+        "book_pos": 117,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 24,
+            "op_index": 9,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 60,
+        "decoder_max_slack": 49,
+        "encoder_target_max": 12,
+        "first_covered_following_op_length": 24,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 11,
+        "op_index": 8,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 275,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 24,
+        "book_pos": 0,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 71,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 119,
+        "decoder_max_slack": 83,
+        "encoder_target_max": 37,
+        "first_covered_following_op_length": 71,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 36,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 3413,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 28,
+        "book_pos": 89,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 11,
+            "op_index": 2,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 57,
+        "decoder_max_slack": 51,
+        "encoder_target_max": 7,
+        "first_covered_following_op_length": 11,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 6,
+        "op_index": 1,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2778,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 28,
+        "book_pos": 95,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 22,
+            "op_index": 3,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 51,
+        "decoder_max_slack": 40,
+        "encoder_target_max": 12,
+        "first_covered_following_op_length": 22,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 11,
+        "op_index": 2,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2160,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 30,
+        "book_pos": 60,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 43,
+            "op_index": 4,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 90,
+        "decoder_max_slack": 71,
+        "encoder_target_max": 20,
+        "first_covered_following_op_length": 43,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 19,
+        "op_index": 3,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2232,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 34,
+        "book_pos": 69,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 14,
+            "op_index": 5,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 54,
+        "decoder_max_slack": 32,
+        "encoder_target_max": 23,
+        "first_covered_following_op_length": 14,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 22,
+        "op_index": 4,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 129,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 46,
+        "book_pos": 124,
+        "covered_following_digits": 3,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 3,
+            "fully_covered": false,
+            "length": 112,
+            "op_index": 2,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 129,
+        "decoder_max_slack": 112,
+        "encoder_target_max": 20,
+        "first_covered_following_op_length": 112,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 17,
+        "op_index": 1,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2320,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 3
+      },
+      {
+        "book": 51,
+        "book_pos": 0,
+        "covered_following_digits": 7,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 7,
+            "fully_covered": false,
+            "length": 141,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 268,
+        "decoder_max_slack": 141,
+        "encoder_target_max": 134,
+        "first_covered_following_op_length": 141,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 127,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 6977,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 7
+      },
+      {
+        "book": 54,
+        "book_pos": 0,
+        "covered_following_digits": 2,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 2,
+            "fully_covered": false,
+            "length": 8,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 57,
+        "decoder_max_slack": 8,
+        "encoder_target_max": 51,
+        "first_covered_following_op_length": 8,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 49,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 3350,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 2
+      },
+      {
+        "book": 56,
+        "book_pos": 141,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 73,
+            "op_index": 6,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 125,
+        "decoder_max_slack": 113,
+        "encoder_target_max": 13,
+        "first_covered_following_op_length": 73,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 12,
+        "op_index": 5,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2260,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 56,
+        "book_pos": 236,
+        "covered_following_digits": 1,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 1,
+            "fully_covered": false,
+            "length": 22,
+            "op_index": 9,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 30,
+        "decoder_max_slack": 22,
+        "encoder_target_max": 9,
+        "first_covered_following_op_length": 22,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 8,
+        "op_index": 8,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 2157,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 1
+      },
+      {
+        "book": 61,
+        "book_pos": 0,
+        "covered_following_digits": 10,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 10,
+            "fully_covered": false,
+            "length": 33,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 145,
+        "decoder_max_slack": 33,
+        "encoder_target_max": 122,
+        "first_covered_following_op_length": 33,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 112,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 4514,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 10
+      },
+      {
+        "book": 65,
+        "book_pos": 0,
+        "covered_following_digits": 13,
+        "covered_following_op_count": 1,
+        "covered_following_ops": [
+          {
+            "covered_digits": 13,
+            "fully_covered": false,
+            "length": 54,
+            "op_index": 1,
+            "type": "copy"
+          }
+        ],
+        "decoder_max_possible": 169,
+        "decoder_max_slack": 57,
+        "encoder_target_max": 125,
+        "first_covered_following_op_length": 54,
+        "first_covered_following_op_type": "copy",
+        "fully_covered_following_op_count": 0,
+        "length": 112,
+        "op_index": 0,
+        "slack_equals_first_following_op_length": false,
+        "source_digit_pos": 4511,
+        "target_max_reaches_book_end": false,
+        "target_max_slack": 13
+      }
+    ],
+    "scope": {
+      "analysis_only": true,
+      "compression_bound_changed": false,
+      "new_formula_emitted": false,
+      "plaintext_or_translation_claim": false,
+      "row0_origin_changed": false,
+      "tested_question": "What the 23 non-target-max copy lengths would absorb if each copy were extended to its encoder-known maximal target match."
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/51_copy_length_segmentation_exception_audit.json",
+    "summary": {
+      "copy_event_count": 261,
+      "covered_following_digits_by_type": {
+        "copy": 126,
+        "literal": 2
+      },
+      "exceptions_absorbing_full_next_op": 0,
+      "exceptions_covering_exactly_one_following_op": 23,
+      "exceptions_reaching_book_end": 0,
+      "exceptions_slack_equals_first_following_op": 0,
+      "exceptions_with_partial_following_op_cover": 23,
+      "fully_covered_following_ops_by_type": {},
+      "interpretation": "The high-coverage target-max rule fails exactly where extending a copy would cross into the next operation and stop inside it. These are resegmentation boundaries, not isolated length coding anomalies.",
+      "target_max_exception_count": 23,
+      "target_max_exception_fraction": 0.08812260536398467,
+      "target_max_match_count": 238,
+      "target_max_slack_digits_max": 72,
+      "target_max_slack_digits_mean": 5.565217391304348,
+      "target_max_slack_digits_min": 1,
+      "target_max_slack_digits_total": 128
+    }
+  },
   "copy_source_state_compression": {
     "classification": "copy_source_previous_end_state_compression_valid",
     "decision": {
@@ -2264,6 +2929,7 @@
     "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
     "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
+    "copy_length_segmentation_exception_status": "target_max_exceptions_are_partial_next_op_intrusions",
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
     "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
     "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",

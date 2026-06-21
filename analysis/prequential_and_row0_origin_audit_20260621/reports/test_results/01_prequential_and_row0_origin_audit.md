@@ -686,6 +686,25 @@ generation-explanation profile. The all-latest negative control is
 bits worse than current.
 See [50_source_canonicality_tradeoff_audit.md](50_source_canonicality_tradeoff_audit.md).
 
+### Copy Length Segmentation Exception Audit
+
+The copy-length side then gets the same structural treatment. The
+target-max length rule still matches
+`238`/
+`261` copy events,
+but the
+`23`
+exceptions are not clean absorbable suffixes. In every exception,
+extending to target-max enters exactly one following operation and
+stops inside it; it absorbs `0` whole following ops and reaches book
+end `0` times. The slack totals
+`128`
+digits, mostly into following copy ops
+`{'copy': 126, 'literal': 2}`.
+This makes copy-length progress a resegmentation problem, not a
+scalar default problem.
+See [51_copy_length_segmentation_exception_audit.md](51_copy_length_segmentation_exception_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

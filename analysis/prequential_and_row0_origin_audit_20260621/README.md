@@ -166,6 +166,9 @@ exogenous.
 - [scripts/50_source_canonicality_tradeoff_audit.py](scripts/50_source_canonicality_tradeoff_audit.py) - prices the compression-vs-canonicality tradeoff between the current source choices and an all-earliest profile.
 - [reports/test_results/50_source_canonicality_tradeoff_audit.md](reports/test_results/50_source_canonicality_tradeoff_audit.md) - source canonicality tradeoff result.
 - [reports/test_results/50_source_canonicality_tradeoff_audit.json](reports/test_results/50_source_canonicality_tradeoff_audit.json) - structured source canonicality tradeoff ledger.
+- [scripts/51_copy_length_segmentation_exception_audit.py](scripts/51_copy_length_segmentation_exception_audit.py) - maps the non-target-max copy lengths to following-operation intrusion boundaries.
+- [reports/test_results/51_copy_length_segmentation_exception_audit.md](reports/test_results/51_copy_length_segmentation_exception_audit.md) - copy-length segmentation exception result.
+- [reports/test_results/51_copy_length_segmentation_exception_audit.json](reports/test_results/51_copy_length_segmentation_exception_audit.json) - structured copy-length segmentation ledger.
 
 ## Boundary
 
@@ -300,7 +303,11 @@ exogenous.
   tradeoff audit then prices the cleaner all-earliest explanation profile:
   restoring `10` non-earliest current sources raises the total from
   `8160.825608` to `8177.316653` bits (`+16.491045`), so the current bound and
-  the simpler generation-explanation profile remain separate ledgers. The complete
+  the simpler generation-explanation profile remain separate ledgers. A
+  copy-length segmentation exception audit then maps the `23` target-max
+  exceptions: every one enters exactly one following op and stops inside it,
+  absorbing `0` whole following ops. This makes copy length a joint
+  resegmentation problem rather than a scalar default problem. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
