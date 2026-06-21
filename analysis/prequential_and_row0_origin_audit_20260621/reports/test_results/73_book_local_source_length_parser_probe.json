@@ -1,0 +1,103 @@
+{
+  "case_reopened": false,
+  "classification": "book_local_source_length_parser_probe_roundtrips_subset",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "parser_path_progress_not_formula_promotion",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "book_local_subset_executable_hard_book_unresolved",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "final_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_partial_boundary_shift_second_pass_formula_469.json",
+    "gate37_parser": "analysis/prequential_and_row0_origin_audit_20260621/scripts/37_cutoff60_source_state_reparse_prototype_gate.py",
+    "gate72_feasibility": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "book_local_source_length_parser_probe.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "cutoff": 60,
+    "does_not_search_plaintext": true,
+    "hard_book_not_executed": 66,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "target_books": [
+      67,
+      60
+    ]
+  },
+  "summary": {
+    "book_rows": [
+      {
+        "book": 67,
+        "book_digits": 98,
+        "copied_digits": 98,
+        "copy_items": 1,
+        "elapsed_seconds": 3.2412176249781623,
+        "errors": [],
+        "final_previous_copy_end": 303,
+        "gain_vs_raw_digit_uniform_bits": 304.42341734306524,
+        "literal_digits": 0,
+        "literal_runs": 0,
+        "op_count": 1,
+        "parser_bits": 21.125535955896282,
+        "parser_minus_same_policy_reprice_bits": 0.0,
+        "previous_end_domain_size": 113,
+        "raw_digit_uniform_bits": 325.5489532989615,
+        "roundtrip_ok": true,
+        "same_policy_reprice_bits": 21.125535955896282,
+        "source_default_count": 0,
+        "source_exception_count": 1,
+        "state_evaluations": 33222,
+        "transition_evaluations": 2523629
+      },
+      {
+        "book": 60,
+        "book_digits": 151,
+        "copied_digits": 150,
+        "copy_items": 5,
+        "elapsed_seconds": 6.45761262497399,
+        "errors": [],
+        "final_previous_copy_end": 7047,
+        "gain_vs_raw_digit_uniform_bits": 396.87061362880763,
+        "literal_digits": 1,
+        "literal_runs": 1,
+        "op_count": 6,
+        "parser_bits": 104.74052869918403,
+        "parser_minus_same_policy_reprice_bits": 1.4210854715202004e-14,
+        "previous_end_domain_size": 209,
+        "raw_digit_uniform_bits": 501.6111423279917,
+        "roundtrip_ok": true,
+        "same_policy_reprice_bits": 104.74052869918401,
+        "source_default_count": 0,
+        "source_exception_count": 5,
+        "state_evaluations": 94677,
+        "transition_evaluations": 5899652
+      }
+    ],
+    "hard_book_proxy": {
+      "book": 66,
+      "book_digits": 210,
+      "copy_candidate_edges": 21321,
+      "copy_transition_proxy": 26096904,
+      "distinct_candidate_end_states": 408,
+      "end_state_proxy": 258264,
+      "reason_not_executed": "book 66 is the cutoff-60 hard case by transition proxy; it needs pruning/caching before exact execution is a useful gate"
+    },
+    "interpretation": "The existing active source/length DP is already executable on small and medium cutoff-60 books, proving the parser path beyond a proxy audit. It is not yet promotable: the subset is narrow, the same-policy reparse comparator is still competitive, and the hard book remains transition-heavy.",
+    "raw_positive_book_count": 2,
+    "roundtrip_book_count": 2,
+    "target_book_count": 2,
+    "total_elapsed_seconds": 9.698830249952152,
+    "total_gain_vs_raw_digit_uniform_bits": 701.2940309718729,
+    "total_parser_bits": 125.86606465508031,
+    "total_parser_minus_same_policy_reprice_bits": 1.4210854715202004e-14,
+    "total_same_policy_reprice_bits": 125.8660646550803,
+    "total_state_evaluations": 127899,
+    "total_transition_evaluations": 8423281
+  },
+  "translation_delta": "NONE"
+}

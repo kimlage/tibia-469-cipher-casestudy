@@ -275,6 +275,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Row0 real-origin search | row0-only scoreboard retests paid anchors, external order, workbook/script provenance, manual worksheet shape, ordered-surface exceptions, 6/9 quotient, diagonal/E pressure, grid coordinates, inventory/frequency, and recent book-formula dependency; no origin formula is promoted, and the only moved axis is strong falsification of important hypotheses | negative row0-origin search / no constructive improvement |
 | Final formula dependency refresh | the `8154.676268` formula still has `609` retained operation dependency fields; target-max coverage stays `242/261`, declared-source+decoder-max `60/261`, unique-source+decoder-max `28/261`, and previous-end+decoder-max `1/261` | source/length parser still required |
 | Final source/length parser feasibility | previous-end state compression keeps every tested book-level end-state proxy below `1,000,000`, but the copy-transition proxy totals `1,966,897,365` transitions (`23045.1x` old DP), with hardest books `53`, `51`, `35`, and `58` | parser needs pruning/caching before promotion |
+| Book-local source/length parser probe | active source/length DP executes on cutoff-60 books `67` and `60`, both roundtrip and beat raw digits at `125.866` total parser bits, but ties the same-policy reprice and leaves hard book `66` unresolved | parser path executable / no bound promotion |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -416,6 +417,7 @@ Primary sources:
 [row0_real_origin_search_report.md](../../analysis/row0_real_origin_search_20260621/reports/row0_real_origin_search_report.md),
 [final_formula_dependency_refresh_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.md),
 [final_source_length_parser_feasibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.md),
+[book_local_source_length_parser_probe.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/73_book_local_source_length_parser_probe.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

@@ -642,6 +642,11 @@ all tested book-level previous-end state proxies are under `1,000,000`, but the
 copy-transition proxy still totals `1,966,897,365` transitions (`23045.1x` old
 DP), so the parser must be pruned/cached and attacked per book rather than as a
 naive whole-suffix DP.
+The first book-local parser probe executes that path on cutoff-60 books `67`
+and `60`: both roundtrip and beat raw digits, totaling `125.866` parser bits
+and `8,423,281` transition evaluations. It is implementation progress, not a
+bound promotion, because it ties the same-policy reprice comparator and leaves
+book `66` as the immediate hard case.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -804,6 +809,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   unchanged and `609` operation dependency fields remain declared,
   scopes the final source/length parser as feasible by state proxy but still
   transition-heavy (`1,966,897,365` transition proxy),
+  executes the active source/length DP on books `67` and `60` as a roundtrip
+  parser probe, while leaving book `66` as the hard case,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

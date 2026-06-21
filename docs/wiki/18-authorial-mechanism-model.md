@@ -137,6 +137,12 @@ end-state proxy below `1,000,000`, but the copy-transition proxy is still
 The parser should therefore be built as a pruned/cached per-book source+length
 DP, starting with the hard books `53`, `51`, `35`, and `58`.
 
+The first book-local probe confirms that this parser path is executable, not
+just theoretical: cutoff-60 books `67` and `60` both roundtrip under the active
+source/length DP and beat raw digit coding. The result does not promote a new
+bound because it ties the same-policy reprice comparator, and book `66` remains
+the immediate hard case by transition proxy.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

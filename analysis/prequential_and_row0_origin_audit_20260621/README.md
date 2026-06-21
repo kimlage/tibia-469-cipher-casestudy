@@ -232,6 +232,9 @@ exogenous.
 - [scripts/72_final_source_length_parser_feasibility_audit.py](scripts/72_final_source_length_parser_feasibility_audit.py) - recomputes source/length parser state and transition proxies on the final formula.
 - [reports/test_results/72_final_source_length_parser_feasibility_audit.md](reports/test_results/72_final_source_length_parser_feasibility_audit.md) - final parser feasibility audit.
 - [reports/test_results/72_final_source_length_parser_feasibility_audit.json](reports/test_results/72_final_source_length_parser_feasibility_audit.json) - structured parser feasibility ledger.
+- [scripts/73_book_local_source_length_parser_probe.py](scripts/73_book_local_source_length_parser_probe.py) - executes the active source/length DP on two cutoff-60 books before attacking the hard case.
+- [reports/test_results/73_book_local_source_length_parser_probe.md](reports/test_results/73_book_local_source_length_parser_probe.md) - book-local parser probe.
+- [reports/test_results/73_book_local_source_length_parser_probe.json](reports/test_results/73_book_local_source_length_parser_probe.json) - structured parser probe ledger.
 
 ## Boundary
 
@@ -451,6 +454,11 @@ exogenous.
   old frozen-count DP. The next implementation step is a pruned/cached
   per-book source+length parser, with hardest books led by `53`, `51`, `35`,
   and `58`.
+- The first book-local source/length parser probe executes that path on two
+  cutoff-60 books: `67` and `60` both roundtrip and beat raw digit coding, with
+  `125.866` total parser bits, `8,423,281` transition evaluations, and no
+  improvement over the same-policy reprice comparator. Book `66` remains the
+  held-back cutoff-60 hard case with `26,096,904` transition proxy.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
