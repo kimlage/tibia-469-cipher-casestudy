@@ -358,6 +358,12 @@ be reduced to a small library of repeated templates. It cannot: exact
 length/target skeletons have `58` unique templates across `60` books, with only
 two repeated pairs (`43/50` and `47/62`). Type-sequence motifs repeat across
 `39` books, but those motifs do not carry the length-bearing skeleton.
+A type motif library ledger then prices the tempting partial reuse directly. A
+type library has `193` type entries plus `60` book assignments and saves only
+`8` records before residuals. After paying the remaining `261` length/target
+records, the full representation is `514` records, `+253` versus the exact
+skeleton atlas. The motifs remain descriptive; they are not a generator or
+promoted library.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -2004,6 +2010,7 @@ book generation, not row0 pair-cell placement.
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
+- [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

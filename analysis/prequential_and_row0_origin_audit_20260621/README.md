@@ -319,6 +319,9 @@ exogenous.
 - [scripts/101_skeleton_template_reuse_audit.py](scripts/101_skeleton_template_reuse_audit.py) - checks whether repeated skeleton templates reduce the atlas.
 - [reports/test_results/101_skeleton_template_reuse_audit.md](reports/test_results/101_skeleton_template_reuse_audit.md) - skeleton template reuse result.
 - [reports/test_results/101_skeleton_template_reuse_audit.json](reports/test_results/101_skeleton_template_reuse_audit.json) - structured skeleton template reuse ledger.
+- [scripts/102_type_motif_library_ledger.py](scripts/102_type_motif_library_ledger.py) - prices repeated operation-type motifs against the exact skeleton atlas.
+- [reports/test_results/102_type_motif_library_ledger.md](reports/test_results/102_type_motif_library_ledger.md) - type motif library ledger result.
+- [reports/test_results/102_type_motif_library_ledger.json](reports/test_results/102_type_motif_library_ledger.json) - structured type motif library ledger.
 
 ## Boundary
 
@@ -364,6 +367,11 @@ exogenous.
   (`58` unique templates across `60` books, with only two reused pairs). Type
   sequences show motifs (`28` templates, `39` reused books), but length-bearing
   templates do not reduce the atlas to a small reusable library.
+- Type motif library boundary: pricing those repeated type motifs directly gives
+  `193` type entries plus `60` book assignments, saving only `8` records before
+  residuals. The representation still requires `261` residual length/target
+  records, for `514` total records (`+253` vs the exact skeleton atlas), so no
+  type-motif library is promoted.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

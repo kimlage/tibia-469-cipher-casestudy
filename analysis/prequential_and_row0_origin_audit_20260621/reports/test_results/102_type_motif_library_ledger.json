@@ -1,0 +1,148 @@
+{
+  "case_reopened": false,
+  "classification": "type_motif_library_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "type_motif_library_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "exact_atlas_retained",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate101_skeleton_template_reuse": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.json"
+  },
+  "plaintext_claim": false,
+  "reused_type_groups": [
+    {
+      "books": [
+        22,
+        27,
+        33,
+        43,
+        47,
+        50,
+        53,
+        62,
+        66,
+        67,
+        68,
+        69
+      ],
+      "sequence": [
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        18,
+        35,
+        37,
+        48,
+        51,
+        54,
+        61,
+        63,
+        64
+      ],
+      "sequence": [
+        "copy",
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        19,
+        21,
+        24,
+        45,
+        46,
+        59
+      ],
+      "sequence": [
+        "copy",
+        "copy",
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        10,
+        25,
+        44,
+        52
+      ],
+      "sequence": [
+        "literal",
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        29,
+        41,
+        55
+      ],
+      "sequence": [
+        "copy",
+        "copy",
+        "copy",
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        32,
+        39,
+        58
+      ],
+      "sequence": [
+        "copy",
+        "literal",
+        "copy"
+      ]
+    },
+    {
+      "books": [
+        30,
+        36
+      ],
+      "sequence": [
+        "copy",
+        "copy",
+        "copy",
+        "copy",
+        "copy",
+        "copy"
+      ]
+    }
+  ],
+  "schema": "type_motif_library_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "ledger_only": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "tests_type_sequence_library": true
+  },
+  "summary": {
+    "book_assignment_records": 60,
+    "book_count": 60,
+    "exact_atlas_records": 261,
+    "full_representation_delta_vs_exact_atlas": 253,
+    "interpretation": "Type-sequence motifs repeat, but a type library only saves eight type/assignment records before residual length and target positions are paid. With those residuals included, the type-motif representation is larger than the exact skeleton atlas, so it is not promoted.",
+    "largest_reused_group": 12,
+    "promotes_type_library": false,
+    "residual_length_target_records": 261,
+    "reused_book_count": 39,
+    "reused_group_count": 7,
+    "type_library_entries": 193,
+    "type_library_total_records": 514,
+    "type_only_delta_vs_exact_atlas": -8,
+    "type_template_count": 28
+  },
+  "translation_delta": "NONE"
+}

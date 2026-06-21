@@ -789,6 +789,9 @@ and even target-dependent copy availability reaches only `208/261`.
 A skeleton template reuse audit then rejects a small reusable template library:
 exact skeletons have `58` unique templates across `60` books, with only two
 reused pairs, although type-sequence motifs repeat across `39` books.
+A type motif library ledger rejects promoting those motifs: `193` type entries
+plus `60` assignments still require `261` residual length/target records, for
+`514` total records (`+253` versus the exact skeleton atlas).
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1010,6 +1013,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   external fields),
   rejects simple decoder-visible rules as a generator for the skeleton,
   rejects exact skeleton template reuse as too sparse for a small library,
+  rejects type-sequence motif libraries after full residual accounting,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
