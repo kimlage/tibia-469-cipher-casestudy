@@ -46,6 +46,8 @@ SOURCES = {
     / "23_order_frontier_promotion_gate.json",
     "source_blocker_structural_context_gate": TEST_RESULTS
     / "24_source_blocker_structural_context_gate.json",
+    "source_canonicality_decodability_gate": TEST_RESULTS
+    / "25_source_canonicality_decodability_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -87,6 +89,7 @@ def make_result() -> dict[str, Any]:
     order_frontier = load_json(SOURCES["online_order_frontier_controls"])
     promotion_gate = load_json(SOURCES["order_frontier_promotion_gate"])
     source_gate = load_json(SOURCES["source_blocker_structural_context_gate"])
+    source_canonicality_gate = load_json(SOURCES["source_canonicality_decodability_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -112,6 +115,7 @@ def make_result() -> dict[str, Any]:
         ("online_order_frontier_controls", order_frontier),
         ("order_frontier_promotion_gate", promotion_gate),
         ("source_blocker_structural_context_gate", source_gate),
+        ("source_canonicality_decodability_gate", source_canonicality_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -789,6 +793,40 @@ def make_result() -> dict[str, Any]:
                 "Simple structural source contexts do not remove that blocker."
             ),
         },
+        {
+            "question": "does_earliest_source_canonicality_remove_decoder_source",
+            "source": rel(SOURCES["source_canonicality_decodability_gate"]),
+            "status": "failed_encoder_side_only",
+            "evidence": {
+                "earliest_source_count": source_canonicality_gate["summary"][
+                    "earliest_source_count"
+                ],
+                "copy_items": source_canonicality_gate["summary"]["copy_items"],
+                "unique_source_count": source_canonicality_gate["summary"][
+                    "unique_source_count"
+                ],
+                "ambiguous_source_count": source_canonicality_gate["summary"][
+                    "ambiguous_source_count"
+                ],
+                "earliest_exact_chunk_rule_decoder_computable": source_canonicality_gate[
+                    "summary"
+                ]["earliest_exact_chunk_rule_decoder_computable"],
+                "copy_source_dependency_removed_by_canonicality": source_canonicality_gate[
+                    "summary"
+                ]["copy_source_dependency_removed_by_canonicality"],
+                "default_exception_default_matches": source_canonicality_gate[
+                    "summary"
+                ]["default_exception_default_matches"],
+                "default_exception_exceptions": source_canonicality_gate["summary"][
+                    "default_exception_exceptions"
+                ],
+            },
+            "interpretation": (
+                "Every source is canonical relative to its copied chunk, but that "
+                "chunk is not decoder-known future target information. The source "
+                "ledger remains a decoding dependency."
+            ),
+        },
     ]
 
     result = {
@@ -1030,6 +1068,18 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['best_non_global_context_delta_vs_global_bits']:+.3f}; "
                 f"prefix losses {evidence['best_context_prefix_frozen_loss_count']}/"
                 f"{evidence['prefix_frozen_split_count']}"
+            )
+        elif row["question"] == "does_earliest_source_canonicality_remove_decoder_source":
+            key = (
+                f"earliest {evidence['earliest_source_count']}/"
+                f"{evidence['copy_items']}; unique {evidence['unique_source_count']}/"
+                f"{evidence['copy_items']}; ambiguous "
+                f"{evidence['ambiguous_source_count']}; decoder-computable "
+                f"{evidence['earliest_exact_chunk_rule_decoder_computable']}; "
+                f"dependency removed "
+                f"{evidence['copy_source_dependency_removed_by_canonicality']}; "
+                f"default/exception {evidence['default_exception_default_matches']} defaults, "
+                f"{evidence['default_exception_exceptions']} exceptions"
             )
         else:
             key = (

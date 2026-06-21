@@ -291,6 +291,19 @@ advance needs a new source derivation or representation, not a simple
 declared context split.
 See [24_source_blocker_structural_context_gate.md](test_results/24_source_blocker_structural_context_gate.md).
 
+### Source Canonicality Decodability Gate
+
+The strongest source-derivation clue is then separated from decoder
+requirements. Every declared copy source is the earliest legal
+occurrence of the copied chunk (`261/261`), but only `123/261` source
+choices are unique at the declared length and `138/261` are ambiguous.
+More importantly, the earliest-exact-chunk rule depends on the future
+target chunk, which the decoder does not know until source and length
+are resolved. Source canonicality is therefore retained as encoder
+regularity, while the decodable default/exception source ledger remains
+the valid source representation.
+See [25_source_canonicality_decodability_gate.md](test_results/25_source_canonicality_decodability_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

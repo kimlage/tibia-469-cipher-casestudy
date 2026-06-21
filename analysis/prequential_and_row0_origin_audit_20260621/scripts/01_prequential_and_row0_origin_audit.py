@@ -284,6 +284,7 @@ def render_markdown(
     online_order_frontier_controls_link: str,
     order_frontier_promotion_gate_link: str,
     source_blocker_structural_context_gate_link: str,
+    source_canonicality_decodability_gate_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -609,6 +610,19 @@ def render_markdown(
             "declared context split.",
             f"See [24_source_blocker_structural_context_gate.md]({source_blocker_structural_context_gate_link}).",
             "",
+            "### Source Canonicality Decodability Gate",
+            "",
+            "The strongest source-derivation clue is then separated from decoder",
+            "requirements. Every declared copy source is the earliest legal",
+            "occurrence of the copied chunk (`261/261`), but only `123/261` source",
+            "choices are unique at the declared length and `138/261` are ambiguous.",
+            "More importantly, the earliest-exact-chunk rule depends on the future",
+            "target chunk, which the decoder does not know until source and length",
+            "are resolved. Source canonicality is therefore retained as encoder",
+            "regularity, while the decodable default/exception source ledger remains",
+            "the valid source representation.",
+            f"See [25_source_canonicality_decodability_gate.md]({source_canonicality_decodability_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -726,6 +740,9 @@ def main() -> None:
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
             ),
+            source_canonicality_decodability_gate_link=(
+                "25_source_canonicality_decodability_gate.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -780,6 +797,9 @@ def main() -> None:
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"
+            ),
+            source_canonicality_decodability_gate_link=(
+                "test_results/25_source_canonicality_decodability_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

@@ -1,0 +1,40 @@
+{
+  "case_reopened": false,
+  "classification": "earliest_source_canonicality_encoder_side_only",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "decoder_source_dependency_status": "not_removed",
+    "generation_explanation_status": "source_rule_boundary_sharpened",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_canonicality_status": "complete_encoder_regularization",
+    "source_default_exception_status": "retained_decodable_representation",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_canonicality": "analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.json",
+    "copy_source_default_exception": "analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.json",
+    "copy_source_structural_context": "analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.json",
+    "cross_op_source_break_even": "analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.json",
+    "source_blocker_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "source_canonicality_decodability_gate.v1",
+  "summary": {
+    "ambiguous_source_count": 138,
+    "candidate_count_max": 14,
+    "candidate_count_mean": 2.4406130268199235,
+    "copy_items": 261,
+    "copy_source_dependency_removed_by_canonicality": false,
+    "default_exception_candidate_gain_bits": 28.861785641604,
+    "default_exception_default_matches": 5,
+    "default_exception_exceptions": 256,
+    "earliest_exact_chunk_rule_decoder_computable": false,
+    "earliest_source_count": 261,
+    "interpretation": "The declared source is fully canonical relative to the copied chunk, but that chunk is future target information from the decoder's perspective. Earliest-source canonicality therefore audits encoder regularity; it does not remove the source ledger.",
+    "simple_source_context_promoted": false,
+    "source_blocker_gate_closed": true,
+    "source_free_oracle_delta_bits": -11.209103631023481,
+    "unique_source_count": 123
+  },
+  "translation_delta": "NONE"
+}

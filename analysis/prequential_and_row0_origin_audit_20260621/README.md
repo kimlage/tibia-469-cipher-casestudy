@@ -88,6 +88,9 @@ exogenous.
 - [scripts/24_source_blocker_structural_context_gate.py](scripts/24_source_blocker_structural_context_gate.py) - checks whether simple source contexts rescue the cross-op near-tie source blocker.
 - [reports/test_results/24_source_blocker_structural_context_gate.md](reports/test_results/24_source_blocker_structural_context_gate.md) - source blocker structural-context gate result.
 - [reports/test_results/24_source_blocker_structural_context_gate.json](reports/test_results/24_source_blocker_structural_context_gate.json) - structured source-blocker gate ledger.
+- [scripts/25_source_canonicality_decodability_gate.py](scripts/25_source_canonicality_decodability_gate.py) - checks whether earliest-source canonicality removes the decoder source dependency.
+- [reports/test_results/25_source_canonicality_decodability_gate.md](reports/test_results/25_source_canonicality_decodability_gate.md) - source canonicality/decodability gate result.
+- [reports/test_results/25_source_canonicality_decodability_gate.json](reports/test_results/25_source_canonicality_decodability_gate.json) - structured source-canonicality gate ledger.
 
 ## Boundary
 
@@ -150,7 +153,11 @@ exogenous.
   rescue for the tight cross-op near tie: the candidate is only `+0.027` bits
   worse and a source-free oracle would be `-11.209` bits, but the best
   decodable simple source context (`book_half`) is `+5.872` bits worse than
-  global and loses all `5/5` prefix-frozen checks.
+  global and loses all `5/5` prefix-frozen checks. A canonicality/decodability
+  gate then separates encoder regularity from decoder derivation: every source
+  is the earliest legal occurrence of the copied chunk (`261/261`), but the rule
+  depends on future target text, `138/261` source choices remain ambiguous at
+  declared length, and the decoder source dependency is not removed.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

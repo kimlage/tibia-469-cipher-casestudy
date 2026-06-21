@@ -467,6 +467,22 @@
       "question": "do_simple_source_contexts_rescue_the_cross_op_near_tie",
       "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
       "status": "failed_simple_contexts_worse"
+    },
+    {
+      "evidence": {
+        "ambiguous_source_count": 138,
+        "copy_items": 261,
+        "copy_source_dependency_removed_by_canonicality": false,
+        "default_exception_default_matches": 5,
+        "default_exception_exceptions": 256,
+        "earliest_exact_chunk_rule_decoder_computable": false,
+        "earliest_source_count": 261,
+        "unique_source_count": 123
+      },
+      "interpretation": "Every source is canonical relative to its copied chunk, but that chunk is not decoder-known future target information. The source ledger remains a decoding dependency.",
+      "question": "does_earliest_source_canonicality_remove_decoder_source",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
+      "status": "failed_encoder_side_only"
     }
   ],
   "frozen_validation_scope": {
@@ -499,7 +515,8 @@
     "seed_exception_signal_cost": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.json",
     "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
     "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json",
-    "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json"
+    "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
+    "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",

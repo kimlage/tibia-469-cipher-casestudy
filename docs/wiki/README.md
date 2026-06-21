@@ -470,6 +470,10 @@ distinguishes literal from copy.
 The copy-source canonicality audit shows all copy sources are earliest legal
 occurrences of their copied chunks; source is canonical for encoding but still
 required for decoding.
+The source canonicality decodability gate makes that limitation explicit:
+earliest-source canonicality is `261/261`, but the rule depends on future
+target text, `138/261` choices remain ambiguous at declared length, and source
+is not removed from the decoder.
 A control addendum supports that tie-break: latest occurrence reaches only
 `123/261`, previous-source-plus-length only `5/261`, and random candidate
 choice would expect `169.473` hits.

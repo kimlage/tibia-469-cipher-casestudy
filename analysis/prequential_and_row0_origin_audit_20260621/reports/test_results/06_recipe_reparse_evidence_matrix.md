@@ -44,6 +44,7 @@ claim.
 | `is_the_online_prefix_book_frontier_numeric_order_unique` | `failed_as_numeric_order_uniqueness_proof` | numeric after-bootstrap 69/69; perfect controls 10/11; random perfect 6/6; best mean `random_04` +0.549 bits |
 | `can_order_frontier_control_orders_promote_a_formula` | `failed_no_promotable_order` | frontier best `random_04`; full raw best `numeric`; full charged best `numeric`; promotable 0; random_04 +61.452 frontier vs +521.038 charged |
 | `do_simple_source_contexts_rescue_the_cross_op_near_tie` | `failed_simple_contexts_worse` | candidate +0.027; source margin +0.027; oracle -11.209; best context `book_half` +5.872; prefix losses 5/5 |
+| `does_earliest_source_canonicality_remove_decoder_source` | `failed_encoder_side_only` | earliest 261/261; unique 123/261; ambiguous 138; decoder-computable False; dependency removed False; default/exception 5 defaults, 256 exceptions |
 
 ## Decision
 
