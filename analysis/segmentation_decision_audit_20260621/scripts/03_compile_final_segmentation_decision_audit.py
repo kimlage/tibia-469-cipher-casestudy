@@ -51,6 +51,9 @@ OBSERVABLE_STATE_SUPPORT = TEST_RESULTS / "39_observable_state_support_audit.jso
 LATENT_STATE_REQUIREMENT = TEST_RESULTS / "40_latent_state_requirement_audit.json"
 LATENT_LOOKUP_COST = TEST_RESULTS / "41_latent_state_lookup_cost_gate.json"
 COMPACT_LATENT_RULE = TEST_RESULTS / "42_compact_latent_rule_frontier.json"
+SOURCE_FREE_RESIDUAL_RULE = (
+    TEST_RESULTS / "43_source_free_residual_rule_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -184,6 +187,11 @@ def main() -> None:
         if COMPACT_LATENT_RULE.exists()
         else None
     )
+    source_free_residual_rule = (
+        load_json(SOURCE_FREE_RESIDUAL_RULE)
+        if SOURCE_FREE_RESIDUAL_RULE.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -266,6 +274,8 @@ def main() -> None:
         assert_boundary("latent_state_lookup_cost_gate", latent_lookup_cost)
     if compact_latent_rule is not None:
         assert_boundary("compact_latent_rule_frontier", compact_latent_rule)
+    if source_free_residual_rule is not None:
+        assert_boundary("source_free_residual_rule_gate", source_free_residual_rule)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -367,6 +377,11 @@ def main() -> None:
     )
     compact_latent_rule_summary = (
         None if compact_latent_rule is None else compact_latent_rule["summary"]
+    )
+    source_free_residual_rule_summary = (
+        None
+        if source_free_residual_rule is None
+        else source_free_residual_rule["summary"]
     )
 
     lines = [
@@ -1492,6 +1507,37 @@ def main() -> None:
                 "",
             ]
         )
+    if source_free_residual_rule_summary is not None:
+        lines.extend(
+            [
+                "## Source-Free Residual Rule Gate",
+                "",
+                "Gate 43 removes target-dependent active parser features from the",
+                "residual-rule search. It allows only source-free book/op ordinal",
+                "predicates, while reporting lookup-like `book_eq` predicates",
+                "separately.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Residual decisions | `{source_free_residual_rule_summary['residual_count']}` |",
+                f"| Structural predicates | `{source_free_residual_rule_summary['predicate_count']}` |",
+                f"| Structural candidate rule sets | `{source_free_residual_rule_summary['structural_candidate_rule_sets']}` |",
+                f"| Lookup-like candidate rule sets | `{source_free_residual_rule_summary['lookup_like_candidate_rule_sets']}` |",
+                f"| Best structural net bits vs lookup | `{source_free_residual_rule_summary['structural_best_net_bits_vs_lookup']:.3f}` |",
+                f"| Best structural false positives | `{source_free_residual_rule_summary['structural_best_false_positive_count']}` |",
+                f"| Best zero-false-positive structural hits | `{source_free_residual_rule_summary['structural_best_zero_false_positive_hit_count']}` |",
+                f"| Best zero-false-positive net bits vs lookup | `{source_free_residual_rule_summary['structural_best_zero_false_positive_net_bits_vs_lookup']:.3f}` |",
+                f"| Prequential structural cells with held-out hit | `{source_free_residual_rule_summary['prequential_structural_cells_with_hit']}/{source_free_residual_rule_summary['prequential_structural_cells_with_test']}` |",
+                "",
+                "The apparent structural MDL win uses a false positive. The clean",
+                "zero-false-positive structural rule hits only one residual and",
+                "costs more than lookup, and prefix-selected structural rules get",
+                "no held-out residual hits. The source-free ordinal shortcut is",
+                "therefore rejected; the missing mechanism still needs a real",
+                "target-stream or richer latent path/state account.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1518,7 +1564,11 @@ def main() -> None:
             "simple observable splits still leave `10` residual distinctions",
             "needing latent resolution. Gate 41 prices a pure latent lookup at",
             "least `79.361` bits before rule cost. Gate 42 rejects compact",
-            "residual-visible latent rules against that lookup. The remaining blocker is a richer latent path/state",
+            "residual-visible latent rules against that lookup. Gate 43 then",
+            "rejects strict source-free book/op ordinal residual rules: the",
+            "only apparent win uses a false positive, clean rules are worse",
+            "than lookup, and prefix-selected rules recover no held-out",
+            "residuals. The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1569,6 +1619,7 @@ def main() -> None:
             "- [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)",
             "- [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)",
             "- [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)",
+            "- [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)",
             "",
         ]
     )

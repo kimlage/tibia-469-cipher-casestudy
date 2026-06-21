@@ -1228,6 +1228,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `11` full-oracle correction events),
   rejects compact residual-visible latent rules (`6276` rule sets; best clean
   rule `+1.773` bits worse than lookup),
+  rejects strict source-free book/op ordinal residual rules (`4495` structural
+  rule sets; best clean rule hits `1/10`, costs `+1.651` bits, and has `0/4`
+  held-out hits),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

@@ -689,6 +689,13 @@ A compact latent rule frontier then tests that requirement directly. It charges
 lookup. The only apparent MDL win has a false positive; the best
 zero-false-positive rule is `+1.773` bits worse than lookup and gets `0/4`
 held-out hits. Compact residual-visible latent rules are therefore rejected.
+A stricter source-free residual rule gate then removes target-dependent active
+parser features and tests only book/op ordinal predicates. The apparent
+structural win again needs a false positive; the best clean rule hits only
+`1/10` residuals, costs `+1.651` bits versus lookup, and prefix-selected rules
+get `0/4` held-out hits. This rejects the source-free ordinal selector path
+and leaves the blocker at a richer latent path/state mechanism or an actual
+source-free account for the target digit stream.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2394,6 +2401,7 @@ book generation, not row0 pair-cell placement.
 - [Latent state requirement audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/40_latent_state_requirement_audit.md)
 - [Latent state lookup cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.md)
 - [Compact latent rule frontier](../../analysis/segmentation_decision_audit_20260621/reports/test_results/42_compact_latent_rule_frontier.md)
+- [Source-free residual rule gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/43_source_free_residual_rule_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

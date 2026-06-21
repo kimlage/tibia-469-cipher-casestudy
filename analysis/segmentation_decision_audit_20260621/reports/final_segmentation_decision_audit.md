@@ -897,6 +897,32 @@ zero-false-positive rule is worse than lookup, and no selected
 rule gets a held-out residual hit. Compact residual-visible
 latent rules are therefore rejected.
 
+## Source-Free Residual Rule Gate
+
+Gate 43 removes target-dependent active parser features from the
+residual-rule search. It allows only source-free book/op ordinal
+predicates, while reporting lookup-like `book_eq` predicates
+separately.
+
+| Diagnostic | Value |
+|---|---:|
+| Residual decisions | `10` |
+| Structural predicates | `45` |
+| Structural candidate rule sets | `4495` |
+| Lookup-like candidate rule sets | `5510` |
+| Best structural net bits vs lookup | `-5.366` |
+| Best structural false positives | `1` |
+| Best zero-false-positive structural hits | `1` |
+| Best zero-false-positive net bits vs lookup | `1.651` |
+| Prequential structural cells with held-out hit | `0/4` |
+
+The apparent structural MDL win uses a false positive. The clean
+zero-false-positive structural rule hits only one residual and
+costs more than lookup, and prefix-selected structural rules get
+no held-out residual hits. The source-free ordinal shortcut is
+therefore rejected; the missing mechanism still needs a real
+target-stream or richer latent path/state account.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -921,7 +947,11 @@ families have no deterministic residual support. Gate 40 shows
 simple observable splits still leave `10` residual distinctions
 needing latent resolution. Gate 41 prices a pure latent lookup at
 least `79.361` bits before rule cost. Gate 42 rejects compact
-residual-visible latent rules against that lookup. The remaining blocker is a richer latent path/state
+residual-visible latent rules against that lookup. Gate 43 then
+rejects strict source-free book/op ordinal residual rules: the
+only apparent win uses a false positive, clean rules are worse
+than lookup, and prefix-selected rules recover no held-out
+residuals. The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -972,3 +1002,4 @@ or the stable projection as an oracle.
 - [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)
 - [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)
 - [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)
+- [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)
