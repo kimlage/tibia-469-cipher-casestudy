@@ -313,6 +313,9 @@ exogenous.
 - [scripts/99_exact_skeleton_dependency_ledger.py](scripts/99_exact_skeleton_dependency_ledger.py) - converts the invariant skeleton into an explicit dependency ledger.
 - [reports/test_results/99_exact_skeleton_dependency_ledger.md](reports/test_results/99_exact_skeleton_dependency_ledger.md) - exact skeleton dependency ledger result.
 - [reports/test_results/99_exact_skeleton_dependency_ledger.json](reports/test_results/99_exact_skeleton_dependency_ledger.json) - structured exact skeleton dependency ledger.
+- [scripts/100_skeleton_rule_coverage_audit.py](scripts/100_skeleton_rule_coverage_audit.py) - tests whether simple decoder-visible rules generate the exact skeleton.
+- [reports/test_results/100_skeleton_rule_coverage_audit.md](reports/test_results/100_skeleton_rule_coverage_audit.md) - skeleton rule coverage result.
+- [reports/test_results/100_skeleton_rule_coverage_audit.json](reports/test_results/100_skeleton_rule_coverage_audit.json) - structured skeleton rule coverage ledger.
 
 ## Boundary
 
@@ -350,6 +353,10 @@ exogenous.
   `53` literal payload chunks external. Residual external fields drop from `609`
   active fields to `261`, but total materialized atlas+external records are
   still `522`, so no decoder-side generator is promoted.
+- Skeleton rule coverage boundary: simple decoder-visible rules do not generate
+  the skeleton. The best op-type rule is the trivial `always_copy` at `208/261`,
+  the best length rule covers `116/261`, and target-dependent copy availability
+  also reaches only `208/261`; the skeleton remains an atlas.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

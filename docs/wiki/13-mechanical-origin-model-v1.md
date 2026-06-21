@@ -302,6 +302,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source-policy selector boundary | the book-`63` latest-source selector matches per-case policy minima and has positive lower-bound bit balance, but it is book-specific and source fields remain materialized | audit-only selector / not generation |
 | Full-source exact skeleton invariance | removing source addresses leaves an exact operation skeleton invariant in `175/175` policy-cutoff cases and `60/60` books; canonical skeleton has `261` ops, `208` copies, `53` literal runs, and `266` literal digits | source-free segmentation atlas / not generator |
 | Exact skeleton dependency ledger | the stable skeleton leaves `208` copy-source fields and `53` literal payload chunks external; residual external fields drop from `609` to `261`, but atlas+external records still total `522` | dependency ledger improvement / not generator |
+| Skeleton rule coverage audit | simple decoder-visible rules do not generate the skeleton: best op-type rule is `always_copy` at `208/261`, best length rule is `116/261`, and target-dependent availability is only `208/261` | simple generator rejected |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -470,6 +471,7 @@ Primary sources:
 [source_policy_selector_boundary.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md),
 [full_source_exact_skeleton_invariance.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md),
 [exact_skeleton_dependency_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md),
+[skeleton_rule_coverage_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

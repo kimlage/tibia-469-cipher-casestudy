@@ -348,6 +348,11 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A skeleton rule coverage audit then tests whether that atlas can be replaced by
+simple decoder-visible rules. It cannot: the best op-type rule is just
+`always_copy` at `208/261`, the best length rule reaches `116/261`, literal
+length coverage is only `5/53`, and even the target-dependent copy-availability
+control reaches only `208/261`. The exact skeleton remains materialized.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1992,6 +1997,7 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

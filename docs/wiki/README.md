@@ -783,6 +783,9 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A skeleton rule coverage audit then rejects replacing the atlas with simple
+rules: best op-type coverage is `208/261`, best length coverage is `116/261`,
+and even target-dependent copy availability reaches only `208/261`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1002,6 +1005,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   policies/cutoffs while retaining source and payload dependencies,
   quantifies the skeleton atlas ledger (`261` atlas records plus `261` residual
   external fields),
+  rejects simple decoder-visible rules as a generator for the skeleton,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
