@@ -579,6 +579,11 @@ A contextual stability audit then stress-tests that clue. The full-fit
 `5/10` drops to `1/10` under leave-one-book retraining and to `0/10` under
 leave-context-out; support pruning also collapses most of the gain. The context
 table is therefore weak post-hoc evidence, not a stable parser rule.
+A hierarchical context backoff audit then checks whether the failure was merely
+sparsity. It preserves the same full-fit ceiling (`5/10` residuals, `0` false
+controls), but prefix/holdout still has only `1/5` zero-false-control cells and
+held-out residual gains come with false clean-control changes. Backoff is not
+promoted.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2267,6 +2272,7 @@ book generation, not row0 pair-cell placement.
 - [Branch ranker prequential audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/23_branch_ranker_prequential_audit.md)
 - [Contextual mode selector audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/24_contextual_mode_selector_audit.md)
 - [Contextual mode stability audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/25_contextual_mode_stability_audit.md)
+- [Hierarchical context backoff audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/26_hierarchical_context_backoff_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

@@ -517,6 +517,27 @@ from training or when low-support buckets are pruned. This
 reclassifies the context table as a weak post-hoc clue, not
 a generative parser rule.
 
+## Hierarchical Context Backoff Control
+
+Gate 26 tests whether the gate-25 failure was only context
+sparsity. It trains observable context hierarchies and backs
+off to coarser modes when support is low.
+
+| Selector | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Best full-fit backoff `start_active_to_combo` support `1` | `229/234` | `5/10` | `0` | weak full-fit clue only |
+
+- Families tested: `4`.
+- Support thresholds tested: `5`.
+- Prequential zero-clean-false-change cells: `1/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+- Prequential selected matches oracle cells: `2/5`.
+
+Backoff does not rescue the contextual mode family. It keeps
+the same full-fit ceiling but its held-out residual gains come
+with false clean-control changes, so it is not a generative
+parser rule.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -524,6 +545,7 @@ a single residual feature flag, and not a simple first-branch
 continuation objective or small prefix-trained branch ranker.
 A finite context table has weak full-fit signal, but stability
 tests collapse it under leave-one-book/context controls. The
+hierarchical backoff variant still fails clean holdout. The
 remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -558,3 +580,4 @@ or the stable projection as an oracle.
 - [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)
 - [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)
 - [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)
+- [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)

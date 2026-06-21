@@ -944,6 +944,9 @@ and `1/5` all-residual-covered cells.
 A contextual stability audit then reclassifies that clue as weak/post-hoc:
 the `5/10` full-fit gain drops to `1/10` under leave-one-book and `0/10` under
 leave-context-out, with support pruning removing most residual gains.
+A hierarchical context backoff audit preserves the same full-fit `5/10` ceiling
+but fails clean holdout: prequential selection has only `1/5` zero-false-control
+cells and residual gains require false clean-control changes.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

@@ -34,6 +34,7 @@ BRANCH_CONTINUATION = TEST_RESULTS / "22_residual_branch_continuation_audit.json
 BRANCH_RANKER = TEST_RESULTS / "23_branch_ranker_prequential_audit.json"
 CONTEXTUAL_MODE = TEST_RESULTS / "24_contextual_mode_selector_audit.json"
 CONTEXTUAL_STABILITY = TEST_RESULTS / "25_contextual_mode_stability_audit.json"
+HIERARCHICAL_BACKOFF = TEST_RESULTS / "26_hierarchical_context_backoff_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -110,6 +111,9 @@ def main() -> None:
     contextual_stability = (
         load_json(CONTEXTUAL_STABILITY) if CONTEXTUAL_STABILITY.exists() else None
     )
+    hierarchical_backoff = (
+        load_json(HIERARCHICAL_BACKOFF) if HIERARCHICAL_BACKOFF.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -156,6 +160,8 @@ def main() -> None:
         assert_boundary("contextual_mode_selector_audit", contextual_mode)
     if contextual_stability is not None:
         assert_boundary("contextual_mode_stability_audit", contextual_stability)
+    if hierarchical_backoff is not None:
+        assert_boundary("hierarchical_context_backoff_audit", hierarchical_backoff)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -212,6 +218,9 @@ def main() -> None:
     )
     contextual_stability_summary = (
         None if contextual_stability is None else contextual_stability["summary"]
+    )
+    hierarchical_backoff_summary = (
+        None if hierarchical_backoff is None else hierarchical_backoff["summary"]
     )
 
     lines = [
@@ -872,6 +881,32 @@ def main() -> None:
                 "",
             ]
         )
+    if hierarchical_backoff_summary is not None:
+        lines.extend(
+            [
+                "## Hierarchical Context Backoff Control",
+                "",
+                "Gate 26 tests whether the gate-25 failure was only context",
+                "sparsity. It trains observable context hierarchies and backs",
+                "off to coarser modes when support is low.",
+                "",
+                "| Selector | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Best full-fit backoff `{hierarchical_backoff_summary['best_family']}` support `{hierarchical_backoff_summary['best_min_support']}` | `{hierarchical_backoff_summary['best_full_fit_total_hits']}/{hierarchical_backoff_summary['decision_count']}` | `{hierarchical_backoff_summary['best_full_fit_residual_hits']}/{hierarchical_backoff_summary['residual_decision_count']}` | `{hierarchical_backoff_summary['best_full_fit_clean_false_changes']}` | weak full-fit clue only |",
+                "",
+                f"- Families tested: `{hierarchical_backoff_summary['family_count']}`.",
+                f"- Support thresholds tested: `{hierarchical_backoff_summary['support_threshold_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{hierarchical_backoff_summary['prequential_zero_clean_false_change_cells']}/{hierarchical_backoff_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{hierarchical_backoff_summary['prequential_cover_all_test_residual_cells']}/{hierarchical_backoff_summary['prequential_cells']}`.",
+                f"- Prequential selected matches oracle cells: `{hierarchical_backoff_summary['prequential_selected_matches_oracle_cells']}/{hierarchical_backoff_summary['prequential_cells']}`.",
+                "",
+                "Backoff does not rescue the contextual mode family. It keeps",
+                "the same full-fit ceiling but its held-out residual gains come",
+                "with false clean-control changes, so it is not a generative",
+                "parser rule.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -881,6 +916,7 @@ def main() -> None:
             "continuation objective or small prefix-trained branch ranker.",
             "A finite context table has weak full-fit signal, but stability",
             "tests collapse it under leave-one-book/context controls. The",
+            "hierarchical backoff variant still fails clean holdout. The",
             "remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -915,6 +951,7 @@ def main() -> None:
             "- [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)",
             "- [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)",
             "- [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)",
+            "- [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)",
             "",
         ]
     )
