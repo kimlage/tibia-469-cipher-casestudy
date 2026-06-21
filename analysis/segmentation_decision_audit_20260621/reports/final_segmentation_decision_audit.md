@@ -315,12 +315,33 @@ parser failures are isolated first-drift decisions, not
 long unstable paths. It is still not a promoted rule because
 the correction itself is chosen from the stable projection.
 
+## Observable Repair Policy Control
+
+Gate 17 tests whether the gate-16 oracle repairs can be
+replaced by small observable parser actions: immediate-copy
+forcing, book-start/internal copy forcing, next-peak literal
+delay, short-copy literal substitution, copy shortening by one,
+and one combined policy.
+
+| Policy family | Exact books | Boundary |
+|---|---:|---|
+| Baseline `window5` | `48/60` | retained |
+| Best observable repair policy `baseline_window5` | `48/60` | rejected |
+
+- Exact delta vs baseline: `0`.
+- Prequential selected matches oracle cells: `3/5`.
+
+The first-drift oracle map does not yet convert into a small
+observable repair rule. The baseline remains the best policy,
+and train-selected repair actions overfit in the middle prefix
+splits.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is
-a non-oracle classifier for the first-drift repair decisions,
-especially the mixed missed-copy and literal-understop classes,
-or a source-free account of why the target digit stream exists.
+a richer non-oracle classifier for the first-drift repair
+decisions than the simple observable templates tested here, or
+a source-free account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
 or the stable projection as an oracle.
@@ -342,3 +363,4 @@ or the stable projection as an oracle.
 - [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)
 - [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)
 - [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)
+- [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)

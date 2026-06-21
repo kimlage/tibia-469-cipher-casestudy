@@ -906,6 +906,10 @@ replacing the first divergent operation with the stable projection repairs
 `11/12` residual books, and two oracle repairs reach `60/60`. This is not a
 new rule, but it narrows the next parser task to a non-oracle classifier for
 those first divergent decisions.
+An observable repair-policy audit tests that next step directly. Across `36`
+simple repair templates, the best result is still the unmodified `window5`
+parser at `48/60`, and prefix selection matches the suffix oracle in only
+`3/5` cells. The oracle map is therefore diagnostic, not yet a rule.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
