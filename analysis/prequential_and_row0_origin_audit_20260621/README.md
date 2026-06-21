@@ -334,6 +334,9 @@ exogenous.
 - [scripts/106_prequential_optional_literal_rule_validation.py](scripts/106_prequential_optional_literal_rule_validation.py) - validates optional-literal exception rules on prefix/suffix splits.
 - [reports/test_results/106_prequential_optional_literal_rule_validation.md](reports/test_results/106_prequential_optional_literal_rule_validation.md) - prequential optional-literal rule result.
 - [reports/test_results/106_prequential_optional_literal_rule_validation.json](reports/test_results/106_prequential_optional_literal_rule_validation.json) - structured prequential optional-literal rule validation.
+- [scripts/107_operation_type_dependency_ledger.py](scripts/107_operation_type_dependency_ledger.py) - consolidates operation-type dependency after availability and exception-rule gates.
+- [reports/test_results/107_operation_type_dependency_ledger.md](reports/test_results/107_operation_type_dependency_ledger.md) - operation-type dependency ledger result.
+- [reports/test_results/107_operation_type_dependency_ledger.json](reports/test_results/107_operation_type_dependency_ledger.json) - structured operation-type dependency ledger.
 
 ## Boundary
 
@@ -405,6 +408,11 @@ exogenous.
   rule also beats baseline in `4/4`. Train-selected rules still lag suffix
   oracles in some splits and retain target/length-atlas dependencies, so this is
   predictive support for the clue, not generator promotion.
+- Operation-type dependency ledger: with target copy availability and the
+  length atlas allowed, explicit op-type dependency drops conceptually from
+  `261` fields to `3` residual errors. Materialized type+length records are
+  still `264` (`+3` vs the exact skeleton atlas), so this is dependency
+  clarification rather than a new generator or bound.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

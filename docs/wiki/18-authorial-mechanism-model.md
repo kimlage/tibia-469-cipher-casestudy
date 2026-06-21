@@ -388,6 +388,13 @@ suffix splits, and the fixed full-corpus rule also beats baseline in `4/4`.
 But train-selected rules trail suffix-oracle rules by up to `1` error, and the
 family still depends on target copy availability plus the length atlas. This is
 predictive support, not promotion.
+An operation-type dependency ledger then separates the real gain from the
+remaining blocker. If target copy availability and the length atlas are allowed,
+explicit `op_type` dependency falls conceptually from `261` fields to `3`
+residual type errors. But the retained `261` length rows mean the type+length
+ledger is still `264` records, `+3` versus the exact skeleton atlas, and source
+choices plus literal payload remain external. This clarifies dependency; it
+does not promote a generator or change the bound.
 
 A seed primacy audit then tests whether the usual operational seed assumption
 itself has mechanical privilege. Under seed-only exact-copy coverage, books
@@ -2055,6 +2062,7 @@ book generation, not row0 pair-cell placement.
 - [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
 - [Optional literal exception rule audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md)
 - [Prequential optional literal rule validation](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.md)
+- [Operation type dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)

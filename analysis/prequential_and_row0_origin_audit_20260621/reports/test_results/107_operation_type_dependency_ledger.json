@@ -1,0 +1,63 @@
+{
+  "case_reopened": false,
+  "classification": "operation_type_dependency_reduced_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "op_type_dependency_reduced_generator_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "type_mostly_derived_length_atlas_retained",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate103_copy_availability_type_exception": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.json",
+    "gate105_optional_literal_exception_rule": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.json",
+    "gate106_prequential_optional_literal_rule": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.json",
+    "gate99_exact_skeleton_dependency_ledger": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "operation_type_dependency_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "ledger_only": true,
+    "length_atlas_dependency_retained": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "target_text_dependency_retained": true
+  },
+  "summary": {
+    "conceptual_type_field_delta": -258,
+    "copy_count": 208,
+    "exact_skeleton_atlas_records": 261,
+    "exact_skeleton_total_materialized_records": 522,
+    "explicit_op_type_fields_before_rule": 261,
+    "explicit_op_type_residual_after_rule": 3,
+    "forced_literal_rows_from_no_copy_availability": 36,
+    "interpretation": "Operation type is mostly derivable once target copy availability and the length atlas are allowed: no-availability forces 36 literals, availability covers all 208 copies, and a short rule reduces the 17 optional literal exceptions to 3 residual errors. This reduces explicit op-type dependency conceptually from 261 fields to 3 residual fields, with prequential support, but it does not reduce the materialized atlas because the 261 length rows, target copy availability, copy sources, and literal payload remain external.",
+    "length_atlas_records_retained": 261,
+    "literal_count": 53,
+    "operation_count": 261,
+    "optional_literal_exception_rule": "(length_le_5 and remaining_ge_10)",
+    "optional_literal_exception_rule_tp_fp_fn": [
+      17,
+      3,
+      0
+    ],
+    "optional_literal_exceptions_before_rule": 17,
+    "prequential_support": {
+      "evaluated_splits": 4,
+      "max_train_selected_oracle_gap_errors": 1,
+      "promotes_prequential_rule": false,
+      "train_selected_better_than_baseline_splits": 4
+    },
+    "promotes_type_generator": false,
+    "record_delta_vs_exact_skeleton_atlas": 3,
+    "record_delta_vs_gate99_total_materialized": 3,
+    "residual_type_errors_after_rule": 3,
+    "total_materialized_records_after_type_rule": 525,
+    "type_length_records_after_rule": 264
+  },
+  "translation_delta": "NONE"
+}
