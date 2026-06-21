@@ -307,6 +307,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Type motif library ledger | type motifs repeat, but a type library has `193` entries plus `60` assignments and still leaves `261` length/target residual records; full representation is `514` records, `+253` vs exact atlas | type motif library rejected |
 | Copy availability type exception ledger | target-dependent copy availability contains every copy (`208/208`) and forces `36` literals, leaving `17` optional literal exceptions, but the conditioned ledger is `278` records (`+17` vs exact atlas) and depends on target text | `AUDIT_ONLY` mechanical clue |
 | Target position derivation ledger | `target_start`, `remaining`, and op index are derived in `261/261` rows from cumulative lengths/book length, so target position is not an independent skeleton dependency | ledger sharpened / atlas retained |
+| Optional literal exception rule audit | within available-copy rows, `length <= 5 and remaining >= 10` catches all `17` optional literal exceptions with `3` false-positive copies; shuffled controls have best-error min `12` | partial target-dependent type clue / not promoted |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
@@ -482,6 +483,7 @@ Primary sources:
 [type_motif_library_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md),
 [copy_availability_type_exception_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md),
 [target_position_derivation_ledger.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md),
+[optional_literal_exception_rule_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),

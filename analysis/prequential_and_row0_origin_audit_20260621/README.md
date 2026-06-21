@@ -328,6 +328,9 @@ exogenous.
 - [scripts/104_target_position_derivation_ledger.py](scripts/104_target_position_derivation_ledger.py) - checks whether target positions are derived from the length sequence.
 - [reports/test_results/104_target_position_derivation_ledger.md](reports/test_results/104_target_position_derivation_ledger.md) - target position derivation result.
 - [reports/test_results/104_target_position_derivation_ledger.json](reports/test_results/104_target_position_derivation_ledger.json) - structured target position derivation ledger.
+- [scripts/105_optional_literal_exception_rule_audit.py](scripts/105_optional_literal_exception_rule_audit.py) - tests simple rules for available-copy literal exceptions.
+- [reports/test_results/105_optional_literal_exception_rule_audit.md](reports/test_results/105_optional_literal_exception_rule_audit.md) - optional literal exception rule result.
+- [reports/test_results/105_optional_literal_exception_rule_audit.json](reports/test_results/105_optional_literal_exception_rule_audit.json) - structured optional literal exception rule audit.
 
 ## Boundary
 
@@ -388,6 +391,12 @@ exogenous.
   and book length. This removes target position as an independent conceptual
   dependency, but the exact atlas remains `261` one-row-per-operation records
   because operation type and length are still not generated.
+- Optional-literal exception boundary: among available-copy rows, the rule
+  `length <= 5 and remaining >= 10` covers all `17` optional literal exceptions
+  with `3` false-positive copy rows, reducing conditioned exception records from
+  `17` to `3`. Shuffled-label controls do not match it, but the rule still
+  depends on target copy availability and the external length atlas, so it is
+  `AUDIT_ONLY`.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

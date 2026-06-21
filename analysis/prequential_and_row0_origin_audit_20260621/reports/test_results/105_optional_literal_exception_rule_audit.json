@@ -1,0 +1,353 @@
+{
+  "best_rule_rows": {
+    "false_negative_rows": [],
+    "false_positive_rows": [
+      {
+        "book": 20,
+        "length": 5,
+        "op_index": 4,
+        "remaining": 23,
+        "target_start": 40,
+        "type": "copy"
+      },
+      {
+        "book": 34,
+        "length": 5,
+        "op_index": 7,
+        "remaining": 18,
+        "target_start": 105,
+        "type": "copy"
+      },
+      {
+        "book": 39,
+        "length": 5,
+        "op_index": 0,
+        "remaining": 59,
+        "target_start": 0,
+        "type": "copy"
+      }
+    ],
+    "true_positive_rows": [
+      {
+        "book": 10,
+        "length": 5,
+        "op_index": 0,
+        "remaining": 281,
+        "target_start": 0,
+        "type": "literal"
+      },
+      {
+        "book": 12,
+        "length": 2,
+        "op_index": 0,
+        "remaining": 137,
+        "target_start": 0,
+        "type": "literal"
+      },
+      {
+        "book": 12,
+        "length": 4,
+        "op_index": 9,
+        "remaining": 55,
+        "target_start": 82,
+        "type": "literal"
+      },
+      {
+        "book": 14,
+        "length": 5,
+        "op_index": 2,
+        "remaining": 88,
+        "target_start": 45,
+        "type": "literal"
+      },
+      {
+        "book": 16,
+        "length": 1,
+        "op_index": 7,
+        "remaining": 24,
+        "target_start": 150,
+        "type": "literal"
+      },
+      {
+        "book": 16,
+        "length": 1,
+        "op_index": 9,
+        "remaining": 10,
+        "target_start": 164,
+        "type": "literal"
+      },
+      {
+        "book": 17,
+        "length": 3,
+        "op_index": 3,
+        "remaining": 125,
+        "target_start": 149,
+        "type": "literal"
+      },
+      {
+        "book": 25,
+        "length": 3,
+        "op_index": 0,
+        "remaining": 35,
+        "target_start": 0,
+        "type": "literal"
+      },
+      {
+        "book": 26,
+        "length": 5,
+        "op_index": 2,
+        "remaining": 149,
+        "target_start": 21,
+        "type": "literal"
+      },
+      {
+        "book": 32,
+        "length": 2,
+        "op_index": 1,
+        "remaining": 126,
+        "target_start": 11,
+        "type": "literal"
+      },
+      {
+        "book": 38,
+        "length": 2,
+        "op_index": 1,
+        "remaining": 22,
+        "target_start": 112,
+        "type": "literal"
+      },
+      {
+        "book": 39,
+        "length": 2,
+        "op_index": 1,
+        "remaining": 54,
+        "target_start": 5,
+        "type": "literal"
+      },
+      {
+        "book": 42,
+        "length": 2,
+        "op_index": 3,
+        "remaining": 98,
+        "target_start": 89,
+        "type": "literal"
+      },
+      {
+        "book": 44,
+        "length": 5,
+        "op_index": 0,
+        "remaining": 126,
+        "target_start": 0,
+        "type": "literal"
+      },
+      {
+        "book": 52,
+        "length": 3,
+        "op_index": 0,
+        "remaining": 137,
+        "target_start": 0,
+        "type": "literal"
+      },
+      {
+        "book": 58,
+        "length": 3,
+        "op_index": 1,
+        "remaining": 248,
+        "target_start": 24,
+        "type": "literal"
+      },
+      {
+        "book": 65,
+        "length": 3,
+        "op_index": 0,
+        "remaining": 169,
+        "target_start": 0,
+        "type": "literal"
+      }
+    ]
+  },
+  "case_reopened": false,
+  "classification": "optional_literal_exception_rule_audit_only",
+  "controls": {
+    "shuffled_exception_labels": {
+      "empirical_p_min_errors_lte_observed": 0.0,
+      "max": 18,
+      "mean": 15.844,
+      "median": 16.0,
+      "min": 12,
+      "trials": 2000
+    }
+  },
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "optional_literal_exception_rule_audit_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "exception_rule_partial_target_dependent_clue",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate103_copy_availability_type_exception": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "optional_literal_exception_rule_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "control_trials": 2000,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "random_seed": 469105,
+    "row0_origin_changed": false,
+    "rule_library_excludes_book_id": true,
+    "target_text_dependency_retained": true,
+    "tests_optional_literal_exception_rules": true
+  },
+  "summary": {
+    "availability_baseline_errors": 17,
+    "available_rows": 225,
+    "best_rule": "(length_le_5 and remaining_ge_10)",
+    "best_rule_errors": 3,
+    "best_rule_fn": 0,
+    "best_rule_fp": 3,
+    "best_rule_kind": "pair",
+    "best_rule_precision": 0.85,
+    "best_rule_recall": 1.0,
+    "best_rule_tp": 17,
+    "best_single_rule": "length_le_4",
+    "best_single_rule_errors": 4,
+    "error_delta_vs_availability_baseline": -14,
+    "gate103_conditioned_skeleton_records": 278,
+    "interpretation": "A short target-dependent rule explains most optional literal exceptions: available-copy rows with length <= 5 and remaining >= 10 account for all 17 optional literals but incorrectly mark 3 copy rows. This is far better than shuffled controls, but it still depends on target copy availability and on the external length atlas, so it is a structural clue rather than a promoted generator.",
+    "optional_literal_exception_rows": 17,
+    "primitive_rule_count": 112,
+    "promotes_exception_rule": false,
+    "record_delta_vs_gate103_conditioned": -14,
+    "rule_conditioned_skeleton_records": 264,
+    "total_rule_count_after_dedup": 7070
+  },
+  "top_rules": [
+    {
+      "errors": 3,
+      "f1": 0.9189189189189189,
+      "fn": 0,
+      "fp": 3,
+      "kind": "pair",
+      "precision": 0.85,
+      "recall": 1.0,
+      "rule": "(length_le_5 and remaining_ge_10)",
+      "tn": 205,
+      "tp": 17
+    },
+    {
+      "errors": 3,
+      "f1": 0.9142857142857143,
+      "fn": 1,
+      "fp": 2,
+      "kind": "pair",
+      "precision": 0.8888888888888888,
+      "recall": 0.9411764705882353,
+      "rule": "(length_le_5 and remaining_ge_20)",
+      "tn": 206,
+      "tp": 16
+    },
+    {
+      "errors": 3,
+      "f1": 0.9090909090909091,
+      "fn": 2,
+      "fp": 1,
+      "kind": "pair",
+      "precision": 0.9375,
+      "recall": 0.8823529411764706,
+      "rule": "(length_le_5 and remaining_ge_24)",
+      "tn": 207,
+      "tp": 15
+    },
+    {
+      "errors": 4,
+      "f1": 0.8749999999999999,
+      "fn": 3,
+      "fp": 1,
+      "kind": "pair",
+      "precision": 0.9333333333333333,
+      "recall": 0.8235294117647058,
+      "rule": "(length_le_4 or remaining_ge_281)",
+      "tn": 207,
+      "tp": 14
+    },
+    {
+      "errors": 4,
+      "f1": 0.8749999999999999,
+      "fn": 3,
+      "fp": 1,
+      "kind": "pair",
+      "precision": 0.9333333333333333,
+      "recall": 0.8235294117647058,
+      "rule": "(length_le_5 and remaining_ge_35)",
+      "tn": 207,
+      "tp": 14
+    },
+    {
+      "errors": 4,
+      "f1": 0.8666666666666666,
+      "fn": 4,
+      "fp": 0,
+      "kind": "primitive",
+      "precision": 1.0,
+      "recall": 0.7647058823529411,
+      "rule": "length_le_4",
+      "tn": 208,
+      "tp": 13
+    },
+    {
+      "errors": 5,
+      "f1": 0.8387096774193549,
+      "fn": 4,
+      "fp": 1,
+      "kind": "pair",
+      "precision": 0.9285714285714286,
+      "recall": 0.7647058823529411,
+      "rule": "(length_le_3 or remaining_ge_281)",
+      "tn": 207,
+      "tp": 13
+    },
+    {
+      "errors": 5,
+      "f1": 0.8387096774193549,
+      "fn": 4,
+      "fp": 1,
+      "kind": "pair",
+      "precision": 0.9285714285714286,
+      "recall": 0.7647058823529411,
+      "rule": "(length_le_5 and remaining_ge_50)",
+      "tn": 207,
+      "tp": 13
+    },
+    {
+      "errors": 5,
+      "f1": 0.8275862068965517,
+      "fn": 5,
+      "fp": 0,
+      "kind": "pair",
+      "precision": 1.0,
+      "recall": 0.7058823529411765,
+      "rule": "(length_le_4 and remaining_ge_20)",
+      "tn": 208,
+      "tp": 12
+    },
+    {
+      "errors": 5,
+      "f1": 0.8275862068965517,
+      "fn": 5,
+      "fp": 0,
+      "kind": "pair",
+      "precision": 1.0,
+      "recall": 0.7058823529411765,
+      "rule": "(length_le_4 and remaining_le_200)",
+      "tn": 208,
+      "tp": 12
+    }
+  ],
+  "translation_delta": "NONE"
+}

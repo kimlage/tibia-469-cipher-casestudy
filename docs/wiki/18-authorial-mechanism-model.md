@@ -376,6 +376,12 @@ A target-position derivation ledger then removes one possible overcount:
 sharpens the skeleton description from type/target/length to type/length with
 derived positions. It does not change the `261` atlas rows or derive operation
 types, lengths, copy sources, or literal payload.
+An optional-literal exception rule audit then tests the remaining exception
+surface. Among available-copy rows, `length <= 5 and remaining >= 10` catches
+all `17` optional literal exceptions and leaves only `3` false-positive copy
+rows; shuffled-label controls have best-error minimum `12`. This is a real
+structural clue, but still not a generator because it depends on target copy
+availability and on the external length atlas.
 
 A seed primacy audit then tests whether the usual operational seed assumption
 itself has mechanical privilege. Under seed-only exact-copy coverage, books
@@ -2041,6 +2047,7 @@ book generation, not row0 pair-cell placement.
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
 - [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
 - [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
+- [Optional literal exception rule audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/105_optional_literal_exception_rule_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
