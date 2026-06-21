@@ -49,6 +49,9 @@ exogenous.
 - [scripts/11_family_holdout_address_corrected_scoreboard.py](scripts/11_family_holdout_address_corrected_scoreboard.py) - applies the address-space correction to every public-bookcase family holdout.
 - [reports/test_results/11_family_holdout_address_corrected_scoreboard.md](reports/test_results/11_family_holdout_address_corrected_scoreboard.md) - address-corrected family scoreboard.
 - [reports/test_results/11_family_holdout_address_corrected_scoreboard.json](reports/test_results/11_family_holdout_address_corrected_scoreboard.json) - structured address-corrected family ledger.
+- [scripts/12_family_holdout_no_test_carryover_audit.py](scripts/12_family_holdout_no_test_carryover_audit.py) - tests family holdout reparsing without cross-book carryover inside the held-out family.
+- [reports/test_results/12_family_holdout_no_test_carryover_audit.md](reports/test_results/12_family_holdout_no_test_carryover_audit.md) - no-test-carryover family holdout result.
+- [reports/test_results/12_family_holdout_no_test_carryover_audit.json](reports/test_results/12_family_holdout_no_test_carryover_audit.json) - structured no-test-carryover ledger.
 
 ## Boundary
 
@@ -75,7 +78,10 @@ exogenous.
   emitted after the training complement against active addresses charged in
   original global numeric positions. Applying that correction across every
   public-bookcase family changes the active comparison from `15/19` beat-or-tie
-  families before correction to `19/19` after correction.
+  families before correction to `19/19` after correction. A stricter
+  no-test-carryover variant still beats raw digit coding in `19/19` families,
+  so the positive family signal does not require earlier held-out books to feed
+  later held-out books.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

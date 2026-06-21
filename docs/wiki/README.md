@@ -403,6 +403,8 @@ approximately `0.000` bits.
 Applying that correction to all public-bookcase families changes the
 reparse-vs-active beat/tie coverage from `15/19` to `19/19`, while preserving
 `19/19` raw-digit wins.
+A no-test-carryover family variant still beats raw digits in `19/19` families
+when each held-out book starts only from the training-complement inventory.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -582,7 +584,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   controls, adds public-bookcase family holdout evidence, localizes remaining
   family losses to copy-address overhead or exact tie, shows those address
   losses vanish under same-coordinate repricing, records `19/19`
-  address-corrected family beat/tie coverage, closes the row0 hypothesis
+  address-corrected family beat/tie coverage, verifies that no-test-carryover
+  family holdouts still beat raw in `19/19`, closes the row0 hypothesis
   requirement matrix with zero promoted origin formulas, and keeps row0 origin
   exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

@@ -143,6 +143,21 @@
     },
     {
       "evidence": {
+        "failure_labels": [],
+        "family_count": 19,
+        "mean_no_test_carryover_gain_vs_raw_bits": 1054.5699134683082,
+        "mean_standard_gain_vs_raw_bits": 1064.818895575434,
+        "no_test_carryover_beats_raw_count": 19,
+        "roundtrip_family_count": 19,
+        "standard_reparse_beats_raw_count": 19
+      },
+      "interpretation": "The positive public-bookcase family signal does not require cross-book carryover inside the held-out family: each held-out book still beats raw digit coding when parsed from the training complement alone.",
+      "question": "does_family_holdout_reparse_depend_on_test_carryover",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
+      "status": "passed_no_test_carryover_raw_baseline"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -179,6 +194,7 @@
   "inputs": {
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
+    "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",

@@ -23,6 +23,8 @@ SOURCES = {
     "family_holdout_address_space": TEST_RESULTS / "10_family_holdout_address_space_audit.json",
     "family_holdout_address_corrected_scoreboard": TEST_RESULTS
     / "11_family_holdout_address_corrected_scoreboard.json",
+    "family_holdout_no_test_carryover": TEST_RESULTS
+    / "12_family_holdout_no_test_carryover_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -51,6 +53,7 @@ def make_result() -> dict[str, Any]:
     family_loss_decomposition = load_json(SOURCES["reparse_family_loss_decomposition"])
     address_space = load_json(SOURCES["family_holdout_address_space"])
     address_corrected = load_json(SOURCES["family_holdout_address_corrected_scoreboard"])
+    no_test_carryover = load_json(SOURCES["family_holdout_no_test_carryover"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -63,6 +66,7 @@ def make_result() -> dict[str, Any]:
         ("reparse_family_loss_decomposition", family_loss_decomposition),
         ("family_holdout_address_space", address_space),
         ("family_holdout_address_corrected_scoreboard", address_corrected),
+        ("family_holdout_no_test_carryover", no_test_carryover),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -285,6 +289,36 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_family_holdout_reparse_depend_on_test_carryover",
+            "source": rel(SOURCES["family_holdout_no_test_carryover"]),
+            "status": "passed_no_test_carryover_raw_baseline",
+            "evidence": {
+                "family_count": no_test_carryover["summary"]["family_count"],
+                "roundtrip_family_count": no_test_carryover["summary"][
+                    "roundtrip_family_count"
+                ],
+                "no_test_carryover_beats_raw_count": no_test_carryover["summary"][
+                    "no_test_carryover_beats_raw_count"
+                ],
+                "standard_reparse_beats_raw_count": no_test_carryover["summary"][
+                    "standard_reparse_beats_raw_count"
+                ],
+                "mean_no_test_carryover_gain_vs_raw_bits": no_test_carryover["summary"][
+                    "mean_no_test_carryover_gain_vs_raw_bits"
+                ],
+                "mean_standard_gain_vs_raw_bits": no_test_carryover["summary"][
+                    "mean_standard_gain_vs_raw_bits"
+                ],
+                "failure_labels": no_test_carryover["summary"]["failure_labels"],
+            },
+            "interpretation": (
+                "The positive public-bookcase family signal does not require "
+                "cross-book carryover inside the held-out family: each held-out "
+                "book still beats raw digit coding when parsed from the training "
+                "complement alone."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -443,6 +477,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['family_count']}; mean reparse-active "
                 f"{evidence['mean_original_reparse_minus_active_bits']:.3f} -> "
                 f"{evidence['mean_address_corrected_reparse_minus_active_bits']:.3f}"
+            )
+        elif row["question"] == "does_family_holdout_reparse_depend_on_test_carryover":
+            key = (
+                f"roundtrip {evidence['roundtrip_family_count']}/{evidence['family_count']}; "
+                f"no-carry beats raw {evidence['no_test_carryover_beats_raw_count']}/"
+                f"{evidence['family_count']}; mean gain "
+                f"{evidence['mean_no_test_carryover_gain_vs_raw_bits']:.3f} bits"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

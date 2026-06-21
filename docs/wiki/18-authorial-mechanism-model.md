@@ -916,6 +916,11 @@ active family recipe in `19/19` after address correction, versus `15/19` before
 correction. The mean reparse-minus-active gap improves from `-139.959` to
 `-161.381` bits. This strengthens predictive recipe validation, but still does
 not derive row0 or promote a final authorial method.
+A no-test-carryover variant then removes cross-book carryover inside each
+held-out family. Each held-out book is parsed from the training-complement
+inventory alone; it still roundtrips `19/19` families and beats raw digit
+coding in `19/19`, with mean gain `1054.570` bits. The family signal therefore
+does not depend on held-out books feeding other held-out books.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1357,6 +1362,7 @@ book generation, not row0 pair-cell placement.
 - [Recipe reparse family loss decomposition](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.md)
 - [Family holdout address-space audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.md)
 - [Family holdout address-corrected scoreboard](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.md)
+- [Family holdout no-test-carryover audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
