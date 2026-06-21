@@ -1,0 +1,131 @@
+{
+  "best_rule": {
+    "accuracy": 0.2727272727272727,
+    "hits": 15,
+    "in_count": 23,
+    "loo_accuracy": 0.2727272727272727,
+    "loo_hits": 15,
+    "pred_in": "E",
+    "pred_out": "N",
+    "rule": "numpad_le_1"
+  },
+  "classification": "REJECTED_CONTROL",
+  "digit_permutation_control": {
+    "control_max_best_hits": 17,
+    "control_median_best_hits": 14,
+    "observed_best_hits": 15,
+    "p_control_ge_observed": 0.2908366533864542,
+    "trials": 250
+  },
+  "interpretation": "Simple priority layers are useful diagnostics but do not beat lookup or survive best-of-family controls as an origin formula.",
+  "label_shuffle_control": {
+    "control_max_best_loo_hits": 18,
+    "control_median_best_loo_hits": 13,
+    "observed_best_loo_hits": 15,
+    "p_control_ge_observed": 0.18562874251497005,
+    "trials": 500
+  },
+  "schema": "row0_priority_layer_mdl.v1",
+  "top_rules": [
+    {
+      "accuracy": 0.2727272727272727,
+      "hits": 15,
+      "in_count": 23,
+      "loo_accuracy": 0.2727272727272727,
+      "loo_hits": 15,
+      "pred_in": "E",
+      "pred_out": "N",
+      "rule": "numpad_le_1"
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "hits": 14,
+      "in_count": 19,
+      "loo_accuracy": 0.2545454545454545,
+      "loo_hits": 14,
+      "pred_in": "E",
+      "pred_out": "N",
+      "rule": "sum_mod_3_0"
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "hits": 14,
+      "in_count": 10,
+      "loo_accuracy": 0.2,
+      "loo_hits": 11,
+      "pred_in": "I",
+      "pred_out": "E",
+      "rule": "has_0"
+    },
+    {
+      "accuracy": 0.23636363636363636,
+      "hits": 13,
+      "in_count": 11,
+      "loo_accuracy": 0.2,
+      "loo_hits": 11,
+      "pred_in": "F",
+      "pred_out": "E",
+      "rule": "sum_mod_5_4"
+    },
+    {
+      "accuracy": 0.21818181818181817,
+      "hits": 12,
+      "in_count": 15,
+      "loo_accuracy": 0.2,
+      "loo_hits": 11,
+      "pred_in": "E",
+      "pred_out": "N",
+      "rule": "high_block"
+    },
+    {
+      "accuracy": 0.2545454545454545,
+      "hits": 14,
+      "in_count": 19,
+      "loo_accuracy": 0.18181818181818182,
+      "loo_hits": 10,
+      "pred_in": "N",
+      "pred_out": "E",
+      "rule": "border"
+    },
+    {
+      "accuracy": 0.23636363636363636,
+      "hits": 13,
+      "in_count": 10,
+      "loo_accuracy": 0.18181818181818182,
+      "loo_hits": 10,
+      "pred_in": "N",
+      "pred_out": "E",
+      "rule": "has_9"
+    },
+    {
+      "accuracy": 0.21818181818181817,
+      "hits": 12,
+      "in_count": 10,
+      "loo_accuracy": 0.18181818181818182,
+      "loo_hits": 10,
+      "pred_in": "I",
+      "pred_out": "E",
+      "rule": "has_6"
+    },
+    {
+      "accuracy": 0.21818181818181817,
+      "hits": 12,
+      "in_count": 9,
+      "loo_accuracy": 0.18181818181818182,
+      "loo_hits": 10,
+      "pred_in": "F",
+      "pred_out": "E",
+      "rule": "diff_1"
+    },
+    {
+      "accuracy": 0.2,
+      "hits": 11,
+      "in_count": 3,
+      "loo_accuracy": 0.18181818181818182,
+      "loo_hits": 10,
+      "pred_in": "*",
+      "pred_out": "E",
+      "rule": "corner"
+    }
+  ]
+}

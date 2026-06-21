@@ -1,0 +1,64 @@
+{
+  "classification": "AUDIT_ONLY",
+  "decision": "No candidate is promoted to PROMOTED_ORIGIN_FORMULA.",
+  "ledger": [
+    {
+      "beats_lookup": false,
+      "candidate": "ordered_surface_render_layer",
+      "explains_39_19_91": true,
+      "final_status": "PROMOTED_MECHANICAL_CLUE",
+      "holdout_predicts_labels": false,
+      "reason": "Explains surface facts, not full label placement.",
+      "starting_status": "PROMOTED_MECHANICAL_CLUE",
+      "survives_controls": true
+    },
+    {
+      "beats_lookup": false,
+      "candidate": "digit_orbit_6_9",
+      "explains_39_19_91": false,
+      "final_status": "WEAK_CLUE",
+      "holdout_predicts_labels": false,
+      "reason": "Weak quotient/orbit signal only.",
+      "starting_status": "WEAK_CLUE",
+      "survives_controls": true
+    },
+    {
+      "beats_lookup": false,
+      "candidate": "k5_eye_arity",
+      "explains_39_19_91": false,
+      "final_status": "REJECTED_CONTROL",
+      "holdout_predicts_labels": false,
+      "reason": "Arity match is not label prediction.",
+      "starting_status": "WEAK_CLUE",
+      "survives_controls": false
+    },
+    {
+      "beats_lookup": false,
+      "candidate": "fixed_lore_order",
+      "explains_39_19_91": false,
+      "final_status": "REJECTED_CONTROL",
+      "holdout_predicts_labels": false,
+      "reason": "No fixed source order beats controls.",
+      "starting_status": "WEAK_CLUE",
+      "survives_controls": false
+    },
+    {
+      "beats_lookup": false,
+      "candidate": "manual_authorial_lookup",
+      "explains_39_19_91": "by_storage_only",
+      "final_status": "AUDIT_ONLY",
+      "holdout_predicts_labels": false,
+      "reason": "Honest baseline and likely exogenous worksheet under current evidence.",
+      "starting_status": "AUDIT_ONLY",
+      "survives_controls": "not_applicable"
+    }
+  ],
+  "refuter_questions": [
+    "beats lookup after costs",
+    "predicts labels under holdout",
+    "survives label shuffle and digit permutation controls",
+    "explains 39 absence and 19/91 directed conflict",
+    "does not use invented semantics"
+  ],
+  "schema": "row0_adversarial_refuter.v1"
+}

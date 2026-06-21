@@ -1,0 +1,32 @@
+{
+  "anchors": [
+    {
+      "id": "ytc_2012_chayenne",
+      "reason": "Useful compatibility holdout for mechanical stream, not a row0 label source.",
+      "status": "secondary_validation_only"
+    },
+    {
+      "id": "secret_library_74032_45331",
+      "reason": "Official unglossed number string; no symbol table or plaintext pair.",
+      "status": "weak_watchlist"
+    },
+    {
+      "id": "avar_tar",
+      "reason": "Retained as control, not promoted.",
+      "status": "negative_control"
+    },
+    {
+      "id": "isle_kharos_exact_topology",
+      "reason": "Exact tile/slot/orientation/order not available as fixed source.",
+      "status": "blocked"
+    },
+    {
+      "id": "tibia_language_comparanda",
+      "reason": "Community language material is not official 469 ground truth.",
+      "status": "control_corpus_only"
+    }
+  ],
+  "classification": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+  "interpretation": "External anchors do not currently validate a row0-origin formula. The unlock remains a CipSoft/in-game symbol table or book-to-meaning crib.",
+  "schema": "row0_external_anchor_holdout.v1"
+}

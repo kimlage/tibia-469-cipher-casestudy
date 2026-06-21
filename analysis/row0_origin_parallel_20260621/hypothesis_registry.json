@@ -1,0 +1,78 @@
+{
+  "classification_counts": {
+    "AUDIT_ONLY": 2,
+    "BLOCKED_NEEDS_EXTERNAL_SOURCE": 1,
+    "PROMOTED_MECHANICAL_CLUE": 1,
+    "REJECTED_CONTROL": 4,
+    "WEAK_CLUE": 1
+  },
+  "hypotheses": [
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "lookup and fixed-order inventory fills do not promote",
+      "id": "H-ROW0-A",
+      "name": "inventory_frequency"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "simple layers fail as origin formula",
+      "id": "H-ROW0-B",
+      "name": "priority_layers"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "label-blind partitions do not recover labels",
+      "id": "H-ROW0-C",
+      "name": "latent_behavior_partition"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "fixed orders ordinary under controls",
+      "id": "H-ROW0-D",
+      "name": "fill_order_inventory"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "no fixed source order promoted",
+      "id": "H-ROW0-E",
+      "name": "lore_fixed_order"
+    },
+    {
+      "classification": "WEAK_CLUE",
+      "evidence": "weak arity/orbit clue only",
+      "id": "H-ROW0-F",
+      "name": "eye_blink_arity"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "geometry stumps fail controls",
+      "id": "H-ROW0-G",
+      "name": "visual_digit_geometry"
+    },
+    {
+      "classification": "PROMOTED_MECHANICAL_CLUE",
+      "evidence": "explains 39 and 19/91 as surface clue only",
+      "id": "H-ROW0-H",
+      "name": "ordered_surface_render"
+    },
+    {
+      "classification": "REJECTED_CONTROL",
+      "evidence": "previous hierarchical provenance and prequential audits do not derive row0",
+      "id": "H-ROW0-I",
+      "name": "book_generation_provenance"
+    },
+    {
+      "classification": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+      "evidence": "blocked pending CipSoft/in-game fixed source",
+      "id": "H-ROW0-J",
+      "name": "external_text_source"
+    },
+    {
+      "classification": "AUDIT_ONLY",
+      "evidence": "project import provenance audited; no generator found",
+      "id": "H-ROW0-K",
+      "name": "artifact_provenance"
+    }
+  ],
+  "schema": "row0_origin_hypothesis_registry.v1"
+}
