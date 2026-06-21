@@ -890,6 +890,8 @@ The online formula recipe-prune audit then separates representation artifacts
 from required recipe dependencies. Book `length` and copy `target_start` are
 derivable; removing them in-memory preserves `8343.062` bits and `70/70`, while
 literal payload plus copy source/length fields remain required declarations.
+The canonical online recipe compile materializes that stripped projection as
+the compact current formula representation, without changing the bound.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1168,6 +1170,7 @@ book generation, not row0 pair-cell placement.
 - [Online deterministic reparse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.md)
 - [Online reparse order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.md)
 - [Online formula recipe prune audit](../../analysis/authorial_mechanism_20260620/reports/test_results/131_online_formula_recipe_prune_audit.md)
+- [Canonical online recipe formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md)
 
 ## Boundary
 

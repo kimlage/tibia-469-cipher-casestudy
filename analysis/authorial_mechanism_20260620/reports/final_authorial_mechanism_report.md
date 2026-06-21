@@ -637,5 +637,9 @@ Generated audits in this directory should be treated as the current state:
   `target_start` in-memory as derivable representation fields. The stripped
   projection preserves `8343.062` bits and `70/70`, reducing recipe JSON by
   `5612` bytes without changing the active bound.
+- `132_canonical_online_recipe_formula_compile`: materializes the stripped
+  projection as the canonical formula file. It preserves `8343.062` bits and
+  `70/70`, contains no copy `target_start` or book `length` fields, and changes
+  representation only.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

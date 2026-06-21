@@ -342,6 +342,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/131_online_formula_recipe_prune_audit.py` - checks which active
   recipe fields are derivable; book `length` and copy `target_start` can be
   pruned losslessly in a canonical projection.
+- `scripts/132_canonical_online_recipe_formula_compile.py` - materializes the
+  pruned canonical online formula as the current compact representation of the
+  `8343.062` bit bound.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

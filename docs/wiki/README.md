@@ -399,6 +399,8 @@ random raw order is `+188.584` bits worse before arbitrary-order charge.
 A recipe-prune audit then marks book `length` and copy `target_start` as
 derivable representation fields; removing them in-memory keeps `8343.062` and
 `70/70`, leaving literal payload plus copy source/length as real dependencies.
+The canonical online recipe compile materializes that stripped representation
+as the compact current formula file, still with no semantic or row0 change.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

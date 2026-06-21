@@ -605,6 +605,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   [`131_online_formula_recipe_prune_audit.py`](scripts/131_online_formula_recipe_prune_audit.py);
   book `length` and copy `target_start` are derivable representation fields.
   Removing them in-memory preserves `8343.062` bits and `70/70` roundtrip.
+- canonical online recipe compilation is now covered by
+  [`132_canonical_online_recipe_formula_compile.py`](scripts/132_canonical_online_recipe_formula_compile.py);
+  it materializes the stripped formula as
+  `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_canonical_formula_469.json`
+  with the same `8343.062` bits and no `target_start` or book `length` fields.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
