@@ -301,6 +301,12 @@ The op-type-derived compile removes explicit op `type`; the remaining operation
 dependencies are literal text, copy source, and copy length.
 The copy-source canonicality audit shows every copy source is the earliest
 legal occurrence of its copied chunk, but source is still needed to decode.
+The copy-length default decodability audit then separates an encoder-only
+temptation from a decodable rule: target-max extension matches `238/261` copies
+but cannot be decoded without future target digits, while a decodable
+`decoder_max_possible` default plus adaptive exception ledger lowers the
+mechanical bound to `8206.178` bits. Copy length remains a modeled dependency,
+not a solved row0 or semantic layer.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

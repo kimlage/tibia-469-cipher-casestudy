@@ -96,8 +96,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_param_minaddr_repair2_formula_469` | `8561.8` | `7.9` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469` | `8558.7` | `3.1` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_formula_469` | `8343.1` | `215.6` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_default_exception_formula_469` | `8206.2` | `136.9` |
 
-The `8343.1` row is the current `compression_bound`, not a final authorial
+The `8206.2` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -923,6 +924,13 @@ The copy-source canonicality audit then checks whether those remaining source
 fields are arbitrary. All 261 copy sources are the earliest legal occurrence of
 the copied chunk at the declared length; only 123 are unique, so this is an
 encoder-side canonicality result, not a decoder-side source removal.
+The copy-length default decodability audit then tests the remaining copy-length
+dependency. The high-coverage target-max rule matches `238/261` copies but is
+encoder-only because it requires future target digits. A decodable
+`decoder_max_possible` default plus adaptive exception ledger lowers
+copy-length cost from `1485.689` to `1348.806` bits after an explicit `8` bit
+declaration delta, promoting the mechanical bound to `8206.178` bits. Copy
+length is remodeled, not eliminated; row0 and semantics remain unchanged.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1208,6 +1216,7 @@ book generation, not row0 pair-cell placement.
 - [Literal-length-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md)
 - [Op-type-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md)
 - [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
+- [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 
 ## Boundary
 
@@ -1226,8 +1235,8 @@ one post-minaddr local literal-to-copy repair, and the adaptive copy-length
 index ledger with `alpha=2`, plus a fixed book-midpoint context for that
 copy-length prior and final `alpha=1`, plus a declared item-type prior split at
 book `6` with split-only item-type coding, plus the deterministic online
-reparse compile, as the current strongest copy/reference fabrication bound at
-roughly `8343.1` bits.
+reparse compile and the decodable copy-length default/exception ledger, as the
+current strongest copy/reference fabrication bound at roughly `8206.2` bits.
 Follow-up
 literal-to-copy repairs,
 immediate copy-to-literal repairs or pairs, alternate decodable address

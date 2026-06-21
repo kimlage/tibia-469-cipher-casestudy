@@ -625,6 +625,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   all 261 declared sources are the earliest legal occurrence of the copied
   chunk at the declared length. This supports a canonical encoder-side source
   rule, but source remains a decoding dependency.
+- copy-length default decodability is now covered by
+  [`136_copy_length_default_decodability_audit.py`](scripts/136_copy_length_default_decodability_audit.py);
+  the tempting encoder-only max-extension rule matches `238/261` copies but is
+  not decodable. A decodable `decoder_max_possible` default plus adaptive
+  exception ledger lowers copy-length cost from `1485.689` to `1348.806` bits
+  after an explicit `8` bit declaration delta, promoting the mechanical bound
+  from `8343.062` to `8206.178` bits with `translation_delta: NONE`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

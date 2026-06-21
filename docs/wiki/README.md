@@ -408,6 +408,10 @@ distinguishes literal from copy.
 The copy-source canonicality audit shows all copy sources are earliest legal
 occurrences of their copied chunks; source is canonical for encoding but still
 required for decoding.
+The copy-length default/exception audit then remodels copy length: the
+target-max rule is mostly true but encoder-only, while a decodable
+`decoder_max_possible` default plus adaptive exceptions lowers the mechanical
+bound to `8206.178` bits without changing row0 or semantics.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

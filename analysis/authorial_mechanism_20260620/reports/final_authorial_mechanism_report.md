@@ -653,5 +653,11 @@ Generated audits in this directory should be treated as the current state:
   sources are the earliest legal occurrence of the copied chunk at the declared
   length. This makes source choice canonical on the encoder side, while copy
   source remains required for decoding.
+- `136_copy_length_default_decodability_audit`: tests whether copy length can
+  be defaulted. The high-coverage target-max rule matches `238/261` copies but
+  is encoder-only. A decodable `decoder_max_possible` default plus adaptive
+  exception ledger lowers copy-length cost from `1485.689` to `1348.806` bits
+  after an `8` bit declaration delta, promoting the mechanical bound to
+  `8206.178` bits without changing row0 or semantics.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.
