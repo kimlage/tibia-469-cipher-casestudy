@@ -876,6 +876,10 @@ without declared literal windows or copy starts. It improves exact books from
 `39/60` to `46/60`, but still drifts in `14` books and over-literalizes the
 stable projection, so parser integration remains partial rather than a
 source-free generator.
+A policy frontier over the same local-peak family then selects
+`max_copy_length:window5` in `5/5` prefix cells and improves exact books to
+`48/60`. The remaining `12` mixed drift books keep the segmentation mechanism
+in partial-parser status, not promoted generator status.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

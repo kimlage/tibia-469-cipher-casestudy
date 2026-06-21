@@ -17,6 +17,7 @@ LITERAL_GAP = TEST_RESULTS / "05_literal_gap_boundary_audit.json"
 ONLINE_LITERAL = TEST_RESULTS / "06_online_literal_stop_rule_audit.json"
 LITERAL_EXCEPTION = TEST_RESULTS / "07_literal_stop_exception_topology_audit.json"
 INTEGRATED_ONLINE = TEST_RESULTS / "08_integrated_online_literal_parser_audit.json"
+POLICY_DRIFT = TEST_RESULTS / "09_integrated_parser_policy_and_drift_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -54,6 +55,7 @@ def main() -> None:
     integrated_online = (
         load_json(INTEGRATED_ONLINE) if INTEGRATED_ONLINE.exists() else None
     )
+    policy_drift = load_json(POLICY_DRIFT) if POLICY_DRIFT.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -66,6 +68,8 @@ def main() -> None:
         assert_boundary("literal_stop_exception_topology_audit", literal_exception)
     if integrated_online is not None:
         assert_boundary("integrated_online_literal_parser_audit", integrated_online)
+    if policy_drift is not None:
+        assert_boundary("integrated_parser_policy_and_drift_audit", policy_drift)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -80,6 +84,7 @@ def main() -> None:
     integrated_summary = (
         None if integrated_online is None else integrated_online["summary"]
     )
+    policy_drift_summary = None if policy_drift is None else policy_drift["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -274,13 +279,40 @@ def main() -> None:
                 "",
             ]
         )
+    if policy_drift_summary is not None:
+        lines.extend(
+            [
+                "## Integrated Parser Policy Frontier",
+                "",
+                "A follow-up gate retuned the same local-peak stop family as an",
+                "integrated parser, rather than scoring stops inside known literal",
+                "windows.",
+                "",
+                "| Policy | Exact books | Drift books | Boundary |",
+                "|---|---:|---:|---|",
+                f"| First-match greedy | `{policy_drift_summary['first_match_exact_books']}/60` | `21` | rejected baseline |",
+                f"| Gate-08 active `{policy_drift_summary['active_policy']}` | `{policy_drift_summary['active_exact_books']}/60` | `{60 - policy_drift_summary['active_exact_books']}` | partial parser |",
+                f"| Best prefix-stable `{policy_drift_summary['best_policy']}` | `{policy_drift_summary['best_exact_books']}/60` | `{60 - policy_drift_summary['best_exact_books']}` | partial, not promoted |",
+                "",
+                f"- Prequential selected policy matches suffix oracle in `{policy_drift_summary['prequential_selected_matches_oracle_cells']}/{policy_drift_summary['prequential_cells']}` cells.",
+                f"- Best-policy drift classes: `{policy_drift_summary['best_drift_class_counts']}`.",
+                "",
+                "The window-5 policy is a real integrated-parser improvement and is",
+                "stable under prefix policy selection, but it still leaves `12/60`",
+                "books mismatched. The remaining topology mixes missed book-start",
+                "copies, missed internal copies, literal understops, and one copy",
+                "length drift, so the local-peak family is not a complete",
+                "segmentation mechanism.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is a",
             "source-free account of why the target digit stream exists, or a",
-            "parser integration that closes the remaining `14/60` drift cases",
+            "parser integration that closes the remaining `12/60` drift cases",
             "without smuggling in declared literal windows, target text generation,",
             "or changed skeleton/literal accounting.",
             "",
@@ -293,6 +325,7 @@ def main() -> None:
             "- [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)",
             "- [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)",
             "- [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)",
+            "- [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)",
             "",
         ]
     )

@@ -144,11 +144,33 @@ projection. The integrated parser therefore reduces the segmentation
 blocker but does not replace the retained operation-start ledger or
 emit a source-free generator.
 
+## Integrated Parser Policy Frontier
+
+A follow-up gate retuned the same local-peak stop family as an
+integrated parser, rather than scoring stops inside known literal
+windows.
+
+| Policy | Exact books | Drift books | Boundary |
+|---|---:|---:|---|
+| First-match greedy | `39/60` | `21` | rejected baseline |
+| Gate-08 active `max_copy_length:window6` | `46/60` | `14` | partial parser |
+| Best prefix-stable `max_copy_length:window5` | `48/60` | `12` | partial, not promoted |
+
+- Prequential selected policy matches suffix oracle in `5/5` cells.
+- Best-policy drift classes: `{'book_start_copy_missed_as_literal': 3, 'copy_length_drift_same_source': 1, 'copy_started_inside_stable_literal': 1, 'internal_copy_missed_as_literal': 3, 'literal_understop': 4}`.
+
+The window-5 policy is a real integrated-parser improvement and is
+stable under prefix policy selection, but it still leaves `12/60`
+books mismatched. The remaining topology mixes missed book-start
+copies, missed internal copies, literal understops, and one copy
+length drift, so the local-peak family is not a complete
+segmentation mechanism.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
 source-free account of why the target digit stream exists, or a
-parser integration that closes the remaining `14/60` drift cases
+parser integration that closes the remaining `12/60` drift cases
 without smuggling in declared literal windows, target text generation,
 or changed skeleton/literal accounting.
 
@@ -161,3 +183,4 @@ or changed skeleton/literal accounting.
 - [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)
 - [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)
 - [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)
+- [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)
