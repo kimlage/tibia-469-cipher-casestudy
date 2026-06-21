@@ -777,6 +777,12 @@ prefix/holdout cells. This is a real weak clue for path-state structure, but
 not a promoted parser: top-1 still gets only `5/10` residuals, the fixed-width
 paid model is `+4.750` bits worse than lookup, and the apparent rank lower-bound
 saving assumes site/rank knowledge instead of a downstream selector.
+A beam rank selector gate then tests that downstream selector directly. Inside
+the width-5 beam, the full-fit `beam_context_combo` table resolves `10/10`
+residual choices, but it also changes `4` clean controls. Prefix/holdout covers
+all held-out decisions in `0/5` cells, and charging the `73` context-to-rank
+entries makes the selector `+129.872` bits worse than the residual lookup. This
+promotes only a full-fit selector clue, not a generation rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2498,6 +2504,7 @@ book generation, not row0 pair-cell placement.
 - [Sequential signature support gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/56_sequential_signature_support_gate.md)
 - [Latent path-state budget gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/57_latent_path_state_budget_gate.md)
 - [Beam survival budget gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/58_beam_survival_budget_gate.md)
+- [Beam rank selector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/59_beam_rank_selector_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

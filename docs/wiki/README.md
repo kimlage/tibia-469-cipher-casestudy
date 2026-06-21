@@ -990,9 +990,12 @@ detectors, book-skeleton alignment, and source-interval safe firing. The newest
 beam survival gate adds one useful but weak boundary: under
 `max_suffix_copy_digits`, a width-5 beam keeps the stable branch alive in
 `5/5` prefix/holdout cells, but top-1 still resolves only `5/10` residuals and
-the fixed-width paid model is `+4.750` bits worse than lookup. The blocker is
-therefore a downstream selector or richer latent path/state account, not
-another local branch-choice combination.
+the fixed-width paid model is `+4.750` bits worse than lookup. A beam-rank
+selector gate then tests the missing selector: full-fit `beam_context_combo`
+resolves `10/10` residuals but changes `4` clean controls, has `0/5`
+prefix/holdout cover-all cells, and is `+129.872` bits worse after paying the
+context table. The blocker is therefore a richer latent path/state selector,
+not another local branch-choice combination.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

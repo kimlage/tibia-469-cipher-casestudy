@@ -1310,6 +1310,32 @@ paid model is worse than residual lookup. The apparent rank
 lower-bound saving is diagnostic only because it assumes site/rank
 knowledge rather than a downstream selector.
 
+## Beam Rank Selector Gate
+
+Gate 59 tests the downstream selector that gate 58 left
+missing. It learns observable context-to-rank mappings inside
+the surviving width-5 beam and evaluates them under
+prefix/holdout.
+
+| Diagnostic | Value |
+|---|---:|
+| Best context | `beam_context_combo` |
+| Best total hits | `230/234` |
+| Best residual hits | `10/10` |
+| Best clean false changes | `4` |
+| Prefix/holdout cover-all cells | `0/5` |
+| Prefix/holdout cover-all-residual cells | `1/5` |
+| Full-fit selector net vs lookup | `129.872` bits |
+| Optimistic no-table net vs lookup | `-39.629` bits |
+
+The selector exposes a stronger full-fit clue than prior branch
+rankers: `beam_context_combo` resolves all `10/10` residuals,
+but only by changing `4` clean controls and using a `73`-context
+table. Once that table is paid, it is `+129.872` bits worse
+than residual lookup, and prefix/holdout covers all test
+decisions in `0/5` cells. The no-table saving is diagnostic
+only.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1390,10 +1416,14 @@ Gate 58 adds a weak but useful path-state clue: a width-5
 beam under the best continuation objective preserves the stable
 branch in `5/5` prefix/holdout cells, but it does not select the
 branch and the paid fixed-width model remains worse than lookup.
+Gate 59 tests the missing selector inside that beam: a full-fit
+context table resolves `10/10` residuals but changes `4` clean
+controls, fails clean prefix/holdout, and becomes worse than
+lookup when the context->rank table is paid.
 The remaining blocker is therefore a downstream selector or richer
 latent path/state segmentation account for why the parser waits,
-copies, or understops at the remaining mixed residual sites, or
-a source-free
+copies, or understops at the remaining mixed residual sites, or a
+source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -1458,3 +1488,4 @@ or the stable projection as an oracle.
 - [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)
 - [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)
 - [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)
+- [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)

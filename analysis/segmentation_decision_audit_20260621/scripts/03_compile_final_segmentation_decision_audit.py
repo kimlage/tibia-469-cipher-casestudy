@@ -83,6 +83,7 @@ LATENT_PATH_STATE_BUDGET = (
     TEST_RESULTS / "57_latent_path_state_budget_gate.json"
 )
 BEAM_SURVIVAL_BUDGET = TEST_RESULTS / "58_beam_survival_budget_gate.json"
+BEAM_RANK_SELECTOR = TEST_RESULTS / "59_beam_rank_selector_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -294,6 +295,9 @@ def main() -> None:
         if BEAM_SURVIVAL_BUDGET.exists()
         else None
     )
+    beam_rank_selector = (
+        load_json(BEAM_RANK_SELECTOR) if BEAM_RANK_SELECTOR.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -417,6 +421,8 @@ def main() -> None:
         assert_boundary("latent_path_state_budget_gate", latent_path_state_budget)
     if beam_survival_budget is not None:
         assert_boundary("beam_survival_budget_gate", beam_survival_budget)
+    if beam_rank_selector is not None:
+        assert_boundary("beam_rank_selector_gate", beam_rank_selector)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -592,6 +598,9 @@ def main() -> None:
     )
     beam_survival_budget_summary = (
         None if beam_survival_budget is None else beam_survival_budget["summary"]
+    )
+    beam_rank_selector_summary = (
+        None if beam_rank_selector is None else beam_rank_selector["summary"]
     )
 
     lines = [
@@ -2211,6 +2220,37 @@ def main() -> None:
                 "",
             ]
         )
+    if beam_rank_selector_summary is not None:
+        lines.extend(
+            [
+                "## Beam Rank Selector Gate",
+                "",
+                "Gate 59 tests the downstream selector that gate 58 left",
+                "missing. It learns observable context-to-rank mappings inside",
+                "the surviving width-5 beam and evaluates them under",
+                "prefix/holdout.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best context | `{beam_rank_selector_summary['best_context']}` |",
+                f"| Best total hits | `{beam_rank_selector_summary['best_total_hits']}/{beam_rank_selector_summary['best_total_total']}` |",
+                f"| Best residual hits | `{beam_rank_selector_summary['best_residual_hits']}/{beam_rank_selector_summary['best_residual_total']}` |",
+                f"| Best clean false changes | `{beam_rank_selector_summary['best_clean_false_changes']}` |",
+                f"| Prefix/holdout cover-all cells | `{beam_rank_selector_summary['prequential_cover_all_test_cells']}/{beam_rank_selector_summary['prequential_cells']}` |",
+                f"| Prefix/holdout cover-all-residual cells | `{beam_rank_selector_summary['prequential_cover_all_residual_cells']}/{beam_rank_selector_summary['prequential_cells']}` |",
+                f"| Full-fit selector net vs lookup | `{beam_rank_selector_summary['full_fit_selector_net_vs_lookup_bits']:.3f}` bits |",
+                f"| Optimistic no-table net vs lookup | `{beam_rank_selector_summary['optimistic_selector_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "The selector exposes a stronger full-fit clue than prior branch",
+                "rankers: `beam_context_combo` resolves all `10/10` residuals,",
+                "but only by changing `4` clean controls and using a `73`-context",
+                "table. Once that table is paid, it is `+129.872` bits worse",
+                "than residual lookup, and prefix/holdout covers all test",
+                "decisions in `0/5` cells. The no-table saving is diagnostic",
+                "only.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2293,10 +2333,14 @@ def main() -> None:
             "beam under the best continuation objective preserves the stable",
             "branch in `5/5` prefix/holdout cells, but it does not select the",
             "branch and the paid fixed-width model remains worse than lookup.",
+            "Gate 59 tests the missing selector inside that beam: a full-fit",
+            "context table resolves `10/10` residuals but changes `4` clean",
+            "controls, fails clean prefix/holdout, and becomes worse than",
+            "lookup when the context->rank table is paid.",
             "The remaining blocker is therefore a downstream selector or richer",
             "latent path/state segmentation account for why the parser waits,",
-            "copies, or understops at the remaining mixed residual sites, or",
-            "a source-free",
+            "copies, or understops at the remaining mixed residual sites, or a",
+            "source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -2361,6 +2405,7 @@ def main() -> None:
             "- [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)",
             "- [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)",
             "- [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)",
+            "- [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)",
             "",
         ]
     )
