@@ -637,6 +637,10 @@ still real: the latest source substitutions reduce the earlier all-earliest
 pattern from `261/261` to `251/261`, joint earliest+target-max is only
 encoder-oracle (`230/261`), and the decoder-valid declared-source+decoder-max
 rule covers only `60/261`.
+A source canonicality tradeoff audit then prices the cleaner profile:
+restoring the `10` non-earliest current sources to all-earliest raises the
+total from `8160.825608` to `8177.316653` bits (`+16.491045`), so the lower
+compression bound and the cleaner generation-explanation profile stay separate.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -720,9 +724,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   seed path, gates source-state dependency and retains previous-copy
   source/length state after state-free defaults fail, closes the row0
   hypothesis requirement matrix with zero promoted origin formulas, records
-  the source-length joint derivability boundary, rejects paid partial worksheet
-  anchors as a row0-origin formula, and keeps row0 origin exogenous with
-  translation delta zero.
+  the source-length joint derivability boundary, prices the source canonicality
+  tradeoff, rejects paid partial worksheet anchors as a row0-origin formula,
+  and keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

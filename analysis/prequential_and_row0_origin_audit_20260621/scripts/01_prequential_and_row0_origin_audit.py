@@ -165,6 +165,14 @@ SOURCE_LENGTH_JOINT_DERIVABILITY_AUDIT = (
     / "test_results"
     / "49_source_length_joint_derivability_audit.json"
 )
+SOURCE_CANONICALITY_TRADEOFF_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "50_source_canonicality_tradeoff_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -403,6 +411,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "source_length_joint_derivability_audit",
         source_length_joint_derivability,
     )
+    source_canonicality_tradeoff = load_json(SOURCE_CANONICALITY_TRADEOFF_AUDIT)
+    assert_analysis_boundary(
+        "source_canonicality_tradeoff_audit",
+        source_canonicality_tradeoff,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -618,6 +631,16 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "hypotheses": source_length_joint_derivability["hypotheses"],
             "decision": source_length_joint_derivability["decision"],
         },
+        "source_canonicality_tradeoff": {
+            "classification": source_canonicality_tradeoff["classification"],
+            "source": rel(SOURCE_CANONICALITY_TRADEOFF_AUDIT),
+            "scope": source_canonicality_tradeoff["scope"],
+            "summary": source_canonicality_tradeoff["summary"],
+            "noncanonical_current_sources": source_canonicality_tradeoff[
+                "noncanonical_current_sources"
+            ],
+            "decision": source_canonicality_tradeoff["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -657,6 +680,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
             "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
             "source_length_joint_derivability_status": "joint_encoder_regularities_confirmed_decoder_dependency_retained",
+            "source_canonicality_tradeoff_status": "all_earliest_profile_costed_not_promoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -712,6 +736,7 @@ def render_markdown(
     literal_payload_model_gate_link: str,
     current_formula_dependency_scoreboard_link: str,
     source_length_joint_derivability_audit_link: str,
+    source_canonicality_tradeoff_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -759,6 +784,9 @@ def render_markdown(
         "dependency_counts"
     ]
     source_length_joint = result["source_length_joint_derivability"]["summary"]
+    source_canonicality_tradeoff = result["source_canonicality_tradeoff"][
+        "summary"
+    ]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1452,6 +1480,25 @@ def render_markdown(
             "is sharper, but no formula or bound is promoted.",
             f"See [49_source_length_joint_derivability_audit.md]({source_length_joint_derivability_audit_link}).",
             "",
+            "### Source Canonicality Tradeoff Audit",
+            "",
+            "The canonicality tradeoff audit then prices the simpler all-earliest",
+            "source explanation profile against the current lower compression bound.",
+            "Restoring all copy sources to the earliest legal occurrence repairs",
+            f"`{source_canonicality_tradeoff['current_non_earliest_count']}`",
+            "non-earliest events and returns source coverage to all-earliest, but",
+            "raises the total from",
+            f"`{source_canonicality_tradeoff['current_total_bits']:.6f}` to",
+            f"`{source_canonicality_tradeoff['all_earliest_total_bits']:.6f}`",
+            "bits, a delta of",
+            f"`{source_canonicality_tradeoff['all_earliest_delta_vs_current_bits']:+.6f}`",
+            "bits. This exactly separates ledgers: the current formula remains the",
+            "compression bound, while the all-earliest variant is the cleaner",
+            "generation-explanation profile. The all-latest negative control is",
+            f"`{source_canonicality_tradeoff['all_latest_delta_vs_current_bits']:+.6f}`",
+            "bits worse than current.",
+            f"See [50_source_canonicality_tradeoff_audit.md]({source_canonicality_tradeoff_audit_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1676,6 +1723,9 @@ def main() -> None:
             source_length_joint_derivability_audit_link=(
                 "49_source_length_joint_derivability_audit.md"
             ),
+            source_canonicality_tradeoff_audit_link=(
+                "50_source_canonicality_tradeoff_audit.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
                 "47_row0_parallel_provenance_bridge_audit.md"
@@ -1805,6 +1855,9 @@ def main() -> None:
             ),
             source_length_joint_derivability_audit_link=(
                 "test_results/49_source_length_joint_derivability_audit.md"
+            ),
+            source_canonicality_tradeoff_audit_link=(
+                "test_results/50_source_canonicality_tradeoff_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

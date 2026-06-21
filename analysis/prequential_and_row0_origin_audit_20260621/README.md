@@ -163,6 +163,9 @@ exogenous.
 - [scripts/49_source_length_joint_derivability_audit.py](scripts/49_source_length_joint_derivability_audit.py) - tests whether copy source and copy length become derivable as a joint dependency.
 - [reports/test_results/49_source_length_joint_derivability_audit.md](reports/test_results/49_source_length_joint_derivability_audit.md) - source-length joint derivability result.
 - [reports/test_results/49_source_length_joint_derivability_audit.json](reports/test_results/49_source_length_joint_derivability_audit.json) - structured source-length joint ledger.
+- [scripts/50_source_canonicality_tradeoff_audit.py](scripts/50_source_canonicality_tradeoff_audit.py) - prices the compression-vs-canonicality tradeoff between the current source choices and an all-earliest profile.
+- [reports/test_results/50_source_canonicality_tradeoff_audit.md](reports/test_results/50_source_canonicality_tradeoff_audit.md) - source canonicality tradeoff result.
+- [reports/test_results/50_source_canonicality_tradeoff_audit.json](reports/test_results/50_source_canonicality_tradeoff_audit.json) - structured source canonicality tradeoff ledger.
 
 ## Boundary
 
@@ -293,7 +296,11 @@ exogenous.
   all-earliest source pattern (`251/261` current), joint
   earliest+target-max covers `230/261` but is encoder-oracle only, and the
   decoder-valid declared-source+decoder-max rule covers only `60/261`. Source
-  and length therefore remain declared dependencies. The complete
+  and length therefore remain declared dependencies. A source canonicality
+  tradeoff audit then prices the cleaner all-earliest explanation profile:
+  restoring `10` non-earliest current sources raises the total from
+  `8160.825608` to `8177.316653` bits (`+16.491045`), so the current bound and
+  the simpler generation-explanation profile remain separate ledgers. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

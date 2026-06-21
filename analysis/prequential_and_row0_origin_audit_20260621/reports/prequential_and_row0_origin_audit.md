@@ -667,6 +667,25 @@ therefore remain declared dependencies; the structural-parser target
 is sharper, but no formula or bound is promoted.
 See [49_source_length_joint_derivability_audit.md](test_results/49_source_length_joint_derivability_audit.md).
 
+### Source Canonicality Tradeoff Audit
+
+The canonicality tradeoff audit then prices the simpler all-earliest
+source explanation profile against the current lower compression bound.
+Restoring all copy sources to the earliest legal occurrence repairs
+`10`
+non-earliest events and returns source coverage to all-earliest, but
+raises the total from
+`8160.825608` to
+`8177.316653`
+bits, a delta of
+`+16.491045`
+bits. This exactly separates ledgers: the current formula remains the
+compression bound, while the all-earliest variant is the cleaner
+generation-explanation profile. The all-latest negative control is
+`+40.940777`
+bits worse than current.
+See [50_source_canonicality_tradeoff_audit.md](test_results/50_source_canonicality_tradeoff_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
