@@ -14,9 +14,9 @@ books.
 The purpose is not to infer private intent. The purpose is to convert the
 report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
-bound is the deterministic online reparse formula with a decodable copy-length
-default/exception ledger at roughly `8206.2` bits. Treat this as
-`compression_bound`, not as a final authorial method.
+bound is the deterministic online reparse formula with decodable copy-length
+and copy-source default/exception ledgers at roughly `8177.3` bits. Treat this
+as `compression_bound`, not as a final authorial method.
 
 ## Gates
 
@@ -357,6 +357,9 @@ default/exception ledger at roughly `8206.2` bits. Treat this as
 - `scripts/136_copy_length_default_decodability_audit.py` - tests copy-length
   defaults for decodability and promotes a decoder-side default/exception
   copy-length model, lowering the mechanical bound to `8206.178` bits.
+- `scripts/137_copy_source_default_decodability_audit.py` - tests a decodable
+  previous-source-plus-length default with adaptive exception sources, lowering
+  the mechanical bound to `8177.317` bits.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

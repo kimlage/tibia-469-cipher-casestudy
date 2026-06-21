@@ -659,5 +659,11 @@ Generated audits in this directory should be treated as the current state:
   exception ledger lowers copy-length cost from `1485.689` to `1348.806` bits
   after an `8` bit declaration delta, promoting the mechanical bound to
   `8206.178` bits without changing row0 or semantics.
+- `137_copy_source_default_decodability_audit`: tests whether copy source can
+  be defaulted. A previous-source-plus-length default is decodable but only
+  matches `5/261` sources; paired with a global adaptive exception-source
+  stream and a charged `12` bit declaration delta, it lowers copy-address cost
+  from `3031.700` to `3002.838` bits and promotes the mechanical bound to
+  `8177.317` bits. Copy source remains modeled, not eliminated.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

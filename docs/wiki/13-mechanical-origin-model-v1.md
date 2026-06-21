@@ -180,6 +180,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Op-type-derived recipe formula | op `type` is derived from field shape; removes 348 more redundant fields and preserves `8343.062` bits and `70/70` | remaining op dependencies: literal text, copy source, copy length |
 | Copy source canonicality audit | all 261 copy sources are the earliest legal occurrence of the copied chunk at declared length; only 123 are unique | canonical encoder rule / source still required for decoding |
 | Copy length default/exception formula | target-max extension is high-coverage but encoder-only; decodable `decoder_max_possible` default plus adaptive exceptions lowers copy-length cost and promotes the bound to `8206.178` bits | copy length remodeled / row0 unchanged |
+| Copy source default/exception formula | previous-source-plus-length default is decodable but sparse; adaptive exception-source coding lowers copy-address cost and promotes the bound to `8177.317` bits | copy source remodeled / row0 unchanged |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
@@ -311,6 +312,7 @@ Primary sources:
 [op_type_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md),
 [copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md),
 [copy_length_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md),
+[copy_source_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

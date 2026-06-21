@@ -632,6 +632,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   exception ledger lowers copy-length cost from `1485.689` to `1348.806` bits
   after an explicit `8` bit declaration delta, promoting the mechanical bound
   from `8343.062` to `8206.178` bits with `translation_delta: NONE`.
+- copy-source default decodability is now covered by
+  [`137_copy_source_default_decodability_audit.py`](scripts/137_copy_source_default_decodability_audit.py);
+  a decodable previous-source-plus-length default matches only `5/261` sources,
+  but combined with a global adaptive exception-source stream and a charged
+  `12` bit declaration delta it lowers copy-address cost from `3031.700` to
+  `3002.838` bits, promoting the mechanical bound to `8177.317` bits with
+  `translation_delta: NONE`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

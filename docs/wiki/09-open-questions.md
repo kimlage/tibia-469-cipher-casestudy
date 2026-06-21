@@ -307,6 +307,11 @@ but cannot be decoded without future target digits, while a decodable
 `decoder_max_possible` default plus adaptive exception ledger lowers the
 mechanical bound to `8206.178` bits. Copy length remains a modeled dependency,
 not a solved row0 or semantic layer.
+The copy-source default decodability audit then remodels source addressing:
+previous-source-plus-length is decodable and only matches `5/261` sources, but
+with a global adaptive exception-source stream and a charged `12` bit
+declaration delta it lowers the mechanical bound to `8177.317` bits. Copy
+source remains modeled rather than eliminated.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

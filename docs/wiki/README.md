@@ -412,6 +412,10 @@ The copy-length default/exception audit then remodels copy length: the
 target-max rule is mostly true but encoder-only, while a decodable
 `decoder_max_possible` default plus adaptive exceptions lowers the mechanical
 bound to `8206.178` bits without changing row0 or semantics.
+The copy-source default/exception audit then remodels source addressing with a
+decodable previous-source-plus-length default plus global adaptive exceptions,
+lowering the mechanical bound to `8177.317` bits while leaving row0 and
+semantics unchanged.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
