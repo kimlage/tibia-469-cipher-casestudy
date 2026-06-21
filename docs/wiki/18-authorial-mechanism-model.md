@@ -895,6 +895,10 @@ the compact current formula representation, without changing the bound.
 The literal-length-derived recipe compile then removes literal op `length` as
 an independent field, because it is derived from literal `text`; copy `length`
 remains declared because copied text is not stored in the operation.
+The op-type-derived recipe compile then removes op `type` as an independent
+field: `text` implies literal, while `source_digit_pos` plus `length` implies
+copy. Literal text, copy source, and copy length are now the remaining
+operation-level recipe dependencies.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1175,6 +1179,7 @@ book generation, not row0 pair-cell placement.
 - [Online formula recipe prune audit](../../analysis/authorial_mechanism_20260620/reports/test_results/131_online_formula_recipe_prune_audit.md)
 - [Canonical online recipe formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md)
 - [Literal-length-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md)
+- [Op-type-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md)
 
 ## Boundary
 

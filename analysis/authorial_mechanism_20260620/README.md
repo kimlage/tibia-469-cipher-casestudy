@@ -348,6 +348,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/133_literal_length_derived_recipe_compile.py` - derives literal
   op lengths from literal text payload, removing another redundant recipe
   field while retaining copy lengths as declared dependencies.
+- `scripts/134_op_type_derived_recipe_compile.py` - derives operation type
+  from op field shape, leaving literal text, copy source, and copy length as
+  the remaining operation-level recipe dependencies.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

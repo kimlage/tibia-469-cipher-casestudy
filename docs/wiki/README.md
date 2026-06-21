@@ -403,6 +403,8 @@ The canonical online recipe compile materializes that stripped representation
 as the compact current formula file, still with no semantic or row0 change.
 The literal-length-derived compile removes literal op `length` as an independent
 field; copy `length` remains declared.
+The op-type-derived compile removes explicit op `type`; field shape now
+distinguishes literal from copy.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

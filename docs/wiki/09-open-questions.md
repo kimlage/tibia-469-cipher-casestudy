@@ -286,6 +286,8 @@ The canonical online recipe compile materializes that stripped representation
 as the compact formula artifact; this still does not derive `row0`.
 The literal-length-derived compile removes literal op `length` as an independent
 field, while copy `length` remains a declared dependency.
+The op-type-derived compile removes explicit op `type`; the remaining operation
+dependencies are literal text, copy source, and copy length.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

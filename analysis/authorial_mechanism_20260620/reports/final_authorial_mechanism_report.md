@@ -645,5 +645,9 @@ Generated audits in this directory should be treated as the current state:
   fields because they are derivable from literal `text`. It preserves
   `8343.062` bits and `70/70`, removes 87 more redundant fields, and keeps copy
   `length` as a real declared dependency.
+- `134_op_type_derived_recipe_compile`: removes op `type` fields because the
+  operation kind is derivable from field shape. It preserves `8343.062` bits
+  and `70/70`, removes 348 more redundant fields, and leaves literal text,
+  copy source, and copy length as the remaining operation dependencies.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

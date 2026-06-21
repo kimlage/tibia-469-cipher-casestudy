@@ -615,6 +615,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   literal op `length` is derived from `len(text)`, removing 87 more redundant
   fields and preserving `8343.062` bits and `70/70`. Copy `length` remains a
   declared dependency.
+- op-type-derived recipe compilation is now covered by
+  [`134_op_type_derived_recipe_compile.py`](scripts/134_op_type_derived_recipe_compile.py);
+  op `type` is derived from field shape, removing 348 more redundant fields and
+  preserving `8343.062` bits and `70/70`. The remaining operation-level
+  dependencies are literal text, copy source, and copy length.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
