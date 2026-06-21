@@ -1169,6 +1169,35 @@ rollbacks and misses. The zero-FP rule is only `-0.131` bits
 better before holdout, covers only `2/10` residuals, and does
 not promote a parser.
 
+## Book-Start Copy Subclass Gate
+
+Gate 54 isolates the diagnostic-looking residual subclass where
+a book-start active literal should instead be a copy. The gate
+does not use `drift_class` as a predicate; it fires only from
+book-start literal state and observable copy-candidate features.
+
+| Diagnostic | Value |
+|---|---:|
+| Rules tested | `105072` |
+| Book-start copy residuals | `3` |
+| Best predicate | `min_start_distance__len_ge_5__payload_ge_1__interval_le_4__active_literal_len_le_98` |
+| Best book-start copy hits | `3/3` |
+| Best residual hits overall | `3/10` |
+| Best clean false changes | `6` |
+| Best zero-FP book-start copy hits | `1/3` |
+| Best priced net vs lookup | `8.670` |
+| Prequential oracle-cover zero-FP cells | `0/4` |
+| Random p(>= observed) | `1.000` |
+
+The subclass remains a weak clue, not a parser rule. The best
+full-fit rule catches all `3/3` book-start copy residuals, but
+does so with `6` clean false changes and is `+32.421` bits
+worse than residual lookup after costs. The best zero-FP rule
+covers only `1/3` of the subclass and is still `+8.670` bits
+worse than lookup. Prefix/holdout does not select a clean rule
+that matches the oracle, so the book-start copy pattern is
+audit-only.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1229,6 +1258,11 @@ Gate 53 prices the remaining source-interval clue and keeps it
 audit-only: the full-fit rule is worse than lookup, while the
 zero-FP rule saves only `0.131` bits before holdout and covers
 only `2/10` residuals.
+Gate 54 then isolates the tempting book-start copy residual
+subclass without using `drift_class`; it catches all `3/3`
+subclass residuals only with `6` clean false changes, while the
+zero-FP variant catches just `1/3` and remains more expensive
+than lookup.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1291,3 +1325,4 @@ or the stable projection as an oracle.
 - [Source interval precision gate](test_results/51_source_interval_precision_gate.md)
 - [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)
 - [Source interval cost gate](test_results/53_source_interval_cost_gate.md)
+- [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)

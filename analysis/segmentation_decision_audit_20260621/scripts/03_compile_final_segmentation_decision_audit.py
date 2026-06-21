@@ -70,6 +70,9 @@ SOURCE_INTERVAL_OBSERVABLE_PRECISION = (
     TEST_RESULTS / "52_source_interval_observable_precision_gate.json"
 )
 SOURCE_INTERVAL_COST = TEST_RESULTS / "53_source_interval_cost_gate.json"
+BOOK_START_COPY_SUBCLASS = (
+    TEST_RESULTS / "54_book_start_copy_subclass_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -256,6 +259,11 @@ def main() -> None:
     source_interval_cost = (
         load_json(SOURCE_INTERVAL_COST) if SOURCE_INTERVAL_COST.exists() else None
     )
+    book_start_copy_subclass = (
+        load_json(BOOK_START_COPY_SUBCLASS)
+        if BOOK_START_COPY_SUBCLASS.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -365,6 +373,8 @@ def main() -> None:
         )
     if source_interval_cost is not None:
         assert_boundary("source_interval_cost_gate", source_interval_cost)
+    if book_start_copy_subclass is not None:
+        assert_boundary("book_start_copy_subclass_gate", book_start_copy_subclass)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -517,6 +527,11 @@ def main() -> None:
     )
     source_interval_cost_summary = (
         None if source_interval_cost is None else source_interval_cost["summary"]
+    )
+    book_start_copy_subclass_summary = (
+        None
+        if book_start_copy_subclass is None
+        else book_start_copy_subclass["summary"]
     )
 
     lines = [
@@ -1970,6 +1985,40 @@ def main() -> None:
                 "",
             ]
         )
+    if book_start_copy_subclass_summary is not None:
+        lines.extend(
+            [
+                "## Book-Start Copy Subclass Gate",
+                "",
+                "Gate 54 isolates the diagnostic-looking residual subclass where",
+                "a book-start active literal should instead be a copy. The gate",
+                "does not use `drift_class` as a predicate; it fires only from",
+                "book-start literal state and observable copy-candidate features.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Rules tested | `{book_start_copy_subclass_summary['rule_count']}` |",
+                f"| Book-start copy residuals | `{book_start_copy_subclass_summary['book_start_copy_residual_total']}` |",
+                f"| Best predicate | `{book_start_copy_subclass_summary['best_predicate']}` |",
+                f"| Best book-start copy hits | `{book_start_copy_subclass_summary['best_book_start_copy_residual_hits']}/{book_start_copy_subclass_summary['book_start_copy_residual_total']}` |",
+                f"| Best residual hits overall | `{book_start_copy_subclass_summary['best_residual_hits']}/{book_start_copy_subclass_summary['residual_total']}` |",
+                f"| Best clean false changes | `{book_start_copy_subclass_summary['best_clean_false_changes']}` |",
+                f"| Best zero-FP book-start copy hits | `{book_start_copy_subclass_summary['best_zero_fp_book_start_copy_residual_hits']}/{book_start_copy_subclass_summary['book_start_copy_residual_total']}` |",
+                f"| Best priced net vs lookup | `{book_start_copy_subclass_summary['best_priced_net_vs_lookup_bits']:.3f}` |",
+                f"| Prequential oracle-cover zero-FP cells | `{book_start_copy_subclass_summary['prequential_cover_oracle_book_start_zero_fp_cells']}/{book_start_copy_subclass_summary['prequential_cells_with_test_residuals']}` |",
+                f"| Random p(>= observed) | `{book_start_copy_subclass_summary['random_p_ge_observed']:.3f}` |",
+                "",
+                "The subclass remains a weak clue, not a parser rule. The best",
+                "full-fit rule catches all `3/3` book-start copy residuals, but",
+                "does so with `6` clean false changes and is `+32.421` bits",
+                "worse than residual lookup after costs. The best zero-FP rule",
+                "covers only `1/3` of the subclass and is still `+8.670` bits",
+                "worse than lookup. Prefix/holdout does not select a clean rule",
+                "that matches the oracle, so the book-start copy pattern is",
+                "audit-only.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2032,6 +2081,11 @@ def main() -> None:
             "audit-only: the full-fit rule is worse than lookup, while the",
             "zero-FP rule saves only `0.131` bits before holdout and covers",
             "only `2/10` residuals.",
+            "Gate 54 then isolates the tempting book-start copy residual",
+            "subclass without using `drift_class`; it catches all `3/3`",
+            "subclass residuals only with `6` clean false changes, while the",
+            "zero-FP variant catches just `1/3` and remains more expensive",
+            "than lookup.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2094,6 +2148,7 @@ def main() -> None:
             "- [Source interval precision gate](test_results/51_source_interval_precision_gate.md)",
             "- [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)",
             "- [Source interval cost gate](test_results/53_source_interval_cost_gate.md)",
+            "- [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)",
             "",
         ]
     )

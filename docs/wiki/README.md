@@ -1256,6 +1256,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   prices the remaining source-interval clue as audit-only: full-fit is
   `+3.410` bits worse than residual lookup, and zero-FP saves only `0.131`
   bits before holdout,
+  isolates the book-start copy residual subclass without `drift_class`; the
+  full-fit rule catches `3/3` subclass residuals only with `6` clean false
+  changes, and the best zero-FP rule catches `1/3` while remaining `+8.670`
+  bits worse than lookup,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
