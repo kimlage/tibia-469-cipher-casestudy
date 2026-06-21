@@ -809,6 +809,11 @@ the `201` internal boundaries sit on small proportional grids. They do not:
 the best denominator, `128`, reaches `41/60` exact books and `159/201` hits,
 below the same-shape random mean `161.357`; prefix-selected denominators beat
 held-out random p95 in `0/5` cells.
+An operation recursive partition audit then tests a different simple geometry:
+recursively splitting each book interval by bisection, thirds, fourths, fifths,
+or golden-ratio cuts. The best policy, `latest:half`, reaches only `2/48`
+exact nontrivial books and `11/201` cutpoint hits, below random p95 `14`; no
+holdout cell beats random p95.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and

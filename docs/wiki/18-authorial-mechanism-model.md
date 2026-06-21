@@ -389,6 +389,12 @@ fall on small proportional grids after granting book length and op count. They
 do not. The best denominator, `128`, reaches `41/60` exact books and `159/201`
 hits, below the same-shape random-control mean `161.357`, and prefix-selected
 denominators beat held-out random p95 in `0/5` cells.
+An operation recursive partition audit then tests a different source-free
+geometry: recursively splitting the book interval by bisection, thirds,
+fourths, fifths, or golden-ratio cuts. It also fails. The best policy,
+`latest:half`, reaches only `2/48` exact nontrivial books and `11/201`
+cutpoint hits, below random p95 `14`, with `0/5` holdout cells beating random
+p95.
 A book order generation audit then consolidates the scattered order controls
 against the current boundary. Numeric order remains the compact canonical order
 used by the formula: full-formula and descriptor-cost gates promote no
@@ -2529,6 +2535,8 @@ book generation, not row0 pair-cell placement.
 - [Operation cutpoint scaling gate](../../analysis/operation_cutpoint_scaling_audit_20260621/reports/test_results/01_operation_cutpoint_scaling_gate.md)
 - [Final operation cutpoint lattice audit](../../analysis/operation_cutpoint_lattice_audit_20260621/reports/final_operation_cutpoint_lattice_audit.md)
 - [Operation cutpoint lattice gate](../../analysis/operation_cutpoint_lattice_audit_20260621/reports/test_results/01_operation_cutpoint_lattice_gate.md)
+- [Final operation recursive partition audit](../../analysis/operation_recursive_partition_audit_20260621/reports/final_operation_recursive_partition_audit.md)
+- [Operation recursive partition gate](../../analysis/operation_recursive_partition_audit_20260621/reports/test_results/01_operation_recursive_partition_gate.md)
 - [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
 - [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
