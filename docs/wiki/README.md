@@ -558,6 +558,9 @@ digit coding: the active categorical previous-emitted-digit order-2 model stays
 best, so no literal-payload fallback is promoted.
 The literal-payload structural context audit also rejects literal-run offset,
 run-length bucket, and book half/parity contexts as over-splits.
+The literal-payload model gate then retains the same order-2 payload boundary
+after forced literal availability is separated: order-1, modal default/exception
+coding, and simple structural contexts all remain worse.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

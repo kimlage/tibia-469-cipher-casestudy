@@ -344,6 +344,20 @@ cross-op repairs score `465` candidates and the best is still
 externality is reduced but not removed.
 See [28_literal_copy_availability_gate.md](test_results/28_literal_copy_availability_gate.md).
 
+### Literal Payload Model Gate
+
+After forced literal availability is separated, the residual literal
+payload model still cannot be simplified under the tested controls.
+The current order-2 previous-emitted-digit categorical model costs
+`2613.661` bits over `857` literal digits. Order-1 wins some
+intermediate frozen splits, but is `+95.968` bits worse on the full
+corpus, `+47.346` bits worse in aggregate online prefix totals, and
+`+28.609` bits worse in aggregate frozen prefix totals. The best
+modal default/exception candidate is `+38.049` bits worse, and the
+best non-active structural context is `+19.159` bits worse. The
+payload dependency is therefore retained, not removed.
+See [29_literal_payload_model_gate.md](test_results/29_literal_payload_model_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -397,6 +411,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.
 - Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.
 - Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
+- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

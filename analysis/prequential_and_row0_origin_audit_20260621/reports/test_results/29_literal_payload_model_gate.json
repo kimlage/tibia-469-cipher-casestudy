@@ -1,0 +1,65 @@
+{
+  "case_reopened": false,
+  "classification": "literal_payload_order2_retained_simplifications_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "fallback_status": "modal_default_exception_rejected",
+    "generation_explanation_status": "literal_payload_dependency_sharpened",
+    "literal_payload_model_status": "active_order2_retained",
+    "row0_origin_status": "unchanged_exogenous",
+    "structural_context_status": "over_split_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "current_literal_payload_profile": "analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.json",
+    "literal_copy_availability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.json",
+    "literal_payload_default_decodability": "analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.json",
+    "literal_payload_structural_context": "analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "literal_payload_model_gate.v1",
+  "summary": {
+    "active_context_count": 98,
+    "active_literal_payload_bits": 2613.660822752486,
+    "active_order": 2,
+    "best_modal_default_bits": 2651.7096558933745,
+    "best_modal_default_default_count": 240,
+    "best_modal_default_default_order": 2,
+    "best_modal_default_delta_vs_active_bits": 38.04883314088829,
+    "best_modal_default_exception_count": 617,
+    "best_modal_default_exception_order": 2,
+    "best_non_active_structural_delta_vs_active_bits": 19.15874874400606,
+    "best_non_active_structural_label": "prev2_plus_book_half",
+    "best_non_active_structural_total_bits": 2632.8195714964922,
+    "copy_availability_classification": "literal_externality_reduced_local_repairs_rejected",
+    "interpretation": "After separating forced literal payload from optional parser repairs, the remaining literal digit model still cannot be simplified to order1, modal default/exception coding, or simple structural context splits. The active order2 previous-emitted-digit categorical model remains the current payload boundary.",
+    "literal_digit_count": 857,
+    "literal_externality_status": "reduced_not_removed",
+    "modal_default_candidate_count": 18,
+    "order0_full_corpus_bits": 2842.4315749465445,
+    "order1_frozen_delta_vs_order2_total_bits": 28.608503801074853,
+    "order1_frozen_win_cutoffs": [
+      20,
+      35,
+      50
+    ],
+    "order1_full_corpus_bits": 2709.62842294555,
+    "order1_full_corpus_delta_vs_order2_bits": 95.96760019306384,
+    "order1_online_delta_vs_order2_total_bits": 47.34555627026942,
+    "order2_frozen_win_cutoffs": [
+      10,
+      60
+    ],
+    "order2_full_corpus_bits": 2613.660822752486,
+    "order2_online_win_cutoffs": [
+      10,
+      20,
+      50,
+      60
+    ],
+    "order3_full_corpus_bits": 2706.054084400152,
+    "simplifications_rejected": true,
+    "structural_candidate_count": 9
+  },
+  "translation_delta": "NONE"
+}

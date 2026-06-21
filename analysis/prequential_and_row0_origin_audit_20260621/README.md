@@ -100,6 +100,9 @@ exogenous.
 - [scripts/28_literal_copy_availability_gate.py](scripts/28_literal_copy_availability_gate.py) - checks how much literal payload is forced by copy unavailability and closes simple local repair families.
 - [reports/test_results/28_literal_copy_availability_gate.md](reports/test_results/28_literal_copy_availability_gate.md) - literal copy-availability gate result.
 - [reports/test_results/28_literal_copy_availability_gate.json](reports/test_results/28_literal_copy_availability_gate.json) - structured literal externality ledger.
+- [scripts/29_literal_payload_model_gate.py](scripts/29_literal_payload_model_gate.py) - checks whether the remaining literal payload model can be simplified after the availability gate.
+- [reports/test_results/29_literal_payload_model_gate.md](reports/test_results/29_literal_payload_model_gate.md) - literal payload model gate result.
+- [reports/test_results/29_literal_payload_model_gate.json](reports/test_results/29_literal_payload_model_gate.json) - structured literal payload model ledger.
 
 ## Boundary
 
@@ -175,7 +178,10 @@ exogenous.
   permutation controls (`p=0.0033`), and rejects searched cutoff `37`. A
   literal copy-availability gate then reduces literal externality: `73/87`
   literal starts and `760/857` literal digits are forced by no legal copy
-  candidate, while in-literal and cross-op local repairs remain worse.
+  candidate, while in-literal and cross-op local repairs remain worse. A
+  literal payload model gate then retains the active order-2 previous-emitted-
+  digit model: order-1 is worse on full corpus and aggregate prefix totals, and
+  modal default/exception plus simple structural contexts are also worse.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

@@ -225,6 +225,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source blocker structural context gate | the cross-op near tie is only `+0.027` bits worse and a source-free oracle would be `-11.209`, but the best decodable context `book_half` is `+5.872` bits worse and loses `5/5` prefix-frozen checks | simple source-context rescue rejected |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
 | Literal payload structural context audit | literal-run offset, run-length bucket, book half/parity, and bounded combinations with `prev2` all over-split the payload stream | rejected context / no new bound |
+| Literal payload model gate | after forced literal availability is separated, order-1 remains worse on full corpus and aggregate prefix totals; modal default/exception and simple structural contexts are also worse | active order-2 payload dependency retained |
 | Prequential and row0 origin audit | frozen validation scope `8558.667` shows partial learned-component prediction, but family failures and recipe externality keep it from being a full generation method; row0 remains exogenous | analysis-only boundary / no generation promotion |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
@@ -398,6 +399,7 @@ Primary sources:
 [source_blocker_structural_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md),
 [literal_payload_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md),
 [literal_payload_structural_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md),
+[literal_payload_model_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

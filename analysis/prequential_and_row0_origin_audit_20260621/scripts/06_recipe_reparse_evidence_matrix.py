@@ -52,6 +52,7 @@ SOURCES = {
     "copy_length_midpoint_context_gate": TEST_RESULTS
     / "27_copy_length_midpoint_context_gate.json",
     "literal_copy_availability_gate": TEST_RESULTS / "28_literal_copy_availability_gate.json",
+    "literal_payload_model_gate": TEST_RESULTS / "29_literal_payload_model_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -97,6 +98,7 @@ def make_result() -> dict[str, Any]:
     source_state_gate = load_json(SOURCES["source_state_dependency_gate"])
     copy_length_midpoint_gate = load_json(SOURCES["copy_length_midpoint_context_gate"])
     literal_copy_gate = load_json(SOURCES["literal_copy_availability_gate"])
+    literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -126,6 +128,7 @@ def make_result() -> dict[str, Any]:
         ("source_state_dependency_gate", source_state_gate),
         ("copy_length_midpoint_context_gate", copy_length_midpoint_gate),
         ("literal_copy_availability_gate", literal_copy_gate),
+        ("literal_payload_model_gate", literal_payload_model_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -972,6 +975,48 @@ def make_result() -> dict[str, Any]:
                 "ledger."
             ),
         },
+        {
+            "question": "can_literal_payload_model_be_simplified_after_availability_gate",
+            "source": rel(SOURCES["literal_payload_model_gate"]),
+            "status": "failed_active_order2_retained",
+            "evidence": {
+                "active_literal_payload_bits": literal_payload_model_gate["summary"][
+                    "active_literal_payload_bits"
+                ],
+                "active_context_count": literal_payload_model_gate["summary"][
+                    "active_context_count"
+                ],
+                "order1_full_corpus_delta_vs_order2_bits": literal_payload_model_gate[
+                    "summary"
+                ]["order1_full_corpus_delta_vs_order2_bits"],
+                "order1_online_delta_vs_order2_total_bits": literal_payload_model_gate[
+                    "summary"
+                ]["order1_online_delta_vs_order2_total_bits"],
+                "order1_frozen_delta_vs_order2_total_bits": literal_payload_model_gate[
+                    "summary"
+                ]["order1_frozen_delta_vs_order2_total_bits"],
+                "order1_frozen_win_cutoffs": literal_payload_model_gate["summary"][
+                    "order1_frozen_win_cutoffs"
+                ],
+                "best_modal_default_delta_vs_active_bits": literal_payload_model_gate[
+                    "summary"
+                ]["best_modal_default_delta_vs_active_bits"],
+                "best_non_active_structural_label": literal_payload_model_gate[
+                    "summary"
+                ]["best_non_active_structural_label"],
+                "best_non_active_structural_delta_vs_active_bits": literal_payload_model_gate[
+                    "summary"
+                ]["best_non_active_structural_delta_vs_active_bits"],
+                "simplifications_rejected": literal_payload_model_gate["summary"][
+                    "simplifications_rejected"
+                ],
+            },
+            "interpretation": (
+                "After forced literal availability is separated, the remaining "
+                "literal payload stream still requires the active order2 "
+                "previous-emitted-digit model under the tested simplifications."
+            ),
+        },
     ]
 
     result = {
@@ -998,6 +1043,7 @@ def make_result() -> dict[str, Any]:
             "source_state_status": "path_dependent_previous_copy_state_retained",
             "copy_length_context_status": "midpoint_context_retained",
             "literal_externality_status": "reduced_not_removed",
+            "literal_payload_model_status": "active_order2_retained",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1273,6 +1319,19 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['near_tie_copy_length_penalty_bits']:+.3f}; "
                 f"closed {evidence['local_repairs_closed']}"
             )
+        elif row["question"] == "can_literal_payload_model_be_simplified_after_availability_gate":
+            key = (
+                f"active {evidence['active_literal_payload_bits']:.3f} bits, "
+                f"{evidence['active_context_count']} contexts; order1 full "
+                f"{evidence['order1_full_corpus_delta_vs_order2_bits']:+.3f}, "
+                f"online {evidence['order1_online_delta_vs_order2_total_bits']:+.3f}, "
+                f"frozen {evidence['order1_frozen_delta_vs_order2_total_bits']:+.3f}; "
+                f"order1 frozen wins {evidence['order1_frozen_win_cutoffs']}; "
+                f"modal default {evidence['best_modal_default_delta_vs_active_bits']:+.3f}; "
+                f"structural `{evidence['best_non_active_structural_label']}` "
+                f"{evidence['best_non_active_structural_delta_vs_active_bits']:+.3f}; "
+                f"simplifications rejected {evidence['simplifications_rejected']}"
+            )
         else:
             key = (
                 f"best raw `{evidence['best_raw']}`; best charged `{evidence['best_charged']}`; "
@@ -1291,6 +1350,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Source state: `{result['decision']['source_state_status']}`.",
             f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
             f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
+            f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

@@ -1172,6 +1172,13 @@ The literal-payload structural context audit then tests whether literal-run
 offset, run-length bucket, book half/parity, or bounded combinations with
 `prev2` improve payload coding. They all over-split the stream; the active
 `prev2` categorical model remains best.
+The literal-payload model gate then folds the availability/default/structural
+checks together after forced literals are separated. Order-1 loses by
+`+95.968` bits on the full corpus and by `+47.346` / `+28.609` bits in
+aggregate online/frozen prefix totals; the best modal default/exception
+candidate is `+38.049` bits worse and the best non-active structural context
+is `+19.159` bits worse. The result retains the active order-2 payload
+dependency; it does not promote a new bound or a generation method.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1501,6 +1508,7 @@ book generation, not row0 pair-cell placement.
 - [Source blocker structural context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
+- [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
 
 ## Boundary
 
