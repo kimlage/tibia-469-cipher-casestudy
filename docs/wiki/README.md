@@ -1260,6 +1260,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   full-fit rule catches `3/3` subclass residuals only with `6` clean false
   changes, and the best zero-FP rule catches `1/3` while remaining `+8.670`
   bits worse than lookup,
+  tests observable candidate-signature support and rejects it: the best
+  signature has `0/10` deterministic residual matches, `7/10` out of support,
+  and `0/4` holdout cells with any deterministic match,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

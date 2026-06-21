@@ -1198,6 +1198,35 @@ worse than lookup. Prefix/holdout does not select a clean rule
 that matches the oracle, so the book-start copy pattern is
 audit-only.
 
+## Observable Signature Support Gate
+
+Gate 55 tests whether the remaining residual decisions are
+supported by repeated observable decision/candidate signatures.
+It is a support/collision audit, not another branch-ranking
+policy. Signatures include active operation shape, start/internal
+position, branch counts, candidate length profiles, and copy
+feature buckets; they do not include `drift_class`.
+
+| Diagnostic | Value |
+|---|---:|
+| Signature families | `6` |
+| Label modes | `3` |
+| Best signature | `decision_coarse` |
+| Best label mode | `stable_shape_label` |
+| Best deterministic matches | `0/10` |
+| Best supported residuals | `3/10` |
+| Best status counts | `{'ambiguous_includes_stable': 1, 'deterministic_contradiction': 2, 'out_of_support': 7}` |
+| Prequential cells with deterministic match | `0/4` |
+| Prequential cover-all-residual cells | `0/4` |
+
+No observable signature family promotes. The best full-fit
+signature has `0/10` deterministic residual matches: `7/10`
+residuals are out of support, `2/10` are contradicted, and
+only `1/10` is ambiguously supported with the stable label
+among alternatives. Prefix/holdout also has `0/4` cells with
+any deterministic residual match, so the exposed candidate
+state does not supply a reusable segmentation rule.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1263,6 +1292,10 @@ subclass without using `drift_class`; it catches all `3/3`
 subclass residuals only with `6` clean false changes, while the
 zero-FP variant catches just `1/3` and remains more expensive
 than lookup.
+Gate 55 then tests observable candidate-signature support and
+rejects it: the best signature has `0/10` deterministic residual
+matches, with most residuals out of support and `0/4` holdout
+cells containing any deterministic match.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1326,3 +1359,4 @@ or the stable projection as an oracle.
 - [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)
 - [Source interval cost gate](test_results/53_source_interval_cost_gate.md)
 - [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)
+- [Observable signature support gate](test_results/55_observable_signature_support_gate.md)

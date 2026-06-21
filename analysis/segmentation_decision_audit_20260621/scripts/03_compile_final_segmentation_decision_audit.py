@@ -73,6 +73,9 @@ SOURCE_INTERVAL_COST = TEST_RESULTS / "53_source_interval_cost_gate.json"
 BOOK_START_COPY_SUBCLASS = (
     TEST_RESULTS / "54_book_start_copy_subclass_gate.json"
 )
+OBSERVABLE_SIGNATURE_SUPPORT = (
+    TEST_RESULTS / "55_observable_signature_support_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -264,6 +267,11 @@ def main() -> None:
         if BOOK_START_COPY_SUBCLASS.exists()
         else None
     )
+    observable_signature_support = (
+        load_json(OBSERVABLE_SIGNATURE_SUPPORT)
+        if OBSERVABLE_SIGNATURE_SUPPORT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -375,6 +383,10 @@ def main() -> None:
         assert_boundary("source_interval_cost_gate", source_interval_cost)
     if book_start_copy_subclass is not None:
         assert_boundary("book_start_copy_subclass_gate", book_start_copy_subclass)
+    if observable_signature_support is not None:
+        assert_boundary(
+            "observable_signature_support_gate", observable_signature_support
+        )
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -532,6 +544,11 @@ def main() -> None:
         None
         if book_start_copy_subclass is None
         else book_start_copy_subclass["summary"]
+    )
+    observable_signature_support_summary = (
+        None
+        if observable_signature_support is None
+        else observable_signature_support["summary"]
     )
 
     lines = [
@@ -2019,6 +2036,40 @@ def main() -> None:
                 "",
             ]
         )
+    if observable_signature_support_summary is not None:
+        lines.extend(
+            [
+                "## Observable Signature Support Gate",
+                "",
+                "Gate 55 tests whether the remaining residual decisions are",
+                "supported by repeated observable decision/candidate signatures.",
+                "It is a support/collision audit, not another branch-ranking",
+                "policy. Signatures include active operation shape, start/internal",
+                "position, branch counts, candidate length profiles, and copy",
+                "feature buckets; they do not include `drift_class`.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Signature families | `{observable_signature_support_summary['signature_family_count']}` |",
+                f"| Label modes | `{observable_signature_support_summary['label_mode_count']}` |",
+                f"| Best signature | `{observable_signature_support_summary['best_signature']}` |",
+                f"| Best label mode | `{observable_signature_support_summary['best_label_mode']}` |",
+                f"| Best deterministic matches | `{observable_signature_support_summary['best_deterministic_matches']}/{observable_signature_support_summary['best_query_count']}` |",
+                f"| Best supported residuals | `{observable_signature_support_summary['best_supported_count']}/{observable_signature_support_summary['best_query_count']}` |",
+                f"| Best status counts | `{observable_signature_support_summary['best_status_counts']}` |",
+                f"| Prequential cells with deterministic match | `{observable_signature_support_summary['prequential_cells_with_deterministic_match']}/{observable_signature_support_summary['prequential_cells_with_residuals']}` |",
+                f"| Prequential cover-all-residual cells | `{observable_signature_support_summary['prequential_cover_all_residual_cells']}/{observable_signature_support_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "No observable signature family promotes. The best full-fit",
+                "signature has `0/10` deterministic residual matches: `7/10`",
+                "residuals are out of support, `2/10` are contradicted, and",
+                "only `1/10` is ambiguously supported with the stable label",
+                "among alternatives. Prefix/holdout also has `0/4` cells with",
+                "any deterministic residual match, so the exposed candidate",
+                "state does not supply a reusable segmentation rule.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2086,6 +2137,10 @@ def main() -> None:
             "subclass residuals only with `6` clean false changes, while the",
             "zero-FP variant catches just `1/3` and remains more expensive",
             "than lookup.",
+            "Gate 55 then tests observable candidate-signature support and",
+            "rejects it: the best signature has `0/10` deterministic residual",
+            "matches, with most residuals out of support and `0/4` holdout",
+            "cells containing any deterministic match.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2149,6 +2204,7 @@ def main() -> None:
             "- [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)",
             "- [Source interval cost gate](test_results/53_source_interval_cost_gate.md)",
             "- [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)",
+            "- [Observable signature support gate](test_results/55_observable_signature_support_gate.md)",
             "",
         ]
     )

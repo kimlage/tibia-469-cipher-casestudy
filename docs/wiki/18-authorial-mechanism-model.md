@@ -752,6 +752,13 @@ only with `6` clean false changes and `+32.421` bits versus lookup; the best
 zero-FP rule catches just `1/3`, remains `+8.670` bits worse than lookup, and
 has `0/4` clean oracle-cover holdout cells. The pattern is a weak clue, not a
 segmentation rule.
+An observable signature support gate then tests whether the exposed candidate
+state itself is reusable. Across `6` decision/candidate signature families and
+`3` label modes, the best full-fit signature has `0/10` deterministic residual
+matches: `7/10` residuals are out of support, `2/10` are contradicted, and
+only `1/10` is ambiguously supported. Prefix/holdout has `0/4` cells with any
+deterministic residual match. This rejects the exposed candidate profile as the
+missing parser state.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2469,6 +2476,7 @@ book generation, not row0 pair-cell placement.
 - [Source interval observable precision gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/52_source_interval_observable_precision_gate.md)
 - [Source interval cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/53_source_interval_cost_gate.md)
 - [Book-start copy subclass gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/54_book_start_copy_subclass_gate.md)
+- [Observable signature support gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/55_observable_signature_support_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
