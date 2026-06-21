@@ -966,6 +966,14 @@ claim on the updated recipe. Literal payload order-1 no longer qualifies for
 the current profile: it is `+95.968` bits on the full corpus and `+28.609`
 bits worse in aggregate frozen prefix tests, despite winning cutoffs
 `20/35/50`. The current profile therefore keeps order-2.
+The current active prequential profile audit then consolidates all learned
+streams in the active `8177.317` bit formula: copy length, copy source, literal
+payload, and item type. These streams account for `7157.317` bits (`87.526%`)
+and beat uniform on every tested prefix, contiguous-block, and public-bookcase
+family holdout; the weakest family frozen gain is still `6.269` bits. Random
+same-size train controls are usually stronger than numeric prefixes, so this
+strengthens component-level predictive validation without proving recipe
+discovery or authorial book order.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1268,6 +1276,7 @@ book generation, not row0 pair-cell placement.
 - [Default/exception component profile](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md)
 - [Current literal payload profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md)
 - [Copy source distance model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md)
+- [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

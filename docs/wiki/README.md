@@ -432,6 +432,13 @@ family/bookcase holdout.
 The copy-source distance audit then rejects a decodable backward-distance
 source model: replacing the active absolute-source default/exception model
 would cost `+25.551` bits.
+The current active prequential profile audit then consolidates copy length,
+copy source, literal payload, and item type under the active `8177.317` bit
+formula. The learned streams account for `7157.317` bits (`87.526%`) and beat
+uniform in every tested prefix, block, and public-bookcase family holdout, but
+random same-size train controls are usually stronger than numeric prefixes.
+This strengthens component validation while leaving recipe discovery, row0
+origin, and semantics unchanged.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

@@ -382,6 +382,11 @@ authorial method: family/bookcase holdouts still have failures.
 - `scripts/144_copy_source_distance_model_audit.py` - tests backward-distance
   copy-source coding and rejects it; absolute source default/exception remains
   better by `25.551` bits.
+- `scripts/145_current_active_prequential_profile_audit.py` - consolidates the
+  active `8177.317` bit formula's learned streams; prefix, block, and public
+  bookcase family holdouts all beat uniform, while random same-size train
+  controls show this is not numeric-order evidence and recipe discovery remains
+  unproved.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

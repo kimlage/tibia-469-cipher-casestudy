@@ -698,5 +698,12 @@ Generated audits in this directory should be treated as the current state:
   encoding copy source as backward distance. It is rejected: the distance
   default/exception replacement is `+25.551` bits worse than the active
   absolute-source default/exception model.
+- `145_current_active_prequential_profile_audit`: consolidates the active
+  `8177.317` bit formula's learned streams: copy length, copy source, literal
+  payload, and item type. Those streams account for `7157.317` bits
+  (`87.526%`) and beat uniform on all tested prefix, contiguous-block, and
+  public-bookcase family holdouts. Random same-size train controls are usually
+  stronger than numeric prefixes, so this strengthens component validation but
+  does not prove recipe discovery or authorial book order.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

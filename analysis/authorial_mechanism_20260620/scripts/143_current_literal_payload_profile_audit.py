@@ -43,6 +43,13 @@ def rel(path: Path) -> str:
     return str(path.relative_to(ROOT))
 
 
+def generation_profile_bits(audit142: dict[str, Any]) -> float:
+    decision = audit142["decision"]
+    if "prefix_frozen_generation_profile_bits" in decision:
+        return float(decision["prefix_frozen_generation_profile_bits"])
+    return float(decision["generation_explanation_profile_bits"])
+
+
 def context(emitted: str, order: int) -> str:
     if order == 0:
         return ""
@@ -187,7 +194,7 @@ def make_result() -> dict[str, Any]:
             "active_compression_bound_bits": active_total_bits,
             "active_literal_payload_bits": active_payload_bits,
             "literal_digit_count": len(rows),
-            "prior_generation_profile_bits": audit142["decision"]["generation_explanation_profile_bits"],
+            "prior_generation_profile_bits": generation_profile_bits(audit142),
         },
         "full_corpus": full,
         "prefix_splits": splits,
@@ -205,7 +212,7 @@ def make_result() -> dict[str, Any]:
                 "under the current online-reparse recipe."
             ),
             "generation_explanation_profile_bits_changed": False,
-            "generation_explanation_profile_bits": audit142["decision"]["generation_explanation_profile_bits"],
+            "generation_explanation_profile_bits": generation_profile_bits(audit142),
             "compression_bound_changed": False,
             "row0_origin_changed": False,
             "semantic_delta": "NONE",

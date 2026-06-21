@@ -679,6 +679,14 @@ Coverage of the remaining report recommendations and follow-on refinements:
   backward-distance source coding is decodable but worse than the active
   absolute-source default/exception model (`+25.551` bits replacement delta),
   so the distance variant is rejected.
+- current active prequential profiling is now covered by
+  [`145_current_active_prequential_profile_audit.py`](scripts/145_current_active_prequential_profile_audit.py);
+  the active `8177.317` bit formula has `7157.317` learned-stream bits
+  (`87.526%`) and `1020.000` fixed/declarative bits. Its learned streams beat
+  uniform on all tested prefix, block, and public-bookcase family holdouts
+  (`family min frozen gain=6.269` bits), but random same-size train controls
+  are usually stronger than numeric prefixes, so this is component-level
+  predictive validation, not recipe discovery or authorial order evidence.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
