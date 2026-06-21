@@ -376,6 +376,8 @@ component itself, lowering the active bound to `8558.667` bits with `70/70`
 roundtrip and no semantic claim.
 The split-only alpha resweep retains `alpha=2`; `alpha=1` is the nearest
 alternate at `+0.309` bits.
+The item-type/op-shape boundary gate keeps that split-only item-type stream
+while deriving compact-recipe op `type` fields from operation shape.
 The prequential and row0-origin audit freezes `8558.667` as
 `compression_bound`: learned components beat uniform on prefix future-suffix
 splits, but random same-size train controls are usually stronger, and row0

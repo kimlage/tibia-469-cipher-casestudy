@@ -1,0 +1,56 @@
+{
+  "case_reopened": false,
+  "classification": "item_type_split_only_retained_op_type_shape_derived",
+  "decision": {
+    "compression_bound_status": "split_only_already_promoted_upstream_unchanged_here",
+    "generation_explanation_status": "item_type_boundary_sharpened",
+    "item_type_alpha_status": "alpha_2_retained",
+    "item_type_model_status": "split_only_forced_rule_context_retained",
+    "op_type_recipe_field_status": "derived_from_field_shape",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "current_active_prequential_profile": "analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.json",
+    "item_type_split_only_alpha_resweep": "analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.json",
+    "item_type_split_only_formula_compile": "analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.json",
+    "op_type_derived_recipe_compile": "analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.json",
+    "prequential_component_ablation": "analysis/authorial_mechanism_20260620/reports/test_results/121_prequential_component_ablation_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "item_type_op_shape_boundary_gate.v1",
+  "summary": {
+    "ablation_simpler_components": [
+      "literal_payload",
+      "item_type"
+    ],
+    "active_compression_bound_bits_before_split_only": 8561.791947641772,
+    "active_item_type_bits": 223.4118788124663,
+    "active_profile_item_type_events": 265,
+    "active_profile_item_type_stream_bits": 212.01191674175735,
+    "alpha_retained": true,
+    "ambiguous_shape_ops": 0,
+    "best_alpha": 2,
+    "coded_item_type_items": 287,
+    "copy_shape_ops": 261,
+    "current_alpha": 2,
+    "forced_item_type_items": 81,
+    "forced_literal_to_copy": 73,
+    "forced_remaining_short_to_literal": 8,
+    "forced_rule_violations": [],
+    "interpretation": "Item type is retained as a split-only forced-rule stream in the generation profile, but explicit operation type is not a compact recipe dependency once field shape distinguishes literal from copy.",
+    "literal_shape_ops": 87,
+    "nearest_alpha1_delta_bits": 0.3085791126886761,
+    "op_type_derived": true,
+    "op_type_fields_removed": 348,
+    "op_type_roundtrip_ok": 70,
+    "op_type_score_delta_bits": 0.0,
+    "profile_component_present": true,
+    "split_only_candidate_total_bits": 8558.666806283434,
+    "split_only_conservative_gain_bits": 2.1251413583377143,
+    "split_only_gain_bits": 3.1251413583377143,
+    "split_only_item_type_bits": 220.2867374541295,
+    "split_only_promoted": true
+  },
+  "translation_delta": "NONE"
+}

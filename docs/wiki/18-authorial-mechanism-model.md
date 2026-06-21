@@ -850,6 +850,14 @@ frontier for that promoted model. `alpha=2` remains best at `8558.667` bits
 after charging alpha declaration deltas; `alpha=1` is nearest at `+0.309` bits
 worse, and no alternate alpha is promoted.
 
+The item-type/op-shape boundary gate then separates two uses of "type". The
+split-only item-type sequence remains a retained generation-profile stream, but
+the compact recipe does not need explicit op `type` fields: `text` implies a
+literal op, while `source_digit_pos` plus `length` implies a copy op. Removing
+`348` explicit type fields preserves `70/70` roundtrip and has `+0.000` bit
+delta. This sharpens the recipe dependency ledger without deriving row0 or
+adding semantics.
+
 The prequential and row0-origin audit then changes direction away from
 compression micro-sweeps. It freezes `8558.667` as the current
 `compression_bound`: learned components beat uniform on all prefix
@@ -1028,6 +1036,9 @@ operation-level recipe dependencies.
 The recipe representation dependency gate consolidates those compiles: `766`
 independent recipe fields are derivable with `+0.000` bit delta and `70/70`,
 while literal text, copy source, and copy length remain declared dependencies.
+The item-type/op-shape boundary gate keeps this compatible with the earlier
+item-type split-only result: item-type sequence modeling remains retained, but
+compact-recipe op `type` fields are representation artifacts.
 The copy-source canonicality audit then checks whether those remaining source
 fields are arbitrary. All 261 copy sources are the earliest legal occurrence of
 the copied chunk at the declared length; only 123 are unique, so this is an
@@ -1462,6 +1473,7 @@ book generation, not row0 pair-cell placement.
 - [Simplified generation profile compile](../../analysis/authorial_mechanism_20260620/reports/test_results/122_simplified_generation_profile_compile.md)
 - [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
+- [Item-type op-shape boundary gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/33_item_type_op_shape_boundary_gate.md)
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
 - [Prequential and row0 origin audit 2026-06-21](../../analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md)
 - [Family holdout failure audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/02_family_holdout_failure_audit.md)
@@ -1582,7 +1594,9 @@ nondecodable lower bound. The address/payload context-alpha pair search also
 retains the same active decodable pair and records only a nondecodable lower
 bound. The prequential audit freezes this state as `compression_bound` and
 moves the mainline progress bar to holdout behavior, structural mechanism,
-simplification, or row0 origin evidence.
+simplification, or row0 origin evidence. The item-type/op-shape boundary keeps
+split-only item-type coding as a retained sequence model while treating compact
+recipe op `type` fields as derivable representation only.
 Continue
 testing matrix origin, topology holdouts, and official source watchlists under
 the same Outcome Ledger.

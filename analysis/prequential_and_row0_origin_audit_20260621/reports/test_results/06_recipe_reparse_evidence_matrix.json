@@ -5,6 +5,7 @@
     "copy_length_context_status": "midpoint_context_retained",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
+    "item_type_boundary_status": "split_only_retained_op_type_field_derived",
     "literal_externality_status": "reduced_not_removed",
     "literal_payload_model_status": "active_order2_retained",
     "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
@@ -353,6 +354,30 @@
     },
     {
       "evidence": {
+        "active_item_type_bits": 223.4118788124663,
+        "ambiguous_shape_ops": 0,
+        "best_alpha": 2,
+        "coded_item_type_items": 287,
+        "copy_shape_ops": 261,
+        "current_alpha": 2,
+        "forced_item_type_items": 81,
+        "forced_rule_violations": [],
+        "literal_shape_ops": 87,
+        "nearest_alpha1_delta_bits": 0.3085791126886761,
+        "op_type_fields_removed": 348,
+        "op_type_roundtrip_ok": 70,
+        "op_type_score_delta_bits": 0.0,
+        "split_only_conservative_gain_bits": 2.1251413583377143,
+        "split_only_gain_bits": 3.1251413583377143,
+        "split_only_item_type_bits": 220.2867374541295
+      },
+      "interpretation": "The split-only item-type stream remains a mechanical component, while the explicit op type field in compact recipe JSON is a derivable representation artifact.",
+      "question": "is_item_type_sequence_or_recipe_type_field_dependency",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/33_item_type_op_shape_boundary_gate.json",
+      "status": "split_only_sequence_retained_op_type_field_derived"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -651,6 +676,7 @@
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
+    "item_type_op_shape_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/33_item_type_op_shape_boundary_gate.json",
     "leave_one_book_out_book_bounded_source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json",
     "leave_one_book_out_family_excluded_source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json",
     "leave_one_book_out_no_self": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.json",

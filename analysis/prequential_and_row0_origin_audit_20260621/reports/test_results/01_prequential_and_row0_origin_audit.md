@@ -290,6 +290,23 @@ text (`87` fields / `857` digits), copy source (`261` fields), and
 copy length (`261` fields).
 See [30_recipe_representation_dependency_gate.md](30_recipe_representation_dependency_gate.md).
 
+### Item Type Op Shape Boundary Gate
+
+The item-type boundary is then separated into two layers. The
+split-only forced-rule item-type model remains part of the generation
+profile: it moved the old formula from `8561.792` to `8558.667` bits,
+for a `3.125`-bit gain
+(`2.125` bits
+under the conservative extra-declaration check), and alpha `2` remains
+best with alpha `1` `0.309`
+bits worse. But explicit recipe op `type` fields are not a separate
+compact dependency: `348`
+fields are derivable from operation shape, with literal/copy-shaped
+ops `87`/
+`261`, zero score delta, and
+`70/70` roundtrip.
+See [33_item_type_op_shape_boundary_gate.md](33_item_type_op_shape_boundary_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -453,6 +470,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
 - The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
 - Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.
+- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

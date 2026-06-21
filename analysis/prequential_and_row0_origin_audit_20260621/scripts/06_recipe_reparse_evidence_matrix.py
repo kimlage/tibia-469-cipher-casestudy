@@ -55,6 +55,8 @@ SOURCES = {
     "literal_payload_model_gate": TEST_RESULTS / "29_literal_payload_model_gate.json",
     "recipe_representation_dependency_gate": TEST_RESULTS
     / "30_recipe_representation_dependency_gate.json",
+    "item_type_op_shape_boundary_gate": TEST_RESULTS
+    / "33_item_type_op_shape_boundary_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -106,6 +108,7 @@ def make_result() -> dict[str, Any]:
     literal_copy_gate = load_json(SOURCES["literal_copy_availability_gate"])
     literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
     recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
+    item_type_op_shape_boundary_gate = load_json(SOURCES["item_type_op_shape_boundary_gate"])
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -139,6 +142,7 @@ def make_result() -> dict[str, Any]:
         ("literal_copy_availability_gate", literal_copy_gate),
         ("literal_payload_model_gate", literal_payload_model_gate),
         ("recipe_representation_dependency_gate", recipe_representation_gate),
+        ("item_type_op_shape_boundary_gate", item_type_op_shape_boundary_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -566,6 +570,64 @@ def make_result() -> dict[str, Any]:
                 "Book length, copy target_start, literal length, and op type are "
                 "derivable in the compact recipe; literal text, copy source, and "
                 "copy length remain declared dependencies."
+            ),
+        },
+        {
+            "question": "is_item_type_sequence_or_recipe_type_field_dependency",
+            "source": rel(SOURCES["item_type_op_shape_boundary_gate"]),
+            "status": "split_only_sequence_retained_op_type_field_derived",
+            "evidence": {
+                "split_only_gain_bits": item_type_op_shape_boundary_gate["summary"][
+                    "split_only_gain_bits"
+                ],
+                "split_only_conservative_gain_bits": item_type_op_shape_boundary_gate[
+                    "summary"
+                ]["split_only_conservative_gain_bits"],
+                "active_item_type_bits": item_type_op_shape_boundary_gate["summary"][
+                    "active_item_type_bits"
+                ],
+                "split_only_item_type_bits": item_type_op_shape_boundary_gate[
+                    "summary"
+                ]["split_only_item_type_bits"],
+                "coded_item_type_items": item_type_op_shape_boundary_gate["summary"][
+                    "coded_item_type_items"
+                ],
+                "forced_item_type_items": item_type_op_shape_boundary_gate["summary"][
+                    "forced_item_type_items"
+                ],
+                "forced_rule_violations": item_type_op_shape_boundary_gate["summary"][
+                    "forced_rule_violations"
+                ],
+                "current_alpha": item_type_op_shape_boundary_gate["summary"][
+                    "current_alpha"
+                ],
+                "best_alpha": item_type_op_shape_boundary_gate["summary"]["best_alpha"],
+                "nearest_alpha1_delta_bits": item_type_op_shape_boundary_gate["summary"][
+                    "nearest_alpha1_delta_bits"
+                ],
+                "op_type_fields_removed": item_type_op_shape_boundary_gate["summary"][
+                    "op_type_fields_removed"
+                ],
+                "literal_shape_ops": item_type_op_shape_boundary_gate["summary"][
+                    "literal_shape_ops"
+                ],
+                "copy_shape_ops": item_type_op_shape_boundary_gate["summary"][
+                    "copy_shape_ops"
+                ],
+                "ambiguous_shape_ops": item_type_op_shape_boundary_gate["summary"][
+                    "ambiguous_shape_ops"
+                ],
+                "op_type_score_delta_bits": item_type_op_shape_boundary_gate["summary"][
+                    "op_type_score_delta_bits"
+                ],
+                "op_type_roundtrip_ok": item_type_op_shape_boundary_gate["summary"][
+                    "op_type_roundtrip_ok"
+                ],
+            },
+            "interpretation": (
+                "The split-only item-type stream remains a mechanical component, "
+                "while the explicit op type field in compact recipe JSON is a "
+                "derivable representation artifact."
             ),
         },
         {
@@ -1202,6 +1264,7 @@ def make_result() -> dict[str, Any]:
             "literal_externality_status": "reduced_not_removed",
             "literal_payload_model_status": "active_order2_retained",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
+            "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1364,6 +1427,23 @@ def write_result(result: dict[str, Any]) -> None:
                 f"remaining literal_text {deps['literal_text_fields']}, "
                 f"copy_source {deps['copy_source_fields']}, "
                 f"copy_length {deps['copy_length_fields']}"
+            )
+        elif row["question"] == "is_item_type_sequence_or_recipe_type_field_dependency":
+            key = (
+                f"item-type gain {evidence['split_only_gain_bits']:.3f} bits "
+                f"(conservative {evidence['split_only_conservative_gain_bits']:.3f}); "
+                f"stream {evidence['active_item_type_bits']:.3f} -> "
+                f"{evidence['split_only_item_type_bits']:.3f}; "
+                f"coded/forced items {evidence['coded_item_type_items']}/"
+                f"{evidence['forced_item_type_items']}; alpha "
+                f"{evidence['current_alpha']} retained, alpha1 delta "
+                f"{evidence['nearest_alpha1_delta_bits']:.3f}; "
+                f"op type fields removed {evidence['op_type_fields_removed']}, "
+                f"shape ops {evidence['literal_shape_ops']}/"
+                f"{evidence['copy_shape_ops']}, ambiguous "
+                f"{evidence['ambiguous_shape_ops']}; score delta "
+                f"{evidence['op_type_score_delta_bits']:+.12f}; "
+                f"roundtrip {evidence['op_type_roundtrip_ok']}/70"
             )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
@@ -1569,6 +1649,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
             f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",
             f"- Recipe representation: `{result['decision']['recipe_representation_status']}`.",
+            f"- Item type boundary: `{result['decision']['item_type_boundary_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

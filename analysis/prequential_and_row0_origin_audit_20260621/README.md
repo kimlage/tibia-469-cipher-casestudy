@@ -112,6 +112,9 @@ exogenous.
 - [scripts/32_copy_length_derivation_boundary_gate.py](scripts/32_copy_length_derivation_boundary_gate.py) - checks whether copy length is decoder-derived or remains declared after target-max, decoder-max, midpoint, and compact-recipe evidence.
 - [reports/test_results/32_copy_length_derivation_boundary_gate.md](reports/test_results/32_copy_length_derivation_boundary_gate.md) - copy-length derivation boundary result.
 - [reports/test_results/32_copy_length_derivation_boundary_gate.json](reports/test_results/32_copy_length_derivation_boundary_gate.json) - structured copy-length boundary ledger.
+- [scripts/33_item_type_op_shape_boundary_gate.py](scripts/33_item_type_op_shape_boundary_gate.py) - separates retained item-type sequence modeling from derivable recipe op-type fields.
+- [reports/test_results/33_item_type_op_shape_boundary_gate.md](reports/test_results/33_item_type_op_shape_boundary_gate.md) - item-type/op-shape boundary result.
+- [reports/test_results/33_item_type_op_shape_boundary_gate.json](reports/test_results/33_item_type_op_shape_boundary_gate.json) - structured item-type/op-shape boundary ledger.
 
 ## Boundary
 
@@ -198,7 +201,10 @@ exogenous.
   modal default/exception plus simple structural contexts are also worse. A
   recipe representation dependency gate then removes derivable book length,
   copy target start, literal length, and op type fields while retaining literal
-  text, copy source, and copy length as declared dependencies.
+  text, copy source, and copy length as declared dependencies. An item-type/
+  op-shape boundary gate then keeps the split-only item-type stream while
+  clarifying that explicit compact-recipe op `type` fields are derivable from
+  operation shape.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

@@ -29,6 +29,14 @@ LEGACY_RESULT = (
 )
 OCC_STREAMS = ROOT / "analysis" / "audit_20260609" / "homophone_channel" / "occ_streams.json"
 BOOKS_DIGITS = ROOT / "analysis" / "audit_20260609" / "books_digits.json"
+ITEM_TYPE_OP_SHAPE_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "33_item_type_op_shape_boundary_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -165,7 +173,19 @@ def row0_substrate_facts() -> dict[str, Any]:
     }
 
 
+def assert_analysis_boundary(name: str, data: dict[str, Any]) -> None:
+    if data.get("translation_delta") != "NONE":
+        raise RuntimeError(f"{name} changed translation boundary")
+    if data.get("case_reopened", False) is not False:
+        raise RuntimeError(f"{name} reopened case")
+    if data.get("plaintext_claim", False) is not False:
+        raise RuntimeError(f"{name} introduced plaintext")
+
+
 def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
+    item_type_gate = load_json(ITEM_TYPE_OP_SHAPE_GATE)
+    assert_analysis_boundary("item_type_op_shape_boundary_gate", item_type_gate)
+
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
     blocks = predictive["contiguous_block_holdouts"]
@@ -238,6 +258,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "hypotheses": legacy["row0_origin"]["hypotheses"],
             "promoted_row0_origin_formula_count": 0,
         },
+        "item_type_op_shape_boundary": {
+            "classification": item_type_gate["classification"],
+            "source": rel(ITEM_TYPE_OP_SHAPE_GATE),
+            "summary": item_type_gate["summary"],
+            "decision": item_type_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -260,6 +286,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "literal_externality_status": "reduced_not_removed_local_repairs_rejected",
             "literal_payload_model_status": "active_order2_retained_simplifications_rejected",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
+            "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -291,6 +318,7 @@ def render_markdown(
     online_order_frontier_controls_link: str,
     order_frontier_promotion_gate_link: str,
     recipe_representation_dependency_gate_link: str,
+    item_type_op_shape_boundary_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -307,6 +335,7 @@ def render_markdown(
     family_summary = result["predictive_validation"]["public_bookcase_family_holdouts"]["summary"]
     ablations = result["predictive_validation"]["component_ablation_prefix_splits"]
     params = result["predictive_validation"]["parameter_stability_prefix_splits"]
+    item_type_boundary = result["item_type_op_shape_boundary"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -623,6 +652,23 @@ def render_markdown(
             "copy length (`261` fields).",
             f"See [30_recipe_representation_dependency_gate.md]({recipe_representation_dependency_gate_link}).",
             "",
+            "### Item Type Op Shape Boundary Gate",
+            "",
+            "The item-type boundary is then separated into two layers. The",
+            "split-only forced-rule item-type model remains part of the generation",
+            "profile: it moved the old formula from `8561.792` to `8558.667` bits,",
+            f"for a `{item_type_boundary['split_only_gain_bits']:.3f}`-bit gain",
+            f"(`{item_type_boundary['split_only_conservative_gain_bits']:.3f}` bits",
+            "under the conservative extra-declaration check), and alpha `2` remains",
+            f"best with alpha `1` `{item_type_boundary['nearest_alpha1_delta_bits']:.3f}`",
+            "bits worse. But explicit recipe op `type` fields are not a separate",
+            f"compact dependency: `{item_type_boundary['op_type_fields_removed']}`",
+            "fields are derivable from operation shape, with literal/copy-shaped",
+            f"ops `{item_type_boundary['literal_shape_ops']}`/",
+            f"`{item_type_boundary['copy_shape_ops']}`, zero score delta, and",
+            "`70/70` roundtrip.",
+            f"See [33_item_type_op_shape_boundary_gate.md]({item_type_op_shape_boundary_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -795,6 +841,7 @@ def render_markdown(
             "- Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.",
             "- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.",
             "- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.",
+            "- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -852,6 +899,9 @@ def main() -> None:
             order_frontier_promotion_gate_link="23_order_frontier_promotion_gate.md",
             recipe_representation_dependency_gate_link=(
                 "30_recipe_representation_dependency_gate.md"
+            ),
+            item_type_op_shape_boundary_gate_link=(
+                "33_item_type_op_shape_boundary_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -925,6 +975,9 @@ def main() -> None:
             ),
             recipe_representation_dependency_gate_link=(
                 "test_results/30_recipe_representation_dependency_gate.md"
+            ),
+            item_type_op_shape_boundary_gate_link=(
+                "test_results/33_item_type_op_shape_boundary_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"
