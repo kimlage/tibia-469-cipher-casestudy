@@ -1,0 +1,6421 @@
+{
+  "case_reopened": false,
+  "classification": "operation_cutpoint_lattice_generator_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "operation_length_status": "atlas_retained_after_cutpoint_lattice_gate",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "cutpoint_scaling_gate": "analysis/operation_cutpoint_scaling_audit_20260621/reports/test_results/01_operation_cutpoint_scaling_gate.json",
+    "source_free_skeleton_script": "analysis/source_free_skeleton_generation_audit_20260621/scripts/02_source_free_skeleton_grammar_gate.py"
+  },
+  "parameters": {
+    "denominators": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      70,
+      80,
+      90,
+      100,
+      128
+    ],
+    "prefix_cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "random_seed": 46920260621,
+    "random_trials": 400
+  },
+  "plaintext_claim": false,
+  "prequential": [
+    {
+      "beats_random_p95": false,
+      "covers_all_test_books": false,
+      "cutoff": 20,
+      "selected_denominator": 128,
+      "test_books": 50,
+      "test_exact_books": 36,
+      "test_hits": 104,
+      "test_internal_cutpoints": 132,
+      "test_random_max_hits": 119,
+      "test_random_mean_hits": 104.7975,
+      "test_random_p95_hits": 112,
+      "train_books": 10,
+      "train_exact_books": 5,
+      "train_hits": 55
+    },
+    {
+      "beats_random_p95": false,
+      "covers_all_test_books": false,
+      "cutoff": 30,
+      "selected_denominator": 128,
+      "test_books": 40,
+      "test_exact_books": 30,
+      "test_hits": 77,
+      "test_internal_cutpoints": 100,
+      "test_random_max_hits": 88,
+      "test_random_mean_hits": 78.0725,
+      "test_random_p95_hits": 84,
+      "train_books": 20,
+      "train_exact_books": 11,
+      "train_hits": 82
+    },
+    {
+      "beats_random_p95": false,
+      "covers_all_test_books": false,
+      "cutoff": 40,
+      "selected_denominator": 128,
+      "test_books": 30,
+      "test_exact_books": 23,
+      "test_hits": 48,
+      "test_internal_cutpoints": 65,
+      "test_random_max_hits": 59,
+      "test_random_mean_hits": 48.855,
+      "test_random_p95_hits": 53,
+      "train_books": 30,
+      "train_exact_books": 18,
+      "train_hits": 111
+    },
+    {
+      "beats_random_p95": false,
+      "covers_all_test_books": false,
+      "cutoff": 50,
+      "selected_denominator": 128,
+      "test_books": 20,
+      "test_exact_books": 15,
+      "test_hits": 22,
+      "test_internal_cutpoints": 36,
+      "test_random_max_hits": 31,
+      "test_random_mean_hits": 23.8125,
+      "test_random_p95_hits": 28,
+      "train_books": 40,
+      "train_exact_books": 26,
+      "train_hits": 137
+    },
+    {
+      "beats_random_p95": false,
+      "covers_all_test_books": false,
+      "cutoff": 60,
+      "selected_denominator": 128,
+      "test_books": 10,
+      "test_exact_books": 9,
+      "test_hits": 8,
+      "test_internal_cutpoints": 10,
+      "test_random_max_hits": 10,
+      "test_random_mean_hits": 8.43,
+      "test_random_p95_hits": 10,
+      "train_books": 50,
+      "train_exact_books": 32,
+      "train_hits": 151
+    }
+  ],
+  "schema": "operation_cutpoint_lattice_gate.v1",
+  "summary": {
+    "best_denominator": 128,
+    "best_exact_books": 41,
+    "best_hit_lift_vs_random_mean": -2.3574999999999875,
+    "best_hits": 159,
+    "best_random_max_hits": 174,
+    "best_random_mean_hits": 161.3575,
+    "best_random_p95_hits": 169,
+    "book_count": 60,
+    "denominator_count": 68,
+    "internal_cutpoint_count": 201,
+    "interpretation": "Small normalized lattice denominators do not generate the exact operation cutpoint atlas. Any alignment signal remains descriptive because the exact cutpoint sequence is not selected and holdout coverage is incomplete.",
+    "operation_count": 261,
+    "prequential_beats_random_p95_cells": 0,
+    "prequential_cells": 5,
+    "prequential_cover_all_cells": 0,
+    "promotes_cutpoint_lattice_generator": false,
+    "random_trials_per_denominator": 400
+  },
+  "top_denominators": [
+    {
+      "book_count": 60,
+      "denominator": 128,
+      "exact_book_lift_vs_random_mean": -0.18500000000000227,
+      "exact_books": 41,
+      "hit_lift_vs_random_mean": -2.3574999999999875,
+      "mean_grid_points_per_book": 120.1,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 5,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 12,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 8,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 7,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 7,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 8,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 92,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 9,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 118,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 123,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 122,
+          "hit_count": 8,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 125,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 125,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 114,
+          "hit_count": 11,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 115,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 4,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 128,
+          "exact_book": false,
+          "grid_point_count": 127,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 125,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 125,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 97,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 128,
+          "exact_book": true,
+          "grid_point_count": 127,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 47,
+        "max_hits": 174,
+        "mean_exact_books": 41.185,
+        "mean_hits": 161.3575,
+        "p95_exact_books": 45,
+        "p95_hits": 169,
+        "trials": 400
+      },
+      "total_grid_points": 7206,
+      "total_hits": 159,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 100,
+      "exact_book_lift_vs_random_mean": 4.112500000000001,
+      "exact_books": 34,
+      "hit_lift_vs_random_mean": 14.327499999999986,
+      "mean_grid_points_per_book": 95.75,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 12,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 7,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 5,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 7,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 8,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 92,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 8,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 7,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 5,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 8,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 6,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 4,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 100,
+          "exact_book": false,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 97,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 100,
+          "exact_book": true,
+          "grid_point_count": 99,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 38,
+        "max_hits": 147,
+        "mean_exact_books": 29.8875,
+        "mean_hits": 129.6725,
+        "p95_exact_books": 34,
+        "p95_hits": 140,
+        "trials": 400
+      },
+      "total_grid_points": 5745,
+      "total_hits": 144,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 90,
+      "exact_book_lift_vs_random_mean": 2.8374999999999986,
+      "exact_books": 30,
+      "hit_lift_vs_random_mean": 11.632499999999993,
+      "mean_grid_points_per_book": 86.56666666666666,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 10,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 6,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 4,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 7,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 6,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 5,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 5,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 9,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 3,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 6,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 90,
+          "exact_book": false,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 90,
+          "exact_book": true,
+          "grid_point_count": 89,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 37,
+        "max_hits": 138,
+        "mean_exact_books": 27.1625,
+        "mean_hits": 117.3675,
+        "p95_exact_books": 31,
+        "p95_hits": 128,
+        "trials": 400
+      },
+      "total_grid_points": 5194,
+      "total_hits": 129,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 80,
+      "exact_book_lift_vs_random_mean": 1.8475000000000001,
+      "exact_books": 27,
+      "hit_lift_vs_random_mean": -0.7275000000000063,
+      "mean_grid_points_per_book": 77.23333333333333,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 11,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 4,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 4,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 6,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 4,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 80,
+          "exact_book": false,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 80,
+          "exact_book": true,
+          "grid_point_count": 79,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 32,
+        "max_hits": 126,
+        "mean_exact_books": 25.1525,
+        "mean_hits": 105.7275,
+        "p95_exact_books": 29,
+        "p95_hits": 117,
+        "trials": 400
+      },
+      "total_grid_points": 4634,
+      "total_hits": 105,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 62,
+      "exact_book_lift_vs_random_mean": 3.9800000000000004,
+      "exact_books": 26,
+      "hit_lift_vs_random_mean": 2.957499999999996,
+      "mean_grid_points_per_book": 60.416666666666664,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 7,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 5,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 5,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 6,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 4,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 62,
+          "exact_book": false,
+          "grid_point_count": 61,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 62,
+          "exact_book": true,
+          "grid_point_count": 61,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 27,
+        "max_hits": 102,
+        "mean_exact_books": 22.02,
+        "mean_hits": 84.0425,
+        "p95_exact_books": 25,
+        "p95_hits": 95,
+        "trials": 400
+      },
+      "total_grid_points": 3625,
+      "total_hits": 87,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 70,
+      "exact_book_lift_vs_random_mean": 1.8225000000000016,
+      "exact_books": 25,
+      "hit_lift_vs_random_mean": 5.670000000000002,
+      "mean_grid_points_per_book": 67.9,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 8,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 7,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 4,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 3,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 7,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 4,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 4,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 70,
+          "exact_book": false,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 70,
+          "exact_book": true,
+          "grid_point_count": 69,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 31,
+        "max_hits": 109,
+        "mean_exact_books": 23.1775,
+        "mean_hits": 93.33,
+        "p95_exact_books": 26,
+        "p95_hits": 105,
+        "trials": 400
+      },
+      "total_grid_points": 4074,
+      "total_hits": 99,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 64,
+      "exact_book_lift_vs_random_mean": 2.6774999999999984,
+      "exact_books": 25,
+      "hit_lift_vs_random_mean": 3.9424999999999955,
+      "mean_grid_points_per_book": 62.3,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 4,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 6,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 62,
+          "hit_count": 6,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 6,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 58,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 6,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 56,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 3,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 4,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 64,
+          "exact_book": false,
+          "grid_point_count": 63,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 64,
+          "exact_book": true,
+          "grid_point_count": 63,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 29,
+        "max_hits": 106,
+        "mean_exact_books": 22.3225,
+        "mean_hits": 86.0575,
+        "p95_exact_books": 26,
+        "p95_hits": 98,
+        "trials": 400
+      },
+      "total_grid_points": 3738,
+      "total_hits": 90,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 51,
+      "exact_book_lift_vs_random_mean": 4.350000000000001,
+      "exact_books": 24,
+      "hit_lift_vs_random_mean": 7.334999999999994,
+      "mean_grid_points_per_book": 49.733333333333334,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 6,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 4,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 5,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 5,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 4,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 3,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 51,
+          "exact_book": false,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 51,
+          "exact_book": true,
+          "grid_point_count": 50,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 26,
+        "max_hits": 89,
+        "mean_exact_books": 19.65,
+        "mean_hits": 68.665,
+        "p95_exact_books": 23,
+        "p95_hits": 80,
+        "trials": 400
+      },
+      "total_grid_points": 2984,
+      "total_hits": 76,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 56,
+      "exact_book_lift_vs_random_mean": 3.3924999999999983,
+      "exact_books": 24,
+      "hit_lift_vs_random_mean": -5.627499999999998,
+      "mean_grid_points_per_book": 54.65,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 6,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 5,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 6,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 4,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 5,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 3,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 2,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 56,
+          "exact_book": false,
+          "grid_point_count": 55,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 56,
+          "exact_book": true,
+          "grid_point_count": 55,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 27,
+        "max_hits": 92,
+        "mean_exact_books": 20.6075,
+        "mean_hits": 75.6275,
+        "p95_exact_books": 24,
+        "p95_hits": 86,
+        "trials": 400
+      },
+      "total_grid_points": 3279,
+      "total_hits": 70,
+      "total_internal_cutpoints": 201
+    },
+    {
+      "book_count": 60,
+      "denominator": 54,
+      "exact_book_lift_vs_random_mean": 2.7624999999999993,
+      "exact_books": 23,
+      "hit_lift_vs_random_mean": 5.042500000000004,
+      "mean_grid_points_per_book": 52.68333333333333,
+      "per_book": [
+        {
+          "book": 10,
+          "book_length": 281,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 11,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 12,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 6,
+          "internal_count": 13,
+          "op_count": 14
+        },
+        {
+          "book": 13,
+          "book_length": 141,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 3,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 14,
+          "book_length": 133,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 15,
+          "book_length": 143,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 5,
+          "internal_count": 10,
+          "op_count": 11
+        },
+        {
+          "book": 16,
+          "book_length": 174,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 17,
+          "book_length": 274,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 4,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 18,
+          "book_length": 93,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 19,
+          "book_length": 129,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 20,
+          "book_length": 63,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 4,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 21,
+          "book_length": 176,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 22,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 23,
+          "book_length": 177,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 24,
+          "book_length": 119,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 25,
+          "book_length": 35,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 34,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 26,
+          "book_length": 170,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 27,
+          "book_length": 124,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 28,
+          "book_length": 146,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 29,
+          "book_length": 151,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 30,
+          "book_length": 150,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 31,
+          "book_length": 248,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 3,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 32,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 33,
+          "book_length": 134,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 34,
+          "book_length": 123,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 8,
+          "op_count": 9
+        },
+        {
+          "book": 35,
+          "book_length": 286,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 36,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 3,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 37,
+          "book_length": 160,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 38,
+          "book_length": 134,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 4,
+          "op_count": 5
+        },
+        {
+          "book": 39,
+          "book_length": 59,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 40,
+          "book_length": 168,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 41,
+          "book_length": 136,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 42,
+          "book_length": 187,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 6,
+          "op_count": 7
+        },
+        {
+          "book": 43,
+          "book_length": 141,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 44,
+          "book_length": 126,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 45,
+          "book_length": 149,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 46,
+          "book_length": 253,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 47,
+          "book_length": 126,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 48,
+          "book_length": 169,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 49,
+          "book_length": 115,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 5,
+          "internal_count": 11,
+          "op_count": 12
+        },
+        {
+          "book": 50,
+          "book_length": 141,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 51,
+          "book_length": 268,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 52,
+          "book_length": 137,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 53,
+          "book_length": 271,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 54,
+          "book_length": 57,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 55,
+          "book_length": 116,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 3,
+          "op_count": 4
+        },
+        {
+          "book": 56,
+          "book_length": 266,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 9,
+          "op_count": 10
+        },
+        {
+          "book": 57,
+          "book_length": 230,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 7,
+          "op_count": 8
+        },
+        {
+          "book": 58,
+          "book_length": 272,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 59,
+          "book_length": 272,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 60,
+          "book_length": 151,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 2,
+          "internal_count": 5,
+          "op_count": 6
+        },
+        {
+          "book": 61,
+          "book_length": 145,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 62,
+          "book_length": 126,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 63,
+          "book_length": 126,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 64,
+          "book_length": 151,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 1,
+          "op_count": 2
+        },
+        {
+          "book": 65,
+          "book_length": 169,
+          "denominator": 54,
+          "exact_book": false,
+          "grid_point_count": 53,
+          "hit_count": 1,
+          "internal_count": 2,
+          "op_count": 3
+        },
+        {
+          "book": 66,
+          "book_length": 210,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 67,
+          "book_length": 98,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 68,
+          "book_length": 143,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        },
+        {
+          "book": 69,
+          "book_length": 140,
+          "denominator": 54,
+          "exact_book": true,
+          "grid_point_count": 53,
+          "hit_count": 0,
+          "internal_count": 0,
+          "op_count": 1
+        }
+      ],
+      "random_control": {
+        "max_exact_books": 27,
+        "max_hits": 92,
+        "mean_exact_books": 20.2375,
+        "mean_hits": 72.9575,
+        "p95_exact_books": 23,
+        "p95_hits": 83,
+        "trials": 400
+      },
+      "total_grid_points": 3161,
+      "total_hits": 78,
+      "total_internal_cutpoints": 201
+    }
+  ],
+  "translation_delta": "NONE"
+}

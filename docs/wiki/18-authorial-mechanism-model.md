@@ -383,6 +383,12 @@ exact books and `206/261` row hits, but carries `45` templates plus `181`
 payload records, is `+35` records worse than the exact atlas, and has `0/5`
 cover-all holdout cells. The proportional-cutpoint signal is descriptive, not
 a generator.
+An operation cutpoint lattice audit then removes the learned-template part and
+tests a stricter source-free hypothesis: the `201` internal boundaries should
+fall on small proportional grids after granting book length and op count. They
+do not. The best denominator, `128`, reaches `41/60` exact books and `159/201`
+hits, below the same-shape random-control mean `161.357`, and prefix-selected
+denominators beat held-out random p95 in `0/5` cells.
 A book order generation audit then consolidates the scattered order controls
 against the current boundary. Numeric order remains the compact canonical order
 used by the formula: full-formula and descriptor-cost gates promote no
@@ -2521,6 +2527,8 @@ book generation, not row0 pair-cell placement.
 - [Operation length motif library gate](../../analysis/operation_length_motif_audit_20260621/reports/test_results/01_operation_length_motif_library_gate.md)
 - [Final operation cutpoint scaling audit](../../analysis/operation_cutpoint_scaling_audit_20260621/reports/final_operation_cutpoint_scaling_audit.md)
 - [Operation cutpoint scaling gate](../../analysis/operation_cutpoint_scaling_audit_20260621/reports/test_results/01_operation_cutpoint_scaling_gate.md)
+- [Final operation cutpoint lattice audit](../../analysis/operation_cutpoint_lattice_audit_20260621/reports/final_operation_cutpoint_lattice_audit.md)
+- [Operation cutpoint lattice gate](../../analysis/operation_cutpoint_lattice_audit_20260621/reports/test_results/01_operation_cutpoint_lattice_gate.md)
 - [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
 - [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)

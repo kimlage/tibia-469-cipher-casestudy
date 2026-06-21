@@ -804,6 +804,11 @@ exact books and `206/261` row hits, but needs `45` templates plus `181`
 payload records, is `+35` records worse than the exact atlas, and has `0/5`
 cover-all holdout cells. Cutpoint scaling is therefore descriptive, not a
 generator.
+An operation cutpoint lattice audit then tests the stricter possibility that
+the `201` internal boundaries sit on small proportional grids. They do not:
+the best denominator, `128`, reaches `41/60` exact books and `159/201` hits,
+below the same-shape random mean `161.357`; prefix-selected denominators beat
+held-out random p95 in `0/5` cells.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and
