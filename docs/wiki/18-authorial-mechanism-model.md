@@ -385,6 +385,13 @@ itself has mechanical privilege. Under seed-only exact-copy coverage, books
 after seeing the corpus and still leaves source choice, literal payload, and
 seed selection external. The result is `AUDIT_ONLY_COMPRESSION`, not seed-origin
 promotion.
+A prequential seed-selection audit then asks whether that posthoc signal
+generalizes when seeds are selected using only prefix books. Train-greedy seeds
+beat the random median in `7/7` prefix/k cells and p95 random train seeds in
+`6/7`, so there is partial predictive structure. But operational prefixes beat
+random median in only `1/7`, and train-greedy seeds still trail suffix-oracle
+posthoc seeds. Seed selection remains audit-only rather than a promoted
+generator.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -2035,6 +2042,7 @@ book generation, not row0 pair-cell placement.
 - [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
 - [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
+- [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

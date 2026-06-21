@@ -805,6 +805,10 @@ A seed primacy audit rejects treating operational books `0..9` as a special
 mechanical seed set: they cover `8664/9567` non-seed digits, below random k=10
 median `9005`, while a better k=10 seed exists only posthoc. The result is
 `AUDIT_ONLY_COMPRESSION`, not seed-origin promotion.
+A prequential seed-selection audit preserves the useful part of that signal
+without overclaiming it: prefix-trained greedy seeds beat random median in
+`7/7` cells and p95 in `6/7`, but operational prefixes beat random median in
+only `1/7` and train-greedy still trails suffix-oracle posthoc seeds.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1031,6 +1035,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   derives target positions from cumulative lengths while retaining the atlas,
   rejects operational seed `0..9` as mechanically privileged under seed-only
   coverage controls,
+  keeps prefix-trained seed selection as partial predictive signal only,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

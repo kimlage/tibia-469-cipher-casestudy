@@ -42,6 +42,21 @@ The best k=10 candidate found by posthoc greedy coverage is much stronger,
 but it is selected after seeing the corpus: `[7, 8, 9, 13, 17, 20, 25, 39, 54, 67]`.
 It is therefore an audit-only compression result, not a primary-origin claim.
 
+## Prequential Seed Selection
+
+- Prequential seed selection audit: [analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md](test_results/03_prequential_seed_selection_audit.md).
+- Evaluated prefix/k cells: `7`.
+- Train-greedy beats random median cells: `7`.
+- Train-greedy beats random p95 cells: `6`.
+- Operational prefix beats random median cells: `1`.
+- Mean train-greedy vs suffix-oracle coverage gap: `0.016640`.
+- Max train-greedy vs suffix-oracle coverage gap: `0.028849`.
+- Promotes prequential seed generator: `False`.
+
+Prefix-trained seeds show partial predictive signal, but they do not close
+the posthoc gap: they fail the random-p95 condition in one evaluated cell
+and remain behind suffix-oracle seeds selected after seeing the future books.
+
 ## Seed Size Sweep
 
 | k | Best label | Seed books | Copied | Literal | Copies | Coverage | Gain vs random median after declaration |

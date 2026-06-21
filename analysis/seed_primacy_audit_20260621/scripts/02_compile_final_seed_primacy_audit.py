@@ -10,6 +10,7 @@ HERE = Path(__file__).resolve().parents[1]
 REPORTS = HERE / "reports"
 TEST_RESULTS = REPORTS / "test_results"
 SEED_COVERAGE = TEST_RESULTS / "01_seed_coverage_audit.json"
+PREQUENTIAL_SEED_SELECTION = TEST_RESULTS / "03_prequential_seed_selection_audit.json"
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -38,6 +39,19 @@ def main() -> None:
         raise RuntimeError("seed audit changed translation boundary")
     if audit.get("case_reopened") is not False or audit.get("plaintext_claim") is not False:
         raise RuntimeError("seed audit violated archival boundary")
+    prequential = (
+        load_json(PREQUENTIAL_SEED_SELECTION)
+        if PREQUENTIAL_SEED_SELECTION.exists()
+        else None
+    )
+    if prequential is not None:
+        if prequential.get("translation_delta") != "NONE":
+            raise RuntimeError("prequential seed audit changed translation boundary")
+        if (
+            prequential.get("case_reopened") is not False
+            or prequential.get("plaintext_claim") is not False
+        ):
+            raise RuntimeError("prequential seed audit violated archival boundary")
 
     summary = audit["summary"]
     decision = audit["decision"]
@@ -114,11 +128,37 @@ def main() -> None:
         f"but it is selected after seeing the corpus: `{compact_seed(best_k10['seed_books'])}`.",
         "It is therefore an audit-only compression result, not a primary-origin claim.",
         "",
-        "## Seed Size Sweep",
-        "",
-        "| k | Best label | Seed books | Copied | Literal | Copies | Coverage | Gain vs random median after declaration |",
-        "|---:|---|---|---:|---:|---:|---:|---:|",
     ]
+    if prequential is not None:
+        ps = prequential["summary"]
+        lines.extend(
+            [
+                "## Prequential Seed Selection",
+                "",
+                "- Prequential seed selection audit: "
+                "[analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md](test_results/03_prequential_seed_selection_audit.md).",
+                f"- Evaluated prefix/k cells: `{ps['evaluated_cells']}`.",
+                f"- Train-greedy beats random median cells: `{ps['train_greedy_beats_random_median_cells']}`.",
+                f"- Train-greedy beats random p95 cells: `{ps['train_greedy_beats_random_p95_cells']}`.",
+                f"- Operational prefix beats random median cells: `{ps['operational_beats_random_median_cells']}`.",
+                f"- Mean train-greedy vs suffix-oracle coverage gap: `{ps['mean_train_greedy_oracle_gap_coverage']:.6f}`.",
+                f"- Max train-greedy vs suffix-oracle coverage gap: `{ps['max_train_greedy_oracle_gap_coverage']:.6f}`.",
+                f"- Promotes prequential seed generator: `{ps['promotes_prequential_seed_generator']}`.",
+                "",
+                "Prefix-trained seeds show partial predictive signal, but they do not close",
+                "the posthoc gap: they fail the random-p95 condition in one evaluated cell",
+                "and remain behind suffix-oracle seeds selected after seeing the future books.",
+                "",
+            ]
+        )
+    lines.extend(
+        [
+            "## Seed Size Sweep",
+            "",
+            "| k | Best label | Seed books | Copied | Literal | Copies | Coverage | Gain vs random median after declaration |",
+            "|---:|---|---|---:|---:|---:|---:|---:|",
+        ]
+    )
     for row in audit["best_by_k"]:
         lines.append(
             f"| {row['seed_book_count']} | `{row['label']}` | `{compact_seed(row['seed_books'])}` | "
