@@ -292,9 +292,18 @@ exogenous.
 - [scripts/92_full_source_latest_multicutoff_probe.py](scripts/92_full_source_latest_multicutoff_probe.py) - probes latest-source full source exposure on cutoffs `50/60`.
 - [reports/test_results/92_full_source_latest_multicutoff_probe.md](reports/test_results/92_full_source_latest_multicutoff_probe.md) - full source latest multi-cutoff probe result.
 - [reports/test_results/92_full_source_latest_multicutoff_probe.json](reports/test_results/92_full_source_latest_multicutoff_probe.json) - structured full source latest multi-cutoff ledger.
+- [scripts/93_full_source_all_policy_multicutoff_probe.py](scripts/93_full_source_all_policy_multicutoff_probe.py) - compares all source tie policies with all same-length sources exposed on cutoffs `50/60`.
+- [reports/test_results/93_full_source_all_policy_multicutoff_probe.md](reports/test_results/93_full_source_all_policy_multicutoff_probe.md) - full source all-policy multi-cutoff probe result.
+- [reports/test_results/93_full_source_all_policy_multicutoff_probe.json](reports/test_results/93_full_source_all_policy_multicutoff_probe.json) - structured full source all-policy multi-cutoff ledger.
 
 ## Boundary
 
+- Full-source exposure result: exposing every same-length source candidate and
+  comparing all three tie policies on cutoffs `50/60` preserves `30/30`
+  roundtrip/raw-positive evaluations per policy and `10/10` multi-cutoff-stable
+  books per policy. This is partial parser robustness only. It does not emit a
+  source-generation formula, change `row0`, or change the `8154.676268`-bit
+  compression bound.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

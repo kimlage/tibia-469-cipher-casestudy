@@ -305,6 +305,13 @@ exposing `1246561` hidden candidates. This is stronger partial stability evidenc
 for the parser, but still not a formula promotion: source candidates remain
 target-chunk matches, and the full five-cutoff all-policy exposure remains
 unrun.
+A full-source all-policy multi-cutoff probe then checks whether that partial
+stability depends on the `latest_source` policy. It does not at cutoffs `50/60`:
+`earliest_source`, `latest_source`, and `prefer_previous_end_then_earliest` each
+roundtrip and beat raw in `30/30` book evaluations, and each keeps books `60..69`
+stable across both cutoffs (`10/10`). This is still an exposed-source parser
+robustness result, not a source-generation rule; `row0` and the `8154.676268`-bit
+bound remain unchanged.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1942,6 +1949,7 @@ book generation, not row0 pair-cell placement.
 - [Cross-op source break-even audit](../../analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.md)
 - [Copy source structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.md)
 - [Source blocker structural context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md)
+- [Full source all-policy multi-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

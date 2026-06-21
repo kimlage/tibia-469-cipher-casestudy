@@ -751,6 +751,11 @@ same disruptive policy. It roundtrips and beats raw in `30/30` evaluations, and
 books `60..69` stay exact-path stable across both cutoffs (`10/10`) while `35`
 non-earliest sources are selected. This is partial multi-cutoff robustness, not a
 full formula promotion.
+A full-source all-policy multi-cutoff probe then verifies that the same partial
+stability is not specific to `latest_source`: `earliest_source`, `latest_source`,
+and `prefer_previous_end_then_earliest` each roundtrip and beat raw in `30/30`
+evaluations on cutoffs `50/60`, with `10/10` shared books stable per policy.
+This leaves `row0` unchanged and does not change the compression bound.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -957,6 +962,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   while showing non-earliest source choices are near-ties, not generator rules,
   extends `latest_source` full-source exposure to cutoffs `50/60` and keeps
   books `60..69` stable (`10/10`),
+  checks all three full-source tie policies at cutoffs `50/60` and keeps `30/30`
+  roundtrip/raw-positive evaluations per policy with `row0` unchanged,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
