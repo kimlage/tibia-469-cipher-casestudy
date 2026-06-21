@@ -924,6 +924,11 @@ stable-projection correction repairs `9/10` residual books and two corrections
 reach `60/60`, with only book `20` needing two oracle corrections. This is
 diagnostic rather than promotable, because the correction choices come from the
 stable projection.
+A residual feature screen then rejects the next simple explanation: the best
+observable predicate catches `6/10` residuals but also fires on `13` clean
+control decisions, while the best zero-false-positive predicate catches only
+`1/10`. The remaining segmentation blocker is path/state structure, not a
+single residual flag.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

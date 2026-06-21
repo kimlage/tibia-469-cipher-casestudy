@@ -403,11 +403,36 @@ This narrows the next classifier target, but does not promote
 a parser because the repair choices come from the stable
 projection.
 
+## Post-Repair Residual Feature Screen
+
+Gate 21 asks whether the gate-20 residual oracle map has a
+non-oracle observable feature signature. The ten first residual
+drifts are scored as positives against active-parser aligned
+decisions before any drift as negative controls.
+
+| Screen | Result | Boundary |
+|---|---:|---|
+| Best overall predicate `active_literal_immediate_copy_ge1` | TP/FP/FN `6/13/4` | rejected |
+| Best zero-FP predicate `active_literal_immediate_copy_ge5__and__remaining_le20` | `1/10` residuals | too narrow |
+| Full zero-FP detector | `None` | absent |
+
+- Clean decision controls: `224`.
+- Predicates tested: `365`.
+- Prequential zero-test-FP cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+The residual errors are not separated by a simple feature flag.
+The missed-copy subset is visible as an opportunity class, but
+the same signature fires on already-correct parser decisions.
+The remaining blocker therefore remains a richer path/state
+segmentation rule rather than a single residual predicate.
+
 ## Next Blocker
 
-The next real blocker is not another local length policy. It is
-either a non-oracle classifier for the post-repair oracle map
-across the remaining missed-copy/copy-drift cases, or a source-free
+The next real blocker is not another local length policy or
+a single residual feature flag. It is a richer path/state
+segmentation account for why the parser waits, copies, or
+understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -434,3 +459,4 @@ or the stable projection as an oracle.
 - [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)
 - [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)
 - [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)
+- [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)

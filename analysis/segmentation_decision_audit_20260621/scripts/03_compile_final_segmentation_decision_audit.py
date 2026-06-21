@@ -29,6 +29,7 @@ OBSERVABLE_REPAIR = TEST_RESULTS / "17_observable_repair_policy_audit.json"
 CONDITIONAL_REPAIR = TEST_RESULTS / "18_conditional_repair_classifier_audit.json"
 TWO_STAGE_REPAIR = TEST_RESULTS / "19_two_stage_conditional_repair_audit.json"
 POST_REPAIR_ORACLE = TEST_RESULTS / "20_post_repair_residual_oracle_audit.json"
+RESIDUAL_FEATURE = TEST_RESULTS / "21_post_repair_residual_feature_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -92,6 +93,9 @@ def main() -> None:
     post_repair_oracle = (
         load_json(POST_REPAIR_ORACLE) if POST_REPAIR_ORACLE.exists() else None
     )
+    residual_feature = (
+        load_json(RESIDUAL_FEATURE) if RESIDUAL_FEATURE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -128,6 +132,8 @@ def main() -> None:
         assert_boundary("two_stage_conditional_repair_audit", two_stage_repair)
     if post_repair_oracle is not None:
         assert_boundary("post_repair_residual_oracle_audit", post_repair_oracle)
+    if residual_feature is not None:
+        assert_boundary("post_repair_residual_feature_audit", residual_feature)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -169,6 +175,9 @@ def main() -> None:
     )
     post_repair_oracle_summary = (
         None if post_repair_oracle is None else post_repair_oracle["summary"]
+    )
+    residual_feature_summary = (
+        None if residual_feature is None else residual_feature["summary"]
     )
 
     lines = [
@@ -690,13 +699,43 @@ def main() -> None:
                 "",
             ]
         )
+    if residual_feature_summary is not None:
+        lines.extend(
+            [
+                "## Post-Repair Residual Feature Screen",
+                "",
+                "Gate 21 asks whether the gate-20 residual oracle map has a",
+                "non-oracle observable feature signature. The ten first residual",
+                "drifts are scored as positives against active-parser aligned",
+                "decisions before any drift as negative controls.",
+                "",
+                "| Screen | Result | Boundary |",
+                "|---|---:|---|",
+                f"| Best overall predicate `{residual_feature_summary['best_overall_predicate']}` | TP/FP/FN `{residual_feature_summary['best_overall_tp_fp_fn']['tp']}/{residual_feature_summary['best_overall_tp_fp_fn']['fp']}/{residual_feature_summary['best_overall_tp_fp_fn']['fn']}` | rejected |",
+                f"| Best zero-FP predicate `{residual_feature_summary['best_zero_fp_predicate']}` | `{residual_feature_summary['best_zero_fp_tp']}/{residual_feature_summary['residual_book_count']}` residuals | too narrow |",
+                f"| Full zero-FP detector | `{residual_feature_summary['full_zero_fp_detector']}` | absent |",
+                "",
+                f"- Clean decision controls: `{residual_feature_summary['clean_decision_control_count']}`.",
+                f"- Predicates tested: `{residual_feature_summary['predicate_count']}`.",
+                f"- Prequential zero-test-FP cells: `{residual_feature_summary['prequential_zero_test_fp_cells']}/{residual_feature_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{residual_feature_summary['prequential_cover_all_test_residual_cells']}/{residual_feature_summary['prequential_cells']}`.",
+                "",
+                "The residual errors are not separated by a simple feature flag.",
+                "The missed-copy subset is visible as an opportunity class, but",
+                "the same signature fires on already-correct parser decisions.",
+                "The remaining blocker therefore remains a richer path/state",
+                "segmentation rule rather than a single residual predicate.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
-            "The next real blocker is not another local length policy. It is",
-            "either a non-oracle classifier for the post-repair oracle map",
-            "across the remaining missed-copy/copy-drift cases, or a source-free",
+            "The next real blocker is not another local length policy or",
+            "a single residual feature flag. It is a richer path/state",
+            "segmentation account for why the parser waits, copies, or",
+            "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -723,6 +762,7 @@ def main() -> None:
             "- [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)",
             "- [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)",
             "- [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)",
+            "- [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)",
             "",
         ]
     )
