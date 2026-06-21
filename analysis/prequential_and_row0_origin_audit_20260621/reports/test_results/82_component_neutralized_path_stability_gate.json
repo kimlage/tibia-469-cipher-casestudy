@@ -1,0 +1,6021 @@
+{
+  "case_reopened": false,
+  "classification": "component_neutralization_improves_path_stability",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "component_neutralization_tested_for_path_stability",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "component_neutralization_improves_path_stability",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate77_context_loader": "analysis/prequential_and_row0_origin_audit_20260621/scripts/77_multi_cutoff_sparse_suffix_parser_validation.py",
+    "gate78_path_stability": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.json",
+    "gate81_cost_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/81_boundary_instability_cost_decomposition_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "component_neutralized_path_stability_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "component_neutralization_only": true,
+    "compression_bound_changed": false,
+    "cost_modes": [
+      "active_learned",
+      "uniform_copy_length",
+      "uniform_source_exception",
+      "uniform_copy_length_and_source_exception",
+      "uniform_copy_length_and_full_source"
+    ],
+    "cutoffs": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "active_stable_exact_path_book_count": 38,
+    "best_stability_book_count": 48,
+    "best_stability_delta_vs_active": 10,
+    "best_stability_mode": "uniform_copy_length_and_source_exception",
+    "elapsed_seconds": 49.88063725002576,
+    "interpretation": "Uniformizing the learned copy-length/source-exception cost components tests whether path instability is an artifact of overfit component priors. A mode can be structurally interesting only if it improves exact multi-cutoff path stability without being treated as a compression-bound promotion.",
+    "mode_summaries": [
+      {
+        "book_count_with_multiple_cutoffs": 50,
+        "book_rows": [
+          {
+            "book": 10,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 11,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 12,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 13,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 14,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 15,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 16,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 17,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 18,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 19,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 20,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 21,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 22,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 23,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 25,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 26,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 27,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 29,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 31,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 32,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 33,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 36,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 37,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 38,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 40,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 41,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 42,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 43,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 44,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 47,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 48,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 49,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 50,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 52,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 53,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 55,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 57,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 58,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 59,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 60,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 62,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 63,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 64,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 4,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ],
+              [
+                50
+              ],
+              [
+                60
+              ]
+            ]
+          },
+          {
+            "book": 66,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 67,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 68,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 69,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          }
+        ],
+        "cost_mode": "active_learned",
+        "max_signature_count_per_book": 4,
+        "raw_positive_book_evaluations": 175,
+        "raw_positive_delta_vs_active": 0,
+        "roundtrip_book_evaluations": 175,
+        "stable_book_delta_vs_active": 0,
+        "stable_exact_path_book_count": 38,
+        "stable_exact_path_fraction": 0.76,
+        "total_parser_bits": 11992.210881813065,
+        "total_parser_bits_delta_vs_active": 0.0,
+        "total_parser_evaluations": 175,
+        "total_raw_digit_uniform_bits": 93927.51688294017,
+        "total_transition_evaluations": 12714003,
+        "total_unique_book_signatures": 64,
+        "unstable_books": [
+          {
+            "book": 21,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "signature_count": 4,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ],
+              [
+                50
+              ],
+              [
+                60
+              ]
+            ]
+          }
+        ],
+        "unstable_exact_path_book_count": 12
+      },
+      {
+        "book_count_with_multiple_cutoffs": 50,
+        "book_rows": [
+          {
+            "book": 10,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 11,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 12,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 13,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 14,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 15,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 16,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 17,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 18,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 19,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 20,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 21,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 22,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 23,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 25,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 26,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 27,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 29,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 31,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 32,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 33,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 36,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 37,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 38,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 40,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 41,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 42,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 43,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 44,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 47,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 48,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 49,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 50,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 52,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 53,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 55,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 57,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 58,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 59,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 60,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 62,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 63,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 64,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 66,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 67,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 68,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 69,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          }
+        ],
+        "cost_mode": "uniform_copy_length",
+        "max_signature_count_per_book": 2,
+        "raw_positive_book_evaluations": 175,
+        "raw_positive_delta_vs_active": 0,
+        "roundtrip_book_evaluations": 175,
+        "stable_book_delta_vs_active": 5,
+        "stable_exact_path_book_count": 43,
+        "stable_exact_path_fraction": 0.86,
+        "total_parser_bits": 12021.477115662572,
+        "total_parser_bits_delta_vs_active": 29.266233849506534,
+        "total_parser_evaluations": 175,
+        "total_raw_digit_uniform_bits": 93927.51688294017,
+        "total_transition_evaluations": 12627866,
+        "total_unique_book_signatures": 57,
+        "unstable_books": [
+          {
+            "book": 26,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                35,
+                50,
+                60
+              ],
+              [
+                10,
+                20
+              ]
+            ]
+          }
+        ],
+        "unstable_exact_path_book_count": 7
+      },
+      {
+        "book_count_with_multiple_cutoffs": 50,
+        "book_rows": [
+          {
+            "book": 10,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 11,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 12,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 13,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 14,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 15,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 16,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 17,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 18,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 19,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 20,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 21,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 22,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 23,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 25,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 26,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 27,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 29,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 31,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 32,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 33,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 36,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 37,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 38,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 40,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 41,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 42,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 43,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 44,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 47,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 48,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 49,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 50,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 52,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 53,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 55,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 57,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 58,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 59,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 60,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 62,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 63,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 64,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 3,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ],
+              [
+                60
+              ]
+            ]
+          },
+          {
+            "book": 66,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 67,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 68,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 69,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          }
+        ],
+        "cost_mode": "uniform_source_exception",
+        "max_signature_count_per_book": 3,
+        "raw_positive_book_evaluations": 175,
+        "raw_positive_delta_vs_active": 0,
+        "roundtrip_book_evaluations": 175,
+        "stable_book_delta_vs_active": 2,
+        "stable_exact_path_book_count": 40,
+        "stable_exact_path_fraction": 0.8,
+        "total_parser_bits": 12030.076695420317,
+        "total_parser_bits_delta_vs_active": 37.865813607251766,
+        "total_parser_evaluations": 175,
+        "total_raw_digit_uniform_bits": 93927.51688294017,
+        "total_transition_evaluations": 12526973,
+        "total_unique_book_signatures": 61,
+        "unstable_books": [
+          {
+            "book": 21,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "signature_count": 3,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ],
+              [
+                50
+              ],
+              [
+                60
+              ]
+            ]
+          }
+        ],
+        "unstable_exact_path_book_count": 10
+      },
+      {
+        "book_count_with_multiple_cutoffs": 50,
+        "book_rows": [
+          {
+            "book": 10,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 11,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 12,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 13,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 14,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 15,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 16,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 17,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 18,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 19,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 20,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 21,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 22,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 23,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 25,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 26,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 27,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 29,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 31,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 32,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 33,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 36,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 37,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 38,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 40,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 41,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 42,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 43,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 44,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 47,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 48,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 49,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 50,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 52,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 53,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 55,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 57,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 58,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 59,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 60,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 62,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 63,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 64,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 66,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 67,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 68,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 69,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          }
+        ],
+        "cost_mode": "uniform_copy_length_and_source_exception",
+        "max_signature_count_per_book": 2,
+        "raw_positive_book_evaluations": 175,
+        "raw_positive_delta_vs_active": 0,
+        "roundtrip_book_evaluations": 175,
+        "stable_book_delta_vs_active": 10,
+        "stable_exact_path_book_count": 48,
+        "stable_exact_path_fraction": 0.96,
+        "total_parser_bits": 12059.816504198376,
+        "total_parser_bits_delta_vs_active": 67.6056223853102,
+        "total_parser_evaluations": 175,
+        "total_raw_digit_uniform_bits": 93927.51688294017,
+        "total_transition_evaluations": 12400238,
+        "total_unique_book_signatures": 52,
+        "unstable_books": [
+          {
+            "book": 26,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10
+              ],
+              [
+                20
+              ]
+            ]
+          }
+        ],
+        "unstable_exact_path_book_count": 2
+      },
+      {
+        "book_count_with_multiple_cutoffs": 50,
+        "book_rows": [
+          {
+            "book": 10,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 11,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 12,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 13,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 14,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 15,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 16,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 17,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 18,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 19,
+            "cutoff_count": 1,
+            "cutoffs_tested": [
+              10
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 20,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 21,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 22,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 23,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 24,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 25,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 26,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 27,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 28,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 29,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 30,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 31,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 32,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 33,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 34,
+            "cutoff_count": 2,
+            "cutoffs_tested": [
+              10,
+              20
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ]
+            ]
+          },
+          {
+            "book": 35,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 36,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 37,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 38,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 39,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 40,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 41,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 42,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 43,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 44,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 2,
+            "stable_exact_path": false,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          },
+          {
+            "book": 46,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 47,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 48,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 49,
+            "cutoff_count": 3,
+            "cutoffs_tested": [
+              10,
+              20,
+              35
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35
+              ]
+            ]
+          },
+          {
+            "book": 50,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 51,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 52,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 53,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 54,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 55,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 56,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 57,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 58,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 59,
+            "cutoff_count": 4,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50
+              ]
+            ]
+          },
+          {
+            "book": 60,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 61,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 62,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 63,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 64,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 65,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 66,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 67,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 68,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          },
+          {
+            "book": 69,
+            "cutoff_count": 5,
+            "cutoffs_tested": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "signature_count": 1,
+            "stable_exact_path": true,
+            "variant_cutoffs": [
+              [
+                10,
+                20,
+                35,
+                50,
+                60
+              ]
+            ]
+          }
+        ],
+        "cost_mode": "uniform_copy_length_and_full_source",
+        "max_signature_count_per_book": 2,
+        "raw_positive_book_evaluations": 175,
+        "raw_positive_delta_vs_active": 0,
+        "roundtrip_book_evaluations": 175,
+        "stable_book_delta_vs_active": 10,
+        "stable_exact_path_book_count": 48,
+        "stable_exact_path_fraction": 0.96,
+        "total_parser_bits": 12427.26465824425,
+        "total_parser_bits_delta_vs_active": 435.0537764311848,
+        "total_parser_evaluations": 175,
+        "total_raw_digit_uniform_bits": 93927.51688294017,
+        "total_transition_evaluations": 12865156,
+        "total_unique_book_signatures": 52,
+        "unstable_books": [
+          {
+            "book": 35,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                10,
+                20
+              ],
+              [
+                35
+              ]
+            ]
+          },
+          {
+            "book": 45,
+            "signature_count": 2,
+            "variant_cutoffs": [
+              [
+                20,
+                35
+              ],
+              [
+                10
+              ]
+            ]
+          }
+        ],
+        "unstable_exact_path_book_count": 2
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}

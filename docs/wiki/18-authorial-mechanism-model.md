@@ -211,6 +211,15 @@ stabilize learned copy-length and source-exception choices under frozen
 prefixes, with literal-payload pressure mostly confined to the larger
 segmentation-shape changes.
 
+A component-neutralized stability gate tests the natural simplification: replace
+the learned copy-length and source-exception priors with uniform decodable
+costs and rerun the same multi-cutoff parser. Exact path stability improves
+from `38/50` to `48/50`, and all `175/175` suffix evaluations still roundtrip
+and beat raw digit-uniform cost. The tradeoff is explicit: the mode costs
+`+67.605622` parser bits versus active learned scoring and still leaves books
+`26` and `34` unstable. This is therefore a structural simplification candidate
+for the generator explanation, not a compression-bound promotion.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

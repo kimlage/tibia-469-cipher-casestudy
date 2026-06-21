@@ -259,6 +259,9 @@ exogenous.
 - [scripts/81_boundary_instability_cost_decomposition_gate.py](scripts/81_boundary_instability_cost_decomposition_gate.py) - decomposes winner-vs-variant boundary instability costs by coding component.
 - [reports/test_results/81_boundary_instability_cost_decomposition_gate.md](reports/test_results/81_boundary_instability_cost_decomposition_gate.md) - boundary instability cost decomposition result.
 - [reports/test_results/81_boundary_instability_cost_decomposition_gate.json](reports/test_results/81_boundary_instability_cost_decomposition_gate.json) - structured component-delta ledger.
+- [scripts/82_component_neutralized_path_stability_gate.py](scripts/82_component_neutralized_path_stability_gate.py) - reruns multi-cutoff path stability after uniformizing learned copy-length/source-exception costs.
+- [reports/test_results/82_component_neutralized_path_stability_gate.md](reports/test_results/82_component_neutralized_path_stability_gate.md) - component-neutralized path stability result.
+- [reports/test_results/82_component_neutralized_path_stability_gate.json](reports/test_results/82_component_neutralized_path_stability_gate.json) - structured component-neutralization ledger.
 
 ## Boundary
 
@@ -530,6 +533,12 @@ exogenous.
   `4`, and `copy_source_flag` in `1`. The remaining blocker is therefore
   learned copy-length/source-exception selection, with payload concentrated in
   a few segmentation-shape cases.
+- The component-neutralized path-stability gate then tests that diagnosis by
+  replacing learned copy-length and source-exception priors with uniform
+  decodable costs. Exact multi-cutoff path stability improves from `38/50` to
+  `48/50`, with `175/175` roundtrip/raw-positive evaluations, but pays
+  `+67.605622` parser bits and still leaves books `26` and `34` unstable. This
+  is a structural simplification candidate, not a compression-bound promotion.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

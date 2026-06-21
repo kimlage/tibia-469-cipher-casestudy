@@ -688,6 +688,12 @@ variants against their per-cutoff parser winners: `copy_length` is dominant in
 and `copy_source_flag` in `1`. The blocker is now localized to learned
 copy-length/source-exception costs, with payload pressure concentrated in a few
 segmentation-shape cases.
+A component-neutralized stability gate then tests the simplification directly:
+uniform decodable copy-length and source-exception costs improve exact
+multi-cutoff path stability from `38/50` to `48/50` while preserving `175/175`
+roundtrip/raw-positive evaluations. The cost is `+67.605622` parser bits and
+residual instability in books `26` and `34`, so this is a generator-explanation
+candidate, not a compression-bound promotion.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -868,6 +874,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   matches; `18/37` audit-only oracle),
   decomposes remaining boundary instability by component (`copy_length` dominant
   in `30/47`, `copy_source_exception` in `12/47`),
+  tests uniform copy-length/source-exception costs as a structural
+  simplification (`48/50` stable, `+67.605622` parser bits, books `26`/`34`
+  still unstable),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
