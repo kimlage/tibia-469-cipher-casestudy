@@ -869,6 +869,12 @@ suffixes retain large positive gains. This upgrades the result from
 component-only validation to controlled predictive recipe evidence, still
 without changing the bound or making a semantic claim.
 
+The train-set control then checks whether that predictive recipe evidence is
+specific to numeric prefix order. At focused cutoff `50`, the numeric prefix
+beats the random train-set mean, but one random inventory exceeds it
+(`p(random >= observed)=0.1538`). The copy/reference mechanism remains
+predictive; numeric order is not promoted as an authorial generation order.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1142,6 +1148,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
+- [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
 
 ## Boundary
 

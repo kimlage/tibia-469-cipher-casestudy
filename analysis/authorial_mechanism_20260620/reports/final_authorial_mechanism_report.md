@@ -620,5 +620,10 @@ Generated audits in this directory should be treated as the current state:
   books at cutoffs `20/35/50`. The observed suffixes remain far better than all
   control means; controls have negative gain versus raw digits while observed
   gains remain large and positive.
+- `128_prequential_recipe_reparse_trainset_controls`: asks whether the reparse
+  result is numeric-prefix specific. At focused cutoff `50`, the numeric prefix
+  beats the random train-set mean, but one random inventory exceeds it
+  (`p(random >= observed)=0.1538`). This keeps the recipe signal predictive but
+  rejects numeric order as a promoted authorial generation order.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

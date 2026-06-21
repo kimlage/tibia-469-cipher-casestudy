@@ -387,6 +387,9 @@ remaining split-specific analysis rather than a new bound.
 The reparse controls then show this is not generic behavior on same-length
 random or shuffled decimal strings: controls lose against raw digits while real
 suffixes keep large positive gains.
+The train-set control keeps that boundary honest: numeric prefix training beats
+the random train-set mean at cutoff `50`, but does not beat every random
+inventory, so numeric order is not promoted.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

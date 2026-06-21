@@ -585,6 +585,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   per-book-shuffled, and suffix-pool-shuffled controls. Control gains are
   negative while observed gains remain large and positive, so the audit-126
   signal is not generic LZ behavior on arbitrary same-length decimal strings.
+- prequential recipe train-set controls are now covered by
+  [`128_prequential_recipe_reparse_trainset_controls.py`](scripts/128_prequential_recipe_reparse_trainset_controls.py);
+  at focused cutoff `50`, the numeric prefix beats the random train-set mean
+  but not all random inventories (`p(random >= observed)=0.1538`). The reparse
+  signal remains predictive, but numeric order is not promoted as an authorial
+  generation order.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

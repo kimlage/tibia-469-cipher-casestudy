@@ -330,6 +330,9 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 - `scripts/127_prequential_recipe_reparse_controls.py` - controls the
   deterministic suffix reparse against random same-length books and shuffled
   suffix/book digit controls.
+- `scripts/128_prequential_recipe_reparse_trainset_controls.py` - tests
+  whether the deterministic suffix reparse is specific to numeric prefix
+  training or also appears with random same-size training inventories.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
