@@ -358,11 +358,30 @@ It narrows the residual literal-understop class, but it still
 leaves ten mixed drift books and therefore does not promote a
 complete segmentation mechanism.
 
+## Two-Stage Conditional Repair Control
+
+Gate 19 keeps the gate-18 classifier as first stage and tests
+whether one additional observable predicate-action rule can
+close more of the remaining drift.
+
+| Pipeline | Exact books | Boundary |
+|---|---:|---|
+| Active first stage `if_peak_len_le5_then_skip_to_next_peak_ge5` | `50/60` | retained |
+| Best two-stage pipeline `if_peak_len_le5_then_skip_to_next_peak_ge5` | `50/60` | rejected as second-stage gain |
+
+- Exact delta vs active first stage: `0`.
+- Prequential selected matches oracle cells: `3/5`.
+
+A second simple observable rule does not improve the parser.
+The best pipeline is still the single gate-18 classifier, and
+train-selected second-stage repairs overfit in the middle
+prefix splits.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is
-either a second-stage non-oracle classifier for the remaining
-`10/60` drift books after the peak-length repair, or a source-free
+either a richer structured account for the remaining `10/60`
+drift books after the peak-length repair, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -387,3 +406,4 @@ or the stable projection as an oracle.
 - [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)
 - [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)
 - [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)
+- [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)

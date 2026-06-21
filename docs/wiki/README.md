@@ -915,6 +915,10 @@ A restricted conditional classifier then gives a partial non-oracle repair:
 selected in `5/5` prefix/holdout cells. It is not a complete parser because ten
 mixed drift books remain, but it is real segmentation progress rather than a
 compression-only tweak.
+A two-stage follow-up tests whether one more observable repair can build on
+that rule. It cannot: the best pipeline remains the single-stage `50/60`
+parser, and second-stage train selection matches the suffix oracle in only
+`3/5` cells.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

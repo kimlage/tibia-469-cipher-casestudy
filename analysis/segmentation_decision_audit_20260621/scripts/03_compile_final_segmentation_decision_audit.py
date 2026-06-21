@@ -27,6 +27,7 @@ SOURCE_BOUNDARY = TEST_RESULTS / "15_source_boundary_alignment_audit.json"
 DRIFT_REPAIR = TEST_RESULTS / "16_single_drift_repair_oracle_audit.json"
 OBSERVABLE_REPAIR = TEST_RESULTS / "17_observable_repair_policy_audit.json"
 CONDITIONAL_REPAIR = TEST_RESULTS / "18_conditional_repair_classifier_audit.json"
+TWO_STAGE_REPAIR = TEST_RESULTS / "19_two_stage_conditional_repair_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -84,6 +85,9 @@ def main() -> None:
     conditional_repair = (
         load_json(CONDITIONAL_REPAIR) if CONDITIONAL_REPAIR.exists() else None
     )
+    two_stage_repair = (
+        load_json(TWO_STAGE_REPAIR) if TWO_STAGE_REPAIR.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -116,6 +120,8 @@ def main() -> None:
         assert_boundary("observable_repair_policy_audit", observable_repair)
     if conditional_repair is not None:
         assert_boundary("conditional_repair_classifier_audit", conditional_repair)
+    if two_stage_repair is not None:
+        assert_boundary("two_stage_conditional_repair_audit", two_stage_repair)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -151,6 +157,9 @@ def main() -> None:
     )
     conditional_repair_summary = (
         None if conditional_repair is None else conditional_repair["summary"]
+    )
+    two_stage_repair_summary = (
+        None if two_stage_repair is None else two_stage_repair["summary"]
     )
 
     lines = [
@@ -614,13 +623,37 @@ def main() -> None:
                 "",
             ]
         )
+    if two_stage_repair_summary is not None:
+        lines.extend(
+            [
+                "## Two-Stage Conditional Repair Control",
+                "",
+                "Gate 19 keeps the gate-18 classifier as first stage and tests",
+                "whether one additional observable predicate-action rule can",
+                "close more of the remaining drift.",
+                "",
+                "| Pipeline | Exact books | Boundary |",
+                "|---|---:|---|",
+                f"| Active first stage `{two_stage_repair_summary['active_first_stage']}` | `{two_stage_repair_summary['active_exact_books']}/60` | retained |",
+                f"| Best two-stage pipeline `{two_stage_repair_summary['best_pipeline']}` | `{two_stage_repair_summary['best_exact_books']}/60` | rejected as second-stage gain |",
+                "",
+                f"- Exact delta vs active first stage: `{two_stage_repair_summary['exact_delta_vs_active']}`.",
+                f"- Prequential selected matches oracle cells: `{two_stage_repair_summary['prequential_selected_matches_oracle_cells']}/{two_stage_repair_summary['prequential_cells']}`.",
+                "",
+                "A second simple observable rule does not improve the parser.",
+                "The best pipeline is still the single gate-18 classifier, and",
+                "train-selected second-stage repairs overfit in the middle",
+                "prefix splits.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is",
-            "either a second-stage non-oracle classifier for the remaining",
-            "`10/60` drift books after the peak-length repair, or a source-free",
+            "either a richer structured account for the remaining `10/60`",
+            "drift books after the peak-length repair, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -645,6 +678,7 @@ def main() -> None:
             "- [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)",
             "- [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)",
             "- [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)",
+            "- [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)",
             "",
         ]
     )
