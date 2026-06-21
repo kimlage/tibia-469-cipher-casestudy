@@ -712,5 +712,11 @@ Generated audits in this directory should be treated as the current state:
   previous_item)` state is insufficient. The audit records state proxies up to
   `302879952` for cutoff 10 and keeps this as the next recipe-discovery
   implementation boundary.
+- `147_copy_source_state_free_default_audit`: tests whether decoder-computable
+  defaults free of previous-copy source/length can replace the active
+  copy-source default. The best state-free rule, `state_free_back_current_length`,
+  is still `+15.186` bits worse on the full corpus and worse in every prefix
+  frozen split, so the path-dependent source state remains necessary for this
+  model.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

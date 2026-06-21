@@ -444,6 +444,11 @@ blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,
 with a cutoff-10 state proxy of `302879952`, so no active reparse parser is
 promoted yet.
+The copy-source state-free default audit rejects the direct simplification:
+the best decoder-computable default that avoids previous-copy state is
+`state_free_back_current_length`, still `+15.186` bits worse and worse in every
+prefix frozen split. The path-dependent source state remains the active
+recipe-discovery boundary.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

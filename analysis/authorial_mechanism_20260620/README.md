@@ -391,6 +391,10 @@ authorial method: family/bookcase holdouts still have failures.
   recipe-discovery blocker: exact reparse with the current copy-source model
   must carry previous-copy source/length state, producing a large state proxy
   rather than the old `(book_pos, previous_item)` DP state.
+- `scripts/147_copy_source_state_free_default_audit.py` - tests state-free
+  copy-source defaults as a way to remove the previous-copy source/length
+  parser state; the best candidate is still `+15.186` bits worse, so the
+  active path-dependent source default is retained.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

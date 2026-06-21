@@ -981,6 +981,12 @@ plus previous copy length, so exact active reparse must carry
 than the old `(book_pos, previous_item)` state. The largest cutoff-10 state
 proxy is `302879952`, and the max book-level multiplier is `38968.0`; no active
 reparse parser is promoted yet.
+The copy-source state-free default audit then tests whether that state can be
+removed by replacing the active source default with decoder-computable defaults
+based on emitted length, book position, or current copy length. The best
+state-free rule is `state_free_back_current_length`, but it is still `+15.186`
+bits worse on the full corpus and worse in every prefix frozen split, so the
+path-dependent source state remains the current implementation boundary.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1285,6 +1291,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source distance model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md)
 - [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
 - [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
+- [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 
