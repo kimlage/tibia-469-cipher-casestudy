@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Declare diagonal cells as a family and assign E to the observed diagonal-E anchors.",
+    "bits_below_lookup_after_costs": 4.901113169839412,
+    "classification": "REJECTED_CONTROL",
+    "contradictions": "The family-supplied lower bound is ordinary under diagonal-family controls.",
+    "coverage_pairs": "5 diagonal E anchors",
+    "description_bits": "positive only if the diagonal family is supplied; explicit pair costs are negative",
+    "evidence_path": "analysis/row0_origin_parallel_20260621/reports/test_results/159_row0_paid_anchor_reduction_gate.json",
+    "explains_39_93_19_91": "no",
+    "hypothesis": "diagonal_E_pressure",
+    "labels_predicted_holdout": 0,
+    "metric_moved": "5_falsification_strong",
+    "negative_controls": "diagonal-family random-subset p=0.9816"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

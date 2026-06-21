@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Best simple coordinate stump: numpad_le_1 -> E/N with leave-one-out scoring.",
+    "bits_below_lookup_after_costs": 0.0,
+    "classification": "REJECTED_CONTROL",
+    "contradictions": "Best stump accuracy is low and ordinary for the searched family.",
+    "coverage_pairs": "55/55 predictions",
+    "description_bits": "does not beat lookup; rule family searched and controlled",
+    "evidence_path": "analysis/row0_origin_parallel_20260621/reports/test_results/144_row0_priority_layer_mdl.json",
+    "explains_39_93_19_91": "no",
+    "hypothesis": "grid_coordinate_formula_paid",
+    "labels_predicted_holdout": 15,
+    "metric_moved": "5_falsification_strong",
+    "negative_controls": "label-shuffle p=0.1856; digit-permutation p=0.2908"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

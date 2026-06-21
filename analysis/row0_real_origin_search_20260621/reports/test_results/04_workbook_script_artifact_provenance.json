@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Use local workbook/script audit as artifact provenance; distinguish project reconstruction from CipSoft or in-game origin.",
+    "bits_below_lookup_after_costs": 0.0,
+    "classification": "AUDIT_ONLY",
+    "contradictions": "4 workbooks, 4 scripts, and 98 tracked paths trace local project layers but not pre-project/CipSoft origin.",
+    "coverage_pairs": "project artifact surface only",
+    "description_bits": "audit-only; not a generative code",
+    "evidence_path": "analysis/row0_origin_parallel_20260621/reports/test_results/154_row0_deep_provenance_audit.json",
+    "explains_39_93_19_91": "no",
+    "hypothesis": "workbook_script_artifact_provenance",
+    "labels_predicted_holdout": 0,
+    "metric_moved": "none_new_provenance",
+    "negative_controls": "not a label predictor"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

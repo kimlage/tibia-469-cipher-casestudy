@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Quotient unordered pair cells by the fixed 6<->9 digit orbit and test whether orbit structure predicts labels.",
+    "bits_below_lookup_after_costs": 0.0,
+    "classification": "WEAK_CLUE",
+    "contradictions": "Mixed non-singleton orbits remain; the quotient does not assign all labels.",
+    "coverage_pairs": "51/55 primary quotient hits",
+    "description_bits": "quotient/orbit clue only; full label table still needs residual lookup",
+    "evidence_path": "analysis/generator_search_20260618/digit_orbit_robust_control_results.json",
+    "explains_39_93_19_91": "partly touches 39/93 but does not explain the directed absence/conflict",
+    "hypothesis": "six_nine_quotient_orbit_compression",
+    "labels_predicted_holdout": 0,
+    "metric_moved": "none",
+    "negative_controls": "fixed-swap control p=0.0152; weak signal, not full formula"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

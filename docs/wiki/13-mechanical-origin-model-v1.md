@@ -12,6 +12,7 @@ source_refs:
   - analysis/ml_formula_probe_20260618
   - analysis/prequential_and_row0_origin_audit_20260621
   - analysis/row0_origin_parallel_20260621
+  - analysis/row0_real_origin_search_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -271,6 +272,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Recent formula row0 compatibility audit | partial-boundary book-formula improvements lower the downstream bound to `8154.676268`, but no gate predicts row0 labels under holdout, beats row0 lookup after costs, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / book formula only |
+| Row0 real-origin search | row0-only scoreboard retests paid anchors, external order, workbook/script provenance, manual worksheet shape, ordered-surface exceptions, 6/9 quotient, diagonal/E pressure, grid coordinates, inventory/frequency, and recent book-formula dependency; no origin formula is promoted, and the only moved axis is strong falsification of important hypotheses | negative row0-origin search / no constructive improvement |
 | Final formula dependency refresh | the `8154.676268` formula still has `609` retained operation dependency fields; target-max coverage stays `242/261`, declared-source+decoder-max `60/261`, unique-source+decoder-max `28/261`, and previous-end+decoder-max `1/261` | source/length parser still required |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
@@ -410,6 +412,7 @@ Primary sources:
 [row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [row0_paid_anchor_reduction_gate.md](../../analysis/row0_origin_parallel_20260621/reports/test_results/159_row0_paid_anchor_reduction_gate.md),
 [recent_formula_row0_compatibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/70_recent_formula_row0_compatibility_audit.md),
+[row0_real_origin_search_report.md](../../analysis/row0_real_origin_search_20260621/reports/row0_real_origin_search_report.md),
 [final_formula_dependency_refresh_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
@@ -501,12 +504,17 @@ The following remain documented but not promoted:
   tape-feature, low-rank, render, eye/blink, and provenance tests are now
   indexed together as `row0_origin_frontier_saturated_current_corpus`; this is
   a frontier statement, not a solved-origin claim.
+- Row0 real-origin search: the paid-anchor, diagonal/E, grid-coordinate, and
+  inventory/frequency origin families are rejected under row0-only controls;
+  the external-order source is blocked, and workbook/script provenance remains
+  audit-only rather than CipSoft/authorial evidence.
 
 Primary sources:
 [matrix_generator_exhaustive_report.md](../../analysis/generator_search_20260618/matrix_generator_exhaustive_report.md),
 [generator_model_final_report.md](../../analysis/generator_search_20260618/generator_model_final_report.md),
 [hierarchical_provenance_pair_label_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/09_hierarchical_provenance_pair_label_audit.md),
 [row0_origin_frontier_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md),
+[row0_real_origin_search_report.md](../../analysis/row0_real_origin_search_20260621/reports/row0_real_origin_search_report.md),
 [accepted_rejected_hypotheses.json](../../analysis/generator_search_20260618/accepted_rejected_hypotheses.json),
 [k5_eye_pair_model_report.md](../../analysis/eye_model_20260619/k5_eye_pair_model_report.md),
 [eye_state_5x2_model_report.md](../../analysis/eye_model_20260619/eye_state_5x2_model_report.md).

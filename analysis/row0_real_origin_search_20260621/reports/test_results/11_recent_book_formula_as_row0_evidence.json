@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Ask whether the current 8154.676268-bit book formula predicts the row0 table rather than merely using it.",
+    "bits_below_lookup_after_costs": 0.0,
+    "classification": "AUDIT_ONLY",
+    "contradictions": "The formula improves downstream book generation while assuming row0 as substrate.",
+    "coverage_pairs": "0/55 direct row0 predictions",
+    "description_bits": "excluded from row0 scoring",
+    "evidence_path": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/70_recent_formula_row0_compatibility_audit.json",
+    "explains_39_93_19_91": "no",
+    "hypothesis": "recent_book_formula_as_row0_evidence",
+    "labels_predicted_holdout": 0,
+    "metric_moved": "none",
+    "negative_controls": "compatibility gate has predicts_row0_labels_under_holdout=false and beats_row0_lookup_after_cost=false"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

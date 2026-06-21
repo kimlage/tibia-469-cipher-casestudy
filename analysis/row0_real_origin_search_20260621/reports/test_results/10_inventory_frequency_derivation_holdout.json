@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Use fixed/frequency-driven pair placement plus symbol inventory, then test the same rule on held-out books.",
+    "bits_below_lookup_after_costs": 0.0,
+    "classification": "REJECTED_CONTROL",
+    "contradictions": "Train-selected order does not generalize; fixed orders top out at 8/55 observed hits.",
+    "coverage_pairs": "6/55 holdout hits",
+    "description_bits": "inventory/order rule only; no paid row0 formula",
+    "evidence_path": "analysis/row0_origin_parallel_20260621/reports/test_results/146_row0_fill_order_inventory_search.json",
+    "explains_39_93_19_91": "no",
+    "hypothesis": "inventory_frequency_derivation_holdout",
+    "labels_predicted_holdout": 6,
+    "metric_moved": "5_falsification_strong",
+    "negative_controls": "holdout control p=0.6614; fixed-order random control p=0.3337"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}

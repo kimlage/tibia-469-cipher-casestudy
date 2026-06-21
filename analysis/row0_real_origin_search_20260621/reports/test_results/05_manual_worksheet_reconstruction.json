@@ -1,0 +1,19 @@
+{
+  "result": {
+    "algorithm": "Treat row0 as a worksheet: freeze rare/surface/diagonal anchors, encode all remaining pair labels by lookup.",
+    "bits_below_lookup_after_costs": -11.851749041416053,
+    "classification": "WEAK_CLUE",
+    "contradictions": "A worksheet model is honest as provenance shape, but the chosen cells remain exogenous.",
+    "coverage_pairs": "13/55 anchors before residual lookup",
+    "description_bits": "13 anchors reduce residual lookup from 160.521 to 106.343 before paying anchor costs",
+    "evidence_path": "analysis/row0_origin_parallel_20260621/reports/test_results/156_row0_partial_worksheet_model.json",
+    "explains_39_93_19_91": "captures 39/19 as declared anchors, not as a rule",
+    "hypothesis": "manual_worksheet_reconstruction",
+    "labels_predicted_holdout": 0,
+    "metric_moved": "none",
+    "negative_controls": "paid-anchor gate rejects the explicit pair+label version; rare singletons only break even"
+  },
+  "row0_lookup_bits": 160.52070273483628,
+  "schema": "row0_real_origin_hypothesis_result.v1",
+  "verdict": "row0_real_origin_search_negative_under_current_evidence"
+}
