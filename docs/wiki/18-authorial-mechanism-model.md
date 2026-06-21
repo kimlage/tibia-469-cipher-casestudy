@@ -335,6 +335,13 @@ matches the per-case policy minimum and has a positive lower-bound balance after
 charging a simple book+policy selector floor, but it is still a book-specific
 switch over a source-dependent parser. It is therefore audit-only compression
 bookkeeping, not a generation explanation.
+An exact source-free skeleton invariance audit then extracts the part that does
+survive. Removing source addresses and source-default flags leaves operation
+type, target start, length, and forced flag invariant across `175/175`
+policy-cutoff cases and `60/60` books. The canonical exposed-source skeleton has
+`261` ops, `208` copy items, `53` literal runs, `266` literal digits, and `9301`
+copied digits. This is real segmentation evidence, but still only an atlas:
+literal payload and copy-source choices remain external to the decoder.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1977,6 +1984,7 @@ book generation, not row0 pair-cell placement.
 - [Full source policy invariance boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.md)
 - [Full source canonical policy boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.md)
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
+- [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

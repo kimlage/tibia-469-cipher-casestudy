@@ -307,6 +307,9 @@ exogenous.
 - [scripts/97_source_policy_selector_boundary.py](scripts/97_source_policy_selector_boundary.py) - tests whether a minimal book-specific source-policy selector should be promoted.
 - [reports/test_results/97_source_policy_selector_boundary.md](reports/test_results/97_source_policy_selector_boundary.md) - source-policy selector boundary result.
 - [reports/test_results/97_source_policy_selector_boundary.json](reports/test_results/97_source_policy_selector_boundary.json) - structured source-policy selector ledger.
+- [scripts/98_full_source_exact_skeleton_invariance.py](scripts/98_full_source_exact_skeleton_invariance.py) - checks exact source-free operation skeleton invariance across policies and cutoffs.
+- [reports/test_results/98_full_source_exact_skeleton_invariance.md](reports/test_results/98_full_source_exact_skeleton_invariance.md) - exact source-free skeleton invariance result.
+- [reports/test_results/98_full_source_exact_skeleton_invariance.json](reports/test_results/98_full_source_exact_skeleton_invariance.json) - structured exact skeleton invariance ledger.
 
 ## Boundary
 
@@ -334,6 +337,11 @@ exogenous.
   book `63`, `earliest_source` otherwise) matches the per-case policy minimum
   and has a positive lower-bound bit balance after a simple selector floor, but
   it is book-specific and leaves source fields materialized, so it is audit-only.
+- Exact source-free skeleton boundary: after removing source addresses and
+  source-default flags, operation type/target/length/forced skeletons are
+  invariant in `175/175` policy-cutoff cases and `60/60` books. This is a real
+  segmentation atlas (`261` ops, `208` copies, `53` literal runs), but source
+  fields and literal payload remain outside the decoder.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

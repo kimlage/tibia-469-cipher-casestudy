@@ -773,6 +773,11 @@ A source-policy selector boundary then tests that selector explicitly:
 `latest_source` only on book `63` and `earliest_source` otherwise matches the
 per-case policy minimum and has positive lower-bound bit balance, but remains a
 book-specific switch over source-dependent paths, so it is audit-only.
+An exact source-free skeleton invariance audit then keeps the real structural
+gain: after removing source addresses, the operation skeleton is invariant in
+`175/175` policy-cutoff cases and `60/60` books. The skeleton has `261` ops,
+`208` copies, `53` literal runs, and `266` literal digits, but remains an atlas
+because literal payload and copy-source choices are still external.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -988,6 +993,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects a static canonical source tie policy as cost-unsafe,
   rejects the book-`63` source-policy selector as audit-only despite positive
   lower-bound bit balance,
+  extracts an exact source-free operation skeleton invariant across all tested
+  policies/cutoffs while retaining source and payload dependencies,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
