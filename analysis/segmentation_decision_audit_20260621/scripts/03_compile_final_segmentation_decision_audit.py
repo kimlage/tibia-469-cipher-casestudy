@@ -46,6 +46,7 @@ STRUCTURAL_CONSENSUS = TEST_RESULTS / "34_structural_signal_consensus_audit.json
 STRUCTURAL_DECOMPOSITION = TEST_RESULTS / "35_structural_vote_residual_decomposition.json"
 BRANCH_CHOICE_CLOSURE = TEST_RESULTS / "36_branch_choice_frontier_closure_audit.json"
 PATH_TEMPLATE_REUSE = TEST_RESULTS / "37_path_template_reuse_audit.json"
+TRAJECTORY_NEIGHBOR = TEST_RESULTS / "38_trajectory_neighbor_parser_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -154,6 +155,11 @@ def main() -> None:
         if PATH_TEMPLATE_REUSE.exists()
         else None
     )
+    trajectory_neighbor = (
+        load_json(TRAJECTORY_NEIGHBOR)
+        if TRAJECTORY_NEIGHBOR.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -226,6 +232,8 @@ def main() -> None:
         assert_boundary("branch_choice_frontier_closure_audit", branch_choice_closure)
     if path_template_reuse is not None:
         assert_boundary("path_template_reuse_audit", path_template_reuse)
+    if trajectory_neighbor is not None:
+        assert_boundary("trajectory_neighbor_parser_audit", trajectory_neighbor)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -312,6 +320,9 @@ def main() -> None:
     )
     path_template_reuse_summary = (
         None if path_template_reuse is None else path_template_reuse["summary"]
+    )
+    trajectory_neighbor_summary = (
+        None if trajectory_neighbor is None else trajectory_neighbor["summary"]
     )
 
     lines = [
@@ -1297,6 +1308,33 @@ def main() -> None:
                 "",
             ]
         )
+    if trajectory_neighbor_summary is not None:
+        lines.extend(
+            [
+                "## Trajectory Neighbor Parser Control",
+                "",
+                "Gate 38 tests a richer path/state shortcut: choose the residual",
+                "first-drift operation by nearest cumulative parser-state",
+                "trajectory from books already parsed exactly. It tests",
+                "trajectory-only, context-only, and combined vectors with",
+                "`k=1/3/5`.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Exact parser books | `{trajectory_neighbor_summary['exact_book_count']}` |",
+                f"| Residual parser books | `{trajectory_neighbor_summary['residual_book_count']}` |",
+                f"| Best policy | `{trajectory_neighbor_summary['best_family']}`, k=`{trajectory_neighbor_summary['best_k']}` |",
+                f"| Best residual hits | `{trajectory_neighbor_summary['best_hits']}/{trajectory_neighbor_summary['best_query_count']}` |",
+                f"| Prequential residual cells fully hit | `{trajectory_neighbor_summary['prequential_cells_all_hit']}/{trajectory_neighbor_summary['prequential_cells_with_residuals']}` |",
+                f"| Shuffle p_ge_observed | `{trajectory_neighbor_summary['shuffle_p_ge_observed']:.4f}` |",
+                "",
+                "Every tested trajectory-neighbor policy scores `0/10` on the",
+                "residual first-drift choices. The nearest-neighbor shortcut is",
+                "therefore rejected as a replacement for the retained segmentation",
+                "decisions.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1317,8 +1355,9 @@ def main() -> None:
             "collapses back to the active baseline. Vote decomposition shows no",
             "clean residual threshold hidden inside those signals. Gate 36 closes",
             "that branch-choice weak-signal frontier as audit-only. Gate 37 then",
-            "rejects simple exact-length path-template reuse. The remaining",
-            "blocker is a richer latent path/state",
+            "rejects simple exact-length path-template reuse. Gate 38 rejects",
+            "nearest trajectory-state reuse. The remaining blocker is a richer",
+            "latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1364,6 +1403,7 @@ def main() -> None:
             "- [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)",
             "- [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)",
             "- [Path template reuse audit](test_results/37_path_template_reuse_audit.md)",
+            "- [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)",
             "",
         ]
     )

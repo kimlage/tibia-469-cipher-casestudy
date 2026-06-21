@@ -782,6 +782,28 @@ multi-op path-template reuse explanation and leaves the blocker
 at a richer latent path/state mechanism or source-free target
 digit account.
 
+## Trajectory Neighbor Parser Control
+
+Gate 38 tests a richer path/state shortcut: choose the residual
+first-drift operation by nearest cumulative parser-state
+trajectory from books already parsed exactly. It tests
+trajectory-only, context-only, and combined vectors with
+`k=1/3/5`.
+
+| Diagnostic | Value |
+|---|---:|
+| Exact parser books | `50` |
+| Residual parser books | `10` |
+| Best policy | `trajectory`, k=`1` |
+| Best residual hits | `0/10` |
+| Prequential residual cells fully hit | `0/4` |
+| Shuffle p_ge_observed | `1.0000` |
+
+Every tested trajectory-neighbor policy scores `0/10` on the
+residual first-drift choices. The nearest-neighbor shortcut is
+therefore rejected as a replacement for the retained segmentation
+decisions.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -800,8 +822,9 @@ is also rejected, and consensus over the weak structural signals
 collapses back to the active baseline. Vote decomposition shows no
 clean residual threshold hidden inside those signals. Gate 36 closes
 that branch-choice weak-signal frontier as audit-only. Gate 37 then
-rejects simple exact-length path-template reuse. The remaining
-blocker is a richer latent path/state
+rejects simple exact-length path-template reuse. Gate 38 rejects
+nearest trajectory-state reuse. The remaining blocker is a richer
+latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -847,3 +870,4 @@ or the stable projection as an oracle.
 - [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)
 - [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)
 - [Path template reuse audit](test_results/37_path_template_reuse_audit.md)
+- [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)

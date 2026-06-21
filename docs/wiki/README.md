@@ -1218,6 +1218,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   the next blocker,
   rejects exact-length path-template reuse (`0/10` residual first-drift
   corrections explained),
+  rejects nearest parser-trajectory reuse as well (`0/10` residual
+  first-drift corrections explained),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

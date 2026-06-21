@@ -660,6 +660,12 @@ state. The library explains `0/10` residual first-drift corrections
 deterministically, so simple reuse of a seen multi-op path shape is rejected.
 This leaves the blocker at richer latent path/state, not another local
 branch-choice feature.
+A trajectory-neighbor parser audit then tests that richer shortcut directly:
+nearest cumulative parser-state trajectories over trajectory-only, context-only,
+and combined vectors, with `k=1/3/5`. Every tested policy explains `0/10`
+residual first-drift corrections, while shuffled labels average `0.190` hits.
+Nearest trajectory reuse is therefore rejected as the missing segmentation
+mechanism.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2360,6 +2366,7 @@ book generation, not row0 pair-cell placement.
 - [Structural vote residual decomposition](../../analysis/segmentation_decision_audit_20260621/reports/test_results/35_structural_vote_residual_decomposition.md)
 - [Branch choice frontier closure audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.md)
 - [Path template reuse audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/37_path_template_reuse_audit.md)
+- [Trajectory neighbor parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/38_trajectory_neighbor_parser_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
