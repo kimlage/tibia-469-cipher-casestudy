@@ -680,19 +680,23 @@ Generated audits in this directory should be treated as the current state:
   `5/261`, and uniform random candidate choice would expect `169.473` hits
   with `log2 P(all earliest)=-236.596`.
 - `141_default_exception_prequential_validation`: validates audits 136/137
-  under holdout. The promoted default-exception ledgers are online-predictive
-  on all prefix splits (`min=43.582` bits versus legal uniform), but frozen
-  prefix-10 scoring loses `-39.773` bits because copy-source prediction is
-  sparse, and family splits include failures. No frozen generation-method
-  promotion follows.
+  under holdout. After the train-count freezing fix, the promoted
+  default-exception ledgers are online- and frozen-predictive on all prefix
+  splits (`min frozen aggregate=50.303` bits versus legal uniform). Family
+  splits still include failures, so this remains partial generation evidence
+  rather than a final authorial method.
 - `142_default_exception_component_profile`: separates the ledgers after that
-  validation. The active `compression_bound` remains `8177.317` bits, while
-  the frozen-prefix generation-explanation profile is `8206.178` bits:
-  copy-length default/exception is retained for frozen explanation, but
-  copy-source default/exception is compression-bound-only.
+  validation. The active `compression_bound` remains `8177.317` bits, and the
+  prefix-frozen generation profile for this default/exception layer is also
+  `8177.317` bits. The claim remains partial because family/bookcase holdouts
+  still have nonpositive component splits.
 - `143_current_literal_payload_profile_audit`: retests the older
   literal-payload order-1 profile on the current recipe. It is not retained:
   order-1 is `+95.968` bits on the full corpus and `+28.609` bits worse in
   aggregate frozen prefix tests, despite winning cutoffs `20/35/50`.
+- `144_copy_source_distance_model_audit`: tests the decodable alternative of
+  encoding copy source as backward distance. It is rejected: the distance
+  default/exception replacement is `+25.551` bits worse than the active
+  absolute-source default/exception model.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

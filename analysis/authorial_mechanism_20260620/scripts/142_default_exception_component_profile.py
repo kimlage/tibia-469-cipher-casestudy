@@ -65,8 +65,7 @@ def make_result() -> dict[str, Any]:
     length_formula = load_json(COPY_LENGTH_FORMULA)
     source_formula = load_json(COPY_SOURCE_FORMULA)
     compression_bound_bits = float(source_formula["mdl_estimate_rough"][COPY_SOURCE_TOTAL_KEY])
-    frozen_prefix_profile_bits = float(length_formula["mdl_estimate_rough"][COPY_LENGTH_TOTAL_KEY])
-    source_default_full_corpus_gain = frozen_prefix_profile_bits - compression_bound_bits
+    copy_length_only_bits = float(length_formula["mdl_estimate_rough"][COPY_LENGTH_TOTAL_KEY])
 
     prefix_summary = section_component_summary(audit["prefix_future_suffix"]["rows"])
     block_summary = section_component_summary(audit["contiguous_block_holdouts"]["rows"])
@@ -78,10 +77,34 @@ def make_result() -> dict[str, Any]:
     copy_source_prefix_frozen_ok = (
         prefix_summary["copy_source"]["frozen"]["nonpositive_count"] == 0
     )
-    classification = (
-        "copy_length_default_exception_frozen_profile_source_default_compression_only"
-        if copy_length_prefix_frozen_ok and not copy_source_prefix_frozen_ok
-        else "default_exception_component_profile_mixed"
+    family_any_failures = any(
+        family_summary[component][mode]["nonpositive_count"] > 0
+        for component in ("copy_length", "copy_source")
+        for mode in ("online", "frozen")
+    )
+    prefix_frozen_profile_bits = (
+        compression_bound_bits
+        if copy_length_prefix_frozen_ok and copy_source_prefix_frozen_ok
+        else copy_length_only_bits
+    )
+    if copy_length_prefix_frozen_ok and copy_source_prefix_frozen_ok and family_any_failures:
+        classification = "default_exception_components_prefix_frozen_partial_family_holdout"
+    elif copy_length_prefix_frozen_ok and copy_source_prefix_frozen_ok:
+        classification = "default_exception_components_prefix_frozen_profile"
+    elif copy_length_prefix_frozen_ok and not copy_source_prefix_frozen_ok:
+        classification = "copy_length_default_exception_frozen_profile_source_default_compression_only"
+    else:
+        classification = "default_exception_component_profile_mixed"
+
+    source_default_full_corpus_gain = copy_length_only_bits - compression_bound_bits
+    copy_source_status = (
+        "retained_for_prefix_frozen_generation_profile_partial_under_family_holdout"
+        if copy_source_prefix_frozen_ok and family_any_failures
+        else (
+            "retained_for_frozen_prefix_generation_profile"
+            if copy_source_prefix_frozen_ok
+            else "compression_bound_only_not_frozen_generation_profile"
+        )
     )
 
     return {
@@ -98,11 +121,13 @@ def make_result() -> dict[str, Any]:
         },
         "bit_ledgers": {
             "compression_bound_with_copy_source_default_bits": compression_bound_bits,
-            "frozen_prefix_generation_profile_bits": frozen_prefix_profile_bits,
-            "copy_source_default_full_corpus_gain_bits": source_default_full_corpus_gain,
+            "copy_length_only_default_exception_bits": copy_length_only_bits,
+            "prefix_frozen_generation_profile_bits": prefix_frozen_profile_bits,
+            "copy_source_default_gain_vs_copy_length_only_bits": source_default_full_corpus_gain,
             "interpretation": (
-                "Keep the copy-source default/exception ledger in compression_bound, "
-                "but do not count it as frozen-prefix generation explanation."
+                "Count the copy-source default/exception ledger in the prefix-frozen "
+                "profile after the train-count fix, but keep the generation claim "
+                "partial because family holdouts still have failures."
             ),
         },
         "component_summaries": {
@@ -112,17 +137,14 @@ def make_result() -> dict[str, Any]:
         },
         "decision": {
             "compression_bound_bits": compression_bound_bits,
-            "generation_explanation_profile_bits": frozen_prefix_profile_bits,
+            "prefix_frozen_generation_profile_bits": prefix_frozen_profile_bits,
+            "family_holdout_partial": family_any_failures,
             "copy_length_default_exception_status": (
                 "retained_for_frozen_prefix_generation_profile"
                 if copy_length_prefix_frozen_ok
                 else "partial_only"
             ),
-            "copy_source_default_exception_status": (
-                "compression_bound_only_not_frozen_generation_profile"
-                if not copy_source_prefix_frozen_ok
-                else "retained_for_frozen_prefix_generation_profile"
-            ),
+            "copy_source_default_exception_status": copy_source_status,
             "compression_bound_changed": False,
             "row0_origin_changed": False,
             "semantic_delta": "NONE",
@@ -141,16 +163,17 @@ def render_markdown(result: dict[str, Any]) -> str:
         "",
         "## Purpose",
         "",
-        "Audit 141 showed that the promoted default/exception ledgers are",
-        "online-predictive but frozen-unstable. This profile separates the",
-        "compression bound from the frozen-prefix generation explanation by",
-        "component.",
+        "Audit 141 tests whether the promoted default/exception ledgers predict",
+        "held-out books after learning counts on train books. This profile",
+        "separates the compression bound, prefix-frozen evidence, and remaining",
+        "family-holdout limits by component.",
         "",
         "## Bit Ledgers",
         "",
         f"- Compression bound with copy-source default: `{bits['compression_bound_with_copy_source_default_bits']:.3f}` bits",
-        f"- Frozen-prefix generation profile: `{bits['frozen_prefix_generation_profile_bits']:.3f}` bits",
-        f"- Copy-source default full-corpus gain retained only in compression bound: `{bits['copy_source_default_full_corpus_gain_bits']:.3f}` bits",
+        f"- Copy-length-only default/exception bits: `{bits['copy_length_only_default_exception_bits']:.3f}` bits",
+        f"- Prefix-frozen generation profile: `{bits['prefix_frozen_generation_profile_bits']:.3f}` bits",
+        f"- Copy-source default gain vs copy-length-only profile: `{bits['copy_source_default_gain_vs_copy_length_only_bits']:.3f}` bits",
         "",
         "## Prefix Component Summary",
         "",
@@ -171,9 +194,9 @@ def render_markdown(result: dict[str, Any]) -> str:
             "## Decision",
             "",
             "- Keep `8177.317` bits as `compression_bound`.",
-            "- Use `8206.178` bits as the frozen-prefix generation-explanation profile for the default/exception layer.",
-            "- Retain copy-length default/exception as frozen-prefix explanatory evidence.",
-            "- Treat copy-source default/exception as compression-bound-only until a train-frozen source model beats legal uniform.",
+            "- Use `8177.317` bits as the prefix-frozen generation profile for the default/exception layer.",
+            "- Retain copy-length and copy-source default/exception as prefix-frozen explanatory evidence.",
+            "- Keep the generation claim partial because family/bookcase holdouts still have nonpositive component splits.",
             "- `row0` and semantics are unchanged.",
         ]
     )

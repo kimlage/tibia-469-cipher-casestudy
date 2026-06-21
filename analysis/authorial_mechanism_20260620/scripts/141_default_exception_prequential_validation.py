@@ -100,19 +100,19 @@ def split_rows(rows: list[dict[str, Any]], books: set[int]) -> list[dict[str, An
 
 def copy_length_counts(rows: list[dict[str, Any]], *, min_len: int) -> dict[str, Any]:
     counts = {"flag": {}, "exception": {}}
-    score_copy_length_default_exception(
+    scored = score_copy_length_default_exception(
         rows,
         min_len=min_len,
         counts=counts,
         update=True,
     )
-    return counts
+    return scored["counts"]
 
 
 def source_counts(rows: list[dict[str, Any]]) -> dict[str, Any]:
     counts = {"flag": {True: 0.0, False: 0.0}, "exception": {}}
-    score_source_default_exception(rows, counts=counts, update=True)
-    return counts
+    scored = score_source_default_exception(rows, counts=counts, update=True)
+    return scored["counts"]
 
 
 def score_copy_length_default_exception(
@@ -471,6 +471,10 @@ def make_result() -> dict[str, Any]:
                 "copy_source previous-source-plus-length default plus adaptive exception source",
             ],
             "baseline": "uniform legal copy length and uniform legal source address per event",
+            "train_count_freezing": (
+                "Frozen rows use the returned adaptive counts learned on train "
+                "books, then score test books without updating those counts."
+            ),
             "declaration_bits_excluded_from_holdout": (
                 "Holdout rows test stream prediction only; declaration charges are "
                 "fixed global model costs and are not relearned per split."
@@ -512,6 +516,8 @@ def render_markdown(result: dict[str, Any]) -> str:
         "default/exception ledgers. This audit asks whether those components",
         "predict held-out books with frozen train counts, or whether the gains",
         "are only full-corpus compression. It does not search new parameters.",
+        "Frozen mode uses counts learned on train books and scores test books",
+        "without updating those counts.",
         "",
         "## Prefix Future-Suffix Splits",
         "",

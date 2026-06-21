@@ -16,7 +16,8 @@ report into bounded mechanical hypotheses and run additional generation-method
 tests. The original tape baseline is now historical; the current strongest
 bound is the deterministic online reparse formula with decodable copy-length
 and copy-source default/exception ledgers at roughly `8177.3` bits. Treat this
-as `compression_bound`, not as a final authorial method.
+as `compression_bound` and prefix-frozen partial evidence, not as a final
+authorial method: family/bookcase holdouts still have failures.
 
 ## Gates
 
@@ -371,12 +372,16 @@ as `compression_bound`, not as a final authorial method.
   while random candidate choice would expect only `169.473` hits.
 - `scripts/141_default_exception_prequential_validation.py` - tests the
   promoted copy-length/source default-exception ledgers under prefix, block,
-  and family holdout; they are online-predictive but frozen/source-unstable.
-- `scripts/142_default_exception_component_profile.py` - separates
-  `compression_bound` (`8177.317` bits) from the frozen-prefix generation
-  profile (`8206.178` bits) after audit 141.
+  and family holdout; after the train-count fix, prefix frozen gains are
+  positive, but family/bookcase holdouts still include failures.
+- `scripts/142_default_exception_component_profile.py` - records `8177.317`
+  bits as both `compression_bound` and prefix-frozen generation profile for
+  this layer, while keeping the generation claim partial under family holdout.
 - `scripts/143_current_literal_payload_profile_audit.py` - retests the old
   literal-payload order-1 profile on the current recipe and retains order-2.
+- `scripts/144_copy_source_distance_model_audit.py` - tests backward-distance
+  copy-source coding and rejects it; absolute source default/exception remains
+  better by `25.551` bits.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

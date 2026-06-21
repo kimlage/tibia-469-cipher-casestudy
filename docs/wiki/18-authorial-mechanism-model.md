@@ -950,15 +950,17 @@ from `3031.700` to `3002.838` bits and promotes the mechanical bound to
 `8177.317` bits. Copy source is remodeled, not eliminated.
 The default/exception prequential validation audit then tests those two
 promotions under holdout. They retain positive online gains on every prefix
-future-suffix split (`min=43.582` bits), but frozen prefix-10 scoring loses
-`-39.773` bits versus legal uniform because copy-source prediction is sparse.
-Family holdouts also include nonpositive failures, so this remains
-online-predictive component evidence rather than a frozen generation method.
-A component-profile compile then separates the ledgers: `8177.317` bits remains
-the active `compression_bound`, while the frozen-prefix generation-explanation
-profile is `8206.178` bits. Copy-length default/exception is retained for the
-frozen explanation; copy-source default/exception is compression-bound-only
-until a train-frozen source model beats legal uniform.
+future-suffix split and, after fixing train-count freezing, positive frozen
+gains on every prefix split (`min frozen aggregate=50.303` bits). Family
+holdouts still include nonpositive failures, so this remains prefix-frozen
+partial component evidence rather than a final generation method. A
+component-profile compile then records `8177.317` bits as both the active
+`compression_bound` and the prefix-frozen generation profile for this
+default/exception layer. The generation claim remains partial because
+family/bookcase holdouts still fail.
+The copy-source distance audit then tests a decodable backward-distance source
+encoding. It is rejected: the distance default/exception replacement is
+`+25.551` bits worse than the active absolute-source default/exception model.
 The current literal-payload profile audit then retests an older simplification
 claim on the updated recipe. Literal payload order-1 no longer qualifies for
 the current profile: it is `+95.968` bits on the full corpus and `+28.609`
@@ -1265,6 +1267,7 @@ book generation, not row0 pair-cell placement.
 - [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)
 - [Default/exception component profile](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md)
 - [Current literal payload profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md)
+- [Copy source distance model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

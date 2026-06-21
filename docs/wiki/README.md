@@ -423,12 +423,15 @@ decodable previous-source-plus-length default plus global adaptive exceptions,
 lowering the mechanical bound to `8177.317` bits while leaving row0 and
 semantics unchanged.
 The default/exception prequential validation audit keeps that boundary honest:
-prefix online gains stay positive, but frozen prefix-10 loses `-39.773` bits
-and family holdouts include failures, so the default/exception ledgers are not
-promoted as a frozen generation method.
-A component-profile compile now records the split explicitly: `8177.317` bits
-is the `compression_bound`, while `8206.178` bits is the frozen-prefix
-generation-explanation profile for this layer.
+after the train-count freezing fix, prefix online and frozen gains stay
+positive (`min frozen aggregate=50.303` bits), but family holdouts include
+failures. A component-profile compile now records the split explicitly:
+`8177.317` bits is both the `compression_bound` and prefix-frozen generation
+profile for this layer, while the generation claim remains partial under
+family/bookcase holdout.
+The copy-source distance audit then rejects a decodable backward-distance
+source model: replacing the active absolute-source default/exception model
+would cost `+25.551` bits.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

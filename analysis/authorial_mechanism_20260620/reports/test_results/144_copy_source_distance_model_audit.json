@@ -1,0 +1,807 @@
+{
+  "case_reopened": false,
+  "classification": "copy_source_backward_distance_rejected_absolute_source_retained",
+  "decision": {
+    "active_copy_source_model_retained": true,
+    "backward_distance_promoted": false,
+    "compression_bound_changed": false,
+    "distance_replacement_total_worse_than_active_bits": 25.551406147975285,
+    "distance_stream_worse_than_active_default_exception_bits": 25.55140614797665,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "full_corpus": {
+    "distance_vs_active": {
+      "active_absolute_default_exception_stream_bits": 2990.838060159001,
+      "distance_adaptive_stream_bits": 3034.065820853798,
+      "distance_copy_address_delta_vs_active_bits": 25.55140614797665,
+      "distance_default_exception_replacement_total_bits": 8202.868059270899,
+      "distance_default_exception_stream_bits": 3016.3894663069777
+    },
+    "models": {
+      "absolute_source": {
+        "adaptive_distinct_values": 233,
+        "adaptive_gain_vs_uniform_bits": 19.38891244897104,
+        "adaptive_stream_bits": 3012.3109333516345,
+        "default_count": 5,
+        "default_exception_copy_address_bits_with_declaration": 3002.838060159001,
+        "default_exception_exception_bits": 2949.6275938511703,
+        "default_exception_flag_bits": 41.21046630783095,
+        "default_exception_gain_vs_uniform_bits": 40.861785641604456,
+        "default_exception_stream_bits": 2990.838060159001,
+        "distinct_exception_values": 229,
+        "exception_count": 256,
+        "replacement_total_bits": 8177.3166531229235,
+        "uniform_legal_bits": 3031.6998458006055
+      },
+      "backward_distance": {
+        "adaptive_distinct_values": 252,
+        "adaptive_gain_vs_uniform_bits": -2.3659750531924146,
+        "adaptive_stream_bits": 3034.065820853798,
+        "default_count": 5,
+        "default_exception_copy_address_bits_with_declaration": 3028.3894663069777,
+        "default_exception_exception_bits": 2975.178999999147,
+        "default_exception_flag_bits": 41.21046630783095,
+        "default_exception_gain_vs_uniform_bits": 15.310379493627806,
+        "default_exception_stream_bits": 3016.3894663069777,
+        "distinct_exception_values": 252,
+        "exception_count": 256,
+        "replacement_total_bits": 8202.868059270899,
+        "uniform_legal_bits": 3031.6998458006055
+      }
+    },
+    "uniform_legal_bits": 3031.6998458006055
+  },
+  "plaintext_claim": false,
+  "prefix_future_suffix": {
+    "rows": [
+      {
+        "event_counts": {
+          "test": 204,
+          "train": 57
+        },
+        "label": "prefix_10_future_suffix",
+        "models": {
+          "absolute_source": {
+            "adaptive": {
+              "test_frozen_bits": 2498.647261216771,
+              "test_frozen_gain_vs_uniform_bits": 4.163553450731797,
+              "test_online_bits": 2486.2888059265474,
+              "test_online_gain_vs_uniform_bits": 16.522008740955243,
+              "train_bits": 526.0221274250861,
+              "train_distinct_values": 52
+            },
+            "default_exception": {
+              "test_frozen_bits": 2470.6977148130863,
+              "test_frozen_gain_vs_uniform_bits": 32.113099854416305,
+              "test_online_bits": 2459.159327516946,
+              "test_online_default_count": 5,
+              "test_online_exception_count": 199,
+              "test_online_gain_vs_uniform_bits": 43.65148715055648,
+              "train_bits": 531.6787326420553,
+              "train_default_count": 0,
+              "train_distinct_exception_values": 52,
+              "train_exception_count": 57
+            }
+          },
+          "backward_distance": {
+            "adaptive": {
+              "test_frozen_bits": 2506.6472612167713,
+              "test_frozen_gain_vs_uniform_bits": -3.8364465492686577,
+              "test_online_bits": 2504.4587309279896,
+              "test_online_gain_vs_uniform_bits": -1.6479162604869089,
+              "train_bits": 529.6070899258073,
+              "train_distinct_values": 55
+            },
+            "default_exception": {
+              "test_frozen_bits": 2477.6995239540774,
+              "test_frozen_gain_vs_uniform_bits": 25.111290713425205,
+              "test_online_bits": 2481.2758329509384,
+              "test_online_default_count": 5,
+              "test_online_exception_count": 199,
+              "test_online_gain_vs_uniform_bits": 21.53498171656429,
+              "train_bits": 535.1136333560388,
+              "train_default_count": 0,
+              "train_distinct_exception_values": 55,
+              "train_exception_count": 57
+            }
+          }
+        },
+        "test_books": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_uniform_bits": 2502.8108146675027,
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "event_counts": {
+          "test": 152,
+          "train": 109
+        },
+        "label": "prefix_20_future_suffix",
+        "models": {
+          "absolute_source": {
+            "adaptive": {
+              "test_frozen_bits": 1913.8480817618129,
+              "test_frozen_gain_vs_uniform_bits": 1.9563635638965025,
+              "test_online_bits": 1901.8868690590284,
+              "test_online_gain_vs_uniform_bits": 13.917576266680953,
+              "train_bits": 1110.4240642926043,
+              "train_distinct_values": 99
+            },
+            "default_exception": {
+              "test_frozen_bits": 1889.260109800229,
+              "test_frozen_gain_vs_uniform_bits": 26.544335525480392,
+              "test_online_bits": 1877.7903122486787,
+              "test_online_default_count": 4,
+              "test_online_exception_count": 148,
+              "test_online_gain_vs_uniform_bits": 38.01413307703069,
+              "train_bits": 1113.0477479103224,
+              "train_default_count": 1,
+              "train_distinct_exception_values": 99,
+              "train_exception_count": 108
+            }
+          },
+          "backward_distance": {
+            "adaptive": {
+              "test_frozen_bits": 1919.848081761813,
+              "test_frozen_gain_vs_uniform_bits": -4.043636436103725,
+              "test_online_bits": 1916.056794060471,
+              "test_online_gain_vs_uniform_bits": -0.25234873476165376,
+              "train_bits": 1118.0090267933253,
+              "train_distinct_values": 106
+            },
+            "default_exception": {
+              "test_frozen_bits": 1895.2646125876176,
+              "test_frozen_gain_vs_uniform_bits": 20.539832738091718,
+              "test_online_bits": 1895.9342486801693,
+              "test_online_default_count": 4,
+              "test_online_exception_count": 148,
+              "test_online_gain_vs_uniform_bits": 19.87019664554009,
+              "train_bits": 1120.455217626807,
+              "train_default_count": 1,
+              "train_distinct_exception_values": 106,
+              "train_exception_count": 108
+            }
+          }
+        },
+        "test_books": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_uniform_bits": 1915.8044453257094,
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "event_counts": {
+          "test": 93,
+          "train": 168
+        },
+        "label": "prefix_35_future_suffix",
+        "models": {
+          "absolute_source": {
+            "adaptive": {
+              "test_frozen_bits": 1198.2489441622824,
+              "test_frozen_gain_vs_uniform_bits": 6.126595275343334,
+              "test_online_bits": 1194.3514275470327,
+              "test_online_gain_vs_uniform_bits": 10.024111890593076,
+              "train_bits": 1817.9595058046004,
+              "train_distinct_values": 152
+            },
+            "default_exception": {
+              "test_frozen_bits": 1173.755432587359,
+              "test_frozen_gain_vs_uniform_bits": 30.620106850266666,
+              "test_online_bits": 1169.0576642729695,
+              "test_online_default_count": 4,
+              "test_online_exception_count": 89,
+              "test_online_gain_vs_uniform_bits": 35.31787516465624,
+              "train_bits": 1821.7803958860316,
+              "train_default_count": 1,
+              "train_distinct_exception_values": 152,
+              "train_exception_count": 167
+            }
+          },
+          "backward_distance": {
+            "adaptive": {
+              "test_frozen_bits": 1207.2489441622824,
+              "test_frozen_gain_vs_uniform_bits": -2.873404724656666,
+              "test_online_bits": 1201.9363900477535,
+              "test_online_gain_vs_uniform_bits": 2.4391493898722274,
+              "train_bits": 1832.1294308060428,
+              "train_distinct_values": 165
+            },
+            "default_exception": {
+              "test_frozen_bits": 1182.7570454497188,
+              "test_frozen_gain_vs_uniform_bits": 21.61849398790696,
+              "test_online_bits": 1180.6288885956103,
+              "test_online_default_count": 4,
+              "test_online_exception_count": 89,
+              "test_online_gain_vs_uniform_bits": 23.74665084201547,
+              "train_bits": 1835.760577711366,
+              "train_default_count": 1,
+              "train_distinct_exception_values": 165,
+              "train_exception_count": 167
+            }
+          }
+        },
+        "test_books": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_uniform_bits": 1204.3755394376258,
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "event_counts": {
+          "test": 48,
+          "train": 213
+        },
+        "label": "prefix_50_future_suffix",
+        "models": {
+          "absolute_source": {
+            "adaptive": {
+              "test_frozen_bits": 630.2386515272461,
+              "test_frozen_gain_vs_uniform_bits": 3.021608792805523,
+              "test_online_bits": 629.4004479949117,
+              "test_online_gain_vs_uniform_bits": 3.8598123251399556,
+              "train_bits": 2382.910485356722,
+              "train_distinct_values": 190
+            },
+            "default_exception": {
+              "test_frozen_bits": 623.858228902931,
+              "test_frozen_gain_vs_uniform_bits": 9.402031417120611,
+              "test_online_bits": 623.1474928916209,
+              "test_online_default_count": 1,
+              "test_online_exception_count": 47,
+              "test_online_gain_vs_uniform_bits": 10.112767428430743,
+              "train_bits": 2367.69056726738,
+              "train_default_count": 4,
+              "train_distinct_exception_values": 187,
+              "train_exception_count": 209
+            }
+          },
+          "backward_distance": {
+            "adaptive": {
+              "test_frozen_bits": 633.8236140279672,
+              "test_frozen_gain_vs_uniform_bits": -0.5633537079155531,
+              "test_online_bits": 632.9854104956328,
+              "test_online_gain_vs_uniform_bits": 0.2748498244188795,
+              "train_bits": 2401.0804103581645,
+              "train_distinct_values": 206
+            },
+            "default_exception": {
+              "test_frozen_bits": 627.4429753771034,
+              "test_frozen_gain_vs_uniform_bits": 5.817284942948277,
+              "test_online_bits": 627.7257466864312,
+              "test_online_default_count": 1,
+              "test_online_exception_count": 47,
+              "test_online_gain_vs_uniform_bits": 5.534513633620463,
+              "train_bits": 2388.663719620545,
+              "train_default_count": 4,
+              "train_distinct_exception_values": 206,
+              "train_exception_count": 209
+            }
+          }
+        },
+        "test_books": [
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_uniform_bits": 633.2602603200517,
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "event_counts": {
+          "test": 18,
+          "train": 243
+        },
+        "label": "prefix_60_future_suffix",
+        "models": {
+          "absolute_source": {
+            "adaptive": {
+              "test_frozen_bits": 236.95387658165464,
+              "test_frozen_gain_vs_uniform_bits": 2.9786624798616117,
+              "test_online_bits": 235.97435317405137,
+              "test_online_gain_vs_uniform_bits": 3.9581858874648788,
+              "train_bits": 2776.336580177583,
+              "train_distinct_values": 219
+            },
+            "default_exception": {
+              "test_frozen_bits": 229.69194569417138,
+              "test_frozen_gain_vs_uniform_bits": 10.240593367344871,
+              "test_online_bits": 228.7906922113158,
+              "test_online_default_count": 1,
+              "test_online_exception_count": 17,
+              "test_online_gain_vs_uniform_bits": 11.141846850200466,
+              "train_bits": 2762.0473679476854,
+              "train_default_count": 4,
+              "train_distinct_exception_values": 216,
+              "train_exception_count": 239
+            }
+          },
+          "backward_distance": {
+            "adaptive": {
+              "test_frozen_bits": 240.53883908237583,
+              "test_frozen_gain_vs_uniform_bits": -0.6063000208595781,
+              "test_online_bits": 239.55931567477253,
+              "test_online_gain_vs_uniform_bits": 0.37322338674371736,
+              "train_bits": 2794.5065051790257,
+              "train_distinct_values": 235
+            },
+            "default_exception": {
+              "test_frozen_bits": 233.27690658113764,
+              "test_frozen_gain_vs_uniform_bits": 6.655632480378614,
+              "test_online_bits": 233.37374661542162,
+              "test_online_default_count": 1,
+              "test_online_exception_count": 17,
+              "test_online_gain_vs_uniform_bits": 6.558792446094628,
+              "train_bits": 2783.015719691555,
+              "train_default_count": 4,
+              "train_distinct_exception_values": 235,
+              "train_exception_count": 239
+            }
+          }
+        },
+        "test_books": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69
+        ],
+        "test_uniform_bits": 239.93253906151625,
+        "train_books": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      }
+    ],
+    "summaries": {
+      "absolute_source_adaptive": {
+        "frozen_gain_vs_uniform_bits": {
+          "max": 6.126595275343334,
+          "mean": 3.6493567125277537,
+          "min": 1.9563635638965025,
+          "n": 5
+        },
+        "nonpositive_gain_failures": [],
+        "online_gain_vs_uniform_bits": {
+          "max": 16.522008740955243,
+          "mean": 9.656339022166822,
+          "min": 3.8598123251399556,
+          "n": 5
+        }
+      },
+      "absolute_source_default_exception": {
+        "frozen_gain_vs_uniform_bits": {
+          "max": 32.113099854416305,
+          "mean": 21.78403340292577,
+          "min": 9.402031417120611,
+          "n": 5
+        },
+        "nonpositive_gain_failures": [],
+        "online_gain_vs_uniform_bits": {
+          "max": 43.65148715055648,
+          "mean": 27.647621934174925,
+          "min": 10.112767428430743,
+          "n": 5
+        }
+      },
+      "backward_distance_adaptive": {
+        "frozen_gain_vs_uniform_bits": {
+          "max": -0.5633537079155531,
+          "mean": -2.384628287760836,
+          "min": -4.043636436103725,
+          "n": 5
+        },
+        "nonpositive_gain_failures": [
+          {
+            "frozen_gain_vs_uniform_bits": -3.8364465492686577,
+            "label": "prefix_10_future_suffix",
+            "online_gain_vs_uniform_bits": -1.6479162604869089
+          },
+          {
+            "frozen_gain_vs_uniform_bits": -4.043636436103725,
+            "label": "prefix_20_future_suffix",
+            "online_gain_vs_uniform_bits": -0.25234873476165376
+          },
+          {
+            "frozen_gain_vs_uniform_bits": -2.873404724656666,
+            "label": "prefix_35_future_suffix",
+            "online_gain_vs_uniform_bits": 2.4391493898722274
+          },
+          {
+            "frozen_gain_vs_uniform_bits": -0.5633537079155531,
+            "label": "prefix_50_future_suffix",
+            "online_gain_vs_uniform_bits": 0.2748498244188795
+          },
+          {
+            "frozen_gain_vs_uniform_bits": -0.6063000208595781,
+            "label": "prefix_60_future_suffix",
+            "online_gain_vs_uniform_bits": 0.37322338674371736
+          }
+        ],
+        "online_gain_vs_uniform_bits": {
+          "max": 2.4391493898722274,
+          "mean": 0.23739152115725232,
+          "min": -1.6479162604869089,
+          "n": 5
+        }
+      },
+      "backward_distance_default_exception": {
+        "frozen_gain_vs_uniform_bits": {
+          "max": 25.111290713425205,
+          "mean": 15.948506972550154,
+          "min": 5.817284942948277,
+          "n": 5
+        },
+        "nonpositive_gain_failures": [],
+        "online_gain_vs_uniform_bits": {
+          "max": 23.74665084201547,
+          "mean": 15.449027056766989,
+          "min": 5.534513633620463,
+          "n": 5
+        }
+      }
+    }
+  },
+  "schema": "copy_source_distance_model_audit.v1",
+  "scope": {
+    "active_copy_address_bits": 3002.838060159001,
+    "active_total_bits": 8177.3166531229235,
+    "candidate": "backward_distance = emitted_length_before_copy - source_digit_pos",
+    "controls": [
+      "uniform legal source/distance alphabet",
+      "global adaptive absolute source",
+      "global adaptive backward distance",
+      "previous absolute source plus length default/exception",
+      "previous backward distance default/exception",
+      "prefix future-suffix frozen-count validation"
+    ],
+    "copy_items": 261,
+    "declaration_bits_for_default_exception_replacement": 12.0
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "144_copy_source_distance_model_audit",
+  "translation_delta": "NONE"
+}

@@ -658,22 +658,27 @@ Coverage of the remaining report recommendations and follow-on refinements:
   earliest)=-236.596`).
 - default/exception prequential validation is now covered by
   [`141_default_exception_prequential_validation.py`](scripts/141_default_exception_prequential_validation.py);
-  copy-length/source default-exception components have positive online gains
-  on all prefix future-suffix splits (`min=43.582` bits), but frozen prefix-10
-  scoring loses `-39.773` bits versus legal uniform because copy-source
-  prediction is sparse. Family holdouts also include nonpositive failures, so
-  this is not a frozen generation method.
+  after fixing train-count freezing, copy-length/source default-exception
+  components have positive online and frozen gains on all prefix future-suffix
+  splits (`min frozen aggregate=50.303` bits). Family holdouts still include
+  nonpositive failures, so this is prefix-frozen partial evidence rather than
+  a final generation method.
 - default/exception component profiling is now covered by
   [`142_default_exception_component_profile.py`](scripts/142_default_exception_component_profile.py);
-  keep `8177.317` bits as `compression_bound`, but the frozen-prefix
-  generation-explanation profile is `8206.178` bits because copy-source
-  default/exception is retained only as compression-bound evidence.
+  keep `8177.317` bits as both `compression_bound` and prefix-frozen
+  generation profile for this layer, while family/bookcase failures keep the
+  generation claim partial.
 - current literal-payload profiling is now covered by
   [`143_current_literal_payload_profile_audit.py`](scripts/143_current_literal_payload_profile_audit.py);
   the earlier order-1 generation-profile result does not transfer to the
   current online-reparse/default-exception recipe. Order-1 is `+95.968` bits on
   full corpus and `+28.609` bits worse in aggregate frozen prefix tests, so
   order-2 is retained for the current profile.
+- copy-source distance modeling is now covered by
+  [`144_copy_source_distance_model_audit.py`](scripts/144_copy_source_distance_model_audit.py);
+  backward-distance source coding is decodable but worse than the active
+  absolute-source default/exception model (`+25.551` bits replacement delta),
+  so the distance variant is rejected.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

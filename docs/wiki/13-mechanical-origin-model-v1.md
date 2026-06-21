@@ -183,9 +183,10 @@ The model is mechanical only. It is not a semantic decoder.
 | Copy source canonicality controls | earliest occurrence remains `261/261`; latest occurrence is `123/261`, previous-source-plus-length is `5/261`, and random candidate choice expects `169.473` hits | source tie-break support / no decoder removal |
 | Copy length default/exception formula | target-max extension is high-coverage but encoder-only; decodable `decoder_max_possible` default plus adaptive exceptions lowers copy-length cost and promotes the bound to `8206.178` bits | copy length remodeled / row0 unchanged |
 | Copy source default/exception formula | previous-source-plus-length default is decodable but sparse; adaptive exception-source coding lowers copy-address cost and promotes the bound to `8177.317` bits | copy source remodeled / row0 unchanged |
-| Default/exception prequential validation | prefix online gains are all positive (`min=43.582` bits), but frozen prefix-10 loses `-39.773` bits and family holdouts include failures | online-predictive / frozen method not promoted |
-| Default/exception component profile | `8177.317` remains compression bound; frozen-prefix generation profile is `8206.178` because copy-source default is compression-only | separated ledgers |
+| Default/exception prequential validation | after train-count freezing fix, prefix online and frozen gains are all positive (`min frozen aggregate=50.303` bits), but family holdouts include failures | prefix-frozen partial / final method not promoted |
+| Default/exception component profile | `8177.317` remains compression bound and prefix-frozen profile; family/bookcase failures keep the generation claim partial | separated ledgers |
 | Current literal-payload profile audit | old order-1 profile does not transfer; order-1 is `+95.968` full-corpus and `+28.609` aggregate frozen-prefix bits worse | order-2 retained |
+| Copy source distance model audit | backward-distance source coding is decodable but the replacement is `+25.551` bits worse than active absolute-source default/exception | distance rejected |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
 | Literal payload structural context audit | literal-run offset, run-length bucket, book half/parity, and bounded combinations with `prev2` all over-split the payload stream | rejected context / no new bound |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
@@ -325,6 +326,7 @@ Primary sources:
 [default_exception_prequential_validation.md](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md),
 [default_exception_component_profile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md),
 [current_literal_payload_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md),
+[copy_source_distance_model_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md),
 [literal_payload_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md),
 [literal_payload_structural_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),

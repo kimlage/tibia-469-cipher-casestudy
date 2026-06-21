@@ -1,209 +1,162 @@
 {
   "bit_ledgers": {
     "compression_bound_with_copy_source_default_bits": 8177.3166531229235,
-    "copy_source_default_full_corpus_gain_bits": 28.861785641604,
-    "frozen_prefix_generation_profile_bits": 8206.178438764528,
-    "interpretation": "Keep the copy-source default/exception ledger in compression_bound, but do not count it as frozen-prefix generation explanation."
+    "copy_length_only_default_exception_bits": 8206.178438764528,
+    "copy_source_default_gain_vs_copy_length_only_bits": 28.861785641604,
+    "interpretation": "Count the copy-source default/exception ledger in the prefix-frozen profile after the train-count fix, but keep the generation claim partial because family holdouts still have failures.",
+    "prefix_frozen_generation_profile_bits": 8177.3166531229235
   },
   "case_reopened": false,
-  "classification": "copy_length_default_exception_frozen_profile_source_default_compression_only",
+  "classification": "default_exception_components_prefix_frozen_partial_family_holdout",
   "component_summaries": {
     "contiguous_block_holdouts": {
       "copy_length": {
         "frozen": {
-          "max": 38.93650999633658,
-          "mean": 8.826377139894971,
-          "min": -39.243537652969394,
-          "n": 7,
-          "nonpositive_count": 2,
-          "nonpositive_labels": [
-            "holdout_block_00_09",
-            "holdout_block_10_19"
-          ],
-          "total": 61.784639979264796
-        },
-        "online": {
-          "max": 37.67868334228511,
-          "mean": 22.841303410327612,
-          "min": 17.130812709606005,
+          "max": 42.57603611004214,
+          "mean": 33.156285148030896,
+          "min": 24.098741287249396,
           "n": 7,
           "nonpositive_count": 0,
           "nonpositive_labels": [],
-          "total": 159.88912387229328
+          "total": 232.09399603621628
+        },
+        "online": {
+          "max": 43.43136269266347,
+          "mean": 34.06427591662777,
+          "min": 25.084621783871853,
+          "n": 7,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 238.44993141639438
         }
       },
       "copy_source": {
         "frozen": {
-          "max": 7.154987279180432,
-          "mean": -28.229784355074013,
-          "min": -56.80752999871902,
+          "max": 22.132669308509435,
+          "mean": 6.203451716973433,
+          "min": -4.051516335690053,
           "n": 7,
-          "nonpositive_count": 6,
+          "nonpositive_count": 2,
           "nonpositive_labels": [
             "holdout_block_00_09",
-            "holdout_block_10_19",
-            "holdout_block_20_29",
-            "holdout_block_30_39",
-            "holdout_block_50_59",
-            "holdout_block_60_69"
-          ],
-          "total": -197.6084904855181
-        },
-        "online": {
-          "max": 21.94691603736584,
-          "mean": 1.6248661974485077,
-          "min": -5.46552089434914,
-          "n": 7,
-          "nonpositive_count": 5,
-          "nonpositive_labels": [
-            "holdout_block_00_09",
-            "holdout_block_10_19",
-            "holdout_block_20_29",
-            "holdout_block_30_39",
             "holdout_block_50_59"
           ],
-          "total": 11.374063382139553
+          "total": 43.42416201881403
+        },
+        "online": {
+          "max": 23.731696815569194,
+          "mean": 7.141464106021805,
+          "min": -1.2189914174143155,
+          "n": 7,
+          "nonpositive_count": 2,
+          "nonpositive_labels": [
+            "holdout_block_00_09",
+            "holdout_block_50_59"
+          ],
+          "total": 49.99024874215263
         }
       }
     },
     "prefix_future_suffix": {
       "copy_length": {
         "frozen": {
-          "max": 106.75402933845112,
-          "mean": 79.30586790072284,
-          "min": 38.93650999633658,
+          "max": 167.72590195688417,
+          "mean": 101.00562665111968,
+          "min": 40.06213721477803,
           "n": 5,
           "nonpositive_count": 0,
           "nonpositive_labels": [],
-          "total": 396.5293395036142
+          "total": 505.0281332555984
         },
         "online": {
-          "max": 171.44146766636686,
-          "mean": 101.57859275948881,
-          "min": 37.67868334228511,
+          "max": 190.2296325041907,
+          "mean": 110.11176441500545,
+          "min": 40.39249298016634,
           "n": 5,
           "nonpositive_count": 0,
           "nonpositive_labels": [],
-          "total": 507.89296379744405
+          "total": 550.5588220750273
         }
       },
       "copy_source": {
         "frozen": {
-          "max": -4.660550503096744,
-          "mean": -64.4182726254051,
-          "min": -140.8009604867998,
-          "n": 5,
-          "nonpositive_count": 5,
-          "nonpositive_labels": [
-            "prefix_10_future_suffix",
-            "prefix_20_future_suffix",
-            "prefix_35_future_suffix",
-            "prefix_50_future_suffix",
-            "prefix_60_future_suffix"
-          ],
-          "total": -322.0913631270255
-        },
-        "online": {
-          "max": 36.65361247909186,
-          "mean": 21.0656179851147,
-          "min": 2.986292712007753,
+          "max": 32.113099854416305,
+          "mean": 21.78403340292577,
+          "min": 9.402031417120611,
           "n": 5,
           "nonpositive_count": 0,
           "nonpositive_labels": [],
-          "total": 105.3280899255735
+          "total": 108.92016701462884
+        },
+        "online": {
+          "max": 43.65148715055648,
+          "mean": 27.647621934174925,
+          "min": 10.112767428430743,
+          "n": 5,
+          "nonpositive_count": 0,
+          "nonpositive_labels": [],
+          "total": 138.23810967087462
         }
       }
     },
     "public_bookcase_family_holdouts": {
       "copy_length": {
         "frozen": {
-          "max": 24.284603040703214,
-          "mean": 1.4577120434038626,
-          "min": -11.680201132714295,
+          "max": 21.891527511726395,
+          "mean": 7.787184261309167,
+          "min": -8.20685369766268,
           "n": 19,
-          "nonpositive_count": 10,
+          "nonpositive_count": 2,
           "nonpositive_labels": [
-            "hellgate_public_bookcase_1",
-            "hellgate_public_bookcase_10",
-            "hellgate_public_bookcase_12",
             "hellgate_public_bookcase_13",
-            "hellgate_public_bookcase_2",
-            "hellgate_public_bookcase_22",
-            "hellgate_public_bookcase_23",
-            "hellgate_public_bookcase_3",
-            "hellgate_public_bookcase_36",
-            "hellgate_public_bookcase_7"
+            "hellgate_public_bookcase_36"
           ],
-          "total": 27.69652882467339
+          "total": 147.95650096487418
         },
         "online": {
-          "max": 24.377712445094694,
-          "mean": 4.463603946115933,
-          "min": -7.069033164705004,
+          "max": 22.02097955861639,
+          "mean": 7.887210039037538,
+          "min": -8.368271716380661,
           "n": 19,
-          "nonpositive_count": 7,
+          "nonpositive_count": 3,
           "nonpositive_labels": [
-            "hellgate_public_bookcase_1",
-            "hellgate_public_bookcase_12",
             "hellgate_public_bookcase_13",
-            "hellgate_public_bookcase_22",
-            "hellgate_public_bookcase_23",
             "hellgate_public_bookcase_36",
             "hellgate_public_bookcase_7"
           ],
-          "total": 84.80847497620273
+          "total": 149.85699074171322
         }
       },
       "copy_source": {
         "frozen": {
-          "max": 13.305972704825194,
-          "mean": -5.559896256379746,
-          "min": -21.967565492016348,
+          "max": 13.615061989073098,
+          "mean": 2.241728742906322,
+          "min": -1.2339457833556224,
           "n": 19,
-          "nonpositive_count": 15,
+          "nonpositive_count": 5,
           "nonpositive_labels": [
-            "hellgate_public_bookcase_1",
-            "hellgate_public_bookcase_10",
-            "hellgate_public_bookcase_12",
             "hellgate_public_bookcase_2",
-            "hellgate_public_bookcase_20",
-            "hellgate_public_bookcase_22",
-            "hellgate_public_bookcase_23",
             "hellgate_public_bookcase_3",
-            "hellgate_public_bookcase_30",
-            "hellgate_public_bookcase_36",
-            "hellgate_public_bookcase_4",
             "hellgate_public_bookcase_40",
-            "hellgate_public_bookcase_6",
             "hellgate_public_bookcase_7",
             "hellgate_public_bookcase_8"
           ],
-          "total": -105.63802887121517
+          "total": 42.59284611522012
         },
         "online": {
-          "max": 15.551432384054749,
-          "mean": -0.44516949923446125,
-          "min": -4.795612999248817,
+          "max": 13.81346339785705,
+          "mean": 2.233631201960819,
+          "min": -1.2457294384373654,
           "n": 19,
-          "nonpositive_count": 15,
+          "nonpositive_count": 5,
           "nonpositive_labels": [
-            "hellgate_public_bookcase_1",
-            "hellgate_public_bookcase_10",
-            "hellgate_public_bookcase_12",
             "hellgate_public_bookcase_2",
-            "hellgate_public_bookcase_20",
-            "hellgate_public_bookcase_22",
-            "hellgate_public_bookcase_23",
             "hellgate_public_bookcase_3",
-            "hellgate_public_bookcase_30",
-            "hellgate_public_bookcase_36",
-            "hellgate_public_bookcase_4",
             "hellgate_public_bookcase_40",
-            "hellgate_public_bookcase_6",
             "hellgate_public_bookcase_7",
             "hellgate_public_bookcase_8"
           ],
-          "total": -8.458220485454763
+          "total": 42.43899283725556
         }
       }
     }
@@ -212,8 +165,9 @@
     "compression_bound_bits": 8177.3166531229235,
     "compression_bound_changed": false,
     "copy_length_default_exception_status": "retained_for_frozen_prefix_generation_profile",
-    "copy_source_default_exception_status": "compression_bound_only_not_frozen_generation_profile",
-    "generation_explanation_profile_bits": 8206.178438764528,
+    "copy_source_default_exception_status": "retained_for_prefix_frozen_generation_profile_partial_under_family_holdout",
+    "family_holdout_partial": true,
+    "prefix_frozen_generation_profile_bits": 8177.3166531229235,
     "row0_origin_changed": false,
     "semantic_delta": "NONE"
   },
