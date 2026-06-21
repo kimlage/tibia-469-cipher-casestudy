@@ -2956,6 +2956,7 @@
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
     "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
     "targetmax_resegmentation_formula_status": "promoted_bound_8158_766094",
+    "targetmax_resegmentation_second_pass_status": "promoted_bound_8157_065654",
     "translation_or_plaintext_status": "NONE"
   },
   "full_corpus_source_path_formula": {
@@ -19725,6 +19726,63 @@
       "roundtrip_error_count": 0,
       "score_error_count": 0,
       "slack": 4
+    }
+  },
+  "targetmax_resegmentation_second_pass": {
+    "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_second_pass_formula_469.json",
+    "classification": "targetmax_resegmentation_second_pass_improves_bound",
+    "decision": {
+      "compression_bound_status": "improved_by_second_targetmax_resegmentation",
+      "generation_explanation_status": "resegmentation_path_promoted_second_step",
+      "next_mainline_status": "continue_exact_targetmax_resegmentation_until_no_positive_candidate",
+      "row0_origin_status": "unchanged_exogenous",
+      "targetmax_resegmentation_status": "second_candidate_promoted",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "analysis_only": true,
+      "candidate_source": "remaining gate51 target-max exceptions still matching the gate53 formula",
+      "exact_component_scorer_reproduces_current_bound": true,
+      "plaintext_or_translation_claim": false,
+      "row0_origin_changed": false,
+      "stale_exception_count": 1
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/54_targetmax_resegmentation_second_pass_gate.json",
+    "summary": {
+      "best_candidate": {
+        "book": 2,
+        "candidate_gain_bits": 1.7004397181417517,
+        "candidate_total_bits": 8157.065654431436,
+        "component_delta_bits": {
+          "copy_length_bits": 0.5474877953020041,
+          "copy_source_bits": 0.0,
+          "item_type_bits": 0.0,
+          "literal_bits_no_payload": 0.0,
+          "literal_payload_bits": -2.2479275134437557
+        },
+        "errors": [],
+        "following_op_type": "literal",
+        "mode": "preserve_next_mode",
+        "op_index": 9,
+        "roundtrip_error_count": 0,
+        "score_error_count": 0,
+        "slack": 1
+      },
+      "candidate_gain_bits": 1.7004397181417517,
+      "candidate_total_bits": 8157.065654431436,
+      "current_exact_total_bits": 8158.766094149578,
+      "current_total_bits": 8158.766094149578,
+      "improving_candidate_count": 4,
+      "interpretation": "A second exact target-max resegmentation pass still finds a positive mechanical compression-bound improvement, but it does not derive row0 or add semantics.",
+      "inventory": {
+        "copied_digits": 10407,
+        "copy_items": 261,
+        "literal_digits": 856,
+        "literal_runs": 87
+      },
+      "stale_exception_count": 1,
+      "tested_candidate_count": 44,
+      "valid_candidate_count": 40
     }
   },
   "translation_delta": "NONE"

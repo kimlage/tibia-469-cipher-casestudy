@@ -734,6 +734,13 @@ The candidate lowers the bound from `8160.825608` to `8158.766094` bits, a gain 
 Roundtrip and score errors are both `0`/`0`. This is a real compression-bound promotion, not row0 derivation or semantics.
 See [53_targetmax_resegmentation_formula_gate.md](53_targetmax_resegmentation_formula_gate.md).
 
+### Target-Max Resegmentation Second-Pass Gate
+
+The next exact gate retests the remaining compatible target-max rewrites against the promoted formula. It skips `1` stale exception already changed by gate 53, tests `44` candidates, finds `40` valid candidates and `4` exact improvements.
+The best candidate is book `2` op `9` `preserve_next_mode` with slack `1`, lowering the bound from `8158.766094` to `8157.065654` bits, a gain of `+1.700440` bits.
+The inventory changes to `{'copied_digits': 10407, 'copy_items': 261, 'literal_digits': 856, 'literal_runs': 87}`. This remains a mechanical compression-bound update only; `row0` and semantics are unchanged.
+See [54_targetmax_resegmentation_second_pass_gate.md](54_targetmax_resegmentation_second_pass_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -825,6 +832,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.
 - The source-substitution saturation audit freezes repeated same-chunk local source edits as no longer mainline: the last three gains sum to `0.001484` bits and are dwarfed by selector-cost sanity checks.
 - Exact scoring promotes one target-max resegmentation from the proxy frontier, lowering the active bound from `8160.825608` to `8158.766094` bits with zero row0 or semantic change.
+- A second exact target-max resegmentation lowers the active bound again from `8158.766094` to `8157.065654` bits; this is still a mechanical bound update, not row0 derivation or semantics.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

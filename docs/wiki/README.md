@@ -654,6 +654,9 @@ An exact formula gate now validates that candidate under the active component
 scorer: it reproduces the `8160.825608`-bit bound and promotes the same book
 `9` op `0` resegmentation to `8158.766094` bits, a `+2.059513`-bit mechanical
 compression-bound gain. `row0` origin and semantic status remain unchanged.
+A second exact pass then retests the remaining compatible candidates, promotes
+book `2` op `9`, and lowers the mechanical bound again to `8157.065654` bits
+(`+1.700440`). `row0` origin and semantic status still remain unchanged.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -740,7 +743,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   the source-length joint derivability boundary, prices the source canonicality
   tradeoff, maps copy-length target-max exceptions to resegmentation
   boundaries, opens and exact-scores a local target-max resegmentation path,
-  promotes the resulting `8158.766094`-bit mechanical bound, rejects paid
+  promotes the resulting `8158.766094`-bit mechanical bound, then promotes a
+  second exact target-max resegmentation to `8157.065654` bits, rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

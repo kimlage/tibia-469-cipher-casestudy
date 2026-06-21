@@ -175,6 +175,9 @@ exogenous.
 - [scripts/53_targetmax_resegmentation_formula_gate.py](scripts/53_targetmax_resegmentation_formula_gate.py) - validates the best target-max resegmentation candidate under the exact active component scorer.
 - [reports/test_results/53_targetmax_resegmentation_formula_gate.md](reports/test_results/53_targetmax_resegmentation_formula_gate.md) - target-max resegmentation formula gate.
 - [reports/test_results/53_targetmax_resegmentation_formula_gate.json](reports/test_results/53_targetmax_resegmentation_formula_gate.json) - structured target-max resegmentation formula ledger.
+- [scripts/54_targetmax_resegmentation_second_pass_gate.py](scripts/54_targetmax_resegmentation_second_pass_gate.py) - retests remaining compatible target-max resegmentations after the first promoted rewrite.
+- [reports/test_results/54_targetmax_resegmentation_second_pass_gate.md](reports/test_results/54_targetmax_resegmentation_second_pass_gate.md) - target-max resegmentation second-pass gate.
+- [reports/test_results/54_targetmax_resegmentation_second_pass_gate.json](reports/test_results/54_targetmax_resegmentation_second_pass_gate.json) - structured second-pass resegmentation ledger.
 
 ## Boundary
 
@@ -320,8 +323,10 @@ exogenous.
   then validates that candidate against the active component scorer: it
   reproduces the current `8160.825608`-bit bound and promotes the same
   resegmentation to `8158.766094` bits, a `+2.059513`-bit compression-bound
-  gain. This changes neither `row0` origin nor semantics. The complete
-  parser is still unpromoted because the full active objective, adaptive counts, tie
+  gain. A second exact gate then retests remaining compatible candidates and
+  promotes book `2` op `9`, lowering the bound again to `8157.065654` bits
+  (`+1.700440`). These changes affect neither `row0` origin nor semantics.
+  The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
   recipes with the active `previous_copy_end` source ledger: `10/10` books
