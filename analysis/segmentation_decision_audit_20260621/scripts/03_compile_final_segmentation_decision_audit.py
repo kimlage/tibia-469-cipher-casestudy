@@ -26,6 +26,7 @@ FEATURE_WEIGHTED = TEST_RESULTS / "14_feature_weighted_global_parser_audit.json"
 SOURCE_BOUNDARY = TEST_RESULTS / "15_source_boundary_alignment_audit.json"
 DRIFT_REPAIR = TEST_RESULTS / "16_single_drift_repair_oracle_audit.json"
 OBSERVABLE_REPAIR = TEST_RESULTS / "17_observable_repair_policy_audit.json"
+CONDITIONAL_REPAIR = TEST_RESULTS / "18_conditional_repair_classifier_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -80,6 +81,9 @@ def main() -> None:
     observable_repair = (
         load_json(OBSERVABLE_REPAIR) if OBSERVABLE_REPAIR.exists() else None
     )
+    conditional_repair = (
+        load_json(CONDITIONAL_REPAIR) if CONDITIONAL_REPAIR.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -110,6 +114,8 @@ def main() -> None:
         assert_boundary("single_drift_repair_oracle_audit", drift_repair)
     if observable_repair is not None:
         assert_boundary("observable_repair_policy_audit", observable_repair)
+    if conditional_repair is not None:
+        assert_boundary("conditional_repair_classifier_audit", conditional_repair)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -142,6 +148,9 @@ def main() -> None:
     drift_repair_summary = None if drift_repair is None else drift_repair["summary"]
     observable_repair_summary = (
         None if observable_repair is None else observable_repair["summary"]
+    )
+    conditional_repair_summary = (
+        None if conditional_repair is None else conditional_repair["summary"]
     )
 
     lines = [
@@ -578,14 +587,41 @@ def main() -> None:
                 "",
             ]
         )
+    if conditional_repair_summary is not None:
+        lines.extend(
+            [
+                "## Conditional Repair Classifier",
+                "",
+                "Gate 18 tests a restricted classifier family: one observable",
+                "predicate plus one observable repair action, applied end-to-end",
+                "and selected under prefix/holdout.",
+                "",
+                "| Parser | Exact books | Boundary |",
+                "|---|---:|---|",
+                f"| Baseline `window5` | `{conditional_repair_summary['baseline_exact_books']}/60` | retained baseline |",
+                f"| Best conditional classifier `{conditional_repair_summary['best_classifier']}` | `{conditional_repair_summary['best_exact_books']}/60` | partial, not promoted |",
+                "",
+                f"- Exact delta vs baseline: `{conditional_repair_summary['exact_delta_vs_baseline']}`.",
+                f"- Repairs applied by best classifier: `{conditional_repair_summary['best_total_repairs_applied']}`.",
+                f"- Prequential selected matches oracle cells: `{conditional_repair_summary['prequential_selected_matches_oracle_cells']}/{conditional_repair_summary['prequential_cells']}`.",
+                f"- Remaining mismatch books: `{conditional_repair_summary['best_mismatch_books']}`.",
+                "",
+                "This is the first non-oracle repair classifier in this front",
+                "to improve the integrated parser under prefix-stable selection.",
+                "It narrows the residual literal-understop class, but it still",
+                "leaves ten mixed drift books and therefore does not promote a",
+                "complete segmentation mechanism.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is",
-            "a richer non-oracle classifier for the first-drift repair",
-            "decisions than the simple observable templates tested here, or",
-            "a source-free account of why the target digit stream exists.",
+            "either a second-stage non-oracle classifier for the remaining",
+            "`10/60` drift books after the peak-length repair, or a source-free",
+            "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
             "or the stable projection as an oracle.",
@@ -608,6 +644,7 @@ def main() -> None:
             "- [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)",
             "- [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)",
             "- [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)",
+            "- [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)",
             "",
         ]
     )

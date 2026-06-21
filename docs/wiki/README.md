@@ -910,6 +910,11 @@ An observable repair-policy audit tests that next step directly. Across `36`
 simple repair templates, the best result is still the unmodified `window5`
 parser at `48/60`, and prefix selection matches the suffix oracle in only
 `3/5` cells. The oracle map is therefore diagnostic, not yet a rule.
+A restricted conditional classifier then gives a partial non-oracle repair:
+`if_peak_len_le5_then_skip_to_next_peak_ge5` reaches `50/60` exact books and is
+selected in `5/5` prefix/holdout cells. It is not a complete parser because ten
+mixed drift books remain, but it is real segmentation progress rather than a
+compression-only tweak.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

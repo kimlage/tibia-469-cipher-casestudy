@@ -336,12 +336,34 @@ observable repair rule. The baseline remains the best policy,
 and train-selected repair actions overfit in the middle prefix
 splits.
 
+## Conditional Repair Classifier
+
+Gate 18 tests a restricted classifier family: one observable
+predicate plus one observable repair action, applied end-to-end
+and selected under prefix/holdout.
+
+| Parser | Exact books | Boundary |
+|---|---:|---|
+| Baseline `window5` | `48/60` | retained baseline |
+| Best conditional classifier `if_peak_len_le5_then_skip_to_next_peak_ge5` | `50/60` | partial, not promoted |
+
+- Exact delta vs baseline: `2`.
+- Repairs applied by best classifier: `4`.
+- Prequential selected matches oracle cells: `5/5`.
+- Remaining mismatch books: `[14, 16, 20, 21, 26, 34, 39, 45, 55, 57]`.
+
+This is the first non-oracle repair classifier in this front
+to improve the integrated parser under prefix-stable selection.
+It narrows the residual literal-understop class, but it still
+leaves ten mixed drift books and therefore does not promote a
+complete segmentation mechanism.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is
-a richer non-oracle classifier for the first-drift repair
-decisions than the simple observable templates tested here, or
-a source-free account of why the target digit stream exists.
+either a second-stage non-oracle classifier for the remaining
+`10/60` drift books after the peak-length repair, or a source-free
+account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
 or the stable projection as an oracle.
@@ -364,3 +386,4 @@ or the stable projection as an oracle.
 - [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)
 - [Single drift repair oracle audit](test_results/16_single_drift_repair_oracle_audit.md)
 - [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)
+- [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)
