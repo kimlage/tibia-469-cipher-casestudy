@@ -380,6 +380,10 @@ The prequential and row0-origin audit freezes `8558.667` as
 `compression_bound`: learned components beat uniform on prefix future-suffix
 splits, but random same-size train controls are usually stronger, and row0
 origin remains exogenous.
+The recipe reparse audit strengthens that result: with frozen train-prefix
+component counts, a deterministic LZ parser roundtrips every future suffix and
+beats the active full-corpus recipe under the same frozen counts, while still
+remaining split-specific analysis rather than a new bound.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

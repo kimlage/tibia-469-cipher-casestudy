@@ -609,5 +609,11 @@ Generated audits in this directory should be treated as the current state:
   predictive component evidence only. Row0 origin remains exogenous under the
   manual lookup, permutation/group, grid, order/frequency, external-text, and
   workbook/script-artifact hypothesis ledger.
+- `126_prequential_recipe_reparse_audit`: tests the recipe limitation left by
+  audit 125. With only frozen train-prefix component counts, a deterministic LZ
+  parser roundtrips every future suffix and beats the active full-corpus recipe
+  under the same frozen counts on all five cutoffs. This is stronger predictive
+  evidence for the copy/reference mechanism, but it is split-specific and does
+  not alter the full-corpus `compression_bound`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -572,6 +572,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   permutation/group, 10x10 grid, order/frequency, external-text, and
   workbook/script-artifact hypotheses yield no charged controlled origin
   formula.
+- prequential recipe reparse is now covered by
+  [`126_prequential_recipe_reparse_audit.py`](scripts/126_prequential_recipe_reparse_audit.py);
+  under frozen train-prefix component counts, a deterministic LZ parser
+  roundtrips every future suffix and is cheaper than the active full-corpus
+  recipe on all five prefix cutoffs. This strengthens predictive validation of
+  the mechanical copy/reference layer, but remains split-specific analysis and
+  does not change `compression_bound`.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

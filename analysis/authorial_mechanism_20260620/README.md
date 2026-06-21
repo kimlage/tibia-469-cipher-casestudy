@@ -324,6 +324,9 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 - `scripts/125_prequential_and_row0_origin_audit.py` - freezes `8558.667` as
   the current `compression_bound`, tests learned components under
   prefix/block/family holdout, and records that row0 origin remains exogenous.
+- `scripts/126_prequential_recipe_reparse_audit.py` - tests the audit-125
+  recipe limitation by reparsing future suffix books with frozen train-prefix
+  component counts and a deterministic LZ parser.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -855,6 +855,13 @@ same audit records row0 as still exogenous across manual lookup,
 permutation/group, 10x10 grid, order/frequency, external-text, and
 workbook/script-artifact hypotheses.
 
+The prequential recipe reparse audit then tests the remaining recipe
+dependency. With only train-prefix component counts frozen, a deterministic LZ
+parser roundtrips every future suffix and beats the active full-corpus recipe
+under the same frozen counts on all five cutoffs. This strengthens the
+mechanical copy/reference explanation, but it remains split-specific analysis;
+it does not lower the full-corpus `compression_bound` or derive row0.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1126,6 +1133,7 @@ book generation, not row0 pair-cell placement.
 - [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
+- [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 
 ## Boundary
 
