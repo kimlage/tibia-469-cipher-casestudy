@@ -788,6 +788,11 @@ only at support threshold `1`, which means the decisive contexts are mostly
 singletons. Leave-one-book retraining keeps only `4/10` residual hits,
 leave-context-out keeps `5/10`, and prefix/holdout still has `0/5` cover-all
 cells. The observable beam selector is therefore not stable enough to promote.
+A beam hierarchical backoff gate then tests whether the failure is merely
+over-specific context granularity. It is not: the best hierarchy,
+`global_to_beam_combo`, ties the unstable full-fit row only at support `1`,
+grows the paid table to `88` contexts, costs `+166.286` bits versus lookup, and
+still has `0/5` cover-all holdout cells.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2511,6 +2516,7 @@ book generation, not row0 pair-cell placement.
 - [Beam survival budget gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/58_beam_survival_budget_gate.md)
 - [Beam rank selector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/59_beam_rank_selector_gate.md)
 - [Beam selector stability gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/60_beam_selector_stability_gate.md)
+- [Beam hierarchical backoff gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/61_beam_hierarchical_backoff_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

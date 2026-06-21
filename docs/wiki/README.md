@@ -997,8 +997,11 @@ prefix/holdout cover-all cells, and is `+129.872` bits worse after paying the
 context table. A stability gate then shows why this is not just over-pruning:
 the best setting still needs support threshold `1`, leave-one-book keeps only
 `4/10` residuals, leave-context-out keeps `5/10`, and prefix/holdout remains
-`0/5` on cover-all cells. The blocker is therefore a richer latent path/state
-selector, not another local branch-choice combination.
+`0/5` on cover-all cells. Hierarchical backoff over the same beam contexts
+also fails: the best hierarchy ties the unstable full-fit row only at support
+`1`, costs `+166.286` bits versus lookup, and remains `0/5` on cover-all
+holdout cells. The blocker is therefore a richer latent path/state selector,
+not another local branch-choice combination.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

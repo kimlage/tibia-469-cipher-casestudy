@@ -1360,6 +1360,28 @@ leave-context-out drops to `5/10`, and prefix/holdout has
 `0/5` cover-all cells. The beam-selector hypothesis is
 therefore retained only as a weak full-fit clue.
 
+## Beam Hierarchical Backoff Gate
+
+Gate 61 tests whether hierarchical backoff over observable
+beam contexts can stabilize the selector without relying on
+singleton `beam_context_combo` rows.
+
+| Diagnostic | Value |
+|---|---:|
+| Best family | `global_to_beam_combo` |
+| Best min support | `1` |
+| Best total hits | `230/234` |
+| Best residual hits | `10/10` |
+| Best clean false changes | `4` |
+| Best context count | `88` |
+| Prefix/holdout cover-all cells | `0/5` |
+| Best net vs lookup | `166.286` bits |
+
+Backoff does not rescue the selector. The best hierarchy ties
+the unstable full-fit `230/234`, `10/10` residual row only at
+support `1`, grows the paid context table to `88` entries,
+and remains `0/5` on prefix/holdout cover-all cells.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1448,6 +1470,10 @@ Gate 60 stress-tests that table and confirms it is not stable:
 support pruning loses residuals, leave-one-book recovers only
 `4/10`, leave-context-out only `5/10`, and no prefix/holdout
 cell covers all test decisions.
+Gate 61 tests hierarchical backoff over the same beam contexts
+and also fails: it ties the unstable full-fit result only with
+support `1`, increases table cost, and keeps `0/5` cover-all
+holdout cells.
 The remaining blocker is therefore a downstream selector or richer
 latent path/state segmentation account for why the parser waits,
 copies, or understops at the remaining mixed residual sites,
@@ -1517,3 +1543,4 @@ or the stable projection as an oracle.
 - [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)
 - [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)
 - [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)
+- [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)

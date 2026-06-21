@@ -85,6 +85,7 @@ LATENT_PATH_STATE_BUDGET = (
 BEAM_SURVIVAL_BUDGET = TEST_RESULTS / "58_beam_survival_budget_gate.json"
 BEAM_RANK_SELECTOR = TEST_RESULTS / "59_beam_rank_selector_gate.json"
 BEAM_SELECTOR_STABILITY = TEST_RESULTS / "60_beam_selector_stability_gate.json"
+BEAM_HIERARCHICAL_BACKOFF = TEST_RESULTS / "61_beam_hierarchical_backoff_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -304,6 +305,11 @@ def main() -> None:
         if BEAM_SELECTOR_STABILITY.exists()
         else None
     )
+    beam_hierarchical_backoff = (
+        load_json(BEAM_HIERARCHICAL_BACKOFF)
+        if BEAM_HIERARCHICAL_BACKOFF.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -431,6 +437,8 @@ def main() -> None:
         assert_boundary("beam_rank_selector_gate", beam_rank_selector)
     if beam_selector_stability is not None:
         assert_boundary("beam_selector_stability_gate", beam_selector_stability)
+    if beam_hierarchical_backoff is not None:
+        assert_boundary("beam_hierarchical_backoff_gate", beam_hierarchical_backoff)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -614,6 +622,11 @@ def main() -> None:
         None
         if beam_selector_stability is None
         else beam_selector_stability["summary"]
+    )
+    beam_hierarchical_backoff_summary = (
+        None
+        if beam_hierarchical_backoff is None
+        else beam_hierarchical_backoff["summary"]
     )
 
     lines = [
@@ -2293,6 +2306,33 @@ def main() -> None:
                 "",
             ]
         )
+    if beam_hierarchical_backoff_summary is not None:
+        lines.extend(
+            [
+                "## Beam Hierarchical Backoff Gate",
+                "",
+                "Gate 61 tests whether hierarchical backoff over observable",
+                "beam contexts can stabilize the selector without relying on",
+                "singleton `beam_context_combo` rows.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best family | `{beam_hierarchical_backoff_summary['best_family']}` |",
+                f"| Best min support | `{beam_hierarchical_backoff_summary['best_min_support']}` |",
+                f"| Best total hits | `{beam_hierarchical_backoff_summary['best_total_hits']}/{beam_hierarchical_backoff_summary['best_total_total']}` |",
+                f"| Best residual hits | `{beam_hierarchical_backoff_summary['best_residual_hits']}/{beam_hierarchical_backoff_summary['best_residual_total']}` |",
+                f"| Best clean false changes | `{beam_hierarchical_backoff_summary['best_clean_false_changes']}` |",
+                f"| Best context count | `{beam_hierarchical_backoff_summary['best_context_count']}` |",
+                f"| Prefix/holdout cover-all cells | `{beam_hierarchical_backoff_summary['prequential_cover_all_test_cells']}/{beam_hierarchical_backoff_summary['prequential_cells']}` |",
+                f"| Best net vs lookup | `{beam_hierarchical_backoff_summary['best_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "Backoff does not rescue the selector. The best hierarchy ties",
+                "the unstable full-fit `230/234`, `10/10` residual row only at",
+                "support `1`, grows the paid context table to `88` entries,",
+                "and remains `0/5` on prefix/holdout cover-all cells.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2383,6 +2423,10 @@ def main() -> None:
             "support pruning loses residuals, leave-one-book recovers only",
             "`4/10`, leave-context-out only `5/10`, and no prefix/holdout",
             "cell covers all test decisions.",
+            "Gate 61 tests hierarchical backoff over the same beam contexts",
+            "and also fails: it ties the unstable full-fit result only with",
+            "support `1`, increases table cost, and keeps `0/5` cover-all",
+            "holdout cells.",
             "The remaining blocker is therefore a downstream selector or richer",
             "latent path/state segmentation account for why the parser waits,",
             "copies, or understops at the remaining mixed residual sites,",
@@ -2452,6 +2496,7 @@ def main() -> None:
             "- [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)",
             "- [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)",
             "- [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)",
+            "- [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)",
             "",
         ]
     )
