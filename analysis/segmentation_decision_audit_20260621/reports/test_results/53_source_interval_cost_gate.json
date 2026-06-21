@@ -1,0 +1,93 @@
+{
+  "case_reopened": false,
+  "classification": "source_interval_cost_weak_clue_not_promoted",
+  "cost_rows": [
+    {
+      "clean_false_changes": 4,
+      "clean_rollback_bits": 27.625258535276604,
+      "missed_label_counts": {
+        "('copy', 44)": 1,
+        "('copy', 8)": 1,
+        "('literal', 1)": 1,
+        "('literal', 28)": 1,
+        "('literal', 39)": 1
+      },
+      "model": "best_observable_full_fit_rule",
+      "net_vs_lookup_bits": 3.4102369967571207,
+      "policy": "max_payload_occurrences",
+      "predicate": "changes_type_eq_True__and__source_target_interval_distance_ge_3",
+      "residual_hits": 5,
+      "residual_miss_label_bits": 6.90689059560852,
+      "residual_miss_site_bits": 33.342249429681544,
+      "residual_misses": 5,
+      "rule_id_bits": 14.896710815726115,
+      "total_bits": 82.77110937629278
+    },
+    {
+      "clean_false_changes": 0,
+      "clean_rollback_bits": 0.0,
+      "missed_label_counts": {
+        "('copy', 10)": 1,
+        "('copy', 11)": 1,
+        "('copy', 44)": 1,
+        "('copy', 8)": 1,
+        "('copy', 9)": 1,
+        "('literal', 1)": 1,
+        "('literal', 28)": 1,
+        "('literal', 39)": 1
+      },
+      "model": "best_observable_zero_fp_rule",
+      "net_vs_lookup_bits": -0.13132472738369927,
+      "policy": "min_interval_distance_r2",
+      "predicate": "length_delta_abs_le_2__and__source_target_interval_distance_ge_4",
+      "residual_hits": 2,
+      "residual_miss_label_bits": 15.29920801838728,
+      "residual_miss_site_bits": 49.03362881803857,
+      "residual_misses": 8,
+      "rule_id_bits": 14.896710815726115,
+      "total_bits": 79.22954765215196
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "source_interval_cost_weak_clue_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "source_interval_signal_priced_against_lookup",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "latent_state_lookup_cost_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.json",
+    "source_interval_context_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/50_source_interval_context_gate.json",
+    "source_interval_observable_precision_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/52_source_interval_observable_precision_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "source_interval_cost_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "prices_source_interval_signal_against_lookup": true,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true
+  },
+  "summary": {
+    "baseline_lookup_bits": 79.36087237953566,
+    "best_full_fit_bits": 82.77110937629278,
+    "best_full_fit_net_vs_lookup_bits": 3.4102369967571207,
+    "best_model": "best_observable_zero_fp_rule",
+    "best_model_bits": 79.22954765215196,
+    "best_model_net_vs_lookup_bits": -0.13132472738369927,
+    "best_zero_fp_bits": 79.22954765215196,
+    "best_zero_fp_net_vs_lookup_bits": -0.13132472738369927,
+    "decision_universe": 267,
+    "interpretation": "Gate 53 prices the observable source-interval weak clue against the gate-41 residual lookup after charging for rule selection, clean rollbacks, and remaining residual misses in the full decision universe.",
+    "promotes_source_interval_cost_rule": false,
+    "residual_total": 10,
+    "rule_count": 30504,
+    "rule_id_bits": 14.896710815726115,
+    "source_decision_universe": 234,
+    "weak_cost_reduction_before_holdout": true
+  },
+  "translation_delta": "NONE"
+}

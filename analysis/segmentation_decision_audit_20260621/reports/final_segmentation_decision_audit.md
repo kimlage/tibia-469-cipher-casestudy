@@ -1148,6 +1148,27 @@ available to the parser. Observable-only predicates retain the
 best zero-FP observable rule covers only `2/10` residuals and
 holdout remains non-promoting.
 
+## Source Interval Cost Gate
+
+Gate 53 prices the observable source-interval weak clue against
+the gate-41 residual lookup. It charges rule selection, clean
+rollbacks, and remaining residual misses in the full decision
+universe instead of granting the residual set.
+
+| Diagnostic | Value |
+|---|---:|
+| Baseline lookup bits | `79.361` |
+| Rule ID bits | `14.897` |
+| Best full-fit net vs lookup | `3.410` |
+| Best zero-FP net vs lookup | `-0.131` |
+| Weak cost reduction before holdout | `True` |
+
+The source-interval signal remains audit-only. The full-fit
+rule is `+3.410` bits worse than explicit lookup after clean
+rollbacks and misses. The zero-FP rule is only `-0.131` bits
+better before holdout, covers only `2/10` residuals, and does
+not promote a parser.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1204,6 +1225,10 @@ Gate 52 corrects that screen by removing the diagnostic
 `drift_class` predicate; the best observable zero-FP rule drops
 to `2/10` residuals, so the safe source-interval rule is weaker
 than gate 51's headline suggested.
+Gate 53 prices the remaining source-interval clue and keeps it
+audit-only: the full-fit rule is worse than lookup, while the
+zero-FP rule saves only `0.131` bits before holdout and covers
+only `2/10` residuals.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1265,3 +1290,4 @@ or the stable projection as an oracle.
 - [Source interval context gate](test_results/50_source_interval_context_gate.md)
 - [Source interval precision gate](test_results/51_source_interval_precision_gate.md)
 - [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)
+- [Source interval cost gate](test_results/53_source_interval_cost_gate.md)

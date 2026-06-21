@@ -742,6 +742,10 @@ An observable-only correction then removes the diagnostic `drift_class`
 predicate from that screen. The best zero-FP rule drops to `2/10` residuals;
 the `5/10` full-fit signal remains, but still with `4` clean false changes and
 no holdout promotion.
+A source-interval cost gate then prices that weak clue against the explicit
+residual lookup. The full-fit rule is `+3.410` bits worse after clean rollbacks
+and misses. The zero-FP rule is only `-0.131` bits better before holdout and
+covers only `2/10` residuals, so it stays audit-only.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2457,6 +2461,7 @@ book generation, not row0 pair-cell placement.
 - [Source interval context gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/50_source_interval_context_gate.md)
 - [Source interval precision gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/51_source_interval_precision_gate.md)
 - [Source interval observable precision gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/52_source_interval_observable_precision_gate.md)
+- [Source interval cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/53_source_interval_cost_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

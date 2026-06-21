@@ -69,6 +69,7 @@ SOURCE_INTERVAL_PRECISION = TEST_RESULTS / "51_source_interval_precision_gate.js
 SOURCE_INTERVAL_OBSERVABLE_PRECISION = (
     TEST_RESULTS / "52_source_interval_observable_precision_gate.json"
 )
+SOURCE_INTERVAL_COST = TEST_RESULTS / "53_source_interval_cost_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -252,6 +253,9 @@ def main() -> None:
         if SOURCE_INTERVAL_OBSERVABLE_PRECISION.exists()
         else None
     )
+    source_interval_cost = (
+        load_json(SOURCE_INTERVAL_COST) if SOURCE_INTERVAL_COST.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -359,6 +363,8 @@ def main() -> None:
             "source_interval_observable_precision_gate",
             source_interval_observable_precision,
         )
+    if source_interval_cost is not None:
+        assert_boundary("source_interval_cost_gate", source_interval_cost)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -508,6 +514,9 @@ def main() -> None:
         None
         if source_interval_observable_precision is None
         else source_interval_observable_precision["summary"]
+    )
+    source_interval_cost_summary = (
+        None if source_interval_cost is None else source_interval_cost["summary"]
     )
 
     lines = [
@@ -1935,6 +1944,32 @@ def main() -> None:
                 "",
             ]
         )
+    if source_interval_cost_summary is not None:
+        lines.extend(
+            [
+                "## Source Interval Cost Gate",
+                "",
+                "Gate 53 prices the observable source-interval weak clue against",
+                "the gate-41 residual lookup. It charges rule selection, clean",
+                "rollbacks, and remaining residual misses in the full decision",
+                "universe instead of granting the residual set.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Baseline lookup bits | `{source_interval_cost_summary['baseline_lookup_bits']:.3f}` |",
+                f"| Rule ID bits | `{source_interval_cost_summary['rule_id_bits']:.3f}` |",
+                f"| Best full-fit net vs lookup | `{source_interval_cost_summary['best_full_fit_net_vs_lookup_bits']:.3f}` |",
+                f"| Best zero-FP net vs lookup | `{source_interval_cost_summary['best_zero_fp_net_vs_lookup_bits']:.3f}` |",
+                f"| Weak cost reduction before holdout | `{source_interval_cost_summary['weak_cost_reduction_before_holdout']}` |",
+                "",
+                "The source-interval signal remains audit-only. The full-fit",
+                "rule is `+3.410` bits worse than explicit lookup after clean",
+                "rollbacks and misses. The zero-FP rule is only `-0.131` bits",
+                "better before holdout, covers only `2/10` residuals, and does",
+                "not promote a parser.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1993,6 +2028,10 @@ def main() -> None:
             "`drift_class` predicate; the best observable zero-FP rule drops",
             "to `2/10` residuals, so the safe source-interval rule is weaker",
             "than gate 51's headline suggested.",
+            "Gate 53 prices the remaining source-interval clue and keeps it",
+            "audit-only: the full-fit rule is worse than lookup, while the",
+            "zero-FP rule saves only `0.131` bits before holdout and covers",
+            "only `2/10` residuals.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2054,6 +2093,7 @@ def main() -> None:
             "- [Source interval context gate](test_results/50_source_interval_context_gate.md)",
             "- [Source interval precision gate](test_results/51_source_interval_precision_gate.md)",
             "- [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)",
+            "- [Source interval cost gate](test_results/53_source_interval_cost_gate.md)",
             "",
         ]
     )

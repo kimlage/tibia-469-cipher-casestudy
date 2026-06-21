@@ -1253,6 +1253,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rule `3/10`),
   corrects that precision screen by removing diagnostic `drift_class`, leaving
   the best observable zero-FP rule at only `2/10` residuals,
+  prices the remaining source-interval clue as audit-only: full-fit is
+  `+3.410` bits worse than residual lookup, and zero-FP saves only `0.131`
+  bits before holdout,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
