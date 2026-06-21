@@ -718,5 +718,11 @@ Generated audits in this directory should be treated as the current state:
   is still `+15.186` bits worse on the full corpus and worse in every prefix
   frozen split, so the path-dependent source state remains necessary for this
   model.
+- `148_copy_length_midpoint_context_audit`: tests whether the active
+  copy-length `book_id < 35` context is removable or posthoc. It is retained:
+  midpoint beats global by `13.839` stream bits, ranks second among all 69
+  one-cut boundaries, beats global in every prefix frozen split, and passes
+  book-id permutation controls (`p=0.0033`). The searched cutoff `37` is not
+  promoted because it gains only `0.256` bits over the natural midpoint.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

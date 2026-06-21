@@ -987,6 +987,12 @@ based on emitted length, book position, or current copy length. The best
 state-free rule is `state_free_back_current_length`, but it is still `+15.186`
 bits worse on the full corpus and worse in every prefix frozen split, so the
 path-dependent source state remains the current implementation boundary.
+The copy-length midpoint context audit then checks whether the active
+`book_id < 35` split is removable or merely posthoc. It is retained as
+supported context: midpoint beats global by `13.839` stream bits, ranks second
+among all 69 one-cut boundaries, beats global in every prefix frozen split,
+and passes book-id permutation controls (`p=0.0033`). The searched cutoff `37`
+is not promoted because it gains only `0.256` bits over the natural midpoint.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1292,6 +1298,7 @@ book generation, not row0 pair-cell placement.
 - [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
 - [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
+- [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

@@ -395,6 +395,10 @@ authorial method: family/bookcase holdouts still have failures.
   copy-source defaults as a way to remove the previous-copy source/length
   parser state; the best candidate is still `+15.186` bits worse, so the
   active path-dependent source default is retained.
+- `scripts/148_copy_length_midpoint_context_audit.py` - validates the fixed
+  copy-length midpoint context against a global model, searched boundaries,
+  prefix-frozen splits, and book-id permutation controls; midpoint is retained
+  as supported context, not a new bound.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

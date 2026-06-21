@@ -1,0 +1,278 @@
+{
+  "case_reopened": false,
+  "classification": "copy_length_midpoint_context_supported_not_formula_change",
+  "decision": {
+    "best_boundary_promoted": false,
+    "compression_bound_changed": false,
+    "global_context_promoted": false,
+    "midpoint_context_retained": true,
+    "reason": "The natural midpoint split is strongly better than global and nearly tied with the best searched boundary; the searched best boundary is not promoted because it adds search/ad-hoc cost for only a sub-bit improvement over midpoint.",
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "full_corpus": {
+    "best_boundary": {
+      "cutoff": 37,
+      "default_count": 60,
+      "exception_count": 201,
+      "stream_bits": 1340.5498262047909
+    },
+    "best_boundary_gain_vs_global_bits": 14.094599161951237,
+    "global_stream_bits": 1354.644425366742,
+    "midpoint_35_stream_bits": 1340.8058534696768,
+    "midpoint_boundary_rank": 2,
+    "midpoint_context_counts": {
+      "first_half": 168,
+      "second_half": 93
+    },
+    "midpoint_gain_vs_global_bits": 13.838571897065322,
+    "top_10_boundaries": [
+      {
+        "cutoff": 37,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1340.5498262047909
+      },
+      {
+        "cutoff": 35,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1340.8058534696768
+      },
+      {
+        "cutoff": 36,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1341.972930717574
+      },
+      {
+        "cutoff": 29,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1341.984862080971
+      },
+      {
+        "cutoff": 38,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1342.6878172680563
+      },
+      {
+        "cutoff": 33,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1342.822250537628
+      },
+      {
+        "cutoff": 34,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1343.845342548194
+      },
+      {
+        "cutoff": 27,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1344.2118814910298
+      },
+      {
+        "cutoff": 32,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1344.7025733797288
+      },
+      {
+        "cutoff": 30,
+        "default_count": 60,
+        "exception_count": 201,
+        "stream_bits": 1344.7050661045262
+      }
+    ]
+  },
+  "permutation_controls": {
+    "best_boundary_gain_control_summary": {
+      "max": 10.977134125879957,
+      "mean": 1.5401375470166885,
+      "median": 1.2365698681435333,
+      "min": -7.762244836456603,
+      "n": 300
+    },
+    "best_cutoff_control_summary": {
+      "max": 69.0,
+      "mean": 37.99666666666667,
+      "median": 62.5,
+      "min": 1.0,
+      "n": 300
+    },
+    "control_count": 300,
+    "midpoint_gain_control_summary": {
+      "max": -8.333333262376073,
+      "mean": -20.898385299603927,
+      "median": -21.320364638333672,
+      "min": -31.72219632227575,
+      "n": 300
+    },
+    "observed": {
+      "best_boundary_cutoff": 37,
+      "best_boundary_gain_vs_global_bits": 14.094599161951237,
+      "best_boundary_stream_bits": 1340.5498262047909,
+      "midpoint_gain_vs_global_bits": 13.838571897065322
+    },
+    "p_permuted_best_boundary_gain_ge_observed": 0.0033222591362126247,
+    "p_permuted_midpoint_gain_ge_observed": 0.0033222591362126247,
+    "seed": 469
+  },
+  "plaintext_claim": false,
+  "prefix_future_suffix": {
+    "midpoint_minus_global_frozen_bits_summary": {
+      "max": -5.49341349778112,
+      "mean": -15.41506768288516,
+      "median": -12.955352187949131,
+      "min": -26.41571288994669,
+      "n": 5
+    },
+    "rows": [
+      {
+        "cutoff": 10,
+        "label": "prefix_10_future_suffix",
+        "midpoint_minus_global_frozen_bits": -26.41571288994669,
+        "midpoint_minus_global_online_bits": -13.838571897065322,
+        "models": {
+          "global": {
+            "test_frozen_bits": 1094.1704714916875,
+            "test_online_bits": 1059.0895999514996,
+            "train_bits": 295.5548254152422,
+            "train_context_counts": {
+              "global": 57
+            }
+          },
+          "midpoint_35": {
+            "test_frozen_bits": 1067.7547586017408,
+            "test_online_bits": 1045.2510280544343,
+            "train_bits": 295.5548254152422,
+            "train_context_counts": {
+              "first_half": 57
+            }
+          }
+        },
+        "test_events": 204,
+        "train_events": 57
+      },
+      {
+        "cutoff": 20,
+        "label": "prefix_20_future_suffix",
+        "midpoint_minus_global_frozen_bits": -21.27502563397877,
+        "midpoint_minus_global_online_bits": -13.838571897065435,
+        "models": {
+          "global": {
+            "test_frozen_bits": 810.5640272555919,
+            "test_online_bits": 791.0510402810241,
+            "train_bits": 563.5933850857177,
+            "train_context_counts": {
+              "global": 109
+            }
+          },
+          "midpoint_35": {
+            "test_frozen_bits": 789.2890016216131,
+            "test_online_bits": 777.2124683839587,
+            "train_bits": 563.5933850857177,
+            "train_context_counts": {
+              "first_half": 109
+            }
+          }
+        },
+        "test_events": 152,
+        "train_events": 109
+      },
+      {
+        "cutoff": 35,
+        "label": "prefix_35_future_suffix",
+        "midpoint_minus_global_frozen_bits": -12.955352187949131,
+        "midpoint_minus_global_online_bits": -13.838571897065094,
+        "models": {
+          "global": {
+            "test_frozen_bits": 503.8745026336614,
+            "test_online_bits": 493.9083711070682,
+            "train_bits": 860.7360542596739,
+            "train_context_counts": {
+              "global": 168
+            }
+          },
+          "midpoint_35": {
+            "test_frozen_bits": 490.91915044571226,
+            "test_online_bits": 480.0697992100031,
+            "train_bits": 860.7360542596739,
+            "train_context_counts": {
+              "first_half": 168
+            }
+          }
+        },
+        "test_events": 93,
+        "train_events": 168
+      },
+      {
+        "cutoff": 50,
+        "label": "prefix_50_future_suffix",
+        "midpoint_minus_global_frozen_bits": -10.935834204770089,
+        "midpoint_minus_global_online_bits": -9.154921476908953,
+        "models": {
+          "global": {
+            "test_frozen_bits": 261.79622047227747,
+            "test_online_bits": 260.24458971104593,
+            "train_bits": 1094.3998356556965,
+            "train_context_counts": {
+              "global": 213
+            }
+          },
+          "midpoint_35": {
+            "test_frozen_bits": 250.86038626750738,
+            "test_online_bits": 251.08966823413698,
+            "train_bits": 1089.7161852355398,
+            "train_context_counts": {
+              "first_half": 168,
+              "second_half": 45
+            }
+          }
+        },
+        "test_events": 48,
+        "train_events": 213
+      },
+      {
+        "cutoff": 60,
+        "label": "prefix_60_future_suffix",
+        "midpoint_minus_global_frozen_bits": -5.49341349778112,
+        "midpoint_minus_global_online_bits": -5.224846536542145,
+        "models": {
+          "global": {
+            "test_frozen_bits": 82.26035648819749,
+            "test_online_bits": 81.66143376157021,
+            "train_bits": 1272.982991605172,
+            "train_context_counts": {
+              "global": 243
+            }
+          },
+          "midpoint_35": {
+            "test_frozen_bits": 76.76694299041637,
+            "test_online_bits": 76.43658722502806,
+            "train_bits": 1264.3692662446488,
+            "train_context_counts": {
+              "first_half": 168,
+              "second_half": 75
+            }
+          }
+        },
+        "test_events": 18,
+        "train_events": 243
+      }
+    ]
+  },
+  "schema": "copy_length_midpoint_context_audit.v1",
+  "scope": {
+    "copy_length_events": 261,
+    "min_len": 5,
+    "question": "Is the active fixed midpoint context for copy-length exceptions a supported mechanical split or a removable/posthoc parameter?"
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "148_copy_length_midpoint_context_audit",
+  "translation_delta": "NONE"
+}

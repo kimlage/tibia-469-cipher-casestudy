@@ -449,6 +449,11 @@ the best decoder-computable default that avoids previous-copy state is
 `state_free_back_current_length`, still `+15.186` bits worse and worse in every
 prefix frozen split. The path-dependent source state remains the active
 recipe-discovery boundary.
+The copy-length midpoint context audit then supports the active `book_id < 35`
+split: midpoint beats global by `13.839` stream bits, ranks second among 69
+one-cut boundaries, wins every prefix frozen split, and passes book-id
+permutation controls (`p=0.0033`). The searched cutoff `37` is not promoted for
+only `0.256` bits over the natural midpoint.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.
