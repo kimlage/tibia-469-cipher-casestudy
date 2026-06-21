@@ -13,6 +13,7 @@ TEST_RESULTS = REPORTS / "test_results"
 TRACE = TEST_RESULTS / "01_segmentation_decision_trace.json"
 STRUCTURAL = TEST_RESULTS / "02_structural_segmentation_hypothesis_audit.json"
 DEPENDENCY = TEST_RESULTS / "04_parser_dependency_reduction_ledger.json"
+LITERAL_GAP = TEST_RESULTS / "05_literal_gap_boundary_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -42,16 +43,20 @@ def main() -> None:
     trace = load_json(TRACE)
     structural = load_json(STRUCTURAL)
     dependency = load_json(DEPENDENCY) if DEPENDENCY.exists() else None
+    literal_gap = load_json(LITERAL_GAP) if LITERAL_GAP.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
         assert_boundary("parser_dependency_reduction_ledger", dependency)
+    if literal_gap is not None:
+        assert_boundary("literal_gap_boundary_audit", literal_gap)
 
     ts = trace["summary"]
     ss = structural["summary"]
     exception_rows = structural["exception_rows"]
     dep_ledger = None if dependency is None else dependency["ledger"]
     greedy = None if dependency is None else dependency["full_greedy_parser_control"]
+    gap_summary = None if literal_gap is None else literal_gap["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -161,6 +166,27 @@ def main() -> None:
                 "",
             ]
         )
+    if gap_summary is not None:
+        lines.extend(
+            [
+                "## Literal Gap Boundary",
+                "",
+                "| Hypothesis | Result | Boundary |",
+                "|---|---:|---|",
+                f"| Stop at first available match | `{gap_summary['stable_stop_is_first_match_count']}/{gap_summary['literal_gap_count']}` | rejected |",
+                f"| Stop at local-window best literal+copy advance | `{gap_summary['stable_stop_local_best_total_advance_count']}/{gap_summary['literal_gap_count']}` | declared-window clue |",
+                f"| Stop at full-suffix best literal+copy advance | `{gap_summary['stable_stop_full_suffix_best_total_advance_count']}/{gap_summary['literal_gaps_followed_by_copy']}` | source-free rule rejected |",
+                "",
+                f"- Copy was already available at literal start in `{gap_summary['copy_available_at_literal_start']}` gaps.",
+                f"- Future stable copy improves immediate copy in `{gap_summary['future_copy_improves_immediate_count']}` followed-by-copy gaps.",
+                "",
+                "This explains why first-match greedy parsing fails: stable literal gaps",
+                "often wait for a better next copy. But the explanation is still",
+                "conditioned on the declared literal window; it does not derive that",
+                "window source-free.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -176,6 +202,7 @@ def main() -> None:
             "- [Segmentation decision trace](test_results/01_segmentation_decision_trace.md)",
             "- [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)",
             "- [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)",
+            "- [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)",
             "",
         ]
     )

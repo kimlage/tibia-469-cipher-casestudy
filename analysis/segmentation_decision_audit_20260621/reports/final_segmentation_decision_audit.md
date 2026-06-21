@@ -83,6 +83,22 @@ The dependency reduction is therefore real but conditional. It needs
 target text and the stable projection's copy starts; it does not derive
 the full operation sequence source-free.
 
+## Literal Gap Boundary
+
+| Hypothesis | Result | Boundary |
+|---|---:|---|
+| Stop at first available match | `23/54` | rejected |
+| Stop at local-window best literal+copy advance | `54/54` | declared-window clue |
+| Stop at full-suffix best literal+copy advance | `11/49` | source-free rule rejected |
+
+- Copy was already available at literal start in `17` gaps.
+- Future stable copy improves immediate copy in `48` followed-by-copy gaps.
+
+This explains why first-match greedy parsing fails: stable literal gaps
+often wait for a better next copy. But the explanation is still
+conditioned on the declared literal window; it does not derive that
+window source-free.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -96,3 +112,4 @@ target text or changing the skeleton/literal accounting.
 - [Segmentation decision trace](test_results/01_segmentation_decision_trace.md)
 - [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)
 - [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)
+- [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)

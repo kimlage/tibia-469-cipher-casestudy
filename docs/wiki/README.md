@@ -859,6 +859,11 @@ target-text parser projection, materialized records drop from `522` to `318`
 and `414` copy `(source,length)` fields are conditionally removed. The full
 greedy source-free parser is exact for only `39/60` non-seed books, so the
 operation-start atlas remains the blocker.
+A literal gap boundary audit explains the local shape of that blocker:
+inside each declared literal window, the stable boundary maximizes
+literal-offset plus next-copy length in `54/54` gaps. But first available match
+explains only `23/54`, and full-suffix best advance explains only `11/49`
+followed-by-copy gaps, so the literal window itself is still retained.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

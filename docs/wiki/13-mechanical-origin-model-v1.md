@@ -317,6 +317,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Segmentation decision trace | stable copy projection exposes candidate `(source,length)` spaces directly: median `80` candidate pairs, max `1248`, and `207/208` declared copies equal the source-local target max | parser trace built / row0 unchanged |
 | Structural segmentation hypothesis audit | `choose the longest previous target match; break source ties by earliest source` recovers `207/208` copy pairs, versus random global-max source expectation `119.739/208`; this is target-text-aware parser evidence, not a source-free generator | promoted mechanical segmentation clue / generator not promoted |
 | Parser dependency reduction ledger | conditional target-text parser projection reduces materialized records from `522` to `318` and removes `414` copy `(source,length)` fields, but full greedy source-free parsing is exact for only `39/60` non-seed books | dependency reduced conditionally / op-start atlas retained |
+| Literal gap boundary audit | inside each declared literal window, stopping at best literal+copy advance matches `54/54` gaps, but first-available-match gets only `23/54` and full-suffix best-advance only `11/49` followed-by-copy gaps | local boundary clue / literal window retained |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -505,6 +506,7 @@ Primary sources:
 [segmentation_decision_trace.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/01_segmentation_decision_trace.md),
 [structural_segmentation_hypothesis_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.md),
 [parser_dependency_reduction_ledger.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/04_parser_dependency_reduction_ledger.md),
+[literal_gap_boundary_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/05_literal_gap_boundary_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),

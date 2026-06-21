@@ -462,6 +462,12 @@ exact skeleton ledger, the conditional target-text parser projection reduces
 materialized records from `522` to `318` and removes `414` copy
 `(source,length)` fields. The source-free greedy control is exact for only
 `39/60` non-seed books, so the operation-start atlas remains retained.
+A literal gap boundary audit then isolates why first-match greedy parsing
+fails. Within each declared literal window, the stable stop maximizes
+literal-offset plus next-copy length in `54/54` gaps; first available match
+explains only `23/54`, and full-suffix best advance explains only `11/49`
+followed-by-copy gaps. The local boundary clue is real, but the literal window
+itself remains retained.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2129,6 +2135,7 @@ book generation, not row0 pair-cell placement.
 - [Segmentation decision trace](../../analysis/segmentation_decision_audit_20260621/reports/test_results/01_segmentation_decision_trace.md)
 - [Structural segmentation hypothesis audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.md)
 - [Parser dependency reduction ledger](../../analysis/segmentation_decision_audit_20260621/reports/test_results/04_parser_dependency_reduction_ledger.md)
+- [Literal gap boundary audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/05_literal_gap_boundary_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
