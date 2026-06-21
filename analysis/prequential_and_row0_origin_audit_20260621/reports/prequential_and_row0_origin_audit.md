@@ -307,6 +307,28 @@ ops `87`/
 `70/70` roundtrip.
 See [33_item_type_op_shape_boundary_gate.md](test_results/33_item_type_op_shape_boundary_gate.md).
 
+### Current Active Profile Boundary Gate
+
+A current-active-profile gate then aligns the older frozen validation
+scope with the latest active mechanical ledger. The active bound is
+`8177.317` bits:
+copy-length default/exception first moved the formula to
+`8206.178`
+bits, and copy-source default/exception moved it to
+`8177.317`
+bits. The full active learned streams cover
+`87.526%`
+of the bound and have positive frozen gain in every tested prefix,
+block, and public-bookcase family split; the family frozen minimum is
+`6.269`
+bits. The gate does not prove recipe discovery: exact active reparse
+requires state
+`(book_pos, previous_item, previous_copy_source, previous_copy_length)`,
+and the best state-free replacement is
+`15.186`
+bits worse.
+See [34_current_active_profile_boundary_gate.md](test_results/34_current_active_profile_boundary_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -471,6 +493,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
 - Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.
 - Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.
+- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

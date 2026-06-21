@@ -8,10 +8,119 @@
   },
   "case_reopened": false,
   "classification": "analysis_only_falsifiable_audit_row0_origin_exogenous",
+  "current_active_profile_boundary": {
+    "classification": "active_8177_profile_validated_recipe_discovery_blocked",
+    "decision": {
+      "compression_bound_status": "8177.317_bits_active_bound_retained",
+      "generation_explanation_status": "active_learned_components_predictive_under_tested_holdouts",
+      "numeric_order_status": "not_unique_against_random_same_size_train_controls",
+      "recipe_discovery_status": "not_proved_path_dependent_state_boundary_retained",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.json",
+    "summary": {
+      "active_block_gain_summary": {
+        "frozen_mean_gain_bits": 85.39698859763605,
+        "frozen_min_gain_bits": 50.36084501663345,
+        "frozen_nonpositive_count": 0,
+        "online_mean_gain_bits": 93.29198232951508,
+        "online_min_gain_bits": 51.37273532887605,
+        "online_nonpositive_count": 0,
+        "split_count": 7
+      },
+      "active_compression_bound_bits": 8177.3166531229235,
+      "active_family_gain_summary": {
+        "frozen_mean_gain_bits": 26.32771642232084,
+        "frozen_min_gain_bits": 6.269436093812175,
+        "frozen_nonpositive_count": 0,
+        "online_mean_gain_bits": 26.745568583089163,
+        "online_min_gain_bits": 6.286122639744804,
+        "online_nonpositive_count": 0,
+        "split_count": 19
+      },
+      "active_prefix_gain_summary": {
+        "frozen_mean_gain_bits": 188.20271396250922,
+        "frozen_min_gain_bits": 62.10262401821575,
+        "frozen_nonpositive_count": 0,
+        "online_mean_gain_bits": 213.8244515740017,
+        "online_min_gain_bits": 63.50179912046735,
+        "online_nonpositive_count": 0,
+        "split_count": 5
+      },
+      "active_reparse_state_key_required": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+      "active_validated": true,
+      "best_state_free_default": "state_free_back_current_length",
+      "best_state_free_worse_than_active_total_bits": 15.186017251789963,
+      "component_stream_bits": {
+        "copy_length_stream_bits": 1340.8058534696768,
+        "copy_source_stream_bits": 2990.838060159001,
+        "item_type_stream_bits": 212.01191674175735,
+        "literal_payload_stream_bits": 2613.660822752486
+      },
+      "copy_length_default_exception_bits": 8206.178438764528,
+      "copy_length_gain_bits": 136.88350617093965,
+      "copy_source_default_exception_bits": 8177.3166531229235,
+      "copy_source_gain_bits": 28.861785641604,
+      "cutoff10_old_reparse_state_count": 28881,
+      "cutoff10_state_proxy": 302879952,
+      "default_exception_bound_promoted": true,
+      "default_exception_validation_family_nonpositive_frozen_count": 2,
+      "default_exception_validation_family_nonpositive_online_count": 2,
+      "event_counts": {
+        "copy_length": 261,
+        "copy_source": 261,
+        "item_type": 265,
+        "literal_payload": 857
+      },
+      "exact_active_reparse_implemented": false,
+      "fixed_recipe_or_declaration_bits": 1020.0000000000018,
+      "fixed_recipe_or_declaration_share_pct": 12.473529438418689,
+      "learned_component_stream_bits": 7157.316653122922,
+      "learned_component_stream_share_pct": 87.5264705615813,
+      "max_book_state_proxy_multiplier": 38968.0,
+      "old_reparse_state_key": "(book_pos, previous_item)",
+      "random_train_control_cutoffs": [
+        {
+          "cutoff": 10,
+          "observed_numeric_prefix_online_gain_bits": 417.16407283714034,
+          "p_random_ge_observed": 1.0,
+          "random_median_online_gain_bits": 492.93885555668794
+        },
+        {
+          "cutoff": 20,
+          "observed_numeric_prefix_online_gain_bits": 287.9535724741904,
+          "p_random_ge_observed": 1.0,
+          "random_median_online_gain_bits": 441.1711153285446
+        },
+        {
+          "cutoff": 35,
+          "observed_numeric_prefix_online_gain_bits": 189.1802157870195,
+          "p_random_ge_observed": 1.0,
+          "random_median_online_gain_bits": 330.12104728952295
+        },
+        {
+          "cutoff": 50,
+          "observed_numeric_prefix_online_gain_bits": 111.32259765119079,
+          "p_random_ge_observed": 1.0,
+          "random_median_online_gain_bits": 188.22609718354715
+        },
+        {
+          "cutoff": 60,
+          "observed_numeric_prefix_online_gain_bits": 63.50179912046735,
+          "p_random_ge_observed": 0.85,
+          "random_median_online_gain_bits": 100.51733853172533
+        }
+      ],
+      "recipe_discovery_proved": false,
+      "state_blocker_retained": true
+    }
+  },
   "decision": {
     "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
     "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
+    "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
     "generation_explanation_status": "predictive_signal_partial_not_generation_method",
     "item_type_boundary_status": "split_only_retained_op_type_field_derived",
     "literal_externality_status": "reduced_not_removed_local_repairs_rejected",
@@ -4882,6 +4991,7 @@
   },
   "schema": "prequential_and_row0_origin_audit_20260621.v1",
   "scope": {
+    "current_active_compression_bound_bits": 8177.3166531229235,
     "fixed_recipe_limitation": "All predictive tests keep the full-corpus LZ recipe fixed. They validate learned component scoring, not recipe discovery.",
     "known_later_compression_only_bound_bits_not_used_as_generation_claim": 8343.061944935467,
     "reason_later_bound_not_used_here": "The requested method change freezes the 8558.667-bit formula as the predictive-validation target and stops treating later compression-only micro-improvements as generation evidence.",

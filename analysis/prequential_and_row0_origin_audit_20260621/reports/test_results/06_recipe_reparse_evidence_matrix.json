@@ -4,6 +4,7 @@
   "decision": {
     "copy_length_context_status": "midpoint_context_retained",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
+    "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
     "item_type_boundary_status": "split_only_retained_op_type_field_derived",
     "literal_externality_status": "reduced_not_removed",
@@ -378,6 +379,32 @@
     },
     {
       "evidence": {
+        "active_block_frozen_min_gain_bits": 50.36084501663345,
+        "active_compression_bound_bits": 8177.3166531229235,
+        "active_family_frozen_min_gain_bits": 6.269436093812175,
+        "active_family_frozen_nonpositive_count": 0,
+        "active_prefix_frozen_min_gain_bits": 62.10262401821575,
+        "active_reparse_state_key_required": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+        "best_state_free_default": "state_free_back_current_length",
+        "best_state_free_worse_than_active_total_bits": 15.186017251789963,
+        "copy_length_default_exception_bits": 8206.178438764528,
+        "copy_length_gain_bits": 136.88350617093965,
+        "copy_source_default_exception_bits": 8177.3166531229235,
+        "copy_source_gain_bits": 28.861785641604,
+        "cutoff10_old_reparse_state_count": 28881,
+        "cutoff10_state_proxy": 302879952,
+        "default_exception_only_family_frozen_nonpositive_count": 2,
+        "fixed_recipe_or_declaration_bits": 1020.0000000000018,
+        "learned_component_stream_share_pct": 87.5264705615813,
+        "recipe_discovery_proved": false
+      },
+      "interpretation": "The active 8177-bit component profile is stronger than the default/exception-only validation, but exact active reparse is still path-state-bound and recipe discovery is not proved.",
+      "question": "is_current_active_8177_profile_validated_or_recipe_discovered",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.json",
+      "status": "active_profile_validated_recipe_discovery_blocked"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -673,6 +700,7 @@
   "inputs": {
     "copy_length_derivation_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.json",
     "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
+    "current_active_profile_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.json",
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",

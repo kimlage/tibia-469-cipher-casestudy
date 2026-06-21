@@ -115,6 +115,9 @@ exogenous.
 - [scripts/33_item_type_op_shape_boundary_gate.py](scripts/33_item_type_op_shape_boundary_gate.py) - separates retained item-type sequence modeling from derivable recipe op-type fields.
 - [reports/test_results/33_item_type_op_shape_boundary_gate.md](reports/test_results/33_item_type_op_shape_boundary_gate.md) - item-type/op-shape boundary result.
 - [reports/test_results/33_item_type_op_shape_boundary_gate.json](reports/test_results/33_item_type_op_shape_boundary_gate.json) - structured item-type/op-shape boundary ledger.
+- [scripts/34_current_active_profile_boundary_gate.py](scripts/34_current_active_profile_boundary_gate.py) - consolidates the current `8177.317`-bit active profile and its recipe-discovery blocker.
+- [reports/test_results/34_current_active_profile_boundary_gate.md](reports/test_results/34_current_active_profile_boundary_gate.md) - current active profile boundary result.
+- [reports/test_results/34_current_active_profile_boundary_gate.json](reports/test_results/34_current_active_profile_boundary_gate.json) - structured current active profile boundary ledger.
 
 ## Boundary
 
@@ -204,7 +207,10 @@ exogenous.
   text, copy source, and copy length as declared dependencies. An item-type/
   op-shape boundary gate then keeps the split-only item-type stream while
   clarifying that explicit compact-recipe op `type` fields are derivable from
-  operation shape.
+  operation shape. A current-active-profile boundary gate then consolidates
+  the `8177.317`-bit active profile: all tested prefix, block, and
+  public-bookcase family frozen gains are positive, but exact active reparse is
+  still blocked by path-dependent copy-source state.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

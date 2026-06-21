@@ -514,6 +514,9 @@ uniform in every tested prefix, block, and public-bookcase family holdout, but
 random same-size train controls are usually stronger than numeric prefixes.
 This strengthens component validation while leaving recipe discovery, row0
 origin, and semantics unchanged.
+A current-active-profile boundary gate consolidates that result: the profile is
+validated across tested splits, but exact active reparse remains blocked by
+previous-copy source/length state.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

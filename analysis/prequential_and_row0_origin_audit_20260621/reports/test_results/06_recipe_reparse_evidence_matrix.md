@@ -37,6 +37,7 @@ claim.
 | `does_online_reparse_reduce_full_corpus_recipe_cost` | `passed_as_mechanical_compile_not_semantic_claim` | 8558.667 -> 8343.062 bits; gain 215.605; roundtrip 70/70 |
 | `which_recipe_fields_are_derivable_representation_artifacts` | `passed_derivable_fields_removed_dependencies_retained` | bits 8343.062 -> 8343.062; delta +0.000000000000; removed fields book_length 70, copy_target 261, literal_length 87, type 348 (total 766); JSON saved 11722; remaining literal_text 87, copy_source 261, copy_length 261 |
 | `is_item_type_sequence_or_recipe_type_field_dependency` | `split_only_sequence_retained_op_type_field_derived` | item-type gain 3.125 bits (conservative 2.125); stream 223.412 -> 220.287; coded/forced items 287/81; alpha 2 retained, alpha1 delta 0.309; op type fields removed 348, shape ops 87/261, ambiguous 0; score delta +0.000000000000; roundtrip 70/70 |
+| `is_current_active_8177_profile_validated_or_recipe_discovered` | `active_profile_validated_recipe_discovery_blocked` | active 8177.317 bits; length/source defaults 8206.178/8177.317; gains 136.884/28.862; learned share 87.526%; frozen min prefix/block/family 62.103/50.361/6.269; family failures active/default-only 0/2; recipe proved False; state `(book_pos, previous_item, previous_copy_source, previous_copy_length)`; cutoff10 state proxy 302879952 vs old 28881; state-free `state_free_back_current_length` +15.186 |
 | `where_is_the_online_prefix_per_book_frontier` | `passed_after_bootstrap_with_book0_failure` | book-bounded raw wins 69/70; after bootstrap 69/69; failures [0]; mean gain 419.761; break-even book 2 |
 | `does_an_explicit_book0_seed_close_the_online_bootstrap_failure` | `passed_as_bootstrap_accounting_not_bound_promotion` | book0 online-raw 10.499 bits; seed wins/ties 70/70; strict wins 69/70; failures []; stream saving 10.499 |
 | `does_book0_seed_survive_complete_formula_rescoring` | `failed_as_formula_promotion` | seeded 8344.041 vs online 8343.062; delta 0.979; book-bounded delta 305.198; promoted 0 |
@@ -67,5 +68,6 @@ claim.
 - Literal payload model: `active_order2_retained`.
 - Recipe representation: `derivable_fields_removed_dependencies_retained`.
 - Item type boundary: `split_only_retained_op_type_field_derived`.
+- Current active profile: `8177_bound_validated_recipe_discovery_blocked`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

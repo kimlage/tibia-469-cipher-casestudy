@@ -37,6 +37,14 @@ ITEM_TYPE_OP_SHAPE_GATE = (
     / "test_results"
     / "33_item_type_op_shape_boundary_gate.json"
 )
+CURRENT_ACTIVE_PROFILE_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "34_current_active_profile_boundary_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -185,6 +193,8 @@ def assert_analysis_boundary(name: str, data: dict[str, Any]) -> None:
 def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     item_type_gate = load_json(ITEM_TYPE_OP_SHAPE_GATE)
     assert_analysis_boundary("item_type_op_shape_boundary_gate", item_type_gate)
+    active_profile_gate = load_json(CURRENT_ACTIVE_PROFILE_GATE)
+    assert_analysis_boundary("current_active_profile_boundary_gate", active_profile_gate)
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -216,6 +226,9 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "known_later_compression_only_bound_bits_not_used_as_generation_claim": (
                 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS
             ),
+            "current_active_compression_bound_bits": active_profile_gate["summary"][
+                "active_compression_bound_bits"
+            ],
             "reason_later_bound_not_used_here": (
                 "The requested method change freezes the 8558.667-bit formula as "
                 "the predictive-validation target and stops treating later "
@@ -264,6 +277,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": item_type_gate["summary"],
             "decision": item_type_gate["decision"],
         },
+        "current_active_profile_boundary": {
+            "classification": active_profile_gate["classification"],
+            "source": rel(CURRENT_ACTIVE_PROFILE_GATE),
+            "summary": active_profile_gate["summary"],
+            "decision": active_profile_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -287,6 +306,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "literal_payload_model_status": "active_order2_retained_simplifications_rejected",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
+            "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -319,6 +339,7 @@ def render_markdown(
     order_frontier_promotion_gate_link: str,
     recipe_representation_dependency_gate_link: str,
     item_type_op_shape_boundary_gate_link: str,
+    current_active_profile_boundary_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -336,6 +357,7 @@ def render_markdown(
     ablations = result["predictive_validation"]["component_ablation_prefix_splits"]
     params = result["predictive_validation"]["parameter_stability_prefix_splits"]
     item_type_boundary = result["item_type_op_shape_boundary"]["summary"]
+    active_profile_boundary = result["current_active_profile_boundary"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -349,9 +371,9 @@ def render_markdown(
         f"- Later compression-only bound recorded but not used as generation evidence: `{result['scope']['known_later_compression_only_bound_bits_not_used_as_generation_claim']:.3f}` bits",
         "- No plaintext, translation, or case-reopening claim is made.",
         "- Limitation: the LZ recipe is fixed from the full corpus; this audit tests learned component scoring, not recipe discovery.",
-        "",
-        "## Predictive Validation",
-        "",
+            "",
+            "## Predictive Validation",
+            "",
         f"Predictive classification: `{result['predictive_validation']['classification']}`",
         "",
         "| Split | Train books | Test books | Train bits | Test online bits | Test frozen bits | Uniform bits | Online gain | Frozen gain | Gap/event |",
@@ -669,6 +691,28 @@ def render_markdown(
             "`70/70` roundtrip.",
             f"See [33_item_type_op_shape_boundary_gate.md]({item_type_op_shape_boundary_gate_link}).",
             "",
+            "### Current Active Profile Boundary Gate",
+            "",
+            "A current-active-profile gate then aligns the older frozen validation",
+            "scope with the latest active mechanical ledger. The active bound is",
+            f"`{active_profile_boundary['active_compression_bound_bits']:.3f}` bits:",
+            "copy-length default/exception first moved the formula to",
+            f"`{active_profile_boundary['copy_length_default_exception_bits']:.3f}`",
+            f"bits, and copy-source default/exception moved it to",
+            f"`{active_profile_boundary['copy_source_default_exception_bits']:.3f}`",
+            "bits. The full active learned streams cover",
+            f"`{active_profile_boundary['learned_component_stream_share_pct']:.3f}%`",
+            "of the bound and have positive frozen gain in every tested prefix,",
+            "block, and public-bookcase family split; the family frozen minimum is",
+            f"`{active_profile_boundary['active_family_gain_summary']['frozen_min_gain_bits']:.3f}`",
+            "bits. The gate does not prove recipe discovery: exact active reparse",
+            "requires state",
+            f"`{active_profile_boundary['active_reparse_state_key_required']}`,",
+            "and the best state-free replacement is",
+            f"`{active_profile_boundary['best_state_free_worse_than_active_total_bits']:.3f}`",
+            "bits worse.",
+            f"See [34_current_active_profile_boundary_gate.md]({current_active_profile_boundary_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -842,6 +886,7 @@ def render_markdown(
             "- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.",
             "- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.",
             "- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.",
+            "- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -902,6 +947,9 @@ def main() -> None:
             ),
             item_type_op_shape_boundary_gate_link=(
                 "33_item_type_op_shape_boundary_gate.md"
+            ),
+            current_active_profile_boundary_gate_link=(
+                "34_current_active_profile_boundary_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -978,6 +1026,9 @@ def main() -> None:
             ),
             item_type_op_shape_boundary_gate_link=(
                 "test_results/33_item_type_op_shape_boundary_gate.md"
+            ),
+            current_active_profile_boundary_gate_link=(
+                "test_results/34_current_active_profile_boundary_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

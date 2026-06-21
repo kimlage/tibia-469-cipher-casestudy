@@ -213,6 +213,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Current literal-payload profile audit | old order-1 profile does not transfer; order-1 is `+95.968` full-corpus and `+28.609` aggregate frozen-prefix bits worse | order-2 retained |
 | Copy source distance model audit | backward-distance source coding is decodable but the replacement is `+25.551` bits worse than active absolute-source default/exception | distance rejected |
 | Current active prequential profile audit | active learned streams cover `7157.317/8177.317` bits and beat uniform on all tested prefix, block, and public-bookcase family holdouts; random same-size train controls are usually stronger than numeric prefixes | component validation strengthened / recipe discovery not proved |
+| Current active profile boundary gate | consolidates `8177.317` as active bound with positive frozen gain across all tested prefix/block/family splits, while exact active reparse remains blocked by previous-copy source/length state | active profile validated / recipe discovery blocked |
 | Active reparse state-boundary audit | active copy-source default is path-dependent on previous copy source/length; exact reparse needs expanded state and reaches a cutoff-10 state proxy of `302879952` | recipe-discovery blocker localized |
 | Copy source state-free default audit | decoder-computable source defaults that avoid previous-copy state are all worse; the best `state_free_back_current_length` rule is `+15.186` bits worse and worse in every prefix frozen split | state-free source simplification rejected |
 | Source state dependency gate | canonicality does not remove source dependency and state-free defaults do not remove previous-copy source/length state; best state-free default is `+15.186` bits and loses `5/5` prefix-frozen checks | path-dependent source state retained |
@@ -392,6 +393,7 @@ Primary sources:
 [current_literal_payload_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md),
 [copy_source_distance_model_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md),
 [current_active_prequential_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md),
+[current_active_profile_boundary_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.md),
 [active_reparse_state_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md),
 [copy_source_state_free_default_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md),
 [source_selection_derivation_boundary_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.md),

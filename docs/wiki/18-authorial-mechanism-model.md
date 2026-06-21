@@ -1100,6 +1100,10 @@ family holdout; the weakest family frozen gain is still `6.269` bits. Random
 same-size train controls are usually stronger than numeric prefixes, so this
 strengthens component-level predictive validation without proving recipe
 discovery or authorial book order.
+The current active profile boundary gate then records the same conclusion as a
+single prequential-side decision: the `8177.317`-bit active profile is retained,
+but exact active reparse is still blocked by previous-copy source/length state
+and the best state-free replacement is `+15.186` bits worse.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry
@@ -1520,6 +1524,7 @@ book generation, not row0 pair-cell placement.
 - [Current literal payload profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md)
 - [Copy source distance model audit](../../analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.md)
 - [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
+- [Current active profile boundary gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.md)
 - [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
 - [Source state dependency gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.md)

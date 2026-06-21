@@ -57,6 +57,8 @@ SOURCES = {
     / "30_recipe_representation_dependency_gate.json",
     "item_type_op_shape_boundary_gate": TEST_RESULTS
     / "33_item_type_op_shape_boundary_gate.json",
+    "current_active_profile_boundary_gate": TEST_RESULTS
+    / "34_current_active_profile_boundary_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -109,6 +111,7 @@ def make_result() -> dict[str, Any]:
     literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
     recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
     item_type_op_shape_boundary_gate = load_json(SOURCES["item_type_op_shape_boundary_gate"])
+    current_active_profile_gate = load_json(SOURCES["current_active_profile_boundary_gate"])
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -143,6 +146,7 @@ def make_result() -> dict[str, Any]:
         ("literal_payload_model_gate", literal_payload_model_gate),
         ("recipe_representation_dependency_gate", recipe_representation_gate),
         ("item_type_op_shape_boundary_gate", item_type_op_shape_boundary_gate),
+        ("current_active_profile_boundary_gate", current_active_profile_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -628,6 +632,76 @@ def make_result() -> dict[str, Any]:
                 "The split-only item-type stream remains a mechanical component, "
                 "while the explicit op type field in compact recipe JSON is a "
                 "derivable representation artifact."
+            ),
+        },
+        {
+            "question": "is_current_active_8177_profile_validated_or_recipe_discovered",
+            "source": rel(SOURCES["current_active_profile_boundary_gate"]),
+            "status": "active_profile_validated_recipe_discovery_blocked",
+            "evidence": {
+                "active_compression_bound_bits": current_active_profile_gate["summary"][
+                    "active_compression_bound_bits"
+                ],
+                "copy_length_default_exception_bits": current_active_profile_gate[
+                    "summary"
+                ]["copy_length_default_exception_bits"],
+                "copy_length_gain_bits": current_active_profile_gate["summary"][
+                    "copy_length_gain_bits"
+                ],
+                "copy_source_default_exception_bits": current_active_profile_gate[
+                    "summary"
+                ]["copy_source_default_exception_bits"],
+                "copy_source_gain_bits": current_active_profile_gate["summary"][
+                    "copy_source_gain_bits"
+                ],
+                "learned_component_stream_share_pct": current_active_profile_gate[
+                    "summary"
+                ]["learned_component_stream_share_pct"],
+                "fixed_recipe_or_declaration_bits": current_active_profile_gate[
+                    "summary"
+                ]["fixed_recipe_or_declaration_bits"],
+                "active_prefix_frozen_min_gain_bits": current_active_profile_gate[
+                    "summary"
+                ]["active_prefix_gain_summary"]["frozen_min_gain_bits"],
+                "active_block_frozen_min_gain_bits": current_active_profile_gate[
+                    "summary"
+                ]["active_block_gain_summary"]["frozen_min_gain_bits"],
+                "active_family_frozen_min_gain_bits": current_active_profile_gate[
+                    "summary"
+                ]["active_family_gain_summary"]["frozen_min_gain_bits"],
+                "active_family_frozen_nonpositive_count": current_active_profile_gate[
+                    "summary"
+                ]["active_family_gain_summary"]["frozen_nonpositive_count"],
+                "default_exception_only_family_frozen_nonpositive_count": (
+                    current_active_profile_gate["summary"][
+                        "default_exception_validation_family_nonpositive_frozen_count"
+                    ]
+                ),
+                "recipe_discovery_proved": current_active_profile_gate["summary"][
+                    "recipe_discovery_proved"
+                ],
+                "active_reparse_state_key_required": current_active_profile_gate[
+                    "summary"
+                ]["active_reparse_state_key_required"],
+                "cutoff10_state_proxy": current_active_profile_gate["summary"][
+                    "cutoff10_state_proxy"
+                ],
+                "cutoff10_old_reparse_state_count": current_active_profile_gate[
+                    "summary"
+                ]["cutoff10_old_reparse_state_count"],
+                "best_state_free_default": current_active_profile_gate["summary"][
+                    "best_state_free_default"
+                ],
+                "best_state_free_worse_than_active_total_bits": (
+                    current_active_profile_gate["summary"][
+                        "best_state_free_worse_than_active_total_bits"
+                    ]
+                ),
+            },
+            "interpretation": (
+                "The active 8177-bit component profile is stronger than the "
+                "default/exception-only validation, but exact active reparse is "
+                "still path-state-bound and recipe discovery is not proved."
             ),
         },
         {
@@ -1265,6 +1339,7 @@ def make_result() -> dict[str, Any]:
             "literal_payload_model_status": "active_order2_retained",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
+            "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1444,6 +1519,28 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['ambiguous_shape_ops']}; score delta "
                 f"{evidence['op_type_score_delta_bits']:+.12f}; "
                 f"roundtrip {evidence['op_type_roundtrip_ok']}/70"
+            )
+        elif row["question"] == "is_current_active_8177_profile_validated_or_recipe_discovered":
+            key = (
+                f"active {evidence['active_compression_bound_bits']:.3f} bits; "
+                f"length/source defaults {evidence['copy_length_default_exception_bits']:.3f}/"
+                f"{evidence['copy_source_default_exception_bits']:.3f}; gains "
+                f"{evidence['copy_length_gain_bits']:.3f}/"
+                f"{evidence['copy_source_gain_bits']:.3f}; learned share "
+                f"{evidence['learned_component_stream_share_pct']:.3f}%; "
+                f"frozen min prefix/block/family "
+                f"{evidence['active_prefix_frozen_min_gain_bits']:.3f}/"
+                f"{evidence['active_block_frozen_min_gain_bits']:.3f}/"
+                f"{evidence['active_family_frozen_min_gain_bits']:.3f}; "
+                f"family failures active/default-only "
+                f"{evidence['active_family_frozen_nonpositive_count']}/"
+                f"{evidence['default_exception_only_family_frozen_nonpositive_count']}; "
+                f"recipe proved {evidence['recipe_discovery_proved']}; state "
+                f"`{evidence['active_reparse_state_key_required']}`; cutoff10 "
+                f"state proxy {evidence['cutoff10_state_proxy']} vs old "
+                f"{evidence['cutoff10_old_reparse_state_count']}; state-free "
+                f"`{evidence['best_state_free_default']}` "
+                f"{evidence['best_state_free_worse_than_active_total_bits']:+.3f}"
             )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
@@ -1650,6 +1747,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",
             f"- Recipe representation: `{result['decision']['recipe_representation_status']}`.",
             f"- Item type boundary: `{result['decision']['item_type_boundary_status']}`.",
+            f"- Current active profile: `{result['decision']['current_active_profile_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]
