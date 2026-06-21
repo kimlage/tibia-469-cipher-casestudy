@@ -801,6 +801,10 @@ A target-position derivation ledger then sharpens the atlas accounting:
 `target_start`, `remaining`, and operation index derive in `261/261` rows from
 cumulative lengths/book length, so target position is not an independent
 skeleton dependency even though the `261` type/length atlas rows remain.
+A seed primacy audit rejects treating operational books `0..9` as a special
+mechanical seed set: they cover `8664/9567` non-seed digits, below random k=10
+median `9005`, while a better k=10 seed exists only posthoc. The result is
+`AUDIT_ONLY_COMPRESSION`, not seed-origin promotion.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1025,6 +1029,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects type-sequence motif libraries after full residual accounting,
   records target-dependent copy availability as an `AUDIT_ONLY` op-type clue,
   derives target positions from cumulative lengths while retaining the atlas,
+  rejects operational seed `0..9` as mechanically privileged under seed-only
+  coverage controls,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

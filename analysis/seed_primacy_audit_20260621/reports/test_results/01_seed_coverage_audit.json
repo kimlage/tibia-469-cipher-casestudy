@@ -1,0 +1,1777 @@
+{
+  "best_by_k": [
+    {
+      "copied_digits_explained": 10011,
+      "copy_items_required": 459,
+      "coverage_rate": 0.9659397915862601,
+      "gain_vs_random_median_after_declaration_bits": 5172.242043739621,
+      "gain_vs_random_median_copied_digits": 1557.0,
+      "label": "greedy_coverage",
+      "literal_digits_required": 353,
+      "literal_runs_required": 140,
+      "median_book_coverage_rate": 0.9838709677419355,
+      "payload_gain_after_declaration_bits": 33232.2932948882,
+      "prefix_holdout_gap_abs": 0.01127173770935963,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 5,
+      "seed_books": [
+        8,
+        9,
+        13,
+        17,
+        25
+      ],
+      "seed_declaration_bits": 23.528863029181142,
+      "seed_digits": 899,
+      "target_digits": 10364
+    },
+    {
+      "copied_digits_explained": 9734,
+      "copy_items_required": 388,
+      "coverage_rate": 0.9752529806632602,
+      "gain_vs_random_median_after_declaration_bits": 2421.6855811728856,
+      "gain_vs_random_median_copied_digits": 729.0,
+      "label": "greedy_coverage",
+      "literal_digits_required": 247,
+      "literal_runs_required": 95,
+      "median_book_coverage_rate": 0.9923926877241698,
+      "payload_gain_after_declaration_bits": 32297.118801739034,
+      "prefix_holdout_gap_abs": 0.0007725779310546743,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 10,
+      "seed_books": [
+        7,
+        8,
+        9,
+        13,
+        17,
+        20,
+        25,
+        39,
+        54,
+        67
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1282,
+      "target_digits": 9981
+    },
+    {
+      "copied_digits_explained": 9328,
+      "copy_items_required": 279,
+      "coverage_rate": 0.9893932965634281,
+      "gain_vs_random_median_after_declaration_bits": 2728.9639299499686,
+      "gain_vs_random_median_copied_digits": 821.5,
+      "label": "greedy_coverage",
+      "literal_digits_required": 100,
+      "literal_runs_required": 35,
+      "median_book_coverage_rate": 1.0,
+      "payload_gain_after_declaration_bits": 30937.58731499361,
+      "prefix_holdout_gap_abs": 0.005704986303585291,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 15,
+      "seed_books": [
+        1,
+        7,
+        8,
+        9,
+        12,
+        13,
+        17,
+        18,
+        20,
+        25,
+        39,
+        49,
+        54,
+        55,
+        67
+      ],
+      "seed_declaration_bits": 49.357954115705446,
+      "seed_digits": 1835,
+      "target_digits": 9428
+    },
+    {
+      "copied_digits_explained": 8721,
+      "copy_items_required": 252,
+      "coverage_rate": 0.9906849937521299,
+      "gain_vs_random_median_after_declaration_bits": 2913.3309392162155,
+      "gain_vs_random_median_copied_digits": 877.0,
+      "label": "greedy_coverage",
+      "literal_digits_required": 82,
+      "literal_runs_required": 28,
+      "median_book_coverage_rate": 1.0,
+      "payload_gain_after_declaration_bits": 28913.36717211764,
+      "prefix_holdout_gap_abs": 0.002851369155334793,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 20,
+      "seed_books": [
+        1,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        17,
+        18,
+        20,
+        24,
+        25,
+        27,
+        34,
+        39,
+        49,
+        54,
+        55,
+        63,
+        67
+      ],
+      "seed_declaration_bits": 57.16774339504577,
+      "seed_digits": 2460,
+      "target_digits": 8803
+    }
+  ],
+  "candidate_rows": [
+    {
+      "copied_digits_explained": 10011,
+      "copy_items_per_1000_copied_digits": 45.84956547797423,
+      "copy_items_required": 459,
+      "coverage_rate": 0.9659397915862601,
+      "derived_stats": {
+        "book_count": 65,
+        "mean_entropy": 3.2326064985179017,
+        "mean_length": 159.44615384615383,
+        "mean_repeated_5gram_fraction": 0.07828519071103801
+      },
+      "gain_vs_random_median_after_declaration_bits": 5172.242043739621,
+      "gain_vs_random_median_copied_digits": 1557.0,
+      "high_book_coverage_rate": 0.9708654670094259,
+      "label": "greedy_coverage",
+      "literal_digits_required": 353,
+      "literal_runs_required": 140,
+      "low_book_coverage_rate": 0.9595937293000663,
+      "median_book_coverage_rate": 0.9838709677419355,
+      "op_count": 599,
+      "payload_gain_after_declaration_bits": 33232.2932948882,
+      "payload_gain_before_declaration_bits": 33255.822157917384,
+      "prefix_holdout_gap_abs": 0.01127173770935963,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 5,
+      "seed_books": [
+        8,
+        9,
+        13,
+        17,
+        25
+      ],
+      "seed_declaration_bits": 23.528863029181142,
+      "seed_digits": 899,
+      "seed_stats": {
+        "book_count": 5,
+        "mean_entropy": 3.181012287321847,
+        "mean_length": 179.8,
+        "mean_repeated_5gram_fraction": 0.07559775902025309
+      },
+      "source_dependency_remaining": 459,
+      "target_book_count": 65,
+      "target_digits": 10364
+    },
+    {
+      "copied_digits_explained": 8553,
+      "copy_items_per_1000_copied_digits": 55.65298725593359,
+      "copy_items_required": 476,
+      "coverage_rate": 0.8091769157994324,
+      "derived_stats": {
+        "book_count": 65,
+        "mean_entropy": 3.229036048046366,
+        "mean_length": 162.6153846153846,
+        "mean_repeated_5gram_fraction": 0.0807107714935501
+      },
+      "gain_vs_random_median_after_declaration_bits": 328.87088139385014,
+      "gain_vs_random_median_copied_digits": 99.0,
+      "high_book_coverage_rate": 0.7758354755784062,
+      "label": "canonical_prefix",
+      "literal_digits_required": 2017,
+      "literal_runs_required": 242,
+      "low_book_coverage_rate": 0.8502639915522703,
+      "median_book_coverage_rate": 0.8461538461538461,
+      "op_count": 718,
+      "payload_gain_after_declaration_bits": 28388.92213254243,
+      "payload_gain_before_declaration_bits": 28412.45099557161,
+      "prefix_holdout_gap_abs": 0.07442851597386413,
+      "random_control_percentile_copied_digits": 0.53,
+      "search_class": "zero_search_prefix",
+      "seed_book_count": 5,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed_declaration_bits": 23.528863029181142,
+      "seed_digits": 693,
+      "seed_stats": {
+        "book_count": 5,
+        "mean_entropy": 3.2274281434518155,
+        "mean_length": 138.6,
+        "mean_repeated_5gram_fraction": 0.04406520884759577
+      },
+      "source_dependency_remaining": 476,
+      "target_book_count": 65,
+      "target_digits": 10570
+    },
+    {
+      "copied_digits_explained": 8346,
+      "copy_items_per_1000_copied_digits": 59.54948478312964,
+      "copy_items_required": 497,
+      "coverage_rate": 0.8461928419345027,
+      "derived_stats": {
+        "book_count": 65,
+        "mean_entropy": 3.227756159215221,
+        "mean_length": 151.73846153846154,
+        "mean_repeated_5gram_fraction": 0.07765818447487463
+      },
+      "gain_vs_random_median_after_declaration_bits": -358.7682342478329,
+      "gain_vs_random_median_copied_digits": -108.0,
+      "high_book_coverage_rate": 0.8230172250615181,
+      "label": "singleton_centrality_top",
+      "literal_digits_required": 1517,
+      "literal_runs_required": 273,
+      "low_book_coverage_rate": 0.8729257641921397,
+      "median_book_coverage_rate": 0.8613138686131386,
+      "op_count": 770,
+      "payload_gain_after_declaration_bits": 27701.283016900747,
+      "payload_gain_before_declaration_bits": 27724.811879929926,
+      "prefix_holdout_gap_abs": 0.049908539130621654,
+      "random_control_percentile_copied_digits": 0.42,
+      "search_class": "posthoc_single_book_coverage_top_k",
+      "seed_book_count": 5,
+      "seed_books": [
+        5,
+        9,
+        10,
+        35,
+        56
+      ],
+      "seed_declaration_bits": 23.528863029181142,
+      "seed_digits": 1400,
+      "seed_stats": {
+        "book_count": 5,
+        "mean_entropy": 3.244066698256697,
+        "mean_length": 280.0,
+        "mean_repeated_5gram_fraction": 0.08374884009037697
+      },
+      "source_dependency_remaining": 497,
+      "target_book_count": 65,
+      "target_digits": 9863
+    },
+    {
+      "copied_digits_explained": 8039,
+      "copy_items_per_1000_copied_digits": 93.91715387486006,
+      "copy_items_required": 755,
+      "coverage_rate": 0.7574672571374729,
+      "derived_stats": {
+        "book_count": 65,
+        "mean_entropy": 3.22914270715726,
+        "mean_length": 163.27692307692308,
+        "mean_repeated_5gram_fraction": 0.07575150015912693
+      },
+      "gain_vs_random_median_after_declaration_bits": -1378.600159378253,
+      "gain_vs_random_median_copied_digits": -415.0,
+      "high_book_coverage_rate": 0.7610968294772922,
+      "label": "public_bookcase_order_prefix",
+      "literal_digits_required": 2574,
+      "literal_runs_required": 449,
+      "low_book_coverage_rate": 0.753034742570113,
+      "median_book_coverage_rate": 0.7847222222222222,
+      "op_count": 1204,
+      "payload_gain_after_declaration_bits": 26681.451091770326,
+      "payload_gain_before_declaration_bits": 26704.979954799506,
+      "prefix_holdout_gap_abs": 0.008062086907179133,
+      "random_control_percentile_copied_digits": 0.28,
+      "search_class": "metadata_public_bookcase_then_canonical_fill",
+      "seed_book_count": 5,
+      "seed_books": [
+        12,
+        14,
+        15,
+        16,
+        20
+      ],
+      "seed_declaration_bits": 23.528863029181142,
+      "seed_digits": 650,
+      "seed_stats": {
+        "book_count": 5,
+        "mean_entropy": 3.2260415750101896,
+        "mean_length": 130.0,
+        "mean_repeated_5gram_fraction": 0.10853573619509709
+      },
+      "source_dependency_remaining": 755,
+      "target_book_count": 65,
+      "target_digits": 10613
+    },
+    {
+      "copied_digits_explained": 9734,
+      "copy_items_per_1000_copied_digits": 39.86028354222314,
+      "copy_items_required": 388,
+      "coverage_rate": 0.9752529806632602,
+      "derived_stats": {
+        "book_count": 60,
+        "mean_entropy": 3.2340275858321563,
+        "mean_length": 166.35,
+        "mean_repeated_5gram_fraction": 0.08245885989182566
+      },
+      "gain_vs_random_median_after_declaration_bits": 2421.6855811728856,
+      "gain_vs_random_median_copied_digits": 729.0,
+      "high_book_coverage_rate": 0.9749154954634407,
+      "label": "greedy_coverage",
+      "literal_digits_required": 247,
+      "literal_runs_required": 95,
+      "low_book_coverage_rate": 0.9756880733944954,
+      "median_book_coverage_rate": 0.9923926877241698,
+      "op_count": 483,
+      "payload_gain_after_declaration_bits": 32297.118801739034,
+      "payload_gain_before_declaration_bits": 32335.648075633584,
+      "prefix_holdout_gap_abs": 0.0007725779310546743,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 10,
+      "seed_books": [
+        7,
+        8,
+        9,
+        13,
+        17,
+        20,
+        25,
+        39,
+        54,
+        67
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1282,
+      "seed_stats": {
+        "book_count": 10,
+        "mean_entropy": 3.1982828690343466,
+        "mean_length": 128.2,
+        "mean_repeated_5gram_fraction": 0.05189945978091959
+      },
+      "source_dependency_remaining": 388,
+      "target_book_count": 60,
+      "target_digits": 9981
+    },
+    {
+      "copied_digits_explained": 8664,
+      "copy_items_per_1000_copied_digits": 45.82179132040628,
+      "copy_items_required": 397,
+      "coverage_rate": 0.9056130448416432,
+      "derived_stats": {
+        "book_count": 60,
+        "mean_entropy": 3.2304284335141746,
+        "mean_length": 159.45,
+        "mean_repeated_5gram_fraction": 0.08358297451500618
+      },
+      "gain_vs_random_median_after_declaration_bits": -1132.7774803565917,
+      "gain_vs_random_median_copied_digits": -341.0,
+      "high_book_coverage_rate": 0.8892887746358183,
+      "label": "canonical_prefix",
+      "literal_digits_required": 903,
+      "literal_runs_required": 147,
+      "low_book_coverage_rate": 0.9311361200428725,
+      "median_book_coverage_rate": 0.9396298218301332,
+      "op_count": 544,
+      "payload_gain_after_declaration_bits": 28742.655740209557,
+      "payload_gain_before_declaration_bits": 28781.185014104107,
+      "prefix_holdout_gap_abs": 0.04184734540705415,
+      "random_control_percentile_copied_digits": 0.21,
+      "search_class": "zero_search_prefix",
+      "seed_book_count": 10,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1696,
+      "seed_stats": {
+        "book_count": 10,
+        "mean_entropy": 3.2198777829422376,
+        "mean_length": 169.6,
+        "mean_repeated_5gram_fraction": 0.045154772041836544
+      },
+      "source_dependency_remaining": 397,
+      "target_book_count": 60,
+      "target_digits": 9567
+    },
+    {
+      "copied_digits_explained": 8664,
+      "copy_items_per_1000_copied_digits": 45.82179132040628,
+      "copy_items_required": 397,
+      "coverage_rate": 0.9056130448416432,
+      "derived_stats": {
+        "book_count": 60,
+        "mean_entropy": 3.2304284335141746,
+        "mean_length": 159.45,
+        "mean_repeated_5gram_fraction": 0.08358297451500618
+      },
+      "gain_vs_random_median_after_declaration_bits": -1132.7774803565917,
+      "gain_vs_random_median_copied_digits": -341.0,
+      "high_book_coverage_rate": 0.8892887746358183,
+      "label": "operational_0_9",
+      "literal_digits_required": 903,
+      "literal_runs_required": 147,
+      "low_book_coverage_rate": 0.9311361200428725,
+      "median_book_coverage_rate": 0.9396298218301332,
+      "op_count": 544,
+      "payload_gain_after_declaration_bits": 28742.655740209557,
+      "payload_gain_before_declaration_bits": 28781.185014104107,
+      "prefix_holdout_gap_abs": 0.04184734540705415,
+      "random_control_percentile_copied_digits": 0.21,
+      "search_class": "current_operational_seed",
+      "seed_book_count": 10,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1696,
+      "seed_stats": {
+        "book_count": 10,
+        "mean_entropy": 3.2198777829422376,
+        "mean_length": 169.6,
+        "mean_repeated_5gram_fraction": 0.045154772041836544
+      },
+      "source_dependency_remaining": 397,
+      "target_book_count": 60,
+      "target_digits": 9567
+    },
+    {
+      "copied_digits_explained": 8276,
+      "copy_items_per_1000_copied_digits": 38.66602223296278,
+      "copy_items_required": 320,
+      "coverage_rate": 0.9660324500992179,
+      "derived_stats": {
+        "book_count": 60,
+        "mean_entropy": 3.2246784232968113,
+        "mean_length": 142.78333333333333,
+        "mean_repeated_5gram_fraction": 0.08016845384836406
+      },
+      "gain_vs_random_median_after_declaration_bits": -2421.685581172889,
+      "gain_vs_random_median_copied_digits": -729.0,
+      "high_book_coverage_rate": 0.9685519831025581,
+      "label": "singleton_centrality_top",
+      "literal_digits_required": 291,
+      "literal_runs_required": 90,
+      "low_book_coverage_rate": 0.9635392475615421,
+      "median_book_coverage_rate": 0.979721397579356,
+      "op_count": 410,
+      "payload_gain_after_declaration_bits": 27453.74763939326,
+      "payload_gain_before_declaration_bits": 27492.27691328781,
+      "prefix_holdout_gap_abs": 0.005012735541016,
+      "random_control_percentile_copied_digits": 0.06,
+      "search_class": "posthoc_single_book_coverage_top_k",
+      "seed_book_count": 10,
+      "seed_books": [
+        5,
+        9,
+        10,
+        17,
+        35,
+        51,
+        56,
+        58,
+        59,
+        66
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 2696,
+      "seed_stats": {
+        "book_count": 10,
+        "mean_entropy": 3.2543778442464175,
+        "mean_length": 269.6,
+        "mean_repeated_5gram_fraction": 0.06564189604168925
+      },
+      "source_dependency_remaining": 320,
+      "target_book_count": 60,
+      "target_digits": 8567
+    },
+    {
+      "copied_digits_explained": 7779,
+      "copy_items_per_1000_copied_digits": 94.61370356086901,
+      "copy_items_required": 736,
+      "coverage_rate": 0.7807889190003011,
+      "derived_stats": {
+        "book_count": 60,
+        "mean_entropy": 3.231946420515307,
+        "mean_length": 166.05,
+        "mean_repeated_5gram_fraction": 0.07242021486216071
+      },
+      "gain_vs_random_median_after_declaration_bits": -4072.6838443319066,
+      "gain_vs_random_median_copied_digits": -1226.0,
+      "high_book_coverage_rate": 0.7893744644387318,
+      "label": "public_bookcase_order_prefix",
+      "literal_digits_required": 2184,
+      "literal_runs_required": 399,
+      "low_book_coverage_rate": 0.7686531007751938,
+      "median_book_coverage_rate": 0.7942847750540059,
+      "op_count": 1135,
+      "payload_gain_after_declaration_bits": 25802.749376234242,
+      "payload_gain_before_declaration_bits": 25841.278650128792,
+      "prefix_holdout_gap_abs": 0.02072136366353805,
+      "random_control_percentile_copied_digits": 0.01,
+      "search_class": "metadata_public_bookcase_then_canonical_fill",
+      "seed_book_count": 10,
+      "seed_books": [
+        12,
+        14,
+        15,
+        16,
+        20,
+        21,
+        24,
+        25,
+        26,
+        30
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1300,
+      "seed_stats": {
+        "book_count": 10,
+        "mean_entropy": 3.2107698609354425,
+        "mean_length": 130.0,
+        "mean_repeated_5gram_fraction": 0.11213132995890931
+      },
+      "source_dependency_remaining": 736,
+      "target_book_count": 60,
+      "target_digits": 9963
+    },
+    {
+      "copied_digits_explained": 9328,
+      "copy_items_per_1000_copied_digits": 29.909948542024015,
+      "copy_items_required": 279,
+      "coverage_rate": 0.9893932965634281,
+      "derived_stats": {
+        "book_count": 55,
+        "mean_entropy": 3.2379320419634148,
+        "mean_length": 171.4181818181818,
+        "mean_repeated_5gram_fraction": 0.07099630410244041
+      },
+      "gain_vs_random_median_after_declaration_bits": 2728.9639299499686,
+      "gain_vs_random_median_copied_digits": 821.5,
+      "high_book_coverage_rate": 0.9918367346938776,
+      "label": "greedy_coverage",
+      "literal_digits_required": 100,
+      "literal_runs_required": 35,
+      "low_book_coverage_rate": 0.9861317483902923,
+      "median_book_coverage_rate": 1.0,
+      "op_count": 314,
+      "payload_gain_after_declaration_bits": 30937.58731499361,
+      "payload_gain_before_declaration_bits": 30986.945269109314,
+      "prefix_holdout_gap_abs": 0.005704986303585291,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 15,
+      "seed_books": [
+        1,
+        7,
+        8,
+        9,
+        12,
+        13,
+        17,
+        18,
+        20,
+        25,
+        39,
+        49,
+        54,
+        55,
+        67
+      ],
+      "seed_declaration_bits": 49.357954115705446,
+      "seed_digits": 1835,
+      "seed_stats": {
+        "book_count": 15,
+        "mean_entropy": 3.1958814354856684,
+        "mean_length": 122.33333333333333,
+        "mean_repeated_5gram_fraction": 0.1041152977123009
+      },
+      "source_dependency_remaining": 279,
+      "target_book_count": 55,
+      "target_digits": 9428
+    },
+    {
+      "copied_digits_explained": 8420,
+      "copy_items_per_1000_copied_digits": 35.39192399049881,
+      "copy_items_required": 298,
+      "coverage_rate": 0.963607232776379,
+      "derived_stats": {
+        "book_count": 55,
+        "mean_entropy": 3.2291626788169263,
+        "mean_length": 158.87272727272727,
+        "mean_repeated_5gram_fraction": 0.0838728621451797
+      },
+      "gain_vs_random_median_after_declaration_bits": -287.3467802077539,
+      "gain_vs_random_median_copied_digits": -86.5,
+      "high_book_coverage_rate": 0.9602399314481577,
+      "label": "canonical_prefix",
+      "literal_digits_required": 318,
+      "literal_runs_required": 74,
+      "low_book_coverage_rate": 0.9703754736479504,
+      "median_book_coverage_rate": 0.986013986013986,
+      "op_count": 372,
+      "payload_gain_after_declaration_bits": 27921.276604835886,
+      "payload_gain_before_declaration_bits": 27970.63455895159,
+      "prefix_holdout_gap_abs": 0.010135542199792735,
+      "random_control_percentile_copied_digits": 0.32,
+      "search_class": "zero_search_prefix",
+      "seed_book_count": 15,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "seed_declaration_bits": 49.357954115705446,
+      "seed_digits": 2525,
+      "seed_stats": {
+        "book_count": 15,
+        "mean_entropy": 3.2280357670227935,
+        "mean_length": 168.33333333333334,
+        "mean_repeated_5gram_fraction": 0.05690125155559018
+      },
+      "source_dependency_remaining": 298,
+      "target_book_count": 55,
+      "target_digits": 8738
+    },
+    {
+      "copied_digits_explained": 7976,
+      "copy_items_per_1000_copied_digits": 86.63490471414242,
+      "copy_items_required": 691,
+      "coverage_rate": 0.8547851248526417,
+      "derived_stats": {
+        "book_count": 55,
+        "mean_entropy": 3.2333549791639324,
+        "mean_length": 169.65454545454546,
+        "mean_repeated_5gram_fraction": 0.06586508553284326
+      },
+      "gain_vs_random_median_after_declaration_bits": -1762.2828543377436,
+      "gain_vs_random_median_copied_digits": -530.5,
+      "high_book_coverage_rate": 0.8558523928502787,
+      "label": "public_bookcase_order_prefix",
+      "literal_digits_required": 1355,
+      "literal_runs_required": 300,
+      "low_book_coverage_rate": 0.8534399224806202,
+      "median_book_coverage_rate": 0.8709677419354839,
+      "op_count": 991,
+      "payload_gain_after_declaration_bits": 26446.340530705897,
+      "payload_gain_before_declaration_bits": 26495.6984848216,
+      "prefix_holdout_gap_abs": 0.002412470369658526,
+      "random_control_percentile_copied_digits": 0.02,
+      "search_class": "metadata_public_bookcase_then_canonical_fill",
+      "seed_book_count": 15,
+      "seed_books": [
+        12,
+        14,
+        15,
+        16,
+        20,
+        21,
+        24,
+        25,
+        26,
+        30,
+        38,
+        39,
+        54,
+        55,
+        56
+      ],
+      "seed_declaration_bits": 49.357954115705446,
+      "seed_digits": 1932,
+      "seed_stats": {
+        "book_count": 15,
+        "mean_entropy": 3.2126639990837713,
+        "mean_length": 128.8,
+        "mean_repeated_5gram_fraction": 0.12292976580082379
+      },
+      "source_dependency_remaining": 691,
+      "target_book_count": 55,
+      "target_digits": 9331
+    },
+    {
+      "copied_digits_explained": 7283,
+      "copy_items_per_1000_copied_digits": 36.24879857201702,
+      "copy_items_required": 264,
+      "coverage_rate": 0.9673263381591181,
+      "derived_stats": {
+        "book_count": 55,
+        "mean_entropy": 3.221191813604364,
+        "mean_length": 136.8909090909091,
+        "mean_repeated_5gram_fraction": 0.07913627552702095
+      },
+      "gain_vs_random_median_after_declaration_bits": -4064.3790240946873,
+      "gain_vs_random_median_copied_digits": -1223.5,
+      "high_book_coverage_rate": 0.9680582796301485,
+      "label": "singleton_centrality_top",
+      "literal_digits_required": 246,
+      "literal_runs_required": 73,
+      "low_book_coverage_rate": 0.9666666666666667,
+      "median_book_coverage_rate": 1.0,
+      "op_count": 337,
+      "payload_gain_after_declaration_bits": 24144.244360948953,
+      "payload_gain_before_declaration_bits": 24193.602315064658,
+      "prefix_holdout_gap_abs": 0.0013916129634817809,
+      "random_control_percentile_copied_digits": 0.0,
+      "search_class": "posthoc_single_book_coverage_top_k",
+      "seed_book_count": 15,
+      "seed_books": [
+        5,
+        9,
+        10,
+        17,
+        21,
+        26,
+        35,
+        40,
+        46,
+        51,
+        53,
+        56,
+        58,
+        59,
+        66
+      ],
+      "seed_declaration_bits": 49.357954115705446,
+      "seed_digits": 3734,
+      "seed_stats": {
+        "book_count": 15,
+        "mean_entropy": 3.2572622728021874,
+        "mean_length": 248.93333333333334,
+        "mean_repeated_5gram_fraction": 0.07426873582217228
+      },
+      "source_dependency_remaining": 264,
+      "target_book_count": 55,
+      "target_digits": 7529
+    },
+    {
+      "copied_digits_explained": 8721,
+      "copy_items_per_1000_copied_digits": 28.895768833849328,
+      "copy_items_required": 252,
+      "coverage_rate": 0.9906849937521299,
+      "derived_stats": {
+        "book_count": 50,
+        "mean_entropy": 3.2393412217837385,
+        "mean_length": 176.06,
+        "mean_repeated_5gram_fraction": 0.06931077389039546
+      },
+      "gain_vs_random_median_after_declaration_bits": 2913.3309392162155,
+      "gain_vs_random_median_copied_digits": 877.0,
+      "high_book_coverage_rate": 0.9918313069908815,
+      "label": "greedy_coverage",
+      "literal_digits_required": 82,
+      "literal_runs_required": 28,
+      "low_book_coverage_rate": 0.9889799378355467,
+      "median_book_coverage_rate": 1.0,
+      "op_count": 280,
+      "payload_gain_after_declaration_bits": 28913.36717211764,
+      "payload_gain_before_declaration_bits": 28970.534915512686,
+      "prefix_holdout_gap_abs": 0.002851369155334793,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 20,
+      "seed_books": [
+        1,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        17,
+        18,
+        20,
+        24,
+        25,
+        27,
+        34,
+        39,
+        49,
+        54,
+        55,
+        63,
+        67
+      ],
+      "seed_declaration_bits": 57.16774339504577,
+      "seed_digits": 2460,
+      "seed_stats": {
+        "book_count": 20,
+        "mean_entropy": 3.2028711375542964,
+        "mean_length": 123.0,
+        "mean_repeated_5gram_fraction": 0.10004937483994815
+      },
+      "source_dependency_remaining": 252,
+      "target_book_count": 50,
+      "target_digits": 8803
+    },
+    {
+      "copied_digits_explained": 8194,
+      "copy_items_per_1000_copied_digits": 39.78520868928484,
+      "copy_items_required": 326,
+      "coverage_rate": 0.9489287782281413,
+      "derived_stats": {
+        "book_count": 50,
+        "mean_entropy": 3.23497464616687,
+        "mean_length": 172.7,
+        "mean_repeated_5gram_fraction": 0.06718811171173618
+      },
+      "gain_vs_random_median_after_declaration_bits": 1162.6748332105744,
+      "gain_vs_random_median_copied_digits": 350.0,
+      "high_book_coverage_rate": 0.9410569105691057,
+      "label": "public_bookcase_order_prefix",
+      "literal_digits_required": 441,
+      "literal_runs_required": 107,
+      "low_book_coverage_rate": 0.9593539703903096,
+      "median_book_coverage_rate": 0.9635036496350365,
+      "op_count": 433,
+      "payload_gain_after_declaration_bits": 27162.711066112,
+      "payload_gain_before_declaration_bits": 27219.878809507045,
+      "prefix_holdout_gap_abs": 0.018297059821203887,
+      "random_control_percentile_copied_digits": 0.95,
+      "search_class": "metadata_public_bookcase_then_canonical_fill",
+      "seed_book_count": 20,
+      "seed_books": [
+        0,
+        1,
+        2,
+        12,
+        14,
+        15,
+        16,
+        20,
+        21,
+        24,
+        25,
+        26,
+        30,
+        38,
+        39,
+        54,
+        55,
+        56,
+        68,
+        69
+      ],
+      "seed_declaration_bits": 57.16774339504577,
+      "seed_digits": 2628,
+      "seed_stats": {
+        "book_count": 20,
+        "mean_entropy": 3.213787576596468,
+        "mean_length": 131.4,
+        "mean_repeated_5gram_fraction": 0.10535603028659635
+      },
+      "source_dependency_remaining": 326,
+      "target_book_count": 50,
+      "target_digits": 8635
+    },
+    {
+      "copied_digits_explained": 7828,
+      "copy_items_per_1000_copied_digits": 27.082268778742975,
+      "copy_items_required": 212,
+      "coverage_rate": 0.9877602523659306,
+      "derived_stats": {
+        "book_count": 50,
+        "mean_entropy": 3.229383969598489,
+        "mean_length": 158.5,
+        "mean_repeated_5gram_fraction": 0.08278985217716804
+      },
+      "gain_vs_random_median_after_declaration_bits": -53.15084951819881,
+      "gain_vs_random_median_copied_digits": -16.0,
+      "high_book_coverage_rate": 0.9885175664095972,
+      "label": "canonical_prefix",
+      "literal_digits_required": 97,
+      "literal_runs_required": 27,
+      "low_book_coverage_rate": 0.9856459330143541,
+      "median_book_coverage_rate": 1.0,
+      "op_count": 239,
+      "payload_gain_after_declaration_bits": 25946.885383383225,
+      "payload_gain_before_declaration_bits": 26004.05312677827,
+      "prefix_holdout_gap_abs": 0.0028716333952431006,
+      "random_control_percentile_copied_digits": 0.47,
+      "search_class": "zero_search_prefix",
+      "seed_book_count": 20,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "seed_declaration_bits": 57.16774339504577,
+      "seed_digits": 3338,
+      "seed_stats": {
+        "book_count": 20,
+        "mean_entropy": 3.2277642680174203,
+        "mean_length": 166.9,
+        "mean_repeated_5gram_fraction": 0.0663516791230167
+      },
+      "source_dependency_remaining": 212,
+      "target_book_count": 50,
+      "target_digits": 7925
+    },
+    {
+      "copied_digits_explained": 6525,
+      "copy_items_per_1000_copied_digits": 35.24904214559387,
+      "copy_items_required": 230,
+      "coverage_rate": 0.9725741541213295,
+      "derived_stats": {
+        "book_count": 50,
+        "mean_entropy": 3.218297350395018,
+        "mean_length": 134.18,
+        "mean_repeated_5gram_fraction": 0.08026490369007315
+      },
+      "gain_vs_random_median_after_declaration_bits": -4381.623157156431,
+      "gain_vs_random_median_copied_digits": -1319.0,
+      "high_book_coverage_rate": 0.9754123871770931,
+      "label": "singleton_centrality_top",
+      "literal_digits_required": 184,
+      "literal_runs_required": 56,
+      "low_book_coverage_rate": 0.9699656750572082,
+      "median_book_coverage_rate": 1.0,
+      "op_count": 286,
+      "payload_gain_after_declaration_bits": 21618.413075744993,
+      "payload_gain_before_declaration_bits": 21675.58081914004,
+      "prefix_holdout_gap_abs": 0.0054467121198849,
+      "random_control_percentile_copied_digits": 0.0,
+      "search_class": "posthoc_single_book_coverage_top_k",
+      "seed_book_count": 20,
+      "seed_books": [
+        2,
+        5,
+        9,
+        10,
+        12,
+        17,
+        21,
+        26,
+        30,
+        35,
+        40,
+        42,
+        46,
+        51,
+        53,
+        56,
+        58,
+        59,
+        65,
+        66
+      ],
+      "seed_declaration_bits": 57.16774339504577,
+      "seed_digits": 4554,
+      "seed_stats": {
+        "book_count": 20,
+        "mean_entropy": 3.2554808160260973,
+        "mean_length": 227.7,
+        "mean_repeated_5gram_fraction": 0.07266405034075393
+      },
+      "source_dependency_remaining": 230,
+      "target_book_count": 50,
+      "target_digits": 6709
+    }
+  ],
+  "case_reopened": false,
+  "classification": "AUDIT_ONLY_COMPRESSION",
+  "decision": {
+    "alternative_seed_better_for_k10": true,
+    "authorial_seed_claim": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+    "best_alternative_k10_seed": [
+      7,
+      8,
+      9,
+      13,
+      17,
+      20,
+      25,
+      39,
+      54,
+      67
+    ],
+    "books_0_9_special_as_seed": false,
+    "compression_bound_status": "unchanged_8154_676268",
+    "gain_over_random_survives_declaration_cost": false,
+    "generation_explanation_status": "seed_primacy_not_promoted_posthoc_coverage_only",
+    "mechanical_primary_core_signal": "not_promoted_posthoc_alternatives_exist",
+    "row0_origin_status": "unchanged_exogenous",
+    "row0_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "family_holdout_controls": [
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 262,
+      "coverage_rate_all_nonseed_targets": 0.9703703703703703,
+      "heldout_books": [
+        12,
+        14
+      ],
+      "heldout_target_digits": 270,
+      "label": "hellgate_public_bookcase_1",
+      "literal_digits_required_all_nonseed_targets": 8,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 413,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        0,
+        1,
+        2
+      ],
+      "heldout_target_digits": 413,
+      "label": "hellgate_public_bookcase_10",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 272,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        58
+      ],
+      "heldout_target_digits": 272,
+      "label": "hellgate_public_bookcase_11",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 273,
+      "coverage_rate_all_nonseed_targets": 0.975,
+      "heldout_books": [
+        3,
+        4
+      ],
+      "heldout_target_digits": 280,
+      "label": "hellgate_public_bookcase_12",
+      "literal_digits_required_all_nonseed_targets": 7,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 486,
+      "coverage_rate_all_nonseed_targets": 0.9898167006109979,
+      "heldout_books": [
+        40,
+        41,
+        42
+      ],
+      "heldout_target_digits": 491,
+      "label": "hellgate_public_bookcase_13",
+      "literal_digits_required_all_nonseed_targets": 5,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 150,
+      "coverage_rate_all_nonseed_targets": 0.9933774834437086,
+      "heldout_books": [
+        60
+      ],
+      "heldout_target_digits": 151,
+      "label": "hellgate_public_bookcase_14",
+      "literal_digits_required_all_nonseed_targets": 1,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 137,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        22
+      ],
+      "heldout_target_digits": 137,
+      "label": "hellgate_public_bookcase_15",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 124,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        27
+      ],
+      "heldout_target_digits": 124,
+      "label": "hellgate_public_bookcase_16",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 248,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        31
+      ],
+      "heldout_target_digits": 248,
+      "label": "hellgate_public_bookcase_17",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 145,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        61
+      ],
+      "heldout_target_digits": 145,
+      "label": "hellgate_public_bookcase_19",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 317,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        15,
+        16
+      ],
+      "heldout_target_digits": 317,
+      "label": "hellgate_public_bookcase_2",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 275,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        44,
+        45
+      ],
+      "heldout_target_digits": 275,
+      "label": "hellgate_public_bookcase_20",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 403,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        62,
+        63,
+        64
+      ],
+      "heldout_target_digits": 403,
+      "label": "hellgate_public_bookcase_21",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 512,
+      "coverage_rate_all_nonseed_targets": 0.924187725631769,
+      "heldout_books": [
+        5,
+        6,
+        7
+      ],
+      "heldout_target_digits": 554,
+      "label": "hellgate_public_bookcase_22",
+      "literal_digits_required_all_nonseed_targets": 42,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 297,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        28,
+        29
+      ],
+      "heldout_target_digits": 297,
+      "label": "hellgate_public_bookcase_23",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 137,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        36
+      ],
+      "heldout_target_digits": 137,
+      "label": "hellgate_public_bookcase_24",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 160,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        37
+      ],
+      "heldout_target_digits": 160,
+      "label": "hellgate_public_bookcase_25",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 145,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        61
+      ],
+      "heldout_target_digits": 145,
+      "label": "hellgate_public_bookcase_26",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 379,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        46,
+        47
+      ],
+      "heldout_target_digits": 379,
+      "label": "hellgate_public_bookcase_27",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 166,
+      "coverage_rate_all_nonseed_targets": 0.9822485207100592,
+      "heldout_books": [
+        65
+      ],
+      "heldout_target_digits": 169,
+      "label": "hellgate_public_bookcase_28",
+      "literal_digits_required_all_nonseed_targets": 3,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 274,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        17
+      ],
+      "heldout_target_digits": 274,
+      "label": "hellgate_public_bookcase_29",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 239,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        20,
+        21
+      ],
+      "heldout_target_digits": 239,
+      "label": "hellgate_public_bookcase_3",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 271,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        32,
+        33
+      ],
+      "heldout_target_digits": 271,
+      "label": "hellgate_public_bookcase_30",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 169,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        48
+      ],
+      "heldout_target_digits": 169,
+      "label": "hellgate_public_bookcase_31",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 98,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        67
+      ],
+      "heldout_target_digits": 98,
+      "label": "hellgate_public_bookcase_32",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 222,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        18,
+        19
+      ],
+      "heldout_target_digits": 222,
+      "label": "hellgate_public_bookcase_33",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 118,
+      "coverage_rate_all_nonseed_targets": 0.959349593495935,
+      "heldout_books": [
+        34
+      ],
+      "heldout_target_digits": 123,
+      "label": "hellgate_public_bookcase_34",
+      "literal_digits_required_all_nonseed_targets": 5,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 94,
+      "coverage_rate_all_nonseed_targets": 0.8173913043478261,
+      "heldout_books": [
+        49
+      ],
+      "heldout_target_digits": 115,
+      "label": "hellgate_public_bookcase_35",
+      "literal_digits_required_all_nonseed_targets": 21,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 446,
+      "coverage_rate_all_nonseed_targets": 0.9933184855233853,
+      "heldout_books": [
+        8,
+        9
+      ],
+      "heldout_target_digits": 449,
+      "label": "hellgate_public_bookcase_36",
+      "literal_digits_required_all_nonseed_targets": 3,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 161,
+      "coverage_rate_all_nonseed_targets": 0.9096045197740112,
+      "heldout_books": [
+        23
+      ],
+      "heldout_target_digits": 177,
+      "label": "hellgate_public_bookcase_37",
+      "literal_digits_required_all_nonseed_targets": 16,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 286,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        35
+      ],
+      "heldout_target_digits": 286,
+      "label": "hellgate_public_bookcase_38",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 137,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        11
+      ],
+      "heldout_target_digits": 137,
+      "label": "hellgate_public_bookcase_39",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 324,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        24,
+        25,
+        26
+      ],
+      "heldout_target_digits": 324,
+      "label": "hellgate_public_bookcase_4",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 817,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "heldout_target_digits": 817,
+      "label": "hellgate_public_bookcase_40",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 66
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 150,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        30
+      ],
+      "heldout_target_digits": 150,
+      "label": "hellgate_public_bookcase_5",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 69
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 191,
+      "coverage_rate_all_nonseed_targets": 0.9896373056994818,
+      "heldout_books": [
+        38,
+        39
+      ],
+      "heldout_target_digits": 193,
+      "label": "hellgate_public_bookcase_6",
+      "literal_digits_required_all_nonseed_targets": 2,
+      "seed_book_count": 68
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 432,
+      "coverage_rate_all_nonseed_targets": 0.9840546697038725,
+      "heldout_books": [
+        54,
+        55,
+        56
+      ],
+      "heldout_target_digits": 439,
+      "label": "hellgate_public_bookcase_7",
+      "literal_digits_required_all_nonseed_targets": 7,
+      "seed_book_count": 67
+    },
+    {
+      "classification": "family_holdout_control_only",
+      "copied_digits_explained_all_nonseed_targets": 283,
+      "coverage_rate_all_nonseed_targets": 1.0,
+      "heldout_books": [
+        68,
+        69
+      ],
+      "heldout_target_digits": 283,
+      "label": "hellgate_public_bookcase_8",
+      "literal_digits_required_all_nonseed_targets": 0,
+      "seed_book_count": 68
+    }
+  ],
+  "inputs": {
+    "bookcase_manifest": "analysis/physical_topology_20260620/tables/hellgate_public_bookcase_manifest.csv",
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "skeleton_dependency_ledger": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json"
+  },
+  "permuted_prefix_control_summaries": [
+    {
+      "copied_digits_max": 9625,
+      "copied_digits_mean": 8486.5,
+      "copied_digits_median": 8528.0,
+      "copied_digits_min": 6950,
+      "copied_digits_p95": 9337,
+      "coverage_rate_median": 0.8145329646582996,
+      "coverage_rate_p95": 0.8976324471181836,
+      "label": "permuted_order_prefixes",
+      "payload_gain_after_declaration_bits_median": 28305.873930170244,
+      "payload_gain_after_declaration_bits_p95": 30993.31375893412,
+      "sample_count": 100,
+      "seed_book_count": 5
+    },
+    {
+      "copied_digits_max": 9576,
+      "copied_digits_mean": 8927.85,
+      "copied_digits_median": 8977.5,
+      "copied_digits_min": 8142,
+      "copied_digits_p95": 9357,
+      "coverage_rate_median": 0.9335431853552243,
+      "coverage_rate_p95": 0.9703975799481418,
+      "label": "permuted_order_prefixes",
+      "payload_gain_after_declaration_bits_median": 29784.080197956744,
+      "payload_gain_after_declaration_bits_p95": 31044.751909966497,
+      "sample_count": 100,
+      "seed_book_count": 10
+    },
+    {
+      "copied_digits_max": 8985,
+      "copied_digits_mean": 8482.97,
+      "copied_digits_median": 8507.0,
+      "copied_digits_min": 7541,
+      "copied_digits_p95": 8816,
+      "coverage_rate_median": 0.9686246852147944,
+      "coverage_rate_p95": 0.9821428571428571,
+      "label": "permuted_order_prefixes",
+      "payload_gain_after_declaration_bits_median": 28210.284349091085,
+      "payload_gain_after_declaration_bits_p95": 29236.76013041128,
+      "sample_count": 100,
+      "seed_book_count": 15
+    },
+    {
+      "copied_digits_max": 8319,
+      "copied_digits_mean": 7822.14,
+      "copied_digits_median": 7832.0,
+      "copied_digits_min": 7275,
+      "copied_digits_p95": 8158,
+      "coverage_rate_median": 0.9801496881844908,
+      "coverage_rate_p95": 0.9865771812080537,
+      "label": "permuted_order_prefixes",
+      "payload_gain_after_declaration_bits_median": 25960.173095762773,
+      "payload_gain_after_declaration_bits_p95": 27043.121654696053,
+      "sample_count": 100,
+      "seed_book_count": 20
+    }
+  ],
+  "plaintext_claim": false,
+  "random_control_summaries": [
+    {
+      "copied_digits_max": 9723,
+      "copied_digits_mean": 8426.93,
+      "copied_digits_median": 8454.0,
+      "copied_digits_min": 6551,
+      "copied_digits_p95": 9352,
+      "coverage_rate_median": 0.8153365270705524,
+      "coverage_rate_p95": 0.9035616971584274,
+      "label": "random_seed_sets",
+      "payload_gain_after_declaration_bits_median": 28060.05125114858,
+      "payload_gain_after_declaration_bits_p95": 31043.142680357432,
+      "sample_count": 100,
+      "seed_book_count": 5
+    },
+    {
+      "copied_digits_max": 9475,
+      "copied_digits_mean": 8919.2,
+      "copied_digits_median": 9005.0,
+      "copied_digits_min": 7739,
+      "copied_digits_p95": 9345,
+      "coverage_rate_median": 0.9340076487939251,
+      "coverage_rate_p95": 0.9709574468085106,
+      "label": "random_seed_sets",
+      "payload_gain_after_declaration_bits_median": 29875.43322056615,
+      "payload_gain_after_declaration_bits_p95": 31004.88877282785,
+      "sample_count": 100,
+      "seed_book_count": 10
+    },
+    {
+      "copied_digits_max": 8919,
+      "copied_digits_mean": 8497.1,
+      "copied_digits_median": 8506.5,
+      "copied_digits_min": 7764,
+      "copied_digits_p95": 8821,
+      "coverage_rate_median": 0.968889883806664,
+      "coverage_rate_p95": 0.9824193736174176,
+      "label": "random_seed_sets",
+      "payload_gain_after_declaration_bits_median": 28208.62338504364,
+      "payload_gain_after_declaration_bits_p95": 29253.369770885718,
+      "sample_count": 100,
+      "seed_book_count": 15
+    },
+    {
+      "copied_digits_max": 8420,
+      "copied_digits_mean": 7835.66,
+      "copied_digits_median": 7844.0,
+      "copied_digits_min": 7312,
+      "copied_digits_p95": 8137,
+      "coverage_rate_median": 0.9800229758852679,
+      "coverage_rate_p95": 0.9867139061116031,
+      "label": "random_seed_sets",
+      "payload_gain_after_declaration_bits_median": 26000.036232901424,
+      "payload_gain_after_declaration_bits_p95": 26973.36116470342,
+      "sample_count": 100,
+      "seed_book_count": 20
+    }
+  ],
+  "schema": "seed_primacy_coverage_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "copy_crosses_seed_book_boundaries": false,
+    "derived_to_derived_copy_allowed": false,
+    "does_not_search_plaintext": true,
+    "min_copy_len": 5,
+    "new_formula_emitted": false,
+    "parse_policy": "dynamic_programming_over_longest_available_copy_at_each_position",
+    "permuted_prefix_samples_per_k": 100,
+    "random_samples_per_k": 100,
+    "rng_seed": 46920260621,
+    "row0_origin_changed": false,
+    "target_self_copy_allowed": false
+  },
+  "skeleton_context": {
+    "note": "Seed-only parses are compared to the existing source-free skeleton ledger, not promoted as a replacement generator.",
+    "operational_copied_digits": 9301,
+    "operational_copy_source_fields": 208,
+    "operational_literal_payload_digits": 266,
+    "operational_seed_books": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "operational_skeleton_records": 261
+  },
+  "summary": {
+    "alternative_better_than_operational": true,
+    "best_k10_candidate": {
+      "copied_digits_explained": 9734,
+      "copy_items_required": 388,
+      "coverage_rate": 0.9752529806632602,
+      "gain_vs_random_median_after_declaration_bits": 2421.6855811728856,
+      "gain_vs_random_median_copied_digits": 729.0,
+      "label": "greedy_coverage",
+      "literal_digits_required": 247,
+      "literal_runs_required": 95,
+      "median_book_coverage_rate": 0.9923926877241698,
+      "payload_gain_after_declaration_bits": 32297.118801739034,
+      "prefix_holdout_gap_abs": 0.0007725779310546743,
+      "random_control_percentile_copied_digits": 1.0,
+      "search_class": "posthoc_greedy_coverage",
+      "seed_book_count": 10,
+      "seed_books": [
+        7,
+        8,
+        9,
+        13,
+        17,
+        20,
+        25,
+        39,
+        54,
+        67
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1282,
+      "target_digits": 9981
+    },
+    "book_count": 70,
+    "elapsed_seconds": 14.577110875048675,
+    "final_category": "AUDIT_ONLY_COMPRESSION",
+    "interpretation": "This is a seed-only substring coverage audit. It can identify small high-coverage subsets, but source choice, literal payload, and seed-set selection remain external; therefore coverage gains are mechanical/compression clues only unless they beat controls after declaration cost and survive non-posthoc constraints.",
+    "operational_0_9": {
+      "copied_digits_explained": 8664,
+      "copy_items_required": 397,
+      "coverage_rate": 0.9056130448416432,
+      "gain_vs_random_median_after_declaration_bits": -1132.7774803565917,
+      "gain_vs_random_median_copied_digits": -341.0,
+      "label": "operational_0_9",
+      "literal_digits_required": 903,
+      "literal_runs_required": 147,
+      "median_book_coverage_rate": 0.9396298218301332,
+      "payload_gain_after_declaration_bits": 28742.655740209557,
+      "prefix_holdout_gap_abs": 0.04184734540705415,
+      "random_control_percentile_copied_digits": 0.21,
+      "search_class": "current_operational_seed",
+      "seed_book_count": 10,
+      "seed_books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "seed_declaration_bits": 38.529273894550805,
+      "seed_digits": 1696,
+      "target_digits": 9567
+    },
+    "operational_above_random_median": false,
+    "operational_above_random_p95": false,
+    "seed_sizes": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "total_digits": 11263
+  },
+  "translation_delta": "NONE"
+}

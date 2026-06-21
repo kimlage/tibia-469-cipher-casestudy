@@ -377,6 +377,15 @@ sharpens the skeleton description from type/target/length to type/length with
 derived positions. It does not change the `261` atlas rows or derive operation
 types, lengths, copy sources, or literal payload.
 
+A seed primacy audit then tests whether the usual operational seed assumption
+itself has mechanical privilege. Under seed-only exact-copy coverage, books
+`0..9` cover `8664/9567` non-seed digits and sit below the random k=10 median
+(`9005` copied digits; percentile `0.21`). A posthoc greedy k=10 set
+`[7, 8, 9, 13, 17, 20, 25, 39, 54, 67]` covers `9734` digits, but it is chosen
+after seeing the corpus and still leaves source choice, literal payload, and
+seed selection external. The result is `AUDIT_ONLY_COMPRESSION`, not seed-origin
+promotion.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`
@@ -2025,6 +2034,7 @@ book generation, not row0 pair-cell placement.
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
 - [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
 - [Target position derivation ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.md)
+- [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
