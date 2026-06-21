@@ -474,14 +474,37 @@ while residual-only weighting can hit some residual branches
 only by destroying the clean-control path. This rejects a
 small learned branch ranker as the missing generative parser.
 
+## Contextual Mode Selector Control
+
+Gate 24 tests a finite observable state table: each context
+family learns which non-oracle branch objective to use from
+stable labels, then is evaluated under prefix/holdout.
+
+| Selector | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best full-fit context `context_combo` | `229/234` | `5/10` | `0` | weak full-fit clue only |
+
+- Context families tested: `10`.
+- Prequential zero-clean-false-change cells: `1/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+- Prequential selected matches oracle cells: `3/5`.
+
+A finite context table shows a real full-corpus signal:
+the best observable context resolves half of the residuals
+without false clean-control changes. It is still not promoted
+because the same selector is not prefix/holdout stable and
+does not cover future residuals reliably.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
 a single residual feature flag, and not a simple first-branch
 continuation objective or small prefix-trained branch ranker.
-It is a richer path/state segmentation account for why the
-parser waits, copies, or understops at the remaining mixed
-residual sites, or a source-free
+A finite context table has weak full-fit signal but no stable
+holdout rule. The remaining blocker is a richer path/state
+segmentation account for why the parser waits, copies, or
+understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -511,3 +534,4 @@ or the stable projection as an oracle.
 - [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)
 - [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)
 - [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)
+- [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)

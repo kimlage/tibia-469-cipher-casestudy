@@ -937,6 +937,10 @@ A branch-ranker prequential audit then rejects a learned small ranker: the
 active baseline is `224/234` with `0/10` residual hits; the best full-fit ranker
 is `223/234` with `0/10`; residual-only weighting reaches `7/10` only by
 changing `221` clean controls.
+A contextual mode selector finds a weak full-fit clue: `context_combo` reaches
+`229/234` and resolves `5/10` residuals with `0` clean-control changes. It is
+not promoted because prefix/holdout keeps only `1/5` zero-false-control cells
+and `1/5` all-residual-covered cells.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

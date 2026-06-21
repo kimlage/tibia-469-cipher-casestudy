@@ -32,6 +32,7 @@ POST_REPAIR_ORACLE = TEST_RESULTS / "20_post_repair_residual_oracle_audit.json"
 RESIDUAL_FEATURE = TEST_RESULTS / "21_post_repair_residual_feature_audit.json"
 BRANCH_CONTINUATION = TEST_RESULTS / "22_residual_branch_continuation_audit.json"
 BRANCH_RANKER = TEST_RESULTS / "23_branch_ranker_prequential_audit.json"
+CONTEXTUAL_MODE = TEST_RESULTS / "24_contextual_mode_selector_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -102,6 +103,9 @@ def main() -> None:
         load_json(BRANCH_CONTINUATION) if BRANCH_CONTINUATION.exists() else None
     )
     branch_ranker = load_json(BRANCH_RANKER) if BRANCH_RANKER.exists() else None
+    contextual_mode = (
+        load_json(CONTEXTUAL_MODE) if CONTEXTUAL_MODE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -144,6 +148,8 @@ def main() -> None:
         assert_boundary("residual_branch_continuation_audit", branch_continuation)
     if branch_ranker is not None:
         assert_boundary("branch_ranker_prequential_audit", branch_ranker)
+    if contextual_mode is not None:
+        assert_boundary("contextual_mode_selector_audit", contextual_mode)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -194,6 +200,9 @@ def main() -> None:
     )
     branch_ranker_summary = (
         None if branch_ranker is None else branch_ranker["summary"]
+    )
+    contextual_mode_summary = (
+        None if contextual_mode is None else contextual_mode["summary"]
     )
 
     lines = [
@@ -801,6 +810,33 @@ def main() -> None:
                 "",
             ]
         )
+    if contextual_mode_summary is not None:
+        lines.extend(
+            [
+                "## Contextual Mode Selector Control",
+                "",
+                "Gate 24 tests a finite observable state table: each context",
+                "family learns which non-oracle branch objective to use from",
+                "stable labels, then is evaluated under prefix/holdout.",
+                "",
+                "| Selector | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{contextual_mode_summary['active_baseline_total_hits']}/{contextual_mode_summary['decision_count']}` | `{contextual_mode_summary['active_baseline_residual_hits']}/{contextual_mode_summary['residual_decision_count']}` | `{contextual_mode_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best full-fit context `{contextual_mode_summary['best_context_family']}` | `{contextual_mode_summary['best_full_fit_total_hits']}/{contextual_mode_summary['decision_count']}` | `{contextual_mode_summary['best_full_fit_residual_hits']}/{contextual_mode_summary['residual_decision_count']}` | `{contextual_mode_summary['best_full_fit_clean_false_changes']}` | weak full-fit clue only |",
+                "",
+                f"- Context families tested: `{contextual_mode_summary['context_family_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{contextual_mode_summary['prequential_zero_clean_false_change_cells']}/{contextual_mode_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{contextual_mode_summary['prequential_cover_all_test_residual_cells']}/{contextual_mode_summary['prequential_cells']}`.",
+                f"- Prequential selected matches oracle cells: `{contextual_mode_summary['prequential_selected_matches_oracle_cells']}/{contextual_mode_summary['prequential_cells']}`.",
+                "",
+                "A finite context table shows a real full-corpus signal:",
+                "the best observable context resolves half of the residuals",
+                "without false clean-control changes. It is still not promoted",
+                "because the same selector is not prefix/holdout stable and",
+                "does not cover future residuals reliably.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -808,9 +844,10 @@ def main() -> None:
             "The next real blocker is not another local length policy or",
             "a single residual feature flag, and not a simple first-branch",
             "continuation objective or small prefix-trained branch ranker.",
-            "It is a richer path/state segmentation account for why the",
-            "parser waits, copies, or understops at the remaining mixed",
-            "residual sites, or a source-free",
+            "A finite context table has weak full-fit signal but no stable",
+            "holdout rule. The remaining blocker is a richer path/state",
+            "segmentation account for why the parser waits, copies, or",
+            "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -840,6 +877,7 @@ def main() -> None:
             "- [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)",
             "- [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)",
             "- [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)",
+            "- [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)",
             "",
         ]
     )

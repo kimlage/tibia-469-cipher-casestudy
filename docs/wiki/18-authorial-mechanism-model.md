@@ -570,6 +570,11 @@ learned from prefix books. It cannot: the active-branch baseline is `224/234`
 with `0/10` residual hits, while the best full-fit ranker is worse at `223/234`
 and still hits `0/10` residuals. A residual-only mode can hit `7/10`, but only by
 changing `221` clean controls. No learned branch ranker is promoted.
+A contextual mode selector then tests a finite observable state table. It finds
+a weak full-fit clue: the best context family (`context_combo`) reaches
+`229/234`, resolving `5/10` residuals with `0` clean-control changes. It is not
+promoted because prefix/holdout keeps only `1/5` zero-false-control cells and
+only `1/5` all-residual-covered cells.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2256,6 +2261,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair residual feature audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/21_post_repair_residual_feature_audit.md)
 - [Residual branch continuation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.md)
 - [Branch ranker prequential audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/23_branch_ranker_prequential_audit.md)
+- [Contextual mode selector audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/24_contextual_mode_selector_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
