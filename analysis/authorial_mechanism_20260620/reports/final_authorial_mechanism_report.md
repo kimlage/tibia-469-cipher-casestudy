@@ -724,5 +724,11 @@ Generated audits in this directory should be treated as the current state:
   one-cut boundaries, beats global in every prefix frozen split, and passes
   book-id permutation controls (`p=0.0033`). The searched cutoff `37` is not
   promoted because it gains only `0.256` bits over the natural midpoint.
+- `149_literal_copy_availability_boundary_audit`: separates literal payload
+  dependency into forced and optional regions. `73/87` literal starts have no
+  legal `min_len` copy candidate, covering `788/857` literal digits at item
+  level; digit-level availability leaves `97` optional literal positions.
+  The remaining externality is localized to `14` literal starts where copy
+  candidates exist but the cost parser chose literals.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

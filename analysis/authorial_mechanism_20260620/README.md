@@ -399,6 +399,10 @@ authorial method: family/bookcase holdouts still have failures.
   copy-length midpoint context against a global model, searched boundaries,
   prefix-frozen splits, and book-id permutation controls; midpoint is retained
   as supported context, not a new bound.
+- `scripts/149_literal_copy_availability_boundary_audit.py` - separates
+  literal runs forced by no legal copy candidate from residual parser choices;
+  `73/87` literal starts are forced, leaving `14` optional literal starts as
+  the remaining literal recipe frontier.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

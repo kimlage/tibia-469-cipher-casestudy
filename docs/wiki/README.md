@@ -454,6 +454,11 @@ split: midpoint beats global by `13.839` stream bits, ranks second among 69
 one-cut boundaries, wins every prefix frozen split, and passes book-id
 permutation controls (`p=0.0033`). The searched cutoff `37` is not promoted for
 only `0.256` bits over the natural midpoint.
+The literal copy availability boundary audit narrows the remaining literal
+recipe dependency: `73/87` literal starts have no legal `min_len` copy
+candidate, and `760/857` literal digits are forced at digit level. The residual
+choice frontier is now localized to `14` literal starts and `97` literal digit
+positions where copy candidates exist.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

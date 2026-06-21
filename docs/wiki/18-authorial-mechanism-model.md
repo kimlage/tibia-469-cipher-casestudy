@@ -993,6 +993,13 @@ supported context: midpoint beats global by `13.839` stream bits, ranks second
 among all 69 one-cut boundaries, beats global in every prefix frozen split,
 and passes book-id permutation controls (`p=0.0033`). The searched cutoff `37`
 is not promoted because it gains only `0.256` bits over the natural midpoint.
+The literal copy availability boundary audit then narrows the remaining
+literal-payload externality. `73/87` literal starts have no legal `min_len`
+copy candidate, covering `788/857` literal digits at item level; at digit
+granularity, `760/857` literal digits are forced by copy unavailability. The
+residual parser frontier is localized to `14` literal starts and `97` literal
+digit positions where a copy candidate exists but the cost parser chose
+literal text.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1299,6 +1306,7 @@ book generation, not row0 pair-cell placement.
 - [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
+- [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 
