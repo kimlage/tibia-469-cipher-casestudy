@@ -130,6 +130,13 @@ fields, with source/length derivation unchanged at declared-source+decoder-max
 `1/261`. The next real formula work remains source/length parser derivation,
 not another local boundary-shift pass.
 
+The follow-up parser feasibility audit makes that next step concrete. On the
+final formula, previous-end state compression keeps every tested book-level
+end-state proxy below `1,000,000`, but the copy-transition proxy is still
+`1,966,897,365` total transitions (`23045.1x` the old frozen-count DP).
+The parser should therefore be built as a pruned/cached per-book source+length
+DP, starting with the hard books `53`, `51`, `35`, and `58`.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

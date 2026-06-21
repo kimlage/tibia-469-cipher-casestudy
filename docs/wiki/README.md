@@ -637,6 +637,11 @@ changed the structural source/length frontier. It did not: target-max coverage
 stays `242/261`, declared-source+decoder-max stays `60/261`,
 unique-source+decoder-max stays `28/261`, previous-end+decoder-max stays
 `1/261`, and retained operation dependency fields remain `609`.
+The final parser feasibility audit then scopes the next implementation path:
+all tested book-level previous-end state proxies are under `1,000,000`, but the
+copy-transition proxy still totals `1,966,897,365` transitions (`23045.1x` old
+DP), so the parser must be pruned/cached and attacked per book rather than as a
+naive whole-suffix DP.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -797,6 +802,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   unchanged,
   confirms by final dependency refresh that source/length derivation is still
   unchanged and `609` operation dependency fields remain declared,
+  scopes the final source/length parser as feasible by state proxy but still
+  transition-heavy (`1,966,897,365` transition proxy),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

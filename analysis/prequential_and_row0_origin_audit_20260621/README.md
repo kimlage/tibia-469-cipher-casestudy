@@ -229,6 +229,9 @@ exogenous.
 - [scripts/71_final_formula_dependency_refresh_gate.py](scripts/71_final_formula_dependency_refresh_gate.py) - refreshes the source/length dependency scoreboard on the final `8154.676268`-bit formula.
 - [reports/test_results/71_final_formula_dependency_refresh_gate.md](reports/test_results/71_final_formula_dependency_refresh_gate.md) - final formula dependency refresh.
 - [reports/test_results/71_final_formula_dependency_refresh_gate.json](reports/test_results/71_final_formula_dependency_refresh_gate.json) - structured final dependency ledger.
+- [scripts/72_final_source_length_parser_feasibility_audit.py](scripts/72_final_source_length_parser_feasibility_audit.py) - recomputes source/length parser state and transition proxies on the final formula.
+- [reports/test_results/72_final_source_length_parser_feasibility_audit.md](reports/test_results/72_final_source_length_parser_feasibility_audit.md) - final parser feasibility audit.
+- [reports/test_results/72_final_source_length_parser_feasibility_audit.json](reports/test_results/72_final_source_length_parser_feasibility_audit.json) - structured parser feasibility ledger.
 
 ## Boundary
 
@@ -441,6 +444,13 @@ exogenous.
   coverage remains `242/261`, declared-source+decoder-max remains `60/261`,
   unique-source+decoder-max remains `28/261`, previous-end+decoder-max remains
   `1/261`, and retained operation dependency fields remain `609`.
+- The final source/length parser feasibility audit then recalculates the parser
+  frontier on the `8154.676268` formula. Previous-end state compression keeps
+  all tested book-level end-state proxies below `1,000,000`, but the copy
+  transition proxy is still `1,966,897,365` total transitions, `23045.1x` the
+  old frozen-count DP. The next implementation step is a pruned/cached
+  per-book source+length parser, with hardest books led by `53`, `51`, `35`,
+  and `58`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
