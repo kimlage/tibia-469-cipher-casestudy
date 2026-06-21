@@ -725,6 +725,11 @@ literal digits, reducing materialized operation dependency fields by `139` versu
 the active formula. It still requires target text for copy candidates, literal
 payload, and literal endpoints, so it remains an encoder-side projection rather
 than a promoted decoder-side generator.
+A decoder-side rule coverage audit then tests simple source/length rules against
+that projection. The best source rule covers `6/208` copy events, the best
+length rule covers `58/208`, and the best joint rule covers only `2/208`; the
+decoder-max length signal beats shuffled-length controls but is far from a full
+generator, with `265` literal payload digits still materialized.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -921,6 +926,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   tests the stable path projection boundary (`11263/11263` digits covered, `208`
   copy items, `54` literal runs, but target-text dependence blocks generator
   promotion),
+  tests simple decoder-side source/length rules and rejects promotion (`6/208`
+  best source, `58/208` best length, `2/208` best joint),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

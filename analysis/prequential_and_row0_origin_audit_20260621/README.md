@@ -277,6 +277,9 @@ exogenous.
 - [scripts/87_stable_path_projection_boundary_audit.py](scripts/87_stable_path_projection_boundary_audit.py) - tests whether the stable no-item/no-literal-length path projection can be promoted as a generator.
 - [reports/test_results/87_stable_path_projection_boundary_audit.md](reports/test_results/87_stable_path_projection_boundary_audit.md) - stable path projection boundary result.
 - [reports/test_results/87_stable_path_projection_boundary_audit.json](reports/test_results/87_stable_path_projection_boundary_audit.json) - structured stable path projection boundary ledger.
+- [scripts/88_decoder_side_rule_coverage_audit.py](scripts/88_decoder_side_rule_coverage_audit.py) - tests simple decoder-side source/length rules against the stable path projection.
+- [reports/test_results/88_decoder_side_rule_coverage_audit.md](reports/test_results/88_decoder_side_rule_coverage_audit.md) - decoder-side rule coverage result.
+- [reports/test_results/88_decoder_side_rule_coverage_audit.json](reports/test_results/88_decoder_side_rule_coverage_audit.json) - structured decoder-side rule coverage ledger.
 
 ## Boundary
 
@@ -586,6 +589,13 @@ exogenous.
   versus the active formula. It still uses the target book text to find copy
   candidates, literal payload, and literal endpoints, so it is an encoder-side
   projection only, not a decoder-side generator.
+- The decoder-side rule coverage audit then tests whether simple rules can turn
+  that projection into a generator. The best source rule is
+  `source_is_previous_copy_end` at `6/208`; the best length rule is
+  `length_is_decoder_max` at `58/208`; and the best decoder-side joint rule is
+  only `2/208`. The decoder-max length signal beats shuffled-length controls
+  (`p=0.0000`) but is far from complete, and `265` literal payload digits remain
+  materialized.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

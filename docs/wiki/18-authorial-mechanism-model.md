@@ -262,6 +262,15 @@ the projection is still chosen with the target book text available: copy
 candidates, literal payload, and literal endpoints are target-dependent. So this
 is an encoder-side stable projection, not a promoted decoder-side generator.
 
+A decoder-side rule coverage audit then tests the obvious promotion path. Simple
+rules fail to explain the stable projection: the best decoder-side source rule
+is `source_is_previous_copy_end` at `6/208`, the best length rule is
+`length_is_decoder_max` at `58/208`, and the best joint rule reaches only
+`2/208`. The decoder-max length signal is nonrandom against shuffled lengths
+(`p=0.0000`), but `265` literal payload digits are still materialized and source
+choice remains almost entirely target-dependent. The result is
+`decoder_side_rule_coverage_insufficient`.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

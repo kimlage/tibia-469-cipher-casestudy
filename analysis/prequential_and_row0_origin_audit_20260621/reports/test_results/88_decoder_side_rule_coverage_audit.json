@@ -1,0 +1,379 @@
+{
+  "case_reopened": false,
+  "classification": "decoder_side_rule_coverage_insufficient",
+  "controls": {
+    "p_permuted_decoder_max_hits_ge_observed": 0.0,
+    "p_random_latest_hits_ge_observed": 1.0,
+    "p_random_previous_end_hits_ge_observed": 0.0,
+    "p_random_zero_hits_ge_observed": 0.052,
+    "permuted_length_decoder_max_hit_summary": {
+      "max": 7,
+      "mean": 1.741,
+      "median": 2.0,
+      "min": 0,
+      "n": 1000
+    },
+    "random_source_latest_hit_summary": {
+      "max": 2,
+      "mean": 0.059,
+      "median": 0.0,
+      "min": 0,
+      "n": 1000
+    },
+    "random_source_previous_end_hit_summary": {
+      "max": 0,
+      "mean": 0.0,
+      "median": 0.0,
+      "min": 0,
+      "n": 1000
+    },
+    "random_source_zero_hit_summary": {
+      "max": 2,
+      "mean": 0.056,
+      "median": 0.0,
+      "min": 0,
+      "n": 1000
+    },
+    "seed": 469,
+    "trials": 1000
+  },
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "decoder_side_rule_coverage_insufficient",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "target_text_dependency_not_removed",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "gate86_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/86_global_item_literal_length_control_gate.py",
+    "gate87": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/87_stable_path_projection_boundary_audit.json"
+  },
+  "plaintext_claim": false,
+  "rule_summary": {
+    "best_decoder_side_joint_rule": "joint_previous_end_decoder_max",
+    "best_decoder_side_joint_rule_hits": 2,
+    "best_decoder_side_length_rule": "length_is_decoder_max",
+    "best_decoder_side_length_rule_hits": 58,
+    "best_decoder_side_source_rule": "source_is_previous_copy_end",
+    "best_decoder_side_source_rule_hits": 6,
+    "copied_digits": 9302,
+    "copy_event_count": 208,
+    "counts": {
+      "joint_earliest_target_match_decoder_max": 58,
+      "joint_latest_legal_decoder_max": 0,
+      "joint_previous_end_decoder_max": 2,
+      "joint_unique_target_match_decoder_max": 24,
+      "joint_zero_decoder_max": 1,
+      "length_is_decoder_max": 58,
+      "length_is_min_len": 7,
+      "length_is_previous_copy_length": 2,
+      "length_is_remaining_book": 55,
+      "source_is_earliest_target_match": 208,
+      "source_is_latest_legal": 0,
+      "source_is_latest_target_match": 78,
+      "source_is_previous_copy_end": 6,
+      "source_is_unique_target_match": 78,
+      "source_is_zero": 1
+    },
+    "decoder_max_minus_length_summary": {
+      "max": 267.0,
+      "mean": 53.69230769230769,
+      "median": 38.5,
+      "min": 0.0,
+      "n": 208
+    },
+    "legal_source_count_summary": {
+      "max": 11119.0,
+      "mean": 5585.110576923077,
+      "median": 5036.5,
+      "min": 1697.0,
+      "n": 208
+    },
+    "target_match_source_count_summary": {
+      "max": 14.0,
+      "mean": 2.8461538461538463,
+      "median": 2.0,
+      "min": 1.0,
+      "n": 208
+    }
+  },
+  "sample_failures": [
+    {
+      "book": 10,
+      "book_pos": 5,
+      "decoder_max_possible_after_declared_source": 276,
+      "legal_source_count": 1697,
+      "length": 276,
+      "op_index": 1,
+      "source": 0,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 11,
+      "book_pos": 6,
+      "decoder_max_possible_after_declared_source": 131,
+      "legal_source_count": 1979,
+      "length": 7,
+      "op_index": 1,
+      "source": 1334,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 11,
+      "book_pos": 13,
+      "decoder_max_possible_after_declared_source": 124,
+      "legal_source_count": 1986,
+      "length": 29,
+      "op_index": 2,
+      "source": 833,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 11,
+      "book_pos": 49,
+      "decoder_max_possible_after_declared_source": 88,
+      "legal_source_count": 2022,
+      "length": 30,
+      "op_index": 4,
+      "source": 1349,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 11,
+      "book_pos": 79,
+      "decoder_max_possible_after_declared_source": 58,
+      "legal_source_count": 2052,
+      "length": 58,
+      "op_index": 5,
+      "source": 862,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 12,
+      "book_pos": 2,
+      "decoder_max_possible_after_declared_source": 135,
+      "legal_source_count": 2112,
+      "length": 19,
+      "op_index": 1,
+      "source": 314,
+      "target_match_source_count": 3
+    },
+    {
+      "book": 12,
+      "book_pos": 21,
+      "decoder_max_possible_after_declared_source": 116,
+      "legal_source_count": 2131,
+      "length": 12,
+      "op_index": 2,
+      "source": 853,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 12,
+      "book_pos": 37,
+      "decoder_max_possible_after_declared_source": 100,
+      "legal_source_count": 2147,
+      "length": 10,
+      "op_index": 4,
+      "source": 12,
+      "target_match_source_count": 5
+    },
+    {
+      "book": 12,
+      "book_pos": 56,
+      "decoder_max_possible_after_declared_source": 81,
+      "legal_source_count": 2166,
+      "length": 14,
+      "op_index": 6,
+      "source": 446,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 12,
+      "book_pos": 70,
+      "decoder_max_possible_after_declared_source": 67,
+      "legal_source_count": 2180,
+      "length": 12,
+      "op_index": 7,
+      "source": 207,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 12,
+      "book_pos": 86,
+      "decoder_max_possible_after_declared_source": 51,
+      "legal_source_count": 2196,
+      "length": 13,
+      "op_index": 9,
+      "source": 413,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 12,
+      "book_pos": 99,
+      "decoder_max_possible_after_declared_source": 38,
+      "legal_source_count": 2209,
+      "length": 31,
+      "op_index": 10,
+      "source": 1304,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 12,
+      "book_pos": 132,
+      "decoder_max_possible_after_declared_source": 5,
+      "legal_source_count": 2242,
+      "length": 5,
+      "op_index": 12,
+      "source": 50,
+      "target_match_source_count": 5
+    },
+    {
+      "book": 13,
+      "book_pos": 0,
+      "decoder_max_possible_after_declared_source": 26,
+      "legal_source_count": 2247,
+      "length": 26,
+      "op_index": 0,
+      "source": 2225,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 13,
+      "book_pos": 28,
+      "decoder_max_possible_after_declared_source": 113,
+      "legal_source_count": 2275,
+      "length": 19,
+      "op_index": 2,
+      "source": 527,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 13,
+      "book_pos": 48,
+      "decoder_max_possible_after_declared_source": 93,
+      "legal_source_count": 2295,
+      "length": 8,
+      "op_index": 4,
+      "source": 4,
+      "target_match_source_count": 6
+    },
+    {
+      "book": 13,
+      "book_pos": 56,
+      "decoder_max_possible_after_declared_source": 85,
+      "legal_source_count": 2303,
+      "length": 13,
+      "op_index": 5,
+      "source": 1362,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 13,
+      "book_pos": 80,
+      "decoder_max_possible_after_declared_source": 61,
+      "legal_source_count": 2327,
+      "length": 9,
+      "op_index": 7,
+      "source": 693,
+      "target_match_source_count": 2
+    },
+    {
+      "book": 13,
+      "book_pos": 89,
+      "decoder_max_possible_after_declared_source": 52,
+      "legal_source_count": 2336,
+      "length": 52,
+      "op_index": 8,
+      "source": 350,
+      "target_match_source_count": 3
+    },
+    {
+      "book": 14,
+      "book_pos": 39,
+      "decoder_max_possible_after_declared_source": 94,
+      "legal_source_count": 2427,
+      "length": 6,
+      "op_index": 1,
+      "source": 256,
+      "target_match_source_count": 5
+    },
+    {
+      "book": 14,
+      "book_pos": 50,
+      "decoder_max_possible_after_declared_source": 83,
+      "legal_source_count": 2438,
+      "length": 39,
+      "op_index": 3,
+      "source": 1654,
+      "target_match_source_count": 1
+    },
+    {
+      "book": 14,
+      "book_pos": 89,
+      "decoder_max_possible_after_declared_source": 44,
+      "legal_source_count": 2477,
+      "length": 26,
+      "op_index": 4,
+      "source": 154,
+      "target_match_source_count": 3
+    },
+    {
+      "book": 14,
+      "book_pos": 115,
+      "decoder_max_possible_after_declared_source": 18,
+      "legal_source_count": 2503,
+      "length": 7,
+      "op_index": 5,
+      "source": 889,
+      "target_match_source_count": 5
+    },
+    {
+      "book": 14,
+      "book_pos": 122,
+      "decoder_max_possible_after_declared_source": 11,
+      "legal_source_count": 2510,
+      "length": 8,
+      "op_index": 6,
+      "source": 869,
+      "target_match_source_count": 3
+    },
+    {
+      "book": 15,
+      "book_pos": 1,
+      "decoder_max_possible_after_declared_source": 142,
+      "legal_source_count": 2522,
+      "length": 13,
+      "op_index": 1,
+      "source": 37,
+      "target_match_source_count": 4
+    }
+  ],
+  "schema": "decoder_side_rule_coverage_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "decoder_side_rules_only": true,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "projection_mode": "payload_uniform_no_item_or_literal_length",
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "best_decoder_side_joint_rule": "joint_previous_end_decoder_max",
+    "best_decoder_side_joint_rule_hits": 2,
+    "best_decoder_side_length_rule": "length_is_decoder_max",
+    "best_decoder_side_length_rule_hits": 58,
+    "best_decoder_side_source_rule": "source_is_previous_copy_end",
+    "best_decoder_side_source_rule_hits": 6,
+    "decoder_joint_covers_all": false,
+    "elapsed_seconds": 8.011653125053272,
+    "interpretation": "Simple decoder-side source and length rules explain only part of the stable projection. The projection remains target-text dependent unless copy source, copy length, and literal payload can be generated without oracle access.",
+    "literal_payload_digits_still_materialized": 265,
+    "projection_copied_digits": 9302,
+    "projection_copy_event_count": 208,
+    "promotes_generator": false
+  },
+  "translation_delta": "NONE"
+}
