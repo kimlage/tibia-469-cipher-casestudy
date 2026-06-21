@@ -1023,6 +1023,28 @@ worse than lookup because of clean rollbacks. It becomes cheaper
 only if the residual sites are already granted, so that row is
 audit-only and does not reduce the source/length dependency.
 
+## Residual Site Detector Gate
+
+Gate 48 tests the missing condition from gate 47: whether
+residual sites can be detected from observable branch ambiguity
+and ranker-disagreement features without granting a site lookup.
+
+| Diagnostic | Value |
+|---|---:|
+| Predicates | `1196` |
+| Scored rules | `4356` |
+| Best predicate | `active_top_count_le_1__and__max_copy_length_le_10` |
+| Best TP/FP/FN | `6/6/4` |
+| Best precision/recall | `0.500/0.600` |
+| Best zero-FP TP | `3` |
+| Prequential zero-FP cells | `2/4` |
+| Prequential cover-all-residual cells | `0/4` |
+
+No residual-site detector is promoted. Observable ambiguity
+features do not identify the residual sites cleanly enough to
+make the residual-gated ranker source-free; the apparent
+saving remains lookup-dependent.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1061,6 +1083,9 @@ ranker gets `6/10` residuals but changes `20` clean controls.
 Gate 47 prices that weak signal: global ranker+corrections is
 `+96.497` bits worse than lookup, while the apparent residual-gated
 win requires granting the residual-site lookup first.
+Gate 48 tests that missing site detector and rejects it: best
+full-fit rule is only `6/10` residuals with `6` false positives,
+and no prefix/holdout residual cell covers all residuals.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1117,3 +1142,4 @@ or the stable projection as an oracle.
 - [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)
 - [Branch rank position audit](test_results/46_branch_rank_position_audit.md)
 - [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)
+- [Residual site detector gate](test_results/48_residual_site_detector_gate.md)

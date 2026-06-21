@@ -1240,6 +1240,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   prices that signal as audit-only: global ranker+corrections is `+96.497`
   bits worse than lookup, while the apparent residual-gated win requires
   granting residual sites first,
+  rejects observable residual-site detection (`4356` rules; best `6/10` with
+  `6` false positives; `0/4` holdout cells cover all residuals),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

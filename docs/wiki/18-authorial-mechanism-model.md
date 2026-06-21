@@ -717,6 +717,10 @@ globally, `balanced_ops_literals` plus corrections costs `+96.497` bits versus
 the explicit residual lookup. A residual-gated version is `-4.684` bits only
 after the residual sites are already granted, so it remains audit-only rather
 than a source-free parser improvement.
+A residual-site detector gate then tests whether that granted condition can be
+made observable. It cannot: the best branch-ambiguity rule is `6/10` residuals
+with `6` false positives, the best zero-FP rule covers only `3/10`, and
+prefix/holdout covers all held-out residuals in `0/4` cells.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2427,6 +2431,7 @@ book generation, not row0 pair-cell placement.
 - [Residual exception transfer gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/45_residual_exception_transfer_gate.md)
 - [Branch rank position audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/46_branch_rank_position_audit.md)
 - [Branch rank exception cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/47_branch_rank_exception_cost_gate.md)
+- [Residual site detector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/48_residual_site_detector_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

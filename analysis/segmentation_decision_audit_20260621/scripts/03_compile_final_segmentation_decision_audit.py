@@ -62,6 +62,7 @@ BRANCH_RANK_POSITION = TEST_RESULTS / "46_branch_rank_position_audit.json"
 BRANCH_RANK_EXCEPTION_COST = (
     TEST_RESULTS / "47_branch_rank_exception_cost_gate.json"
 )
+RESIDUAL_SITE_DETECTOR = TEST_RESULTS / "48_residual_site_detector_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -220,6 +221,11 @@ def main() -> None:
         if BRANCH_RANK_EXCEPTION_COST.exists()
         else None
     )
+    residual_site_detector = (
+        load_json(RESIDUAL_SITE_DETECTOR)
+        if RESIDUAL_SITE_DETECTOR.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -314,6 +320,8 @@ def main() -> None:
         assert_boundary("branch_rank_position_audit", branch_rank_position)
     if branch_rank_exception_cost is not None:
         assert_boundary("branch_rank_exception_cost_gate", branch_rank_exception_cost)
+    if residual_site_detector is not None:
+        assert_boundary("residual_site_detector_gate", residual_site_detector)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -438,6 +446,11 @@ def main() -> None:
         None
         if branch_rank_exception_cost is None
         else branch_rank_exception_cost["summary"]
+    )
+    residual_site_detector_summary = (
+        None
+        if residual_site_detector is None
+        else residual_site_detector["summary"]
     )
 
     lines = [
@@ -1715,6 +1728,33 @@ def main() -> None:
                 "",
             ]
         )
+    if residual_site_detector_summary is not None:
+        lines.extend(
+            [
+                "## Residual Site Detector Gate",
+                "",
+                "Gate 48 tests the missing condition from gate 47: whether",
+                "residual sites can be detected from observable branch ambiguity",
+                "and ranker-disagreement features without granting a site lookup.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Predicates | `{residual_site_detector_summary['predicate_count']}` |",
+                f"| Scored rules | `{residual_site_detector_summary['scored_rule_count']}` |",
+                f"| Best predicate | `{residual_site_detector_summary['best_predicate']}` |",
+                f"| Best TP/FP/FN | `{residual_site_detector_summary['best_tp']}/{residual_site_detector_summary['best_fp']}/{residual_site_detector_summary['best_fn']}` |",
+                f"| Best precision/recall | `{residual_site_detector_summary['best_precision']:.3f}/{residual_site_detector_summary['best_recall']:.3f}` |",
+                f"| Best zero-FP TP | `{residual_site_detector_summary['best_zero_fp_tp']}` |",
+                f"| Prequential zero-FP cells | `{residual_site_detector_summary['prequential_zero_fp_cells']}/{residual_site_detector_summary['prequential_cells_with_residuals']}` |",
+                f"| Prequential cover-all-residual cells | `{residual_site_detector_summary['prequential_cover_all_residual_cells']}/{residual_site_detector_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "No residual-site detector is promoted. Observable ambiguity",
+                "features do not identify the residual sites cleanly enough to",
+                "make the residual-gated ranker source-free; the apparent",
+                "saving remains lookup-dependent.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1755,6 +1795,9 @@ def main() -> None:
             "Gate 47 prices that weak signal: global ranker+corrections is",
             "`+96.497` bits worse than lookup, while the apparent residual-gated",
             "win requires granting the residual-site lookup first.",
+            "Gate 48 tests that missing site detector and rejects it: best",
+            "full-fit rule is only `6/10` residuals with `6` false positives,",
+            "and no prefix/holdout residual cell covers all residuals.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1811,6 +1854,7 @@ def main() -> None:
             "- [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)",
             "- [Branch rank position audit](test_results/46_branch_rank_position_audit.md)",
             "- [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)",
+            "- [Residual site detector gate](test_results/48_residual_site_detector_gate.md)",
             "",
         ]
     )
