@@ -197,6 +197,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Optional literal copy repair frontier | `74` single in-literal copy-prefix repairs across `5` eligible optional starts are scored under the active ledger; best candidate is still `+1.180` bits worse | simplest optional-literal repair rejected |
 | Cross-op optional literal copy frontier | allowing replacement copies to cross literal boundaries yields `465` valid candidates; none improves, and the best is only `+0.027` bits worse than active | cross-op optional-literal repair rejected |
 | Cross-op near-tie decomposition | best near miss saves literal/item bits but pays `+11.237` copy-source and `+1.639` copy-length bits, yielding a real `+0.027` bit loss | near tie explained / no promotion |
+| Cross-op source break-even audit | best near miss uses earliest of two full-length sources and would improve under a source-free oracle, but the active source ledger is `0.027` bits above break-even | source-free oracle rejected |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
 | Literal payload structural context audit | literal-run offset, run-length bucket, book half/parity, and bounded combinations with `prev2` all over-split the payload stream | rejected context / no new bound |
 | Prequential and row0 origin audit | frozen validation scope `8558.667` shows partial learned-component prediction, but family failures and recipe externality keep it from being a full generation method; row0 remains exogenous | analysis-only boundary / no generation promotion |
@@ -350,6 +351,7 @@ Primary sources:
 [optional_literal_copy_repair_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md),
 [cross_op_optional_literal_copy_frontier.md](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md),
 [cross_op_near_tie_decomposition.md](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md),
+[cross_op_source_break_even_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.md),
 [literal_payload_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md),
 [literal_payload_structural_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),

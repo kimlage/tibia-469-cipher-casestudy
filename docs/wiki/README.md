@@ -469,6 +469,10 @@ improves, and the best is only `+0.027` bits worse than active.
 The cross-op near-tie decomposition explains that best miss: literal/item
 savings are nearly canceled by copy-length/source costs, with copy source alone
 adding `+11.237` bits. The tiny loss is real, not rounding noise.
+The cross-op source break-even audit shows why it still cannot be promoted:
+the candidate source is earliest among two full-length occurrences, but this is
+only encoder-side unless source can be derived during decoding. The active
+source ledger sits `0.027` bits above break-even.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

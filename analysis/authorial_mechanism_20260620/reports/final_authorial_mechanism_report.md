@@ -745,5 +745,10 @@ Generated audits in this directory should be treated as the current state:
   bits, and `1.417` item-type bits, but pays `1.639` copy-length bits and
   `11.237` copy-source bits. The loss is therefore real and source-ledger
   dominated, not a rounding artifact.
+- `153_cross_op_source_break_even_audit`: quantifies the source-cost boundary
+  for the near miss. The candidate source is the earliest of two full-length
+  occurrences, and a source-free oracle would improve by `11.209` bits, but
+  the active source ledger is `0.027` bits above break-even. This is not
+  promoted because the oracle is not decoder-side.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

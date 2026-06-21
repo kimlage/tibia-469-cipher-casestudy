@@ -1,0 +1,66 @@
+{
+  "break_even": {
+    "active_copy_source_delta_bits": 11.236537206576486,
+    "active_total_delta_bits": 0.02743357555300463,
+    "break_even_copy_source_delta_bits": 11.209103631023481,
+    "copy_length_delta_bits": 1.6386634560265065,
+    "no_source_no_length_oracle_delta_bits": -12.847767087049988,
+    "no_source_oracle_delta_bits": -11.209103631023481,
+    "non_copy_delta_bits": -12.847767087049988,
+    "non_source_delta_bits": -11.209103631023481,
+    "source_delta_margin_over_break_even_bits": 0.02743357555300463
+  },
+  "candidate": {
+    "book": 12,
+    "book_pos": 82,
+    "candidate_total_bits": 8177.344086698475,
+    "copy_items": 262,
+    "copy_length": 11,
+    "crossed_digits": 7,
+    "delta_bits": 0.02743357555300463,
+    "literal_digits": 853,
+    "literal_length_before": 4,
+    "literal_runs": 86,
+    "op_index": 8,
+    "source_digit_pos": 102,
+    "valid": true
+  },
+  "case_reopened": false,
+  "classification": "cross_op_source_break_even_blocks_promotion",
+  "component_deltas": {
+    "copy_length_default_exception_bits": 1.6386634560265065,
+    "copy_source_default_exception_bits": 11.236537206576486,
+    "fixed_bits": 0.0,
+    "item_type_stream_bits": -1.4172481603253004,
+    "literal_bits_no_payload": -4.0,
+    "literal_payload_bits": -7.4305189267242895
+  },
+  "decision": {
+    "candidate_promoted": false,
+    "compression_bound_changed": false,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE",
+    "source_free_oracle_promoted": false
+  },
+  "plaintext_claim": false,
+  "schema": "cross_op_source_break_even_audit.v1",
+  "source_candidate_audit": "analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.json",
+  "source_candidates_at_position": {
+    "candidate_count": 7,
+    "full_length_source_count": 2,
+    "full_length_sources": [
+      {
+        "max_length": 11,
+        "source_digit_pos": 102
+      },
+      {
+        "max_length": 11,
+        "source_digit_pos": 1803
+      }
+    ],
+    "selected_source_is_earliest_full_length": true
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "153_cross_op_source_break_even_audit",
+  "translation_delta": "NONE"
+}

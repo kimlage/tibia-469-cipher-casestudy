@@ -412,6 +412,9 @@ authorial method: family/bookcase holdouts still have failures.
 - `scripts/152_cross_op_near_tie_decomposition.py` - decomposes the best
   `+0.027` bit cross-op near miss; literal/item savings are almost exactly
   canceled by copy-length/source costs, especially copy source.
+- `scripts/153_cross_op_source_break_even_audit.py` - quantifies the
+  source-cost break-even for that near miss: a source-free oracle would save
+  `11.209` bits, but the active source ledger is `0.027` bits above break-even.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
