@@ -2940,6 +2940,7 @@
     "literal_externality_status": "reduced_not_removed_local_repairs_rejected",
     "literal_payload_model_status": "active_order2_retained_simplifications_rejected",
     "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
+    "post_targetmax_source_substitution_status": "promoted_bound_8156_050167_microscopic",
     "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "exogenous_under_current_evidence",
     "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
@@ -14302,6 +14303,217 @@
     }
   },
   "plaintext_claim": false,
+  "post_targetmax_source_substitution_frontier": {
+    "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_formula_469.json",
+    "classification": "post_targetmax_source_substitution_frontier_improves_bound",
+    "decision": {
+      "compression_bound_status": "improved_by_post_targetmax_source_substitution",
+      "generation_explanation_status": "fixed_recipe_source_frontier_after_resegmentation",
+      "recipe_discovery_status": "fixed_recipe_post_targetmax_source_substitution_frontier_tested",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "adaptive_rescore": true,
+      "fixed_copy_lengths": true,
+      "fixed_segmentation": true,
+      "same_chunk_source_choices_only": true,
+      "searched_pair_substitutions": true,
+      "searched_single_substitutions": true,
+      "searched_triples_or_higher": false,
+      "starts_after_targetmax_saturation": true,
+      "starts_from_bound_bits": 8156.050354919866
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/56_post_targetmax_source_substitution_frontier_gate.json",
+    "summary": {
+      "active_copy_source_bits": 2985.3517481729127,
+      "active_default_count": 7,
+      "active_exception_count": 254,
+      "active_total_bits": 8156.050354919866,
+      "alternative_count": 380,
+      "best_arity": 2,
+      "best_pair_rows": [
+        {
+          "book": 46,
+          "candidate_count": 2,
+          "candidate_source": 1406,
+          "copy_source_bits": 2985.351560383125,
+          "event_index": 201,
+          "gain_bits": 0.0001877897875601775,
+          "length": 112,
+          "op_index": 2,
+          "original_source": 699
+        },
+        {
+          "book": 47,
+          "candidate_count": 2,
+          "candidate_source": 1518,
+          "copy_source_bits": 2985.351560383125,
+          "event_index": 202,
+          "gain_bits": 0.0001877897875601775,
+          "length": 126,
+          "op_index": 0,
+          "original_source": 811
+        }
+      ],
+      "best_substitutions": [
+        {
+          "book": 46,
+          "candidate_count": 2,
+          "candidate_source": 1406,
+          "copy_source_bits": 2985.351560383125,
+          "event_index": 201,
+          "gain_bits": 0.0001877897875601775,
+          "length": 112,
+          "op_index": 2,
+          "original_source": 699
+        },
+        {
+          "book": 47,
+          "candidate_count": 2,
+          "candidate_source": 1518,
+          "copy_source_bits": 2985.351560383125,
+          "event_index": 202,
+          "gain_bits": 0.0001877897875601775,
+          "length": 126,
+          "op_index": 0,
+          "original_source": 811
+        }
+      ],
+      "candidate_copy_source_bits": 2985.351560383125,
+      "candidate_default_count": 7,
+      "candidate_exception_count": 254,
+      "candidate_exception_source_bits": 2921.5390580612143,
+      "candidate_flag_bits": 51.812502321911055,
+      "candidate_gain_bits": 0.0001877897875601775,
+      "candidate_source_option_count": 641,
+      "candidate_total_bits": 8156.050167130078,
+      "copy_event_count": 261,
+      "pair_substitution_count": 71321,
+      "positive_pair_count": 152,
+      "positive_single_count": 1,
+      "previous_bound_bits": 8156.050354919866,
+      "remaining_blockers": [
+        "Only same-chunk source substitutions are searched.",
+        "Segmentation and copy lengths remain fixed.",
+        "Triples and higher-order source substitutions are not searched in this gate.",
+        "Row0 origin remains exogenous."
+      ],
+      "single_substitution_count": 380,
+      "top_single_rows": [
+        {
+          "book": 60,
+          "candidate_count": 5,
+          "candidate_source": 7047,
+          "copy_source_bits": 2985.351606628145,
+          "event_index": 244,
+          "gain_bits": 0.00014154476775729563,
+          "length": 53,
+          "op_index": 2,
+          "original_source": 3048
+        },
+        {
+          "book": 6,
+          "candidate_count": 2,
+          "candidate_source": 791,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 33,
+          "gain_bits": 0.0,
+          "length": 6,
+          "op_index": 0,
+          "original_source": 373
+        },
+        {
+          "book": 6,
+          "candidate_count": 2,
+          "candidate_source": 808,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 38,
+          "gain_bits": 0.0,
+          "length": 12,
+          "op_index": 7,
+          "original_source": 390
+        },
+        {
+          "book": 6,
+          "candidate_count": 2,
+          "candidate_source": 945,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 44,
+          "gain_bits": 0.0,
+          "length": 21,
+          "op_index": 14,
+          "original_source": 52
+        },
+        {
+          "book": 8,
+          "candidate_count": 2,
+          "candidate_source": 786,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 52,
+          "gain_bits": 0.0,
+          "length": 6,
+          "op_index": 5,
+          "original_source": 368
+        },
+        {
+          "book": 10,
+          "candidate_count": 3,
+          "candidate_source": 1024,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 57,
+          "gain_bits": 0.0,
+          "length": 6,
+          "op_index": 0,
+          "original_source": 888
+        },
+        {
+          "book": 10,
+          "candidate_count": 3,
+          "candidate_source": 1595,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 57,
+          "gain_bits": 0.0,
+          "length": 6,
+          "op_index": 0,
+          "original_source": 888
+        },
+        {
+          "book": 11,
+          "candidate_count": 2,
+          "candidate_source": 1569,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 62,
+          "gain_bits": 0.0,
+          "length": 58,
+          "op_index": 5,
+          "original_source": 862
+        },
+        {
+          "book": 12,
+          "candidate_count": 3,
+          "candidate_source": 732,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 63,
+          "gain_bits": 0.0,
+          "length": 19,
+          "op_index": 1,
+          "original_source": 314
+        },
+        {
+          "book": 12,
+          "candidate_count": 3,
+          "candidate_source": 1439,
+          "copy_source_bits": 2985.3517481729127,
+          "event_index": 63,
+          "gain_bits": 0.0,
+          "length": 19,
+          "op_index": 1,
+          "original_source": 314
+        }
+      ]
+    }
+  },
   "predictive_validation": {
     "classification": "predictive_signal_partial_not_generation_method",
     "component_ablation_prefix_splits": {

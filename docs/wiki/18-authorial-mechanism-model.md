@@ -107,8 +107,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_formula_469` | `8158.7661` | `2.0595` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_second_pass_formula_469` | `8157.0657` | `1.7004` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_saturated_formula_469` | `8156.0504` | `1.0153` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_formula_469` | `8156.0502` | `0.0002` |
 
-The `8156.0504` row is the current `compression_bound`, not a final authorial
+The `8156.0502` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1175,6 +1176,11 @@ frontier tests `38` candidates, with `34` valid and `0` exact improvements.
 This closes the local target-max resegmentation family under the current
 scorer, but it is still not a row0 derivation, plaintext claim, or final
 authorial method.
+Rerunning the exact same-chunk source-substitution frontier after that
+resegmentation finds a microscopic pair gain: book `46` op `2` and book `47`
+op `0` move the bound from `8156.050355` to `8156.050167` bits
+(`+0.000188`). This is compression-bound bookkeeping after a representation
+change, not stronger generation evidence.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1626,6 +1632,7 @@ book generation, not row0 pair-cell placement.
 - [Target-max resegmentation formula gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/53_targetmax_resegmentation_formula_gate.md)
 - [Target-max resegmentation second-pass gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/54_targetmax_resegmentation_second_pass_gate.md)
 - [Target-max resegmentation saturation gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/55_targetmax_resegmentation_saturation_gate.md)
+- [Post-target-max source substitution frontier gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/56_post_targetmax_source_substitution_frontier_gate.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

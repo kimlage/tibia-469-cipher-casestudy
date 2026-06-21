@@ -181,6 +181,9 @@ exogenous.
 - [scripts/55_targetmax_resegmentation_saturation_gate.py](scripts/55_targetmax_resegmentation_saturation_gate.py) - greedily promotes exact target-max resegmentations until the local frontier has no positive candidate.
 - [reports/test_results/55_targetmax_resegmentation_saturation_gate.md](reports/test_results/55_targetmax_resegmentation_saturation_gate.md) - target-max resegmentation saturation gate.
 - [reports/test_results/55_targetmax_resegmentation_saturation_gate.json](reports/test_results/55_targetmax_resegmentation_saturation_gate.json) - structured target-max saturation ledger.
+- [scripts/56_post_targetmax_source_substitution_frontier_gate.py](scripts/56_post_targetmax_source_substitution_frontier_gate.py) - reruns exact same-chunk source substitution after target-max saturation.
+- [reports/test_results/56_post_targetmax_source_substitution_frontier_gate.md](reports/test_results/56_post_targetmax_source_substitution_frontier_gate.md) - post-target-max source substitution frontier gate.
+- [reports/test_results/56_post_targetmax_source_substitution_frontier_gate.json](reports/test_results/56_post_targetmax_source_substitution_frontier_gate.json) - structured post-target-max source substitution ledger.
 
 ## Boundary
 
@@ -331,7 +334,9 @@ exogenous.
   (`+1.700440`). A saturation gate then promotes the final two exact positive
   target-max resegmentations and closes this local frontier at `8156.050355`
   bits, with `0` exact improving candidates left. These changes affect neither
-  `row0` origin nor semantics.
+  `row0` origin nor semantics. Rerunning same-chunk source substitutions after
+  that saturation finds a microscopic pair gain and moves the bound to
+  `8156.050167` bits; this is fixed-recipe compression bookkeeping only.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
