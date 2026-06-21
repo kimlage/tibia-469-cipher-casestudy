@@ -1,0 +1,2281 @@
+{
+  "case_reopened": false,
+  "classification": "full_source_all_policy_fivecutoff_stable",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "full_source_all_policy_fivecutoff_probe_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_rule_status": "full_source_all_policy_fivecutoff_stable",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate91_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/91_full_source_exposure_audit.py",
+    "gate92_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/92_full_source_latest_multicutoff_probe.py",
+    "gate93_all_policy_cutoffs_50_60": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.json"
+  },
+  "plaintext_claim": false,
+  "policy_summaries": [
+    {
+      "book_count": 60,
+      "book_rows": [
+        {
+          "book": 10,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 11,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 12,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 13,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 14,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 15,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 16,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 17,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 18,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 19,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 20,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 21,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 22,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 23,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 24,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 25,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 26,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 27,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 28,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 29,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 30,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 31,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 32,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 33,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 34,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 35,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 36,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 37,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 38,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 39,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 40,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 41,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 42,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 43,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 44,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 45,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 46,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 47,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 48,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 49,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 50,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 51,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 52,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 53,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 54,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 55,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 56,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 57,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 58,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 59,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 60,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 61,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 62,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 63,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 64,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 65,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 66,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 67,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 68,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 69,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        }
+      ],
+      "five_cutoff_stability": {
+        "max_signature_count": 1,
+        "multi_cutoff_book_count": 50,
+        "multi_cutoff_stable_book_count": 50,
+        "multi_cutoff_unstable_book_count": 0,
+        "unstable_books": []
+      },
+      "hidden_candidate_count": 5060831,
+      "max_candidates_at_position": 1351,
+      "multi_cutoff_book_count": 50,
+      "multi_cutoff_stable_book_count": 50,
+      "multi_cutoff_unstable_book_count": 0,
+      "policy": "earliest_source",
+      "positions_with_hidden_sources": 25431,
+      "raw_positive_book_evaluations": 175,
+      "roundtrip_book_evaluations": 175,
+      "source": "computed_gate94",
+      "target_book_evaluations": 175,
+      "total_copy_items": 525,
+      "total_literal_digits": 529,
+      "total_non_earliest_source_count": 20,
+      "total_primary_parser_bits": 11439.81184041862,
+      "unstable_books": []
+    },
+    {
+      "book_count": 60,
+      "book_rows": [
+        {
+          "book": 10,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 11,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 12,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 6,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 13,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 14,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 15,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 16,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 17,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 18,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 19,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 20,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 10,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 21,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 22,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 23,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 16,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 24,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 25,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 26,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 27,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 28,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 6,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 29,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 30,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 8,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 31,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 16,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 32,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 33,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 34,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 12,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 35,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 36,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 15,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 37,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 38,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 39,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 40,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 6,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 41,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 12,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 42,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 12,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 43,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 44,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 45,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 46,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 6,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 47,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 48,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 6,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 49,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 21,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 50,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 51,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 52,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 53,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 54,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 55,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 12,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 56,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 24,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 57,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 8,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 58,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 59,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 8,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 60,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 15,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 61,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 62,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 63,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 64,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 65,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 66,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 67,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 68,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 69,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        }
+      ],
+      "five_cutoff_stability": {
+        "max_signature_count": 1,
+        "multi_cutoff_book_count": 50,
+        "multi_cutoff_stable_book_count": 50,
+        "multi_cutoff_unstable_book_count": 0,
+        "unstable_books": []
+      },
+      "hidden_candidate_count": 5060831,
+      "max_candidates_at_position": 1351,
+      "multi_cutoff_book_count": 50,
+      "multi_cutoff_stable_book_count": 50,
+      "multi_cutoff_unstable_book_count": 0,
+      "policy": "latest_source",
+      "positions_with_hidden_sources": 25431,
+      "raw_positive_book_evaluations": 175,
+      "roundtrip_book_evaluations": 175,
+      "source": "computed_gate94",
+      "target_book_evaluations": 175,
+      "total_copy_items": 525,
+      "total_literal_digits": 529,
+      "total_non_earliest_source_count": 312,
+      "total_primary_parser_bits": 11439.900221325443,
+      "unstable_books": []
+    },
+    {
+      "book_count": 60,
+      "book_rows": [
+        {
+          "book": 10,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 11,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 12,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 13,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 14,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 15,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 16,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 17,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 18,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 19,
+          "cutoff_count": 1,
+          "cutoffs": [
+            10
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 20,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 21,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 22,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 23,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 24,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 25,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 26,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 27,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 28,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 29,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 30,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 31,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 32,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 33,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 34,
+          "cutoff_count": 2,
+          "cutoffs": [
+            10,
+            20
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 35,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 36,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 37,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 38,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 39,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 40,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 41,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 42,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 43,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 44,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 45,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 46,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 47,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 48,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 49,
+          "cutoff_count": 3,
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "non_earliest_source_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 50,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 51,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 52,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 53,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 54,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 55,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 56,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 57,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 58,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 59,
+          "cutoff_count": 4,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "non_earliest_source_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 60,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 61,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 62,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 63,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 64,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 65,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 66,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 67,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 68,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        },
+        {
+          "book": 69,
+          "cutoff_count": 5,
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "non_earliest_source_count": 0,
+          "signature_count": 1,
+          "stable_exact_path": true
+        }
+      ],
+      "five_cutoff_stability": {
+        "max_signature_count": 1,
+        "multi_cutoff_book_count": 50,
+        "multi_cutoff_stable_book_count": 50,
+        "multi_cutoff_unstable_book_count": 0,
+        "unstable_books": []
+      },
+      "hidden_candidate_count": 5060831,
+      "max_candidates_at_position": 1351,
+      "multi_cutoff_book_count": 50,
+      "multi_cutoff_stable_book_count": 50,
+      "multi_cutoff_unstable_book_count": 0,
+      "policy": "prefer_previous_end_then_earliest",
+      "positions_with_hidden_sources": 25431,
+      "raw_positive_book_evaluations": 175,
+      "roundtrip_book_evaluations": 175,
+      "source": "computed_gate94",
+      "target_book_evaluations": 175,
+      "total_copy_items": 525,
+      "total_literal_digits": 529,
+      "total_non_earliest_source_count": 20,
+      "total_primary_parser_bits": 11439.81184041862,
+      "unstable_books": []
+    }
+  ],
+  "schema": "full_source_all_policy_fivecutoff_probe.v1",
+  "scope": {
+    "all_same_length_sources_exposed": true,
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "policies": [
+      "earliest_source",
+      "latest_source",
+      "prefer_previous_end_then_earliest"
+    ],
+    "row0_origin_changed": false,
+    "tested_cutoffs": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ]
+  },
+  "summary": {
+    "all_five_cutoff_multi_book_stable": true,
+    "all_raw_positive": true,
+    "all_roundtrip": true,
+    "any_non_earliest_sources_selected": true,
+    "elapsed_seconds": 573.7716232920066,
+    "interpretation": "All three source tie policies are tested across the five prequential cutoffs with every same-length source candidate exposed. This checks whether the exposed-source parser robustness from cutoffs 50/60 survives the full cutoff grid.",
+    "policy_count": 3,
+    "total_multi_cutoff_books_across_policies": 150,
+    "total_unstable_books_across_policies": 0
+  },
+  "translation_delta": "NONE"
+}

@@ -303,8 +303,7 @@ raw in `30/30` book evaluations, and books `60..69` remain exact-path stable
 across both cutoffs (`10/10`). The parser selects `35` non-earliest sources while
 exposing `1246561` hidden candidates. This is stronger partial stability evidence
 for the parser, but still not a formula promotion: source candidates remain
-target-chunk matches, and the full five-cutoff all-policy exposure remains
-unrun.
+target-chunk matches.
 A full-source all-policy multi-cutoff probe then checks whether that partial
 stability depends on the `latest_source` policy. It does not at cutoffs `50/60`:
 `earliest_source`, `latest_source`, and `prefer_previous_end_then_earliest` each
@@ -312,6 +311,12 @@ roundtrip and beat raw in `30/30` book evaluations, and each keeps books `60..69
 stable across both cutoffs (`10/10`). This is still an exposed-source parser
 robustness result, not a source-generation rule; `row0` and the `8154.676268`-bit
 bound remain unchanged.
+A full-source all-policy five-cutoff probe then closes the open cutoff-grid
+question. Across cutoffs `10/20/35/50/60`, all three tie policies roundtrip and
+beat raw in `175/175` book evaluations per policy, each has `50/50`
+multi-cutoff-stable books, and the aggregate unstable policy-book count is
+`0/150`. This materially strengthens parser robustness under source-candidate
+exposure, but still does not derive source choice during decoding or alter row0.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1950,6 +1955,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.md)
 - [Source blocker structural context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md)
 - [Full source all-policy multi-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.md)
+- [Full source all-policy five-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

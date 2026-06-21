@@ -756,6 +756,11 @@ stability is not specific to `latest_source`: `earliest_source`, `latest_source`
 and `prefer_previous_end_then_earliest` each roundtrip and beat raw in `30/30`
 evaluations on cutoffs `50/60`, with `10/10` shared books stable per policy.
 This leaves `row0` unchanged and does not change the compression bound.
+A full-source all-policy five-cutoff probe then extends the same check to
+cutoffs `10/20/35/50/60`: each policy keeps `175/175` roundtrip/raw-positive
+evaluations and `50/50` multi-cutoff-stable books, with `0/150` unstable
+policy-book cases. This strengthens exposed-source parser robustness but still
+does not derive source choice or change `row0`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -964,6 +969,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   books `60..69` stable (`10/10`),
   checks all three full-source tie policies at cutoffs `50/60` and keeps `30/30`
   roundtrip/raw-positive evaluations per policy with `row0` unchanged,
+  extends that all-policy full-source exposure to the five-cutoff grid and keeps
+  `50/50` multi-cutoff-stable books per policy,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

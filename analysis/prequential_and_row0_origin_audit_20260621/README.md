@@ -295,6 +295,9 @@ exogenous.
 - [scripts/93_full_source_all_policy_multicutoff_probe.py](scripts/93_full_source_all_policy_multicutoff_probe.py) - compares all source tie policies with all same-length sources exposed on cutoffs `50/60`.
 - [reports/test_results/93_full_source_all_policy_multicutoff_probe.md](reports/test_results/93_full_source_all_policy_multicutoff_probe.md) - full source all-policy multi-cutoff probe result.
 - [reports/test_results/93_full_source_all_policy_multicutoff_probe.json](reports/test_results/93_full_source_all_policy_multicutoff_probe.json) - structured full source all-policy multi-cutoff ledger.
+- [scripts/94_full_source_all_policy_fivecutoff_probe.py](scripts/94_full_source_all_policy_fivecutoff_probe.py) - extends all-policy full-source exposure to cutoffs `10/20/35/50/60`.
+- [reports/test_results/94_full_source_all_policy_fivecutoff_probe.md](reports/test_results/94_full_source_all_policy_fivecutoff_probe.md) - full source all-policy five-cutoff probe result.
+- [reports/test_results/94_full_source_all_policy_fivecutoff_probe.json](reports/test_results/94_full_source_all_policy_fivecutoff_probe.json) - structured full source all-policy five-cutoff ledger.
 
 ## Boundary
 
@@ -304,6 +307,11 @@ exogenous.
   books per policy. This is partial parser robustness only. It does not emit a
   source-generation formula, change `row0`, or change the `8154.676268`-bit
   compression bound.
+- Full-source five-cutoff result: extending that same exposed-source test to
+  cutoffs `10/20/35/50/60` preserves `175/175` roundtrip/raw-positive
+  evaluations per policy and `50/50` multi-cutoff-stable books per policy, with
+  `0/150` unstable policy-book cases. This strengthens parser robustness but
+  still does not make source choice decoder-derived or row0-derived.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then
