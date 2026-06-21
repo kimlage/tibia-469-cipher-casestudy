@@ -37,6 +37,8 @@ SOURCES = {
     / "18_online_bootstrap_seed_policy_audit.json",
     "seeded_online_formula_rescore": TEST_RESULTS
     / "19_seeded_online_formula_rescore_audit.json",
+    "seeded_rescore_loss_decomposition": TEST_RESULTS
+    / "20_seeded_rescore_loss_decomposition.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -73,6 +75,7 @@ def make_result() -> dict[str, Any]:
     online_frontier = load_json(SOURCES["online_prefix_book_frontier"])
     bootstrap_seed = load_json(SOURCES["online_bootstrap_seed_policy"])
     seeded_rescore = load_json(SOURCES["seeded_online_formula_rescore"])
+    seeded_loss = load_json(SOURCES["seeded_rescore_loss_decomposition"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -93,6 +96,7 @@ def make_result() -> dict[str, Any]:
         ("online_prefix_book_frontier", online_frontier),
         ("online_bootstrap_seed_policy", bootstrap_seed),
         ("seeded_online_formula_rescore", seeded_rescore),
+        ("seeded_rescore_loss_decomposition", seeded_loss),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -586,6 +590,39 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "why_does_seeded_rescore_fail",
+            "source": rel(SOURCES["seeded_rescore_loss_decomposition"]),
+            "status": "explained_by_literal_payload_penalty",
+            "evidence": {
+                "local_seed_saving_bits": seeded_loss["local_bootstrap_accounting"][
+                    "raw_seeded_stream_saving_vs_online_bits"
+                ],
+                "seeded_delta_vs_online_bits": seeded_loss["summary"][
+                    "seeded_delta_vs_online_bits"
+                ],
+                "seeded_payload_penalty_bits": seeded_loss["summary"][
+                    "seeded_payload_penalty_bits"
+                ],
+                "seeded_non_payload_savings_bits": seeded_loss["summary"][
+                    "seeded_non_payload_savings_bits"
+                ],
+                "payload_penalty_exceeds_local_seed_saving": seeded_loss["summary"][
+                    "payload_penalty_exceeds_local_seed_saving"
+                ],
+                "book_bounded_delta_vs_online_bits": seeded_loss["summary"][
+                    "book_bounded_delta_vs_online_bits"
+                ],
+                "book_bounded_largest_penalty_component": seeded_loss["summary"][
+                    "book_bounded_largest_penalty_component"
+                ],
+            },
+            "interpretation": (
+                "The complete formula scorer rejects the seed because the literal "
+                "payload penalty outweighs the local bootstrap saving and the "
+                "non-payload component savings."
+            ),
+        },
+        {
             "question": "does_numeric_online_order_survive_order_controls",
             "source": rel(SOURCES["online_reparse_order_controls"]),
             "status": "passed_against_tested_orders",
@@ -798,6 +835,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"book-bounded delta "
                 f"{evidence['book_bounded_seeded_delta_vs_online_bits']:.3f}; "
                 f"promoted {evidence['promoted_candidate_count']}"
+            )
+        elif row["question"] == "why_does_seeded_rescore_fail":
+            key = (
+                f"payload penalty {evidence['seeded_payload_penalty_bits']:.3f}; "
+                f"non-payload savings {evidence['seeded_non_payload_savings_bits']:.3f}; "
+                f"net {evidence['seeded_delta_vs_online_bits']:.3f}; "
+                f"local seed saving {evidence['local_seed_saving_bits']:.3f}"
             )
         else:
             key = (

@@ -425,6 +425,8 @@ compression-bound or authorial-proof promotion.
 A full formula rescore confirms the caution: the seeded formula is `+0.979`
 bits worse than the existing `8343.062`-bit online formula, so the seed remains
 bootstrap accounting rather than a promoted formula.
+The loss decomposition explains why: non-payload components save `36.842` bits,
+but literal payload adds `37.821` bits.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -611,9 +613,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   book-bounded and same-family-excluded source constraints, maps the online
   previous-books-only frontier to a bootstrap-only local failure, records the
   explicit raw-seed policy that closes that failure locally, rejects the same
-  seed as a complete-formula promotion under rescoring, closes the row0
-  hypothesis requirement matrix with zero promoted origin formulas, and keeps
-  row0 origin exogenous with translation delta zero.
+  seed as a complete-formula promotion under rescoring, decomposes that
+  rejection to literal-payload cost, closes the row0 hypothesis requirement
+  matrix with zero promoted origin formulas, and keeps row0 origin exogenous
+  with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

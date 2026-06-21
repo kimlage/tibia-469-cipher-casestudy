@@ -73,6 +73,9 @@ exogenous.
 - [scripts/19_seeded_online_formula_rescore_audit.py](scripts/19_seeded_online_formula_rescore_audit.py) - converts the book-0 seed policy back into formula recipes and rescoring under the complete active ledger.
 - [reports/test_results/19_seeded_online_formula_rescore_audit.md](reports/test_results/19_seeded_online_formula_rescore_audit.md) - seeded online formula rescore result.
 - [reports/test_results/19_seeded_online_formula_rescore_audit.json](reports/test_results/19_seeded_online_formula_rescore_audit.json) - structured seeded-rescore ledger.
+- [scripts/20_seeded_rescore_loss_decomposition.py](scripts/20_seeded_rescore_loss_decomposition.py) - decomposes why the seeded formula fails complete rescoring.
+- [reports/test_results/20_seeded_rescore_loss_decomposition.md](reports/test_results/20_seeded_rescore_loss_decomposition.md) - seeded rescore loss decomposition.
+- [reports/test_results/20_seeded_rescore_loss_decomposition.json](reports/test_results/20_seeded_rescore_loss_decomposition.json) - structured loss-decomposition ledger.
 
 ## Boundary
 
@@ -119,7 +122,9 @@ exogenous.
   local failure as `70/70` wins-or-ties, while not promoting a new compression
   bound or authorial proof. A full formula rescore then rejects promotion:
   seeded online is `+0.979` bits worse than the existing `8343.062`-bit online
-  formula, and the book-bounded seeded formula is `+305.198` bits worse.
+  formula, and the book-bounded seeded formula is `+305.198` bits worse. The
+  loss decomposition explains the mismatch: the seed saves `36.842` non-payload
+  bits but adds `37.821` literal-payload bits under full scoring.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

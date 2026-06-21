@@ -1,0 +1,156 @@
+{
+  "book_bounded_seeded_online_formula_rescored": {
+    "component_rows": [
+      {
+        "component": "literal_bits_no_payload",
+        "delta_bits": -8.0,
+        "effect": "saving",
+        "label": "literal_length_or_structure"
+      },
+      {
+        "component": "literal_payload_bits",
+        "delta_bits": 104.40000327787493,
+        "effect": "penalty",
+        "label": "literal_payload"
+      },
+      {
+        "component": "copy_address_bits",
+        "delta_bits": 136.41172210043078,
+        "effect": "penalty",
+        "label": "copy_address"
+      },
+      {
+        "component": "copy_length_code_bits",
+        "delta_bits": 69.81818370732208,
+        "effect": "penalty",
+        "label": "copy_length"
+      },
+      {
+        "component": "item_type_split_only_stream_bits",
+        "delta_bits": 2.5680181860813036,
+        "effect": "penalty",
+        "label": "item_type"
+      }
+    ],
+    "largest_penalty": {
+      "component": "copy_address_bits",
+      "delta_bits": 136.41172210043078,
+      "effect": "penalty",
+      "label": "copy_address"
+    },
+    "largest_saving": {
+      "component": "literal_bits_no_payload",
+      "delta_bits": -8.0,
+      "effect": "saving",
+      "label": "literal_length_or_structure"
+    },
+    "net_delta_bits": 305.197927271709,
+    "penalty_components": [
+      "literal_payload_bits",
+      "copy_address_bits",
+      "copy_length_code_bits",
+      "item_type_split_only_stream_bits"
+    ],
+    "saving_components": [
+      "literal_bits_no_payload"
+    ],
+    "total_penalty_bits": 313.1979272717091,
+    "total_saving_bits": 8.0
+  },
+  "case_reopened": false,
+  "classification": "seed_rescore_loss_explained_by_literal_payload_penalty",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "generation_explanation_status": "seed_caveat_clarified_not_promoted",
+    "loss_decomposition_status": "explained",
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_policy_status": "bootstrap_accounting_only",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "online_bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
+    "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json"
+  },
+  "local_bootstrap_accounting": {
+    "raw_seeded_failure_books": [],
+    "raw_seeded_raw_wins_or_ties": 70,
+    "raw_seeded_stream_saving_vs_online_bits": 10.498855747274263
+  },
+  "plaintext_claim": false,
+  "schema": "seeded_rescore_loss_decomposition.v1",
+  "seeded_online_formula_rescored": {
+    "component_rows": [
+      {
+        "component": "literal_bits_no_payload",
+        "delta_bits": -8.0,
+        "effect": "saving",
+        "label": "literal_length_or_structure"
+      },
+      {
+        "component": "literal_payload_bits",
+        "delta_bits": 37.8212339392644,
+        "effect": "penalty",
+        "label": "literal_payload"
+      },
+      {
+        "component": "copy_address_bits",
+        "delta_bits": -19.47978026402916,
+        "effect": "saving",
+        "label": "copy_address"
+      },
+      {
+        "component": "copy_length_code_bits",
+        "delta_bits": -7.770048663097214,
+        "effect": "saving",
+        "label": "copy_length"
+      },
+      {
+        "component": "item_type_split_only_stream_bits",
+        "delta_bits": -1.5925756848310186,
+        "effect": "saving",
+        "label": "item_type"
+      }
+    ],
+    "largest_penalty": {
+      "component": "literal_payload_bits",
+      "delta_bits": 37.8212339392644,
+      "effect": "penalty",
+      "label": "literal_payload"
+    },
+    "largest_saving": {
+      "component": "copy_address_bits",
+      "delta_bits": -19.47978026402916,
+      "effect": "saving",
+      "label": "copy_address"
+    },
+    "net_delta_bits": 0.978829327306812,
+    "penalty_components": [
+      "literal_payload_bits"
+    ],
+    "saving_components": [
+      "literal_bits_no_payload",
+      "copy_address_bits",
+      "copy_length_code_bits",
+      "item_type_split_only_stream_bits"
+    ],
+    "total_penalty_bits": 37.8212339392644,
+    "total_saving_bits": 36.84240461195739
+  },
+  "summary": {
+    "book_bounded_delta_vs_online_bits": 305.197927271709,
+    "book_bounded_largest_penalty_component": {
+      "component": "copy_address_bits",
+      "delta_bits": 136.41172210043078,
+      "effect": "penalty",
+      "label": "copy_address"
+    },
+    "interpretation": "The seed saves local cold-start accounting, but the complete formula scorer charges the full literal payload for book 0. That payload penalty is larger than the local seed saving and outweighs copy/item/literal-structure savings.",
+    "payload_penalty_exceeds_local_seed_saving": true,
+    "promoted_candidate_count": 0,
+    "seeded_delta_vs_online_bits": 0.978829327306812,
+    "seeded_non_payload_savings_bits": 36.84240461195739,
+    "seeded_payload_penalty_bits": 37.8212339392644,
+    "seeded_total_penalty_bits": 37.8212339392644
+  },
+  "translation_delta": "NONE"
+}
