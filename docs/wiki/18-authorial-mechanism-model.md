@@ -594,6 +594,12 @@ sparsity. It preserves the same full-fit ceiling (`5/10` residuals, `0` false
 controls), but prefix/holdout still has only `1/5` zero-false-control cells and
 held-out residual gains come with false clean-control changes. Backoff is not
 promoted.
+An observable decision-tree policy audit then tests the stronger small
+finite-state version of that idea. The best tree reaches `228/234` total hits
+and `4/10` residual hits with `0` clean-control changes in full fit, but
+prefix/holdout recovers `0` held-out residuals in every split that contains
+residuals. The branch choice is therefore not explained by a small observable
+decision tree over the current branch/position predicates.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2283,6 +2289,7 @@ book generation, not row0 pair-cell placement.
 - [Contextual mode selector audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/24_contextual_mode_selector_audit.md)
 - [Contextual mode stability audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/25_contextual_mode_stability_audit.md)
 - [Hierarchical context backoff audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/26_hierarchical_context_backoff_audit.md)
+- [Observable decision tree policy audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/27_observable_decision_tree_policy_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

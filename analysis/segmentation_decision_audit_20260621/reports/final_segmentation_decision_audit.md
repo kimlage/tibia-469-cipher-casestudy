@@ -538,6 +538,29 @@ the same full-fit ceiling but its held-out residual gains come
 with false clean-control changes, so it is not a generative
 parser rule.
 
+## Observable Decision Tree Policy Control
+
+Gate 27 tests whether the same residual branch choices need a
+flat context table, or whether a small observable decision tree
+over branch/position predicates can select a non-oracle continuation
+objective.
+
+| Parser | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best observable tree | `228/234` | `4/10` | `0` | rejected |
+
+- Observable predicates tested: `45`.
+- Best tree depth/nodes: `3` / `9`.
+- Prequential zero-clean-false-change cells: `5/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+The tree gives a stronger full-fit separator than the active baseline
+without changing clean controls, but it recovers only `4/10`
+residuals and recovers `0` held-out residuals in every split that
+contains residuals. This rejects a small observable finite-state
+decision tree as the missing parser.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -545,7 +568,8 @@ a single residual feature flag, and not a simple first-branch
 continuation objective or small prefix-trained branch ranker.
 A finite context table has weak full-fit signal, but stability
 tests collapse it under leave-one-book/context controls. The
-hierarchical backoff variant still fails clean holdout. The
+hierarchical backoff variant still fails clean holdout, and a
+small observable decision tree still misses held-out residuals. The
 remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -581,3 +605,4 @@ or the stable projection as an oracle.
 - [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)
 - [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)
 - [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)
+- [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)

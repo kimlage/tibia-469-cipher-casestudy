@@ -947,6 +947,10 @@ leave-context-out, with support pruning removing most residual gains.
 A hierarchical context backoff audit preserves the same full-fit `5/10` ceiling
 but fails clean holdout: prequential selection has only `1/5` zero-false-control
 cells and residual gains require false clean-control changes.
+An observable decision-tree policy audit then rejects the stronger small
+finite-state parser version: best full-fit tree reaches `228/234` and `4/10`
+residuals with `0` clean-control changes, but prefix/holdout recovers `0`
+held-out residuals in every split that contains residuals.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

@@ -35,6 +35,7 @@ BRANCH_RANKER = TEST_RESULTS / "23_branch_ranker_prequential_audit.json"
 CONTEXTUAL_MODE = TEST_RESULTS / "24_contextual_mode_selector_audit.json"
 CONTEXTUAL_STABILITY = TEST_RESULTS / "25_contextual_mode_stability_audit.json"
 HIERARCHICAL_BACKOFF = TEST_RESULTS / "26_hierarchical_context_backoff_audit.json"
+OBSERVABLE_TREE = TEST_RESULTS / "27_observable_decision_tree_policy_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -114,6 +115,7 @@ def main() -> None:
     hierarchical_backoff = (
         load_json(HIERARCHICAL_BACKOFF) if HIERARCHICAL_BACKOFF.exists() else None
     )
+    observable_tree = load_json(OBSERVABLE_TREE) if OBSERVABLE_TREE.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -162,6 +164,8 @@ def main() -> None:
         assert_boundary("contextual_mode_stability_audit", contextual_stability)
     if hierarchical_backoff is not None:
         assert_boundary("hierarchical_context_backoff_audit", hierarchical_backoff)
+    if observable_tree is not None:
+        assert_boundary("observable_decision_tree_policy_audit", observable_tree)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -221,6 +225,9 @@ def main() -> None:
     )
     hierarchical_backoff_summary = (
         None if hierarchical_backoff is None else hierarchical_backoff["summary"]
+    )
+    observable_tree_summary = (
+        None if observable_tree is None else observable_tree["summary"]
     )
 
     lines = [
@@ -907,6 +914,34 @@ def main() -> None:
                 "",
             ]
         )
+    if observable_tree_summary is not None:
+        lines.extend(
+            [
+                "## Observable Decision Tree Policy Control",
+                "",
+                "Gate 27 tests whether the same residual branch choices need a",
+                "flat context table, or whether a small observable decision tree",
+                "over branch/position predicates can select a non-oracle continuation",
+                "objective.",
+                "",
+                "| Parser | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{observable_tree_summary['active_baseline_total_hits']}/{observable_tree_summary['decision_count']}` | `{observable_tree_summary['active_baseline_residual_hits']}/{observable_tree_summary['residual_decision_count']}` | `{observable_tree_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best observable tree | `{observable_tree_summary['best_total_hits']}/{observable_tree_summary['decision_count']}` | `{observable_tree_summary['best_residual_hits']}/{observable_tree_summary['residual_decision_count']}` | `{observable_tree_summary['best_clean_false_changes']}` | rejected |",
+                "",
+                f"- Observable predicates tested: `{observable_tree_summary['predicate_count']}`.",
+                f"- Best tree depth/nodes: `{observable_tree_summary['best_depth']}` / `{observable_tree_summary['best_node_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{observable_tree_summary['prequential_zero_clean_false_change_cells']}/{observable_tree_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{observable_tree_summary['prequential_cover_all_test_residual_cells']}/{observable_tree_summary['prequential_cells']}`.",
+                "",
+                "The tree gives a stronger full-fit separator than the active baseline",
+                "without changing clean controls, but it recovers only `4/10`",
+                "residuals and recovers `0` held-out residuals in every split that",
+                "contains residuals. This rejects a small observable finite-state",
+                "decision tree as the missing parser.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -916,7 +951,8 @@ def main() -> None:
             "continuation objective or small prefix-trained branch ranker.",
             "A finite context table has weak full-fit signal, but stability",
             "tests collapse it under leave-one-book/context controls. The",
-            "hierarchical backoff variant still fails clean holdout. The",
+            "hierarchical backoff variant still fails clean holdout, and a",
+            "small observable decision tree still misses held-out residuals. The",
             "remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -952,6 +988,7 @@ def main() -> None:
             "- [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)",
             "- [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)",
             "- [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)",
+            "- [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)",
             "",
         ]
     )
