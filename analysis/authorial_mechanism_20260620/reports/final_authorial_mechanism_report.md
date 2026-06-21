@@ -641,5 +641,9 @@ Generated audits in this directory should be treated as the current state:
   projection as the canonical formula file. It preserves `8343.062` bits and
   `70/70`, contains no copy `target_start` or book `length` fields, and changes
   representation only.
+- `133_literal_length_derived_recipe_compile`: removes literal op `length`
+  fields because they are derivable from literal `text`. It preserves
+  `8343.062` bits and `70/70`, removes 87 more redundant fields, and keeps copy
+  `length` as a real declared dependency.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

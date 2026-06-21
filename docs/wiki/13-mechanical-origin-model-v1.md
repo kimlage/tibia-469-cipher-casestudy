@@ -176,6 +176,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Online reparse order control | numeric order remains best against reverse, parity, length-derived, and 6 seeded random orders; best random raw order is `+188.584` bits worse before order cost | canonical order support / no new bound |
 | Online formula recipe prune | book `length` and copy `target_start` are derivable; stripped projection preserves `8343.062` bits and `70/70`, saving `5612` recipe JSON bytes | representation simplification / no new bound |
 | Canonical online recipe formula | materializes the pruned formula without book `length` or copy `target_start`; preserves `8343.062` bits and `70/70` | current compact bound representation |
+| Literal-length-derived recipe formula | literal op `length` is derived from literal `text`; removes 87 more redundant fields and preserves `8343.062` bits and `70/70` | tighter recipe representation |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
@@ -303,6 +304,7 @@ Primary sources:
 [online_reparse_order_control_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.md),
 [online_formula_recipe_prune_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/131_online_formula_recipe_prune_audit.md),
 [canonical_online_recipe_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md),
+[literal_length_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).

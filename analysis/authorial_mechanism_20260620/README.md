@@ -345,6 +345,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/132_canonical_online_recipe_formula_compile.py` - materializes the
   pruned canonical online formula as the current compact representation of the
   `8343.062` bit bound.
+- `scripts/133_literal_length_derived_recipe_compile.py` - derives literal
+  op lengths from literal text payload, removing another redundant recipe
+  field while retaining copy lengths as declared dependencies.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

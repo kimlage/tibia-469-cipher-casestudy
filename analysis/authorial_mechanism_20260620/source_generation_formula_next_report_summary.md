@@ -610,6 +610,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   it materializes the stripped formula as
   `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_canonical_formula_469.json`
   with the same `8343.062` bits and no `target_start` or book `length` fields.
+- literal-length-derived recipe compilation is now covered by
+  [`133_literal_length_derived_recipe_compile.py`](scripts/133_literal_length_derived_recipe_compile.py);
+  literal op `length` is derived from `len(text)`, removing 87 more redundant
+  fields and preserving `8343.062` bits and `70/70`. Copy `length` remains a
+  declared dependency.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
