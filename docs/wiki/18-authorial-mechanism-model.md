@@ -359,6 +359,12 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A source-free skeleton grammar audit then tests the direct next step: derive the
+`261`-operation atlas from grammar contexts over operation index, prior
+operation, book length, remaining length, phase, and book-mod/order features.
+It rejects that path: the best full-fit context gets only `3/60` exact books
+and `14/261` operation hits, costs `+660.028` bits versus a label-atlas lower
+bound after corrections, and has `0/5` cover-all holdout cells.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2455,6 +2461,8 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Final source-free skeleton generation audit](../../analysis/source_free_skeleton_generation_audit_20260621/reports/final_source_free_skeleton_generation_audit.md)
+- [Source-free skeleton grammar gate](../../analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

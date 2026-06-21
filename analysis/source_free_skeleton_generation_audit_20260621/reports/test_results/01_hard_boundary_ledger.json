@@ -1,0 +1,81 @@
+{
+  "case_reopened": false,
+  "classification": "hard_boundary_ledger_audit_only",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "hard_boundary_frozen_atlas_not_generator",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "exact_skeleton_dependency_ledger": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json",
+    "exact_skeleton_invariance": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.json"
+  },
+  "plaintext_claim": false,
+  "remaining_dependencies": {
+    "copy_source_fields": {
+      "priority": "secondary_after_skeleton_generation",
+      "records": 208,
+      "status": "external_after_skeleton"
+    },
+    "literal_payload": {
+      "chunks": 53,
+      "digits": 266,
+      "priority": "parallel_payload_generation_audit",
+      "status": "external_payload_after_skeleton"
+    },
+    "seed_payload": {
+      "books": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "status": "external_operational_seed_context"
+    },
+    "skeleton_atlas": {
+      "next_test": "source_free_skeleton_grammar",
+      "records": 261,
+      "status": "materialized_atlas_not_generator"
+    }
+  },
+  "schema": "hard_boundary_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "freezes_remaining_dependencies": true,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "compression_bound_changed": false,
+    "copied_digits": 9301,
+    "copy_source_fields": 208,
+    "external_dependency_fields_after_skeleton": 261,
+    "literal_payload_chunks": 53,
+    "literal_payload_digits": 266,
+    "promotes_generator": false,
+    "row0_unchanged": true,
+    "seed_books_external": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "skeleton_atlas_records": 261,
+    "total_materialized_records_after_skeleton": 522
+  },
+  "translation_delta": "NONE"
+}

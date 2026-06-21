@@ -783,6 +783,13 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A source-free skeleton grammar audit then tests the next obvious generator
+claim directly. Even granting book lengths, `13` grammar families over operation
+index, prior operation, remaining length, phase, and book-mod/order features
+generate only `3/60` exact books and `14/261` operation hits in the best
+full-fit context, cost `+660.028` bits versus a label-atlas lower bound, and
+have `0/5` cover-all holdout cells. The skeleton is therefore still an atlas,
+not a source-free formula.
 A skeleton rule coverage audit then rejects replacing the atlas with simple
 rules: best op-type coverage is `208/261`, best length coverage is `116/261`,
 and even target-dependent copy availability reaches only `208/261`.
