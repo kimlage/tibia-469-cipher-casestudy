@@ -148,6 +148,9 @@ exogenous.
 - [scripts/44_full_corpus_source_substitution_third_pass_gate.py](scripts/44_full_corpus_source_substitution_third_pass_gate.py) - reruns the exact single/pair source-substitution frontier on the promoted `8160.826421` bit formula.
 - [reports/test_results/44_full_corpus_source_substitution_third_pass_gate.md](reports/test_results/44_full_corpus_source_substitution_third_pass_gate.md) - third-pass source substitution result.
 - [reports/test_results/44_full_corpus_source_substitution_third_pass_gate.json](reports/test_results/44_full_corpus_source_substitution_third_pass_gate.json) - structured third-pass source substitution ledger.
+- [scripts/45_full_corpus_source_substitution_fourth_pass_gate.py](scripts/45_full_corpus_source_substitution_fourth_pass_gate.py) - reruns the exact single/pair source-substitution frontier on the promoted `8160.825917` bit formula.
+- [reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.md](reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.md) - fourth-pass source substitution result.
+- [reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json](reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json) - structured fourth-pass source substitution ledger.
 
 ## Boundary
 
@@ -260,7 +263,9 @@ exogenous.
   `+0.000671` bit gain, lowering the bound to `8160.826421`; this is a
   compression-bound update, not stronger generation evidence. A third pass
   finds another microscopic `+0.000503` bit gain, lowering the bound to
-  `8160.825917` and reinforcing local source-frontier saturation. The complete
+  `8160.825917` and reinforcing local source-frontier saturation. A fourth
+  pass adds only `+0.000310` bits, lowering the bound to `8160.825608`; this
+  further supports local source-frontier saturation. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

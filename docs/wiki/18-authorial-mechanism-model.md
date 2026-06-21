@@ -103,8 +103,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_frontier_formula_469` | `8160.8` | `1.6` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_second_pass_formula_469` | `8160.826` | `0.001` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_third_pass_formula_469` | `8160.8259` | `0.0005` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469` | `8160.8256` | `0.0003` |
 
-The `8160.8259` row is the current `compression_bound`, not a final authorial
+The `8160.8256` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1163,6 +1164,10 @@ A third pass still finds a positive pair, but it is smaller again: book `34`
 op `6` and book `36` op `1` lower the bound from `8160.826421` to
 `8160.825917` bits. This reinforces local source-frontier saturation rather
 than providing new generation evidence.
+A fourth pass still finds a positive pair, but it is smaller again: book `28`
+op `4` and book `56` op `5` lower the bound from `8160.825917` to
+`8160.825608` bits. This is compression-bound bookkeeping and local
+source-frontier saturation, not new generation evidence.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

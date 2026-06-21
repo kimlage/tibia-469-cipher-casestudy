@@ -491,6 +491,18 @@ This reinforces that the local source frontier is entering saturation;
 it remains only a compression-bound update.
 See [44_full_corpus_source_substitution_third_pass_gate.md](test_results/44_full_corpus_source_substitution_third_pass_gate.md).
 
+### Full-Corpus Source Substitution Fourth-Pass Gate
+
+A fourth pass over the same single/pair frontier still finds a positive
+pair, but the gain shrinks again:
+`8160.825917` to
+`8160.825608` bits,
+a gain of
+`+0.000310` bits.
+This is compression-bound bookkeeping and local source-frontier
+saturation, not new generation evidence.
+See [45_full_corpus_source_substitution_fourth_pass_gate.md](test_results/45_full_corpus_source_substitution_fourth_pass_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -666,6 +678,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - Full-corpus single/pair source-substitution frontier search lowers the active bound from `8162.412` to `8160.827` bits; triples and higher-order substitutions remain unsearched.
 - A second single/pair source-substitution pass finds only a microscopic `+0.000671` bit gain, lowering the active bound to `8160.826421`; this is a compression-bound update, not stronger generation evidence.
 - A third single/pair source-substitution pass finds another microscopic `+0.000503` bit gain, lowering the active bound to `8160.825917`; local source substitutions are saturating.
+- A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

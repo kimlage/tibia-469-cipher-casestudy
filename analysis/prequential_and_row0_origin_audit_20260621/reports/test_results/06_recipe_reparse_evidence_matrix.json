@@ -23,6 +23,7 @@
     "source_selection_status": "encoder_canonical_decoder_dependency_retained",
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
+    "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
     "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
     "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
@@ -623,6 +624,23 @@
     },
     {
       "evidence": {
+        "active_total_bits": 8160.825917190259,
+        "best_arity": 2,
+        "candidate_gain_bits": 0.0003095543997915229,
+        "candidate_total_bits": 8160.825607635859,
+        "pair_substitution_count": 69849,
+        "positive_pair_count": 509,
+        "positive_single_count": 3,
+        "searched_triples_or_higher": false,
+        "single_substitution_count": 376
+      },
+      "interpretation": "The fourth pass still finds a positive single/pair source substitution, but the gain shrinks again. This updates the compression bound while strengthening the saturation diagnosis for the local fixed-recipe source frontier.",
+      "question": "does_fourth_pass_single_pair_source_substitution_still_improve",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json",
+      "status": "passed_microscopic_fourth_pass_source_substitution_improves_bound"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -926,6 +944,7 @@
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
     "full_corpus_source_path_formula_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/41_full_corpus_source_path_formula_gate.json",
+    "full_corpus_source_substitution_fourth_pass_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/45_full_corpus_source_substitution_fourth_pass_gate.json",
     "full_corpus_source_substitution_frontier_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/42_full_corpus_source_substitution_frontier_gate.json",
     "full_corpus_source_substitution_second_pass_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json",
     "full_corpus_source_substitution_third_pass_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/44_full_corpus_source_substitution_third_pass_gate.json",

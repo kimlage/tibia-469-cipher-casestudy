@@ -48,6 +48,7 @@ claim.
 | `can_single_pair_source_substitution_improve_formula_bound` | `passed_single_pair_source_substitution_improves_bound` | active 8162.412; candidate 8160.827; gain +1.585; copy-source 2987.933 -> 2986.348; singles 12/376; pairs 2686/69849; best arity 2; triples searched False |
 | `does_second_pass_single_pair_source_substitution_still_improve` | `passed_microscopic_second_pass_source_substitution_improves_bound` | active 8160.827092; candidate 8160.826421; gain +0.000671; singles 10/376; pairs 2091/69849; best arity 2; triples searched False |
 | `does_third_pass_single_pair_source_substitution_still_improve` | `passed_microscopic_third_pass_source_substitution_improves_bound` | active 8160.826421; candidate 8160.825917; gain +0.000503; singles 7/376; pairs 1371/69849; best arity 2; triples searched False |
+| `does_fourth_pass_single_pair_source_substitution_still_improve` | `passed_microscopic_fourth_pass_source_substitution_improves_bound` | active 8160.825917; candidate 8160.825608; gain +0.000310; singles 3/376; pairs 509/69849; best arity 2; triples searched False |
 | `where_is_the_online_prefix_per_book_frontier` | `passed_after_bootstrap_with_book0_failure` | book-bounded raw wins 69/70; after bootstrap 69/69; failures [0]; mean gain 419.761; break-even book 2 |
 | `does_an_explicit_book0_seed_close_the_online_bootstrap_failure` | `passed_as_bootstrap_accounting_not_bound_promotion` | book0 online-raw 10.499 bits; seed wins/ties 70/70; strict wins 69/70; failures []; stream saving 10.499 |
 | `does_book0_seed_survive_complete_formula_rescoring` | `failed_as_formula_promotion` | seeded 8344.041 vs online 8343.062; delta 0.979; book-bounded delta 305.198; promoted 0 |
@@ -89,5 +90,6 @@ claim.
 - Source substitution frontier: `single_pair_source_substitution_improves_bound_to_8160_827`.
 - Source substitution second pass: `microscopic_single_pair_improves_bound_to_8160_826`.
 - Source substitution third pass: `microscopic_single_pair_improves_bound_to_8160_825917`.
+- Source substitution fourth pass: `microscopic_single_pair_improves_bound_to_8160_825608`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

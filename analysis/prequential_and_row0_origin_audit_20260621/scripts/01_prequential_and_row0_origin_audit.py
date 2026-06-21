@@ -125,6 +125,14 @@ FULL_CORPUS_SOURCE_SUBSTITUTION_THIRD_PASS_GATE = (
     / "test_results"
     / "44_full_corpus_source_substitution_third_pass_gate.json"
 )
+FULL_CORPUS_SOURCE_SUBSTITUTION_FOURTH_PASS_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "45_full_corpus_source_substitution_fourth_pass_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -336,6 +344,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "full_corpus_source_substitution_third_pass_gate",
         full_corpus_source_substitution_third_pass_gate,
     )
+    full_corpus_source_substitution_fourth_pass_gate = load_json(
+        FULL_CORPUS_SOURCE_SUBSTITUTION_FOURTH_PASS_GATE
+    )
+    assert_analysis_boundary(
+        "full_corpus_source_substitution_fourth_pass_gate",
+        full_corpus_source_substitution_fourth_pass_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -510,6 +525,18 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
                 "candidate_output_formula"
             ],
         },
+        "full_corpus_source_substitution_fourth_pass": {
+            "classification": full_corpus_source_substitution_fourth_pass_gate[
+                "classification"
+            ],
+            "source": rel(FULL_CORPUS_SOURCE_SUBSTITUTION_FOURTH_PASS_GATE),
+            "summary": full_corpus_source_substitution_fourth_pass_gate["summary"],
+            "scope": full_corpus_source_substitution_fourth_pass_gate["scope"],
+            "decision": full_corpus_source_substitution_fourth_pass_gate["decision"],
+            "candidate_output_formula": full_corpus_source_substitution_fourth_pass_gate[
+                "candidate_output_formula"
+            ],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -544,6 +571,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
             "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
             "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
+            "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -587,6 +615,7 @@ def render_markdown(
     full_corpus_source_substitution_frontier_gate_link: str,
     full_corpus_source_substitution_second_pass_gate_link: str,
     full_corpus_source_substitution_third_pass_gate_link: str,
+    full_corpus_source_substitution_fourth_pass_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -627,6 +656,9 @@ def render_markdown(
     ]["summary"]
     source_substitution_third_pass = result[
         "full_corpus_source_substitution_third_pass"
+    ]["summary"]
+    source_substitution_fourth_pass = result[
+        "full_corpus_source_substitution_fourth_pass"
     ]["summary"]
 
     lines = [
@@ -1145,6 +1177,18 @@ def render_markdown(
             "it remains only a compression-bound update.",
             f"See [44_full_corpus_source_substitution_third_pass_gate.md]({full_corpus_source_substitution_third_pass_gate_link}).",
             "",
+            "### Full-Corpus Source Substitution Fourth-Pass Gate",
+            "",
+            "A fourth pass over the same single/pair frontier still finds a positive",
+            "pair, but the gain shrinks again:",
+            f"`{source_substitution_fourth_pass['active_total_bits']:.6f}` to",
+            f"`{source_substitution_fourth_pass['candidate_total_bits']:.6f}` bits,",
+            "a gain of",
+            f"`{source_substitution_fourth_pass['candidate_gain_bits']:+.6f}` bits.",
+            "This is compression-bound bookkeeping and local source-frontier",
+            "saturation, not new generation evidence.",
+            f"See [45_full_corpus_source_substitution_fourth_pass_gate.md]({full_corpus_source_substitution_fourth_pass_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -1329,6 +1373,7 @@ def render_markdown(
             "- Full-corpus single/pair source-substitution frontier search lowers the active bound from `8162.412` to `8160.827` bits; triples and higher-order substitutions remain unsearched.",
             "- A second single/pair source-substitution pass finds only a microscopic `+0.000671` bit gain, lowering the active bound to `8160.826421`; this is a compression-bound update, not stronger generation evidence.",
             "- A third single/pair source-substitution pass finds another microscopic `+0.000503` bit gain, lowering the active bound to `8160.825917`; local source substitutions are saturating.",
+            "- A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -1422,6 +1467,9 @@ def main() -> None:
             ),
             full_corpus_source_substitution_third_pass_gate_link=(
                 "44_full_corpus_source_substitution_third_pass_gate.md"
+            ),
+            full_corpus_source_substitution_fourth_pass_gate_link=(
+                "45_full_corpus_source_substitution_fourth_pass_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1531,6 +1579,9 @@ def main() -> None:
             ),
             full_corpus_source_substitution_third_pass_gate_link=(
                 "test_results/44_full_corpus_source_substitution_third_pass_gate.md"
+            ),
+            full_corpus_source_substitution_fourth_pass_gate_link=(
+                "test_results/45_full_corpus_source_substitution_fourth_pass_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"
