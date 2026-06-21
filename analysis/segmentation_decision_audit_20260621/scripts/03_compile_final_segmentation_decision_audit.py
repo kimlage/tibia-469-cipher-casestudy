@@ -55,6 +55,9 @@ SOURCE_FREE_RESIDUAL_RULE = (
     TEST_RESULTS / "43_source_free_residual_rule_gate.json"
 )
 OPERATION_NGRAM_GRAMMAR = TEST_RESULTS / "44_operation_ngram_grammar_gate.json"
+RESIDUAL_EXCEPTION_TRANSFER = (
+    TEST_RESULTS / "45_residual_exception_transfer_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -198,6 +201,11 @@ def main() -> None:
         if OPERATION_NGRAM_GRAMMAR.exists()
         else None
     )
+    residual_exception_transfer = (
+        load_json(RESIDUAL_EXCEPTION_TRANSFER)
+        if RESIDUAL_EXCEPTION_TRANSFER.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -284,6 +292,10 @@ def main() -> None:
         assert_boundary("source_free_residual_rule_gate", source_free_residual_rule)
     if operation_ngram_grammar is not None:
         assert_boundary("operation_ngram_grammar_gate", operation_ngram_grammar)
+    if residual_exception_transfer is not None:
+        assert_boundary(
+            "residual_exception_transfer_gate", residual_exception_transfer
+        )
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -395,6 +407,11 @@ def main() -> None:
         None
         if operation_ngram_grammar is None
         else operation_ngram_grammar["summary"]
+    )
+    residual_exception_transfer_summary = (
+        None
+        if residual_exception_transfer is None
+        else residual_exception_transfer["summary"]
     )
 
     lines = [
@@ -1584,6 +1601,35 @@ def main() -> None:
                 "",
             ]
         )
+    if residual_exception_transfer_summary is not None:
+        lines.extend(
+            [
+                "## Residual Exception Transfer Gate",
+                "",
+                "Gate 45 tests whether the residual corrections form a small",
+                "reusable exception family. It trains only on other residual",
+                "corrections and predicts each held-out residual from observable",
+                "active-parser features; stable labels are used only as",
+                "leave-one-residual-out training/evaluation labels.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Families tested | `{len(residual_exception_transfer_summary['families_tested'])}` |",
+                f"| k values tested | `{residual_exception_transfer_summary['k_values_tested']}` |",
+                f"| Best family | `{residual_exception_transfer_summary['best_family']}` |",
+                f"| Best k | `{residual_exception_transfer_summary['best_k']}` |",
+                f"| Best hits | `{residual_exception_transfer_summary['best_hit_count']}/{residual_exception_transfer_summary['residual_count']}` |",
+                f"| Best unsupported residuals | `{residual_exception_transfer_summary['best_unsupported_count']}` |",
+                f"| Prequential cells with held-out hit | `{residual_exception_transfer_summary['prequential_cells_with_hit']}/{residual_exception_transfer_summary['prequential_cells_with_test']}` |",
+                f"| Shuffle p_ge_observed | `{residual_exception_transfer_summary['shuffle_p_ge_observed']:.4f}` |",
+                "",
+                "No residual exception-transfer rule is promoted. The residual",
+                "corrections do not predict each other under the tested",
+                "observable feature families, so the current residual set does",
+                "not compress into a reusable exception class.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1616,8 +1662,10 @@ def main() -> None:
             "than lookup, and prefix-selected rules recover no held-out",
             "residuals. Gate 44 rejects operation n-gram path grammar as well:",
             "all tested operation-sequence contexts get `0/10` residual hits,",
-            "with either false positives or unsupported residuals. The",
-            "remaining blocker is a richer latent path/state",
+            "with either false positives or unsupported residuals. Gate 45",
+            "then rejects residual self-transfer: the `10` corrections do not",
+            "predict one another under leave-one-residual-out feature matching.",
+            "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1670,6 +1718,7 @@ def main() -> None:
             "- [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)",
             "- [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)",
             "- [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)",
+            "- [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)",
             "",
         ]
     )

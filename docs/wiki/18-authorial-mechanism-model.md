@@ -702,6 +702,11 @@ plus op-bucket grammars on the `50` exact parser books, then predict the
 `10` residual first-drift choices. Every family gets `0/10` hits. Richer
 contexts become unsupported; the lowest-net unigram has `10` false positives.
 This rejects a compact operation-sequence grammar as the missing latent state.
+A residual exception transfer gate then asks whether the `10` residual
+corrections at least predict each other. They do not: `6` observable feature
+families with `k=1/3/5` nearest-residual transfer all get `0/10` hits, and
+prefix/holdout has `0/4` cells with any held-out hit. The residual set still
+looks like unresolved latent state, not a reusable exception class.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2409,6 +2414,7 @@ book generation, not row0 pair-cell placement.
 - [Compact latent rule frontier](../../analysis/segmentation_decision_audit_20260621/reports/test_results/42_compact_latent_rule_frontier.md)
 - [Source-free residual rule gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/43_source_free_residual_rule_gate.md)
 - [Operation n-gram grammar gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/44_operation_ngram_grammar_gate.md)
+- [Residual exception transfer gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/45_residual_exception_transfer_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

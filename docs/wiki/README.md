@@ -1233,6 +1233,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   held-out hits),
   rejects operation n-gram grammars trained on exact parser books (`9` grammar
   families; `0/10` residual hits; lowest-net unigram has `10` false positives),
+  rejects residual exception transfer as well (`6` feature families, `k=1/3/5`,
+  `0/10` leave-one-residual-out hits),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

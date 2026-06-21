@@ -951,6 +951,30 @@ lowest-cost unigram model still has `10` false positives. This
 rejects a compact operation-sequence grammar as the missing
 latent path/state mechanism.
 
+## Residual Exception Transfer Gate
+
+Gate 45 tests whether the residual corrections form a small
+reusable exception family. It trains only on other residual
+corrections and predicts each held-out residual from observable
+active-parser features; stable labels are used only as
+leave-one-residual-out training/evaluation labels.
+
+| Diagnostic | Value |
+|---|---:|
+| Families tested | `6` |
+| k values tested | `[1, 3, 5]` |
+| Best family | `context_prev2` |
+| Best k | `1` |
+| Best hits | `0/10` |
+| Best unsupported residuals | `0` |
+| Prequential cells with held-out hit | `0/4` |
+| Shuffle p_ge_observed | `1.0000` |
+
+No residual exception-transfer rule is promoted. The residual
+corrections do not predict each other under the tested
+observable feature families, so the current residual set does
+not compress into a reusable exception class.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -981,8 +1005,10 @@ only apparent win uses a false positive, clean rules are worse
 than lookup, and prefix-selected rules recover no held-out
 residuals. Gate 44 rejects operation n-gram path grammar as well:
 all tested operation-sequence contexts get `0/10` residual hits,
-with either false positives or unsupported residuals. The
-remaining blocker is a richer latent path/state
+with either false positives or unsupported residuals. Gate 45
+then rejects residual self-transfer: the `10` corrections do not
+predict one another under leave-one-residual-out feature matching.
+The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -1035,3 +1061,4 @@ or the stable projection as an oracle.
 - [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)
 - [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)
 - [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)
+- [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)
