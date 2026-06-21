@@ -59,6 +59,8 @@ SOURCES = {
     / "33_item_type_op_shape_boundary_gate.json",
     "current_active_profile_boundary_gate": TEST_RESULTS
     / "34_current_active_profile_boundary_gate.json",
+    "copy_source_state_compression_gate": TEST_RESULTS
+    / "35_copy_source_state_compression_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -112,6 +114,7 @@ def make_result() -> dict[str, Any]:
     recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
     item_type_op_shape_boundary_gate = load_json(SOURCES["item_type_op_shape_boundary_gate"])
     current_active_profile_gate = load_json(SOURCES["current_active_profile_boundary_gate"])
+    copy_source_state_compression_gate = load_json(SOURCES["copy_source_state_compression_gate"])
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -147,6 +150,7 @@ def make_result() -> dict[str, Any]:
         ("recipe_representation_dependency_gate", recipe_representation_gate),
         ("item_type_op_shape_boundary_gate", item_type_op_shape_boundary_gate),
         ("current_active_profile_boundary_gate", current_active_profile_gate),
+        ("copy_source_state_compression_gate", copy_source_state_compression_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -702,6 +706,57 @@ def make_result() -> dict[str, Any]:
                 "The active 8177-bit component profile is stronger than the "
                 "default/exception-only validation, but exact active reparse is "
                 "still path-state-bound and recipe discovery is not proved."
+            ),
+        },
+        {
+            "question": "can_copy_source_previous_pair_state_be_compressed",
+            "source": rel(SOURCES["copy_source_state_compression_gate"]),
+            "status": "previous_pair_state_compressed_to_previous_end",
+            "evidence": {
+                "previous_pair_state_key": copy_source_state_compression_gate["summary"][
+                    "previous_pair_state_key"
+                ],
+                "compressed_state_key": copy_source_state_compression_gate["summary"][
+                    "compressed_state_key"
+                ],
+                "source_default_stream_bits": copy_source_state_compression_gate[
+                    "summary"
+                ]["source_default_stream_bits"],
+                "source_default_count": copy_source_state_compression_gate["summary"][
+                    "source_default_count"
+                ],
+                "source_exception_count": copy_source_state_compression_gate["summary"][
+                    "source_exception_count"
+                ],
+                "end_default_mismatch_count": copy_source_state_compression_gate[
+                    "summary"
+                ]["end_default_mismatch_count"],
+                "total_pair_state_proxy": copy_source_state_compression_gate[
+                    "summary"
+                ]["total_pair_state_proxy"],
+                "total_end_state_proxy": copy_source_state_compression_gate["summary"][
+                    "total_end_state_proxy"
+                ],
+                "total_end_proxy_reduction_pct": copy_source_state_compression_gate[
+                    "summary"
+                ]["total_end_proxy_reduction_pct"],
+                "cutoff10_pair_state_proxy": copy_source_state_compression_gate[
+                    "summary"
+                ]["cutoff_rows"][0]["candidate_graph_summary"]["pair_state_proxy"],
+                "cutoff10_end_state_proxy": copy_source_state_compression_gate[
+                    "summary"
+                ]["cutoff_rows"][0]["candidate_graph_summary"]["end_state_proxy"],
+                "parser_promoted": copy_source_state_compression_gate["summary"][
+                    "parser_promoted"
+                ],
+                "recipe_discovery_removed": copy_source_state_compression_gate[
+                    "summary"
+                ]["recipe_discovery_removed"],
+            },
+            "interpretation": (
+                "The active source default only needs previous copy end, not the "
+                "full previous source/length pair. This reduces state size but "
+                "does not promote a complete active parser."
             ),
         },
         {
@@ -1340,6 +1395,7 @@ def make_result() -> dict[str, Any]:
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
+            "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1541,6 +1597,22 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['cutoff10_old_reparse_state_count']}; state-free "
                 f"`{evidence['best_state_free_default']}` "
                 f"{evidence['best_state_free_worse_than_active_total_bits']:+.3f}"
+            )
+        elif row["question"] == "can_copy_source_previous_pair_state_be_compressed":
+            key = (
+                f"`{evidence['previous_pair_state_key']}` -> "
+                f"`{evidence['compressed_state_key']}`; stream "
+                f"{evidence['source_default_stream_bits']:.3f}; "
+                f"default/exception {evidence['source_default_count']}/"
+                f"{evidence['source_exception_count']}; mismatches "
+                f"{evidence['end_default_mismatch_count']}; proxy "
+                f"{evidence['total_pair_state_proxy']} -> "
+                f"{evidence['total_end_state_proxy']} "
+                f"({evidence['total_end_proxy_reduction_pct']:.3f}% reduction); "
+                f"cutoff10 {evidence['cutoff10_pair_state_proxy']} -> "
+                f"{evidence['cutoff10_end_state_proxy']}; parser promoted "
+                f"{evidence['parser_promoted']}; recipe removed "
+                f"{evidence['recipe_discovery_removed']}"
             )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
@@ -1748,6 +1820,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Recipe representation: `{result['decision']['recipe_representation_status']}`.",
             f"- Item type boundary: `{result['decision']['item_type_boundary_status']}`.",
             f"- Current active profile: `{result['decision']['current_active_profile_status']}`.",
+            f"- Copy source state compression: `{result['decision']['copy_source_state_compression_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

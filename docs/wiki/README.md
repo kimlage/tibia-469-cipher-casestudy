@@ -517,6 +517,9 @@ origin, and semantics unchanged.
 A current-active-profile boundary gate consolidates that result: the profile is
 validated across tested splits, but exact active reparse remains blocked by
 previous-copy source/length state.
+A copy-source state compression gate then reduces that blocker: the source
+default only needs `previous_copy_end`, preserving the ledger while reducing
+the aggregate candidate-state proxy by `97.239%`; no full parser is promoted.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

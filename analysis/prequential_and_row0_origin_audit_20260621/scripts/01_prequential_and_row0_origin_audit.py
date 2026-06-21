@@ -45,6 +45,14 @@ CURRENT_ACTIVE_PROFILE_GATE = (
     / "test_results"
     / "34_current_active_profile_boundary_gate.json"
 )
+COPY_SOURCE_STATE_COMPRESSION_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "35_copy_source_state_compression_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -195,6 +203,8 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary("item_type_op_shape_boundary_gate", item_type_gate)
     active_profile_gate = load_json(CURRENT_ACTIVE_PROFILE_GATE)
     assert_analysis_boundary("current_active_profile_boundary_gate", active_profile_gate)
+    state_compression_gate = load_json(COPY_SOURCE_STATE_COMPRESSION_GATE)
+    assert_analysis_boundary("copy_source_state_compression_gate", state_compression_gate)
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -283,6 +293,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_profile_gate["summary"],
             "decision": active_profile_gate["decision"],
         },
+        "copy_source_state_compression": {
+            "classification": state_compression_gate["classification"],
+            "source": rel(COPY_SOURCE_STATE_COMPRESSION_GATE),
+            "summary": state_compression_gate["summary"],
+            "decision": state_compression_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -307,6 +323,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
+            "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -340,6 +357,7 @@ def render_markdown(
     recipe_representation_dependency_gate_link: str,
     item_type_op_shape_boundary_gate_link: str,
     current_active_profile_boundary_gate_link: str,
+    copy_source_state_compression_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -358,6 +376,7 @@ def render_markdown(
     params = result["predictive_validation"]["parameter_stability_prefix_splits"]
     item_type_boundary = result["item_type_op_shape_boundary"]["summary"]
     active_profile_boundary = result["current_active_profile_boundary"]["summary"]
+    state_compression = result["copy_source_state_compression"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -713,6 +732,26 @@ def render_markdown(
             "bits worse.",
             f"See [34_current_active_profile_boundary_gate.md]({current_active_profile_boundary_gate_link}).",
             "",
+            "### Copy Source State Compression Gate",
+            "",
+            "The source-state blocker is then sharpened. The active source",
+            "default was previously described as needing previous source and",
+            "previous length, but the cost rule only uses their sum. The gate",
+            "therefore replaces",
+            f"`{state_compression['previous_pair_state_key']}` with",
+            f"`{state_compression['compressed_state_key']}` for source-cost",
+            "classification. It preserves the same default/exception stream",
+            f"(`{state_compression['source_default_stream_bits']:.3f}` bits,",
+            f"`{state_compression['end_default_hits']}` defaults,",
+            f"`{state_compression['end_exception_hits']}` exceptions,",
+            f"`{state_compression['end_default_mismatch_count']}` mismatches)",
+            "and reduces the aggregate candidate-state proxy from",
+            f"`{state_compression['total_pair_state_proxy']}` to",
+            f"`{state_compression['total_end_state_proxy']}`",
+            f"(`{state_compression['total_end_proxy_reduction_pct']:.3f}%`).",
+            "This is a real state simplification, not a parser promotion.",
+            f"See [35_copy_source_state_compression_gate.md]({copy_source_state_compression_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -887,6 +926,7 @@ def render_markdown(
             "- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.",
             "- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.",
             "- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.",
+            "- Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -950,6 +990,9 @@ def main() -> None:
             ),
             current_active_profile_boundary_gate_link=(
                 "34_current_active_profile_boundary_gate.md"
+            ),
+            copy_source_state_compression_gate_link=(
+                "35_copy_source_state_compression_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1029,6 +1072,9 @@ def main() -> None:
             ),
             current_active_profile_boundary_gate_link=(
                 "test_results/34_current_active_profile_boundary_gate.md"
+            ),
+            copy_source_state_compression_gate_link=(
+                "test_results/35_copy_source_state_compression_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

@@ -329,6 +329,26 @@ and the best state-free replacement is
 bits worse.
 See [34_current_active_profile_boundary_gate.md](34_current_active_profile_boundary_gate.md).
 
+### Copy Source State Compression Gate
+
+The source-state blocker is then sharpened. The active source
+default was previously described as needing previous source and
+previous length, but the cost rule only uses their sum. The gate
+therefore replaces
+`(book_pos, previous_item, previous_copy_source, previous_copy_length)` with
+`(book_pos, previous_item, previous_copy_end)` for source-cost
+classification. It preserves the same default/exception stream
+(`2990.838` bits,
+`5` defaults,
+`256` exceptions,
+`0` mismatches)
+and reduces the aggregate candidate-state proxy from
+`969111171` to
+`26758611`
+(`97.239%`).
+This is a real state simplification, not a parser promotion.
+See [35_copy_source_state_compression_gate.md](35_copy_source_state_compression_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -494,6 +514,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.
 - Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.
 - The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.
+- Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

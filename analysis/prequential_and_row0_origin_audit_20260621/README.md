@@ -118,6 +118,9 @@ exogenous.
 - [scripts/34_current_active_profile_boundary_gate.py](scripts/34_current_active_profile_boundary_gate.py) - consolidates the current `8177.317`-bit active profile and its recipe-discovery blocker.
 - [reports/test_results/34_current_active_profile_boundary_gate.md](reports/test_results/34_current_active_profile_boundary_gate.md) - current active profile boundary result.
 - [reports/test_results/34_current_active_profile_boundary_gate.json](reports/test_results/34_current_active_profile_boundary_gate.json) - structured current active profile boundary ledger.
+- [scripts/35_copy_source_state_compression_gate.py](scripts/35_copy_source_state_compression_gate.py) - tests whether previous copy source/length state compresses to previous copy end for active source defaults.
+- [reports/test_results/35_copy_source_state_compression_gate.md](reports/test_results/35_copy_source_state_compression_gate.md) - copy-source state-compression result.
+- [reports/test_results/35_copy_source_state_compression_gate.json](reports/test_results/35_copy_source_state_compression_gate.json) - structured copy-source state-compression ledger.
 
 ## Boundary
 
@@ -210,7 +213,11 @@ exogenous.
   operation shape. A current-active-profile boundary gate then consolidates
   the `8177.317`-bit active profile: all tested prefix, block, and
   public-bookcase family frozen gains are positive, but exact active reparse is
-  still blocked by path-dependent copy-source state.
+  still blocked by path-dependent copy-source state. A copy-source state
+  compression gate then reduces that state from previous `(source, length)` to
+  `previous_copy_end`, preserving the active default/exception ledger and
+  cutting the aggregate candidate-state proxy by `97.239%`, but without
+  promoting a complete parser.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
