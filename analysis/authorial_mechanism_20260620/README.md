@@ -351,6 +351,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/134_op_type_derived_recipe_compile.py` - derives operation type
   from op field shape, leaving literal text, copy source, and copy length as
   the remaining operation-level recipe dependencies.
+- `scripts/135_copy_source_canonicality_audit.py` - checks whether declared
+  copy sources are arbitrary; every source is the earliest legal occurrence of
+  the copied chunk, while source remains a decoding dependency.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

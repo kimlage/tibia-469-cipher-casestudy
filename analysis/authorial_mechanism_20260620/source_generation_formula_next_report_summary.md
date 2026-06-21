@@ -620,6 +620,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   op `type` is derived from field shape, removing 348 more redundant fields and
   preserving `8343.062` bits and `70/70`. The remaining operation-level
   dependencies are literal text, copy source, and copy length.
+- copy-source canonicality is now covered by
+  [`135_copy_source_canonicality_audit.py`](scripts/135_copy_source_canonicality_audit.py);
+  all 261 declared sources are the earliest legal occurrence of the copied
+  chunk at the declared length. This supports a canonical encoder-side source
+  rule, but source remains a decoding dependency.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

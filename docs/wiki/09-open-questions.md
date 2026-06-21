@@ -275,6 +275,12 @@ roundtrip `70/70` at `8558.667` bits, lowering the active mechanical bound by
 `3.125` bits without changing row0 or semantics.
 The split-only alpha resweep then retains `alpha=2`; the nearest alternate
 `alpha=1` is `+0.309` bits worse, so the new parameter frontier is closed.
+A stricter 2026-06-21 prequential and row0-origin audit freezes `8558.667`
+as the validation scope instead of treating later compression-only reductions
+as generation evidence. Prefix and contiguous-block holdouts keep positive
+learned-component gains, but public-bookcase family holdouts include
+nonpositive failures; the model is therefore classified as partial predictive
+structure, not an authorial generation method. Row0 remains exogenous.
 A deterministic online reparse compile later lowers the bound to `8343.062`
 while preserving `translation_delta: NONE`; row0 origin remains exogenous.
 The follow-up order control supports numeric order against reverse, parity,
@@ -288,6 +294,8 @@ The literal-length-derived compile removes literal op `length` as an independent
 field, while copy `length` remains a declared dependency.
 The op-type-derived compile removes explicit op `type`; the remaining operation
 dependencies are literal text, copy source, and copy length.
+The copy-source canonicality audit shows every copy source is the earliest
+legal occurrence of its copied chunk, but source is still needed to decode.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

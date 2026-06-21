@@ -649,5 +649,9 @@ Generated audits in this directory should be treated as the current state:
   operation kind is derivable from field shape. It preserves `8343.062` bits
   and `70/70`, removes 348 more redundant fields, and leaves literal text,
   copy source, and copy length as the remaining operation dependencies.
+- `135_copy_source_canonicality_audit`: shows that all 261 declared copy
+  sources are the earliest legal occurrence of the copied chunk at the declared
+  length. This makes source choice canonical on the encoder side, while copy
+  source remains required for decoding.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

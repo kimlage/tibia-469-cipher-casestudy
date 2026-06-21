@@ -856,6 +856,16 @@ same audit records row0 as still exogenous across manual lookup,
 permutation/group, 10x10 grid, order/frequency, external-text, and
 workbook/script-artifact hypotheses.
 
+A 2026-06-21 consolidation reruns that direction as a stricter analysis-only
+audit: `8558.667` bits is treated as the frozen validation scope, while later
+compression-only reductions are not counted as generation evidence. Prefix and
+contiguous-block holdouts retain positive learned-component gains versus
+uniform baselines, but public-bookcase family holdouts include nonpositive
+failures, so the classification is only
+`predictive_signal_partial_not_generation_method`. The row0/table result is
+unchanged: row0 remains exogenous, and no plaintext or semantic claim is
+introduced.
+
 The prequential recipe reparse audit then tests the remaining recipe
 dependency. With only train-prefix component counts frozen, a deterministic LZ
 parser roundtrips every future suffix and beats the active full-corpus recipe
@@ -899,6 +909,10 @@ The op-type-derived recipe compile then removes op `type` as an independent
 field: `text` implies literal, while `source_digit_pos` plus `length` implies
 copy. Literal text, copy source, and copy length are now the remaining
 operation-level recipe dependencies.
+The copy-source canonicality audit then checks whether those remaining source
+fields are arbitrary. All 261 copy sources are the earliest legal occurrence of
+the copied chunk at the declared length; only 123 are unique, so this is an
+encoder-side canonicality result, not a decoder-side source removal.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1171,6 +1185,7 @@ book generation, not row0 pair-cell placement.
 - [Item-type split-only formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md)
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
+- [Prequential and row0 origin audit 2026-06-21](../../analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
@@ -1180,6 +1195,7 @@ book generation, not row0 pair-cell placement.
 - [Canonical online recipe formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md)
 - [Literal-length-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md)
 - [Op-type-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md)
+- [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
 
 ## Boundary
 

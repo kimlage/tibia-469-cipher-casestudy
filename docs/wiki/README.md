@@ -405,6 +405,9 @@ The literal-length-derived compile removes literal op `length` as an independent
 field; copy `length` remains declared.
 The op-type-derived compile removes explicit op `type`; field shape now
 distinguishes literal from copy.
+The copy-source canonicality audit shows all copy sources are earliest legal
+occurrences of their copied chunks; source is canonical for encoding but still
+required for decoding.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
@@ -471,6 +474,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   sequential LZ book/run-literal/dynamic-parse/Rice-length/literal-length
   formulas, plus copy-address and copy-graph/order audits; keeps translation
   delta at zero.
+- **Prequential and row0 origin audit:** [`analysis/prequential_and_row0_origin_audit_20260621/`](../../analysis/prequential_and_row0_origin_audit_20260621/) —
+  freezes `8558.667` bits as a validation scope, classifies the learned
+  component signal as partial under family holdouts, and keeps row0 origin
+  exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures
