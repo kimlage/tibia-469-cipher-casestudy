@@ -476,7 +476,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   delta at zero.
 - **Prequential and row0 origin audit:** [`analysis/prequential_and_row0_origin_audit_20260621/`](../../analysis/prequential_and_row0_origin_audit_20260621/) —
   freezes `8558.667` bits as a validation scope, classifies the learned
-  component signal as partial under family holdouts, and keeps row0 origin
+  component signal as partial under family holdouts, decomposes the family
+  failures as component/sample-size stress cases, and keeps row0 origin
   exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)

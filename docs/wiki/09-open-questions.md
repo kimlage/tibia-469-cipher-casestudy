@@ -280,7 +280,10 @@ as the validation scope instead of treating later compression-only reductions
 as generation evidence. Prefix and contiguous-block holdouts keep positive
 learned-component gains, but public-bookcase family holdouts include
 nonpositive failures; the model is therefore classified as partial predictive
-structure, not an authorial generation method. Row0 remains exogenous.
+structure, not an authorial generation method. A follow-up failure audit
+narrows those failures to small component/sample-size stress cases: bookcases
+`33` and `8` are copy-only copy-length losses, while bookcase `6` is a frozen
+item-type loss. Row0 remains exogenous.
 A deterministic online reparse compile later lowers the bound to `8343.062`
 while preserving `translation_delta: NONE`; row0 origin remains exogenous.
 The follow-up order control supports numeric order against reverse, parity,

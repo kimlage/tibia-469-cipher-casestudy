@@ -259,7 +259,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def render_markdown(result: dict[str, Any], *, audit_link_prefix: str) -> str:
+def render_markdown(
+    result: dict[str, Any],
+    *,
+    audit_link_prefix: str,
+    family_failure_link: str,
+) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
     random_controls = result["predictive_validation"]["randomized_order_controls"]
     block_summary = result["predictive_validation"]["contiguous_block_holdouts"]["summary"]
@@ -348,6 +353,16 @@ def render_markdown(result: dict[str, Any], *, audit_link_prefix: str) -> str:
             "",
             "Interpretation: prefix and contiguous-block tests retain positive advantage over uniform, but the family split has nonpositive failures. The result is therefore predictive signal only, not a final generation method.",
             "",
+            "### Family Failure Follow-Up",
+            "",
+            "A follow-up failure audit decomposes the three public-bookcase family failures.",
+            "They are component/sample-size stress cases rather than a new row0-origin signal:",
+            "`hellgate_public_bookcase_33` and `hellgate_public_bookcase_8` are copy-only",
+            "failures dominated by copy-length underperformance, while",
+            "`hellgate_public_bookcase_6` is online-positive but frozen-negative because the",
+            "item-type component loses to uniform under frozen counts.",
+            f"See [02_family_holdout_failure_audit.md]({family_failure_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -418,11 +433,19 @@ def main() -> None:
 
     result_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     report_path.write_text(
-        render_markdown(result, audit_link_prefix="../../../audit_20260609"),
+        render_markdown(
+            result,
+            audit_link_prefix="../../../audit_20260609",
+            family_failure_link="02_family_holdout_failure_audit.md",
+        ),
         encoding="utf-8",
     )
     final_report_path.write_text(
-        render_markdown(result, audit_link_prefix="../../audit_20260609"),
+        render_markdown(
+            result,
+            audit_link_prefix="../../audit_20260609",
+            family_failure_link="test_results/02_family_holdout_failure_audit.md",
+        ),
         encoding="utf-8",
     )
 

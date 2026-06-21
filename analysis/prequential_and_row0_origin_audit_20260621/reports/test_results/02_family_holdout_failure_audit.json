@@ -1,0 +1,1175 @@
+{
+  "case_reopened": false,
+  "classification": "family_holdout_failures_are_component_and_sample_specific",
+  "interpretation": {
+    "mechanical_reading": "Bookcase 33 has five copy events, five item-type events, and no literal-payload events; copy-length coding loses more than item-type coding saves. Bookcase 8 shows the same copy-only pattern with only two copy events. Bookcase 6 is online-positive but frozen-negative because item-type coding loses to uniform by more than copy/payload save under frozen counts.",
+    "progress_delta": "This narrows the previous partial-predictive classification: the family failures are explainable as component/sample-size stress cases, but they still block promotion to a final generation method.",
+    "result": "The family holdout failures are not broad row0-origin evidence. They are small, component-specific losses in public bookcase groups.",
+    "strongest_failure": "hellgate_public_bookcase_33"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "bookcase_public": "1",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 76.35379636717185,
+          "frozen_gain_vs_uniform_bits": 10.46030463122986,
+          "online_bits": 76.74322062124006,
+          "online_gain_vs_uniform_bits": 10.070880377161657,
+          "uniform_bits": 86.81410099840171
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 153.5484984676365,
+          "frozen_gain_vs_uniform_bits": 25.835618656281042,
+          "online_bits": 153.51533021254497,
+          "online_gain_vs_uniform_bits": 25.86878691137258,
+          "uniform_bits": 179.38411712391755
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 15.207548364595397,
+          "frozen_gain_vs_uniform_bits": 0.7924516354046034,
+          "online_bits": 15.213287432172066,
+          "online_gain_vs_uniform_bits": 0.7867125678279336,
+          "uniform_bits": 16.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 16,
+        "test_item_type": 16,
+        "test_literal_payload": 54,
+        "train_copy": 267,
+        "train_item_type": 271,
+        "train_literal_payload": 719
+      },
+      "event_total_percentile_rank_low_to_high": 0.8421052631578947,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 37.08837492291548,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_1",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 36.72637985636214,
+      "public_title_prefixes": [
+        "5611457278",
+        "7830203118"
+      ],
+      "test_books": [
+        12,
+        14
+      ],
+      "test_event_total": 86,
+      "train_test_gap_bits_per_event": -0.3584769745918166
+    },
+    {
+      "bookcase_public": "10",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 46.642359634114335,
+          "frozen_gain_vs_uniform_bits": 15.440978685045472,
+          "online_bits": 45.43008739308566,
+          "online_gain_vs_uniform_bits": 16.65325092607415,
+          "uniform_bits": 62.08333831915981
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 1028.0120996170617,
+          "frozen_gain_vs_uniform_bits": 84.83381217020451,
+          "online_bits": 1015.8131604222867,
+          "online_gain_vs_uniform_bits": 97.0327513649795,
+          "uniform_bits": 1112.8459117872662
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 14.326816485758973,
+          "frozen_gain_vs_uniform_bits": 1.6731835142410265,
+          "online_bits": 12.79057895699644,
+          "online_gain_vs_uniform_bits": 3.2094210430035606,
+          "uniform_bits": 16.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 13,
+        "test_item_type": 16,
+        "test_literal_payload": 335,
+        "train_copy": 270,
+        "train_item_type": 271,
+        "train_literal_payload": 438
+      },
+      "event_total_percentile_rank_low_to_high": 1.0,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 101.94797436949102,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_10",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 116.89542333405711,
+      "public_title_prefixes": [
+        "9561513534",
+        "2295345274",
+        "8675635611"
+      ],
+      "test_books": [
+        0,
+        1,
+        2
+      ],
+      "test_event_total": 364,
+      "train_test_gap_bits_per_event": -0.33092855873202565
+    },
+    {
+      "bookcase_public": "12",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 79.93752468200452,
+          "frozen_gain_vs_uniform_bits": 22.1810014829734,
+          "online_bits": 79.64260885310573,
+          "online_gain_vs_uniform_bits": 22.475917311872195,
+          "uniform_bits": 102.11852616497792
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 245.5620788774448,
+          "frozen_gain_vs_uniform_bits": 10.226384428882085,
+          "online_bits": 245.40149209275285,
+          "online_gain_vs_uniform_bits": 10.386971213574043,
+          "uniform_bits": 255.7884633063269
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 22.82441118931672,
+          "frozen_gain_vs_uniform_bits": -3.82441118931672,
+          "online_bits": 21.630011817027956,
+          "online_gain_vs_uniform_bits": -2.630011817027956,
+          "uniform_bits": 19.0
+        }
+      ],
+      "dominant_negative_components": [
+        "item_type"
+      ],
+      "event_counts": {
+        "test_copy": 18,
+        "test_item_type": 19,
+        "test_literal_payload": 77,
+        "train_copy": 265,
+        "train_item_type": 268,
+        "train_literal_payload": 696
+      },
+      "event_total_percentile_rank_low_to_high": 0.8947368421052632,
+      "failure": false,
+      "failure_reason": "component_under_uniform",
+      "frozen_gain_vs_uniform_bits": 28.58297472253878,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_12",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 30.232876708418303,
+      "public_title_prefixes": [
+        "7816705121",
+        "9457655996"
+      ],
+      "test_books": [
+        3,
+        4
+      ],
+      "test_event_total": 114,
+      "train_test_gap_bits_per_event": -0.16265445914425536
+    },
+    {
+      "bookcase_public": "13",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 68.97293727870812,
+          "frozen_gain_vs_uniform_bits": 0.153194845512985,
+          "online_bits": 69.38846309947178,
+          "online_gain_vs_uniform_bits": -0.26233097525067706,
+          "uniform_bits": 69.1261321242211
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 26.246388335021518,
+          "frozen_gain_vs_uniform_bits": -2.992891670809982,
+          "online_bits": 26.246388335021518,
+          "online_gain_vs_uniform_bits": -2.992891670809982,
+          "uniform_bits": 23.253496664211536
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 7.885969229254179,
+          "frozen_gain_vs_uniform_bits": 4.114030770745821,
+          "online_bits": 7.912721627897007,
+          "online_gain_vs_uniform_bits": 4.087278372102993,
+          "uniform_bits": 12.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length",
+        "literal_payload"
+      ],
+      "event_counts": {
+        "test_copy": 12,
+        "test_item_type": 12,
+        "test_literal_payload": 7,
+        "train_copy": 271,
+        "train_item_type": 275,
+        "train_literal_payload": 766
+      },
+      "event_total_percentile_rank_low_to_high": 0.631578947368421,
+      "failure": false,
+      "failure_reason": "component_under_uniform",
+      "frozen_gain_vs_uniform_bits": 1.2743339454488307,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_13",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 0.8320557260423413,
+      "public_title_prefixes": [
+        "8577445451",
+        "0152551751",
+        "5197292197"
+      ],
+      "test_books": [
+        40,
+        41,
+        42
+      ],
+      "test_event_total": 31,
+      "train_test_gap_bits_per_event": 0.15306561731462054
+    },
+    {
+      "bookcase_public": "2",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 80.68953364777612,
+          "frozen_gain_vs_uniform_bits": 6.298507177924407,
+          "online_bits": 80.48247712828442,
+          "online_gain_vs_uniform_bits": 6.5055636974161075,
+          "uniform_bits": 86.98804082570052
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 34.809050110767465,
+          "frozen_gain_vs_uniform_bits": 8.376015122768244,
+          "online_bits": 34.85635582554582,
+          "online_gain_vs_uniform_bits": 8.32870940798989,
+          "uniform_bits": 43.18506523353571
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 15.207548364595397,
+          "frozen_gain_vs_uniform_bits": 0.7924516354046034,
+          "online_bits": 15.213287432172068,
+          "online_gain_vs_uniform_bits": 0.7867125678279319,
+          "uniform_bits": 16.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 16,
+        "test_item_type": 16,
+        "test_literal_payload": 13,
+        "train_copy": 267,
+        "train_item_type": 271,
+        "train_literal_payload": 760
+      },
+      "event_total_percentile_rank_low_to_high": 0.7368421052631579,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 15.466973936097247,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_2",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 15.620985673233918,
+      "public_title_prefixes": [
+        "7278943151",
+        "3834350812"
+      ],
+      "test_books": [
+        15,
+        16
+      ],
+      "test_event_total": 45,
+      "train_test_gap_bits_per_event": -0.2995412252840812
+    },
+    {
+      "bookcase_public": "20",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 29.512585655280073,
+          "frozen_gain_vs_uniform_bits": 4.026551807629989,
+          "online_bits": 29.57948451119538,
+          "online_gain_vs_uniform_bits": 3.959652951714684,
+          "uniform_bits": 33.53913746291006
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 1.683625484077215,
+          "frozen_gain_vs_uniform_bits": 3.316374515922785,
+          "online_bits": 1.668356478793512,
+          "online_gain_vs_uniform_bits": 3.3316435212064883,
+          "uniform_bits": 5.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.3157894736842105,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 7.342926323552774,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_20",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 7.291296472921172,
+      "public_title_prefixes": [
+        "2197278167",
+        "2119118003"
+      ],
+      "test_books": [
+        44,
+        45
+      ],
+      "test_event_total": 10,
+      "train_test_gap_bits_per_event": -0.06691657335365209
+    },
+    {
+      "bookcase_public": "21",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 35.04812570712117,
+          "frozen_gain_vs_uniform_bits": -1.6084128771584716,
+          "online_bits": 35.092977163658674,
+          "online_gain_vs_uniform_bits": -1.6532643336959723,
+          "uniform_bits": 33.4397128299627
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 1.683625484077215,
+          "frozen_gain_vs_uniform_bits": 3.316374515922785,
+          "online_bits": 1.668356478793512,
+          "online_gain_vs_uniform_bits": 3.3316435212064883,
+          "uniform_bits": 5.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length"
+      ],
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.3157894736842105,
+      "failure": false,
+      "failure_reason": "small_copy_only_family_copy_length_under_uniform",
+      "frozen_gain_vs_uniform_bits": 1.707961638764317,
+      "full_duplicate_test_books": [
+        62,
+        63
+      ],
+      "label": "hellgate_public_bookcase_21",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 1.6783791875105152,
+      "public_title_prefixes": [
+        "4800658611",
+        "4600364671",
+        "9521991184"
+      ],
+      "test_books": [
+        62,
+        63,
+        64
+      ],
+      "test_event_total": 10,
+      "train_test_gap_bits_per_event": 0.4885166323313195
+    },
+    {
+      "bookcase_public": "22",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 119.37899623004606,
+          "frozen_gain_vs_uniform_bits": 17.779660184717585,
+          "online_bits": 120.21684895571572,
+          "online_gain_vs_uniform_bits": 16.941807459047922,
+          "uniform_bits": 137.15865641476364
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 267.8618501116174,
+          "frozen_gain_vs_uniform_bits": 4.5362536691462765,
+          "online_bits": 265.61913676452974,
+          "online_gain_vs_uniform_bits": 6.778967016233935,
+          "uniform_bits": 272.3981037807637
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 20.717323368922333,
+          "frozen_gain_vs_uniform_bits": 1.282676631077667,
+          "online_bits": 20.827725768969486,
+          "online_gain_vs_uniform_bits": 1.1722742310305136,
+          "uniform_bits": 22.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 22,
+        "test_item_type": 22,
+        "test_literal_payload": 82,
+        "train_copy": 261,
+        "train_item_type": 265,
+        "train_literal_payload": 691
+      },
+      "event_total_percentile_rank_low_to_high": 0.9473684210526315,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 23.598590484941553,
+      "full_duplicate_test_books": [
+        5
+      ],
+      "label": "hellgate_public_bookcase_22",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 24.893048706312356,
+      "public_title_prefixes": [
+        "2758576519",
+        "3046484353",
+        "8435345158"
+      ],
+      "test_books": [
+        5,
+        6,
+        7
+      ],
+      "test_event_total": 126,
+      "train_test_gap_bits_per_event": 0.0425125500775585
+    },
+    {
+      "bookcase_public": "23",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 48.51687945404003,
+          "frozen_gain_vs_uniform_bits": -2.6373754334861914,
+          "online_bits": 48.70679966181627,
+          "online_gain_vs_uniform_bits": -2.827295641262431,
+          "uniform_bits": 45.87950402055384
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 3.0873035510911238,
+          "frozen_gain_vs_uniform_bits": 5.912696448908877,
+          "online_bits": 3.0309549191108016,
+          "online_gain_vs_uniform_bits": 5.969045080889199,
+          "uniform_bits": 9.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length"
+      ],
+      "event_counts": {
+        "test_copy": 9,
+        "test_item_type": 9,
+        "test_literal_payload": 0,
+        "train_copy": 274,
+        "train_item_type": 278,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.47368421052631576,
+      "failure": false,
+      "failure_reason": "component_under_uniform",
+      "frozen_gain_vs_uniform_bits": 3.2753210154226835,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_23",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 3.1417494396267642,
+      "public_title_prefixes": [
+        "1185764219",
+        "1143128895"
+      ],
+      "test_books": [
+        28,
+        29
+      ],
+      "test_event_total": 18,
+      "train_test_gap_bits_per_event": -0.3212409675241714
+    },
+    {
+      "bookcase_public": "27",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 26.20491169577319,
+          "frozen_gain_vs_uniform_bits": 1.4844652788142696,
+          "online_bits": 26.23938927392119,
+          "online_gain_vs_uniform_bits": 1.44998770066627,
+          "uniform_bits": 27.68937697458746
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 1.3407367663585166,
+          "frozen_gain_vs_uniform_bits": 2.659263233641483,
+          "online_bits": 1.3316313819780687,
+          "online_gain_vs_uniform_bits": 2.6683686180219315,
+          "uniform_bits": 4.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 4,
+        "test_item_type": 4,
+        "test_literal_payload": 0,
+        "train_copy": 279,
+        "train_item_type": 283,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.10526315789473684,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 4.143728512455752,
+      "full_duplicate_test_books": [
+        47
+      ],
+      "label": "hellgate_public_bookcase_27",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 4.1183563186882,
+      "public_title_prefixes": [
+        "1180014015",
+        "4519889975"
+      ],
+      "test_books": [
+        46,
+        47
+      ],
+      "test_event_total": 8,
+      "train_test_gap_bits_per_event": 0.25629802518766676
+    },
+    {
+      "bookcase_public": "3",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 47.58896371580115,
+          "frozen_gain_vs_uniform_bits": 4.942044238476605,
+          "online_bits": 47.522394541862965,
+          "online_gain_vs_uniform_bits": 5.008613412414789,
+          "uniform_bits": 52.531007954277754
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 3.446481713874459,
+          "frozen_gain_vs_uniform_bits": 6.553518286125541,
+          "online_bits": 3.3756030904982475,
+          "online_gain_vs_uniform_bits": 6.624396909501753,
+          "uniform_bits": 10.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 10,
+        "test_item_type": 10,
+        "test_literal_payload": 0,
+        "train_copy": 273,
+        "train_item_type": 277,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.5789473684210527,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 11.495562524602143,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_3",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 11.633010321916544,
+      "public_title_prefixes": [
+        "0174648349",
+        "5084348561"
+      ],
+      "test_books": [
+        20,
+        21
+      ],
+      "test_event_total": 20,
+      "train_test_gap_bits_per_event": -0.6559247007911848
+    },
+    {
+      "bookcase_public": "30",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 21.258955972237874,
+          "frozen_gain_vs_uniform_bits": -0.28648796040028657,
+          "online_bits": 21.27330388621186,
+          "online_gain_vs_uniform_bits": -0.30083587437427184,
+          "uniform_bits": 20.972468011837588
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 9.129283016944967,
+          "frozen_gain_vs_uniform_bits": 0.8365012677171197,
+          "online_bits": 9.129283016944967,
+          "online_gain_vs_uniform_bits": 0.8365012677171197,
+          "uniform_bits": 9.965784284662087
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 2.957141866066556,
+          "frozen_gain_vs_uniform_bits": 0.042858133933444176,
+          "online_bits": 2.967300844728923,
+          "online_gain_vs_uniform_bits": 0.03269915527107692,
+          "uniform_bits": 3.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length"
+      ],
+      "event_counts": {
+        "test_copy": 3,
+        "test_item_type": 3,
+        "test_literal_payload": 3,
+        "train_copy": 280,
+        "train_item_type": 284,
+        "train_literal_payload": 770
+      },
+      "event_total_percentile_rank_low_to_high": 0.15789473684210525,
+      "failure": false,
+      "failure_reason": "component_under_uniform",
+      "frozen_gain_vs_uniform_bits": 0.5928714412502814,
+      "full_duplicate_test_books": [
+        33
+      ],
+      "label": "hellgate_public_bookcase_30",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 0.5683645486139284,
+      "public_title_prefixes": [
+        "6518009967",
+        "1928895216"
+      ],
+      "test_books": [
+        32,
+        33
+      ],
+      "test_event_total": 9,
+      "train_test_gap_bits_per_event": 0.5199471875878845
+    },
+    {
+      "bookcase_public": "33",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 36.77881250678841,
+          "frozen_gain_vs_uniform_bits": -6.256081842131863,
+          "online_bits": 36.82011430000773,
+          "online_gain_vs_uniform_bits": -6.297383635351181,
+          "uniform_bits": 30.52273066465655
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 1.683625484077215,
+          "frozen_gain_vs_uniform_bits": 3.316374515922785,
+          "online_bits": 1.668356478793512,
+          "online_gain_vs_uniform_bits": 3.3316435212064883,
+          "uniform_bits": 5.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length"
+      ],
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.3157894736842105,
+      "failure": true,
+      "failure_reason": "small_copy_only_family_copy_length_under_uniform",
+      "frozen_gain_vs_uniform_bits": -2.9397073262090743,
+      "full_duplicate_test_books": [
+        18,
+        19
+      ],
+      "label": "hellgate_public_bookcase_33",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": -2.965740114144694,
+      "public_title_prefixes": [
+        "9785857651",
+        "7563561145"
+      ],
+      "test_books": [
+        18,
+        19
+      ],
+      "test_event_total": 10,
+      "train_test_gap_bits_per_event": 0.6621199547433125
+    },
+    {
+      "bookcase_public": "36",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 44.79201993902173,
+          "frozen_gain_vs_uniform_bits": 0.4895903520555791,
+          "online_bits": 44.74279854798361,
+          "online_gain_vs_uniform_bits": 0.5388117430936958,
+          "uniform_bits": 45.28161029107731
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 125.22165554525502,
+          "frozen_gain_vs_uniform_bits": 10.97739634512682,
+          "online_bits": 125.51773290392785,
+          "online_gain_vs_uniform_bits": 10.681318986453988,
+          "uniform_bits": 136.19905189038184
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 10.998084408423468,
+          "frozen_gain_vs_uniform_bits": -1.998084408423468,
+          "online_bits": 10.957541507178007,
+          "online_gain_vs_uniform_bits": -1.9575415071780071,
+          "uniform_bits": 9.0
+        }
+      ],
+      "dominant_negative_components": [
+        "item_type"
+      ],
+      "event_counts": {
+        "test_copy": 9,
+        "test_item_type": 9,
+        "test_literal_payload": 41,
+        "train_copy": 274,
+        "train_item_type": 278,
+        "train_literal_payload": 732
+      },
+      "event_total_percentile_rank_low_to_high": 0.7894736842105263,
+      "failure": false,
+      "failure_reason": "component_under_uniform",
+      "frozen_gain_vs_uniform_bits": 9.468902288758926,
+      "full_duplicate_test_books": [
+        8
+      ],
+      "label": "hellgate_public_bookcase_36",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 9.262589222369684,
+      "public_title_prefixes": [
+        "4647261145",
+        "5857651972"
+      ],
+      "test_books": [
+        8,
+        9
+      ],
+      "test_event_total": 59,
+      "train_test_gap_bits_per_event": -0.12526011772317025
+    },
+    {
+      "bookcase_public": "4",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 47.85162250717716,
+          "frozen_gain_vs_uniform_bits": 2.065359157582982,
+          "online_bits": 47.96415040719604,
+          "online_gain_vs_uniform_bits": 1.9528312575641067,
+          "uniform_bits": 49.916981664760144
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 7.562242424221072,
+          "frozen_gain_vs_uniform_bits": 2.403541860441015,
+          "online_bits": 7.562242424221072,
+          "online_gain_vs_uniform_bits": 2.403541860441015,
+          "uniform_bits": 9.965784284662087
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 4.612312203373937,
+          "frozen_gain_vs_uniform_bits": 3.3876877966260626,
+          "online_bits": 4.621493829472811,
+          "online_gain_vs_uniform_bits": 3.3785061705271886,
+          "uniform_bits": 8.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 8,
+        "test_item_type": 8,
+        "test_literal_payload": 3,
+        "train_copy": 275,
+        "train_item_type": 279,
+        "train_literal_payload": 770
+      },
+      "event_total_percentile_rank_low_to_high": 0.5263157894736842,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 7.856588814650067,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_4",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 7.734879288532312,
+      "public_title_prefixes": [
+        "5727857261",
+        "2197278943",
+        "4042158576"
+      ],
+      "test_books": [
+        24,
+        25,
+        26
+      ],
+      "test_event_total": 19,
+      "train_test_gap_bits_per_event": -0.02593893357056265
+    },
+    {
+      "bookcase_public": "40",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 55.12790670618861,
+          "frozen_gain_vs_uniform_bits": 4.07277914692677,
+          "online_bits": 54.837816882668925,
+          "online_gain_vs_uniform_bits": 4.362868970446456,
+          "uniform_bits": 59.20068585311538
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 2.7314752739107666,
+          "frozen_gain_vs_uniform_bits": 5.268524726089233,
+          "online_bits": 2.687921191211788,
+          "online_gain_vs_uniform_bits": 5.312078808788212,
+          "uniform_bits": 8.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 8,
+        "test_item_type": 8,
+        "test_literal_payload": 0,
+        "train_copy": 275,
+        "train_item_type": 279,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.42105263157894735,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 9.341303873015995,
+      "full_duplicate_test_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "label": "hellgate_public_bookcase_40",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 9.674947779234664,
+      "public_title_prefixes": [
+        "8005953724",
+        "5460036467",
+        "8952197278",
+        "1801894452"
+      ],
+      "test_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "test_event_total": 16,
+      "train_test_gap_bits_per_event": 0.4086362915390427
+    },
+    {
+      "bookcase_public": "6",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 22.979585962195397,
+          "frozen_gain_vs_uniform_bits": 0.3826318537176796,
+          "online_bits": 22.460741710697125,
+          "online_gain_vs_uniform_bits": 0.9014761052159521,
+          "uniform_bits": 23.362217815913077
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 14.703254733748148,
+          "frozen_gain_vs_uniform_bits": 1.9063857406886644,
+          "online_bits": 14.703254733748148,
+          "online_gain_vs_uniform_bits": 1.9063857406886644,
+          "uniform_bits": 16.609640474436812
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 7.684198553936633,
+          "frozen_gain_vs_uniform_bits": -2.684198553936633,
+          "online_bits": 7.6467809442343695,
+          "online_gain_vs_uniform_bits": -2.6467809442343695,
+          "uniform_bits": 5.0
+        }
+      ],
+      "dominant_negative_components": [
+        "item_type"
+      ],
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 5,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 768
+      },
+      "event_total_percentile_rank_low_to_high": 0.3684210526315789,
+      "failure": true,
+      "failure_reason": "small_family_item_type_under_uniform",
+      "frozen_gain_vs_uniform_bits": -0.3951809595302933,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_6",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 0.16108090167024613,
+      "public_title_prefixes": [
+        "2364672119",
+        "5765219727"
+      ],
+      "test_books": [
+        38,
+        39
+      ],
+      "test_event_total": 15,
+      "train_test_gap_bits_per_event": -0.20556508749186087
+    },
+    {
+      "bookcase_public": "7",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 80.92869301698583,
+          "frozen_gain_vs_uniform_bits": 4.1993375685056265,
+          "online_bits": 81.43150012592476,
+          "online_gain_vs_uniform_bits": 3.696530459566702,
+          "uniform_bits": 85.12803058549146
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 21.24401108757834,
+          "frozen_gain_vs_uniform_bits": 2.009485576633196,
+          "online_bits": 21.314400415469738,
+          "online_gain_vs_uniform_bits": 1.939096248741798,
+          "uniform_bits": 23.253496664211536
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 6.704081956886643,
+          "frozen_gain_vs_uniform_bits": 7.295918043113357,
+          "online_bits": 6.65817564759901,
+          "online_gain_vs_uniform_bits": 7.34182435240099,
+          "uniform_bits": 14.0
+        }
+      ],
+      "dominant_negative_components": [],
+      "event_counts": {
+        "test_copy": 14,
+        "test_item_type": 14,
+        "test_literal_payload": 7,
+        "train_copy": 269,
+        "train_item_type": 273,
+        "train_literal_payload": 766
+      },
+      "event_total_percentile_rank_low_to_high": 0.6842105263157895,
+      "failure": false,
+      "failure_reason": "positive_or_near_positive",
+      "frozen_gain_vs_uniform_bits": 13.504741188252183,
+      "full_duplicate_test_books": [],
+      "label": "hellgate_public_bookcase_7",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": 12.977451060709498,
+      "public_title_prefixes": [
+        "4352821778",
+        "9457651288",
+        "6512889523"
+      ],
+      "test_books": [
+        54,
+        55,
+        56
+      ],
+      "test_event_total": 35,
+      "train_test_gap_bits_per_event": -0.06624978918106672
+    },
+    {
+      "bookcase_public": "8",
+      "component_gains": [
+        {
+          "component": "copy_length",
+          "frozen_bits": 15.709568507680348,
+          "frozen_gain_vs_uniform_bits": -1.5031645937065008,
+          "online_bits": 15.709568507680348,
+          "online_gain_vs_uniform_bits": -1.5031645937065008,
+          "uniform_bits": 14.206403913973848
+        },
+        {
+          "component": "literal_payload",
+          "frozen_bits": 0.0,
+          "frozen_gain_vs_uniform_bits": 0.0,
+          "online_bits": 0.0,
+          "online_gain_vs_uniform_bits": 0.0,
+          "uniform_bits": 0.0
+        },
+        {
+          "component": "item_type",
+          "frozen_bits": 0.664288981860998,
+          "frozen_gain_vs_uniform_bits": 1.335711018139002,
+          "online_bits": 0.6627898029189703,
+          "online_gain_vs_uniform_bits": 1.3372101970810297,
+          "uniform_bits": 2.0
+        }
+      ],
+      "dominant_negative_components": [
+        "copy_length"
+      ],
+      "event_counts": {
+        "test_copy": 2,
+        "test_item_type": 2,
+        "test_literal_payload": 0,
+        "train_copy": 281,
+        "train_item_type": 285,
+        "train_literal_payload": 773
+      },
+      "event_total_percentile_rank_low_to_high": 0.05263157894736842,
+      "failure": true,
+      "failure_reason": "small_copy_only_family_copy_length_under_uniform",
+      "frozen_gain_vs_uniform_bits": -0.1674535755674995,
+      "full_duplicate_test_books": [
+        68,
+        69
+      ],
+      "label": "hellgate_public_bookcase_8",
+      "manifest_confidence": "medium_public_bookcase_not_tile",
+      "manifest_note": "public overview order; not authorial read order; no exact tile/slot/orientation",
+      "online_gain_vs_uniform_bits": -0.1659543966254695,
+      "public_title_prefixes": [
+        "6114312889",
+        "3485625108"
+      ],
+      "test_books": [
+        68,
+        69
+      ],
+      "test_event_total": 4,
+      "train_test_gap_bits_per_event": 0.9045136106060401
+    }
+  ],
+  "schema": "family_holdout_failure_audit.v1",
+  "sources": {
+    "bookcase_manifest": "analysis/physical_topology_20260620/tables/hellgate_public_bookcase_manifest.csv",
+    "occ_streams": "analysis/audit_20260609/homophone_channel/occ_streams.json",
+    "parent_audit": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/01_prequential_and_row0_origin_audit.json"
+  },
+  "summary": {
+    "copy_length_failure_count": 2,
+    "copy_only_failure_count": 2,
+    "failure_count": 3,
+    "failure_labels": [
+      "hellgate_public_bookcase_33",
+      "hellgate_public_bookcase_6",
+      "hellgate_public_bookcase_8"
+    ],
+    "family_split_count": 19,
+    "item_type_failure_count": 1,
+    "maximum_family_event_total": 364,
+    "median_family_event_total": 19,
+    "minimum_family_event_total": 4
+  },
+  "translation_delta": "NONE"
+}

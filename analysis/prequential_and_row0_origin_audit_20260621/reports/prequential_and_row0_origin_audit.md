@@ -56,6 +56,16 @@ Values are bits saved by the learned component over replacing only that componen
 
 Interpretation: prefix and contiguous-block tests retain positive advantage over uniform, but the family split has nonpositive failures. The result is therefore predictive signal only, not a final generation method.
 
+### Family Failure Follow-Up
+
+A follow-up failure audit decomposes the three public-bookcase family failures.
+They are component/sample-size stress cases rather than a new row0-origin signal:
+`hellgate_public_bookcase_33` and `hellgate_public_bookcase_8` are copy-only
+failures dominated by copy-length underperformance, while
+`hellgate_public_bookcase_6` is online-positive but frozen-negative because the
+item-type component loses to uniform under frozen counts.
+See [02_family_holdout_failure_audit.md](test_results/02_family_holdout_failure_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

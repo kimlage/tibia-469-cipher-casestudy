@@ -865,6 +865,11 @@ failures, so the classification is only
 `predictive_signal_partial_not_generation_method`. The row0/table result is
 unchanged: row0 remains exogenous, and no plaintext or semantic claim is
 introduced.
+A follow-up family-failure audit decomposes those failures: bookcases `33` and
+`8` are copy-only failures dominated by copy-length underperformance, while
+bookcase `6` is online-positive but frozen-negative because item-type coding
+loses to uniform under frozen counts. This narrows the failure mode without
+promoting a final authorial method.
 
 The prequential recipe reparse audit then tests the remaining recipe
 dependency. With only train-prefix component counts frozen, a deterministic LZ
@@ -1186,6 +1191,7 @@ book generation, not row0 pair-cell placement.
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
 - [Prequential and row0 origin audit 2026-06-21](../../analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md)
+- [Family holdout failure audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/02_family_holdout_failure_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
