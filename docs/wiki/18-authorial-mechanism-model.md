@@ -738,6 +738,10 @@ A source-interval precision gate then asks whether that clue can fire only
 where it is safe. Predicate gating improves the false-positive profile, but
 does not promote a rule: the best full-fit repair still has `4` clean false
 changes, and the best zero-FP rule covers only `3/10` residuals.
+An observable-only correction then removes the diagnostic `drift_class`
+predicate from that screen. The best zero-FP rule drops to `2/10` residuals;
+the `5/10` full-fit signal remains, but still with `4` clean false changes and
+no holdout promotion.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2452,6 +2456,7 @@ book generation, not row0 pair-cell placement.
 - [Book skeleton alignment gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/49_book_skeleton_alignment_gate.md)
 - [Source interval context gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/50_source_interval_context_gate.md)
 - [Source interval precision gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/51_source_interval_precision_gate.md)
+- [Source interval observable precision gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/52_source_interval_observable_precision_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

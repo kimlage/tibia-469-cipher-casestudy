@@ -1122,6 +1122,32 @@ misses half the residuals and is not clean. The best zero-FP
 rule covers only `3/10`, and prefix/holdout never covers all
 held-out residuals.
 
+## Source Interval Observable Precision Gate
+
+Gate 52 corrects the gate-51 precision screen by removing
+`drift_class` and other diagnostic post-difference labels from
+the predicate family. It retests whether source-interval repairs
+have a genuinely observable safe firing condition.
+
+| Diagnostic | Value |
+|---|---:|
+| Observable predicates | `1762` |
+| Scored rules | `30504` |
+| Prior zero-FP predicate | `drift_class_eq_book_start_copy_missed_as_literal` |
+| Prior zero-FP residual hits | `3/10` |
+| Best observable rule | `max_payload_occurrences` / `changes_type_eq_True__and__source_target_interval_distance_ge_3` |
+| Best observable residual hits | `5/10` |
+| Best observable clean false changes | `4` |
+| Best observable zero-FP residual hits | `2/10` |
+| Prequential cover-all-residual cells | `0/4` |
+
+The correction weakens the safe-rule story: the previous zero-FP
+result relied on `drift_class`, which is diagnostic rather than
+available to the parser. Observable-only predicates retain the
+`5/10` full-fit signal with `4` clean false changes, but the
+best zero-FP observable rule covers only `2/10` residuals and
+holdout remains non-promoting.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1174,6 +1200,10 @@ holdout cells.
 Gate 51 then gates that source-interval signal with observable
 predicates; the best full-fit rule still has `4` clean false
 changes, and the best zero-FP rule covers only `3/10` residuals.
+Gate 52 corrects that screen by removing the diagnostic
+`drift_class` predicate; the best observable zero-FP rule drops
+to `2/10` residuals, so the safe source-interval rule is weaker
+than gate 51's headline suggested.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1234,3 +1264,4 @@ or the stable projection as an oracle.
 - [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)
 - [Source interval context gate](test_results/50_source_interval_context_gate.md)
 - [Source interval precision gate](test_results/51_source_interval_precision_gate.md)
+- [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)

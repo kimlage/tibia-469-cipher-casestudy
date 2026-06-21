@@ -1251,6 +1251,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   gates that source-interval clue with observable predicates but still does
   not promote it (`5/10` residuals with `4` clean false changes; best zero-FP
   rule `3/10`),
+  corrects that precision screen by removing diagnostic `drift_class`, leaving
+  the best observable zero-FP rule at only `2/10` residuals,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

@@ -66,6 +66,9 @@ RESIDUAL_SITE_DETECTOR = TEST_RESULTS / "48_residual_site_detector_gate.json"
 BOOK_SKELETON_ALIGNMENT = TEST_RESULTS / "49_book_skeleton_alignment_gate.json"
 SOURCE_INTERVAL_CONTEXT = TEST_RESULTS / "50_source_interval_context_gate.json"
 SOURCE_INTERVAL_PRECISION = TEST_RESULTS / "51_source_interval_precision_gate.json"
+SOURCE_INTERVAL_OBSERVABLE_PRECISION = (
+    TEST_RESULTS / "52_source_interval_observable_precision_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -244,6 +247,11 @@ def main() -> None:
         if SOURCE_INTERVAL_PRECISION.exists()
         else None
     )
+    source_interval_observable_precision = (
+        load_json(SOURCE_INTERVAL_OBSERVABLE_PRECISION)
+        if SOURCE_INTERVAL_OBSERVABLE_PRECISION.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -346,6 +354,11 @@ def main() -> None:
         assert_boundary("source_interval_context_gate", source_interval_context)
     if source_interval_precision is not None:
         assert_boundary("source_interval_precision_gate", source_interval_precision)
+    if source_interval_observable_precision is not None:
+        assert_boundary(
+            "source_interval_observable_precision_gate",
+            source_interval_observable_precision,
+        )
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -490,6 +503,11 @@ def main() -> None:
         None
         if source_interval_precision is None
         else source_interval_precision["summary"]
+    )
+    source_interval_observable_precision_summary = (
+        None
+        if source_interval_observable_precision is None
+        else source_interval_observable_precision["summary"]
     )
 
     lines = [
@@ -1886,6 +1904,37 @@ def main() -> None:
                 "",
             ]
         )
+    if source_interval_observable_precision_summary is not None:
+        lines.extend(
+            [
+                "## Source Interval Observable Precision Gate",
+                "",
+                "Gate 52 corrects the gate-51 precision screen by removing",
+                "`drift_class` and other diagnostic post-difference labels from",
+                "the predicate family. It retests whether source-interval repairs",
+                "have a genuinely observable safe firing condition.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Observable predicates | `{source_interval_observable_precision_summary['observable_predicate_count']}` |",
+                f"| Scored rules | `{source_interval_observable_precision_summary['scored_rule_count']}` |",
+                f"| Prior zero-FP predicate | `{source_interval_observable_precision_summary['prior_best_zero_fp_predicate']}` |",
+                f"| Prior zero-FP residual hits | `{source_interval_observable_precision_summary['prior_best_zero_fp_residual_hits']}/10` |",
+                f"| Best observable rule | `{source_interval_observable_precision_summary['best_policy']}` / `{source_interval_observable_precision_summary['best_predicate']}` |",
+                f"| Best observable residual hits | `{source_interval_observable_precision_summary['best_residual_hits']}/{source_interval_observable_precision_summary['best_residual_total']}` |",
+                f"| Best observable clean false changes | `{source_interval_observable_precision_summary['best_clean_false_changes']}` |",
+                f"| Best observable zero-FP residual hits | `{source_interval_observable_precision_summary['best_zero_fp_residual_hits']}/{source_interval_observable_precision_summary['best_zero_fp_residual_total']}` |",
+                f"| Prequential cover-all-residual cells | `{source_interval_observable_precision_summary['prequential_cover_all_residual_cells']}/{source_interval_observable_precision_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "The correction weakens the safe-rule story: the previous zero-FP",
+                "result relied on `drift_class`, which is diagnostic rather than",
+                "available to the parser. Observable-only predicates retain the",
+                "`5/10` full-fit signal with `4` clean false changes, but the",
+                "best zero-FP observable rule covers only `2/10` residuals and",
+                "holdout remains non-promoting.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1940,6 +1989,10 @@ def main() -> None:
             "Gate 51 then gates that source-interval signal with observable",
             "predicates; the best full-fit rule still has `4` clean false",
             "changes, and the best zero-FP rule covers only `3/10` residuals.",
+            "Gate 52 corrects that screen by removing the diagnostic",
+            "`drift_class` predicate; the best observable zero-FP rule drops",
+            "to `2/10` residuals, so the safe source-interval rule is weaker",
+            "than gate 51's headline suggested.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2000,6 +2053,7 @@ def main() -> None:
             "- [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)",
             "- [Source interval context gate](test_results/50_source_interval_context_gate.md)",
             "- [Source interval precision gate](test_results/51_source_interval_precision_gate.md)",
+            "- [Source interval observable precision gate](test_results/52_source_interval_observable_precision_gate.md)",
             "",
         ]
     )

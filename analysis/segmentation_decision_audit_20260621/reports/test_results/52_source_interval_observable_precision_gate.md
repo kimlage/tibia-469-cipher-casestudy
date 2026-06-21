@@ -1,0 +1,66 @@
+# Source Interval Observable Precision Gate
+
+Classification: `source_interval_observable_precision_weak_clue_not_promoted`
+Translation delta: `NONE`
+
+## Purpose
+
+Gate 52 corrects the gate-51 precision screen by removing
+`drift_class` and any diagnostic post-difference label from the
+predicate family. The question is whether the source-interval
+signal has a genuinely observable safe firing condition.
+
+## Summary
+
+- Policy-decision rows: `2808`.
+- Policies: `12`.
+- Observable predicates: `1762`.
+- Scored rules: `30504`.
+- Prior zero-FP predicate: `drift_class_eq_book_start_copy_missed_as_literal`.
+- Prior zero-FP residual hits: `3/10`.
+- Best observable rule: `max_payload_occurrences` / `changes_type_eq_True__and__source_target_interval_distance_ge_3`.
+- Best observable residual hits: `5/10`.
+- Best observable clean false changes: `4`.
+- Best observable zero-FP rule: `min_interval_distance_r2` / `length_delta_abs_le_2__and__source_target_interval_distance_ge_4`.
+- Best observable zero-FP residual hits: `2/10`.
+
+## Scoreboard
+
+| Policy | Predicate | Residual hits | Clean false changes | Residual false | Selected |
+|---|---|---:|---:|---:|---:|
+| `max_payload_occurrences` | `changes_type_eq_True__and__source_target_interval_distance_ge_3` | `5/10` | `4` | `0` | `9` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__source_target_interval_distance_ge_3` | `5/10` | `4` | `0` | `9` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r2_interval_distance_ge_3` | `5/10` | `4` | `0` | `9` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__r2_interval_distance_ge_3` | `5/10` | `4` | `0` | `9` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__source_target_end_distance_ge_1` | `5/10` | `5` | `0` | `10` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__source_target_end_distance_ge_1` | `5/10` | `5` | `0` | `10` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r4_interval_distance_ge_6` | `5/10` | `5` | `0` | `10` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__r4_interval_distance_ge_6` | `5/10` | `5` | `0` | `10` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r4_interval_distance_ge_5` | `5/10` | `5` | `0` | `10` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__r4_interval_distance_ge_5` | `5/10` | `5` | `0` | `10` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r4_end_distance_ge_3` | `5/10` | `5` | `0` | `10` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__r4_end_distance_ge_3` | `5/10` | `5` | `0` | `10` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r2_end_distance_ge_1` | `5/10` | `5` | `0` | `10` |
+| `min_source_target_start_distance` | `changes_type_eq_True__and__r2_end_distance_ge_1` | `5/10` | `5` | `0` | `10` |
+| `max_payload_occurrences` | `changes_type_eq_True__and__r8_interval_distance_ge_14` | `5/10` | `5` | `1` | `11` |
+
+## Prefix/Holdout
+
+| Cutoff | Policy | Predicate | Test residual hits | Test clean false changes | Test residual false |
+|---:|---|---|---:|---:|---:|
+| `20` | `max_context_recurrence_r2` | `r8_start_distance_le_4` | `0/8` | `7` | `0` |
+| `30` | `max_payload_occurrences` | `changes_type_eq_True` | `2/5` | `7` | `1` |
+| `40` | `max_payload_occurrences` | `changes_type_eq_True` | `0/3` | `5` | `1` |
+| `50` | `max_payload_occurrences` | `changes_type_eq_True` | `0/2` | `3` | `0` |
+| `60` | `max_payload_occurrences` | `changes_type_eq_True` | `0/0` | `1` | `0` |
+
+## Decision
+
+- Promotes observable source-interval precision rule: `False`.
+- Prequential cover-all-residual cells: `0/4`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Gate 52 corrects gate 51 by excluding drift_class and other diagnostic labels from the precision predicates. It asks whether the source-interval signal has a genuinely observable safe firing condition.
+- The source-interval signal still does not convert into a clean observable parser rule.
+- Compression bound is unchanged.
+- Row0 remains exogenous and unchanged.
+- No plaintext, translation, semantic reading, or case reopening is introduced.
