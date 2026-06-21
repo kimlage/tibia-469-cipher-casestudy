@@ -371,6 +371,11 @@ cutpoints are chosen. The best source-free model,
 audit-only full-fit reduction from `60` exact op-count records to `55` paid
 records. It is not promoted: it still misses `20` books and has `0/5`
 prefix/holdout cells that cover all books or beat random p95.
+An operation shape-count generation audit then broadens that test to
+`(op_count, literal_count)`. The same context is again best but weaker:
+`37/60` exact shapes, `58` paid records versus a `60`-record exact shape atlas,
+`23` missed books, and `0/5` prefix/holdout cells that cover all books or beat
+random p95. Coarse operation shape remains retained.
 An operation-length Markov audit then tests the skeleton blocker directly under
 generous assumptions: book lengths and operation types are granted, and only the
 `261` operation lengths must be generated. The best of `11` Markov/context
@@ -2535,6 +2540,8 @@ book generation, not row0 pair-cell placement.
 - [Generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.md)
 - [Final operation count generation audit](../../analysis/operation_count_generation_audit_20260621/reports/final_operation_count_generation_audit.md)
 - [Operation count generation gate](../../analysis/operation_count_generation_audit_20260621/reports/test_results/01_operation_count_generation_gate.md)
+- [Final operation shape count generation audit](../../analysis/operation_shape_count_generation_audit_20260621/reports/final_operation_shape_count_generation_audit.md)
+- [Operation shape count generation gate](../../analysis/operation_shape_count_generation_audit_20260621/reports/test_results/01_operation_shape_count_generation_gate.md)
 - [Final operation length Markov audit](../../analysis/operation_length_markov_audit_20260621/reports/final_operation_length_markov_audit.md)
 - [Operation length Markov gate](../../analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.md)
 - [Final operation length motif audit](../../analysis/operation_length_motif_audit_20260621/reports/final_operation_length_motif_audit.md)
