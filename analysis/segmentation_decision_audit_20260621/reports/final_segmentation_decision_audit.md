@@ -187,6 +187,27 @@ suffix books, especially through false book-start copies. The
 remaining segmentation blocker is therefore not a simple
 immediate-copy/missed-copy threshold.
 
+## Peak-Strength Control
+
+The opposite rescue is to wait for a stronger local peak before
+ending a literal run, aiming to fix literal-understop drifts.
+
+| Family | Best exact books | Boundary |
+|---|---:|---|
+| Window-5 baseline | `48/60` | retained |
+| Minimum peak strength | `48/60` | rejected |
+
+- Best policy: `window5:min_peak_len5`.
+- Exact-book improvement vs baseline: `0`.
+- Prequential selected policy matches suffix oracle in `3/5` cells.
+
+Raising the minimum accepted peak does not improve exact coverage.
+The first alternate threshold, `min_peak_len6`, ties `48/60` but
+increases literal digits and turns some understops into missed-copy
+and overstop failures; larger thresholds degrade sharply. The
+remaining literal-understop cases are therefore not solved by a
+simple weak-peak filter.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -206,3 +227,4 @@ or changed skeleton/literal accounting.
 - [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)
 - [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)
 - [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)
+- [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)

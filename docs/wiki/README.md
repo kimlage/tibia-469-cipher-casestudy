@@ -884,6 +884,9 @@ An immediate-copy override audit then rejects the obvious rescue: book-start,
 internal, and any-position overrides over thresholds `5..20` do not beat the
 `window5:no_override` parser and overfit held-out suffixes in the middle prefix
 cells. The blocker is not a simple missed-copy threshold.
+A peak-strength control rejects the opposite shortcut too: requiring stronger
+local peaks up to `min_peak_len30` does not beat `48/60`; `min_peak_len6` only
+ties while trading understops for missed-copy/overstop failures.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

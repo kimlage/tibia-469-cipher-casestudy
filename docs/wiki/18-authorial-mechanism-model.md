@@ -496,6 +496,11 @@ beat `window5:no_override`; train-selected book-start overrides overfit in the
 middle prefix cells and lose held-out suffix books. The remaining drifts are
 therefore not explained by a simple "copy immediately when a strong match
 exists" rule.
+A peak-strength control tests the opposite rescue: wait for a stronger local
+peak before ending a literal run. Thresholds `min_peak_len 5..30` do not improve
+on `48/60`; `min_peak_len6` ties the total but increases literal digits and
+trades some understops for missed-copy/overstop failures. The remaining drift
+is therefore not just weak early peak acceptance either.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2169,6 +2174,7 @@ book generation, not row0 pair-cell placement.
 - [Integrated online literal parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/08_integrated_online_literal_parser_audit.md)
 - [Integrated parser policy and drift audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/09_integrated_parser_policy_and_drift_audit.md)
 - [Integrated parser override audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/10_integrated_parser_override_audit.md)
+- [Integrated parser peak strength audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/11_integrated_parser_peak_strength_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

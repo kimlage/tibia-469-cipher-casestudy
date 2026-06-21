@@ -19,6 +19,7 @@ LITERAL_EXCEPTION = TEST_RESULTS / "07_literal_stop_exception_topology_audit.jso
 INTEGRATED_ONLINE = TEST_RESULTS / "08_integrated_online_literal_parser_audit.json"
 POLICY_DRIFT = TEST_RESULTS / "09_integrated_parser_policy_and_drift_audit.json"
 OVERRIDE = TEST_RESULTS / "10_integrated_parser_override_audit.json"
+PEAK_STRENGTH = TEST_RESULTS / "11_integrated_parser_peak_strength_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -58,6 +59,7 @@ def main() -> None:
     )
     policy_drift = load_json(POLICY_DRIFT) if POLICY_DRIFT.exists() else None
     override = load_json(OVERRIDE) if OVERRIDE.exists() else None
+    peak_strength = load_json(PEAK_STRENGTH) if PEAK_STRENGTH.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -74,6 +76,8 @@ def main() -> None:
         assert_boundary("integrated_parser_policy_and_drift_audit", policy_drift)
     if override is not None:
         assert_boundary("integrated_parser_override_audit", override)
+    if peak_strength is not None:
+        assert_boundary("integrated_parser_peak_strength_audit", peak_strength)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -90,6 +94,7 @@ def main() -> None:
     )
     policy_drift_summary = None if policy_drift is None else policy_drift["summary"]
     override_summary = None if override is None else override["summary"]
+    peak_summary = None if peak_strength is None else peak_strength["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -337,6 +342,32 @@ def main() -> None:
                 "",
             ]
         )
+    if peak_summary is not None:
+        lines.extend(
+            [
+                "## Peak-Strength Control",
+                "",
+                "The opposite rescue is to wait for a stronger local peak before",
+                "ending a literal run, aiming to fix literal-understop drifts.",
+                "",
+                "| Family | Best exact books | Boundary |",
+                "|---|---:|---|",
+                f"| Window-5 baseline | `{peak_summary['baseline_exact_books']}/60` | retained |",
+                f"| Minimum peak strength | `{peak_summary['best_exact_books']}/60` | rejected |",
+                "",
+                f"- Best policy: `{peak_summary['best_policy']}`.",
+                f"- Exact-book improvement vs baseline: `{peak_summary['exact_improvement_vs_baseline']}`.",
+                f"- Prequential selected policy matches suffix oracle in `{peak_summary['prequential_selected_matches_oracle_cells']}/{peak_summary['prequential_cells']}` cells.",
+                "",
+                "Raising the minimum accepted peak does not improve exact coverage.",
+                "The first alternate threshold, `min_peak_len6`, ties `48/60` but",
+                "increases literal digits and turns some understops into missed-copy",
+                "and overstop failures; larger thresholds degrade sharply. The",
+                "remaining literal-understop cases are therefore not solved by a",
+                "simple weak-peak filter.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -358,6 +389,7 @@ def main() -> None:
             "- [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)",
             "- [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)",
             "- [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)",
+            "- [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)",
             "",
         ]
     )
