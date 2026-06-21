@@ -13,6 +13,7 @@ source_refs:
   - analysis/prequential_and_row0_origin_audit_20260621
   - analysis/row0_origin_parallel_20260621
   - analysis/row0_real_origin_search_20260621
+  - analysis/authorial_provenance_audit_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -343,6 +344,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
 | Seed requirement closure audit | final seed front is checked against the requested baselines, metrics, and controls: operational, random, permuted, centrality, metadata/bookcase, family holdout, declaration cost, and prequential checks all close `13/13` | requirements closed / still audit-only |
+| Chayenne spacing/provenance audit | the PortalTibia primary-source answer has two numeric blocks separated by a visible marker; the joined 49-digit string has `0` corpus occurrences, while the source split at boundary `36` is the unique full split whose two sides are both attested book substrings; shuffle controls are `0/2000` for block/join hits and `0/1000` for joined full-split hits | `PROMOTED_MECHANICAL_CLUE` / row0 and plaintext unchanged |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -351,6 +353,8 @@ The model is mechanical only. It is not a semantic decoder.
 Primary sources:
 [tape_based_formula_report.md](../../analysis/generator_search_20260618/tape_based_formula_report.md),
 [literal_reference_benchmark_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/06_literal_reference_benchmark_controls.md),
+[authorial_provenance_source_notes.md](../../analysis/authorial_provenance_audit_20260621/reports/authorial_provenance_source_notes.md),
+[chayenne_spacing_audit.md](../../analysis/authorial_provenance_audit_20260621/reports/test_results/01_chayenne_spacing_audit.md),
 [tape_inventory_self_reference_search.md](../../analysis/authorial_mechanism_20260620/reports/test_results/07_tape_inventory_self_reference_search.md),
 [hierarchical_reference_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/08_hierarchical_reference_formula_compile.md),
 [sequential_lz_book_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/10_sequential_lz_book_formula_compile.md),

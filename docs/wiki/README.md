@@ -1179,7 +1179,17 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   keeps prefix-trained seed selection as partial predictive signal only,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
+  integrates the Chayenne public-surface audit as a narrow provenance clue:
+  the visible split separates two corpus-attested numeric modules, while the
+  concatenation is absent from the corpus and shuffle controls do not reproduce
+  the split,
   keeps row0 origin exogenous with translation delta zero.
+- **Authorial provenance audit:** [`analysis/authorial_provenance_audit_20260621/`](../../analysis/authorial_provenance_audit_20260621/) —
+  verifies the PortalTibia Chayenne answer as a controlled surface object:
+  the published split at boundary `36` is the unique full split into two
+  attested 469 book substrings, but this is only
+  `PROMOTED_MECHANICAL_CLUE`; it does not change `row0`,
+  `compression_bound`, plaintext, or translation.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

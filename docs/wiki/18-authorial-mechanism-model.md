@@ -9,6 +9,7 @@ moc_parent: README.md
 source_refs:
   - analysis/authorial_mechanism_20260620
   - analysis/prequential_and_row0_origin_audit_20260621
+  - analysis/authorial_provenance_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -122,6 +123,15 @@ against the independent row0 front. They remain compatible but do not move
 row0: no recent formula gate predicts row0 labels under holdout, beats lookup
 after paid anchor/rule costs, explains `39`/`93`/`19/91`, or adds
 CipSoft/authorial provenance. The result is `row0 unchanged`.
+
+The Chayenne provenance audit adds one narrow public-surface clue, not a new
+generator. In the PortalTibia interview, the numeric answer appears as two
+blocks separated by a visible marker; concatenating them yields no corpus hit,
+while the published split at boundary `36` is the unique full split whose two
+sides are both attested book substrings. Shuffle controls find no comparable
+block/join or full-split hits. This supports reuse of existing 469 numeric
+modules in that public answer, but it does not derive row0, choose parser
+`(source,length)` fields, change `compression_bound`, or create plaintext.
 
 The final dependency refresh adds the mechanical boundary for the current
 formula: the `8154.6763`-bit bound still retains `609` operation dependency
@@ -2280,6 +2290,8 @@ book generation, not row0 pair-cell placement.
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
+- [Authorial provenance source notes](../../analysis/authorial_provenance_audit_20260621/reports/authorial_provenance_source_notes.md)
+- [Chayenne spacing audit](../../analysis/authorial_provenance_audit_20260621/reports/test_results/01_chayenne_spacing_audit.md)
 
 ## Boundary
 
