@@ -317,6 +317,12 @@ beat raw in `175/175` book evaluations per policy, each has `50/50`
 multi-cutoff-stable books, and the aggregate unstable policy-book count is
 `0/150`. This materially strengthens parser robustness under source-candidate
 exposure, but still does not derive source choice during decoding or alter row0.
+A source-policy invariance boundary then tests the stronger claim that all-policy
+stability might demote source choice itself. It does not. Across `175`
+`(cutoff, book)` cases, operation shape is invariant in `175/175`, but exact
+source-bearing signatures are invariant in only `48/175`; the other `127/175`
+are pure source-choice variants. The parser shape is robust, while source choice
+remains a retained declared dependency.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1956,6 +1962,7 @@ book generation, not row0 pair-cell placement.
 - [Source blocker structural context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md)
 - [Full source all-policy multi-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/93_full_source_all_policy_multicutoff_probe.md)
 - [Full source all-policy five-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.md)
+- [Full source policy invariance boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

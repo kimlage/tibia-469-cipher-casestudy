@@ -298,6 +298,9 @@ exogenous.
 - [scripts/94_full_source_all_policy_fivecutoff_probe.py](scripts/94_full_source_all_policy_fivecutoff_probe.py) - extends all-policy full-source exposure to cutoffs `10/20/35/50/60`.
 - [reports/test_results/94_full_source_all_policy_fivecutoff_probe.md](reports/test_results/94_full_source_all_policy_fivecutoff_probe.md) - full source all-policy five-cutoff probe result.
 - [reports/test_results/94_full_source_all_policy_fivecutoff_probe.json](reports/test_results/94_full_source_all_policy_fivecutoff_probe.json) - structured full source all-policy five-cutoff ledger.
+- [scripts/95_full_source_policy_invariance_boundary.py](scripts/95_full_source_policy_invariance_boundary.py) - checks whether all-policy stability demotes source choice itself.
+- [reports/test_results/95_full_source_policy_invariance_boundary.md](reports/test_results/95_full_source_policy_invariance_boundary.md) - source-policy invariance boundary result.
+- [reports/test_results/95_full_source_policy_invariance_boundary.json](reports/test_results/95_full_source_policy_invariance_boundary.json) - structured source-policy invariance boundary ledger.
 
 ## Boundary
 
@@ -312,6 +315,10 @@ exogenous.
   evaluations per policy and `50/50` multi-cutoff-stable books per policy, with
   `0/150` unstable policy-book cases. This strengthens parser robustness but
   still does not make source choice decoder-derived or row0-derived.
+- Source-policy invariance boundary: comparing the three policies case-by-case
+  shows exact source-bearing signatures are invariant in only `48/175` cases.
+  Operation shape is invariant in `175/175`, so the result is shape robustness
+  with `127/175` pure source-choice variants, not source-dependency removal.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then
