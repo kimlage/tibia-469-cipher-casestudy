@@ -1283,6 +1283,33 @@ The apparently cheaper rows become cheaper only by granting the
 residual sites or ignoring the failed residual-site detector, so
 they repackage lookup rather than explaining generation.
 
+## Beam Survival Budget Gate
+
+Gate 58 asks a weaker but structurally useful question after
+direct branch choice and latent lookup pricing fail: does the
+stable branch at least remain inside a small observable beam?
+This tests path-state survival, not branch selection.
+
+| Diagnostic | Value |
+|---|---:|
+| Best objective | `max_suffix_copy_digits` |
+| Best all-decision beam width | `5` |
+| Best residual beam width | `5` |
+| Residual top-1 choices | `5/10` |
+| Clean top-1 choices | `204/224` |
+| Prefix/holdout all-survival cells | `5/5` |
+| Prefix/holdout residual-survival cells | `5/5` |
+| Fixed-width model net vs lookup | `4.750` bits |
+| Rank lower-bound net vs lookup | `-9.655` bits |
+
+This is a real weak path-state clue: width `5` keeps the stable
+branch alive across the tested decision universe and in all
+prefix/holdout cells. It is still not a promoted parser because
+top-1 selection misses residual choices, and the valid fixed-width
+paid model is worse than residual lookup. The apparent rank
+lower-bound saving is diagnostic only because it assumes site/rank
+knowledge rather than a downstream selector.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1359,9 +1386,14 @@ Gate 57 then prices a latent path-state fallback and rejects it
 as lookup repackaging: the best valid model is exactly the
 `79.361`-bit residual shape lookup, while cheaper rows require
 a residual-site oracle.
-The remaining blocker is a richer latent path/state
-segmentation account for why the parser waits, copies, or
-understops at the remaining mixed residual sites, or a source-free
+Gate 58 adds a weak but useful path-state clue: a width-5
+beam under the best continuation objective preserves the stable
+branch in `5/5` prefix/holdout cells, but it does not select the
+branch and the paid fixed-width model remains worse than lookup.
+The remaining blocker is therefore a downstream selector or richer
+latent path/state segmentation account for why the parser waits,
+copies, or understops at the remaining mixed residual sites, or
+a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -1425,3 +1457,4 @@ or the stable projection as an oracle.
 - [Observable signature support gate](test_results/55_observable_signature_support_gate.md)
 - [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)
 - [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)
+- [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)

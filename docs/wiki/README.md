@@ -983,6 +983,16 @@ variants introduce false clean-control changes.
 A residual vote decomposition confirms there is no hidden clean cutoff:
 threshold `3` catches only books `16/39` and also moves `18` clean controls;
 threshold `4` leaves only book `39` and still has one clean false move.
+The later path-state gates reject exact path-template reuse, trajectory
+neighbors, observable state support, compact latent rules, source-free ordinal
+rules, n-gram grammars, residual transfer, branch-rank cost, residual-site
+detectors, book-skeleton alignment, and source-interval safe firing. The newest
+beam survival gate adds one useful but weak boundary: under
+`max_suffix_copy_digits`, a width-5 beam keeps the stable branch alive in
+`5/5` prefix/holdout cells, but top-1 still resolves only `5/10` residuals and
+the fixed-width paid model is `+4.750` bits worse than lookup. The blocker is
+therefore a downstream selector or richer latent path/state account, not
+another local branch-choice combination.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

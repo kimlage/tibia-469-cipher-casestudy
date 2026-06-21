@@ -82,6 +82,7 @@ SEQUENTIAL_SIGNATURE_SUPPORT = (
 LATENT_PATH_STATE_BUDGET = (
     TEST_RESULTS / "57_latent_path_state_budget_gate.json"
 )
+BEAM_SURVIVAL_BUDGET = TEST_RESULTS / "58_beam_survival_budget_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -288,6 +289,11 @@ def main() -> None:
         if LATENT_PATH_STATE_BUDGET.exists()
         else None
     )
+    beam_survival_budget = (
+        load_json(BEAM_SURVIVAL_BUDGET)
+        if BEAM_SURVIVAL_BUDGET.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -409,6 +415,8 @@ def main() -> None:
         )
     if latent_path_state_budget is not None:
         assert_boundary("latent_path_state_budget_gate", latent_path_state_budget)
+    if beam_survival_budget is not None:
+        assert_boundary("beam_survival_budget_gate", beam_survival_budget)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -581,6 +589,9 @@ def main() -> None:
         None
         if latent_path_state_budget is None
         else latent_path_state_budget["summary"]
+    )
+    beam_survival_budget_summary = (
+        None if beam_survival_budget is None else beam_survival_budget["summary"]
     )
 
     lines = [
@@ -2168,6 +2179,38 @@ def main() -> None:
                 "",
             ]
         )
+    if beam_survival_budget_summary is not None:
+        lines.extend(
+            [
+                "## Beam Survival Budget Gate",
+                "",
+                "Gate 58 asks a weaker but structurally useful question after",
+                "direct branch choice and latent lookup pricing fail: does the",
+                "stable branch at least remain inside a small observable beam?",
+                "This tests path-state survival, not branch selection.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best objective | `{beam_survival_budget_summary['best_objective']}` |",
+                f"| Best all-decision beam width | `{beam_survival_budget_summary['best_all_max_rank']}` |",
+                f"| Best residual beam width | `{beam_survival_budget_summary['best_residual_max_rank']}` |",
+                f"| Residual top-1 choices | `{beam_survival_budget_summary['best_residual_top1']}/{beam_survival_budget_summary['residual_decision_count']}` |",
+                f"| Clean top-1 choices | `{beam_survival_budget_summary['best_clean_top1']}/{beam_survival_budget_summary['clean_control_count']}` |",
+                f"| Prefix/holdout all-survival cells | `{beam_survival_budget_summary['prequential_all_survived_at_train_width_cells']}/{beam_survival_budget_summary['prequential_cells']}` |",
+                f"| Prefix/holdout residual-survival cells | `{beam_survival_budget_summary['prequential_residual_survived_at_train_width_cells']}/{beam_survival_budget_summary['prequential_cells']}` |",
+                f"| Fixed-width model net vs lookup | `{beam_survival_budget_summary['fixed_width_net_vs_lookup_bits']:.3f}` bits |",
+                f"| Rank lower-bound net vs lookup | `{beam_survival_budget_summary['rank_lower_bound_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "This is a real weak path-state clue: width `5` keeps the stable",
+                "branch alive across the tested decision universe and in all",
+                "prefix/holdout cells. It is still not a promoted parser because",
+                "top-1 selection misses residual choices, and the valid fixed-width",
+                "paid model is worse than residual lookup. The apparent rank",
+                "lower-bound saving is diagnostic only because it assumes site/rank",
+                "knowledge rather than a downstream selector.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2246,9 +2289,14 @@ def main() -> None:
             "as lookup repackaging: the best valid model is exactly the",
             "`79.361`-bit residual shape lookup, while cheaper rows require",
             "a residual-site oracle.",
-            "The remaining blocker is a richer latent path/state",
-            "segmentation account for why the parser waits, copies, or",
-            "understops at the remaining mixed residual sites, or a source-free",
+            "Gate 58 adds a weak but useful path-state clue: a width-5",
+            "beam under the best continuation objective preserves the stable",
+            "branch in `5/5` prefix/holdout cells, but it does not select the",
+            "branch and the paid fixed-width model remains worse than lookup.",
+            "The remaining blocker is therefore a downstream selector or richer",
+            "latent path/state segmentation account for why the parser waits,",
+            "copies, or understops at the remaining mixed residual sites, or",
+            "a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -2312,6 +2360,7 @@ def main() -> None:
             "- [Observable signature support gate](test_results/55_observable_signature_support_gate.md)",
             "- [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)",
             "- [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)",
+            "- [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)",
             "",
         ]
     )
