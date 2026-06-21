@@ -449,6 +449,15 @@ metadata/bookcase, random/permuted controls, declaration cost, family holdouts,
 and prequential checks. This strengthens the audit boundary but does not promote
 a seed-origin formula.
 
+A segmentation decision audit then changes the unit from simple length policy
+to parser trace. On the stable copy projection, `choose the longest previous
+target match; break source ties by earliest source` recovers `207/208` copy
+pairs, compared with random global-max source expectation `119.739/208`. This
+is promoted only as a mechanical segmentation clue for target-text-aware
+parsing: it reduces declared copy `(source,length)` dependence under that
+parser view, but it does not generate the target digit stream source-free and
+does not replace the full skeleton/literal ledger.
+
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
 the better posthoc cores are recorded as compression/redundancy clues only, and
@@ -2111,6 +2120,9 @@ book generation, not row0 pair-cell placement.
 - [Operation length dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/110_operation_length_dependency_ledger.md)
 - [Decoder length candidate ambiguity audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/111_decoder_length_candidate_ambiguity_audit.md)
 - [Decoder length policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/112_decoder_length_policy_audit.md)
+- [Final segmentation decision audit](../../analysis/segmentation_decision_audit_20260621/reports/final_segmentation_decision_audit.md)
+- [Segmentation decision trace](../../analysis/segmentation_decision_audit_20260621/reports/test_results/01_segmentation_decision_trace.md)
+- [Structural segmentation hypothesis audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

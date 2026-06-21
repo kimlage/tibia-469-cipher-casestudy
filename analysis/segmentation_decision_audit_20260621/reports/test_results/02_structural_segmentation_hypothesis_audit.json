@@ -1,0 +1,609 @@
+{
+  "case_reopened": false,
+  "classification": "target_text_longest_earliest_parser_clue_not_source_free_generator",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "target_text_max_boundary_clue_not_generator",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "copy_pairs_mostly_reduced_if_target_text_is_granted_source_free_dependency_retained",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "exception_rows": [
+    {
+      "all_source_max_length": 45,
+      "book": 55,
+      "candidate_pair_count": 95,
+      "declared_boundary_candidate_pair_count": 7,
+      "declared_length": 44,
+      "declared_source": 2757,
+      "decoder_max": 45,
+      "extend_to_max_extra_digits": 1,
+      "max_boundary_candidate_pair_count": 0,
+      "op_index": 2,
+      "projection_copy_index": 2,
+      "target_start": 67
+    }
+  ],
+  "hypothesis_rows": [
+    {
+      "boundary": "declared_source_and_target_text_dependent",
+      "coverage": 0.9951923076923077,
+      "hits": 207,
+      "hypothesis": "declared_source_target_match_max_length",
+      "misses": 1,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "book": 55,
+          "candidate_pair_count": 95,
+          "declared_length": 44,
+          "declared_source": 2757,
+          "decoder_max": 45,
+          "op_index": 2,
+          "projection_copy_index": 2
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "target_text_dependent_pair_oracle",
+      "coverage": 0.9951923076923077,
+      "hits": 207,
+      "hypothesis": "global_longest_target_match_pair",
+      "misses": 1,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "book": 55,
+          "candidate_pair_count": 95,
+          "declared_length": 44,
+          "declared_source": 2757,
+          "decoder_max": 45,
+          "op_index": 2,
+          "projection_copy_index": 2
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "target_text_dependent_source_tie_policy",
+      "coverage": 0.9951923076923077,
+      "hits": 207,
+      "hypothesis": "earliest_global_max_source",
+      "misses": 1,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "all_source_max_length": 45,
+          "book": 55,
+          "declared_length": 44,
+          "declared_source": 2757,
+          "global_max_length_source_count": 2,
+          "op_index": 2,
+          "predicted_source": null,
+          "projection_copy_index": 2
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "target_text_dependent_source_tie_policy",
+      "coverage": 0.375,
+      "hits": 78,
+      "hypothesis": "latest_global_max_source",
+      "misses": 130,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "all_source_max_length": 29,
+          "book": 11,
+          "declared_length": 29,
+          "declared_source": 833,
+          "global_max_length_source_count": 2,
+          "op_index": 2,
+          "predicted_source": 1540,
+          "projection_copy_index": 2
+        },
+        {
+          "all_source_max_length": 58,
+          "book": 11,
+          "declared_length": 58,
+          "declared_source": 862,
+          "global_max_length_source_count": 2,
+          "op_index": 5,
+          "predicted_source": 1569,
+          "projection_copy_index": 5
+        },
+        {
+          "all_source_max_length": 19,
+          "book": 12,
+          "declared_length": 19,
+          "declared_source": 314,
+          "global_max_length_source_count": 3,
+          "op_index": 1,
+          "predicted_source": 1439,
+          "projection_copy_index": 1
+        },
+        {
+          "all_source_max_length": 12,
+          "book": 12,
+          "declared_length": 12,
+          "declared_source": 853,
+          "global_max_length_source_count": 2,
+          "op_index": 2,
+          "predicted_source": 1560,
+          "projection_copy_index": 2
+        },
+        {
+          "all_source_max_length": 10,
+          "book": 12,
+          "declared_length": 10,
+          "declared_source": 12,
+          "global_max_length_source_count": 5,
+          "op_index": 4,
+          "predicted_source": 2099,
+          "projection_copy_index": 4
+        },
+        {
+          "all_source_max_length": 12,
+          "book": 12,
+          "declared_length": 12,
+          "declared_source": 207,
+          "global_max_length_source_count": 2,
+          "op_index": 7,
+          "predicted_source": 1908,
+          "projection_copy_index": 7
+        },
+        {
+          "all_source_max_length": 5,
+          "book": 12,
+          "declared_length": 5,
+          "declared_source": 50,
+          "global_max_length_source_count": 5,
+          "op_index": 12,
+          "predicted_source": 1751,
+          "projection_copy_index": 12
+        },
+        {
+          "all_source_max_length": 8,
+          "book": 13,
+          "declared_length": 8,
+          "declared_source": 4,
+          "global_max_length_source_count": 6,
+          "op_index": 4,
+          "predicted_source": 2091,
+          "projection_copy_index": 4
+        },
+        {
+          "all_source_max_length": 13,
+          "book": 13,
+          "declared_length": 13,
+          "declared_source": 1362,
+          "global_max_length_source_count": 2,
+          "op_index": 5,
+          "predicted_source": 2039,
+          "projection_copy_index": 5
+        },
+        {
+          "all_source_max_length": 9,
+          "book": 13,
+          "declared_length": 9,
+          "declared_source": 693,
+          "global_max_length_source_count": 2,
+          "op_index": 7,
+          "predicted_source": 1400,
+          "projection_copy_index": 7
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "target_text_dependent_boundary_clue",
+      "coverage": 0.5913461538461539,
+      "hits": 123,
+      "hypothesis": "copy_preserves_recurrent_next_boundary",
+      "misses": 85,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_pair_count": 442,
+          "declared_length": 276,
+          "declared_source": 0,
+          "decoder_max": 276,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 66,
+          "declared_length": 29,
+          "declared_source": 833,
+          "decoder_max": 29,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 119,
+          "declared_length": 58,
+          "declared_source": 862,
+          "decoder_max": 58,
+          "op_index": 5,
+          "projection_copy_index": 5
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 43,
+          "declared_length": 12,
+          "declared_source": 853,
+          "decoder_max": 12,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 36,
+          "declared_length": 10,
+          "declared_source": 12,
+          "decoder_max": 10,
+          "op_index": 4,
+          "projection_copy_index": 4
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 103,
+          "declared_length": 31,
+          "declared_source": 1304,
+          "decoder_max": 31,
+          "op_index": 10,
+          "projection_copy_index": 10
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 5,
+          "declared_length": 5,
+          "declared_source": 50,
+          "decoder_max": 5,
+          "op_index": 12,
+          "projection_copy_index": 12
+        },
+        {
+          "book": 13,
+          "candidate_pair_count": 75,
+          "declared_length": 26,
+          "declared_source": 2225,
+          "decoder_max": 26,
+          "op_index": 0,
+          "projection_copy_index": 0
+        },
+        {
+          "book": 13,
+          "candidate_pair_count": 15,
+          "declared_length": 19,
+          "declared_source": 527,
+          "decoder_max": 19,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 13,
+          "candidate_pair_count": 22,
+          "declared_length": 13,
+          "declared_source": 1362,
+          "decoder_max": 13,
+          "op_index": 5,
+          "projection_copy_index": 5
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "rejected_control",
+      "coverage": 0.0,
+      "hits": 0,
+      "hypothesis": "stop_before_max_protects_literal_payload",
+      "misses": 208,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_pair_count": 442,
+          "declared_length": 276,
+          "declared_source": 0,
+          "decoder_max": 276,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 3,
+          "declared_length": 7,
+          "declared_source": 1334,
+          "decoder_max": 7,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 66,
+          "declared_length": 29,
+          "declared_source": 833,
+          "decoder_max": 29,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 43,
+          "declared_length": 30,
+          "declared_source": 1349,
+          "decoder_max": 30,
+          "op_index": 4,
+          "projection_copy_index": 4
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 119,
+          "declared_length": 58,
+          "declared_source": 862,
+          "decoder_max": 58,
+          "op_index": 5,
+          "projection_copy_index": 5
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 45,
+          "declared_length": 19,
+          "declared_source": 314,
+          "decoder_max": 19,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 43,
+          "declared_length": 12,
+          "declared_source": 853,
+          "decoder_max": 12,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 36,
+          "declared_length": 10,
+          "declared_source": 12,
+          "decoder_max": 10,
+          "op_index": 4,
+          "projection_copy_index": 4
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 18,
+          "declared_length": 14,
+          "declared_source": 446,
+          "decoder_max": 14,
+          "op_index": 6,
+          "projection_copy_index": 6
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 16,
+          "declared_length": 12,
+          "declared_source": 207,
+          "decoder_max": 12,
+          "op_index": 7,
+          "projection_copy_index": 7
+        }
+      ],
+      "total": 208
+    },
+    {
+      "boundary": "target_text_dependent_boundary_clue",
+      "coverage": 0.004807692307692308,
+      "hits": 1,
+      "hypothesis": "declared_boundary_has_more_future_copy_options_than_max_boundary",
+      "misses": 207,
+      "promoted": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_pair_count": 442,
+          "declared_length": 276,
+          "declared_source": 0,
+          "decoder_max": 276,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 3,
+          "declared_length": 7,
+          "declared_source": 1334,
+          "decoder_max": 7,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 66,
+          "declared_length": 29,
+          "declared_source": 833,
+          "decoder_max": 29,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 43,
+          "declared_length": 30,
+          "declared_source": 1349,
+          "decoder_max": 30,
+          "op_index": 4,
+          "projection_copy_index": 4
+        },
+        {
+          "book": 11,
+          "candidate_pair_count": 119,
+          "declared_length": 58,
+          "declared_source": 862,
+          "decoder_max": 58,
+          "op_index": 5,
+          "projection_copy_index": 5
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 45,
+          "declared_length": 19,
+          "declared_source": 314,
+          "decoder_max": 19,
+          "op_index": 1,
+          "projection_copy_index": 1
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 43,
+          "declared_length": 12,
+          "declared_source": 853,
+          "decoder_max": 12,
+          "op_index": 2,
+          "projection_copy_index": 2
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 36,
+          "declared_length": 10,
+          "declared_source": 12,
+          "decoder_max": 10,
+          "op_index": 4,
+          "projection_copy_index": 4
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 18,
+          "declared_length": 14,
+          "declared_source": 446,
+          "decoder_max": 14,
+          "op_index": 6,
+          "projection_copy_index": 6
+        },
+        {
+          "book": 12,
+          "candidate_pair_count": 16,
+          "declared_length": 12,
+          "declared_source": 207,
+          "decoder_max": 12,
+          "op_index": 7,
+          "projection_copy_index": 7
+        }
+      ],
+      "total": 208
+    }
+  ],
+  "inputs": {
+    "segmentation_decision_trace": "analysis/segmentation_decision_audit_20260621/reports/test_results/01_segmentation_decision_trace.json"
+  },
+  "plaintext_claim": false,
+  "prequential_tie_policy_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_test_coverage": 0.9935483870967742,
+      "oracle_test_hits": 154,
+      "selected_matches_oracle": true,
+      "selected_policy": "earliest_global_max_source",
+      "test_coverage": 0.9935483870967742,
+      "test_hits": 154,
+      "test_rows": 155,
+      "train_coverage": 1.0,
+      "train_rows": 53
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_test_coverage": 0.9915966386554622,
+      "oracle_test_hits": 118,
+      "selected_matches_oracle": true,
+      "selected_policy": "earliest_global_max_source",
+      "test_coverage": 0.9915966386554622,
+      "test_hits": 118,
+      "test_rows": 119,
+      "train_coverage": 1.0,
+      "train_rows": 89
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_test_coverage": 0.9875,
+      "oracle_test_hits": 79,
+      "selected_matches_oracle": true,
+      "selected_policy": "earliest_global_max_source",
+      "test_coverage": 0.9875,
+      "test_hits": 79,
+      "test_rows": 80,
+      "train_coverage": 1.0,
+      "train_rows": 128
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_test_coverage": 0.9795918367346939,
+      "oracle_test_hits": 48,
+      "selected_matches_oracle": true,
+      "selected_policy": "earliest_global_max_source",
+      "test_coverage": 0.9795918367346939,
+      "test_hits": 48,
+      "test_rows": 49,
+      "train_coverage": 1.0,
+      "train_rows": 159
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_test_coverage": 1.0,
+      "oracle_test_hits": 18,
+      "selected_matches_oracle": true,
+      "selected_policy": "earliest_global_max_source",
+      "test_coverage": 1.0,
+      "test_hits": 18,
+      "test_rows": 18,
+      "train_coverage": 0.9947368421052631,
+      "train_rows": 190
+    }
+  ],
+  "schema": "structural_segmentation_hypothesis_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_emit_formula": true,
+    "row0_origin_changed": false,
+    "tests_target_text_dependent_structural_rules": true
+  },
+  "summary": {
+    "best_source_tie_policy": "earliest_global_max_source",
+    "best_source_tie_policy_coverage": 0.9951923076923077,
+    "best_source_tie_policy_hits": 207,
+    "copy_count": 208,
+    "interpretation": "The strongest structural finding is that target-text-aware longest-copy segmentation with earliest-source tie recovers nearly every copy pair in the stable projection. This is a real parser clue for segmentation, but not a source-free generator: it requires the target suffix being parsed and still has one exception. Literal-protection and recurrent-boundary shortcuts do not explain the decision trace.",
+    "literal_payload_protection_hits": 0,
+    "prequential_selected_matches_oracle_cells": 5,
+    "prequential_tie_policy_cells": 5,
+    "promotes_source_free_segmentation_rule": false,
+    "promotes_target_text_parser_clue": true,
+    "random_global_max_source_expected_coverage": 0.575667788408173,
+    "random_global_max_source_expected_hits": 119.73889998889999,
+    "recurrent_boundary_hits": 123,
+    "target_text_global_longest_pair_coverage": 0.9951923076923077,
+    "target_text_global_longest_pair_hits": 207,
+    "target_text_global_longest_pair_total": 208,
+    "unique_global_max_source_coverage": 0.375,
+    "unique_global_max_source_rows": 78
+  },
+  "translation_delta": "NONE",
+  "unique_global_max_source": {
+    "boundary": "partial_target_text_dependent_forcing",
+    "coverage_of_all_rows": 0.375,
+    "covered_accuracy": 1.0,
+    "covered_rows": 78,
+    "hits_on_covered_rows": 78,
+    "hypothesis": "unique_global_max_source_forces_joint_pair",
+    "promoted": false,
+    "total": 208
+  }
+}

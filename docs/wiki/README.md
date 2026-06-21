@@ -848,6 +848,12 @@ A seed requirement closure audit closes `13/13` requested checks for the seed
 front, including centrality, metadata/bookcase, family holdout, declaration
 cost, random/permuted, and prequential controls. Classification remains
 `AUDIT_ONLY_COMPRESSION`.
+A segmentation decision audit then tests the real parser blocker. On the stable
+copy projection, longest previous target match with earliest-source tie
+recovers `207/208` copy pairs, versus random global-max source expectation
+`119.739/208`. This is a promoted mechanical segmentation clue for
+target-text-aware parsing, but not a source-free generator and not a row0,
+plaintext, or translation change.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
