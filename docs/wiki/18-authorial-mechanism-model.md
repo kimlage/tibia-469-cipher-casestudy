@@ -342,6 +342,12 @@ policy-cutoff cases and `60/60` books. The canonical exposed-source skeleton has
 `261` ops, `208` copy items, `53` literal runs, `266` literal digits, and `9301`
 copied digits. This is real segmentation evidence, but still only an atlas:
 literal payload and copy-source choices remain external to the decoder.
+An exact skeleton dependency ledger then makes that boundary quantitative.
+Compared with `609` active external dependency fields, the skeleton atlas leaves
+`208` copy-source fields and `53` literal payload chunks external (`261` fields),
+while the atlas itself has `261` stable operation skeleton records. Total
+materialized atlas+external records are therefore `522`: a real dependency-ledger
+improvement, but not a compression-bound change or generator promotion.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1985,6 +1991,7 @@ book generation, not row0 pair-cell placement.
 - [Full source canonical policy boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.md)
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
+- [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

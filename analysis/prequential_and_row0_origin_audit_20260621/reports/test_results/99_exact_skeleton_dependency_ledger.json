@@ -1,0 +1,100 @@
+{
+  "active_formula_dependency_counts": {
+    "copied_digits": 10407,
+    "copy_op_count": 261,
+    "declared_copy_length_fields": 261,
+    "declared_copy_source_fields": 261,
+    "declared_literal_payload_fields": 87,
+    "declared_operation_dependency_fields": 609,
+    "literal_digits": 856,
+    "literal_op_count": 87,
+    "op_count": 348
+  },
+  "case_reopened": false,
+  "classification": "exact_skeleton_dependency_ledger_atlas_only",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "dependency_ledger_improved_generator_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "stable_source_free_atlas",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "exact_skeleton_dependency_counts": {
+    "atlas_operation_skeleton_records": 261,
+    "external_copy_source_fields": 208,
+    "external_dependency_fields_after_skeleton": 261,
+    "external_literal_payload_chunks": 53,
+    "external_literal_payload_digits": 266,
+    "total_materialized_records_after_skeleton": 522
+  },
+  "family_deltas": {
+    "copy_items_delta_vs_active": -53,
+    "external_field_delta_vs_active": -348,
+    "literal_payload_chunk_delta_vs_active": -34,
+    "prior_projection_copy_source_field_delta": 0,
+    "prior_projection_literal_digit_delta": 1,
+    "prior_projection_literal_run_delta": -1,
+    "total_materialized_record_delta_vs_active": -87
+  },
+  "inputs": {
+    "gate71_final_dependency_refresh": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json",
+    "gate87_stable_projection_boundary": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/87_stable_path_projection_boundary_audit.json",
+    "gate98_exact_skeleton_invariance": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.json"
+  },
+  "plaintext_claim": false,
+  "prior_projection_dependency_counts": {
+    "item_type_charge_removed_from_projection": true,
+    "literal_length_charge_removed_from_projection": true,
+    "materialized_copy_length_fields": 208,
+    "materialized_copy_source_fields": 208,
+    "materialized_literal_payload_digit_fields": 265,
+    "materialized_operation_dependency_fields": 470,
+    "materialized_seed_payload_digit_fields": 1696
+  },
+  "residual_dependencies": {
+    "copied_digits": 9301,
+    "copy_source_fields": 208,
+    "decoder_can_emit_books_from_skeleton_without_payload_or_sources": false,
+    "literal_payload_chunks": 53,
+    "literal_payload_digits": 266,
+    "seed_books_external": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "skeleton_records": 261,
+    "target_text_required_for_copy_source_choice": true,
+    "target_text_required_for_literal_payload": true
+  },
+  "schema": "exact_skeleton_dependency_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "ledger_only": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "active_external_dependency_fields": 609,
+    "copied_digits": 9301,
+    "copy_items": 208,
+    "interpretation": "The exact source-free skeleton moves operation type and length into a stable atlas, reducing the residual external field families to literal payload chunks and copy-source choices. Because the atlas itself is still materialized and source/payload fields remain external, this is a dependency ledger improvement rather than a generator promotion.",
+    "ledger_dependency_reduction": true,
+    "literal_digits": 266,
+    "literal_runs": 53,
+    "promotes_generator": false,
+    "skeleton_atlas_records": 261,
+    "skeleton_external_dependency_fields": 261,
+    "skeleton_total_materialized_records": 522
+  },
+  "translation_delta": "NONE"
+}

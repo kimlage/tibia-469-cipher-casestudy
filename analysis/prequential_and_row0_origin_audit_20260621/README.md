@@ -310,6 +310,9 @@ exogenous.
 - [scripts/98_full_source_exact_skeleton_invariance.py](scripts/98_full_source_exact_skeleton_invariance.py) - checks exact source-free operation skeleton invariance across policies and cutoffs.
 - [reports/test_results/98_full_source_exact_skeleton_invariance.md](reports/test_results/98_full_source_exact_skeleton_invariance.md) - exact source-free skeleton invariance result.
 - [reports/test_results/98_full_source_exact_skeleton_invariance.json](reports/test_results/98_full_source_exact_skeleton_invariance.json) - structured exact skeleton invariance ledger.
+- [scripts/99_exact_skeleton_dependency_ledger.py](scripts/99_exact_skeleton_dependency_ledger.py) - converts the invariant skeleton into an explicit dependency ledger.
+- [reports/test_results/99_exact_skeleton_dependency_ledger.md](reports/test_results/99_exact_skeleton_dependency_ledger.md) - exact skeleton dependency ledger result.
+- [reports/test_results/99_exact_skeleton_dependency_ledger.json](reports/test_results/99_exact_skeleton_dependency_ledger.json) - structured exact skeleton dependency ledger.
 
 ## Boundary
 
@@ -342,6 +345,11 @@ exogenous.
   invariant in `175/175` policy-cutoff cases and `60/60` books. This is a real
   segmentation atlas (`261` ops, `208` copies, `53` literal runs), but source
   fields and literal payload remain outside the decoder.
+- Exact skeleton dependency ledger: the skeleton atlas moves operation type and
+  length into `261` stable skeleton records, leaving `208` copy-source fields and
+  `53` literal payload chunks external. Residual external fields drop from `609`
+  active fields to `261`, but total materialized atlas+external records are
+  still `522`, so no decoder-side generator is promoted.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

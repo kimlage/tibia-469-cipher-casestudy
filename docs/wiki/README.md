@@ -778,6 +778,11 @@ gain: after removing source addresses, the operation skeleton is invariant in
 `175/175` policy-cutoff cases and `60/60` books. The skeleton has `261` ops,
 `208` copies, `53` literal runs, and `266` literal digits, but remains an atlas
 because literal payload and copy-source choices are still external.
+The exact skeleton dependency ledger then quantifies the improvement: residual
+external fields fall from `609` active fields to `261` fields (`208` copy-source
+fields plus `53` literal payload chunks), while the stable skeleton atlas itself
+has `261` records. This is dependency-ledger progress, not a new compression
+bound or decoder-side generator.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -995,6 +1000,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   lower-bound bit balance,
   extracts an exact source-free operation skeleton invariant across all tested
   policies/cutoffs while retaining source and payload dependencies,
+  quantifies the skeleton atlas ledger (`261` atlas records plus `261` residual
+  external fields),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
