@@ -1,0 +1,857 @@
+{
+  "case_reopened": false,
+  "classification": "family_copy_address_losses_are_holdout_coordinate_artifacts",
+  "decision": {
+    "address_loss_status": "coordinate_comparison_artifact",
+    "generation_explanation_status": "stronger_but_still_partial",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "epsilon_bits": 0.001,
+  "inputs": {
+    "family_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+    "trainset_controls": "analysis/authorial_mechanism_20260620/scripts/128_prequential_recipe_reparse_trainset_controls.py"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "active_copy_rows": [
+        {
+          "book": 40,
+          "earliest_rebased_source": 1581,
+          "legal_rebased_source_count": 4,
+          "length": 97,
+          "op_index": 0,
+          "original_address_bits": 12.5980525001616,
+          "original_target_digit_global": 6204,
+          "rebased_address_bits": 13.394462694610317,
+          "rebased_minus_original_bits": 0.7964101944487165,
+          "rebased_target_digit_global": 10772,
+          "target_start": 0
+        },
+        {
+          "book": 40,
+          "earliest_rebased_source": 4423,
+          "legal_rebased_source_count": 2,
+          "length": 62,
+          "op_index": 2,
+          "original_address_bits": 12.621136113274641,
+          "original_target_digit_global": 6304,
+          "rebased_address_bits": 13.407798850221974,
+          "rebased_minus_original_bits": 0.7866627369473331,
+          "rebased_target_digit_global": 10872,
+          "target_start": 100
+        },
+        {
+          "book": 40,
+          "earliest_rebased_source": 117,
+          "legal_rebased_source_count": 13,
+          "length": 6,
+          "op_index": 3,
+          "original_address_bits": 12.635264656539514,
+          "original_target_digit_global": 6366,
+          "rebased_address_bits": 13.416005780559267,
+          "rebased_minus_original_bits": 0.7807411240197535,
+          "rebased_target_digit_global": 10934,
+          "target_start": 162
+        },
+        {
+          "book": 41,
+          "earliest_rebased_source": 123,
+          "legal_rebased_source_count": 10,
+          "length": 18,
+          "op_index": 0,
+          "original_address_bits": 12.63662462054365,
+          "original_target_digit_global": 6372,
+          "rebased_address_bits": 13.41679752760606,
+          "rebased_minus_original_bits": 0.7801729070624095,
+          "rebased_target_digit_global": 10940,
+          "target_start": 0
+        },
+        {
+          "book": 41,
+          "earliest_rebased_source": 359,
+          "legal_rebased_source_count": 12,
+          "length": 36,
+          "op_index": 1,
+          "original_address_bits": 12.640696837570093,
+          "original_target_digit_global": 6390,
+          "rebased_address_bits": 13.419170165028538,
+          "rebased_minus_original_bits": 0.7784733274584443,
+          "rebased_target_digit_global": 10958,
+          "target_start": 18
+        },
+        {
+          "book": 41,
+          "earliest_rebased_source": 142,
+          "legal_rebased_source_count": 5,
+          "length": 65,
+          "op_index": 2,
+          "original_address_bits": 12.64880694972577,
+          "original_target_digit_global": 6426,
+          "rebased_address_bits": 13.423903765836593,
+          "rebased_minus_original_bits": 0.7750968161108229,
+          "rebased_target_digit_global": 10994,
+          "target_start": 54
+        },
+        {
+          "book": 41,
+          "earliest_rebased_source": 78,
+          "legal_rebased_source_count": 7,
+          "length": 17,
+          "op_index": 3,
+          "original_address_bits": 12.663335723478353,
+          "original_target_digit_global": 6491,
+          "rebased_address_bits": 13.432411404703588,
+          "rebased_minus_original_bits": 0.7690756812252353,
+          "rebased_target_digit_global": 11059,
+          "target_start": 119
+        },
+        {
+          "book": 42,
+          "earliest_rebased_source": 95,
+          "legal_rebased_source_count": 8,
+          "length": 22,
+          "op_index": 0,
+          "original_address_bits": 12.667111542075027,
+          "original_target_digit_global": 6508,
+          "rebased_address_bits": 13.434628227636725,
+          "rebased_minus_original_bits": 0.7675166855616986,
+          "rebased_target_digit_global": 11076,
+          "target_start": 0
+        },
+        {
+          "book": 42,
+          "earliest_rebased_source": 207,
+          "legal_rebased_source_count": 6,
+          "length": 55,
+          "op_index": 1,
+          "original_address_bits": 12.671983272091865,
+          "original_target_digit_global": 6530,
+          "rebased_address_bits": 13.437492010125352,
+          "rebased_minus_original_bits": 0.7655087380334873,
+          "rebased_target_digit_global": 11098,
+          "target_start": 22
+        },
+        {
+          "book": 42,
+          "earliest_rebased_source": 347,
+          "legal_rebased_source_count": 9,
+          "length": 12,
+          "op_index": 2,
+          "original_address_bits": 12.684091106529095,
+          "original_target_digit_global": 6585,
+          "rebased_address_bits": 13.444626694202688,
+          "rebased_minus_original_bits": 0.7605355876735924,
+          "rebased_target_digit_global": 11153,
+          "target_start": 77
+        },
+        {
+          "book": 42,
+          "earliest_rebased_source": 262,
+          "legal_rebased_source_count": 1,
+          "length": 85,
+          "op_index": 4,
+          "original_address_bits": 12.687156944138907,
+          "original_target_digit_global": 6599,
+          "rebased_address_bits": 13.44643717584693,
+          "rebased_minus_original_bits": 0.7592802317080221,
+          "rebased_target_digit_global": 11167,
+          "target_start": 91
+        },
+        {
+          "book": 42,
+          "earliest_rebased_source": 398,
+          "legal_rebased_source_count": 9,
+          "length": 9,
+          "op_index": 5,
+          "original_address_bits": 12.705632387361415,
+          "original_target_digit_global": 6684,
+          "rebased_address_bits": 13.457380879072534,
+          "rebased_minus_original_bits": 0.751748491711119,
+          "rebased_target_digit_global": 11252,
+          "target_start": 176
+        }
+      ],
+      "active_original_copy_address_bits": 151.85989265348994,
+      "active_rebased_copy_address_bits": 161.13111517545056,
+      "active_rebased_minus_original_address_bits": 9.271222521960624,
+      "active_rebased_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "coordinate_shift_explained_share": 0.9999857638903902,
+      "copy_count": 12,
+      "label": "hellgate_public_bookcase_13",
+      "reparse_book_rows": [
+        {
+          "book": 40,
+          "copy_address_bits": 40.21839931341058,
+          "copy_count": 3,
+          "copy_lengths": [
+            97,
+            63,
+            5
+          ],
+          "copy_targets": [
+            0,
+            100,
+            163
+          ]
+        },
+        {
+          "book": 41,
+          "copy_address_bits": 53.692282863174775,
+          "copy_count": 4,
+          "copy_lengths": [
+            18,
+            36,
+            65,
+            17
+          ],
+          "copy_targets": [
+            0,
+            18,
+            54,
+            119
+          ]
+        },
+        {
+          "book": 42,
+          "copy_address_bits": 67.22056498688423,
+          "copy_count": 5,
+          "copy_lengths": [
+            22,
+            55,
+            12,
+            85,
+            9
+          ],
+          "copy_targets": [
+            0,
+            22,
+            77,
+            91,
+            176
+          ]
+        }
+      ],
+      "reparse_copy_address_bits": 161.1312471634696,
+      "reparse_minus_active_original_address_bits": 9.271354509979659,
+      "reparse_minus_active_rebased_address_bits": 0.00013198801903513413,
+      "reparse_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "test_books": [
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "active_copy_rows": [
+        {
+          "book": 62,
+          "earliest_rebased_source": 424,
+          "legal_rebased_source_count": 3,
+          "length": 126,
+          "op_index": 0,
+          "original_address_bits": 13.30149619498255,
+          "original_target_digit_global": 10100,
+          "rebased_address_bits": 13.406205005418855,
+          "rebased_minus_original_bits": 0.1047088104363052,
+          "rebased_target_digit_global": 10860,
+          "target_start": 0
+        },
+        {
+          "book": 63,
+          "earliest_rebased_source": 6978,
+          "legal_rebased_source_count": 2,
+          "length": 47,
+          "op_index": 0,
+          "original_address_bits": 13.31938987600021,
+          "original_target_digit_global": 10226,
+          "rebased_address_bits": 13.422853195944265,
+          "rebased_minus_original_bits": 0.10346331994405489,
+          "rebased_target_digit_global": 10986,
+          "target_start": 0
+        },
+        {
+          "book": 63,
+          "earliest_rebased_source": 1247,
+          "legal_rebased_source_count": 2,
+          "length": 79,
+          "op_index": 1,
+          "original_address_bits": 13.326008077730995,
+          "original_target_digit_global": 10273,
+          "rebased_address_bits": 13.429014367174707,
+          "rebased_minus_original_bits": 0.10300628944371226,
+          "rebased_target_digit_global": 11033,
+          "target_start": 47
+        },
+        {
+          "book": 64,
+          "earliest_rebased_source": 1326,
+          "legal_rebased_source_count": 1,
+          "length": 76,
+          "op_index": 0,
+          "original_address_bits": 13.33706433868474,
+          "original_target_digit_global": 10352,
+          "rebased_address_bits": 13.439311461818846,
+          "rebased_minus_original_bits": 0.10224712313410578,
+          "rebased_target_digit_global": 11112,
+          "target_start": 0
+        },
+        {
+          "book": 64,
+          "earliest_rebased_source": 7025,
+          "legal_rebased_source_count": 4,
+          "length": 75,
+          "op_index": 1,
+          "original_address_bits": 13.347621368568134,
+          "original_target_digit_global": 10428,
+          "rebased_address_bits": 13.449148645375436,
+          "rebased_minus_original_bits": 0.10152727680730145,
+          "rebased_target_digit_global": 11188,
+          "target_start": 76
+        }
+      ],
+      "active_original_copy_address_bits": 66.63157985596663,
+      "active_rebased_copy_address_bits": 67.1465326757321,
+      "active_rebased_minus_original_address_bits": 0.5149528197654689,
+      "active_rebased_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "coordinate_shift_explained_share": 0.9999999999999724,
+      "copy_count": 5,
+      "label": "hellgate_public_bookcase_21",
+      "reparse_book_rows": [
+        {
+          "book": 62,
+          "copy_address_bits": 13.406205005418855,
+          "copy_count": 1,
+          "copy_lengths": [
+            126
+          ],
+          "copy_targets": [
+            0
+          ]
+        },
+        {
+          "book": 63,
+          "copy_address_bits": 26.851867563118972,
+          "copy_count": 2,
+          "copy_lengths": [
+            47,
+            79
+          ],
+          "copy_targets": [
+            0,
+            47
+          ]
+        },
+        {
+          "book": 64,
+          "copy_address_bits": 26.888460107194284,
+          "copy_count": 2,
+          "copy_lengths": [
+            76,
+            75
+          ],
+          "copy_targets": [
+            0,
+            76
+          ]
+        }
+      ],
+      "reparse_copy_address_bits": 67.14653267573212,
+      "reparse_minus_active_original_address_bits": 0.5149528197654831,
+      "reparse_minus_active_rebased_address_bits": 1.4210854715202004e-14,
+      "reparse_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "test_books": [
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "active_copy_rows": [
+        {
+          "book": 18,
+          "earliest_rebased_source": 87,
+          "legal_rebased_source_count": 5,
+          "length": 51,
+          "op_index": 0,
+          "original_address_bits": 11.603626344986193,
+          "original_target_digit_global": 3116,
+          "rebased_address_bits": 13.430060461694131,
+          "rebased_minus_original_bits": 1.8264341167079383,
+          "rebased_target_digit_global": 11041,
+          "target_start": 0
+        },
+        {
+          "book": 18,
+          "earliest_rebased_source": 196,
+          "legal_rebased_source_count": 5,
+          "length": 42,
+          "op_index": 1,
+          "original_address_bits": 11.627077840517394,
+          "original_target_digit_global": 3167,
+          "rebased_address_bits": 13.436711542137214,
+          "rebased_minus_original_bits": 1.8096337016198198,
+          "rebased_target_digit_global": 11092,
+          "target_start": 51
+        },
+        {
+          "book": 19,
+          "earliest_rebased_source": 238,
+          "legal_rebased_source_count": 4,
+          "length": 36,
+          "op_index": 0,
+          "original_address_bits": 11.646108641506103,
+          "original_target_digit_global": 3209,
+          "rebased_address_bits": 13.442165972229322,
+          "rebased_minus_original_bits": 1.7960573307232188,
+          "rebased_target_digit_global": 11134,
+          "target_start": 0
+        },
+        {
+          "book": 19,
+          "earliest_rebased_source": 148,
+          "legal_rebased_source_count": 7,
+          "length": 48,
+          "op_index": 1,
+          "original_address_bits": 11.662223305317841,
+          "original_target_digit_global": 3245,
+          "rebased_address_bits": 13.446824840780307,
+          "rebased_minus_original_bits": 1.7846015354624658,
+          "rebased_target_digit_global": 11170,
+          "target_start": 36
+        },
+        {
+          "book": 19,
+          "earliest_rebased_source": 881,
+          "legal_rebased_source_count": 11,
+          "length": 45,
+          "op_index": 2,
+          "original_address_bits": 11.683433292835403,
+          "original_target_digit_global": 3293,
+          "rebased_address_bits": 13.453013354466314,
+          "rebased_minus_original_bits": 1.7695800616309114,
+          "rebased_target_digit_global": 11218,
+          "target_start": 84
+        }
+      ],
+      "active_original_copy_address_bits": 58.22246942516293,
+      "active_rebased_copy_address_bits": 67.20877617130728,
+      "active_rebased_minus_original_address_bits": 8.98630674614435,
+      "active_rebased_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "coordinate_shift_explained_share": 1.0,
+      "copy_count": 5,
+      "label": "hellgate_public_bookcase_33",
+      "reparse_book_rows": [
+        {
+          "book": 18,
+          "copy_address_bits": 26.866772003831343,
+          "copy_count": 2,
+          "copy_lengths": [
+            51,
+            42
+          ],
+          "copy_targets": [
+            0,
+            51
+          ]
+        },
+        {
+          "book": 19,
+          "copy_address_bits": 40.34200416747594,
+          "copy_count": 3,
+          "copy_lengths": [
+            36,
+            48,
+            45
+          ],
+          "copy_targets": [
+            0,
+            36,
+            84
+          ]
+        }
+      ],
+      "reparse_copy_address_bits": 67.20877617130728,
+      "reparse_minus_active_original_address_bits": 8.98630674614435,
+      "reparse_minus_active_rebased_address_bits": 0.0,
+      "reparse_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "test_books": [
+        18,
+        19
+      ]
+    },
+    {
+      "active_copy_rows": [
+        {
+          "book": 54,
+          "earliest_rebased_source": 3350,
+          "legal_rebased_source_count": 1,
+          "length": 48,
+          "op_index": 0,
+          "original_address_bits": 13.067938476436064,
+          "original_target_digit_global": 8591,
+          "rebased_address_bits": 13.401412878714178,
+          "rebased_minus_original_bits": 0.33347440227811376,
+          "rebased_target_digit_global": 10824,
+          "target_start": 0
+        },
+        {
+          "book": 54,
+          "earliest_rebased_source": 27,
+          "legal_rebased_source_count": 14,
+          "length": 9,
+          "op_index": 1,
+          "original_address_bits": 13.075980462416286,
+          "original_target_digit_global": 8639,
+          "rebased_address_bits": 13.407798850221974,
+          "rebased_minus_original_bits": 0.3318183878056882,
+          "rebased_target_digit_global": 10872,
+          "target_start": 48
+        },
+        {
+          "book": 55,
+          "earliest_rebased_source": 2638,
+          "legal_rebased_source_count": 2,
+          "length": 13,
+          "op_index": 0,
+          "original_address_bits": 13.077483356859508,
+          "original_target_digit_global": 8648,
+          "rebased_address_bits": 13.40899307934218,
+          "rebased_minus_original_bits": 0.3315097224826715,
+          "rebased_target_digit_global": 10881,
+          "target_start": 0
+        },
+        {
+          "book": 55,
+          "earliest_rebased_source": 2748,
+          "legal_rebased_source_count": 1,
+          "length": 54,
+          "op_index": 1,
+          "original_address_bits": 13.079651444144783,
+          "original_target_digit_global": 8661,
+          "rebased_address_bits": 13.410716333604269,
+          "rebased_minus_original_bits": 0.3310648894594852,
+          "rebased_target_digit_global": 10894,
+          "target_start": 13
+        },
+        {
+          "book": 55,
+          "earliest_rebased_source": 2757,
+          "legal_rebased_source_count": 2,
+          "length": 45,
+          "op_index": 2,
+          "original_address_bits": 13.088622630607802,
+          "original_target_digit_global": 8715,
+          "rebased_address_bits": 13.417852514885897,
+          "rebased_minus_original_bits": 0.32922988427809585,
+          "rebased_target_digit_global": 10948,
+          "target_start": 67
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2272,
+          "legal_rebased_source_count": 1,
+          "length": 40,
+          "op_index": 0,
+          "original_address_bits": 13.096715154488535,
+          "original_target_digit_global": 8764,
+          "rebased_address_bits": 13.424297532397075,
+          "rebased_minus_original_bits": 0.3275823779085396,
+          "rebased_target_digit_global": 10997,
+          "target_start": 0
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2177,
+          "legal_rebased_source_count": 3,
+          "length": 36,
+          "op_index": 1,
+          "original_address_bits": 13.103287808412022,
+          "original_target_digit_global": 8804,
+          "rebased_address_bits": 13.429537509249478,
+          "rebased_minus_original_bits": 0.3262497008374563,
+          "rebased_target_digit_global": 11037,
+          "target_start": 40
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 4068,
+          "legal_rebased_source_count": 1,
+          "length": 53,
+          "op_index": 2,
+          "original_address_bits": 13.109177703355275,
+          "original_target_digit_global": 8840,
+          "rebased_address_bits": 13.434237271026891,
+          "rebased_minus_original_bits": 0.3250595676716159,
+          "rebased_target_digit_global": 11073,
+          "target_start": 76
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2312,
+          "legal_rebased_source_count": 2,
+          "length": 9,
+          "op_index": 3,
+          "original_address_bits": 13.117805411682438,
+          "original_target_digit_global": 8893,
+          "rebased_address_bits": 13.441128621804697,
+          "rebased_minus_original_bits": 0.3233232101222594,
+          "rebased_target_digit_global": 11126,
+          "target_start": 129
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2234,
+          "legal_rebased_source_count": 6,
+          "length": 12,
+          "op_index": 5,
+          "original_address_bits": 13.119751712201424,
+          "original_target_digit_global": 8905,
+          "rebased_address_bits": 13.442684367865834,
+          "rebased_minus_original_bits": 0.32293265566440965,
+          "rebased_target_digit_global": 11138,
+          "target_start": 141
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 6052,
+          "legal_rebased_source_count": 1,
+          "length": 73,
+          "op_index": 6,
+          "original_address_bits": 13.121695390556571,
+          "original_target_digit_global": 8917,
+          "rebased_address_bits": 13.444238438078106,
+          "rebased_minus_original_bits": 0.32254304752153473,
+          "rebased_target_digit_global": 11150,
+          "target_start": 153
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2167,
+          "legal_rebased_source_count": 4,
+          "length": 10,
+          "op_index": 7,
+          "original_address_bits": 13.133463346523438,
+          "original_target_digit_global": 8990,
+          "rebased_address_bits": 13.453656467320046,
+          "rebased_minus_original_bits": 0.320193120796608,
+          "rebased_target_digit_global": 11223,
+          "target_start": 226
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 2157,
+          "legal_rebased_source_count": 3,
+          "length": 8,
+          "op_index": 8,
+          "original_address_bits": 13.135067945777816,
+          "original_target_digit_global": 9000,
+          "rebased_address_bits": 13.454941833621119,
+          "rebased_minus_original_bits": 0.3198738878433023,
+          "rebased_target_digit_global": 11233,
+          "target_start": 236
+        },
+        {
+          "book": 56,
+          "earliest_rebased_source": 241,
+          "legal_rebased_source_count": 12,
+          "length": 22,
+          "op_index": 9,
+          "original_address_bits": 13.136350341454156,
+          "original_target_digit_global": 9008,
+          "rebased_address_bits": 13.455969302758032,
+          "rebased_minus_original_bits": 0.3196189613038758,
+          "rebased_target_digit_global": 11241,
+          "target_start": 244
+        }
+      ],
+      "active_original_copy_address_bits": 183.4629911849161,
+      "active_rebased_copy_address_bits": 188.0274650008898,
+      "active_rebased_minus_original_address_bits": 4.564473815973713,
+      "active_rebased_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "coordinate_shift_explained_share": 0.9999709195193972,
+      "copy_count": 14,
+      "label": "hellgate_public_bookcase_7",
+      "reparse_book_rows": [
+        {
+          "book": 54,
+          "copy_address_bits": 26.80934446988862,
+          "copy_count": 2,
+          "copy_lengths": [
+            49,
+            8
+          ],
+          "copy_targets": [
+            0,
+            49
+          ]
+        },
+        {
+          "book": 55,
+          "copy_address_bits": 40.237561927832346,
+          "copy_count": 3,
+          "copy_lengths": [
+            13,
+            54,
+            45
+          ],
+          "copy_targets": [
+            0,
+            13,
+            67
+          ]
+        },
+        {
+          "book": 56,
+          "copy_address_bits": 120.98069134412128,
+          "copy_count": 9,
+          "copy_lengths": [
+            40,
+            36,
+            53,
+            9,
+            12,
+            73,
+            10,
+            8,
+            22
+          ],
+          "copy_targets": [
+            0,
+            40,
+            76,
+            129,
+            141,
+            153,
+            226,
+            236,
+            244
+          ]
+        }
+      ],
+      "reparse_copy_address_bits": 188.02759774184224,
+      "reparse_minus_active_original_address_bits": 4.564606556926151,
+      "reparse_minus_active_rebased_address_bits": 0.00013274095243787087,
+      "reparse_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "test_books": [
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "active_copy_rows": [
+        {
+          "book": 68,
+          "earliest_rebased_source": 2869,
+          "legal_rebased_source_count": 3,
+          "length": 143,
+          "op_index": 0,
+          "original_address_bits": 13.422064766172813,
+          "original_target_digit_global": 10980,
+          "rebased_address_bits": 13.422064766172813,
+          "rebased_minus_original_bits": 0.0,
+          "rebased_target_digit_global": 10980,
+          "target_start": 0
+        },
+        {
+          "book": 69,
+          "earliest_rebased_source": 1546,
+          "legal_rebased_source_count": 1,
+          "length": 140,
+          "op_index": 0,
+          "original_address_bits": 13.440739423014273,
+          "original_target_digit_global": 11123,
+          "rebased_address_bits": 13.440739423014273,
+          "rebased_minus_original_bits": 0.0,
+          "rebased_target_digit_global": 11123,
+          "target_start": 0
+        }
+      ],
+      "active_original_copy_address_bits": 26.862804189187088,
+      "active_rebased_copy_address_bits": 26.862804189187088,
+      "active_rebased_minus_original_address_bits": 0.0,
+      "active_rebased_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "coordinate_shift_explained_share": null,
+      "copy_count": 2,
+      "label": "hellgate_public_bookcase_8",
+      "reparse_book_rows": [
+        {
+          "book": 68,
+          "copy_address_bits": 13.422064766172813,
+          "copy_count": 1,
+          "copy_lengths": [
+            143
+          ],
+          "copy_targets": [
+            0
+          ]
+        },
+        {
+          "book": 69,
+          "copy_address_bits": 13.440739423014273,
+          "copy_count": 1,
+          "copy_lengths": [
+            140
+          ],
+          "copy_targets": [
+            0
+          ]
+        }
+      ],
+      "reparse_copy_address_bits": 26.862804189187088,
+      "reparse_minus_active_original_address_bits": 0.0,
+      "reparse_minus_active_rebased_address_bits": 0.0,
+      "reparse_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "test_books": [
+        68,
+        69
+      ]
+    }
+  ],
+  "schema": "family_holdout_address_space_audit.v1",
+  "summary": {
+    "all_rebased_active_roundtrip": true,
+    "all_reparse_roundtrip": true,
+    "family_count": 5,
+    "interpretation": "The apparent copy-address losses in the family-loss audit are caused by comparing reparse addresses emitted after the training complement against active-recipe addresses charged in their original global numeric positions.",
+    "mean_original_address_delta_bits": 4.667444126563129,
+    "mean_rebased_address_delta_bits": 5.294579429744317e-05,
+    "original_positive_address_loss_count": 4,
+    "rebased_nonpositive_address_loss_count": 5,
+    "total_coordinate_shift_bits": 23.336955903844157
+  },
+  "translation_delta": "NONE"
+}

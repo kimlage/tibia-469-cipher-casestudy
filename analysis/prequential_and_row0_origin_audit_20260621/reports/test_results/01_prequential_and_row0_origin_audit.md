@@ -120,6 +120,17 @@ an exact tie. This localizes the remaining active-recipe advantage
 without promoting a new generation formula.
 See [09_recipe_reparse_family_loss_decomposition.md](09_recipe_reparse_family_loss_decomposition.md).
 
+### Family Holdout Address Space Audit
+
+A same-coordinate address audit then checks whether those copy-address
+losses are real recipe losses. They are not: when the active recipe is
+rebased into the same holdout coordinate system used by the reparse,
+all five families roundtrip and the mean copy-address delta falls from
+`4.667` bits to approximately `0.000` bits under a `0.001` bit epsilon.
+The prior active-recipe local wins were therefore an address-space
+comparison artifact, not a reparse failure.
+See [10_family_holdout_address_space_audit.md](10_family_holdout_address_space_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -169,7 +180,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts; the remaining family losses localize mostly to copy-address overhead, so the generation claim remains partial.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts; the remaining copy-address family losses vanish under same-coordinate repricing, so they are not real reparse failures.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

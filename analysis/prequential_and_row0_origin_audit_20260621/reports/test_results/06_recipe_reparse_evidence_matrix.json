@@ -112,6 +112,22 @@
     },
     {
       "evidence": {
+        "all_rebased_active_roundtrip": true,
+        "epsilon_bits": 0.001,
+        "family_count": 5,
+        "mean_original_address_delta_bits": 4.667444126563129,
+        "mean_rebased_address_delta_bits": 5.294579429744317e-05,
+        "original_positive_address_loss_count": 4,
+        "rebased_nonpositive_address_loss_count": 5,
+        "total_coordinate_shift_bits": 23.336955903844157
+      },
+      "interpretation": "The copy-address losses are a coordinate-comparison artifact: active original-coordinate address bits are not a fair family holdout comparator when held-out books are emitted after the training complement.",
+      "question": "do_family_copy_address_losses_survive_same_coordinate_repricing",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
+      "status": "failed_as_real_reparse_loss"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -146,6 +162,7 @@
     "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
   },
   "inputs": {
+    "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",

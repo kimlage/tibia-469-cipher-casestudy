@@ -904,6 +904,12 @@ dominated by copy-address bits with identical literal/copy inventory, and one
 family is an exact tie. This explains the residual family gap as local ledger
 overhead against an already-seen active recipe, not as row0 or semantic
 evidence.
+A same-coordinate address-space audit then corrects that comparison. When the
+active recipe is repriced in the same heldout-after-train coordinate system as
+the reparse, all five active recipes still roundtrip and the mean copy-address
+delta drops from `4.667` bits to approximately `0.000` bits. The apparent
+active local wins were therefore coordinate artifacts, not real family-reparse
+failures.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1343,6 +1349,7 @@ book generation, not row0 pair-cell placement.
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)
 - [Recipe reparse family loss decomposition](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.md)
+- [Family holdout address-space audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

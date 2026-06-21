@@ -43,6 +43,9 @@ exogenous.
 - [scripts/09_recipe_reparse_family_loss_decomposition.py](scripts/09_recipe_reparse_family_loss_decomposition.py) - decomposes the five family holdout losses against the active frozen recipe.
 - [reports/test_results/09_recipe_reparse_family_loss_decomposition.md](reports/test_results/09_recipe_reparse_family_loss_decomposition.md) - family loss component diagnosis.
 - [reports/test_results/09_recipe_reparse_family_loss_decomposition.json](reports/test_results/09_recipe_reparse_family_loss_decomposition.json) - structured family loss ledger.
+- [scripts/10_family_holdout_address_space_audit.py](scripts/10_family_holdout_address_space_audit.py) - tests whether the remaining family copy-address losses survive same-coordinate repricing.
+- [reports/test_results/10_family_holdout_address_space_audit.md](reports/test_results/10_family_holdout_address_space_audit.md) - address-space repricing result.
+- [reports/test_results/10_family_holdout_address_space_audit.json](reports/test_results/10_family_holdout_address_space_audit.json) - structured address-space ledger.
 
 ## Boundary
 
@@ -64,7 +67,10 @@ exogenous.
   component-failure families, while beating the active frozen recipe in `14/19`.
   The five remaining active-recipe wins are now localized: all roundtrip, all
   still beat raw digits, and four are dominated by copy-address overhead rather
-  than changed literal/copy inventory.
+  than changed literal/copy inventory. Same-coordinate address repricing then
+  shows those copy-address losses are artifacts of comparing reparse addresses
+  emitted after the training complement against active addresses charged in
+  original global numeric positions.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

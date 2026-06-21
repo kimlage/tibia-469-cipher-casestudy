@@ -396,6 +396,10 @@ component-failure families, while beating the active frozen recipe in `14/19`.
 A family-loss decomposition then localizes the five remaining active-recipe
 wins: all roundtrip and beat raw digits; four are dominated by copy-address
 overhead, and one is an exact tie.
+A same-coordinate address-space audit then shows those copy-address losses are
+comparison artifacts: repricing the active recipe in the heldout-after-train
+coordinate system drops the mean address delta from `4.667` bits to
+approximately `0.000` bits.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -573,7 +577,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   component fallback, quantifies and partly reduces the fixed-recipe
   externality through deterministic-reparse evidence and multi-cutoff train-set
   controls, adds public-bookcase family holdout evidence, localizes remaining
-  family losses to copy-address overhead or exact tie, closes the row0
+  family losses to copy-address overhead or exact tie, shows those address
+  losses vanish under same-coordinate repricing, closes the row0
   hypothesis requirement matrix with zero promoted origin formulas, and keeps
   row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

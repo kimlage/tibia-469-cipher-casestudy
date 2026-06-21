@@ -20,6 +20,7 @@ SOURCES = {
     "reparse_family_holdout": TEST_RESULTS / "08_recipe_reparse_family_holdout.json",
     "reparse_family_loss_decomposition": TEST_RESULTS
     / "09_recipe_reparse_family_loss_decomposition.json",
+    "family_holdout_address_space": TEST_RESULTS / "10_family_holdout_address_space_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -46,6 +47,7 @@ def make_result() -> dict[str, Any]:
     trainset_multicutoff = load_json(SOURCES["reparse_trainset_multicutoff"])
     family_holdout = load_json(SOURCES["reparse_family_holdout"])
     family_loss_decomposition = load_json(SOURCES["reparse_family_loss_decomposition"])
+    address_space = load_json(SOURCES["family_holdout_address_space"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -56,6 +58,7 @@ def make_result() -> dict[str, Any]:
         ("reparse_trainset_multicutoff", trainset_multicutoff),
         ("reparse_family_holdout", family_holdout),
         ("reparse_family_loss_decomposition", family_loss_decomposition),
+        ("family_holdout_address_space", address_space),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -213,6 +216,39 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "do_family_copy_address_losses_survive_same_coordinate_repricing",
+            "source": rel(SOURCES["family_holdout_address_space"]),
+            "status": "failed_as_real_reparse_loss",
+            "evidence": {
+                "family_count": address_space["summary"]["family_count"],
+                "all_rebased_active_roundtrip": address_space["summary"][
+                    "all_rebased_active_roundtrip"
+                ],
+                "original_positive_address_loss_count": address_space["summary"][
+                    "original_positive_address_loss_count"
+                ],
+                "rebased_nonpositive_address_loss_count": address_space["summary"][
+                    "rebased_nonpositive_address_loss_count"
+                ],
+                "mean_original_address_delta_bits": address_space["summary"][
+                    "mean_original_address_delta_bits"
+                ],
+                "mean_rebased_address_delta_bits": address_space["summary"][
+                    "mean_rebased_address_delta_bits"
+                ],
+                "total_coordinate_shift_bits": address_space["summary"][
+                    "total_coordinate_shift_bits"
+                ],
+                "epsilon_bits": address_space["epsilon_bits"],
+            },
+            "interpretation": (
+                "The copy-address losses are a coordinate-comparison artifact: "
+                "active original-coordinate address bits are not a fair family "
+                "holdout comparator when held-out books are emitted after the "
+                "training complement."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -352,6 +388,15 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['all_roundtrip']}; worst `{evidence['worst_family']}` "
                 f"{evidence['max_reparse_minus_active_bits']:.3f} bits; "
                 f"loss components {evidence['largest_loss_component_counts']}"
+            )
+        elif row["question"] == "do_family_copy_address_losses_survive_same_coordinate_repricing":
+            key = (
+                f"original losses {evidence['original_positive_address_loss_count']}/"
+                f"{evidence['family_count']}; rebased nonpositive "
+                f"{evidence['rebased_nonpositive_address_loss_count']}/"
+                f"{evidence['family_count']}; mean delta "
+                f"{evidence['mean_original_address_delta_bits']:.3f} -> "
+                f"{evidence['mean_rebased_address_delta_bits']:.3f} bits"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (
