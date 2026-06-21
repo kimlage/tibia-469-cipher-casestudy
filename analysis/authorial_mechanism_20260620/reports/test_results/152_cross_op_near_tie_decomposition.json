@@ -1,0 +1,84 @@
+{
+  "base_score": {
+    "copied_digits": 10406,
+    "copy_items": 261,
+    "copy_length_default_exception_bits": 1348.8058534696768,
+    "copy_source_default_exception_bits": 3002.838060159001,
+    "fixed_bits": 620.0,
+    "item_type_stream_bits": 212.01191674175735,
+    "literal_bits_no_payload": 380.0,
+    "literal_digits": 857,
+    "literal_payload_bits": 2613.660822752486,
+    "literal_runs": 87,
+    "roundtrip_ok": 70,
+    "total_bits": 8177.316653122922
+  },
+  "candidate": {
+    "book": 12,
+    "book_pos": 82,
+    "candidate_total_bits": 8177.344086698475,
+    "copy_items": 262,
+    "copy_length": 11,
+    "crossed_digits": 7,
+    "delta_bits": 0.02743357555300463,
+    "literal_digits": 853,
+    "literal_length_before": 4,
+    "literal_runs": 86,
+    "op_index": 8,
+    "source_digit_pos": 102,
+    "valid": true
+  },
+  "candidate_score": {
+    "copied_digits": 10410,
+    "copy_items": 262,
+    "copy_length_default_exception_bits": 1350.4445169257033,
+    "copy_source_default_exception_bits": 3014.0745973655776,
+    "fixed_bits": 620.0,
+    "item_type_stream_bits": 210.59466858143205,
+    "literal_bits_no_payload": 376.0,
+    "literal_digits": 853,
+    "literal_payload_bits": 2606.230303825762,
+    "literal_runs": 86,
+    "roundtrip_ok": 70,
+    "total_bits": 8177.344086698475
+  },
+  "case_reopened": false,
+  "classification": "cross_op_near_tie_explained_no_promotion",
+  "component_deltas": {
+    "copy_length_default_exception_bits": 1.6386634560265065,
+    "copy_source_default_exception_bits": 11.236537206576486,
+    "fixed_bits": 0.0,
+    "item_type_stream_bits": -1.4172481603253004,
+    "literal_bits_no_payload": -4.0,
+    "literal_payload_bits": -7.4305189267242895
+  },
+  "decision": {
+    "candidate_promoted": false,
+    "compression_bound_changed": false,
+    "near_tie_requires_new_model_or_declaration_credit": true,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "delta_checks": {
+    "absolute_difference": 3.979039320256561e-13,
+    "component_sum_delta_bits": 0.027433575553402534,
+    "total_delta_bits": 0.02743357555300463
+  },
+  "delta_signs": {
+    "penalty_components": {
+      "copy_length_default_exception_bits": 1.6386634560265065,
+      "copy_source_default_exception_bits": 11.236537206576486
+    },
+    "saving_components": {
+      "item_type_stream_bits": -1.4172481603253004,
+      "literal_bits_no_payload": -4.0,
+      "literal_payload_bits": -7.4305189267242895
+    }
+  },
+  "plaintext_claim": false,
+  "schema": "cross_op_near_tie_decomposition.v1",
+  "source_candidate_audit": "analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.json",
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "152_cross_op_near_tie_decomposition",
+  "translation_delta": "NONE"
+}

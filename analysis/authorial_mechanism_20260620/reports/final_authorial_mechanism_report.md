@@ -740,5 +740,10 @@ Generated audits in this directory should be treated as the current state:
   operations. It scores `465` valid cross-op candidates; none improves, and
   the best is only `+0.027` bits worse than active. This keeps the active
   parser choice while showing the frontier is tight.
+- `152_cross_op_near_tie_decomposition`: decomposes that `+0.027` bit near
+  miss. The candidate saves `4.000` literal-structure bits, `7.431` payload
+  bits, and `1.417` item-type bits, but pays `1.639` copy-length bits and
+  `11.237` copy-source bits. The loss is therefore real and source-ledger
+  dominated, not a rounding artifact.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

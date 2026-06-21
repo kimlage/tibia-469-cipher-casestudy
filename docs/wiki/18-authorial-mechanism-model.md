@@ -1011,6 +1011,11 @@ family. It permits a replacement copy to cross the literal boundary and consume
 following operations before trimming the remaining recipe. It scores `465`
 valid candidates; none improves, and the best is only `+0.027` bits worse than
 active, so the active parser remains retained for this local frontier.
+The cross-op near-tie decomposition then checks that this tiny loss is not a
+rounding artifact. The best candidate saves `4.000` literal-structure bits,
+`7.431` payload bits, and `1.417` item-type bits, but pays `1.639` copy-length
+bits and `11.237` copy-source bits. The near miss is source-ledger dominated
+and remains unpromoted.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1320,6 +1325,7 @@ book generation, not row0 pair-cell placement.
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
 - [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)
 - [Cross-op optional literal copy frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md)
+- [Cross-op near-tie decomposition](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

@@ -466,6 +466,9 @@ scores `74` candidates across `5` starts; none improves, and the best remains
 The cross-op optional literal copy frontier then allows those replacement
 copies to consume following operations. It scores `465` valid candidates; none
 improves, and the best is only `+0.027` bits worse than active.
+The cross-op near-tie decomposition explains that best miss: literal/item
+savings are nearly canceled by copy-length/source costs, with copy source alone
+adding `+11.237` bits. The tiny loss is real, not rounding noise.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

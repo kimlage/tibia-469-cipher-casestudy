@@ -409,6 +409,9 @@ authorial method: family/bookcase holdouts still have failures.
 - `scripts/151_cross_op_optional_literal_copy_frontier.py` - allows optional
   literal copy repairs to cross into following operations; all `465` valid
   candidates are still worse, with the best only `+0.027` bits.
+- `scripts/152_cross_op_near_tie_decomposition.py` - decomposes the best
+  `+0.027` bit cross-op near miss; literal/item savings are almost exactly
+  canceled by copy-length/source costs, especially copy source.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
