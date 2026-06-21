@@ -114,6 +114,16 @@ This reduces the literal-window blocker further: most starts are now
 explained by an online local-peak rule, but four followed-by-copy gaps
 remain exceptions.
 
+## Literal Stop Exception Topology
+
+- Exception count: `4`.
+- Exception classes: `{'book_start_overstop': 1, 'book_start_understop': 1, 'long_internal_understop': 1, 'microgap_zero_offset_understop': 1}`.
+- Best source-free exception flag: `source_free_predicted_copy_le8` with recall `0.750` and `9` false positives.
+- Promotes exception rule: `False`.
+
+The residual exceptions are heterogeneous; no source-free exception
+flag isolates all four without false positives.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -129,3 +139,4 @@ target text or changing the skeleton/literal accounting.
 - [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)
 - [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)
 - [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)
+- [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)

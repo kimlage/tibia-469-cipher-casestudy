@@ -868,6 +868,9 @@ An online stop-rule audit reduces that retained surface further: first confirmed
 max-copy local peak with confirmation window `6` predicts `45/49`
 followed-by-copy literal stops and `50/54` gaps with book-end default. The same
 policy/window is prefix-selected in `5/5` cells, but four exceptions remain.
+A literal-stop exception topology audit maps those four misses into four
+classes; the best source-free exception flag has recall `0.750` with `9` false
+positives, so no exception rule is promoted.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

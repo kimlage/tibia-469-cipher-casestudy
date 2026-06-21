@@ -1,0 +1,150 @@
+{
+  "case_reopened": false,
+  "classification": "literal_stop_exceptions_heterogeneous_no_rule_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "literal_stop_residual_exceptions_mapped",
+    "literal_window_status": "four_exceptions_retained",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_free_parser_status": "not_promoted",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "exception_rows": [
+    {
+      "book": 14,
+      "exception_class": "book_start_understop",
+      "literal_length": 39,
+      "next_copy_length": 6,
+      "ok": false,
+      "op_index": 0,
+      "predicted_copy_length": 5,
+      "predicted_literal_length": 18,
+      "predicted_total_advance": 23,
+      "prediction_error": -21,
+      "target_start": 0
+    },
+    {
+      "book": 16,
+      "exception_class": "microgap_zero_offset_understop",
+      "literal_length": 1,
+      "next_copy_length": 8,
+      "ok": false,
+      "op_index": 9,
+      "predicted_copy_length": 8,
+      "predicted_literal_length": 0,
+      "predicted_total_advance": 8,
+      "prediction_error": -1,
+      "target_start": 164
+    },
+    {
+      "book": 34,
+      "exception_class": "book_start_overstop",
+      "literal_length": 4,
+      "next_copy_length": 6,
+      "ok": false,
+      "op_index": 0,
+      "predicted_copy_length": 45,
+      "predicted_literal_length": 10,
+      "predicted_total_advance": 55,
+      "prediction_error": 6,
+      "target_start": 0
+    },
+    {
+      "book": 57,
+      "exception_class": "long_internal_understop",
+      "literal_length": 28,
+      "next_copy_length": 44,
+      "ok": false,
+      "op_index": 2,
+      "predicted_copy_length": 5,
+      "predicted_literal_length": 11,
+      "predicted_total_advance": 16,
+      "prediction_error": -17,
+      "target_start": 69
+    }
+  ],
+  "inputs": {
+    "online_literal_stop_rule_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/06_online_literal_stop_rule_audit.json"
+  },
+  "plaintext_claim": false,
+  "predicate_rows": [
+    {
+      "false_positive_ok_rows": 0,
+      "precision": 1.0,
+      "predicate": "source_free_predicted_offset_zero",
+      "promotes_exception_rule": false,
+      "recall": 0.25,
+      "true_positive_exceptions": 1,
+      "uses_stable_boundary": false
+    },
+    {
+      "false_positive_ok_rows": 9,
+      "precision": 0.25,
+      "predicate": "source_free_predicted_copy_le8",
+      "promotes_exception_rule": false,
+      "recall": 0.75,
+      "true_positive_exceptions": 3,
+      "uses_stable_boundary": false
+    },
+    {
+      "false_positive_ok_rows": 11,
+      "precision": 0.15384615384615385,
+      "predicate": "source_free_book_start",
+      "promotes_exception_rule": false,
+      "recall": 0.5,
+      "true_positive_exceptions": 2,
+      "uses_stable_boundary": false
+    },
+    {
+      "false_positive_ok_rows": 0,
+      "precision": 1.0,
+      "predicate": "diagnostic_predicted_before_stable",
+      "promotes_exception_rule": false,
+      "recall": 0.75,
+      "true_positive_exceptions": 3,
+      "uses_stable_boundary": true
+    },
+    {
+      "false_positive_ok_rows": 0,
+      "precision": 1.0,
+      "predicate": "diagnostic_abs_error_ge6",
+      "promotes_exception_rule": false,
+      "recall": 0.75,
+      "true_positive_exceptions": 3,
+      "uses_stable_boundary": true
+    },
+    {
+      "false_positive_ok_rows": 9,
+      "precision": 0.3076923076923077,
+      "predicate": "diagnostic_short_next_or_long_literal",
+      "promotes_exception_rule": false,
+      "recall": 1.0,
+      "true_positive_exceptions": 4,
+      "uses_stable_boundary": true
+    }
+  ],
+  "schema": "literal_stop_exception_topology_audit.v1",
+  "summary": {
+    "best_source_free_exception_flag": {
+      "false_positive_ok_rows": 9,
+      "precision": 0.25,
+      "predicate": "source_free_predicted_copy_le8",
+      "promotes_exception_rule": false,
+      "recall": 0.75,
+      "true_positive_exceptions": 3,
+      "uses_stable_boundary": false
+    },
+    "exception_classes": {
+      "book_start_overstop": 1,
+      "book_start_understop": 1,
+      "long_internal_understop": 1,
+      "microgap_zero_offset_understop": 1
+    },
+    "exception_count": 4,
+    "followed_by_copy_rows": 49,
+    "interpretation": "The four online literal-stop misses are heterogeneous. Source-free flags such as book-start, predicted offset zero, or short predicted copy do not isolate them without false positives. Diagnostic predicates can describe the failures after seeing the stable stop, but they are not generation rules.",
+    "online_rule_hits": 45,
+    "promotes_exception_rule": false
+  },
+  "translation_delta": "NONE"
+}

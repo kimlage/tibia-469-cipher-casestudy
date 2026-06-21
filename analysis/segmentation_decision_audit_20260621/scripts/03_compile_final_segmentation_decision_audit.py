@@ -15,6 +15,7 @@ STRUCTURAL = TEST_RESULTS / "02_structural_segmentation_hypothesis_audit.json"
 DEPENDENCY = TEST_RESULTS / "04_parser_dependency_reduction_ledger.json"
 LITERAL_GAP = TEST_RESULTS / "05_literal_gap_boundary_audit.json"
 ONLINE_LITERAL = TEST_RESULTS / "06_online_literal_stop_rule_audit.json"
+LITERAL_EXCEPTION = TEST_RESULTS / "07_literal_stop_exception_topology_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -46,6 +47,9 @@ def main() -> None:
     dependency = load_json(DEPENDENCY) if DEPENDENCY.exists() else None
     literal_gap = load_json(LITERAL_GAP) if LITERAL_GAP.exists() else None
     online_literal = load_json(ONLINE_LITERAL) if ONLINE_LITERAL.exists() else None
+    literal_exception = (
+        load_json(LITERAL_EXCEPTION) if LITERAL_EXCEPTION.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -54,6 +58,8 @@ def main() -> None:
         assert_boundary("literal_gap_boundary_audit", literal_gap)
     if online_literal is not None:
         assert_boundary("online_literal_stop_rule_audit", online_literal)
+    if literal_exception is not None:
+        assert_boundary("literal_stop_exception_topology_audit", literal_exception)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -62,6 +68,9 @@ def main() -> None:
     greedy = None if dependency is None else dependency["full_greedy_parser_control"]
     gap_summary = None if literal_gap is None else literal_gap["summary"]
     online_summary = None if online_literal is None else online_literal["summary"]
+    exception_summary = (
+        None if literal_exception is None else literal_exception["summary"]
+    )
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -213,6 +222,24 @@ def main() -> None:
                 "",
             ]
         )
+    if exception_summary is not None:
+        best_flag = exception_summary["best_source_free_exception_flag"]
+        lines.extend(
+            [
+                "## Literal Stop Exception Topology",
+                "",
+                f"- Exception count: `{exception_summary['exception_count']}`.",
+                f"- Exception classes: `{exception_summary['exception_classes']}`.",
+                f"- Best source-free exception flag: `{best_flag['predicate']}` "
+                f"with recall `{best_flag['recall']:.3f}` and "
+                f"`{best_flag['false_positive_ok_rows']}` false positives.",
+                f"- Promotes exception rule: `{exception_summary['promotes_exception_rule']}`.",
+                "",
+                "The residual exceptions are heterogeneous; no source-free exception",
+                "flag isolates all four without false positives.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -230,6 +257,7 @@ def main() -> None:
             "- [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)",
             "- [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)",
             "- [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)",
+            "- [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)",
             "",
         ]
     )

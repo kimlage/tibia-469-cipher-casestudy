@@ -474,6 +474,10 @@ window `6`, predicts `45/49` followed-by-copy literal stops and `50/54` gaps
 with the book-end default. Prefix selection chooses the same policy/window in
 `5/5` cells, but the rule still has four followed-by-copy exceptions and is not
 a source-free generator.
+A literal-stop exception topology audit then maps those four misses. They split
+into four classes, and the best source-free exception flag reaches recall
+`0.750` with `9` false positives. No exception rule is promoted; the residual
+four stops remain retained.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2143,6 +2147,7 @@ book generation, not row0 pair-cell placement.
 - [Parser dependency reduction ledger](../../analysis/segmentation_decision_audit_20260621/reports/test_results/04_parser_dependency_reduction_ledger.md)
 - [Literal gap boundary audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/05_literal_gap_boundary_audit.md)
 - [Online literal stop rule audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/06_online_literal_stop_rule_audit.md)
+- [Literal stop exception topology audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/07_literal_stop_exception_topology_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
