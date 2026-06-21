@@ -199,6 +199,9 @@ exogenous.
 - [scripts/61_active_copy_length_exception_topology_gate.py](scripts/61_active_copy_length_exception_topology_gate.py) - remaps active target-max copy-length exceptions after promoted resegmentations.
 - [reports/test_results/61_active_copy_length_exception_topology_gate.md](reports/test_results/61_active_copy_length_exception_topology_gate.md) - active copy-length exception topology result.
 - [reports/test_results/61_active_copy_length_exception_topology_gate.json](reports/test_results/61_active_copy_length_exception_topology_gate.json) - structured active copy-length exception topology ledger.
+- [scripts/62_active_residual_targetmax_resegmentation_gate.py](scripts/62_active_residual_targetmax_resegmentation_gate.py) - exact-scores residual local target-max extend-and-trim rewrites on the active formula.
+- [reports/test_results/62_active_residual_targetmax_resegmentation_gate.md](reports/test_results/62_active_residual_targetmax_resegmentation_gate.md) - active residual target-max resegmentation result.
+- [reports/test_results/62_active_residual_targetmax_resegmentation_gate.json](reports/test_results/62_active_residual_targetmax_resegmentation_gate.json) - structured active residual target-max resegmentation ledger.
 
 ## Boundary
 
@@ -363,7 +366,9 @@ exogenous.
   unchanged. The active copy-length exception topology gate then maps the
   residual frontier: target-max exceptions drop from `23` to `19`, but all
   `19` remaining exceptions still cross into exactly one following op and stop
-  inside it.
+  inside it. The residual target-max resegmentation gate exact-scores all `38`
+  local rewrites for those exceptions and finds `0` improving candidates; the
+  best valid rewrite is still `-0.000163` bits worse.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

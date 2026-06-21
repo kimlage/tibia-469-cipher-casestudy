@@ -261,6 +261,14 @@ ACTIVE_COPY_LENGTH_EXCEPTION_TOPOLOGY_GATE = (
     / "test_results"
     / "61_active_copy_length_exception_topology_gate.json"
 )
+ACTIVE_RESIDUAL_TARGETMAX_RESEGMENTATION_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "62_active_residual_targetmax_resegmentation_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -578,6 +586,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_copy_length_exception_topology_gate",
         active_copy_length_exception_topology,
+    )
+    active_residual_targetmax_resegmentation = load_json(
+        ACTIVE_RESIDUAL_TARGETMAX_RESEGMENTATION_GATE
+    )
+    assert_analysis_boundary(
+        "active_residual_targetmax_resegmentation_gate",
+        active_residual_targetmax_resegmentation,
     )
 
     predictive = legacy["predictive_validation"]
@@ -913,6 +928,15 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_copy_length_exception_topology["summary"],
             "decision": active_copy_length_exception_topology["decision"],
         },
+        "active_residual_targetmax_resegmentation": {
+            "classification": active_residual_targetmax_resegmentation[
+                "classification"
+            ],
+            "source": rel(ACTIVE_RESIDUAL_TARGETMAX_RESEGMENTATION_GATE),
+            "scope": active_residual_targetmax_resegmentation["scope"],
+            "summary": active_residual_targetmax_resegmentation["summary"],
+            "decision": active_residual_targetmax_resegmentation["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -964,6 +988,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
             "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
             "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
+            "active_residual_targetmax_resegmentation_status": "local_extend_trim_saturated_no_improvements",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1031,6 +1056,7 @@ def render_markdown(
     active_formula_dependency_refresh_gate_link: str,
     active_source_length_joint_refresh_gate_link: str,
     active_copy_length_exception_topology_gate_link: str,
+    active_residual_targetmax_resegmentation_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1110,6 +1136,9 @@ def render_markdown(
         "summary"
     ]
     active_length_topology = result["active_copy_length_exception_topology"][
+        "summary"
+    ]
+    residual_targetmax = result["active_residual_targetmax_resegmentation"][
         "summary"
     ]
 
@@ -2023,6 +2052,19 @@ def render_markdown(
             "length default.",
             f"See [61_active_copy_length_exception_topology_gate.md]({active_copy_length_exception_topology_gate_link}).",
             "",
+            "### Active Residual Target-Max Resegmentation Gate",
+            "",
+            "The residual target-max gate tests the remaining active exceptions "
+            "with the same local extend-and-trim modes used by the promoted "
+            "target-max gates. It tests "
+            f"`{residual_targetmax['candidate_count']}` candidates, with "
+            f"`{residual_targetmax['valid_candidate_count']}` valid and "
+            f"`{residual_targetmax['improving_candidate_count']}` improving.",
+            "The best valid residual rewrite is still worse by "
+            f"`{residual_targetmax['best_valid_candidate']['candidate_gain_bits']:+.6f}` "
+            "bits, so the local residual target-max frontier is saturated.",
+            f"See [62_active_residual_targetmax_resegmentation_gate.md]({active_residual_targetmax_resegmentation_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2131,6 +2173,7 @@ def render_markdown(
             "- The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.",
             "- The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.",
             "- The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.",
+            "- The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2291,6 +2334,9 @@ def main() -> None:
             ),
             active_copy_length_exception_topology_gate_link=(
                 "61_active_copy_length_exception_topology_gate.md"
+            ),
+            active_residual_targetmax_resegmentation_gate_link=(
+                "62_active_residual_targetmax_resegmentation_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2457,6 +2503,9 @@ def main() -> None:
             ),
             active_copy_length_exception_topology_gate_link=(
                 "test_results/61_active_copy_length_exception_topology_gate.md"
+            ),
+            active_residual_targetmax_resegmentation_gate_link=(
+                "test_results/62_active_residual_targetmax_resegmentation_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

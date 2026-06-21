@@ -657,6 +657,81 @@
       "total_pair_to_end_proxy_reduction_pct": 97.23885021649389
     }
   },
+  "active_residual_targetmax_resegmentation": {
+    "classification": "active_residual_targetmax_resegmentation_saturated_no_improvements",
+    "decision": {
+      "compression_bound_status": "unchanged_8156_049986",
+      "copy_length_dependency_status": "retained_declared",
+      "generation_explanation_status": "residual_boundaries_require_nonlocal_joint_parser",
+      "residual_targetmax_resegmentation_status": "saturated_no_improving_candidate",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "analysis_only": true,
+      "candidate_modes": [
+        "preserve_next_mode",
+        "literalize_next_remainder"
+      ],
+      "candidate_source": "19 active target-max copy-length exceptions from gate 61",
+      "compression_bound_changed": false,
+      "does_not_search_plaintext": true,
+      "new_formula_emitted": false,
+      "row0_origin_changed": false
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/62_active_residual_targetmax_resegmentation_gate.json",
+    "summary": {
+      "active_exception_count": 19,
+      "best_valid_candidate": {
+        "book": 54,
+        "book_pos": 0,
+        "candidate_gain_bits": -0.0001630255983400275,
+        "candidate_total_bits": 8156.0501492874955,
+        "component_delta_bits": {
+          "copy_length_bits": 0.9999999999997726,
+          "copy_source_bits": -0.9998369744007505,
+          "item_type_bits": 0.0,
+          "literal_bits_no_payload": 0.0,
+          "literal_payload_bits": 0.0
+        },
+        "error_count": 0,
+        "errors": [],
+        "following_op_type": "copy",
+        "mode": "preserve_next_mode",
+        "op_index": 0,
+        "slack": 2
+      },
+      "candidate_count": 38,
+      "current_exact_total_bits": 8156.049986261897,
+      "current_total_bits": 8156.049986261897,
+      "error_histogram": {
+        "literal_forces_copy": 4
+      },
+      "improving_candidate_count": 0,
+      "interpretation": "Every remaining active target-max exception was tested with the same local trim modes used by the promoted target-max gates. No exact valid candidate improves the active bound. The best valid residual rewrite is still worse by 0.000163 bits, so this local residual target-max resegmentation frontier is saturated.",
+      "invalid_candidate_count": 4,
+      "valid_candidate_count": 34,
+      "worst_valid_candidate": {
+        "book": 10,
+        "book_pos": 0,
+        "candidate_gain_bits": -519.5027962968043,
+        "candidate_total_bits": 8675.552782558701,
+        "component_delta_bits": {
+          "copy_length_bits": 1.0095589231571012,
+          "copy_source_bits": -10.88439283193975,
+          "item_type_bits": 1.7478129764033667,
+          "literal_bits_no_payload": 29.0,
+          "literal_payload_bits": 498.6298172291836
+        },
+        "error_count": 0,
+        "errors": [],
+        "following_op_type": "copy",
+        "mode": "literalize_next_remainder",
+        "op_index": 0,
+        "slack": 72
+      }
+    }
+  },
   "active_source_length_joint_refresh": {
     "active_formula_summary": {
       "copied_digits": 10407,
@@ -3192,6 +3267,7 @@
     "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
     "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
     "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
+    "active_residual_targetmax_resegmentation_status": "local_extend_trim_saturated_no_improvements",
     "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
     "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
     "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",

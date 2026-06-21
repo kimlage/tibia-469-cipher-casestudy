@@ -675,6 +675,8 @@ increase by `+4`, while decoder-valid joint rules remain unchanged.
 The active copy-length topology gate then shows the residual exceptions are
 still segmentation boundaries: `23 -> 19` exceptions, all `19` remaining as
 partial next-op intrusions.
+The residual target-max resegmentation gate tests `38` local rewrites and finds
+`0` improvements, closing that local frontier under the active scorer.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -771,6 +773,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   decoder-valid,
   maps the remaining `19` target-max length exceptions as partial next-op
   intrusions,
+  closes the residual local target-max resegmentation frontier with `0/38`
+  improvements,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
