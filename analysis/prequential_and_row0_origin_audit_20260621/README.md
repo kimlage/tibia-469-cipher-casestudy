@@ -256,6 +256,9 @@ exogenous.
 - [scripts/80_boundary_policy_stability_gate.py](scripts/80_boundary_policy_stability_gate.py) - tests fixed simple boundary policies against the unstable path variants with cross-cutoff repricing.
 - [reports/test_results/80_boundary_policy_stability_gate.md](reports/test_results/80_boundary_policy_stability_gate.md) - boundary policy stability result.
 - [reports/test_results/80_boundary_policy_stability_gate.json](reports/test_results/80_boundary_policy_stability_gate.json) - structured boundary-policy scoreboard.
+- [scripts/81_boundary_instability_cost_decomposition_gate.py](scripts/81_boundary_instability_cost_decomposition_gate.py) - decomposes winner-vs-variant boundary instability costs by coding component.
+- [reports/test_results/81_boundary_instability_cost_decomposition_gate.md](reports/test_results/81_boundary_instability_cost_decomposition_gate.md) - boundary instability cost decomposition result.
+- [reports/test_results/81_boundary_instability_cost_decomposition_gate.json](reports/test_results/81_boundary_instability_cost_decomposition_gate.json) - structured component-delta ledger.
 
 ## Boundary
 
@@ -520,6 +523,13 @@ exogenous.
   `18/37` exact matches with `7.849662` regret bits, while the best structural
   policy reaches `16/37` with `8.984788` regret bits. Simple invariant boundary
   rules are therefore rejected rather than promoted.
+- The boundary-instability cost decomposition gate then compares each observed
+  losing variant against the per-cutoff parser winner. Across `47`
+  variant-vs-winner comparisons, the dominant positive component is
+  `copy_length` in `30`, `copy_source_exception` in `12`, `literal_payload` in
+  `4`, and `copy_source_flag` in `1`. The remaining blocker is therefore
+  learned copy-length/source-exception selection, with payload concentrated in
+  a few segmentation-shape cases.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

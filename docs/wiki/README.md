@@ -682,6 +682,12 @@ boundary policies over the `12` unstable books and `37` cutoff observations do
 not stabilize the paths. The best structural rule reaches only `16/37` exact
 matches with `8.984788` regret bits, and even the audit-only average-reprice
 oracle reaches only `18/37`.
+A boundary-instability cost decomposition then compares `47` losing observed
+variants against their per-cutoff parser winners: `copy_length` is dominant in
+`30` comparisons, `copy_source_exception` in `12`, `literal_payload` in `4`,
+and `copy_source_flag` in `1`. The blocker is now localized to learned
+copy-length/source-exception costs, with payload pressure concentrated in a few
+segmentation-shape cases.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -860,6 +866,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   boundary shifts and `3` segmentation-shape changes,
   rejects simple invariant boundary policies (`16/37` best structural exact
   matches; `18/37` audit-only oracle),
+  decomposes remaining boundary instability by component (`copy_length` dominant
+  in `30/47`, `copy_source_exception` in `12/47`),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

@@ -202,6 +202,15 @@ lowest average repriced observed variant reaches only `18/37`. Simple boundary
 rules are therefore rejected; boundary selection remains an exogenous parser
 cost choice rather than a closed authorial mechanism.
 
+The follow-up cost decomposition localizes that exogenous choice. Across `47`
+losing observed variants compared against their per-cutoff parser winners,
+the dominant positive component is `copy_length` in `30` comparisons,
+`copy_source_exception` in `12`, `literal_payload` in `4`, and
+`copy_source_flag` in `1`. This makes the next parser question narrower:
+stabilize learned copy-length and source-exception choices under frozen
+prefixes, with literal-payload pressure mostly confined to the larger
+segmentation-shape changes.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

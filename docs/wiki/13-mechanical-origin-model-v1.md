@@ -283,6 +283,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Multi-cutoff parser path stability | exact operation signatures are replayed for the same book across frozen cutoffs; `38/50` multi-cutoff books keep one exact path, while `12/50` vary and book `65` has `4` signatures | parser mechanism supported / path instability remains |
 | Unstable parser path decomposition | the `12` prefix-sensitive books split into `9` same-shape boundary shifts and `3` segmentation-shape changes; none is pure source-address drift | next blocker is boundary stabilization |
 | Boundary policy stability gate | fixed simple boundary policies are repriced over the `12` unstable books and `37` cutoff observations; the best structural policy reaches only `16/37` exact matches with `8.984788` regret bits, and even the audit-only oracle reaches only `18/37` | rejected boundary-rule shortcut / blocker remains |
+| Boundary instability cost decomposition | `47` losing observed variants are compared against their per-cutoff parser winners; dominant positive components are `copy_length` in `30`, `copy_source_exception` in `12`, `literal_payload` in `4`, and `copy_source_flag` in `1` | blocker localized to learned length/source-exception costs |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -432,6 +433,7 @@ Primary sources:
 [multi_cutoff_parser_path_stability_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.md),
 [unstable_parser_path_decomposition_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/79_unstable_parser_path_decomposition_audit.md),
 [boundary_policy_stability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/80_boundary_policy_stability_gate.md),
+[boundary_instability_cost_decomposition_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/81_boundary_instability_cost_decomposition_gate.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

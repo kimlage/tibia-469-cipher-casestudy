@@ -1,0 +1,880 @@
+{
+  "case_reopened": false,
+  "classification": "boundary_instability_driven_by_learned_cost_components",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "boundary_selection_still_cost_driven_not_rule_driven",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "boundary_instability_costs_decomposed",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate80_boundary_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/80_boundary_policy_stability_gate.json",
+    "gate80_boundary_policy_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/80_boundary_policy_stability_gate.py"
+  },
+  "plaintext_claim": false,
+  "schema": "boundary_instability_cost_decomposition_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "observed_variants_only": true,
+    "row0_origin_changed": false,
+    "unstable_books_only": true
+  },
+  "summary": {
+    "book_rows": [
+      {
+        "book": 21,
+        "comparison_count": 2,
+        "cutoff_count": 2,
+        "dominant_component_counts": {
+          "copy_length": 2
+        },
+        "total_regret_bits": 2.0055353566536738,
+        "variant_count": 2
+      },
+      {
+        "book": 24,
+        "comparison_count": 2,
+        "cutoff_count": 2,
+        "dominant_component_counts": {
+          "copy_length": 2
+        },
+        "total_regret_bits": 1.0028970584006984,
+        "variant_count": 2
+      },
+      {
+        "book": 28,
+        "comparison_count": 2,
+        "cutoff_count": 2,
+        "dominant_component_counts": {
+          "copy_length": 2
+        },
+        "total_regret_bits": 0.523956510609878,
+        "variant_count": 2
+      },
+      {
+        "book": 30,
+        "comparison_count": 2,
+        "cutoff_count": 2,
+        "dominant_component_counts": {
+          "copy_source_exception": 1,
+          "literal_payload": 1
+        },
+        "total_regret_bits": 2.814884766853865,
+        "variant_count": 2
+      },
+      {
+        "book": 34,
+        "comparison_count": 2,
+        "cutoff_count": 2,
+        "dominant_component_counts": {
+          "copy_source_exception": 1,
+          "literal_payload": 1
+        },
+        "total_regret_bits": 1.0765659823477733,
+        "variant_count": 2
+      },
+      {
+        "book": 35,
+        "comparison_count": 3,
+        "cutoff_count": 3,
+        "dominant_component_counts": {
+          "copy_length": 1,
+          "copy_source_exception": 2
+        },
+        "total_regret_bits": 2.967479309985677,
+        "variant_count": 2
+      },
+      {
+        "book": 39,
+        "comparison_count": 3,
+        "cutoff_count": 3,
+        "dominant_component_counts": {
+          "copy_source_flag": 1,
+          "literal_payload": 2
+        },
+        "total_regret_bits": 2.8110521052667963,
+        "variant_count": 2
+      },
+      {
+        "book": 46,
+        "comparison_count": 3,
+        "cutoff_count": 3,
+        "dominant_component_counts": {
+          "copy_length": 2,
+          "copy_source_exception": 1
+        },
+        "total_regret_bits": 1.0782746684264666,
+        "variant_count": 2
+      },
+      {
+        "book": 51,
+        "comparison_count": 4,
+        "cutoff_count": 4,
+        "dominant_component_counts": {
+          "copy_length": 4
+        },
+        "total_regret_bits": 2.159282221007196,
+        "variant_count": 2
+      },
+      {
+        "book": 56,
+        "comparison_count": 4,
+        "cutoff_count": 4,
+        "dominant_component_counts": {
+          "copy_length": 2,
+          "copy_source_exception": 2
+        },
+        "total_regret_bits": 4.524783610198824,
+        "variant_count": 2
+      },
+      {
+        "book": 61,
+        "comparison_count": 5,
+        "cutoff_count": 5,
+        "dominant_component_counts": {
+          "copy_length": 3,
+          "copy_source_exception": 2
+        },
+        "total_regret_bits": 8.296914558434914,
+        "variant_count": 2
+      },
+      {
+        "book": 65,
+        "comparison_count": 15,
+        "cutoff_count": 5,
+        "dominant_component_counts": {
+          "copy_length": 12,
+          "copy_source_exception": 3
+        },
+        "total_regret_bits": 11.436597072171324,
+        "variant_count": 4
+      }
+    ],
+    "dominant_component_counts": {
+      "copy_length": 30,
+      "copy_source_exception": 12,
+      "copy_source_flag": 1,
+      "literal_payload": 4
+    },
+    "interpretation": "The remaining boundary choices are being selected by the learned coding streams rather than by a simple invariant boundary rule. Component deltas localize which streams most often make the losing observed variants more expensive than the per-cutoff parser winner.",
+    "largest_regret_comparisons": [
+      {
+        "book": 61,
+        "component_delta_bits": {
+          "copy_length": 2.2454760344494886,
+          "copy_source_exception": 1.5863624960186868,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 60,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 3.8318385304681755,
+        "variant_component_bits": {
+          "copy_length": 13.349419464341047,
+          "copy_source_exception": 26.646339956529665,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "fdeb0d8988185207",
+        "winner_component_bits": {
+          "copy_length": 11.103943429891558,
+          "copy_source_exception": 25.05997746051098,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "dc08d5469e078553"
+      },
+      {
+        "book": 61,
+        "component_delta_bits": {
+          "copy_length": 1.2700891633677465,
+          "copy_source_exception": 1.5863665835968384,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 50,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 2.856455746964585,
+        "variant_component_bits": {
+          "copy_length": 12.888933465134397,
+          "copy_source_exception": 26.63788140269804,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "fdeb0d8988185207",
+        "winner_component_bits": {
+          "copy_length": 11.61884430176665,
+          "copy_source_exception": 25.0515148191012,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "dc08d5469e078553"
+      },
+      {
+        "book": 30,
+        "component_delta_bits": {
+          "copy_length": 4.651739128169879,
+          "copy_source_exception": 12.215529095399418,
+          "copy_source_flag": 0.039528364186637355,
+          "item_type": -0.1649415939280563,
+          "literal_length": -4.0,
+          "literal_payload": -9.96454393557245
+        },
+        "cutoff": 20,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 2.777311058255421,
+        "variant_component_bits": {
+          "copy_length": 39.038145536150935,
+          "copy_source_exception": 73.35151774156954,
+          "copy_source_flag": 0.23717018511982407,
+          "item_type": 3.8970165174952016,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "efd825fa783e1134",
+        "winner_component_bits": {
+          "copy_length": 34.386406407981056,
+          "copy_source_exception": 61.13598864617012,
+          "copy_source_flag": 0.19764182093318672,
+          "item_type": 4.061958111423258,
+          "literal_length": 4.0,
+          "literal_payload": 9.96454393557245
+        },
+        "winner_signature": "c6ce2b68e2686234"
+      },
+      {
+        "book": 56,
+        "component_delta_bits": {
+          "copy_length": 3.2381464926509977,
+          "copy_source_exception": -0.9996851995214655,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 50,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 2.238461293129518,
+        "variant_component_bits": {
+          "copy_length": 57.74334939316302,
+          "copy_source_exception": 117.3720841184048,
+          "copy_source_flag": 0.3675034575771981,
+          "item_type": 5.427392373789247,
+          "literal_length": 4.0,
+          "literal_payload": 10.939211882666427
+        },
+        "variant_signature": "01a0656cc3c5fb37",
+        "winner_component_bits": {
+          "copy_length": 54.505202900512025,
+          "copy_source_exception": 118.37176931792627,
+          "copy_source_flag": 0.3675034575771981,
+          "item_type": 5.427392373789247,
+          "literal_length": 4.0,
+          "literal_payload": 10.939211882666427
+        },
+        "winner_signature": "fef1188b432b704b"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 2.2099230693742307,
+          "copy_source_exception": 0.0018660138015746952,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 50,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 2.211789083175809,
+        "variant_component_bits": {
+          "copy_length": 13.714245517666122,
+          "copy_source_exception": 26.78901076649938,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "variant_signature": "eaf0b833144ee1c3",
+        "winner_component_bits": {
+          "copy_length": 11.50432244829189,
+          "copy_source_exception": 26.787144752697806,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "winner_signature": "17f495347bea8db8"
+      },
+      {
+        "book": 35,
+        "component_delta_bits": {
+          "copy_length": -1.0667804611082108,
+          "copy_source_exception": 3.0336092464942013,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 20,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 1.9668287853859852,
+        "variant_component_bits": {
+          "copy_length": 15.061455578062747,
+          "copy_source_exception": 24.90702313081683,
+          "copy_source_flag": 0.07905672837327468,
+          "item_type": 1.2990055058317338,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "9503157fe0c3c10a",
+        "winner_component_bits": {
+          "copy_length": 16.128236039170957,
+          "copy_source_exception": 21.87341388432263,
+          "copy_source_flag": 0.07905672837327468,
+          "item_type": 1.2990055058317338,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "9ad7a00cacd455fa"
+      },
+      {
+        "book": 51,
+        "component_delta_bits": {
+          "copy_length": 1.9347823405535198,
+          "copy_source_exception": 0.0012243275616512506,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 50,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 1.9360066681151693,
+        "variant_component_bits": {
+          "copy_length": 15.7060912555411,
+          "copy_source_exception": 25.997436730584177,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "3d8ce3a7f7ec8553",
+        "winner_component_bits": {
+          "copy_length": 13.77130891498758,
+          "copy_source_exception": 25.996212403022525,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "50e022dfd76cf1c8"
+      },
+      {
+        "book": 39,
+        "component_delta_bits": {
+          "copy_length": -5.78135971352466,
+          "copy_source_exception": 0.0016287180644809496,
+          "copy_source_flag": -5.882643049361842,
+          "item_type": -0.6374299206152918,
+          "literal_length": 0.0,
+          "literal_payload": 13.6846390555808
+        },
+        "cutoff": 10,
+        "dominant_positive_component": "literal_payload",
+        "regret_bits": 1.3848350901434827,
+        "variant_component_bits": {
+          "copy_length": 5.584962500721156,
+          "copy_source_exception": 12.59898297103609,
+          "copy_source_flag": 0.024662054234269072,
+          "item_type": 1.4854268271702418,
+          "literal_length": 4.0,
+          "literal_payload": 17.269601556301957
+        },
+        "variant_signature": "51d57fd93b8c610f",
+        "winner_component_bits": {
+          "copy_length": 11.366322214245816,
+          "copy_source_exception": 12.59735425297161,
+          "copy_source_flag": 5.90730510359611,
+          "item_type": 2.1228567477855336,
+          "literal_length": 4.0,
+          "literal_payload": 3.584962500721158
+        },
+        "winner_signature": "ce5b37868920b08f"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 1.2203900684252993,
+          "copy_source_exception": 0.0017278582867383818,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 60,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 1.2221179267120377,
+        "variant_component_bits": {
+          "copy_length": 13.216745858195306,
+          "copy_source_exception": 26.797038277623265,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 7.1598713367783375
+        },
+        "variant_signature": "eaf0b833144ee1c3",
+        "winner_component_bits": {
+          "copy_length": 11.996355789770007,
+          "copy_source_exception": 26.795310419336527,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 7.1598713367783375
+        },
+        "winner_signature": "5bea3cd9dc3c044a"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 0.11103131238874475,
+          "copy_source_exception": 0.9994645281404999,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 35,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 1.1104958405292464,
+        "variant_component_bits": {
+          "copy_length": 13.121209716409284,
+          "copy_source_exception": 26.775861313952795,
+          "copy_source_flag": 0.051373287327299205,
+          "item_type": 0.9214591799434253,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "variant_signature": "17f495347bea8db8",
+        "winner_component_bits": {
+          "copy_length": 13.01017840402054,
+          "copy_source_exception": 25.776396785812295,
+          "copy_source_flag": 0.051373287327299205,
+          "item_type": 0.9214591799434253,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "winner_signature": "1792f6a37c523309"
+      },
+      {
+        "book": 56,
+        "component_delta_bits": {
+          "copy_length": 0.09575898280543527,
+          "copy_source_exception": 0.999683750346108,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 35,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 1.0954427331515433,
+        "variant_component_bits": {
+          "copy_length": 58.14961739757402,
+          "copy_source_exception": 118.31189445535877,
+          "copy_source_flag": 0.23117979297284635,
+          "item_type": 5.5568502790536245,
+          "literal_length": 4.0,
+          "literal_payload": 10.868822554775022
+        },
+        "variant_signature": "fef1188b432b704b",
+        "winner_component_bits": {
+          "copy_length": 58.053858414768584,
+          "copy_source_exception": 117.31221070501266,
+          "copy_source_flag": 0.23117979297284635,
+          "item_type": 5.5568502790536245,
+          "literal_length": 4.0,
+          "literal_payload": 10.868822554775022
+        },
+        "winner_signature": "01a0656cc3c5fb37"
+      },
+      {
+        "book": 56,
+        "component_delta_bits": {
+          "copy_length": 0.09575898280543527,
+          "copy_source_exception": 0.9996816919162228,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 20,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 1.095440674721658,
+        "variant_component_bits": {
+          "copy_length": 58.14961739757402,
+          "copy_source_exception": 118.22708683012601,
+          "copy_source_flag": 0.35575527767973614,
+          "item_type": 6.659969123086724,
+          "literal_length": 4.0,
+          "literal_payload": 11.716819461329976
+        },
+        "variant_signature": "fef1188b432b704b",
+        "winner_component_bits": {
+          "copy_length": 58.053858414768584,
+          "copy_source_exception": 117.22740513820979,
+          "copy_source_flag": 0.35575527767973614,
+          "item_type": 6.659969123086724,
+          "literal_length": 4.0,
+          "literal_payload": 11.716819461329976
+        },
+        "winner_signature": "01a0656cc3c5fb37"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 0.08406426478847706,
+          "copy_source_exception": 0.9995984147389798,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 35,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 1.0836626795274569,
+        "variant_component_bits": {
+          "copy_length": 13.094242668809017,
+          "copy_source_exception": 26.775995200551275,
+          "copy_source_flag": 0.051373287327299205,
+          "item_type": 0.9214591799434253,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "variant_signature": "5bea3cd9dc3c044a",
+        "winner_component_bits": {
+          "copy_length": 13.01017840402054,
+          "copy_source_exception": 25.776396785812295,
+          "copy_source_flag": 0.051373287327299205,
+          "item_type": 0.9214591799434253,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "winner_signature": "1792f6a37c523309"
+      },
+      {
+        "book": 21,
+        "component_delta_bits": {
+          "copy_length": 1.0524674198941355,
+          "copy_source_exception": -0.0008028353244924347,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 10,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 1.051664584569643,
+        "variant_component_bits": {
+          "copy_length": 19.20575507427733,
+          "copy_source_exception": 35.32116416137964,
+          "copy_source_flag": 0.07398616270280722,
+          "item_type": 1.9122897618458752,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "45e96b26269960af",
+        "winner_component_bits": {
+          "copy_length": 18.153287654383195,
+          "copy_source_exception": 35.321966996704134,
+          "copy_source_flag": 0.07398616270280722,
+          "item_type": 1.9122897618458752,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "3d67956f8f5b3285"
+      },
+      {
+        "book": 24,
+        "component_delta_bits": {
+          "copy_length": 0.9920948019146536,
+          "copy_source_exception": 0.0003580332667354469,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 20,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 0.992452835181389,
+        "variant_component_bits": {
+          "copy_length": 18.79165469425254,
+          "copy_source_exception": 35.94122967444119,
+          "copy_source_flag": 0.11858509255991202,
+          "item_type": 1.9485082587476006,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "e213fe1406e7f85b",
+        "winner_component_bits": {
+          "copy_length": 17.799559892337886,
+          "copy_source_exception": 35.94087164117445,
+          "copy_source_flag": 0.11858509255991202,
+          "item_type": 1.9485082587476006,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "e1475f1a390e1c76"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 0.9825125732711584,
+          "copy_source_exception": 0.00013336677068664926,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 50,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 0.9826459400418486,
+        "variant_component_bits": {
+          "copy_length": 12.48683502156305,
+          "copy_source_exception": 26.787278119468493,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "variant_signature": "5bea3cd9dc3c044a",
+        "winner_component_bits": {
+          "copy_length": 11.50432244829189,
+          "copy_source_exception": 26.787144752697806,
+          "copy_source_flag": 0.08166743501715515,
+          "item_type": 0.8721982296133471,
+          "literal_length": 0.0,
+          "literal_payload": 8.99859042974532
+        },
+        "winner_signature": "17f495347bea8db8"
+      },
+      {
+        "book": 35,
+        "component_delta_bits": {
+          "copy_length": -1.0667804611082108,
+          "copy_source_exception": 2.0339107834784116,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 10,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 0.9671303223702026,
+        "variant_component_bits": {
+          "copy_length": 15.061455578062747,
+          "copy_source_exception": 24.881183805461262,
+          "copy_source_flag": 0.049324108468538144,
+          "item_type": 1.2748598412305834,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "9503157fe0c3c10a",
+        "winner_component_bits": {
+          "copy_length": 16.128236039170957,
+          "copy_source_exception": 22.84727302198285,
+          "copy_source_flag": 0.049324108468538144,
+          "item_type": 1.2748598412305834,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "9ad7a00cacd455fa"
+      },
+      {
+        "book": 21,
+        "component_delta_bits": {
+          "copy_length": 0.9530789526125076,
+          "copy_source_exception": 0.0007918194715230698,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 20,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 0.9538707720840307,
+        "variant_component_bits": {
+          "copy_length": 18.43000767221303,
+          "copy_source_exception": 35.383333687208285,
+          "copy_source_flag": 0.11858509255991202,
+          "item_type": 1.9485082587476006,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "3d67956f8f5b3285",
+        "winner_component_bits": {
+          "copy_length": 17.476928719600522,
+          "copy_source_exception": 35.38254186773676,
+          "copy_source_flag": 0.11858509255991202,
+          "item_type": 1.9485082587476006,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "45e96b26269960af"
+      },
+      {
+        "book": 65,
+        "component_delta_bits": {
+          "copy_length": 2.513171817653145,
+          "copy_source_exception": -1.5845635804805696,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 60,
+        "dominant_positive_component": "copy_length",
+        "regret_bits": 0.9286082371725755,
+        "variant_component_bits": {
+          "copy_length": 14.509527607423152,
+          "copy_source_exception": 25.210746838855957,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 7.1598713367783375
+        },
+        "variant_signature": "1792f6a37c523309",
+        "winner_component_bits": {
+          "copy_length": 11.996355789770007,
+          "copy_source_exception": 26.795310419336527,
+          "copy_source_flag": 0.07154226204364389,
+          "item_type": 0.8032339670330445,
+          "literal_length": 0.0,
+          "literal_payload": 7.1598713367783375
+        },
+        "winner_signature": "5bea3cd9dc3c044a"
+      },
+      {
+        "book": 46,
+        "component_delta_bits": {
+          "copy_length": -0.07943446749440497,
+          "copy_source_exception": 1.00118528970728,
+          "copy_source_flag": 0.0,
+          "item_type": 0.0,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "cutoff": 10,
+        "dominant_positive_component": "copy_source_exception",
+        "regret_bits": 0.9217508222128785,
+        "variant_component_bits": {
+          "copy_length": 20.600595334833805,
+          "copy_source_exception": 38.47232354043129,
+          "copy_source_flag": 0.07398616270280722,
+          "item_type": 1.9122897618458752,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "variant_signature": "082d332652d09d96",
+        "winner_component_bits": {
+          "copy_length": 20.68002980232821,
+          "copy_source_exception": 37.47113825072401,
+          "copy_source_flag": 0.07398616270280722,
+          "item_type": 1.9122897618458752,
+          "literal_length": 0.0,
+          "literal_payload": 0.0
+        },
+        "winner_signature": "ed189d1ff20e1df0"
+      }
+    ],
+    "mean_regret_bits": 0.865919642986321,
+    "positive_delta_totals_by_component": {
+      "copy_length": 41.52152630827369,
+      "copy_source_exception": 40.86788587144136,
+      "copy_source_flag": 5.903485163789821,
+      "item_type": 1.3207993288272377,
+      "literal_length": 5.0,
+      "literal_payload": 54.20306378361666
+    },
+    "signed_delta_totals_by_component": {
+      "copy_length": 19.0549551613966,
+      "copy_source_exception": 11.056559067013895,
+      "copy_source_flag": -5.2379353596695095,
+      "item_type": -0.768504859247269,
+      "literal_length": 0.0,
+      "literal_payload": 16.593149210863388
+    },
+    "top_positive_components": [
+      {
+        "bits": 54.20306378361666,
+        "component": "literal_payload"
+      },
+      {
+        "bits": 41.52152630827369,
+        "component": "copy_length"
+      },
+      {
+        "bits": 40.86788587144136,
+        "component": "copy_source_exception"
+      },
+      {
+        "bits": 5.903485163789821,
+        "component": "copy_source_flag"
+      },
+      {
+        "bits": 5.0,
+        "component": "literal_length"
+      },
+      {
+        "bits": 1.3207993288272377,
+        "component": "item_type"
+      }
+    ],
+    "top_signed_components": [
+      {
+        "bits": 19.0549551613966,
+        "component": "copy_length"
+      },
+      {
+        "bits": 16.593149210863388,
+        "component": "literal_payload"
+      },
+      {
+        "bits": 11.056559067013895,
+        "component": "copy_source_exception"
+      },
+      {
+        "bits": -5.2379353596695095,
+        "component": "copy_source_flag"
+      },
+      {
+        "bits": -0.768504859247269,
+        "component": "item_type"
+      },
+      {
+        "bits": 0.0,
+        "component": "literal_length"
+      }
+    ],
+    "total_regret_bits": 40.698223220357086,
+    "unstable_book_count": 12,
+    "variant_against_winner_comparison_count": 47
+  },
+  "translation_delta": "NONE"
+}
