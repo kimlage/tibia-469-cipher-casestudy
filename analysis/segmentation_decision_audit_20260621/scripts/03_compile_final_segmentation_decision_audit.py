@@ -37,6 +37,7 @@ CONTEXTUAL_STABILITY = TEST_RESULTS / "25_contextual_mode_stability_audit.json"
 HIERARCHICAL_BACKOFF = TEST_RESULTS / "26_hierarchical_context_backoff_audit.json"
 OBSERVABLE_TREE = TEST_RESULTS / "27_observable_decision_tree_policy_audit.json"
 TARGET_BOUNDARY = TEST_RESULTS / "28_target_boundary_recurrence_audit.json"
+FUTURE_COPY = TEST_RESULTS / "29_future_copy_opportunity_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -118,6 +119,7 @@ def main() -> None:
     )
     observable_tree = load_json(OBSERVABLE_TREE) if OBSERVABLE_TREE.exists() else None
     target_boundary = load_json(TARGET_BOUNDARY) if TARGET_BOUNDARY.exists() else None
+    future_copy = load_json(FUTURE_COPY) if FUTURE_COPY.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -170,6 +172,8 @@ def main() -> None:
         assert_boundary("observable_decision_tree_policy_audit", observable_tree)
     if target_boundary is not None:
         assert_boundary("target_boundary_recurrence_audit", target_boundary)
+    if future_copy is not None:
+        assert_boundary("future_copy_opportunity_audit", future_copy)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -236,6 +240,7 @@ def main() -> None:
     target_boundary_summary = (
         None if target_boundary is None else target_boundary["summary"]
     )
+    future_copy_summary = None if future_copy is None else future_copy["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -976,6 +981,32 @@ def main() -> None:
                 "",
             ]
         )
+    if future_copy_summary is not None:
+        lines.extend(
+            [
+                "## Future Copy Opportunity Control",
+                "",
+                "Gate 29 tests whether branch choices preserve or create",
+                "near-future copy opportunities. Each branch is scored by copy",
+                "availability at its boundary and within a short lookahead window.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{future_copy_summary['active_baseline_total_hits']}/{future_copy_summary['decision_count']}` | `{future_copy_summary['active_baseline_residual_hits']}/{future_copy_summary['residual_decision_count']}` | `{future_copy_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best opportunity policy `{future_copy_summary['best_policy']}` | `{future_copy_summary['best_total_hits']}/{future_copy_summary['decision_count']}` | `{future_copy_summary['best_residual_hits']}/{future_copy_summary['residual_decision_count']}` | `{future_copy_summary['best_clean_false_changes']}` | rejected |",
+                "",
+                f"- Lookahead positions: `{future_copy_summary['lookahead']}`.",
+                f"- Opportunity policies tested: `{future_copy_summary['policy_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{future_copy_summary['prequential_zero_clean_false_change_cells']}/{future_copy_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{future_copy_summary['prequential_cover_all_test_residual_cells']}/{future_copy_summary['prequential_cells']}`.",
+                "",
+                "Near-future copy opportunity does not explain the residual branch",
+                "choices. The best policy catches only `2/10` residuals and changes",
+                "`130` clean controls, while randomized feature controls do better",
+                "on total hits.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -987,7 +1018,8 @@ def main() -> None:
             "tests collapse it under leave-one-book/context controls. The",
             "hierarchical backoff variant still fails clean holdout, and a",
             "small observable decision tree still misses held-out residuals.",
-            "Target-side boundary recurrence is also rejected. The",
+            "Target-side boundary recurrence and near-future copy opportunity",
+            "are also rejected. The",
             "remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1025,6 +1057,7 @@ def main() -> None:
             "- [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)",
             "- [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)",
             "- [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)",
+            "- [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)",
             "",
         ]
     )

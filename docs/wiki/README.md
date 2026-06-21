@@ -955,6 +955,10 @@ A target-boundary recurrence audit rejects the chunk-boundary variant:
 recurrence around `target_start + length` reaches only `31/234`, `1/10`
 residuals, and `194` clean false changes, worse than random-boundary controls
 on total hits.
+A future copy opportunity audit rejects the local-consequence variant:
+near-future copy availability reaches only `96/234`, `2/10` residuals, and
+`130` clean false changes, while randomized opportunity features are stronger
+on total hits.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

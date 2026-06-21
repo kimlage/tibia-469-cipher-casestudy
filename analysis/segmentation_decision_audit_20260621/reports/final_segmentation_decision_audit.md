@@ -583,6 +583,27 @@ rule. The best recurrence policy gets only `1/10` residuals,
 changes `194` clean controls, and is worse than random-boundary
 controls on total hits.
 
+## Future Copy Opportunity Control
+
+Gate 29 tests whether branch choices preserve or create
+near-future copy opportunities. Each branch is scored by copy
+availability at its boundary and within a short lookahead window.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best opportunity policy `max_copy_positions` | `96/234` | `2/10` | `130` | rejected |
+
+- Lookahead positions: `12`.
+- Opportunity policies tested: `5`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+Near-future copy opportunity does not explain the residual branch
+choices. The best policy catches only `2/10` residuals and changes
+`130` clean controls, while randomized feature controls do better
+on total hits.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -592,7 +613,8 @@ A finite context table has weak full-fit signal, but stability
 tests collapse it under leave-one-book/context controls. The
 hierarchical backoff variant still fails clean holdout, and a
 small observable decision tree still misses held-out residuals.
-Target-side boundary recurrence is also rejected. The
+Target-side boundary recurrence and near-future copy opportunity
+are also rejected. The
 remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -630,3 +652,4 @@ or the stable projection as an oracle.
 - [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)
 - [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)
 - [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)
+- [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)

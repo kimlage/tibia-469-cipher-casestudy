@@ -606,6 +606,12 @@ target-side boundary, raw context recurrence around `target_start + length`
 should prefer it. It does not: the best recurrence policy reaches only
 `31/234`, catches `1/10` residuals, changes `194` clean controls, and is worse
 than random-boundary controls on total hits.
+A future copy opportunity audit then tests the complementary local consequence:
+maybe the stable branch is chosen because it creates or preserves copy
+availability in the next few target positions. That also fails. The best
+opportunity policy reaches `96/234`, catches `2/10` residuals, and changes
+`130` clean controls; randomized opportunity features are stronger on total
+hits.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2297,6 +2303,7 @@ book generation, not row0 pair-cell placement.
 - [Hierarchical context backoff audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/26_hierarchical_context_backoff_audit.md)
 - [Observable decision tree policy audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/27_observable_decision_tree_policy_audit.md)
 - [Target boundary recurrence audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/28_target_boundary_recurrence_audit.md)
+- [Future copy opportunity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/29_future_copy_opportunity_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

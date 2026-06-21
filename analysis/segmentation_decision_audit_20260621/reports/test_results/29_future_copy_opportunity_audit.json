@@ -1,0 +1,370 @@
+{
+  "active_baseline": {
+    "clean_false_changes": 0,
+    "clean_total": 224,
+    "policy": "prefer_active_control",
+    "residual_hits": 0,
+    "residual_miss_books": [
+      14,
+      16,
+      20,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "residual_total": 10,
+    "selected_label_counts": {
+      "active_parser+observable_immediate_copy": 2,
+      "active_parser+observable_immediate_copy+stable_projection_oracle": 179,
+      "active_parser+observable_literal_stop": 8,
+      "active_parser+observable_literal_stop+stable_projection_oracle": 45
+    },
+    "total_hits": 224,
+    "total_total": 234
+  },
+  "case_reopened": false,
+  "classification": "future_copy_opportunity_policy_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "future_copy_opportunity_policy_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "future_copy_opportunity_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_scoreboard": [
+    {
+      "clean_false_changes": 0,
+      "clean_total": 224,
+      "policy": "prefer_active_control",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy": 2,
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 179,
+        "active_parser+observable_literal_stop": 8,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 45
+      },
+      "total_hits": 224,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 130,
+      "clean_total": 224,
+      "policy": "max_copy_positions",
+      "residual_hits": 2,
+      "residual_miss_books": [
+        14,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 71,
+        "active_parser+observable_literal_stop": 3,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 23,
+        "observable_literal_stop": 135,
+        "observable_literal_stop+stable_projection_oracle": 2
+      },
+      "total_hits": 96,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 148,
+      "clean_total": 224,
+      "policy": "max_window_sum_len",
+      "residual_hits": 2,
+      "residual_miss_books": [
+        14,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 54,
+        "active_parser+observable_literal_stop": 2,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 22,
+        "observable_immediate_copy": 1,
+        "observable_literal_stop": 153,
+        "observable_literal_stop+stable_projection_oracle": 2
+      },
+      "total_hits": 78,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 150,
+      "clean_total": 224,
+      "policy": "max_window_best_len",
+      "residual_hits": 2,
+      "residual_miss_books": [
+        14,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 50,
+        "active_parser+observable_literal_stop": 4,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 24,
+        "observable_literal_stop": 154,
+        "observable_literal_stop+stable_projection_oracle": 2
+      },
+      "total_hits": 76,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 159,
+      "clean_total": 224,
+      "policy": "max_immediate_len",
+      "residual_hits": 1,
+      "residual_miss_books": [
+        14,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 43,
+        "active_parser+observable_literal_stop": 4,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 22,
+        "observable_immediate_copy": 22,
+        "observable_literal_stop": 142,
+        "observable_literal_stop+stable_projection_oracle": 1
+      },
+      "total_hits": 66,
+      "total_total": 234
+    },
+    {
+      "clean_false_changes": 172,
+      "clean_total": 224,
+      "policy": "min_first_available_offset",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "residual_total": 10,
+      "selected_label_counts": {
+        "active_parser+observable_immediate_copy": 2,
+        "active_parser+observable_immediate_copy+stable_projection_oracle": 50,
+        "active_parser+observable_literal_stop+stable_projection_oracle": 2,
+        "observable_literal_stop": 180
+      },
+      "total_hits": 52,
+      "total_total": 234
+    }
+  ],
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "branch_continuation_script": "analysis/segmentation_decision_audit_20260621/scripts/22_residual_branch_continuation_audit.py",
+    "target_boundary_recurrence_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/28_target_boundary_recurrence_audit.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_policy": "max_copy_positions",
+      "oracle_test_clean_false_changes": 92,
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 63,
+      "selected_matches_oracle_total_hits": true,
+      "selected_policy": "max_copy_positions",
+      "test_clean_false_changes": 92,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "test_residual_total": 8,
+      "test_total": 163,
+      "test_total_hits": 63,
+      "train_clean_false_changes": 45,
+      "train_residual_hits": 1,
+      "train_residual_total": 2,
+      "train_total": 71,
+      "train_total_hits": 25
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_policy": "max_copy_positions",
+      "oracle_test_clean_false_changes": 68,
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 57,
+      "selected_matches_oracle_total_hits": true,
+      "selected_policy": "max_copy_positions",
+      "test_clean_false_changes": 68,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "test_residual_total": 5,
+      "test_total": 130,
+      "test_total_hits": 57,
+      "train_clean_false_changes": 64,
+      "train_residual_hits": 1,
+      "train_residual_total": 5,
+      "train_total": 104,
+      "train_total_hits": 36
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_policy": "max_copy_positions",
+      "oracle_test_clean_false_changes": 46,
+      "oracle_test_residual_hits": 1,
+      "oracle_test_total_hits": 40,
+      "selected_matches_oracle_total_hits": true,
+      "selected_policy": "max_copy_positions",
+      "test_clean_false_changes": 46,
+      "test_residual_hits": 1,
+      "test_residual_miss_books": [
+        45,
+        55
+      ],
+      "test_residual_total": 3,
+      "test_total": 88,
+      "test_total_hits": 40,
+      "train_clean_false_changes": 84,
+      "train_residual_hits": 1,
+      "train_residual_total": 7,
+      "train_total": 146,
+      "train_total_hits": 56
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_policy": "max_copy_positions",
+      "oracle_test_clean_false_changes": 27,
+      "oracle_test_residual_hits": 1,
+      "oracle_test_total_hits": 22,
+      "selected_matches_oracle_total_hits": true,
+      "selected_policy": "max_copy_positions",
+      "test_clean_false_changes": 27,
+      "test_residual_hits": 1,
+      "test_residual_miss_books": [
+        55
+      ],
+      "test_residual_total": 2,
+      "test_total": 50,
+      "test_total_hits": 22,
+      "train_clean_false_changes": 103,
+      "train_residual_hits": 1,
+      "train_residual_total": 8,
+      "train_total": 184,
+      "train_total_hits": 74
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_policy": "min_first_available_offset",
+      "oracle_test_clean_false_changes": 10,
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 10,
+      "selected_matches_oracle_total_hits": false,
+      "selected_policy": "max_copy_positions",
+      "test_clean_false_changes": 12,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [],
+      "test_residual_total": 0,
+      "test_total": 20,
+      "test_total_hits": 8,
+      "train_clean_false_changes": 118,
+      "train_residual_hits": 2,
+      "train_residual_total": 10,
+      "train_total": 214,
+      "train_total_hits": 88
+    }
+  ],
+  "randomized_feature_control": {
+    "clean_false_changes_min": 75,
+    "controls": 30,
+    "p_residual_hits_ge_real": 0.03225806451612903,
+    "p_total_hits_ge_real": 1.0,
+    "residual_hits_max": 1,
+    "total_hits_max": 150,
+    "total_hits_median": 132,
+    "total_hits_min": 121
+  },
+  "schema": "future_copy_opportunity_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "stable_projection_used_as_training_label": false,
+    "target_text_required": true
+  },
+  "summary": {
+    "active_baseline_clean_false_changes": 0,
+    "active_baseline_residual_hits": 0,
+    "active_baseline_total_hits": 224,
+    "best_clean_false_changes": 130,
+    "best_policy": "max_copy_positions",
+    "best_residual_hits": 2,
+    "best_total_hits": 96,
+    "clean_control_count": 224,
+    "decision_count": 234,
+    "interpretation": "Gate 29 tests whether branch choice is explained by preserving or creating near-future copy opportunities after the branch boundary.",
+    "lookahead": 12,
+    "policy_count": 5,
+    "prequential_cells": 5,
+    "prequential_cover_all_test_residual_cells": 1,
+    "prequential_selected_matches_oracle_cells": 4,
+    "prequential_zero_clean_false_change_cells": 0,
+    "promotes_future_copy_opportunity_policy": false,
+    "residual_decision_count": 10
+  },
+  "translation_delta": "NONE"
+}
