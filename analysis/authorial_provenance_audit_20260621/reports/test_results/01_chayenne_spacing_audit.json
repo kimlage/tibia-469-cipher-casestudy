@@ -29,6 +29,112 @@
   "case_reopened": false,
   "chunks": [
     {
+      "best_extension_counts": {
+        "best_left_extensions": [
+          {
+            "best_count": 11,
+            "extension_len": 2,
+            "sequence": "26114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 10,
+            "extension_len": 4,
+            "sequence": "4726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 10,
+            "extension_len": 6,
+            "sequence": "464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 8,
+            "sequence": "74464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 10,
+            "sequence": "5274464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 12,
+            "sequence": "345274464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 5,
+            "extension_len": 18,
+            "sequence": "452295345274464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 24,
+            "sequence": "801894452295345274464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 30,
+            "sequence": "751911801894452295345274464726114514519485611451908304576512282177"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 40,
+            "sequence": "0140152551751911801894452295345274464726114514519485611451908304576512282177"
+          }
+        ],
+        "best_right_extensions": [
+          {
+            "best_count": 10,
+            "extension_len": 2,
+            "sequence": "11451451948561145190830457651228217735"
+          },
+          {
+            "best_count": 10,
+            "extension_len": 4,
+            "sequence": "1145145194856114519083045765122821773508"
+          },
+          {
+            "best_count": 10,
+            "extension_len": 6,
+            "sequence": "114514519485611451908304576512282177350843"
+          },
+          {
+            "best_count": 10,
+            "extension_len": 8,
+            "sequence": "11451451948561145190830457651228217735084348"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 10,
+            "sequence": "1145145194856114519083045765122821773508434856"
+          },
+          {
+            "best_count": 5,
+            "extension_len": 12,
+            "sequence": "114514519485611451908304576512282177350843485628"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 18,
+            "sequence": "114514519485611451908304576512282177350843485628477090"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 24,
+            "sequence": "114514519485611451908304576512282177350843485628477090889524"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 30,
+            "sequence": "114514519485611451908304576512282177350843485628477090889524348561"
+          },
+          {
+            "best_count": 4,
+            "extension_len": 40,
+            "sequence": "1145145194856114519083045765122821773508434856284770908895243485611216480065"
+          }
+        ]
+      },
       "context_examples": [
         {
           "book": 1,
@@ -108,6 +214,306 @@
           "start": 165
         }
       ],
+      "context_extension": {
+        "all_hits_common_extended": "26114514519485611451908304576512282177",
+        "all_hits_common_extended_len": 38,
+        "all_hits_common_extended_occurrence_count": 11,
+        "all_hits_common_left": "26",
+        "all_hits_common_left_len": 2,
+        "all_hits_common_right": "",
+        "all_hits_common_right_len": 0
+      },
+      "context_modes": [
+        {
+          "flank": 2,
+          "top_both": [
+            {
+              "count": 10,
+              "left": "26",
+              "right": "35"
+            },
+            {
+              "count": 1,
+              "left": "26",
+              "right": "45"
+            }
+          ],
+          "top_left": [
+            [
+              "26",
+              11
+            ]
+          ],
+          "top_right": [
+            [
+              "35",
+              10
+            ],
+            [
+              "45",
+              1
+            ]
+          ]
+        },
+        {
+          "flank": 6,
+          "top_both": [
+            {
+              "count": 9,
+              "left": "464726",
+              "right": "350843"
+            },
+            {
+              "count": 1,
+              "left": "464726",
+              "right": "451904"
+            },
+            {
+              "count": 1,
+              "left": "199126",
+              "right": "350843"
+            }
+          ],
+          "top_left": [
+            [
+              "464726",
+              10
+            ],
+            [
+              "199126",
+              1
+            ]
+          ],
+          "top_right": [
+            [
+              "350843",
+              10
+            ],
+            [
+              "451904",
+              1
+            ]
+          ]
+        },
+        {
+          "flank": 12,
+          "top_both": [
+            {
+              "count": 4,
+              "left": "345274464726",
+              "right": "350843485628"
+            },
+            {
+              "count": 1,
+              "left": "464726",
+              "right": "350843485627"
+            },
+            {
+              "count": 1,
+              "left": "345274464726",
+              "right": "451904504215"
+            },
+            {
+              "count": 1,
+              "left": "688952199126",
+              "right": "350843485628"
+            },
+            {
+              "count": 1,
+              "left": "978036464726",
+              "right": "350843485627"
+            }
+          ],
+          "top_left": [
+            [
+              "345274464726",
+              8
+            ],
+            [
+              "464726",
+              1
+            ],
+            [
+              "688952199126",
+              1
+            ],
+            [
+              "978036464726",
+              1
+            ]
+          ],
+          "top_right": [
+            [
+              "350843485628",
+              5
+            ],
+            [
+              "350843485627",
+              3
+            ],
+            [
+              "451904504215",
+              1
+            ],
+            [
+              "350843485623",
+              1
+            ],
+            [
+              "350843485",
+              1
+            ]
+          ]
+        },
+        {
+          "flank": 18,
+          "top_both": [
+            {
+              "count": 2,
+              "left": "452295345274464726",
+              "right": "350843485628477090"
+            },
+            {
+              "count": 1,
+              "left": "2295345274464726",
+              "right": "350843485628477090"
+            },
+            {
+              "count": 1,
+              "left": "464726",
+              "right": "350843485627563561"
+            },
+            {
+              "count": 1,
+              "left": "991103345274464726",
+              "right": "451904504215956151"
+            },
+            {
+              "count": 1,
+              "left": "5345274464726",
+              "right": "350843485628477090"
+            }
+          ],
+          "top_left": [
+            [
+              "452295345274464726",
+              5
+            ],
+            [
+              "2295345274464726",
+              1
+            ],
+            [
+              "464726",
+              1
+            ],
+            [
+              "991103345274464726",
+              1
+            ],
+            [
+              "5345274464726",
+              1
+            ]
+          ],
+          "top_right": [
+            [
+              "350843485628477090",
+              4
+            ],
+            [
+              "350843485627563561",
+              3
+            ],
+            [
+              "451904504215956151",
+              1
+            ],
+            [
+              "350843485628474856",
+              1
+            ],
+            [
+              "350843485623646461",
+              1
+            ]
+          ]
+        },
+        {
+          "flank": 24,
+          "top_both": [
+            {
+              "count": 2,
+              "left": "801894452295345274464726",
+              "right": "350843485628477090889524"
+            },
+            {
+              "count": 1,
+              "left": "2295345274464726",
+              "right": "350843485628477090889524"
+            },
+            {
+              "count": 1,
+              "left": "464726",
+              "right": "350843485627563561145191"
+            },
+            {
+              "count": 1,
+              "left": "889521991103345274464726",
+              "right": "451904504215956151353478"
+            },
+            {
+              "count": 1,
+              "left": "5345274464726",
+              "right": "350843485628477090889524"
+            }
+          ],
+          "top_left": [
+            [
+              "801894452295345274464726",
+              4
+            ],
+            [
+              "2295345274464726",
+              1
+            ],
+            [
+              "464726",
+              1
+            ],
+            [
+              "889521991103345274464726",
+              1
+            ],
+            [
+              "5345274464726",
+              1
+            ]
+          ],
+          "top_right": [
+            [
+              "350843485628477090889524",
+              4
+            ],
+            [
+              "350843485627563561145191",
+              3
+            ],
+            [
+              "451904504215956151353478",
+              1
+            ],
+            [
+              "350843485628474856112164",
+              1
+            ],
+            [
+              "350843485623646461219785",
+              1
+            ]
+          ]
+        }
+      ],
       "label": "block_1",
       "length_digits": 36,
       "occurrence_count": 11,
@@ -160,6 +566,112 @@
       "text": "114514519485611451908304576512282177"
     },
     {
+      "best_extension_counts": {
+        "best_left_extensions": [
+          {
+            "best_count": 9,
+            "extension_len": 2,
+            "sequence": "636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 4,
+            "sequence": "79636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 6,
+            "sequence": "0579636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 8,
+            "sequence": "680579636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 10,
+            "sequence": "09680579636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 12,
+            "sequence": "9709680579636612527570584"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 18,
+            "sequence": "5764219709680579636612527570584"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 24,
+            "sequence": "7261185764219709680579636612527570584"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 30,
+            "sequence": "5727857261185764219709680579636612527570584"
+          },
+          {
+            "best_count": 8,
+            "extension_len": 40,
+            "sequence": "96180031145727857261185764219709680579636612527570584"
+          }
+        ],
+        "best_right_extensions": [
+          {
+            "best_count": 9,
+            "extension_len": 2,
+            "sequence": "661252757058452"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 4,
+            "sequence": "66125275705845217"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 6,
+            "sequence": "6612527570584521765"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 8,
+            "sequence": "661252757058452176521"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 10,
+            "sequence": "66125275705845217652197"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 12,
+            "sequence": "6612527570584521765219727"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 18,
+            "sequence": "6612527570584521765219727830464"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 24,
+            "sequence": "6612527570584521765219727830464876515"
+          },
+          {
+            "best_count": 9,
+            "extension_len": 30,
+            "sequence": "6612527570584521765219727830464876515956461"
+          },
+          {
+            "best_count": 7,
+            "extension_len": 40,
+            "sequence": "66125275705845217652197278304648765159564611414519889"
+          }
+        ]
+      },
       "context_examples": [
         {
           "book": 2,
@@ -223,6 +735,136 @@
           "post": "521765219727",
           "pre": "970968057963",
           "start": 188
+        }
+      ],
+      "context_extension": {
+        "all_hits_common_extended": "1185764219709680579636612527570584521765219727830464876515956461141",
+        "all_hits_common_extended_len": 67,
+        "all_hits_common_extended_occurrence_count": 9,
+        "all_hits_common_left": "118576421970968057963",
+        "all_hits_common_left_len": 21,
+        "all_hits_common_right": "521765219727830464876515956461141",
+        "all_hits_common_right_len": 33
+      },
+      "context_modes": [
+        {
+          "flank": 2,
+          "top_both": [
+            {
+              "count": 9,
+              "left": "63",
+              "right": "52"
+            }
+          ],
+          "top_left": [
+            [
+              "63",
+              9
+            ]
+          ],
+          "top_right": [
+            [
+              "52",
+              9
+            ]
+          ]
+        },
+        {
+          "flank": 6,
+          "top_both": [
+            {
+              "count": 9,
+              "left": "057963",
+              "right": "521765"
+            }
+          ],
+          "top_left": [
+            [
+              "057963",
+              9
+            ]
+          ],
+          "top_right": [
+            [
+              "521765",
+              9
+            ]
+          ]
+        },
+        {
+          "flank": 12,
+          "top_both": [
+            {
+              "count": 9,
+              "left": "970968057963",
+              "right": "521765219727"
+            }
+          ],
+          "top_left": [
+            [
+              "970968057963",
+              9
+            ]
+          ],
+          "top_right": [
+            [
+              "521765219727",
+              9
+            ]
+          ]
+        },
+        {
+          "flank": 18,
+          "top_both": [
+            {
+              "count": 9,
+              "left": "576421970968057963",
+              "right": "521765219727830464"
+            }
+          ],
+          "top_left": [
+            [
+              "576421970968057963",
+              9
+            ]
+          ],
+          "top_right": [
+            [
+              "521765219727830464",
+              9
+            ]
+          ]
+        },
+        {
+          "flank": 24,
+          "top_both": [
+            {
+              "count": 8,
+              "left": "726118576421970968057963",
+              "right": "521765219727830464876515"
+            },
+            {
+              "count": 1,
+              "left": "118576421970968057963",
+              "right": "521765219727830464876515"
+            }
+          ],
+          "top_left": [
+            [
+              "726118576421970968057963",
+              8
+            ],
+            [
+              "118576421970968057963",
+              1
+            ]
+          ],
+          "top_right": [
+            [
+              "521765219727830464876515",
+              9
+            ]
+          ]
         }
       ],
       "label": "block_2",
@@ -406,6 +1048,40 @@
   },
   "plaintext_claim": false,
   "primary_surface": "114514519485611451908304576512282177 [visible emoticon/image separator] 6612527570584 xD",
+  "selection_logic": {
+    "chunk_profiles": {
+      "block_1": {
+        "all_hits_common_extended": "26114514519485611451908304576512282177",
+        "all_hits_common_extended_len": 38,
+        "all_hits_common_extended_occurrence_count": 11,
+        "all_hits_common_left": "26",
+        "all_hits_common_left_len": 2,
+        "all_hits_common_right": "",
+        "all_hits_common_right_len": 0,
+        "earliest_occurrence": {
+          "book": 1,
+          "start": 16
+        },
+        "interpretation": "recurring stem with variable continuations"
+      },
+      "block_2": {
+        "all_hits_common_extended": "1185764219709680579636612527570584521765219727830464876515956461141",
+        "all_hits_common_extended_len": 67,
+        "all_hits_common_extended_occurrence_count": 9,
+        "all_hits_common_left": "118576421970968057963",
+        "all_hits_common_left_len": 21,
+        "all_hits_common_right": "521765219727830464876515956461141",
+        "all_hits_common_right_len": 33,
+        "earliest_occurrence": {
+          "book": 2,
+          "start": 111
+        },
+        "interpretation": "internal slice of a stable repeated template"
+      }
+    },
+    "source_order_clue": "The earliest occurrences of the two selected blocks are in consecutive books 1 and 2.",
+    "summary": "The answer appears to select two corpus modules rather than quote one contiguous string."
+  },
   "source_urls": {
     "portaltibia_chayenne_2009": "https://forum.portaltibia.com.br/topic/11420-entrevista-com-chayenne/",
     "s2ward_issue_3": "https://github.com/s2ward/469/issues/3",

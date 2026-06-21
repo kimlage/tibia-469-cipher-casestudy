@@ -30,6 +30,7 @@ translation, plaintext, row0 origin, or semantic reading.
 | hypothesis | current status | basis | blocker |
 | --- | --- | --- | --- |
 | Chayenne visible separator marks a join between two existing book substrings | `PROMOTED_MECHANICAL_CLUE` | The primary-source split is the only split of the joined 49-digit answer into two substrings attested in the committed 70-book corpus. | It explains a public surface boundary, not the origin of either substring. |
+| Chayenne selected chunks follow module-like corpus roles | `WEAK_CLUE` | Block 1 first appears in book 1 and behaves like a recurring stem with variable continuations; Block 2 first appears in book 2 and is an internal slice of a larger 67-digit template repeated 9 times. | This suggests salient module selection, but not a deterministic selection rule or authorial intent. |
 | Chayenne answer is word spacing or phrase segmentation | `REJECTED_CONTROL` | The two chunks occur separately as numeric modules; the joined string does not occur. There is no attested gloss. | Needs primary source with meaning or a reproducible external codebook. |
 | Chayenne answer implies direct plaintext translation | `REJECTED_CONTROL` | No plaintext is supplied by Chayenne, and the answer is framed publicly with emoticons. | Needs CipSoft/in-game book->plaintext or symbol table evidence. |
 | 5-eye/binary blinking decode of the Chayenne string | `REJECTED_CONTROL` | The raw block lengths and integer bit lengths do not align cleanly to stable 5-bit grouping; community tests also note padding/alignment failures. | Needs a deterministic, externally validated parsing rule. |
@@ -43,6 +44,12 @@ the visible source separator preserves a unique join between two
 corpus-attested numeric modules. This supports a provenance/register clue:
 the answer appears to reuse existing 469 book material rather than encode a
 separate visible sentence with ordinary word boundaries.
+
+The newer selection-logic check keeps that conclusion narrow. It shows that
+Block 1 is a recurring stem with variable continuations, while Block 2 is not a
+maximal quote but a window inside a larger stable repeated template. That
+supports "module/example selection" more than "continuous phrase" or "word
+spacing".
 
 This does not change row0, does not create a translation, and does not reopen
 the case. It is useful because it turns the Chayenne quote into a controlled

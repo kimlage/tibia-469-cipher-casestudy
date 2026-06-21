@@ -86,6 +86,108 @@ def context_snippets(
     return rows
 
 
+def count_occurrences(books: Dict[int, str], needle: str) -> int:
+    return len(find_occurrences(books, needle))
+
+
+def common_context_extension(
+    books: Dict[int, str], needle: str, hits: List[Dict[str, int]]
+) -> Dict[str, object]:
+    left = ""
+    while True:
+        chars = []
+        ok = True
+        for hit in hits:
+            text = books[hit["book"]]
+            idx = hit["start"] - len(left) - 1
+            if idx < 0:
+                ok = False
+                break
+            chars.append(text[idx])
+        if ok and len(set(chars)) == 1:
+            left = chars[0] + left
+        else:
+            break
+
+    right = ""
+    while True:
+        chars = []
+        ok = True
+        for hit in hits:
+            text = books[hit["book"]]
+            idx = hit["start"] + len(needle) + len(right)
+            if idx >= len(text):
+                ok = False
+                break
+            chars.append(text[idx])
+        if ok and len(set(chars)) == 1:
+            right += chars[0]
+        else:
+            break
+
+    extended = left + needle + right
+    return {
+        "all_hits_common_left": left,
+        "all_hits_common_left_len": len(left),
+        "all_hits_common_right": right,
+        "all_hits_common_right_len": len(right),
+        "all_hits_common_extended": extended,
+        "all_hits_common_extended_len": len(extended),
+        "all_hits_common_extended_occurrence_count": count_occurrences(books, extended),
+    }
+
+
+def context_mode_profile(
+    books: Dict[int, str], needle: str, hits: List[Dict[str, int]], flank: int
+) -> Dict[str, object]:
+    left_counts: Counter[str] = Counter()
+    right_counts: Counter[str] = Counter()
+    both_counts: Counter[Tuple[str, str]] = Counter()
+    for hit in hits:
+        text = books[hit["book"]]
+        start = hit["start"]
+        left = text[max(0, start - flank) : start]
+        right = text[start + len(needle) : start + len(needle) + flank]
+        left_counts[left] += 1
+        right_counts[right] += 1
+        both_counts[(left, right)] += 1
+    return {
+        "flank": flank,
+        "top_left": left_counts.most_common(5),
+        "top_right": right_counts.most_common(5),
+        "top_both": [
+            {"left": left, "right": right, "count": count}
+            for (left, right), count in both_counts.most_common(5)
+        ],
+    }
+
+
+def best_extension_counts(
+    books: Dict[int, str], needle: str, hits: List[Dict[str, int]]
+) -> Dict[str, List[Dict[str, object]]]:
+    sizes = [2, 4, 6, 8, 10, 12, 18, 24, 30, 40]
+    left_rows = []
+    right_rows = []
+    for size in sizes:
+        left_candidates: Counter[str] = Counter()
+        right_candidates: Counter[str] = Counter()
+        for hit in hits:
+            text = books[hit["book"]]
+            start = hit["start"]
+            if start >= size:
+                left_candidates[text[start - size : start] + needle] += 1
+            end = start + len(needle)
+            if end + size <= len(text):
+                right_candidates[needle + text[end : end + size]] += 1
+        if left_candidates:
+            seq, count = left_candidates.most_common(1)[0]
+            left_rows.append({"extension_len": size, "best_count": count, "sequence": seq})
+        if right_candidates:
+            seq, count = right_candidates.most_common(1)[0]
+            right_rows.append({"extension_len": size, "best_count": count, "sequence": seq})
+    return {"best_left_extensions": left_rows, "best_right_extensions": right_rows}
+
+
 def substring_distribution(books: Dict[int, str], needle: str) -> Dict[str, object]:
     n = len(needle)
     counts: Counter[str] = Counter()
@@ -210,6 +312,7 @@ def write_markdown(result: Dict[str, object]) -> None:
     split = result["summary"]
     distribution = result["distribution"]
     pair_alignment = result["pair_alignment"]
+    selection = result["selection_logic"]
 
     rows = []
     for chunk in chunks:
@@ -253,6 +356,21 @@ def write_markdown(result: Dict[str, object]) -> None:
         ]
     )
 
+    logic_rows = []
+    for label, row in selection["chunk_profiles"].items():
+        earliest = row["earliest_occurrence"]
+        logic_rows.append(
+            [
+                label,
+                f'{earliest["book"]}:{earliest["start"]}',
+                row["all_hits_common_left_len"],
+                row["all_hits_common_right_len"],
+                row["all_hits_common_extended_len"],
+                row["all_hits_common_extended_occurrence_count"],
+                row["interpretation"],
+            ]
+        )
+
     body = f"""# Chayenne Spacing Audit
 
 Status: `analysis_only`
@@ -292,6 +410,16 @@ as a mechanical boundary only.
 ## Negative Controls
 
 {md_table(control_rows, ["control", "trials", "hits", "hit rate"])}
+
+## Selection Logic
+
+{md_table(logic_rows, ["chunk", "earliest book:start", "common left", "common right", "common extended len", "extended hits", "interpretation"])}
+
+The two selected chunks are not a contiguous book quote. Their first attested
+occurrences are in consecutive early books (`1` and `2`), and the source answer
+joins them with emoticons. Block 1 behaves like a recurring stem with variable
+continuations; Block 2 is an internal slice of a larger stable repeated
+template.
 
 ## Pair And Binary Alignment
 
@@ -342,6 +470,12 @@ def main() -> None:
                 "occurrence_count": len(hits),
                 "occurrences": hits,
                 "context_examples": context_snippets(books, hits, block),
+                "context_extension": common_context_extension(books, block, hits),
+                "context_modes": [
+                    context_mode_profile(books, block, hits, flank)
+                    for flank in (2, 6, 12, 18, 24)
+                ],
+                "best_extension_counts": best_extension_counts(books, block, hits),
             }
         )
 
@@ -398,6 +532,22 @@ def main() -> None:
             "block_1": binary_profile(CHAYENNE_BLOCKS[0]),
             "block_2": binary_profile(CHAYENNE_BLOCKS[1]),
             "joined": binary_profile(joined),
+        },
+        "selection_logic": {
+            "summary": "The answer appears to select two corpus modules rather than quote one contiguous string.",
+            "source_order_clue": "The earliest occurrences of the two selected blocks are in consecutive books 1 and 2.",
+            "chunk_profiles": {
+                "block_1": {
+                    "earliest_occurrence": chunk_rows[0]["occurrences"][0],
+                    **chunk_rows[0]["context_extension"],
+                    "interpretation": "recurring stem with variable continuations",
+                },
+                "block_2": {
+                    "earliest_occurrence": chunk_rows[1]["occurrences"][0],
+                    **chunk_rows[1]["context_extension"],
+                    "interpretation": "internal slice of a stable repeated template",
+                },
+            },
         },
         "decision": {
             "classification": "PROMOTED_MECHANICAL_CLUE",

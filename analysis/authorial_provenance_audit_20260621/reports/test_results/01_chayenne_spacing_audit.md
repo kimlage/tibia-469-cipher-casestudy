@@ -50,6 +50,19 @@ as a mechanical boundary only.
 | joined | 2000 | 0 | 0.000000 |
 | joined_valid_full_split | 1000 | 0 | 0.000000 |
 
+## Selection Logic
+
+| chunk | earliest book:start | common left | common right | common extended len | extended hits | interpretation |
+| --- | --- | --- | --- | --- | --- | --- |
+| block_1 | 1:16 | 2 | 0 | 38 | 11 | recurring stem with variable continuations |
+| block_2 | 2:111 | 21 | 33 | 67 | 9 | internal slice of a stable repeated template |
+
+The two selected chunks are not a contiguous book quote. Their first attested
+occurrences are in consecutive early books (`1` and `2`), and the source answer
+joins them with emoticons. Block 1 behaves like a recurring stem with variable
+continuations; Block 2 is an internal slice of a larger stable repeated
+template.
+
 ## Pair And Binary Alignment
 
 - Block 1 pairs from start: `['11', '45', '14', '51', '94', '85', '61', '14', '51', '90', '83', '04', '57', '65', '12', '28', '21', '77']`
