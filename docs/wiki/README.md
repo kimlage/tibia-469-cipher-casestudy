@@ -387,7 +387,9 @@ The recipe-reparse evidence matrix reduces that limitation: deterministic
 reparse roundtrips all prefix-held-out suffixes and beats active suffix recipes
 plus content controls, while still rejecting the stronger claim that numeric
 prefix training is uniquely authorial because random same-size train inventories
-can match it at cutoff `50` (`p=0.1538`).
+can match it at cutoff `50` (`p=0.1538`). A multi-cutoff train-set control
+extends that boundary to cutoffs `35/50/60`: numeric prefix wins against
+random-train mean/max at `2/3` cutoffs and loses at cutoff `60`.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -563,9 +565,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   component signal as partial under family holdouts, decomposes the family
   failures as component/sample-size stress cases, rejects a train-only
   component fallback, quantifies and partly reduces the fixed-recipe
-  externality through a deterministic-reparse evidence matrix, closes the row0
-  hypothesis requirement matrix with zero promoted origin formulas, and keeps
-  row0 origin exogenous with translation delta zero.
+  externality through deterministic-reparse evidence and multi-cutoff train-set
+  controls, closes the row0 hypothesis requirement matrix with zero promoted
+  origin formulas, and keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

@@ -889,6 +889,10 @@ prefix-held-out suffixes, beats the active suffix recipes under frozen counts,
 and beats content controls. The stronger order claim remains partial, because a
 focused cutoff-`50` train-set control lets random same-size training inventories
 match or exceed the numeric prefix (`p=0.1538`).
+A multi-cutoff train-set control then repeats that check at cutoffs `35/50/60`:
+numeric prefix beats the random-train mean and max at `2/3` cutoffs, but loses
+at cutoff `60`. That sharpens the boundary: recipe reparsing is mechanically
+predictive, while numeric order is still not promoted as authorial proof.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1325,6 +1329,7 @@ book generation, not row0 pair-cell placement.
 - [Recipe externality audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md)
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
+- [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

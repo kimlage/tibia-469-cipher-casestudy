@@ -95,8 +95,9 @@ reparse audits actually reduce that fixed-recipe externality. They do:
 deterministic reparse roundtrips all future suffixes at cutoffs
 `10/20/35/50/60` and beats the active suffix recipe under frozen counts.
 Content controls are also weaker. The boundary remains partial because
-the focused train-set control shows random same-size training inventories
-can match or exceed the numeric prefix (`p=0.1538`).
+train-set controls show random same-size training inventories can match
+or exceed the numeric prefix: single-cutoff `50` gives `p=0.1538`, and
+the multi-cutoff control loses to the random-train mean at cutoff `60`.
 See [06_recipe_reparse_evidence_matrix.md](test_results/06_recipe_reparse_evidence_matrix.md).
 
 ## Row0 Origin Boundary

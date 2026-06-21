@@ -16,6 +16,7 @@ SOURCES = {
     "prequential_recipe_reparse": AUTHORIAL_RESULTS / "126_prequential_recipe_reparse_audit.json",
     "reparse_content_controls": AUTHORIAL_RESULTS / "127_prequential_recipe_reparse_controls.json",
     "reparse_trainset_controls": AUTHORIAL_RESULTS / "128_prequential_recipe_reparse_trainset_controls.json",
+    "reparse_trainset_multicutoff": TEST_RESULTS / "07_recipe_reparse_trainset_multicutoff.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -39,6 +40,7 @@ def make_result() -> dict[str, Any]:
     reparse = load_json(SOURCES["prequential_recipe_reparse"])
     content_controls = load_json(SOURCES["reparse_content_controls"])
     trainset_controls = load_json(SOURCES["reparse_trainset_controls"])
+    trainset_multicutoff = load_json(SOURCES["reparse_trainset_multicutoff"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -46,6 +48,7 @@ def make_result() -> dict[str, Any]:
         ("prequential_recipe_reparse", reparse),
         ("reparse_content_controls", content_controls),
         ("reparse_trainset_controls", trainset_controls),
+        ("reparse_trainset_multicutoff", trainset_multicutoff),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -96,7 +99,7 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
-            "question": "is_numeric_prefix_training_uniquely_supported",
+            "question": "is_numeric_prefix_training_uniquely_supported_single_cutoff",
             "source": rel(SOURCES["reparse_trainset_controls"]),
             "status": "failed_as_authorial_order_proof",
             "evidence": {
@@ -113,6 +116,39 @@ def make_result() -> dict[str, Any]:
                 "The copy/reference mechanism is predictive, but random same-size "
                 "training inventories can match or exceed the numeric prefix in the "
                 "focused train-set control."
+            ),
+        },
+        {
+            "question": "is_numeric_prefix_training_uniquely_supported_multicutoff",
+            "source": rel(SOURCES["reparse_trainset_multicutoff"]),
+            "status": "failed_as_authorial_order_proof",
+            "evidence": {
+                "cutoffs": trainset_multicutoff["control_cutoffs"],
+                "control_trials_per_cutoff": trainset_multicutoff["control_trials_per_cutoff"],
+                "numeric_prefix_beats_control_mean_cutoffs": trainset_multicutoff["summary"][
+                    "numeric_prefix_beats_control_mean_cutoffs"
+                ],
+                "numeric_prefix_beats_control_max_cutoffs": trainset_multicutoff["summary"][
+                    "numeric_prefix_beats_control_max_cutoffs"
+                ],
+                "numeric_prefix_unique_at_control_resolution_cutoffs": trainset_multicutoff["summary"][
+                    "numeric_prefix_unique_at_control_resolution_cutoffs"
+                ],
+                "cutoff_60_observed_gain": next(
+                    row["observed_prefix"]["gain_vs_raw_bits"]
+                    for row in trainset_multicutoff["rows"]
+                    if row["cutoff"] == 60
+                ),
+                "cutoff_60_random_mean_gain": next(
+                    row["random_train_set_control"]["mean"]
+                    for row in trainset_multicutoff["rows"]
+                    if row["cutoff"] == 60
+                ),
+            },
+            "interpretation": (
+                "The multi-cutoff train-set control keeps recipe predictability, "
+                "but numeric prefix is not uniquely strong; at cutoff 60 it loses "
+                "to the random-train mean and max."
             ),
         },
         {
@@ -229,11 +265,18 @@ def write_result(result: dict[str, Any]) -> None:
                 f"observed beats all control means; "
                 f"{evidence['control_trials']} trials per control family"
             )
-        elif row["question"] == "is_numeric_prefix_training_uniquely_supported":
+        elif row["question"] == "is_numeric_prefix_training_uniquely_supported_single_cutoff":
             key = (
                 f"cutoff {evidence['cutoff']}; observed gain "
                 f"{evidence['observed_gain_vs_raw_bits']:.3f}; random max "
                 f"{evidence['random_train_max_gain_bits']:.3f}; p={evidence['p_random_ge_observed']:.4f}"
+            )
+        elif row["question"] == "is_numeric_prefix_training_uniquely_supported_multicutoff":
+            key = (
+                f"cutoffs {evidence['cutoffs']}; mean wins "
+                f"{evidence['numeric_prefix_beats_control_mean_cutoffs']}/3; "
+                f"cutoff 60 observed {evidence['cutoff_60_observed_gain']:.3f} "
+                f"vs random mean {evidence['cutoff_60_random_mean_gain']:.3f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

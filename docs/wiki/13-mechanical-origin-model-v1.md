@@ -174,6 +174,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Recipe externality audit | only `4285.876/8558.667` bits are prequentially scored learned components; `4272.791` bits remain fixed recipe or non-learned ledger | component validation only / full recipe discovery not proved |
 | Row0 hypothesis requirement audit | all six requested row0-origin families are forced through algorithm, cost, coverage, contradiction, negative-control, and random/permuted comparison fields; promoted origin formulas remain `0` | row0 origin checklist closed negative |
 | Recipe reparse evidence matrix | deterministic reparse roundtrips all prefix-held-out suffixes and beats active suffix recipes/content controls, but random same-size train inventories can match or exceed numeric prefix at cutoff `50` (`p=0.1538`) | fixed-recipe externality partly reduced / generation claim still partial |
+| Recipe reparse train-set multi-cutoff | random same-size train-set controls at cutoffs `35/50/60` show numeric prefix beats random mean/max at `2/3` cutoffs but loses at cutoff `60` | numeric order not promoted as authorial proof |
 | Prequential recipe reparse audit | with frozen train-prefix component counts, a deterministic LZ parser roundtrips every future suffix and beats the active full-corpus recipe under the same frozen counts on all five cutoffs | predictive recipe evidence / split-specific analysis only |
 | Prequential recipe reparse controls | at cutoffs `20/35/50`, real suffixes beat random same-length, per-book-shuffled, and suffix-pool-shuffled controls; controls have negative gain versus raw digits | controlled predictive recipe evidence |
 | Prequential recipe train-set controls | at focused cutoff `50`, numeric prefix beats the random train-set mean but not all random inventories (`p=0.1538`) | predictive recipe evidence / numeric order not promoted |
@@ -329,6 +330,7 @@ Primary sources:
 [recipe_externality_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md),
 [row0_hypothesis_requirement_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md),
 [recipe_reparse_evidence_matrix.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md),
+[recipe_reparse_trainset_multicutoff.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md),
 [row0_origin_parallel_report.md](../../analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md),
 [row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),

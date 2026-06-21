@@ -34,6 +34,9 @@ exogenous.
 - [scripts/06_recipe_reparse_evidence_matrix.py](scripts/06_recipe_reparse_evidence_matrix.py) - checks whether deterministic reparse evidence reduces the fixed-recipe externality.
 - [reports/test_results/06_recipe_reparse_evidence_matrix.md](reports/test_results/06_recipe_reparse_evidence_matrix.md) - recipe-reparse evidence matrix.
 - [reports/test_results/06_recipe_reparse_evidence_matrix.json](reports/test_results/06_recipe_reparse_evidence_matrix.json) - structured recipe-reparse ledger.
+- [scripts/07_recipe_reparse_trainset_multicutoff.py](scripts/07_recipe_reparse_trainset_multicutoff.py) - expands random same-size train-set controls beyond cutoff 50.
+- [reports/test_results/07_recipe_reparse_trainset_multicutoff.md](reports/test_results/07_recipe_reparse_trainset_multicutoff.md) - multi-cutoff train-set control.
+- [reports/test_results/07_recipe_reparse_trainset_multicutoff.json](reports/test_results/07_recipe_reparse_trainset_multicutoff.json) - structured multi-cutoff train-set ledger.
 
 ## Boundary
 
@@ -47,7 +50,9 @@ exogenous.
   full formula rather than discovering held-out recipes. The recipe-reparse
   evidence matrix partially reduces that limitation: deterministic reparse
   roundtrips held-out suffixes and beats content controls, but numeric prefix
-  training is not unique against random same-size train inventories.
+  training is not unique against random same-size train inventories. The
+  multi-cutoff train-set control sharpens that boundary: numeric prefix wins
+  against random-train mean at `2/3` tested cutoffs and loses at cutoff `60`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

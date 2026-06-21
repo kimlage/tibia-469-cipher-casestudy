@@ -55,8 +55,27 @@
         "random_train_mean_gain_bits": 9473.486059931087
       },
       "interpretation": "The copy/reference mechanism is predictive, but random same-size training inventories can match or exceed the numeric prefix in the focused train-set control.",
-      "question": "is_numeric_prefix_training_uniquely_supported",
+      "question": "is_numeric_prefix_training_uniquely_supported_single_cutoff",
       "source": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
+      "status": "failed_as_authorial_order_proof"
+    },
+    {
+      "evidence": {
+        "control_trials_per_cutoff": 4,
+        "cutoff_60_observed_gain": 4467.254916733285,
+        "cutoff_60_random_mean_gain": 4564.670233568408,
+        "cutoffs": [
+          35,
+          50,
+          60
+        ],
+        "numeric_prefix_beats_control_max_cutoffs": 2,
+        "numeric_prefix_beats_control_mean_cutoffs": 2,
+        "numeric_prefix_unique_at_control_resolution_cutoffs": 2
+      },
+      "interpretation": "The multi-cutoff train-set control keeps recipe predictability, but numeric prefix is not uniquely strong; at cutoff 60 it loses to the random-train mean and max.",
+      "question": "is_numeric_prefix_training_uniquely_supported_multicutoff",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json",
       "status": "failed_as_authorial_order_proof"
     },
     {
@@ -100,7 +119,8 @@
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",
     "recipe_externality": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
     "reparse_content_controls": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",
-    "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json"
+    "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
+    "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",
