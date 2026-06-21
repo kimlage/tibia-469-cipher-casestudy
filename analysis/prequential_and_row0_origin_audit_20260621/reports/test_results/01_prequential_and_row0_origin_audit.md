@@ -777,6 +777,12 @@ The source/length refresh repeats the gate-49 joint tests on the active post-tar
 Declared-source+decoder-max, unique-source+decoder-max, and previous-end+decoder-max all have delta `+0` / `+0` / `+0`. So the active formula sharpens encoder-side regularity while keeping source and length declared.
 See [60_active_source_length_joint_refresh_gate.md](60_active_source_length_joint_refresh_gate.md).
 
+### Active Copy Length Exception Topology Gate
+
+The active copy-length topology gate maps the target-max exceptions remaining after promoted resegmentations. Exceptions drop from `23` to `19` and slack digits drop from `128` to `115`.
+But every remaining active exception still crosses into exactly one following operation and stops inside it: `19` / `19` / `0` for one-following-op, partial-cover, full-absorption counts. The residual boundary is still joint segmentation, not a scalar length default.
+See [61_active_copy_length_exception_topology_gate.md](61_active_copy_length_exception_topology_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -875,6 +881,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.
 - The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.
 - The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.
+- The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

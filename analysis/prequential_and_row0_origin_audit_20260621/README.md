@@ -196,6 +196,9 @@ exogenous.
 - [scripts/60_active_source_length_joint_refresh_gate.py](scripts/60_active_source_length_joint_refresh_gate.py) - retests joint source/length derivability on the active post-target-max formula.
 - [reports/test_results/60_active_source_length_joint_refresh_gate.md](reports/test_results/60_active_source_length_joint_refresh_gate.md) - active source/length joint refresh result.
 - [reports/test_results/60_active_source_length_joint_refresh_gate.json](reports/test_results/60_active_source_length_joint_refresh_gate.json) - structured active source/length joint refresh ledger.
+- [scripts/61_active_copy_length_exception_topology_gate.py](scripts/61_active_copy_length_exception_topology_gate.py) - remaps active target-max copy-length exceptions after promoted resegmentations.
+- [reports/test_results/61_active_copy_length_exception_topology_gate.md](reports/test_results/61_active_copy_length_exception_topology_gate.md) - active copy-length exception topology result.
+- [reports/test_results/61_active_copy_length_exception_topology_gate.json](reports/test_results/61_active_copy_length_exception_topology_gate.json) - structured active copy-length exception topology ledger.
 
 ## Boundary
 
@@ -357,7 +360,10 @@ exogenous.
   only one digit moved from literal payload to copied payload. The active
   source/length joint refresh then shows the same boundary from another angle:
   encoder target-max hits improve by `+4`, but decoder-valid joint rules remain
-  unchanged.
+  unchanged. The active copy-length exception topology gate then maps the
+  residual frontier: target-max exceptions drop from `23` to `19`, but all
+  `19` remaining exceptions still cross into exactly one following op and stop
+  inside it.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

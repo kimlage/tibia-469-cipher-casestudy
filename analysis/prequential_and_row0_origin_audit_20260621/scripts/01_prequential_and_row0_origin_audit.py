@@ -253,6 +253,14 @@ ACTIVE_SOURCE_LENGTH_JOINT_REFRESH_GATE = (
     / "test_results"
     / "60_active_source_length_joint_refresh_gate.json"
 )
+ACTIVE_COPY_LENGTH_EXCEPTION_TOPOLOGY_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "61_active_copy_length_exception_topology_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -563,6 +571,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_source_length_joint_refresh_gate",
         active_source_length_joint_refresh,
+    )
+    active_copy_length_exception_topology = load_json(
+        ACTIVE_COPY_LENGTH_EXCEPTION_TOPOLOGY_GATE
+    )
+    assert_analysis_boundary(
+        "active_copy_length_exception_topology_gate",
+        active_copy_length_exception_topology,
     )
 
     predictive = legacy["predictive_validation"]
@@ -891,6 +906,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_source_length_joint_refresh["summary"],
             "decision": active_source_length_joint_refresh["decision"],
         },
+        "active_copy_length_exception_topology": {
+            "classification": active_copy_length_exception_topology["classification"],
+            "source": rel(ACTIVE_COPY_LENGTH_EXCEPTION_TOPOLOGY_GATE),
+            "scope": active_copy_length_exception_topology["scope"],
+            "summary": active_copy_length_exception_topology["summary"],
+            "decision": active_copy_length_exception_topology["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -941,6 +963,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "post_targetmax_source_substitution_stop_status": "micro_frontier_frozen_not_mainline",
             "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
             "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
+            "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1007,6 +1030,7 @@ def render_markdown(
     post_targetmax_source_substitution_stop_audit_link: str,
     active_formula_dependency_refresh_gate_link: str,
     active_source_length_joint_refresh_gate_link: str,
+    active_copy_length_exception_topology_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1083,6 +1107,9 @@ def render_markdown(
         "summary"
     ]
     active_source_length_refresh = result["active_source_length_joint_refresh"][
+        "summary"
+    ]
+    active_length_topology = result["active_copy_length_exception_topology"][
         "summary"
     ]
 
@@ -1977,6 +2004,25 @@ def render_markdown(
             "source and length declared.",
             f"See [60_active_source_length_joint_refresh_gate.md]({active_source_length_joint_refresh_gate_link}).",
             "",
+            "### Active Copy Length Exception Topology Gate",
+            "",
+            "The active copy-length topology gate maps the target-max exceptions "
+            "remaining after promoted resegmentations. Exceptions drop from "
+            f"`{active_length_topology['previous_exception_count']}` to "
+            f"`{active_length_topology['active_exception_count']}` and slack "
+            "digits drop from "
+            f"`{active_length_topology['previous_slack_digits_total']}` to "
+            f"`{active_length_topology['active_slack_digits_total']}`.",
+            "But every remaining active exception still crosses into exactly one "
+            "following operation and stops inside it: "
+            f"`{active_length_topology['active_exceptions_covering_exactly_one_following_op']}` / "
+            f"`{active_length_topology['active_exceptions_with_partial_following_op_cover']}` / "
+            f"`{active_length_topology['active_exceptions_absorbing_full_next_op']}` "
+            "for one-following-op, partial-cover, full-absorption counts. "
+            "The residual boundary is still joint segmentation, not a scalar "
+            "length default.",
+            f"See [61_active_copy_length_exception_topology_gate.md]({active_copy_length_exception_topology_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2084,6 +2130,7 @@ def render_markdown(
             "- The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.",
             "- The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.",
             "- The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.",
+            "- The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2241,6 +2288,9 @@ def main() -> None:
             ),
             active_source_length_joint_refresh_gate_link=(
                 "60_active_source_length_joint_refresh_gate.md"
+            ),
+            active_copy_length_exception_topology_gate_link=(
+                "61_active_copy_length_exception_topology_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2404,6 +2454,9 @@ def main() -> None:
             ),
             active_source_length_joint_refresh_gate_link=(
                 "test_results/60_active_source_length_joint_refresh_gate.md"
+            ),
+            active_copy_length_exception_topology_gate_link=(
+                "test_results/61_active_copy_length_exception_topology_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

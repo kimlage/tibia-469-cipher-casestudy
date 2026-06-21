@@ -672,6 +672,9 @@ reduction: the bound improved by `4.775621` bits since gate 48, but declared
 recipe dependencies remain unchanged at `609` fields.
 The active source/length joint refresh sharpens the boundary: target-max hits
 increase by `+4`, while decoder-valid joint rules remain unchanged.
+The active copy-length topology gate then shows the residual exceptions are
+still segmentation boundaries: `23 -> 19` exceptions, all `19` remaining as
+partial next-op intrusions.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -766,6 +769,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   records that the active formula still declares `609` recipe dependency fields,
   confirms that active source/length gains are encoder-side rather than
   decoder-valid,
+  maps the remaining `19` target-max length exceptions as partial next-op
+  intrusions,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

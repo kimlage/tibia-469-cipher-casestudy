@@ -6,6 +6,44 @@
     "recomputed_total_bits": 8558.666806283434,
     "roundtrip_books": 70
   },
+  "active_copy_length_exception_topology": {
+    "classification": "active_copy_length_exceptions_still_partial_next_op_intrusions",
+    "decision": {
+      "compression_bound_status": "unchanged_8156_049986",
+      "copy_length_dependency_status": "retained_declared",
+      "copy_length_targetmax_status": "active_exceptions_reduced_to_19_but_topology_unchanged",
+      "generation_explanation_status": "residual_length_exceptions_are_segmentation_boundaries",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "analysis_only": true,
+      "compression_bound_changed": false,
+      "does_not_search_new_resegmentations": true,
+      "does_not_search_plaintext": true,
+      "new_formula_emitted": false,
+      "row0_origin_changed": false
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/61_active_copy_length_exception_topology_gate.json",
+    "summary": {
+      "active_all_partial_single_next": true,
+      "active_exception_count": 19,
+      "active_exceptions_absorbing_full_next_op": 0,
+      "active_exceptions_covering_exactly_one_following_op": 19,
+      "active_exceptions_with_partial_following_op_cover": 19,
+      "active_slack_digits_total": 115,
+      "active_target_max_match_count": 242,
+      "added_exception_count": 0,
+      "exception_count_delta": -4,
+      "interpretation": "The target-max resegmentation path eliminates four old length exceptions and reduces slack by 13 digits, but every remaining active exception still crosses into exactly one following op and stops inside it. The residual problem is still joint segmentation, not a scalar length-default choice.",
+      "previous_exception_count": 23,
+      "previous_slack_digits_total": 128,
+      "previous_target_max_match_count": 238,
+      "removed_exception_count": 4,
+      "slack_digits_delta": -13,
+      "target_max_match_delta": 4
+    }
+  },
   "active_formula_dependency_refresh": {
     "active_formula": {
       "classification": "post_targetmax_source_substitution_second_pass_improves_bound",
@@ -3151,6 +3189,7 @@
     }
   },
   "decision": {
+    "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
     "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
     "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
     "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
