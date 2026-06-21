@@ -653,6 +653,13 @@ the stable residual branch is oracle-repairable, but the tested non-oracle
 weak-signal families do not justify another local branch-choice combination.
 This is a closure result, not a new generator; the next blocker remains a
 richer path/state segmentation mechanism or a source-free target digit account.
+A path-template reuse audit then tests the next structural shortcut. It builds
+a library of exact source-free operation-length templates of width `1..3` from
+the `50` books already parsed exactly by the active parser, keyed by observable
+state. The library explains `0/10` residual first-drift corrections
+deterministically, so simple reuse of a seen multi-op path shape is rejected.
+This leaves the blocker at richer latent path/state, not another local
+branch-choice feature.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2352,6 +2359,7 @@ book generation, not row0 pair-cell placement.
 - [Structural signal consensus audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/34_structural_signal_consensus_audit.md)
 - [Structural vote residual decomposition](../../analysis/segmentation_decision_audit_20260621/reports/test_results/35_structural_vote_residual_decomposition.md)
 - [Branch choice frontier closure audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.md)
+- [Path template reuse audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/37_path_template_reuse_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

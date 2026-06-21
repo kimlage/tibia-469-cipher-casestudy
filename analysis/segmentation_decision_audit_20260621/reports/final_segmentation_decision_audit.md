@@ -761,6 +761,27 @@ branch is oracle-repairable, but the tested non-oracle weak-signal
 families do not justify another local branch-choice combination
 under current evidence.
 
+## Path Template Reuse Control
+
+Gate 37 tests the next structural shortcut after weak signals:
+whether the remaining first-drift corrections can be selected
+by reusing exact source-free operation-length templates from
+books that the active parser already parses exactly.
+
+| Diagnostic | Value |
+|---|---:|
+| Exact parser books | `50` |
+| Residual parser books | `10` |
+| Best template width | `1` |
+| Deterministic residual matches | `0/10` |
+| Prequential residual cells with match | `0/4` |
+
+No exact-length template width `1..3` explains any of the `10`
+residual first-drift corrections. This rejects a simple
+multi-op path-template reuse explanation and leaves the blocker
+at a richer latent path/state mechanism or source-free target
+digit account.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -778,8 +799,9 @@ one-residual full-fit clue. Raw context nearest-neighbor recurrence
 is also rejected, and consensus over the weak structural signals
 collapses back to the active baseline. Vote decomposition shows no
 clean residual threshold hidden inside those signals. Gate 36 closes
-that branch-choice weak-signal frontier as audit-only. The remaining
-blocker is a richer path/state
+that branch-choice weak-signal frontier as audit-only. Gate 37 then
+rejects simple exact-length path-template reuse. The remaining
+blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -824,3 +846,4 @@ or the stable projection as an oracle.
 - [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)
 - [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)
 - [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)
+- [Path template reuse audit](test_results/37_path_template_reuse_audit.md)

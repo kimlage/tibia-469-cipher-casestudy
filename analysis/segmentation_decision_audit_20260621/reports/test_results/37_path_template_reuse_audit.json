@@ -1,0 +1,1382 @@
+{
+  "case_reopened": false,
+  "classification": "path_template_reuse_hypothesis_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "path_template_reuse_hypothesis_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "template_reuse_tested",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_by_width": {
+    "1": {
+      "ambiguous_key_count": 22,
+      "deterministic_residual_matches": 0,
+      "library_key_count": 115,
+      "library_template_count": 178,
+      "residual_count": 10,
+      "residual_rows": [
+        {
+          "active_shape": [
+            "literal",
+            27
+          ],
+          "book": 14,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le21",
+            "le0",
+            "le21",
+            "le5",
+            "le13",
+            "le5"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "literal",
+              39
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            39
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            8
+          ],
+          "book": 16,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_started_inside_stable_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "copy",
+            "le8",
+            "le8",
+            "le0",
+            "le8",
+            "le1",
+            "le8"
+          ],
+          "op_index": 9,
+          "stable_path_signature": [
+            [
+              "literal",
+              1
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            1
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            3
+          ],
+          "book": 20,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "le8",
+            "literal",
+            "le3",
+            "le13",
+            "le3",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              10
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            10
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 21,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le13",
+            "le8",
+            "gt55",
+            "le1",
+            "gt55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              9
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            9
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 26,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le1",
+            "le13",
+            "le1",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              11
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            11
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            5
+          ],
+          "book": 34,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "literal",
+            "le5",
+            "le5",
+            "le5",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 7,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 39,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le5",
+            "le8",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 45,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le1",
+            "le8",
+            "le1",
+            "le21",
+            "le1",
+            "le21"
+          ],
+          "op_index": 1,
+          "stable_path_signature": [
+            [
+              "copy",
+              8
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            8
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            45
+          ],
+          "book": 55,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_length_drift_same_source",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "copy",
+            "gt34",
+            "le55",
+            "le0",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              44
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            44
+          ],
+          "template_support": 8
+        },
+        {
+          "active_shape": [
+            "literal",
+            17
+          ],
+          "book": 57,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le13",
+            "le0",
+            "le13",
+            "le5",
+            "le8",
+            "le5"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "literal",
+              28
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            28
+          ],
+          "template_support": 0
+        }
+      ],
+      "width": 1
+    },
+    "2": {
+      "ambiguous_key_count": 28,
+      "deterministic_residual_matches": 0,
+      "library_key_count": 115,
+      "library_template_count": 196,
+      "residual_count": 10,
+      "residual_rows": [
+        {
+          "active_shape": [
+            "literal",
+            27
+          ],
+          "book": 14,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le21",
+            "le0",
+            "le21",
+            "le5",
+            "le13",
+            "le5"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "literal",
+              39
+            ],
+            [
+              "copy",
+              6
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            39
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            8
+          ],
+          "book": 16,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_started_inside_stable_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "copy",
+            "le8",
+            "le8",
+            "le0",
+            "le8",
+            "le1",
+            "le8"
+          ],
+          "op_index": 9,
+          "stable_path_signature": [
+            [
+              "literal",
+              1
+            ],
+            [
+              "copy",
+              8
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            1
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            3
+          ],
+          "book": 20,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "le8",
+            "literal",
+            "le3",
+            "le13",
+            "le3",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              10
+            ],
+            [
+              "copy",
+              9
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            10
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 21,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le13",
+            "le8",
+            "gt55",
+            "le1",
+            "gt55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              9
+            ],
+            [
+              "copy",
+              135
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            9
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 26,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le1",
+            "le13",
+            "le1",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              11
+            ],
+            [
+              "copy",
+              10
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            11
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            5
+          ],
+          "book": 34,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "literal",
+            "le5",
+            "le5",
+            "le5",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 7,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ],
+            [
+              "copy",
+              13
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 39,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le5",
+            "le8",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ],
+            [
+              "literal",
+              2
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 45,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le1",
+            "le8",
+            "le1",
+            "le21",
+            "le1",
+            "le21"
+          ],
+          "op_index": 1,
+          "stable_path_signature": [
+            [
+              "copy",
+              8
+            ],
+            [
+              "copy",
+              79
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            8
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            45
+          ],
+          "book": 55,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_length_drift_same_source",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "copy",
+            "gt34",
+            "le55",
+            "le0",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              44
+            ],
+            [
+              "copy",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            44
+          ],
+          "template_support": 8
+        },
+        {
+          "active_shape": [
+            "literal",
+            17
+          ],
+          "book": 57,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le13",
+            "le0",
+            "le13",
+            "le5",
+            "le8",
+            "le5"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "literal",
+              28
+            ],
+            [
+              "copy",
+              44
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            28
+          ],
+          "template_support": 0
+        }
+      ],
+      "width": 2
+    },
+    "3": {
+      "ambiguous_key_count": 29,
+      "deterministic_residual_matches": 0,
+      "library_key_count": 115,
+      "library_template_count": 198,
+      "residual_count": 10,
+      "residual_rows": [
+        {
+          "active_shape": [
+            "literal",
+            27
+          ],
+          "book": 14,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le21",
+            "le0",
+            "le21",
+            "le5",
+            "le13",
+            "le5"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "literal",
+              39
+            ],
+            [
+              "copy",
+              6
+            ],
+            [
+              "literal",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            39
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            8
+          ],
+          "book": 16,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_started_inside_stable_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "copy",
+            "le8",
+            "le8",
+            "le0",
+            "le8",
+            "le1",
+            "le8"
+          ],
+          "op_index": 9,
+          "stable_path_signature": [
+            [
+              "literal",
+              1
+            ],
+            [
+              "copy",
+              8
+            ],
+            [
+              "literal",
+              1
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            1
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            3
+          ],
+          "book": 20,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "le8",
+            "literal",
+            "le3",
+            "le13",
+            "le3",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              10
+            ],
+            [
+              "copy",
+              9
+            ],
+            [
+              "copy",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            10
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 21,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le13",
+            "le8",
+            "gt55",
+            "le1",
+            "gt55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              9
+            ],
+            [
+              "copy",
+              135
+            ],
+            [
+              "copy",
+              32
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            9
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 26,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le1",
+            "le13",
+            "le1",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              11
+            ],
+            [
+              "copy",
+              10
+            ],
+            [
+              "literal",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            11
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            5
+          ],
+          "book": 34,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "end",
+            "copy",
+            "le13",
+            "literal",
+            "le5",
+            "le5",
+            "le5",
+            "le13",
+            "le1",
+            "le13"
+          ],
+          "op_index": 7,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ],
+            [
+              "copy",
+              13
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            7
+          ],
+          "book": 39,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "book_start_copy_missed_as_literal",
+          "feature_key": [
+            "start",
+            "BOS",
+            "le1",
+            "literal",
+            "le8",
+            "le5",
+            "le8",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 0,
+          "stable_path_signature": [
+            [
+              "copy",
+              5
+            ],
+            [
+              "literal",
+              2
+            ],
+            [
+              "copy",
+              52
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            5
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "literal",
+            1
+          ],
+          "book": 45,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "internal_copy_missed_as_literal",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le1",
+            "le8",
+            "le1",
+            "le21",
+            "le1",
+            "le21"
+          ],
+          "op_index": 1,
+          "stable_path_signature": [
+            [
+              "copy",
+              8
+            ],
+            [
+              "copy",
+              79
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            8
+          ],
+          "template_support": 0
+        },
+        {
+          "active_shape": [
+            "copy",
+            45
+          ],
+          "book": 55,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "copy_length_drift_same_source",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "copy",
+            "gt34",
+            "le55",
+            "le0",
+            "le55",
+            "le1",
+            "le55"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "copy",
+              44
+            ],
+            [
+              "copy",
+              5
+            ]
+          ],
+          "stable_shape": [
+            "copy",
+            44
+          ],
+          "template_support": 8
+        },
+        {
+          "active_shape": [
+            "literal",
+            17
+          ],
+          "book": 57,
+          "deterministic_key": false,
+          "deterministic_match": false,
+          "drift_class": "literal_understop",
+          "feature_key": [
+            "middle",
+            "copy",
+            "gt34",
+            "literal",
+            "le13",
+            "le0",
+            "le13",
+            "le5",
+            "le8",
+            "le5"
+          ],
+          "op_index": 2,
+          "stable_path_signature": [
+            [
+              "literal",
+              28
+            ],
+            [
+              "copy",
+              44
+            ],
+            [
+              "copy",
+              33
+            ]
+          ],
+          "stable_shape": [
+            "literal",
+            28
+          ],
+          "template_support": 0
+        }
+      ],
+      "width": 3
+    }
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "branch_choice_frontier_closure": "analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.json",
+    "conditional_repair_classifier": "analysis/segmentation_decision_audit_20260621/reports/test_results/18_conditional_repair_classifier_audit.json"
+  },
+  "plaintext_claim": false,
+  "prequential_by_width": {
+    "1": [
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 20,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 8,
+        "train_exact_books": 8
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 30,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 5,
+        "train_exact_books": 15
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 40,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 3,
+        "train_exact_books": 23
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 50,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 2,
+        "train_exact_books": 32
+      },
+      {
+        "covered_feature_keys": 0,
+        "cutoff_book": 60,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 0,
+        "train_exact_books": 40
+      }
+    ],
+    "2": [
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 20,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 8,
+        "train_exact_books": 8
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 30,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 5,
+        "train_exact_books": 15
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 40,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 3,
+        "train_exact_books": 23
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 50,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 2,
+        "train_exact_books": 32
+      },
+      {
+        "covered_feature_keys": 0,
+        "cutoff_book": 60,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 0,
+        "train_exact_books": 40
+      }
+    ],
+    "3": [
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 20,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 8,
+        "train_exact_books": 8
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 30,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 5,
+        "train_exact_books": 15
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 40,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 3,
+        "train_exact_books": 23
+      },
+      {
+        "covered_feature_keys": 1,
+        "cutoff_book": 50,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 2,
+        "train_exact_books": 32
+      },
+      {
+        "covered_feature_keys": 0,
+        "cutoff_book": 60,
+        "deterministic_feature_keys": 0,
+        "deterministic_template_matches": 0,
+        "test_residuals": 0,
+        "train_exact_books": 40
+      }
+    ]
+  },
+  "schema": "path_template_reuse_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true,
+    "tests_template_reuse_not_local_sweep": true
+  },
+  "shuffle_controls": {
+    "1": {
+      "observed": 0,
+      "p_ge_observed": 1.0,
+      "shuffle_ge_observed_count": 400,
+      "shuffle_max": 0,
+      "shuffle_mean": 0.0,
+      "shuffle_min": 0,
+      "trials": 400,
+      "width": 1
+    },
+    "2": {
+      "observed": 0,
+      "p_ge_observed": 1.0,
+      "shuffle_ge_observed_count": 400,
+      "shuffle_max": 0,
+      "shuffle_mean": 0.0,
+      "shuffle_min": 0,
+      "trials": 400,
+      "width": 2
+    },
+    "3": {
+      "observed": 0,
+      "p_ge_observed": 1.0,
+      "shuffle_ge_observed_count": 400,
+      "shuffle_max": 0,
+      "shuffle_mean": 0.0,
+      "shuffle_min": 0,
+      "trials": 400,
+      "width": 3
+    }
+  },
+  "summary": {
+    "active_classifier": "if_peak_len_le5_then_skip_to_next_peak_ge5",
+    "best_ambiguous_key_count": 22,
+    "best_deterministic_residual_matches": 0,
+    "best_library_key_count": 115,
+    "best_p_ge_observed": 1.0,
+    "best_residual_count": 10,
+    "best_width": 1,
+    "decision_count": 267,
+    "exact_book_count": 50,
+    "interpretation": "Path-template reuse tests whether the remaining first-drift corrections are explained by multi-operation stable templates seen in exact parser books under the same observable state key. It is structural because it tests reusable path shape, not a single branch-choice feature or a bit sweep.",
+    "prequential_cells": 5,
+    "prequential_cells_with_match": 0,
+    "prequential_cells_with_residuals": 4,
+    "promotes_path_template_reuse": false,
+    "residual_book_count": 10,
+    "residual_books": [
+      14,
+      16,
+      20,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "widths_tested": [
+      1,
+      2,
+      3
+    ]
+  },
+  "translation_delta": "NONE"
+}

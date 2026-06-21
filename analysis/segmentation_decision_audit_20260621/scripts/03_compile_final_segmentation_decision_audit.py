@@ -45,6 +45,7 @@ CONTEXT_NEAREST = TEST_RESULTS / "33_context_nearest_branch_audit.json"
 STRUCTURAL_CONSENSUS = TEST_RESULTS / "34_structural_signal_consensus_audit.json"
 STRUCTURAL_DECOMPOSITION = TEST_RESULTS / "35_structural_vote_residual_decomposition.json"
 BRANCH_CHOICE_CLOSURE = TEST_RESULTS / "36_branch_choice_frontier_closure_audit.json"
+PATH_TEMPLATE_REUSE = TEST_RESULTS / "37_path_template_reuse_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -148,6 +149,11 @@ def main() -> None:
         if BRANCH_CHOICE_CLOSURE.exists()
         else None
     )
+    path_template_reuse = (
+        load_json(PATH_TEMPLATE_REUSE)
+        if PATH_TEMPLATE_REUSE.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -218,6 +224,8 @@ def main() -> None:
         )
     if branch_choice_closure is not None:
         assert_boundary("branch_choice_frontier_closure_audit", branch_choice_closure)
+    if path_template_reuse is not None:
+        assert_boundary("path_template_reuse_audit", path_template_reuse)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -301,6 +309,9 @@ def main() -> None:
     )
     branch_choice_closure_summary = (
         None if branch_choice_closure is None else branch_choice_closure["summary"]
+    )
+    path_template_reuse_summary = (
+        None if path_template_reuse is None else path_template_reuse["summary"]
     )
 
     lines = [
@@ -1260,6 +1271,32 @@ def main() -> None:
                 "",
             ]
         )
+    if path_template_reuse_summary is not None:
+        lines.extend(
+            [
+                "## Path Template Reuse Control",
+                "",
+                "Gate 37 tests the next structural shortcut after weak signals:",
+                "whether the remaining first-drift corrections can be selected",
+                "by reusing exact source-free operation-length templates from",
+                "books that the active parser already parses exactly.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Exact parser books | `{path_template_reuse_summary['exact_book_count']}` |",
+                f"| Residual parser books | `{path_template_reuse_summary['residual_book_count']}` |",
+                f"| Best template width | `{path_template_reuse_summary['best_width']}` |",
+                f"| Deterministic residual matches | `{path_template_reuse_summary['best_deterministic_residual_matches']}/{path_template_reuse_summary['best_residual_count']}` |",
+                f"| Prequential residual cells with match | `{path_template_reuse_summary['prequential_cells_with_match']}/{path_template_reuse_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "No exact-length template width `1..3` explains any of the `10`",
+                "residual first-drift corrections. This rejects a simple",
+                "multi-op path-template reuse explanation and leaves the blocker",
+                "at a richer latent path/state mechanism or source-free target",
+                "digit account.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1279,8 +1316,9 @@ def main() -> None:
             "is also rejected, and consensus over the weak structural signals",
             "collapses back to the active baseline. Vote decomposition shows no",
             "clean residual threshold hidden inside those signals. Gate 36 closes",
-            "that branch-choice weak-signal frontier as audit-only. The remaining",
-            "blocker is a richer path/state",
+            "that branch-choice weak-signal frontier as audit-only. Gate 37 then",
+            "rejects simple exact-length path-template reuse. The remaining",
+            "blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1325,6 +1363,7 @@ def main() -> None:
             "- [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)",
             "- [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)",
             "- [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)",
+            "- [Path template reuse audit](test_results/37_path_template_reuse_audit.md)",
             "",
         ]
     )
