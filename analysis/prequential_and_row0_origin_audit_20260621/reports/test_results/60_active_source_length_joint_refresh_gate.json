@@ -1,0 +1,296 @@
+{
+  "active_formula_summary": {
+    "copied_digits": 10407,
+    "copy_event_count": 261,
+    "decoder_max_length_hits_after_declared_source": 60,
+    "earliest_source_hits_at_declared_length": 247,
+    "encoder_target_max_length_hits_after_declared_source": 242,
+    "joint_declared_source_decoder_max_hits": 60,
+    "joint_encoder_earliest_target_max_hits": 230,
+    "joint_previous_end_decoder_max_hits": 1,
+    "joint_unique_source_decoder_max_hits": 28,
+    "joint_unique_source_target_max_hits": 118,
+    "latest_source_hits_at_declared_length": 128,
+    "permutation_controls": {
+      "decoder_max_hit_summary": {
+        "max": 8,
+        "mean": 1.945,
+        "median": 2.0,
+        "min": 0,
+        "n": 1000
+      },
+      "p_permuted_decoder_max_hits_ge_observed": 0.0,
+      "p_permuted_target_max_hits_ge_observed": 0.0,
+      "seed": 469,
+      "target_max_hit_summary": {
+        "max": 16,
+        "mean": 7.316,
+        "median": 7.0,
+        "min": 0,
+        "n": 1000
+      },
+      "trials": 1000
+    },
+    "unique_source_hits_at_declared_length": 123
+  },
+  "case_reopened": false,
+  "changed_ops": [
+    {
+      "active": {
+        "length": 7,
+        "source_digit_pos": 101,
+        "type": "copy"
+      },
+      "book": 2,
+      "op_index": 9,
+      "previous": {
+        "length": 6,
+        "source_digit_pos": 101,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 30,
+        "text": "304648765159564611414519889975",
+        "type": "literal"
+      },
+      "book": 2,
+      "op_index": 10,
+      "previous": {
+        "length": 31,
+        "text": "8304648765159564611414519889975",
+        "type": "literal"
+      }
+    },
+    {
+      "active": {
+        "length": 271,
+        "source_digit_pos": 695,
+        "type": "copy"
+      },
+      "book": 9,
+      "op_index": 0,
+      "previous": {
+        "length": 267,
+        "source_digit_pos": 695,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 17,
+        "source_digit_pos": 73,
+        "type": "copy"
+      },
+      "book": 9,
+      "op_index": 1,
+      "previous": {
+        "length": 21,
+        "source_digit_pos": 69,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 112,
+        "source_digit_pos": 1406,
+        "type": "copy"
+      },
+      "book": 46,
+      "op_index": 2,
+      "previous": {
+        "length": 112,
+        "source_digit_pos": 699,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 126,
+        "source_digit_pos": 1518,
+        "type": "copy"
+      },
+      "book": 47,
+      "op_index": 0,
+      "previous": {
+        "length": 126,
+        "source_digit_pos": 811,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 17,
+        "source_digit_pos": 5129,
+        "type": "copy"
+      },
+      "book": 49,
+      "op_index": 3,
+      "previous": {
+        "length": 17,
+        "source_digit_pos": 864,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 5,
+        "source_digit_pos": 5124,
+        "type": "copy"
+      },
+      "book": 49,
+      "op_index": 11,
+      "previous": {
+        "length": 5,
+        "source_digit_pos": 2053,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 134,
+        "source_digit_pos": 6977,
+        "type": "copy"
+      },
+      "book": 51,
+      "op_index": 0,
+      "previous": {
+        "length": 127,
+        "source_digit_pos": 6977,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 134,
+        "source_digit_pos": 7235,
+        "type": "copy"
+      },
+      "book": 51,
+      "op_index": 1,
+      "previous": {
+        "length": 141,
+        "source_digit_pos": 7228,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 9,
+        "source_digit_pos": 2157,
+        "type": "copy"
+      },
+      "book": 56,
+      "op_index": 8,
+      "previous": {
+        "length": 8,
+        "source_digit_pos": 2157,
+        "type": "copy"
+      }
+    },
+    {
+      "active": {
+        "length": 21,
+        "source_digit_pos": 242,
+        "type": "copy"
+      },
+      "book": 56,
+      "op_index": 9,
+      "previous": {
+        "length": 22,
+        "source_digit_pos": 241,
+        "type": "copy"
+      }
+    }
+  ],
+  "classification": "active_source_length_joint_refresh_encoder_gain_decoder_boundary_unchanged",
+  "decision": {
+    "compression_bound_status": "unchanged_8156_049986",
+    "copy_length_dependency_status": "retained_declared",
+    "generation_explanation_status": "active_formula_does_not_improve_decoder_valid_joint_derivation",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_dependency_status": "retained_declared",
+    "source_length_joint_status": "active_formula_encoder_targetmax_gain_decoder_dependency_retained",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "deltas": {
+    "copied_digits": 1,
+    "copy_event_count": 0,
+    "decoder_max_length_hits_after_declared_source": 0,
+    "earliest_source_hits_at_declared_length": -4,
+    "encoder_target_max_length_hits_after_declared_source": 4,
+    "joint_declared_source_decoder_max_hits": 0,
+    "joint_encoder_earliest_target_max_hits": 0,
+    "joint_previous_end_decoder_max_hits": 0,
+    "joint_unique_source_decoder_max_hits": 0,
+    "joint_unique_source_target_max_hits": 3,
+    "latest_source_hits_at_declared_length": 2,
+    "unique_source_hits_at_declared_length": 0
+  },
+  "inputs": {
+    "active_dependency_refresh_59": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/59_active_formula_dependency_refresh_gate.json",
+    "active_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_formula_469.json",
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "previous_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469.json",
+    "source_length_joint_49": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.json"
+  },
+  "plaintext_claim": false,
+  "previous_formula_summary": {
+    "copied_digits": 10406,
+    "copy_event_count": 261,
+    "decoder_max_length_hits_after_declared_source": 60,
+    "earliest_source_hits_at_declared_length": 251,
+    "encoder_target_max_length_hits_after_declared_source": 238,
+    "joint_declared_source_decoder_max_hits": 60,
+    "joint_encoder_earliest_target_max_hits": 230,
+    "joint_previous_end_decoder_max_hits": 1,
+    "joint_unique_source_decoder_max_hits": 28,
+    "joint_unique_source_target_max_hits": 115,
+    "latest_source_hits_at_declared_length": 126,
+    "permutation_controls": {
+      "decoder_max_hit_summary": {
+        "max": 8,
+        "mean": 1.968,
+        "median": 2.0,
+        "min": 0,
+        "n": 1000
+      },
+      "p_permuted_decoder_max_hits_ge_observed": 0.0,
+      "p_permuted_target_max_hits_ge_observed": 0.0,
+      "seed": 469,
+      "target_max_hit_summary": {
+        "max": 16,
+        "mean": 7.287,
+        "median": 7.0,
+        "min": 0,
+        "n": 1000
+      },
+      "trials": 1000
+    },
+    "unique_source_hits_at_declared_length": 123
+  },
+  "schema": "active_source_length_joint_refresh_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_new_copy_sources_or_lengths": true,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "active_copy_event_count": 261,
+    "active_declared_source_decoder_max_delta": 0,
+    "active_earliest_source_hit_delta": -4,
+    "active_joint_earliest_target_max_delta": 0,
+    "active_previous_end_decoder_max_delta": 0,
+    "active_target_max_hit_delta": 4,
+    "active_unique_source_decoder_max_delta": 0,
+    "changed_op_count": 12,
+    "decoder_valid_joint_rule_improved": false,
+    "interpretation": "The active formula converts four additional copy lengths into target-max hits, but this is encoder-side evidence only. The decoder-valid joint checks do not improve: declared-source plus decoder-max stays at 60/261, unique-source plus decoder-max stays at 28/261, and previous-end plus decoder-max stays at 1/261.",
+    "previous_copy_event_count": 261
+  },
+  "translation_delta": "NONE"
+}

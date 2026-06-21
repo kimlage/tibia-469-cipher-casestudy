@@ -619,6 +619,122 @@
       "total_pair_to_end_proxy_reduction_pct": 97.23885021649389
     }
   },
+  "active_source_length_joint_refresh": {
+    "active_formula_summary": {
+      "copied_digits": 10407,
+      "copy_event_count": 261,
+      "decoder_max_length_hits_after_declared_source": 60,
+      "earliest_source_hits_at_declared_length": 247,
+      "encoder_target_max_length_hits_after_declared_source": 242,
+      "joint_declared_source_decoder_max_hits": 60,
+      "joint_encoder_earliest_target_max_hits": 230,
+      "joint_previous_end_decoder_max_hits": 1,
+      "joint_unique_source_decoder_max_hits": 28,
+      "joint_unique_source_target_max_hits": 118,
+      "latest_source_hits_at_declared_length": 128,
+      "permutation_controls": {
+        "decoder_max_hit_summary": {
+          "max": 8,
+          "mean": 1.945,
+          "median": 2.0,
+          "min": 0,
+          "n": 1000
+        },
+        "p_permuted_decoder_max_hits_ge_observed": 0.0,
+        "p_permuted_target_max_hits_ge_observed": 0.0,
+        "seed": 469,
+        "target_max_hit_summary": {
+          "max": 16,
+          "mean": 7.316,
+          "median": 7.0,
+          "min": 0,
+          "n": 1000
+        },
+        "trials": 1000
+      },
+      "unique_source_hits_at_declared_length": 123
+    },
+    "classification": "active_source_length_joint_refresh_encoder_gain_decoder_boundary_unchanged",
+    "decision": {
+      "compression_bound_status": "unchanged_8156_049986",
+      "copy_length_dependency_status": "retained_declared",
+      "generation_explanation_status": "active_formula_does_not_improve_decoder_valid_joint_derivation",
+      "row0_origin_status": "unchanged_exogenous",
+      "source_dependency_status": "retained_declared",
+      "source_length_joint_status": "active_formula_encoder_targetmax_gain_decoder_dependency_retained",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "deltas": {
+      "copied_digits": 1,
+      "copy_event_count": 0,
+      "decoder_max_length_hits_after_declared_source": 0,
+      "earliest_source_hits_at_declared_length": -4,
+      "encoder_target_max_length_hits_after_declared_source": 4,
+      "joint_declared_source_decoder_max_hits": 0,
+      "joint_encoder_earliest_target_max_hits": 0,
+      "joint_previous_end_decoder_max_hits": 0,
+      "joint_unique_source_decoder_max_hits": 0,
+      "joint_unique_source_target_max_hits": 3,
+      "latest_source_hits_at_declared_length": 2,
+      "unique_source_hits_at_declared_length": 0
+    },
+    "previous_formula_summary": {
+      "copied_digits": 10406,
+      "copy_event_count": 261,
+      "decoder_max_length_hits_after_declared_source": 60,
+      "earliest_source_hits_at_declared_length": 251,
+      "encoder_target_max_length_hits_after_declared_source": 238,
+      "joint_declared_source_decoder_max_hits": 60,
+      "joint_encoder_earliest_target_max_hits": 230,
+      "joint_previous_end_decoder_max_hits": 1,
+      "joint_unique_source_decoder_max_hits": 28,
+      "joint_unique_source_target_max_hits": 115,
+      "latest_source_hits_at_declared_length": 126,
+      "permutation_controls": {
+        "decoder_max_hit_summary": {
+          "max": 8,
+          "mean": 1.968,
+          "median": 2.0,
+          "min": 0,
+          "n": 1000
+        },
+        "p_permuted_decoder_max_hits_ge_observed": 0.0,
+        "p_permuted_target_max_hits_ge_observed": 0.0,
+        "seed": 469,
+        "target_max_hit_summary": {
+          "max": 16,
+          "mean": 7.287,
+          "median": 7.0,
+          "min": 0,
+          "n": 1000
+        },
+        "trials": 1000
+      },
+      "unique_source_hits_at_declared_length": 123
+    },
+    "scope": {
+      "analysis_only": true,
+      "compression_bound_changed": false,
+      "does_not_search_new_copy_sources_or_lengths": true,
+      "does_not_search_plaintext": true,
+      "new_formula_emitted": false,
+      "row0_origin_changed": false
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/60_active_source_length_joint_refresh_gate.json",
+    "summary": {
+      "active_copy_event_count": 261,
+      "active_declared_source_decoder_max_delta": 0,
+      "active_earliest_source_hit_delta": -4,
+      "active_joint_earliest_target_max_delta": 0,
+      "active_previous_end_decoder_max_delta": 0,
+      "active_target_max_hit_delta": 4,
+      "active_unique_source_decoder_max_delta": 0,
+      "changed_op_count": 12,
+      "decoder_valid_joint_rule_improved": false,
+      "interpretation": "The active formula converts four additional copy lengths into target-max hits, but this is encoder-side evidence only. The decoder-valid joint checks do not improve: declared-source plus decoder-max stays at 60/261, unique-source plus decoder-max stays at 28/261, and previous-end plus decoder-max stays at 1/261.",
+      "previous_copy_event_count": 261
+    }
+  },
   "case_reopened": false,
   "classification": "analysis_only_falsifiable_audit_row0_origin_exogenous",
   "copy_length_segmentation_exception": {
@@ -3037,6 +3153,7 @@
   "decision": {
     "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
     "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
+    "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
     "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
     "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",

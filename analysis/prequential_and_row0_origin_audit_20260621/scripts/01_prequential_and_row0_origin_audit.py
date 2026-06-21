@@ -245,6 +245,14 @@ ACTIVE_FORMULA_DEPENDENCY_REFRESH_GATE = (
     / "test_results"
     / "59_active_formula_dependency_refresh_gate.json"
 )
+ACTIVE_SOURCE_LENGTH_JOINT_REFRESH_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "60_active_source_length_joint_refresh_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -548,6 +556,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_formula_dependency_refresh_gate",
         active_formula_dependency_refresh,
+    )
+    active_source_length_joint_refresh = load_json(
+        ACTIVE_SOURCE_LENGTH_JOINT_REFRESH_GATE
+    )
+    assert_analysis_boundary(
+        "active_source_length_joint_refresh_gate",
+        active_source_length_joint_refresh,
     )
 
     predictive = legacy["predictive_validation"]
@@ -862,6 +877,20 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_formula_dependency_refresh["summary"],
             "decision": active_formula_dependency_refresh["decision"],
         },
+        "active_source_length_joint_refresh": {
+            "classification": active_source_length_joint_refresh["classification"],
+            "source": rel(ACTIVE_SOURCE_LENGTH_JOINT_REFRESH_GATE),
+            "scope": active_source_length_joint_refresh["scope"],
+            "previous_formula_summary": active_source_length_joint_refresh[
+                "previous_formula_summary"
+            ],
+            "active_formula_summary": active_source_length_joint_refresh[
+                "active_formula_summary"
+            ],
+            "deltas": active_source_length_joint_refresh["deltas"],
+            "summary": active_source_length_joint_refresh["summary"],
+            "decision": active_source_length_joint_refresh["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -911,6 +940,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "post_targetmax_source_substitution_second_pass_status": "promoted_bound_8156_049986_microscopic",
             "post_targetmax_source_substitution_stop_status": "micro_frontier_frozen_not_mainline",
             "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
+            "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -976,6 +1006,7 @@ def render_markdown(
     post_targetmax_source_substitution_second_pass_gate_link: str,
     post_targetmax_source_substitution_stop_audit_link: str,
     active_formula_dependency_refresh_gate_link: str,
+    active_source_length_joint_refresh_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1049,6 +1080,9 @@ def render_markdown(
         "summary"
     ]
     active_dependency_refresh = result["active_formula_dependency_refresh"][
+        "summary"
+    ]
+    active_source_length_refresh = result["active_source_length_joint_refresh"][
         "summary"
     ]
 
@@ -1928,6 +1962,21 @@ def render_markdown(
             "derived source/length explanation.",
             f"See [59_active_formula_dependency_refresh_gate.md]({active_formula_dependency_refresh_gate_link}).",
             "",
+            "### Active Source-Length Joint Refresh Gate",
+            "",
+            "The source/length refresh repeats the gate-49 joint tests on the active "
+            "post-target-max formula. Encoder target-max length hits improve by "
+            f"`{active_source_length_refresh['active_target_max_hit_delta']:+d}`, "
+            "but decoder-valid joint rules do not improve.",
+            "Declared-source+decoder-max, unique-source+decoder-max, and "
+            "previous-end+decoder-max all have delta "
+            f"`{active_source_length_refresh['active_declared_source_decoder_max_delta']:+d}` / "
+            f"`{active_source_length_refresh['active_unique_source_decoder_max_delta']:+d}` / "
+            f"`{active_source_length_refresh['active_previous_end_decoder_max_delta']:+d}`. "
+            "So the active formula sharpens encoder-side regularity while keeping "
+            "source and length declared.",
+            f"See [60_active_source_length_joint_refresh_gate.md]({active_source_length_joint_refresh_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2034,6 +2083,7 @@ def render_markdown(
             "- A second post-target-max source-substitution pass finds another microscopic pair gain, moving the bound to `8156.049986` bits; this is still not generation evidence.",
             "- The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.",
             "- The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.",
+            "- The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2188,6 +2238,9 @@ def main() -> None:
             ),
             active_formula_dependency_refresh_gate_link=(
                 "59_active_formula_dependency_refresh_gate.md"
+            ),
+            active_source_length_joint_refresh_gate_link=(
+                "60_active_source_length_joint_refresh_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2348,6 +2401,9 @@ def main() -> None:
             ),
             active_formula_dependency_refresh_gate_link=(
                 "test_results/59_active_formula_dependency_refresh_gate.md"
+            ),
+            active_source_length_joint_refresh_gate_link=(
+                "test_results/60_active_source_length_joint_refresh_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

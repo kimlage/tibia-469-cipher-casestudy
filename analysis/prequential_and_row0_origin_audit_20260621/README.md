@@ -193,6 +193,9 @@ exogenous.
 - [scripts/59_active_formula_dependency_refresh_gate.py](scripts/59_active_formula_dependency_refresh_gate.py) - refreshes dependency counts on the active post-target-max formula without searching another source pass.
 - [reports/test_results/59_active_formula_dependency_refresh_gate.md](reports/test_results/59_active_formula_dependency_refresh_gate.md) - active formula dependency refresh result.
 - [reports/test_results/59_active_formula_dependency_refresh_gate.json](reports/test_results/59_active_formula_dependency_refresh_gate.json) - structured active formula dependency refresh ledger.
+- [scripts/60_active_source_length_joint_refresh_gate.py](scripts/60_active_source_length_joint_refresh_gate.py) - retests joint source/length derivability on the active post-target-max formula.
+- [reports/test_results/60_active_source_length_joint_refresh_gate.md](reports/test_results/60_active_source_length_joint_refresh_gate.md) - active source/length joint refresh result.
+- [reports/test_results/60_active_source_length_joint_refresh_gate.json](reports/test_results/60_active_source_length_joint_refresh_gate.json) - structured active source/length joint refresh ledger.
 
 ## Boundary
 
@@ -351,7 +354,10 @@ exogenous.
   selector-cost sanity checks dominate. The active-formula dependency refresh
   then confirms that the bound improved by `4.775621` bits since the gate-48
   formula, but declared recipe dependencies remain unchanged at `609` fields;
-  only one digit moved from literal payload to copied payload.
+  only one digit moved from literal payload to copied payload. The active
+  source/length joint refresh then shows the same boundary from another angle:
+  encoder target-max hits improve by `+4`, but decoder-valid joint rules remain
+  unchanged.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

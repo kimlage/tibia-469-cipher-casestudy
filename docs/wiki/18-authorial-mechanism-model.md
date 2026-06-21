@@ -1193,6 +1193,11 @@ the gate-48 formula: the bound is `4.775621` bits lower, but declared recipe
 dependencies remain unchanged at `609` fields. The only count-level payload
 shift is one digit from literal payload to copied payload, so the source/length
 explanation gap is not reduced.
+A source/length joint refresh confirms the same boundary: active target-max
+length hits rise from `238/261` to `242/261`, but decoder-valid joint rules are
+unchanged (`60/261` declared-source+decoder-max, `28/261`
+unique-source+decoder-max, `1/261` previous-end+decoder-max). This keeps source
+and length as declared dependencies rather than derived generation rules.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1648,6 +1653,7 @@ book generation, not row0 pair-cell placement.
 - [Post-target-max source substitution second-pass gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.md)
 - [Post-target-max source substitution stop audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/58_post_targetmax_source_substitution_stop_audit.md)
 - [Active formula dependency refresh gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/59_active_formula_dependency_refresh_gate.md)
+- [Active source-length joint refresh gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/60_active_source_length_joint_refresh_gate.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

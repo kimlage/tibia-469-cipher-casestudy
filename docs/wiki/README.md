@@ -670,6 +670,8 @@ gain is only `0.000369` bits, and selector-cost sanity checks dominate.
 The active-formula dependency refresh then confirms no structural dependency
 reduction: the bound improved by `4.775621` bits since gate 48, but declared
 recipe dependencies remain unchanged at `609` fields.
+The active source/length joint refresh sharpens the boundary: target-max hits
+increase by `+4`, while decoder-valid joint rules remain unchanged.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -762,6 +764,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   post-target-max source substitution bound of `8156.050167` bits and a second
   pass at `8156.049986` bits, freezes that micro-frontier under a stop audit,
   records that the active formula still declares `609` recipe dependency fields,
+  confirms that active source/length gains are encoder-side rather than
+  decoder-valid,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
