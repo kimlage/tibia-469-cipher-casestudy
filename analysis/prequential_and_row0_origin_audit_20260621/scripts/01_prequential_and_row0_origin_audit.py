@@ -280,6 +280,7 @@ def render_markdown(
     online_bootstrap_seed_policy_link: str,
     seeded_online_formula_rescore_link: str,
     seeded_rescore_loss_decomposition_link: str,
+    seed_exception_signal_cost_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -555,6 +556,17 @@ def render_markdown(
             "formula scoring.",
             f"See [20_seeded_rescore_loss_decomposition.md]({seeded_rescore_loss_decomposition_link}).",
             "",
+            "### Seed Exception Signal Cost Audit",
+            "",
+            "The last seed fallback is tested as an exception-signaling problem. Even",
+            "the best-case zero-cost deterministic fallback is `+0.979` bits worse",
+            "than the existing online formula. A one-book exception index would make",
+            "the delta `+7.108` bits, and a bitmask would make it `+70.979` bits.",
+            "Promotion would require a negative descriptor cost (`< -0.979` bits),",
+            "so the seed exception cannot become a promoted formula under any",
+            "nonnegative signaling cost.",
+            f"See [21_seed_exception_signal_cost_audit.md]({seed_exception_signal_cost_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -613,7 +625,7 @@ def render_markdown(
             "",
             "- `8558.667` bits remains a frozen validation scope here, not a final authorial method.",
             "- The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.",
-            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates.",
+            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -666,6 +678,7 @@ def main() -> None:
             seeded_rescore_loss_decomposition_link=(
                 "20_seeded_rescore_loss_decomposition.md"
             ),
+            seed_exception_signal_cost_link="21_seed_exception_signal_cost_audit.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -708,6 +721,9 @@ def main() -> None:
             ),
             seeded_rescore_loss_decomposition_link=(
                 "test_results/20_seeded_rescore_loss_decomposition.md"
+            ),
+            seed_exception_signal_cost_link=(
+                "test_results/21_seed_exception_signal_cost_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

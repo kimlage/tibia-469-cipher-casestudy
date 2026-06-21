@@ -1,0 +1,63 @@
+{
+  "case_reopened": false,
+  "classification": "seed_exception_cannot_promote_under_nonnegative_signal_cost",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "exception_signal_status": "rejected_for_formula_promotion",
+    "generation_explanation_status": "seed_exception_boundary_closed",
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_policy_status": "bootstrap_accounting_only",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "online_bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
+    "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
+    "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "description": "Best-case deterministic fallback: no exception list is charged. This is the most favorable possible promotion test.",
+      "descriptor_bits": 0.0,
+      "full_formula_delta_vs_online_bits": 0.978829327306812,
+      "full_formula_promotes": false,
+      "local_seed_net_vs_online_bits": 10.498855747274263,
+      "policy": "zero_cost_deterministic_raw_if_online_loses"
+    },
+    {
+      "description": "Identify the single exception book among 70 books.",
+      "descriptor_bits": 6.129283016944966,
+      "full_formula_delta_vs_online_bits": 7.108112344251778,
+      "full_formula_promotes": false,
+      "local_seed_net_vs_online_bits": 4.369572730329296,
+      "policy": "one_book_index_exception"
+    },
+    {
+      "description": "Encode the exception count and then the selected book index.",
+      "descriptor_bits": 12.279030136449649,
+      "full_formula_delta_vs_online_bits": 13.25785946375646,
+      "full_formula_promotes": false,
+      "local_seed_net_vs_online_bits": -1.7801743891753858,
+      "policy": "exception_count_plus_one_book_index"
+    },
+    {
+      "description": "A direct one-bit-per-book exception mask.",
+      "descriptor_bits": 70.0,
+      "full_formula_delta_vs_online_bits": 70.97882932730681,
+      "full_formula_promotes": false,
+      "local_seed_net_vs_online_bits": -59.50114425272574,
+      "policy": "book_bitmask"
+    }
+  ],
+  "schema": "seed_exception_signal_cost_audit.v1",
+  "summary": {
+    "interpretation": "The seed exception already loses under complete formula rescoring before any descriptor cost is charged. A promoted exception policy would require a negative signal cost, which is inadmissible.",
+    "local_seed_saving_bits": 10.498855747274263,
+    "non_payload_savings_bits": 36.84240461195739,
+    "nonnegative_descriptor_can_promote": false,
+    "payload_penalty_bits": 37.8212339392644,
+    "promotion_threshold_descriptor_bits": -0.978829327306812,
+    "zero_cost_full_formula_delta_vs_online_bits": 0.978829327306812
+  },
+  "translation_delta": "NONE"
+}

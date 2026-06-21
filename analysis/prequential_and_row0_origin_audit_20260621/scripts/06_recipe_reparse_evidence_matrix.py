@@ -39,6 +39,7 @@ SOURCES = {
     / "19_seeded_online_formula_rescore_audit.json",
     "seeded_rescore_loss_decomposition": TEST_RESULTS
     / "20_seeded_rescore_loss_decomposition.json",
+    "seed_exception_signal_cost": TEST_RESULTS / "21_seed_exception_signal_cost_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -76,6 +77,7 @@ def make_result() -> dict[str, Any]:
     bootstrap_seed = load_json(SOURCES["online_bootstrap_seed_policy"])
     seeded_rescore = load_json(SOURCES["seeded_online_formula_rescore"])
     seeded_loss = load_json(SOURCES["seeded_rescore_loss_decomposition"])
+    seed_signal = load_json(SOURCES["seed_exception_signal_cost"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -97,6 +99,7 @@ def make_result() -> dict[str, Any]:
         ("online_bootstrap_seed_policy", bootstrap_seed),
         ("seeded_online_formula_rescore", seeded_rescore),
         ("seeded_rescore_loss_decomposition", seeded_loss),
+        ("seed_exception_signal_cost", seed_signal),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -623,6 +626,38 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "can_exception_signaling_rescue_the_book0_seed",
+            "source": rel(SOURCES["seed_exception_signal_cost"]),
+            "status": "failed_requires_negative_descriptor_cost",
+            "evidence": {
+                "local_seed_saving_bits": seed_signal["summary"]["local_seed_saving_bits"],
+                "zero_cost_full_formula_delta_vs_online_bits": seed_signal["summary"][
+                    "zero_cost_full_formula_delta_vs_online_bits"
+                ],
+                "promotion_threshold_descriptor_bits": seed_signal["summary"][
+                    "promotion_threshold_descriptor_bits"
+                ],
+                "nonnegative_descriptor_can_promote": seed_signal["summary"][
+                    "nonnegative_descriptor_can_promote"
+                ],
+                "one_book_index_full_delta_bits": next(
+                    row["full_formula_delta_vs_online_bits"]
+                    for row in seed_signal["rows"]
+                    if row["policy"] == "one_book_index_exception"
+                ),
+                "book_bitmask_full_delta_bits": next(
+                    row["full_formula_delta_vs_online_bits"]
+                    for row in seed_signal["rows"]
+                    if row["policy"] == "book_bitmask"
+                ),
+            },
+            "interpretation": (
+                "The zero-cost deterministic fallback is already worse than the "
+                "existing online formula. Any real exception signal makes the "
+                "seed policy less promotable, so the seed boundary is closed."
+            ),
+        },
+        {
             "question": "does_numeric_online_order_survive_order_controls",
             "source": rel(SOURCES["online_reparse_order_controls"]),
             "status": "passed_against_tested_orders",
@@ -842,6 +877,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"non-payload savings {evidence['seeded_non_payload_savings_bits']:.3f}; "
                 f"net {evidence['seeded_delta_vs_online_bits']:.3f}; "
                 f"local seed saving {evidence['local_seed_saving_bits']:.3f}"
+            )
+        elif row["question"] == "can_exception_signaling_rescue_the_book0_seed":
+            key = (
+                f"zero-cost delta {evidence['zero_cost_full_formula_delta_vs_online_bits']:.3f}; "
+                f"required descriptor < {evidence['promotion_threshold_descriptor_bits']:.3f}; "
+                f"nonnegative promotes {evidence['nonnegative_descriptor_can_promote']}; "
+                f"one-book index delta {evidence['one_book_index_full_delta_bits']:.3f}"
             )
         else:
             key = (

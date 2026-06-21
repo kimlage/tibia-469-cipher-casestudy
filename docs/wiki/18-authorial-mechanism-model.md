@@ -969,6 +969,11 @@ A seeded rescore loss-decomposition audit explains the small `+0.979` failure:
 the seeded formula saves `36.842` non-payload bits, but the complete scorer
 adds `37.821` literal-payload bits. The local seed saving is therefore real as
 bootstrap accounting, but insufficient as formula compression.
+A seed exception signal-cost audit closes the remaining escape hatch: even a
+zero-cost deterministic fallback is `+0.979` bits worse than the online formula,
+a one-book exception index is `+7.108`, and promotion would require negative
+descriptor cost (`< -0.979` bits). The book-0 seed exception is therefore
+closed as a formula-promotion path.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1419,6 +1424,7 @@ book generation, not row0 pair-cell placement.
 - [Online bootstrap seed policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.md)
 - [Seeded online formula rescore audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.md)
 - [Seeded rescore loss decomposition](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.md)
+- [Seed exception signal cost audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

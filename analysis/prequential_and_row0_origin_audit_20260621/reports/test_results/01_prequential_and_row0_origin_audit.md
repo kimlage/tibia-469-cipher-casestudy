@@ -241,6 +241,17 @@ can close the local cold-start ledger while still failing complete
 formula scoring.
 See [20_seeded_rescore_loss_decomposition.md](20_seeded_rescore_loss_decomposition.md).
 
+### Seed Exception Signal Cost Audit
+
+The last seed fallback is tested as an exception-signaling problem. Even
+the best-case zero-cost deterministic fallback is `+0.979` bits worse
+than the existing online formula. A one-book exception index would make
+the delta `+7.108` bits, and a bitmask would make it `+70.979` bits.
+Promotion would require a negative descriptor cost (`< -0.979` bits),
+so the seed exception cannot become a promoted formula under any
+nonnegative signaling cost.
+See [21_seed_exception_signal_cost_audit.md](21_seed_exception_signal_cost_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -290,7 +301,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

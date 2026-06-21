@@ -394,6 +394,20 @@
     },
     {
       "evidence": {
+        "book_bitmask_full_delta_bits": 70.97882932730681,
+        "local_seed_saving_bits": 10.498855747274263,
+        "nonnegative_descriptor_can_promote": false,
+        "one_book_index_full_delta_bits": 7.108112344251778,
+        "promotion_threshold_descriptor_bits": -0.978829327306812,
+        "zero_cost_full_formula_delta_vs_online_bits": 0.978829327306812
+      },
+      "interpretation": "The zero-cost deterministic fallback is already worse than the existing online formula. Any real exception signal makes the seed policy less promotable, so the seed boundary is closed.",
+      "question": "can_exception_signaling_rescue_the_book0_seed",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.json",
+      "status": "failed_requires_negative_descriptor_cost"
+    },
+    {
+      "evidence": {
         "arbitrary_order_descriptor_bits": 332.4532653795422,
         "best_charged": "numeric",
         "best_raw": "numeric",
@@ -432,6 +446,7 @@
     "reparse_family_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
     "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
     "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json",
+    "seed_exception_signal_cost": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.json",
     "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
     "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json"
   },
