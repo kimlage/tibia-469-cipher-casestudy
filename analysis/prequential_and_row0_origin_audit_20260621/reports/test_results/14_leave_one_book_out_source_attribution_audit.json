@@ -1,0 +1,5058 @@
+{
+  "case_reopened": false,
+  "classification": "loo_source_attribution_mapped_with_boundary_crossings",
+  "decision": {
+    "generation_explanation_status": "stronger_but_still_partial",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_attribution_status": "mapped_for_singleton_holdout",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "leave_one_book_out_no_self": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.json",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+    "trainset_controls": "analysis/authorial_mechanism_20260620/scripts/128_prequential_recipe_reparse_trainset_controls.py"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "book_length_digits": 144,
+      "copied_digits": 144,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 144,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:10": 144
+          },
+          "source_digit_pos": 1557,
+          "source_start": "book:10",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:10": 144
+      },
+      "source_start_books_by_copy_items": {
+        "book:10": 1
+      },
+      "target_book": 0,
+      "top_source_book": "book:10",
+      "top_source_copied_digits": 144,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 92,
+      "copied_digits": 92,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 92,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:10": 92
+          },
+          "source_digit_pos": 1753,
+          "source_start": "book:10",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:10": 92
+      },
+      "source_start_books_by_copy_items": {
+        "book:10": 1
+      },
+      "target_book": 1,
+      "top_source_book": "book:10",
+      "top_source_copied_digits": 92,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 177,
+      "copied_digits": 177,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:67": 53
+          },
+          "source_digit_pos": 10736,
+          "source_start": "book:67",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 124,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:5": 124
+          },
+          "source_digit_pos": 530,
+          "source_start": "book:5",
+          "target_start": 53
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:5": 124,
+        "book:67": 53
+      },
+      "source_start_books_by_copy_items": {
+        "book:5": 1,
+        "book:67": 1
+      },
+      "target_book": 2,
+      "top_source_book": "book:5",
+      "top_source_copied_digits": 124,
+      "top_source_share": 0.7005649717514124,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 140,
+      "copied_digits": 140,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 140,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:44": 121,
+            "book:45": 19
+          },
+          "source_digit_pos": 6701,
+          "source_start": "book:44",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 140,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:44": 121,
+        "book:45": 19
+      },
+      "source_start_books_by_copy_items": {
+        "book:44": 1
+      },
+      "target_book": 3,
+      "top_source_book": "book:44",
+      "top_source_copied_digits": 121,
+      "top_source_share": 0.8642857142857143,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 140,
+      "copied_digits": 132,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 7,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:3": 7
+          },
+          "source_digit_pos": 521,
+          "source_start": "book:3",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 15,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:3": 15
+          },
+          "source_digit_pos": 467,
+          "source_start": "book:3",
+          "target_start": 7
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 40,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:3": 40
+          },
+          "source_digit_pos": 418,
+          "source_start": "book:3",
+          "target_start": 22
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:3": 11
+          },
+          "source_digit_pos": 528,
+          "source_start": "book:3",
+          "target_start": 64
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 15,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:3": 15
+          },
+          "source_digit_pos": 506,
+          "source_start": "book:3",
+          "target_start": 78
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 14,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:3": 14
+          },
+          "source_digit_pos": 539,
+          "source_start": "book:3",
+          "target_start": 93
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 9,
+          "source_books_touched": {
+            "book:3": 9
+          },
+          "source_digit_pos": 458,
+          "source_start": "book:3",
+          "target_start": 110
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 21,
+          "op_index": 10,
+          "source_books_touched": {
+            "book:3": 21
+          },
+          "source_digit_pos": 485,
+          "source_start": "book:3",
+          "target_start": 119
+        }
+      ],
+      "copy_items": 8,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:3": 132
+      },
+      "source_start_books_by_copy_items": {
+        "book:3": 8
+      },
+      "target_book": 4,
+      "top_source_book": "book:3",
+      "top_source_copied_digits": 132,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 273,
+      "copied_digits": 273,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 273,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:8": 2,
+            "book:9": 271
+          },
+          "source_digit_pos": 1127,
+          "source_start": "book:8",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 273,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:8": 2,
+        "book:9": 271
+      },
+      "source_start_books_by_copy_items": {
+        "book:8": 1
+      },
+      "target_book": 5,
+      "top_source_book": "book:9",
+      "top_source_copied_digits": 271,
+      "top_source_share": 0.9926739926739927,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 175,
+      "copied_digits": 169,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 6,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:2": 6
+          },
+          "source_digit_pos": 373,
+          "source_start": "book:2",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:5": 11
+          },
+          "source_digit_pos": 859,
+          "source_start": "book:5",
+          "target_start": 6
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 29,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:7": 29
+          },
+          "source_digit_pos": 1041,
+          "source_start": "book:7",
+          "target_start": 17
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 10,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:5": 10
+          },
+          "source_digit_pos": 840,
+          "source_start": "book:5",
+          "target_start": 46
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 14,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:5": 14
+          },
+          "source_digit_pos": 886,
+          "source_start": "book:5",
+          "target_start": 56
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 35,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:7": 35
+          },
+          "source_digit_pos": 998,
+          "source_start": "book:7",
+          "target_start": 70
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 13,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:5": 13
+          },
+          "source_digit_pos": 819,
+          "source_start": "book:5",
+          "target_start": 111
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 14,
+          "op_index": 8,
+          "source_books_touched": {
+            "book:0": 14
+          },
+          "source_digit_pos": 30,
+          "source_start": "book:0",
+          "target_start": 124
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 5,
+          "op_index": 9,
+          "source_books_touched": {
+            "book:5": 5
+          },
+          "source_digit_pos": 878,
+          "source_start": "book:5",
+          "target_start": 138
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 10,
+          "source_books_touched": {
+            "book:0": 11
+          },
+          "source_digit_pos": 19,
+          "source_start": "book:0",
+          "target_start": 143
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 21,
+          "op_index": 11,
+          "source_books_touched": {
+            "book:0": 21
+          },
+          "source_digit_pos": 52,
+          "source_start": "book:0",
+          "target_start": 154
+        }
+      ],
+      "copy_items": 11,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:0": 46,
+        "book:2": 6,
+        "book:5": 53,
+        "book:7": 64
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 3,
+        "book:2": 1,
+        "book:5": 5,
+        "book:7": 2
+      },
+      "target_book": 6,
+      "top_source_book": "book:7",
+      "top_source_copied_digits": 64,
+      "top_source_share": 0.378698224852071,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 106,
+      "copied_digits": 81,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:6": 11
+          },
+          "source_digit_pos": 971,
+          "source_start": "book:6",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 7,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:2": 7
+          },
+          "source_digit_pos": 401,
+          "source_start": "book:2",
+          "target_start": 11
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 34,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:6": 34
+          },
+          "source_digit_pos": 1036,
+          "source_start": "book:6",
+          "target_start": 32
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 29,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:6": 29
+          },
+          "source_digit_pos": 983,
+          "source_start": "book:6",
+          "target_start": 75
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:2": 7,
+        "book:6": 74
+      },
+      "source_start_books_by_copy_items": {
+        "book:2": 1,
+        "book:6": 3
+      },
+      "target_book": 7,
+      "top_source_book": "book:6",
+      "top_source_copied_digits": 74,
+      "top_source_share": 0.9135802469135802,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 155,
+      "copied_digits": 155,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 155,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:63": 79,
+            "book:64": 76
+          },
+          "source_digit_pos": 10118,
+          "source_start": "book:63",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 155,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:63": 79,
+        "book:64": 76
+      },
+      "source_start_books_by_copy_items": {
+        "book:63": 1
+      },
+      "target_book": 8,
+      "top_source_book": "book:63",
+      "top_source_copied_digits": 79,
+      "top_source_share": 0.5096774193548387,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 294,
+      "copied_digits": 291,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 269,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:5": 269
+          },
+          "source_digit_pos": 695,
+          "source_start": "book:5",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 22,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:14": 22
+          },
+          "source_digit_pos": 2165,
+          "source_start": "book:14",
+          "target_start": 269
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:14": 22,
+        "book:5": 269
+      },
+      "source_start_books_by_copy_items": {
+        "book:14": 1,
+        "book:5": 1
+      },
+      "target_book": 9,
+      "top_source_book": "book:5",
+      "top_source_copied_digits": 269,
+      "top_source_share": 0.9243986254295533,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 281,
+      "copied_digits": 281,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 281,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:66": 210,
+            "book:67": 71
+          },
+          "source_digit_pos": 10391,
+          "source_start": "book:66",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 281,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:66": 210,
+        "book:67": 71
+      },
+      "source_start_books_by_copy_items": {
+        "book:66": 1
+      },
+      "target_book": 10,
+      "top_source_book": "book:66",
+      "top_source_copied_digits": 210,
+      "top_source_share": 0.7473309608540926,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 137,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 137,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:32": 123,
+            "book:33": 14
+          },
+          "source_digit_pos": 4911,
+          "source_start": "book:32",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 137,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:32": 123,
+        "book:33": 14
+      },
+      "source_start_books_by_copy_items": {
+        "book:32": 1
+      },
+      "target_book": 11,
+      "top_source_book": "book:32",
+      "top_source_copied_digits": 123,
+      "top_source_share": 0.8978102189781022,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 137,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 137,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:21": 137
+          },
+          "source_digit_pos": 3271,
+          "source_start": "book:21",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:21": 137
+      },
+      "source_start_books_by_copy_items": {
+        "book:21": 1
+      },
+      "target_book": 12,
+      "top_source_book": "book:21",
+      "top_source_copied_digits": 137,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 141,
+      "copied_digits": 141,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:21": 52
+          },
+          "source_digit_pos": 3378,
+          "source_start": "book:21",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 89,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:38": 89
+          },
+          "source_digit_pos": 5893,
+          "source_start": "book:38",
+          "target_start": 52
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:21": 52,
+        "book:38": 89
+      },
+      "source_start_books_by_copy_items": {
+        "book:21": 1,
+        "book:38": 1
+      },
+      "target_book": 13,
+      "top_source_book": "book:38",
+      "top_source_copied_digits": 89,
+      "top_source_share": 0.6312056737588653,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 133,
+      "copied_digits": 116,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 34,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:45": 32,
+            "book:46": 2
+          },
+          "source_digit_pos": 6946,
+          "source_start": "book:45",
+          "target_start": 1
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 65,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:37": 65
+          },
+          "source_digit_pos": 5728,
+          "source_start": "book:37",
+          "target_start": 50
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:17": 11
+          },
+          "source_digit_pos": 2936,
+          "source_start": "book:17",
+          "target_start": 115
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 6,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:0": 6
+          },
+          "source_digit_pos": 90,
+          "source_start": "book:0",
+          "target_start": 126
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 34,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 5,
+      "source_books_by_copied_digits": {
+        "book:0": 6,
+        "book:17": 11,
+        "book:37": 65,
+        "book:45": 32,
+        "book:46": 2
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:17": 1,
+        "book:37": 1,
+        "book:45": 1
+      },
+      "target_book": 14,
+      "top_source_book": "book:37",
+      "top_source_copied_digits": 65,
+      "top_source_share": 0.5603448275862069,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 143,
+      "copied_digits": 143,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:39": 52
+          },
+          "source_digit_pos": 6009,
+          "source_start": "book:39",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 91,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:16": 91
+          },
+          "source_digit_pos": 2540,
+          "source_start": "book:16",
+          "target_start": 52
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:16": 91,
+        "book:39": 52
+      },
+      "source_start_books_by_copy_items": {
+        "book:16": 1,
+        "book:39": 1
+      },
+      "target_book": 15,
+      "top_source_book": "book:16",
+      "top_source_copied_digits": 91,
+      "top_source_share": 0.6363636363636364,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 174,
+      "copied_digits": 174,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 92,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:15": 92
+          },
+          "source_digit_pos": 2562,
+          "source_start": "book:15",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 40,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:55": 40
+          },
+          "source_digit_pos": 8499,
+          "source_start": "book:55",
+          "target_start": 92
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:5": 11
+          },
+          "source_digit_pos": 865,
+          "source_start": "book:5",
+          "target_start": 132
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 7,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:15": 7
+          },
+          "source_digit_pos": 2641,
+          "source_start": "book:15",
+          "target_start": 143
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 24,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:28": 24
+          },
+          "source_digit_pos": 4269,
+          "source_start": "book:28",
+          "target_start": 150
+        }
+      ],
+      "copy_items": 5,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:15": 99,
+        "book:28": 24,
+        "book:5": 11,
+        "book:55": 40
+      },
+      "source_start_books_by_copy_items": {
+        "book:15": 2,
+        "book:28": 1,
+        "book:5": 1,
+        "book:55": 1
+      },
+      "target_book": 16,
+      "top_source_book": "book:15",
+      "top_source_copied_digits": 99,
+      "top_source_share": 0.5689655172413793,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 274,
+      "copied_digits": 274,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 7,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:0": 7
+          },
+          "source_digit_pos": 106,
+          "source_start": "book:0",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:45": 9
+          },
+          "source_digit_pos": 6749,
+          "source_start": "book:45",
+          "target_start": 7
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 176,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:44": 114,
+            "book:45": 62
+          },
+          "source_digit_pos": 6574,
+          "source_start": "book:44",
+          "target_start": 16
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 82,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:46": 82
+          },
+          "source_digit_pos": 6883,
+          "source_start": "book:46",
+          "target_start": 192
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 176,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:0": 7,
+        "book:44": 114,
+        "book:45": 71,
+        "book:46": 82
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:44": 1,
+        "book:45": 1,
+        "book:46": 1
+      },
+      "target_book": 17,
+      "top_source_book": "book:44",
+      "top_source_copied_digits": 114,
+      "top_source_share": 0.41605839416058393,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 93,
+      "copied_digits": 93,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 51,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:0": 51
+          },
+          "source_digit_pos": 87,
+          "source_start": "book:0",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 42,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:1": 40,
+            "book:2": 2
+          },
+          "source_digit_pos": 196,
+          "source_start": "book:1",
+          "target_start": 51
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 42,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:0": 51,
+        "book:1": 40,
+        "book:2": 2
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:1": 1
+      },
+      "target_book": 18,
+      "top_source_book": "book:0",
+      "top_source_copied_digits": 51,
+      "top_source_share": 0.5483870967741935,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 129,
+      "copied_digits": 129,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:2": 36
+          },
+          "source_digit_pos": 238,
+          "source_start": "book:2",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 48,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:1": 48
+          },
+          "source_digit_pos": 148,
+          "source_start": "book:1",
+          "target_start": 36
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 45,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:5": 45
+          },
+          "source_digit_pos": 881,
+          "source_start": "book:5",
+          "target_start": 84
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:1": 48,
+        "book:2": 36,
+        "book:5": 45
+      },
+      "source_start_books_by_copy_items": {
+        "book:1": 1,
+        "book:2": 1,
+        "book:5": 1
+      },
+      "target_book": 19,
+      "top_source_book": "book:1",
+      "top_source_copied_digits": 48,
+      "top_source_share": 0.37209302325581395,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 63,
+      "copied_digits": 63,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 15,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:8": 15
+          },
+          "source_digit_pos": 1377,
+          "source_start": "book:8",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 48,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:54": 48
+          },
+          "source_digit_pos": 8531,
+          "source_start": "book:54",
+          "target_start": 15
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:54": 48,
+        "book:8": 15
+      },
+      "source_start_books_by_copy_items": {
+        "book:54": 1,
+        "book:8": 1
+      },
+      "target_book": 20,
+      "top_source_book": "book:54",
+      "top_source_copied_digits": 48,
+      "top_source_share": 0.7619047619047619,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 176,
+      "copied_digits": 176,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 144,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:26": 144
+          },
+          "source_digit_pos": 3895,
+          "source_start": "book:26",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 32,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:13": 32
+          },
+          "source_digit_pos": 2277,
+          "source_start": "book:13",
+          "target_start": 144
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:13": 32,
+        "book:26": 144
+      },
+      "source_start_books_by_copy_items": {
+        "book:13": 1,
+        "book:26": 1
+      },
+      "target_book": 21,
+      "top_source_book": "book:26",
+      "top_source_copied_digits": 144,
+      "top_source_share": 0.8181818181818182,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 137,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 137,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:2": 137
+          },
+          "source_digit_pos": 274,
+          "source_start": "book:2",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:2": 137
+      },
+      "source_start_books_by_copy_items": {
+        "book:2": 1
+      },
+      "target_book": 22,
+      "top_source_book": "book:2",
+      "top_source_copied_digits": 137,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 177,
+      "copied_digits": 150,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 14,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:2": 14
+          },
+          "source_digit_pos": 341,
+          "source_start": "book:2",
+          "target_start": 4
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 34,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:2": 34
+          },
+          "source_digit_pos": 379,
+          "source_start": "book:2",
+          "target_start": 25
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:2": 36
+          },
+          "source_digit_pos": 236,
+          "source_start": "book:2",
+          "target_start": 59
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:2": 9
+          },
+          "source_digit_pos": 292,
+          "source_start": "book:2",
+          "target_start": 95
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:2": 11
+          },
+          "source_digit_pos": 275,
+          "source_start": "book:2",
+          "target_start": 117
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 24,
+          "op_index": 8,
+          "source_books_touched": {
+            "book:2": 24
+          },
+          "source_digit_pos": 355,
+          "source_start": "book:2",
+          "target_start": 128
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 22,
+          "op_index": 10,
+          "source_books_touched": {
+            "book:2": 22
+          },
+          "source_digit_pos": 319,
+          "source_start": "book:2",
+          "target_start": 155
+        }
+      ],
+      "copy_items": 7,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:2": 150
+      },
+      "source_start_books_by_copy_items": {
+        "book:2": 7
+      },
+      "target_book": 23,
+      "top_source_book": "book:2",
+      "top_source_copied_digits": 150,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 119,
+      "copied_digits": 119,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:12": 36
+          },
+          "source_digit_pos": 2119,
+          "source_start": "book:12",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 71,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:21": 71
+          },
+          "source_digit_pos": 3506,
+          "source_start": "book:21",
+          "target_start": 36
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 12,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:21": 12
+          },
+          "source_digit_pos": 3401,
+          "source_start": "book:21",
+          "target_start": 107
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:12": 36,
+        "book:21": 83
+      },
+      "source_start_books_by_copy_items": {
+        "book:12": 1,
+        "book:21": 2
+      },
+      "target_book": 24,
+      "top_source_book": "book:21",
+      "top_source_copied_digits": 83,
+      "top_source_share": 0.6974789915966386,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 35,
+      "copied_digits": 35,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 35,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:39": 35
+          },
+          "source_digit_pos": 6114,
+          "source_start": "book:39",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:39": 35
+      },
+      "source_start_books_by_copy_items": {
+        "book:39": 1
+      },
+      "target_book": 25,
+      "top_source_book": "book:39",
+      "top_source_copied_digits": 35,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 170,
+      "copied_digits": 170,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:17": 11
+          },
+          "source_digit_pos": 3054,
+          "source_start": "book:17",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:2": 9
+          },
+          "source_digit_pos": 404,
+          "source_start": "book:2",
+          "target_start": 11
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 7,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:30": 7
+          },
+          "source_digit_pos": 4466,
+          "source_start": "book:30",
+          "target_start": 20
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 143,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:21": 143
+          },
+          "source_digit_pos": 3402,
+          "source_start": "book:21",
+          "target_start": 27
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:17": 11,
+        "book:2": 9,
+        "book:21": 143,
+        "book:30": 7
+      },
+      "source_start_books_by_copy_items": {
+        "book:17": 1,
+        "book:2": 1,
+        "book:21": 1,
+        "book:30": 1
+      },
+      "target_book": 26,
+      "top_source_book": "book:21",
+      "top_source_copied_digits": 143,
+      "top_source_share": 0.8411764705882353,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 124,
+      "copied_digits": 124,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 124,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:1": 89,
+            "book:2": 35
+          },
+          "source_digit_pos": 147,
+          "source_start": "book:1",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 124,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:1": 89,
+        "book:2": 35
+      },
+      "source_start_books_by_copy_items": {
+        "book:1": 1
+      },
+      "target_book": 27,
+      "top_source_book": "book:1",
+      "top_source_copied_digits": 89,
+      "top_source_share": 0.717741935483871,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 146,
+      "copied_digits": 146,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 146,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:48": 146
+          },
+          "source_digit_pos": 7367,
+          "source_start": "book:48",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:48": 146
+      },
+      "source_start_books_by_copy_items": {
+        "book:48": 1
+      },
+      "target_book": 28,
+      "top_source_book": "book:48",
+      "top_source_copied_digits": 146,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 151,
+      "copied_digits": 151,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 106,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:3": 106
+          },
+          "source_digit_pos": 432,
+          "source_start": "book:3",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 45,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:61": 45
+          },
+          "source_digit_pos": 9881,
+          "source_start": "book:61",
+          "target_start": 106
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:3": 106,
+        "book:61": 45
+      },
+      "source_start_books_by_copy_items": {
+        "book:3": 1,
+        "book:61": 1
+      },
+      "target_book": 29,
+      "top_source_book": "book:3",
+      "top_source_copied_digits": 106,
+      "top_source_share": 0.7019867549668874,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 150,
+      "copied_digits": 144,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 17,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:26": 17
+          },
+          "source_digit_pos": 4065,
+          "source_start": "book:26",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 37,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:12": 37
+          },
+          "source_digit_pos": 2160,
+          "source_start": "book:12",
+          "target_start": 23
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 19,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:12": 19
+          },
+          "source_digit_pos": 2232,
+          "source_start": "book:12",
+          "target_start": 60
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 43,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:12": 43
+          },
+          "source_digit_pos": 2117,
+          "source_start": "book:12",
+          "target_start": 79
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 28,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:12": 28
+          },
+          "source_digit_pos": 2197,
+          "source_start": "book:12",
+          "target_start": 122
+        }
+      ],
+      "copy_items": 5,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:12": 127,
+        "book:26": 17
+      },
+      "source_start_books_by_copy_items": {
+        "book:12": 4,
+        "book:26": 1
+      },
+      "target_book": 30,
+      "top_source_book": "book:12",
+      "top_source_copied_digits": 127,
+      "top_source_share": 0.8819444444444444,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 248,
+      "copied_digits": 248,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:1": 9
+          },
+          "source_digit_pos": 147,
+          "source_start": "book:1",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 44,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:1": 44
+          },
+          "source_digit_pos": 177,
+          "source_start": "book:1",
+          "target_start": 9
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 10,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:2": 10
+          },
+          "source_digit_pos": 251,
+          "source_start": "book:2",
+          "target_start": 53
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 42,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:57": 42
+          },
+          "source_digit_pos": 8880,
+          "source_start": "book:57",
+          "target_start": 63
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 36,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:1": 1,
+            "book:2": 35
+          },
+          "source_digit_pos": 235,
+          "source_start": "book:1",
+          "target_start": 105
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:1": 52
+          },
+          "source_digit_pos": 158,
+          "source_start": "book:1",
+          "target_start": 141
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 12,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:1": 12
+          },
+          "source_digit_pos": 221,
+          "source_start": "book:1",
+          "target_start": 193
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 43,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:1": 28,
+            "book:2": 15
+          },
+          "source_digit_pos": 208,
+          "source_start": "book:1",
+          "target_start": 205
+        }
+      ],
+      "copy_items": 8,
+      "cross_boundary_copied_digits": 79,
+      "cross_boundary_copy_items": 2,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:1": 146,
+        "book:2": 60,
+        "book:57": 42
+      },
+      "source_start_books_by_copy_items": {
+        "book:1": 6,
+        "book:2": 1,
+        "book:57": 1
+      },
+      "target_book": 31,
+      "top_source_book": "book:1",
+      "top_source_copied_digits": 146,
+      "top_source_share": 0.5887096774193549,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 137,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 137,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:58": 137
+          },
+          "source_digit_pos": 9150,
+          "source_start": "book:58",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:58": 137
+      },
+      "source_start_books_by_copy_items": {
+        "book:58": 1
+      },
+      "target_book": 32,
+      "top_source_book": "book:58",
+      "top_source_copied_digits": 137,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 134,
+      "copied_digits": 134,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 134,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:0": 131,
+            "book:1": 3
+          },
+          "source_digit_pos": 13,
+          "source_start": "book:0",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 134,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:0": 131,
+        "book:1": 3
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1
+      },
+      "target_book": 33,
+      "top_source_book": "book:0",
+      "top_source_copied_digits": 131,
+      "top_source_share": 0.9776119402985075,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 123,
+      "copied_digits": 110,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 45,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:17": 45
+          },
+          "source_digit_pos": 2965,
+          "source_start": "book:17",
+          "target_start": 10
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 11,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:3": 11
+          },
+          "source_digit_pos": 511,
+          "source_start": "book:3",
+          "target_start": 58
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 22,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:0": 15,
+            "book:1": 7
+          },
+          "source_digit_pos": 129,
+          "source_start": "book:0",
+          "target_start": 69
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 14,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:3": 14
+          },
+          "source_digit_pos": 475,
+          "source_start": "book:3",
+          "target_start": 91
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 5,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:1": 5
+          },
+          "source_digit_pos": 183,
+          "source_start": "book:1",
+          "target_start": 105
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 13,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:3": 13
+          },
+          "source_digit_pos": 492,
+          "source_start": "book:3",
+          "target_start": 110
+        }
+      ],
+      "copy_items": 6,
+      "cross_boundary_copied_digits": 22,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:0": 15,
+        "book:1": 12,
+        "book:17": 45,
+        "book:3": 38
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:1": 1,
+        "book:17": 1,
+        "book:3": 3
+      },
+      "target_book": 34,
+      "top_source_book": "book:17",
+      "top_source_copied_digits": 45,
+      "top_source_share": 0.4090909090909091,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 286,
+      "copied_digits": 286,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:5": 9
+          },
+          "source_digit_pos": 881,
+          "source_start": "book:5",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 277,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:10": 277
+          },
+          "source_digit_pos": 1698,
+          "source_start": "book:10",
+          "target_start": 9
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:10": 277,
+        "book:5": 9
+      },
+      "source_start_books_by_copy_items": {
+        "book:10": 1,
+        "book:5": 1
+      },
+      "target_book": 35,
+      "top_source_book": "book:10",
+      "top_source_copied_digits": 277,
+      "top_source_share": 0.9685314685314685,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 137,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 8,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:11": 8
+          },
+          "source_digit_pos": 1983,
+          "source_start": "book:11",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 10,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:5": 10
+          },
+          "source_digit_pos": 890,
+          "source_start": "book:5",
+          "target_start": 8
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 40,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:11": 40
+          },
+          "source_digit_pos": 2044,
+          "source_start": "book:11",
+          "target_start": 18
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 20,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:0": 20
+          },
+          "source_digit_pos": 7,
+          "source_start": "book:0",
+          "target_start": 58
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 6,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:11": 6
+          },
+          "source_digit_pos": 1977,
+          "source_start": "book:11",
+          "target_start": 78
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:11": 53
+          },
+          "source_digit_pos": 1991,
+          "source_start": "book:11",
+          "target_start": 84
+        }
+      ],
+      "copy_items": 6,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:0": 20,
+        "book:11": 107,
+        "book:5": 10
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:11": 4,
+        "book:5": 1
+      },
+      "target_book": 36,
+      "top_source_book": "book:11",
+      "top_source_copied_digits": 107,
+      "top_source_share": 0.781021897810219,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 160,
+      "copied_digits": 160,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 49,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:9": 49
+          },
+          "source_digit_pos": 1644,
+          "source_start": "book:9",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 111,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:8": 111
+          },
+          "source_digit_pos": 1247,
+          "source_start": "book:8",
+          "target_start": 49
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:8": 111,
+        "book:9": 49
+      },
+      "source_start_books_by_copy_items": {
+        "book:8": 1,
+        "book:9": 1
+      },
+      "target_book": 37,
+      "top_source_book": "book:8",
+      "top_source_copied_digits": 111,
+      "top_source_share": 0.69375,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 134,
+      "copied_digits": 130,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 112,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:13": 112
+          },
+          "source_digit_pos": 2280,
+          "source_start": "book:13",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 12,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:5": 12
+          },
+          "source_digit_pos": 832,
+          "source_start": "book:5",
+          "target_start": 114
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 6,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:14": 6
+          },
+          "source_digit_pos": 2392,
+          "source_start": "book:14",
+          "target_start": 128
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:13": 112,
+        "book:14": 6,
+        "book:5": 12
+      },
+      "source_start_books_by_copy_items": {
+        "book:13": 1,
+        "book:14": 1,
+        "book:5": 1
+      },
+      "target_book": 38,
+      "top_source_book": "book:13",
+      "top_source_copied_digits": 112,
+      "top_source_share": 0.8615384615384616,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 59,
+      "copied_digits": 52,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:15": 52
+          },
+          "source_digit_pos": 2525,
+          "source_start": "book:15",
+          "target_start": 7
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:15": 52
+      },
+      "source_start_books_by_copy_items": {
+        "book:15": 1
+      },
+      "target_book": 39,
+      "top_source_book": "book:15",
+      "top_source_copied_digits": 52,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 168,
+      "copied_digits": 165,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 97,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:9": 97
+          },
+          "source_digit_pos": 1581,
+          "source_start": "book:9",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 63,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:28": 62,
+            "book:29": 1
+          },
+          "source_digit_pos": 4423,
+          "source_start": "book:28",
+          "target_start": 100
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 5,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:0": 5
+          },
+          "source_digit_pos": 118,
+          "source_start": "book:0",
+          "target_start": 163
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 63,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:0": 5,
+        "book:28": 62,
+        "book:29": 1,
+        "book:9": 97
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:28": 1,
+        "book:9": 1
+      },
+      "target_book": 40,
+      "top_source_book": "book:9",
+      "top_source_copied_digits": 97,
+      "top_source_share": 0.5878787878787879,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 136,
+      "copied_digits": 136,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 18,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:0": 18
+          },
+          "source_digit_pos": 123,
+          "source_start": "book:0",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:2": 36
+          },
+          "source_digit_pos": 359,
+          "source_start": "book:2",
+          "target_start": 18
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 65,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:0": 2,
+            "book:1": 63
+          },
+          "source_digit_pos": 142,
+          "source_start": "book:0",
+          "target_start": 54
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 17,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:0": 17
+          },
+          "source_digit_pos": 78,
+          "source_start": "book:0",
+          "target_start": 119
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 65,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:0": 37,
+        "book:1": 63,
+        "book:2": 36
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 3,
+        "book:2": 1
+      },
+      "target_book": 41,
+      "top_source_book": "book:1",
+      "top_source_copied_digits": 63,
+      "top_source_share": 0.4632352941176471,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 187,
+      "copied_digits": 183,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 22,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:0": 22
+          },
+          "source_digit_pos": 95,
+          "source_start": "book:0",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 55,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:1": 29,
+            "book:2": 26
+          },
+          "source_digit_pos": 207,
+          "source_start": "book:1",
+          "target_start": 22
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 12,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:2": 12
+          },
+          "source_digit_pos": 347,
+          "source_start": "book:2",
+          "target_start": 77
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 85,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:2": 85
+          },
+          "source_digit_pos": 262,
+          "source_start": "book:2",
+          "target_start": 91
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:2": 9
+          },
+          "source_digit_pos": 398,
+          "source_start": "book:2",
+          "target_start": 176
+        }
+      ],
+      "copy_items": 5,
+      "cross_boundary_copied_digits": 55,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:0": 22,
+        "book:1": 29,
+        "book:2": 132
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:1": 1,
+        "book:2": 3
+      },
+      "target_book": 42,
+      "top_source_book": "book:2",
+      "top_source_copied_digits": 132,
+      "top_source_share": 0.7213114754098361,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 141,
+      "copied_digits": 141,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 141,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:32": 112,
+            "book:33": 29
+          },
+          "source_digit_pos": 5059,
+          "source_start": "book:32",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 141,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:32": 112,
+        "book:33": 29
+      },
+      "source_start_books_by_copy_items": {
+        "book:32": 1
+      },
+      "target_book": 43,
+      "top_source_book": "book:32",
+      "top_source_copied_digits": 112,
+      "top_source_share": 0.7943262411347518,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 126,
+      "copied_digits": 126,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 126,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:52": 126
+          },
+          "source_digit_pos": 8060,
+          "source_start": "book:52",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:52": 126
+      },
+      "source_start_books_by_copy_items": {
+        "book:52": 1
+      },
+      "target_book": 44,
+      "top_source_book": "book:52",
+      "top_source_copied_digits": 126,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 149,
+      "copied_digits": 149,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:17": 52
+          },
+          "source_digit_pos": 2972,
+          "source_start": "book:17",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 97,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:46": 97
+          },
+          "source_digit_pos": 6989,
+          "source_start": "book:46",
+          "target_start": 52
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:17": 52,
+        "book:46": 97
+      },
+      "source_start_books_by_copy_items": {
+        "book:17": 1,
+        "book:46": 1
+      },
+      "target_book": 45,
+      "top_source_book": "book:46",
+      "top_source_copied_digits": 97,
+      "top_source_share": 0.6510067114093959,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 253,
+      "copied_digits": 253,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 253,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:51": 253
+          },
+          "source_digit_pos": 7672,
+          "source_start": "book:51",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:51": 253
+      },
+      "source_start_books_by_copy_items": {
+        "book:51": 1
+      },
+      "target_book": 46,
+      "top_source_book": "book:51",
+      "top_source_copied_digits": 253,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 126,
+      "copied_digits": 126,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 126,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:5": 126
+          },
+          "source_digit_pos": 811,
+          "source_start": "book:5",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:5": 126
+      },
+      "source_start_books_by_copy_items": {
+        "book:5": 1
+      },
+      "target_book": 47,
+      "top_source_book": "book:5",
+      "top_source_copied_digits": 126,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 169,
+      "copied_digits": 169,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:2": 53
+          },
+          "source_digit_pos": 303,
+          "source_start": "book:2",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 116,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:28": 116
+          },
+          "source_digit_pos": 4369,
+          "source_start": "book:28",
+          "target_start": 53
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:2": 53,
+        "book:28": 116
+      },
+      "source_start_books_by_copy_items": {
+        "book:2": 1,
+        "book:28": 1
+      },
+      "target_book": 48,
+      "top_source_book": "book:28",
+      "top_source_copied_digits": 116,
+      "top_source_share": 0.6863905325443787,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 115,
+      "copied_digits": 83,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 17,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:5": 17
+          },
+          "source_digit_pos": 864,
+          "source_start": "book:5",
+          "target_start": 25
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 18,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:11": 18
+          },
+          "source_digit_pos": 2050,
+          "source_start": "book:11",
+          "target_start": 42
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 8,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:5": 8
+          },
+          "source_digit_pos": 867,
+          "source_start": "book:5",
+          "target_start": 61
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 18,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:5": 18
+          },
+          "source_digit_pos": 863,
+          "source_start": "book:5",
+          "target_start": 69
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:11": 9
+          },
+          "source_digit_pos": 2052,
+          "source_start": "book:11",
+          "target_start": 87
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 8,
+          "op_index": 8,
+          "source_books_touched": {
+            "current_prefix": 8
+          },
+          "source_digit_pos": 11183,
+          "source_start": "current_prefix",
+          "target_start": 102
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 5,
+          "op_index": 9,
+          "source_books_touched": {
+            "book:11": 5
+          },
+          "source_digit_pos": 2053,
+          "source_start": "book:11",
+          "target_start": 110
+        }
+      ],
+      "copy_items": 7,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:11": 32,
+        "book:5": 43,
+        "current_prefix": 8
+      },
+      "source_start_books_by_copy_items": {
+        "book:11": 3,
+        "book:5": 3,
+        "current_prefix": 1
+      },
+      "target_book": 49,
+      "top_source_book": "book:5",
+      "top_source_copied_digits": 43,
+      "top_source_share": 0.5180722891566265,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 141,
+      "copied_digits": 141,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 141,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:9": 141
+          },
+          "source_digit_pos": 1536,
+          "source_start": "book:9",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:9": 141
+      },
+      "source_start_books_by_copy_items": {
+        "book:9": 1
+      },
+      "target_book": 50,
+      "top_source_book": "book:9",
+      "top_source_copied_digits": 141,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 268,
+      "copied_digits": 268,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:45": 52
+          },
+          "source_digit_pos": 6977,
+          "source_start": "book:45",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 216,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:46": 211,
+            "book:47": 5
+          },
+          "source_digit_pos": 7153,
+          "source_start": "book:46",
+          "target_start": 52
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 216,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:45": 52,
+        "book:46": 211,
+        "book:47": 5
+      },
+      "source_start_books_by_copy_items": {
+        "book:45": 1,
+        "book:46": 1
+      },
+      "target_book": 51,
+      "top_source_book": "book:46",
+      "top_source_copied_digits": 211,
+      "top_source_share": 0.7873134328358209,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 137,
+      "copied_digits": 134,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 134,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:44": 126,
+            "book:45": 8
+          },
+          "source_digit_pos": 6836,
+          "source_start": "book:44",
+          "target_start": 3
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 134,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:44": 126,
+        "book:45": 8
+      },
+      "source_start_books_by_copy_items": {
+        "book:44": 1
+      },
+      "target_book": 52,
+      "top_source_book": "book:44",
+      "top_source_copied_digits": 126,
+      "top_source_share": 0.9402985074626866,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 271,
+      "copied_digits": 271,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 271,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:46": 234,
+            "book:47": 37
+          },
+          "source_digit_pos": 7130,
+          "source_start": "book:46",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 271,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:46": 234,
+        "book:47": 37
+      },
+      "source_start_books_by_copy_items": {
+        "book:46": 1
+      },
+      "target_book": 53,
+      "top_source_book": "book:46",
+      "top_source_copied_digits": 234,
+      "top_source_share": 0.8634686346863468,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 57,
+      "copied_digits": 57,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 49,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:20": 49
+          },
+          "source_digit_pos": 3350,
+          "source_start": "book:20",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 8,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:0": 8
+          },
+          "source_digit_pos": 28,
+          "source_start": "book:0",
+          "target_start": 49
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:0": 8,
+        "book:20": 49
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:20": 1
+      },
+      "target_book": 54,
+      "top_source_book": "book:20",
+      "top_source_copied_digits": 49,
+      "top_source_share": 0.8596491228070176,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 116,
+      "copied_digits": 112,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 13,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:15": 13
+          },
+          "source_digit_pos": 2638,
+          "source_start": "book:15",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 54,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:16": 54
+          },
+          "source_digit_pos": 2748,
+          "source_start": "book:16",
+          "target_start": 13
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 45,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:16": 45
+          },
+          "source_digit_pos": 2757,
+          "source_start": "book:16",
+          "target_start": 67
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:15": 13,
+        "book:16": 99
+      },
+      "source_start_books_by_copy_items": {
+        "book:15": 1,
+        "book:16": 2
+      },
+      "target_book": 55,
+      "top_source_book": "book:16",
+      "top_source_copied_digits": 99,
+      "top_source_share": 0.8839285714285714,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 266,
+      "copied_digits": 263,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 40,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:13": 40
+          },
+          "source_digit_pos": 2272,
+          "source_start": "book:13",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:12": 36
+          },
+          "source_digit_pos": 2177,
+          "source_start": "book:12",
+          "target_start": 40
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:26": 53
+          },
+          "source_digit_pos": 4068,
+          "source_start": "book:26",
+          "target_start": 76
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:13": 9
+          },
+          "source_digit_pos": 2312,
+          "source_start": "book:13",
+          "target_start": 129
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 12,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:12": 12
+          },
+          "source_digit_pos": 2234,
+          "source_start": "book:12",
+          "target_start": 141
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 73,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:38": 73
+          },
+          "source_digit_pos": 6052,
+          "source_start": "book:38",
+          "target_start": 153
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 10,
+          "op_index": 7,
+          "source_books_touched": {
+            "book:12": 10
+          },
+          "source_digit_pos": 2167,
+          "source_start": "book:12",
+          "target_start": 226
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 8,
+          "op_index": 8,
+          "source_books_touched": {
+            "book:12": 8
+          },
+          "source_digit_pos": 2157,
+          "source_start": "book:12",
+          "target_start": 236
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 22,
+          "op_index": 9,
+          "source_books_touched": {
+            "book:2": 22
+          },
+          "source_digit_pos": 241,
+          "source_start": "book:2",
+          "target_start": 244
+        }
+      ],
+      "copy_items": 9,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 5,
+      "source_books_by_copied_digits": {
+        "book:12": 66,
+        "book:13": 49,
+        "book:2": 22,
+        "book:26": 53,
+        "book:38": 73
+      },
+      "source_start_books_by_copy_items": {
+        "book:12": 4,
+        "book:13": 2,
+        "book:2": 1,
+        "book:26": 1,
+        "book:38": 1
+      },
+      "target_book": 56,
+      "top_source_book": "book:38",
+      "top_source_copied_digits": 73,
+      "top_source_share": 0.27756653992395436,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 230,
+      "copied_digits": 198,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 28,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:31": 28
+          },
+          "source_digit_pos": 4910,
+          "source_start": "book:31",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 41,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:31": 41
+          },
+          "source_digit_pos": 4939,
+          "source_start": "book:31",
+          "target_start": 28
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 44,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:31": 44
+          },
+          "source_digit_pos": 4848,
+          "source_start": "book:31",
+          "target_start": 97
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 33,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:31": 33
+          },
+          "source_digit_pos": 4859,
+          "source_start": "book:31",
+          "target_start": 141
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 10,
+          "op_index": 5,
+          "source_books_touched": {
+            "book:2": 10
+          },
+          "source_digit_pos": 240,
+          "source_start": "book:2",
+          "target_start": 174
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 42,
+          "op_index": 6,
+          "source_books_touched": {
+            "book:31": 42
+          },
+          "source_digit_pos": 4892,
+          "source_start": "book:31",
+          "target_start": 184
+        }
+      ],
+      "copy_items": 6,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:2": 10,
+        "book:31": 188
+      },
+      "source_start_books_by_copy_items": {
+        "book:2": 1,
+        "book:31": 5
+      },
+      "target_book": 57,
+      "top_source_book": "book:31",
+      "top_source_copied_digits": 188,
+      "top_source_share": 0.9494949494949495,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 272,
+      "copied_digits": 272,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:59": 52
+          },
+          "source_digit_pos": 9401,
+          "source_start": "book:59",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": true,
+          "length": 220,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:32": 112,
+            "book:33": 108
+          },
+          "source_digit_pos": 5059,
+          "source_start": "book:32",
+          "target_start": 52
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 220,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:32": 112,
+        "book:33": 108,
+        "book:59": 52
+      },
+      "source_start_books_by_copy_items": {
+        "book:32": 1,
+        "book:59": 1
+      },
+      "target_book": 58,
+      "top_source_book": "book:32",
+      "top_source_copied_digits": 112,
+      "top_source_share": 0.4117647058823529,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 272,
+      "copied_digits": 272,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 141,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:32": 112,
+            "book:33": 29
+          },
+          "source_digit_pos": 5059,
+          "source_start": "book:32",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:58": 52
+          },
+          "source_digit_pos": 9260,
+          "source_start": "book:58",
+          "target_start": 141
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 79,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:0": 79
+          },
+          "source_digit_pos": 42,
+          "source_start": "book:0",
+          "target_start": 193
+        }
+      ],
+      "copy_items": 3,
+      "cross_boundary_copied_digits": 141,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 4,
+      "source_books_by_copied_digits": {
+        "book:0": 79,
+        "book:32": 112,
+        "book:33": 29,
+        "book:58": 52
+      },
+      "source_start_books_by_copy_items": {
+        "book:0": 1,
+        "book:32": 1,
+        "book:58": 1
+      },
+      "target_book": 59,
+      "top_source_book": "book:32",
+      "top_source_copied_digits": 112,
+      "top_source_share": 0.4117647058823529,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 151,
+      "copied_digits": 150,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 9,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:8": 9
+          },
+          "source_digit_pos": 1379,
+          "source_start": "book:8",
+          "target_start": 1
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 2,
+          "source_books_touched": {
+            "book:17": 53
+          },
+          "source_digit_pos": 3048,
+          "source_start": "book:17",
+          "target_start": 10
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 52,
+          "op_index": 3,
+          "source_books_touched": {
+            "book:8": 52
+          },
+          "source_digit_pos": 1327,
+          "source_start": "book:8",
+          "target_start": 63
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 36,
+          "op_index": 4,
+          "source_books_touched": {
+            "book:64": 36
+          },
+          "source_digit_pos": 10263,
+          "source_start": "book:64",
+          "target_start": 115
+        }
+      ],
+      "copy_items": 4,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 3,
+      "source_books_by_copied_digits": {
+        "book:17": 53,
+        "book:64": 36,
+        "book:8": 61
+      },
+      "source_start_books_by_copy_items": {
+        "book:17": 1,
+        "book:64": 1,
+        "book:8": 2
+      },
+      "target_book": 60,
+      "top_source_book": "book:8",
+      "top_source_copied_digits": 61,
+      "top_source_share": 0.4066666666666667,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 145,
+      "copied_digits": 145,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 145,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:65": 145
+          },
+          "source_digit_pos": 10361,
+          "source_start": "book:65",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:65": 145
+      },
+      "source_start_books_by_copy_items": {
+        "book:65": 1
+      },
+      "target_book": 61,
+      "top_source_book": "book:65",
+      "top_source_copied_digits": 145,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 126,
+      "copied_digits": 126,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 126,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:3": 126
+          },
+          "source_digit_pos": 424,
+          "source_start": "book:3",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:3": 126
+      },
+      "source_start_books_by_copy_items": {
+        "book:3": 1
+      },
+      "target_book": 62,
+      "top_source_book": "book:3",
+      "top_source_copied_digits": 126,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 126,
+      "copied_digits": 126,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 47,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:45": 47
+          },
+          "source_digit_pos": 6978,
+          "source_start": "book:45",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 79,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:8": 79
+          },
+          "source_digit_pos": 1247,
+          "source_start": "book:8",
+          "target_start": 47
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:45": 47,
+        "book:8": 79
+      },
+      "source_start_books_by_copy_items": {
+        "book:45": 1,
+        "book:8": 1
+      },
+      "target_book": 63,
+      "top_source_book": "book:8",
+      "top_source_copied_digits": 79,
+      "top_source_share": 0.626984126984127,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 151,
+      "copied_digits": 151,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 76,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:8": 76
+          },
+          "source_digit_pos": 1326,
+          "source_start": "book:8",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 75,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:45": 75
+          },
+          "source_digit_pos": 7025,
+          "source_start": "book:45",
+          "target_start": 76
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:45": 75,
+        "book:8": 76
+      },
+      "source_start_books_by_copy_items": {
+        "book:45": 1,
+        "book:8": 1
+      },
+      "target_book": 64,
+      "top_source_book": "book:8",
+      "top_source_copied_digits": 76,
+      "top_source_share": 0.5033112582781457,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 169,
+      "copied_digits": 166,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 113,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:29": 113
+          },
+          "source_digit_pos": 4511,
+          "source_start": "book:29",
+          "target_start": 0
+        },
+        {
+          "crosses_source_book_boundary": false,
+          "length": 53,
+          "op_index": 1,
+          "source_books_touched": {
+            "book:45": 53
+          },
+          "source_digit_pos": 7030,
+          "source_start": "book:45",
+          "target_start": 113
+        }
+      ],
+      "copy_items": 2,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:29": 113,
+        "book:45": 53
+      },
+      "source_start_books_by_copy_items": {
+        "book:29": 1,
+        "book:45": 1
+      },
+      "target_book": 65,
+      "top_source_book": "book:29",
+      "top_source_copied_digits": 113,
+      "top_source_share": 0.6807228915662651,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 210,
+      "copied_digits": 210,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 210,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:10": 210
+          },
+          "source_digit_pos": 1696,
+          "source_start": "book:10",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:10": 210
+      },
+      "source_start_books_by_copy_items": {
+        "book:10": 1
+      },
+      "target_book": 66,
+      "top_source_book": "book:10",
+      "top_source_copied_digits": 210,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 98,
+      "copied_digits": 98,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": true,
+          "length": 98,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:1": 31,
+            "book:2": 67
+          },
+          "source_digit_pos": 205,
+          "source_start": "book:1",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 98,
+      "cross_boundary_copy_items": 1,
+      "distinct_source_books": 2,
+      "source_books_by_copied_digits": {
+        "book:1": 31,
+        "book:2": 67
+      },
+      "source_start_books_by_copy_items": {
+        "book:1": 1
+      },
+      "target_book": 67,
+      "top_source_book": "book:2",
+      "top_source_copied_digits": 67,
+      "top_source_share": 0.6836734693877551,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 143,
+      "copied_digits": 143,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 143,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:17": 143
+          },
+          "source_digit_pos": 2869,
+          "source_start": "book:17",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:17": 143
+      },
+      "source_start_books_by_copy_items": {
+        "book:17": 1
+      },
+      "target_book": 68,
+      "top_source_book": "book:17",
+      "top_source_copied_digits": 143,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "book_length_digits": 140,
+      "copied_digits": 140,
+      "copy_details": [
+        {
+          "crosses_source_book_boundary": false,
+          "length": 140,
+          "op_index": 0,
+          "source_books_touched": {
+            "book:9": 140
+          },
+          "source_digit_pos": 1546,
+          "source_start": "book:9",
+          "target_start": 0
+        }
+      ],
+      "copy_items": 1,
+      "cross_boundary_copied_digits": 0,
+      "cross_boundary_copy_items": 0,
+      "distinct_source_books": 1,
+      "source_books_by_copied_digits": {
+        "book:9": 140
+      },
+      "source_start_books_by_copy_items": {
+        "book:9": 1
+      },
+      "target_book": 69,
+      "top_source_book": "book:9",
+      "top_source_copied_digits": 140,
+      "top_source_share": 1.0,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    }
+  ],
+  "schema": "leave_one_book_out_source_attribution_audit.v1",
+  "source_edges": [
+    {
+      "copied_digits": 277,
+      "source": "book:10",
+      "target_book": 35
+    },
+    {
+      "copied_digits": 271,
+      "source": "book:9",
+      "target_book": 5
+    },
+    {
+      "copied_digits": 269,
+      "source": "book:5",
+      "target_book": 9
+    },
+    {
+      "copied_digits": 253,
+      "source": "book:51",
+      "target_book": 46
+    },
+    {
+      "copied_digits": 234,
+      "source": "book:46",
+      "target_book": 53
+    },
+    {
+      "copied_digits": 211,
+      "source": "book:46",
+      "target_book": 51
+    },
+    {
+      "copied_digits": 210,
+      "source": "book:66",
+      "target_book": 10
+    },
+    {
+      "copied_digits": 210,
+      "source": "book:10",
+      "target_book": 66
+    },
+    {
+      "copied_digits": 188,
+      "source": "book:31",
+      "target_book": 57
+    },
+    {
+      "copied_digits": 150,
+      "source": "book:2",
+      "target_book": 23
+    },
+    {
+      "copied_digits": 146,
+      "source": "book:48",
+      "target_book": 28
+    },
+    {
+      "copied_digits": 146,
+      "source": "book:1",
+      "target_book": 31
+    },
+    {
+      "copied_digits": 145,
+      "source": "book:65",
+      "target_book": 61
+    },
+    {
+      "copied_digits": 144,
+      "source": "book:10",
+      "target_book": 0
+    },
+    {
+      "copied_digits": 144,
+      "source": "book:26",
+      "target_book": 21
+    },
+    {
+      "copied_digits": 143,
+      "source": "book:21",
+      "target_book": 26
+    },
+    {
+      "copied_digits": 143,
+      "source": "book:17",
+      "target_book": 68
+    },
+    {
+      "copied_digits": 141,
+      "source": "book:9",
+      "target_book": 50
+    },
+    {
+      "copied_digits": 140,
+      "source": "book:9",
+      "target_book": 69
+    },
+    {
+      "copied_digits": 137,
+      "source": "book:21",
+      "target_book": 12
+    },
+    {
+      "copied_digits": 137,
+      "source": "book:2",
+      "target_book": 22
+    },
+    {
+      "copied_digits": 137,
+      "source": "book:58",
+      "target_book": 32
+    },
+    {
+      "copied_digits": 132,
+      "source": "book:3",
+      "target_book": 4
+    },
+    {
+      "copied_digits": 132,
+      "source": "book:2",
+      "target_book": 42
+    },
+    {
+      "copied_digits": 131,
+      "source": "book:0",
+      "target_book": 33
+    },
+    {
+      "copied_digits": 127,
+      "source": "book:12",
+      "target_book": 30
+    },
+    {
+      "copied_digits": 126,
+      "source": "book:52",
+      "target_book": 44
+    },
+    {
+      "copied_digits": 126,
+      "source": "book:5",
+      "target_book": 47
+    },
+    {
+      "copied_digits": 126,
+      "source": "book:44",
+      "target_book": 52
+    },
+    {
+      "copied_digits": 126,
+      "source": "book:3",
+      "target_book": 62
+    },
+    {
+      "copied_digits": 124,
+      "source": "book:5",
+      "target_book": 2
+    },
+    {
+      "copied_digits": 123,
+      "source": "book:32",
+      "target_book": 11
+    },
+    {
+      "copied_digits": 121,
+      "source": "book:44",
+      "target_book": 3
+    },
+    {
+      "copied_digits": 116,
+      "source": "book:28",
+      "target_book": 48
+    },
+    {
+      "copied_digits": 114,
+      "source": "book:44",
+      "target_book": 17
+    },
+    {
+      "copied_digits": 113,
+      "source": "book:29",
+      "target_book": 65
+    },
+    {
+      "copied_digits": 112,
+      "source": "book:13",
+      "target_book": 38
+    },
+    {
+      "copied_digits": 112,
+      "source": "book:32",
+      "target_book": 43
+    },
+    {
+      "copied_digits": 112,
+      "source": "book:32",
+      "target_book": 58
+    },
+    {
+      "copied_digits": 112,
+      "source": "book:32",
+      "target_book": 59
+    },
+    {
+      "copied_digits": 111,
+      "source": "book:8",
+      "target_book": 37
+    },
+    {
+      "copied_digits": 108,
+      "source": "book:33",
+      "target_book": 58
+    },
+    {
+      "copied_digits": 107,
+      "source": "book:11",
+      "target_book": 36
+    },
+    {
+      "copied_digits": 106,
+      "source": "book:3",
+      "target_book": 29
+    },
+    {
+      "copied_digits": 99,
+      "source": "book:15",
+      "target_book": 16
+    },
+    {
+      "copied_digits": 99,
+      "source": "book:16",
+      "target_book": 55
+    },
+    {
+      "copied_digits": 97,
+      "source": "book:9",
+      "target_book": 40
+    },
+    {
+      "copied_digits": 97,
+      "source": "book:46",
+      "target_book": 45
+    },
+    {
+      "copied_digits": 92,
+      "source": "book:10",
+      "target_book": 1
+    },
+    {
+      "copied_digits": 91,
+      "source": "book:16",
+      "target_book": 15
+    },
+    {
+      "copied_digits": 89,
+      "source": "book:38",
+      "target_book": 13
+    },
+    {
+      "copied_digits": 89,
+      "source": "book:1",
+      "target_book": 27
+    },
+    {
+      "copied_digits": 83,
+      "source": "book:21",
+      "target_book": 24
+    },
+    {
+      "copied_digits": 82,
+      "source": "book:46",
+      "target_book": 17
+    },
+    {
+      "copied_digits": 79,
+      "source": "book:63",
+      "target_book": 8
+    },
+    {
+      "copied_digits": 79,
+      "source": "book:0",
+      "target_book": 59
+    },
+    {
+      "copied_digits": 79,
+      "source": "book:8",
+      "target_book": 63
+    },
+    {
+      "copied_digits": 76,
+      "source": "book:64",
+      "target_book": 8
+    },
+    {
+      "copied_digits": 76,
+      "source": "book:8",
+      "target_book": 64
+    },
+    {
+      "copied_digits": 75,
+      "source": "book:45",
+      "target_book": 64
+    },
+    {
+      "copied_digits": 74,
+      "source": "book:6",
+      "target_book": 7
+    },
+    {
+      "copied_digits": 73,
+      "source": "book:38",
+      "target_book": 56
+    },
+    {
+      "copied_digits": 71,
+      "source": "book:67",
+      "target_book": 10
+    },
+    {
+      "copied_digits": 71,
+      "source": "book:45",
+      "target_book": 17
+    },
+    {
+      "copied_digits": 67,
+      "source": "book:2",
+      "target_book": 67
+    },
+    {
+      "copied_digits": 66,
+      "source": "book:12",
+      "target_book": 56
+    },
+    {
+      "copied_digits": 65,
+      "source": "book:37",
+      "target_book": 14
+    },
+    {
+      "copied_digits": 64,
+      "source": "book:7",
+      "target_book": 6
+    },
+    {
+      "copied_digits": 63,
+      "source": "book:1",
+      "target_book": 41
+    },
+    {
+      "copied_digits": 62,
+      "source": "book:28",
+      "target_book": 40
+    },
+    {
+      "copied_digits": 61,
+      "source": "book:8",
+      "target_book": 60
+    },
+    {
+      "copied_digits": 60,
+      "source": "book:2",
+      "target_book": 31
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:67",
+      "target_book": 2
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:5",
+      "target_book": 6
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:2",
+      "target_book": 48
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:26",
+      "target_book": 56
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:17",
+      "target_book": 60
+    },
+    {
+      "copied_digits": 53,
+      "source": "book:45",
+      "target_book": 65
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:21",
+      "target_book": 13
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:39",
+      "target_book": 15
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:15",
+      "target_book": 39
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:17",
+      "target_book": 45
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:45",
+      "target_book": 51
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:59",
+      "target_book": 58
+    },
+    {
+      "copied_digits": 52,
+      "source": "book:58",
+      "target_book": 59
+    },
+    {
+      "copied_digits": 51,
+      "source": "book:0",
+      "target_book": 18
+    },
+    {
+      "copied_digits": 49,
+      "source": "book:9",
+      "target_book": 37
+    },
+    {
+      "copied_digits": 49,
+      "source": "book:20",
+      "target_book": 54
+    },
+    {
+      "copied_digits": 49,
+      "source": "book:13",
+      "target_book": 56
+    },
+    {
+      "copied_digits": 48,
+      "source": "book:1",
+      "target_book": 19
+    },
+    {
+      "copied_digits": 48,
+      "source": "book:54",
+      "target_book": 20
+    },
+    {
+      "copied_digits": 47,
+      "source": "book:45",
+      "target_book": 63
+    },
+    {
+      "copied_digits": 46,
+      "source": "book:0",
+      "target_book": 6
+    },
+    {
+      "copied_digits": 45,
+      "source": "book:5",
+      "target_book": 19
+    },
+    {
+      "copied_digits": 45,
+      "source": "book:61",
+      "target_book": 29
+    },
+    {
+      "copied_digits": 45,
+      "source": "book:17",
+      "target_book": 34
+    },
+    {
+      "copied_digits": 43,
+      "source": "book:5",
+      "target_book": 49
+    },
+    {
+      "copied_digits": 42,
+      "source": "book:57",
+      "target_book": 31
+    },
+    {
+      "copied_digits": 40,
+      "source": "book:55",
+      "target_book": 16
+    },
+    {
+      "copied_digits": 40,
+      "source": "book:1",
+      "target_book": 18
+    },
+    {
+      "copied_digits": 38,
+      "source": "book:3",
+      "target_book": 34
+    },
+    {
+      "copied_digits": 37,
+      "source": "book:0",
+      "target_book": 41
+    },
+    {
+      "copied_digits": 37,
+      "source": "book:47",
+      "target_book": 53
+    },
+    {
+      "copied_digits": 36,
+      "source": "book:2",
+      "target_book": 19
+    },
+    {
+      "copied_digits": 36,
+      "source": "book:12",
+      "target_book": 24
+    },
+    {
+      "copied_digits": 36,
+      "source": "book:2",
+      "target_book": 41
+    },
+    {
+      "copied_digits": 36,
+      "source": "book:64",
+      "target_book": 60
+    },
+    {
+      "copied_digits": 35,
+      "source": "book:39",
+      "target_book": 25
+    },
+    {
+      "copied_digits": 35,
+      "source": "book:2",
+      "target_book": 27
+    },
+    {
+      "copied_digits": 32,
+      "source": "book:45",
+      "target_book": 14
+    },
+    {
+      "copied_digits": 32,
+      "source": "book:13",
+      "target_book": 21
+    },
+    {
+      "copied_digits": 32,
+      "source": "book:11",
+      "target_book": 49
+    },
+    {
+      "copied_digits": 31,
+      "source": "book:1",
+      "target_book": 67
+    },
+    {
+      "copied_digits": 29,
+      "source": "book:1",
+      "target_book": 42
+    },
+    {
+      "copied_digits": 29,
+      "source": "book:33",
+      "target_book": 43
+    },
+    {
+      "copied_digits": 29,
+      "source": "book:33",
+      "target_book": 59
+    },
+    {
+      "copied_digits": 24,
+      "source": "book:28",
+      "target_book": 16
+    },
+    {
+      "copied_digits": 22,
+      "source": "book:14",
+      "target_book": 9
+    },
+    {
+      "copied_digits": 22,
+      "source": "book:0",
+      "target_book": 42
+    },
+    {
+      "copied_digits": 22,
+      "source": "book:2",
+      "target_book": 56
+    },
+    {
+      "copied_digits": 20,
+      "source": "book:0",
+      "target_book": 36
+    },
+    {
+      "copied_digits": 19,
+      "source": "book:45",
+      "target_book": 3
+    },
+    {
+      "copied_digits": 17,
+      "source": "book:26",
+      "target_book": 30
+    },
+    {
+      "copied_digits": 15,
+      "source": "book:8",
+      "target_book": 20
+    },
+    {
+      "copied_digits": 15,
+      "source": "book:0",
+      "target_book": 34
+    },
+    {
+      "copied_digits": 14,
+      "source": "book:33",
+      "target_book": 11
+    },
+    {
+      "copied_digits": 13,
+      "source": "book:15",
+      "target_book": 55
+    },
+    {
+      "copied_digits": 12,
+      "source": "book:1",
+      "target_book": 34
+    },
+    {
+      "copied_digits": 12,
+      "source": "book:5",
+      "target_book": 38
+    },
+    {
+      "copied_digits": 11,
+      "source": "book:17",
+      "target_book": 14
+    },
+    {
+      "copied_digits": 11,
+      "source": "book:5",
+      "target_book": 16
+    },
+    {
+      "copied_digits": 11,
+      "source": "book:17",
+      "target_book": 26
+    },
+    {
+      "copied_digits": 10,
+      "source": "book:5",
+      "target_book": 36
+    },
+    {
+      "copied_digits": 10,
+      "source": "book:2",
+      "target_book": 57
+    },
+    {
+      "copied_digits": 9,
+      "source": "book:2",
+      "target_book": 26
+    },
+    {
+      "copied_digits": 9,
+      "source": "book:5",
+      "target_book": 35
+    },
+    {
+      "copied_digits": 8,
+      "source": "current_prefix",
+      "target_book": 49
+    },
+    {
+      "copied_digits": 8,
+      "source": "book:45",
+      "target_book": 52
+    },
+    {
+      "copied_digits": 8,
+      "source": "book:0",
+      "target_book": 54
+    },
+    {
+      "copied_digits": 7,
+      "source": "book:2",
+      "target_book": 7
+    },
+    {
+      "copied_digits": 7,
+      "source": "book:0",
+      "target_book": 17
+    },
+    {
+      "copied_digits": 7,
+      "source": "book:30",
+      "target_book": 26
+    },
+    {
+      "copied_digits": 6,
+      "source": "book:2",
+      "target_book": 6
+    },
+    {
+      "copied_digits": 6,
+      "source": "book:0",
+      "target_book": 14
+    },
+    {
+      "copied_digits": 6,
+      "source": "book:14",
+      "target_book": 38
+    },
+    {
+      "copied_digits": 5,
+      "source": "book:0",
+      "target_book": 40
+    },
+    {
+      "copied_digits": 5,
+      "source": "book:47",
+      "target_book": 51
+    },
+    {
+      "copied_digits": 3,
+      "source": "book:1",
+      "target_book": 33
+    },
+    {
+      "copied_digits": 2,
+      "source": "book:8",
+      "target_book": 5
+    },
+    {
+      "copied_digits": 2,
+      "source": "book:46",
+      "target_book": 14
+    },
+    {
+      "copied_digits": 2,
+      "source": "book:2",
+      "target_book": 18
+    },
+    {
+      "copied_digits": 1,
+      "source": "book:29",
+      "target_book": 40
+    }
+  ],
+  "summary": {
+    "book_count": 70,
+    "cross_boundary_copied_digit_share": 0.2712890978123305,
+    "current_prefix_copied_digit_share": 0.0007231965286566625,
+    "current_prefix_copied_digits": 8,
+    "current_prefix_copy_items_started": 1,
+    "current_prefix_target_books": [
+      49
+    ],
+    "highest_top_source_share_rows": [
+      {
+        "copied_digits": 144,
+        "target_book": 0,
+        "top_source_book": "book:10",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 92,
+        "target_book": 1,
+        "top_source_book": "book:10",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 132,
+        "target_book": 4,
+        "top_source_book": "book:3",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 137,
+        "target_book": 12,
+        "top_source_book": "book:21",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 137,
+        "target_book": 22,
+        "top_source_book": "book:2",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 150,
+        "target_book": 23,
+        "top_source_book": "book:2",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 35,
+        "target_book": 25,
+        "top_source_book": "book:39",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 146,
+        "target_book": 28,
+        "top_source_book": "book:48",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 137,
+        "target_book": 32,
+        "top_source_book": "book:58",
+        "top_source_share": 1.0
+      },
+      {
+        "copied_digits": 52,
+        "target_book": 39,
+        "top_source_book": "book:15",
+        "top_source_share": 1.0
+      }
+    ],
+    "interpretation": "The singleton result is not a black box: copied digits can be attributed to concrete source books or to the current held-out book prefix already emitted by the sequential decoder. Boundary-crossing copies are explicitly counted because the complement inventory is a concatenation of books without separators.",
+    "max_distinct_source_books": 5,
+    "max_top_source_share": 1.0,
+    "mean_distinct_source_books_per_target": 2.1714285714285713,
+    "mean_top_source_share": 0.7724562427289722,
+    "roundtrip_book_count": 70,
+    "top_edges_by_copied_digits": [
+      {
+        "copied_digits": 277,
+        "source": "book:10",
+        "target_book": 35
+      },
+      {
+        "copied_digits": 271,
+        "source": "book:9",
+        "target_book": 5
+      },
+      {
+        "copied_digits": 269,
+        "source": "book:5",
+        "target_book": 9
+      },
+      {
+        "copied_digits": 253,
+        "source": "book:51",
+        "target_book": 46
+      },
+      {
+        "copied_digits": 234,
+        "source": "book:46",
+        "target_book": 53
+      },
+      {
+        "copied_digits": 211,
+        "source": "book:46",
+        "target_book": 51
+      },
+      {
+        "copied_digits": 210,
+        "source": "book:66",
+        "target_book": 10
+      },
+      {
+        "copied_digits": 210,
+        "source": "book:10",
+        "target_book": 66
+      },
+      {
+        "copied_digits": 188,
+        "source": "book:31",
+        "target_book": 57
+      },
+      {
+        "copied_digits": 150,
+        "source": "book:2",
+        "target_book": 23
+      },
+      {
+        "copied_digits": 146,
+        "source": "book:48",
+        "target_book": 28
+      },
+      {
+        "copied_digits": 146,
+        "source": "book:1",
+        "target_book": 31
+      },
+      {
+        "copied_digits": 145,
+        "source": "book:65",
+        "target_book": 61
+      },
+      {
+        "copied_digits": 144,
+        "source": "book:10",
+        "target_book": 0
+      },
+      {
+        "copied_digits": 144,
+        "source": "book:26",
+        "target_book": 21
+      },
+      {
+        "copied_digits": 143,
+        "source": "book:21",
+        "target_book": 26
+      },
+      {
+        "copied_digits": 143,
+        "source": "book:17",
+        "target_book": 68
+      },
+      {
+        "copied_digits": 141,
+        "source": "book:9",
+        "target_book": 50
+      },
+      {
+        "copied_digits": 140,
+        "source": "book:9",
+        "target_book": 69
+      },
+      {
+        "copied_digits": 137,
+        "source": "book:21",
+        "target_book": 12
+      }
+    ],
+    "top_source_books_by_copied_digits": [
+      {
+        "copied_digits": 762,
+        "source": "book:2"
+      },
+      {
+        "copied_digits": 723,
+        "source": "book:10"
+      },
+      {
+        "copied_digits": 702,
+        "source": "book:5"
+      },
+      {
+        "copied_digits": 698,
+        "source": "book:9"
+      },
+      {
+        "copied_digits": 626,
+        "source": "book:46"
+      },
+      {
+        "copied_digits": 461,
+        "source": "book:1"
+      },
+      {
+        "copied_digits": 459,
+        "source": "book:32"
+      },
+      {
+        "copied_digits": 427,
+        "source": "book:0"
+      },
+      {
+        "copied_digits": 415,
+        "source": "book:21"
+      },
+      {
+        "copied_digits": 402,
+        "source": "book:3"
+      }
+    ],
+    "top_source_dominated_books_ge_0_90": [
+      0,
+      1,
+      4,
+      5,
+      7,
+      9,
+      12,
+      22,
+      23,
+      25,
+      28,
+      32,
+      33,
+      35,
+      39,
+      44,
+      46,
+      47,
+      50,
+      52,
+      57,
+      61,
+      62,
+      66,
+      68,
+      69
+    ],
+    "top_source_start_books_by_copy_items": [
+      {
+        "copy_items_started": 20,
+        "source": "book:2"
+      },
+      {
+        "copy_items_started": 16,
+        "source": "book:5"
+      },
+      {
+        "copy_items_started": 16,
+        "source": "book:0"
+      },
+      {
+        "copy_items_started": 13,
+        "source": "book:3"
+      },
+      {
+        "copy_items_started": 12,
+        "source": "book:1"
+      },
+      {
+        "copy_items_started": 9,
+        "source": "book:12"
+      },
+      {
+        "copy_items_started": 7,
+        "source": "book:8"
+      },
+      {
+        "copy_items_started": 7,
+        "source": "book:11"
+      },
+      {
+        "copy_items_started": 6,
+        "source": "book:45"
+      },
+      {
+        "copy_items_started": 6,
+        "source": "book:17"
+      }
+    ],
+    "total_copied_digits": 11062,
+    "total_copy_items": 189,
+    "total_cross_boundary_copied_digits": 3001,
+    "total_cross_boundary_copy_items": 23,
+    "widest_source_rows": [
+      {
+        "copied_digits": 116,
+        "distinct_source_books": 5,
+        "target_book": 14
+      },
+      {
+        "copied_digits": 263,
+        "distinct_source_books": 5,
+        "target_book": 56
+      },
+      {
+        "copied_digits": 169,
+        "distinct_source_books": 4,
+        "target_book": 6
+      },
+      {
+        "copied_digits": 174,
+        "distinct_source_books": 4,
+        "target_book": 16
+      },
+      {
+        "copied_digits": 274,
+        "distinct_source_books": 4,
+        "target_book": 17
+      },
+      {
+        "copied_digits": 170,
+        "distinct_source_books": 4,
+        "target_book": 26
+      },
+      {
+        "copied_digits": 110,
+        "distinct_source_books": 4,
+        "target_book": 34
+      },
+      {
+        "copied_digits": 165,
+        "distinct_source_books": 4,
+        "target_book": 40
+      },
+      {
+        "copied_digits": 272,
+        "distinct_source_books": 4,
+        "target_book": 59
+      },
+      {
+        "copied_digits": 93,
+        "distinct_source_books": 3,
+        "target_book": 18
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}

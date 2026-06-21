@@ -161,6 +161,17 @@ while still not proving an authorial order because the inventory is the
 full complement of other books.
 See [13_leave_one_book_out_no_self_audit.md](test_results/13_leave_one_book_out_no_self_audit.md).
 
+### Leave-One-Book-Out Source Attribution
+
+The singleton result is then expanded into a source atlas. Across `70`
+singleton reparses there are `189` copy items and `11062` copied digits.
+The copied digits are attributable to concrete source books or, rarely,
+the already-emitted current prefix (`8` digits, share `0.000723`). The
+important caveat is explicit: `3001` copied digits (`0.271289`) cross
+artificial source-book boundaries created by concatenating the complement
+inventory without separators.
+See [14_leave_one_book_out_source_attribution_audit.md](test_results/14_leave_one_book_out_source_attribution_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -210,7 +221,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, and singleton leave-one-book-out reparsing beats raw in `70/70`.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, and singleton copy sources are now attributed with a documented boundary-crossing caveat.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

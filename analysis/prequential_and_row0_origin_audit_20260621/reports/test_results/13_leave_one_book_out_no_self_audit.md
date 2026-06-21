@@ -6,8 +6,9 @@ Translation delta: `NONE`
 ## Purpose
 
 This audit tests singleton holdout granularity. Each book is reparsed
-using only the other `69` books as inventory, with no bytes from the
-held-out book available as prior material.
+using the other `69` books as the preloaded inventory. The held-out
+book itself is not preloaded; as in sequential decoding, its current
+prefix may become available after emission.
 
 ## Summary
 
@@ -111,6 +112,6 @@ held-out book available as prior material.
 
 ## Decision
 
-- Every individual book is mechanically reparseable from the other 69 books with positive gain over raw digit coding.
+- Every individual book is mechanically reparseable from the other 69 preloaded books, plus any current prefix emitted during sequential decoding, with positive gain over raw digit coding.
 - This strengthens item-level predictive redundancy, but it uses complement inventory and is not an authorial order proof.
 - No plaintext, translation, row0-origin change, or case reopening is introduced.

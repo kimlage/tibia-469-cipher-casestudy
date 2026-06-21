@@ -26,6 +26,8 @@ SOURCES = {
     "family_holdout_no_test_carryover": TEST_RESULTS
     / "12_family_holdout_no_test_carryover_audit.json",
     "leave_one_book_out_no_self": TEST_RESULTS / "13_leave_one_book_out_no_self_audit.json",
+    "leave_one_book_out_source_attribution": TEST_RESULTS
+    / "14_leave_one_book_out_source_attribution_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -56,6 +58,7 @@ def make_result() -> dict[str, Any]:
     address_corrected = load_json(SOURCES["family_holdout_address_corrected_scoreboard"])
     no_test_carryover = load_json(SOURCES["family_holdout_no_test_carryover"])
     leave_one_out = load_json(SOURCES["leave_one_book_out_no_self"])
+    source_attribution = load_json(SOURCES["leave_one_book_out_source_attribution"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -70,6 +73,7 @@ def make_result() -> dict[str, Any]:
         ("family_holdout_address_corrected_scoreboard", address_corrected),
         ("family_holdout_no_test_carryover", no_test_carryover),
         ("leave_one_book_out_no_self", leave_one_out),
+        ("leave_one_book_out_source_attribution", source_attribution),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -342,6 +346,39 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "where_do_singleton_holdout_copies_source_from",
+            "source": rel(SOURCES["leave_one_book_out_source_attribution"]),
+            "status": "mapped_with_boundary_caveat",
+            "evidence": {
+                "book_count": source_attribution["summary"]["book_count"],
+                "roundtrip_book_count": source_attribution["summary"]["roundtrip_book_count"],
+                "total_copy_items": source_attribution["summary"]["total_copy_items"],
+                "total_copied_digits": source_attribution["summary"]["total_copied_digits"],
+                "total_cross_boundary_copy_items": source_attribution["summary"][
+                    "total_cross_boundary_copy_items"
+                ],
+                "cross_boundary_copied_digit_share": source_attribution["summary"][
+                    "cross_boundary_copied_digit_share"
+                ],
+                "current_prefix_copied_digits": source_attribution["summary"][
+                    "current_prefix_copied_digits"
+                ],
+                "current_prefix_copied_digit_share": source_attribution["summary"][
+                    "current_prefix_copied_digit_share"
+                ],
+                "mean_distinct_source_books_per_target": source_attribution["summary"][
+                    "mean_distinct_source_books_per_target"
+                ],
+                "mean_top_source_share": source_attribution["summary"]["mean_top_source_share"],
+            },
+            "interpretation": (
+                "Singleton holdout copies are now attributable to source books "
+                "or the already-emitted current prefix. The map also exposes a "
+                "boundary caveat: many copied digits cross artificial boundaries "
+                "created by concatenating source books without separators."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -514,6 +551,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"beats raw {evidence['beats_raw_count']}/{evidence['book_count']}; "
                 f"mean gain {evidence['mean_gain_vs_raw_bits']:.3f}; "
                 f"min gain {evidence['min_gain_vs_raw_bits']:.3f}"
+            )
+        elif row["question"] == "where_do_singleton_holdout_copies_source_from":
+            key = (
+                f"{evidence['total_copy_items']} copy items; "
+                f"{evidence['total_copied_digits']} copied digits; "
+                f"boundary share {evidence['cross_boundary_copied_digit_share']:.3f}; "
+                f"current-prefix share {evidence['current_prefix_copied_digit_share']:.6f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

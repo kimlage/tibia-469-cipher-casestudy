@@ -927,6 +927,12 @@ all `70/70` roundtrip and beat raw digit coding, with mean gain `469.307` bits
 and minimum gain `96.055` bits. This validates item-level mechanical
 redundancy but remains complement-inventory evidence, not an authorial order or
 row0-origin proof.
+A singleton source-attribution audit then maps the dependency graph behind that
+result: `189` copy items produce `11062` copied digits, with mean `2.171`
+distinct source books per target and mean top-source share `0.772`. It also
+exposes a caveat rather than hiding it: `3001` copied digits (`0.271289`) cross
+artificial source-book boundaries in the concatenated complement inventory,
+while current-prefix copying is tiny (`8` digits, share `0.000723`).
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1370,6 +1376,7 @@ book generation, not row0 pair-cell placement.
 - [Family holdout address-corrected scoreboard](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.md)
 - [Family holdout no-test-carryover audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.md)
 - [Leave-one-book-out no-self audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.md)
+- [Leave-one-book-out source attribution audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

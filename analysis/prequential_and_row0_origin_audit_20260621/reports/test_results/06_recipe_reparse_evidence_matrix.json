@@ -200,6 +200,24 @@
     },
     {
       "evidence": {
+        "book_count": 70,
+        "cross_boundary_copied_digit_share": 0.2712890978123305,
+        "current_prefix_copied_digit_share": 0.0007231965286566625,
+        "current_prefix_copied_digits": 8,
+        "mean_distinct_source_books_per_target": 2.1714285714285713,
+        "mean_top_source_share": 0.7724562427289722,
+        "roundtrip_book_count": 70,
+        "total_copied_digits": 11062,
+        "total_copy_items": 189,
+        "total_cross_boundary_copy_items": 23
+      },
+      "interpretation": "Singleton holdout copies are now attributable to source books or the already-emitted current prefix. The map also exposes a boundary caveat: many copied digits cross artificial boundaries created by concatenating source books without separators.",
+      "question": "where_do_singleton_holdout_copies_source_from",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.json",
+      "status": "mapped_with_boundary_caveat"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -238,6 +256,7 @@
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
     "leave_one_book_out_no_self": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.json",
+    "leave_one_book_out_source_attribution": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",

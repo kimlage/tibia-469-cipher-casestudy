@@ -55,6 +55,9 @@ exogenous.
 - [scripts/13_leave_one_book_out_no_self_audit.py](scripts/13_leave_one_book_out_no_self_audit.py) - tests each individual book against an inventory made from the other 69 books only.
 - [reports/test_results/13_leave_one_book_out_no_self_audit.md](reports/test_results/13_leave_one_book_out_no_self_audit.md) - singleton holdout no-self result.
 - [reports/test_results/13_leave_one_book_out_no_self_audit.json](reports/test_results/13_leave_one_book_out_no_self_audit.json) - structured singleton holdout ledger.
+- [scripts/14_leave_one_book_out_source_attribution_audit.py](scripts/14_leave_one_book_out_source_attribution_audit.py) - maps singleton holdout copy sources to source books or current prefix.
+- [reports/test_results/14_leave_one_book_out_source_attribution_audit.md](reports/test_results/14_leave_one_book_out_source_attribution_audit.md) - singleton source attribution atlas.
+- [reports/test_results/14_leave_one_book_out_source_attribution_audit.json](reports/test_results/14_leave_one_book_out_source_attribution_audit.json) - structured singleton source-attribution ledger.
 
 ## Boundary
 
@@ -86,7 +89,9 @@ exogenous.
   so the positive family signal does not require earlier held-out books to feed
   later held-out books. Singleton leave-one-book-out reparsing also roundtrips
   `70/70` books and beats raw digit coding in `70/70`, with minimum gain
-  `96.055` bits.
+  `96.055` bits. Source attribution for that singleton audit maps `11062`
+  copied digits to source books or current prefix; `3001` copied digits cross
+  artificial source-book boundaries in the concatenated complement inventory.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
