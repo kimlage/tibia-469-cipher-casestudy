@@ -559,6 +559,10 @@ The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no
 charged controlled pair-label formula is available in the current corpus.
+A paid-anchor follow-up tests the best partial worksheet shape directly: all
+13 anchors save `54.178` bits only before costs; after explicit pair+label
+cost the net is `-11.852` bits. Rare-singleton anchors are nominally strong
+under random controls but merely break even once their rare labels are paid.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -641,8 +645,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejection to literal-payload cost, closes exception-signaling rescue for that
   seed path, gates source-state dependency and retains previous-copy
   source/length state after state-free defaults fail, closes the row0
-  hypothesis requirement matrix with zero promoted
-  origin formulas, and keeps row0 origin exogenous with translation delta zero.
+  hypothesis requirement matrix with zero promoted origin formulas, rejects
+  paid partial worksheet anchors as a row0-origin formula, and keeps row0
+  origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

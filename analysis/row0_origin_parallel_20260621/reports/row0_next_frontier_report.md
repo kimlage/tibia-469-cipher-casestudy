@@ -5,7 +5,7 @@ Translation delta: `NONE`
 
 ## Decision
 
-`row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction`.
+`row0_advance_requires_primary_source_or_new_paid_anchor_source`.
 
 ## Priority order
 
@@ -18,5 +18,5 @@ Translation delta: `NONE`
 
 - No `PROMOTED_ORIGIN_FORMULA`.
 - Surface asymmetry is a real mechanical clue.
-- Partial worksheet model is plausible but currently weak because anchor/source costs are unpaid.
+- Partial worksheet model is plausible but weak; after the paid-anchor gate, explicit anchor labels do not beat lookup.
 - External source remains the only likely strong unlock.

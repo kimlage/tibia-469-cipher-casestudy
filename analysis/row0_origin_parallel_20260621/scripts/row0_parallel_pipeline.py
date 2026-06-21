@@ -324,6 +324,12 @@ def log2_factorial(n: int) -> float:
     return math.lgamma(n + 1) / math.log(2)
 
 
+def log2_choose(n: int, k: int) -> float:
+    if k < 0 or k > n:
+        return float("inf")
+    return log2_factorial(n) - log2_factorial(k) - log2_factorial(n - k)
+
+
 def inventory_sequence_bits(counts: Counter[str]) -> float:
     total = sum(counts.values())
     return log2_factorial(total) - sum(log2_factorial(count) for count in counts.values())
@@ -1568,6 +1574,7 @@ def run_158() -> dict[str, Any]:
     scoreboard = load_json(TEST_RESULTS / "155_row0_improvement_scoreboard.json")
     worksheet = load_json(TEST_RESULTS / "156_row0_partial_worksheet_model.json")
     surface = load_json(TEST_RESULTS / "157_row0_surface_exception_focus.json")
+    paid_anchor = load_json(TEST_RESULTS / "159_row0_paid_anchor_reduction_gate.json")
     synthesis = {
         "schema": "row0_next_frontier_synthesis.v1",
         "classification": "AUDIT_ONLY",
@@ -1583,7 +1590,16 @@ def run_158() -> dict[str, Any]:
             "scoreboard": scoreboard["decision"],
             "worksheet": worksheet["promotion_decision"],
             "surface": surface["decision"],
-            "overall": "row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction",
+            "paid_anchor": paid_anchor.get(
+                "decision",
+                "partial_worksheet_anchor_costing_pending",
+            ),
+            "overall": (
+                "row0_advance_requires_primary_source_or_new_paid_anchor_source"
+                if paid_anchor.get("decision")
+                == "explicit_paid_anchor_model_does_not_beat_lookup"
+                else "row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction"
+            ),
         },
     }
     write_json(TEST_RESULTS / "158_row0_next_frontier_synthesis.json", synthesis)
@@ -1595,7 +1611,7 @@ def run_158() -> dict[str, Any]:
         "",
         "## Decision",
         "",
-        "`row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction`.",
+        f"`{synthesis['decisions']['overall']}`.",
         "",
         "## Priority order",
         "",
@@ -1608,12 +1624,319 @@ def run_158() -> dict[str, Any]:
         "",
         "- No `PROMOTED_ORIGIN_FORMULA`.",
         "- Surface asymmetry is a real mechanical clue.",
-        "- Partial worksheet model is plausible but currently weak because anchor/source costs are unpaid.",
+        "- Partial worksheet model is plausible but weak; after the paid-anchor gate, explicit anchor labels do not beat lookup.",
         "- External source remains the only likely strong unlock.",
     ]
     write_md(TEST_RESULTS / "158_row0_next_frontier_synthesis.md", lines)
     write_md(REPORTS / "row0_next_frontier_report.md", lines)
     return synthesis
+
+
+def anchor_subset_result(
+    rows: list[dict[str, Any]],
+    anchors: list[dict[str, Any]],
+    *,
+    name: str,
+    random_seed_offset: int,
+    control_universe: list[str] | None = None,
+    control_trials: int = 5000,
+    family_pair_cost_bits: float | None = None,
+) -> dict[str, Any]:
+    baseline_bits = inventory_sequence_bits(inventory(rows))
+    all_pairs = [row["pair"] for row in rows]
+    anchor_pairs = {row["pair"] for row in anchors}
+    residual_bits = residual_lookup_bits_after_freezing(rows, anchor_pairs)
+    nominal_reduction = baseline_bits - residual_bits
+    pair_set_cost = log2_choose(len(all_pairs), len(anchor_pairs))
+    anchor_label_bits = inventory_sequence_bits(Counter(row["label"] for row in anchors))
+    explicit_pair_label_net = nominal_reduction - pair_set_cost - anchor_label_bits
+    pair_identity_only_net = nominal_reduction - pair_set_cost
+    family_cost = pair_set_cost if family_pair_cost_bits is None else family_pair_cost_bits
+    family_paid_net_without_label_source = nominal_reduction - family_cost
+    family_paid_net_with_anchor_label_arrangement = (
+        nominal_reduction - family_cost - anchor_label_bits
+    )
+
+    universe = control_universe or all_pairs
+    rng = random.Random(RANDOM_SEED + random_seed_offset)
+    control_values = []
+    if len(anchor_pairs) <= len(universe):
+        for _ in range(control_trials):
+            sampled = set(rng.sample(universe, len(anchor_pairs)))
+            control_values.append(
+                baseline_bits - residual_lookup_bits_after_freezing(rows, sampled)
+            )
+    control_values_sorted = sorted(control_values)
+    control = {
+        "trials": len(control_values),
+        "universe_size": len(universe),
+        "median_nominal_reduction_bits": (
+            control_values_sorted[len(control_values_sorted) // 2]
+            if control_values_sorted
+            else None
+        ),
+        "max_nominal_reduction_bits": max(control_values) if control_values else None,
+        "p_control_ge_observed_nominal": (
+            pvalue_ge(control_values, nominal_reduction) if control_values else None
+        ),
+    }
+    return {
+        "name": name,
+        "anchor_count": len(anchor_pairs),
+        "anchors": sorted(anchor_pairs),
+        "anchor_label_counts": dict(Counter(row["label"] for row in anchors)),
+        "residual_lookup_bits": residual_bits,
+        "nominal_reduction_before_anchor_cost_bits": nominal_reduction,
+        "pair_set_cost_bits": pair_set_cost,
+        "anchor_label_arrangement_bits": anchor_label_bits,
+        "explicit_pair_label_net_bits": explicit_pair_label_net,
+        "pair_identity_only_net_bits": pair_identity_only_net,
+        "family_pair_cost_bits": family_cost,
+        "family_paid_net_without_label_source_bits": family_paid_net_without_label_source,
+        "family_paid_net_with_anchor_label_arrangement_bits": (
+            family_paid_net_with_anchor_label_arrangement
+        ),
+        "control": control,
+    }
+
+
+def run_159() -> dict[str, Any]:
+    rows = pair_rows()
+    anchors = worksheet_anchor_rows()
+    baseline_bits = inventory_sequence_bits(inventory(rows))
+    diagonal_pairs = [row["pair"] for row in rows if row["is_diagonal"]]
+    groups = [
+        (
+            "all_declared_worksheet_anchors",
+            anchors,
+            None,
+            1590,
+            None,
+        ),
+        (
+            "promoted_surface_anchors_only",
+            [row for row in anchors if row["classification"] == "PROMOTED_MECHANICAL_CLUE"],
+            None,
+            1591,
+            None,
+        ),
+        (
+            "rare_singleton_anchors",
+            [row for row in anchors if row["anchor_family"].startswith("rare_singleton")],
+            None,
+            1592,
+            None,
+        ),
+        (
+            "diagonal_E_pressure_anchors_all_pairs_cost",
+            [row for row in anchors if row["anchor_family"] == "diagonal_E_pressure"],
+            None,
+            1593,
+            None,
+        ),
+        (
+            "diagonal_E_pressure_anchors_diagonal_family_cost",
+            [row for row in anchors if row["anchor_family"] == "diagonal_E_pressure"],
+            diagonal_pairs,
+            1594,
+            log2_choose(len(diagonal_pairs), 5),
+        ),
+        (
+            "unique_star_anchor",
+            [row for row in anchors if row["anchor_family"] == "unique_star_cell"],
+            None,
+            1595,
+            None,
+        ),
+        (
+            "weak_anchors_only",
+            [row for row in anchors if row["classification"] == "WEAK_CLUE"],
+            None,
+            1596,
+            None,
+        ),
+    ]
+    rows_out = [
+        anchor_subset_result(
+            rows,
+            group_anchors,
+            name=name,
+            control_universe=control_universe,
+            random_seed_offset=seed_offset,
+            family_pair_cost_bits=family_cost,
+        )
+        for name, group_anchors, control_universe, seed_offset, family_cost in groups
+    ]
+    all_row = next(row for row in rows_out if row["name"] == "all_declared_worksheet_anchors")
+    rare_row = next(row for row in rows_out if row["name"] == "rare_singleton_anchors")
+    diagonal_family = next(
+        row for row in rows_out if row["name"] == "diagonal_E_pressure_anchors_diagonal_family_cost"
+    )
+    epsilon = 1e-6
+    full_explicit_promotes = all_row["explicit_pair_label_net_bits"] > epsilon
+    controlled_paid_subset_promotes = any(
+        row["explicit_pair_label_net_bits"] > epsilon
+        and row["control"]["p_control_ge_observed_nominal"] is not None
+        and row["control"]["p_control_ge_observed_nominal"] < 0.05
+        for row in rows_out
+    )
+    positive_uncontrolled_lower_bounds = [
+        row["name"]
+        for row in rows_out
+        if row["family_paid_net_with_anchor_label_arrangement_bits"] > epsilon
+        and not (
+            row["control"]["p_control_ge_observed_nominal"] is not None
+            and row["control"]["p_control_ge_observed_nominal"] < 0.05
+        )
+    ]
+    decision = (
+        "explicit_paid_anchor_model_promotes"
+        if full_explicit_promotes or controlled_paid_subset_promotes
+        else "explicit_paid_anchor_model_does_not_beat_lookup"
+    )
+    result = {
+        "schema": "row0_paid_anchor_reduction_gate.v1",
+        "classification": "paid_partial_worksheet_anchor_reduction_not_promoted",
+        "translation_delta": "NONE",
+        "case_reopened": False,
+        "plaintext_claim": False,
+        "baseline_lookup_bits": baseline_bits,
+        "source_partial_worksheet_model": rel(
+            TEST_RESULTS / "156_row0_partial_worksheet_model.json"
+        ),
+        "models": rows_out,
+        "summary": {
+            "all_anchors_nominal_reduction_bits": all_row[
+                "nominal_reduction_before_anchor_cost_bits"
+            ],
+            "all_anchors_pair_identity_only_net_bits": all_row[
+                "pair_identity_only_net_bits"
+            ],
+            "all_anchors_explicit_pair_label_net_bits": all_row[
+                "explicit_pair_label_net_bits"
+            ],
+            "all_anchors_random_subset_p_ge_nominal": all_row["control"][
+                "p_control_ge_observed_nominal"
+            ],
+            "rare_singletons_nominal_reduction_bits": rare_row[
+                "nominal_reduction_before_anchor_cost_bits"
+            ],
+            "rare_singletons_explicit_pair_label_net_bits": rare_row[
+                "explicit_pair_label_net_bits"
+            ],
+            "rare_singletons_random_subset_p_ge_nominal": rare_row["control"][
+                "p_control_ge_observed_nominal"
+            ],
+            "diagonal_family_net_with_label_arrangement_bits": diagonal_family[
+                "family_paid_net_with_anchor_label_arrangement_bits"
+            ],
+            "diagonal_family_random_subset_p_ge_nominal": diagonal_family["control"][
+                "p_control_ge_observed_nominal"
+            ],
+            "full_explicit_pair_label_model_promoted": full_explicit_promotes,
+            "controlled_paid_subset_promoted": controlled_paid_subset_promotes,
+            "positive_uncontrolled_lower_bound_models": positive_uncontrolled_lower_bounds,
+            "interpretation": (
+                "The worksheet anchors reduce residual lookup only when anchor "
+                "labels or source rules are treated as free. Once exact anchor "
+                "pairs plus their labels are paid as data, the full anchor set is "
+                "worse than lookup and the rare-singleton subset merely breaks "
+                "even."
+            ),
+        },
+        "decision": decision,
+    }
+    write_json(TEST_RESULTS / "159_row0_paid_anchor_reduction_gate.json", result)
+
+    csv_rows = []
+    for row in rows_out:
+        csv_rows.append(
+            {
+                "name": row["name"],
+                "anchor_count": row["anchor_count"],
+                "nominal_reduction_before_anchor_cost_bits": row[
+                    "nominal_reduction_before_anchor_cost_bits"
+                ],
+                "pair_identity_only_net_bits": row["pair_identity_only_net_bits"],
+                "explicit_pair_label_net_bits": row["explicit_pair_label_net_bits"],
+                "family_paid_net_with_anchor_label_arrangement_bits": row[
+                    "family_paid_net_with_anchor_label_arrangement_bits"
+                ],
+                "p_control_ge_observed_nominal": row["control"][
+                    "p_control_ge_observed_nominal"
+                ],
+            }
+        )
+    write_csv(DATA / "row0_paid_anchor_reduction_gate.csv", csv_rows, list(csv_rows[0].keys()))
+
+    lines = [
+        "# 159. Row0 Paid Anchor Reduction Gate",
+        "",
+        f"Classification: `{result['classification']}`",
+        "Translation delta: `NONE`",
+        "",
+        "## Purpose",
+        "",
+        "Audit 156 showed that freezing 13 worksheet-style anchors reduces the",
+        "residual lookup by `54.178` bits before paying anchor/source costs. This",
+        "gate asks whether that reduction survives paid encodings of the anchor",
+        "pairs and labels.",
+        "",
+        "## Summary",
+        "",
+        f"- Lookup baseline: `{baseline_bits:.3f}` bits.",
+        f"- All anchors nominal reduction before cost: "
+        f"`{result['summary']['all_anchors_nominal_reduction_bits']:.3f}` bits.",
+        f"- All anchors after paying pair identities only: "
+        f"`{result['summary']['all_anchors_pair_identity_only_net_bits']:.3f}` bits.",
+        f"- All anchors after paying explicit pair+label data: "
+        f"`{result['summary']['all_anchors_explicit_pair_label_net_bits']:.3f}` bits.",
+        f"- Rare-singleton nominal control p: "
+        f"`{result['summary']['rare_singletons_random_subset_p_ge_nominal']:.4f}`.",
+        f"- Rare-singleton explicit pair+label net: "
+        f"`{result['summary']['rare_singletons_explicit_pair_label_net_bits']:.3f}` bits.",
+        f"- Diagonal-family paid net with label arrangement: "
+        f"`{result['summary']['diagonal_family_net_with_label_arrangement_bits']:.3f}` bits.",
+        f"- Diagonal-family nominal control p: "
+        f"`{result['summary']['diagonal_family_random_subset_p_ge_nominal']:.4f}`.",
+        "",
+        "## Model Table",
+        "",
+        "| Anchor model | k | Nominal reduction | Pair-only net | Explicit pair+label net | Family-paid+label net | Control p |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for row in rows_out:
+        lines.append(
+            f"| `{row['name']}` | `{row['anchor_count']}` | "
+            f"`{row['nominal_reduction_before_anchor_cost_bits']:.3f}` | "
+            f"`{row['pair_identity_only_net_bits']:.3f}` | "
+            f"`{row['explicit_pair_label_net_bits']:.3f}` | "
+            f"`{row['family_paid_net_with_anchor_label_arrangement_bits']:.3f}` | "
+            f"`{row['control']['p_control_ge_observed_nominal']:.4f}` |"
+        )
+    lines += [
+        "",
+        "## Interpretation",
+        "",
+        "The strongest apparent anchor signal is the rare-singleton group: random",
+        "subsets almost never match its nominal lookup reduction. But that is",
+        "exactly because the labels are rare. Once the rare labels are paid as",
+        "anchor data, the net is effectively zero. The full 13-anchor worksheet",
+        "model is worse than lookup after explicit pair+label cost. The diagonal",
+        "family has a positive narrow lower bound only when the diagonal family",
+        "is supplied, but its nominal reduction is ordinary under diagonal-subset",
+        "controls (`p=0.9816`). Therefore the partial worksheet hypothesis remains",
+        "a plausible description of how a human table could be organized, not a",
+        "promoted origin formula.",
+        "",
+        "## Boundary",
+        "",
+        "- No row0-origin formula is promoted.",
+        "- No book-generation compression bound is changed.",
+        "- No plaintext, translation, semantic reading, or case reopening is introduced.",
+    ]
+    write_md(TEST_RESULTS / "159_row0_paid_anchor_reduction_gate.md", lines)
+    return result
 
 
 STEPS = {
@@ -1635,6 +1958,7 @@ STEPS = {
     "156": run_156,
     "157": run_157,
     "158": run_158,
+    "159": run_159,
 }
 
 
@@ -1661,7 +1985,7 @@ def write_readme() -> None:
 def run_all() -> None:
     ensure_dirs()
     write_readme()
-    for step in [str(number) for number in range(141, 159)]:
+    for step in [str(number) for number in range(141, 158)] + ["159", "158"]:
         STEPS[step]()
 
 
