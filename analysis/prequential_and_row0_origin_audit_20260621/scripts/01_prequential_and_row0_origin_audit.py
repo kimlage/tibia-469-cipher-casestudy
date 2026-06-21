@@ -274,6 +274,7 @@ def render_markdown(
     family_holdout_no_test_carryover_link: str,
     leave_one_book_out_no_self_link: str,
     leave_one_book_out_source_attribution_link: str,
+    leave_one_book_out_book_bounded_source_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -480,6 +481,15 @@ def render_markdown(
             "inventory without separators.",
             f"See [14_leave_one_book_out_source_attribution_audit.md]({leave_one_book_out_source_attribution_link}).",
             "",
+            "### Book-Bounded Singleton Source Audit",
+            "",
+            "The boundary caveat is then tested directly by forbidding copy sources",
+            "from crossing source-book boundaries. The singleton result survives:",
+            "`70/70` books roundtrip and beat raw digit coding, mean gain remains",
+            "`464.898` bits, and the mean penalty versus the unbounded singleton",
+            "parser is only `4.409` bits.",
+            f"See [15_leave_one_book_out_book_bounded_source_audit.md]({leave_one_book_out_book_bounded_source_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -538,7 +548,7 @@ def render_markdown(
             "",
             "- `8558.667` bits remains a frozen validation scope here, not a final authorial method.",
             "- The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.",
-            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, and singleton copy sources are now attributed with a documented boundary-crossing caveat.",
+            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, and the signal survives book-bounded source constraints.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -579,6 +589,9 @@ def main() -> None:
             leave_one_book_out_source_attribution_link=(
                 "14_leave_one_book_out_source_attribution_audit.md"
             ),
+            leave_one_book_out_book_bounded_source_link=(
+                "15_leave_one_book_out_book_bounded_source_audit.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -603,6 +616,9 @@ def main() -> None:
             leave_one_book_out_no_self_link="test_results/13_leave_one_book_out_no_self_audit.md",
             leave_one_book_out_source_attribution_link=(
                 "test_results/14_leave_one_book_out_source_attribution_audit.md"
+            ),
+            leave_one_book_out_book_bounded_source_link=(
+                "test_results/15_leave_one_book_out_book_bounded_source_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

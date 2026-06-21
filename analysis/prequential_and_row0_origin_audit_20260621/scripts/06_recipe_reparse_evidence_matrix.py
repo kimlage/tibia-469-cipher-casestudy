@@ -28,6 +28,8 @@ SOURCES = {
     "leave_one_book_out_no_self": TEST_RESULTS / "13_leave_one_book_out_no_self_audit.json",
     "leave_one_book_out_source_attribution": TEST_RESULTS
     / "14_leave_one_book_out_source_attribution_audit.json",
+    "leave_one_book_out_book_bounded_source": TEST_RESULTS
+    / "15_leave_one_book_out_book_bounded_source_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -59,6 +61,7 @@ def make_result() -> dict[str, Any]:
     no_test_carryover = load_json(SOURCES["family_holdout_no_test_carryover"])
     leave_one_out = load_json(SOURCES["leave_one_book_out_no_self"])
     source_attribution = load_json(SOURCES["leave_one_book_out_source_attribution"])
+    book_bounded = load_json(SOURCES["leave_one_book_out_book_bounded_source"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -74,6 +77,7 @@ def make_result() -> dict[str, Any]:
         ("family_holdout_no_test_carryover", no_test_carryover),
         ("leave_one_book_out_no_self", leave_one_out),
         ("leave_one_book_out_source_attribution", source_attribution),
+        ("leave_one_book_out_book_bounded_source", book_bounded),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -379,6 +383,35 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_singleton_holdout_survive_book_bounded_sources",
+            "source": rel(SOURCES["leave_one_book_out_book_bounded_source"]),
+            "status": "passed_book_bounded_source_constraint",
+            "evidence": {
+                "book_count": book_bounded["summary"]["book_count"],
+                "roundtrip_book_count": book_bounded["summary"]["roundtrip_book_count"],
+                "beats_raw_count": book_bounded["summary"]["beats_raw_count"],
+                "mean_book_bounded_gain_vs_raw_bits": book_bounded["summary"][
+                    "mean_book_bounded_gain_vs_raw_bits"
+                ],
+                "min_book_bounded_gain_vs_raw_bits": book_bounded["summary"][
+                    "min_book_bounded_gain_vs_raw_bits"
+                ],
+                "mean_book_bounded_minus_unbounded_bits": book_bounded["summary"][
+                    "mean_book_bounded_minus_unbounded_bits"
+                ],
+                "max_book_bounded_minus_unbounded_bits": book_bounded["summary"][
+                    "max_book_bounded_minus_unbounded_bits"
+                ],
+                "failure_books": book_bounded["summary"]["failure_books"],
+            },
+            "interpretation": (
+                "Forbidding copy sources from crossing source-book boundaries "
+                "preserves positive singleton holdout gain for every book. The "
+                "boundary caveat is therefore not required for the item-level "
+                "predictive signal."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -558,6 +591,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['total_copied_digits']} copied digits; "
                 f"boundary share {evidence['cross_boundary_copied_digit_share']:.3f}; "
                 f"current-prefix share {evidence['current_prefix_copied_digit_share']:.6f}"
+            )
+        elif row["question"] == "does_singleton_holdout_survive_book_bounded_sources":
+            key = (
+                f"roundtrip {evidence['roundtrip_book_count']}/{evidence['book_count']}; "
+                f"beats raw {evidence['beats_raw_count']}/{evidence['book_count']}; "
+                f"mean gain {evidence['mean_book_bounded_gain_vs_raw_bits']:.3f}; "
+                f"mean penalty {evidence['mean_book_bounded_minus_unbounded_bits']:.3f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

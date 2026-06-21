@@ -58,6 +58,9 @@ exogenous.
 - [scripts/14_leave_one_book_out_source_attribution_audit.py](scripts/14_leave_one_book_out_source_attribution_audit.py) - maps singleton holdout copy sources to source books or current prefix.
 - [reports/test_results/14_leave_one_book_out_source_attribution_audit.md](reports/test_results/14_leave_one_book_out_source_attribution_audit.md) - singleton source attribution atlas.
 - [reports/test_results/14_leave_one_book_out_source_attribution_audit.json](reports/test_results/14_leave_one_book_out_source_attribution_audit.json) - structured singleton source-attribution ledger.
+- [scripts/15_leave_one_book_out_book_bounded_source_audit.py](scripts/15_leave_one_book_out_book_bounded_source_audit.py) - retests singleton holdout while forbidding source copies from crossing source-book boundaries.
+- [reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md](reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md) - book-bounded singleton source result.
+- [reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json](reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json) - structured book-bounded singleton ledger.
 
 ## Boundary
 
@@ -92,6 +95,8 @@ exogenous.
   `96.055` bits. Source attribution for that singleton audit maps `11062`
   copied digits to source books or current prefix; `3001` copied digits cross
   artificial source-book boundaries in the concatenated complement inventory.
+  A book-bounded singleton reparse forbids those crossings and still beats raw
+  digit coding in `70/70` books, with mean gain `464.898` bits.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
