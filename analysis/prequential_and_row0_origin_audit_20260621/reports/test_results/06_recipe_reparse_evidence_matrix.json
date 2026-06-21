@@ -24,6 +24,7 @@
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
+    "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "translation_or_plaintext_status": "NONE"
   },
   "evidence_matrix": [
@@ -587,6 +588,23 @@
     },
     {
       "evidence": {
+        "active_total_bits": 8160.827091772942,
+        "best_arity": 2,
+        "candidate_gain_bits": 0.0006711103651468875,
+        "candidate_total_bits": 8160.826420662577,
+        "pair_substitution_count": 69849,
+        "positive_pair_count": 2091,
+        "positive_single_count": 10,
+        "searched_triples_or_higher": false,
+        "single_substitution_count": 376
+      },
+      "interpretation": "The second pass finds only a microscopic single/pair source substitution improvement. This is counted as a compression-bound step, not as a stronger generation explanation.",
+      "question": "does_second_pass_single_pair_source_substitution_still_improve",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json",
+      "status": "passed_microscopic_second_pass_source_substitution_improves_bound"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -891,6 +909,7 @@
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
     "full_corpus_source_path_formula_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/41_full_corpus_source_path_formula_gate.json",
     "full_corpus_source_substitution_frontier_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/42_full_corpus_source_substitution_frontier_gate.json",
+    "full_corpus_source_substitution_second_pass_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json",
     "item_type_op_shape_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/33_item_type_op_shape_boundary_gate.json",
     "leave_one_book_out_book_bounded_source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json",
     "leave_one_book_out_family_excluded_source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json",

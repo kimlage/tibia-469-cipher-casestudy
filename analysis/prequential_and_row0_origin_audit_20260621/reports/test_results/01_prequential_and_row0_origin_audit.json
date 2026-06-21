@@ -2150,6 +2150,7 @@
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
+    "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "translation_or_plaintext_status": "NONE"
   },
   "full_corpus_source_path_formula": {
@@ -2428,6 +2429,216 @@
           "length": 12,
           "op_index": 5,
           "original_source": 2234
+        }
+      ]
+    }
+  },
+  "full_corpus_source_substitution_second_pass": {
+    "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_second_pass_formula_469.json",
+    "classification": "full_corpus_source_substitution_second_pass_improves_bound",
+    "decision": {
+      "compression_bound_status": "improved_by_second_pass_source_substitution",
+      "recipe_discovery_status": "fixed_recipe_second_pass_source_substitution_frontier_tested",
+      "row0_origin_status": "unchanged_exogenous",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "adaptive_rescore": true,
+      "fixed_copy_lengths": true,
+      "fixed_segmentation": true,
+      "pass": 2,
+      "same_chunk_source_choices_only": true,
+      "searched_pair_substitutions": true,
+      "searched_single_substitutions": true,
+      "searched_triples_or_higher": false,
+      "starts_from_bound_bits": 8160.827091772942
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json",
+    "summary": {
+      "active_copy_source_bits": 2986.34849880902,
+      "active_default_count": 7,
+      "active_exception_count": 254,
+      "active_total_bits": 8160.827091772942,
+      "alternative_count": 376,
+      "best_arity": 2,
+      "best_pair_rows": [
+        {
+          "book": 24,
+          "candidate_count": 2,
+          "candidate_source": 3413,
+          "copy_source_bits": 2986.347827698655,
+          "event_index": 128,
+          "gain_bits": 0.0006711103651468875,
+          "length": 36,
+          "op_index": 0,
+          "original_source": 2119
+        },
+        {
+          "book": 49,
+          "candidate_count": 9,
+          "candidate_source": 2802,
+          "copy_source_bits": 2986.347827698655,
+          "event_index": 208,
+          "gain_bits": 0.0006711103651468875,
+          "length": 8,
+          "op_index": 6,
+          "original_source": 867
+        }
+      ],
+      "best_substitutions": [
+        {
+          "book": 24,
+          "candidate_count": 2,
+          "candidate_source": 3413,
+          "copy_source_bits": 2986.347827698655,
+          "event_index": 128,
+          "gain_bits": 0.0006711103651468875,
+          "length": 36,
+          "op_index": 0,
+          "original_source": 2119
+        },
+        {
+          "book": 49,
+          "candidate_count": 9,
+          "candidate_source": 2802,
+          "copy_source_bits": 2986.347827698655,
+          "event_index": 208,
+          "gain_bits": 0.0006711103651468875,
+          "length": 8,
+          "op_index": 6,
+          "original_source": 867
+        }
+      ],
+      "candidate_copy_source_bits": 2986.347827698655,
+      "candidate_default_count": 7,
+      "candidate_exception_count": 254,
+      "candidate_exception_source_bits": 2922.535325376744,
+      "candidate_flag_bits": 51.812502321911055,
+      "candidate_gain_bits": 0.0006711103651468875,
+      "candidate_source_option_count": 637,
+      "candidate_total_bits": 8160.826420662577,
+      "copy_event_count": 261,
+      "pair_substitution_count": 69849,
+      "positive_pair_count": 2091,
+      "positive_single_count": 10,
+      "previous_bound_bits": 8160.827091772942,
+      "remaining_blockers": [
+        "Only same-chunk source substitutions are searched.",
+        "Segmentation and copy lengths remain fixed.",
+        "Triples and higher-order source substitutions are not searched in this gate.",
+        "Row0 origin remains exogenous."
+      ],
+      "single_substitution_count": 376,
+      "top_single_rows": [
+        {
+          "book": 24,
+          "candidate_count": 2,
+          "candidate_source": 3413,
+          "copy_source_bits": 2986.3481500371004,
+          "event_index": 128,
+          "gain_bits": 0.00034877191956184106,
+          "length": 36,
+          "op_index": 0,
+          "original_source": 2119
+        },
+        {
+          "book": 49,
+          "candidate_count": 9,
+          "candidate_source": 2802,
+          "copy_source_bits": 2986.3481764705753,
+          "event_index": 208,
+          "gain_bits": 0.00032233844467555173,
+          "length": 8,
+          "op_index": 6,
+          "original_source": 867
+        },
+        {
+          "book": 34,
+          "candidate_count": 14,
+          "candidate_source": 522,
+          "copy_source_bits": 2986.348240006429,
+          "event_index": 166,
+          "gain_bits": 0.0002588025909062708,
+          "length": 5,
+          "op_index": 6,
+          "original_source": 183
+        },
+        {
+          "book": 34,
+          "candidate_count": 14,
+          "candidate_source": 2960,
+          "copy_source_bits": 2986.348240006429,
+          "event_index": 166,
+          "gain_bits": 0.0002588025909062708,
+          "length": 5,
+          "op_index": 6,
+          "original_source": 183
+        },
+        {
+          "book": 36,
+          "candidate_count": 8,
+          "candidate_source": 1026,
+          "copy_source_bits": 2986.3482541392927,
+          "event_index": 171,
+          "gain_bits": 0.0002446697271807352,
+          "length": 10,
+          "op_index": 1,
+          "original_source": 890
+        },
+        {
+          "book": 36,
+          "candidate_count": 8,
+          "candidate_source": 2084,
+          "copy_source_bits": 2986.348255828802,
+          "event_index": 171,
+          "gain_bits": 0.00024298021799040725,
+          "length": 10,
+          "op_index": 1,
+          "original_source": 890
+        },
+        {
+          "book": 49,
+          "candidate_count": 9,
+          "candidate_source": 2061,
+          "copy_source_bits": 2986.3483176000714,
+          "event_index": 208,
+          "gain_bits": 0.0001812089485611068,
+          "length": 8,
+          "op_index": 6,
+          "original_source": 867
+        },
+        {
+          "book": 56,
+          "candidate_count": 6,
+          "candidate_source": 2260,
+          "copy_source_bits": 2986.3483408698835,
+          "event_index": 227,
+          "gain_bits": 0.00015793913644301938,
+          "length": 12,
+          "op_index": 5,
+          "original_source": 2234
+        },
+        {
+          "book": 28,
+          "candidate_count": 2,
+          "candidate_source": 3084,
+          "copy_source_bits": 2986.3483471937566,
+          "event_index": 141,
+          "gain_bits": 0.0001516152633485035,
+          "length": 18,
+          "op_index": 4,
+          "original_source": 2397
+        },
+        {
+          "book": 60,
+          "candidate_count": 5,
+          "candidate_source": 7047,
+          "copy_source_bits": 2986.348357264253,
+          "event_index": 244,
+          "gain_bits": 0.00014154476684780093,
+          "length": 53,
+          "op_index": 2,
+          "original_source": 3048
         }
       ]
     }

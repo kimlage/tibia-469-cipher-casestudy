@@ -467,6 +467,18 @@ and
 triples and higher-order substitutions remain outside this frontier.
 See [42_full_corpus_source_substitution_frontier_gate.md](42_full_corpus_source_substitution_frontier_gate.md).
 
+### Full-Corpus Source Substitution Second-Pass Gate
+
+The same single/pair frontier is rerun on the promoted source-substitution
+formula. It still finds a positive pair, but only a microscopic one:
+`8160.827092` to
+`8160.826421` bits,
+a gain of
+`+0.000671` bits.
+This updates the compression bound but does not strengthen the generation
+explanation; triples and higher-order substitutions remain outside this gate.
+See [43_full_corpus_source_substitution_second_pass_gate.md](43_full_corpus_source_substitution_second_pass_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -640,6 +652,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Global fixed-segmentation source-path optimization improves the repriced ledger by `-42.359` bits, changing `10/514` sources with max DP state count `14`; segmentation and copy lengths remain fixed.
 - Full-corpus fixed-recipe source-path optimization survives adaptive rescore and lowers the active bound from `8177.317` to `8162.412` bits by changing `2/261` source positions; segmentation and copy lengths remain fixed.
 - Full-corpus single/pair source-substitution frontier search lowers the active bound from `8162.412` to `8160.827` bits; triples and higher-order substitutions remain unsearched.
+- A second single/pair source-substitution pass finds only a microscopic `+0.000671` bit gain, lowering the active bound to `8160.826421`; this is a compression-bound update, not stronger generation evidence.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

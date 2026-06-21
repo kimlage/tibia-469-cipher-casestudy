@@ -75,6 +75,8 @@ SOURCES = {
     / "41_full_corpus_source_path_formula_gate.json",
     "full_corpus_source_substitution_frontier_gate": TEST_RESULTS
     / "42_full_corpus_source_substitution_frontier_gate.json",
+    "full_corpus_source_substitution_second_pass_gate": TEST_RESULTS
+    / "43_full_corpus_source_substitution_second_pass_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -150,6 +152,9 @@ def make_result() -> dict[str, Any]:
     full_corpus_source_substitution_frontier_gate = load_json(
         SOURCES["full_corpus_source_substitution_frontier_gate"]
     )
+    full_corpus_source_substitution_second_pass_gate = load_json(
+        SOURCES["full_corpus_source_substitution_second_pass_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -201,6 +206,10 @@ def make_result() -> dict[str, Any]:
         (
             "full_corpus_source_substitution_frontier_gate",
             full_corpus_source_substitution_frontier_gate,
+        ),
+        (
+            "full_corpus_source_substitution_second_pass_gate",
+            full_corpus_source_substitution_second_pass_gate,
         ),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
@@ -1192,6 +1201,45 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_second_pass_single_pair_source_substitution_still_improve",
+            "source": rel(SOURCES["full_corpus_source_substitution_second_pass_gate"]),
+            "status": "passed_microscopic_second_pass_source_substitution_improves_bound",
+            "evidence": {
+                "active_total_bits": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["active_total_bits"],
+                "candidate_total_bits": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["candidate_total_bits"],
+                "candidate_gain_bits": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["candidate_gain_bits"],
+                "single_substitution_count": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["single_substitution_count"],
+                "positive_single_count": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["positive_single_count"],
+                "pair_substitution_count": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["pair_substitution_count"],
+                "positive_pair_count": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["positive_pair_count"],
+                "best_arity": full_corpus_source_substitution_second_pass_gate[
+                    "summary"
+                ]["best_arity"],
+                "searched_triples_or_higher": full_corpus_source_substitution_second_pass_gate[
+                    "scope"
+                ]["searched_triples_or_higher"],
+            },
+            "interpretation": (
+                "The second pass finds only a microscopic single/pair source "
+                "substitution improvement. This is counted as a compression-bound "
+                "step, not as a stronger generation explanation."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1835,6 +1883,7 @@ def make_result() -> dict[str, Any]:
             "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
             "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
             "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
+            "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -2156,6 +2205,18 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['best_arity']}; triples searched "
                 f"{evidence['searched_triples_or_higher']}"
             )
+        elif row["question"] == "does_second_pass_single_pair_source_substitution_still_improve":
+            key = (
+                f"active {evidence['active_total_bits']:.6f}; candidate "
+                f"{evidence['candidate_total_bits']:.6f}; gain "
+                f"{evidence['candidate_gain_bits']:+.6f}; singles "
+                f"{evidence['positive_single_count']}/"
+                f"{evidence['single_substitution_count']}; pairs "
+                f"{evidence['positive_pair_count']}/"
+                f"{evidence['pair_substitution_count']}; best arity "
+                f"{evidence['best_arity']}; triples searched "
+                f"{evidence['searched_triples_or_higher']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2370,6 +2431,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Global source-path optimizer: `{result['decision']['global_source_path_optimizer_status']}`.",
             f"- Full-corpus source-path formula: `{result['decision']['full_corpus_source_path_formula_status']}`.",
             f"- Source substitution frontier: `{result['decision']['source_substitution_frontier_status']}`.",
+            f"- Source substitution second pass: `{result['decision']['source_substitution_second_pass_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

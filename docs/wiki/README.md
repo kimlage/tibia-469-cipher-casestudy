@@ -548,6 +548,9 @@ A single/pair source-substitution frontier then searches `376` singles and
 `69849` pairs exactly under adaptive rescore; the best pair lowers the active
 mechanical bound again from `8162.412` to `8160.827` bits. Triples and higher
 source-substitution orders remain unsearched.
+A second pass over that same frontier finds only a microscopic `+0.000671` bit
+gain, moving the bound to `8160.826421` bits. This is recorded as a
+compression-bound update, not stronger generation evidence.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,
