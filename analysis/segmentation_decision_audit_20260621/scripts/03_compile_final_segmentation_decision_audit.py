@@ -16,6 +16,7 @@ DEPENDENCY = TEST_RESULTS / "04_parser_dependency_reduction_ledger.json"
 LITERAL_GAP = TEST_RESULTS / "05_literal_gap_boundary_audit.json"
 ONLINE_LITERAL = TEST_RESULTS / "06_online_literal_stop_rule_audit.json"
 LITERAL_EXCEPTION = TEST_RESULTS / "07_literal_stop_exception_topology_audit.json"
+INTEGRATED_ONLINE = TEST_RESULTS / "08_integrated_online_literal_parser_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -50,6 +51,9 @@ def main() -> None:
     literal_exception = (
         load_json(LITERAL_EXCEPTION) if LITERAL_EXCEPTION.exists() else None
     )
+    integrated_online = (
+        load_json(INTEGRATED_ONLINE) if INTEGRATED_ONLINE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -60,6 +64,8 @@ def main() -> None:
         assert_boundary("online_literal_stop_rule_audit", online_literal)
     if literal_exception is not None:
         assert_boundary("literal_stop_exception_topology_audit", literal_exception)
+    if integrated_online is not None:
+        assert_boundary("integrated_online_literal_parser_audit", integrated_online)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -70,6 +76,9 @@ def main() -> None:
     online_summary = None if online_literal is None else online_literal["summary"]
     exception_summary = (
         None if literal_exception is None else literal_exception["summary"]
+    )
+    integrated_summary = (
+        None if integrated_online is None else integrated_online["summary"]
     )
 
     lines = [
@@ -240,15 +249,40 @@ def main() -> None:
                 "",
             ]
         )
+    if integrated_summary is not None:
+        lines.extend(
+            [
+                "## Integrated Online Parser",
+                "",
+                "The online stop rule was then frozen and run as an end-to-end",
+                "target-text-aware parser, without granting declared literal windows",
+                "or copy starts.",
+                "",
+                "| Parser | Exact books | Operations | Literal digits | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Full greedy control | `{integrated_summary['full_greedy_exact_books']}/{integrated_summary['tested_books']}` | n/a | n/a | earlier control |",
+                f"| Integrated online stop + longest copy | `{integrated_summary['exact_book_count']}/{integrated_summary['tested_books']}` | `{integrated_summary['predicted_operation_count']}` vs stable `{integrated_summary['stable_projection_operation_count']}` | `{integrated_summary['predicted_literal_digit_count']}` vs stable `{integrated_summary['stable_literal_digit_count']}` | partial parser, not promoted |",
+                "",
+                f"- Exact-book delta vs full greedy: `{integrated_summary['exact_books_delta_vs_full_greedy']}`.",
+                f"- Mismatch books: `{integrated_summary['mismatch_books']}`.",
+                "",
+                "This is a real parser improvement over first-match greedy, but it",
+                "still drifts in `14/60` books and over-literalizes the stable",
+                "projection. The integrated parser therefore reduces the segmentation",
+                "blocker but does not replace the retained operation-start ledger or",
+                "emit a source-free generator.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is a",
             "source-free account of why the target digit stream exists, or a",
-            "controlled parser integration that proves the stable projection can",
-            "replace the retained `(source,length)` ledger without smuggling in",
-            "target text or changing the skeleton/literal accounting.",
+            "parser integration that closes the remaining `14/60` drift cases",
+            "without smuggling in declared literal windows, target text generation,",
+            "or changed skeleton/literal accounting.",
             "",
             "## Sources",
             "",
@@ -258,6 +292,7 @@ def main() -> None:
             "- [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)",
             "- [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)",
             "- [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)",
+            "- [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)",
             "",
         ]
     )

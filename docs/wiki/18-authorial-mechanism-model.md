@@ -478,6 +478,12 @@ A literal-stop exception topology audit then maps those four misses. They split
 into four classes, and the best source-free exception flag reaches recall
 `0.750` with `9` false positives. No exception rule is promoted; the residual
 four stops remain retained.
+The integrated online parser audit then freezes the same stop rule and runs it
+end-to-end, without declared literal windows or copy starts. It improves exact
+books from the full-greedy control's `39/60` to `46/60`, but still drifts in
+`14` books and over-literalizes the projection (`329` predicted literal digits
+versus stable `265`). This is a partial parser improvement, not a promoted
+source-free generator.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2148,6 +2154,7 @@ book generation, not row0 pair-cell placement.
 - [Literal gap boundary audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/05_literal_gap_boundary_audit.md)
 - [Online literal stop rule audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/06_online_literal_stop_rule_audit.md)
 - [Literal stop exception topology audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/07_literal_stop_exception_topology_audit.md)
+- [Integrated online literal parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/08_integrated_online_literal_parser_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

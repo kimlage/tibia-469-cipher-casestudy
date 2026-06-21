@@ -124,13 +124,33 @@ remain exceptions.
 The residual exceptions are heterogeneous; no source-free exception
 flag isolates all four without false positives.
 
+## Integrated Online Parser
+
+The online stop rule was then frozen and run as an end-to-end
+target-text-aware parser, without granting declared literal windows
+or copy starts.
+
+| Parser | Exact books | Operations | Literal digits | Boundary |
+|---|---:|---:|---:|---|
+| Full greedy control | `39/60` | n/a | n/a | earlier control |
+| Integrated online stop + longest copy | `46/60` | `268` vs stable `262` | `329` vs stable `265` | partial parser, not promoted |
+
+- Exact-book delta vs full greedy: `7`.
+- Mismatch books: `[14, 16, 20, 21, 26, 28, 30, 34, 36, 39, 45, 55, 57, 63]`.
+
+This is a real parser improvement over first-match greedy, but it
+still drifts in `14/60` books and over-literalizes the stable
+projection. The integrated parser therefore reduces the segmentation
+blocker but does not replace the retained operation-start ledger or
+emit a source-free generator.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
 source-free account of why the target digit stream exists, or a
-controlled parser integration that proves the stable projection can
-replace the retained `(source,length)` ledger without smuggling in
-target text or changing the skeleton/literal accounting.
+parser integration that closes the remaining `14/60` drift cases
+without smuggling in declared literal windows, target text generation,
+or changed skeleton/literal accounting.
 
 ## Sources
 
@@ -140,3 +160,4 @@ target text or changing the skeleton/literal accounting.
 - [Literal gap boundary audit](test_results/05_literal_gap_boundary_audit.md)
 - [Online literal stop rule audit](test_results/06_online_literal_stop_rule_audit.md)
 - [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)
+- [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)

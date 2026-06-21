@@ -4,7 +4,7 @@ page_type: root_index
 context: bonelord-469
 visibility: public_candidate
 status: closed
-updated_at: 2026-06-20
+updated_at: 2026-06-21
 ---
 
 # The Bonelord "469" Cipher — Project Wiki
@@ -871,6 +871,11 @@ policy/window is prefix-selected in `5/5` cells, but four exceptions remain.
 A literal-stop exception topology audit maps those four misses into four
 classes; the best source-free exception flag has recall `0.750` with `9` false
 positives, so no exception rule is promoted.
+An integrated online parser audit then freezes that rule and lets it parse
+without declared literal windows or copy starts. It improves exact books from
+`39/60` to `46/60`, but still drifts in `14` books and over-literalizes the
+stable projection, so parser integration remains partial rather than a
+source-free generator.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
