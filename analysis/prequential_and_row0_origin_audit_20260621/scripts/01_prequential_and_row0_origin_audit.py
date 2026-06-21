@@ -269,6 +269,14 @@ ACTIVE_RESIDUAL_TARGETMAX_RESEGMENTATION_GATE = (
     / "test_results"
     / "62_active_residual_targetmax_resegmentation_gate.json"
 )
+ACTIVE_EXCEPTION_STOP_RULE_SEPARABILITY_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "63_active_exception_stop_rule_separability_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -593,6 +601,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_residual_targetmax_resegmentation_gate",
         active_residual_targetmax_resegmentation,
+    )
+    active_exception_stop_rule_separability = load_json(
+        ACTIVE_EXCEPTION_STOP_RULE_SEPARABILITY_GATE
+    )
+    assert_analysis_boundary(
+        "active_exception_stop_rule_separability_gate",
+        active_exception_stop_rule_separability,
     )
 
     predictive = legacy["predictive_validation"]
@@ -937,6 +952,15 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_residual_targetmax_resegmentation["summary"],
             "decision": active_residual_targetmax_resegmentation["decision"],
         },
+        "active_exception_stop_rule_separability": {
+            "classification": active_exception_stop_rule_separability[
+                "classification"
+            ],
+            "source": rel(ACTIVE_EXCEPTION_STOP_RULE_SEPARABILITY_GATE),
+            "scope": active_exception_stop_rule_separability["scope"],
+            "summary": active_exception_stop_rule_separability["summary"],
+            "decision": active_exception_stop_rule_separability["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -989,6 +1013,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "active_source_length_joint_refresh_status": "encoder_targetmax_gain_decoder_boundary_unchanged",
             "active_copy_length_exception_topology_status": "active_exceptions_reduced_to_19_same_partial_topology",
             "active_residual_targetmax_resegmentation_status": "local_extend_trim_saturated_no_improvements",
+            "active_exception_stop_rule_status": "simple_stop_rules_do_not_separate_residual_boundaries",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1057,6 +1082,7 @@ def render_markdown(
     active_source_length_joint_refresh_gate_link: str,
     active_copy_length_exception_topology_gate_link: str,
     active_residual_targetmax_resegmentation_gate_link: str,
+    active_exception_stop_rule_separability_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1141,6 +1167,7 @@ def render_markdown(
     residual_targetmax = result["active_residual_targetmax_resegmentation"][
         "summary"
     ]
+    stop_rule = result["active_exception_stop_rule_separability"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2065,6 +2092,26 @@ def render_markdown(
             "bits, so the local residual target-max frontier is saturated.",
             f"See [62_active_residual_targetmax_resegmentation_gate.md]({active_residual_targetmax_resegmentation_gate_link}).",
             "",
+            "### Active Exception Stop-Rule Separability Gate",
+            "",
+            "The stop-rule separability gate then asks whether the same `19` "
+            "residual stop-before-target-max boundaries can be isolated by "
+            "simple single-feature or pairwise conjunction rules over all "
+            f"`{stop_rule['copy_event_count']}` copy events. It finds "
+            f"`{stop_rule['exact_separator_count']}` exact separators; the "
+            f"best rule is `{stop_rule['best_rule']['rule']}` with TP/FP/FN "
+            f"`{stop_rule['best_rule']['tp']}` / "
+            f"`{stop_rule['best_rule']['fp']}` / "
+            f"`{stop_rule['best_rule']['fn']}`, F1 "
+            f"`{stop_rule['best_rule']['f1']:.6f}`, and "
+            f"decoder-valid status `{stop_rule['best_rule']['decoder_valid']}`.",
+            "The best decoder-valid rule is weaker, and the permutation control "
+            "does not make the observed best rule exceptional "
+            f"(`p={stop_rule['permutation_control']['p_permuted_max_f1_ge_observed']:.6f}`). "
+            "So no simple promotable stop rule explains the residual boundary; "
+            "a future parser would need richer nonlocal state.",
+            f"See [63_active_exception_stop_rule_separability_gate.md]({active_exception_stop_rule_separability_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2174,6 +2221,7 @@ def render_markdown(
             "- The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.",
             "- The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.",
             "- The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.",
+            "- The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2337,6 +2385,9 @@ def main() -> None:
             ),
             active_residual_targetmax_resegmentation_gate_link=(
                 "62_active_residual_targetmax_resegmentation_gate.md"
+            ),
+            active_exception_stop_rule_separability_gate_link=(
+                "63_active_exception_stop_rule_separability_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2506,6 +2557,9 @@ def main() -> None:
             ),
             active_residual_targetmax_resegmentation_gate_link=(
                 "test_results/62_active_residual_targetmax_resegmentation_gate.md"
+            ),
+            active_exception_stop_rule_separability_gate_link=(
+                "test_results/63_active_exception_stop_rule_separability_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

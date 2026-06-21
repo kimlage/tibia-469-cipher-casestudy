@@ -1208,6 +1208,13 @@ extend-and-trim rewrites for those `19` active exceptions. `34` candidates are
 valid, `0` improve the active bound, and the best valid rewrite is still
 `-0.000163` bits worse. This closes the remaining local target-max frontier
 under the active exact scorer.
+The active exception stop-rule separability gate then tests whether a simple
+single-feature or pairwise-conjunction rule can identify those residual
+boundaries across all `261` copy events. It finds `0` exact separators; the
+best rule is target-adjacent and not decoder-valid, with TP/FP/FN `11/53/8`,
+F1 `0.265060`, and permutation-control `p=0.160000`. The residual copy-length
+boundary therefore still needs richer nonlocal parser state rather than another
+local stop heuristic.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in

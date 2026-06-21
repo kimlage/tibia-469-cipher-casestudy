@@ -775,6 +775,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   intrusions,
   closes the residual local target-max resegmentation frontier with `0/38`
   improvements,
+  rejects simple stop-rule separation for those `19` residual boundaries
+  (`0` exact separators; best F1 `0.265060` and not decoder-valid),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

@@ -202,6 +202,9 @@ exogenous.
 - [scripts/62_active_residual_targetmax_resegmentation_gate.py](scripts/62_active_residual_targetmax_resegmentation_gate.py) - exact-scores residual local target-max extend-and-trim rewrites on the active formula.
 - [reports/test_results/62_active_residual_targetmax_resegmentation_gate.md](reports/test_results/62_active_residual_targetmax_resegmentation_gate.md) - active residual target-max resegmentation result.
 - [reports/test_results/62_active_residual_targetmax_resegmentation_gate.json](reports/test_results/62_active_residual_targetmax_resegmentation_gate.json) - structured active residual target-max resegmentation ledger.
+- [scripts/63_active_exception_stop_rule_separability_gate.py](scripts/63_active_exception_stop_rule_separability_gate.py) - tests whether simple stop rules separate the remaining active target-max exceptions.
+- [reports/test_results/63_active_exception_stop_rule_separability_gate.md](reports/test_results/63_active_exception_stop_rule_separability_gate.md) - active exception stop-rule separability result.
+- [reports/test_results/63_active_exception_stop_rule_separability_gate.json](reports/test_results/63_active_exception_stop_rule_separability_gate.json) - structured active exception stop-rule separability ledger.
 
 ## Boundary
 
@@ -368,7 +371,11 @@ exogenous.
   `19` remaining exceptions still cross into exactly one following op and stop
   inside it. The residual target-max resegmentation gate exact-scores all `38`
   local rewrites for those exceptions and finds `0` improving candidates; the
-  best valid rewrite is still `-0.000163` bits worse.
+  best valid rewrite is still `-0.000163` bits worse. A stop-rule separability
+  gate then tests simple single-feature and pairwise conjunction rules over all
+  `261` copy events. It finds `0` exact separators for the `19` residual
+  boundaries; the best rule has F1 `0.265060`, many false positives, and is not
+  decoder-valid.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

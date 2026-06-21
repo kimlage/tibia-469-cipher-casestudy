@@ -789,6 +789,12 @@ The residual target-max gate tests the remaining active exceptions with the same
 The best valid residual rewrite is still worse by `-0.000163` bits, so the local residual target-max frontier is saturated.
 See [62_active_residual_targetmax_resegmentation_gate.md](test_results/62_active_residual_targetmax_resegmentation_gate.md).
 
+### Active Exception Stop-Rule Separability Gate
+
+The stop-rule separability gate then asks whether the same `19` residual stop-before-target-max boundaries can be isolated by simple single-feature or pairwise conjunction rules over all `261` copy events. It finds `0` exact separators; the best rule is `next_type_copy & next_length_ge_20` with TP/FP/FN `11` / `53` / `8`, F1 `0.265060`, and decoder-valid status `False`.
+The best decoder-valid rule is weaker, and the permutation control does not make the observed best rule exceptional (`p=0.160000`). So no simple promotable stop rule explains the residual boundary; a future parser would need richer nonlocal state.
+See [63_active_exception_stop_rule_separability_gate.md](test_results/63_active_exception_stop_rule_separability_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -889,6 +895,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](test_results/47_row0_parallel_
 - The active source/length joint refresh shows encoder target-max hits improve by `+4`, but decoder-valid joint rules remain unchanged.
 - The active copy-length exception topology gate shows target-max exceptions drop `23 -> 19`, but all `19` remaining exceptions are still partial next-op intrusions.
 - The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.
+- The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
