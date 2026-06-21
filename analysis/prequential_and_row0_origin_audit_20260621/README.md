@@ -145,6 +145,9 @@ exogenous.
 - [scripts/43_full_corpus_source_substitution_second_pass_gate.py](scripts/43_full_corpus_source_substitution_second_pass_gate.py) - reruns the exact single/pair source-substitution frontier on the promoted `8160.827` bit formula.
 - [reports/test_results/43_full_corpus_source_substitution_second_pass_gate.md](reports/test_results/43_full_corpus_source_substitution_second_pass_gate.md) - second-pass source substitution result.
 - [reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json](reports/test_results/43_full_corpus_source_substitution_second_pass_gate.json) - structured second-pass source substitution ledger.
+- [scripts/44_full_corpus_source_substitution_third_pass_gate.py](scripts/44_full_corpus_source_substitution_third_pass_gate.py) - reruns the exact single/pair source-substitution frontier on the promoted `8160.826421` bit formula.
+- [reports/test_results/44_full_corpus_source_substitution_third_pass_gate.md](reports/test_results/44_full_corpus_source_substitution_third_pass_gate.md) - third-pass source substitution result.
+- [reports/test_results/44_full_corpus_source_substitution_third_pass_gate.json](reports/test_results/44_full_corpus_source_substitution_third_pass_gate.json) - structured third-pass source substitution ledger.
 
 ## Boundary
 
@@ -255,7 +258,9 @@ exogenous.
   bound again from `8162.412` to `8160.827` bits; triples and higher-order
   substitutions remain unsearched. A second pass finds only a microscopic
   `+0.000671` bit gain, lowering the bound to `8160.826421`; this is a
-  compression-bound update, not stronger generation evidence. The complete
+  compression-bound update, not stronger generation evidence. A third pass
+  finds another microscopic `+0.000503` bit gain, lowering the bound to
+  `8160.825917` and reinforcing local source-frontier saturation. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

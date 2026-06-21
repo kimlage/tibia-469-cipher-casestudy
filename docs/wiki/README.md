@@ -551,6 +551,8 @@ source-substitution orders remain unsearched.
 A second pass over that same frontier finds only a microscopic `+0.000671` bit
 gain, moving the bound to `8160.826421` bits. This is recorded as a
 compression-bound update, not stronger generation evidence.
+A third pass still finds a positive pair, but only `+0.000503` bits, moving the
+bound to `8160.825917` bits and indicating local source-frontier saturation.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,
