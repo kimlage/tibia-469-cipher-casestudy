@@ -1336,6 +1336,30 @@ than residual lookup, and prefix/holdout covers all test
 decisions in `0/5` cells. The no-table saving is diagnostic
 only.
 
+## Beam Selector Stability Gate
+
+Gate 60 stress-tests the gate-59 `beam_context_combo` selector
+with support pruning, leave-one-book retraining,
+leave-context-out retraining, and prefix/holdout selection.
+
+| Diagnostic | Value |
+|---|---:|
+| Best min support | `1` |
+| Best total hits | `230/234` |
+| Best residual hits | `10/10` |
+| Best clean false changes | `4` |
+| Leave-one-book residual hits | `4/10` |
+| Leave-context-out residual hits | `5/10` |
+| Prefix/holdout cover-all cells | `0/5` |
+| Best net vs lookup | `128.872` bits |
+
+The full-fit selector clue does not stabilize. All `10/10`
+residual hits require support threshold `1`, most residual
+contexts are singletons, leave-one-book drops to `4/10`,
+leave-context-out drops to `5/10`, and prefix/holdout has
+`0/5` cover-all cells. The beam-selector hypothesis is
+therefore retained only as a weak full-fit clue.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1420,11 +1444,14 @@ Gate 59 tests the missing selector inside that beam: a full-fit
 context table resolves `10/10` residuals but changes `4` clean
 controls, fails clean prefix/holdout, and becomes worse than
 lookup when the context->rank table is paid.
+Gate 60 stress-tests that table and confirms it is not stable:
+support pruning loses residuals, leave-one-book recovers only
+`4/10`, leave-context-out only `5/10`, and no prefix/holdout
+cell covers all test decisions.
 The remaining blocker is therefore a downstream selector or richer
 latent path/state segmentation account for why the parser waits,
-copies, or understops at the remaining mixed residual sites, or a
-source-free
-account of why the target digit stream exists.
+copies, or understops at the remaining mixed residual sites,
+or a source-free account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
 or the stable projection as an oracle.
@@ -1489,3 +1516,4 @@ or the stable projection as an oracle.
 - [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)
 - [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)
 - [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)
+- [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)

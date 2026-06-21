@@ -994,8 +994,11 @@ the fixed-width paid model is `+4.750` bits worse than lookup. A beam-rank
 selector gate then tests the missing selector: full-fit `beam_context_combo`
 resolves `10/10` residuals but changes `4` clean controls, has `0/5`
 prefix/holdout cover-all cells, and is `+129.872` bits worse after paying the
-context table. The blocker is therefore a richer latent path/state selector,
-not another local branch-choice combination.
+context table. A stability gate then shows why this is not just over-pruning:
+the best setting still needs support threshold `1`, leave-one-book keeps only
+`4/10` residuals, leave-context-out keeps `5/10`, and prefix/holdout remains
+`0/5` on cover-all cells. The blocker is therefore a richer latent path/state
+selector, not another local branch-choice combination.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

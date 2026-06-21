@@ -84,6 +84,7 @@ LATENT_PATH_STATE_BUDGET = (
 )
 BEAM_SURVIVAL_BUDGET = TEST_RESULTS / "58_beam_survival_budget_gate.json"
 BEAM_RANK_SELECTOR = TEST_RESULTS / "59_beam_rank_selector_gate.json"
+BEAM_SELECTOR_STABILITY = TEST_RESULTS / "60_beam_selector_stability_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -298,6 +299,11 @@ def main() -> None:
     beam_rank_selector = (
         load_json(BEAM_RANK_SELECTOR) if BEAM_RANK_SELECTOR.exists() else None
     )
+    beam_selector_stability = (
+        load_json(BEAM_SELECTOR_STABILITY)
+        if BEAM_SELECTOR_STABILITY.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -423,6 +429,8 @@ def main() -> None:
         assert_boundary("beam_survival_budget_gate", beam_survival_budget)
     if beam_rank_selector is not None:
         assert_boundary("beam_rank_selector_gate", beam_rank_selector)
+    if beam_selector_stability is not None:
+        assert_boundary("beam_selector_stability_gate", beam_selector_stability)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -601,6 +609,11 @@ def main() -> None:
     )
     beam_rank_selector_summary = (
         None if beam_rank_selector is None else beam_rank_selector["summary"]
+    )
+    beam_selector_stability_summary = (
+        None
+        if beam_selector_stability is None
+        else beam_selector_stability["summary"]
     )
 
     lines = [
@@ -2251,6 +2264,35 @@ def main() -> None:
                 "",
             ]
         )
+    if beam_selector_stability_summary is not None:
+        lines.extend(
+            [
+                "## Beam Selector Stability Gate",
+                "",
+                "Gate 60 stress-tests the gate-59 `beam_context_combo` selector",
+                "with support pruning, leave-one-book retraining,",
+                "leave-context-out retraining, and prefix/holdout selection.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best min support | `{beam_selector_stability_summary['best_min_support']}` |",
+                f"| Best total hits | `{beam_selector_stability_summary['best_total_hits']}/{beam_selector_stability_summary['best_total_total']}` |",
+                f"| Best residual hits | `{beam_selector_stability_summary['best_residual_hits']}/{beam_selector_stability_summary['best_residual_total']}` |",
+                f"| Best clean false changes | `{beam_selector_stability_summary['best_clean_false_changes']}` |",
+                f"| Leave-one-book residual hits | `{beam_selector_stability_summary['leave_one_book_residual_hits']}/{beam_selector_stability_summary['residual_decision_count']}` |",
+                f"| Leave-context-out residual hits | `{beam_selector_stability_summary['leave_context_out_residual_hits']}/{beam_selector_stability_summary['residual_decision_count']}` |",
+                f"| Prefix/holdout cover-all cells | `{beam_selector_stability_summary['prequential_cover_all_test_cells']}/{beam_selector_stability_summary['prequential_cells']}` |",
+                f"| Best net vs lookup | `{beam_selector_stability_summary['best_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "The full-fit selector clue does not stabilize. All `10/10`",
+                "residual hits require support threshold `1`, most residual",
+                "contexts are singletons, leave-one-book drops to `4/10`,",
+                "leave-context-out drops to `5/10`, and prefix/holdout has",
+                "`0/5` cover-all cells. The beam-selector hypothesis is",
+                "therefore retained only as a weak full-fit clue.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2337,11 +2379,14 @@ def main() -> None:
             "context table resolves `10/10` residuals but changes `4` clean",
             "controls, fails clean prefix/holdout, and becomes worse than",
             "lookup when the context->rank table is paid.",
+            "Gate 60 stress-tests that table and confirms it is not stable:",
+            "support pruning loses residuals, leave-one-book recovers only",
+            "`4/10`, leave-context-out only `5/10`, and no prefix/holdout",
+            "cell covers all test decisions.",
             "The remaining blocker is therefore a downstream selector or richer",
             "latent path/state segmentation account for why the parser waits,",
-            "copies, or understops at the remaining mixed residual sites, or a",
-            "source-free",
-            "account of why the target digit stream exists.",
+            "copies, or understops at the remaining mixed residual sites,",
+            "or a source-free account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
             "or the stable projection as an oracle.",
@@ -2406,6 +2451,7 @@ def main() -> None:
             "- [Latent path-state budget gate](test_results/57_latent_path_state_budget_gate.md)",
             "- [Beam survival budget gate](test_results/58_beam_survival_budget_gate.md)",
             "- [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)",
+            "- [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)",
             "",
         ]
     )

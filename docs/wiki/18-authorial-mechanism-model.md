@@ -783,6 +783,11 @@ residual choices, but it also changes `4` clean controls. Prefix/holdout covers
 all held-out decisions in `0/5` cells, and charging the `73` context-to-rank
 entries makes the selector `+129.872` bits worse than the residual lookup. This
 promotes only a full-fit selector clue, not a generation rule.
+A beam selector stability gate then stress-tests that clue. It remains best
+only at support threshold `1`, which means the decisive contexts are mostly
+singletons. Leave-one-book retraining keeps only `4/10` residual hits,
+leave-context-out keeps `5/10`, and prefix/holdout still has `0/5` cover-all
+cells. The observable beam selector is therefore not stable enough to promote.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2505,6 +2510,7 @@ book generation, not row0 pair-cell placement.
 - [Latent path-state budget gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/57_latent_path_state_budget_gate.md)
 - [Beam survival budget gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/58_beam_survival_budget_gate.md)
 - [Beam rank selector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/59_beam_rank_selector_gate.md)
+- [Beam selector stability gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/60_beam_selector_stability_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
