@@ -35,6 +35,7 @@ claim.
 | `does_singleton_holdout_survive_book_bounded_sources` | `passed_book_bounded_source_constraint` | roundtrip 70/70; beats raw 70/70; mean gain 464.898; mean penalty 4.409 |
 | `does_singleton_holdout_survive_same_family_source_exclusion` | `passed_family_excluded_source_constraint` | roundtrip 70/70; beats raw 70/70; family-labeled 46/46; mean gain 460.251; max penalty 119.076 |
 | `does_online_reparse_reduce_full_corpus_recipe_cost` | `passed_as_mechanical_compile_not_semantic_claim` | 8558.667 -> 8343.062 bits; gain 215.605; roundtrip 70/70 |
+| `where_is_the_online_prefix_per_book_frontier` | `passed_after_bootstrap_with_book0_failure` | book-bounded raw wins 69/70; after bootstrap 69/69; failures [0]; mean gain 419.761; break-even book 2 |
 | `does_numeric_online_order_survive_order_controls` | `passed_against_tested_orders` | best raw `numeric`; best charged `numeric`; 6 random orders |
 
 ## Decision

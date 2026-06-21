@@ -64,6 +64,9 @@ exogenous.
 - [scripts/16_leave_one_book_out_family_excluded_source_audit.py](scripts/16_leave_one_book_out_family_excluded_source_audit.py) - retests singleton holdout after removing same-family books from train counts and copy sources.
 - [reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md](reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md) - family-excluded singleton source result.
 - [reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json](reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json) - structured family-excluded singleton ledger.
+- [scripts/17_online_prefix_book_frontier_audit.py](scripts/17_online_prefix_book_frontier_audit.py) - decomposes the previous-books-only online parser by target book and adds a book-bounded source variant.
+- [reports/test_results/17_online_prefix_book_frontier_audit.md](reports/test_results/17_online_prefix_book_frontier_audit.md) - online prefix book frontier result.
+- [reports/test_results/17_online_prefix_book_frontier_audit.json](reports/test_results/17_online_prefix_book_frontier_audit.json) - structured online prefix frontier ledger.
 
 ## Boundary
 
@@ -102,7 +105,10 @@ exogenous.
   digit coding in `70/70` books, with mean gain `464.898` bits. A stricter
   family-excluded singleton reparse removes same-family books from train counts
   and copy sources; it still beats raw digit coding in `70/70` books and in
-  `46/46` family-labeled books, with mean gain `460.251` bits.
+  `46/46` family-labeled books, with mean gain `460.251` bits. A per-book
+  online-prefix frontier audit then tests true previous-books-only generation:
+  book-bounded online reparsing beats raw in `69/70`, and the only failure is
+  the cold-start book `0`; after bootstrap it wins in `69/69`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

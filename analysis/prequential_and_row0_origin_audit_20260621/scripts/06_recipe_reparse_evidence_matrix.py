@@ -32,6 +32,7 @@ SOURCES = {
     / "15_leave_one_book_out_book_bounded_source_audit.json",
     "leave_one_book_out_family_excluded_source": TEST_RESULTS
     / "16_leave_one_book_out_family_excluded_source_audit.json",
+    "online_prefix_book_frontier": TEST_RESULTS / "17_online_prefix_book_frontier_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -65,6 +66,7 @@ def make_result() -> dict[str, Any]:
     source_attribution = load_json(SOURCES["leave_one_book_out_source_attribution"])
     book_bounded = load_json(SOURCES["leave_one_book_out_book_bounded_source"])
     family_excluded = load_json(SOURCES["leave_one_book_out_family_excluded_source"])
+    online_frontier = load_json(SOURCES["online_prefix_book_frontier"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -82,6 +84,7 @@ def make_result() -> dict[str, Any]:
         ("leave_one_book_out_source_attribution", source_attribution),
         ("leave_one_book_out_book_bounded_source", book_bounded),
         ("leave_one_book_out_family_excluded_source", family_excluded),
+        ("online_prefix_book_frontier", online_frontier),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -470,6 +473,47 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "where_is_the_online_prefix_per_book_frontier",
+            "source": rel(SOURCES["online_prefix_book_frontier"]),
+            "status": "passed_after_bootstrap_with_book0_failure",
+            "evidence": {
+                "book_count": online_frontier["summary"]["book_count"],
+                "book_bounded_roundtrip_book_count": online_frontier["summary"][
+                    "book_bounded_roundtrip_book_count"
+                ],
+                "book_bounded_online_beats_raw_count": online_frontier["summary"][
+                    "book_bounded_online_beats_raw_count"
+                ],
+                "after_bootstrap_book_count": online_frontier["summary"][
+                    "after_bootstrap_book_count"
+                ],
+                "book_bounded_after_bootstrap_beats_raw_count": online_frontier[
+                    "summary"
+                ]["book_bounded_after_bootstrap_beats_raw_count"],
+                "book_bounded_online_failure_books": online_frontier["summary"][
+                    "book_bounded_online_failure_books"
+                ],
+                "mean_book_bounded_online_gain_vs_raw_bits": online_frontier["summary"][
+                    "mean_book_bounded_online_gain_vs_raw_bits"
+                ],
+                "min_book_bounded_online_gain_vs_raw_bits": online_frontier["summary"][
+                    "min_book_bounded_online_gain_vs_raw_bits"
+                ],
+                "total_book_bounded_online_gain_vs_raw_bits": online_frontier["summary"][
+                    "total_book_bounded_online_gain_vs_raw_bits"
+                ],
+                "cumulative_book_bounded_break_even_book": online_frontier["summary"][
+                    "cumulative_book_bounded_break_even_book"
+                ],
+            },
+            "interpretation": (
+                "At per-book sequential granularity, the previous-books-only "
+                "parser fails against raw only for the cold-start book 0. After "
+                "that bootstrap, the book-bounded online variant beats raw for "
+                "every remaining book."
+            ),
+        },
+        {
             "question": "does_numeric_online_order_survive_order_controls",
             "source": rel(SOURCES["online_reparse_order_controls"]),
             "status": "passed_against_tested_orders",
@@ -655,6 +699,16 @@ def write_result(result: dict[str, Any]) -> None:
             key = (
                 f"{evidence['active_scope_bits']:.3f} -> {evidence['candidate_total_bits']:.3f} bits; "
                 f"gain {evidence['candidate_gain_vs_active_bits']:.3f}; roundtrip {evidence['roundtrip']}"
+            )
+        elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
+            key = (
+                f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
+                f"{evidence['book_count']}; after bootstrap "
+                f"{evidence['book_bounded_after_bootstrap_beats_raw_count']}/"
+                f"{evidence['after_bootstrap_book_count']}; failures "
+                f"{evidence['book_bounded_online_failure_books']}; mean gain "
+                f"{evidence['mean_book_bounded_online_gain_vs_raw_bits']:.3f}; "
+                f"break-even book {evidence['cumulative_book_bounded_break_even_book']}"
             )
         else:
             key = (

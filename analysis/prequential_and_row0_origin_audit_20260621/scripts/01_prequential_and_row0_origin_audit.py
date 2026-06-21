@@ -276,6 +276,7 @@ def render_markdown(
     leave_one_book_out_source_attribution_link: str,
     leave_one_book_out_book_bounded_source_link: str,
     leave_one_book_out_family_excluded_source_link: str,
+    online_prefix_book_frontier_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -504,6 +505,19 @@ def render_markdown(
             "while still not promoting a final authorial method.",
             f"See [16_leave_one_book_out_family_excluded_source_audit.md]({leave_one_book_out_family_excluded_source_link}).",
             "",
+            "### Online Prefix Book Frontier Audit",
+            "",
+            "Finally, the deterministic online parser is decomposed at per-book",
+            "granularity under the true numeric-prefix constraint: book `n` can use",
+            "only books `< n` as external inventory. The book-bounded variant",
+            "roundtrips `70/70`, beats raw digit coding in `69/70`, and the only",
+            "failure is book `0`, before any prior-book inventory exists. After that",
+            "bootstrap, it beats raw in `69/69` books; the cumulative book-bounded",
+            "gain crosses break-even at book `2`. Mean book-bounded online gain is",
+            "`419.761` bits. This strengthens sequential mechanical generation",
+            "evidence while keeping the bootstrap caveat explicit.",
+            f"See [17_online_prefix_book_frontier_audit.md]({online_prefix_book_frontier_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -562,7 +576,7 @@ def render_markdown(
             "",
             "- `8558.667` bits remains a frozen validation scope here, not a final authorial method.",
             "- The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.",
-            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, and the signal survives book-bounded and same-family-excluded source constraints.",
+            "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, and the online previous-books-only frontier is positive after the bootstrap book.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -609,6 +623,7 @@ def main() -> None:
             leave_one_book_out_family_excluded_source_link=(
                 "16_leave_one_book_out_family_excluded_source_audit.md"
             ),
+            online_prefix_book_frontier_link="17_online_prefix_book_frontier_audit.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -639,6 +654,9 @@ def main() -> None:
             ),
             leave_one_book_out_family_excluded_source_link=(
                 "test_results/16_leave_one_book_out_family_excluded_source_audit.md"
+            ),
+            online_prefix_book_frontier_link=(
+                "test_results/17_online_prefix_book_frontier_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

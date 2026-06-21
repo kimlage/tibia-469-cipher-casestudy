@@ -1,0 +1,3615 @@
+{
+  "case_reopened": false,
+  "classification": "online_prefix_book_frontier_bootstrap_only_failure",
+  "decision": {
+    "book_boundary_status": "book_bounded_online_frontier_retains_after_bootstrap_signal",
+    "bootstrap_status": "book_0_is_expected_cold_start_failure_against_raw",
+    "generation_explanation_status": "stronger_but_still_partial",
+    "online_prefix_status": "predictive_after_bootstrap",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "book_bounded_parser": "analysis/prequential_and_row0_origin_audit_20260621/scripts/15_leave_one_book_out_book_bounded_source_audit.py",
+    "online_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+    "trainset_controls": "analysis/authorial_mechanism_20260620/scripts/128_prequential_recipe_reparse_trainset_controls.py"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "book": 0,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 19.4797802640291,
+        "copy_length_stream_bits": 10.169925001442312,
+        "item_type_stream_bits": 4.0,
+        "literal_length_bits": 30.0,
+        "literal_payload_bits": 425.20679614558304
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 16,
+        "copy_items": 3,
+        "literal_digits": 128,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": 0.0,
+      "book_bounded_online_beats_raw": false,
+      "book_bounded_online_gain_vs_raw_bits": -10.498855747274263,
+      "book_bounded_online_reparse_bits": 488.8565014110544,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 144,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": -10.498855747274263,
+      "cumulative_online_gain_vs_raw_bits": -10.498855747274263,
+      "online_beats_raw": false,
+      "online_component_bits": {
+        "copy_address_bits": 19.4797802640291,
+        "copy_length_stream_bits": 10.169925001442312,
+        "item_type_stream_bits": 4.0,
+        "literal_length_bits": 30.0,
+        "literal_payload_bits": 425.20679614558304
+      },
+      "online_gain_vs_raw_bits": -10.498855747274263,
+      "online_inventory": {
+        "copied_digits": 16,
+        "copy_items": 3,
+        "literal_digits": 128,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 488.8565014110544,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 0,
+      "raw_uniform_bits": 478.35764566378015
+    },
+    {
+      "book": 1,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 30.102683303477928,
+        "copy_length_stream_bits": 13.973652527995426,
+        "item_type_stream_bits": 3.749062230738571,
+        "literal_length_bits": 23.0,
+        "literal_payload_bits": 225.03950093313716
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 23,
+        "copy_items": 4,
+        "literal_digits": 69,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": -0.03525382205873484,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 9.7524857342882,
+      "book_bounded_online_reparse_bits": 295.8648989953491,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 92,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": -0.7463700129860626,
+      "cumulative_online_gain_vs_raw_bits": -0.7816238350447975,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 30.102683303477928,
+        "copy_length_stream_bits": 13.696098170955864,
+        "item_type_stream_bits": 3.6601499971153753,
+        "literal_length_bits": 23.0,
+        "literal_payload_bits": 225.44122134585868
+      },
+      "online_gain_vs_raw_bits": 9.717231912229465,
+      "online_inventory": {
+        "copied_digits": 23,
+        "copy_items": 4,
+        "literal_digits": 69,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 295.90015281740784,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 1,
+      "raw_uniform_bits": 305.6173847296373
+    },
+    {
+      "book": 2,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 41.24580818687311,
+        "copy_length_stream_bits": 18.739994150800513,
+        "item_type_stream_bits": 2.490224995673063,
+        "literal_length_bits": 38.0,
+        "literal_payload_bits": 444.46683429574756
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 31,
+        "copy_items": 5,
+        "literal_digits": 146,
+        "literal_runs": 6
+      },
+      "book_bounded_minus_online_bits": -1.9890940088528168,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 43.038411165968796,
+      "book_bounded_online_reparse_bits": 544.9428616290943,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 177,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 42.29204115298273,
+      "cumulative_online_gain_vs_raw_bits": 40.26769332207118,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 49.20000449725998,
+        "copy_length_stream_bits": 25.912743252336757,
+        "item_type_stream_bits": 2.649581362776108,
+        "literal_length_bits": 41.0,
+        "literal_payload_bits": 428.16962652557424
+      },
+      "online_gain_vs_raw_bits": 41.04931715711598,
+      "online_inventory": {
+        "copied_digits": 38,
+        "copy_items": 6,
+        "literal_digits": 139,
+        "literal_runs": 7
+      },
+      "online_reparse_bits": 546.9319556379471,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 2,
+      "raw_uniform_bits": 587.9812727950631
+    },
+    {
+      "book": 3,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 53.41369666820894,
+        "copy_length_stream_bits": 29.37113732015904,
+        "item_type_stream_bits": 6.2534966642115375,
+        "literal_length_bits": 31.0,
+        "literal_payload_bits": 276.3263745349952
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 48,
+        "copy_items": 6,
+        "literal_digits": 92,
+        "literal_runs": 5
+      },
+      "book_bounded_minus_online_bits": 6.2139402666876435,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 68.70522809665601,
+      "book_bounded_online_reparse_bits": 396.3647051875747,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 140,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 110.99726924963875,
+      "cumulative_online_gain_vs_raw_bits": 115.18686168541484,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 53.41369666820894,
+        "copy_length_stream_bits": 28.6930654150464,
+        "item_type_stream_bits": 6.646257456517525,
+        "literal_length_bits": 30.0,
+        "literal_payload_bits": 271.3977453811141
+      },
+      "online_gain_vs_raw_bits": 74.91916836334366,
+      "online_inventory": {
+        "copied_digits": 49,
+        "copy_items": 6,
+        "literal_digits": 91,
+        "literal_runs": 5
+      },
+      "online_reparse_bits": 390.15076492088707,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 3,
+      "raw_uniform_bits": 465.06993328423073
+    },
+    {
+      "book": 4,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 74.00580807960432,
+        "copy_length_stream_bits": 45.06566335207727,
+        "item_type_stream_bits": 11.062884614923965,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 27.15863187516001
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 132,
+        "copy_items": 8,
+        "literal_digits": 8,
+        "literal_runs": 3
+      },
+      "book_bounded_minus_online_bits": -2.946018731912602,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 295.77694536246514,
+      "book_bounded_online_reparse_bits": 169.2929879217656,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 140,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 406.7742146121039,
+      "cumulative_online_gain_vs_raw_bits": 408.0177883159674,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 74.00580807960432,
+        "copy_length_stream_bits": 45.57450106080971,
+        "item_type_stream_bits": 13.051164686959048,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 27.607532826305118
+      },
+      "online_gain_vs_raw_bits": 292.83092663055254,
+      "online_inventory": {
+        "copied_digits": 132,
+        "copy_items": 8,
+        "literal_digits": 8,
+        "literal_runs": 3
+      },
+      "online_reparse_bits": 172.2390066536782,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 4,
+      "raw_uniform_bits": 465.06993328423073
+    },
+    {
+      "book": 5,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 57.90154813153866,
+        "copy_length_stream_bits": 34.90706656612371,
+        "item_type_stream_bits": 5.509775004326937,
+        "literal_length_bits": 20.0,
+        "literal_payload_bits": 137.16750504603132
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 229,
+        "copy_items": 6,
+        "literal_digits": 44,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": -3.458198137814122,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 651.4004751562293,
+      "book_bounded_online_reparse_bits": 255.4858947480206,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 273,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 1058.174689768333,
+      "cumulative_online_gain_vs_raw_bits": 1055.9600653343825,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 57.90154813153866,
+        "copy_length_stream_bits": 37.26977231975613,
+        "item_type_stream_bits": 5.5564171527961745,
+        "literal_length_bits": 20.0,
+        "literal_payload_bits": 138.21635528174377
+      },
+      "online_gain_vs_raw_bits": 647.9422770184152,
+      "online_inventory": {
+        "copied_digits": 229,
+        "copy_items": 6,
+        "literal_digits": 44,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 258.9440928858347,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 5,
+      "raw_uniform_bits": 906.8863699042499
+    },
+    {
+      "book": 6,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 120.30260048469592,
+        "copy_length_stream_bits": 67.79469307282253,
+        "item_type_stream_bits": 12.0,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 44.6536099917807
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 161,
+        "copy_items": 12,
+        "literal_digits": 14,
+        "literal_runs": 3
+      },
+      "book_bounded_minus_online_bits": 1.406264554898513,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 324.58651305598926,
+      "book_bounded_online_reparse_bits": 256.7509035492991,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 175,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 1382.7612028243225,
+      "cumulative_online_gain_vs_raw_bits": 1381.9528429452703,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 120.30260048469592,
+        "copy_length_stream_bits": 66.73696505586383,
+        "item_type_stream_bits": 12.0,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 44.30507345384083
+      },
+      "online_gain_vs_raw_bits": 325.99277761088774,
+      "online_inventory": {
+        "copied_digits": 161,
+        "copy_items": 12,
+        "literal_digits": 14,
+        "literal_runs": 3
+      },
+      "online_reparse_bits": 255.34463899440058,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 6,
+      "raw_uniform_bits": 581.3374166052884
+    },
+    {
+      "book": 7,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 40.75015666357254,
+        "copy_length_stream_bits": 22.250302370018936,
+        "item_type_stream_bits": 4.437280572950681,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 82.99401217656873
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 82,
+        "copy_items": 4,
+        "literal_digits": 24,
+        "literal_runs": 3
+      },
+      "book_bounded_minus_online_bits": -1.0659571240405228,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 191.69262627494953,
+      "book_bounded_online_reparse_bits": 160.43175178311088,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 106,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 1574.453829099272,
+      "cumulative_online_gain_vs_raw_bits": 1572.5795120961793,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 40.75015666357254,
+        "copy_length_stream_bits": 22.8861265319864,
+        "item_type_stream_bits": 4.437280572950681,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 83.4241451386418
+      },
+      "online_gain_vs_raw_bits": 190.626669150909,
+      "online_inventory": {
+        "copied_digits": 82,
+        "copy_items": 4,
+        "literal_digits": 24,
+        "literal_runs": 3
+      },
+      "online_reparse_bits": 161.4977089071514,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 7,
+      "raw_uniform_bits": 352.1243780580604
+    },
+    {
+      "book": 8,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 41.448223876631715,
+        "copy_length_stream_bits": 19.334203439743483,
+        "item_type_stream_bits": 4.272123099152057,
+        "literal_length_bits": 13.0,
+        "literal_payload_bits": 157.88154642527613
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 101,
+        "copy_items": 4,
+        "literal_digits": 54,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 1.4250876022146883,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 278.96275786673766,
+      "book_bounded_online_reparse_bits": 235.9360968408034,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 155,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 1853.4165869660096,
+      "cumulative_online_gain_vs_raw_bits": 1852.9673575651318,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 51.86290911243893,
+        "copy_length_stream_bits": 21.962214118900125,
+        "item_type_stream_bits": 5.786696271981815,
+        "literal_length_bits": 16.0,
+        "literal_payload_bits": 138.89918973526778
+      },
+      "online_gain_vs_raw_bits": 280.3878454689524,
+      "online_inventory": {
+        "copied_digits": 107,
+        "copy_items": 5,
+        "literal_digits": 48,
+        "literal_runs": 3
+      },
+      "online_reparse_bits": 234.5110092385887,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 8,
+      "raw_uniform_bits": 514.8988547075411
+    },
+    {
+      "book": 9,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 31.869843928276143,
+        "copy_length_stream_bits": 14.161328743875774,
+        "item_type_stream_bits": 2.3806473675977213,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 294,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.6235284638827565,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 928.2350398571349,
+      "book_bounded_online_reparse_bits": 48.411820039749635,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 294,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 2781.6516268231444,
+      "cumulative_online_gain_vs_raw_bits": 2781.8259258861494,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 31.869843928276143,
+        "copy_length_stream_bits": 13.707550865092115,
+        "item_type_stream_bits": 2.2108967824986188,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 928.8585683210176,
+      "online_inventory": {
+        "copied_digits": 294,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 47.78829157586688,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 9,
+      "raw_uniform_bits": 976.6468598968845
+    },
+    {
+      "book": 10,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 43.21703443023412,
+        "copy_length_stream_bits": 26.42648944689941,
+        "item_type_stream_bits": 2.752223974741039,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 281,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 36.62593683501996,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 861.0660468114742,
+      "book_bounded_online_reparse_bits": 72.39574785187457,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 281,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 3642.7176736346187,
+      "cumulative_online_gain_vs_raw_bits": 3679.5179095326434,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 21.454134596672986,
+        "copy_length_stream_bits": 13.040816578951045,
+        "item_type_stream_bits": 1.2748598412305834,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 897.6919836464941,
+      "online_inventory": {
+        "copied_digits": 281,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 35.76981101685462,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 10,
+      "raw_uniform_bits": 933.4617946633488
+    },
+    {
+      "book": 11,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 43.89058810208596,
+        "copy_length_stream_bits": 24.79391514447719,
+        "item_type_stream_bits": 4.339850002884625,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 41.60438985182789
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 124,
+        "copy_items": 4,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": -0.1780054391114163,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 332.47540589829293,
+      "book_bounded_online_reparse_bits": 122.62874310127566,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 3975.1930795329117,
+      "cumulative_online_gain_vs_raw_bits": 4011.815309991825,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 43.89058810208596,
+        "copy_length_stream_bits": 25.295498415695047,
+        "item_type_stream_bits": 4.339850002884625,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 41.28081201972144
+      },
+      "online_gain_vs_raw_bits": 332.2974004591815,
+      "online_inventory": {
+        "copied_digits": 124,
+        "copy_items": 4,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 122.80674854038708,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 11,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 12,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 99.78053445903501,
+        "copy_length_stream_bits": 44.72365443102398,
+        "item_type_stream_bits": 8.273986131910332,
+        "literal_length_bits": 13.0,
+        "literal_payload_bits": 46.10236927323291
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 119,
+        "copy_items": 9,
+        "literal_digits": 18,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": -0.3800656225728005,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 243.2236047043664,
+      "book_bounded_online_reparse_bits": 211.8805442952022,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 4218.416684237278,
+      "cumulative_online_gain_vs_raw_bits": 4254.6588490736185,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 88.67922427548561,
+        "copy_length_stream_bits": 43.76280420711622,
+        "item_type_stream_bits": 8.522126252568901,
+        "literal_length_bits": 17.0,
+        "literal_payload_bits": 54.29645518260421
+      },
+      "online_gain_vs_raw_bits": 242.8435390817936,
+      "online_inventory": {
+        "copied_digits": 115,
+        "copy_items": 8,
+        "literal_digits": 22,
+        "literal_runs": 5
+      },
+      "online_reparse_bits": 212.260609917775,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 12,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 13,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 66.9918481255891,
+        "copy_length_stream_bits": 32.56400996507604,
+        "item_type_stream_bits": 6.34447279948925,
+        "literal_length_bits": 13.0,
+        "literal_payload_bits": 41.061256250554536
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 127,
+        "copy_items": 6,
+        "literal_digits": 14,
+        "literal_runs": 3
+      },
+      "book_bounded_minus_online_bits": 1.2148811980628693,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 308.4302742384091,
+      "book_bounded_online_reparse_bits": 159.96158714070893,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 141,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 4526.846958475687,
+      "cumulative_online_gain_vs_raw_bits": 4564.304004510091,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 78.1742398112602,
+        "copy_length_stream_bits": 34.67836296211558,
+        "item_type_stream_bits": 6.944463086886954,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 26.949640082383354
+      },
+      "online_gain_vs_raw_bits": 309.645155436472,
+      "online_inventory": {
+        "copied_digits": 132,
+        "copy_items": 7,
+        "literal_digits": 9,
+        "literal_runs": 3
+      },
+      "online_reparse_bits": 158.74670594264606,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 13,
+      "raw_uniform_bits": 468.39186137911804
+    },
+    {
+      "book": 14,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 45.10819989496408,
+        "copy_length_stream_bits": 18.674811981738124,
+        "item_type_stream_bits": 3.435233390015494,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 145.80514165363292
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 80,
+        "copy_items": 4,
+        "literal_digits": 53,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 2.0610860931743957,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 218.79304969966853,
+      "book_bounded_online_reparse_bits": 223.02338692035062,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 133,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 4745.640008175355,
+      "cumulative_online_gain_vs_raw_bits": 4785.158140302933,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 45.10819989496408,
+        "copy_length_stream_bits": 16.915493643023517,
+        "item_type_stream_bits": 3.4902400761916916,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 145.44836721299694
+      },
+      "online_gain_vs_raw_bits": 220.85413579284292,
+      "online_inventory": {
+        "copied_digits": 80,
+        "copy_items": 4,
+        "literal_digits": 53,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 220.96230082717622,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 14,
+      "raw_uniform_bits": 441.81643662001915
+    },
+    {
+      "book": 15,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 102.0294094923034,
+        "copy_length_stream_bits": 49.713060224886,
+        "item_type_stream_bits": 8.272649778966896,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 7.584962500721161
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 140,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 3
+      },
+      "book_bounded_minus_online_bits": 5.776591005140659,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 295.4356355720153,
+      "book_bounded_online_reparse_bits": 179.60008199687746,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 143,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 5041.075643747371,
+      "cumulative_online_gain_vs_raw_bits": 5086.370366880089,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 102.02995380283274,
+        "copy_length_stream_bits": 50.47440209864808,
+        "item_type_stream_bits": 7.596669065784896,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 5.722466024471096
+      },
+      "online_gain_vs_raw_bits": 301.212226577156,
+      "online_inventory": {
+        "copied_digits": 141,
+        "copy_items": 9,
+        "literal_digits": 2,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 173.8234909917368,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 15,
+      "raw_uniform_bits": 475.0357175688928
+    },
+    {
+      "book": 16,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 68.63733669583027,
+        "copy_length_stream_bits": 27.787150514073378,
+        "item_type_stream_bits": 6.509775004326937,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 46.06681248851311
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 156,
+        "copy_items": 6,
+        "literal_digits": 18,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": 3.4697687096509924,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 417.01441380765743,
+      "book_bounded_online_reparse_bits": 161.0010747027436,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 174,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 5458.090057555029,
+      "cumulative_online_gain_vs_raw_bits": 5506.854549397398,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 68.63733669583027,
+        "copy_length_stream_bits": 28.42638472481103,
+        "item_type_stream_bits": 6.381098721747272,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 42.08648585070401
+      },
+      "online_gain_vs_raw_bits": 420.48418251730845,
+      "online_inventory": {
+        "copied_digits": 157,
+        "copy_items": 6,
+        "literal_digits": 17,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 157.53130599309262,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 16,
+      "raw_uniform_bits": 578.015488510401
+    },
+    {
+      "book": 17,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 92.37055078019286,
+        "copy_length_stream_bits": 44.980655662046665,
+        "item_type_stream_bits": 8.606236475885416,
+        "literal_length_bits": 18.0,
+        "literal_payload_bits": 95.90159450932691
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 242,
+        "copy_items": 8,
+        "literal_digits": 32,
+        "literal_runs": 5
+      },
+      "book_bounded_minus_online_bits": 16.55286274226603,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 650.3492605716855,
+      "book_bounded_online_reparse_bits": 259.85903742745177,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 274,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 6108.439318126714,
+      "cumulative_online_gain_vs_raw_bits": 6173.75667271135,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 80.81022273749879,
+        "copy_length_stream_bits": 39.486939441032874,
+        "item_type_stream_bits": 7.7580208655471825,
+        "literal_length_bits": 18.0,
+        "literal_payload_bits": 97.25099164110682
+      },
+      "online_gain_vs_raw_bits": 666.9021233139515,
+      "online_inventory": {
+        "copied_digits": 240,
+        "copy_items": 7,
+        "literal_digits": 34,
+        "literal_runs": 5
+      },
+      "online_reparse_bits": 243.30617468518574,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 17,
+      "raw_uniform_bits": 910.2082979991372
+    },
+    {
+      "book": 18,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 23.230704185503587,
+        "copy_length_stream_bits": 12.803727526553114,
+        "item_type_stream_bits": 1.2942379535674513,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 4.731319031025066
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 91,
+        "copy_items": 2,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 2.8088997550890653,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 266.87932412787546,
+      "book_bounded_online_reparse_bits": 42.059988696649214,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 93,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 6375.31864225459,
+      "cumulative_online_gain_vs_raw_bits": 6443.444896594315,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 23.230704185503587,
+        "copy_length_stream_bits": 14.609871287178827,
+        "item_type_stream_bits": 1.4105134688777363,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 269.6882238829645,
+      "online_inventory": {
+        "copied_digits": 93,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 39.25108894156015,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 18,
+      "raw_uniform_bits": 308.9393128245247
+    },
+    {
+      "book": 19,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 34.991765239659344,
+        "copy_length_stream_bits": 22.764774423196677,
+        "item_type_stream_bits": 1.8840936678391262,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 129,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.10261826565835008,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 368.8880909097746,
+      "book_bounded_online_reparse_bits": 59.64063333069515,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 129,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 6744.206733164364,
+      "cumulative_online_gain_vs_raw_bits": 6812.435605769748,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 34.991765239659344,
+        "copy_length_stream_bits": 22.500777705456215,
+        "item_type_stream_bits": 2.045472119921236,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 368.9907091754329,
+      "online_inventory": {
+        "copied_digits": 129,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 59.5380150650368,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 19,
+      "raw_uniform_bits": 428.5287242404697
+    },
+    {
+      "book": 20,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 82.00988394306194,
+        "copy_length_stream_bits": 26.294017254738957,
+        "item_type_stream_bits": 4.210154364568077,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 63,
+        "copy_items": 7,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.9740155063836511,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 96.76741441553484,
+      "book_bounded_online_reparse_bits": 112.51405556236897,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 63,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 6840.974147579898,
+      "cumulative_online_gain_vs_raw_bits": 6910.177035691666,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 82.00902748854995,
+        "copy_length_stream_bits": 24.9844932970243,
+        "item_type_stream_bits": 4.546519270411069,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 97.7414299219185,
+      "online_inventory": {
+        "copied_digits": 63,
+        "copy_items": 7,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 111.54004005598532,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 20,
+      "raw_uniform_bits": 209.2814699779038
+    },
+    {
+      "book": 21,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 35.25137132826608,
+        "copy_length_stream_bits": 17.553377585476916,
+        "item_type_stream_bits": 1.6424633859074798,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 176,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.13388325618245744,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 530.2121324005253,
+      "book_bounded_online_reparse_bits": 54.447212299650474,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 176,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 7371.186279980424,
+      "cumulative_online_gain_vs_raw_bits": 7440.255284836008,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 35.25303426898297,
+        "copy_length_stream_bits": 17.573173784686485,
+        "item_type_stream_bits": 1.754887502163469,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 530.0782491443429,
+      "online_inventory": {
+        "copied_digits": 176,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 54.58109555583293,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 21,
+      "raw_uniform_bits": 584.6593447001758
+    },
+    {
+      "book": 22,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 11.80292019858527,
+        "copy_length_stream_bits": 8.038918989292302,
+        "item_type_stream_bits": 0.5272470028648688,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.03926594872829625,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 434.73506280882617,
+      "book_bounded_online_reparse_bits": 20.36908619074244,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 7805.92134278925,
+      "cumulative_online_gain_vs_raw_bits": 7875.029613593562,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 11.80292019858527,
+        "copy_length_stream_bits": 7.965784284662087,
+        "item_type_stream_bits": 0.5611157587667883,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 434.7743287575545,
+      "online_inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.329820242014144,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 22,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 23,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 95.12077645465614,
+        "copy_length_stream_bits": 45.13923434688022,
+        "item_type_stream_bits": 8.973192751090126,
+        "literal_length_bits": 16.0,
+        "literal_payload_bits": 62.533495091604465
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 156,
+        "copy_items": 8,
+        "literal_digits": 21,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": 2.1754413693701053,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 360.21457415083216,
+      "book_bounded_online_reparse_bits": 227.76669864423093,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 177,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 8166.135916940082,
+      "cumulative_online_gain_vs_raw_bits": 8237.419629113765,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 95.12077645465614,
+        "copy_length_stream_bits": 43.21234517006409,
+        "item_type_stream_bits": 8.81364789953178,
+        "literal_length_bits": 16.0,
+        "literal_payload_bits": 62.4444877506089
+      },
+      "online_gain_vs_raw_bits": 362.39001552020227,
+      "online_inventory": {
+        "copied_digits": 156,
+        "copy_items": 8,
+        "literal_digits": 21,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 225.59125727486082,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 23,
+      "raw_uniform_bits": 587.9812727950631
+    },
+    {
+      "book": 24,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 35.825801629860266,
+        "copy_length_stream_bits": 18.953048296734625,
+        "item_type_stream_bits": 1.6549272825633894,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 119,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 1.2050114210416325,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 338.8756660824378,
+      "book_bounded_online_reparse_bits": 56.43377720915828,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 119,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 8505.01158302252,
+      "cumulative_online_gain_vs_raw_bits": 8577.500306617245,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 35.825801629860266,
+        "copy_length_stream_bits": 17.64807665609292,
+        "item_type_stream_bits": 1.754887502163469,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 340.0806775034795,
+      "online_inventory": {
+        "copied_digits": 119,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 55.22876578811665,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 24,
+      "raw_uniform_bits": 395.3094432915961
+    },
+    {
+      "book": 25,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 11.96902670215077,
+        "copy_length_stream_bits": 6.139551352398794,
+        "item_type_stream_bits": 1.6938968722743202,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 7.389810567168186
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 32,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 0.38912895523245794,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 85.07519782706561,
+      "book_bounded_online_reparse_bits": 31.19228549399207,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 35,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 8590.086780849586,
+      "cumulative_online_gain_vs_raw_bits": 8662.964633399542,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 11.96902670215077,
+        "copy_length_stream_bits": 6.044394119358453,
+        "item_type_stream_bits": 1.628031222613042,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 7.161704494637345
+      },
+      "online_gain_vs_raw_bits": 85.46432678229807,
+      "online_inventory": {
+        "copied_digits": 32,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 30.803156538759612,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 25,
+      "raw_uniform_bits": 116.26748332105768
+    },
+    {
+      "book": 26,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 47.942993583138254,
+        "copy_length_stream_bits": 22.40136421026945,
+        "item_type_stream_bits": 2.1859534116260817,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 170,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -1.1087901963222748,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 492.1974649258178,
+      "book_bounded_online_reparse_bits": 72.53031120503377,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 170,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 9082.284245775403,
+      "cumulative_online_gain_vs_raw_bits": 9154.053308129038,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 47.942993583138254,
+        "copy_length_stream_bits": 23.384203536597596,
+        "item_type_stream_bits": 2.311904281620197,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 491.08867472949555,
+      "online_inventory": {
+        "copied_digits": 170,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 73.63910140135604,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 26,
+      "raw_uniform_bits": 564.7277761308516
+    },
+    {
+      "book": 27,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 24.11006810464592,
+        "copy_length_stream_bits": 14.281350514981035,
+        "item_type_stream_bits": 1.047123912114026,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 124,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 18.886951011982674,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 372.4805412342919,
+      "book_bounded_online_reparse_bits": 39.43854253174098,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 124,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 9454.764787009695,
+      "cumulative_online_gain_vs_raw_bits": 9545.420800375312,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.039947160169094,
+        "copy_length_stream_bits": 7.9600019320680815,
+        "item_type_stream_bits": 0.5516424275211298,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 391.3674922462746,
+      "online_inventory": {
+        "copied_digits": 124,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.551591519758304,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 27,
+      "raw_uniform_bits": 411.9190837660329
+    },
+    {
+      "book": 28,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 60.54683550704882,
+        "copy_length_stream_bits": 27.273288586729233,
+        "item_type_stream_bits": 2.590654961214737,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 146,
+        "copy_items": 5,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.514184251467114,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 394.59072279856207,
+      "book_bounded_online_reparse_bits": 90.41077905499279,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 146,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 9849.355509808258,
+      "cumulative_online_gain_vs_raw_bits": 9940.52570742534,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 60.54650987900526,
+        "copy_length_stream_bits": 26.62291424184783,
+        "item_type_stream_bits": 2.727170682672593,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 395.1049070500292,
+      "online_inventory": {
+        "copied_digits": 146,
+        "copy_items": 5,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 89.89659480352567,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 28,
+      "raw_uniform_bits": 485.0015018535549
+    },
+    {
+      "book": 29,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 48.64281223887145,
+        "copy_length_stream_bits": 19.513019069703468,
+        "item_type_stream_bits": 1.9703939302899867,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 151,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -2.088562172488011,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 431.4849170891268,
+      "book_bounded_online_reparse_bits": 70.1262252388649,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 151,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 10280.840426897385,
+      "cumulative_online_gain_vs_raw_bits": 10369.922062341979,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 48.64281223887145,
+        "copy_length_stream_bits": 21.506382315529123,
+        "item_type_stream_bits": 2.0655928569523394,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 429.39635491663876,
+      "online_inventory": {
+        "copied_digits": 151,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 72.21478741135292,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 29,
+      "raw_uniform_bits": 501.6111423279917
+    },
+    {
+      "book": 30,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 60.974716093074264,
+        "copy_length_stream_bits": 35.50176839239611,
+        "item_type_stream_bits": 3.7322260210467695,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.77714113727719
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 144,
+        "copy_items": 5,
+        "literal_digits": 6,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 0.02324602172754453,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 384.30336258931,
+      "book_bounded_online_reparse_bits": 113.98585164379432,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 150,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 10665.143789486694,
+      "cumulative_online_gain_vs_raw_bits": 10754.248670953017,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 60.974716093074264,
+        "copy_length_stream_bits": 35.54965307089515,
+        "item_type_stream_bits": 3.764203031278984,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.67403342681839
+      },
+      "online_gain_vs_raw_bits": 384.3266086110375,
+      "online_inventory": {
+        "copied_digits": 144,
+        "copy_items": 5,
+        "literal_digits": 6,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 113.96260562206677,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 30,
+      "raw_uniform_bits": 498.2892142331043
+    },
+    {
+      "book": 31,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 110.31088714505141,
+        "copy_length_stream_bits": 59.75663000516163,
+        "item_type_stream_bits": 5.491823991122836,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 8.451211111832322
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 245,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 30.36578667166745,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 635.8276152788976,
+      "book_bounded_online_reparse_bits": 188.01055225316819,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 248,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 11300.97140476559,
+      "cumulative_online_gain_vs_raw_bits": 11420.442072903581,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 98.01796743658889,
+        "copy_length_stream_bits": 55.72444741119859,
+        "item_type_stream_bits": 3.9023507337132632,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 666.193401950565,
+      "online_inventory": {
+        "copied_digits": 248,
+        "copy_items": 8,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 157.64476558150074,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 31,
+      "raw_uniform_bits": 823.8381675320658
+    },
+    {
+      "book": 32,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 24.59669524502111,
+        "copy_length_stream_bits": 13.07099300809027,
+        "item_type_stream_bits": 2.4081594103609563,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.129283016944964
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 134,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 5.041377945732421,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 401.8990183191513,
+      "book_bounded_online_reparse_bits": 53.2051306804173,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 11702.870423084742,
+      "cumulative_online_gain_vs_raw_bits": 11827.382469168464,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 24.596409194650214,
+        "copy_length_stream_bits": 11.677426023029863,
+        "item_type_stream_bits": 2.345597000780995,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 5.544320516223813
+      },
+      "online_gain_vs_raw_bits": 406.94039626488376,
+      "online_inventory": {
+        "copied_digits": 135,
+        "copy_items": 2,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 48.16375273468488,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 32,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 33,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 12.335111168424861,
+        "copy_length_stream_bits": 8.233619676759702,
+        "item_type_stream_bits": 0.425305834732671,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 8.315149562256295
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 131,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 8.349736528435681,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 415.82917847273296,
+      "book_bounded_online_reparse_bits": 29.309186242173528,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 134,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 12118.699601557475,
+      "cumulative_online_gain_vs_raw_bits": 12251.561384169632,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.335111168424861,
+        "copy_length_stream_bits": 8.164906926675688,
+        "item_type_stream_bits": 0.4594316186372972,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 424.17891500116866,
+      "online_inventory": {
+        "copied_digits": 134,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.959449713737847,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 33,
+      "raw_uniform_bits": 445.1383647149065
+    },
+    {
+      "book": 34,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 86.74658302080746,
+        "copy_length_stream_bits": 31.509153893054247,
+        "item_type_stream_bits": 6.068777560832152,
+        "literal_length_bits": 9.0,
+        "literal_payload_bits": 37.69200782917325
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 110,
+        "copy_items": 7,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 16.960409963751886,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 237.58063336727844,
+      "book_bounded_online_reparse_bits": 171.01652230386713,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 123,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 12356.280234924754,
+      "cumulative_online_gain_vs_raw_bits": 12506.102427500662,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 74.3518523913759,
+        "copy_length_stream_bits": 28.728585631522993,
+        "item_type_stream_bits": 5.5921932413740025,
+        "literal_length_bits": 9.0,
+        "literal_payload_bits": 36.383481075842354
+      },
+      "online_gain_vs_raw_bits": 254.54104333103032,
+      "online_inventory": {
+        "copied_digits": 110,
+        "copy_items": 6,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 154.05611234011525,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 34,
+      "raw_uniform_bits": 408.5971556711456
+    },
+    {
+      "book": 35,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 24.813205783051018,
+        "copy_length_stream_bits": 16.221700393752663,
+        "item_type_stream_bits": 0.8495053082241111,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 286,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 1.0495304231049616,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 908.1870236527577,
+      "book_bounded_online_reparse_bits": 41.88441148502779,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 286,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 13264.467258577512,
+      "cumulative_online_gain_vs_raw_bits": 13415.338981576524,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 24.85196630391665,
+        "copy_length_stream_bits": 15.061455578062747,
+        "item_type_stream_bits": 0.9214591799434253,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 909.2365540758627,
+      "online_inventory": {
+        "copied_digits": 286,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 40.83488106192283,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 35,
+      "raw_uniform_bits": 950.0714351377856
+    },
+    {
+      "book": 36,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 74.93768331381195,
+        "copy_length_stream_bits": 37.57134238870166,
+        "item_type_stream_bits": 2.5093546614593465,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 137,
+        "copy_items": 6,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -1.1216079707762105,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 340.0857686355957,
+      "book_bounded_online_reparse_bits": 115.01838036397294,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 13604.553027213107,
+      "cumulative_online_gain_vs_raw_bits": 13754.303142241344,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 74.93768331381195,
+        "copy_length_stream_bits": 38.484000069643756,
+        "item_type_stream_bits": 2.7183049512934505,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 338.9641606648195,
+      "online_inventory": {
+        "copied_digits": 137,
+        "copy_items": 6,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 116.13998833474915,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 36,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 37,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 25.03900168507412,
+        "copy_length_stream_bits": 14.181618168395818,
+        "item_type_stream_bits": 0.7996059711673668,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 160,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.05948286758895449,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 491.4882693573407,
+      "book_bounded_online_reparse_bits": 40.02022582463731,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 160,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 14096.041296570447,
+      "cumulative_online_gain_vs_raw_bits": 14245.731928731097,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 25.03900168507412,
+        "copy_length_stream_bits": 14.177730967033272,
+        "item_type_stream_bits": 0.8629760401188759,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 491.4287864897517,
+      "online_inventory": {
+        "copied_digits": 160,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 40.07970869222626,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 37,
+      "raw_uniform_bits": 531.508495181978
+    },
+    {
+      "book": 38,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 37.7148282298833,
+        "copy_length_stream_bits": 12.511258495502268,
+        "item_type_stream_bits": 4.523930601691301,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 11.427312844134974
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 130,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 0.016188478934864747,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 370.96103454369467,
+      "book_bounded_online_reparse_bits": 74.17733017121184,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 134,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 14467.002331114141,
+      "cumulative_online_gain_vs_raw_bits": 14616.709151753726,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 37.7148282298833,
+        "copy_length_stream_bits": 12.44086916761087,
+        "item_type_stream_bits": 4.367234668149207,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 11.638209626633568
+      },
+      "online_gain_vs_raw_bits": 370.9772230226296,
+      "online_inventory": {
+        "copied_digits": 130,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 74.16114169227697,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 38,
+      "raw_uniform_bits": 445.1383647149065
+    },
+    {
+      "book": 39,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 12.585901449690772,
+        "copy_length_stream_bits": 4.857980995127572,
+        "item_type_stream_bits": 2.0179219079972626,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 16.604537569723934
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 52,
+        "copy_items": 1,
+        "literal_digits": 7,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 1.3493491356421004,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 155.9274156758148,
+      "book_bounded_online_reparse_bits": 40.066341922539536,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 59,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 14622.929746789956,
+      "cumulative_online_gain_vs_raw_bits": 14773.985916565183,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.585901449690772,
+        "copy_length_stream_bits": 4.832890014164742,
+        "item_type_stream_bits": 1.9259994185562233,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 15.372201904485701
+      },
+      "online_gain_vs_raw_bits": 157.27676481145693,
+      "online_inventory": {
+        "copied_digits": 52,
+        "copy_items": 1,
+        "literal_digits": 7,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 38.716992786897436,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 39,
+      "raw_uniform_bits": 195.99375759835436
+    },
+    {
+      "book": 40,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 37.85445326997576,
+        "copy_length_stream_bits": 14.138698443688826,
+        "item_type_stream_bits": 2.830074998557688,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 10.666224002803204
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 165,
+        "copy_items": 3,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 0.6037524503120721,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 488.59446922605133,
+      "book_bounded_online_reparse_bits": 69.4894507150255,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 168,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 15111.524216016007,
+      "cumulative_online_gain_vs_raw_bits": 15263.184138241546,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 37.854680019687954,
+        "copy_length_stream_bits": 13.685186796595348,
+        "item_type_stream_bits": 2.7999016793446634,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 10.54592976908549
+      },
+      "online_gain_vs_raw_bits": 489.1982216763634,
+      "online_inventory": {
+        "copied_digits": 165,
+        "copy_items": 3,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 68.88569826471343,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 40,
+      "raw_uniform_bits": 558.0839199410768
+    },
+    {
+      "book": 41,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 50.59013925671277,
+        "copy_length_stream_bits": 25.12570685259905,
+        "item_type_stream_bits": 3.2451468931311878,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 6.1292830169449815
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 134,
+        "copy_items": 4,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 11.741303196274544,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 362.69194488529325,
+      "book_bounded_online_reparse_bits": 89.090276019388,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 136,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 15474.2161609013,
+      "cumulative_online_gain_vs_raw_bits": 15637.617386323114,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 50.589690028921225,
+        "copy_length_stream_bits": 24.94923397540221,
+        "item_type_stream_bits": 1.810048818790027,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 374.4332480815678,
+      "online_inventory": {
+        "copied_digits": 136,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 77.34897282311346,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 41,
+      "raw_uniform_bits": 451.78222090468125
+    },
+    {
+      "book": 42,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 76.09435531730543,
+        "copy_length_stream_bits": 38.99210674510719,
+        "item_type_stream_bits": 4.058661389420356,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 15.584610237249507
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 183,
+        "copy_items": 6,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 20.373361977564485,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 482.4708200548543,
+      "book_bounded_online_reparse_bits": 138.72973368908248,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 187,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 15956.686980956154,
+      "cumulative_online_gain_vs_raw_bits": 16140.461568355533,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 63.415975252196304,
+        "copy_length_stream_bits": 31.462584490394057,
+        "item_type_stream_bits": 3.686750854210686,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 15.791061114716939
+      },
+      "online_gain_vs_raw_bits": 502.84418203241876,
+      "online_inventory": {
+        "copied_digits": 183,
+        "copy_items": 5,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 118.356371711518,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 42,
+      "raw_uniform_bits": 621.2005537439368
+    },
+    {
+      "book": 43,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 25.442504070588644,
+        "copy_length_stream_bits": 10.933690654952233,
+        "item_type_stream_bits": 0.8082983662722151,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 141,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 16.701052083349463,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 431.207368287305,
+      "book_bounded_online_reparse_bits": 37.18449309181309,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 141,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 16387.89434924346,
+      "cumulative_online_gain_vs_raw_bits": 16588.369988726186,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.708006128896072,
+        "copy_length_stream_bits": 7.339850002884625,
+        "item_type_stream_bits": 0.43558487668292956,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 447.9084203706544,
+      "online_inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.483441008463625,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 43,
+      "raw_uniform_bits": 468.39186137911804
+    },
+    {
+      "book": 44,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 12.739147709986453,
+        "copy_length_stream_bits": 7.1799090900149345,
+        "item_type_stream_bits": 2.0494686762642997,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 12.669391281881863
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 121,
+        "copy_items": 1,
+        "literal_digits": 5,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 1.0424655175135626,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 379.9250231976601,
+      "book_bounded_online_reparse_bits": 38.63791675814755,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 126,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 16767.819372441118,
+      "cumulative_online_gain_vs_raw_bits": 16969.33747744136,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.739147709986453,
+        "copy_length_stream_bits": 7.139551352398794,
+        "item_type_stream_bits": 1.9487746766448268,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 11.767977501603912
+      },
+      "online_gain_vs_raw_bits": 380.96748871517366,
+      "online_inventory": {
+        "copied_digits": 121,
+        "copy_items": 1,
+        "literal_digits": 5,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 37.595451240633984,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 44,
+      "raw_uniform_bits": 418.5629399558076
+    },
+    {
+      "book": 45,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 38.320610754820194,
+        "copy_length_stream_bits": 18.863251626383978,
+        "item_type_stream_bits": 1.1814630401074442,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 149,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.9754147760871419,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 436.60196071690535,
+      "book_bounded_online_reparse_bits": 58.36532542131162,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 149,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 17204.42133315802,
+      "cumulative_online_gain_vs_raw_bits": 17404.964023382177,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 38.320610754820194,
+        "copy_length_stream_bits": 19.696560081174137,
+        "item_type_stream_bits": 1.3235693614044368,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 435.62654594081823,
+      "online_inventory": {
+        "copied_digits": 149,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 59.34074019739876,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 45,
+      "raw_uniform_bits": 494.967286138217
+    },
+    {
+      "book": 46,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 38.4385707185294,
+        "copy_length_stream_bits": 19.669693047647925,
+        "item_type_stream_bits": 1.1592504640172283,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 253,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.020245996023774637,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 781.1802937763081,
+      "book_bounded_online_reparse_bits": 59.26751423019455,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 253,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 17985.60162693433,
+      "cumulative_online_gain_vs_raw_bits": 18186.124071162463,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 38.43837168493029,
+        "copy_length_stream_bits": 19.553055503374683,
+        "item_type_stream_bits": 1.2963330379133557,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 781.1600477802843,
+      "online_inventory": {
+        "copied_digits": 253,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 59.287760226218325,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 46,
+      "raw_uniform_bits": 840.4478080065027
+    },
+    {
+      "book": 47,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 12.845490050944376,
+        "copy_length_stream_bits": 7.303780748177103,
+        "item_type_stream_bits": 0.379287474329642,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.0022794076006249497,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 398.0343816823565,
+      "book_bounded_online_reparse_bits": 20.52855827345112,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 126,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 18383.636008616686,
+      "cumulative_online_gain_vs_raw_bits": 18584.16073225242,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.845490050944376,
+        "copy_length_stream_bits": 7.257387842692652,
+        "item_type_stream_bits": 0.4234009722134705,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 398.03666108995714,
+      "online_inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.526278865850497,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 47,
+      "raw_uniform_bits": 418.5629399558076
+    },
+    {
+      "book": 48,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 25.74994541256432,
+        "copy_length_stream_bits": 12.2924175024928,
+        "item_type_stream_bits": 0.7539389168906487,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 169,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.05495111119135032,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 522.6095462040165,
+      "book_bounded_online_reparse_bits": 38.79630183194777,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 169,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 18906.245554820704,
+      "cumulative_online_gain_vs_raw_bits": 19106.715327345246,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 25.761383329564985,
+        "copy_length_stream_bits": 12.248718247933585,
+        "item_type_stream_bits": 0.8411513656405477,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 522.5545950928251,
+      "online_inventory": {
+        "copied_digits": 169,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 38.85125294313912,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 48,
+      "raw_uniform_bits": 561.4058480359643
+    },
+    {
+      "book": 49,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 103.31254317524949,
+        "copy_length_stream_bits": 34.87316189716032,
+        "item_type_stream_bits": 10.03358213944012,
+        "literal_length_bits": 17.0,
+        "literal_payload_bits": 87.4542233400282
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 90,
+        "copy_items": 8,
+        "literal_digits": 25,
+        "literal_runs": 4
+      },
+      "book_bounded_minus_online_bits": -0.5821250045734132,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 129.3482203601685,
+      "book_bounded_online_reparse_bits": 252.67351055187817,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 115,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 19035.59377518087,
+      "cumulative_online_gain_vs_raw_bits": 19235.48142270084,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 103.31254317524949,
+        "copy_length_stream_bits": 34.96466888456597,
+        "item_type_stream_bits": 9.660149997115376,
+        "literal_length_bits": 17.0,
+        "literal_payload_bits": 88.31827349952073
+      },
+      "online_gain_vs_raw_bits": 128.7660953555951,
+      "online_inventory": {
+        "copied_digits": 90,
+        "copy_items": 8,
+        "literal_digits": 25,
+        "literal_runs": 4
+      },
+      "online_reparse_bits": 253.25563555645158,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 49,
+      "raw_uniform_bits": 382.0217309120467
+    },
+    {
+      "book": 50,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 12.923698883295073,
+        "copy_length_stream_bits": 7.515699838284043,
+        "item_type_stream_bits": 0.3932331289604955,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.9729879653546618,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 447.55922952857844,
+      "book_bounded_online_reparse_bits": 20.832631850539613,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 141,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 19483.15300470945,
+      "cumulative_online_gain_vs_raw_bits": 19684.01364019477,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.923698883295073,
+        "copy_length_stream_bits": 6.499845887083206,
+        "item_type_stream_bits": 0.43609911480667357,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 448.5322174939331,
+      "online_inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 19.85964388518495,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 50,
+      "raw_uniform_bits": 468.39186137911804
+    },
+    {
+      "book": 51,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 38.91729578596899,
+        "copy_length_stream_bits": 13.89273253261186,
+        "item_type_stream_bits": 1.172855642263592,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 268,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 13.994963442336633,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 836.2938454689686,
+      "book_bounded_online_reparse_bits": 53.98288396084444,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 268,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 20319.446850178418,
+      "cumulative_online_gain_vs_raw_bits": 20534.302449106075,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 25.922265218644462,
+        "copy_length_stream_bits": 13.198956544751777,
+        "item_type_stream_bits": 0.8666987551115709,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 850.2888089113052,
+      "online_inventory": {
+        "copied_digits": 268,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 39.987920518507806,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 51,
+      "raw_uniform_bits": 890.276729429813
+    },
+    {
+      "book": 52,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 25.99894099370521,
+        "copy_length_stream_bits": 11.829722735086058,
+        "item_type_stream_bits": 0.7685303009680546,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 137,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 5.950014288661258,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 416.50695496980927,
+      "book_bounded_online_reparse_bits": 38.59719402975933,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 137,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 20735.953805148227,
+      "cumulative_online_gain_vs_raw_bits": 20956.759418364545,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 12.998237821888047,
+        "copy_length_stream_bits": 7.442943495848728,
+        "item_type_stream_bits": 1.9619319591664803,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 6.244066464194818
+      },
+      "online_gain_vs_raw_bits": 422.45696925847056,
+      "online_inventory": {
+        "copied_digits": 134,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 32.64717974109807,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 52,
+      "raw_uniform_bits": 455.1041489995686
+    },
+    {
+      "book": 53,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.080849480773473,
+        "copy_length_stream_bits": 13.07681559705083,
+        "item_type_stream_bits": 0.759867396645856,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 271,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 18.156429904480554,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 860.3249812400051,
+      "book_bounded_online_reparse_bits": 39.91753247447016,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 271,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 21596.278786388233,
+      "cumulative_online_gain_vs_raw_bits": 21835.24082950903,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.02167404285837,
+        "copy_length_stream_bits": 8.303780748177102,
+        "item_type_stream_bits": 0.43564777895412987,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 878.4814111444856,
+      "online_inventory": {
+        "copied_digits": 271,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 21.761102569989603,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 53,
+      "raw_uniform_bits": 900.2425137144752
+    },
+    {
+      "book": 54,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.14408600445857,
+        "copy_length_stream_bits": 6.92837032301897,
+        "item_type_stream_bits": 0.7513987026566862,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 57,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.07778658325162979,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 155.52604637844541,
+      "book_bounded_online_reparse_bits": 33.823855030134226,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 57,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 21751.80483276668,
+      "cumulative_online_gain_vs_raw_bits": 21990.84466247073,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.14408600445857,
+        "copy_length_stream_bits": 6.736063627871814,
+        "item_type_stream_bits": 0.8659188145522125,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 155.60383296169707,
+      "online_inventory": {
+        "copied_digits": 57,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 33.746068446882596,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 54,
+      "raw_uniform_bits": 189.34990140857965
+    },
+    {
+      "book": 55,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 39.24575743161209,
+        "copy_length_stream_bits": 20.785123558525264,
+        "item_type_stream_bits": 1.1146765878358886,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 10.418789634139898
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 112,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": -0.038799320400158877,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 313.77931179482084,
+      "book_bounded_online_reparse_bits": 71.56434721211315,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 116,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 22065.5841445615,
+      "cumulative_online_gain_vs_raw_bits": 22304.58517494515,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 39.24575743161209,
+        "copy_length_stream_bits": 20.514775685385302,
+        "item_type_stream_bits": 1.2830451255931998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 10.559568289922709
+      },
+      "online_gain_vs_raw_bits": 313.7405124744207,
+      "online_inventory": {
+        "copied_digits": 112,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 71.6031465325133,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 55,
+      "raw_uniform_bits": 385.343659006934
+    },
+    {
+      "book": 56,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 118.07331481445168,
+        "copy_length_stream_bits": 51.95841812868274,
+        "item_type_stream_bits": 5.083795573468846,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 10.851749041416099
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 263,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": -3.169066545198234,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 693.6655956820189,
+      "book_bounded_online_reparse_bits": 189.96727755801936,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 266,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 22759.24974024352,
+      "cumulative_online_gain_vs_raw_bits": 22995.08170408197,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 118.07331481445168,
+        "copy_length_stream_bits": 54.711470194791424,
+        "item_type_stream_bits": 5.345233015449465,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 11.006326078524978
+      },
+      "online_gain_vs_raw_bits": 690.4965291368208,
+      "online_inventory": {
+        "copied_digits": 263,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 193.1363441032176,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 56,
+      "raw_uniform_bits": 883.6328732400383
+    },
+    {
+      "book": 57,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 78.93814080117232,
+        "copy_length_stream_bits": 41.66686093644167,
+        "item_type_stream_bits": 3.9744972824563947,
+        "literal_length_bits": 7.0,
+        "literal_payload_bits": 104.54566888057175
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 198,
+        "copy_items": 6,
+        "literal_digits": 32,
+        "literal_runs": 2
+      },
+      "book_bounded_minus_online_bits": 3.4388870660371538,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 527.9182939234513,
+      "book_bounded_online_reparse_bits": 236.1251679006421,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 230,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 23287.16803416697,
+      "cumulative_online_gain_vs_raw_bits": 23526.43888507146,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 78.93814080117232,
+        "copy_length_stream_bits": 42.00713239828985,
+        "item_type_stream_bits": 4.061220099873074,
+        "literal_length_bits": 7.0,
+        "literal_payload_bits": 100.67978753526967
+      },
+      "online_gain_vs_raw_bits": 531.3571809894884,
+      "online_inventory": {
+        "copied_digits": 198,
+        "copy_items": 6,
+        "literal_digits": 32,
+        "literal_runs": 2
+      },
+      "online_reparse_bits": 232.68628083460496,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 57,
+      "raw_uniform_bits": 764.0434618240934
+    },
+    {
+      "book": 58,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 39.556834157459946,
+        "copy_length_stream_bits": 20.89577051579223,
+        "item_type_stream_bits": 2.9077704922613083,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.107403916884252
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 269,
+        "copy_items": 3,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 17.95132039523405,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 827.0966627269647,
+      "book_bounded_online_reparse_bits": 76.46777908239774,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 272,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 24114.264696893937,
+      "cumulative_online_gain_vs_raw_bits": 24371.48686819366,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.356548552235644,
+        "copy_length_stream_bits": 16.67700384155642,
+        "item_type_stream_bits": 2.438512174013167,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.044394119358458
+      },
+      "online_gain_vs_raw_bits": 845.0479831221988,
+      "online_inventory": {
+        "copied_digits": 269,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 58.51645868716369,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 58,
+      "raw_uniform_bits": 903.5644418093625
+    },
+    {
+      "book": 59,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 52.93296665132189,
+        "copy_length_stream_bits": 26.08877939813933,
+        "item_type_stream_bits": 1.4286263327933757,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 272,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 21.101107802506007,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 823.1140694271079,
+      "book_bounded_online_reparse_bits": 80.4503723822546,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 272,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 24937.378766321046,
+      "cumulative_online_gain_vs_raw_bits": 25215.702045423273,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 39.703997687919156,
+        "copy_length_stream_bits": 18.420618191560955,
+        "item_type_stream_bits": 1.2246487002684892,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 844.2151772296139,
+      "online_inventory": {
+        "copied_digits": 272,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 59.34926457974859,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 59,
+      "raw_uniform_bits": 903.5644418093625
+    },
+    {
+      "book": 60,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 66.33939124533933,
+        "copy_length_stream_bits": 27.532339842208508,
+        "item_type_stream_bits": 3.615505468972742,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 3.2479275134435857
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 150,
+        "copy_items": 5,
+        "literal_digits": 1,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": -0.39233799605298714,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 396.87597825802754,
+      "book_bounded_online_reparse_bits": 104.73516406996416,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 151,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 25334.254744579073,
+      "cumulative_online_gain_vs_raw_bits": 25612.185685685246,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 66.33939124533933,
+        "copy_length_stream_bits": 27.681183999714378,
+        "item_type_stream_bits": 3.6474952023261435,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 3.4594316186372973
+      },
+      "online_gain_vs_raw_bits": 396.48364026197453,
+      "online_inventory": {
+        "copied_digits": 150,
+        "copy_items": 5,
+        "literal_digits": 1,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 105.12750206601714,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 60,
+      "raw_uniform_bits": 501.6111423279917
+    },
+    {
+      "book": 61,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.577971996455894,
+        "copy_length_stream_bits": 11.536247215688128,
+        "item_type_stream_bits": 0.7025231776910582,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 145,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.6492963503061944,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 442.8628313688324,
+      "book_bounded_online_reparse_bits": 38.816742389835085,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 145,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 25777.117575947905,
+      "cumulative_online_gain_vs_raw_bits": 26055.697813404386,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.577398645215013,
+        "copy_length_stream_bits": 10.790552137805381,
+        "item_type_stream_bits": 0.7994952565084975,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 443.5121277191386,
+      "online_inventory": {
+        "copied_digits": 145,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 38.16744603952889,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 61,
+      "raw_uniform_bits": 481.6795737586675
+    },
+    {
+      "book": 62,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 13.30149619498255,
+        "copy_length_stream_bits": 6.6653359171851765,
+        "item_type_stream_bits": 0.34792330342030686,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.01776124180568317,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 398.2481845402196,
+      "book_bounded_online_reparse_bits": 20.31475541558803,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 126,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 26175.365760488123,
+      "cumulative_online_gain_vs_raw_bits": 26453.963759186412,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.30149619498255,
+        "copy_length_stream_bits": 6.599912842187128,
+        "item_type_stream_bits": 0.39558513661267136,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 398.26594578202526,
+      "online_inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 20.29699417378235,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 62,
+      "raw_uniform_bits": 418.5629399558076
+    },
+    {
+      "book": 63,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.645397953731205,
+        "copy_length_stream_bits": 13.257387842692651,
+        "item_type_stream_bits": 0.6925559126062222,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 126,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.042470999174057056,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 377.9675982467775,
+      "book_bounded_online_reparse_bits": 40.59534170903008,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 126,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 26553.3333587349,
+      "cumulative_online_gain_vs_raw_bits": 26831.973828432365,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.645397953731205,
+        "copy_length_stream_bits": 13.120399895988982,
+        "item_type_stream_bits": 0.7870728601358433,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 378.0100692459516,
+      "online_inventory": {
+        "copied_digits": 126,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 40.55287070985602,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 63,
+      "raw_uniform_bits": 418.5629399558076
+    },
+    {
+      "book": 64,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.684685707252875,
+        "copy_length_stream_bits": 15.007684321621767,
+        "item_type_stream_bits": 0.6860674557980276,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.031149055620986132,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 459.23270484331897,
+      "book_bounded_online_reparse_bits": 42.37843748467267,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 151,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 27012.56606357822,
+      "cumulative_online_gain_vs_raw_bits": 27291.237682331306,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.684685707252875,
+        "copy_length_stream_bits": 14.883597907455396,
+        "item_type_stream_bits": 0.7790048143434127,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 459.26385389894,
+      "online_inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 42.34728842905169,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 64,
+      "raw_uniform_bits": 501.6111423279917
+    },
+    {
+      "book": 65,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.73137326159859,
+        "copy_length_stream_bits": 12.25915476886684,
+        "item_type_stream_bits": 0.6797000057692496,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 7.199672344836301
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 166,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "book_bounded_minus_online_bits": 0.7824743656443616,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 514.5359476548933,
+      "book_bounded_online_reparse_bits": 46.86990038107098,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 169,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 27527.102011233113,
+      "cumulative_online_gain_vs_raw_bits": 27806.556104351843,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 26.731237305791968,
+        "copy_length_stream_bits": 11.425215903299385,
+        "item_type_stream_bits": 0.7711014695569263,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 7.1598713367783375
+      },
+      "online_gain_vs_raw_bits": 515.3184220205376,
+      "online_inventory": {
+        "copied_digits": 166,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "online_reparse_bits": 46.087426015426615,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 65,
+      "raw_uniform_bits": 561.4058480359643
+    },
+    {
+      "book": 66,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 13.381002109550925,
+        "copy_length_stream_bits": 8.233619676759702,
+        "item_type_stream_bits": 0.336725096815443,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 210,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": -0.006090983179515064,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 675.65355304322,
+      "book_bounded_online_reparse_bits": 21.95134688312607,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 210,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 28202.755564276333,
+      "cumulative_online_gain_vs_raw_bits": 28482.203566411885,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.381002109550925,
+        "copy_length_stream_bits": 8.194756854422248,
+        "item_type_stream_bits": 0.38167890233241275,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 675.6474620600405,
+      "online_inventory": {
+        "copied_digits": 210,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 21.957437866305586,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 66,
+      "raw_uniform_bits": 697.6048999263461
+    },
+    {
+      "book": 67,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 26.822356949589853,
+        "copy_length_stream_bits": 14.420618191560955,
+        "item_type_stream_bits": 0.6703683831792583,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 98,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 20.775717490174035,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 283.63560977463146,
+      "book_bounded_online_reparse_bits": 41.913343524330074,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 98,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 28486.391174050965,
+      "cumulative_online_gain_vs_raw_bits": 28786.61489367669,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.409125710465315,
+        "copy_length_stream_bits": 7.348728154231077,
+        "item_type_stream_bits": 0.37977216945964665,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 304.4113272648055,
+      "online_inventory": {
+        "copied_digits": 98,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 21.13762603415604,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 67,
+      "raw_uniform_bits": 325.5489532989615
+    },
+    {
+      "book": 68,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 13.422064766172813,
+        "copy_length_stream_bits": 7.870364719583405,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 143,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.004445747237340925,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 453.41114359220603,
+      "book_bounded_online_reparse_bits": 21.62457397668672,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 143,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 28939.80231764317,
+      "cumulative_online_gain_vs_raw_bits": 29240.030483016133,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.422064766172813,
+        "copy_length_stream_bits": 7.820178962415188,
+        "item_type_stream_bits": 0.37788450086137776,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 453.4155893394434,
+      "online_inventory": {
+        "copied_digits": 143,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 21.620128229449378,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 68,
+      "raw_uniform_bits": 475.0357175688928
+    },
+    {
+      "book": 69,
+      "book_bounded_component_bits": {
+        "copy_address_bits": 13.440739423014273,
+        "copy_length_stream_bits": 7.839203788096944,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "book_bounded_inventory": {
+        "copied_digits": 140,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "book_bounded_minus_online_bits": 0.019046430034578066,
+      "book_bounded_online_beats_raw": true,
+      "book_bounded_online_gain_vs_raw_bits": 443.45934476113104,
+      "book_bounded_online_reparse_bits": 21.610588523099686,
+      "book_bounded_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "book_length_digits": 140,
+      "cumulative_book_bounded_online_gain_vs_raw_bits": 29383.2616624043,
+      "cumulative_online_gain_vs_raw_bits": 29683.5088742073,
+      "online_beats_raw": true,
+      "online_component_bits": {
+        "copy_address_bits": 13.440739423014273,
+        "copy_length_stream_bits": 7.774787059601174,
+        "item_type_stream_bits": 0.3760156104496598,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "online_gain_vs_raw_bits": 443.4783911911656,
+      "online_inventory": {
+        "copied_digits": 140,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "online_reparse_bits": 21.591542093065108,
+      "online_validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      },
+      "prior_train_book_count": 69,
+      "raw_uniform_bits": 465.06993328423073
+    }
+  ],
+  "schema": "online_prefix_book_frontier_audit.v1",
+  "summary": {
+    "after_bootstrap_book_count": 69,
+    "book_bounded_after_bootstrap_beats_raw_count": 69,
+    "book_bounded_after_bootstrap_failure_books": [],
+    "book_bounded_online_beats_raw_count": 69,
+    "book_bounded_online_failure_books": [
+      0
+    ],
+    "book_bounded_roundtrip_book_count": 70,
+    "book_count": 70,
+    "cumulative_book_bounded_break_even_book": 2,
+    "highest_book_boundary_penalty_books": [
+      {
+        "book": 10,
+        "book_bounded_gain_vs_raw_bits": 861.0660468114742,
+        "book_bounded_minus_online_bits": 36.62593683501996
+      },
+      {
+        "book": 31,
+        "book_bounded_gain_vs_raw_bits": 635.8276152788976,
+        "book_bounded_minus_online_bits": 30.36578667166745
+      },
+      {
+        "book": 59,
+        "book_bounded_gain_vs_raw_bits": 823.1140694271079,
+        "book_bounded_minus_online_bits": 21.101107802506007
+      },
+      {
+        "book": 67,
+        "book_bounded_gain_vs_raw_bits": 283.63560977463146,
+        "book_bounded_minus_online_bits": 20.775717490174035
+      },
+      {
+        "book": 42,
+        "book_bounded_gain_vs_raw_bits": 482.4708200548543,
+        "book_bounded_minus_online_bits": 20.373361977564485
+      },
+      {
+        "book": 27,
+        "book_bounded_gain_vs_raw_bits": 372.4805412342919,
+        "book_bounded_minus_online_bits": 18.886951011982674
+      },
+      {
+        "book": 53,
+        "book_bounded_gain_vs_raw_bits": 860.3249812400051,
+        "book_bounded_minus_online_bits": 18.156429904480554
+      },
+      {
+        "book": 58,
+        "book_bounded_gain_vs_raw_bits": 827.0966627269647,
+        "book_bounded_minus_online_bits": 17.95132039523405
+      },
+      {
+        "book": 34,
+        "book_bounded_gain_vs_raw_bits": 237.58063336727844,
+        "book_bounded_minus_online_bits": 16.960409963751886
+      },
+      {
+        "book": 43,
+        "book_bounded_gain_vs_raw_bits": 431.207368287305,
+        "book_bounded_minus_online_bits": 16.701052083349463
+      }
+    ],
+    "interpretation": "The online parser is evaluated at per-book granularity using only previous numeric-order books as external inventory. A book-bounded variant forbids source copies from crossing prior-book boundaries. The only raw-coding failure is the bootstrap book before any prior inventory exists.",
+    "max_book_bounded_minus_online_bits": 36.62593683501996,
+    "mean_book_bounded_minus_online_bits": 4.289245882899931,
+    "mean_book_bounded_online_gain_vs_raw_bits": 419.76088089149005,
+    "mean_online_gain_vs_raw_bits": 424.05012677439004,
+    "min_book_bounded_online_gain_vs_raw_bits": -10.498855747274263,
+    "min_online_gain_vs_raw_bits": -10.498855747274263,
+    "online_after_bootstrap_beats_raw_count": 69,
+    "online_after_bootstrap_failure_books": [],
+    "online_beats_raw_count": 69,
+    "online_failure_books": [
+      0
+    ],
+    "online_roundtrip_book_count": 70,
+    "total_book_bounded_online_gain_vs_raw_bits": 29383.261662404304,
+    "total_online_gain_vs_raw_bits": 29683.508874207302,
+    "weakest_book_bounded_books": [
+      {
+        "book": 0,
+        "book_length_digits": 144,
+        "copied_digits": 16,
+        "gain_vs_raw_bits": -10.498855747274263,
+        "literal_digits": 128,
+        "prior_train_book_count": 0
+      },
+      {
+        "book": 1,
+        "book_length_digits": 92,
+        "copied_digits": 23,
+        "gain_vs_raw_bits": 9.7524857342882,
+        "literal_digits": 69,
+        "prior_train_book_count": 1
+      },
+      {
+        "book": 2,
+        "book_length_digits": 177,
+        "copied_digits": 31,
+        "gain_vs_raw_bits": 43.038411165968796,
+        "literal_digits": 146,
+        "prior_train_book_count": 2
+      },
+      {
+        "book": 3,
+        "book_length_digits": 140,
+        "copied_digits": 48,
+        "gain_vs_raw_bits": 68.70522809665601,
+        "literal_digits": 92,
+        "prior_train_book_count": 3
+      },
+      {
+        "book": 25,
+        "book_length_digits": 35,
+        "copied_digits": 32,
+        "gain_vs_raw_bits": 85.07519782706561,
+        "literal_digits": 3,
+        "prior_train_book_count": 25
+      },
+      {
+        "book": 20,
+        "book_length_digits": 63,
+        "copied_digits": 63,
+        "gain_vs_raw_bits": 96.76741441553484,
+        "literal_digits": 0,
+        "prior_train_book_count": 20
+      },
+      {
+        "book": 49,
+        "book_length_digits": 115,
+        "copied_digits": 90,
+        "gain_vs_raw_bits": 129.3482203601685,
+        "literal_digits": 25,
+        "prior_train_book_count": 49
+      },
+      {
+        "book": 54,
+        "book_length_digits": 57,
+        "copied_digits": 57,
+        "gain_vs_raw_bits": 155.52604637844541,
+        "literal_digits": 0,
+        "prior_train_book_count": 54
+      },
+      {
+        "book": 39,
+        "book_length_digits": 59,
+        "copied_digits": 52,
+        "gain_vs_raw_bits": 155.9274156758148,
+        "literal_digits": 7,
+        "prior_train_book_count": 39
+      },
+      {
+        "book": 7,
+        "book_length_digits": 106,
+        "copied_digits": 82,
+        "gain_vs_raw_bits": 191.69262627494953,
+        "literal_digits": 24,
+        "prior_train_book_count": 7
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}

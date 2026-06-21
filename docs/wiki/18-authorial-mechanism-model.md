@@ -945,6 +945,14 @@ family-labeled books, with mean gain `460.251` bits. Same-family source
 memorization is therefore not required for the singleton signal, although the
 result remains mechanical redundancy evidence rather than a final authorial
 method.
+An online prefix book frontier audit then decomposes the deterministic online
+formula at target-book granularity. Under the previous-books-only constraint,
+the book-bounded variant roundtrips `70/70`, beats raw in `69/70`, and the only
+failure is the cold-start book `0`, before any prior-book inventory exists.
+After that bootstrap, it beats raw in `69/69`; cumulative book-bounded gain
+crosses break-even at book `2`, with mean gain `419.761` bits. This is the
+strongest current sequential generation frontier, still without deriving row0
+or plaintext.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1391,6 +1399,7 @@ book generation, not row0 pair-cell placement.
 - [Leave-one-book-out source attribution audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.md)
 - [Leave-one-book-out book-bounded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md)
 - [Leave-one-book-out family-excluded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md)
+- [Online prefix book frontier audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
