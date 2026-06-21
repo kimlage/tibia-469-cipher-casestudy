@@ -220,6 +220,15 @@ and beat raw digit-uniform cost. The tradeoff is explicit: the mode costs
 `26` and `34` unstable. This is therefore a structural simplification candidate
 for the generator explanation, not a compression-bound promotion.
 
+The residual tradeoff audit clarifies the candidate boundary. The best
+neutralized mode resolves `11` of the `12` active learned-path instabilities,
+but it does not simply dominate the active parser: book `34` remains unstable
+and book `26` becomes newly unstable. Uniformizing the entire source model
+changes the residual pair to books `35` and `45`, but costs an additional
+`367.448154` parser bits over the best neutralized mode. The source flag is
+therefore not promoted; the remaining structural question is a narrow residual
+mechanism for books `26` and `34`.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

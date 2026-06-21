@@ -285,6 +285,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Boundary policy stability gate | fixed simple boundary policies are repriced over the `12` unstable books and `37` cutoff observations; the best structural policy reaches only `16/37` exact matches with `8.984788` regret bits, and even the audit-only oracle reaches only `18/37` | rejected boundary-rule shortcut / blocker remains |
 | Boundary instability cost decomposition | `47` losing observed variants are compared against their per-cutoff parser winners; dominant positive components are `copy_length` in `30`, `copy_source_exception` in `12`, `literal_payload` in `4`, and `copy_source_flag` in `1` | blocker localized to learned length/source-exception costs |
 | Component-neutralized path stability | uniform decodable copy-length and source-exception costs improve exact multi-cutoff path stability from `38/50` to `48/50` with `175/175` roundtrip/raw-positive evaluations, at `+67.605622` parser bits and residual instability in books `26` and `34` | structural simplification candidate / no bound promotion |
+| Component-neutralized residual tradeoff | the best neutralized mode resolves `11/12` active unstable books, keeps book `34` unstable, and introduces book `26`; full-source uniformization changes the residuals to `35`/`45` but costs another `+367.448154` bits | candidate not final / source flag not promoted |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -436,6 +437,7 @@ Primary sources:
 [boundary_policy_stability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/80_boundary_policy_stability_gate.md),
 [boundary_instability_cost_decomposition_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/81_boundary_instability_cost_decomposition_gate.md),
 [component_neutralized_path_stability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/82_component_neutralized_path_stability_gate.md),
+[component_neutralized_residual_tradeoff_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/83_component_neutralized_residual_tradeoff_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

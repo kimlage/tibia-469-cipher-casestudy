@@ -1,0 +1,2268 @@
+{
+  "case_reopened": false,
+  "classification": "component_neutralization_tradeoff_localized",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "simplification_candidate_with_two_residual_books",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "component_neutralized_tradeoff_not_final",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate82_component_neutralized_path_stability": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/82_component_neutralized_path_stability_gate.json",
+    "gate82_replay_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/82_component_neutralized_path_stability_gate.py"
+  },
+  "plaintext_claim": false,
+  "schema": "component_neutralized_residual_tradeoff_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "full_source_control_mode": "uniform_copy_length_and_full_source",
+    "mode_compared_to_active": "uniform_copy_length_and_source_exception",
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "active_unstable_books": [
+      21,
+      24,
+      28,
+      30,
+      34,
+      35,
+      39,
+      46,
+      51,
+      56,
+      61,
+      65
+    ],
+    "best_parser_bits_delta_vs_active": 67.6056223853102,
+    "best_stable_delta_vs_active": 10,
+    "best_unstable_books": [
+      26,
+      34
+    ],
+    "book_rows": [
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 176,
+                "copy_sources": [
+                  197,
+                  2114,
+                  2275
+                ],
+                "length_sequence": [
+                  7,
+                  135,
+                  34
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 55.46153057563602
+              },
+              "signature": "3d67956f8f5b3285"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 176,
+                "copy_sources": [
+                  197,
+                  2114,
+                  2273
+                ],
+                "length_sequence": [
+                  7,
+                  133,
+                  36
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 54.926563938644804
+              },
+              "signature": "45e96b26269960af"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 176,
+                "copy_sources": [
+                  197,
+                  2116,
+                  2277
+                ],
+                "length_sequence": [
+                  9,
+                  135,
+                  32
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 56.8212172269623,
+                "20": 56.902034653721124
+              },
+              "signature": "f687c204e01f2662"
+            }
+          ]
+        },
+        "book": 21,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 176,
+                "copy_sources": [
+                  197,
+                  2116,
+                  2277
+                ],
+                "length_sequence": [
+                  9,
+                  135,
+                  32
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 59.74723106425949,
+                "20": 59.78344956116121
+              },
+              "signature": "f687c204e01f2662"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 119,
+                "copy_sources": [
+                  2119,
+                  3507,
+                  3401
+                ],
+                "length_sequence": [
+                  37,
+                  70,
+                  12
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 56.27688565472161
+              },
+              "signature": "e213fe1406e7f85b"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 119,
+                "copy_sources": [
+                  2119,
+                  3506,
+                  3401
+                ],
+                "length_sequence": [
+                  36,
+                  71,
+                  12
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 55.807524884819856
+              },
+              "signature": "e1475f1a390e1c76"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 119,
+                "copy_sources": [
+                  2119,
+                  3507,
+                  3401
+                ],
+                "length_sequence": [
+                  37,
+                  70,
+                  12
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 53.94223735665079,
+                "20": 54.02305478340962
+              },
+              "signature": "e213fe1406e7f85b"
+            }
+          ]
+        },
+        "book": 24,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 119,
+                "copy_sources": [
+                  2119,
+                  3507,
+                  3401
+                ],
+                "length_sequence": [
+                  37,
+                  70,
+                  12
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 56.868251193947984,
+                "20": 56.90446969084971
+              },
+              "signature": "e213fe1406e7f85b"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 170,
+                "copy_sources": [
+                  3054,
+                  822,
+                  1386,
+                  3402
+                ],
+                "length_sequence": [
+                  11,
+                  10,
+                  6,
+                  143
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 74.53715335826342,
+                "20": 74.33104558021569
+              },
+              "signature": "920c569dd09c8bd0"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 170,
+                "copy_sources": [
+                  3054,
+                  822,
+                  1386,
+                  3402
+                ],
+                "length_sequence": [
+                  11,
+                  10,
+                  6,
+                  143
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 79.5399524334699
+              },
+              "signature": "920c569dd09c8bd0"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 165,
+                "copy_sources": [
+                  3054,
+                  822,
+                  3401
+                ],
+                "length_sequence": [
+                  11,
+                  10,
+                  5,
+                  144
+                ],
+                "literal_digits": 5,
+                "type_sequence": "CCLC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 78.41728935780434
+              },
+              "signature": "ab749cd0c019e80d"
+            }
+          ]
+        },
+        "book": 26,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 165,
+                "copy_sources": [
+                  3054,
+                  822,
+                  3401
+                ],
+                "length_sequence": [
+                  11,
+                  10,
+                  5,
+                  144
+                ],
+                "literal_digits": 5,
+                "type_sequence": "CCLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 82.90372090527498,
+                "20": 81.29870426524442
+              },
+              "signature": "ab749cd0c019e80d"
+            }
+          ]
+        },
+        "status": "introduced_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 146,
+                "copy_sources": [
+                  744,
+                  2778,
+                  2160,
+                  2821,
+                  2397
+                ],
+                "length_sequence": [
+                  89,
+                  6,
+                  12,
+                  21,
+                  18
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 89.57426091119223
+              },
+              "signature": "8cb38b3003324679"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 146,
+                "copy_sources": [
+                  744,
+                  2778,
+                  2161,
+                  2821,
+                  2397
+                ],
+                "length_sequence": [
+                  89,
+                  7,
+                  11,
+                  21,
+                  18
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 90.64898778090101
+              },
+              "signature": "ee53cae37f654670"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 146,
+                "copy_sources": [
+                  744,
+                  2778,
+                  2161,
+                  2821,
+                  2397
+                ],
+                "length_sequence": [
+                  89,
+                  7,
+                  11,
+                  21,
+                  18
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 91.19385494602123,
+                "20": 91.32855065728594
+              },
+              "signature": "ee53cae37f654670"
+            }
+          ]
+        },
+        "book": 28,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 146,
+                "copy_sources": [
+                  744,
+                  2778,
+                  2161,
+                  2821,
+                  2397
+                ],
+                "length_sequence": [
+                  89,
+                  7,
+                  11,
+                  21,
+                  18
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 96.07054467484988,
+                "20": 96.13090883635276
+              },
+              "signature": "ee53cae37f654670"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 150,
+                "copy_sources": [
+                  4065,
+                  255,
+                  2160,
+                  2232,
+                  2118,
+                  2197
+                ],
+                "length_sequence": [
+                  17,
+                  6,
+                  37,
+                  20,
+                  42,
+                  28
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 115.55791197326346
+              },
+              "signature": "efd825fa783e1134"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 144,
+                "copy_sources": [
+                  4065,
+                  2160,
+                  2232,
+                  2117,
+                  2197
+                ],
+                "length_sequence": [
+                  17,
+                  6,
+                  37,
+                  19,
+                  43,
+                  28
+                ],
+                "literal_digits": 6,
+                "type_sequence": "CLCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 113.74653892208008
+              },
+              "signature": "c6ce2b68e2686234"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 144,
+                "copy_sources": [
+                  4065,
+                  2160,
+                  2232,
+                  2118,
+                  2197
+                ],
+                "length_sequence": [
+                  17,
+                  6,
+                  37,
+                  20,
+                  42,
+                  28
+                ],
+                "literal_digits": 6,
+                "type_sequence": "CLCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 112.30629755840953,
+                "20": 110.38558793250513
+              },
+              "signature": "2829e24c3f231526"
+            }
+          ]
+        },
+        "book": 30,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 144,
+                "copy_sources": [
+                  4065,
+                  2160,
+                  2232,
+                  2118,
+                  2197
+                ],
+                "length_sequence": [
+                  17,
+                  6,
+                  37,
+                  20,
+                  42,
+                  28
+                ],
+                "literal_digits": 6,
+                "type_sequence": "CLCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 117.18298728723815,
+                "20": 115.18794611157195
+              },
+              "signature": "2829e24c3f231526"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 116,
+                "copy_sources": [
+                  505,
+                  2965,
+                  511,
+                  129,
+                  475,
+                  183,
+                  492
+                ],
+                "length_sequence": [
+                  4,
+                  6,
+                  45,
+                  3,
+                  11,
+                  22,
+                  14,
+                  5,
+                  13
+                ],
+                "literal_digits": 7,
+                "type_sequence": "LCCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 156.25307336072072
+              },
+              "signature": "e99aa6f75bb6e35a"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 110,
+                "copy_sources": [
+                  2965,
+                  511,
+                  129,
+                  475,
+                  183,
+                  492
+                ],
+                "length_sequence": [
+                  10,
+                  45,
+                  3,
+                  11,
+                  22,
+                  14,
+                  5,
+                  13
+                ],
+                "literal_digits": 13,
+                "type_sequence": "LCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 154.1126061846831
+              },
+              "signature": "f82f5fc3fbe15a4a"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 110,
+                "copy_sources": [
+                  2965,
+                  511,
+                  129,
+                  476,
+                  183,
+                  492
+                ],
+                "length_sequence": [
+                  10,
+                  45,
+                  3,
+                  11,
+                  23,
+                  13,
+                  5,
+                  13
+                ],
+                "literal_digits": 13,
+                "type_sequence": "LCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 155.74216585949108
+              },
+              "signature": "9f1e2914cde2f0d0"
+            },
+            {
+              "cutoffs": [
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 105,
+                "copy_sources": [
+                  2965,
+                  511,
+                  129,
+                  476,
+                  492
+                ],
+                "length_sequence": [
+                  10,
+                  45,
+                  3,
+                  11,
+                  23,
+                  13,
+                  5,
+                  13
+                ],
+                "literal_digits": 18,
+                "type_sequence": "LCLCCCLC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 155.4030244874224
+              },
+              "signature": "aae9cf8e156e238f"
+            }
+          ]
+        },
+        "book": 34,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 105,
+                "copy_sources": [
+                  2965,
+                  511,
+                  129,
+                  476,
+                  492
+                ],
+                "length_sequence": [
+                  10,
+                  45,
+                  3,
+                  11,
+                  23,
+                  13,
+                  5,
+                  13
+                ],
+                "literal_digits": 18,
+                "type_sequence": "LCLCCCLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 160.75309363379108,
+                "20": 160.20538266648924
+              },
+              "signature": "aae9cf8e156e238f"
+            }
+          ]
+        },
+        "status": "persistent_in_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 286,
+                "copy_sources": [
+                  881,
+                  16
+                ],
+                "length_sequence": [
+                  28,
+                  258
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 40.299693010852934,
+                "20": 39.3797121576986
+              },
+              "signature": "9ad7a00cacd455fa"
+            },
+            {
+              "cutoffs": [
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 286,
+                "copy_sources": [
+                  5146,
+                  147
+                ],
+                "length_sequence": [
+                  159,
+                  127
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "35": 38.9715068514536
+              },
+              "signature": "9503157fe0c3c10a"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 286,
+                "copy_sources": [
+                  5146,
+                  147
+                ],
+                "length_sequence": [
+                  159,
+                  127
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 41.23708139184315,
+                "20": 41.29095967634903,
+                "35": 40.88572990941475
+              },
+              "signature": "9503157fe0c3c10a"
+            }
+          ]
+        },
+        "book": 35,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 279,
+                "copy_sources": [
+                  1696
+                ],
+                "length_sequence": [
+                  7,
+                  279
+                ],
+                "literal_digits": 7,
+                "type_sequence": "LC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 43.11524537646621,
+                "20": 42.930303543384184
+              },
+              "signature": "17e4d39bc354cddf"
+            },
+            {
+              "cutoffs": [
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 286,
+                "copy_sources": [
+                  5146,
+                  147
+                ],
+                "length_sequence": [
+                  159,
+                  127
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "35": 42.83435662208745
+              },
+              "signature": "9503157fe0c3c10a"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 57,
+                "copy_sources": [
+                  2520,
+                  2525
+                ],
+                "length_sequence": [
+                  5,
+                  2,
+                  52
+                ],
+                "literal_digits": 2,
+                "type_sequence": "CLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 39.57880081932022,
+                "20": 38.65481268989216
+              },
+              "signature": "ce5b37868920b08f"
+            },
+            {
+              "cutoffs": [
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 52,
+                "copy_sources": [
+                  2525
+                ],
+                "length_sequence": [
+                  7,
+                  52
+                ],
+                "literal_digits": 7,
+                "type_sequence": "LC"
+              },
+              "parser_bits_by_cutoff": {
+                "35": 38.47797464391341
+              },
+              "signature": "51d57fd93b8c610f"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 57,
+                "copy_sources": [
+                  2520,
+                  2525
+                ],
+                "length_sequence": [
+                  5,
+                  2,
+                  52
+                ],
+                "literal_digits": 2,
+                "type_sequence": "CLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 39.56546950660616,
+                "20": 38.62988781558419,
+                "35": 39.12624592753879
+              },
+              "signature": "ce5b37868920b08f"
+            }
+          ]
+        },
+        "book": 39,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 57,
+                "copy_sources": [
+                  2520,
+                  2525
+                ],
+                "length_sequence": [
+                  5,
+                  2,
+                  52
+                ],
+                "literal_digits": 2,
+                "type_sequence": "CLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 35.65816440301005,
+                "20": 35.3809060857686,
+                "35": 35.27613084845859
+              },
+              "signature": "ce5b37868920b08f"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 149,
+                "copy_sources": [
+                  2972,
+                  2850,
+                  3033
+                ],
+                "length_sequence": [
+                  62,
+                  8,
+                  79
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 60.12513168110161,
+                "20": 60.23650245941383,
+                "35": 58.664435517825105
+              },
+              "signature": "4c322f935fac2e0c"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 149,
+                "copy_sources": [
+                  2972,
+                  2850,
+                  3033
+                ],
+                "length_sequence": [
+                  62,
+                  8,
+                  79
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 60.09003571343625,
+                "20": 60.17085314019508,
+                "35": 59.56300848979365
+              },
+              "signature": "4c322f935fac2e0c"
+            }
+          ]
+        },
+        "book": 45,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 140,
+                "copy_sources": [
+                  2972,
+                  3034
+                ],
+                "length_sequence": [
+                  62,
+                  9,
+                  78
+                ],
+                "literal_digits": 9,
+                "type_sequence": "CLC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 57.858414522972275,
+                "35": 58.164170660798575
+              },
+              "signature": "7e911f463b9168e8"
+            },
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 140,
+                "copy_sources": [
+                  2972,
+                  3033
+                ],
+                "length_sequence": [
+                  61,
+                  9,
+                  79
+                ],
+                "literal_digits": 9,
+                "type_sequence": "CLC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 61.43119115629634
+              },
+              "signature": "de14f49ef2e90998"
+            }
+          ]
+        },
+        "status": "full_source_only_residual"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 253,
+                "copy_sources": [
+                  6987,
+                  2320,
+                  701
+                ],
+                "length_sequence": [
+                  124,
+                  19,
+                  110
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "20": 60.169752728849865,
+                "35": 59.59674100668019
+              },
+              "signature": "082d332652d09d96"
+            },
+            {
+              "cutoffs": [
+                10
+              ],
+              "op_profile": {
+                "copied_digits": 253,
+                "copy_sources": [
+                  6987,
+                  2320,
+                  695
+                ],
+                "length_sequence": [
+                  124,
+                  13,
+                  116
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 60.1374439776009
+              },
+              "signature": "ed189d1ff20e1df0"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 253,
+                "copy_sources": [
+                  6987,
+                  2320,
+                  702
+                ],
+                "length_sequence": [
+                  124,
+                  20,
+                  109
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 61.01156350744478,
+                "20": 61.092380934203604,
+                "35": 60.48453628380218
+              },
+              "signature": "694bcf46b09a46d7"
+            }
+          ]
+        },
+        "book": 46,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 253,
+                "copy_sources": [
+                  6987,
+                  2320,
+                  702
+                ],
+                "length_sequence": [
+                  124,
+                  20,
+                  109
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 63.93757734474197,
+                "20": 63.97379584164369,
+                "35": 63.40747635281123
+              },
+              "signature": "694bcf46b09a46d7"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 268,
+                "copy_sources": [
+                  6977,
+                  7235
+                ],
+                "length_sequence": [
+                  134,
+                  134
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 42.33465103383144,
+                "20": 42.40643227643134,
+                "35": 42.02218610165427
+              },
+              "signature": "3d8ce3a7f7ec8553"
+            },
+            {
+              "cutoffs": [
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 268,
+                "copy_sources": [
+                  6977,
+                  7228
+                ],
+                "length_sequence": [
+                  127,
+                  141
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "50": 40.72138698264061
+              },
+              "signature": "50e022dfd76cf1c8"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 268,
+                "copy_sources": [
+                  6977,
+                  7235
+                ],
+                "length_sequence": [
+                  134,
+                  134
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 42.31410522775154,
+                "20": 42.367983512257425,
+                "35": 41.96275374532314,
+                "50": 41.94378694268292
+              },
+              "signature": "3d8ce3a7f7ec8553"
+            }
+          ]
+        },
+        "book": 51,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 268,
+                "copy_sources": [
+                  6977,
+                  7235
+                ],
+                "length_sequence": [
+                  134,
+                  134
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 44.264781119283,
+                "20": 44.28892678388415,
+                "35": 43.91138045799584,
+                "50": 43.86211950766576
+              },
+              "signature": "3d8ce3a7f7ec8553"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 263,
+                "copy_sources": [
+                  2272,
+                  2177,
+                  4068,
+                  2312,
+                  2234,
+                  6053,
+                  2167,
+                  2157,
+                  242
+                ],
+                "length_sequence": [
+                  40,
+                  36,
+                  53,
+                  9,
+                  3,
+                  13,
+                  72,
+                  10,
+                  9,
+                  21
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCCCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 198.24460159703182,
+                "20": 198.01380741507478,
+                "35": 196.02292174658274
+              },
+              "signature": "01a0656cc3c5fb37"
+            },
+            {
+              "cutoffs": [
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 263,
+                "copy_sources": [
+                  2272,
+                  2177,
+                  4068,
+                  2312,
+                  2234,
+                  6052,
+                  2167,
+                  2157,
+                  241
+                ],
+                "length_sequence": [
+                  40,
+                  36,
+                  53,
+                  9,
+                  3,
+                  12,
+                  73,
+                  10,
+                  8,
+                  22
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCCCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "50": 193.61107993247114
+              },
+              "signature": "fef1188b432b704b"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 263,
+                "copy_sources": [
+                  2272,
+                  2177,
+                  4068,
+                  2312,
+                  2234,
+                  6053,
+                  2167,
+                  2157,
+                  242
+                ],
+                "length_sequence": [
+                  40,
+                  36,
+                  53,
+                  9,
+                  3,
+                  13,
+                  72,
+                  10,
+                  9,
+                  21
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCCCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 198.16167932393256,
+                "20": 198.85857981533212,
+                "35": 196.78288858003714,
+                "50": 196.86014366726857
+              },
+              "signature": "01a0656cc3c5fb37"
+            }
+          ]
+        },
+        "book": 56,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 263,
+                "copy_sources": [
+                  2272,
+                  2177,
+                  4068,
+                  2312,
+                  2234,
+                  6053,
+                  2167,
+                  2157,
+                  242
+                ],
+                "length_sequence": [
+                  40,
+                  36,
+                  53,
+                  9,
+                  3,
+                  13,
+                  72,
+                  10,
+                  9,
+                  21
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCCCLCCCCC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 206.93972083582415,
+                "20": 207.50282453765237,
+                "35": 205.55170878706434,
+                "50": 205.4926402096914
+              },
+              "signature": "01a0656cc3c5fb37"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                35,
+                50,
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 145,
+                "copy_sources": [
+                  4514,
+                  3033
+                ],
+                "length_sequence": [
+                  112,
+                  33
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "35": 38.594952581701975,
+                "50": 37.624224785498356,
+                "60": 37.038697119479224
+              },
+              "signature": "dc08d5469e078553"
+            },
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 145,
+                "copy_sources": [
+                  4514,
+                  3043
+                ],
+                "length_sequence": [
+                  122,
+                  23
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 39.30658885691348,
+                "20": 39.37476170886111
+              },
+              "signature": "fdeb0d8988185207"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50,
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 145,
+                "copy_sources": [
+                  4514,
+                  3043
+                ],
+                "length_sequence": [
+                  122,
+                  23
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 39.290206193578896,
+                "20": 39.34408447808478,
+                "35": 38.9388547111505,
+                "50": 38.919887908510276,
+                "60": 38.84079847295645
+              },
+              "signature": "fdeb0d8988185207"
+            }
+          ]
+        },
+        "book": 61,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50,
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 145,
+                "copy_sources": [
+                  4514,
+                  3043
+                ],
+                "length_sequence": [
+                  122,
+                  23
+                ],
+                "literal_digits": 0,
+                "type_sequence": "CC"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 41.24088208511036,
+                "20": 41.26502774971151,
+                "35": 40.88748142382319,
+                "50": 40.83822047349311,
+                "60": 40.769256210912815
+              },
+              "signature": "fdeb0d8988185207"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      },
+      {
+        "active": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 4,
+          "stable_exact_path": false,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  3043
+                ],
+                "length_sequence": [
+                  125,
+                  41,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 49.6061872945861,
+                "20": 49.779416714366945
+              },
+              "signature": "eaf0b833144ee1c3"
+            },
+            {
+              "cutoffs": [
+                35
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  3033
+                ],
+                "length_sequence": [
+                  115,
+                  51,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "35": 48.75799808684888
+              },
+              "signature": "1792f6a37c523309"
+            },
+            {
+              "cutoffs": [
+                50
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  7028
+                ],
+                "length_sequence": [
+                  111,
+                  55,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "50": 48.24392329536552
+              },
+              "signature": "17f495347bea8db8"
+            },
+            {
+              "cutoffs": [
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  7029
+                ],
+                "length_sequence": [
+                  112,
+                  54,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "60": 46.82631377496156
+              },
+              "signature": "5bea3cd9dc3c044a"
+            }
+          ]
+        },
+        "best": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50,
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  3043
+                ],
+                "length_sequence": [
+                  125,
+                  41,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 49.59065482109951,
+                "20": 49.750327769627994,
+                "35": 49.39240371747207,
+                "50": 49.37343691483185,
+                "60": 47.45562838631105
+              },
+              "signature": "eaf0b833144ee1c3"
+            }
+          ]
+        },
+        "book": 65,
+        "full_source": {
+          "cutoffs": [
+            10,
+            20,
+            35,
+            50,
+            60
+          ],
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variants": [
+            {
+              "cutoffs": [
+                10,
+                20,
+                35,
+                50,
+                60
+              ],
+              "op_profile": {
+                "copied_digits": 166,
+                "copy_sources": [
+                  4511,
+                  3043
+                ],
+                "length_sequence": [
+                  125,
+                  41,
+                  3
+                ],
+                "literal_digits": 3,
+                "type_sequence": "CCL"
+              },
+              "parser_bits_by_cutoff": {
+                "10": 51.54133071263097,
+                "20": 51.67127104125472,
+                "35": 51.34103043014477,
+                "50": 51.29176947981469,
+                "60": 49.38408612426741
+              },
+              "signature": "eaf0b833144ee1c3"
+            }
+          ]
+        },
+        "status": "resolved_by_best"
+      }
+    ],
+    "full_source_extra_cost_vs_best": 367.4481540458746,
+    "full_source_parser_bits_delta_vs_active": 435.0537764311848,
+    "full_source_replaced_residual_books": [
+      26,
+      34,
+      35,
+      45
+    ],
+    "full_source_unstable_books": [
+      35,
+      45
+    ],
+    "interpretation": "Uniform copy-length/source-exception scoring resolves most active learned-path instabilities, but the gain is not a full mechanism closure: book 34 remains unstable and book 26 becomes newly unstable. Full source uniformization changes the residual pair but costs far more, so the source flag is not promoted as the next simplification.",
+    "introduced_by_best_books": [
+      26
+    ],
+    "persistent_in_best_books": [
+      34
+    ],
+    "resolved_by_best_books": [
+      21,
+      24,
+      28,
+      30,
+      35,
+      39,
+      46,
+      51,
+      56,
+      61,
+      65
+    ],
+    "resolved_by_best_count": 11
+  },
+  "translation_delta": "NONE"
+}

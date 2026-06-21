@@ -694,6 +694,12 @@ multi-cutoff path stability from `38/50` to `48/50` while preserving `175/175`
 roundtrip/raw-positive evaluations. The cost is `+67.605622` parser bits and
 residual instability in books `26` and `34`, so this is a generator-explanation
 candidate, not a compression-bound promotion.
+A residual tradeoff audit then shows why that candidate is not final: it
+resolves `11/12` active learned-path instabilities, but book `34` persists and
+book `26` is newly introduced. Uniformizing the full source model changes the
+residual pair to `35`/`45` at another `+367.448154` bits over the best
+neutralized mode, so source-flag uniformization is rejected as the next
+simplification.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -877,6 +883,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   tests uniform copy-length/source-exception costs as a structural
   simplification (`48/50` stable, `+67.605622` parser bits, books `26`/`34`
   still unstable),
+  localizes the residual tradeoff (`11/12` active instabilities resolved,
+  `34` persistent, `26` introduced; full-source uniformization rejected),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

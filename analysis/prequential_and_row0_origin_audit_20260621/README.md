@@ -262,6 +262,9 @@ exogenous.
 - [scripts/82_component_neutralized_path_stability_gate.py](scripts/82_component_neutralized_path_stability_gate.py) - reruns multi-cutoff path stability after uniformizing learned copy-length/source-exception costs.
 - [reports/test_results/82_component_neutralized_path_stability_gate.md](reports/test_results/82_component_neutralized_path_stability_gate.md) - component-neutralized path stability result.
 - [reports/test_results/82_component_neutralized_path_stability_gate.json](reports/test_results/82_component_neutralized_path_stability_gate.json) - structured component-neutralization ledger.
+- [scripts/83_component_neutralized_residual_tradeoff_audit.py](scripts/83_component_neutralized_residual_tradeoff_audit.py) - localizes resolved, persistent, introduced, and full-source residual instabilities after component neutralization.
+- [reports/test_results/83_component_neutralized_residual_tradeoff_audit.md](reports/test_results/83_component_neutralized_residual_tradeoff_audit.md) - residual tradeoff result.
+- [reports/test_results/83_component_neutralized_residual_tradeoff_audit.json](reports/test_results/83_component_neutralized_residual_tradeoff_audit.json) - structured residual tradeoff ledger.
 
 ## Boundary
 
@@ -539,6 +542,12 @@ exogenous.
   `48/50`, with `175/175` roundtrip/raw-positive evaluations, but pays
   `+67.605622` parser bits and still leaves books `26` and `34` unstable. This
   is a structural simplification candidate, not a compression-bound promotion.
+- The residual tradeoff audit then separates that `48/50` result: the best
+  neutralized mode resolves `11` of the `12` active unstable books, keeps book
+  `34` unstable, and introduces book `26` as a new instability. Full-source
+  uniformization changes the residual pair to books `35` and `45` but costs
+  another `+367.448154` bits over the best mode, so source-flag uniformization
+  is not promoted.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
