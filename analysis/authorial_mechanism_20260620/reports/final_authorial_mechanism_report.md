@@ -735,5 +735,10 @@ Generated audits in this directory should be treated as the current state:
   with a legal prior copy, leaving any literal suffix intact. It scores `74`
   candidates across `5` eligible starts under the full active ledger; none
   improves, and the best is `+1.180` bits worse.
+- `151_cross_op_optional_literal_copy_frontier`: expands that repair family so
+  the replacement copy may cross the literal boundary and consume following
+  operations. It scores `465` valid cross-op candidates; none improves, and
+  the best is only `+0.027` bits worse than active. This keeps the active
+  parser choice while showing the frontier is tight.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -463,6 +463,9 @@ The optional literal copy repair frontier then checks the simplest repair:
 single in-literal copy-prefix substitutions for eligible optional starts. It
 scores `74` candidates across `5` starts; none improves, and the best remains
 `+1.180` bits worse under the active ledger.
+The cross-op optional literal copy frontier then allows those replacement
+copies to consume following operations. It scores `465` valid candidates; none
+improves, and the best is only `+0.027` bits worse than active.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

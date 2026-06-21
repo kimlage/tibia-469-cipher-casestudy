@@ -1006,6 +1006,11 @@ legal prior copy. It scores `74` candidates across `5` eligible starts under
 the full active ledger; no candidate improves, and the best remains `+1.180`
 bits worse. Broader repairs crossing operation boundaries remain a separate
 frontier.
+The cross-op optional literal copy frontier then tests that broader local
+family. It permits a replacement copy to cross the literal boundary and consume
+following operations before trimming the remaining recipe. It scores `465`
+valid candidates; none improves, and the best is only `+0.027` bits worse than
+active, so the active parser remains retained for this local frontier.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1314,6 +1319,7 @@ book generation, not row0 pair-cell placement.
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
 - [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)
+- [Cross-op optional literal copy frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

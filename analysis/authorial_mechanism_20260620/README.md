@@ -406,6 +406,9 @@ authorial method: family/bookcase holdouts still have failures.
 - `scripts/150_optional_literal_copy_repair_frontier.py` - tests single
   in-literal copy-prefix repairs for the optional literal starts; all `74`
   scored candidates are worse, with the best still `+1.180` bits.
+- `scripts/151_cross_op_optional_literal_copy_frontier.py` - allows optional
+  literal copy repairs to cross into following operations; all `465` valid
+  candidates are still worse, with the best only `+0.027` bits.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
