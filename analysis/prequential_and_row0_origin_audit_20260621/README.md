@@ -40,6 +40,9 @@ exogenous.
 - [scripts/08_recipe_reparse_family_holdout.py](scripts/08_recipe_reparse_family_holdout.py) - tests deterministic reparse under public-bookcase family holdout.
 - [reports/test_results/08_recipe_reparse_family_holdout.md](reports/test_results/08_recipe_reparse_family_holdout.md) - family holdout recipe-reparse result.
 - [reports/test_results/08_recipe_reparse_family_holdout.json](reports/test_results/08_recipe_reparse_family_holdout.json) - structured family holdout ledger.
+- [scripts/09_recipe_reparse_family_loss_decomposition.py](scripts/09_recipe_reparse_family_loss_decomposition.py) - decomposes the five family holdout losses against the active frozen recipe.
+- [reports/test_results/09_recipe_reparse_family_loss_decomposition.md](reports/test_results/09_recipe_reparse_family_loss_decomposition.md) - family loss component diagnosis.
+- [reports/test_results/09_recipe_reparse_family_loss_decomposition.json](reports/test_results/09_recipe_reparse_family_loss_decomposition.json) - structured family loss ledger.
 
 ## Boundary
 
@@ -59,6 +62,9 @@ exogenous.
   Public-bookcase family holdout further strengthens the recipe signal:
   deterministic reparse beats raw digits in `19/19` families and in `3/3`
   component-failure families, while beating the active frozen recipe in `14/19`.
+  The five remaining active-recipe wins are now localized: all roundtrip, all
+  still beat raw digits, and four are dominated by copy-address overhead rather
+  than changed literal/copy inventory.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

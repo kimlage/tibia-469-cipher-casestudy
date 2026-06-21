@@ -393,6 +393,9 @@ random-train mean/max at `2/3` cutoffs and loses at cutoff `60`.
 Public-bookcase family holdout strengthens the recipe-discovery side:
 deterministic reparse beats raw digits in `19/19` families and `3/3`
 component-failure families, while beating the active frozen recipe in `14/19`.
+A family-loss decomposition then localizes the five remaining active-recipe
+wins: all roundtrip and beat raw digits; four are dominated by copy-address
+overhead, and one is an exact tie.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -569,7 +572,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   failures as component/sample-size stress cases, rejects a train-only
   component fallback, quantifies and partly reduces the fixed-recipe
   externality through deterministic-reparse evidence and multi-cutoff train-set
-  controls, adds public-bookcase family holdout evidence, closes the row0
+  controls, adds public-bookcase family holdout evidence, localizes remaining
+  family losses to copy-address overhead or exact tie, closes the row0
   hypothesis requirement matrix with zero promoted origin formulas, and keeps
   row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

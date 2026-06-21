@@ -18,6 +18,8 @@ SOURCES = {
     "reparse_trainset_controls": AUTHORIAL_RESULTS / "128_prequential_recipe_reparse_trainset_controls.json",
     "reparse_trainset_multicutoff": TEST_RESULTS / "07_recipe_reparse_trainset_multicutoff.json",
     "reparse_family_holdout": TEST_RESULTS / "08_recipe_reparse_family_holdout.json",
+    "reparse_family_loss_decomposition": TEST_RESULTS
+    / "09_recipe_reparse_family_loss_decomposition.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -43,6 +45,7 @@ def make_result() -> dict[str, Any]:
     trainset_controls = load_json(SOURCES["reparse_trainset_controls"])
     trainset_multicutoff = load_json(SOURCES["reparse_trainset_multicutoff"])
     family_holdout = load_json(SOURCES["reparse_family_holdout"])
+    family_loss_decomposition = load_json(SOURCES["reparse_family_loss_decomposition"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -52,6 +55,7 @@ def make_result() -> dict[str, Any]:
         ("reparse_trainset_controls", trainset_controls),
         ("reparse_trainset_multicutoff", trainset_multicutoff),
         ("reparse_family_holdout", family_holdout),
+        ("reparse_family_loss_decomposition", family_loss_decomposition),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -179,6 +183,33 @@ def make_result() -> dict[str, Any]:
                 "parser beats raw digits for every public-bookcase family and "
                 "rescues the component-only failure families, but the active recipe "
                 "remains cheaper in some families."
+            ),
+        },
+        {
+            "question": "are_family_reparse_losses_localized",
+            "source": rel(SOURCES["reparse_family_loss_decomposition"]),
+            "status": "passed_as_loss_localization_not_promotion",
+            "evidence": {
+                "loss_family_count": family_loss_decomposition["summary"]["loss_family_count"],
+                "all_roundtrip": family_loss_decomposition["summary"]["all_roundtrip"],
+                "component_family_failure_loss_count": family_loss_decomposition["summary"][
+                    "component_family_failure_loss_count"
+                ],
+                "mean_reparse_minus_active_bits": family_loss_decomposition["summary"][
+                    "mean_reparse_minus_active_bits"
+                ],
+                "max_reparse_minus_active_bits": family_loss_decomposition["summary"][
+                    "max_reparse_minus_active_bits"
+                ],
+                "worst_family": family_loss_decomposition["summary"]["worst_family"],
+                "largest_loss_component_counts": family_loss_decomposition["summary"][
+                    "largest_loss_component_counts"
+                ],
+            },
+            "interpretation": (
+                "The five active-recipe local wins are roundtrip-valid and still "
+                "beat raw digits; the losses are localized mostly to copy-address "
+                "cost, so they are not new semantic or row0-origin evidence."
             ),
         },
         {
@@ -314,6 +345,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"beats active {evidence['reparse_beats_active_recipe_count']}/{evidence['family_count']}; "
                 f"component failures rescued {evidence['component_failure_reparse_beats_raw_count']}/"
                 f"{evidence['component_failure_family_count']}"
+            )
+        elif row["question"] == "are_family_reparse_losses_localized":
+            key = (
+                f"{evidence['loss_family_count']} local losses; all roundtrip "
+                f"{evidence['all_roundtrip']}; worst `{evidence['worst_family']}` "
+                f"{evidence['max_reparse_minus_active_bits']:.3f} bits; "
+                f"loss components {evidence['largest_loss_component_counts']}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

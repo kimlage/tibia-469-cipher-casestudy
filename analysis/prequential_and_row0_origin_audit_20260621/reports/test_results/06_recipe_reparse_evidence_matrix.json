@@ -94,6 +94,24 @@
     },
     {
       "evidence": {
+        "all_roundtrip": true,
+        "component_family_failure_loss_count": 2,
+        "largest_loss_component_counts": {
+          "copy_address_bits": 4,
+          "no_positive_component": 1
+        },
+        "loss_family_count": 5,
+        "max_reparse_minus_active_bits": 8.98630674614435,
+        "mean_reparse_minus_active_bits": 4.231936489452684,
+        "worst_family": "hellgate_public_bookcase_33"
+      },
+      "interpretation": "The five active-recipe local wins are roundtrip-valid and still beat raw digits; the losses are localized mostly to copy-address cost, so they are not new semantic or row0-origin evidence.",
+      "question": "are_family_reparse_losses_localized",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
+      "status": "passed_as_loss_localization_not_promotion"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -134,6 +152,7 @@
     "recipe_externality": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
     "reparse_content_controls": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",
     "reparse_family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
+    "reparse_family_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
     "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
     "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json"
   },

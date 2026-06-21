@@ -110,6 +110,16 @@ for `3/3` component-failure families. It beats the active frozen recipe in
 the generation explanation remains partial.
 See [08_recipe_reparse_family_holdout.md](08_recipe_reparse_family_holdout.md).
 
+### Recipe Reparse Family Loss Decomposition
+
+The five families where reparse does not beat the active frozen recipe
+are then decomposed by charged component. All five still roundtrip and
+still beat raw digits. Four losses are dominated by copy-address bits,
+with identical literal/copy inventory against the active recipe; one is
+an exact tie. This localizes the remaining active-recipe advantage
+without promoting a new generation formula.
+See [09_recipe_reparse_family_loss_decomposition.md](09_recipe_reparse_family_loss_decomposition.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -159,7 +169,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts, but the generation claim remains partial.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts; the remaining family losses localize mostly to copy-address overhead, so the generation claim remains partial.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.
