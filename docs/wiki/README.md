@@ -893,6 +893,9 @@ remaining boundary problem is not a single local context rule.
 A global-objective parser audit then rejects the broad shortcut too: book-local
 DP under simple operation/literal/copy objectives tops out at `23/60`, below
 the `48/60` local parser.
+A feature-weighted DP with `16` simple structural cost profiles improves only
+to `26/60`, so obvious linear copy/literal costs also do not recover the
+segmentation mechanism.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

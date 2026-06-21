@@ -1,0 +1,3820 @@
+{
+  "best_mismatches": [
+    {
+      "book": 10,
+      "first_diff": {
+        "index": 0,
+        "predicted": {
+          "length": 9,
+          "source": 888,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 5,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        }
+      },
+      "predicted_op_count": 2,
+      "stable_projection_op_count": 2
+    },
+    {
+      "book": 12,
+      "first_diff": {
+        "index": 5,
+        "predicted": {
+          "length": 4,
+          "source": null,
+          "target_start": 47,
+          "type": "literal"
+        },
+        "stable_projection": {
+          "length": 9,
+          "source": null,
+          "target_start": 47,
+          "type": "literal"
+        }
+      },
+      "predicted_op_count": 14,
+      "stable_projection_op_count": 13
+    },
+    {
+      "book": 13,
+      "first_diff": {
+        "index": 4,
+        "predicted": {
+          "length": 7,
+          "source": 4,
+          "target_start": 48,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 8,
+          "source": 4,
+          "target_start": 48,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 10,
+      "stable_projection_op_count": 9
+    },
+    {
+      "book": 14,
+      "first_diff": {
+        "index": 2,
+        "predicted": {
+          "length": 5,
+          "source": 510,
+          "target_start": 45,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 5,
+          "source": null,
+          "target_start": 45,
+          "type": "literal"
+        }
+      },
+      "predicted_op_count": 8,
+      "stable_projection_op_count": 8
+    },
+    {
+      "book": 15,
+      "first_diff": {
+        "index": 7,
+        "predicted": {
+          "length": 7,
+          "source": 1392,
+          "target_start": 95,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 8,
+          "source": 2550,
+          "target_start": 95,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 11,
+      "stable_projection_op_count": 11
+    },
+    {
+      "book": 16,
+      "first_diff": {
+        "index": 5,
+        "predicted": {
+          "length": 10,
+          "source": 865,
+          "target_start": 132,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 12,
+          "source": 865,
+          "target_start": 132,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 11,
+      "stable_projection_op_count": 12
+    },
+    {
+      "book": 17,
+      "first_diff": {
+        "index": 4,
+        "predicted": {
+          "length": 130,
+          "source": 420,
+          "target_start": 16,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 133,
+          "source": 420,
+          "target_start": 16,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 14,
+      "stable_projection_op_count": 14
+    },
+    {
+      "book": 20,
+      "first_diff": {
+        "index": 2,
+        "predicted": {
+          "length": 9,
+          "source": 180,
+          "target_start": 21,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 10,
+          "source": 180,
+          "target_start": 21,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 7,
+      "stable_projection_op_count": 7
+    },
+    {
+      "book": 21,
+      "first_diff": {
+        "index": 1,
+        "predicted": {
+          "length": 109,
+          "source": 2116,
+          "target_start": 9,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 135,
+          "source": 2116,
+          "target_start": 9,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 3,
+      "stable_projection_op_count": 3
+    },
+    {
+      "book": 23,
+      "first_diff": {
+        "index": 8,
+        "predicted": {
+          "length": 11,
+          "source": 275,
+          "target_start": 117,
+          "type": "copy"
+        },
+        "stable_projection": {
+          "length": 12,
+          "source": 275,
+          "target_start": 117,
+          "type": "copy"
+        }
+      },
+      "predicted_op_count": 12,
+      "stable_projection_op_count": 12
+    }
+  ],
+  "case_reopened": false,
+  "classification": "feature_weighted_global_parser_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "feature_weighted_parser_status": "not_promoted",
+    "generation_explanation_status": "feature_weighted_global_parser_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "global_objective_parser_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_profile": "no_copy_reward",
+      "oracle_test_hits": 23,
+      "selected_matches_oracle": true,
+      "selected_profile": "no_copy_reward",
+      "test_hits": 23,
+      "test_total": 50,
+      "train_hits": 3,
+      "train_total": 10
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_profile": "no_copy_reward",
+      "oracle_test_hits": 19,
+      "selected_matches_oracle": true,
+      "selected_profile": "no_copy_reward",
+      "test_hits": 19,
+      "test_total": 40,
+      "train_hits": 7,
+      "train_total": 20
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_profile": "no_copy_reward",
+      "oracle_test_hits": 16,
+      "selected_matches_oracle": false,
+      "selected_profile": "copy_base_heavy",
+      "test_hits": 15,
+      "test_total": 30,
+      "train_hits": 11,
+      "train_total": 30
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_profile": "literal_run_heavy",
+      "oracle_test_hits": 13,
+      "selected_matches_oracle": false,
+      "selected_profile": "no_copy_reward",
+      "test_hits": 12,
+      "test_total": 20,
+      "train_hits": 14,
+      "train_total": 40
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_profile": "no_copy_reward",
+      "oracle_test_hits": 8,
+      "selected_matches_oracle": false,
+      "selected_profile": "copy_base_heavy",
+      "test_hits": 7,
+      "test_total": 10,
+      "train_hits": 19,
+      "train_total": 50
+    }
+  ],
+  "profile_scoreboard": [
+    {
+      "exact_book_count": 26,
+      "mismatch_book_count": 34,
+      "predicted_copy_count": 161,
+      "predicted_literal_digit_count": 598,
+      "predicted_literal_gap_count": 64,
+      "predicted_operation_count": 225,
+      "profile": "copy_base_heavy",
+      "sample_mismatches": [
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 23,
+              "source": null,
+              "target_start": 33,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 4,
+              "source": null,
+              "target_start": 33,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 8,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 1,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 9,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 9,
+              "source": null,
+              "target_start": 15,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": 190,
+              "target_start": 15,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": 197,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 23,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 22,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": 292,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 12
+        }
+      ],
+      "weights": {
+        "book_start_copy": 0,
+        "copy_base": 48,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "copy_base_heavy",
+        "short_copy": 0
+      }
+    },
+    {
+      "exact_book_count": 26,
+      "mismatch_book_count": 34,
+      "predicted_copy_count": 223,
+      "predicted_literal_digit_count": 204,
+      "predicted_literal_gap_count": 42,
+      "predicted_operation_count": 265,
+      "profile": "no_copy_reward",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 9,
+              "source": 888,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 2,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 4,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 4,
+            "predicted": {
+              "length": 7,
+              "source": 4,
+              "target_start": 48,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 4,
+              "target_start": 48,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 2,
+            "predicted": {
+              "length": 5,
+              "source": 510,
+              "target_start": 45,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 45,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 10,
+              "source": 865,
+              "target_start": 132,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 865,
+              "target_start": 132,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 4,
+            "predicted": {
+              "length": 130,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 133,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 2,
+            "predicted": {
+              "length": 9,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 10,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 109,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 135,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 23,
+          "first_diff": {
+            "index": 8,
+            "predicted": {
+              "length": 11,
+              "source": 275,
+              "target_start": 117,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 275,
+              "target_start": 117,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 12
+        }
+      ],
+      "weights": {
+        "book_start_copy": 8,
+        "copy_base": 8,
+        "copy_reward": 0,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "no_copy_reward",
+        "short_copy": 8
+      }
+    },
+    {
+      "exact_book_count": 25,
+      "mismatch_book_count": 35,
+      "predicted_copy_count": 229,
+      "predicted_literal_digit_count": 175,
+      "predicted_literal_gap_count": 47,
+      "predicted_operation_count": 276,
+      "profile": "copy_moderate",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 9,
+              "source": 888,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 2,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 4,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 4,
+            "predicted": {
+              "length": 7,
+              "source": 4,
+              "target_start": 48,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 4,
+              "target_start": 48,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 18,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 10,
+              "source": 865,
+              "target_start": 132,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 865,
+              "target_start": 132,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 4,
+            "predicted": {
+              "length": 130,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 133,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 2,
+            "predicted": {
+              "length": 9,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 10,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 109,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 135,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 23,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 110,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": null,
+              "target_start": 110,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 12
+        }
+      ],
+      "weights": {
+        "book_start_copy": 8,
+        "copy_base": 8,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "copy_moderate",
+        "short_copy": 8
+      }
+    },
+    {
+      "exact_book_count": 25,
+      "mismatch_book_count": 35,
+      "predicted_copy_count": 199,
+      "predicted_literal_digit_count": 348,
+      "predicted_literal_gap_count": 43,
+      "predicted_operation_count": 242,
+      "profile": "literal_run_heavy",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 9,
+              "source": 888,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 2,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 8,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 1,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 9,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 2,
+            "predicted": {
+              "length": 9,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 10,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 109,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 135,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        }
+      ],
+      "weights": {
+        "book_start_copy": 16,
+        "copy_base": 12,
+        "copy_reward": 1,
+        "literal_digit": 2,
+        "literal_run": 16,
+        "name": "literal_run_heavy",
+        "short_copy": 16
+      }
+    },
+    {
+      "exact_book_count": 23,
+      "mismatch_book_count": 37,
+      "predicted_copy_count": 247,
+      "predicted_literal_digit_count": 142,
+      "predicted_literal_gap_count": 36,
+      "predicted_operation_count": 283,
+      "profile": "copy_light",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 5,
+              "source": 869,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 2,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 5,
+              "source": 63,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 16,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 21,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 18,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 13,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 104,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 4,
+            "predicted": {
+              "length": 129,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 133,
+              "source": 420,
+              "target_start": 16,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 2,
+            "predicted": {
+              "length": 9,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 10,
+              "source": 180,
+              "target_start": 21,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 7,
+              "source": 197,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": 197,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 23,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 10,
+              "source": 341,
+              "target_start": 4,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 14,
+              "source": 341,
+              "target_start": 4,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 15,
+          "stable_projection_op_count": 12
+        }
+      ],
+      "weights": {
+        "book_start_copy": 0,
+        "copy_base": 2,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 2,
+        "name": "copy_light",
+        "short_copy": 0
+      }
+    },
+    {
+      "exact_book_count": 23,
+      "mismatch_book_count": 37,
+      "predicted_copy_count": 189,
+      "predicted_literal_digit_count": 410,
+      "predicted_literal_gap_count": 53,
+      "predicted_operation_count": 242,
+      "profile": "shortcopy_guard",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 9,
+              "source": 888,
+              "target_start": 0,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 2,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 8,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 1,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 9,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 123,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 6,
+              "source": null,
+              "target_start": 15,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": 190,
+              "target_start": 15,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 7,
+          "stable_projection_op_count": 7
+        },
+        {
+          "book": 21,
+          "first_diff": {
+            "index": 1,
+            "predicted": {
+              "length": 109,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 135,
+              "source": 2116,
+              "target_start": 9,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 3
+        }
+      ],
+      "weights": {
+        "book_start_copy": 8,
+        "copy_base": 8,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "shortcopy_guard",
+        "short_copy": 48
+      }
+    },
+    {
+      "exact_book_count": 5,
+      "mismatch_book_count": 55,
+      "predicted_copy_count": 199,
+      "predicted_literal_digit_count": 368,
+      "predicted_literal_gap_count": 95,
+      "predicted_operation_count": 294,
+      "profile": "copy_conservative",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 16,
+        "copy_base": 16,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "copy_conservative",
+        "short_copy": 16
+      }
+    },
+    {
+      "exact_book_count": 5,
+      "mismatch_book_count": 55,
+      "predicted_copy_count": 226,
+      "predicted_literal_digit_count": 231,
+      "predicted_literal_gap_count": 95,
+      "predicted_operation_count": 321,
+      "profile": "copy_length_reward2",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 4,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 18,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 15,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 16,
+        "copy_base": 16,
+        "copy_reward": 2,
+        "literal_digit": 6,
+        "literal_run": 4,
+        "name": "copy_length_reward2",
+        "short_copy": 16
+      }
+    },
+    {
+      "exact_book_count": 5,
+      "mismatch_book_count": 55,
+      "predicted_copy_count": 176,
+      "predicted_literal_digit_count": 510,
+      "predicted_literal_gap_count": 106,
+      "predicted_operation_count": 282,
+      "profile": "copy_very_conservative",
+      "sample_mismatches": [
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 11,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 130,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 130,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 32,
+        "copy_base": 32,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 8,
+        "name": "copy_very_conservative",
+        "short_copy": 32
+      }
+    },
+    {
+      "exact_book_count": 5,
+      "mismatch_book_count": 55,
+      "predicted_copy_count": 201,
+      "predicted_literal_digit_count": 367,
+      "predicted_literal_gap_count": 94,
+      "predicted_operation_count": 295,
+      "profile": "literal_expensive_guarded",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 48,
+        "copy_base": 24,
+        "copy_reward": 1,
+        "literal_digit": 8,
+        "literal_run": 8,
+        "name": "literal_expensive_guarded",
+        "short_copy": 32
+      }
+    },
+    {
+      "exact_book_count": 5,
+      "mismatch_book_count": 55,
+      "predicted_copy_count": 176,
+      "predicted_literal_digit_count": 510,
+      "predicted_literal_gap_count": 106,
+      "predicted_operation_count": 282,
+      "profile": "literal_tolerant",
+      "sample_mismatches": [
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 11,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 130,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 2,
+              "source": null,
+              "target_start": 130,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 16,
+        "copy_base": 12,
+        "copy_reward": 1,
+        "literal_digit": 1,
+        "literal_run": 2,
+        "name": "literal_tolerant",
+        "short_copy": 16
+      }
+    },
+    {
+      "exact_book_count": 4,
+      "mismatch_book_count": 56,
+      "predicted_copy_count": 231,
+      "predicted_literal_digit_count": 216,
+      "predicted_literal_gap_count": 95,
+      "predicted_operation_count": 326,
+      "profile": "literal_expensive",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 3,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 33,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 4,
+              "source": null,
+              "target_start": 33,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 15,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 18,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 13,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 15,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 16,
+        "copy_base": 16,
+        "copy_reward": 1,
+        "literal_digit": 8,
+        "literal_run": 4,
+        "name": "literal_expensive",
+        "short_copy": 8
+      }
+    },
+    {
+      "exact_book_count": 4,
+      "mismatch_book_count": 56,
+      "predicted_copy_count": 189,
+      "predicted_literal_digit_count": 449,
+      "predicted_literal_gap_count": 98,
+      "predicted_operation_count": 287,
+      "profile": "stable_like_mid",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        }
+      ],
+      "weights": {
+        "book_start_copy": 24,
+        "copy_base": 14,
+        "copy_reward": 1,
+        "literal_digit": 3,
+        "literal_run": 6,
+        "name": "stable_like_mid",
+        "short_copy": 18
+      }
+    },
+    {
+      "exact_book_count": 3,
+      "mismatch_book_count": 57,
+      "predicted_copy_count": 229,
+      "predicted_literal_digit_count": 225,
+      "predicted_literal_gap_count": 97,
+      "predicted_operation_count": 326,
+      "profile": "bookstart_guard",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 5,
+            "predicted": {
+              "length": 4,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 9,
+              "source": null,
+              "target_start": 47,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 14,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 18,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 15,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        },
+        {
+          "book": 20,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 15,
+              "source": 1377,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 8,
+          "stable_projection_op_count": 7
+        }
+      ],
+      "weights": {
+        "book_start_copy": 48,
+        "copy_base": 8,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "bookstart_guard",
+        "short_copy": 8
+      }
+    },
+    {
+      "exact_book_count": 3,
+      "mismatch_book_count": 57,
+      "predicted_copy_count": 194,
+      "predicted_literal_digit_count": 428,
+      "predicted_literal_gap_count": 98,
+      "predicted_operation_count": 292,
+      "profile": "copy_base_light_guarded",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": 1392,
+              "target_start": 95,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 10,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        }
+      ],
+      "weights": {
+        "book_start_copy": 32,
+        "copy_base": 4,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "copy_base_light_guarded",
+        "short_copy": 32
+      }
+    },
+    {
+      "exact_book_count": 3,
+      "mismatch_book_count": 57,
+      "predicted_copy_count": 186,
+      "predicted_literal_digit_count": 472,
+      "predicted_literal_gap_count": 101,
+      "predicted_operation_count": 287,
+      "profile": "guarded_both",
+      "sample_mismatches": [
+        {
+          "book": 10,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 5,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 11,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 13,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 6,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 5,
+          "stable_projection_op_count": 6
+        },
+        {
+          "book": 12,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 11,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            },
+            "stable_projection": {
+              "length": 12,
+              "source": 207,
+              "target_start": 70,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 12,
+          "stable_projection_op_count": 13
+        },
+        {
+          "book": 13,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 26,
+              "source": 2225,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 9
+        },
+        {
+          "book": 14,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 50,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 39,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            }
+          },
+          "predicted_op_count": 6,
+          "stable_projection_op_count": 8
+        },
+        {
+          "book": 15,
+          "first_diff": {
+            "index": 7,
+            "predicted": {
+              "length": 7,
+              "source": null,
+              "target_start": 95,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 8,
+              "source": 2550,
+              "target_start": 95,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 11
+        },
+        {
+          "book": 16,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 106,
+              "source": 2562,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 9,
+          "stable_projection_op_count": 12
+        },
+        {
+          "book": 17,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 16,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 7,
+              "source": 106,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 11,
+          "stable_projection_op_count": 14
+        },
+        {
+          "book": 18,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 51,
+              "source": 87,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 3,
+          "stable_projection_op_count": 2
+        },
+        {
+          "book": 19,
+          "first_diff": {
+            "index": 0,
+            "predicted": {
+              "length": 1,
+              "source": null,
+              "target_start": 0,
+              "type": "literal"
+            },
+            "stable_projection": {
+              "length": 36,
+              "source": 238,
+              "target_start": 0,
+              "type": "copy"
+            }
+          },
+          "predicted_op_count": 4,
+          "stable_projection_op_count": 3
+        }
+      ],
+      "weights": {
+        "book_start_copy": 48,
+        "copy_base": 12,
+        "copy_reward": 1,
+        "literal_digit": 4,
+        "literal_run": 4,
+        "name": "guarded_both",
+        "short_copy": 48
+      }
+    }
+  ],
+  "schema": "feature_weighted_global_parser_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "declared_copy_starts_granted": false,
+    "declared_literal_windows_granted": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true
+  },
+  "summary": {
+    "baseline_window5_exact_books": 48,
+    "best_exact_books": 26,
+    "best_profile": "no_copy_reward",
+    "exact_improvement_vs_window5": -22,
+    "interpretation": "Feature-weighted DP tests whether a small structural cost over literal mass, copy base cost, short-copy penalties, and book-start copy penalties can replace the local peak parser.",
+    "prequential_cells": 5,
+    "prequential_selected_matches_oracle_cells": 2,
+    "prequential_stable": false,
+    "profile_count": 16,
+    "promotes_feature_weighted_parser": false
+  },
+  "translation_delta": "NONE"
+}

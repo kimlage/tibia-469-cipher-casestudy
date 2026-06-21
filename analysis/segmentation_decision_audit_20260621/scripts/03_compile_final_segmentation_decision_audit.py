@@ -22,6 +22,7 @@ OVERRIDE = TEST_RESULTS / "10_integrated_parser_override_audit.json"
 PEAK_STRENGTH = TEST_RESULTS / "11_integrated_parser_peak_strength_audit.json"
 RESIDUAL_CONTEXT = TEST_RESULTS / "12_integrated_parser_residual_context_audit.json"
 GLOBAL_OBJECTIVE = TEST_RESULTS / "13_global_objective_parser_audit.json"
+FEATURE_WEIGHTED = TEST_RESULTS / "14_feature_weighted_global_parser_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -68,6 +69,9 @@ def main() -> None:
     global_objective = (
         load_json(GLOBAL_OBJECTIVE) if GLOBAL_OBJECTIVE.exists() else None
     )
+    feature_weighted = (
+        load_json(FEATURE_WEIGHTED) if FEATURE_WEIGHTED.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -90,6 +94,8 @@ def main() -> None:
         assert_boundary("integrated_parser_residual_context_audit", residual_context)
     if global_objective is not None:
         assert_boundary("global_objective_parser_audit", global_objective)
+    if feature_weighted is not None:
+        assert_boundary("feature_weighted_global_parser_audit", feature_weighted)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -112,6 +118,9 @@ def main() -> None:
     )
     global_objective_summary = (
         None if global_objective is None else global_objective["summary"]
+    )
+    feature_weighted_summary = (
+        None if feature_weighted is None else feature_weighted["summary"]
     )
 
     lines = [
@@ -440,6 +449,31 @@ def main() -> None:
                 "",
             ]
         )
+    if feature_weighted_summary is not None:
+        lines.extend(
+            [
+                "## Feature-Weighted Global Parser Control",
+                "",
+                "Gate 14 tests whether a small structural cost can rescue the global",
+                "DP approach: literal mass, copy base cost, copy-length reward,",
+                "short-copy penalty, and book-start-copy penalty.",
+                "",
+                "| Parser family | Best exact books | Boundary |",
+                "|---|---:|---|",
+                f"| Window-5 local parser | `{feature_weighted_summary['baseline_window5_exact_books']}/60` | retained baseline |",
+                f"| Feature-weighted DP profiles | `{feature_weighted_summary['best_exact_books']}/60` | rejected |",
+                "",
+                f"- Best profile: `{feature_weighted_summary['best_profile']}`.",
+                f"- Exact-book delta vs window5: `{feature_weighted_summary['exact_improvement_vs_window5']}`.",
+                f"- Prequential selected profile matches suffix oracle in `{feature_weighted_summary['prequential_selected_matches_oracle_cells']}/{feature_weighted_summary['prequential_cells']}` cells.",
+                "",
+                "The richer cost family improves over crude objectives only slightly",
+                "(`26/60` vs `23/60`) and remains far below the local `window5`",
+                "parser. A small linear feature cost over obvious copy/literal",
+                "features is therefore not the missing segmentation mechanism.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -464,6 +498,7 @@ def main() -> None:
             "- [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)",
             "- [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)",
             "- [Global objective parser audit](test_results/13_global_objective_parser_audit.md)",
+            "- [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)",
             "",
         ]
     )

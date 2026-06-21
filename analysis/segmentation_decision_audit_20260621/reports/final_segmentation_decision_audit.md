@@ -251,6 +251,26 @@ does not explain the retained stable segmentation. Any next path-state
 model needs a richer learned or structural cost, not a crude global
 objective.
 
+## Feature-Weighted Global Parser Control
+
+Gate 14 tests whether a small structural cost can rescue the global
+DP approach: literal mass, copy base cost, copy-length reward,
+short-copy penalty, and book-start-copy penalty.
+
+| Parser family | Best exact books | Boundary |
+|---|---:|---|
+| Window-5 local parser | `48/60` | retained baseline |
+| Feature-weighted DP profiles | `26/60` | rejected |
+
+- Best profile: `no_copy_reward`.
+- Exact-book delta vs window5: `-22`.
+- Prequential selected profile matches suffix oracle in `2/5` cells.
+
+The richer cost family improves over crude objectives only slightly
+(`26/60` vs `23/60`) and remains far below the local `window5`
+parser. A small linear feature cost over obvious copy/literal
+features is therefore not the missing segmentation mechanism.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -273,3 +293,4 @@ or changed skeleton/literal accounting.
 - [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)
 - [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)
 - [Global objective parser audit](test_results/13_global_objective_parser_audit.md)
+- [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)

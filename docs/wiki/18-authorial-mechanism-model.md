@@ -513,6 +513,11 @@ count, literal mass, and copy mass. The objectives are stable under prefix
 selection but wrong; the best reaches only `23/60`, far below the `48/60`
 window5 parser. This rejects crude global optimization as the missing
 segmentation rule.
+A feature-weighted global parser audit then tests a slightly richer DP cost
+family: literal mass, copy base cost, copy reward, short-copy penalty, and
+book-start-copy penalty. The best of `16` profiles reaches only `26/60`, still
+far below `48/60`, so a small linear cost over obvious copy/literal features is
+also rejected.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2189,6 +2194,7 @@ book generation, not row0 pair-cell placement.
 - [Integrated parser peak strength audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/11_integrated_parser_peak_strength_audit.md)
 - [Integrated parser residual context audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/12_integrated_parser_residual_context_audit.md)
 - [Global objective parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.md)
+- [Feature weighted global parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/14_feature_weighted_global_parser_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
