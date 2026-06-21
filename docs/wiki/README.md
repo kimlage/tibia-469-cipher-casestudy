@@ -1245,6 +1245,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects book-level skeleton alignment as well (`27` configs; best `0/10`
   residual unique-branch hits, `0/10` residual type/length hits, and `211`
   clean false changes),
+  records source-interval context as a weak non-promoted clue (`5/10`
+  residuals, `p=0.002`, but `189` clean false changes and `0/4` cover-all
+  holdout cells),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

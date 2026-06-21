@@ -1073,6 +1073,30 @@ hits in every split with held-out residuals. Whole-book skeleton
 similarity therefore does not remove the remaining source/length
 dependency.
 
+## Source Interval Context Gate
+
+Gate 50 tests whether copied payload recurrence, source-side
+boundary recurrence, or source-target neighborhood similarity
+selects the remaining branch choices. This is a source/content
+structural test over observable branches, not a bit sweep.
+
+| Diagnostic | Value |
+|---|---:|
+| Policies | `12` |
+| Active baseline residual hits | `0/10` |
+| Best policy | `min_source_target_start_distance` |
+| Best residual hits | `5/10` |
+| Best total hits | `40/234` |
+| Best clean false changes | `189` |
+| Prequential cover-all-residual cells | `0/4` |
+| Random p(>= observed) | `0.002` |
+
+Source interval context is recorded as a weak clue only. The
+best policy repairs `5/10` residuals and beats random branch
+choice, but it changes `189` clean controls and has no
+prefix/holdout split that covers all residuals. It therefore
+does not remove the retained source/length dependency.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1118,6 +1142,10 @@ Gate 49 then tests book-level skeleton alignment and rejects it
 more sharply: best full-fit alignment gets `0/10` residual
 unique-branch hits, `0/10` residual type/length hits, and
 `211` clean false changes.
+Gate 50 records a source-interval weak clue: source-target
+neighborhood similarity catches `5/10` residuals, but only by
+changing `189` clean controls and with `0/4` cover-all
+holdout cells.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1176,3 +1204,4 @@ or the stable projection as an oracle.
 - [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)
 - [Residual site detector gate](test_results/48_residual_site_detector_gate.md)
 - [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)
+- [Source interval context gate](test_results/50_source_interval_context_gate.md)

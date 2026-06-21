@@ -64,6 +64,7 @@ BRANCH_RANK_EXCEPTION_COST = (
 )
 RESIDUAL_SITE_DETECTOR = TEST_RESULTS / "48_residual_site_detector_gate.json"
 BOOK_SKELETON_ALIGNMENT = TEST_RESULTS / "49_book_skeleton_alignment_gate.json"
+SOURCE_INTERVAL_CONTEXT = TEST_RESULTS / "50_source_interval_context_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -232,6 +233,11 @@ def main() -> None:
         if BOOK_SKELETON_ALIGNMENT.exists()
         else None
     )
+    source_interval_context = (
+        load_json(SOURCE_INTERVAL_CONTEXT)
+        if SOURCE_INTERVAL_CONTEXT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -330,6 +336,8 @@ def main() -> None:
         assert_boundary("residual_site_detector_gate", residual_site_detector)
     if book_skeleton_alignment is not None:
         assert_boundary("book_skeleton_alignment_gate", book_skeleton_alignment)
+    if source_interval_context is not None:
+        assert_boundary("source_interval_context_gate", source_interval_context)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -464,6 +472,11 @@ def main() -> None:
         None
         if book_skeleton_alignment is None
         else book_skeleton_alignment["summary"]
+    )
+    source_interval_context_summary = (
+        None
+        if source_interval_context is None
+        else source_interval_context["summary"]
     )
 
     lines = [
@@ -1801,6 +1814,35 @@ def main() -> None:
                 "",
             ]
         )
+    if source_interval_context_summary is not None:
+        lines.extend(
+            [
+                "## Source Interval Context Gate",
+                "",
+                "Gate 50 tests whether copied payload recurrence, source-side",
+                "boundary recurrence, or source-target neighborhood similarity",
+                "selects the remaining branch choices. This is a source/content",
+                "structural test over observable branches, not a bit sweep.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Policies | `{source_interval_context_summary['policy_count']}` |",
+                f"| Active baseline residual hits | `{source_interval_context_summary['active_baseline_residual_hits']}/{source_interval_context_summary['residual_count']}` |",
+                f"| Best policy | `{source_interval_context_summary['best_policy']}` |",
+                f"| Best residual hits | `{source_interval_context_summary['best_residual_hits']}/{source_interval_context_summary['residual_count']}` |",
+                f"| Best total hits | `{source_interval_context_summary['best_total_hits']}/{source_interval_context_summary['decision_count']}` |",
+                f"| Best clean false changes | `{source_interval_context_summary['best_clean_false_changes']}` |",
+                f"| Prequential cover-all-residual cells | `{source_interval_context_summary['prequential_cover_all_residual_cells']}/{source_interval_context_summary['prequential_cells_with_residuals']}` |",
+                f"| Random p(>= observed) | `{source_interval_context_summary['random_p_ge_observed']:.3f}` |",
+                "",
+                "Source interval context is recorded as a weak clue only. The",
+                "best policy repairs `5/10` residuals and beats random branch",
+                "choice, but it changes `189` clean controls and has no",
+                "prefix/holdout split that covers all residuals. It therefore",
+                "does not remove the retained source/length dependency.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1848,6 +1890,10 @@ def main() -> None:
             "more sharply: best full-fit alignment gets `0/10` residual",
             "unique-branch hits, `0/10` residual type/length hits, and",
             "`211` clean false changes.",
+            "Gate 50 records a source-interval weak clue: source-target",
+            "neighborhood similarity catches `5/10` residuals, but only by",
+            "changing `189` clean controls and with `0/4` cover-all",
+            "holdout cells.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1906,6 +1952,7 @@ def main() -> None:
             "- [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)",
             "- [Residual site detector gate](test_results/48_residual_site_detector_gate.md)",
             "- [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)",
+            "- [Source interval context gate](test_results/50_source_interval_context_gate.md)",
             "",
         ]
     )
