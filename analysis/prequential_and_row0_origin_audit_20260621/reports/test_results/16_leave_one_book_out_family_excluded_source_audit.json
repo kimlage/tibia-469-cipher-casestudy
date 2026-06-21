@@ -1,0 +1,2911 @@
+{
+  "case_reopened": false,
+  "classification": "family_excluded_singleton_holdout_predictive",
+  "decision": {
+    "generation_explanation_status": "stronger_but_still_partial",
+    "row0_origin_status": "unchanged_exogenous",
+    "same_family_source_status": "predictive_signal_retained_without_same_family_sources",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "book_bounded_parser": "analysis/prequential_and_row0_origin_audit_20260621/scripts/15_leave_one_book_out_book_bounded_source_audit.py",
+    "book_bounded_singleton": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json",
+    "families": "analysis/authorial_mechanism_20260620/scripts/125_prequential_and_row0_origin_audit.py",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+    "trainset_controls": "analysis/authorial_mechanism_20260620/scripts/128_prequential_recipe_reparse_trainset_controls.py"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "beats_raw": true,
+      "book": 0,
+      "book_bounded_gain_vs_raw_bits": 456.11458589493066,
+      "book_bounded_reparse_bits": 22.243059768849463,
+      "book_length_digits": 144,
+      "component_bits": {
+        "copy_address_bits": 13.404875455015208,
+        "copy_length_stream_bits": 7.266786540694901,
+        "item_type_stream_bits": 1.15754127698648,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        0,
+        1,
+        2
+      ],
+      "excluded_peer_books": [
+        1,
+        2
+      ],
+      "family_excluded_gain_vs_raw_bits": 456.52844239108356,
+      "family_excluded_minus_book_bounded_bits": -0.41385649615287434,
+      "family_excluded_reparse_bits": 21.82920327269659,
+      "family_labels": [
+        "hellgate_public_bookcase_10"
+      ],
+      "inventory": {
+        "copied_digits": 144,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 478.35764566378015,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 1,
+      "book_bounded_gain_vs_raw_bits": 283.6671728307558,
+      "book_bounded_reparse_bits": 21.950211898881477,
+      "book_length_digits": 92,
+      "component_bits": {
+        "copy_address_bits": 13.404875455015208,
+        "copy_length_stream_bits": 6.93663793900257,
+        "item_type_stream_bits": 1.15754127698648,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        0,
+        1,
+        2
+      ],
+      "excluded_peer_books": [
+        0,
+        2
+      ],
+      "family_excluded_gain_vs_raw_bits": 284.11833005863303,
+      "family_excluded_minus_book_bounded_bits": -0.4511572278772178,
+      "family_excluded_reparse_bits": 21.49905467100426,
+      "family_labels": [
+        "hellgate_public_bookcase_10"
+      ],
+      "inventory": {
+        "copied_digits": 92,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 305.6173847296373,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 2,
+      "book_bounded_gain_vs_raw_bits": 543.6896144645211,
+      "book_bounded_reparse_bits": 44.29165833054201,
+      "book_length_digits": 177,
+      "component_bits": {
+        "copy_address_bits": 26.81678360615185,
+        "copy_length_stream_bits": 14.553179281422967,
+        "item_type_stream_bits": 2.31508255397296,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        0,
+        1,
+        2
+      ],
+      "excluded_peer_books": [
+        0,
+        1
+      ],
+      "family_excluded_gain_vs_raw_bits": 544.2962273535153,
+      "family_excluded_minus_book_bounded_bits": -0.6066128889942419,
+      "family_excluded_reparse_bits": 43.68504544154777,
+      "family_labels": [
+        "hellgate_public_bookcase_10"
+      ],
+      "inventory": {
+        "copied_digits": 177,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 587.9812727950631,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 3,
+      "book_bounded_gain_vs_raw_bits": 423.36666765785185,
+      "book_bounded_reparse_bits": 41.703265626378865,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 26.84583761143643,
+        "copy_length_stream_bits": 11.586739280905237,
+        "item_type_stream_bits": 4.230954434839872,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        3,
+        4
+      ],
+      "excluded_peer_books": [
+        4
+      ],
+      "family_excluded_gain_vs_raw_bits": 422.4064019570492,
+      "family_excluded_minus_book_bounded_bits": 0.9602657008026796,
+      "family_excluded_reparse_bits": 42.663531327181545,
+      "family_labels": [
+        "hellgate_public_bookcase_12"
+      ],
+      "inventory": {
+        "copied_digits": 140,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 465.06993328423073,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 4,
+      "book_bounded_gain_vs_raw_bits": 265.3009266655173,
+      "book_bounded_reparse_bits": 199.76900661871343,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 107.44418354699201,
+        "copy_length_stream_bits": 41.549388615196186,
+        "item_type_stream_bits": 11.71292095686087,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 27.9208328446297
+      },
+      "excluded_books": [
+        3,
+        4
+      ],
+      "excluded_peer_books": [
+        3
+      ],
+      "family_excluded_gain_vs_raw_bits": 264.44260732055193,
+      "family_excluded_minus_book_bounded_bits": 0.8583193449653663,
+      "family_excluded_reparse_bits": 200.6273259636788,
+      "family_labels": [
+        "hellgate_public_bookcase_12"
+      ],
+      "inventory": {
+        "copied_digits": 132,
+        "copy_items": 8,
+        "literal_digits": 8,
+        "literal_runs": 3
+      },
+      "raw_uniform_bits": 465.06993328423073,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 5,
+      "book_bounded_gain_vs_raw_bits": 872.819816779203,
+      "book_bounded_reparse_bits": 34.06655312504693,
+      "book_length_digits": 273,
+      "component_bits": {
+        "copy_address_bits": 13.38626668677018,
+        "copy_length_stream_bits": 8.73809225962049,
+        "item_type_stream_bits": 0.5849625007211563,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 7.266786540694902
+      },
+      "excluded_books": [
+        5,
+        6,
+        7
+      ],
+      "excluded_peer_books": [
+        6,
+        7
+      ],
+      "family_excluded_gain_vs_raw_bits": 872.9102619164432,
+      "family_excluded_minus_book_bounded_bits": -0.0904451372402022,
+      "family_excluded_reparse_bits": 33.97610798780673,
+      "family_labels": [
+        "hellgate_public_bookcase_22"
+      ],
+      "inventory": {
+        "copied_digits": 271,
+        "copy_items": 1,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 906.8863699042499,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 6,
+      "book_bounded_gain_vs_raw_bits": 352.66320834306845,
+      "book_bounded_reparse_bits": 228.6742082622199,
+      "book_length_digits": 175,
+      "component_bits": {
+        "copy_address_bits": 160.76292694974282,
+        "copy_length_stream_bits": 63.19338200416711,
+        "item_type_stream_bits": 9.88239110173108,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 43.77002213108389
+      },
+      "excluded_books": [
+        5,
+        6,
+        7
+      ],
+      "excluded_peer_books": [
+        5,
+        7
+      ],
+      "family_excluded_gain_vs_raw_bits": 291.72869441856346,
+      "family_excluded_minus_book_bounded_bits": 60.934513924504984,
+      "family_excluded_reparse_bits": 289.6087221867249,
+      "family_labels": [
+        "hellgate_public_bookcase_22"
+      ],
+      "inventory": {
+        "copied_digits": 161,
+        "copy_items": 12,
+        "literal_digits": 14,
+        "literal_runs": 3
+      },
+      "raw_uniform_bits": 581.3374166052884,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 7,
+      "book_bounded_gain_vs_raw_bits": 175.12949881005233,
+      "book_bounded_reparse_bits": 176.9948792480081,
+      "book_length_digits": 106,
+      "component_bits": {
+        "copy_address_bits": 93.74617664840001,
+        "copy_length_stream_bits": 30.45832274102034,
+        "item_type_stream_bits": 12.365565553443492,
+        "literal_length_bits": 22.0,
+        "literal_payload_bits": 137.50109130031143
+      },
+      "excluded_books": [
+        5,
+        6,
+        7
+      ],
+      "excluded_peer_books": [
+        5,
+        6
+      ],
+      "family_excluded_gain_vs_raw_bits": 56.05322181488515,
+      "family_excluded_minus_book_bounded_bits": 119.07627699516718,
+      "family_excluded_reparse_bits": 296.07115624317527,
+      "family_labels": [
+        "hellgate_public_bookcase_22"
+      ],
+      "inventory": {
+        "copied_digits": 66,
+        "copy_items": 7,
+        "literal_digits": 40,
+        "literal_runs": 6
+      },
+      "raw_uniform_bits": 352.1243780580604,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 8,
+      "book_bounded_gain_vs_raw_bits": 473.35535062276165,
+      "book_bounded_reparse_bits": 41.543504084779435,
+      "book_length_digits": 155,
+      "component_bits": {
+        "copy_address_bits": 26.813839037377402,
+        "copy_length_stream_bits": 14.019330102390072,
+        "item_type_stream_bits": 0.6259529880856678,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        8,
+        9
+      ],
+      "excluded_peer_books": [
+        9
+      ],
+      "family_excluded_gain_vs_raw_bits": 473.4397325796879,
+      "family_excluded_minus_book_bounded_bits": -0.08438195692629336,
+      "family_excluded_reparse_bits": 41.45912212785314,
+      "family_labels": [
+        "hellgate_public_bookcase_36"
+      ],
+      "inventory": {
+        "copied_digits": 155,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 514.8988547075411,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 9,
+      "book_bounded_gain_vs_raw_bits": 926.974556597275,
+      "book_bounded_reparse_bits": 49.67230329960955,
+      "book_length_digits": 294,
+      "component_bits": {
+        "copy_address_bits": 26.835618950548785,
+        "copy_length_stream_bits": 14.03477747327517,
+        "item_type_stream_bits": 0.6259529880856678,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 8.036173612553512
+      },
+      "excluded_books": [
+        8,
+        9
+      ],
+      "excluded_peer_books": [
+        8
+      ],
+      "family_excluded_gain_vs_raw_bits": 927.1143368724214,
+      "family_excluded_minus_book_bounded_bits": -0.13978027514642122,
+      "family_excluded_reparse_bits": 49.53252302446313,
+      "family_labels": [
+        "hellgate_public_bookcase_36"
+      ],
+      "inventory": {
+        "copied_digits": 291,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 976.6468598968845,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 10,
+      "book_bounded_gain_vs_raw_bits": 906.089925267141,
+      "book_bounded_reparse_bits": 27.371869396207792,
+      "book_length_digits": 281,
+      "component_bits": {
+        "copy_address_bits": 13.422327623974558,
+        "copy_length_stream_bits": 8.829722735086058,
+        "item_type_stream_bits": 0.33518419158962914,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 4.784634845557548
+      },
+      "excluded_books": [
+        10
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 906.089925267141,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 27.371869396207792,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 279,
+        "copy_items": 1,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 933.4617946633488,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 11,
+      "book_bounded_gain_vs_raw_bits": 416.60557994374335,
+      "book_bounded_reparse_bits": 38.49856905582524,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 26.898124662469876,
+        "copy_length_stream_bits": 10.959519021589635,
+        "item_type_stream_bits": 0.6409253717657273,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        11
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 416.60557994374335,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 38.49856905582524,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 12,
+      "book_bounded_gain_vs_raw_bits": 434.1054128359505,
+      "book_bounded_reparse_bits": 20.998736163618087,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.423772486429716,
+        "copy_length_stream_bits": 7.2143191208007655,
+        "item_type_stream_bits": 0.3157758679057671,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        12,
+        14
+      ],
+      "excluded_peer_books": [
+        14
+      ],
+      "family_excluded_gain_vs_raw_bits": 434.1502815244324,
+      "family_excluded_minus_book_bounded_bits": -0.04486868848183789,
+      "family_excluded_reparse_bits": 20.95386747513625,
+      "family_labels": [
+        "hellgate_public_bookcase_1"
+      ],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 13,
+      "book_bounded_gain_vs_raw_bits": 427.22941663114887,
+      "book_bounded_reparse_bits": 41.162444747969204,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 26.8879512321191,
+        "copy_length_stream_bits": 13.63952913613776,
+        "item_type_stream_bits": 0.6349643797123404,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        13
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 427.22941663114887,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 41.162444747969204,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 468.39186137911804,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 14,
+      "book_bounded_gain_vs_raw_bits": 305.11209537114934,
+      "book_bounded_reparse_bits": 136.7043412488698,
+      "book_length_digits": 133,
+      "component_bits": {
+        "copy_address_bits": 53.733237813177325,
+        "copy_length_stream_bits": 19.36197985575918,
+        "item_type_stream_bits": 5.325157262864318,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 48.100298204291676
+      },
+      "excluded_books": [
+        12,
+        14
+      ],
+      "excluded_peer_books": [
+        12
+      ],
+      "family_excluded_gain_vs_raw_bits": 305.29576348392663,
+      "family_excluded_minus_book_bounded_bits": -0.18366811277729767,
+      "family_excluded_reparse_bits": 136.5206731360925,
+      "family_labels": [
+        "hellgate_public_bookcase_1"
+      ],
+      "inventory": {
+        "copied_digits": 114,
+        "copy_items": 4,
+        "literal_digits": 19,
+        "literal_runs": 3
+      },
+      "raw_uniform_bits": 441.81643662001915,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 15,
+      "book_bounded_gain_vs_raw_bits": 433.267938915606,
+      "book_bounded_reparse_bits": 41.76777865328674,
+      "book_length_digits": 143,
+      "component_bits": {
+        "copy_address_bits": 80.56172697965383,
+        "copy_length_stream_bits": 32.61988743172005,
+        "item_type_stream_bits": 1.8946552074346028,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        15,
+        16
+      ],
+      "excluded_peer_books": [
+        16
+      ],
+      "family_excluded_gain_vs_raw_bits": 359.95944795008427,
+      "family_excluded_minus_book_bounded_bits": 73.30849096552174,
+      "family_excluded_reparse_bits": 115.07626961880848,
+      "family_labels": [
+        "hellgate_public_bookcase_2"
+      ],
+      "inventory": {
+        "copied_digits": 143,
+        "copy_items": 6,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 475.0357175688928,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 16,
+      "book_bounded_gain_vs_raw_bits": 482.9994019836239,
+      "book_bounded_reparse_bits": 95.01608652677714,
+      "book_length_digits": 174,
+      "component_bits": {
+        "copy_address_bits": 107.42675550952994,
+        "copy_length_stream_bits": 43.353782681650074,
+        "item_type_stream_bits": 4.557233838866762,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 11.366322214245816
+      },
+      "excluded_books": [
+        15,
+        16
+      ],
+      "excluded_peer_books": [
+        15
+      ],
+      "family_excluded_gain_vs_raw_bits": 407.31139426610844,
+      "family_excluded_minus_book_bounded_bits": 75.68800771751543,
+      "family_excluded_reparse_bits": 170.70409424429258,
+      "family_labels": [
+        "hellgate_public_bookcase_2"
+      ],
+      "inventory": {
+        "copied_digits": 171,
+        "copy_items": 8,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 578.015488510401,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 17,
+      "book_bounded_gain_vs_raw_bits": 809.5856014978112,
+      "book_bounded_reparse_bits": 100.62269650132595,
+      "book_length_digits": 274,
+      "component_bits": {
+        "copy_address_bits": 67.1625236935004,
+        "copy_length_stream_bits": 31.90965951037267,
+        "item_type_stream_bits": 1.5505132974528635,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        17
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 809.5856014978112,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 100.62269650132595,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 274,
+        "copy_items": 5,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 910.2082979991372,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 18,
+      "book_bounded_gain_vs_raw_bits": 262.9075358845609,
+      "book_bounded_reparse_bits": 46.031776939963784,
+      "book_length_digits": 93,
+      "component_bits": {
+        "copy_address_bits": 26.866772003831343,
+        "copy_length_stream_bits": 13.55092711099324,
+        "item_type_stream_bits": 0.673450193630886,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 4.891783703218323
+      },
+      "excluded_books": [
+        18,
+        19
+      ],
+      "excluded_peer_books": [
+        19
+      ],
+      "family_excluded_gain_vs_raw_bits": 262.95637981285086,
+      "family_excluded_minus_book_bounded_bits": -0.0488439282899904,
+      "family_excluded_reparse_bits": 45.98293301167379,
+      "family_labels": [
+        "hellgate_public_bookcase_33"
+      ],
+      "inventory": {
+        "copied_digits": 91,
+        "copy_items": 2,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 308.9393128245247,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 19,
+      "book_bounded_gain_vs_raw_bits": 365.929490071388,
+      "book_bounded_reparse_bits": 62.599234169081726,
+      "book_length_digits": 129,
+      "component_bits": {
+        "copy_address_bits": 40.30581788520121,
+        "copy_length_stream_bits": 21.227885395795166,
+        "item_type_stream_bits": 1.010175290446329,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        18,
+        19
+      ],
+      "excluded_peer_books": [
+        18
+      ],
+      "family_excluded_gain_vs_raw_bits": 365.98484566902704,
+      "family_excluded_minus_book_bounded_bits": -0.055355597639021425,
+      "family_excluded_reparse_bits": 62.543878571442704,
+      "family_labels": [
+        "hellgate_public_bookcase_33"
+      ],
+      "inventory": {
+        "copied_digits": 129,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 428.5287242404697,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 20,
+      "book_bounded_gain_vs_raw_bits": 169.64411386978742,
+      "book_bounded_reparse_bits": 39.63735610811639,
+      "book_length_digits": 63,
+      "component_bits": {
+        "copy_address_bits": 26.857635612625494,
+        "copy_length_stream_bits": 12.033595068451708,
+        "item_type_stream_bits": 0.6892963427748918,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        20,
+        21
+      ],
+      "excluded_peer_books": [
+        21
+      ],
+      "family_excluded_gain_vs_raw_bits": 169.7009429540517,
+      "family_excluded_minus_book_bounded_bits": -0.05682908426429378,
+      "family_excluded_reparse_bits": 39.5805270238521,
+      "family_labels": [
+        "hellgate_public_bookcase_3"
+      ],
+      "inventory": {
+        "copied_digits": 63,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 209.2814699779038,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 21,
+      "book_bounded_gain_vs_raw_bits": 543.8599962013535,
+      "book_bounded_reparse_bits": 40.79934849882228,
+      "book_length_digits": 176,
+      "component_bits": {
+        "copy_address_bits": 26.87440301252459,
+        "copy_length_stream_bits": 13.149985220736012,
+        "item_type_stream_bits": 0.6892963427748918,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        20,
+        21
+      ],
+      "excluded_peer_books": [
+        20
+      ],
+      "family_excluded_gain_vs_raw_bits": 543.9456601241403,
+      "family_excluded_minus_book_bounded_bits": -0.08566392278679302,
+      "family_excluded_reparse_bits": 40.71368457603549,
+      "family_labels": [
+        "hellgate_public_bookcase_3"
+      ],
+      "inventory": {
+        "copied_digits": 176,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 584.6593447001758,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 22,
+      "book_bounded_gain_vs_raw_bits": 433.0469728469132,
+      "book_bounded_reparse_bits": 22.057176152655416,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441128621804697,
+        "copy_length_stream_bits": 8.285402218862249,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        22
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 433.0469728469132,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 22.057176152655416,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 23,
+      "book_bounded_gain_vs_raw_bits": 346.7070345464634,
+      "book_bounded_reparse_bits": 241.27423824859972,
+      "book_length_digits": 177,
+      "component_bits": {
+        "copy_address_bits": 94.1270196243785,
+        "copy_length_stream_bits": 40.011187978999445,
+        "item_type_stream_bits": 10.39169631296278,
+        "literal_length_bits": 17.0,
+        "literal_payload_bits": 79.74433433225902
+      },
+      "excluded_books": [
+        23
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 346.7070345464634,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 241.27423824859972,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 150,
+        "copy_items": 7,
+        "literal_digits": 27,
+        "literal_runs": 4
+      },
+      "raw_uniform_bits": 587.9812727950631,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 24,
+      "book_bounded_gain_vs_raw_bits": 334.80676100585305,
+      "book_bounded_reparse_bits": 60.502682285743035,
+      "book_length_digits": 119,
+      "component_bits": {
+        "copy_address_bits": 40.26878689778992,
+        "copy_length_stream_bits": 19.065040471595726,
+        "item_type_stream_bits": 1.0017022096603148,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        24,
+        25,
+        26
+      ],
+      "excluded_peer_books": [
+        25,
+        26
+      ],
+      "family_excluded_gain_vs_raw_bits": 334.97391371255014,
+      "family_excluded_minus_book_bounded_bits": -0.16715270669707394,
+      "family_excluded_reparse_bits": 60.33552957904596,
+      "family_labels": [
+        "hellgate_public_bookcase_4"
+      ],
+      "inventory": {
+        "copied_digits": 119,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 395.3094432915961,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 25,
+      "book_bounded_gain_vs_raw_bits": 96.05517848827662,
+      "book_bounded_reparse_bits": 20.212304832781054,
+      "book_length_digits": 35,
+      "component_bits": {
+        "copy_address_bits": 13.416665599935456,
+        "copy_length_stream_bits": 6.400879436282184,
+        "item_type_stream_bits": 0.33390073655343827,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        24,
+        25,
+        26
+      ],
+      "excluded_peer_books": [
+        24,
+        26
+      ],
+      "family_excluded_gain_vs_raw_bits": 96.1160375482866,
+      "family_excluded_minus_book_bounded_bits": -0.06085906000997454,
+      "family_excluded_reparse_bits": 20.15144577277108,
+      "family_labels": [
+        "hellgate_public_bookcase_4"
+      ],
+      "inventory": {
+        "copied_digits": 35,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 116.26748332105768,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 26,
+      "book_bounded_gain_vs_raw_bits": 487.4101780252255,
+      "book_bounded_reparse_bits": 77.31759810562608,
+      "book_length_digits": 170,
+      "component_bits": {
+        "copy_address_bits": 53.67430702436917,
+        "copy_length_stream_bits": 22.15118917958078,
+        "item_type_stream_bits": 1.335602946213753,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        24,
+        25,
+        26
+      ],
+      "excluded_peer_books": [
+        24,
+        25
+      ],
+      "family_excluded_gain_vs_raw_bits": 487.5666769806879,
+      "family_excluded_minus_book_bounded_bits": -0.15649895546236792,
+      "family_excluded_reparse_bits": 77.16109915016371,
+      "family_labels": [
+        "hellgate_public_bookcase_4"
+      ],
+      "inventory": {
+        "copied_digits": 170,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 564.7277761308516,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 27,
+      "book_bounded_gain_vs_raw_bits": 370.7180640700758,
+      "book_bounded_reparse_bits": 41.201019695957086,
+      "book_length_digits": 124,
+      "component_bits": {
+        "copy_address_bits": 26.89711323129505,
+        "copy_length_stream_bits": 13.642615840685092,
+        "item_type_stream_bits": 0.6612906239769426,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        27
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 370.7180640700758,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 41.201019695957086,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 124,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 411.9190837660329,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 28,
+      "book_bounded_gain_vs_raw_bits": 462.9119330911482,
+      "book_bounded_reparse_bits": 22.089568762406667,
+      "book_length_digits": 146,
+      "component_bits": {
+        "copy_address_bits": 13.420223419348645,
+        "copy_length_stream_bits": 8.294620748891626,
+        "item_type_stream_bits": 0.3430337278990138,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        28,
+        29
+      ],
+      "excluded_peer_books": [
+        29
+      ],
+      "family_excluded_gain_vs_raw_bits": 462.9436239574156,
+      "family_excluded_minus_book_bounded_bits": -0.03169086626738249,
+      "family_excluded_reparse_bits": 22.057877896139285,
+      "family_labels": [
+        "hellgate_public_bookcase_23"
+      ],
+      "inventory": {
+        "copied_digits": 146,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 485.0015018535549,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 29,
+      "book_bounded_gain_vs_raw_bits": 460.67885178224856,
+      "book_bounded_reparse_bits": 40.9322905457431,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 26.8543303479586,
+        "copy_length_stream_bits": 13.31741261376487,
+        "item_type_stream_bits": 0.6860674557980276,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        28,
+        29
+      ],
+      "excluded_peer_books": [
+        28
+      ],
+      "family_excluded_gain_vs_raw_bits": 460.7533319104702,
+      "family_excluded_minus_book_bounded_bits": -0.07448012822160166,
+      "family_excluded_reparse_bits": 40.8578104175215,
+      "family_labels": [
+        "hellgate_public_bookcase_23"
+      ],
+      "inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 501.6111423279917,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 30,
+      "book_bounded_gain_vs_raw_bits": 378.7196590930106,
+      "book_bounded_reparse_bits": 119.56955514009374,
+      "book_length_digits": 150,
+      "component_bits": {
+        "copy_address_bits": 67.23394223778836,
+        "copy_length_stream_bits": 34.970701773625976,
+        "item_type_stream_bits": 3.611433196770613,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.753477931908797
+      },
+      "excluded_books": [
+        30
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 378.7196590930106,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 119.56955514009374,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 144,
+        "copy_items": 5,
+        "literal_digits": 6,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 498.2892142331043,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 31,
+      "book_bounded_gain_vs_raw_bits": 643.5844161877368,
+      "book_bounded_reparse_bits": 180.25375134432898,
+      "book_length_digits": 248,
+      "component_bits": {
+        "copy_address_bits": 120.97084825455671,
+        "copy_length_stream_bits": 56.20999340662263,
+        "item_type_stream_bits": 3.0729096831496125,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        31
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 643.5844161877368,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 180.25375134432898,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 248,
+        "copy_items": 9,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 823.8381675320658,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 32,
+      "book_bounded_gain_vs_raw_bits": 434.057409917326,
+      "book_bounded_reparse_bits": 21.046739082242567,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.423641195075856,
+        "copy_length_stream_bits": 7.2761244052742375,
+        "item_type_stream_bits": 0.32631541212830145,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        32,
+        33
+      ],
+      "excluded_peer_books": [
+        33
+      ],
+      "family_excluded_gain_vs_raw_bits": 434.0780679870902,
+      "family_excluded_minus_book_bounded_bits": -0.020658069764170506,
+      "family_excluded_reparse_bits": 21.026081012478397,
+      "family_labels": [
+        "hellgate_public_bookcase_30"
+      ],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 33,
+      "book_bounded_gain_vs_raw_bits": 414.93842326992234,
+      "book_bounded_reparse_bits": 30.19994144498417,
+      "book_length_digits": 134,
+      "component_bits": {
+        "copy_address_bits": 13.423641195075856,
+        "copy_length_stream_bits": 8.257387842692651,
+        "item_type_stream_bits": 0.32631541212830145,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 8.160991876672313
+      },
+      "excluded_books": [
+        32,
+        33
+      ],
+      "excluded_peer_books": [
+        32
+      ],
+      "family_excluded_gain_vs_raw_bits": 414.97002838833737,
+      "family_excluded_minus_book_bounded_bits": -0.03160511841504743,
+      "family_excluded_reparse_bits": 30.168336326569122,
+      "family_labels": [
+        "hellgate_public_bookcase_30"
+      ],
+      "inventory": {
+        "copied_digits": 131,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 445.1383647149065,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 34,
+      "book_bounded_gain_vs_raw_bits": 231.5807874215621,
+      "book_bounded_reparse_bits": 177.01636824958348,
+      "book_length_digits": 123,
+      "component_bits": {
+        "copy_address_bits": 94.16860850091888,
+        "copy_length_stream_bits": 31.509153893054247,
+        "item_type_stream_bits": 6.244703626074413,
+        "literal_length_bits": 9.0,
+        "literal_payload_bits": 36.09390222953591
+      },
+      "excluded_books": [
+        34
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 231.5807874215621,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 177.01636824958348,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 110,
+        "copy_items": 7,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "raw_uniform_bits": 408.5971556711456,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 35,
+      "book_bounded_gain_vs_raw_bits": 908.2571714937866,
+      "book_bounded_reparse_bits": 41.81426364399901,
+      "book_length_digits": 286,
+      "component_bits": {
+        "copy_address_bits": 26.844523585594263,
+        "copy_length_stream_bits": 14.305451076543749,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        35
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 908.2571714937866,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 41.81426364399901,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 286,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 950.0714351377856,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 36,
+      "book_bounded_gain_vs_raw_bits": 339.0557460103316,
+      "book_bounded_reparse_bits": 116.04840298923703,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 80.6785836630545,
+        "copy_length_stream_bits": 33.34013752441373,
+        "item_type_stream_bits": 2.0296818017688345,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        36
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 339.0557460103316,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 116.04840298923703,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 6,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 37,
+      "book_bounded_gain_vs_raw_bits": 488.44719180005893,
+      "book_bounded_reparse_bits": 43.06130338191909,
+      "book_length_digits": 160,
+      "component_bits": {
+        "copy_address_bits": 26.882639364847464,
+        "copy_length_stream_bits": 15.514375035210623,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        37
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 488.44719180005893,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 43.06130338191909,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 160,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 531.508495181978,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 38,
+      "book_bounded_gain_vs_raw_bits": 368.2453858420124,
+      "book_bounded_reparse_bits": 76.8929788728941,
+      "book_length_digits": 134,
+      "component_bits": {
+        "copy_address_bits": 40.33291680856903,
+        "copy_length_stream_bits": 12.768184324776925,
+        "item_type_stream_bits": 5.017936996109023,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 11.002815015607098
+      },
+      "excluded_books": [
+        38,
+        39
+      ],
+      "excluded_peer_books": [
+        39
+      ],
+      "family_excluded_gain_vs_raw_bits": 368.01651156984445,
+      "family_excluded_minus_book_bounded_bits": 0.22887427216795686,
+      "family_excluded_reparse_bits": 77.12185314506206,
+      "family_labels": [
+        "hellgate_public_bookcase_6"
+      ],
+      "inventory": {
+        "copied_digits": 130,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "raw_uniform_bits": 445.1383647149065,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 39,
+      "book_bounded_gain_vs_raw_bits": 154.0727910756309,
+      "book_bounded_reparse_bits": 41.920966522723475,
+      "book_length_digits": 59,
+      "component_bits": {
+        "copy_address_bits": 13.434758522966765,
+        "copy_length_stream_bits": 4.37851162325373,
+        "item_type_stream_bits": 2.3516754382814145,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 17.752521527861624
+      },
+      "excluded_books": [
+        38,
+        39
+      ],
+      "excluded_peer_books": [
+        38
+      ],
+      "family_excluded_gain_vs_raw_bits": 154.07629048599082,
+      "family_excluded_minus_book_bounded_bits": -0.0034994103599359505,
+      "family_excluded_reparse_bits": 41.91746711236354,
+      "family_labels": [
+        "hellgate_public_bookcase_6"
+      ],
+      "inventory": {
+        "copied_digits": 52,
+        "copy_items": 1,
+        "literal_digits": 7,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 195.99375759835436,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 40,
+      "book_bounded_gain_vs_raw_bits": 484.48105181151436,
+      "book_bounded_reparse_bits": 73.60286812956244,
+      "book_length_digits": 168,
+      "component_bits": {
+        "copy_address_bits": 40.21826732539156,
+        "copy_length_stream_bits": 15.651023653456217,
+        "item_type_stream_bits": 2.945258597366477,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 10.50779464019871
+      },
+      "excluded_books": [
+        40,
+        41,
+        42
+      ],
+      "excluded_peer_books": [
+        41,
+        42
+      ],
+      "family_excluded_gain_vs_raw_bits": 484.7615757246639,
+      "family_excluded_minus_book_bounded_bits": -0.2805239131494659,
+      "family_excluded_reparse_bits": 73.32234421641297,
+      "family_labels": [
+        "hellgate_public_bookcase_13"
+      ],
+      "inventory": {
+        "copied_digits": 165,
+        "copy_items": 3,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 558.0839199410768,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 41,
+      "book_bounded_gain_vs_raw_bits": 360.9022755555654,
+      "book_bounded_reparse_bits": 90.87994534911587,
+      "book_length_digits": 136,
+      "component_bits": {
+        "copy_address_bits": 53.603599979297904,
+        "copy_length_stream_bits": 23.53231486006274,
+        "item_type_stream_bits": 3.277833936453348,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 6.0
+      },
+      "excluded_books": [
+        40,
+        41,
+        42
+      ],
+      "excluded_peer_books": [
+        40,
+        42
+      ],
+      "family_excluded_gain_vs_raw_bits": 361.36847212886727,
+      "family_excluded_minus_book_bounded_bits": -0.4661965733018718,
+      "family_excluded_reparse_bits": 90.413748775814,
+      "family_labels": [
+        "hellgate_public_bookcase_13"
+      ],
+      "inventory": {
+        "copied_digits": 134,
+        "copy_items": 4,
+        "literal_digits": 2,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 451.78222090468125,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 42,
+      "book_bounded_gain_vs_raw_bits": 479.06948901805634,
+      "book_bounded_reparse_bits": 142.13106472588044,
+      "book_length_digits": 187,
+      "component_bits": {
+        "copy_address_bits": 80.42234805475563,
+        "copy_length_stream_bits": 37.50413050347738,
+        "item_type_stream_bits": 3.9429846146270897,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 15.73859369482281
+      },
+      "excluded_books": [
+        40,
+        41,
+        42
+      ],
+      "excluded_peer_books": [
+        40,
+        41
+      ],
+      "family_excluded_gain_vs_raw_bits": 479.59249687625385,
+      "family_excluded_minus_book_bounded_bits": -0.5230078581975022,
+      "family_excluded_reparse_bits": 141.60805686768293,
+      "family_labels": [
+        "hellgate_public_bookcase_13"
+      ],
+      "inventory": {
+        "copied_digits": 183,
+        "copy_items": 6,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "raw_uniform_bits": 621.2005537439368,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 43,
+      "book_bounded_gain_vs_raw_bits": 429.45516896998527,
+      "book_bounded_reparse_bits": 38.93669240913276,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 26.89709242979869,
+        "copy_length_stream_bits": 11.37531099747307,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        43
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 429.45516896998527,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 38.93669240913276,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 468.39186137911804,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 44,
+      "book_bounded_gain_vs_raw_bits": 398.65895766151345,
+      "book_bounded_reparse_bits": 19.90398229429415,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.4231159101471,
+        "copy_length_stream_bits": 6.108524456778169,
+        "item_type_stream_bits": 0.336725096815443,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        44,
+        45
+      ],
+      "excluded_peer_books": [
+        45
+      ],
+      "family_excluded_gain_vs_raw_bits": 398.6945744920669,
+      "family_excluded_minus_book_bounded_bits": -0.035616830553436785,
+      "family_excluded_reparse_bits": 19.868365463740712,
+      "family_labels": [
+        "hellgate_public_bookcase_20"
+      ],
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 418.5629399558076,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 45,
+      "book_bounded_gain_vs_raw_bits": 455.69984671828513,
+      "book_bounded_reparse_bits": 39.26743941993186,
+      "book_length_digits": 149,
+      "component_bits": {
+        "copy_address_bits": 26.853045651500373,
+        "copy_length_stream_bits": 11.69355955506084,
+        "item_type_stream_bits": 0.673450193630886,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        44,
+        45
+      ],
+      "excluded_peer_books": [
+        44
+      ],
+      "family_excluded_gain_vs_raw_bits": 455.7472307380249,
+      "family_excluded_minus_book_bounded_bits": -0.04738401973976636,
+      "family_excluded_reparse_bits": 39.220055400192095,
+      "family_labels": [
+        "hellgate_public_bookcase_20"
+      ],
+      "inventory": {
+        "copied_digits": 149,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 494.967286138217,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 46,
+      "book_bounded_gain_vs_raw_bits": 818.2535197780671,
+      "book_bounded_reparse_bits": 22.194288228435553,
+      "book_length_digits": 253,
+      "component_bits": {
+        "copy_address_bits": 13.409390936137703,
+        "copy_length_stream_bits": 8.430452551665532,
+        "item_type_stream_bits": 0.33518419158962914,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        46,
+        47
+      ],
+      "excluded_peer_books": [
+        47
+      ],
+      "family_excluded_gain_vs_raw_bits": 818.2727803271098,
+      "family_excluded_minus_book_bounded_bits": -0.019260549042691366,
+      "family_excluded_reparse_bits": 22.175027679392862,
+      "family_labels": [
+        "hellgate_public_bookcase_27"
+      ],
+      "inventory": {
+        "copied_digits": 253,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 840.4478080065027,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 47,
+      "book_bounded_gain_vs_raw_bits": 398.06864066869326,
+      "book_bounded_reparse_bits": 20.494299287114337,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.409390936137703,
+        "copy_length_stream_bits": 6.700439718141092,
+        "item_type_stream_bits": 0.33518419158962914,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        46,
+        47
+      ],
+      "excluded_peer_books": [
+        46
+      ],
+      "family_excluded_gain_vs_raw_bits": 398.1179251099392,
+      "family_excluded_minus_book_bounded_bits": -0.0492844412459128,
+      "family_excluded_reparse_bits": 20.445014845868425,
+      "family_labels": [
+        "hellgate_public_bookcase_27"
+      ],
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 418.5629399558076,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 48,
+      "book_bounded_gain_vs_raw_bits": 522.1048482056073,
+      "book_bounded_reparse_bits": 39.30099983035705,
+      "book_length_digits": 169,
+      "component_bits": {
+        "copy_address_bits": 26.88082182248751,
+        "copy_length_stream_bits": 11.755889026008543,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        48
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 522.1048482056073,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 39.30099983035705,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 169,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 561.4058480359643,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 49,
+      "book_bounded_gain_vs_raw_bits": 124.65719767020033,
+      "book_bounded_reparse_bits": 257.36453324184635,
+      "book_length_digits": 115,
+      "component_bits": {
+        "copy_address_bits": 94.1718320915561,
+        "copy_length_stream_bits": 28.61584690605302,
+        "item_type_stream_bits": 8.338954850890808,
+        "literal_length_bits": 15.0,
+        "literal_payload_bits": 111.23789939334644
+      },
+      "excluded_books": [
+        49
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 124.65719767020033,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 257.36453324184635,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 83,
+        "copy_items": 7,
+        "literal_digits": 32,
+        "literal_runs": 3
+      },
+      "raw_uniform_bits": 382.0217309120467,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 50,
+      "book_bounded_gain_vs_raw_bits": 447.7626254052536,
+      "book_bounded_reparse_bits": 20.629235973864464,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 13.350110443347928,
+        "copy_length_stream_bits": 6.820178962415188,
+        "item_type_stream_bits": 0.34143440923884577,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "excluded_peer_books": [
+        51,
+        52,
+        53
+      ],
+      "family_excluded_gain_vs_raw_bits": 447.88013756411607,
+      "family_excluded_minus_book_bounded_bits": -0.11751215886250321,
+      "family_excluded_reparse_bits": 20.51172381500196,
+      "family_labels": [
+        "hellgate_public_bookcase_40"
+      ],
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 468.39186137911804,
+      "train_book_count": 66,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 51,
+      "book_bounded_gain_vs_raw_bits": 835.1955375958265,
+      "book_bounded_reparse_bits": 55.08119183398646,
+      "book_length_digits": 268,
+      "component_bits": {
+        "copy_address_bits": 40.093249918632196,
+        "copy_length_stream_bits": 13.723660944409984,
+        "item_type_stream_bits": 1.0243032277165374,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "excluded_peer_books": [
+        50,
+        52,
+        53
+      ],
+      "family_excluded_gain_vs_raw_bits": 835.4355153390543,
+      "family_excluded_minus_book_bounded_bits": -0.23997774322774745,
+      "family_excluded_reparse_bits": 54.84121409075871,
+      "family_labels": [
+        "hellgate_public_bookcase_40"
+      ],
+      "inventory": {
+        "copied_digits": 268,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 890.276729429813,
+      "train_book_count": 66,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 52,
+      "book_bounded_gain_vs_raw_bits": 415.103799683414,
+      "book_bounded_reparse_bits": 40.000349316154605,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 26.701463815540073,
+        "copy_length_stream_bits": 12.688250309133178,
+        "item_type_stream_bits": 0.6828688184776915,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "excluded_peer_books": [
+        50,
+        51,
+        53
+      ],
+      "family_excluded_gain_vs_raw_bits": 415.03156605641766,
+      "family_excluded_minus_book_bounded_bits": 0.0722336269963364,
+      "family_excluded_reparse_bits": 40.07258294315094,
+      "family_labels": [
+        "hellgate_public_bookcase_40"
+      ],
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 455.1041489995686,
+      "train_book_count": 66,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 53,
+      "book_bounded_gain_vs_raw_bits": 860.0207933677548,
+      "book_bounded_reparse_bits": 40.22172034672041,
+      "book_length_digits": 271,
+      "component_bits": {
+        "copy_address_bits": 26.730165591892824,
+        "copy_length_stream_bits": 12.630797987665094,
+        "item_type_stream_bits": 0.6828688184776915,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "excluded_peer_books": [
+        50,
+        51,
+        52
+      ],
+      "family_excluded_gain_vs_raw_bits": 860.1986813164395,
+      "family_excluded_minus_book_bounded_bits": -0.1778879486848055,
+      "family_excluded_reparse_bits": 40.043832398035605,
+      "family_labels": [
+        "hellgate_public_bookcase_40"
+      ],
+      "inventory": {
+        "copied_digits": 271,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 900.2425137144752,
+      "train_book_count": 66,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 54,
+      "book_bounded_gain_vs_raw_bits": 154.6089599530878,
+      "book_bounded_reparse_bits": 34.74094145549185,
+      "book_length_digits": 57,
+      "component_bits": {
+        "copy_address_bits": 26.80934446988862,
+        "copy_length_stream_bits": 7.185866545311334,
+        "item_type_stream_bits": 0.6869684765076197,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        54,
+        55,
+        56
+      ],
+      "excluded_peer_books": [
+        55,
+        56
+      ],
+      "family_excluded_gain_vs_raw_bits": 154.6677219168721,
+      "family_excluded_minus_book_bounded_bits": -0.05876196378427778,
+      "family_excluded_reparse_bits": 34.68217949170757,
+      "family_labels": [
+        "hellgate_public_bookcase_7"
+      ],
+      "inventory": {
+        "copied_digits": 57,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 189.34990140857965,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 55,
+      "book_bounded_gain_vs_raw_bits": 312.0433295177855,
+      "book_bounded_reparse_bits": 73.30032948914852,
+      "book_length_digits": 116,
+      "component_bits": {
+        "copy_address_bits": 40.214876926584466,
+        "copy_length_stream_bits": 21.355843045713787,
+        "item_type_stream_bits": 1.0304527147614295,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 10.214723860610036
+      },
+      "excluded_books": [
+        54,
+        55,
+        56
+      ],
+      "excluded_peer_books": [
+        54,
+        56
+      ],
+      "family_excluded_gain_vs_raw_bits": 312.5277624592643,
+      "family_excluded_minus_book_bounded_bits": -0.48443294147880067,
+      "family_excluded_reparse_bits": 72.81589654766972,
+      "family_labels": [
+        "hellgate_public_bookcase_7"
+      ],
+      "inventory": {
+        "copied_digits": 112,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 385.343659006934,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 56,
+      "book_bounded_gain_vs_raw_bits": 691.5928882943672,
+      "book_bounded_reparse_bits": 192.03998494567105,
+      "book_length_digits": 266,
+      "component_bits": {
+        "copy_address_bits": 120.77729778766775,
+        "copy_length_stream_bits": 50.94641083457471,
+        "item_type_stream_bits": 4.986660765617595,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 11.029287226968279
+      },
+      "excluded_books": [
+        54,
+        55,
+        56
+      ],
+      "excluded_peer_books": [
+        54,
+        55
+      ],
+      "family_excluded_gain_vs_raw_bits": 691.89321662521,
+      "family_excluded_minus_book_bounded_bits": -0.300328330842774,
+      "family_excluded_reparse_bits": 191.73965661482828,
+      "family_labels": [
+        "hellgate_public_bookcase_7"
+      ],
+      "inventory": {
+        "copied_digits": 263,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 883.6328732400383,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 57,
+      "book_bounded_gain_vs_raw_bits": 525.3287598180278,
+      "book_bounded_reparse_bits": 238.7147020060655,
+      "book_length_digits": 230,
+      "component_bits": {
+        "copy_address_bits": 80.65515790081432,
+        "copy_length_stream_bits": 42.46595639609596,
+        "item_type_stream_bits": 3.941003624666954,
+        "literal_length_bits": 7.0,
+        "literal_payload_bits": 104.65258408448827
+      },
+      "excluded_books": [
+        57
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 525.3287598180278,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 238.7147020060655,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 198,
+        "copy_items": 6,
+        "literal_digits": 32,
+        "literal_runs": 2
+      },
+      "raw_uniform_bits": 764.0434618240934,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 58,
+      "book_bounded_gain_vs_raw_bits": 842.9237744660506,
+      "book_bounded_reparse_bits": 60.64066734331184,
+      "book_length_digits": 272,
+      "component_bits": {
+        "copy_address_bits": 40.29923465175246,
+        "copy_length_stream_bits": 19.362486455174476,
+        "item_type_stream_bits": 0.9789462363849044,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        58
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 842.9237744660506,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 60.64066734331184,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 272,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 903.5644418093625,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 59,
+      "book_bounded_gain_vs_raw_bits": 823.3331431978808,
+      "book_bounded_reparse_bits": 80.23129861148176,
+      "book_length_digits": 272,
+      "component_bits": {
+        "copy_address_bits": 53.74789537248846,
+        "copy_length_stream_bits": 25.14877368911544,
+        "item_type_stream_bits": 1.3346295498778773,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        59
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 823.3331431978808,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 80.23129861148176,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 272,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 903.5644418093625,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 60,
+      "book_bounded_gain_vs_raw_bits": 414.7482264779536,
+      "book_bounded_reparse_bits": 86.86291585003806,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 53.781692470518934,
+        "copy_length_stream_bits": 21.3410871358951,
+        "item_type_stream_bits": 3.2807046249867247,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 4.459431618637297
+      },
+      "excluded_books": [
+        60
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 414.7482264779536,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 86.86291585003806,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 150,
+        "copy_items": 4,
+        "literal_digits": 1,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 501.6111423279917,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 61,
+      "book_bounded_gain_vs_raw_bits": 460.0246956934247,
+      "book_bounded_reparse_bits": 21.65487806524283,
+      "book_length_digits": 145,
+      "component_bits": {
+        "copy_address_bits": 13.440090524950488,
+        "copy_length_stream_bits": 7.882643049361842,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        61
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 460.0246956934247,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 21.65487806524283,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 145,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 481.6795737586675,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 62,
+      "book_bounded_gain_vs_raw_bits": 398.06864066869326,
+      "book_bounded_reparse_bits": 20.494299287114337,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.406205005418855,
+        "copy_length_stream_bits": 6.693486957499325,
+        "item_type_stream_bits": 0.336725096815443,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        62,
+        63,
+        64
+      ],
+      "excluded_peer_books": [
+        63,
+        64
+      ],
+      "family_excluded_gain_vs_raw_bits": 398.126522896074,
+      "family_excluded_minus_book_bounded_bits": -0.057882227380716245,
+      "family_excluded_reparse_bits": 20.43641705973362,
+      "family_labels": [
+        "hellgate_public_bookcase_21"
+      ],
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 418.5629399558076,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 63,
+      "book_bounded_gain_vs_raw_bits": 377.6590120823903,
+      "book_bounded_reparse_bits": 40.90392787341736,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 26.818642537367193,
+        "copy_length_stream_bits": 13.308196801614534,
+        "item_type_stream_bits": 0.673450193630886,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        62,
+        63,
+        64
+      ],
+      "excluded_peer_books": [
+        62,
+        64
+      ],
+      "family_excluded_gain_vs_raw_bits": 377.762650423195,
+      "family_excluded_minus_book_bounded_bits": -0.10363834080474987,
+      "family_excluded_reparse_bits": 40.80028953261261,
+      "family_labels": [
+        "hellgate_public_bookcase_21"
+      ],
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 418.5629399558076,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 64,
+      "book_bounded_gain_vs_raw_bits": 458.9838336158259,
+      "book_bounded_reparse_bits": 42.62730871216574,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 26.82247474994206,
+        "copy_length_stream_bits": 15.046441948007313,
+        "item_type_stream_bits": 0.673450193630886,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        62,
+        63,
+        64
+      ],
+      "excluded_peer_books": [
+        62,
+        63
+      ],
+      "family_excluded_gain_vs_raw_bits": 459.06877543641144,
+      "family_excluded_minus_book_bounded_bits": -0.0849418205854846,
+      "family_excluded_reparse_bits": 42.54236689158026,
+      "family_labels": [
+        "hellgate_public_bookcase_21"
+      ],
+      "inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 501.6111423279917,
+      "train_book_count": 67,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 65,
+      "book_bounded_gain_vs_raw_bits": 514.3593669161988,
+      "book_bounded_reparse_bits": 47.04648111976543,
+      "book_length_digits": 169,
+      "component_bits": {
+        "copy_address_bits": 26.888569241307465,
+        "copy_length_stream_bits": 12.29395055176067,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 7.199672344836301
+      },
+      "excluded_books": [
+        65
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 514.3593669161988,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 47.04648111976543,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 166,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "raw_uniform_bits": 561.4058480359643,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 66,
+      "book_bounded_gain_vs_raw_bits": 675.5899609992865,
+      "book_bounded_reparse_bits": 22.014938927059614,
+      "book_length_digits": 210,
+      "component_bits": {
+        "copy_address_bits": 13.431628182620894,
+        "copy_length_stream_bits": 8.252665432450248,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        66
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 675.5899609992865,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 22.014938927059614,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 210,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 697.6048999263461,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 67,
+      "book_bounded_gain_vs_raw_bits": 283.5676872037006,
+      "book_bounded_reparse_bits": 41.98126609526095,
+      "book_length_digits": 98,
+      "component_bits": {
+        "copy_address_bits": 26.896358921839,
+        "copy_length_stream_bits": 14.420618191560955,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        67
+      ],
+      "excluded_peer_books": [],
+      "family_excluded_gain_vs_raw_bits": 283.5676872037006,
+      "family_excluded_minus_book_bounded_bits": 0.0,
+      "family_excluded_reparse_bits": 41.98126609526095,
+      "family_labels": [],
+      "inventory": {
+        "copied_digits": 98,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 325.5489532989615,
+      "train_book_count": 69,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 68,
+      "book_bounded_gain_vs_raw_bits": 453.38820519113875,
+      "book_bounded_reparse_bits": 21.647512377754033,
+      "book_length_digits": 143,
+      "component_bits": {
+        "copy_address_bits": 13.422064766172813,
+        "copy_length_stream_bits": 7.870364719583405,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        68,
+        69
+      ],
+      "excluded_peer_books": [
+        69
+      ],
+      "family_excluded_gain_vs_raw_bits": 453.41114359220603,
+      "family_excluded_minus_book_bounded_bits": -0.022938401067314373,
+      "family_excluded_reparse_bits": 21.62457397668672,
+      "family_labels": [
+        "hellgate_public_bookcase_8"
+      ],
+      "inventory": {
+        "copied_digits": 143,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 475.0357175688928,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 69,
+      "book_bounded_gain_vs_raw_bits": 443.45934476113104,
+      "book_bounded_reparse_bits": 21.610588523099686,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 13.422064766172813,
+        "copy_length_stream_bits": 7.839203788096944,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "excluded_books": [
+        68,
+        69
+      ],
+      "excluded_peer_books": [
+        68
+      ],
+      "family_excluded_gain_vs_raw_bits": 443.4765202390305,
+      "family_excluded_minus_book_bounded_bits": -0.017175477899428415,
+      "family_excluded_reparse_bits": 21.593413045200258,
+      "family_labels": [
+        "hellgate_public_bookcase_8"
+      ],
+      "inventory": {
+        "copied_digits": 140,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "raw_uniform_bits": 465.06993328423073,
+      "train_book_count": 68,
+      "validation": {
+        "errors": [],
+        "roundtrip_ok": true
+      }
+    }
+  ],
+  "schema": "leave_one_book_out_family_excluded_source_audit.v1",
+  "summary": {
+    "beats_raw_count": 70,
+    "book_count": 70,
+    "failure_books": [],
+    "family_labeled_beats_raw_count": 46,
+    "family_labeled_book_count": 46,
+    "family_labeled_failure_books": [],
+    "highest_family_exclusion_penalty_books": [
+      {
+        "book": 7,
+        "excluded_peer_books": [
+          5,
+          6
+        ],
+        "family_excluded_gain_vs_raw_bits": 56.05322181488515,
+        "family_excluded_minus_book_bounded_bits": 119.07627699516718,
+        "family_labels": [
+          "hellgate_public_bookcase_22"
+        ]
+      },
+      {
+        "book": 16,
+        "excluded_peer_books": [
+          15
+        ],
+        "family_excluded_gain_vs_raw_bits": 407.31139426610844,
+        "family_excluded_minus_book_bounded_bits": 75.68800771751543,
+        "family_labels": [
+          "hellgate_public_bookcase_2"
+        ]
+      },
+      {
+        "book": 15,
+        "excluded_peer_books": [
+          16
+        ],
+        "family_excluded_gain_vs_raw_bits": 359.95944795008427,
+        "family_excluded_minus_book_bounded_bits": 73.30849096552174,
+        "family_labels": [
+          "hellgate_public_bookcase_2"
+        ]
+      },
+      {
+        "book": 6,
+        "excluded_peer_books": [
+          5,
+          7
+        ],
+        "family_excluded_gain_vs_raw_bits": 291.72869441856346,
+        "family_excluded_minus_book_bounded_bits": 60.934513924504984,
+        "family_labels": [
+          "hellgate_public_bookcase_22"
+        ]
+      },
+      {
+        "book": 3,
+        "excluded_peer_books": [
+          4
+        ],
+        "family_excluded_gain_vs_raw_bits": 422.4064019570492,
+        "family_excluded_minus_book_bounded_bits": 0.9602657008026796,
+        "family_labels": [
+          "hellgate_public_bookcase_12"
+        ]
+      },
+      {
+        "book": 4,
+        "excluded_peer_books": [
+          3
+        ],
+        "family_excluded_gain_vs_raw_bits": 264.44260732055193,
+        "family_excluded_minus_book_bounded_bits": 0.8583193449653663,
+        "family_labels": [
+          "hellgate_public_bookcase_12"
+        ]
+      },
+      {
+        "book": 38,
+        "excluded_peer_books": [
+          39
+        ],
+        "family_excluded_gain_vs_raw_bits": 368.01651156984445,
+        "family_excluded_minus_book_bounded_bits": 0.22887427216795686,
+        "family_labels": [
+          "hellgate_public_bookcase_6"
+        ]
+      },
+      {
+        "book": 52,
+        "excluded_peer_books": [
+          50,
+          51,
+          53
+        ],
+        "family_excluded_gain_vs_raw_bits": 415.03156605641766,
+        "family_excluded_minus_book_bounded_bits": 0.0722336269963364,
+        "family_labels": [
+          "hellgate_public_bookcase_40"
+        ]
+      },
+      {
+        "book": 10,
+        "excluded_peer_books": [],
+        "family_excluded_gain_vs_raw_bits": 906.089925267141,
+        "family_excluded_minus_book_bounded_bits": 0.0,
+        "family_labels": []
+      },
+      {
+        "book": 11,
+        "excluded_peer_books": [],
+        "family_excluded_gain_vs_raw_bits": 416.60557994374335,
+        "family_excluded_minus_book_bounded_bits": 0.0,
+        "family_labels": []
+      }
+    ],
+    "interpretation": "Each book is reparsed independently from a book-bounded source inventory. For books with a public-bookcase family label, every book from that same family is removed from both frozen train counts and copy sources. Positive gains test whether singleton prediction depends on same-family memorization.",
+    "max_family_excluded_minus_book_bounded_bits": 119.07627699516718,
+    "mean_family_excluded_gain_vs_raw_bits": 460.2513302956778,
+    "mean_family_excluded_minus_book_bounded_bits": 4.646176048228834,
+    "mean_family_labeled_gain_vs_raw_bits": 432.6494070493336,
+    "min_family_excluded_gain_vs_raw_bits": 56.05322181488515,
+    "min_family_labeled_gain_vs_raw_bits": 56.05322181488515,
+    "roundtrip_book_count": 70,
+    "weakest_books": [
+      {
+        "book": 7,
+        "book_length_digits": 106,
+        "excluded_peer_books": [
+          5,
+          6
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_22"
+        ],
+        "gain_vs_raw_bits": 56.05322181488515
+      },
+      {
+        "book": 25,
+        "book_length_digits": 35,
+        "excluded_peer_books": [
+          24,
+          26
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_4"
+        ],
+        "gain_vs_raw_bits": 96.1160375482866
+      },
+      {
+        "book": 49,
+        "book_length_digits": 115,
+        "excluded_peer_books": [],
+        "family_labels": [],
+        "gain_vs_raw_bits": 124.65719767020033
+      },
+      {
+        "book": 39,
+        "book_length_digits": 59,
+        "excluded_peer_books": [
+          38
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_6"
+        ],
+        "gain_vs_raw_bits": 154.07629048599082
+      },
+      {
+        "book": 54,
+        "book_length_digits": 57,
+        "excluded_peer_books": [
+          55,
+          56
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_7"
+        ],
+        "gain_vs_raw_bits": 154.6677219168721
+      },
+      {
+        "book": 20,
+        "book_length_digits": 63,
+        "excluded_peer_books": [
+          21
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_3"
+        ],
+        "gain_vs_raw_bits": 169.7009429540517
+      },
+      {
+        "book": 34,
+        "book_length_digits": 123,
+        "excluded_peer_books": [],
+        "family_labels": [],
+        "gain_vs_raw_bits": 231.5807874215621
+      },
+      {
+        "book": 18,
+        "book_length_digits": 93,
+        "excluded_peer_books": [
+          19
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_33"
+        ],
+        "gain_vs_raw_bits": 262.95637981285086
+      },
+      {
+        "book": 4,
+        "book_length_digits": 140,
+        "excluded_peer_books": [
+          3
+        ],
+        "family_labels": [
+          "hellgate_public_bookcase_12"
+        ],
+        "gain_vs_raw_bits": 264.44260732055193
+      },
+      {
+        "book": 67,
+        "book_length_digits": 98,
+        "excluded_peer_books": [],
+        "family_labels": [],
+        "gain_vs_raw_bits": 283.5676872037006
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}

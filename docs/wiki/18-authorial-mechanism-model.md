@@ -937,6 +937,14 @@ A book-bounded singleton source audit then removes that caveat as a dependency:
 forbidding copy sources from crossing source-book boundaries still gives
 `70/70` roundtrip and `70/70` raw wins. Mean gain remains `464.898` bits, with
 only `4.409` mean bits of penalty versus the unbounded singleton parser.
+A family-excluded singleton source audit then removes a different possible
+dependency: for books with a known public-bookcase family label, all same-family
+books are removed from frozen train counts and copy sources. The signal still
+roundtrips `70/70`, beats raw in `70/70`, and beats raw in `46/46`
+family-labeled books, with mean gain `460.251` bits. Same-family source
+memorization is therefore not required for the singleton signal, although the
+result remains mechanical redundancy evidence rather than a final authorial
+method.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1382,6 +1390,7 @@ book generation, not row0 pair-cell placement.
 - [Leave-one-book-out no-self audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.md)
 - [Leave-one-book-out source attribution audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.md)
 - [Leave-one-book-out book-bounded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md)
+- [Leave-one-book-out family-excluded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

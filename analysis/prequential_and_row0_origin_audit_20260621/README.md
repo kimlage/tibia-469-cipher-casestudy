@@ -61,6 +61,9 @@ exogenous.
 - [scripts/15_leave_one_book_out_book_bounded_source_audit.py](scripts/15_leave_one_book_out_book_bounded_source_audit.py) - retests singleton holdout while forbidding source copies from crossing source-book boundaries.
 - [reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md](reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md) - book-bounded singleton source result.
 - [reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json](reports/test_results/15_leave_one_book_out_book_bounded_source_audit.json) - structured book-bounded singleton ledger.
+- [scripts/16_leave_one_book_out_family_excluded_source_audit.py](scripts/16_leave_one_book_out_family_excluded_source_audit.py) - retests singleton holdout after removing same-family books from train counts and copy sources.
+- [reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md](reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md) - family-excluded singleton source result.
+- [reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json](reports/test_results/16_leave_one_book_out_family_excluded_source_audit.json) - structured family-excluded singleton ledger.
 
 ## Boundary
 
@@ -96,7 +99,10 @@ exogenous.
   copied digits to source books or current prefix; `3001` copied digits cross
   artificial source-book boundaries in the concatenated complement inventory.
   A book-bounded singleton reparse forbids those crossings and still beats raw
-  digit coding in `70/70` books, with mean gain `464.898` bits.
+  digit coding in `70/70` books, with mean gain `464.898` bits. A stricter
+  family-excluded singleton reparse removes same-family books from train counts
+  and copy sources; it still beats raw digit coding in `70/70` books and in
+  `46/46` family-labeled books, with mean gain `460.251` bits.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

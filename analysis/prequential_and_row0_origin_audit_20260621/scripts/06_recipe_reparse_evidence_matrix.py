@@ -30,6 +30,8 @@ SOURCES = {
     / "14_leave_one_book_out_source_attribution_audit.json",
     "leave_one_book_out_book_bounded_source": TEST_RESULTS
     / "15_leave_one_book_out_book_bounded_source_audit.json",
+    "leave_one_book_out_family_excluded_source": TEST_RESULTS
+    / "16_leave_one_book_out_family_excluded_source_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -62,6 +64,7 @@ def make_result() -> dict[str, Any]:
     leave_one_out = load_json(SOURCES["leave_one_book_out_no_self"])
     source_attribution = load_json(SOURCES["leave_one_book_out_source_attribution"])
     book_bounded = load_json(SOURCES["leave_one_book_out_book_bounded_source"])
+    family_excluded = load_json(SOURCES["leave_one_book_out_family_excluded_source"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -78,6 +81,7 @@ def make_result() -> dict[str, Any]:
         ("leave_one_book_out_no_self", leave_one_out),
         ("leave_one_book_out_source_attribution", source_attribution),
         ("leave_one_book_out_book_bounded_source", book_bounded),
+        ("leave_one_book_out_family_excluded_source", family_excluded),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -412,6 +416,43 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_singleton_holdout_survive_same_family_source_exclusion",
+            "source": rel(SOURCES["leave_one_book_out_family_excluded_source"]),
+            "status": "passed_family_excluded_source_constraint",
+            "evidence": {
+                "book_count": family_excluded["summary"]["book_count"],
+                "family_labeled_book_count": family_excluded["summary"][
+                    "family_labeled_book_count"
+                ],
+                "roundtrip_book_count": family_excluded["summary"]["roundtrip_book_count"],
+                "beats_raw_count": family_excluded["summary"]["beats_raw_count"],
+                "family_labeled_beats_raw_count": family_excluded["summary"][
+                    "family_labeled_beats_raw_count"
+                ],
+                "mean_family_excluded_gain_vs_raw_bits": family_excluded["summary"][
+                    "mean_family_excluded_gain_vs_raw_bits"
+                ],
+                "min_family_excluded_gain_vs_raw_bits": family_excluded["summary"][
+                    "min_family_excluded_gain_vs_raw_bits"
+                ],
+                "mean_family_excluded_minus_book_bounded_bits": family_excluded["summary"][
+                    "mean_family_excluded_minus_book_bounded_bits"
+                ],
+                "max_family_excluded_minus_book_bounded_bits": family_excluded["summary"][
+                    "max_family_excluded_minus_book_bounded_bits"
+                ],
+                "failure_books": family_excluded["summary"]["failure_books"],
+                "weakest_books": family_excluded["summary"]["weakest_books"][:5],
+            },
+            "interpretation": (
+                "For books with known public-bookcase family labels, removing the "
+                "entire same family from frozen train counts and copy sources still "
+                "preserves positive singleton holdout gain. Same-family source "
+                "memorization is therefore not required for the observed item-level "
+                "signal."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -474,7 +515,9 @@ def make_result() -> dict[str, Any]:
                 "This increases predictive/generative validation by showing the "
                 "fixed-recipe limitation is not total: a deterministic parser can "
                 "rediscover held-out recipes. It also falsifies the stronger claim "
-                "that numeric prefix training is uniquely authorial evidence."
+                "that numeric prefix training is uniquely authorial evidence and "
+                "reduces same-family source memorization as an explanation for "
+                "singleton holdout performance."
             ),
         },
     }
@@ -598,6 +641,15 @@ def write_result(result: dict[str, Any]) -> None:
                 f"beats raw {evidence['beats_raw_count']}/{evidence['book_count']}; "
                 f"mean gain {evidence['mean_book_bounded_gain_vs_raw_bits']:.3f}; "
                 f"mean penalty {evidence['mean_book_bounded_minus_unbounded_bits']:.3f}"
+            )
+        elif row["question"] == "does_singleton_holdout_survive_same_family_source_exclusion":
+            key = (
+                f"roundtrip {evidence['roundtrip_book_count']}/{evidence['book_count']}; "
+                f"beats raw {evidence['beats_raw_count']}/{evidence['book_count']}; "
+                f"family-labeled {evidence['family_labeled_beats_raw_count']}/"
+                f"{evidence['family_labeled_book_count']}; mean gain "
+                f"{evidence['mean_family_excluded_gain_vs_raw_bits']:.3f}; "
+                f"max penalty {evidence['max_family_excluded_minus_book_bounded_bits']:.3f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

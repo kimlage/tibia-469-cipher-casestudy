@@ -413,6 +413,9 @@ books/current prefix and exposes a caveat: `3001` copied digits cross
 artificial source-book boundaries in the concatenated complement inventory.
 A book-bounded singleton reparse then forbids those crossings and still beats
 raw digits in `70/70` books, with mean gain `464.898` bits.
+A family-excluded singleton reparse also removes same-family public-bookcase
+books from train counts and copy sources; it still beats raw in `70/70` books
+and in `46/46` family-labeled books, with mean gain `460.251` bits.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -596,9 +599,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   family holdouts still beat raw in `19/19`, adds `70/70` singleton no-self
   holdout wins against raw, maps singleton copy-source dependencies with an
   explicit source-boundary caveat, verifies the singleton signal under
-  book-bounded source constraints, closes the row0 hypothesis requirement matrix
-  with zero promoted origin formulas, and keeps row0 origin exogenous with
-  translation delta zero.
+  book-bounded and same-family-excluded source constraints, closes the row0
+  hypothesis requirement matrix with zero promoted origin formulas, and keeps
+  row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures
