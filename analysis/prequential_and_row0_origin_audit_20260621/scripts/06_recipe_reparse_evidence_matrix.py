@@ -17,6 +17,7 @@ SOURCES = {
     "reparse_content_controls": AUTHORIAL_RESULTS / "127_prequential_recipe_reparse_controls.json",
     "reparse_trainset_controls": AUTHORIAL_RESULTS / "128_prequential_recipe_reparse_trainset_controls.json",
     "reparse_trainset_multicutoff": TEST_RESULTS / "07_recipe_reparse_trainset_multicutoff.json",
+    "reparse_family_holdout": TEST_RESULTS / "08_recipe_reparse_family_holdout.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -41,6 +42,7 @@ def make_result() -> dict[str, Any]:
     content_controls = load_json(SOURCES["reparse_content_controls"])
     trainset_controls = load_json(SOURCES["reparse_trainset_controls"])
     trainset_multicutoff = load_json(SOURCES["reparse_trainset_multicutoff"])
+    family_holdout = load_json(SOURCES["reparse_family_holdout"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -49,6 +51,7 @@ def make_result() -> dict[str, Any]:
         ("reparse_content_controls", content_controls),
         ("reparse_trainset_controls", trainset_controls),
         ("reparse_trainset_multicutoff", trainset_multicutoff),
+        ("reparse_family_holdout", family_holdout),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -149,6 +152,33 @@ def make_result() -> dict[str, Any]:
                 "The multi-cutoff train-set control keeps recipe predictability, "
                 "but numeric prefix is not uniquely strong; at cutoff 60 it loses "
                 "to the random-train mean and max."
+            ),
+        },
+        {
+            "question": "does_recipe_reparse_survive_public_bookcase_family_holdout",
+            "source": rel(SOURCES["reparse_family_holdout"]),
+            "status": "passed_with_active_recipe_ties",
+            "evidence": {
+                "family_count": family_holdout["summary"]["family_count"],
+                "reparse_beats_raw_count": family_holdout["summary"]["reparse_beats_raw_count"],
+                "reparse_beats_active_recipe_count": family_holdout["summary"][
+                    "reparse_beats_active_recipe_count"
+                ],
+                "component_failure_family_count": family_holdout["summary"][
+                    "component_failure_family_count"
+                ],
+                "component_failure_reparse_beats_raw_count": family_holdout["summary"][
+                    "component_failure_reparse_beats_raw_count"
+                ],
+                "mean_reparse_minus_active_bits": family_holdout["summary"][
+                    "mean_reparse_minus_active_bits"
+                ],
+            },
+            "interpretation": (
+                "Family holdout strengthens recipe discovery: the deterministic "
+                "parser beats raw digits for every public-bookcase family and "
+                "rescues the component-only failure families, but the active recipe "
+                "remains cheaper in some families."
             ),
         },
         {
@@ -277,6 +307,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['numeric_prefix_beats_control_mean_cutoffs']}/3; "
                 f"cutoff 60 observed {evidence['cutoff_60_observed_gain']:.3f} "
                 f"vs random mean {evidence['cutoff_60_random_mean_gain']:.3f}"
+            )
+        elif row["question"] == "does_recipe_reparse_survive_public_bookcase_family_holdout":
+            key = (
+                f"beats raw {evidence['reparse_beats_raw_count']}/{evidence['family_count']}; "
+                f"beats active {evidence['reparse_beats_active_recipe_count']}/{evidence['family_count']}; "
+                f"component failures rescued {evidence['component_failure_reparse_beats_raw_count']}/"
+                f"{evidence['component_failure_family_count']}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

@@ -100,6 +100,16 @@ or exceed the numeric prefix: single-cutoff `50` gives `p=0.1538`, and
 the multi-cutoff control loses to the random-train mean at cutoff `60`.
 See [06_recipe_reparse_evidence_matrix.md](06_recipe_reparse_evidence_matrix.md).
 
+### Recipe Reparse Family Holdout
+
+A public-bookcase family holdout then tests whether deterministic recipe
+discovery fails on the same family axis where component-only scoring had
+failures. It does not: reparse beats raw digits for `19/19` families and
+for `3/3` component-failure families. It beats the active frozen recipe in
+`14/19` families, so the active full-corpus recipe still has local wins and
+the generation explanation remains partial.
+See [08_recipe_reparse_family_holdout.md](08_recipe_reparse_family_holdout.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -149,7 +159,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, but the generation claim remains partial.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts, but the generation claim remains partial.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

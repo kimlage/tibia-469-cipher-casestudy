@@ -390,6 +390,9 @@ prefix training is uniquely authorial because random same-size train inventories
 can match it at cutoff `50` (`p=0.1538`). A multi-cutoff train-set control
 extends that boundary to cutoffs `35/50/60`: numeric prefix wins against
 random-train mean/max at `2/3` cutoffs and loses at cutoff `60`.
+Public-bookcase family holdout strengthens the recipe-discovery side:
+deterministic reparse beats raw digits in `19/19` families and `3/3`
+component-failure families, while beating the active frozen recipe in `14/19`.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -566,8 +569,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   failures as component/sample-size stress cases, rejects a train-only
   component fallback, quantifies and partly reduces the fixed-recipe
   externality through deterministic-reparse evidence and multi-cutoff train-set
-  controls, closes the row0 hypothesis requirement matrix with zero promoted
-  origin formulas, and keeps row0 origin exogenous with translation delta zero.
+  controls, adds public-bookcase family holdout evidence, closes the row0
+  hypothesis requirement matrix with zero promoted origin formulas, and keeps
+  row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

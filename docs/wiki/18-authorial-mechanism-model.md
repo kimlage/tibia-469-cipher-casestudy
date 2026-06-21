@@ -893,6 +893,11 @@ A multi-cutoff train-set control then repeats that check at cutoffs `35/50/60`:
 numeric prefix beats the random-train mean and max at `2/3` cutoffs, but loses
 at cutoff `60`. That sharpens the boundary: recipe reparsing is mechanically
 predictive, while numeric order is still not promoted as authorial proof.
+A public-bookcase family holdout then checks the family axis where
+component-only scoring failed. Deterministic reparse beats raw digits in
+`19/19` families and in `3/3` component-failure families, but beats the active
+frozen recipe in only `14/19`; the recipe signal is therefore stronger, while
+the active full-corpus recipe still has local wins.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1330,6 +1335,7 @@ book generation, not row0 pair-cell placement.
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
+- [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

@@ -37,6 +37,9 @@ exogenous.
 - [scripts/07_recipe_reparse_trainset_multicutoff.py](scripts/07_recipe_reparse_trainset_multicutoff.py) - expands random same-size train-set controls beyond cutoff 50.
 - [reports/test_results/07_recipe_reparse_trainset_multicutoff.md](reports/test_results/07_recipe_reparse_trainset_multicutoff.md) - multi-cutoff train-set control.
 - [reports/test_results/07_recipe_reparse_trainset_multicutoff.json](reports/test_results/07_recipe_reparse_trainset_multicutoff.json) - structured multi-cutoff train-set ledger.
+- [scripts/08_recipe_reparse_family_holdout.py](scripts/08_recipe_reparse_family_holdout.py) - tests deterministic reparse under public-bookcase family holdout.
+- [reports/test_results/08_recipe_reparse_family_holdout.md](reports/test_results/08_recipe_reparse_family_holdout.md) - family holdout recipe-reparse result.
+- [reports/test_results/08_recipe_reparse_family_holdout.json](reports/test_results/08_recipe_reparse_family_holdout.json) - structured family holdout ledger.
 
 ## Boundary
 
@@ -53,6 +56,9 @@ exogenous.
   training is not unique against random same-size train inventories. The
   multi-cutoff train-set control sharpens that boundary: numeric prefix wins
   against random-train mean at `2/3` tested cutoffs and loses at cutoff `60`.
+  Public-bookcase family holdout further strengthens the recipe signal:
+  deterministic reparse beats raw digits in `19/19` families and in `3/3`
+  component-failure families, while beating the active frozen recipe in `14/19`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
