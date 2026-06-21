@@ -769,6 +769,10 @@ A canonical source-policy boundary then rejects freezing any static source tie
 policy: earliest and previous-end-preferred are min-cost in `170/175` cases, but
 latest-source is cheaper in five book-`63` cases, so a static policy needs either
 extra bits or a selector.
+A source-policy selector boundary then tests that selector explicitly:
+`latest_source` only on book `63` and `earliest_source` otherwise matches the
+per-case policy minimum and has positive lower-bound bit balance, but remains a
+book-specific switch over source-dependent paths, so it is audit-only.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -982,6 +986,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   checks the stronger source-policy invariance condition and retains source
   choice as declared dependency (`48/175` exact-signature invariant),
   rejects a static canonical source tie policy as cost-unsafe,
+  rejects the book-`63` source-policy selector as audit-only despite positive
+  lower-bound bit balance,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

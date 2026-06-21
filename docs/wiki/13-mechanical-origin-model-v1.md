@@ -299,6 +299,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Full-source all-policy five-cutoff probe | extending the exposed-source all-policy check to cutoffs `10/20/35/50/60` gives `175/175` roundtrip/raw-positive evaluations per policy and `50/50` multi-cutoff-stable books per policy, with `0/150` unstable policy-book cases | five-cutoff parser robustness / still no source rule |
 | Full-source policy invariance boundary | all policies share operation shape in `175/175` cases, but exact source-bearing signatures match in only `48/175`; `127/175` cases are pure source-choice variants | source dependency retained |
 | Full-source canonical policy boundary | no static source tie policy is cost-safe: earliest and previous-end-preferred are min-cost in `170/175`, but latest-source is cheaper in five book-`63` cases | static tie-policy rejected |
+| Source-policy selector boundary | the book-`63` latest-source selector matches per-case policy minima and has positive lower-bound bit balance, but it is book-specific and source fields remain materialized | audit-only selector / not generation |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -464,6 +465,7 @@ Primary sources:
 [full_source_all_policy_fivecutoff_probe.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.md),
 [full_source_policy_invariance_boundary.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.md),
 [full_source_canonical_policy_boundary.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.md),
+[source_policy_selector_boundary.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

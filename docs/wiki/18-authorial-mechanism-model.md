@@ -329,6 +329,12 @@ choice can at least be frozen globally. It cannot without a cost or selector:
 `170/175` cases, but `latest_source` is cheaper in five book-`63` cases; no
 static policy has zero extra bits versus the per-case minimum. This rejects
 static tie-policy promotion and keeps source choice declared.
+A source-policy selector boundary then tests the obvious workaround: use
+`latest_source` only for book `63` and `earliest_source` otherwise. The selector
+matches the per-case policy minimum and has a positive lower-bound balance after
+charging a simple book+policy selector floor, but it is still a book-specific
+switch over a source-dependent parser. It is therefore audit-only compression
+bookkeeping, not a generation explanation.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1970,6 +1976,7 @@ book generation, not row0 pair-cell placement.
 - [Full source all-policy five-cutoff probe](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/94_full_source_all_policy_fivecutoff_probe.md)
 - [Full source policy invariance boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/95_full_source_policy_invariance_boundary.md)
 - [Full source canonical policy boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/96_full_source_canonical_policy_boundary.md)
+- [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
