@@ -667,6 +667,9 @@ A second pass on that reopened source frontier moves the bound to
 `8156.049986` bits, again only as compression bookkeeping.
 The stop audit freezes that micro-frontier as non-mainline: the cumulative
 gain is only `0.000369` bits, and selector-cost sanity checks dominate.
+The active-formula dependency refresh then confirms no structural dependency
+reduction: the bound improved by `4.775621` bits since gate 48, but declared
+recipe dependencies remain unchanged at `609` fields.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -758,6 +761,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   local target-max frontier at `8156.050355` bits, records a microscopic
   post-target-max source substitution bound of `8156.050167` bits and a second
   pass at `8156.049986` bits, freezes that micro-frontier under a stop audit,
+  records that the active formula still declares `609` recipe dependency fields,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

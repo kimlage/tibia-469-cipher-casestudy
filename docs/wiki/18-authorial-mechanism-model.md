@@ -1188,6 +1188,11 @@ confirms that the reopened source frontier is now back in micro-sweep territory.
 A stop audit then freezes that post-target-max source path as non-mainline:
 the two passes sum to only `0.000369` bits, while selector-cost sanity checks
 dominate by `32.244` bits. No third post-target-max source pass is run.
+The active-formula dependency refresh then compares this current formula with
+the gate-48 formula: the bound is `4.775621` bits lower, but declared recipe
+dependencies remain unchanged at `609` fields. The only count-level payload
+shift is one digit from literal payload to copied payload, so the source/length
+explanation gap is not reduced.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1642,6 +1647,7 @@ book generation, not row0 pair-cell placement.
 - [Post-target-max source substitution frontier gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/56_post_targetmax_source_substitution_frontier_gate.md)
 - [Post-target-max source substitution second-pass gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.md)
 - [Post-target-max source substitution stop audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/58_post_targetmax_source_substitution_stop_audit.md)
+- [Active formula dependency refresh gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/59_active_formula_dependency_refresh_gate.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

@@ -765,6 +765,12 @@ The follow-up stop audit freezes this micro-frontier as non-mainline: the two po
 It does not run a third pass and keeps the current compression bound at `8156.049986` bits. Next work should return to structural source/length parsing, holdout-predictive parser improvement, or row0-origin evidence.
 See [58_post_targetmax_source_substitution_stop_audit.md](58_post_targetmax_source_substitution_stop_audit.md).
 
+### Active Formula Dependency Refresh Gate
+
+The active-formula refresh compares the gate-48 formula with the current post-target-max formula. The bound improves by `4.775621` bits, but declared recipe dependencies change by `+0` fields.
+The only count-level payload shift is one digit: literal digits move by `-1` and copied digits by `+1`. So the active formula is a better compression bound but not a more derived source/length explanation.
+See [59_active_formula_dependency_refresh_gate.md](59_active_formula_dependency_refresh_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -861,6 +867,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - Rerunning the source-substitution frontier after target-max saturation finds one microscopic pair gain, moving the bound to `8156.050167` bits; this remains fixed-recipe compression bookkeeping.
 - A second post-target-max source-substitution pass finds another microscopic pair gain, moving the bound to `8156.049986` bits; this is still not generation evidence.
 - The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.
+- The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

@@ -1,0 +1,121 @@
+{
+  "active_formula": {
+    "classification": "post_targetmax_source_substitution_second_pass_improves_bound",
+    "counts": {
+      "book_count": 70,
+      "copied_digit_fraction": 0.9239989345645032,
+      "copied_digits": 10407,
+      "copy_op_count": 261,
+      "declared_copy_length_fields": 261,
+      "declared_copy_source_fields": 261,
+      "declared_literal_payload_fields": 87,
+      "declared_recipe_dependency_fields": 609,
+      "literal_digit_fraction": 0.07600106543549676,
+      "literal_digits": 856,
+      "literal_op_count": 87,
+      "op_count": 348,
+      "roundtrip_book_count": 70,
+      "roundtrip_errors": [],
+      "total_digits": 11263
+    },
+    "total_bits": 8156.049986261897
+  },
+  "case_reopened": false,
+  "classification": "active_formula_dependency_refresh_no_structural_dependency_reduction",
+  "decision": {
+    "compression_bound_status": "retained_8156_049986",
+    "generation_explanation_status": "active_formula_still_declares_same_recipe_dependency_count",
+    "next_mainline_status": "structural_source_length_parser_or_row0_origin_evidence_required",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "dependency_rows": [
+    {
+      "active_declared_units": 87,
+      "delta_declared_units": 0,
+      "dependency": "literal_payload",
+      "previous_declared_units": 87,
+      "status": "unchanged_declared_dependency",
+      "unit": "literal text fields"
+    },
+    {
+      "active_declared_units": 261,
+      "delta_declared_units": 0,
+      "dependency": "copy_source",
+      "previous_declared_units": 261,
+      "status": "unchanged_declared_dependency",
+      "unit": "copy source fields"
+    },
+    {
+      "active_declared_units": 261,
+      "delta_declared_units": 0,
+      "dependency": "copy_length",
+      "previous_declared_units": 261,
+      "status": "unchanged_declared_dependency",
+      "unit": "copy length fields"
+    }
+  ],
+  "inputs": {
+    "active_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_formula_469.json",
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "dependency_scoreboard_48": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/48_current_formula_dependency_scoreboard.json",
+    "post_targetmax_source_second_pass_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.json",
+    "post_targetmax_stop_audit": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/58_post_targetmax_source_substitution_stop_audit.json",
+    "previous_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469.json"
+  },
+  "plaintext_claim": false,
+  "previous_formula": {
+    "classification": "full_corpus_source_substitution_fourth_pass_improves_bound",
+    "counts": {
+      "book_count": 70,
+      "copied_digit_fraction": 0.9239101482731066,
+      "copied_digits": 10406,
+      "copy_op_count": 261,
+      "declared_copy_length_fields": 261,
+      "declared_copy_source_fields": 261,
+      "declared_literal_payload_fields": 87,
+      "declared_recipe_dependency_fields": 609,
+      "literal_digit_fraction": 0.07608985172689336,
+      "literal_digits": 857,
+      "literal_op_count": 87,
+      "op_count": 348,
+      "roundtrip_book_count": 70,
+      "roundtrip_errors": [],
+      "total_digits": 11263
+    },
+    "total_bits": 8160.825607635859
+  },
+  "schema": "active_formula_dependency_refresh_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_additional_source_substitutions": true,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "tests_active_formula_after_targetmax_and_stop_audit": true
+  },
+  "summary": {
+    "active_bound_bits": 8156.049986261897,
+    "bound_delta_bits": -4.775621373962167,
+    "bound_gain_bits": 4.775621373962167,
+    "copied_digits_delta": 1,
+    "count_deltas": {
+      "copied_digits": 1,
+      "copy_op_count": 0,
+      "declared_copy_length_fields": 0,
+      "declared_copy_source_fields": 0,
+      "declared_literal_payload_fields": 0,
+      "declared_recipe_dependency_fields": 0,
+      "literal_digits": -1,
+      "literal_op_count": 0,
+      "op_count": 0,
+      "total_digits": 0
+    },
+    "declared_recipe_dependency_delta": 0,
+    "digit_shift_interpretation": "Target-max resegmentation and post-target-max source substitutions move one digit from literal payload into copied payload, but they do not reduce the number of declared literal, source, or length fields.",
+    "literal_digits_delta": -1,
+    "mainline_implication": "The active bound improves, but the structural explanation gap is unchanged at the dependency-count level. A future improvement must derive source/length fields or row0 rather than only reprice them.",
+    "previous_bound_bits": 8160.825607635859
+  },
+  "translation_delta": "NONE"
+}

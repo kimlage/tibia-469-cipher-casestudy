@@ -237,6 +237,14 @@ POST_TARGETMAX_SOURCE_SUBSTITUTION_STOP_AUDIT = (
     / "test_results"
     / "58_post_targetmax_source_substitution_stop_audit.json"
 )
+ACTIVE_FORMULA_DEPENDENCY_REFRESH_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "59_active_formula_dependency_refresh_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -533,6 +541,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "post_targetmax_source_substitution_stop_audit",
         post_targetmax_source_substitution_stop,
+    )
+    active_formula_dependency_refresh = load_json(
+        ACTIVE_FORMULA_DEPENDENCY_REFRESH_GATE
+    )
+    assert_analysis_boundary(
+        "active_formula_dependency_refresh_gate",
+        active_formula_dependency_refresh,
     )
 
     predictive = legacy["predictive_validation"]
@@ -837,6 +852,16 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "rows": post_targetmax_source_substitution_stop["rows"],
             "decision": post_targetmax_source_substitution_stop["decision"],
         },
+        "active_formula_dependency_refresh": {
+            "classification": active_formula_dependency_refresh["classification"],
+            "source": rel(ACTIVE_FORMULA_DEPENDENCY_REFRESH_GATE),
+            "scope": active_formula_dependency_refresh["scope"],
+            "previous_formula": active_formula_dependency_refresh["previous_formula"],
+            "active_formula": active_formula_dependency_refresh["active_formula"],
+            "dependency_rows": active_formula_dependency_refresh["dependency_rows"],
+            "summary": active_formula_dependency_refresh["summary"],
+            "decision": active_formula_dependency_refresh["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -885,6 +910,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "post_targetmax_source_substitution_status": "promoted_bound_8156_050167_microscopic",
             "post_targetmax_source_substitution_second_pass_status": "promoted_bound_8156_049986_microscopic",
             "post_targetmax_source_substitution_stop_status": "micro_frontier_frozen_not_mainline",
+            "active_formula_dependency_refresh_status": "active_bound_improved_no_declared_dependency_reduction",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -949,6 +975,7 @@ def render_markdown(
     post_targetmax_source_substitution_frontier_gate_link: str,
     post_targetmax_source_substitution_second_pass_gate_link: str,
     post_targetmax_source_substitution_stop_audit_link: str,
+    active_formula_dependency_refresh_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1019,6 +1046,9 @@ def render_markdown(
         "post_targetmax_source_substitution_second_pass"
     ]["summary"]
     post_targetmax_source_stop = result["post_targetmax_source_substitution_stop"][
+        "summary"
+    ]
+    active_dependency_refresh = result["active_formula_dependency_refresh"][
         "summary"
     ]
 
@@ -1883,6 +1913,21 @@ def render_markdown(
             "holdout-predictive parser improvement, or row0-origin evidence.",
             f"See [58_post_targetmax_source_substitution_stop_audit.md]({post_targetmax_source_substitution_stop_audit_link}).",
             "",
+            "### Active Formula Dependency Refresh Gate",
+            "",
+            "The active-formula refresh compares the gate-48 formula with the "
+            "current post-target-max formula. The bound improves by "
+            f"`{active_dependency_refresh['bound_gain_bits']:.6f}` bits, but "
+            "declared recipe dependencies change by "
+            f"`{active_dependency_refresh['declared_recipe_dependency_delta']:+d}` "
+            "fields.",
+            "The only count-level payload shift is one digit: literal digits move by "
+            f"`{active_dependency_refresh['literal_digits_delta']:+d}` and copied "
+            f"digits by `{active_dependency_refresh['copied_digits_delta']:+d}`. "
+            "So the active formula is a better compression bound but not a more "
+            "derived source/length explanation.",
+            f"See [59_active_formula_dependency_refresh_gate.md]({active_formula_dependency_refresh_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1988,6 +2033,7 @@ def render_markdown(
             "- Rerunning the source-substitution frontier after target-max saturation finds one microscopic pair gain, moving the bound to `8156.050167` bits; this remains fixed-recipe compression bookkeeping.",
             "- A second post-target-max source-substitution pass finds another microscopic pair gain, moving the bound to `8156.049986` bits; this is still not generation evidence.",
             "- The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.",
+            "- The active-formula dependency refresh shows the bound improved by `4.775621` bits since the gate-48 formula, but declared recipe dependencies remain unchanged at `609` fields.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2139,6 +2185,9 @@ def main() -> None:
             ),
             post_targetmax_source_substitution_stop_audit_link=(
                 "58_post_targetmax_source_substitution_stop_audit.md"
+            ),
+            active_formula_dependency_refresh_gate_link=(
+                "59_active_formula_dependency_refresh_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2296,6 +2345,9 @@ def main() -> None:
             ),
             post_targetmax_source_substitution_stop_audit_link=(
                 "test_results/58_post_targetmax_source_substitution_stop_audit.md"
+            ),
+            active_formula_dependency_refresh_gate_link=(
+                "test_results/59_active_formula_dependency_refresh_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
