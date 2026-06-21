@@ -919,6 +919,11 @@ A two-stage follow-up tests whether one more observable repair can build on
 that rule. It cannot: the best pipeline remains the single-stage `50/60`
 parser, and second-stage train selection matches the suffix oracle in only
 `3/5` cells.
+A post-repair oracle map then localizes the remaining residual: one
+stable-projection correction repairs `9/10` residual books and two corrections
+reach `60/60`, with only book `20` needing two oracle corrections. This is
+diagnostic rather than promotable, because the correction choices come from the
+stable projection.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

@@ -377,11 +377,37 @@ The best pipeline is still the single gate-18 classifier, and
 train-selected second-stage repairs overfit in the middle
 prefix splits.
 
+## Post-Repair Residual Oracle
+
+Gate 20 keeps the gate-18 non-oracle classifier active,
+then grants stable-projection repairs only as a diagnostic
+upper bound for the remaining drift books.
+
+| Oracle correction budget | Exact books | Residual repairs |
+|---:|---:|---:|
+| `0` | `50/60` | `0` |
+| `1` | `59/60` | `9` |
+| `2` | `60/60` | `10` |
+| `3` | `60/60` | `10` |
+| `4` | `60/60` | `10` |
+| `5` | `60/60` | `10` |
+
+- One oracle correction repairs `9/10` residual books.
+- Two oracle corrections repair all `10/10` residual books.
+- Full-oracle correction histogram: `{'1': 9, '2': 1}`.
+- First-oracle correction classes: `{'book_start_copy_missed_as_literal': 3, 'copy_length_drift_same_source': 1, 'copy_started_inside_stable_literal': 1, 'internal_copy_missed_as_literal': 3, 'literal_understop': 2}`.
+
+The remaining drift is still mostly first-decision local
+under an oracle view: only book `20` needs two corrections.
+This narrows the next classifier target, but does not promote
+a parser because the repair choices come from the stable
+projection.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is
-either a richer structured account for the remaining `10/60`
-drift books after the peak-length repair, or a source-free
+either a non-oracle classifier for the post-repair oracle map
+across the remaining missed-copy/copy-drift cases, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -407,3 +433,4 @@ or the stable projection as an oracle.
 - [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)
 - [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)
 - [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)
+- [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)

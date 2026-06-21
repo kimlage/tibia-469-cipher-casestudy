@@ -28,6 +28,7 @@ DRIFT_REPAIR = TEST_RESULTS / "16_single_drift_repair_oracle_audit.json"
 OBSERVABLE_REPAIR = TEST_RESULTS / "17_observable_repair_policy_audit.json"
 CONDITIONAL_REPAIR = TEST_RESULTS / "18_conditional_repair_classifier_audit.json"
 TWO_STAGE_REPAIR = TEST_RESULTS / "19_two_stage_conditional_repair_audit.json"
+POST_REPAIR_ORACLE = TEST_RESULTS / "20_post_repair_residual_oracle_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -88,6 +89,9 @@ def main() -> None:
     two_stage_repair = (
         load_json(TWO_STAGE_REPAIR) if TWO_STAGE_REPAIR.exists() else None
     )
+    post_repair_oracle = (
+        load_json(POST_REPAIR_ORACLE) if POST_REPAIR_ORACLE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -122,6 +126,8 @@ def main() -> None:
         assert_boundary("conditional_repair_classifier_audit", conditional_repair)
     if two_stage_repair is not None:
         assert_boundary("two_stage_conditional_repair_audit", two_stage_repair)
+    if post_repair_oracle is not None:
+        assert_boundary("post_repair_residual_oracle_audit", post_repair_oracle)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -160,6 +166,9 @@ def main() -> None:
     )
     two_stage_repair_summary = (
         None if two_stage_repair is None else two_stage_repair["summary"]
+    )
+    post_repair_oracle_summary = (
+        None if post_repair_oracle is None else post_repair_oracle["summary"]
     )
 
     lines = [
@@ -647,13 +656,47 @@ def main() -> None:
                 "",
             ]
         )
+    if post_repair_oracle_summary is not None:
+        lines.extend(
+            [
+                "## Post-Repair Residual Oracle",
+                "",
+                "Gate 20 keeps the gate-18 non-oracle classifier active,",
+                "then grants stable-projection repairs only as a diagnostic",
+                "upper bound for the remaining drift books.",
+                "",
+                "| Oracle correction budget | Exact books | Residual repairs |",
+                "|---:|---:|---:|",
+            ]
+        )
+        for row in post_repair_oracle["budget_scoreboard"]:
+            lines.append(
+                f"| `{row['correction_budget']}` | `{row['exact_books']}/60` | "
+                f"`{row['residual_repairs_vs_active']}` |"
+            )
+        lines.extend(
+            [
+                "",
+                f"- One oracle correction repairs `{post_repair_oracle_summary['one_correction_repair_count']}/{post_repair_oracle_summary['residual_book_count']}` residual books.",
+                f"- Two oracle corrections repair all `{post_repair_oracle_summary['residual_book_count']}/{post_repair_oracle_summary['residual_book_count']}` residual books.",
+                f"- Full-oracle correction histogram: `{post_repair_oracle_summary['full_oracle_correction_count_histogram']}`.",
+                f"- First-oracle correction classes: `{post_repair_oracle_summary['first_oracle_correction_drift_classes']}`.",
+                "",
+                "The remaining drift is still mostly first-decision local",
+                "under an oracle view: only book `20` needs two corrections.",
+                "This narrows the next classifier target, but does not promote",
+                "a parser because the repair choices come from the stable",
+                "projection.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is",
-            "either a richer structured account for the remaining `10/60`",
-            "drift books after the peak-length repair, or a source-free",
+            "either a non-oracle classifier for the post-repair oracle map",
+            "across the remaining missed-copy/copy-drift cases, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -679,6 +722,7 @@ def main() -> None:
             "- [Observable repair policy audit](test_results/17_observable_repair_policy_audit.md)",
             "- [Conditional repair classifier audit](test_results/18_conditional_repair_classifier_audit.md)",
             "- [Two-stage conditional repair audit](test_results/19_two_stage_conditional_repair_audit.md)",
+            "- [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)",
             "",
         ]
     )

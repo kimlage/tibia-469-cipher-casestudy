@@ -332,6 +332,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Observable repair policy audit | `36` non-oracle repair templates are tested against the gate-16 oracle map; best remains baseline `window5` at `48/60`, and prequential selection matches oracle in only `3/5` cells | simple repair classifier rejected |
 | Conditional repair classifier audit | a restricted predicate-action classifier finds `if_peak_len_le5_then_skip_to_next_peak_ge5`, improving the integrated parser from `48/60` to `50/60` with `5/5` prequential stability, but leaving `10` mixed drift books | prefix-stable partial repair / not promoted |
 | Two-stage conditional repair audit | adding a second observable predicate-action rule after the gate-18 classifier gives `0` exact-book gain; best remains the single-stage `50/60` parser and second-stage train selection matches oracle in only `3/5` cells | second simple repair layer rejected |
+| Post-repair residual oracle audit | with the `50/60` parser active, one stable-projection correction repairs `9/10` residual books and two corrections reach `60/60`; only book `20` still needs two oracle corrections | residual localized / oracle-only |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -535,6 +536,7 @@ Primary sources:
 [observable_repair_policy_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/17_observable_repair_policy_audit.md),
 [conditional_repair_classifier_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/18_conditional_repair_classifier_audit.md),
 [two_stage_conditional_repair_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/19_two_stage_conditional_repair_audit.md),
+[post_repair_residual_oracle_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/20_post_repair_residual_oracle_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),

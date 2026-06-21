@@ -548,6 +548,11 @@ more observable predicate-action rule can close the remaining drift. It cannot:
 the best pipeline remains the single gate-18 classifier at `50/60`, and
 second-stage train selection matches the suffix oracle in only `3/5` cells.
 The next blocker is therefore not another simple additive repair layer.
+A post-repair oracle map then shows that the remaining drift is still mostly
+local under an oracle view: with the `50/60` parser active, one stable-projection
+correction repairs `9/10` residual books and two corrections reach `60/60`.
+Book `20` is the only residual requiring two oracle corrections. This narrows
+the next target but remains oracle-only, not a promoted parser.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2230,6 +2235,7 @@ book generation, not row0 pair-cell placement.
 - [Observable repair policy audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/17_observable_repair_policy_audit.md)
 - [Conditional repair classifier audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/18_conditional_repair_classifier_audit.md)
 - [Two-stage conditional repair audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/19_two_stage_conditional_repair_audit.md)
+- [Post-repair residual oracle audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/20_post_repair_residual_oracle_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

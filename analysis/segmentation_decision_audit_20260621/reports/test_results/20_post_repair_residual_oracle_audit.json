@@ -1,0 +1,550 @@
+{
+  "budget_scoreboard": [
+    {
+      "correction_budget": 0,
+      "exact_books": 50,
+      "residual_repairs_vs_active": 0
+    },
+    {
+      "correction_budget": 1,
+      "exact_books": 59,
+      "residual_repairs_vs_active": 9
+    },
+    {
+      "correction_budget": 2,
+      "exact_books": 60,
+      "residual_repairs_vs_active": 10
+    },
+    {
+      "correction_budget": 3,
+      "exact_books": 60,
+      "residual_repairs_vs_active": 10
+    },
+    {
+      "correction_budget": 4,
+      "exact_books": 60,
+      "residual_repairs_vs_active": 10
+    },
+    {
+      "correction_budget": 5,
+      "exact_books": 60,
+      "residual_repairs_vs_active": 10
+    }
+  ],
+  "case_reopened": false,
+  "classification": "post_repair_oracle_localizes_residual_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "post_repair_oracle_localizes_residual_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "post_repair_residual_oracle_map",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "two_stage_conditional_repair_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/19_two_stage_conditional_repair_audit.json"
+  },
+  "plaintext_claim": false,
+  "residual_book_rows": [
+    {
+      "baseline_exact": false,
+      "book": 14,
+      "failure_at_budget0": {
+        "drift_class": "literal_understop",
+        "predicted": {
+          "length": 27,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 39,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "target_start": 0
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "literal_understop",
+        "predicted": {
+          "length": 27,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 39,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "target_start": 0
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 1,
+      "stable_op_count": 8
+    },
+    {
+      "baseline_exact": false,
+      "book": 16,
+      "failure_at_budget0": {
+        "drift_class": "copy_started_inside_stable_literal",
+        "predicted": {
+          "length": 8,
+          "source": 473,
+          "target_start": 164,
+          "type": "copy"
+        },
+        "stable_index": 9,
+        "stable_projection": {
+          "length": 1,
+          "source": null,
+          "target_start": 164,
+          "type": "literal"
+        },
+        "target_start": 164
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "copy_started_inside_stable_literal",
+        "predicted": {
+          "length": 8,
+          "source": 473,
+          "target_start": 164,
+          "type": "copy"
+        },
+        "stable_index": 9,
+        "stable_projection": {
+          "length": 1,
+          "source": null,
+          "target_start": 164,
+          "type": "literal"
+        },
+        "target_start": 164
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 12
+    },
+    {
+      "baseline_exact": false,
+      "book": 20,
+      "failure_at_budget0": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 3,
+          "source": null,
+          "target_start": 21,
+          "type": "literal"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 10,
+          "source": 180,
+          "target_start": 21,
+          "type": "copy"
+        },
+        "target_start": 21
+      },
+      "failure_at_budget1": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 5,
+          "source": null,
+          "target_start": 40,
+          "type": "literal"
+        },
+        "stable_index": 4,
+        "stable_projection": {
+          "length": 5,
+          "source": 845,
+          "target_start": 40,
+          "type": "copy"
+        },
+        "target_start": 40
+      },
+      "first_oracle_correction": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 3,
+          "source": null,
+          "target_start": 21,
+          "type": "literal"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 10,
+          "source": 180,
+          "target_start": 21,
+          "type": "copy"
+        },
+        "target_start": 21
+      },
+      "full_oracle_correction_count": 2,
+      "min_correction_budget_to_exact_le5": 2,
+      "one_correction_exact": false,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 7
+    },
+    {
+      "baseline_exact": false,
+      "book": 21,
+      "failure_at_budget0": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 7,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 9,
+          "source": 197,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 7,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 9,
+          "source": 197,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 3
+    },
+    {
+      "baseline_exact": false,
+      "book": 26,
+      "failure_at_budget0": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 1,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 11,
+          "source": 3054,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 1,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 11,
+          "source": 3054,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 4
+    },
+    {
+      "baseline_exact": false,
+      "book": 34,
+      "failure_at_budget0": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 5,
+          "source": null,
+          "target_start": 105,
+          "type": "literal"
+        },
+        "stable_index": 7,
+        "stable_projection": {
+          "length": 5,
+          "source": 183,
+          "target_start": 105,
+          "type": "copy"
+        },
+        "target_start": 105
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 5,
+          "source": null,
+          "target_start": 105,
+          "type": "literal"
+        },
+        "stable_index": 7,
+        "stable_projection": {
+          "length": 5,
+          "source": 183,
+          "target_start": 105,
+          "type": "copy"
+        },
+        "target_start": 105
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 9
+    },
+    {
+      "baseline_exact": false,
+      "book": 39,
+      "failure_at_budget0": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 7,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 5,
+          "source": 2520,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "book_start_copy_missed_as_literal",
+        "predicted": {
+          "length": 7,
+          "source": null,
+          "target_start": 0,
+          "type": "literal"
+        },
+        "stable_index": 0,
+        "stable_projection": {
+          "length": 5,
+          "source": 2520,
+          "target_start": 0,
+          "type": "copy"
+        },
+        "target_start": 0
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 3
+    },
+    {
+      "baseline_exact": false,
+      "book": 45,
+      "failure_at_budget0": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 1,
+          "source": null,
+          "target_start": 62,
+          "type": "literal"
+        },
+        "stable_index": 1,
+        "stable_projection": {
+          "length": 8,
+          "source": 2850,
+          "target_start": 62,
+          "type": "copy"
+        },
+        "target_start": 62
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "internal_copy_missed_as_literal",
+        "predicted": {
+          "length": 1,
+          "source": null,
+          "target_start": 62,
+          "type": "literal"
+        },
+        "stable_index": 1,
+        "stable_projection": {
+          "length": 8,
+          "source": 2850,
+          "target_start": 62,
+          "type": "copy"
+        },
+        "target_start": 62
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 3
+    },
+    {
+      "baseline_exact": false,
+      "book": 55,
+      "failure_at_budget0": {
+        "drift_class": "copy_length_drift_same_source",
+        "predicted": {
+          "length": 45,
+          "source": 2757,
+          "target_start": 67,
+          "type": "copy"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 44,
+          "source": 2757,
+          "target_start": 67,
+          "type": "copy"
+        },
+        "target_start": 67
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "copy_length_drift_same_source",
+        "predicted": {
+          "length": 45,
+          "source": 2757,
+          "target_start": 67,
+          "type": "copy"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 44,
+          "source": 2757,
+          "target_start": 67,
+          "type": "copy"
+        },
+        "target_start": 67
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 0,
+      "stable_op_count": 4
+    },
+    {
+      "baseline_exact": false,
+      "book": 57,
+      "failure_at_budget0": {
+        "drift_class": "literal_understop",
+        "predicted": {
+          "length": 17,
+          "source": null,
+          "target_start": 69,
+          "type": "literal"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 28,
+          "source": null,
+          "target_start": 69,
+          "type": "literal"
+        },
+        "target_start": 69
+      },
+      "failure_at_budget1": null,
+      "first_oracle_correction": {
+        "drift_class": "literal_understop",
+        "predicted": {
+          "length": 17,
+          "source": null,
+          "target_start": 69,
+          "type": "literal"
+        },
+        "stable_index": 2,
+        "stable_projection": {
+          "length": 28,
+          "source": null,
+          "target_start": 69,
+          "type": "literal"
+        },
+        "target_start": 69
+      },
+      "full_oracle_correction_count": 1,
+      "min_correction_budget_to_exact_le5": 1,
+      "one_correction_exact": true,
+      "parser_repair_count_without_oracle": 1,
+      "stable_op_count": 8
+    }
+  ],
+  "schema": "post_repair_residual_oracle_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "declared_literal_windows_granted": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "stable_projection_oracle_used": true,
+    "target_text_required": true
+  },
+  "summary": {
+    "active_classifier": "if_peak_len_le5_then_skip_to_next_peak_ge5",
+    "active_exact_books": 50,
+    "first_oracle_correction_drift_classes": {
+      "book_start_copy_missed_as_literal": 3,
+      "copy_length_drift_same_source": 1,
+      "copy_started_inside_stable_literal": 1,
+      "internal_copy_missed_as_literal": 3,
+      "literal_understop": 2
+    },
+    "full_oracle_correction_count_histogram": {
+      "1": 9,
+      "2": 1
+    },
+    "interpretation": "After the gate18 non-oracle repair, this audit grants stable-projection corrections only to measure whether the remaining drifts are local first-decision failures or deeper path dependencies.",
+    "max_budget_exact_books": 60,
+    "one_correction_exact_books": 59,
+    "one_correction_repair_count": 9,
+    "one_correction_repairs_residual_books": [
+      14,
+      16,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "promotes_post_repair_oracle_as_rule": false,
+    "residual_book_count": 10
+  },
+  "translation_delta": "NONE"
+}
