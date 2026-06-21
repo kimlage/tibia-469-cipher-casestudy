@@ -382,6 +382,12 @@ the literal/copy order directly. A paid template map,
 positions full-fit, but it carries `235` template records, is only `-26` versus
 the exact type-field atlas, and has `0/5` prefix/holdout cells beating random
 p95. This is posthoc materialization, not a generator.
+A type-weighted operation-length audit then grants book length and the full
+literal/copy sequence. Simple source-free weighted allocation still fails:
+the best `learned_by_shape_x_type_x_position` model reaches only `14/60`
+exact books and `74/261` row hits, costs `363` paid records versus `261`
+exact length fields, and has `0/5` cover-all holdout cells. The length
+sequence remains a retained dependency for the joint parser.
 An operation-length Markov audit then tests the skeleton blocker directly under
 generous assumptions: book lengths and operation types are granted, and only the
 `261` operation lengths must be generated. The best of `11` Markov/context
@@ -2550,6 +2556,8 @@ book generation, not row0 pair-cell placement.
 - [Operation shape count generation gate](../../analysis/operation_shape_count_generation_audit_20260621/reports/test_results/01_operation_shape_count_generation_gate.md)
 - [Final operation type sequence generation audit](../../analysis/operation_type_sequence_generation_audit_20260621/reports/final_operation_type_sequence_generation_audit.md)
 - [Operation type sequence generation gate](../../analysis/operation_type_sequence_generation_audit_20260621/reports/test_results/01_operation_type_sequence_generation_gate.md)
+- [Final operation type-weighted length audit](../../analysis/operation_type_weighted_length_audit_20260621/reports/final_operation_type_weighted_length_audit.md)
+- [Operation type-weighted length gate](../../analysis/operation_type_weighted_length_audit_20260621/reports/test_results/01_operation_type_weighted_length_gate.md)
 - [Final operation length Markov audit](../../analysis/operation_length_markov_audit_20260621/reports/final_operation_length_markov_audit.md)
 - [Operation length Markov gate](../../analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.md)
 - [Final operation length motif audit](../../analysis/operation_length_motif_audit_20260621/reports/final_operation_length_motif_audit.md)

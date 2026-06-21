@@ -805,6 +805,12 @@ literal/copy ordering. Exact full-fit is possible only as a paid template map:
 `template_book_mod5_x_shape` reaches `60/60` books and `261/261` type hits, but
 carries `235` template records and has `0/5` holdout cells beating random p95.
 The exact template is posthoc materialization, not a generator.
+A type-weighted length audit then grants book length and the literal/copy
+sequence and asks whether simple source-free weights can allocate the `261`
+operation lengths. They cannot: the best `learned_by_shape_x_type_x_position`
+model reaches only `14/60` exact books and `74/261` row hits, costs `363` paid
+records versus `261` exact length fields, and has `0/5` cover-all holdout
+cells.
 An operation-length Markov audit then attacks the skeleton blocker directly.
 Even granting book lengths and operation types, `11` Markov/context grammars
 do not generate the `261` operation lengths: the best full-fit context gets
