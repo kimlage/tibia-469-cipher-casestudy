@@ -266,6 +266,18 @@ predictive-parser evidence but rejects the stronger claim that the
 per-book frontier proves numeric book order.
 See [22_online_order_frontier_controls.md](test_results/22_online_order_frontier_controls.md).
 
+### Order Frontier Promotion Gate
+
+The non-unique order-frontier result is then checked against the
+complete formula ledger. The local frontier winner, `random_04`, is
+`+61.452` bits better than numeric on book-bounded frontier total, but
+it is `+188.584` bits worse under the complete online formula before
+order cost and `+521.038` bits worse after the arbitrary permutation
+descriptor. No tested non-numeric order is promotable under a
+nonnegative descriptor. The frontier metric is therefore retained as
+a predictive diagnostic, not a compression-bound promotion score.
+See [23_order_frontier_promotion_gate.md](test_results/23_order_frontier_promotion_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

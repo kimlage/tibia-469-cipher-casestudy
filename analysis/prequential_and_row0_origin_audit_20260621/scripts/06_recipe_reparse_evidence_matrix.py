@@ -42,6 +42,8 @@ SOURCES = {
     "seed_exception_signal_cost": TEST_RESULTS / "21_seed_exception_signal_cost_audit.json",
     "online_order_frontier_controls": TEST_RESULTS
     / "22_online_order_frontier_controls.json",
+    "order_frontier_promotion_gate": TEST_RESULTS
+    / "23_order_frontier_promotion_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -81,6 +83,7 @@ def make_result() -> dict[str, Any]:
     seeded_loss = load_json(SOURCES["seeded_rescore_loss_decomposition"])
     seed_signal = load_json(SOURCES["seed_exception_signal_cost"])
     order_frontier = load_json(SOURCES["online_order_frontier_controls"])
+    promotion_gate = load_json(SOURCES["order_frontier_promotion_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -104,6 +107,7 @@ def make_result() -> dict[str, Any]:
         ("seeded_rescore_loss_decomposition", seeded_loss),
         ("seed_exception_signal_cost", seed_signal),
         ("online_order_frontier_controls", order_frontier),
+        ("order_frontier_promotion_gate", promotion_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -716,6 +720,39 @@ def make_result() -> dict[str, Any]:
                 "control orders. It cannot prove numeric order on its own."
             ),
         },
+        {
+            "question": "can_order_frontier_control_orders_promote_a_formula",
+            "source": rel(SOURCES["order_frontier_promotion_gate"]),
+            "status": "failed_no_promotable_order",
+            "evidence": {
+                "frontier_best_total_gain_order": promotion_gate["summary"][
+                    "frontier_best_total_gain_order"
+                ],
+                "full_formula_best_raw_order": promotion_gate["summary"][
+                    "full_formula_best_raw_order"
+                ],
+                "full_formula_best_charged_order": promotion_gate["summary"][
+                    "full_formula_best_charged_order"
+                ],
+                "promotable_order_count": promotion_gate["summary"][
+                    "promotable_order_count"
+                ],
+                "random_04_frontier_total_delta_vs_numeric_bits": promotion_gate[
+                    "summary"
+                ]["random_04"]["frontier_total_gain_delta_vs_numeric_bits"],
+                "random_04_full_formula_raw_delta_vs_numeric_bits": promotion_gate[
+                    "summary"
+                ]["random_04"]["full_formula_raw_delta_vs_numeric_bits"],
+                "random_04_full_formula_charged_delta_vs_numeric_bits": promotion_gate[
+                    "summary"
+                ]["random_04"]["full_formula_charged_delta_vs_numeric_bits"],
+            },
+            "interpretation": (
+                "The best local frontier order is worse under the complete formula "
+                "ledger. The order-frontier metric is therefore retained as a "
+                "predictive diagnostic, not a compression-bound promotion score."
+            ),
+        },
     ]
 
     result = {
@@ -738,7 +775,7 @@ def make_result() -> dict[str, Any]:
         "decision": {
             "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
             "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
-            "numeric_order_status": "aggregate_order_supported_but_per_book_frontier_not_unique",
+            "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -938,6 +975,15 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['random_order_count']}; best mean "
                 f"`{evidence['best_after_bootstrap_mean_gain_order']}` "
                 f"{evidence['best_after_bootstrap_mean_gain_delta_vs_numeric_bits']:+.3f} bits"
+            )
+        elif row["question"] == "can_order_frontier_control_orders_promote_a_formula":
+            key = (
+                f"frontier best `{evidence['frontier_best_total_gain_order']}`; "
+                f"full raw best `{evidence['full_formula_best_raw_order']}`; "
+                f"full charged best `{evidence['full_formula_best_charged_order']}`; "
+                f"promotable {evidence['promotable_order_count']}; random_04 "
+                f"{evidence['random_04_frontier_total_delta_vs_numeric_bits']:+.3f} "
+                f"frontier vs {evidence['random_04_full_formula_charged_delta_vs_numeric_bits']:+.3f} charged"
             )
         else:
             key = (

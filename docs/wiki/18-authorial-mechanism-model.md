@@ -1111,6 +1111,12 @@ seeded random orders, and `random_04` beats numeric by `+0.549` bits in mean
 after-bootstrap gain and `+61.452` bits in total gain. This keeps the online
 frontier as predictive-parser evidence while rejecting the stronger claim that
 the per-book frontier proves numeric order.
+The order frontier promotion gate then reconciles that local metric with the
+full formula ledger. The local frontier winner `random_04` is still `+188.584`
+bits worse than numeric under the complete online formula before order cost and
+`+521.038` bits worse after descriptor cost. No tested non-numeric order can
+promote under a nonnegative descriptor, so the frontier metric is demoted from
+promotion score to diagnostic control.
 The cross-op optional literal copy frontier then tests that broader local
 family. It permits a replacement copy to cross the literal boundary and consume
 following operations before trimming the remaining recipe. It scores `465`
@@ -1434,6 +1440,7 @@ book generation, not row0 pair-cell placement.
 - [Seeded rescore loss decomposition](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.md)
 - [Seed exception signal cost audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.md)
 - [Online order frontier controls](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.md)
+- [Order frontier promotion gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

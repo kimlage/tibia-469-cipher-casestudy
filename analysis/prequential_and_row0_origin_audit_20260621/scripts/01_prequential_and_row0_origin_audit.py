@@ -282,6 +282,7 @@ def render_markdown(
     seeded_rescore_loss_decomposition_link: str,
     seed_exception_signal_cost_link: str,
     online_order_frontier_controls_link: str,
+    order_frontier_promotion_gate_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -582,6 +583,18 @@ def render_markdown(
             "per-book frontier proves numeric book order.",
             f"See [22_online_order_frontier_controls.md]({online_order_frontier_controls_link}).",
             "",
+            "### Order Frontier Promotion Gate",
+            "",
+            "The non-unique order-frontier result is then checked against the",
+            "complete formula ledger. The local frontier winner, `random_04`, is",
+            "`+61.452` bits better than numeric on book-bounded frontier total, but",
+            "it is `+188.584` bits worse under the complete online formula before",
+            "order cost and `+521.038` bits worse after the arbitrary permutation",
+            "descriptor. No tested non-numeric order is promotable under a",
+            "nonnegative descriptor. The frontier metric is therefore retained as",
+            "a predictive diagnostic, not a compression-bound promotion score.",
+            f"See [23_order_frontier_promotion_gate.md]({order_frontier_promotion_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -695,6 +708,7 @@ def main() -> None:
             ),
             seed_exception_signal_cost_link="21_seed_exception_signal_cost_audit.md",
             online_order_frontier_controls_link="22_online_order_frontier_controls.md",
+            order_frontier_promotion_gate_link="23_order_frontier_promotion_gate.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -743,6 +757,9 @@ def main() -> None:
             ),
             online_order_frontier_controls_link=(
                 "test_results/22_online_order_frontier_controls.md"
+            ),
+            order_frontier_promotion_gate_link=(
+                "test_results/23_order_frontier_promotion_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

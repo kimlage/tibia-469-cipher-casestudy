@@ -190,6 +190,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Seeded rescore loss decomposition | the seeded formula saves `36.842` non-payload bits but adds `37.821` literal-payload bits, explaining the `+0.979` net loss | local seed saving outweighed by payload cost |
 | Seed exception signal cost audit | even zero-cost deterministic fallback is `+0.979` bits worse; a one-book index exception is `+7.108`, so promotion would require negative descriptor cost `< -0.979` | seed exception promotion closed |
 | Online order frontier controls | numeric order keeps `69/69` after-bootstrap raw wins, but `10/11` tested orders also do, including `6/6` seeded random orders; `random_04` is `+0.549` bits better in mean after-bootstrap gain and `+61.452` bits better in total gain | online frontier predictive / numeric order not proved |
+| Order frontier promotion gate | the local frontier winner `random_04` is `+188.584` bits worse than numeric under the complete online formula before order cost and `+521.038` bits worse after descriptor cost; no tested non-numeric order promotes | frontier metric demoted from promotion score |
 | Prequential recipe reparse audit | with frozen train-prefix component counts, a deterministic LZ parser roundtrips every future suffix and beats the active full-corpus recipe under the same frozen counts on all five cutoffs | predictive recipe evidence / split-specific analysis only |
 | Prequential recipe reparse controls | at cutoffs `20/35/50`, real suffixes beat random same-length, per-book-shuffled, and suffix-pool-shuffled controls; controls have negative gain versus raw digits | controlled predictive recipe evidence |
 | Prequential recipe train-set controls | at focused cutoff `50`, numeric prefix beats the random train-set mean but not all random inventories (`p=0.1538`) | predictive recipe evidence / numeric order not promoted |
@@ -354,6 +355,7 @@ Primary sources:
 [seeded_rescore_loss_decomposition.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.md),
 [seed_exception_signal_cost_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.md),
 [online_order_frontier_controls.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.md),
+[order_frontier_promotion_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.md),
 [row0_origin_parallel_report.md](../../analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md),
 [row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),

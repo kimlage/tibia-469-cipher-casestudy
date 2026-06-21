@@ -82,6 +82,9 @@ exogenous.
 - [scripts/22_online_order_frontier_controls.py](scripts/22_online_order_frontier_controls.py) - reruns the book-bounded online frontier under named and random order controls.
 - [reports/test_results/22_online_order_frontier_controls.md](reports/test_results/22_online_order_frontier_controls.md) - online order frontier control result.
 - [reports/test_results/22_online_order_frontier_controls.json](reports/test_results/22_online_order_frontier_controls.json) - structured online order frontier ledger.
+- [scripts/23_order_frontier_promotion_gate.py](scripts/23_order_frontier_promotion_gate.py) - checks whether any non-numeric order-frontier control can promote under the complete formula ledger and descriptor cost.
+- [reports/test_results/23_order_frontier_promotion_gate.md](reports/test_results/23_order_frontier_promotion_gate.md) - order frontier promotion-gate result.
+- [reports/test_results/23_order_frontier_promotion_gate.json](reports/test_results/23_order_frontier_promotion_gate.json) - structured order-promotion gate ledger.
 
 ## Boundary
 
@@ -137,7 +140,10 @@ exogenous.
   not numeric-order-unique: numeric keeps `69/69` after-bootstrap raw wins, but
   `10/11` tested orders do too, including `6/6` seeded random orders; `random_04`
   beats numeric by `+0.549` bits in mean after-bootstrap gain and `+61.452` bits
-  in total gain.
+  in total gain. A promotion gate then checks the complete online formula
+  ledger: `random_04` is `+188.584` bits worse before descriptor cost and
+  `+521.038` bits worse after descriptor cost, leaving `0` promotable
+  non-numeric orders.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

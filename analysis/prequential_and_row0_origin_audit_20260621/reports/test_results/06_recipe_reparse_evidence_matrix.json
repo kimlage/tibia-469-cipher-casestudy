@@ -3,7 +3,7 @@
   "classification": "recipe_externality_reduced_but_generation_claim_still_partial",
   "decision": {
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
-    "numeric_order_status": "aggregate_order_supported_but_per_book_frontier_not_unique",
+    "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
     "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence and reduces same-family source memorization as an explanation for singleton holdout performance.",
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
     "row0_origin_status": "unchanged_exogenous",
@@ -437,6 +437,21 @@
       "question": "is_the_online_prefix_book_frontier_numeric_order_unique",
       "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.json",
       "status": "failed_as_numeric_order_uniqueness_proof"
+    },
+    {
+      "evidence": {
+        "frontier_best_total_gain_order": "random_04",
+        "full_formula_best_charged_order": "numeric",
+        "full_formula_best_raw_order": "numeric",
+        "promotable_order_count": 0,
+        "random_04_frontier_total_delta_vs_numeric_bits": 61.45180319879728,
+        "random_04_full_formula_charged_delta_vs_numeric_bits": 521.0376229937428,
+        "random_04_full_formula_raw_delta_vs_numeric_bits": 188.5843576142015
+      },
+      "interpretation": "The best local frontier order is worse under the complete formula ledger. The order-frontier metric is therefore retained as a predictive diagnostic, not a compression-bound promotion score.",
+      "question": "can_order_frontier_control_orders_promote_a_formula",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.json",
+      "status": "failed_no_promotable_order"
     }
   ],
   "frozen_validation_scope": {
@@ -458,6 +473,7 @@
     "online_prefix_book_frontier": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
+    "order_frontier_promotion_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",
     "recipe_externality": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
     "reparse_content_controls": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",

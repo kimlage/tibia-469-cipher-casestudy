@@ -42,11 +42,12 @@ claim.
 | `can_exception_signaling_rescue_the_book0_seed` | `failed_requires_negative_descriptor_cost` | zero-cost delta 0.979; required descriptor < -0.979; nonnegative promotes False; one-book index delta 7.108 |
 | `does_numeric_online_order_survive_order_controls` | `passed_against_tested_orders` | best raw `numeric`; best charged `numeric`; 6 random orders |
 | `is_the_online_prefix_book_frontier_numeric_order_unique` | `failed_as_numeric_order_uniqueness_proof` | numeric after-bootstrap 69/69; perfect controls 10/11; random perfect 6/6; best mean `random_04` +0.549 bits |
+| `can_order_frontier_control_orders_promote_a_formula` | `failed_no_promotable_order` | frontier best `random_04`; full raw best `numeric`; full charged best `numeric`; promotable 0; random_04 +61.452 frontier vs +521.038 charged |
 
 ## Decision
 
 - Recipe externality: `partially_reduced_by_deterministic_reparse`.
 - Generation explanation: `stronger_mechanical_recipe_signal_not_final_authorial_method`.
-- Numeric order: `aggregate_order_supported_but_per_book_frontier_not_unique`.
+- Numeric order: `frontier_not_unique_and_control_orders_not_promotable`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

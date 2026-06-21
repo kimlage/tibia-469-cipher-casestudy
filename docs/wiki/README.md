@@ -409,6 +409,10 @@ unique because `10/11` tested orders pass, including `6/6` seeded random orders;
 `random_04` is `+0.549` bits better in mean after-bootstrap gain and `+61.452`
 bits better in total gain. The online frontier remains predictive-parser
 evidence, not numeric-order proof.
+The follow-up promotion gate then prevents that local frontier result from
+being misread as a formula improvement: `random_04` is `+188.584` bits worse
+than numeric under the complete online formula before order cost and `+521.038`
+bits worse after descriptor cost, with no promotable non-numeric order.
 A no-test-carryover family variant still beats raw digits in `19/19` families
 when each held-out book starts only from the training-complement inventory.
 A singleton leave-one-book-out audit then beats raw digit coding in `70/70`
