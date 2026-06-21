@@ -117,6 +117,12 @@ method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
 
+A row0 compatibility audit checked the later partial-boundary promotions
+against the independent row0 front. They remain compatible but do not move
+row0: no recent formula gate predicts row0 labels under holdout, beats lookup
+after paid anchor/rule costs, explains `39`/`93`/`19/91`, or adds
+CipSoft/authorial provenance. The result is `row0 unchanged`.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

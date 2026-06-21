@@ -325,6 +325,14 @@ PARTIAL_BOUNDARY_SHIFT_SATURATION_GATE = (
     / "test_results"
     / "69_partial_boundary_shift_saturation_gate.json"
 )
+RECENT_FORMULA_ROW0_COMPATIBILITY_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "70_recent_formula_row0_compatibility_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -698,6 +706,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "partial_boundary_shift_saturation_gate",
         partial_boundary_shift_saturation,
+    )
+    recent_formula_row0_compatibility = load_json(
+        RECENT_FORMULA_ROW0_COMPATIBILITY_AUDIT
+    )
+    assert_analysis_boundary(
+        "recent_formula_row0_compatibility_audit",
+        recent_formula_row0_compatibility,
     )
 
     predictive = legacy["predictive_validation"]
@@ -1099,6 +1114,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": partial_boundary_shift_saturation["summary"],
             "decision": partial_boundary_shift_saturation["decision"],
         },
+        "recent_formula_row0_compatibility": {
+            "classification": recent_formula_row0_compatibility["classification"],
+            "source": rel(RECENT_FORMULA_ROW0_COMPATIBILITY_AUDIT),
+            "summary": recent_formula_row0_compatibility["summary"],
+            "taxonomy": recent_formula_row0_compatibility["taxonomy"],
+            "decision": recent_formula_row0_compatibility["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -1158,6 +1180,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "partial_boundary_shift_second_pass_status": "second_partial_shift_candidate_found",
             "partial_boundary_shift_second_pass_formula_status": "promoted_bound_8154_676268",
             "partial_boundary_shift_saturation_status": "saturated_no_remaining_partial_shift_improvements",
+            "recent_formula_row0_compatibility_status": "book_formula_improved_row0_unchanged",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1233,6 +1256,7 @@ def render_markdown(
     partial_boundary_shift_second_pass_gate_link: str,
     partial_boundary_shift_second_pass_formula_gate_link: str,
     partial_boundary_shift_saturation_gate_link: str,
+    recent_formula_row0_compatibility_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1326,6 +1350,7 @@ def render_markdown(
         "summary"
     ]
     partial_shift_saturation = result["partial_boundary_shift_saturation"]["summary"]
+    recent_row0_compatibility = result["recent_formula_row0_compatibility"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2363,6 +2388,19 @@ def render_markdown(
             "`8154.676268` bits.",
             f"See [69_partial_boundary_shift_saturation_gate.md]({partial_boundary_shift_saturation_gate_link}).",
             "",
+            "### Recent Formula Row0 Compatibility Audit",
+            "",
+            "A compatibility gate then asks whether those recent book-formula "
+            "promotions change the independent row0 conclusion. They do not. The "
+            "current bound is "
+            f"`{recent_row0_compatibility['current_compression_bound_bits']:.6f}` "
+            "bits, but the gates contain no row0 label holdout predictor, do not "
+            "beat row0 lookup after paid anchor/rule cost, do not derive `39`, "
+            "`93`, or `19/91`, and add no CipSoft/authorial provenance.",
+            f"Result: `{recent_row0_compatibility['recent_formula_status']}`; "
+            "`row0 unchanged`.",
+            f"See [70_recent_formula_row0_compatibility_audit.md]({recent_formula_row0_compatibility_audit_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2476,6 +2514,7 @@ def render_markdown(
             "- The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.",
             "- The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.",
             "- A second partial-boundary pass promotes book `46` op `1` delta `1`, lowering the bound again to `8154.676268` bits; a saturation gate then finds `0/221` remaining improvements.",
+            "- The recent formula row0 compatibility audit records `row0 unchanged`: the latest bound improvements are book-formula changes only and do not predict row0 labels, beat lookup after costs, explain `39`/`93`/`19/91`, or add provenance.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2660,6 +2699,9 @@ def main() -> None:
             ),
             partial_boundary_shift_saturation_gate_link=(
                 "69_partial_boundary_shift_saturation_gate.md"
+            ),
+            recent_formula_row0_compatibility_audit_link=(
+                "70_recent_formula_row0_compatibility_audit.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2850,6 +2892,9 @@ def main() -> None:
             ),
             partial_boundary_shift_saturation_gate_link=(
                 "test_results/69_partial_boundary_shift_saturation_gate.md"
+            ),
+            recent_formula_row0_compatibility_audit_link=(
+                "test_results/70_recent_formula_row0_compatibility_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

@@ -628,6 +628,10 @@ under random controls but merely break even once their rare labels are paid.
 The row0 parallel provenance bridge then traces local workbook/import/
 reconstruction/audit layers but leaves CipSoft origin untraced, so row0 remains
 a substrate assumed by the book generator rather than a derived component.
+The latest row0 compatibility gate keeps that boundary unchanged after the
+`8154.676268` partial-boundary promotions: the improvement is downstream book
+formula only, with no row0-label holdout predictor, paid lookup reduction,
+surface-clue derivation, or new provenance.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -784,6 +788,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   mechanical bound with `70/70` roundtrip,
   promotes a second partial shift to `8154.676268` bits and then saturates the
   remaining partial-shift frontier (`0/221` improvements),
+  confirms by compatibility audit that those formula promotions leave `row0`
+  unchanged,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

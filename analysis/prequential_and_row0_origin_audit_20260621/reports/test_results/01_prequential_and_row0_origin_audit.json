@@ -4111,6 +4111,7 @@
     "post_targetmax_source_substitution_second_pass_status": "promoted_bound_8156_049986_microscopic",
     "post_targetmax_source_substitution_status": "promoted_bound_8156_050167_microscopic",
     "post_targetmax_source_substitution_stop_status": "micro_frontier_frozen_not_mainline",
+    "recent_formula_row0_compatibility_status": "book_formula_improved_row0_unchanged",
     "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "exogenous_under_current_evidence",
     "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
@@ -21423,6 +21424,105 @@
       "Compression-only bit reductions without holdout or structural value.",
       "Any semantic projection unsupported by CipSoft/in-game evidence."
     ]
+  },
+  "recent_formula_row0_compatibility": {
+    "classification": "row0_unchanged_book_formula_improved",
+    "decision": {
+      "compression_bound_status": "current_bound_8154_676268",
+      "recent_formula_status": "book_generation_improved_row0_unchanged",
+      "row0_origin_status": "unchanged_exogenous",
+      "row0_scoreboard_status": "unchanged_no_origin_formula_promoted",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/70_recent_formula_row0_compatibility_audit.json",
+    "summary": {
+      "all_anchors_explicit_pair_label_net_bits": -11.851749041416053,
+      "beats_row0_lookup_after_cost": false,
+      "bridge_generation_explanation_status": "book_formula_may_use_row0_as_substrate_but_does_not_derive_row0",
+      "current_compression_bound_bits": 8154.676268216349,
+      "deep_provenance_decision": "project_row0_provenance_partially_traced_but_cipsoft_origin_untraced",
+      "explains_surface_clues": false,
+      "formula_gates_checked": [
+        {
+          "candidate_gain_bits": 0.7889493382372166,
+          "candidate_total_bits": 8155.26103692366,
+          "classification": "partial_boundary_shift_formula_improves_bound",
+          "current_total_bits": 8156.049986261897,
+          "row0_origin_status": "unchanged_exogenous",
+          "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/66_partial_boundary_shift_formula_gate.json"
+        },
+        {
+          "candidate_gain_bits": 0.5847687073110137,
+          "candidate_total_bits": 8154.676268216349,
+          "classification": "partial_boundary_shift_second_pass_formula_improves_bound",
+          "current_total_bits": 8155.26103692366,
+          "row0_origin_status": "unchanged_exogenous",
+          "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/68_partial_boundary_shift_second_pass_formula_gate.json"
+        },
+        {
+          "classification": "partial_boundary_shift_saturated",
+          "current_total_bits": 8154.676268216349,
+          "improving_candidate_count": 0,
+          "row0_origin_status": "unchanged_exogenous",
+          "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/69_partial_boundary_shift_saturation_gate.json"
+        }
+      ],
+      "lookup_baseline_bits": 160.52070273483628,
+      "new_row0_provenance": false,
+      "paid_anchor_decision": "explicit_paid_anchor_model_does_not_beat_lookup",
+      "partial_worksheet_decision": "not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid",
+      "predicts_row0_labels_under_holdout": false,
+      "promoted_origin_formula_count": 0,
+      "rare_singletons_explicit_pair_label_net_bits": 1.0658141036401503e-14,
+      "recent_formula_assumes_row0": true,
+      "recent_formula_status": "book_generation_improved_row0_unchanged",
+      "row0_changed": false,
+      "row0_origin_status": "row0_origin_exogenous_under_current_evidence",
+      "scoreboard_decision": "score_row0_progress_separately_from_book_generation_bits",
+      "surface_clues_retained": {
+        "directed_conflict": "19/91",
+        "missing_ordered_code": "39",
+        "present_reverse_code": "93",
+        "status": "PROMOTED_MECHANICAL_CLUE_surface_only"
+      }
+    },
+    "taxonomy": {
+      "AUDIT_ONLY": [
+        {
+          "boundary": "book formula only; row0 unchanged",
+          "evidence": "lower the book-generation compression bound to 8154.676268 while assuming row0",
+          "name": "recent_partial_boundary_formula_promotions"
+        }
+      ],
+      "BLOCKED_NEEDS_EXTERNAL_SOURCE": [
+        {
+          "evidence": "local project provenance traced but primary CipSoft/authorial source remains untraced",
+          "name": "cipsoft_or_authorial_row0_origin"
+        }
+      ],
+      "PROMOTED_MECHANICAL_CLUE": [
+        {
+          "boundary": "surface/render clue only; does not derive pair labels",
+          "evidence": "99/100 ordered codes, missing 39, present 93, and directed 19/91 conflict",
+          "name": "ordered_surface_render_layer"
+        }
+      ],
+      "PROMOTED_ORIGIN_FORMULA": [],
+      "REJECTED_CONTROL": [
+        {
+          "evidence": "13-anchor explicit pair+label net is negative against lookup",
+          "name": "paid_anchor_reduction_gate",
+          "net_bits": -11.851749041416053
+        }
+      ],
+      "WEAK_CLUE": [
+        {
+          "boundary": "plausible authorial worksheet shape, not promoted",
+          "evidence": "13 anchors reduce residual lookup only before source/anchor cost",
+          "name": "partial_worksheet_model"
+        }
+      ]
+    }
   },
   "row0_origin": {
     "classification": "row0_origin_remains_exogenous",

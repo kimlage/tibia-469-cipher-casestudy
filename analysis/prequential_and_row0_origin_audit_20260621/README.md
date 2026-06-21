@@ -223,6 +223,9 @@ exogenous.
 - [scripts/69_partial_boundary_shift_saturation_gate.py](scripts/69_partial_boundary_shift_saturation_gate.py) - closes the partial-boundary shift family after the two promotions.
 - [reports/test_results/69_partial_boundary_shift_saturation_gate.md](reports/test_results/69_partial_boundary_shift_saturation_gate.md) - partial-boundary saturation result.
 - [reports/test_results/69_partial_boundary_shift_saturation_gate.json](reports/test_results/69_partial_boundary_shift_saturation_gate.json) - structured partial-boundary saturation ledger.
+- [scripts/70_recent_formula_row0_compatibility_audit.py](scripts/70_recent_formula_row0_compatibility_audit.py) - checks whether the latest book-formula promotions change the independent row0-origin conclusion.
+- [reports/test_results/70_recent_formula_row0_compatibility_audit.md](reports/test_results/70_recent_formula_row0_compatibility_audit.md) - recent formula / row0 compatibility result.
+- [reports/test_results/70_recent_formula_row0_compatibility_audit.json](reports/test_results/70_recent_formula_row0_compatibility_audit.json) - structured compatibility ledger.
 
 ## Boundary
 
@@ -425,6 +428,11 @@ exogenous.
   it changes `10/514` sources and improves the repriced ledger by `-42.359`
   bits with max state count `14`. Segmentation and copy lengths remain fixed,
   so this is still a partial optimizer rather than a complete active parser.
+- Recent book-formula promotions are compatible with the row0 boundary but do
+  not change it: the latest bound `8154.676268` improves only the downstream
+  book-generation formula, with no row0-label holdout predictor, no lookup-cost
+  reduction after paid anchors, no explanation of `39`/`93`/`19/91`, and no new
+  CipSoft/authorial provenance.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
