@@ -851,6 +851,29 @@ candidate latent state would need to explain all `10` remaining
 residual distinctions, with `9` distinct stable labels still
 unaccounted for by the exposed state.
 
+## Latent State Lookup Cost Gate
+
+Gate 41 prices the fallback hypothesis that the missing latent
+state is just a residual lookup. It charges the site selection
+and label ordering needed after exposed state and simple splits
+fail.
+
+| Diagnostic | Value |
+|---|---:|
+| Decision universe | `267` |
+| First-drift residual sites | `10` |
+| Full-oracle minimum correction events | `11` |
+| Distinct first-drift stable labels | `9` |
+| First-drift lookup lower bound | `79.361` bits |
+| First-drift lookup with per-site dictionary | `90.269` bits |
+| Full-parser lookup lower bound | `83.907` bits |
+
+A latent state is therefore not progress unless it comes with a
+compact rule. Naming the state without such a rule is just an
+ad hoc residual lookup, and even the first-drift lookup is not a
+complete parser because the oracle still needs at least `11`
+correction events.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -873,7 +896,8 @@ rejects simple exact-length path-template reuse. Gate 38 rejects
 nearest trajectory-state reuse. Gate 39 shows the exposed state
 families have no deterministic residual support. Gate 40 shows
 simple observable splits still leave `10` residual distinctions
-needing latent resolution. The remaining blocker is a richer latent path/state
+needing latent resolution. Gate 41 prices a pure latent lookup at
+least `79.361` bits before rule cost. The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -922,3 +946,4 @@ or the stable projection as an oracle.
 - [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)
 - [Observable state support audit](test_results/39_observable_state_support_audit.md)
 - [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)
+- [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)

@@ -49,6 +49,7 @@ PATH_TEMPLATE_REUSE = TEST_RESULTS / "37_path_template_reuse_audit.json"
 TRAJECTORY_NEIGHBOR = TEST_RESULTS / "38_trajectory_neighbor_parser_audit.json"
 OBSERVABLE_STATE_SUPPORT = TEST_RESULTS / "39_observable_state_support_audit.json"
 LATENT_STATE_REQUIREMENT = TEST_RESULTS / "40_latent_state_requirement_audit.json"
+LATENT_LOOKUP_COST = TEST_RESULTS / "41_latent_state_lookup_cost_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -172,6 +173,11 @@ def main() -> None:
         if LATENT_STATE_REQUIREMENT.exists()
         else None
     )
+    latent_lookup_cost = (
+        load_json(LATENT_LOOKUP_COST)
+        if LATENT_LOOKUP_COST.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -250,6 +256,8 @@ def main() -> None:
         assert_boundary("observable_state_support_audit", observable_state_support)
     if latent_state_requirement is not None:
         assert_boundary("latent_state_requirement_audit", latent_state_requirement)
+    if latent_lookup_cost is not None:
+        assert_boundary("latent_state_lookup_cost_gate", latent_lookup_cost)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -345,6 +353,9 @@ def main() -> None:
     )
     latent_state_requirement_summary = (
         None if latent_state_requirement is None else latent_state_requirement["summary"]
+    )
+    latent_lookup_cost_summary = (
+        None if latent_lookup_cost is None else latent_lookup_cost["summary"]
     )
 
     lines = [
@@ -1414,6 +1425,34 @@ def main() -> None:
                 "",
             ]
         )
+    if latent_lookup_cost_summary is not None:
+        lines.extend(
+            [
+                "## Latent State Lookup Cost Gate",
+                "",
+                "Gate 41 prices the fallback hypothesis that the missing latent",
+                "state is just a residual lookup. It charges the site selection",
+                "and label ordering needed after exposed state and simple splits",
+                "fail.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Decision universe | `{latent_lookup_cost_summary['decision_universe']}` |",
+                f"| First-drift residual sites | `{latent_lookup_cost_summary['first_drift_residual_sites']}` |",
+                f"| Full-oracle minimum correction events | `{latent_lookup_cost_summary['full_oracle_min_correction_events']}` |",
+                f"| Distinct first-drift stable labels | `{latent_lookup_cost_summary['distinct_first_drift_stable_labels']}` |",
+                f"| First-drift lookup lower bound | `{latent_lookup_cost_summary['first_drift_lookup_lower_bound_bits']:.3f}` bits |",
+                f"| First-drift lookup with per-site dictionary | `{latent_lookup_cost_summary['first_drift_lookup_dictionary_bits']:.3f}` bits |",
+                f"| Full-parser lookup lower bound | `{latent_lookup_cost_summary['full_parser_lookup_lower_bound_bits']:.3f}` bits |",
+                "",
+                "A latent state is therefore not progress unless it comes with a",
+                "compact rule. Naming the state without such a rule is just an",
+                "ad hoc residual lookup, and even the first-drift lookup is not a",
+                "complete parser because the oracle still needs at least `11`",
+                "correction events.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1438,7 +1477,8 @@ def main() -> None:
             "nearest trajectory-state reuse. Gate 39 shows the exposed state",
             "families have no deterministic residual support. Gate 40 shows",
             "simple observable splits still leave `10` residual distinctions",
-            "needing latent resolution. The remaining blocker is a richer latent path/state",
+            "needing latent resolution. Gate 41 prices a pure latent lookup at",
+            "least `79.361` bits before rule cost. The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1487,6 +1527,7 @@ def main() -> None:
             "- [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)",
             "- [Observable state support audit](test_results/39_observable_state_support_audit.md)",
             "- [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)",
+            "- [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)",
             "",
         ]
     )

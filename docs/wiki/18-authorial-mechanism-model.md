@@ -678,6 +678,12 @@ bucket/parity, target half, and active operation splits across the current
 state families. Across `33` split tests, the best still gives `0/10`
 deterministic residual matches. All `10` residual distinctions, covering `9`
 distinct stable labels, still need a real latent/source-free explanation.
+A latent-state lookup cost gate then prices the ad hoc fallback. Selecting the
+`10` first-drift residual sites and ordering their stable labels costs at least
+`79.361` bits before any human-readable rule is charged; a per-site dictionary
+variant costs `90.269` bits. The full post-repair oracle needs at least `11`
+correction events, so even this lookup is not a full parser. A latent state is
+therefore useful only if it supplies a compact rule, not merely a name.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2381,6 +2387,7 @@ book generation, not row0 pair-cell placement.
 - [Trajectory neighbor parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/38_trajectory_neighbor_parser_audit.md)
 - [Observable state support audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/39_observable_state_support_audit.md)
 - [Latent state requirement audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/40_latent_state_requirement_audit.md)
+- [Latent state lookup cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

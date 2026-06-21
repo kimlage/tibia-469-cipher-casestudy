@@ -1224,6 +1224,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   residual matches; `6/10` out of support),
   rejects simple latent-state splits (`33` tests; `0/10` deterministic
   residual matches),
+  prices the fallback latent lookup (`79.361`-bit first-drift lower bound;
+  `11` full-oracle correction events),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
