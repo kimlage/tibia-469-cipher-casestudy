@@ -205,6 +205,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source canonicality decodability gate | earliest-source canonicality is `261/261`, but the rule depends on future target chunk, `138/261` choices are ambiguous at declared length, and source dependency is not removed | encoder regularity / decoder source retained |
 | Copy source canonicality controls | earliest occurrence remains `261/261`; latest occurrence is `123/261`, previous-source-plus-length is `5/261`, and random candidate choice expects `169.473` hits | source tie-break support / no decoder removal |
 | Copy length default/exception formula | target-max extension is high-coverage but encoder-only; decodable `decoder_max_possible` default plus adaptive exceptions lowers copy-length cost and promotes the bound to `8206.178` bits | copy length remodeled / row0 unchanged |
+| Copy length derivation boundary gate | target-max matches `238/261` copy lengths but is encoder-only; decoder max-possible gives `60` defaults / `201` exceptions, midpoint generalizes, and compact recipes still declare `261` copy lengths | copy length partly modeled / dependency retained |
 | Copy source default/exception formula | previous-source-plus-length default is decodable but sparse; adaptive exception-source coding lowers copy-address cost and promotes the bound to `8177.317` bits | copy source remodeled / row0 unchanged |
 | Default/exception prequential validation | after train-count freezing fix, prefix online and frozen gains are all positive (`min frozen aggregate=50.303` bits), but family holdouts include failures | prefix-frozen partial / final method not promoted |
 | Default/exception component profile | `8177.317` remains compression bound and prefix-frozen profile; family/bookcase failures keep the generation claim partial | separated ledgers |
@@ -382,6 +383,7 @@ Primary sources:
 [source_canonicality_decodability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.md),
 [online_copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md),
 [copy_length_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md),
+[copy_length_derivation_boundary_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.md),
 [copy_source_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md),
 [default_exception_prequential_validation.md](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md),
 [default_exception_component_profile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md),

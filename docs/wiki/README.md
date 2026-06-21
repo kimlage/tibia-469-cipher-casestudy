@@ -488,6 +488,9 @@ The copy-length default/exception audit then remodels copy length: the
 target-max rule is mostly true but encoder-only, while a decodable
 `decoder_max_possible` default plus adaptive exceptions lowers the mechanical
 bound to `8206.178` bits without changing row0 or semantics.
+The copy-length derivation boundary gate then keeps the distinction explicit:
+target-max matches `238/261` but is encoder-only, and compact recipes still
+declare all `261` copy lengths.
 The copy-source default/exception audit then remodels source addressing with a
 decodable previous-source-plus-length default plus global adaptive exceptions,
 lowering the mechanical bound to `8177.317` bits while leaving row0 and

@@ -3,6 +3,7 @@
   "classification": "recipe_externality_reduced_but_generation_claim_still_partial",
   "decision": {
     "copy_length_context_status": "midpoint_context_retained",
+    "copy_length_derivation_status": "partly_decodable_dependency_retained",
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
     "literal_externality_status": "reduced_not_removed",
     "literal_payload_model_status": "active_order2_retained",
@@ -577,6 +578,25 @@
     },
     {
       "evidence": {
+        "candidate_gain_bits": 136.88350617093965,
+        "copied_digits_covered": 10406,
+        "copy_items": 261,
+        "copy_length_fields_retained_in_compact_recipe": 261,
+        "decoder_max_possible_default_count": 60,
+        "decoder_max_possible_exception_count": 201,
+        "encoder_target_max_decodable": false,
+        "encoder_target_max_match_count": 238,
+        "midpoint_gain_vs_global_bits": 13.838571897065322,
+        "midpoint_prefix_frozen_split_count": 5,
+        "midpoint_prefix_frozen_win_count": 5
+      },
+      "interpretation": "Copy length is partly modeled by a decodable max-possible default and supported midpoint context, but the high-coverage target-max rule is encoder-only and compact recipes still declare every copy length.",
+      "question": "is_copy_length_decoder_derived",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.json",
+      "status": "failed_partly_decodable_dependency_retained"
+    },
+    {
+      "evidence": {
         "cross_op_best_delta_bits": 0.02743357555300463,
         "cross_op_valid_candidate_count": 465,
         "forced_literal_digits_no_copy_candidate": 760,
@@ -626,6 +646,7 @@
     "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
   },
   "inputs": {
+    "copy_length_derivation_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.json",
     "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",

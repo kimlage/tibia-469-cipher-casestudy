@@ -256,6 +256,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_state_status": "path_dependent_previous_copy_state_retained",
             "source_selection_status": "encoder_canonical_decoder_dependency_retained",
             "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",
+            "copy_length_derivation_status": "partly_decodable_dependency_retained",
             "literal_externality_status": "reduced_not_removed_local_repairs_rejected",
             "literal_payload_model_status": "active_order2_retained_simplifications_rejected",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
@@ -295,6 +296,7 @@ def render_markdown(
     source_state_dependency_gate_link: str,
     source_selection_derivation_boundary_gate_link: str,
     copy_length_midpoint_context_gate_link: str,
+    copy_length_derivation_boundary_gate_link: str,
     literal_copy_availability_gate_link: str,
     literal_payload_model_gate_link: str,
     row0_requirement_link: str,
@@ -687,6 +689,18 @@ def render_markdown(
             "component while leaving the full recipe and row0 origin unchanged.",
             f"See [27_copy_length_midpoint_context_gate.md]({copy_length_midpoint_context_gate_link}).",
             "",
+            "### Copy Length Derivation Boundary Gate",
+            "",
+            "The copy-length dependency is then separated into encoder-only and",
+            "decoder-valid pieces. The high-coverage target-max rule matches",
+            "`238/261` copy lengths, but it is not decodable because it needs",
+            "future target text. The retained decoder-valid model is",
+            "`decoder_max_possible` default plus adaptive exceptions: `60`",
+            "defaults and `201` exceptions, with `136.884` bits of upstream gain.",
+            "The midpoint context is supported, but the compact recipe still",
+            "declares `261` copy-length fields covering `10406` copied digits.",
+            f"See [32_copy_length_derivation_boundary_gate.md]({copy_length_derivation_boundary_gate_link}).",
+            "",
             "### Literal Copy Availability Gate",
             "",
             "The literal payload is then separated into forced literals and residual",
@@ -777,6 +791,7 @@ def render_markdown(
             "- Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.",
             "- Copy-source selection is encoder-canonical but not decoder-derived: earliest-source hits `261/261`, while distance and state-free replacements lose.",
             "- Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.",
+            "- Copy length is partly remodeled but not derived: target-max is encoder-only, and the compact recipe still declares all `261` copy lengths.",
             "- Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.",
             "- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.",
             "- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.",
@@ -851,6 +866,9 @@ def main() -> None:
             copy_length_midpoint_context_gate_link=(
                 "27_copy_length_midpoint_context_gate.md"
             ),
+            copy_length_derivation_boundary_gate_link=(
+                "32_copy_length_derivation_boundary_gate.md"
+            ),
             literal_copy_availability_gate_link="28_literal_copy_availability_gate.md",
             literal_payload_model_gate_link="29_literal_payload_model_gate.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
@@ -922,6 +940,9 @@ def main() -> None:
             ),
             copy_length_midpoint_context_gate_link=(
                 "test_results/27_copy_length_midpoint_context_gate.md"
+            ),
+            copy_length_derivation_boundary_gate_link=(
+                "test_results/32_copy_length_derivation_boundary_gate.md"
             ),
             literal_copy_availability_gate_link=(
                 "test_results/28_literal_copy_availability_gate.md"

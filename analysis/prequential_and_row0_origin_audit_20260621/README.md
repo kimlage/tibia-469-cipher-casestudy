@@ -109,6 +109,9 @@ exogenous.
 - [scripts/31_source_selection_derivation_boundary_gate.py](scripts/31_source_selection_derivation_boundary_gate.py) - checks whether canonical copy-source selection becomes decoder-derivable after controls, distance coding, and state-free defaults.
 - [reports/test_results/31_source_selection_derivation_boundary_gate.md](reports/test_results/31_source_selection_derivation_boundary_gate.md) - source-selection derivation boundary result.
 - [reports/test_results/31_source_selection_derivation_boundary_gate.json](reports/test_results/31_source_selection_derivation_boundary_gate.json) - structured source-selection boundary ledger.
+- [scripts/32_copy_length_derivation_boundary_gate.py](scripts/32_copy_length_derivation_boundary_gate.py) - checks whether copy length is decoder-derived or remains declared after target-max, decoder-max, midpoint, and compact-recipe evidence.
+- [reports/test_results/32_copy_length_derivation_boundary_gate.md](reports/test_results/32_copy_length_derivation_boundary_gate.md) - copy-length derivation boundary result.
+- [reports/test_results/32_copy_length_derivation_boundary_gate.json](reports/test_results/32_copy_length_derivation_boundary_gate.json) - structured copy-length boundary ledger.
 
 ## Boundary
 
@@ -181,7 +184,9 @@ exogenous.
   `+15.186` bits worse and loses all `5/5` prefix-frozen checks. A source-
   selection derivation boundary gate then confirms `261/261` earliest-source
   canonicality while rejecting decoder derivation, backward distance, and
-  state-free replacements. A copy-length
+  state-free replacements. A copy-length derivation boundary gate then keeps
+  decoder-max/default exceptions and midpoint context while rejecting target-max
+  as encoder-only and retaining declared copy-length fields. A copy-length
   midpoint context gate then keeps the natural `book_id < 35` split: it beats
   global by `13.839` bits, wins all `5/5` prefix-frozen checks, passes
   permutation controls (`p=0.0033`), and rejects searched cutoff `37`. A

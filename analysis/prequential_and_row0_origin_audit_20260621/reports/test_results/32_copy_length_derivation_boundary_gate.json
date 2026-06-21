@@ -1,0 +1,53 @@
+{
+  "case_reopened": false,
+  "classification": "copy_length_partly_decodable_context_supported_dependency_retained",
+  "decision": {
+    "compression_bound_status": "already_promoted_upstream_unchanged_here",
+    "copy_length_context_status": "midpoint_context_retained",
+    "copy_length_decodable_model_status": "decoder_max_possible_default_exception_retained",
+    "copy_length_dependency_status": "declared_copy_lengths_retained",
+    "copy_length_encoder_rule_status": "target_max_encoder_only_rejected_as_decoder_rule",
+    "generation_explanation_status": "copy_length_boundary_sharpened",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_length_default_decodability": "analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.json",
+    "copy_length_midpoint_context": "analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.json",
+    "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
+    "recipe_representation_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/30_recipe_representation_dependency_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "copy_length_derivation_boundary_gate.v1",
+  "summary": {
+    "active_copy_length_bits": 1485.6893596406167,
+    "best_cutoff_delta_vs_midpoint_bits": 0.25602726488591543,
+    "candidate_copy_length_bits": 1348.8058534696768,
+    "candidate_gain_bits": 136.88350617093965,
+    "conservative_extra_declaration_bits": 8.0,
+    "copied_digits_covered": 10406,
+    "copy_items": 261,
+    "copy_length_fields_retained_in_compact_recipe": 261,
+    "decodable_rule_retained": true,
+    "decoder_default_exception_flag_bits": 202.39770959836773,
+    "decoder_default_exception_stream_bits": 1340.8058534696768,
+    "decoder_exception_length_bits": 1138.408143871309,
+    "decoder_exception_length_context": "book_id < 35 versus book_id >= 35",
+    "decoder_max_possible_coverage_fraction": 0.22988505747126436,
+    "decoder_max_possible_default_count": 60,
+    "decoder_max_possible_exception_count": 201,
+    "dependency_retained": true,
+    "encoder_rule_rejected": true,
+    "encoder_target_max_coverage_fraction": 0.9118773946360154,
+    "encoder_target_max_decodable": false,
+    "encoder_target_max_exception_count": 23,
+    "encoder_target_max_match_count": 238,
+    "interpretation": "Copy length has a useful decodable default/exception model and a supported midpoint context, but it is not derived. The strong target-max rule is encoder-only, and the compact recipe still declares one copy length per copy op.",
+    "midpoint_gain_vs_global_bits": 13.838571897065322,
+    "midpoint_permutation_p": 0.0033222591362126247,
+    "midpoint_prefix_frozen_split_count": 5,
+    "midpoint_prefix_frozen_win_count": 5,
+    "midpoint_retained": true
+  },
+  "translation_delta": "NONE"
+}

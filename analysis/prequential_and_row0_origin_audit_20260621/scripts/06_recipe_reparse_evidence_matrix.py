@@ -57,6 +57,8 @@ SOURCES = {
     / "30_recipe_representation_dependency_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
+    "copy_length_derivation_boundary_gate": TEST_RESULTS
+    / "32_copy_length_derivation_boundary_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -105,6 +107,7 @@ def make_result() -> dict[str, Any]:
     literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
     recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
+    copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -137,6 +140,7 @@ def make_result() -> dict[str, Any]:
         ("literal_payload_model_gate", literal_payload_model_gate),
         ("recipe_representation_dependency_gate", recipe_representation_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
+        ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -1035,6 +1039,50 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "is_copy_length_decoder_derived",
+            "source": rel(SOURCES["copy_length_derivation_boundary_gate"]),
+            "status": "failed_partly_decodable_dependency_retained",
+            "evidence": {
+                "copy_items": copy_length_derivation_gate["summary"]["copy_items"],
+                "encoder_target_max_match_count": copy_length_derivation_gate[
+                    "summary"
+                ]["encoder_target_max_match_count"],
+                "encoder_target_max_decodable": copy_length_derivation_gate[
+                    "summary"
+                ]["encoder_target_max_decodable"],
+                "decoder_max_possible_default_count": copy_length_derivation_gate[
+                    "summary"
+                ]["decoder_max_possible_default_count"],
+                "decoder_max_possible_exception_count": copy_length_derivation_gate[
+                    "summary"
+                ]["decoder_max_possible_exception_count"],
+                "candidate_gain_bits": copy_length_derivation_gate["summary"][
+                    "candidate_gain_bits"
+                ],
+                "midpoint_gain_vs_global_bits": copy_length_derivation_gate[
+                    "summary"
+                ]["midpoint_gain_vs_global_bits"],
+                "midpoint_prefix_frozen_win_count": copy_length_derivation_gate[
+                    "summary"
+                ]["midpoint_prefix_frozen_win_count"],
+                "midpoint_prefix_frozen_split_count": copy_length_derivation_gate[
+                    "summary"
+                ]["midpoint_prefix_frozen_split_count"],
+                "copy_length_fields_retained_in_compact_recipe": copy_length_derivation_gate[
+                    "summary"
+                ]["copy_length_fields_retained_in_compact_recipe"],
+                "copied_digits_covered": copy_length_derivation_gate["summary"][
+                    "copied_digits_covered"
+                ],
+            },
+            "interpretation": (
+                "Copy length is partly modeled by a decodable max-possible default "
+                "and supported midpoint context, but the high-coverage target-max "
+                "rule is encoder-only and compact recipes still declare every copy "
+                "length."
+            ),
+        },
+        {
             "question": "how_much_literal_payload_is_forced_by_copy_unavailability",
             "source": rel(SOURCES["literal_copy_availability_gate"]),
             "status": "passed_literal_externality_reduced_not_removed",
@@ -1150,6 +1198,7 @@ def make_result() -> dict[str, Any]:
             "source_state_status": "path_dependent_previous_copy_state_retained",
             "source_selection_status": "encoder_canonical_decoder_dependency_retained",
             "copy_length_context_status": "midpoint_context_retained",
+            "copy_length_derivation_status": "partly_decodable_dependency_retained",
             "literal_externality_status": "reduced_not_removed",
             "literal_payload_model_status": "active_order2_retained",
             "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
@@ -1453,6 +1502,22 @@ def write_result(result: dict[str, Any]) -> None:
                 f"perm p={evidence['p_permuted_midpoint_gain_ge_observed']:.4f}; "
                 f"searched promoted {evidence['searched_boundary_promoted']}"
             )
+        elif row["question"] == "is_copy_length_decoder_derived":
+            key = (
+                f"target-max {evidence['encoder_target_max_match_count']}/"
+                f"{evidence['copy_items']} decodable "
+                f"{evidence['encoder_target_max_decodable']}; "
+                f"decoder max defaults/exceptions "
+                f"{evidence['decoder_max_possible_default_count']}/"
+                f"{evidence['decoder_max_possible_exception_count']}; "
+                f"gain {evidence['candidate_gain_bits']:.3f}; midpoint "
+                f"{evidence['midpoint_gain_vs_global_bits']:.3f}, wins "
+                f"{evidence['midpoint_prefix_frozen_win_count']}/"
+                f"{evidence['midpoint_prefix_frozen_split_count']}; "
+                f"recipe copy_length fields "
+                f"{evidence['copy_length_fields_retained_in_compact_recipe']}; "
+                f"copied digits {evidence['copied_digits_covered']}"
+            )
         elif row["question"] == "how_much_literal_payload_is_forced_by_copy_unavailability":
             key = (
                 f"forced items {evidence['forced_literal_items_no_copy_candidate']}/"
@@ -1500,6 +1565,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Source state: `{result['decision']['source_state_status']}`.",
             f"- Source selection: `{result['decision']['source_selection_status']}`.",
             f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
+            f"- Copy-length derivation: `{result['decision']['copy_length_derivation_status']}`.",
             f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
             f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",
             f"- Recipe representation: `{result['decision']['recipe_representation_status']}`.",

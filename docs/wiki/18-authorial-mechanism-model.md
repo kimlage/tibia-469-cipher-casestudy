@@ -1053,6 +1053,10 @@ encoder-only because it requires future target digits. A decodable
 copy-length cost from `1485.689` to `1348.806` bits after an explicit `8` bit
 declaration delta, promoting the mechanical bound to `8206.178` bits. Copy
 length is remodeled, not eliminated; row0 and semantics remain unchanged.
+The copy-length derivation boundary gate then makes that limit explicit:
+target-max matches `238/261` copies but is encoder-only, the decodable
+max-possible model has `60` defaults and `201` exceptions, midpoint context
+generalizes, and the compact recipe still declares `261` copy lengths.
 The copy-source default decodability audit then tests the largest remaining
 declared component. A previous-source-plus-length default is decodable but only
 matches `5/261` copy sources; combined with a global adaptive exception-source
@@ -1497,6 +1501,7 @@ book generation, not row0 pair-cell placement.
 - [Online copy-source canonicality controls](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md)
 - [Source selection derivation boundary gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.md)
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
+- [Copy length derivation boundary gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)
 - [Default/exception component profile](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md)
