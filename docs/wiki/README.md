@@ -964,6 +964,10 @@ book-local previous-copy continuity is stronger than shuffled controls and
 `min_source_delta` catches `6/10` residuals, but it changes `13` clean controls
 and has `0/5` zero-clean-false-change holdout cells. The blocker is still a
 richer segmentation parser, not row0, plaintext, or translation.
+A global carryover source-state upper bound then grants stable-projection
+history across books and still rejects the hypothesis: `min_source_delta`
+again catches `6/10` residuals, changes `13` clean controls, and has `0/5`
+zero-clean-false-change holdout cells.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

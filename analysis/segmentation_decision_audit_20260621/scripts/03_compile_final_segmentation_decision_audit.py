@@ -39,6 +39,7 @@ OBSERVABLE_TREE = TEST_RESULTS / "27_observable_decision_tree_policy_audit.json"
 TARGET_BOUNDARY = TEST_RESULTS / "28_target_boundary_recurrence_audit.json"
 FUTURE_COPY = TEST_RESULTS / "29_future_copy_opportunity_audit.json"
 SOURCE_STATE = TEST_RESULTS / "30_source_state_continuity_audit.json"
+GLOBAL_SOURCE_STATE = TEST_RESULTS / "31_global_source_state_continuity_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -122,6 +123,9 @@ def main() -> None:
     target_boundary = load_json(TARGET_BOUNDARY) if TARGET_BOUNDARY.exists() else None
     future_copy = load_json(FUTURE_COPY) if FUTURE_COPY.exists() else None
     source_state = load_json(SOURCE_STATE) if SOURCE_STATE.exists() else None
+    global_source_state = (
+        load_json(GLOBAL_SOURCE_STATE) if GLOBAL_SOURCE_STATE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -178,6 +182,8 @@ def main() -> None:
         assert_boundary("future_copy_opportunity_audit", future_copy)
     if source_state is not None:
         assert_boundary("source_state_continuity_audit", source_state)
+    if global_source_state is not None:
+        assert_boundary("global_source_state_continuity_audit", global_source_state)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -246,6 +252,9 @@ def main() -> None:
     )
     future_copy_summary = None if future_copy is None else future_copy["summary"]
     source_state_summary = None if source_state is None else source_state["summary"]
+    global_source_state_summary = (
+        None if global_source_state is None else global_source_state["summary"]
+    )
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -1040,6 +1049,33 @@ def main() -> None:
                 "",
             ]
         )
+    if global_source_state_summary is not None:
+        lines.extend(
+            [
+                "## Global Source State Continuity Upper Bound",
+                "",
+                "Gate 31 grants a stronger version of the source-state hypothesis:",
+                "the previous-copy state is carried across books and is built from",
+                "the full stable-projection history before each decision. Candidate",
+                "branches are still scored only by source/source-end/length",
+                "continuity.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{global_source_state_summary['active_baseline_total_hits']}/{global_source_state_summary['decision_count']}` | `{global_source_state_summary['active_baseline_residual_hits']}/{global_source_state_summary['residual_decision_count']}` | `{global_source_state_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best global source-state policy `{global_source_state_summary['best_policy']}` | `{global_source_state_summary['best_total_hits']}/{global_source_state_summary['decision_count']}` | `{global_source_state_summary['best_residual_hits']}/{global_source_state_summary['residual_decision_count']}` | `{global_source_state_summary['best_clean_false_changes']}` | rejected upper bound |",
+                "",
+                f"- Residual decisions with previous-copy state: `{global_source_state_summary['eligible_prev_copy_residual_decisions']}/{global_source_state_summary['residual_decision_count']}`.",
+                f"- Best eligible residual hits: `{global_source_state_summary['best_eligible_residual_hits']}/{global_source_state_summary['best_eligible_residual_total']}`.",
+                f"- Prequential zero-clean-false-change cells: `{global_source_state_summary['prequential_zero_clean_false_change_cells']}/{global_source_state_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{global_source_state_summary['prequential_cover_all_test_residual_cells']}/{global_source_state_summary['prequential_cells']}`.",
+                "",
+                "Even with stable-projection history granted, source-state continuity",
+                "does not become a parser rule: it catches some residuals but still",
+                "changes clean decisions and fails the clean holdout gate.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1053,7 +1089,8 @@ def main() -> None:
             "small observable decision tree still misses held-out residuals.",
             "Target-side boundary recurrence and near-future copy opportunity",
             "are also rejected. Book-local source-state continuity is rejected",
-            "as well. The remaining blocker is a richer path/state",
+            "as well, and even the global carryover source-state upper bound",
+            "fails clean holdout. The remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1092,6 +1129,7 @@ def main() -> None:
             "- [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)",
             "- [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)",
             "- [Source state continuity audit](test_results/30_source_state_continuity_audit.md)",
+            "- [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)",
             "",
         ]
     )

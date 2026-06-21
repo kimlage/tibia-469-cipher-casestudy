@@ -627,6 +627,28 @@ rule. It is stronger than shuffled source-state controls and
 does catch some residuals, but the gain is bought by changing
 clean decisions and it fails the clean holdout gate.
 
+## Global Source State Continuity Upper Bound
+
+Gate 31 grants a stronger version of the source-state hypothesis:
+the previous-copy state is carried across books and is built from
+the full stable-projection history before each decision. Candidate
+branches are still scored only by source/source-end/length
+continuity.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best global source-state policy `min_source_delta` | `217/234` | `6/10` | `13` | rejected upper bound |
+
+- Residual decisions with previous-copy state: `10/10`.
+- Best eligible residual hits: `6/10`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+Even with stable-projection history granted, source-state continuity
+does not become a parser rule: it catches some residuals but still
+changes clean decisions and fails the clean holdout gate.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -638,7 +660,8 @@ hierarchical backoff variant still fails clean holdout, and a
 small observable decision tree still misses held-out residuals.
 Target-side boundary recurrence and near-future copy opportunity
 are also rejected. Book-local source-state continuity is rejected
-as well. The remaining blocker is a richer path/state
+as well, and even the global carryover source-state upper bound
+fails clean holdout. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -677,3 +700,4 @@ or the stable projection as an oracle.
 - [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)
 - [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)
 - [Source state continuity audit](test_results/30_source_state_continuity_audit.md)
+- [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)
