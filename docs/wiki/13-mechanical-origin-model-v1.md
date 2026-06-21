@@ -4,12 +4,14 @@ page_type: finding
 context: bonelord-469
 visibility: public_candidate
 status: frozen
-updated_at: 2026-06-20
+updated_at: 2026-06-21
 moc_parent: README.md
 source_refs:
   - analysis/mechanism_model_20260618
   - analysis/generator_search_20260618
   - analysis/ml_formula_probe_20260618
+  - analysis/prequential_and_row0_origin_audit_20260621
+  - analysis/row0_origin_parallel_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -191,7 +193,9 @@ The model is mechanical only. It is not a semantic decoder.
 | Active reparse state-boundary audit | active copy-source default is path-dependent on previous copy source/length; exact reparse needs expanded state and reaches a cutoff-10 state proxy of `302879952` | recipe-discovery blocker localized |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
 | Literal payload structural context audit | literal-run offset, run-length bucket, book half/parity, and bounded combinations with `prev2` all over-split the payload stream | rejected context / no new bound |
+| Prequential and row0 origin audit | frozen validation scope `8558.667` shows partial learned-component prediction, but family failures and recipe externality keep it from being a full generation method; row0 remains exogenous | analysis-only boundary / no generation promotion |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
+| Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -311,7 +315,10 @@ Primary sources:
 [item_type_split_only_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md),
 [item_type_split_only_alpha_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md),
 [prequential_and_row0_origin_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md),
+[prequential_and_row0_origin_audit_20260621.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md),
 [recipe_externality_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md),
+[row0_origin_parallel_report.md](../../analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md),
+[row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),
