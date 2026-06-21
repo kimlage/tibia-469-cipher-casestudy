@@ -75,6 +75,18 @@ therefore leaves the same failures in place; only a heldout oracle improves the
 ledger, so no component fallback is promoted.
 See [03_train_cv_component_selector_audit.md](test_results/03_train_cv_component_selector_audit.md).
 
+### Recipe Externality Follow-Up
+
+A recipe-externality audit then quantifies the main remaining limitation of
+the prequential evidence. Of the `8558.667`-bit validation scope,
+`4285.876` bits (`50.076%`) are the prequentially scored copy-length,
+literal-payload, and item-type components, while `4272.791` bits (`49.924%`)
+remain fixed recipe or non-learned ledger: fixed bits, literal structure
+without payload, and copy addresses. The code path confirms that train/test
+splits score event rows extracted from the full formula before splitting; they
+do not discover held-out literal/copy segmentation or copy source addresses.
+See [04_recipe_externality_audit.md](test_results/04_recipe_externality_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -113,5 +125,6 @@ Row0 classification: `row0_origin_remains_exogenous`
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
+- The prequential evidence is conditional on a full-corpus fixed recipe, so it is component validation rather than full recipe discovery.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

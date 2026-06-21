@@ -286,6 +286,10 @@ narrows those failures to small component/sample-size stress cases: bookcases
 item-type loss. A train-CV component selector cannot rescue them without
 heldout information; only an oracle selector can, so no component fallback is
 promoted. Row0 remains exogenous.
+A recipe-externality audit then quantifies why this is still not a full
+generation method: `4285.876/8558.667` bits are prequentially scored learned
+components, while `4272.791` bits remain fixed-recipe or non-learned ledger
+read from the full formula before splitting.
 A deterministic online reparse compile later lowers the bound to `8343.062`
 while preserving `translation_delta: NONE`; row0 origin remains exogenous.
 The follow-up order control supports numeric order against reverse, parity,

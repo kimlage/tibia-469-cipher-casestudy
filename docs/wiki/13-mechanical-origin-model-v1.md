@@ -169,6 +169,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Item-type split-only formula compile | split-only item-type coding keeps the same recipe and forced rules, validates `70/70`, and lowers the bound from `8561.792` to `8558.667` | strongest copy/reference upper bound |
 | Item-type split-only alpha resweep | after the split-only promotion, `alpha=2` remains best at `8558.667`; nearest alternate `alpha=1` is `+0.309` bits worse | retained parameter frontier |
 | Prequential and row0 origin audit | freezes `8558.667` as `compression_bound`; learned components beat uniform on all prefix future-suffix splits, but random same-size train controls are usually stronger, and row0 origin remains exogenous across manual/permutation/grid/order/external/workbook hypotheses | predictive component evidence / row0 still exogenous |
+| Recipe externality audit | only `4285.876/8558.667` bits are prequentially scored learned components; `4272.791` bits remain fixed recipe or non-learned ledger | component validation only / full recipe discovery not proved |
 | Prequential recipe reparse audit | with frozen train-prefix component counts, a deterministic LZ parser roundtrips every future suffix and beats the active full-corpus recipe under the same frozen counts on all five cutoffs | predictive recipe evidence / split-specific analysis only |
 | Prequential recipe reparse controls | at cutoffs `20/35/50`, real suffixes beat random same-length, per-book-shuffled, and suffix-pool-shuffled controls; controls have negative gain versus raw digits | controlled predictive recipe evidence |
 | Prequential recipe train-set controls | at focused cutoff `50`, numeric prefix beats the random train-set mean but not all random inventories (`p=0.1538`) | predictive recipe evidence / numeric order not promoted |
@@ -303,6 +304,7 @@ Primary sources:
 [item_type_split_only_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/123_item_type_split_only_formula_compile.md),
 [item_type_split_only_alpha_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md),
 [prequential_and_row0_origin_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md),
+[recipe_externality_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

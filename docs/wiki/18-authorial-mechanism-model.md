@@ -877,6 +877,12 @@ can disable failing components before seeing the held-out family. It cannot:
 inner family validation keeps all active components for every public-bookcase
 holdout, leaving the same failures. Only a heldout oracle rescues them, so no
 component fallback is promoted as a generation rule.
+A recipe-externality audit then quantifies the remaining limitation: only
+`4285.876` of `8558.667` bits (`50.076%`) are the prequentially scored
+components, while `4272.791` bits (`49.924%`) remain fixed recipe or
+non-learned ledger. The prequential split scores rows extracted from the full
+formula; it does not discover held-out literal/copy segmentation or copy
+source addresses.
 
 The prequential recipe reparse audit then tests the remaining recipe
 dependency. With only train-prefix component counts frozen, a deterministic LZ
@@ -1222,6 +1228,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential and row0 origin audit 2026-06-21](../../analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md)
 - [Family holdout failure audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/02_family_holdout_failure_audit.md)
 - [Train-CV component selector audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/03_train_cv_component_selector_audit.md)
+- [Recipe externality audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

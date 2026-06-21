@@ -25,6 +25,9 @@ exogenous.
 - [scripts/03_train_cv_component_selector_audit.py](scripts/03_train_cv_component_selector_audit.py) - tests whether a train-only component selector can rescue family holdouts.
 - [reports/test_results/03_train_cv_component_selector_audit.md](reports/test_results/03_train_cv_component_selector_audit.md) - train-CV selector result.
 - [reports/test_results/03_train_cv_component_selector_audit.json](reports/test_results/03_train_cv_component_selector_audit.json) - structured selector ledger.
+- [scripts/04_recipe_externality_audit.py](scripts/04_recipe_externality_audit.py) - quantifies how much of the validation still depends on a full-corpus fixed recipe.
+- [reports/test_results/04_recipe_externality_audit.md](reports/test_results/04_recipe_externality_audit.md) - recipe-externality result.
+- [reports/test_results/04_recipe_externality_audit.json](reports/test_results/04_recipe_externality_audit.json) - structured recipe-externality ledger.
 
 ## Boundary
 
@@ -32,6 +35,9 @@ exogenous.
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then
   rejects a promotable component fallback because only a heldout oracle rescues
-  the failures.
+  the failures. The recipe-externality audit then quantifies the remaining
+  limitation: about half of the `8558.667`-bit ledger is still fixed-recipe or
+  non-learned cost, and the prequential split scores rows extracted from the
+  full formula rather than discovering held-out recipes.
 - Row0 result: `row0_origin_remains_exogenous`.
 - No plaintext, translation, semantic mapping, or case-reopening claim is made.

@@ -1,0 +1,179 @@
+{
+  "accounting": {
+    "active_total_bits": 8558.666806283434,
+    "additional_formula_context": {
+      "book_length_bits": 566,
+      "copied_digits": 10490,
+      "copy_items": 283,
+      "literal_digits": 773,
+      "literal_length_code_bits": 396,
+      "literal_runs": 85
+    },
+    "fixed_recipe_breakdown": {
+      "copy_address_bits": 3284.7912281012023,
+      "fixed_bits_ledger": 620.0,
+      "literal_structure_no_payload_bits": 368.0
+    },
+    "fixed_recipe_or_nonlearned_bits": 4272.791228101202,
+    "fixed_recipe_or_nonlearned_share_pct": 49.923560816321164,
+    "prequentially_scored_component_bits": 4285.875578182232,
+    "prequentially_scored_component_share_pct": 50.076439183678836,
+    "scored_components": {
+      "copy_length_bits": 1631.4941403059527,
+      "copy_length_events": 283,
+      "item_type_bits": 220.2867374541295,
+      "item_type_events": 287,
+      "literal_payload_bits": 2434.0947004221503,
+      "literal_payload_events": 773
+    }
+  },
+  "case_reopened": false,
+  "classification": "prequential_validation_is_conditional_on_full_recipe",
+  "decision": {
+    "compression_bound_changed": false,
+    "generation_method_status": "not_promoted",
+    "next_valid_progress": "A stronger generation claim would need train-only or online recipe discovery, not only frozen-parameter scoring of a full-corpus recipe.",
+    "predictive_validation_status": "conditional_component_validation",
+    "row0_origin_changed": false,
+    "translation_or_plaintext_status": "NONE"
+  },
+  "hypothesis_tested": {
+    "hypothesis": "The current prequential validation demonstrates a full held-out generation method for future books.",
+    "reason": "The holdout tests score learned copy-length, literal-payload, and item-type components, but the LZ recipe itself is read from the full-corpus formula before splitting.",
+    "result": "rejected_as_full_generation_method"
+  },
+  "plaintext_claim": false,
+  "recipe_inventory": {
+    "books": 70,
+    "copied_digits": 10490,
+    "copy_ops": 283,
+    "copy_source_addresses_declared_by_recipe": 283,
+    "digits": 11263,
+    "item_type_decisions_declared_by_recipe": 368,
+    "literal_payload_digits": 773,
+    "literal_runs": 85,
+    "ops": 368
+  },
+  "schema": "recipe_externality_audit.v1",
+  "source_control": {
+    "interpretation": "The prequential function scores precomputed event rows after a train/test book filter. It does not discover literal/copy segmentation, copy source addresses, or held-out recipe operations.",
+    "main_collects_rows_from_full_formula_before_splitting": true,
+    "predictive_split_accepts_precomputed_rows": true,
+    "predictive_split_selects_or_searches_recipe_ops": false
+  },
+  "sources": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json",
+    "legacy_script": "analysis/authorial_mechanism_20260620/scripts/125_prequential_and_row0_origin_audit.py",
+    "parent_audit": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/01_prequential_and_row0_origin_audit.json"
+  },
+  "split_recipe_disclosure": {
+    "family_failure_rows": [
+      {
+        "frozen_gain_vs_uniform_bits": -2.9397073262090743,
+        "known_copied_digits": 222,
+        "known_copy_source_addresses": 5,
+        "known_literal_payload_digits": 0,
+        "known_literal_runs": 0,
+        "known_recipe_ops": 5,
+        "label": "hellgate_public_bookcase_33",
+        "online_gain_vs_uniform_bits": -2.965740114144694,
+        "test_books": [
+          18,
+          19
+        ]
+      },
+      {
+        "frozen_gain_vs_uniform_bits": -0.3951809595302933,
+        "known_copied_digits": 188,
+        "known_copy_source_addresses": 5,
+        "known_literal_payload_digits": 5,
+        "known_literal_runs": 3,
+        "known_recipe_ops": 8,
+        "label": "hellgate_public_bookcase_6",
+        "online_gain_vs_uniform_bits": 0.16108090167024613,
+        "test_books": [
+          38,
+          39
+        ]
+      },
+      {
+        "frozen_gain_vs_uniform_bits": -0.1674535755674995,
+        "known_copied_digits": 283,
+        "known_copy_source_addresses": 2,
+        "known_literal_payload_digits": 0,
+        "known_literal_runs": 0,
+        "known_recipe_ops": 2,
+        "label": "hellgate_public_bookcase_8",
+        "online_gain_vs_uniform_bits": -0.1659543966254695,
+        "test_books": [
+          68,
+          69
+        ]
+      }
+    ],
+    "prefix_future_suffix": [
+      {
+        "frozen_gain_vs_uniform_bits": 121.8282395541919,
+        "known_copied_digits": 9329,
+        "known_copy_source_addresses": 221,
+        "known_literal_payload_digits": 238,
+        "known_literal_runs": 47,
+        "known_recipe_ops": 268,
+        "label": "prefix_10_future_suffix",
+        "online_gain_vs_uniform_bits": 157.02652180961695,
+        "test_books": 60,
+        "test_digits": 9567
+      },
+      {
+        "frozen_gain_vs_uniform_bits": 63.548263989504676,
+        "known_copied_digits": 7808,
+        "known_copy_source_addresses": 162,
+        "known_literal_payload_digits": 117,
+        "known_literal_runs": 25,
+        "known_recipe_ops": 187,
+        "label": "prefix_20_future_suffix",
+        "online_gain_vs_uniform_bits": 87.17487650173098,
+        "test_books": 50,
+        "test_digits": 7925
+      },
+      {
+        "frozen_gain_vs_uniform_bits": 37.01410740929407,
+        "known_copied_digits": 5752,
+        "known_copy_source_addresses": 101,
+        "known_literal_payload_digits": 83,
+        "known_literal_runs": 17,
+        "known_recipe_ops": 118,
+        "label": "prefix_35_future_suffix",
+        "online_gain_vs_uniform_bits": 48.46459083970183,
+        "test_books": 35,
+        "test_digits": 5835
+      },
+      {
+        "frozen_gain_vs_uniform_bits": 35.17003478433185,
+        "known_copied_digits": 3443,
+        "known_copy_source_addresses": 53,
+        "known_literal_payload_digits": 46,
+        "known_literal_runs": 7,
+        "known_recipe_ops": 60,
+        "label": "prefix_50_future_suffix",
+        "online_gain_vs_uniform_bits": 37.62774732556079,
+        "test_books": 20,
+        "test_digits": 3489
+      },
+      {
+        "frozen_gain_vs_uniform_bits": 11.078379023643208,
+        "known_copied_digits": 1455,
+        "known_copy_source_addresses": 19,
+        "known_literal_payload_digits": 4,
+        "known_literal_runs": 2,
+        "known_recipe_ops": 21,
+        "label": "prefix_60_future_suffix",
+        "online_gain_vs_uniform_bits": 10.399306435802686,
+        "test_books": 10,
+        "test_digits": 1459
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}
