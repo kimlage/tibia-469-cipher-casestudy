@@ -938,6 +938,11 @@ matches `5/261` copy sources; combined with a global adaptive exception-source
 stream and a charged `12` bit declaration delta, it lowers copy-address cost
 from `3031.700` to `3002.838` bits and promotes the mechanical bound to
 `8177.317` bits. Copy source is remodeled, not eliminated.
+The literal-payload default decodability audit then tests whether the largest
+remaining digit stream can use a modal default plus exceptions. It cannot:
+the active categorical previous-emitted-digit order-2 model remains best, and
+the best default/exception candidate is `+38.049` bits worse. No
+literal-payload fallback is promoted.
 
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
@@ -1225,6 +1230,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
+- [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 
 ## Boundary
 

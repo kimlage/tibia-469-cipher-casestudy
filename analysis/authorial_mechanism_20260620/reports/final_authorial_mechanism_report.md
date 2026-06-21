@@ -665,5 +665,10 @@ Generated audits in this directory should be treated as the current state:
   stream and a charged `12` bit declaration delta, it lowers copy-address cost
   from `3031.700` to `3002.838` bits and promotes the mechanical bound to
   `8177.317` bits. Copy source remains modeled, not eliminated.
+- `138_literal_payload_default_decodability_audit`: tests whether literal
+  payload can use a modal-default/exception ledger. It cannot improve the
+  active categorical previous-emitted-digit order-2 model; the best
+  default/exception candidate is `+38.049` bits worse, so no literal-payload
+  fallback is promoted.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

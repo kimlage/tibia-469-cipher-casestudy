@@ -416,6 +416,9 @@ The copy-source default/exception audit then remodels source addressing with a
 decodable previous-source-plus-length default plus global adaptive exceptions,
 lowering the mechanical bound to `8177.317` bits while leaving row0 and
 semantics unchanged.
+The literal-payload default/exception audit then rejects modal-default literal
+digit coding: the active categorical previous-emitted-digit order-2 model stays
+best, so no literal-payload fallback is promoted.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

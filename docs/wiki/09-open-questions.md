@@ -312,6 +312,10 @@ previous-source-plus-length is decodable and only matches `5/261` sources, but
 with a global adaptive exception-source stream and a charged `12` bit
 declaration delta it lowers the mechanical bound to `8177.317` bits. Copy
 source remains modeled rather than eliminated.
+The literal-payload default decodability audit then rejects a natural next
+fallback: modal-default/exception literal digit coding is decodable, but the
+best candidate is `+38.049` bits worse than the active categorical
+previous-emitted-digit order-2 model.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

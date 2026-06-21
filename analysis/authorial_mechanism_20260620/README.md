@@ -360,6 +360,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/137_copy_source_default_decodability_audit.py` - tests a decodable
   previous-source-plus-length default with adaptive exception sources, lowering
   the mechanical bound to `8177.317` bits.
+- `scripts/138_literal_payload_default_decodability_audit.py` - tests literal
+  payload modal-default/exception candidates and rejects them; the active
+  categorical previous-emitted-digit order-2 model remains best.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

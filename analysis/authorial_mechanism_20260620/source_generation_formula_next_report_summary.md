@@ -639,6 +639,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   `12` bit declaration delta it lowers copy-address cost from `3031.700` to
   `3002.838` bits, promoting the mechanical bound to `8177.317` bits with
   `translation_delta: NONE`.
+- literal-payload default decodability is now covered by
+  [`138_literal_payload_default_decodability_audit.py`](scripts/138_literal_payload_default_decodability_audit.py);
+  modal-default/exception literal digit models are decodable but worse than the
+  active categorical previous-emitted-digit order-2 model. The best
+  default/exception candidate is `+38.049` bits worse, so no literal-payload
+  fallback is promoted.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.
