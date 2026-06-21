@@ -235,6 +235,9 @@ exogenous.
 - [scripts/73_book_local_source_length_parser_probe.py](scripts/73_book_local_source_length_parser_probe.py) - executes the active source/length DP on two cutoff-60 books before attacking the hard case.
 - [reports/test_results/73_book_local_source_length_parser_probe.md](reports/test_results/73_book_local_source_length_parser_probe.md) - book-local parser probe.
 - [reports/test_results/73_book_local_source_length_parser_probe.json](reports/test_results/73_book_local_source_length_parser_probe.json) - structured parser probe ledger.
+- [scripts/74_sparse_hard_book_source_length_parser_gate.py](scripts/74_sparse_hard_book_source_length_parser_gate.py) - replaces dense DP with sparse Dijkstra on the cutoff-60 hard book `66`.
+- [reports/test_results/74_sparse_hard_book_source_length_parser_gate.md](reports/test_results/74_sparse_hard_book_source_length_parser_gate.md) - sparse hard-book parser result.
+- [reports/test_results/74_sparse_hard_book_source_length_parser_gate.json](reports/test_results/74_sparse_hard_book_source_length_parser_gate.json) - structured sparse parser ledger.
 
 ## Boundary
 
@@ -459,6 +462,12 @@ exogenous.
   `125.866` total parser bits, `8,423,281` transition evaluations, and no
   improvement over the same-policy reprice comparator. Book `66` remains the
   held-back cutoff-60 hard case with `26,096,904` transition proxy.
+- The sparse hard-book parser gate resolves that immediate implementation
+  blocker: sparse Dijkstra over reachable `(position, previous_item,
+  previous_copy_end)` states roundtrips book `66` in `0.033` seconds, visiting
+  `20,932` states and evaluating `41,832` transitions, a `623.9x` reduction
+  versus the gate-72 transition proxy. This is parser implementation progress,
+  not a compression-bound promotion.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

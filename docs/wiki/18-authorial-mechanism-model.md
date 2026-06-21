@@ -143,6 +143,13 @@ source/length DP and beat raw digit coding. The result does not promote a new
 bound because it ties the same-policy reprice comparator, and book `66` remains
 the immediate hard case by transition proxy.
 
+The sparse hard-book gate removes that immediate implementation blocker. Using
+Dijkstra over reachable `(position, previous_item, previous_copy_end)` states
+instead of dense dynamic programming, book `66` roundtrips in `0.033s` with
+`41,832` transition evaluations instead of the `26,096,904` transition proxy.
+This moves the source/length parser toward a real generator, but still does not
+promote a corpus-wide parser or a new compression bound.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

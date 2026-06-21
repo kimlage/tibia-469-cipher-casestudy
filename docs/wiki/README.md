@@ -647,6 +647,10 @@ and `60`: both roundtrip and beat raw digits, totaling `125.866` parser bits
 and `8,423,281` transition evaluations. It is implementation progress, not a
 bound promotion, because it ties the same-policy reprice comparator and leaves
 book `66` as the immediate hard case.
+The sparse hard-book parser gate then removes that immediate blocker: book `66`
+roundtrips under sparse Dijkstra in `0.033s`, with `41,832` transition
+evaluations versus the prior `26,096,904` transition proxy. This is still a
+book-local parser result, not a corpus-wide generator promotion.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -811,6 +815,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   transition-heavy (`1,966,897,365` transition proxy),
   executes the active source/length DP on books `67` and `60` as a roundtrip
   parser probe, while leaving book `66` as the hard case,
+  resolves book `66` with sparse Dijkstra as the first hard-book source/length
+  parser implementation,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

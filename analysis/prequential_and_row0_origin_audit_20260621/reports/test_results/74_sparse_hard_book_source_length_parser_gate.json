@@ -1,0 +1,60 @@
+{
+  "case_reopened": false,
+  "classification": "sparse_hard_book_source_length_parser_roundtrips",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "parser_implementation_progress_not_bound_promotion",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "hard_book_66_sparse_parser_executable",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate72_feasibility": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/72_final_source_length_parser_feasibility_audit.json",
+    "gate73_book_local_probe": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/73_book_local_source_length_parser_probe.json",
+    "gate73_context_loader": "analysis/prequential_and_row0_origin_audit_20260621/scripts/73_book_local_source_length_parser_probe.py"
+  },
+  "plaintext_claim": false,
+  "schema": "sparse_hard_book_source_length_parser_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "cutoff": 60,
+    "does_not_search_plaintext": true,
+    "hard_book": 66,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "book_row": {
+      "book": 66,
+      "book_digits": 210,
+      "copied_digits": 210,
+      "copy_items": 1,
+      "copy_length_cache_entries": 21321,
+      "elapsed_seconds": 0.03314058296382427,
+      "gain_vs_raw_digit_uniform_bits": 675.6306883504504,
+      "heap_pops": 211,
+      "heap_pushes": 21341,
+      "item_cache_entries": 3,
+      "literal_digits": 0,
+      "literal_length_cache_entries": 206,
+      "literal_runs": 0,
+      "op_count": 1,
+      "parser_bits": 21.974211575895644,
+      "raw_digit_uniform_bits": 697.6048999263461,
+      "roundtrip_ok": true,
+      "source_cache_entries": 231,
+      "source_default_count": 0,
+      "source_exception_count": 1,
+      "stale_heap_pops": 0,
+      "transition_evaluations": 41832,
+      "visited_state_count": 20932
+    },
+    "gate72_end_state_proxy": 258264,
+    "gate72_transition_proxy": 26096904,
+    "interpretation": "Sparse Dijkstra over reachable states turns the cutoff-60 hard book from a transition-proxy blocker into an executable exact book-local parser. This is implementation progress for the source/length parser, not a formula promotion.",
+    "raw_positive": true,
+    "transition_reduction_factor_vs_proxy": 623.8502581755594
+  },
+  "translation_delta": "NONE"
+}
