@@ -274,6 +274,9 @@ exogenous.
 - [scripts/86_global_item_literal_length_control_gate.py](scripts/86_global_item_literal_length_control_gate.py) - applies the book `49` local item/literal-length controls globally.
 - [reports/test_results/86_global_item_literal_length_control_gate.md](reports/test_results/86_global_item_literal_length_control_gate.md) - global item/literal-length control result.
 - [reports/test_results/86_global_item_literal_length_control_gate.json](reports/test_results/86_global_item_literal_length_control_gate.json) - structured global item/literal-length control ledger.
+- [scripts/87_stable_path_projection_boundary_audit.py](scripts/87_stable_path_projection_boundary_audit.py) - tests whether the stable no-item/no-literal-length path projection can be promoted as a generator.
+- [reports/test_results/87_stable_path_projection_boundary_audit.md](reports/test_results/87_stable_path_projection_boundary_audit.md) - stable path projection boundary result.
+- [reports/test_results/87_stable_path_projection_boundary_audit.json](reports/test_results/87_stable_path_projection_boundary_audit.json) - structured stable path projection boundary ledger.
 
 ## Boundary
 
@@ -576,6 +579,13 @@ exogenous.
   payload-uniform baseline), with `175/175` roundtrip/raw-positive evaluations.
   This is a parser-stability simplification, not a compression-bound change or
   row0-origin result.
+- The stable path projection boundary audit then checks the promotion boundary:
+  the best stable mode covers `11263/11263` digits with `208` canonical copy
+  items, `54` literal runs, and `265` parsed literal digits after the 10
+  seed books, and it reduces materialized operation dependency fields by `139`
+  versus the active formula. It still uses the target book text to find copy
+  candidates, literal payload, and literal endpoints, so it is an encoder-side
+  projection only, not a decoder-side generator.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

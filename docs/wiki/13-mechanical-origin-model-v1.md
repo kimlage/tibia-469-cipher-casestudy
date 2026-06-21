@@ -289,6 +289,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Residual literal-payload neutralization | uniform literal-payload cost on top of the copy-length/source-exception neutralized parser resolves books `26` and `34`, improves stability to `49/50`, and leaves only book `49` unstable, at `+170.606311` parser bits over the previous neutralized mode | narrower simplification candidate / not final |
 | Book 49 residual split cause audit | the sole `49/50` residual is a prefix split: cutoffs `10/20` choose `literal-copy-literal` lengths `11+7+7`, while cutoff `35` chooses one `25`-digit literal; removing local `literal_length` or `item_type` charge stabilizes the split locally | local cause localized / audit-only |
 | Global item/literal-length control gate | applying the book `49` controls corpus-wide shows that removing `item_type` charge closes exact path stability at `50/50`, while removing both `item_type` and `literal_length` also reaches `50/50` with best parser-bit delta `-770.657134` versus payload-uniform baseline and `175/175` roundtrip/raw-positive evaluations | parser-stability simplification / row0 unchanged |
+| Stable path projection boundary audit | the best stable no-item/no-literal-length projection covers `11263/11263` digits with `208` copy items and `54` literal runs after 10 seed books, reducing materialized operation dependency fields by `139` versus active formula, but it still requires target text for copy candidates, literal payload, and endpoints | encoder-side projection only / no generator promotion |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -444,6 +445,7 @@ Primary sources:
 [residual_literal_payload_neutralization_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/84_residual_literal_payload_neutralization_gate.md),
 [book49_residual_split_cause_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/85_book49_residual_split_cause_audit.md),
 [global_item_literal_length_control_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/86_global_item_literal_length_control_gate.md),
+[stable_path_projection_boundary_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/87_stable_path_projection_boundary_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

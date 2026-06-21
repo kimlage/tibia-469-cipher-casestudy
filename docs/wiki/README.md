@@ -718,6 +718,13 @@ stability at `50/50`; removing both `item_type` and `literal_length` also reache
 payload-uniform baseline), with `175/175` roundtrip/raw-positive evaluations.
 This is parser-stability progress only: `row0 unchanged`, no compression-bound
 promotion, and no semantic claim.
+A stable path projection boundary audit then tests the promotion boundary. The
+best stable no-item/no-literal-length projection covers `11263/11263` digits
+after 10 seed books, with `208` copy items, `54` literal runs, and `265` parsed
+literal digits, reducing materialized operation dependency fields by `139` versus
+the active formula. It still requires target text for copy candidates, literal
+payload, and literal endpoints, so it remains an encoder-side projection rather
+than a promoted decoder-side generator.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -911,6 +918,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   applies those controls globally and closes exact path stability at `50/50`
   under no-item-type or no-item-plus-literal-length charge, while keeping row0
   unchanged,
+  tests the stable path projection boundary (`11263/11263` digits covered, `208`
+  copy items, `54` literal runs, but target-text dependence blocks generator
+  promotion),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

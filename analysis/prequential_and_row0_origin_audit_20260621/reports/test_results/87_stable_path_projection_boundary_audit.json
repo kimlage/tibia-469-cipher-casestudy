@@ -1,0 +1,1333 @@
+{
+  "case_reopened": false,
+  "classification": "stable_path_projection_boundary_only",
+  "comparison_to_active_formula_dependencies": {
+    "active_declared_copy_length_fields": 261,
+    "active_declared_copy_source_fields": 261,
+    "active_declared_literal_payload_fields": 87,
+    "active_declared_operation_dependency_fields": 609,
+    "projection_materialized_copy_length_field_delta": -53,
+    "projection_materialized_copy_source_field_delta": -53,
+    "projection_materialized_operation_dependency_field_delta": -139
+  },
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "stable_encoder_path_projection_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "target_text_dependency_blocks_generator_promotion",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "dependency_counts": {
+    "item_type_charge_removed_from_projection": true,
+    "literal_length_charge_removed_from_projection": true,
+    "materialized_copy_length_fields": 208,
+    "materialized_copy_source_fields": 208,
+    "materialized_literal_payload_digit_fields": 265,
+    "materialized_operation_dependency_fields": 470,
+    "materialized_seed_payload_digit_fields": 1696
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "gate71_dependency_refresh": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json",
+    "gate86": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/86_global_item_literal_length_control_gate.json",
+    "gate86_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/86_global_item_literal_length_control_gate.py"
+  },
+  "plaintext_claim": false,
+  "projection": {
+    "book_summaries": [
+      {
+        "book": 10,
+        "canonical_copied_digits": 276,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 5,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 35.44968582448462,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 11,
+        "canonical_copied_digits": 124,
+        "canonical_copy_items": 4,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 13,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 6,
+        "canonical_parser_bits": 113.21420904344473,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 12,
+        "canonical_copied_digits": 116,
+        "canonical_copy_items": 8,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 21,
+        "canonical_literal_runs": 5,
+        "canonical_op_count": 13,
+        "canonical_parser_bits": 201.94548635260594,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 13,
+        "canonical_copied_digits": 127,
+        "canonical_copy_items": 6,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 14,
+        "canonical_literal_runs": 3,
+        "canonical_op_count": 9,
+        "canonical_parser_bits": 149.10534030749096,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 14,
+        "canonical_copied_digits": 86,
+        "canonical_copy_items": 5,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 47,
+        "canonical_literal_runs": 3,
+        "canonical_op_count": 8,
+        "canonical_parser_bits": 237.33701531401985,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 15,
+        "canonical_copied_digits": 141,
+        "canonical_copy_items": 9,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 2,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 11,
+        "canonical_parser_bits": 160.777373920371,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 16,
+        "canonical_copied_digits": 163,
+        "canonical_copy_items": 7,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 11,
+        "canonical_literal_runs": 5,
+        "canonical_op_count": 12,
+        "canonical_parser_bits": 151.34386824623815,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 17,
+        "canonical_copied_digits": 248,
+        "canonical_copy_items": 8,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 26,
+        "canonical_literal_runs": 6,
+        "canonical_op_count": 14,
+        "canonical_parser_bits": 232.13311161502858,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 18,
+        "canonical_copied_digits": 93,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 35.00276938477127,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 19,
+        "canonical_copied_digits": 129,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 48.075809559530626,
+        "cutoff_count": 1,
+        "cutoffs": [
+          10
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 20,
+        "canonical_copied_digits": 63,
+        "canonical_copy_items": 7,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 7,
+        "canonical_parser_bits": 113.6325806722732,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 21,
+        "canonical_copied_digits": 176,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 54.90892746511642,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 22,
+        "canonical_copied_digits": 137,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 18.88246085485668,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 23,
+        "canonical_copied_digits": 156,
+        "canonical_copy_items": 8,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 21,
+        "canonical_literal_runs": 4,
+        "canonical_op_count": 12,
+        "canonical_parser_bits": 214.34975840201992,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 24,
+        "canonical_copied_digits": 119,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 52.02994759480492,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 25,
+        "canonical_copied_digits": 32,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 26.766468054149165,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 26,
+        "canonical_copied_digits": 165,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 5,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 4,
+        "canonical_parser_bits": 74.41766993787608,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 27,
+        "canonical_copied_digits": 124,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 18.971157167796548,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 28,
+        "canonical_copied_digits": 146,
+        "canonical_copy_items": 5,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 5,
+        "canonical_parser_bits": 88.00670534294478,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 29,
+        "canonical_copied_digits": 151,
+        "canonical_copy_items": 4,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 4,
+        "canonical_parser_bits": 67.1321650068555,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 30,
+        "canonical_copied_digits": 150,
+        "canonical_copy_items": 6,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 6,
+        "canonical_parser_bits": 111.50303799880966,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 31,
+        "canonical_copied_digits": 248,
+        "canonical_copy_items": 8,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 8,
+        "canonical_parser_bits": 153.79931267038137,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 32,
+        "canonical_copied_digits": 135,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 2,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 45.25118957029029,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 33,
+        "canonical_copied_digits": 134,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 19.381861795380722,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 34,
+        "canonical_copied_digits": 116,
+        "canonical_copy_items": 7,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 7,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 9,
+        "canonical_parser_bits": 147.0699406962988,
+        "cutoff_count": 2,
+        "cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 35,
+        "canonical_copied_digits": 286,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 39.96222155061256,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 36,
+        "canonical_copied_digits": 137,
+        "canonical_copy_items": 6,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 6,
+        "canonical_parser_bits": 113.54584801640675,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 37,
+        "canonical_copied_digits": 160,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 39.11470352540512,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 38,
+        "canonical_copied_digits": 130,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 4,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 5,
+        "canonical_parser_bits": 63.098183503684886,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 39,
+        "canonical_copied_digits": 57,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 2,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 36.50150644787419,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 40,
+        "canonical_copied_digits": 165,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 4,
+        "canonical_parser_bits": 61.25131399305334,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 41,
+        "canonical_copied_digits": 136,
+        "canonical_copy_items": 4,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 4,
+        "canonical_parser_bits": 67.75943666023127,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 42,
+        "canonical_copied_digits": 183,
+        "canonical_copy_items": 5,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 4,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 7,
+        "canonical_parser_bits": 100.92244632044513,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 43,
+        "canonical_copied_digits": 141,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 19.830484632723618,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 44,
+        "canonical_copied_digits": 121,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 5,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 36.24360392993063,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 45,
+        "canonical_copied_digits": 149,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 58.17774595159038,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 46,
+        "canonical_copied_digits": 253,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 59.0992737455989,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 47,
+        "canonical_copied_digits": 126,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 12.813380386924727,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 48,
+        "canonical_copied_digits": 169,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 38.90456748412916,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 49,
+        "canonical_copied_digits": 90,
+        "canonical_copy_items": 8,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 25,
+        "canonical_literal_runs": 4,
+        "canonical_op_count": 12,
+        "canonical_parser_bits": 224.52625303682598,
+        "cutoff_count": 3,
+        "cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 50,
+        "canonical_copied_digits": 141,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 20.046207333503204,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 51,
+        "canonical_copied_digits": 268,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 41.03924538652095,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 52,
+        "canonical_copied_digits": 134,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 30.010875637561227,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 53,
+        "canonical_copied_digits": 271,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 21.106858534096453,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 54,
+        "canonical_copied_digits": 57,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 32.92132959476415,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 55,
+        "canonical_copied_digits": 116,
+        "canonical_copy_items": 4,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 4,
+        "canonical_parser_bits": 71.36819775723708,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 56,
+        "canonical_copied_digits": 263,
+        "canonical_copy_items": 9,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 10,
+        "canonical_parser_bits": 186.3137787260062,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 57,
+        "canonical_copied_digits": 198,
+        "canonical_copy_items": 6,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 32,
+        "canonical_literal_runs": 2,
+        "canonical_op_count": 8,
+        "canonical_parser_bits": 225.34977486842126,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 58,
+        "canonical_copied_digits": 269,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 52.35032417674649,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 59,
+        "canonical_copied_digits": 272,
+        "canonical_copy_items": 3,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 61.06112736024895,
+        "cutoff_count": 4,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 60,
+        "canonical_copied_digits": 150,
+        "canonical_copy_items": 5,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 1,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 6,
+        "canonical_parser_bits": 99.6339972970079,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 61,
+        "canonical_copied_digits": 145,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 38.0153463523483,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 62,
+        "canonical_copied_digits": 126,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 20.256752682015993,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 63,
+        "canonical_copied_digits": 126,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 39.853996449920224,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 64,
+        "canonical_copied_digits": 151,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 2,
+        "canonical_parser_bits": 32.604207528576865,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 65,
+        "canonical_copied_digits": 166,
+        "canonical_copy_items": 2,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 3,
+        "canonical_literal_runs": 1,
+        "canonical_op_count": 3,
+        "canonical_parser_bits": 48.091356856223484,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 66,
+        "canonical_copied_digits": 210,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 21.092029448874023,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 67,
+        "canonical_copied_digits": 98,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 19.988243985254087,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 68,
+        "canonical_copied_digits": 143,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 20.56553644626786,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 69,
+        "canonical_copied_digits": 140,
+        "canonical_copy_items": 1,
+        "canonical_cutoff": 10,
+        "canonical_literal_digits": 0,
+        "canonical_literal_runs": 0,
+        "canonical_op_count": 1,
+        "canonical_parser_bits": 20.55273456223303,
+        "cutoff_count": 5,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "signature_count": 1,
+        "stable_exact_path": true
+      }
+    ],
+    "canonical_copied_digits": 9302,
+    "canonical_copy_items": 208,
+    "canonical_literal_digits": 265,
+    "canonical_literal_runs": 54,
+    "canonical_op_count": 262,
+    "canonical_transition_evaluations": 4187905,
+    "canonical_visited_states": 910157,
+    "coverage_digit_count": 11263,
+    "multi_cutoff_book_count": 50,
+    "multi_cutoff_books": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "multi_cutoff_stable_book_count": 50,
+    "parsed_book_count": 60,
+    "parsed_books": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "seed_book_count": 10,
+    "seed_books": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "seed_digits": 1696,
+    "single_cutoff_only_book_count": 10,
+    "single_cutoff_only_books": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "stable_book_count": 60,
+    "target_book_count": 70,
+    "total_digit_count": 11263,
+    "unstable_books": []
+  },
+  "schema": "stable_path_projection_boundary_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "projection_mode": "payload_uniform_no_item_or_literal_length",
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "canonical_copied_digits": 9302,
+    "canonical_copy_items": 208,
+    "canonical_literal_digits": 265,
+    "canonical_literal_runs": 54,
+    "coverage_digit_count": 11263,
+    "elapsed_seconds": 7.822503166971728,
+    "interpretation": "Gate 86 gives a stable encoder-side path projection under the no-item/no-literal-length control, but the projection is still chosen with the target book text available. It therefore bounds the path-stability problem without proving a decoder-side book generator.",
+    "multi_cutoff_book_count": 50,
+    "multi_cutoff_stable_book_count": 50,
+    "parsed_book_count": 60,
+    "projection_mode": "payload_uniform_no_item_or_literal_length",
+    "promotes_generator": false,
+    "seed_book_count": 10,
+    "single_cutoff_only_book_count": 10,
+    "stable_modes_from_gate86": [
+      "payload_uniform_no_item_type",
+      "payload_uniform_no_item_or_literal_length"
+    ],
+    "total_digit_count": 11263,
+    "unstable_book_count": 0
+  },
+  "target_text_blocker": {
+    "decoder_can_choose_projection_without_target_text": false,
+    "seed_books_external": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "single_cutoff_books_not_holdout_stability_proven": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "target_text_required_for_copy_candidate_search": true,
+    "target_text_required_for_literal_endpoint_set": true,
+    "target_text_required_for_literal_payload": true
+  },
+  "translation_delta": "NONE"
+}

@@ -253,6 +253,15 @@ payload-uniform baseline), while preserving `175/175` roundtrip/raw-positive
 evaluations. This is a parser-stability simplification: it does not change the
 `8154.676268` compression bound, explain `row0`, or add plaintext evidence.
 
+A stable path projection boundary audit then blocks the strongest possible
+overclaim. The best stable no-item/no-literal-length mode covers `11263/11263`
+digits after treating books `0..9` as seed material, with `208` canonical copy
+items, `54` literal runs, and `265` parsed literal digits; this reduces
+materialized operation dependency fields by `139` versus the active formula. But
+the projection is still chosen with the target book text available: copy
+candidates, literal payload, and literal endpoints are target-dependent. So this
+is an encoder-side stable projection, not a promoted decoder-side generator.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`
