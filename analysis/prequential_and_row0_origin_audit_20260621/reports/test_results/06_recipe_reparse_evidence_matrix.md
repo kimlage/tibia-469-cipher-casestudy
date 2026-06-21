@@ -39,6 +39,7 @@ claim.
 | `is_item_type_sequence_or_recipe_type_field_dependency` | `split_only_sequence_retained_op_type_field_derived` | item-type gain 3.125 bits (conservative 2.125); stream 223.412 -> 220.287; coded/forced items 287/81; alpha 2 retained, alpha1 delta 0.309; op type fields removed 348, shape ops 87/261, ambiguous 0; score delta +0.000000000000; roundtrip 70/70 |
 | `is_current_active_8177_profile_validated_or_recipe_discovered` | `active_profile_validated_recipe_discovery_blocked` | active 8177.317 bits; length/source defaults 8206.178/8177.317; gains 136.884/28.862; learned share 87.526%; frozen min prefix/block/family 62.103/50.361/6.269; family failures active/default-only 0/2; recipe proved False; state `(book_pos, previous_item, previous_copy_source, previous_copy_length)`; cutoff10 state proxy 302879952 vs old 28881; state-free `state_free_back_current_length` +15.186 |
 | `can_copy_source_previous_pair_state_be_compressed` | `previous_pair_state_compressed_to_previous_end` | `(book_pos, previous_item, previous_copy_source, previous_copy_length)` -> `(book_pos, previous_item, previous_copy_end)`; stream 2990.838; default/exception 5/256; mismatches 0; proxy 969111171 -> 26758611 (97.239% reduction); cutoff10 302879952 -> 8286852; parser promoted False; recipe removed False |
+| `does_source_state_compression_make_active_reparse_feasible` | `source_state_dimension_reduced_parser_unpromoted` | `(book_pos, previous_item, previous_copy_source, previous_copy_length)` -> `(book_pos, previous_item, previous_copy_end)`; proxy 969111171 -> 26758611 (97.239%); end/old 313.5x; max book end 614250; all <=1m True; cutoff60 <=250k 9/10; parser promoted False |
 | `where_is_the_online_prefix_per_book_frontier` | `passed_after_bootstrap_with_book0_failure` | book-bounded raw wins 69/70; after bootstrap 69/69; failures [0]; mean gain 419.761; break-even book 2 |
 | `does_an_explicit_book0_seed_close_the_online_bootstrap_failure` | `passed_as_bootstrap_accounting_not_bound_promotion` | book0 online-raw 10.499 bits; seed wins/ties 70/70; strict wins 69/70; failures []; stream saving 10.499 |
 | `does_book0_seed_survive_complete_formula_rescoring` | `failed_as_formula_promotion` | seeded 8344.041 vs online 8343.062; delta 0.979; book-bounded delta 305.198; promoted 0 |
@@ -71,5 +72,6 @@ claim.
 - Item type boundary: `split_only_retained_op_type_field_derived`.
 - Current active profile: `8177_bound_validated_recipe_discovery_blocked`.
 - Copy source state compression: `previous_pair_state_compressed_to_previous_end`.
+- Active reparse feasibility: `source_state_dimension_reduced_parser_unpromoted`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

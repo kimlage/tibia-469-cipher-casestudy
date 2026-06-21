@@ -520,6 +520,10 @@ previous-copy source/length state.
 A copy-source state compression gate then reduces that blocker: the source
 default only needs `previous_copy_end`, preserving the ledger while reducing
 the aggregate candidate-state proxy by `97.239%`; no full parser is promoted.
+The active-reparse feasibility follow-up narrows the next implementation
+frontier: all tested book-level end-state proxies are below `1,000,000`, and
+cutoff `60` has `9/10` books below `250,000`, but the complete active parser
+is still not promoted.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

@@ -53,6 +53,14 @@ COPY_SOURCE_STATE_COMPRESSION_GATE = (
     / "test_results"
     / "35_copy_source_state_compression_gate.json"
 )
+ACTIVE_REPARSE_FEASIBILITY_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "36_active_reparse_feasibility_after_state_compression_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -205,6 +213,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary("current_active_profile_boundary_gate", active_profile_gate)
     state_compression_gate = load_json(COPY_SOURCE_STATE_COMPRESSION_GATE)
     assert_analysis_boundary("copy_source_state_compression_gate", state_compression_gate)
+    active_reparse_feasibility_gate = load_json(ACTIVE_REPARSE_FEASIBILITY_GATE)
+    assert_analysis_boundary(
+        "active_reparse_feasibility_after_state_compression_gate",
+        active_reparse_feasibility_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -299,6 +312,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": state_compression_gate["summary"],
             "decision": state_compression_gate["decision"],
         },
+        "active_reparse_feasibility_after_state_compression": {
+            "classification": active_reparse_feasibility_gate["classification"],
+            "source": rel(ACTIVE_REPARSE_FEASIBILITY_GATE),
+            "summary": active_reparse_feasibility_gate["summary"],
+            "decision": active_reparse_feasibility_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -324,6 +343,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
+            "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -358,6 +378,7 @@ def render_markdown(
     item_type_op_shape_boundary_gate_link: str,
     current_active_profile_boundary_gate_link: str,
     copy_source_state_compression_gate_link: str,
+    active_reparse_feasibility_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -377,6 +398,9 @@ def render_markdown(
     item_type_boundary = result["item_type_op_shape_boundary"]["summary"]
     active_profile_boundary = result["current_active_profile_boundary"]["summary"]
     state_compression = result["copy_source_state_compression"]["summary"]
+    reparse_feasibility = result[
+        "active_reparse_feasibility_after_state_compression"
+    ]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -752,6 +776,24 @@ def render_markdown(
             "This is a real state simplification, not a parser promotion.",
             f"See [35_copy_source_state_compression_gate.md]({copy_source_state_compression_gate_link}).",
             "",
+            "### Active Reparse Feasibility After State Compression Gate",
+            "",
+            "A follow-up feasibility gate then asks whether that state compression",
+            "changes the implementation frontier for exact active reparse. It does",
+            "for the source-state dimension: every tested book-level end-state proxy",
+            "falls below one million, the worst book-level proxy is",
+            f"`{reparse_feasibility['max_book_end_state_proxy']}`, and cutoff `60`",
+            "has",
+            f"`{reparse_feasibility['cutoff60_books_below_250k']}`/",
+            f"`{reparse_feasibility['cutoff60_book_count']}` books below `250000`.",
+            "The aggregate source-state proxy still remains",
+            f"`{reparse_feasibility['total_end_proxy_multiplier_over_old_reparse']:.1f}x`",
+            "the old frozen-count DP state count, and the gate does not solve the",
+            "full active objective, adaptive counts, tie-breaking, copy source",
+            "selection, copy length declaration, literal payload, or item-type",
+            "dependencies. It is a prototype frontier, not a parser promotion.",
+            f"See [36_active_reparse_feasibility_after_state_compression_gate.md]({active_reparse_feasibility_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -927,6 +969,7 @@ def render_markdown(
             "- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.",
             "- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.",
             "- Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.",
+            "- After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -993,6 +1036,9 @@ def main() -> None:
             ),
             copy_source_state_compression_gate_link=(
                 "35_copy_source_state_compression_gate.md"
+            ),
+            active_reparse_feasibility_gate_link=(
+                "36_active_reparse_feasibility_after_state_compression_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1075,6 +1121,9 @@ def main() -> None:
             ),
             copy_source_state_compression_gate_link=(
                 "test_results/35_copy_source_state_compression_gate.md"
+            ),
+            active_reparse_feasibility_gate_link=(
+                "test_results/36_active_reparse_feasibility_after_state_compression_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

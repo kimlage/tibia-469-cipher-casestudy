@@ -1109,6 +1109,12 @@ default only needs `previous_copy_end`, so the previous `(source, length)` pair
 can be compressed to one scalar without changing default/exception
 classification. The aggregate candidate-state proxy falls from `969111171` to
 `26758611` (`97.239%` reduction), but no complete active parser is promoted.
+The active-reparse feasibility follow-up then shows what this buys: every
+tested book-level `previous_copy_end` source-state proxy is below `1,000,000`,
+and cutoff `60` has `9/10` books below `250,000`. This makes a future
+book-local active-source prototype plausible by proxy, but it still does not
+solve the full active objective, adaptive counts, tie-breaking, copy source
+selection, copy length declaration, literal payload, or item-type ledger.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

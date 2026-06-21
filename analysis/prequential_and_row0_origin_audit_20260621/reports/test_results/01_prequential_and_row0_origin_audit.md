@@ -349,6 +349,24 @@ and reduces the aggregate candidate-state proxy from
 This is a real state simplification, not a parser promotion.
 See [35_copy_source_state_compression_gate.md](35_copy_source_state_compression_gate.md).
 
+### Active Reparse Feasibility After State Compression Gate
+
+A follow-up feasibility gate then asks whether that state compression
+changes the implementation frontier for exact active reparse. It does
+for the source-state dimension: every tested book-level end-state proxy
+falls below one million, the worst book-level proxy is
+`614250`, and cutoff `60`
+has
+`9`/
+`10` books below `250000`.
+The aggregate source-state proxy still remains
+`313.5x`
+the old frozen-count DP state count, and the gate does not solve the
+full active objective, adaptive counts, tie-breaking, copy source
+selection, copy length declaration, literal payload, or item-type
+dependencies. It is a prototype frontier, not a parser promotion.
+See [36_active_reparse_feasibility_after_state_compression_gate.md](36_active_reparse_feasibility_after_state_compression_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -515,6 +533,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.
 - The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.
 - Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.
+- After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

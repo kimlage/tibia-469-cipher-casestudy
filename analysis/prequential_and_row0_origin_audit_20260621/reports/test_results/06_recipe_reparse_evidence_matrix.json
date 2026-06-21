@@ -2,6 +2,7 @@
   "case_reopened": false,
   "classification": "recipe_externality_reduced_but_generation_claim_still_partial",
   "decision": {
+    "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
     "copy_length_context_status": "midpoint_context_retained",
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
@@ -427,6 +428,34 @@
     },
     {
       "evidence": {
+        "all_books_below_1m_end_state_proxy": true,
+        "compressed_source_state_key": "(book_pos, previous_item, previous_copy_end)",
+        "cutoff60_book_count": 10,
+        "cutoff60_books_below_250k": 9,
+        "cutoff60_max_book_end_state_proxy": 258264,
+        "max_book_end_state_proxy": 614250,
+        "old_state_key": "(book_pos, previous_item)",
+        "parser_promoted": false,
+        "pre_compression_required_state_key": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+        "recipe_discovery_removed": false,
+        "remaining_blockers": [
+          "The DP still has to reproduce the full active objective, not only source-default classification.",
+          "Literal payload, item type, copy length, copy source, and copy length selection remain recipe/ledger dependencies.",
+          "Adaptive-count and tie-breaking behavior must be specified in any promoted active parser.",
+          "Row0/table origin remains entirely outside this source-state question."
+        ],
+        "total_end_proxy_multiplier_over_old_reparse": 313.51623901581723,
+        "total_end_state_proxy": 26758611,
+        "total_pair_state_proxy": 969111171,
+        "total_pair_to_end_proxy_reduction_pct": 97.23885021649389
+      },
+      "interpretation": "Previous-copy-end compression makes book-local source-state prototypes plausible by proxy, but exact active reparse remains unpromoted because the full objective and remaining recipe dependencies are still unresolved.",
+      "question": "does_source_state_compression_make_active_reparse_feasible",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.json",
+      "status": "source_state_dimension_reduced_parser_unpromoted"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -720,6 +749,7 @@
     "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
   },
   "inputs": {
+    "active_reparse_feasibility_after_state_compression_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.json",
     "copy_length_derivation_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.json",
     "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
     "copy_source_state_compression_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/35_copy_source_state_compression_gate.json",

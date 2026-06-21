@@ -61,6 +61,8 @@ SOURCES = {
     / "34_current_active_profile_boundary_gate.json",
     "copy_source_state_compression_gate": TEST_RESULTS
     / "35_copy_source_state_compression_gate.json",
+    "active_reparse_feasibility_after_state_compression_gate": TEST_RESULTS
+    / "36_active_reparse_feasibility_after_state_compression_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -115,6 +117,9 @@ def make_result() -> dict[str, Any]:
     item_type_op_shape_boundary_gate = load_json(SOURCES["item_type_op_shape_boundary_gate"])
     current_active_profile_gate = load_json(SOURCES["current_active_profile_boundary_gate"])
     copy_source_state_compression_gate = load_json(SOURCES["copy_source_state_compression_gate"])
+    active_reparse_feasibility_gate = load_json(
+        SOURCES["active_reparse_feasibility_after_state_compression_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -151,6 +156,10 @@ def make_result() -> dict[str, Any]:
         ("item_type_op_shape_boundary_gate", item_type_op_shape_boundary_gate),
         ("current_active_profile_boundary_gate", current_active_profile_gate),
         ("copy_source_state_compression_gate", copy_source_state_compression_gate),
+        (
+            "active_reparse_feasibility_after_state_compression_gate",
+            active_reparse_feasibility_gate,
+        ),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -757,6 +766,70 @@ def make_result() -> dict[str, Any]:
                 "The active source default only needs previous copy end, not the "
                 "full previous source/length pair. This reduces state size but "
                 "does not promote a complete active parser."
+            ),
+        },
+        {
+            "question": "does_source_state_compression_make_active_reparse_feasible",
+            "source": rel(
+                SOURCES["active_reparse_feasibility_after_state_compression_gate"]
+            ),
+            "status": "source_state_dimension_reduced_parser_unpromoted",
+            "evidence": {
+                "old_state_key": active_reparse_feasibility_gate["summary"][
+                    "old_state_key"
+                ],
+                "pre_compression_required_state_key": active_reparse_feasibility_gate[
+                    "summary"
+                ]["pre_compression_required_state_key"],
+                "compressed_source_state_key": active_reparse_feasibility_gate[
+                    "summary"
+                ]["compressed_source_state_key"],
+                "total_pair_state_proxy": active_reparse_feasibility_gate["summary"][
+                    "total_pair_state_proxy"
+                ],
+                "total_end_state_proxy": active_reparse_feasibility_gate["summary"][
+                    "total_end_state_proxy"
+                ],
+                "total_pair_to_end_proxy_reduction_pct": (
+                    active_reparse_feasibility_gate["summary"][
+                        "total_pair_to_end_proxy_reduction_pct"
+                    ]
+                ),
+                "total_end_proxy_multiplier_over_old_reparse": (
+                    active_reparse_feasibility_gate["summary"][
+                        "total_end_proxy_multiplier_over_old_reparse"
+                    ]
+                ),
+                "max_book_end_state_proxy": active_reparse_feasibility_gate[
+                    "summary"
+                ]["max_book_end_state_proxy"],
+                "all_books_below_1m_end_state_proxy": active_reparse_feasibility_gate[
+                    "summary"
+                ]["all_books_below_1m_end_state_proxy"],
+                "cutoff60_max_book_end_state_proxy": active_reparse_feasibility_gate[
+                    "summary"
+                ]["cutoff60_max_book_end_state_proxy"],
+                "cutoff60_books_below_250k": active_reparse_feasibility_gate[
+                    "summary"
+                ]["cutoff60_books_below_250k"],
+                "cutoff60_book_count": active_reparse_feasibility_gate["summary"][
+                    "cutoff60_book_count"
+                ],
+                "parser_promoted": active_reparse_feasibility_gate["summary"][
+                    "parser_promoted"
+                ],
+                "recipe_discovery_removed": active_reparse_feasibility_gate[
+                    "summary"
+                ]["recipe_discovery_removed"],
+                "remaining_blockers": active_reparse_feasibility_gate["summary"][
+                    "remaining_blockers"
+                ],
+            },
+            "interpretation": (
+                "Previous-copy-end compression makes book-local source-state "
+                "prototypes plausible by proxy, but exact active reparse remains "
+                "unpromoted because the full objective and remaining recipe "
+                "dependencies are still unresolved."
             ),
         },
         {
@@ -1396,6 +1469,7 @@ def make_result() -> dict[str, Any]:
             "item_type_boundary_status": "split_only_retained_op_type_field_derived",
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
+            "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1614,6 +1688,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['parser_promoted']}; recipe removed "
                 f"{evidence['recipe_discovery_removed']}"
             )
+        elif row["question"] == "does_source_state_compression_make_active_reparse_feasible":
+            key = (
+                f"`{evidence['pre_compression_required_state_key']}` -> "
+                f"`{evidence['compressed_source_state_key']}`; proxy "
+                f"{evidence['total_pair_state_proxy']} -> "
+                f"{evidence['total_end_state_proxy']} "
+                f"({evidence['total_pair_to_end_proxy_reduction_pct']:.3f}%); "
+                f"end/old {evidence['total_end_proxy_multiplier_over_old_reparse']:.1f}x; "
+                f"max book end {evidence['max_book_end_state_proxy']}; "
+                f"all <=1m {evidence['all_books_below_1m_end_state_proxy']}; "
+                f"cutoff60 <=250k {evidence['cutoff60_books_below_250k']}/"
+                f"{evidence['cutoff60_book_count']}; parser promoted "
+                f"{evidence['parser_promoted']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -1821,6 +1909,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Item type boundary: `{result['decision']['item_type_boundary_status']}`.",
             f"- Current active profile: `{result['decision']['current_active_profile_status']}`.",
             f"- Copy source state compression: `{result['decision']['copy_source_state_compression_status']}`.",
+            f"- Active reparse feasibility: `{result['decision']['active_reparse_feasibility_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]
