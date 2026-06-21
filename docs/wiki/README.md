@@ -972,6 +972,10 @@ A phase/grid audit tests short cycles over target boundaries, operation
 lengths, source, source end, and source-target phase. The best clue,
 `source_mod0_10/20`, catches only `1/10` residual without false clean changes
 and recovers no held-out residuals, so it is not a parser rule.
+A raw-context nearest-branch audit then rejects memorized local context as the
+explanation: the best leave-one-book policy is worse than the active baseline,
+recovers `0/10` residuals, changes `8` clean controls, and is matched by
+shuffled training labels.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

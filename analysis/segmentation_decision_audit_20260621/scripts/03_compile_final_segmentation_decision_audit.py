@@ -41,6 +41,7 @@ FUTURE_COPY = TEST_RESULTS / "29_future_copy_opportunity_audit.json"
 SOURCE_STATE = TEST_RESULTS / "30_source_state_continuity_audit.json"
 GLOBAL_SOURCE_STATE = TEST_RESULTS / "31_global_source_state_continuity_audit.json"
 PHASE_GRID = TEST_RESULTS / "32_phase_grid_segmentation_audit.json"
+CONTEXT_NEAREST = TEST_RESULTS / "33_context_nearest_branch_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -128,6 +129,9 @@ def main() -> None:
         load_json(GLOBAL_SOURCE_STATE) if GLOBAL_SOURCE_STATE.exists() else None
     )
     phase_grid = load_json(PHASE_GRID) if PHASE_GRID.exists() else None
+    context_nearest = (
+        load_json(CONTEXT_NEAREST) if CONTEXT_NEAREST.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -188,6 +192,8 @@ def main() -> None:
         assert_boundary("global_source_state_continuity_audit", global_source_state)
     if phase_grid is not None:
         assert_boundary("phase_grid_segmentation_audit", phase_grid)
+    if context_nearest is not None:
+        assert_boundary("context_nearest_branch_audit", context_nearest)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -260,6 +266,9 @@ def main() -> None:
         None if global_source_state is None else global_source_state["summary"]
     )
     phase_grid_summary = None if phase_grid is None else phase_grid["summary"]
+    context_nearest_summary = (
+        None if context_nearest is None else context_nearest["summary"]
+    )
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -1109,6 +1118,34 @@ def main() -> None:
                 "",
             ]
         )
+    if context_nearest_summary is not None:
+        lines.extend(
+            [
+                "## Context Nearest-Branch Control",
+                "",
+                "Gate 33 tests whether stable branch actions recur with raw",
+                "digit context. Each policy finds the nearest prior or other-book",
+                "decision by target-context Hamming distance and applies that",
+                "training row's stable branch action class to the current branch",
+                "set.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{context_nearest_summary['active_baseline_total_hits']}/{context_nearest_summary['decision_count']}` | `{context_nearest_summary['active_baseline_residual_hits']}/{context_nearest_summary['residual_decision_count']}` | `{context_nearest_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best leave-one-book nearest policy `{context_nearest_summary['best_policy']}` | `{context_nearest_summary['best_leave_one_book_total_hits']}/{context_nearest_summary['decision_count']}` | `{context_nearest_summary['best_leave_one_book_residual_hits']}/{context_nearest_summary['residual_decision_count']}` | `{context_nearest_summary['best_leave_one_book_clean_false_changes']}` | rejected |",
+                "",
+                f"- Nearest-context policies tested: `{context_nearest_summary['policy_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{context_nearest_summary['prequential_zero_clean_false_change_cells']}/{context_nearest_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{context_nearest_summary['prequential_cover_all_test_residual_cells']}/{context_nearest_summary['prequential_cells']}`.",
+                f"- Prequential selected matches oracle cells: `{context_nearest_summary['prequential_selected_matches_oracle_cells']}/{context_nearest_summary['prequential_cells']}`.",
+                "",
+                "Raw digit context nearest-neighbor recurrence does not explain",
+                "the branch decisions. It is worse than the active baseline,",
+                "recovers `0/10` residuals, and shuffled training labels match",
+                "or exceed it.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1124,7 +1161,8 @@ def main() -> None:
             "are also rejected. Book-local source-state continuity is rejected",
             "as well, and even the global carryover source-state upper bound",
             "fails clean holdout. A simple phase/grid rule gives only a weak",
-            "one-residual full-fit clue. The remaining blocker is a richer path/state",
+            "one-residual full-fit clue. Raw context nearest-neighbor recurrence",
+            "is also rejected. The remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1165,6 +1203,7 @@ def main() -> None:
             "- [Source state continuity audit](test_results/30_source_state_continuity_audit.md)",
             "- [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)",
             "- [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)",
+            "- [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)",
             "",
         ]
     )

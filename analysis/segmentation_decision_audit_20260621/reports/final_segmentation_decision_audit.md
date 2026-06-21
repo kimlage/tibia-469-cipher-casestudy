@@ -672,6 +672,29 @@ generalize under prefix/holdout and leaves `9/10` residuals
 unexplained. Phase/grid alignment is therefore not the missing
 segmentation parser.
 
+## Context Nearest-Branch Control
+
+Gate 33 tests whether stable branch actions recur with raw
+digit context. Each policy finds the nearest prior or other-book
+decision by target-context Hamming distance and applies that
+training row's stable branch action class to the current branch
+set.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best leave-one-book nearest policy `nearest_context_l8_r8_action_class` | `216/234` | `0/10` | `8` | rejected |
+
+- Nearest-context policies tested: `15`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+- Prequential selected matches oracle cells: `0/5`.
+
+Raw digit context nearest-neighbor recurrence does not explain
+the branch decisions. It is worse than the active baseline,
+recovers `0/10` residuals, and shuffled training labels match
+or exceed it.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -685,7 +708,8 @@ Target-side boundary recurrence and near-future copy opportunity
 are also rejected. Book-local source-state continuity is rejected
 as well, and even the global carryover source-state upper bound
 fails clean holdout. A simple phase/grid rule gives only a weak
-one-residual full-fit clue. The remaining blocker is a richer path/state
+one-residual full-fit clue. Raw context nearest-neighbor recurrence
+is also rejected. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -726,3 +750,4 @@ or the stable projection as an oracle.
 - [Source state continuity audit](test_results/30_source_state_continuity_audit.md)
 - [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)
 - [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)
+- [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)

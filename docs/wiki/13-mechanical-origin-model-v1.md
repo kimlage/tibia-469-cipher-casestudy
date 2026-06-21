@@ -347,6 +347,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source state continuity audit | book-local previous-copy continuity is stronger than shuffled controls and best `min_source_delta` catches `6/10` residuals, but it changes `13` clean controls and has `0/5` zero-clean-false-change holdout cells | source-state continuity rejected |
 | Global source state continuity audit | even granting stable-projection history as global carried source state, best `min_source_delta` still catches only `6/10` residuals, changes `13` clean controls, and has `0/5` zero-clean-false-change holdout cells | carryover source-state upper bound rejected |
 | Phase/grid segmentation audit | simple cycles `2/3/4/5/8/10/16/20` over target boundaries, lengths, source, source end, and source-target phase produce only a weak `source_mod0_10/20` full-fit clue: `1/10` residual, `0` clean false changes, and no held-out residual recovery | phase/grid parser rejected |
+| Context nearest-branch audit | nearest-neighbor recurrence over raw target digit context is worse than the active baseline: best leave-one-book policy gets `216/234`, `0/10` residuals, and `8` clean false changes; shuffled labels match or exceed it | raw-context recurrence rejected |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -566,6 +567,7 @@ Primary sources:
 [source_state_continuity_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/30_source_state_continuity_audit.md),
 [global_source_state_continuity_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/31_global_source_state_continuity_audit.md),
 [phase_grid_segmentation_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/32_phase_grid_segmentation_audit.md),
+[context_nearest_branch_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/33_context_nearest_branch_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),

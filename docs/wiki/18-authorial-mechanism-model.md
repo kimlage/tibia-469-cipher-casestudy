@@ -630,6 +630,11 @@ A phase/grid segmentation audit then tests short cycles
 source-target phase. The best `source_mod0_10/20` clue catches only `1/10`
 residual with `0` clean false changes, and prefix/holdout recovers no held-out
 residuals. This is recorded as a weak full-fit clue, not a parser rule.
+A context nearest-branch audit then tests whether raw target digit context
+recurs with stable branch actions. It does not: the best leave-one-book nearest
+policy is worse than the active baseline (`216/234` vs `224/234`), recovers
+`0/10` residuals, changes `8` clean controls, and is matched or exceeded by
+shuffled training labels.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2325,6 +2330,7 @@ book generation, not row0 pair-cell placement.
 - [Source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/30_source_state_continuity_audit.md)
 - [Global source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/31_global_source_state_continuity_audit.md)
 - [Phase grid segmentation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/32_phase_grid_segmentation_audit.md)
+- [Context nearest branch audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/33_context_nearest_branch_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
