@@ -383,6 +383,9 @@ origin remains exogenous.
 The recipe-externality audit quantifies the boundary: `4285.876/8558.667`
 bits are actually prequentially scored learned components, while `4272.791`
 bits remain fixed-recipe or non-learned ledger extracted from the full formula.
+The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
+six origin families have explicit algorithm/cost/coverage/control entries, and
+promoted row0-origin formulas remain `0`.
 The recipe reparse audit strengthens that result: with frozen train-prefix
 component counts, a deterministic LZ parser roundtrips every future suffix and
 beats the active full-corpus recipe under the same frozen counts, while still
@@ -554,8 +557,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   freezes `8558.667` bits as a validation scope, classifies the learned
   component signal as partial under family holdouts, decomposes the family
   failures as component/sample-size stress cases, rejects a train-only
-  component fallback, quantifies the fixed-recipe externality, and keeps row0
-  origin exogenous with translation delta zero.
+  component fallback, quantifies the fixed-recipe externality, closes the row0
+  hypothesis requirement matrix with zero promoted origin formulas, and keeps
+  row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

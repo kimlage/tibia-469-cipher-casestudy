@@ -28,6 +28,9 @@ exogenous.
 - [scripts/04_recipe_externality_audit.py](scripts/04_recipe_externality_audit.py) - quantifies how much of the validation still depends on a full-corpus fixed recipe.
 - [reports/test_results/04_recipe_externality_audit.md](reports/test_results/04_recipe_externality_audit.md) - recipe-externality result.
 - [reports/test_results/04_recipe_externality_audit.json](reports/test_results/04_recipe_externality_audit.json) - structured recipe-externality ledger.
+- [scripts/05_row0_hypothesis_requirement_audit.py](scripts/05_row0_hypothesis_requirement_audit.py) - forces each row0-origin hypothesis through the same algorithm/cost/coverage/control checklist.
+- [reports/test_results/05_row0_hypothesis_requirement_audit.md](reports/test_results/05_row0_hypothesis_requirement_audit.md) - row0 hypothesis requirement matrix.
+- [reports/test_results/05_row0_hypothesis_requirement_audit.json](reports/test_results/05_row0_hypothesis_requirement_audit.json) - structured requirement ledger.
 
 ## Boundary
 
@@ -40,4 +43,7 @@ exogenous.
   non-learned cost, and the prequential split scores rows extracted from the
   full formula rather than discovering held-out recipes.
 - Row0 result: `row0_origin_remains_exogenous`.
+- Requirement follow-up: all six requested row0-origin families have explicit
+  algorithm, cost or cost note, coverage, contradiction, and control entries;
+  promoted origin formulas remain `0`.
 - No plaintext, translation, semantic mapping, or case-reopening claim is made.

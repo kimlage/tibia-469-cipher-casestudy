@@ -1,0 +1,195 @@
+{
+  "case_reopened": false,
+  "classification": "row0_origin_requirements_all_tested_no_origin_formula",
+  "decision": {
+    "acceptable_negative_result": "origin_of_row0_continues_exogenous",
+    "next_valid_unlocks": [
+      "primary CipSoft/in-game symbol table or exact book-to-meaning crib",
+      "fixed external source that predicts row0 labels without search leakage",
+      "charged holdout-capable row0 algorithm below lookup cost",
+      "provenance artifact showing an earlier authorial worksheet/source order"
+    ],
+    "row0_explains": [
+      "Supplies the code->symbol substrate used to reconstruct the 70 book digit strings byte-exactly.",
+      "Supports unordered pair/mirror geometry and render-exception audits.",
+      "Allows the book-generation formula to operate on digit strings."
+    ],
+    "row0_remains_exogenous": [
+      "Why those unordered pair labels occupy the 10x10 table cells.",
+      "A compact lossless algorithm for the pair labels after rule/search/exception costs.",
+      "A primary CipSoft/in-game plaintext, symbol table, or book->meaning crib.",
+      "A derivation of row0 from the active LZ book-generation formula."
+    ]
+  },
+  "hypothesis_matrix": [
+    {
+      "algorithm": "Declare unordered-pair -> row0-symbol inventory directly.",
+      "all_required_fields_present": true,
+      "contradictions": "none inside inventory; explains no compact origin",
+      "coverage": "55/55 by definition",
+      "descriptive_cost_bits": 209.40452071316824,
+      "failure_gate": "baseline_only_no_compact_origin",
+      "hypothesis": "manual_authorial_lookup",
+      "negative_controls": "not meaningful because this is the lookup baseline",
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Not applicable as a promoted generator: this is the direct lookup/null baseline that random or permuted formulas must beat.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+      "status": "accepted_as_exogenous_substrate_not_origin_formula"
+    },
+    {
+      "algorithm": "Finite-group / cyclic / hash-like formulas over pair indices and digit permutations.",
+      "all_required_fields_present": true,
+      "contradictions": "best exact row is classified lookup_disguise; hash rows are low-coverage and do not compress",
+      "coverage": "55/55 hits for the best finite-group row, but it uses one group per cell",
+      "descriptive_cost_bits": 254.40822783567893,
+      "failure_gate": "lookup_disguise_after_rule_cost",
+      "hypothesis": "simple_permutation_or_group_rule",
+      "negative_controls": 1.0,
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Control p=1.0 in the consolidated audit: the exact finite-group row acts as one group per cell and is classified as lookup disguise.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "analysis/generator_search_20260618/finite_group_pair_formula_results.json",
+      "status": "rejected_lookup_disguise"
+    },
+    {
+      "algorithm": "Local 2D propagation, quotient/orbit formulas, matrix seed overlays, and table-grid order rules.",
+      "all_required_fields_present": true,
+      "contradictions": "partial hits require many exceptions or posthoc overlays; no lossless compact grid algorithm",
+      "coverage": "21/55 best matrix hits; 15/55 best local-2D hits",
+      "descriptive_cost_bits": 366.1843428780211,
+      "failure_gate": "partial_grid_signal_not_lossless_below_lookup",
+      "hypothesis": "grid_10x10_mechanism",
+      "negative_controls": {
+        "local_2d_primary_mdl_gain_control": null,
+        "matrix_control_p": 2.1032806543283516e-09
+      },
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Matrix search has an above-random partial-hit p-value, but the charged candidate is not lossless and remains costlier than lookup; local 2D/grid controls therefore do not promote an origin formula.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+      "status": "rejected_as_origin_formula"
+    },
+    {
+      "algorithm": "Derive pair labels/order from book usage, first-use order, symbol streams, or marginal signatures.",
+      "all_required_fields_present": true,
+      "contradictions": "train and stream signals do not survive as a controlled row0 generator",
+      "coverage": "6/55 holdout same-rule hits",
+      "descriptive_cost_bits": "not promoted; tested as accuracy/control signals",
+      "failure_gate": "holdout_and_control_failure",
+      "hypothesis": "order_or_frequency_derivation",
+      "negative_controls": {
+        "pair_marginal_verdict": "rejected_control",
+        "tape_first_use_bonferroni": 1.0,
+        "usage_train_p_ge_observed": 0.6534488503832055
+      },
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Usage/fill-order controls are ordinary: usage_train_p_ge_observed is 0.6534 and tape first-use Bonferroni is 1.0.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "analysis/generator_search_20260618/usage_driven_pair_placement_results.json",
+      "status": "rejected_holdout_or_control"
+    },
+    {
+      "algorithm": "Map pair labels to known lore/textual seeds or external phrase order.",
+      "all_required_fields_present": true,
+      "contradictions": "lore/textual seeds behave as searched symbol orders, not primary row0 evidence",
+      "coverage": "21/55 at best when lore-word symbol orders are allowed inside matrix search",
+      "descriptive_cost_bits": "no promoted external source ledger",
+      "failure_gate": "no_primary_fixed_external_source",
+      "hypothesis": "known_external_text_source",
+      "negative_controls": 0.0001999600079984003,
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Searched lore/text orders can create partial matrix hits, but no fixed CipSoft/in-game source is attested; Avar Tar remains a negative control.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "analysis/generator_search_20260618/matrix_generator_exhaustive_results.json",
+      "status": "not_attested_rejected_as_source_formula"
+    },
+    {
+      "algorithm": "Treat row0 as an artifact of workbook export, SQLite ingestion, or local scripts.",
+      "all_required_fields_present": true,
+      "contradictions": "export scripts preserve source cells and do not synthesize a compact row0 formula",
+      "coverage": "explains where the project reads row0-like tables from, not why CipSoft/game data has that table",
+      "descriptive_cost_bits": "provenance-preserving ingestion, not a generator",
+      "failure_gate": "provenance_preservation_not_origin_generator",
+      "hypothesis": "workbook_or_script_artifact",
+      "negative_controls": "manual code inspection of ingestion scripts; no generated table algorithm found",
+      "passes_as_origin_formula": false,
+      "random_or_permuted_comparison": "Artifact provenance is a code/path audit rather than a stochastic table generator: scripts preserve source cells and no synthesizing algorithm is found.",
+      "requirement_status": {
+        "clear_algorithm": true,
+        "contradictions": true,
+        "coverage": true,
+        "descriptive_cost": true,
+        "negative_controls": true,
+        "random_or_permuted_comparison": true
+      },
+      "source": "scripts/export_workbook_to_sqlite.py",
+      "status": "rejected_as_origin_explanation_for_in_game_table"
+    }
+  ],
+  "inputs": {
+    "lookup_baseline": "analysis/row0_origin_parallel_20260621/reports/test_results/143_row0_lookup_baseline_mdl.json",
+    "parent_audit": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/01_prequential_and_row0_origin_audit.json",
+    "row0_parallel_final_report": "analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md"
+  },
+  "lookup_baselines": {
+    "bits_direct_observed_label_alphabet": 214.87898275846854,
+    "bits_direct_symbol_alphabet": 209.40452071316824,
+    "bits_lookup_given_inventory": 160.52070273483628,
+    "promotion_rule": "A row0-origin formula must beat lookup after rule, parameters, exceptions, order, and search costs."
+  },
+  "plaintext_claim": false,
+  "requirements": [
+    "clear_algorithm",
+    "descriptive_cost",
+    "coverage",
+    "contradictions",
+    "negative_controls",
+    "random_or_permuted_comparison"
+  ],
+  "schema": "row0_origin_hypothesis_requirement_audit.v1",
+  "summary": {
+    "decision": "Every requested origin family has an explicit algorithm, cost or cost note, coverage, contradiction ledger, and control statement. No family passes the origin-formula gate.",
+    "hypotheses_checked": 6,
+    "hypotheses_with_all_required_fields": 6,
+    "incomplete_hypotheses": [],
+    "promoted_origin_formula_count": 0,
+    "row0_origin_status": "exogenous_under_current_evidence"
+  },
+  "translation_delta": "NONE"
+}

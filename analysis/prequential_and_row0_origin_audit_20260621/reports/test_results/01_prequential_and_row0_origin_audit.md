@@ -75,6 +75,19 @@ therefore leaves the same failures in place; only a heldout oracle improves the
 ledger, so no component fallback is promoted.
 See [03_train_cv_component_selector_audit.md](03_train_cv_component_selector_audit.md).
 
+### Recipe Externality Follow-Up
+
+A recipe-externality audit then quantifies the main remaining limitation of
+the prequential evidence. Of the `8558.667`-bit validation scope,
+`4285.876` bits (`50.076%`) are the prequentially scored copy-length,
+literal-payload, and item-type components, while `4272.791` bits
+(`49.924%`) remain fixed recipe or non-learned ledger: fixed bits,
+literal structure without payload, and copy addresses. The code path
+confirms that train/test splits score event rows extracted from the full
+formula before splitting; they do not discover held-out literal/copy
+segmentation or copy source addresses.
+See [04_recipe_externality_audit.md](04_recipe_externality_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -109,9 +122,22 @@ Row0 classification: `row0_origin_remains_exogenous`
 | `known_external_text_source` | `not_attested_rejected_as_source_formula` | 21/55 at best when lore-word symbol orders are allowed inside matrix search | no promoted external source ledger | lore/textual seeds behave as searched symbol orders, not primary row0 evidence; controls `0.0001999600079984003` |
 | `workbook_or_script_artifact` | `rejected_as_origin_explanation_for_in_game_table` | explains where the project reads row0-like tables from, not why CipSoft/game data has that table | provenance-preserving ingestion, not a generator | export scripts preserve source cells and do not synthesize a compact row0 formula; controls `manual code inspection of ingestion scripts; no generated table algorithm found` |
 
+### Row0 Requirement Matrix Follow-Up
+
+A requirement-matrix follow-up forces all six requested row0-origin families
+through the same checklist: algorithm, descriptive cost, coverage,
+contradictions, negative controls, and random/permuted comparison. All six
+families have explicit entries; promoted row0-origin formulas remain `0`.
+Lookup baselines are `160.521` bits given inventory, `209.405` bits for the
+direct symbol alphabet, and `214.879` bits for the direct observed-label
+alphabet.
+See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_audit.md).
+
 ## Decision
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
+- The prequential evidence is conditional on a full-corpus fixed recipe, so it is component validation rather than full recipe discovery.
+- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.
