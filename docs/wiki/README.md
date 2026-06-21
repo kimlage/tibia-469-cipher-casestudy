@@ -783,6 +783,12 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A book order generation audit then consolidates the scattered order controls.
+Numeric order remains the compact canonical order used by the formula: no
+tested non-numeric order promotes after full-formula and descriptor costs, and
+online reparse random controls never beat numeric. But this is not a generated
+order rule: prefix evidence is not numeric-order-specific, and the online
+frontier criterion is shared by `10` tested orders, including `6` random orders.
 A book length generation audit then makes explicit another dependency that the
 skeleton grammar gates had been granting. The active signed-Rice ledger is a
 real compression improvement (`1030 -> 566` bits, `anchor=151`, `k=5`), but it

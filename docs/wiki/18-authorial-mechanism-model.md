@@ -359,6 +359,13 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A book order generation audit then consolidates the scattered order controls
+against the current boundary. Numeric order remains the compact canonical order
+used by the formula: full-formula and descriptor-cost gates promote no
+non-numeric order, and online reparse random controls never beat numeric. But
+numeric order is not derived: prequential prefix evidence has `0` order-specific
+cutoffs and the online frontier criterion is shared by `10` tested orders,
+including `6` random orders. Book order stays canonical, not generated.
 A book length generation audit then closes a dependency that the skeleton gates
 had been granting. The prior signed-Rice length ledger is reproduced as
 `1030 -> 566` bits (`anchor=151`, `k=5`), but that is residual compression, not
@@ -2482,6 +2489,8 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
+- [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
 - [Book length generation gate](../../analysis/book_length_generation_audit_20260621/reports/test_results/02_book_length_generation_gate.md)
 - [Final source-free skeleton generation audit](../../analysis/source_free_skeleton_generation_audit_20260621/reports/final_source_free_skeleton_generation_audit.md)
