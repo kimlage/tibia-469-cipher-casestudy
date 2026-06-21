@@ -250,6 +250,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source-length joint derivability audit | latest source substitutions reduce the prior all-earliest source pattern from `261/261` to `251/261`; joint earliest+target-max covers `230/261` but is encoder-oracle only, while decoder-valid declared-source+decoder-max covers only `60/261` | source and length remain declared dependencies |
 | Source canonicality tradeoff audit | restoring the all-earliest source profile repairs `10` non-earliest current events but raises the total from `8160.825608` to `8177.316653` bits (`+16.491045`) | compression bound and explanation profile separated |
 | Copy length segmentation exception audit | all `23` target-max length exceptions enter exactly one following op and stop inside it, absorbing `0` complete following ops | copy length is a resegmentation problem |
+| Target-max resegmentation candidate audit | local extend-and-trim rewrites produce `42/46` valid candidates and `5` proxy improvements; best proxy is book `9` op `0` at `-2.059513` bits | candidate path opened / exact scorer required |
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
@@ -418,6 +419,7 @@ Primary sources:
 [source_length_joint_derivability_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.md),
 [source_canonicality_tradeoff_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/50_source_canonicality_tradeoff_audit.md),
 [copy_length_segmentation_exception_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/51_copy_length_segmentation_exception_audit.md),
+[targetmax_resegmentation_candidate_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.md),
 [copy_length_midpoint_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md),
 [copy_length_midpoint_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md),
 [literal_copy_availability_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md),

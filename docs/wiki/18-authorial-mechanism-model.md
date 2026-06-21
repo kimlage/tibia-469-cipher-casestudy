@@ -1146,6 +1146,13 @@ following operation and stop inside it; they absorb `0` complete following ops
 and reach book end `0` times. The exceptions are therefore resegmentation
 boundaries, not scalar length-default noise. Copy-length progress now requires
 a joint segmentation/source/length parser.
+A local target-max resegmentation candidate audit then tests that rewrite
+directly: extend the copy to target-max and trim the following operation. It
+finds `42/46` valid candidates and `5` proxy improvements. The best proxy
+candidate is book `9` op `0` in `preserve_next_mode`, with delta
+`-2.059513` bits. This is not a promoted bound because the candidate total is
+a compatible-component proxy; promotion requires exact scoring under the current
+source-substitution ledger or a joint reparse objective.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1593,6 +1600,7 @@ book generation, not row0 pair-cell placement.
 - [Source-length joint derivability audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.md)
 - [Source canonicality tradeoff audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/50_source_canonicality_tradeoff_audit.md)
 - [Copy length segmentation exception audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/51_copy_length_segmentation_exception_audit.md)
+- [Target-max resegmentation candidate audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

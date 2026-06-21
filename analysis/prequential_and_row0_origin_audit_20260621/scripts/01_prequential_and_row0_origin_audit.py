@@ -181,6 +181,14 @@ COPY_LENGTH_SEGMENTATION_EXCEPTION_AUDIT = (
     / "test_results"
     / "51_copy_length_segmentation_exception_audit.json"
 )
+TARGETMAX_RESEGMENTATION_CANDIDATE_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "52_targetmax_resegmentation_candidate_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -431,6 +439,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "copy_length_segmentation_exception_audit",
         copy_length_segmentation_exception,
     )
+    targetmax_resegmentation_candidate = load_json(
+        TARGETMAX_RESEGMENTATION_CANDIDATE_AUDIT
+    )
+    assert_analysis_boundary(
+        "targetmax_resegmentation_candidate_audit",
+        targetmax_resegmentation_candidate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -664,6 +679,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "exception_rows": copy_length_segmentation_exception["exception_rows"],
             "decision": copy_length_segmentation_exception["decision"],
         },
+        "targetmax_resegmentation_candidate": {
+            "classification": targetmax_resegmentation_candidate["classification"],
+            "source": rel(TARGETMAX_RESEGMENTATION_CANDIDATE_AUDIT),
+            "scope": targetmax_resegmentation_candidate["scope"],
+            "summary": targetmax_resegmentation_candidate["summary"],
+            "decision": targetmax_resegmentation_candidate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -705,6 +727,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_length_joint_derivability_status": "joint_encoder_regularities_confirmed_decoder_dependency_retained",
             "source_canonicality_tradeoff_status": "all_earliest_profile_costed_not_promoted",
             "copy_length_segmentation_exception_status": "target_max_exceptions_are_partial_next_op_intrusions",
+            "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -762,6 +785,7 @@ def render_markdown(
     source_length_joint_derivability_audit_link: str,
     source_canonicality_tradeoff_audit_link: str,
     copy_length_segmentation_exception_audit_link: str,
+    targetmax_resegmentation_candidate_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -813,6 +837,9 @@ def render_markdown(
         "summary"
     ]
     copy_length_segmentation = result["copy_length_segmentation_exception"][
+        "summary"
+    ]
+    targetmax_resegmentation = result["targetmax_resegmentation_candidate"][
         "summary"
     ]
 
@@ -1546,6 +1573,28 @@ def render_markdown(
             "scalar default problem.",
             f"See [51_copy_length_segmentation_exception_audit.md]({copy_length_segmentation_exception_audit_link}).",
             "",
+            "### Target-Max Resegmentation Candidate Audit",
+            "",
+            "The next gate then applies that rewrite locally: extend the copy to",
+            "target-max and trim the following operation. It tests",
+            f"`{targetmax_resegmentation['candidate_count']}` candidates across",
+            f"`{targetmax_resegmentation['exception_count']}` exceptions.",
+            f"`{targetmax_resegmentation['valid_candidate_count']}` candidates",
+            "roundtrip and score under the compatible component proxy, and",
+            f"`{targetmax_resegmentation['improving_proxy_candidate_count']}`",
+            "are proxy improvements. The best proxy candidate is",
+            f"`{targetmax_resegmentation['best_proxy_delta_bits']:+.6f}` bits",
+            "at book",
+            f"`{targetmax_resegmentation['best_candidate']['book']}` op",
+            f"`{targetmax_resegmentation['best_candidate']['op_index']}`",
+            "using",
+            f"`{targetmax_resegmentation['best_candidate']['mode']}`.",
+            "This is not a promoted compression bound: the proxy lacks the exact",
+            "current source-substitution ledger. It opens the next concrete path:",
+            "an exact bound scorer or joint reparse objective for target-max",
+            "resegmentation.",
+            f"See [52_targetmax_resegmentation_candidate_audit.md]({targetmax_resegmentation_candidate_audit_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1776,6 +1825,9 @@ def main() -> None:
             copy_length_segmentation_exception_audit_link=(
                 "51_copy_length_segmentation_exception_audit.md"
             ),
+            targetmax_resegmentation_candidate_audit_link=(
+                "52_targetmax_resegmentation_candidate_audit.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
                 "47_row0_parallel_provenance_bridge_audit.md"
@@ -1911,6 +1963,9 @@ def main() -> None:
             ),
             copy_length_segmentation_exception_audit_link=(
                 "test_results/51_copy_length_segmentation_exception_audit.md"
+            ),
+            targetmax_resegmentation_candidate_audit_link=(
+                "test_results/52_targetmax_resegmentation_candidate_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

@@ -169,6 +169,9 @@ exogenous.
 - [scripts/51_copy_length_segmentation_exception_audit.py](scripts/51_copy_length_segmentation_exception_audit.py) - maps the non-target-max copy lengths to following-operation intrusion boundaries.
 - [reports/test_results/51_copy_length_segmentation_exception_audit.md](reports/test_results/51_copy_length_segmentation_exception_audit.md) - copy-length segmentation exception result.
 - [reports/test_results/51_copy_length_segmentation_exception_audit.json](reports/test_results/51_copy_length_segmentation_exception_audit.json) - structured copy-length segmentation ledger.
+- [scripts/52_targetmax_resegmentation_candidate_audit.py](scripts/52_targetmax_resegmentation_candidate_audit.py) - tests local target-max resegmentation candidates and scores them as proxy diagnostics.
+- [reports/test_results/52_targetmax_resegmentation_candidate_audit.md](reports/test_results/52_targetmax_resegmentation_candidate_audit.md) - target-max resegmentation candidate result.
+- [reports/test_results/52_targetmax_resegmentation_candidate_audit.json](reports/test_results/52_targetmax_resegmentation_candidate_audit.json) - structured target-max resegmentation candidate ledger.
 
 ## Boundary
 
@@ -307,7 +310,11 @@ exogenous.
   copy-length segmentation exception audit then maps the `23` target-max
   exceptions: every one enters exactly one following op and stops inside it,
   absorbing `0` whole following ops. This makes copy length a joint
-  resegmentation problem rather than a scalar default problem. The complete
+  resegmentation problem rather than a scalar default problem. A local
+  target-max resegmentation candidate audit then tests the direct rewrite:
+  `42/46` candidates are valid, `5` are proxy improvements, and the best proxy
+  candidate is `-2.059513` bits at book `9` op `0`; it remains unpromoted
+  until an exact current-bound scorer or joint reparse objective validates it. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

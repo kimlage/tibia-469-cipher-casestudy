@@ -2954,6 +2954,7 @@
     "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
     "source_substitution_second_pass_status": "microscopic_single_pair_improves_bound_to_8160_826",
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
+    "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
     "translation_or_plaintext_status": "NONE"
   },
   "full_corpus_source_path_formula": {
@@ -19614,6 +19615,69 @@
       ],
       "tail_selector_floor_bits": 48.27585552254463,
       "tail_selector_floor_minus_tail_gain_bits": 48.274371385461606
+    }
+  },
+  "targetmax_resegmentation_candidate": {
+    "classification": "targetmax_local_resegmentation_has_proxy_improvements_unpromoted",
+    "decision": {
+      "compression_bound_status": "unchanged_proxy_only",
+      "generation_explanation_status": "resegmentation_path_opened",
+      "next_mainline_status": "exact_bound_scorer_or_joint_reparse_required_before_promotion",
+      "row0_origin_status": "unchanged_exogenous",
+      "targetmax_resegmentation_status": "local_candidates_mapped_proxy_not_promoted",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "scope": {
+      "analysis_only": true,
+      "compression_bound_changed": false,
+      "new_formula_emitted": false,
+      "plaintext_or_translation_claim": false,
+      "row0_origin_changed": false,
+      "scoring_note": "Candidate totals are compatible component proxies: current bound plus rescored deltas for literal structure, literal payload, item type, copy source default/exception, and copy length default/exception. No bound is promoted from this proxy."
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.json",
+    "summary": {
+      "best_candidate": {
+        "book": 9,
+        "candidate_total_proxy_bits": 8158.76609414958,
+        "compatible_component_delta_bits": -2.0595134862792293,
+        "component_delta_bits": {
+          "copy_length_bits": -2.0628666430261546,
+          "copy_source_bits": 0.0033531567469253787,
+          "item_type_bits": 0.0,
+          "literal_bits_no_payload": 0.0,
+          "literal_payload_bits": 0.0
+        },
+        "following_op_type": "copy",
+        "inventory": {
+          "copied_digits": 10406,
+          "copy_items": 261,
+          "literal_digits": 857,
+          "literal_runs": 87
+        },
+        "mode": "preserve_next_mode",
+        "op_index": 0,
+        "roundtrip_errors": [],
+        "roundtrip_ok": true,
+        "score_errors": [],
+        "slack": 4
+      },
+      "best_proxy_delta_bits": -2.0595134862792293,
+      "best_proxy_total_bits": 8158.76609414958,
+      "candidate_count": 46,
+      "current_total_bits": 8160.825607635859,
+      "exception_count": 23,
+      "improving_by_mode": {
+        "literalize_next_remainder": 1,
+        "preserve_next_mode": 4
+      },
+      "improving_proxy_candidate_count": 5,
+      "interpretation": "Local target-max resegmentation is mechanically testable. Any proxy improvement remains unpromoted until an exact current-bound scorer or full reparse objective validates it.",
+      "valid_by_mode": {
+        "literalize_next_remainder": 19,
+        "preserve_next_mode": 23
+      },
+      "valid_candidate_count": 42
     }
   },
   "translation_delta": "NONE"

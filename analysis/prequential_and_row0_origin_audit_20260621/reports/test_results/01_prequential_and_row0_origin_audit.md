@@ -705,6 +705,28 @@ This makes copy-length progress a resegmentation problem, not a
 scalar default problem.
 See [51_copy_length_segmentation_exception_audit.md](51_copy_length_segmentation_exception_audit.md).
 
+### Target-Max Resegmentation Candidate Audit
+
+The next gate then applies that rewrite locally: extend the copy to
+target-max and trim the following operation. It tests
+`46` candidates across
+`23` exceptions.
+`42` candidates
+roundtrip and score under the compatible component proxy, and
+`5`
+are proxy improvements. The best proxy candidate is
+`-2.059513` bits
+at book
+`9` op
+`0`
+using
+`preserve_next_mode`.
+This is not a promoted compression bound: the proxy lacks the exact
+current source-substitution ledger. It opens the next concrete path:
+an exact bound scorer or joint reparse objective for target-max
+resegmentation.
+See [52_targetmax_resegmentation_candidate_audit.md](52_targetmax_resegmentation_candidate_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

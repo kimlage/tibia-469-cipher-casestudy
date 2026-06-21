@@ -645,6 +645,11 @@ A copy-length segmentation exception audit then maps the `23` target-max
 exceptions: every one enters exactly one following op and stops inside it,
 absorbing `0` complete following ops. Copy length is therefore a resegmentation
 problem, not a scalar default problem.
+A local target-max resegmentation candidate audit tests that rewrite directly:
+`42/46` candidates are valid and `5` improve under the compatible component
+proxy; the best is book `9` op `0` at `-2.059513` bits. This is a candidate
+path only until exact current-ledger scoring or a joint reparse objective
+validates it.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -730,8 +735,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   hypothesis requirement matrix with zero promoted origin formulas, records
   the source-length joint derivability boundary, prices the source canonicality
   tradeoff, maps copy-length target-max exceptions to resegmentation
-  boundaries, rejects paid partial worksheet anchors as a row0-origin formula,
-  and keeps row0 origin exogenous with translation delta zero.
+  boundaries, opens a proxy-scored local target-max resegmentation candidate
+  path, rejects paid partial worksheet anchors as a row0-origin formula, and
+  keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures
