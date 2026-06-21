@@ -1,0 +1,232 @@
+{
+  "case_reopened": false,
+  "classification": "copy_source_context_generator_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "copy_source_status": "external_after_context_gate",
+    "generation_explanation_status": "copy_source_context_generator_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_scoreboard": [
+    {
+      "chunk_hit_events": 173,
+      "context_count": 173,
+      "context_name": "book_mod10_x_length",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 428.3141976608136,
+      "legal_predictions": 208,
+      "source_exact_events": 173,
+      "table_source_bits": 2322.1990524554512,
+      "total_bits_with_corrections": 2750.5132501162648
+    },
+    {
+      "chunk_hit_events": 170,
+      "context_count": 170,
+      "context_name": "phase10_x_length",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 466.75446970674676,
+      "legal_predictions": 208,
+      "source_exact_events": 170,
+      "table_source_bits": 2281.9297047250093,
+      "total_bits_with_corrections": 2748.684174431756
+    },
+    {
+      "chunk_hit_events": 162,
+      "context_count": 162,
+      "context_name": "op_index_x_length",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 569.5814307435992,
+      "legal_predictions": 208,
+      "source_exact_events": 162,
+      "table_source_bits": 2174.5447774438308,
+      "total_bits_with_corrections": 2744.12620818743
+    },
+    {
+      "chunk_hit_events": 85,
+      "context_count": 85,
+      "context_name": "length",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 1507.2460268867474,
+      "legal_predictions": 208,
+      "source_exact_events": 85,
+      "table_source_bits": 1140.9648523625028,
+      "total_bits_with_corrections": 2648.21087924925
+    },
+    {
+      "chunk_hit_events": 18,
+      "context_count": 16,
+      "context_name": "target_phase_16",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2337.76215051834,
+      "legal_predictions": 208,
+      "source_exact_events": 18,
+      "table_source_bits": 214.76985456235354,
+      "total_bits_with_corrections": 2552.5320050806936
+    },
+    {
+      "chunk_hit_events": 15,
+      "context_count": 13,
+      "context_name": "op_index",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2367.881078129457,
+      "legal_predictions": 208,
+      "source_exact_events": 15,
+      "table_source_bits": 174.50050683191228,
+      "total_bits_with_corrections": 2542.3815849613693
+    },
+    {
+      "chunk_hit_events": 13,
+      "context_count": 10,
+      "context_name": "book_mod10",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2394.962922398789,
+      "legal_predictions": 208,
+      "source_exact_events": 13,
+      "table_source_bits": 134.231159101471,
+      "total_bits_with_corrections": 2529.19408150026
+    },
+    {
+      "chunk_hit_events": 11,
+      "context_count": 6,
+      "context_name": "matching_count_bucket",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2415.4602496017424,
+      "legal_predictions": 208,
+      "source_exact_events": 11,
+      "table_source_bits": 80.53869546088261,
+      "total_bits_with_corrections": 2495.998945062625
+    },
+    {
+      "chunk_hit_events": 11,
+      "context_count": 10,
+      "context_name": "target_phase_10",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2419.50188771566,
+      "legal_predictions": 208,
+      "source_exact_events": 11,
+      "table_source_bits": 134.231159101471,
+      "total_bits_with_corrections": 2553.733046817131
+    },
+    {
+      "chunk_hit_events": 7,
+      "context_count": 6,
+      "context_name": "length_bucket",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2467.438515469803,
+      "legal_predictions": 208,
+      "source_exact_events": 7,
+      "table_source_bits": 80.53869546088261,
+      "total_bits_with_corrections": 2547.9772109306855
+    },
+    {
+      "chunk_hit_events": 4,
+      "context_count": 1,
+      "context_name": "global",
+      "copy_events": 208,
+      "correction_bits_for_chunk_misses": 2501.720682161969,
+      "legal_predictions": 208,
+      "source_exact_events": 4,
+      "table_source_bits": 13.4231159101471,
+      "total_bits_with_corrections": 2515.143798072116
+    }
+  ],
+  "inputs": {
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "copy_source_policy_gate": "analysis/copy_source_generation_audit_20260621/reports/test_results/02_copy_source_policy_gate.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_context": "global",
+      "oracle_test_chunk_hits": 1,
+      "oracle_test_source_exact": 1,
+      "selected_context": "op_index_x_length",
+      "selected_matches_oracle": true,
+      "test_chunk_hits": 1,
+      "test_copy_events": 155,
+      "test_source_exact": 1,
+      "train_chunk_hits": 51,
+      "train_copy_events": 53
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_context": "target_phase_16",
+      "oracle_test_chunk_hits": 1,
+      "oracle_test_source_exact": 1,
+      "selected_context": "book_mod10_x_length",
+      "selected_matches_oracle": false,
+      "test_chunk_hits": 0,
+      "test_copy_events": 119,
+      "test_source_exact": 0,
+      "train_chunk_hits": 82,
+      "train_copy_events": 89
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_context": "target_phase_16",
+      "oracle_test_chunk_hits": 1,
+      "oracle_test_source_exact": 1,
+      "selected_context": "book_mod10_x_length",
+      "selected_matches_oracle": false,
+      "test_chunk_hits": 0,
+      "test_copy_events": 80,
+      "test_source_exact": 0,
+      "train_chunk_hits": 113,
+      "train_copy_events": 128
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_context": "length",
+      "oracle_test_chunk_hits": 1,
+      "oracle_test_source_exact": 0,
+      "selected_context": "book_mod10_x_length",
+      "selected_matches_oracle": false,
+      "test_chunk_hits": 0,
+      "test_copy_events": 49,
+      "test_source_exact": 0,
+      "train_chunk_hits": 134,
+      "train_copy_events": 159
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_context": "global",
+      "oracle_test_chunk_hits": 0,
+      "oracle_test_source_exact": 0,
+      "selected_context": "book_mod10_x_length",
+      "selected_matches_oracle": true,
+      "test_chunk_hits": 0,
+      "test_copy_events": 18,
+      "test_source_exact": 0,
+      "train_chunk_hits": 156,
+      "train_copy_events": 190
+    }
+  ],
+  "schema": "copy_source_context_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "exact_skeleton_granted": true,
+    "literal_payload_granted": true,
+    "row0_origin_changed": false,
+    "source_table_is_source_bearing": true
+  },
+  "summary": {
+    "best_chunk_hits": 173,
+    "best_context": "book_mod10_x_length",
+    "best_context_count": 173,
+    "best_net_vs_raw_absolute_source_bits": 199.91902947089693,
+    "best_source_exact": 173,
+    "best_total_bits_with_corrections": 2750.5132501162648,
+    "context_family_count": 11,
+    "copy_events": 208,
+    "interpretation": "Source context tables are source-bearing selectors. They do not remove source declarations unless they generalize and beat raw source declaration after paid table and corrections.",
+    "prequential_cells": 5,
+    "prequential_cover_all_chunk_cells": 0,
+    "prequential_selected_matches_oracle_cells": 2,
+    "promotes_copy_source_generator": false
+  },
+  "translation_delta": "NONE"
+}

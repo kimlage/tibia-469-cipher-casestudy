@@ -1,0 +1,664 @@
+{
+  "case_reopened": false,
+  "classification": "copy_source_decoder_policy_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "copy_source_status": "external_after_policy_gate",
+    "generation_explanation_status": "copy_source_decoder_policy_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json"
+  },
+  "plaintext_claim": false,
+  "row_policy_scoreboard": [
+    {
+      "chunk_hit_events": 208,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "previous_end_matching_or_earliest_oracle",
+      "source_exact_events": 200,
+      "target_aware": true
+    },
+    {
+      "chunk_hit_events": 208,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "earliest_matching_oracle",
+      "source_exact_events": 200,
+      "target_aware": true
+    },
+    {
+      "chunk_hit_events": 208,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "latest_matching_oracle",
+      "source_exact_events": 85,
+      "target_aware": true
+    },
+    {
+      "chunk_hit_events": 8,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "previous_end_else_earliest",
+      "source_exact_events": 8,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 4,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "latest_legal",
+      "source_exact_events": 4,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 2,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "previous_end_minus_length_else_earliest",
+      "source_exact_events": 1,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 1,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "same_op_index_else_earliest",
+      "source_exact_events": 1,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 1,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "previous_source_else_earliest",
+      "source_exact_events": 1,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 1,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "earliest_legal",
+      "source_exact_events": 1,
+      "target_aware": false
+    },
+    {
+      "chunk_hit_events": 0,
+      "copy_events": 208,
+      "legal_predictions": 208,
+      "policy": "same_target_start_else_latest",
+      "source_exact_events": 0,
+      "target_aware": false
+    }
+  ],
+  "schema": "copy_source_policy_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "decoder_visible_policies_do_not_use_target_matching": true,
+    "does_not_search_plaintext": true,
+    "exact_skeleton_granted": true,
+    "literal_payload_granted": true,
+    "row0_origin_changed": false,
+    "target_aware_controls_separated": true
+  },
+  "sequential_render_scoreboard": [
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 1,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 1,
+      "exact_digits_sequential": 542,
+      "failed_book_rows": [
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 22
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 31
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 55
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 17
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 53
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 12
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 13
+        },
+        {
+          "book": 20,
+          "book_digits": 63,
+          "exact": false,
+          "exact_digits": 6
+        }
+      ],
+      "policy": "earliest_legal",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 0,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 0,
+      "exact_digits_sequential": 266,
+      "failed_book_rows": [
+        {
+          "book": 10,
+          "book_digits": 281,
+          "exact": false,
+          "exact_digits": 30
+        },
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 25
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 25
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 26
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 62
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 13
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 24
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 66
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 9
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 14
+        }
+      ],
+      "policy": "latest_legal",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 1,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 1,
+      "exact_digits_sequential": 542,
+      "failed_book_rows": [
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 22
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 31
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 55
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 17
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 53
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 12
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 13
+        },
+        {
+          "book": 20,
+          "book_digits": 63,
+          "exact": false,
+          "exact_digits": 6
+        }
+      ],
+      "policy": "previous_source_else_earliest",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 2,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 1,
+      "exact_digits_sequential": 554,
+      "failed_book_rows": [
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 22
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 35
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 21
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 54
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 15
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 66
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 8
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 12
+        },
+        {
+          "book": 20,
+          "book_digits": 63,
+          "exact": false,
+          "exact_digits": 8
+        }
+      ],
+      "policy": "previous_end_else_earliest",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 1,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 1,
+      "exact_digits_sequential": 542,
+      "failed_book_rows": [
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 26
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 30
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 20
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 54
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 33
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 31
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 59
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 11
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 12
+        },
+        {
+          "book": 20,
+          "book_digits": 63,
+          "exact": false,
+          "exact_digits": 5
+        }
+      ],
+      "policy": "previous_end_minus_length_else_earliest",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 0,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 0,
+      "exact_digits_sequential": 266,
+      "failed_book_rows": [
+        {
+          "book": 10,
+          "book_digits": 281,
+          "exact": false,
+          "exact_digits": 39
+        },
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 28
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 24
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 56
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 15
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 25
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 65
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 14
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 21
+        }
+      ],
+      "policy": "same_target_start_else_latest",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 1,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 0,
+      "exact_digits_sequential": 274,
+      "failed_book_rows": [
+        {
+          "book": 10,
+          "book_digits": 281,
+          "exact": false,
+          "exact_digits": 34
+        },
+        {
+          "book": 11,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 25
+        },
+        {
+          "book": 12,
+          "book_digits": 137,
+          "exact": false,
+          "exact_digits": 36
+        },
+        {
+          "book": 13,
+          "book_digits": 141,
+          "exact": false,
+          "exact_digits": 34
+        },
+        {
+          "book": 14,
+          "book_digits": 133,
+          "exact": false,
+          "exact_digits": 58
+        },
+        {
+          "book": 15,
+          "book_digits": 143,
+          "exact": false,
+          "exact_digits": 20
+        },
+        {
+          "book": 16,
+          "book_digits": 174,
+          "exact": false,
+          "exact_digits": 26
+        },
+        {
+          "book": 17,
+          "book_digits": 274,
+          "exact": false,
+          "exact_digits": 56
+        },
+        {
+          "book": 18,
+          "book_digits": 93,
+          "exact": false,
+          "exact_digits": 11
+        },
+        {
+          "book": 19,
+          "book_digits": 129,
+          "exact": false,
+          "exact_digits": 16
+        }
+      ],
+      "policy": "same_op_index_else_earliest",
+      "target_aware": false
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 208,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 60,
+      "exact_digits_sequential": 9567,
+      "failed_book_rows": [],
+      "policy": "earliest_matching_oracle",
+      "target_aware": true
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 208,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 60,
+      "exact_digits_sequential": 9567,
+      "failed_book_rows": [],
+      "policy": "latest_matching_oracle",
+      "target_aware": true
+    },
+    {
+      "book_total": 60,
+      "copy_chunk_hits_sequential": 208,
+      "copy_events": 208,
+      "digit_total": 9567,
+      "exact_books": 60,
+      "exact_digits_sequential": 9567,
+      "failed_book_rows": [],
+      "policy": "previous_end_matching_or_earliest_oracle",
+      "target_aware": true
+    }
+  ],
+  "summary": {
+    "best_decoder_book_total": 60,
+    "best_decoder_chunk_hits": 8,
+    "best_decoder_exact_books_sequential": 1,
+    "best_decoder_policy": "previous_end_else_earliest",
+    "best_decoder_source_exact": 8,
+    "best_oracle_chunk_hits": 208,
+    "best_oracle_policy": "previous_end_matching_or_earliest_oracle",
+    "best_oracle_source_exact": 200,
+    "copy_events": 208,
+    "decoder_visible_policy_count": 7,
+    "interpretation": "Decoder-visible source policies do not remove the source field. Target-aware matching controls can copy correctly, but they use the target chunk and are therefore parser/oracle controls, not generation rules.",
+    "policy_count": 10,
+    "promotes_copy_source_generator": false,
+    "target_aware_control_count": 3
+  },
+  "translation_delta": "NONE"
+}
