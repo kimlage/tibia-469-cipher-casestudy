@@ -271,6 +271,15 @@ is `source_is_previous_copy_end` at `6/208`, the best length rule is
 choice remains almost entirely target-dependent. The result is
 `decoder_side_rule_coverage_insufficient`.
 
+A source tie-break artifact audit then tests the strongest skeptical reading of
+the `208/208` earliest-target-match source signal. It reruns the stable
+projection under `earliest_source`, `latest_source`, and
+`prefer_previous_end_then_earliest` tie policies. All three keep the same primary
+cost (`11459.765681`) and `50/50` path stability, but the selected source sums do
+not move (`source_sum_span=0`). So the signal is not explained as a simple parser
+tie-break artifact. It remains target-dependent, however, because
+earliest-target-match cannot be chosen without the target chunk.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

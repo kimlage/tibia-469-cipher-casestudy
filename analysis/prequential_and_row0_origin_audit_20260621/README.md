@@ -280,6 +280,9 @@ exogenous.
 - [scripts/88_decoder_side_rule_coverage_audit.py](scripts/88_decoder_side_rule_coverage_audit.py) - tests simple decoder-side source/length rules against the stable path projection.
 - [reports/test_results/88_decoder_side_rule_coverage_audit.md](reports/test_results/88_decoder_side_rule_coverage_audit.md) - decoder-side rule coverage result.
 - [reports/test_results/88_decoder_side_rule_coverage_audit.json](reports/test_results/88_decoder_side_rule_coverage_audit.json) - structured decoder-side rule coverage ledger.
+- [scripts/89_source_tiebreak_artifact_audit.py](scripts/89_source_tiebreak_artifact_audit.py) - tests whether the `208/208` earliest-target-match source signal is only parser tie-break.
+- [reports/test_results/89_source_tiebreak_artifact_audit.md](reports/test_results/89_source_tiebreak_artifact_audit.md) - source tie-break artifact result.
+- [reports/test_results/89_source_tiebreak_artifact_audit.json](reports/test_results/89_source_tiebreak_artifact_audit.json) - structured source tie-break artifact ledger.
 
 ## Boundary
 
@@ -596,6 +599,13 @@ exogenous.
   only `2/208`. The decoder-max length signal beats shuffled-length controls
   (`p=0.0000`) but is far from complete, and `265` literal payload digits remain
   materialized.
+- The source tie-break artifact audit then checks whether the `208/208`
+  earliest-target-match source result is merely parser ordering. Re-running the
+  stable projection under `earliest_source`, `latest_source`, and
+  `prefer_previous_end_then_earliest` tie policies keeps the same primary cost
+  (`11459.765681`) and `50/50` stability, but source sums do not change
+  (`source_sum_span=0`). The tie-break artifact hypothesis is therefore not
+  supported, but the rule still remains target-dependent and is not promoted.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

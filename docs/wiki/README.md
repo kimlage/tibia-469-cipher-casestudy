@@ -730,6 +730,11 @@ that projection. The best source rule covers `6/208` copy events, the best
 length rule covers `58/208`, and the best joint rule covers only `2/208`; the
 decoder-max length signal beats shuffled-length controls but is far from a full
 generator, with `265` literal payload digits still materialized.
+A source tie-break artifact audit then checks the `208/208` earliest-target-match
+source signal directly. Alternate source tie policies keep identical primary cost
+and `50/50` stability, but do not change selected source sums, so the signal is
+not reduced to simple parser ordering. It remains target-dependent because the
+target chunk is still needed to select the match.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -928,6 +933,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   promotion),
   tests simple decoder-side source/length rules and rejects promotion (`6/208`
   best source, `58/208` best length, `2/208` best joint),
+  checks source tie-break controls and finds the earliest-target-match signal is
+  not a simple tie artifact, while still target-dependent,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
