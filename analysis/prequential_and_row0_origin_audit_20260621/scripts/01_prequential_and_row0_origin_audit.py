@@ -285,6 +285,22 @@ ACTIVE_EXCEPTION_FINITE_STATE_MODEL_GATE = (
     / "test_results"
     / "64_active_exception_finite_state_model_gate.json"
 )
+ACTIVE_EXCEPTION_PARTIAL_BOUNDARY_SHIFT_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "65_active_exception_partial_boundary_shift_gate.json"
+)
+PARTIAL_BOUNDARY_SHIFT_FORMULA_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "66_partial_boundary_shift_formula_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -623,6 +639,20 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "active_exception_finite_state_model_gate",
         active_exception_finite_state_model,
+    )
+    active_exception_partial_boundary_shift = load_json(
+        ACTIVE_EXCEPTION_PARTIAL_BOUNDARY_SHIFT_GATE
+    )
+    assert_analysis_boundary(
+        "active_exception_partial_boundary_shift_gate",
+        active_exception_partial_boundary_shift,
+    )
+    partial_boundary_shift_formula = load_json(
+        PARTIAL_BOUNDARY_SHIFT_FORMULA_GATE
+    )
+    assert_analysis_boundary(
+        "partial_boundary_shift_formula_gate",
+        partial_boundary_shift_formula,
     )
 
     predictive = legacy["predictive_validation"]
@@ -985,6 +1015,22 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_exception_finite_state_model["summary"],
             "decision": active_exception_finite_state_model["decision"],
         },
+        "active_exception_partial_boundary_shift": {
+            "classification": active_exception_partial_boundary_shift[
+                "classification"
+            ],
+            "source": rel(ACTIVE_EXCEPTION_PARTIAL_BOUNDARY_SHIFT_GATE),
+            "scope": active_exception_partial_boundary_shift["scope"],
+            "summary": active_exception_partial_boundary_shift["summary"],
+            "decision": active_exception_partial_boundary_shift["decision"],
+        },
+        "partial_boundary_shift_formula": {
+            "classification": partial_boundary_shift_formula["classification"],
+            "source": rel(PARTIAL_BOUNDARY_SHIFT_FORMULA_GATE),
+            "scope": partial_boundary_shift_formula["scope"],
+            "summary": partial_boundary_shift_formula["summary"],
+            "decision": partial_boundary_shift_formula["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -1039,6 +1085,8 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "active_residual_targetmax_resegmentation_status": "local_extend_trim_saturated_no_improvements",
             "active_exception_stop_rule_status": "simple_stop_rules_do_not_separate_residual_boundaries",
             "active_exception_finite_state_status": "finite_state_contexts_do_not_replace_explicit_exception_list",
+            "active_exception_partial_boundary_shift_status": "partial_shift_candidate_found",
+            "partial_boundary_shift_formula_status": "promoted_bound_8155_261037",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1109,6 +1157,8 @@ def render_markdown(
     active_residual_targetmax_resegmentation_gate_link: str,
     active_exception_stop_rule_separability_gate_link: str,
     active_exception_finite_state_model_gate_link: str,
+    active_exception_partial_boundary_shift_gate_link: str,
+    partial_boundary_shift_formula_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1195,6 +1245,8 @@ def render_markdown(
     ]
     stop_rule = result["active_exception_stop_rule_separability"]["summary"]
     finite_state = result["active_exception_finite_state_model"]["summary"]
+    partial_shift = result["active_exception_partial_boundary_shift"]["summary"]
+    partial_shift_formula = result["partial_boundary_shift_formula"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2157,6 +2209,37 @@ def render_markdown(
             "replacement for the residual exception list.",
             f"See [64_active_exception_finite_state_model_gate.md]({active_exception_finite_state_model_gate_link}).",
             "",
+            "### Active Exception Partial Boundary Shift Gate",
+            "",
+            "The next local-window gate then tests the missing case from the full "
+            "target-max rewrite: every positive partial shift up to target-max "
+            "inside the same two-operation window. It tests "
+            f"`{partial_shift['candidate_count']}` candidates, with "
+            f"`{partial_shift['valid_candidate_count']}` valid and "
+            f"`{partial_shift['improving_candidate_count']}` improving. The "
+            "best exact-scored candidate is book "
+            f"`{partial_shift['best_valid_candidate']['book']}` op "
+            f"`{partial_shift['best_valid_candidate']['op_index']}`, mode "
+            f"`{partial_shift['best_valid_candidate']['mode']}`, delta "
+            f"`{partial_shift['best_valid_candidate']['delta']}` of slack "
+            f"`{partial_shift['best_valid_candidate']['target_max_slack']}`, "
+            "with gain "
+            f"`{partial_shift['best_valid_candidate']['candidate_gain_bits']:+.6f}` "
+            "bits.",
+            f"See [65_active_exception_partial_boundary_shift_gate.md]({active_exception_partial_boundary_shift_gate_link}).",
+            "",
+            "### Partial Boundary Shift Formula Gate",
+            "",
+            "A promotion gate then reapplies that best partial shift, validates "
+            "the exact scorer and `70/70` roundtrip, and materializes a new "
+            "mechanical formula. The bound moves from "
+            f"`{partial_shift_formula['current_total_bits']:.6f}` to "
+            f"`{partial_shift_formula['candidate_total_bits']:.6f}` bits, a "
+            f"`{partial_shift_formula['candidate_gain_bits']:+.6f}` bit gain. "
+            "The component delta is source-driven: "
+            f"`{partial_shift_formula['component_delta_bits']}`.",
+            f"See [66_partial_boundary_shift_formula_gate.md]({partial_boundary_shift_formula_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2268,6 +2351,7 @@ def render_markdown(
             "- The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.",
             "- The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.",
             "- The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.",
+            "- The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2437,6 +2521,12 @@ def main() -> None:
             ),
             active_exception_finite_state_model_gate_link=(
                 "64_active_exception_finite_state_model_gate.md"
+            ),
+            active_exception_partial_boundary_shift_gate_link=(
+                "65_active_exception_partial_boundary_shift_gate.md"
+            ),
+            partial_boundary_shift_formula_gate_link=(
+                "66_partial_boundary_shift_formula_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2612,6 +2702,12 @@ def main() -> None:
             ),
             active_exception_finite_state_model_gate_link=(
                 "test_results/64_active_exception_finite_state_model_gate.md"
+            ),
+            active_exception_partial_boundary_shift_gate_link=(
+                "test_results/65_active_exception_partial_boundary_shift_gate.md"
+            ),
+            partial_boundary_shift_formula_gate_link=(
+                "test_results/66_partial_boundary_shift_formula_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

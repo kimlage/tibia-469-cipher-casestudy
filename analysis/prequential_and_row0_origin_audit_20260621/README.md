@@ -208,6 +208,12 @@ exogenous.
 - [scripts/64_active_exception_finite_state_model_gate.py](scripts/64_active_exception_finite_state_model_gate.py) - tests compact finite-state context models for the residual target-max exceptions.
 - [reports/test_results/64_active_exception_finite_state_model_gate.md](reports/test_results/64_active_exception_finite_state_model_gate.md) - active exception finite-state model result.
 - [reports/test_results/64_active_exception_finite_state_model_gate.json](reports/test_results/64_active_exception_finite_state_model_gate.json) - structured active exception finite-state ledger.
+- [scripts/65_active_exception_partial_boundary_shift_gate.py](scripts/65_active_exception_partial_boundary_shift_gate.py) - exact-scores every partial local boundary shift up to target-max for the residual exceptions.
+- [reports/test_results/65_active_exception_partial_boundary_shift_gate.md](reports/test_results/65_active_exception_partial_boundary_shift_gate.md) - active exception partial-boundary result.
+- [reports/test_results/65_active_exception_partial_boundary_shift_gate.json](reports/test_results/65_active_exception_partial_boundary_shift_gate.json) - structured partial-boundary ledger.
+- [scripts/66_partial_boundary_shift_formula_gate.py](scripts/66_partial_boundary_shift_formula_gate.py) - promotes the best exact-scored partial boundary shift into a formula.
+- [reports/test_results/66_partial_boundary_shift_formula_gate.md](reports/test_results/66_partial_boundary_shift_formula_gate.md) - partial-boundary formula gate.
+- [reports/test_results/66_partial_boundary_shift_formula_gate.json](reports/test_results/66_partial_boundary_shift_formula_gate.json) - structured partial-boundary promotion ledger.
 
 ## Boundary
 
@@ -381,7 +387,13 @@ exogenous.
   decoder-valid. A finite-state follow-up then tests `231` compact online
   context models over decoder-valid features; the best costs `112.749463` bits,
   which is `+17.943077` bits worse than an explicit exception list, with
-  permutation `p=0.638000`.
+  permutation `p=0.638000`. The missing local-window case is then tested:
+  every positive partial shift up to target-max inside the same two-operation
+  window. That gate scores `229` candidates, finds `213` valid and `2`
+  improving. The promotion gate materializes the best one, book `10` op `0`
+  with `preserve_next_mode` and delta `3` of slack `72`, lowering the active
+  bound from `8156.049986` to `8155.261037` bits with `70/70` roundtrip and
+  zero score errors.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

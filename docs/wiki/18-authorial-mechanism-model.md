@@ -109,8 +109,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_saturated_formula_469` | `8156.0504` | `1.0153` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_formula_469` | `8156.0502` | `0.0002` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_formula_469` | `8156.0500` | `0.0002` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_partial_boundary_shift_formula_469` | `8155.2610` | `0.7889` |
 
-The `8156.0500` row is the current `compression_bound`, not a final authorial
+The `8155.2610` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1222,6 +1223,14 @@ descriptor cost, which is `+17.943077` bits worse than the explicit
 exception-list baseline (`94.806385` bits), with permutation `p=0.638000`.
 Small finite-state context is therefore not a controlled replacement for the
 remaining exception list.
+The partial-boundary shift gate then tests the local-window case left open by
+the full target-max rewrite: all positive shifts smaller than or equal to
+target-max inside the same two-operation window. It finds `2/229` exact-scored
+improvements. The promotion gate materializes the best one, book `10` op `0`
+in `preserve_next_mode` with delta `3` of slack `72`, lowering the mechanical
+bound from `8156.049986` to `8155.261037` bits with `70/70` roundtrip. The
+gain is source-ledger driven (`copy_source_bits -0.997536`, `copy_length_bits +0.208587`)
+and changes neither `row0` origin nor semantics.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in

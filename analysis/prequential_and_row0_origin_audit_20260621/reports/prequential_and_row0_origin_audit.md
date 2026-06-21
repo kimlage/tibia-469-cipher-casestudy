@@ -800,6 +800,16 @@ See [63_active_exception_stop_rule_separability_gate.md](test_results/63_active_
 A follow-up finite-state gate then tests compact KT-coded context models over online decoder-valid features for the same residual exception stream. It tests `231` context models. The best model uses `['source_previous_end']` and costs `112.749463` bits after descriptor cost, which is worse than the explicit exception-list baseline `94.806385` bits by `+17.943077` bits. Permutation controls are also not favorable (`p=0.638000`). So a small online finite-state context is not a controlled replacement for the residual exception list.
 See [64_active_exception_finite_state_model_gate.md](test_results/64_active_exception_finite_state_model_gate.md).
 
+### Active Exception Partial Boundary Shift Gate
+
+The next local-window gate then tests the missing case from the full target-max rewrite: every positive partial shift up to target-max inside the same two-operation window. It tests `229` candidates, with `213` valid and `2` improving. The best exact-scored candidate is book `10` op `0`, mode `preserve_next_mode`, delta `3` of slack `72`, with gain `+0.788949` bits.
+See [65_active_exception_partial_boundary_shift_gate.md](test_results/65_active_exception_partial_boundary_shift_gate.md).
+
+### Partial Boundary Shift Formula Gate
+
+A promotion gate then reapplies that best partial shift, validates the exact scorer and `70/70` roundtrip, and materializes a new mechanical formula. The bound moves from `8156.049986` to `8155.261037` bits, a `+0.788949` bit gain. The component delta is source-driven: `{'copy_length_bits': 0.2085866218112642, 'copy_source_bits': -0.9975359600484808, 'item_type_bits': 0.0, 'literal_bits_no_payload': 0.0, 'literal_payload_bits': 0.0}`.
+See [66_partial_boundary_shift_formula_gate.md](test_results/66_partial_boundary_shift_formula_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -902,6 +912,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](test_results/47_row0_parallel_
 - The active residual target-max resegmentation gate tests `38` local rewrites and finds `0` improving candidates; the best valid rewrite is still `-0.000163` bits worse.
 - The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.
 - The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.
+- The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

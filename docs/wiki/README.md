@@ -779,6 +779,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   (`0` exact separators; best F1 `0.265060` and not decoder-valid),
   rejects compact finite-state context modeling for the same residual
   boundaries (`231` models; best `+17.943077` bits worse than explicit list),
+  reopens the local-window boundary with partial shifts (`2/229` exact
+  improvements) and promotes the best shift to a new `8155.261037`-bit
+  mechanical bound with `70/70` roundtrip,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
