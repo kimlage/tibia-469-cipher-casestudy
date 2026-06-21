@@ -844,6 +844,10 @@ prequential/row0 front: operational `0..9` is rejected as seed-privileged,
 posthoc high-coverage cores remain compression-only, prequential seed selection
 is partial but not promoted, and both row0 and the compression bound remain
 unchanged.
+A seed requirement closure audit closes `13/13` requested checks for the seed
+front, including centrality, metadata/bookcase, family holdout, declaration
+cost, random/permuted, and prequential controls. Classification remains
+`AUDIT_ONLY_COMPRESSION`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

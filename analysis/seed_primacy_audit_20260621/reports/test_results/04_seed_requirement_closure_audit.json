@@ -1,0 +1,113 @@
+{
+  "case_reopened": false,
+  "classification": "seed_primacy_requirements_closed_audit_only",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "seed_primacy_not_promoted",
+    "requirements_closed": true,
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_primacy_status": "audit_only_compression",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "final_report": "analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md",
+    "prequential_seed_selection_audit": "analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.json",
+    "seed_coverage_audit": "analysis/seed_primacy_audit_20260621/reports/test_results/01_seed_coverage_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "seed_requirement_closure_audit.v1",
+  "summary": {
+    "alternative_seed_better_for_k10": true,
+    "authorial_seed_claim": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+    "books_0_9_special_as_seed": false,
+    "candidate_labels": [
+      "canonical_prefix",
+      "greedy_coverage",
+      "operational_0_9",
+      "public_bookcase_order_prefix",
+      "singleton_centrality_top"
+    ],
+    "failed_task_count": 0,
+    "family_holdout_control_count": 38,
+    "final_seed_classification": "AUDIT_ONLY_COMPRESSION",
+    "gain_over_random_survives_declaration_cost": false,
+    "passed_task_count": 13,
+    "promotes_prequential_seed_generator": false,
+    "seed_sizes": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "task_count": 13,
+    "translation_or_plaintext_status": "NONE"
+  },
+  "tasks": [
+    {
+      "evidence": "analysis/seed_primacy_audit_20260621",
+      "requirement": "analysis_only_front_exists",
+      "status": "passed"
+    },
+    {
+      "evidence": "operational_0_9 candidate and decision books_0_9_special_as_seed=False",
+      "requirement": "operational_seed_0_9_baseline",
+      "status": "passed"
+    },
+    {
+      "evidence": "best_by_k=[5, 10, 15, 20]",
+      "requirement": "seed_sizes_5_10_15_20",
+      "status": "passed"
+    },
+    {
+      "evidence": "random_ks=[5, 10, 15, 20]",
+      "requirement": "random_same_size_controls",
+      "status": "passed"
+    },
+    {
+      "evidence": "permuted_ks=[5, 10, 15, 20]",
+      "requirement": "permuted_order_prefix_controls",
+      "status": "passed"
+    },
+    {
+      "evidence": "singleton_centrality_top=[5, 10, 15, 20]",
+      "requirement": "centrality_baseline",
+      "status": "passed"
+    },
+    {
+      "evidence": "public_bookcase_order_prefix=[5, 10, 15, 20]",
+      "requirement": "metadata_bookcase_baseline",
+      "status": "passed"
+    },
+    {
+      "evidence": "family_holdout_controls=38",
+      "requirement": "leave_one_family_bookcase_controls",
+      "status": "passed"
+    },
+    {
+      "evidence": "seed_declaration_bits present on all candidate rows",
+      "requirement": "declaration_cost_charged",
+      "status": "passed"
+    },
+    {
+      "evidence": "required metrics present",
+      "requirement": "metrics_present",
+      "status": "passed"
+    },
+    {
+      "evidence": "promotes_prequential_seed_generator=False",
+      "requirement": "prequential_train_test_check",
+      "status": "passed"
+    },
+    {
+      "evidence": "row0_origin_status unchanged_exogenous",
+      "requirement": "row0_unchanged",
+      "status": "passed"
+    },
+    {
+      "evidence": "translation_delta=NONE, plaintext_claim=False",
+      "requirement": "no_translation_plaintext",
+      "status": "passed"
+    }
+  ],
+  "translation_delta": "NONE"
+}

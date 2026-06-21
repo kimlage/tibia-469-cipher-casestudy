@@ -42,6 +42,19 @@ The best k=10 candidate found by posthoc greedy coverage is much stronger,
 but it is selected after seeing the corpus: `[7, 8, 9, 13, 17, 20, 25, 39, 54, 67]`.
 It is therefore an audit-only compression result, not a primary-origin claim.
 
+## Baseline Matrix
+
+| Baseline | k values | Result | Boundary |
+|---|---|---|---|
+| `operational_0_9` | `10` | below random k=10 median and below posthoc greedy | operational prefix rejected as special seed |
+| `canonical_prefix` | `5/10/15/20` | tested as zero-search book-order prefix | convenience/order baseline only |
+| `random_seed_sets` | `5/10/15/20` | used for percentiles and median-gain comparison | control distribution |
+| `permuted_order_prefixes` | `5/10/15/20` | random order-prefix controls tested | order-robustness control |
+| `singleton_centrality_top` | `5/10/15/20` | tested by top single-book copy coverage | posthoc centrality baseline; not origin evidence |
+| `greedy_coverage` | `5/10/15/20` | best coverage family in this audit | posthoc compression core only |
+| `public_bookcase_order_prefix` | `5/10/15/20` | tested from public bookcase metadata where available | metadata control; not promoted |
+| `leave_one_bookcase` | `38 groups` | emitted as family holdout controls | control-only; not seed-origin evidence |
+
 ## Prequential Seed Selection
 
 - Prequential seed selection audit: [analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md](test_results/03_prequential_seed_selection_audit.md).
@@ -78,6 +91,8 @@ leave copy-source choices and literal payload external.
 - Permuted order prefixes: run for k = `[5, 10, 15, 20]`.
 - Seed declaration cost: charged as `log2(C(70,k))` in the payload-gain ledger.
 - Copy-source dependency: retained as `copy_items_required`; not treated as solved.
+- Seed/derived statistics: emitted as `seed_stats` and `derived_stats` on candidate rows.
+- Prefix/holdout gap: emitted as `prefix_holdout_gap_abs` on candidate rows.
 - Public bookcase metadata: tested as a prefix control where available; it did not beat the posthoc greedy sets.
 - Leave-one-family/bookcase controls: emitted as `family_holdout_controls` in the JSON, classified control-only.
 
@@ -97,6 +112,14 @@ leave copy-source choices and literal payload external.
 4. Mechanical primary-core signal: `not_promoted_posthoc_alternatives_exist`.
 5. Authorial seed claim: `BLOCKED_NEEDS_EXTERNAL_SOURCE`.
 6. Translation/plaintext impact: `NONE`.
+
+## Requirement Closure
+
+- Requirement closure audit: [analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md](test_results/04_seed_requirement_closure_audit.md).
+- Tasks passed: `13/13`.
+- Candidate labels covered: `['canonical_prefix', 'greedy_coverage', 'operational_0_9', 'public_bookcase_order_prefix', 'singleton_centrality_top']`.
+- Family/bookcase controls: `38`.
+- Requirements closed: `True`.
 
 ## Boundary
 

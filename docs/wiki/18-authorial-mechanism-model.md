@@ -443,6 +443,11 @@ beat the random median in `7/7` prefix/k cells and p95 random train seeds in
 random median in only `1/7`, and train-greedy seeds still trail suffix-oracle
 posthoc seeds. Seed selection remains audit-only rather than a promoted
 generator.
+A seed requirement closure audit then checks the front against the requested
+baselines and controls. It closes `13/13` requirements, including centrality,
+metadata/bookcase, random/permuted controls, declaration cost, family holdouts,
+and prequential checks. This strengthens the audit boundary but does not promote
+a seed-origin formula.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2108,6 +2113,7 @@ book generation, not row0 pair-cell placement.
 - [Decoder length policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/112_decoder_length_policy_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
+- [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
 - [Seed primacy integration audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)

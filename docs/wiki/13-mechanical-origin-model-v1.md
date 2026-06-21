@@ -317,6 +317,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
+| Seed requirement closure audit | final seed front is checked against the requested baselines, metrics, and controls: operational, random, permuted, centrality, metadata/bookcase, family holdout, declaration cost, and prequential checks all close `13/13` | requirements closed / still audit-only |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -499,6 +500,7 @@ Primary sources:
 [decoder_length_policy_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/112_decoder_length_policy_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
+[seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),
 [seed_primacy_integration_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),

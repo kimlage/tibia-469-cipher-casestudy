@@ -11,6 +11,7 @@ REPORTS = HERE / "reports"
 TEST_RESULTS = REPORTS / "test_results"
 SEED_COVERAGE = TEST_RESULTS / "01_seed_coverage_audit.json"
 PREQUENTIAL_SEED_SELECTION = TEST_RESULTS / "03_prequential_seed_selection_audit.json"
+REQUIREMENT_CLOSURE = TEST_RESULTS / "04_seed_requirement_closure_audit.json"
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -42,6 +43,11 @@ def main() -> None:
     prequential = (
         load_json(PREQUENTIAL_SEED_SELECTION)
         if PREQUENTIAL_SEED_SELECTION.exists()
+        else None
+    )
+    requirement_closure = (
+        load_json(REQUIREMENT_CLOSURE)
+        if REQUIREMENT_CLOSURE.exists()
         else None
     )
     if prequential is not None:
@@ -128,6 +134,19 @@ def main() -> None:
         f"but it is selected after seeing the corpus: `{compact_seed(best_k10['seed_books'])}`.",
         "It is therefore an audit-only compression result, not a primary-origin claim.",
         "",
+        "## Baseline Matrix",
+        "",
+        "| Baseline | k values | Result | Boundary |",
+        "|---|---|---|---|",
+        "| `operational_0_9` | `10` | below random k=10 median and below posthoc greedy | operational prefix rejected as special seed |",
+        "| `canonical_prefix` | `5/10/15/20` | tested as zero-search book-order prefix | convenience/order baseline only |",
+        "| `random_seed_sets` | `5/10/15/20` | used for percentiles and median-gain comparison | control distribution |",
+        "| `permuted_order_prefixes` | `5/10/15/20` | random order-prefix controls tested | order-robustness control |",
+        "| `singleton_centrality_top` | `5/10/15/20` | tested by top single-book copy coverage | posthoc centrality baseline; not origin evidence |",
+        "| `greedy_coverage` | `5/10/15/20` | best coverage family in this audit | posthoc compression core only |",
+        "| `public_bookcase_order_prefix` | `5/10/15/20` | tested from public bookcase metadata where available | metadata control; not promoted |",
+        "| `leave_one_bookcase` | `38 groups` | emitted as family holdout controls | control-only; not seed-origin evidence |",
+        "",
     ]
     if prequential is not None:
         ps = prequential["summary"]
@@ -182,6 +201,8 @@ def main() -> None:
             f"- Permuted order prefixes: run for k = `{audit['summary']['seed_sizes']}`.",
             "- Seed declaration cost: charged as `log2(C(70,k))` in the payload-gain ledger.",
             "- Copy-source dependency: retained as `copy_items_required`; not treated as solved.",
+            "- Seed/derived statistics: emitted as `seed_stats` and `derived_stats` on candidate rows.",
+            "- Prefix/holdout gap: emitted as `prefix_holdout_gap_abs` on candidate rows.",
             "- Public bookcase metadata: tested as a prefix control where available; it did not beat the posthoc greedy sets.",
             "- Leave-one-family/bookcase controls: emitted as `family_holdout_controls` in the JSON, classified control-only.",
             "",
@@ -202,6 +223,25 @@ def main() -> None:
             f"5. Authorial seed claim: `{decision['authorial_seed_claim']}`.",
             "6. Translation/plaintext impact: `NONE`.",
             "",
+        ]
+    )
+    if requirement_closure is not None:
+        rc = requirement_closure["summary"]
+        lines.extend(
+            [
+                "## Requirement Closure",
+                "",
+                "- Requirement closure audit: "
+                "[analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md](test_results/04_seed_requirement_closure_audit.md).",
+                f"- Tasks passed: `{rc['passed_task_count']}/{rc['task_count']}`.",
+                f"- Candidate labels covered: `{rc['candidate_labels']}`.",
+                f"- Family/bookcase controls: `{rc['family_holdout_control_count']}`.",
+                f"- Requirements closed: `{requirement_closure['decision']['requirements_closed']}`.",
+                "",
+            ]
+        )
+    lines.extend(
+        [
             "## Boundary",
             "",
             "- No plaintext, translation, semantic reading, or fan gloss is introduced.",
