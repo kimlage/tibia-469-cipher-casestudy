@@ -22,11 +22,16 @@ exogenous.
 - [scripts/02_family_holdout_failure_audit.py](scripts/02_family_holdout_failure_audit.py) - decomposes the public-bookcase family holdout failures by component.
 - [reports/test_results/02_family_holdout_failure_audit.md](reports/test_results/02_family_holdout_failure_audit.md) - family failure diagnosis.
 - [reports/test_results/02_family_holdout_failure_audit.json](reports/test_results/02_family_holdout_failure_audit.json) - structured family failure ledger.
+- [scripts/03_train_cv_component_selector_audit.py](scripts/03_train_cv_component_selector_audit.py) - tests whether a train-only component selector can rescue family holdouts.
+- [reports/test_results/03_train_cv_component_selector_audit.md](reports/test_results/03_train_cv_component_selector_audit.md) - train-CV selector result.
+- [reports/test_results/03_train_cv_component_selector_audit.json](reports/test_results/03_train_cv_component_selector_audit.json) - structured selector ledger.
 
 ## Boundary
 
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
-  small component/sample-size stress cases.
+  small component/sample-size stress cases; the train-CV selector audit then
+  rejects a promotable component fallback because only a heldout oracle rescues
+  the failures.
 - Row0 result: `row0_origin_remains_exogenous`.
 - No plaintext, translation, semantic mapping, or case-reopening claim is made.

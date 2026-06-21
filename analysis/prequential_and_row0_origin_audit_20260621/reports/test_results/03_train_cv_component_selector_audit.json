@@ -1,0 +1,1325 @@
+{
+  "case_reopened": false,
+  "classification": "train_cv_component_selector_does_not_rescue_family_holdouts",
+  "decision": {
+    "promotion": "rejected_for_generation_method",
+    "result": "Train-only component selection chooses the active components for every public-bookcase family. It therefore leaves the same family failures in place. The only selector that rescues them is the heldout oracle, which is posthoc and not a generation rule.",
+    "row0_origin_changed": false
+  },
+  "method": {
+    "oracle_selector": "Per-component heldout oracle included only as a ceiling. It sees the target family outcome and is therefore not promotable.",
+    "train_cv_selector": "For each outer public-bookcase family holdout, use only the other public-bookcase families inside the training set. A component is kept adaptive only if its internal leave-family-out gain versus uniform is positive."
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "event_counts": {
+        "test_copy": 16,
+        "test_item_type": 16,
+        "test_literal_payload": 54,
+        "train_copy": 267,
+        "train_item_type": 271,
+        "train_literal_payload": 719
+      },
+      "frozen": {
+        "active_bits": 245.10984319940377,
+        "active_gain_vs_uniform_bits": 37.08837492291548,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 245.10984319940374,
+        "oracle_component_selector_gain_vs_uniform_bits": 37.088374922915506,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 70.39521844381002,
+          "item_type": 41.920380535639,
+          "literal_payload": 97.33862675170002
+        },
+        "train_cv_selector_bits": 245.10984319940374,
+        "train_cv_selector_gain_vs_uniform_bits": 37.088374922915506,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_1",
+      "online": {
+        "active_bits": 245.4718382659571,
+        "active_gain_vs_uniform_bits": 36.72637985636214,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 245.4718382659571,
+        "oracle_component_selector_gain_vs_uniform_bits": 36.72637985636214,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 71.09175699290417,
+          "item_type": 44.87048835941139,
+          "literal_payload": 120.93179083215165
+        },
+        "train_cv_selector_bits": 245.4718382659571,
+        "train_cv_selector_gain_vs_uniform_bits": 36.72637985636214,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        12,
+        14
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 13,
+        "test_item_type": 16,
+        "test_literal_payload": 335,
+        "train_copy": 270,
+        "train_item_type": 271,
+        "train_literal_payload": 438
+      },
+      "frozen": {
+        "active_bits": 1088.981275736935,
+        "active_gain_vs_uniform_bits": 101.94797436949102,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 1088.9812757369352,
+        "oracle_component_selector_gain_vs_uniform_bits": 101.9479743694908,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 64.82352360999849,
+          "item_type": 44.064736657113706,
+          "literal_payload": 30.917563750322202
+        },
+        "train_cv_selector_bits": 1088.9812757369352,
+        "train_cv_selector_gain_vs_uniform_bits": 101.9479743694908,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_10",
+      "online": {
+        "active_bits": 1074.033826772369,
+        "active_gain_vs_uniform_bits": 116.89542333405711,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 1074.0338267723687,
+        "oracle_component_selector_gain_vs_uniform_bits": 116.89542333405734,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 63.734239172579095,
+          "item_type": 43.64981242346764,
+          "literal_payload": 34.705975251124684
+        },
+        "train_cv_selector_bits": 1074.0338267723687,
+        "train_cv_selector_gain_vs_uniform_bits": 116.89542333405734,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 18,
+        "test_item_type": 19,
+        "test_literal_payload": 77,
+        "train_copy": 265,
+        "train_item_type": 268,
+        "train_literal_payload": 696
+      },
+      "frozen": {
+        "active_bits": 348.32401474876605,
+        "active_gain_vs_uniform_bits": 28.58297472253878,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 344.4996035594493,
+        "oracle_component_selector_gain_vs_uniform_bits": 32.4073859118555,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 57.36719059944498,
+          "item_type": 47.3214608715191,
+          "literal_payload": 135.56793356062894
+        },
+        "train_cv_selector_bits": 348.32401474876605,
+        "train_cv_selector_gain_vs_uniform_bits": 28.58297472253878,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_12",
+      "online": {
+        "active_bits": 346.6741127628865,
+        "active_gain_vs_uniform_bits": 30.232876708418303,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 344.0441009458586,
+        "oracle_component_selector_gain_vs_uniform_bits": 32.86288852544624,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 57.240055895851995,
+          "item_type": 49.36145188469467,
+          "literal_payload": 151.02331506039977
+        },
+        "train_cv_selector_bits": 346.6741127628865,
+        "train_cv_selector_gain_vs_uniform_bits": 30.232876708418303,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        3,
+        4
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 12,
+        "test_item_type": 12,
+        "test_literal_payload": 7,
+        "train_copy": 271,
+        "train_item_type": 275,
+        "train_literal_payload": 766
+      },
+      "frozen": {
+        "active_bits": 103.10529484298381,
+        "active_gain_vs_uniform_bits": 1.2743339454488307,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 100.11240317217383,
+        "oracle_component_selector_gain_vs_uniform_bits": 4.267225616258813,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 80.65024100277466,
+          "item_type": 38.33421021423162,
+          "literal_payload": 154.18283234123044
+        },
+        "train_cv_selector_bits": 103.10529484298382,
+        "train_cv_selector_gain_vs_uniform_bits": 1.2743339454488165,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_13",
+      "online": {
+        "active_bits": 103.5475730623903,
+        "active_gain_vs_uniform_bits": 0.8320557260423413,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 100.29235041632964,
+        "oracle_component_selector_gain_vs_uniform_bits": 4.087278372103,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 81.43955399726777,
+          "item_type": 41.28895770708737,
+          "literal_payload": 167.95694675909203
+        },
+        "train_cv_selector_bits": 103.54757306239031,
+        "train_cv_selector_gain_vs_uniform_bits": 0.8320557260423271,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 16,
+        "test_item_type": 16,
+        "test_literal_payload": 13,
+        "train_copy": 267,
+        "train_item_type": 271,
+        "train_literal_payload": 760
+      },
+      "frozen": {
+        "active_bits": 130.70613212313899,
+        "active_gain_vs_uniform_bits": 15.466973936097247,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 130.70613212313899,
+        "oracle_component_selector_gain_vs_uniform_bits": 15.466973936097247,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.70313373872085,
+          "item_type": 41.920380535639005,
+          "literal_payload": 137.72044763882687
+        },
+        "train_cv_selector_bits": 130.70613212313899,
+        "train_cv_selector_gain_vs_uniform_bits": 15.466973936097247,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_2",
+      "online": {
+        "active_bits": 130.55212038600231,
+        "active_gain_vs_uniform_bits": 15.620985673233918,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 130.55212038600231,
+        "oracle_component_selector_gain_vs_uniform_bits": 15.620985673233918,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.40215342850396,
+          "item_type": 44.87048835941139,
+          "literal_payload": 153.04413989400038
+        },
+        "train_cv_selector_bits": 130.55212038600231,
+        "train_cv_selector_gain_vs_uniform_bits": 15.620985673233918,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        15,
+        16
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 31.19621113935729,
+        "active_gain_vs_uniform_bits": 7.342926323552774,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 31.19621113935729,
+        "oracle_component_selector_gain_vs_uniform_bits": 7.342926323552774,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.95302043578911,
+          "item_type": 39.150517319220114,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 31.19621113935729,
+        "train_cv_selector_gain_vs_uniform_bits": 7.342926323552774,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_20",
+      "online": {
+        "active_bits": 31.24784098998889,
+        "active_gain_vs_uniform_bits": 7.291296472921172,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 31.24784098998889,
+        "oracle_component_selector_gain_vs_uniform_bits": 7.291296472921172,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 76.19649075340885,
+          "item_type": 42.048156216314155,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 31.24784098998889,
+        "train_cv_selector_gain_vs_uniform_bits": 7.291296472921172,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        44,
+        45
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 36.731751191198384,
+        "active_gain_vs_uniform_bits": 1.707961638764317,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 35.12333831403991,
+        "oracle_component_selector_gain_vs_uniform_bits": 3.3163745159227886,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 82.89274395566349,
+          "item_type": 39.150517319220114,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 36.731751191198384,
+        "train_cv_selector_gain_vs_uniform_bits": 1.707961638764317,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_21",
+      "online": {
+        "active_bits": 36.761333642452186,
+        "active_gain_vs_uniform_bits": 1.6783791875105152,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 35.108069308756214,
+        "oracle_component_selector_gain_vs_uniform_bits": 3.3316435212064874,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 82.90613791593438,
+          "item_type": 42.048156216314155,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 36.761333642452186,
+        "train_cv_selector_gain_vs_uniform_bits": 1.6783791875105152,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 22,
+        "test_item_type": 22,
+        "test_literal_payload": 82,
+        "train_copy": 261,
+        "train_item_type": 265,
+        "train_literal_payload": 691
+      },
+      "frozen": {
+        "active_bits": 407.95816971058576,
+        "active_gain_vs_uniform_bits": 23.598590484941553,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 407.95816971058576,
+        "oracle_component_selector_gain_vs_uniform_bits": 23.598590484941553,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 61.68621561096418,
+          "item_type": 39.196096362640326,
+          "literal_payload": 138.99111452187117
+        },
+        "train_cv_selector_bits": 407.95816971058576,
+        "train_cv_selector_gain_vs_uniform_bits": 23.598590484941553,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_22",
+      "online": {
+        "active_bits": 406.66371148921496,
+        "active_gain_vs_uniform_bits": 24.893048706312356,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 406.66371148921496,
+        "oracle_component_selector_gain_vs_uniform_bits": 24.893048706312356,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 62.84908301798356,
+          "item_type": 43.6439681049427,
+          "literal_payload": 150.71952599405049
+        },
+        "train_cv_selector_bits": 406.66371148921496,
+        "train_cv_selector_gain_vs_uniform_bits": 24.893048706312356,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 9,
+        "test_item_type": 9,
+        "test_literal_payload": 0,
+        "train_copy": 274,
+        "train_item_type": 278,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 51.604183005131155,
+        "active_gain_vs_uniform_bits": 3.2753210154226835,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 48.966807571644964,
+        "oracle_component_selector_gain_vs_uniform_bits": 5.912696448908875,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 83.9358338801052,
+          "item_type": 36.52862607852984,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 51.604183005131155,
+        "train_cv_selector_gain_vs_uniform_bits": 3.2753210154226835,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_23",
+      "online": {
+        "active_bits": 51.737754580927074,
+        "active_gain_vs_uniform_bits": 3.1417494396267642,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 48.91045893966464,
+        "oracle_component_selector_gain_vs_uniform_bits": 5.969045080889195,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 84.12961705670328,
+          "item_type": 39.38158752368473,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 51.737754580927074,
+        "train_cv_selector_gain_vs_uniform_bits": 3.1417494396267642,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        28,
+        29
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 4,
+        "test_item_type": 4,
+        "test_literal_payload": 0,
+        "train_copy": 279,
+        "train_item_type": 283,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 27.54564846213171,
+        "active_gain_vs_uniform_bits": 4.143728512455752,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 27.54564846213171,
+        "oracle_component_selector_gain_vs_uniform_bits": 4.143728512455752,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 77.92133806999102,
+          "item_type": 39.82049813234279,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 27.54564846213171,
+        "train_cv_selector_gain_vs_uniform_bits": 4.143728512455752,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_27",
+      "online": {
+        "active_bits": 27.57102065589926,
+        "active_gain_vs_uniform_bits": 4.1183563186882,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 27.57102065589926,
+        "oracle_component_selector_gain_vs_uniform_bits": 4.1183563186882,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 78.09668548426595,
+          "item_type": 42.72461946803135,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 27.57102065589926,
+        "train_cv_selector_gain_vs_uniform_bits": 4.1183563186882,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        46,
+        47
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 10,
+        "test_item_type": 10,
+        "test_literal_payload": 0,
+        "train_copy": 273,
+        "train_item_type": 277,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 51.03544542967561,
+        "active_gain_vs_uniform_bits": 11.495562524602143,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 51.03544542967561,
+        "oracle_component_selector_gain_vs_uniform_bits": 11.495562524602143,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.54013860465753,
+          "item_type": 35.888592060111904,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 51.03544542967561,
+        "train_cv_selector_gain_vs_uniform_bits": 11.495562524602143,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_3",
+      "online": {
+        "active_bits": 50.89799763236121,
+        "active_gain_vs_uniform_bits": 11.633010321916544,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 50.89799763236121,
+        "oracle_component_selector_gain_vs_uniform_bits": 11.633010321916544,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.63740550670097,
+          "item_type": 38.7252425241218,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 50.89799763236121,
+        "train_cv_selector_gain_vs_uniform_bits": 11.633010321916544,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        20,
+        21
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 3,
+        "test_item_type": 3,
+        "test_literal_payload": 3,
+        "train_copy": 280,
+        "train_item_type": 284,
+        "train_literal_payload": 770
+      },
+      "frozen": {
+        "active_bits": 33.345380855249395,
+        "active_gain_vs_uniform_bits": 0.5928714412502814,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 33.05889289484911,
+        "oracle_component_selector_gain_vs_uniform_bits": 0.8793594016505679,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 81.95710371468923,
+          "item_type": 42.52864079716459,
+          "literal_payload": 149.21029118138745
+        },
+        "train_cv_selector_bits": 33.345380855249395,
+        "train_cv_selector_gain_vs_uniform_bits": 0.5928714412502814,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_30",
+      "online": {
+        "active_bits": 33.36988774788575,
+        "active_gain_vs_uniform_bits": 0.5683645486139284,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 33.06905187351148,
+        "oracle_component_selector_gain_vs_uniform_bits": 0.8692004229882002,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 81.99111359837579,
+          "item_type": 45.459641475656156,
+          "literal_payload": 163.41100127363708
+        },
+        "train_cv_selector_bits": 33.36988774788575,
+        "train_cv_selector_gain_vs_uniform_bits": 0.5683645486139284,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        32,
+        33
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 0,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 38.462437990865624,
+        "active_gain_vs_uniform_bits": -2.9397073262090743,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 32.20635614873376,
+        "oracle_component_selector_gain_vs_uniform_bits": 3.3163745159227886,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 89.69871646724928,
+          "item_type": 39.150517319220114,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 38.462437990865624,
+        "train_cv_selector_gain_vs_uniform_bits": -2.9397073262090743,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_33",
+      "online": {
+        "active_bits": 38.48847077880124,
+        "active_gain_vs_uniform_bits": -2.965740114144694,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 32.19108714345006,
+        "oracle_component_selector_gain_vs_uniform_bits": 3.3316435212064874,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 89.66883501130175,
+          "item_type": 42.04815621631416,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 38.48847077880124,
+        "train_cv_selector_gain_vs_uniform_bits": -2.965740114144694,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        18,
+        19
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 9,
+        "test_item_type": 9,
+        "test_literal_payload": 41,
+        "train_copy": 274,
+        "train_item_type": 278,
+        "train_literal_payload": 732
+      },
+      "frozen": {
+        "active_bits": 181.0117598927002,
+        "active_gain_vs_uniform_bits": 9.468902288758926,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 179.01367548427675,
+        "oracle_component_selector_gain_vs_uniform_bits": 11.466986697182392,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 80.48325320686533,
+          "item_type": 44.8266345181614,
+          "literal_payload": 129.7821478515966
+        },
+        "train_cv_selector_bits": 181.0117598927002,
+        "train_cv_selector_gain_vs_uniform_bits": 9.468902288758926,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_36",
+      "online": {
+        "active_bits": 181.21807295908945,
+        "active_gain_vs_uniform_bits": 9.262589222369684,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 179.26053145191145,
+        "oracle_component_selector_gain_vs_uniform_bits": 11.22013072954769,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 80.57898589513307,
+          "item_type": 47.72240132398179,
+          "literal_payload": 145.9980101398355
+        },
+        "train_cv_selector_bits": 181.21807295908945,
+        "train_cv_selector_gain_vs_uniform_bits": 9.262589222369684,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        8,
+        9
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 8,
+        "test_item_type": 8,
+        "test_literal_payload": 3,
+        "train_copy": 275,
+        "train_item_type": 279,
+        "train_literal_payload": 770
+      },
+      "frozen": {
+        "active_bits": 60.02617713477217,
+        "active_gain_vs_uniform_bits": 7.856588814650067,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 60.026177134772176,
+        "oracle_component_selector_gain_vs_uniform_bits": 7.85658881465006,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 79.70851377116071,
+          "item_type": 39.07621050044853,
+          "literal_payload": 145.26011566198792
+        },
+        "train_cv_selector_bits": 60.026177134772176,
+        "train_cv_selector_gain_vs_uniform_bits": 7.85658881465006,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_4",
+      "online": {
+        "active_bits": 60.147886660889924,
+        "active_gain_vs_uniform_bits": 7.734879288532312,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 60.147886660889924,
+        "oracle_component_selector_gain_vs_uniform_bits": 7.734879288532312,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 79.83296942782539,
+          "item_type": 42.00536151911756,
+          "literal_payload": 159.4840985009505
+        },
+        "train_cv_selector_bits": 60.147886660889924,
+        "train_cv_selector_gain_vs_uniform_bits": 7.734879288532312,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 8,
+        "test_item_type": 8,
+        "test_literal_payload": 0,
+        "train_copy": 275,
+        "train_item_type": 279,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 57.85938198009938,
+        "active_gain_vs_uniform_bits": 9.341303873015995,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 57.85938198009938,
+        "oracle_component_selector_gain_vs_uniform_bits": 9.341303873015995,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 76.26711075756474,
+          "item_type": 37.17502944856855,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 57.85938198009938,
+        "train_cv_selector_gain_vs_uniform_bits": 9.341303873015995,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_40",
+      "online": {
+        "active_bits": 57.52573807388071,
+        "active_gain_vs_uniform_bits": 9.674947779234664,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 57.52573807388071,
+        "oracle_component_selector_gain_vs_uniform_bits": 9.674947779234664,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 75.9315486731202,
+          "item_type": 40.042149804146355,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 57.52573807388071,
+        "train_cv_selector_gain_vs_uniform_bits": 9.674947779234664,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 5,
+        "test_item_type": 5,
+        "test_literal_payload": 5,
+        "train_copy": 278,
+        "train_item_type": 282,
+        "train_literal_payload": 768
+      },
+      "frozen": {
+        "active_bits": 45.36703924988018,
+        "active_gain_vs_uniform_bits": -0.3951809595302933,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 42.68284069594355,
+        "oracle_component_selector_gain_vs_uniform_bits": 2.2890175944063387,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 81.37835643727277,
+          "item_type": 45.484379232614,
+          "literal_payload": 144.04769637061446
+        },
+        "train_cv_selector_bits": 45.36703924988018,
+        "train_cv_selector_gain_vs_uniform_bits": -0.3951809595302933,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_6",
+      "online": {
+        "active_bits": 44.81077738867964,
+        "active_gain_vs_uniform_bits": 0.16108090167024613,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 42.163996444445274,
+        "oracle_component_selector_gain_vs_uniform_bits": 2.807861845904611,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": false,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 80.79748577678666,
+          "item_type": 48.38026992899823,
+          "literal_payload": 159.28442251012132
+        },
+        "train_cv_selector_bits": 44.81077738867965,
+        "train_cv_selector_gain_vs_uniform_bits": 0.16108090167023903,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        38,
+        39
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 14,
+        "test_item_type": 14,
+        "test_literal_payload": 7,
+        "train_copy": 269,
+        "train_item_type": 273,
+        "train_literal_payload": 766
+      },
+      "frozen": {
+        "active_bits": 108.87678606145082,
+        "active_gain_vs_uniform_bits": 13.504741188252183,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 108.87678606145082,
+        "oracle_component_selector_gain_vs_uniform_bits": 13.504741188252183,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 77.7580647861553,
+          "item_type": 35.12362715795768,
+          "literal_payload": 147.27993661294389
+        },
+        "train_cv_selector_bits": 108.87678606145082,
+        "train_cv_selector_gain_vs_uniform_bits": 13.504741188252183,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_7",
+      "online": {
+        "active_bits": 109.4040761889935,
+        "active_gain_vs_uniform_bits": 12.977451060709498,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": false,
+        "oracle_component_selector_bits": 109.4040761889935,
+        "oracle_component_selector_gain_vs_uniform_bits": 12.977451060709498,
+        "oracle_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 78.17994296470553,
+          "item_type": 37.98912151216861,
+          "literal_payload": 161.4569814507229
+        },
+        "train_cv_selector_bits": 109.4040761889935,
+        "train_cv_selector_gain_vs_uniform_bits": 12.977451060709498,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "event_counts": {
+        "test_copy": 2,
+        "test_item_type": 2,
+        "test_literal_payload": 0,
+        "train_copy": 281,
+        "train_item_type": 285,
+        "train_literal_payload": 773
+      },
+      "frozen": {
+        "active_bits": 16.373857489541347,
+        "active_gain_vs_uniform_bits": -0.1674535755674995,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 14.870692895834846,
+        "oracle_component_selector_gain_vs_uniform_bits": 1.3357110181390013,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 83.31781751656425,
+          "item_type": 41.17666757814065,
+          "literal_payload": 148.94850316707902
+        },
+        "train_cv_selector_bits": 16.373857489541347,
+        "train_cv_selector_gain_vs_uniform_bits": -0.1674535755674995,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "label": "hellgate_public_bookcase_8",
+      "online": {
+        "active_bits": 16.372358310599317,
+        "active_gain_vs_uniform_bits": -0.1659543966254695,
+        "internal_family_cv_count": 18,
+        "oracle_changes_active_components": true,
+        "oracle_component_selector_bits": 14.869193716892818,
+        "oracle_component_selector_gain_vs_uniform_bits": 1.3372101970810295,
+        "oracle_selectors": {
+          "copy_length": false,
+          "item_type": true,
+          "literal_payload": false
+        },
+        "train_cv_changes_active_components": false,
+        "train_cv_component_gains_bits": {
+          "copy_length": 83.30484795427923,
+          "item_type": 44.088707252245854,
+          "literal_payload": 163.1701383473826
+        },
+        "train_cv_selector_bits": 16.372358310599317,
+        "train_cv_selector_gain_vs_uniform_bits": -0.1659543966254695,
+        "train_cv_selectors": {
+          "copy_length": true,
+          "item_type": true,
+          "literal_payload": true
+        }
+      },
+      "test_books": [
+        68,
+        69
+      ]
+    }
+  ],
+  "schema": "train_cv_component_selector_audit.v1",
+  "sources": {
+    "formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json",
+    "legacy_script": "analysis/authorial_mechanism_20260620/scripts/125_prequential_and_row0_origin_audit.py"
+  },
+  "summary": {
+    "frozen": {
+      "active_failure_count": 3,
+      "active_total_gain_vs_uniform_bits": 273.18678814085115,
+      "oracle_changed_family_count": 13,
+      "oracle_selector_failure_count": 0,
+      "oracle_selector_total_gain_vs_uniform_bits": 296.97789667022107,
+      "train_cv_changed_family_count": 0,
+      "train_cv_selector_failure_count": 3,
+      "train_cv_selector_total_gain_vs_uniform_bits": 273.1867881408509
+    },
+    "online": {
+      "active_failure_count": 2,
+      "active_total_gain_vs_uniform_bits": 290.3111800354495,
+      "oracle_changed_family_count": 13,
+      "oracle_selector_failure_count": 0,
+      "oracle_selector_total_gain_vs_uniform_bits": 313.3826810283411,
+      "train_cv_changed_family_count": 0,
+      "train_cv_selector_failure_count": 2,
+      "train_cv_selector_total_gain_vs_uniform_bits": 290.31118003544975
+    }
+  },
+  "translation_delta": "NONE"
+}

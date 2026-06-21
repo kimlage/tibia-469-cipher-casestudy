@@ -66,6 +66,15 @@ failures dominated by copy-length underperformance, while
 item-type component loses to uniform under frozen counts.
 See [02_family_holdout_failure_audit.md](02_family_holdout_failure_audit.md).
 
+### Component Selector Follow-Up
+
+A train-CV component selector then asks whether those failures can be rescued
+without seeing the held-out family. For every public-bookcase family, inner
+training-family validation keeps all three active components. The selector
+therefore leaves the same failures in place; only a heldout oracle improves the
+ledger, so no component fallback is promoted.
+See [03_train_cv_component_selector_audit.md](03_train_cv_component_selector_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

@@ -264,6 +264,7 @@ def render_markdown(
     *,
     audit_link_prefix: str,
     family_failure_link: str,
+    component_selector_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
     random_controls = result["predictive_validation"]["randomized_order_controls"]
@@ -363,6 +364,15 @@ def render_markdown(
             "item-type component loses to uniform under frozen counts.",
             f"See [02_family_holdout_failure_audit.md]({family_failure_link}).",
             "",
+            "### Component Selector Follow-Up",
+            "",
+            "A train-CV component selector then asks whether those failures can be rescued",
+            "without seeing the held-out family. For every public-bookcase family, inner",
+            "training-family validation keeps all three active components. The selector",
+            "therefore leaves the same failures in place; only a heldout oracle improves the",
+            "ledger, so no component fallback is promoted.",
+            f"See [03_train_cv_component_selector_audit.md]({component_selector_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -437,6 +447,7 @@ def main() -> None:
             result,
             audit_link_prefix="../../../audit_20260609",
             family_failure_link="02_family_holdout_failure_audit.md",
+            component_selector_link="03_train_cv_component_selector_audit.md",
         ),
         encoding="utf-8",
     )
@@ -445,6 +456,7 @@ def main() -> None:
             result,
             audit_link_prefix="../../audit_20260609",
             family_failure_link="test_results/02_family_holdout_failure_audit.md",
+            component_selector_link="test_results/03_train_cv_component_selector_audit.md",
         ),
         encoding="utf-8",
     )

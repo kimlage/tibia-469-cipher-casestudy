@@ -283,7 +283,9 @@ nonpositive failures; the model is therefore classified as partial predictive
 structure, not an authorial generation method. A follow-up failure audit
 narrows those failures to small component/sample-size stress cases: bookcases
 `33` and `8` are copy-only copy-length losses, while bookcase `6` is a frozen
-item-type loss. Row0 remains exogenous.
+item-type loss. A train-CV component selector cannot rescue them without
+heldout information; only an oracle selector can, so no component fallback is
+promoted. Row0 remains exogenous.
 A deterministic online reparse compile later lowers the bound to `8343.062`
 while preserving `translation_delta: NONE`; row0 origin remains exogenous.
 The follow-up order control supports numeric order against reverse, parity,
