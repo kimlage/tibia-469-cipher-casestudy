@@ -59,6 +59,9 @@ RESIDUAL_EXCEPTION_TRANSFER = (
     TEST_RESULTS / "45_residual_exception_transfer_gate.json"
 )
 BRANCH_RANK_POSITION = TEST_RESULTS / "46_branch_rank_position_audit.json"
+BRANCH_RANK_EXCEPTION_COST = (
+    TEST_RESULTS / "47_branch_rank_exception_cost_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -212,6 +215,11 @@ def main() -> None:
         if BRANCH_RANK_POSITION.exists()
         else None
     )
+    branch_rank_exception_cost = (
+        load_json(BRANCH_RANK_EXCEPTION_COST)
+        if BRANCH_RANK_EXCEPTION_COST.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -304,6 +312,8 @@ def main() -> None:
         )
     if branch_rank_position is not None:
         assert_boundary("branch_rank_position_audit", branch_rank_position)
+    if branch_rank_exception_cost is not None:
+        assert_boundary("branch_rank_exception_cost_gate", branch_rank_exception_cost)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -423,6 +433,11 @@ def main() -> None:
     )
     branch_rank_position_summary = (
         None if branch_rank_position is None else branch_rank_position["summary"]
+    )
+    branch_rank_exception_cost_summary = (
+        None
+        if branch_rank_exception_cost is None
+        else branch_rank_exception_cost["summary"]
     )
 
     lines = [
@@ -1673,6 +1688,33 @@ def main() -> None:
                 "",
             ]
         )
+    if branch_rank_exception_cost_summary is not None:
+        lines.extend(
+            [
+                "## Branch Rank Exception Cost Gate",
+                "",
+                "Gate 47 prices the weak rank signal from gate 46 against the",
+                "gate-41 residual lookup. It pays for the ranker ID, residual",
+                "misses, and clean-control rollbacks.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Baseline lookup bits | `{branch_rank_exception_cost_summary['baseline_lookup_bits']:.3f}` |",
+                f"| Ranker | `{branch_rank_exception_cost_summary['best_ranker']}` |",
+                f"| Residual hits/misses | `{branch_rank_exception_cost_summary['residual_hits']}/{branch_rank_exception_cost_summary['residual_misses']}` |",
+                f"| Clean false changes | `{branch_rank_exception_cost_summary['clean_false_changes']}` |",
+                f"| Global ranker with labels | `{branch_rank_exception_cost_summary['global_ranker_with_labels_bits']:.3f}` bits |",
+                f"| Global net vs lookup | `{branch_rank_exception_cost_summary['best_promotable_net_vs_lookup_bits']:.3f}` bits |",
+                f"| Residual-gated with labels | `{branch_rank_exception_cost_summary['residual_gated_with_labels_bits']:.3f}` bits |",
+                f"| Residual-gated net vs lookup | `{branch_rank_exception_cost_summary['residual_gated_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "The rank signal is not promoted. Applied globally, it is much",
+                "worse than lookup because of clean rollbacks. It becomes cheaper",
+                "only if the residual sites are already granted, so that row is",
+                "audit-only and does not reduce the source/length dependency.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1710,6 +1752,9 @@ def main() -> None:
             "predict one another under leave-one-residual-out feature matching.",
             "Gate 46 rejects simple branch-rank orderings too: the best top-1",
             "ranker gets `6/10` residuals but changes `20` clean controls.",
+            "Gate 47 prices that weak signal: global ranker+corrections is",
+            "`+96.497` bits worse than lookup, while the apparent residual-gated",
+            "win requires granting the residual-site lookup first.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1765,6 +1810,7 @@ def main() -> None:
             "- [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)",
             "- [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)",
             "- [Branch rank position audit](test_results/46_branch_rank_position_audit.md)",
+            "- [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)",
             "",
         ]
     )

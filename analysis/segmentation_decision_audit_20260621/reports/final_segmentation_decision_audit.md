@@ -1001,6 +1001,28 @@ controls; even top-3 coverage leaves two residuals outside the
 near-top set. The rank view records a weak diagnostic signal,
 not a parser rule.
 
+## Branch Rank Exception Cost Gate
+
+Gate 47 prices the weak rank signal from gate 46 against the
+gate-41 residual lookup. It pays for the ranker ID, residual
+misses, and clean-control rollbacks.
+
+| Diagnostic | Value |
+|---|---:|
+| Baseline lookup bits | `79.361` |
+| Ranker | `balanced_ops_literals` |
+| Residual hits/misses | `6/4` |
+| Clean false changes | `20` |
+| Global ranker with labels | `175.858` bits |
+| Global net vs lookup | `96.497` bits |
+| Residual-gated with labels | `74.676` bits |
+| Residual-gated net vs lookup | `-4.684` bits |
+
+The rank signal is not promoted. Applied globally, it is much
+worse than lookup because of clean rollbacks. It becomes cheaper
+only if the residual sites are already granted, so that row is
+audit-only and does not reduce the source/length dependency.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1036,6 +1058,9 @@ then rejects residual self-transfer: the `10` corrections do not
 predict one another under leave-one-residual-out feature matching.
 Gate 46 rejects simple branch-rank orderings too: the best top-1
 ranker gets `6/10` residuals but changes `20` clean controls.
+Gate 47 prices that weak signal: global ranker+corrections is
+`+96.497` bits worse than lookup, while the apparent residual-gated
+win requires granting the residual-site lookup first.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1091,3 +1116,4 @@ or the stable projection as an oracle.
 - [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)
 - [Residual exception transfer gate](test_results/45_residual_exception_transfer_gate.md)
 - [Branch rank position audit](test_results/46_branch_rank_position_audit.md)
+- [Branch rank exception cost gate](test_results/47_branch_rank_exception_cost_gate.md)

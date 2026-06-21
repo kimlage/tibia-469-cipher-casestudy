@@ -1,0 +1,110 @@
+{
+  "case_reopened": false,
+  "classification": "branch_rank_exception_cost_rejected",
+  "clean_rollback_count_by_label": {
+    "('copy', 11)": 1,
+    "('copy', 6)": 1,
+    "('copy', 62)": 1,
+    "('copy', 7)": 1,
+    "('literal', 1)": 2,
+    "('literal', 11)": 1,
+    "('literal', 2)": 4,
+    "('literal', 3)": 5,
+    "('literal', 4)": 1,
+    "('literal', 5)": 2,
+    "('literal', 6)": 1
+  },
+  "cost_rows": [
+    {
+      "bits": 79.36087237953566,
+      "boundary": "baseline explicit residual lookup",
+      "model": "gate41_first_drift_lookup",
+      "net_vs_lookup": 0.0
+    },
+    {
+      "bits": 111.89680307758465,
+      "boundary": "optimistic lower bound; no correction labels charged",
+      "model": "global_ranker_lower_bound_without_labels",
+      "net_vs_lookup": 32.535930698048986
+    },
+    {
+      "bits": 175.85764489963427,
+      "boundary": "ranker everywhere plus clean/residual corrections",
+      "model": "global_ranker_with_labels",
+      "net_vs_lookup": 96.4967725200986
+    },
+    {
+      "bits": 70.09141170454244,
+      "boundary": "not source-free; residual site lookup granted",
+      "model": "residual_gated_ranker_lower_bound_without_labels",
+      "net_vs_lookup": -9.269460674993226
+    },
+    {
+      "bits": 74.67637420526358,
+      "boundary": "not source-free; residual site lookup plus miss labels",
+      "model": "residual_gated_ranker_with_labels",
+      "net_vs_lookup": -4.684498174272079
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "branch_rank_exception_cost_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "rank_signal_priced_against_lookup",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "branch_rank_position_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/46_branch_rank_position_audit.json",
+    "latent_state_lookup_cost_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.json"
+  },
+  "plaintext_claim": false,
+  "residual_miss_labels": [
+    [
+      "literal",
+      39
+    ],
+    [
+      "literal",
+      1
+    ],
+    [
+      "copy",
+      10
+    ],
+    [
+      "copy",
+      9
+    ]
+  ],
+  "schema": "branch_rank_exception_cost_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "prices_rank_signal_against_lookup": true,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "stable_projection_used_as_label_only": true,
+    "target_text_required": true
+  },
+  "summary": {
+    "baseline_lookup_bits": 79.36087237953566,
+    "best_net_vs_lookup_bits": -4.684498174272079,
+    "best_promotable_net_vs_lookup_bits": 96.4967725200986,
+    "best_ranker": "balanced_ops_literals",
+    "clean_false_changes": 20,
+    "global_correction_count": 24,
+    "global_ranker_lower_bound_bits": 111.89680307758465,
+    "global_ranker_with_labels_bits": 175.85764489963427,
+    "interpretation": "This gate asks whether the weak gate-46 branch-rank signal reduces ad hoc description cost after paying for the ranker, clean rollbacks, and residual misses. It compares against the gate-41 first-drift lookup lower bound.",
+    "promotes_branch_rank_exception_cost": false,
+    "ranker_count": 14,
+    "ranker_id_bits": 3.807354922057604,
+    "residual_gated_lower_bound_bits": 70.09141170454244,
+    "residual_gated_net_vs_lookup_bits": -4.684498174272079,
+    "residual_gated_with_labels_bits": 74.67637420526358,
+    "residual_hits": 6,
+    "residual_misses": 4
+  },
+  "translation_delta": "NONE"
+}

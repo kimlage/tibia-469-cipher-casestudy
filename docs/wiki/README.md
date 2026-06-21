@@ -1237,6 +1237,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `0/10` leave-one-residual-out hits),
   records a weak but rejected branch-rank signal (`balanced_ops_literals`
   gets `6/10` residuals but `20` clean false changes),
+  prices that signal as audit-only: global ranker+corrections is `+96.497`
+  bits worse than lookup, while the apparent residual-gated win requires
+  granting residual sites first,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
