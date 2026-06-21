@@ -2278,6 +2278,7 @@
     "row0_origin_status": "exogenous_under_current_evidence",
     "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
     "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
+    "source_length_joint_derivability_status": "joint_encoder_regularities_confirmed_decoder_dependency_retained",
     "source_selection_status": "encoder_canonical_decoder_dependency_retained",
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
@@ -18506,6 +18507,120 @@
     "reason_later_bound_not_used_here": "The requested method change freezes the 8558.667-bit formula as the predictive-validation target and stops treating later compression-only micro-improvements as generation evidence.",
     "scope_compression_bound_bits": 8558.666806283434,
     "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_param_minaddr_repair2_formula_469.json"
+  },
+  "source_length_joint_derivability": {
+    "classification": "source_length_joint_derivation_partial_decoder_dependency_retained",
+    "decision": {
+      "compression_bound_status": "unchanged",
+      "copy_length_dependency_status": "retained_declared_with_partial_decoder_default",
+      "generation_explanation_status": "joint_dependency_boundary_sharpened",
+      "row0_origin_status": "unchanged_exogenous",
+      "source_dependency_status": "retained_declared",
+      "source_length_joint_status": "encoder_regularities_coupled_decoder_dependency_retained",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "hypotheses": {
+      "declared_source_plus_decoder_max_length": {
+        "algorithm": "Decode the declared source, then take the maximum possible copy length from that source bounded by emitted text and remaining book length.",
+        "contradictions": 201,
+        "coverage": "60/261",
+        "decoder_valid": true,
+        "descriptor_cost_status": "Retains the full source ledger and still needs length exceptions; not a full joint derivation."
+      },
+      "earliest_source_plus_target_max_length": {
+        "algorithm": "With the future target chunk known, choose the earliest source for the declared copied chunk and extend it to the maximal target match.",
+        "contradictions": 31,
+        "coverage": "230/261",
+        "decoder_valid": false,
+        "descriptor_cost_status": "High coverage but depends on future target text; retained as encoder-oracle evidence only."
+      },
+      "previous_end_plus_decoder_max_length": {
+        "algorithm": "Use previous copy end as a state-only source default and take decoder max length.",
+        "contradictions": 260,
+        "coverage": "1/261",
+        "decoder_valid": true,
+        "descriptor_cost_status": "Coverage too low for promotion."
+      },
+      "unique_source_plus_decoder_max_length": {
+        "algorithm": "When the declared-length target chunk has only one source candidate, pair that source with decoder max length.",
+        "contradictions": 233,
+        "coverage": "28/261",
+        "decoder_valid": false,
+        "descriptor_cost_status": "Uniqueness is evaluated against the future target chunk, so it cannot remove source during decoding."
+      }
+    },
+    "scope": {
+      "analysis_only": true,
+      "compression_bound_changed": false,
+      "new_formula_emitted": false,
+      "plaintext_or_translation_claim": false,
+      "row0_origin_changed": false,
+      "tested_question": "Whether copy source and copy length become decoder-derived when evaluated as a joint dependency instead of separate ledgers."
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.json",
+    "summary": {
+      "ambiguous_source_hits_at_declared_length": 138,
+      "copied_digits": 10406,
+      "copy_event_count": 261,
+      "decoder_max_length_hits_after_declared_source": 60,
+      "earliest_source_hits_at_declared_length": 251,
+      "encoder_target_max_length_hits_after_declared_source": 238,
+      "expected_control_hits": {
+        "uniform_candidate_decoder_max_hits": 61.0,
+        "uniform_candidate_earliest_source_hits": 169.4726551226551,
+        "uniform_candidate_earliest_target_max_hits": 156.40598845598845,
+        "uniform_candidate_target_max_hits": 237.3,
+        "uniform_legal_length_decoder_max_hits": 10.714001118639779,
+        "uniform_legal_length_target_max_hits": 10.714001118639779
+      },
+      "full_joint_dependency_removed": false,
+      "interpretation": "The joint view shows that the latest source-substituted formula traded away part of the earlier all-earliest source canonicality. The remaining joint source/length regularity is still mostly encoder-side and does not turn the pair into a decoder-known rule. Source remains target-dependent, and the only decoder-valid length default after a declared source covers 60 of 261 copy events.",
+      "joint_declared_source_decoder_max_hits": 60,
+      "joint_encoder_earliest_declared_length_hits": 251,
+      "joint_encoder_earliest_target_max_hits": 230,
+      "joint_previous_end_decoder_max_hits": 1,
+      "joint_unique_source_decoder_max_hits": 28,
+      "joint_unique_source_target_max_hits": 115,
+      "length_dependency_removed_by_joint_rule": false,
+      "permutation_controls": {
+        "decoder_max_hit_summary": {
+          "max": 8,
+          "mean": 1.968,
+          "median": 2.0,
+          "min": 0,
+          "n": 1000
+        },
+        "legal_under_decoder_max_summary": {
+          "max": 221,
+          "mean": 206.355,
+          "median": 207.0,
+          "min": 195,
+          "n": 1000
+        },
+        "legal_under_target_max_summary": {
+          "max": 151,
+          "mean": 135.704,
+          "median": 136.0,
+          "min": 123,
+          "n": 1000
+        },
+        "p_permuted_decoder_max_hits_ge_observed": 0.0,
+        "p_permuted_target_max_hits_ge_observed": 0.0,
+        "seed": 469,
+        "target_max_hit_summary": {
+          "max": 16,
+          "mean": 7.287,
+          "median": 7.0,
+          "min": 0,
+          "n": 1000
+        },
+        "trials": 1000
+      },
+      "prior_source_boundary_earliest_hits": 261,
+      "source_dependency_removed_by_joint_rule": false,
+      "source_substitution_non_earliest_delta_vs_prior_boundary": 10,
+      "unique_source_hits_at_declared_length": 123
+    }
   },
   "source_substitution_saturation": {
     "classification": "local_source_substitution_frontier_saturated_stop_mainline",

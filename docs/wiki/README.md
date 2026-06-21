@@ -632,6 +632,11 @@ The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
 mechanical blocker.
+A source-length joint derivability audit then clarifies why that blocker is
+still real: the latest source substitutions reduce the earlier all-earliest
+pattern from `261/261` to `251/261`, joint earliest+target-max is only
+encoder-oracle (`230/261`), and the decoder-valid declared-source+decoder-max
+rule covers only `60/261`.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -714,9 +719,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejection to literal-payload cost, closes exception-signaling rescue for that
   seed path, gates source-state dependency and retains previous-copy
   source/length state after state-free defaults fail, closes the row0
-  hypothesis requirement matrix with zero promoted origin formulas, rejects
-  paid partial worksheet anchors as a row0-origin formula, and keeps row0
-  origin exogenous with translation delta zero.
+  hypothesis requirement matrix with zero promoted origin formulas, records
+  the source-length joint derivability boundary, rejects paid partial worksheet
+  anchors as a row0-origin formula, and keeps row0 origin exogenous with
+  translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

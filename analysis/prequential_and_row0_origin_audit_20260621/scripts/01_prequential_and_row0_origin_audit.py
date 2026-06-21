@@ -157,6 +157,14 @@ CURRENT_FORMULA_DEPENDENCY_SCOREBOARD = (
     / "test_results"
     / "48_current_formula_dependency_scoreboard.json"
 )
+SOURCE_LENGTH_JOINT_DERIVABILITY_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "49_source_length_joint_derivability_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -390,6 +398,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "current_formula_dependency_scoreboard",
         current_formula_dependency_scoreboard,
     )
+    source_length_joint_derivability = load_json(SOURCE_LENGTH_JOINT_DERIVABILITY_AUDIT)
+    assert_analysis_boundary(
+        "source_length_joint_derivability_audit",
+        source_length_joint_derivability,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -597,6 +610,14 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": current_formula_dependency_scoreboard["summary"],
             "decision": current_formula_dependency_scoreboard["decision"],
         },
+        "source_length_joint_derivability": {
+            "classification": source_length_joint_derivability["classification"],
+            "source": rel(SOURCE_LENGTH_JOINT_DERIVABILITY_AUDIT),
+            "scope": source_length_joint_derivability["scope"],
+            "summary": source_length_joint_derivability["summary"],
+            "hypotheses": source_length_joint_derivability["hypotheses"],
+            "decision": source_length_joint_derivability["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -635,6 +656,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
             "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
             "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
+            "source_length_joint_derivability_status": "joint_encoder_regularities_confirmed_decoder_dependency_retained",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -689,6 +711,7 @@ def render_markdown(
     literal_copy_availability_gate_link: str,
     literal_payload_model_gate_link: str,
     current_formula_dependency_scoreboard_link: str,
+    source_length_joint_derivability_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -735,6 +758,7 @@ def render_markdown(
     current_dependency_counts = current_dependency["current_formula"][
         "dependency_counts"
     ]
+    source_length_joint = result["source_length_joint_derivability"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1392,13 +1416,41 @@ def render_markdown(
             f"`{current_dependency_counts['literal_op_count']}` literals and",
             f"`{current_dependency_counts['copy_op_count']}` copies. It still",
             "declares literal payload, copy source, and copy length. Copy-source",
-            "selection is encoder-canonical but decoder-declared; copy length is",
-            "partly decodable but still carries exceptions; literal payload is",
+            "selection was encoder-canonical before the later source-substitution",
+            "passes, but the latest formula now needs a joint source/length check",
+            "because some substitutions trade canonicality for source-stream cost.",
+            "Copy length is partly decodable but still carries exceptions; literal payload is",
             "mostly forced and downstream of source/length choices. The next",
             "mainline mechanical test should therefore be a structural",
             "decoder-known source/length parser or objective, not another local",
             "same-chunk source edit.",
             f"See [48_current_formula_dependency_scoreboard.md]({current_formula_dependency_scoreboard_link}).",
+            "",
+            "### Source-Length Joint Derivability Audit",
+            "",
+            "The joint audit then tests source and length as one dependency rather",
+            "than two independent ledgers. It finds that the latest source-substituted",
+            "formula no longer preserves the earlier `261/261` all-earliest source",
+            "pattern: current earliest coverage is",
+            f"`{source_length_joint['earliest_source_hits_at_declared_length']}`/",
+            f"`{source_length_joint['copy_event_count']}`, a",
+            f"`{source_length_joint['source_substitution_non_earliest_delta_vs_prior_boundary']}`",
+            "event delta from the prior boundary. Target-max length remains strong",
+            f"at `{source_length_joint['encoder_target_max_length_hits_after_declared_source']}`/",
+            f"`{source_length_joint['copy_event_count']}`, and joint",
+            "earliest+target-max covers",
+            f"`{source_length_joint['joint_encoder_earliest_target_max_hits']}`/",
+            f"`{source_length_joint['copy_event_count']}`, but both rules need",
+            "future target text and are encoder-oracle only. The decoder-valid",
+            "declared-source plus decoder-max rule covers only",
+            f"`{source_length_joint['joint_declared_source_decoder_max_hits']}`/",
+            f"`{source_length_joint['copy_event_count']}` copy events, while",
+            "a state-only previous-end+decoder-max rule covers",
+            f"`{source_length_joint['joint_previous_end_decoder_max_hits']}`/",
+            f"`{source_length_joint['copy_event_count']}`. Source and length",
+            "therefore remain declared dependencies; the structural-parser target",
+            "is sharper, but no formula or bound is promoted.",
+            f"See [49_source_length_joint_derivability_audit.md]({source_length_joint_derivability_audit_link}).",
             "",
             "## Row0 Origin Boundary",
             "",
@@ -1621,6 +1673,9 @@ def main() -> None:
             current_formula_dependency_scoreboard_link=(
                 "48_current_formula_dependency_scoreboard.md"
             ),
+            source_length_joint_derivability_audit_link=(
+                "49_source_length_joint_derivability_audit.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
                 "47_row0_parallel_provenance_bridge_audit.md"
@@ -1747,6 +1802,9 @@ def main() -> None:
             ),
             current_formula_dependency_scoreboard_link=(
                 "test_results/48_current_formula_dependency_scoreboard.md"
+            ),
+            source_length_joint_derivability_audit_link=(
+                "test_results/49_source_length_joint_derivability_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

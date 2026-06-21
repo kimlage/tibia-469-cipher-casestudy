@@ -631,13 +631,41 @@ local-source-bound formula directly. It roundtrips `70/70` books with
 `87` literals and
 `261` copies. It still
 declares literal payload, copy source, and copy length. Copy-source
-selection is encoder-canonical but decoder-declared; copy length is
-partly decodable but still carries exceptions; literal payload is
+selection was encoder-canonical before the later source-substitution
+passes, but the latest formula now needs a joint source/length check
+because some substitutions trade canonicality for source-stream cost.
+Copy length is partly decodable but still carries exceptions; literal payload is
 mostly forced and downstream of source/length choices. The next
 mainline mechanical test should therefore be a structural
 decoder-known source/length parser or objective, not another local
 same-chunk source edit.
 See [48_current_formula_dependency_scoreboard.md](test_results/48_current_formula_dependency_scoreboard.md).
+
+### Source-Length Joint Derivability Audit
+
+The joint audit then tests source and length as one dependency rather
+than two independent ledgers. It finds that the latest source-substituted
+formula no longer preserves the earlier `261/261` all-earliest source
+pattern: current earliest coverage is
+`251`/
+`261`, a
+`10`
+event delta from the prior boundary. Target-max length remains strong
+at `238`/
+`261`, and joint
+earliest+target-max covers
+`230`/
+`261`, but both rules need
+future target text and are encoder-oracle only. The decoder-valid
+declared-source plus decoder-max rule covers only
+`60`/
+`261` copy events, while
+a state-only previous-end+decoder-max rule covers
+`1`/
+`261`. Source and length
+therefore remain declared dependencies; the structural-parser target
+is sharper, but no formula or bound is promoted.
+See [49_source_length_joint_derivability_audit.md](test_results/49_source_length_joint_derivability_audit.md).
 
 ## Row0 Origin Boundary
 

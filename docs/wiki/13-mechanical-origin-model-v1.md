@@ -247,6 +247,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Row0 parallel provenance bridge | independent provenance front traces local workbook/import/reconstruction/audit layers, but CipSoft origin is untraced and paid worksheet anchors do not beat lookup after pair+label costs | row0 remains exogenous |
 | Current formula dependency scoreboard | latest source-substitution formula roundtrips `70/70` with `348` ops; `87` literal payload fields, `261` copy-source fields, and `261` copy-length fields remain declared | next mainline is structural source/length parser |
+| Source-length joint derivability audit | latest source substitutions reduce the prior all-earliest source pattern from `261/261` to `251/261`; joint earliest+target-max covers `230/261` but is encoder-oracle only, while decoder-valid declared-source+decoder-max covers only `60/261` | source and length remain declared dependencies |
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
@@ -412,6 +413,7 @@ Primary sources:
 [active_reparse_state_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md),
 [copy_source_state_free_default_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md),
 [source_selection_derivation_boundary_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.md),
+[source_length_joint_derivability_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.md),
 [copy_length_midpoint_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md),
 [copy_length_midpoint_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md),
 [literal_copy_availability_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md),

@@ -1123,11 +1123,17 @@ selection, copy length declaration, literal payload, or item-type ledger.
 The current-formula dependency scoreboard then re-counts the latest
 source-substitution formula directly: it roundtrips `70/70` with `348` ops,
 `87` literal payload fields, `261` copy-source fields, and `261` copy-length
-fields still declared. Because source selection is encoder-canonical but not
-decoder-derived, and copy length is partly decodable but still exception-heavy,
-the next mainline mechanical test is a structural decoder-known source/length
-parser or objective. Literal payload and item type are downstream unless that
-parser changes available copy choices.
+fields still declared. A source-length joint derivability audit then checks
+whether those two copy dependencies become simpler as a pair. They do not. The
+latest source substitutions reduce the earlier all-earliest source pattern from
+`261/261` to `251/261`, showing that the last compression gains traded away a
+piece of source canonicality. Joint earliest+target-max still covers `230/261`
+copy events, but it is encoder-oracle only because it needs future target text.
+The decoder-valid declared-source+decoder-max rule covers only `60/261`, and a
+state-only previous-end+decoder-max rule covers only `1/261`. Source and copy
+length therefore remain declared; the next mainline mechanical test is still a
+structural decoder-known source/length parser or objective. Literal payload and
+item type are downstream unless that parser changes available copy choices.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1572,6 +1578,7 @@ book generation, not row0 pair-cell placement.
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
 - [Row0 parallel provenance bridge audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/47_row0_parallel_provenance_bridge_audit.md)
 - [Current formula dependency scoreboard](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/48_current_formula_dependency_scoreboard.md)
+- [Source-length joint derivability audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/49_source_length_joint_derivability_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

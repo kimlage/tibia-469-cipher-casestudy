@@ -160,6 +160,9 @@ exogenous.
 - [scripts/48_current_formula_dependency_scoreboard.py](scripts/48_current_formula_dependency_scoreboard.py) - re-counts retained dependencies on the latest formula and ranks the next structural blocker.
 - [reports/test_results/48_current_formula_dependency_scoreboard.md](reports/test_results/48_current_formula_dependency_scoreboard.md) - current formula dependency scoreboard.
 - [reports/test_results/48_current_formula_dependency_scoreboard.json](reports/test_results/48_current_formula_dependency_scoreboard.json) - structured dependency scoreboard ledger.
+- [scripts/49_source_length_joint_derivability_audit.py](scripts/49_source_length_joint_derivability_audit.py) - tests whether copy source and copy length become derivable as a joint dependency.
+- [reports/test_results/49_source_length_joint_derivability_audit.md](reports/test_results/49_source_length_joint_derivability_audit.md) - source-length joint derivability result.
+- [reports/test_results/49_source_length_joint_derivability_audit.json](reports/test_results/49_source_length_joint_derivability_audit.json) - structured source-length joint ledger.
 
 ## Boundary
 
@@ -284,7 +287,13 @@ exogenous.
   formula dependency scoreboard then re-counts the latest formula directly:
   `87` literal payload fields, `261` copy-source fields, and `261` copy-length
   fields remain declared; the next mainline mechanical test is structural
-  source/length parsing rather than literal or item-type refinement. The complete
+  source/length parsing rather than literal or item-type refinement. A
+  source-length joint derivability audit then checks that target directly: the
+  latest source-substituted formula no longer preserves the earlier `261/261`
+  all-earliest source pattern (`251/261` current), joint
+  earliest+target-max covers `230/261` but is encoder-oracle only, and the
+  decoder-valid declared-source+decoder-max rule covers only `60/261`. Source
+  and length therefore remain declared dependencies. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
