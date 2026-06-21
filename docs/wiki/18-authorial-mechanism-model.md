@@ -953,6 +953,12 @@ After that bootstrap, it beats raw in `69/69`; cumulative book-bounded gain
 crosses break-even at book `2`, with mean gain `419.761` bits. This is the
 strongest current sequential generation frontier, still without deriving row0
 or plaintext.
+An online bootstrap seed-policy audit then tests the remaining cold-start
+exception directly. Book `0` costs `488.857` bits under the online parser but
+`478.358` bits as a raw uniform seed, so one explicit raw seed saves `10.499`
+bits and changes the local ledger to `70/70` wins-or-ties against raw (`69/70`
+strict wins). This closes the local bootstrap failure as accounting, not as a
+new promoted bound or authorial proof.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1400,6 +1406,7 @@ book generation, not row0 pair-cell placement.
 - [Leave-one-book-out book-bounded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/15_leave_one_book_out_book_bounded_source_audit.md)
 - [Leave-one-book-out family-excluded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md)
 - [Online prefix book frontier audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.md)
+- [Online bootstrap seed policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

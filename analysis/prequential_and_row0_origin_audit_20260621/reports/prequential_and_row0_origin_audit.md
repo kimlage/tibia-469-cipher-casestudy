@@ -207,6 +207,18 @@ gain crosses break-even at book `2`. Mean book-bounded online gain is
 evidence while keeping the bootstrap caveat explicit.
 See [17_online_prefix_book_frontier_audit.md](test_results/17_online_prefix_book_frontier_audit.md).
 
+### Online Bootstrap Seed Policy Audit
+
+The bootstrap caveat is then tested directly as an accounting policy.
+Book `0` costs `488.857` bits under the online parser and `478.358`
+bits as a raw uniform seed, so the online cold start is `10.499` bits
+worse than raw. Charging book `0` as one explicit raw seed leaves books
+`1-69` unchanged and gives `70/70` wins-or-ties against raw, with
+`69/70` strict wins and no local failures. This closes the local
+bootstrap failure as a seed-policy issue, but is not promoted as a new
+compression bound or authorial proof.
+See [18_online_bootstrap_seed_policy_audit.md](test_results/18_online_bootstrap_seed_policy_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -256,7 +268,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, and the online previous-books-only frontier is positive after the bootstrap book.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure without promoting a new bound.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

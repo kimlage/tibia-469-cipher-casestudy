@@ -1,0 +1,84 @@
+{
+  "book0": {
+    "book0_online_minus_raw_bits": 10.498855747274263,
+    "book_bounded_online_reparse_bits": 488.8565014110544,
+    "copied_digits_online": 16,
+    "copy_items_online": 3,
+    "length_digits": 144,
+    "literal_digits_online": 128,
+    "raw_uniform_bits": 478.35764566378015
+  },
+  "case_reopened": false,
+  "classification": "explicit_raw_seed_closes_online_bootstrap_failure",
+  "decision": {
+    "bootstrap_status": "one_explicit_raw_seed_closes_local_failure",
+    "compression_bound_status": "not_promoted_as_new_bound",
+    "generation_explanation_status": "stronger_but_still_seeded_partial",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "online_prefix_book_frontier": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.json"
+  },
+  "plaintext_claim": false,
+  "policies": [
+    {
+      "admissibility": "admissible_baseline",
+      "book0_charge_bits": 488.8565014110544,
+      "book0_gain_vs_raw_bits": -10.498855747274263,
+      "classification": "baseline_has_cold_start_failure",
+      "failure_books": [
+        0
+      ],
+      "interpretation": "The deterministic online parser is used unchanged for book 0, before any previous-book inventory exists.",
+      "policy": "online_book0_parser",
+      "raw_wins_or_ties": 69,
+      "stream_gain_vs_raw_bits": 29383.261662404304,
+      "stream_total_bits": 8031.614470312054,
+      "strict_raw_wins": 69
+    },
+    {
+      "admissibility": "admissible_as_explicit_seed_policy_not_authorial_proof",
+      "book0_charge_bits": 478.35764566378015,
+      "book0_gain_vs_raw_bits": 0.0,
+      "classification": "one_explicit_seed_closes_local_failure",
+      "failure_books": [],
+      "interpretation": "Book 0 is treated as a literal/raw seed. Books 1-69 keep the previous-books-only book-bounded online parser.",
+      "policy": "raw_book0_seed_then_online",
+      "raw_wins_or_ties": 70,
+      "stream_gain_vs_raw_bits": 29393.76051815158,
+      "stream_saving_vs_online_book0_parser_bits": 10.498855747274263,
+      "stream_total_bits": 8021.11561456478,
+      "strict_raw_wins": 69
+    },
+    {
+      "admissibility": "not_admissible_as_compression_bound_without_external_attestation",
+      "book0_charge_bits": 0.0,
+      "book0_gain_vs_raw_bits": 478.35764566378015,
+      "classification": "mechanical_generator_seed_only_not_compression_bound",
+      "failure_books": [],
+      "interpretation": "This is only a generator thought experiment: book 0 would have to be externally given. It cannot be counted as compression progress or authorial evidence without primary attestation.",
+      "policy": "externally_given_book0_seed",
+      "raw_wins_or_ties": 70,
+      "stream_gain_vs_raw_bits": 29872.118163815358,
+      "stream_total_bits": 7542.757968901,
+      "strict_raw_wins": 69
+    }
+  ],
+  "schema": "online_bootstrap_seed_policy_audit.v1",
+  "summary": {
+    "after_bootstrap_book_count": 69,
+    "after_bootstrap_strict_raw_wins": 69,
+    "book_bounded_online_gain_vs_raw_bits": 29383.261662404304,
+    "book_bounded_online_stream_total_bits": 8031.614470312054,
+    "interpretation": "The only previous-books-only local failure is a cold-start effect. Charging book 0 as an explicit raw seed removes the negative local gain without changing books 1-69, row0, or model parameters.",
+    "raw_seeded_failure_books": [],
+    "raw_seeded_gain_vs_raw_bits": 29393.76051815158,
+    "raw_seeded_raw_wins_or_ties": 70,
+    "raw_seeded_stream_saving_vs_online_bits": 10.498855747274263,
+    "raw_seeded_stream_total_bits": 8021.11561456478,
+    "raw_seeded_strict_raw_wins": 69,
+    "raw_total_bits": 37414.87613271636
+  },
+  "translation_delta": "NONE"
+}

@@ -33,6 +33,8 @@ SOURCES = {
     "leave_one_book_out_family_excluded_source": TEST_RESULTS
     / "16_leave_one_book_out_family_excluded_source_audit.json",
     "online_prefix_book_frontier": TEST_RESULTS / "17_online_prefix_book_frontier_audit.json",
+    "online_bootstrap_seed_policy": TEST_RESULTS
+    / "18_online_bootstrap_seed_policy_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -67,6 +69,7 @@ def make_result() -> dict[str, Any]:
     book_bounded = load_json(SOURCES["leave_one_book_out_book_bounded_source"])
     family_excluded = load_json(SOURCES["leave_one_book_out_family_excluded_source"])
     online_frontier = load_json(SOURCES["online_prefix_book_frontier"])
+    bootstrap_seed = load_json(SOURCES["online_bootstrap_seed_policy"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -85,6 +88,7 @@ def make_result() -> dict[str, Any]:
         ("leave_one_book_out_book_bounded_source", book_bounded),
         ("leave_one_book_out_family_excluded_source", family_excluded),
         ("online_prefix_book_frontier", online_frontier),
+        ("online_bootstrap_seed_policy", bootstrap_seed),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -514,6 +518,40 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_an_explicit_book0_seed_close_the_online_bootstrap_failure",
+            "source": rel(SOURCES["online_bootstrap_seed_policy"]),
+            "status": "passed_as_bootstrap_accounting_not_bound_promotion",
+            "evidence": {
+                "book0_raw_uniform_bits": bootstrap_seed["book0"]["raw_uniform_bits"],
+                "book0_online_reparse_bits": bootstrap_seed["book0"][
+                    "book_bounded_online_reparse_bits"
+                ],
+                "book0_online_minus_raw_bits": bootstrap_seed["book0"][
+                    "book0_online_minus_raw_bits"
+                ],
+                "raw_seeded_raw_wins_or_ties": bootstrap_seed["summary"][
+                    "raw_seeded_raw_wins_or_ties"
+                ],
+                "raw_seeded_strict_raw_wins": bootstrap_seed["summary"][
+                    "raw_seeded_strict_raw_wins"
+                ],
+                "raw_seeded_failure_books": bootstrap_seed["summary"][
+                    "raw_seeded_failure_books"
+                ],
+                "raw_seeded_stream_saving_vs_online_bits": bootstrap_seed["summary"][
+                    "raw_seeded_stream_saving_vs_online_bits"
+                ],
+                "raw_seeded_gain_vs_raw_bits": bootstrap_seed["summary"][
+                    "raw_seeded_gain_vs_raw_bits"
+                ],
+            },
+            "interpretation": (
+                "Charging book 0 as an explicit raw seed closes the only local "
+                "previous-books-only failure. This is useful bootstrap accounting, "
+                "not a promoted compression bound or authorial proof."
+            ),
+        },
+        {
             "question": "does_numeric_online_order_survive_order_controls",
             "source": rel(SOURCES["online_reparse_order_controls"]),
             "status": "passed_against_tested_orders",
@@ -709,6 +747,14 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['book_bounded_online_failure_books']}; mean gain "
                 f"{evidence['mean_book_bounded_online_gain_vs_raw_bits']:.3f}; "
                 f"break-even book {evidence['cumulative_book_bounded_break_even_book']}"
+            )
+        elif row["question"] == "does_an_explicit_book0_seed_close_the_online_bootstrap_failure":
+            key = (
+                f"book0 online-raw {evidence['book0_online_minus_raw_bits']:.3f} bits; "
+                f"seed wins/ties {evidence['raw_seeded_raw_wins_or_ties']}/70; "
+                f"strict wins {evidence['raw_seeded_strict_raw_wins']}/70; "
+                f"failures {evidence['raw_seeded_failure_books']}; stream saving "
+                f"{evidence['raw_seeded_stream_saving_vs_online_bits']:.3f}"
             )
         else:
             key = (

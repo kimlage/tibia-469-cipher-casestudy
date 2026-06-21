@@ -67,6 +67,9 @@ exogenous.
 - [scripts/17_online_prefix_book_frontier_audit.py](scripts/17_online_prefix_book_frontier_audit.py) - decomposes the previous-books-only online parser by target book and adds a book-bounded source variant.
 - [reports/test_results/17_online_prefix_book_frontier_audit.md](reports/test_results/17_online_prefix_book_frontier_audit.md) - online prefix book frontier result.
 - [reports/test_results/17_online_prefix_book_frontier_audit.json](reports/test_results/17_online_prefix_book_frontier_audit.json) - structured online prefix frontier ledger.
+- [scripts/18_online_bootstrap_seed_policy_audit.py](scripts/18_online_bootstrap_seed_policy_audit.py) - tests whether an explicit raw seed for book 0 closes the online cold-start failure.
+- [reports/test_results/18_online_bootstrap_seed_policy_audit.md](reports/test_results/18_online_bootstrap_seed_policy_audit.md) - online bootstrap seed policy result.
+- [reports/test_results/18_online_bootstrap_seed_policy_audit.json](reports/test_results/18_online_bootstrap_seed_policy_audit.json) - structured bootstrap seed policy ledger.
 
 ## Boundary
 
@@ -108,7 +111,10 @@ exogenous.
   `46/46` family-labeled books, with mean gain `460.251` bits. A per-book
   online-prefix frontier audit then tests true previous-books-only generation:
   book-bounded online reparsing beats raw in `69/70`, and the only failure is
-  the cold-start book `0`; after bootstrap it wins in `69/69`.
+  the cold-start book `0`; after bootstrap it wins in `69/69`. A bootstrap
+  seed-policy audit charges book `0` as an explicit raw seed and closes the
+  local failure as `70/70` wins-or-ties, while not promoting a new compression
+  bound or authorial proof.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

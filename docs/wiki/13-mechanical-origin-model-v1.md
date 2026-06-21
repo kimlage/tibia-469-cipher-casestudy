@@ -185,6 +185,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Book-bounded singleton source audit | forbidding source copies from crossing source-book boundaries still gives `70/70` roundtrip and `70/70` raw wins; mean gain `464.898` bits | boundary caveat not required for singleton signal |
 | Family-excluded singleton source audit | removing same-family books from frozen train counts and copy sources still gives `70/70` roundtrip, `70/70` raw wins, and `46/46` family-labeled raw wins; mean gain `460.251` bits | same-family source memorization not required |
 | Online prefix book frontier audit | previous-books-only online reparsing with book-bounded sources roundtrips `70/70`, beats raw in `69/70`, and beats raw in `69/69` after the bootstrap book `0`; mean gain `419.761` bits | sequential generation frontier / bootstrap caveat |
+| Online bootstrap seed policy audit | charging book `0` as an explicit raw seed closes the online cold-start failure: `70/70` wins-or-ties, `69/70` strict wins, and `10.499` bits saved versus parsing book `0` online | bootstrap policy clarified / no new bound |
 | Prequential recipe reparse audit | with frozen train-prefix component counts, a deterministic LZ parser roundtrips every future suffix and beats the active full-corpus recipe under the same frozen counts on all five cutoffs | predictive recipe evidence / split-specific analysis only |
 | Prequential recipe reparse controls | at cutoffs `20/35/50`, real suffixes beat random same-length, per-book-shuffled, and suffix-pool-shuffled controls; controls have negative gain versus raw digits | controlled predictive recipe evidence |
 | Prequential recipe train-set controls | at focused cutoff `50`, numeric prefix beats the random train-set mean but not all random inventories (`p=0.1538`) | predictive recipe evidence / numeric order not promoted |
@@ -344,6 +345,7 @@ Primary sources:
 [recipe_reparse_family_holdout.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md),
 [leave_one_book_out_family_excluded_source_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md),
 [online_prefix_book_frontier_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.md),
+[online_bootstrap_seed_policy_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.md),
 [row0_origin_parallel_report.md](../../analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md),
 [row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
