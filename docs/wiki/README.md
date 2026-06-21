@@ -535,6 +535,10 @@ source-state-optimal recipes.
 A fixed-segmentation source-choice optimizer then changes `0/514` sources and
 adds `+0.000` bits versus repricing, closing the simple local source-only
 improvement path.
+A global fixed-segmentation source-path DP then changes `10/514` sources and
+improves the repriced ledger by `-42.359` bits with max state count `14`,
+confirming path-state value while still leaving segmentation and copy lengths
+fixed.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

@@ -133,6 +133,9 @@ exogenous.
 - [scripts/39_multicutoff_source_choice_optimizer_gate.py](scripts/39_multicutoff_source_choice_optimizer_gate.py) - tests greedy source substitutions while keeping deterministic reparse segmentation and copy lengths fixed.
 - [reports/test_results/39_multicutoff_source_choice_optimizer_gate.md](reports/test_results/39_multicutoff_source_choice_optimizer_gate.md) - fixed-segmentation source-choice optimizer result.
 - [reports/test_results/39_multicutoff_source_choice_optimizer_gate.json](reports/test_results/39_multicutoff_source_choice_optimizer_gate.json) - structured source-choice optimizer ledger.
+- [scripts/40_multicutoff_global_source_path_optimizer_gate.py](scripts/40_multicutoff_global_source_path_optimizer_gate.py) - optimizes fixed deterministic copy-source choices globally under `previous_copy_end`.
+- [reports/test_results/40_multicutoff_global_source_path_optimizer_gate.md](reports/test_results/40_multicutoff_global_source_path_optimizer_gate.md) - global source-path optimizer result.
+- [reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json](reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json) - structured global source-path optimizer ledger.
 
 ## Boundary
 
@@ -246,7 +249,11 @@ exogenous.
   recipe optimizer. A fixed-segmentation source-choice optimizer then closes a
   simple local improvement path: it changes `0/514` sources and has `+0.000`
   bits against the repriced ledger, so future source-state work must alter
-  segmentation, copy lengths, or use a global path-state objective.
+  segmentation, copy lengths, or use a global path-state objective. The global
+  fixed-segmentation source-path DP then confirms that path-state matters:
+  it changes `10/514` sources and improves the repriced ledger by `-42.359`
+  bits with max state count `14`. Segmentation and copy lengths remain fixed,
+  so this is still a partial optimizer rather than a complete active parser.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

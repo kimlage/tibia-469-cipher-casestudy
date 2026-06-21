@@ -85,6 +85,14 @@ MULTICUTOFF_SOURCE_CHOICE_OPTIMIZER_GATE = (
     / "test_results"
     / "39_multicutoff_source_choice_optimizer_gate.json"
 )
+MULTICUTOFF_GLOBAL_SOURCE_PATH_OPTIMIZER_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "40_multicutoff_global_source_path_optimizer_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -261,6 +269,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "multicutoff_source_choice_optimizer_gate",
         source_choice_optimizer_gate,
     )
+    global_source_path_optimizer_gate = load_json(
+        MULTICUTOFF_GLOBAL_SOURCE_PATH_OPTIMIZER_GATE
+    )
+    assert_analysis_boundary(
+        "multicutoff_global_source_path_optimizer_gate",
+        global_source_path_optimizer_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -382,6 +397,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "scope": source_choice_optimizer_gate["scope"],
             "decision": source_choice_optimizer_gate["decision"],
         },
+        "multicutoff_global_source_path_optimizer": {
+            "classification": global_source_path_optimizer_gate["classification"],
+            "source": rel(MULTICUTOFF_GLOBAL_SOURCE_PATH_OPTIMIZER_GATE),
+            "summary": global_source_path_optimizer_gate["summary"],
+            "scope": global_source_path_optimizer_gate["scope"],
+            "decision": global_source_path_optimizer_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -411,6 +433,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
             "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
+            "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -449,6 +472,7 @@ def render_markdown(
     cutoff60_source_state_reparse_prototype_gate_link: str,
     multicutoff_source_state_reparse_reprice_gate_link: str,
     multicutoff_source_choice_optimizer_gate_link: str,
+    multicutoff_global_source_path_optimizer_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -479,6 +503,7 @@ def render_markdown(
         "summary"
     ]
     source_choice_optimizer = result["multicutoff_source_choice_optimizer"]["summary"]
+    global_source_path = result["multicutoff_global_source_path_optimizer"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -918,6 +943,24 @@ def render_markdown(
             "optimization.",
             f"See [39_multicutoff_source_choice_optimizer_gate.md]({multicutoff_source_choice_optimizer_gate_link}).",
             "",
+            "### Multi-Cutoff Global Source Path Optimizer Gate",
+            "",
+            "A global source-path DP then tests the stronger fixed-segmentation",
+            "hypothesis: a locally worse source may be chosen if its",
+            "`previous_copy_end` state makes later copies cheaper. This does improve",
+            "the fixed deterministic recipes. It changes",
+            f"`{global_source_path['total_changed_sources']}`/",
+            f"`{global_source_path['total_copy_events']}` sources, beats the",
+            "repriced ledger in",
+            f"`{global_source_path['aggregate_beats_reprice_cutoff_count']}`/",
+            f"`{global_source_path['cutoff_count']}` cutoffs, and totals",
+            f"`{global_source_path['total_source_path_minus_reprice_bits']:+.3f}`",
+            "bits versus repricing. Max DP state count is only",
+            f"`{global_source_path['max_state_count']}`. Segmentation and copy",
+            "lengths remain fixed, so this is a partial source-path optimizer rather",
+            "than a full active parser.",
+            f"See [40_multicutoff_global_source_path_optimizer_gate.md]({multicutoff_global_source_path_optimizer_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -1097,6 +1140,7 @@ def render_markdown(
             "- Cutoff-60 deterministic reparse recipes can be repriced with the active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins, and `-10.241` aggregate bits versus uniform-address reparse, but only `4/10` books improve individually and no recipe is reoptimized.",
             "- Multi-cutoff source-state repricing generalizes that aggregate signal across cutoffs `10/20/35/50/60`: `5/5` cutoffs improve versus uniform-address reparse, totaling `-112.968` bits, while still not reoptimizing recipes.",
             "- Fixed-segmentation source-choice optimization finds `0/514` cheaper source substitutions, so the simple source-only improvement path is closed under the immediate `previous_copy_end` cost.",
+            "- Global fixed-segmentation source-path optimization improves the repriced ledger by `-42.359` bits, changing `10/514` sources with max DP state count `14`; segmentation and copy lengths remain fixed.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -1175,6 +1219,9 @@ def main() -> None:
             ),
             multicutoff_source_choice_optimizer_gate_link=(
                 "39_multicutoff_source_choice_optimizer_gate.md"
+            ),
+            multicutoff_global_source_path_optimizer_gate_link=(
+                "40_multicutoff_global_source_path_optimizer_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1269,6 +1316,9 @@ def main() -> None:
             ),
             multicutoff_source_choice_optimizer_gate_link=(
                 "test_results/39_multicutoff_source_choice_optimizer_gate.md"
+            ),
+            multicutoff_global_source_path_optimizer_gate_link=(
+                "test_results/40_multicutoff_global_source_path_optimizer_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

@@ -69,6 +69,8 @@ SOURCES = {
     / "38_multicutoff_source_state_reparse_reprice_gate.json",
     "multicutoff_source_choice_optimizer_gate": TEST_RESULTS
     / "39_multicutoff_source_choice_optimizer_gate.json",
+    "multicutoff_global_source_path_optimizer_gate": TEST_RESULTS
+    / "40_multicutoff_global_source_path_optimizer_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -135,6 +137,9 @@ def make_result() -> dict[str, Any]:
     source_choice_optimizer_gate = load_json(
         SOURCES["multicutoff_source_choice_optimizer_gate"]
     )
+    global_source_path_optimizer_gate = load_json(
+        SOURCES["multicutoff_global_source_path_optimizer_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -181,6 +186,7 @@ def make_result() -> dict[str, Any]:
             multicutoff_source_state_reprice_gate,
         ),
         ("multicutoff_source_choice_optimizer_gate", source_choice_optimizer_gate),
+        ("multicutoff_global_source_path_optimizer_gate", global_source_path_optimizer_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -1000,6 +1006,64 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "can_global_source_path_improve_fixed_segmentation",
+            "source": rel(SOURCES["multicutoff_global_source_path_optimizer_gate"]),
+            "status": "passed_partial_global_source_path_improves_reprice",
+            "evidence": {
+                "cutoff_count": global_source_path_optimizer_gate["summary"][
+                    "cutoff_count"
+                ],
+                "all_roundtrip": global_source_path_optimizer_gate["summary"][
+                    "all_roundtrip"
+                ],
+                "all_books_beat_raw": global_source_path_optimizer_gate["summary"][
+                    "all_books_beat_raw"
+                ],
+                "aggregate_beats_reprice_cutoff_count": global_source_path_optimizer_gate[
+                    "summary"
+                ]["aggregate_beats_reprice_cutoff_count"],
+                "total_bits": global_source_path_optimizer_gate["summary"][
+                    "total_bits"
+                ],
+                "total_reprice_bits": global_source_path_optimizer_gate["summary"][
+                    "total_reprice_bits"
+                ],
+                "total_source_path_minus_reprice_bits": global_source_path_optimizer_gate[
+                    "summary"
+                ]["total_source_path_minus_reprice_bits"],
+                "total_source_path_minus_uniform_address_bits": global_source_path_optimizer_gate[
+                    "summary"
+                ]["total_source_path_minus_uniform_address_bits"],
+                "total_changed_sources": global_source_path_optimizer_gate["summary"][
+                    "total_changed_sources"
+                ],
+                "total_copy_events": global_source_path_optimizer_gate["summary"][
+                    "total_copy_events"
+                ],
+                "total_source_defaults": global_source_path_optimizer_gate["summary"][
+                    "total_source_defaults"
+                ],
+                "total_source_exceptions": global_source_path_optimizer_gate[
+                    "summary"
+                ]["total_source_exceptions"],
+                "max_state_count": global_source_path_optimizer_gate["summary"][
+                    "max_state_count"
+                ],
+                "total_transition_count": global_source_path_optimizer_gate[
+                    "summary"
+                ]["total_transition_count"],
+                "not_segmentation_reoptimization": global_source_path_optimizer_gate[
+                    "scope"
+                ]["not_segmentation_reoptimization"],
+            },
+            "interpretation": (
+                "A global DP over source choices improves the fixed deterministic "
+                "reparse recipes under `previous_copy_end`, proving that the "
+                "remaining source-state value is path-dependent rather than local. "
+                "Segmentation and copy lengths remain fixed."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1640,6 +1704,7 @@ def make_result() -> dict[str, Any]:
             "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
             "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
+            "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1916,6 +1981,23 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['total_copy_items']}; segmentation reoptimized "
                 f"{not evidence['not_segmentation_reoptimization']}"
             )
+        elif row["question"] == "can_global_source_path_improve_fixed_segmentation":
+            key = (
+                f"cutoffs {evidence['cutoff_count']}; roundtrip "
+                f"{evidence['all_roundtrip']}; raw wins "
+                f"{evidence['all_books_beat_raw']}; reprice wins "
+                f"{evidence['aggregate_beats_reprice_cutoff_count']}/"
+                f"{evidence['cutoff_count']}; bits "
+                f"{evidence['total_bits']:.3f} vs reprice "
+                f"{evidence['total_reprice_bits']:.3f}; delta "
+                f"{evidence['total_source_path_minus_reprice_bits']:+.3f}; "
+                f"changed sources {evidence['total_changed_sources']}/"
+                f"{evidence['total_copy_events']}; defaults/exceptions "
+                f"{evidence['total_source_defaults']}/"
+                f"{evidence['total_source_exceptions']}; max states "
+                f"{evidence['max_state_count']}; segmentation reoptimized "
+                f"{not evidence['not_segmentation_reoptimization']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2127,6 +2209,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Source-state reparse prototype: `{result['decision']['source_state_reparse_prototype_status']}`.",
             f"- Multi-cutoff source-state reprice: `{result['decision']['multicutoff_source_state_reprice_status']}`.",
             f"- Source-choice optimizer: `{result['decision']['source_choice_optimizer_status']}`.",
+            f"- Global source-path optimizer: `{result['decision']['global_source_path_optimizer_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

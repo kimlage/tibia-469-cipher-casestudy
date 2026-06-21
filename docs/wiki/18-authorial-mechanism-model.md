@@ -1133,6 +1133,12 @@ chunks and copy lengths changes `0/514` sources and gives `+0.000` bits versus
 the repriced ledger. Future source-state gains must therefore come from
 segmentation, copy-length, or global path-state optimization rather than local
 source substitution.
+A global fixed-segmentation source-path optimizer then confirms that the
+remaining value is path-state rather than local. The exact DP changes `10/514`
+sources, improves the repriced ledger by `-42.359` bits, beats repricing in
+`5/5` cutoffs, and uses max state count `14`. Segmentation and copy lengths
+remain fixed, so this is still a partial optimizer rather than a complete
+active parser.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

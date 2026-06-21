@@ -8,6 +8,7 @@
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
     "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
+    "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
     "item_type_boundary_status": "split_only_retained_op_type_field_derived",
     "literal_externality_status": "reduced_not_removed",
     "literal_payload_model_status": "active_order2_retained",
@@ -516,6 +517,29 @@
     },
     {
       "evidence": {
+        "aggregate_beats_reprice_cutoff_count": 5,
+        "all_books_beat_raw": true,
+        "all_roundtrip": true,
+        "cutoff_count": 5,
+        "max_state_count": 14,
+        "not_segmentation_reoptimization": true,
+        "total_bits": 11974.209085835391,
+        "total_changed_sources": 10,
+        "total_copy_events": 514,
+        "total_reprice_bits": 12016.56851057255,
+        "total_source_defaults": 21,
+        "total_source_exceptions": 493,
+        "total_source_path_minus_reprice_bits": -42.35942473715829,
+        "total_source_path_minus_uniform_address_bits": -155.3275625163107,
+        "total_transition_count": 4215
+      },
+      "interpretation": "A global DP over source choices improves the fixed deterministic reparse recipes under `previous_copy_end`, proving that the remaining source-state value is path-dependent rather than local. Segmentation and copy lengths remain fixed.",
+      "question": "can_global_source_path_improve_fixed_segmentation",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json",
+      "status": "passed_partial_global_source_path_improves_reprice"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -825,6 +849,7 @@
     "leave_one_book_out_source_attribution": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.json",
     "literal_copy_availability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.json",
     "literal_payload_model_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.json",
+    "multicutoff_global_source_path_optimizer_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/40_multicutoff_global_source_path_optimizer_gate.json",
     "multicutoff_source_choice_optimizer_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/39_multicutoff_source_choice_optimizer_gate.json",
     "multicutoff_source_state_reparse_reprice_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json",
     "online_bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
