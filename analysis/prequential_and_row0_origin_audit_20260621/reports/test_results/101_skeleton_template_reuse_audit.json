@@ -1,0 +1,354 @@
+{
+  "case_reopened": false,
+  "classification": "skeleton_template_reuse_sparse",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "template_reuse_insufficient_atlas_retained",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "stable_atlas_not_template_generator",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "group_examples": {
+    "aggregate_profile": {
+      "46849581c7ca70a4": {
+        "books": [
+          47,
+          62
+        ],
+        "value": {
+          "copied_digits": 126,
+          "copy_count": 1,
+          "literal_count": 0,
+          "literal_digits": 0,
+          "op_count": 1
+        }
+      },
+      "9bfdc230cc271f47": {
+        "books": [
+          43,
+          50
+        ],
+        "value": {
+          "copied_digits": 141,
+          "copy_count": 1,
+          "literal_count": 0,
+          "literal_digits": 0,
+          "op_count": 1
+        }
+      }
+    },
+    "exact_skeleton": {
+      "0bdaac53d71d2ed0": {
+        "books": [
+          47,
+          62
+        ],
+        "value": [
+          {
+            "length": 126,
+            "target_start": 0,
+            "type": "copy"
+          }
+        ]
+      },
+      "c5d9ffea3df892bb": {
+        "books": [
+          43,
+          50
+        ],
+        "value": [
+          {
+            "length": 141,
+            "target_start": 0,
+            "type": "copy"
+          }
+        ]
+      }
+    },
+    "length_sequence": {
+      "51d59e4185275c32": {
+        "books": [
+          43,
+          50
+        ],
+        "value": [
+          141
+        ]
+      },
+      "5e2883c1a7025a8a": {
+        "books": [
+          47,
+          62
+        ],
+        "value": [
+          126
+        ]
+      }
+    },
+    "type_sequence": {
+      "46968feb262ba87d": {
+        "books": [
+          19,
+          21,
+          24,
+          45,
+          46,
+          59
+        ],
+        "value": [
+          "copy",
+          "copy",
+          "copy"
+        ]
+      },
+      "573fac8e8444a0e3": {
+        "books": [
+          29,
+          41,
+          55
+        ],
+        "value": [
+          "copy",
+          "copy",
+          "copy",
+          "copy"
+        ]
+      },
+      "8c5d3779b9b73fcf": {
+        "books": [
+          30,
+          36
+        ],
+        "value": [
+          "copy",
+          "copy",
+          "copy",
+          "copy",
+          "copy",
+          "copy"
+        ]
+      },
+      "a8dcb44707cf9f1f": {
+        "books": [
+          18,
+          35,
+          37,
+          48,
+          51,
+          54,
+          61,
+          63,
+          64
+        ],
+        "value": [
+          "copy",
+          "copy"
+        ]
+      },
+      "bd0d6dc24e03fbd3": {
+        "books": [
+          32,
+          39,
+          58
+        ],
+        "value": [
+          "copy",
+          "literal",
+          "copy"
+        ]
+      },
+      "c9729e45ebc837d4": {
+        "books": [
+          22,
+          27,
+          33,
+          43,
+          47,
+          50,
+          53,
+          62,
+          66,
+          67,
+          68,
+          69
+        ],
+        "value": [
+          "copy"
+        ]
+      },
+      "d4bcdb2127f54e0b": {
+        "books": [
+          10,
+          25,
+          44,
+          52
+        ],
+        "value": [
+          "literal",
+          "copy"
+        ]
+      }
+    }
+  },
+  "group_summaries": {
+    "aggregate_profile": {
+      "cluster_size_histogram": {
+        "1": 56,
+        "2": 2
+      },
+      "largest_cluster_size": 2,
+      "reused_book_count": 4,
+      "reused_cluster_count": 2,
+      "reused_clusters": [
+        [
+          43,
+          50
+        ],
+        [
+          47,
+          62
+        ]
+      ],
+      "unique_template_count": 58
+    },
+    "exact_skeleton": {
+      "cluster_size_histogram": {
+        "1": 56,
+        "2": 2
+      },
+      "largest_cluster_size": 2,
+      "reused_book_count": 4,
+      "reused_cluster_count": 2,
+      "reused_clusters": [
+        [
+          43,
+          50
+        ],
+        [
+          47,
+          62
+        ]
+      ],
+      "unique_template_count": 58
+    },
+    "length_sequence": {
+      "cluster_size_histogram": {
+        "1": 56,
+        "2": 2
+      },
+      "largest_cluster_size": 2,
+      "reused_book_count": 4,
+      "reused_cluster_count": 2,
+      "reused_clusters": [
+        [
+          43,
+          50
+        ],
+        [
+          47,
+          62
+        ]
+      ],
+      "unique_template_count": 58
+    },
+    "type_sequence": {
+      "cluster_size_histogram": {
+        "1": 21,
+        "12": 1,
+        "2": 1,
+        "3": 2,
+        "4": 1,
+        "6": 1,
+        "9": 1
+      },
+      "largest_cluster_size": 12,
+      "reused_book_count": 39,
+      "reused_cluster_count": 7,
+      "reused_clusters": [
+        [
+          22,
+          27,
+          33,
+          43,
+          47,
+          50,
+          53,
+          62,
+          66,
+          67,
+          68,
+          69
+        ],
+        [
+          18,
+          35,
+          37,
+          48,
+          51,
+          54,
+          61,
+          63,
+          64
+        ],
+        [
+          19,
+          21,
+          24,
+          45,
+          46,
+          59
+        ],
+        [
+          10,
+          25,
+          44,
+          52
+        ],
+        [
+          29,
+          41,
+          55
+        ],
+        [
+          32,
+          39,
+          58
+        ],
+        [
+          30,
+          36
+        ]
+      ],
+      "unique_template_count": 28
+    }
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "skeleton_template_reuse_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "book_count": 60,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "tests_exact_template_reuse": true,
+    "tests_type_motif_reuse": true
+  },
+  "summary": {
+    "book_count": 60,
+    "exact_largest_cluster_size": 2,
+    "exact_reused_book_count": 4,
+    "exact_reused_cluster_count": 2,
+    "exact_unique_template_count": 58,
+    "interpretation": "Exact skeleton template reuse is sparse: most books still need their own length/target skeleton. Type-sequence motifs repeat, but length-bearing templates do not repeat enough to replace the skeleton atlas with a small template library.",
+    "template_reuse_promotable": false,
+    "type_sequence_largest_cluster_size": 12,
+    "type_sequence_reused_book_count": 39,
+    "type_sequence_unique_count": 28
+  },
+  "translation_delta": "NONE"
+}

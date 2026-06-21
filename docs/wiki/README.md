@@ -786,6 +786,9 @@ bound or decoder-side generator.
 A skeleton rule coverage audit then rejects replacing the atlas with simple
 rules: best op-type coverage is `208/261`, best length coverage is `116/261`,
 and even target-dependent copy availability reaches only `208/261`.
+A skeleton template reuse audit then rejects a small reusable template library:
+exact skeletons have `58` unique templates across `60` books, with only two
+reused pairs, although type-sequence motifs repeat across `39` books.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -1006,6 +1009,7 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   quantifies the skeleton atlas ledger (`261` atlas records plus `261` residual
   external fields),
   rejects simple decoder-visible rules as a generator for the skeleton,
+  rejects exact skeleton template reuse as too sparse for a small library,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

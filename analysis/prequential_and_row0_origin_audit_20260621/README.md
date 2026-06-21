@@ -316,6 +316,9 @@ exogenous.
 - [scripts/100_skeleton_rule_coverage_audit.py](scripts/100_skeleton_rule_coverage_audit.py) - tests whether simple decoder-visible rules generate the exact skeleton.
 - [reports/test_results/100_skeleton_rule_coverage_audit.md](reports/test_results/100_skeleton_rule_coverage_audit.md) - skeleton rule coverage result.
 - [reports/test_results/100_skeleton_rule_coverage_audit.json](reports/test_results/100_skeleton_rule_coverage_audit.json) - structured skeleton rule coverage ledger.
+- [scripts/101_skeleton_template_reuse_audit.py](scripts/101_skeleton_template_reuse_audit.py) - checks whether repeated skeleton templates reduce the atlas.
+- [reports/test_results/101_skeleton_template_reuse_audit.md](reports/test_results/101_skeleton_template_reuse_audit.md) - skeleton template reuse result.
+- [reports/test_results/101_skeleton_template_reuse_audit.json](reports/test_results/101_skeleton_template_reuse_audit.json) - structured skeleton template reuse ledger.
 
 ## Boundary
 
@@ -357,6 +360,10 @@ exogenous.
   the skeleton. The best op-type rule is the trivial `always_copy` at `208/261`,
   the best length rule covers `116/261`, and target-dependent copy availability
   also reaches only `208/261`; the skeleton remains an atlas.
+- Skeleton template reuse boundary: exact length/target skeleton reuse is sparse
+  (`58` unique templates across `60` books, with only two reused pairs). Type
+  sequences show motifs (`28` templates, `39` reused books), but length-bearing
+  templates do not reduce the atlas to a small reusable library.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then

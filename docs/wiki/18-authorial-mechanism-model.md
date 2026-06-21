@@ -353,6 +353,11 @@ simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
 length coverage is only `5/53`, and even the target-dependent copy-availability
 control reaches only `208/261`. The exact skeleton remains materialized.
+A skeleton template reuse audit then checks whether the materialized atlas can
+be reduced to a small library of repeated templates. It cannot: exact
+length/target skeletons have `58` unique templates across `60` books, with only
+two repeated pairs (`43/50` and `47/62`). Type-sequence motifs repeat across
+`39` books, but those motifs do not carry the length-bearing skeleton.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -1998,6 +2003,7 @@ book generation, not row0 pair-cell placement.
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
+- [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
