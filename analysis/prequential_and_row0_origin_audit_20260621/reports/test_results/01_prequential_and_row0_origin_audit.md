@@ -384,6 +384,21 @@ Only
 and no source-state recipe reoptimization is performed.
 See [37_cutoff60_source_state_reparse_prototype_gate.md](37_cutoff60_source_state_reparse_prototype_gate.md).
 
+### Multi-Cutoff Source-State Reparse Reprice Gate
+
+The same source-state repricing then generalizes across all standard
+prefix cutoffs `10/20/35/50/60`. Every cutoff roundtrips, every
+held-out book remains positive against raw digit coding, and the
+active `previous_copy_end` source ledger beats uniform-address reparse
+in aggregate at
+`5`/
+`5` cutoffs. Total
+aggregate delta across the five suffix evaluations is
+`-112.968`
+bits. This is still repricing of deterministic recipes, not
+source-state-aware recipe reoptimization.
+See [38_multicutoff_source_state_reparse_reprice_gate.md](38_multicutoff_source_state_reparse_reprice_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -552,6 +567,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.
 - After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.
 - Cutoff-60 deterministic reparse recipes can be repriced with the active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins, and `-10.241` aggregate bits versus uniform-address reparse, but only `4/10` books improve individually and no recipe is reoptimized.
+- Multi-cutoff source-state repricing generalizes that aggregate signal across cutoffs `10/20/35/50/60`: `5/5` cutoffs improve versus uniform-address reparse, totaling `-112.968` bits, while still not reoptimizing recipes.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

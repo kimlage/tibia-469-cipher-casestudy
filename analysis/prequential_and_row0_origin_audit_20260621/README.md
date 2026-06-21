@@ -127,6 +127,9 @@ exogenous.
 - [scripts/37_cutoff60_source_state_reparse_prototype_gate.py](scripts/37_cutoff60_source_state_reparse_prototype_gate.py) - reprices cutoff-60 deterministic reparse recipes with the active previous-copy-end source ledger.
 - [reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.md](reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.md) - cutoff-60 source-state reparse prototype.
 - [reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json](reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json) - structured cutoff-60 source-state prototype ledger.
+- [scripts/38_multicutoff_source_state_reparse_reprice_gate.py](scripts/38_multicutoff_source_state_reparse_reprice_gate.py) - repeats source-state repricing over prefix cutoffs `10/20/35/50/60`.
+- [reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.md](reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.md) - multi-cutoff source-state reprice result.
+- [reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json](reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json) - structured multi-cutoff source-state reprice ledger.
 
 ## Boundary
 
@@ -234,7 +237,10 @@ exogenous.
   roundtrip, `10/10` beat raw digit coding, and aggregate cost is `-10.241`
   bits versus uniform-address reparse. This is still repricing only: just
   `4/10` books improve individually and no source-state recipe reoptimization
-  is promoted.
+  is promoted. Repeating the same repricing over cutoffs `10/20/35/50/60`
+  generalizes the aggregate signal: `5/5` cutoffs beat uniform-address reparse,
+  totaling `-112.968` bits, while still not promoting a source-state-aware
+  recipe optimizer.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

@@ -528,6 +528,10 @@ A cutoff-60 prototype then reprices deterministic reparse recipes with the
 active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins,
 and `-10.241` aggregate bits versus uniform-address reparse, while only `4/10`
 books improve individually and no recipe reoptimization is promoted.
+The same repricing generalizes across cutoffs `10/20/35/50/60`: `5/5` cutoffs
+beat uniform-address reparse in aggregate, totaling `-112.968` bits, but this
+still reprices existing deterministic recipes rather than discovering
+source-state-optimal recipes.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

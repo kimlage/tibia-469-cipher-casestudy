@@ -11,6 +11,7 @@
     "item_type_boundary_status": "split_only_retained_op_type_field_derived",
     "literal_externality_status": "reduced_not_removed",
     "literal_payload_model_status": "active_order2_retained",
+    "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
     "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
     "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence and reduces same-family source memorization as an explanation for singleton holdout performance.",
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
@@ -476,6 +477,24 @@
     },
     {
       "evidence": {
+        "aggregate_beats_uniform_cutoff_count": 5,
+        "all_books_beat_raw": true,
+        "all_roundtrip": true,
+        "cutoff_count": 5,
+        "not_recipe_reoptimization": true,
+        "total_source_defaults": 15,
+        "total_source_exceptions": 499,
+        "total_source_state_bits": 12016.568510572548,
+        "total_source_state_minus_uniform_address_bits": -112.96813777915372,
+        "total_uniform_address_reparse_bits": 12129.536648351703
+      },
+      "interpretation": "Source-state repricing generalizes over the standard prefix cutoffs in aggregate while preserving roundtrip and raw-digit wins, but it still reprices deterministic recipes rather than discovering source-state-optimal recipes.",
+      "question": "does_source_state_repricing_generalize_across_prefix_cutoffs",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json",
+      "status": "multicutoff_source_state_reprice_generalizes_aggregate_unpromoted"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -785,6 +804,7 @@
     "leave_one_book_out_source_attribution": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.json",
     "literal_copy_availability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.json",
     "literal_payload_model_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.json",
+    "multicutoff_source_state_reparse_reprice_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json",
     "online_bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
     "online_order_frontier_controls": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.json",
     "online_prefix_book_frontier": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.json",

@@ -65,6 +65,8 @@ SOURCES = {
     / "36_active_reparse_feasibility_after_state_compression_gate.json",
     "cutoff60_source_state_reparse_prototype_gate": TEST_RESULTS
     / "37_cutoff60_source_state_reparse_prototype_gate.json",
+    "multicutoff_source_state_reparse_reprice_gate": TEST_RESULTS
+    / "38_multicutoff_source_state_reparse_reprice_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -125,6 +127,9 @@ def make_result() -> dict[str, Any]:
     source_state_reparse_prototype_gate = load_json(
         SOURCES["cutoff60_source_state_reparse_prototype_gate"]
     )
+    multicutoff_source_state_reprice_gate = load_json(
+        SOURCES["multicutoff_source_state_reparse_reprice_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -166,6 +171,10 @@ def make_result() -> dict[str, Any]:
             active_reparse_feasibility_gate,
         ),
         ("cutoff60_source_state_reparse_prototype_gate", source_state_reparse_prototype_gate),
+        (
+            "multicutoff_source_state_reparse_reprice_gate",
+            multicutoff_source_state_reprice_gate,
+        ),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -889,6 +898,55 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_source_state_repricing_generalize_across_prefix_cutoffs",
+            "source": rel(SOURCES["multicutoff_source_state_reparse_reprice_gate"]),
+            "status": "multicutoff_source_state_reprice_generalizes_aggregate_unpromoted",
+            "evidence": {
+                "cutoff_count": multicutoff_source_state_reprice_gate["summary"][
+                    "cutoff_count"
+                ],
+                "all_roundtrip": multicutoff_source_state_reprice_gate["summary"][
+                    "all_roundtrip"
+                ],
+                "all_books_beat_raw": multicutoff_source_state_reprice_gate[
+                    "summary"
+                ]["all_books_beat_raw"],
+                "aggregate_beats_uniform_cutoff_count": (
+                    multicutoff_source_state_reprice_gate["summary"][
+                        "aggregate_beats_uniform_cutoff_count"
+                    ]
+                ),
+                "total_source_state_bits": multicutoff_source_state_reprice_gate[
+                    "summary"
+                ]["total_source_state_bits"],
+                "total_uniform_address_reparse_bits": (
+                    multicutoff_source_state_reprice_gate["summary"][
+                        "total_uniform_address_reparse_bits"
+                    ]
+                ),
+                "total_source_state_minus_uniform_address_bits": (
+                    multicutoff_source_state_reprice_gate["summary"][
+                        "total_source_state_minus_uniform_address_bits"
+                    ]
+                ),
+                "total_source_defaults": multicutoff_source_state_reprice_gate[
+                    "summary"
+                ]["total_source_defaults"],
+                "total_source_exceptions": multicutoff_source_state_reprice_gate[
+                    "summary"
+                ]["total_source_exceptions"],
+                "not_recipe_reoptimization": multicutoff_source_state_reprice_gate[
+                    "scope"
+                ]["not_recipe_reoptimization"],
+            },
+            "interpretation": (
+                "Source-state repricing generalizes over the standard prefix "
+                "cutoffs in aggregate while preserving roundtrip and raw-digit "
+                "wins, but it still reprices deterministic recipes rather than "
+                "discovering source-state-optimal recipes."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1527,6 +1585,7 @@ def make_result() -> dict[str, Any]:
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
             "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
+            "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1775,6 +1834,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['source_exception_count']}; reoptimized "
                 f"{not evidence['not_recipe_reoptimization']}"
             )
+        elif row["question"] == "does_source_state_repricing_generalize_across_prefix_cutoffs":
+            key = (
+                f"cutoffs {evidence['cutoff_count']}; roundtrip "
+                f"{evidence['all_roundtrip']}; raw wins "
+                f"{evidence['all_books_beat_raw']}; aggregate uniform wins "
+                f"{evidence['aggregate_beats_uniform_cutoff_count']}/"
+                f"{evidence['cutoff_count']}; bits "
+                f"{evidence['total_source_state_bits']:.3f} vs "
+                f"{evidence['total_uniform_address_reparse_bits']:.3f}; delta "
+                f"{evidence['total_source_state_minus_uniform_address_bits']:+.3f}; "
+                f"default/exception {evidence['total_source_defaults']}/"
+                f"{evidence['total_source_exceptions']}; reoptimized "
+                f"{not evidence['not_recipe_reoptimization']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -1984,6 +2057,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Copy source state compression: `{result['decision']['copy_source_state_compression_status']}`.",
             f"- Active reparse feasibility: `{result['decision']['active_reparse_feasibility_status']}`.",
             f"- Source-state reparse prototype: `{result['decision']['source_state_reparse_prototype_status']}`.",
+            f"- Multi-cutoff source-state reprice: `{result['decision']['multicutoff_source_state_reprice_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

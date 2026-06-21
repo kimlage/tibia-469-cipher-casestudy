@@ -69,6 +69,14 @@ CUTOFF60_SOURCE_STATE_REPARSE_PROTOTYPE_GATE = (
     / "test_results"
     / "37_cutoff60_source_state_reparse_prototype_gate.json"
 )
+MULTICUTOFF_SOURCE_STATE_REPARSE_REPRICE_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "38_multicutoff_source_state_reparse_reprice_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -233,6 +241,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "cutoff60_source_state_reparse_prototype_gate",
         source_state_reparse_prototype_gate,
     )
+    multicutoff_source_state_reprice_gate = load_json(
+        MULTICUTOFF_SOURCE_STATE_REPARSE_REPRICE_GATE
+    )
+    assert_analysis_boundary(
+        "multicutoff_source_state_reparse_reprice_gate",
+        multicutoff_source_state_reprice_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -340,6 +355,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "scope": source_state_reparse_prototype_gate["scope"],
             "decision": source_state_reparse_prototype_gate["decision"],
         },
+        "multicutoff_source_state_reparse_reprice": {
+            "classification": multicutoff_source_state_reprice_gate["classification"],
+            "source": rel(MULTICUTOFF_SOURCE_STATE_REPARSE_REPRICE_GATE),
+            "summary": multicutoff_source_state_reprice_gate["summary"],
+            "scope": multicutoff_source_state_reprice_gate["scope"],
+            "decision": multicutoff_source_state_reprice_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -367,6 +389,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
             "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
+            "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -403,6 +426,7 @@ def render_markdown(
     copy_source_state_compression_gate_link: str,
     active_reparse_feasibility_gate_link: str,
     cutoff60_source_state_reparse_prototype_gate_link: str,
+    multicutoff_source_state_reparse_reprice_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -429,6 +453,9 @@ def render_markdown(
         "summary"
     ]
     source_reparse_aggregate = source_reparse_prototype["aggregate"]
+    multicutoff_source_reprice = result["multicutoff_source_state_reparse_reprice"][
+        "summary"
+    ]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -839,6 +866,21 @@ def render_markdown(
             "and no source-state recipe reoptimization is performed.",
             f"See [37_cutoff60_source_state_reparse_prototype_gate.md]({cutoff60_source_state_reparse_prototype_gate_link}).",
             "",
+            "### Multi-Cutoff Source-State Reparse Reprice Gate",
+            "",
+            "The same source-state repricing then generalizes across all standard",
+            "prefix cutoffs `10/20/35/50/60`. Every cutoff roundtrips, every",
+            "held-out book remains positive against raw digit coding, and the",
+            "active `previous_copy_end` source ledger beats uniform-address reparse",
+            "in aggregate at",
+            f"`{multicutoff_source_reprice['aggregate_beats_uniform_cutoff_count']}`/",
+            f"`{multicutoff_source_reprice['cutoff_count']}` cutoffs. Total",
+            "aggregate delta across the five suffix evaluations is",
+            f"`{multicutoff_source_reprice['total_source_state_minus_uniform_address_bits']:+.3f}`",
+            "bits. This is still repricing of deterministic recipes, not",
+            "source-state-aware recipe reoptimization.",
+            f"See [38_multicutoff_source_state_reparse_reprice_gate.md]({multicutoff_source_state_reparse_reprice_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -1016,6 +1058,7 @@ def render_markdown(
             "- Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.",
             "- After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.",
             "- Cutoff-60 deterministic reparse recipes can be repriced with the active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins, and `-10.241` aggregate bits versus uniform-address reparse, but only `4/10` books improve individually and no recipe is reoptimized.",
+            "- Multi-cutoff source-state repricing generalizes that aggregate signal across cutoffs `10/20/35/50/60`: `5/5` cutoffs improve versus uniform-address reparse, totaling `-112.968` bits, while still not reoptimizing recipes.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -1088,6 +1131,9 @@ def main() -> None:
             ),
             cutoff60_source_state_reparse_prototype_gate_link=(
                 "37_cutoff60_source_state_reparse_prototype_gate.md"
+            ),
+            multicutoff_source_state_reparse_reprice_gate_link=(
+                "38_multicutoff_source_state_reparse_reprice_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1176,6 +1222,9 @@ def main() -> None:
             ),
             cutoff60_source_state_reparse_prototype_gate_link=(
                 "test_results/37_cutoff60_source_state_reparse_prototype_gate.md"
+            ),
+            multicutoff_source_state_reparse_reprice_gate_link=(
+                "test_results/38_multicutoff_source_state_reparse_reprice_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"

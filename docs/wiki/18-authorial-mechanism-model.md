@@ -1121,6 +1121,12 @@ source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
 `10/10`, and is `-10.241` aggregate bits versus uniform-address reparse, but
 only `4/10` books improve individually and no source-state recipe
 reoptimization is promoted.
+The multi-cutoff source-state reprice gate then repeats the same test at
+cutoffs `10/20/35/50/60`. All cutoffs roundtrip, every held-out book remains
+positive against raw digit coding, and `5/5` cutoffs beat uniform-address
+reparse in aggregate, totaling `-112.968` bits. This validates the
+`previous_copy_end` source ledger over reparsed recipes, but it is still
+repricing only rather than source-state-aware recipe discovery.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry
