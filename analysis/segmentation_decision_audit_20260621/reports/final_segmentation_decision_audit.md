@@ -166,6 +166,27 @@ copies, missed internal copies, literal understops, and one copy
 length drift, so the local-peak family is not a complete
 segmentation mechanism.
 
+## Immediate-Copy Override Control
+
+The next obvious structural rescue is to override the local-peak
+wait rule when a strong copy is already available. Gate 10 tests
+book-start, internal, and any-position immediate-copy overrides
+across thresholds `5..20`.
+
+| Family | Best exact books | Selected by prefix? | Boundary |
+|---|---:|---|---|
+| No override baseline | `48/60` | yes | retained |
+| Immediate-copy overrides | `48/60` | `3/5` oracle cells | rejected |
+
+- Best policy: `window5:no_override`.
+- Exact-book improvement vs baseline: `0`.
+
+The override family does not improve the parser. In the problematic
+middle prefix cells it overfits train books and loses held-out
+suffix books, especially through false book-start copies. The
+remaining segmentation blocker is therefore not a simple
+immediate-copy/missed-copy threshold.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -184,3 +205,4 @@ or changed skeleton/literal accounting.
 - [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)
 - [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)
 - [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)
+- [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)

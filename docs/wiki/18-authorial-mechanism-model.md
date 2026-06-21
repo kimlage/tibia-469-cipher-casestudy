@@ -490,6 +490,12 @@ the suffix oracle in all of them, improving exact books to `48/60`. The
 remaining `12` mismatches include missed book-start copies, missed internal
 copies, literal understops, and one copy-length drift, so the policy is a
 prefix-stable partial parser rather than a complete segmentation mechanism.
+An immediate-copy override audit then rejects the natural missed-copy rescue.
+Book-start, internal, and any-position overrides over thresholds `5..20` do not
+beat `window5:no_override`; train-selected book-start overrides overfit in the
+middle prefix cells and lose held-out suffix books. The remaining drifts are
+therefore not explained by a simple "copy immediately when a strong match
+exists" rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2162,6 +2168,7 @@ book generation, not row0 pair-cell placement.
 - [Literal stop exception topology audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/07_literal_stop_exception_topology_audit.md)
 - [Integrated online literal parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/08_integrated_online_literal_parser_audit.md)
 - [Integrated parser policy and drift audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/09_integrated_parser_policy_and_drift_audit.md)
+- [Integrated parser override audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/10_integrated_parser_override_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

@@ -880,6 +880,10 @@ A policy frontier over the same local-peak family then selects
 `max_copy_length:window5` in `5/5` prefix cells and improves exact books to
 `48/60`. The remaining `12` mixed drift books keep the segmentation mechanism
 in partial-parser status, not promoted generator status.
+An immediate-copy override audit then rejects the obvious rescue: book-start,
+internal, and any-position overrides over thresholds `5..20` do not beat the
+`window5:no_override` parser and overfit held-out suffixes in the middle prefix
+cells. The blocker is not a simple missed-copy threshold.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

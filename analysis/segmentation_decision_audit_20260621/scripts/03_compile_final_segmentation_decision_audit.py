@@ -18,6 +18,7 @@ ONLINE_LITERAL = TEST_RESULTS / "06_online_literal_stop_rule_audit.json"
 LITERAL_EXCEPTION = TEST_RESULTS / "07_literal_stop_exception_topology_audit.json"
 INTEGRATED_ONLINE = TEST_RESULTS / "08_integrated_online_literal_parser_audit.json"
 POLICY_DRIFT = TEST_RESULTS / "09_integrated_parser_policy_and_drift_audit.json"
+OVERRIDE = TEST_RESULTS / "10_integrated_parser_override_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -56,6 +57,7 @@ def main() -> None:
         load_json(INTEGRATED_ONLINE) if INTEGRATED_ONLINE.exists() else None
     )
     policy_drift = load_json(POLICY_DRIFT) if POLICY_DRIFT.exists() else None
+    override = load_json(OVERRIDE) if OVERRIDE.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -70,6 +72,8 @@ def main() -> None:
         assert_boundary("integrated_online_literal_parser_audit", integrated_online)
     if policy_drift is not None:
         assert_boundary("integrated_parser_policy_and_drift_audit", policy_drift)
+    if override is not None:
+        assert_boundary("integrated_parser_override_audit", override)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -85,6 +89,7 @@ def main() -> None:
         None if integrated_online is None else integrated_online["summary"]
     )
     policy_drift_summary = None if policy_drift is None else policy_drift["summary"]
+    override_summary = None if override is None else override["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -306,6 +311,32 @@ def main() -> None:
                 "",
             ]
         )
+    if override_summary is not None:
+        lines.extend(
+            [
+                "## Immediate-Copy Override Control",
+                "",
+                "The next obvious structural rescue is to override the local-peak",
+                "wait rule when a strong copy is already available. Gate 10 tests",
+                "book-start, internal, and any-position immediate-copy overrides",
+                "across thresholds `5..20`.",
+                "",
+                "| Family | Best exact books | Selected by prefix? | Boundary |",
+                "|---|---:|---|---|",
+                f"| No override baseline | `{override_summary['baseline_exact_books']}/60` | yes | retained |",
+                f"| Immediate-copy overrides | `{override_summary['best_exact_books']}/60` | `{override_summary['prequential_selected_matches_oracle_cells']}/{override_summary['prequential_cells']}` oracle cells | rejected |",
+                "",
+                f"- Best policy: `{override_summary['best_policy']}`.",
+                f"- Exact-book improvement vs baseline: `{override_summary['exact_improvement_vs_baseline']}`.",
+                "",
+                "The override family does not improve the parser. In the problematic",
+                "middle prefix cells it overfits train books and loses held-out",
+                "suffix books, especially through false book-start copies. The",
+                "remaining segmentation blocker is therefore not a simple",
+                "immediate-copy/missed-copy threshold.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -326,6 +357,7 @@ def main() -> None:
             "- [Literal stop exception topology audit](test_results/07_literal_stop_exception_topology_audit.md)",
             "- [Integrated online literal parser audit](test_results/08_integrated_online_literal_parser_audit.md)",
             "- [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)",
+            "- [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)",
             "",
         ]
     )
