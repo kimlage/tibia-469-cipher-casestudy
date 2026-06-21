@@ -365,6 +365,13 @@ operation, book length, remaining length, phase, and book-mod/order features.
 It rejects that path: the best full-fit context gets only `3/60` exact books
 and `14/261` operation hits, costs `+660.028` bits versus a label-atlas lower
 bound after corrections, and has `0/5` cover-all holdout cells.
+A literal payload generation audit then tests the next dependency after granting
+that exact skeleton. The remaining `53` literal chunks / `266` literal digits
+do not follow from simple source-free contexts: the best full-fit context
+matches `39/53` chunks but carries `222` payload digits in its table, costs
+`+44.588` bits versus raw uniform literal payload after paid corrections, and
+has `0/5` prefix/holdout cells with any exact chunk. The payload remains
+external rather than generated.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2463,6 +2470,8 @@ book generation, not row0 pair-cell placement.
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
 - [Final source-free skeleton generation audit](../../analysis/source_free_skeleton_generation_audit_20260621/reports/final_source_free_skeleton_generation_audit.md)
 - [Source-free skeleton grammar gate](../../analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.md)
+- [Final literal payload generation audit](../../analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md)
+- [Literal payload context gate](../../analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
