@@ -625,6 +625,9 @@ A paid-anchor follow-up tests the best partial worksheet shape directly: all
 13 anchors save `54.178` bits only before costs; after explicit pair+label
 cost the net is `-11.852` bits. Rare-singleton anchors are nominally strong
 under random controls but merely break even once their rare labels are paid.
+The row0 parallel provenance bridge then traces local workbook/import/
+reconstruction/audit layers but leaves CipSoft origin untraced, so row0 remains
+a substrate assumed by the book generator rather than a derived component.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are

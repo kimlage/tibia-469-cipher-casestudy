@@ -1285,6 +1285,13 @@ exception/render layers, K5 and `5x2` eye models, and hierarchical provenance
 still produce no charged, controlled, holdout-capable pair-label formula. The
 classification is `row0_origin_frontier_saturated_current_corpus`: row0 origin
 remains open, but broad current-corpus brute force is no longer the mainline.
+The row0 parallel provenance bridge then imports the independent row0-origin
+front. It traces local workbook/import/reconstruction/audit layers, but
+CipSoft origin remains untraced. Worksheet anchors have a nominal `54.178` bit
+lookup reduction, but after explicit pair+label costs they are `-11.852` bits
+versus lookup; rare-singleton anchors net to `0.000` bits after paying label
+data. Row0 therefore remains a substrate assumed by the book generator, not a
+derived component of the generator.
 
 The same provenance does not solve the unresolved pair table. The
 hierarchical-provenance audit derived 31 features per unordered pair from
@@ -1555,6 +1562,7 @@ book generation, not row0 pair-cell placement.
 - [Train-CV component selector audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/03_train_cv_component_selector_audit.md)
 - [Recipe externality audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md)
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
+- [Row0 parallel provenance bridge audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/47_row0_parallel_provenance_bridge_audit.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

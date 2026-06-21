@@ -154,6 +154,9 @@ exogenous.
 - [scripts/46_source_substitution_saturation_audit.py](scripts/46_source_substitution_saturation_audit.py) - applies an explicit stop rule to repeated same-chunk source-substitution passes without running a fifth pass.
 - [reports/test_results/46_source_substitution_saturation_audit.md](reports/test_results/46_source_substitution_saturation_audit.md) - source-substitution saturation decision.
 - [reports/test_results/46_source_substitution_saturation_audit.json](reports/test_results/46_source_substitution_saturation_audit.json) - structured source-substitution saturation ledger.
+- [scripts/47_row0_parallel_provenance_bridge_audit.py](scripts/47_row0_parallel_provenance_bridge_audit.py) - integrates the independent row0 provenance front into this audit without changing book-generation bits.
+- [reports/test_results/47_row0_parallel_provenance_bridge_audit.md](reports/test_results/47_row0_parallel_provenance_bridge_audit.md) - row0 parallel provenance bridge.
+- [reports/test_results/47_row0_parallel_provenance_bridge_audit.json](reports/test_results/47_row0_parallel_provenance_bridge_audit.json) - structured row0 provenance bridge ledger.
 
 ## Boundary
 
@@ -271,7 +274,10 @@ exogenous.
   further supports local source-frontier saturation. A saturation audit then
   freezes repeated local same-chunk source substitutions as no longer mainline:
   the last three gains sum to only `0.001484` bits and are dwarfed by
-  selector-cost sanity checks. The complete
+  selector-cost sanity checks. A row0 parallel provenance bridge then imports
+  the independent provenance front: local workbook/import/reconstruction/audit
+  layers are traced, but CipSoft origin remains untraced and paid worksheet
+  anchors do not beat lookup once pair and label costs are charged. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

@@ -141,6 +141,14 @@ SOURCE_SUBSTITUTION_SATURATION_AUDIT = (
     / "test_results"
     / "46_source_substitution_saturation_audit.json"
 )
+ROW0_PARALLEL_PROVENANCE_BRIDGE_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "47_row0_parallel_provenance_bridge_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -364,6 +372,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "source_substitution_saturation_audit",
         source_substitution_saturation,
     )
+    row0_parallel_provenance_bridge = load_json(ROW0_PARALLEL_PROVENANCE_BRIDGE_AUDIT)
+    assert_analysis_boundary(
+        "row0_parallel_provenance_bridge_audit",
+        row0_parallel_provenance_bridge,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -557,6 +570,12 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "scope": source_substitution_saturation["scope"],
             "decision": source_substitution_saturation["decision"],
         },
+        "row0_parallel_provenance_bridge": {
+            "classification": row0_parallel_provenance_bridge["classification"],
+            "source": rel(ROW0_PARALLEL_PROVENANCE_BRIDGE_AUDIT),
+            "summary": row0_parallel_provenance_bridge["summary"],
+            "decision": row0_parallel_provenance_bridge["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -593,6 +612,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
             "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
             "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
+            "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -647,6 +667,7 @@ def render_markdown(
     literal_copy_availability_gate_link: str,
     literal_payload_model_gate_link: str,
     row0_requirement_link: str,
+    row0_parallel_provenance_bridge_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
     random_controls = result["predictive_validation"]["randomized_order_controls"]
@@ -685,6 +706,7 @@ def render_markdown(
     source_substitution_saturation = result["source_substitution_saturation"][
         "summary"
     ]
+    row0_parallel_provenance = result["row0_parallel_provenance_bridge"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1388,6 +1410,24 @@ def render_markdown(
             "alphabet.",
             f"See [05_row0_hypothesis_requirement_audit.md]({row0_requirement_link}).",
             "",
+            "### Row0 Parallel Provenance Bridge",
+            "",
+            "The independent row0-origin parallel front is then bridged back into",
+            "this audit. It traces local project provenance through workbook, import,",
+            "reconstruction, and audit layers, but still leaves CipSoft/authorial",
+            "origin untraced. Its paid-anchor gate confirms the boundary: all",
+            "worksheet anchors have a nominal",
+            f"`{row0_parallel_provenance['all_anchors_nominal_reduction_bits']:.3f}`",
+            "bit reduction, but after explicit pair+label costs they are",
+            f"`{row0_parallel_provenance['all_anchors_explicit_pair_label_net_bits']:.3f}`",
+            "bits versus lookup. Rare singleton anchors have nominal signal",
+            f"`{row0_parallel_provenance['rare_singletons_nominal_reduction_bits']:.3f}`",
+            "bits but net to",
+            f"`{row0_parallel_provenance['rare_singletons_explicit_pair_label_net_bits']:.3f}`",
+            "after paying label data. Ordered-surface asymmetry remains a real",
+            "mechanical clue, not a label-origin formula.",
+            f"See [47_row0_parallel_provenance_bridge_audit.md]({row0_parallel_provenance_bridge_link}).",
+            "",
             "## Decision",
             "",
             "- `8558.667` bits remains a frozen validation scope here, not a final authorial method.",
@@ -1415,6 +1455,7 @@ def render_markdown(
             "- A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.",
             "- The source-substitution saturation audit freezes repeated same-chunk local source edits as no longer mainline: the last three gains sum to `0.001484` bits and are dwarfed by selector-cost sanity checks.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
+            "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
         ]
@@ -1533,6 +1574,9 @@ def main() -> None:
             literal_copy_availability_gate_link="28_literal_copy_availability_gate.md",
             literal_payload_model_gate_link="29_literal_payload_model_gate.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
+            row0_parallel_provenance_bridge_link=(
+                "47_row0_parallel_provenance_bridge_audit.md"
+            ),
         ),
         encoding="utf-8",
     )
@@ -1654,6 +1698,9 @@ def main() -> None:
                 "test_results/29_literal_payload_model_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
+            row0_parallel_provenance_bridge_link=(
+                "test_results/47_row0_parallel_provenance_bridge_audit.md"
+            ),
         ),
         encoding="utf-8",
     )
