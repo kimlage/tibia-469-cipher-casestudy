@@ -369,6 +369,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/140_online_copy_source_canonicality_audit.py` - adds controls to
   the copy-source canonicality result: earliest occurrence remains `261/261`,
   while random candidate choice would expect only `169.473` hits.
+- `scripts/141_default_exception_prequential_validation.py` - tests the
+  promoted copy-length/source default-exception ledgers under prefix, block,
+  and family holdout; they are online-predictive but frozen/source-unstable.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

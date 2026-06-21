@@ -948,6 +948,12 @@ matches `5/261` copy sources; combined with a global adaptive exception-source
 stream and a charged `12` bit declaration delta, it lowers copy-address cost
 from `3031.700` to `3002.838` bits and promotes the mechanical bound to
 `8177.317` bits. Copy source is remodeled, not eliminated.
+The default/exception prequential validation audit then tests those two
+promotions under holdout. They retain positive online gains on every prefix
+future-suffix split (`min=43.582` bits), but frozen prefix-10 scoring loses
+`-39.773` bits versus legal uniform because copy-source prediction is sparse.
+Family holdouts also include nonpositive failures, so this remains
+online-predictive component evidence rather than a frozen generation method.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1246,6 +1252,7 @@ book generation, not row0 pair-cell placement.
 - [Online copy-source canonicality controls](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md)
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
+- [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

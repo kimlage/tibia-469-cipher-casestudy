@@ -679,5 +679,11 @@ Generated audits in this directory should be treated as the current state:
   latest occurrence reaches only `123/261`, previous-source-plus-length reaches
   `5/261`, and uniform random candidate choice would expect `169.473` hits
   with `log2 P(all earliest)=-236.596`.
+- `141_default_exception_prequential_validation`: validates audits 136/137
+  under holdout. The promoted default-exception ledgers are online-predictive
+  on all prefix splits (`min=43.582` bits versus legal uniform), but frozen
+  prefix-10 scoring loses `-39.773` bits because copy-source prediction is
+  sparse, and family splits include failures. No frozen generation-method
+  promotion follows.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

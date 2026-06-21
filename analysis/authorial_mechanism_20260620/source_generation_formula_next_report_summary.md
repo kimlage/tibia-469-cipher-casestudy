@@ -656,6 +656,13 @@ Coverage of the remaining report recommendations and follow-on refinements:
   occurrence is only `123/261`, previous-source-plus-length is `5/261`, and
   uniform random candidate choice would expect `169.473` hits (`log2 P(all
   earliest)=-236.596`).
+- default/exception prequential validation is now covered by
+  [`141_default_exception_prequential_validation.py`](scripts/141_default_exception_prequential_validation.py);
+  copy-length/source default-exception components have positive online gains
+  on all prefix future-suffix splits (`min=43.582` bits), but frozen prefix-10
+  scoring loses `-39.773` bits versus legal uniform because copy-source
+  prediction is sparse. Family holdouts also include nonpositive failures, so
+  this is not a frozen generation method.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

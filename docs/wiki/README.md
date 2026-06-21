@@ -422,6 +422,10 @@ The copy-source default/exception audit then remodels source addressing with a
 decodable previous-source-plus-length default plus global adaptive exceptions,
 lowering the mechanical bound to `8177.317` bits while leaving row0 and
 semantics unchanged.
+The default/exception prequential validation audit keeps that boundary honest:
+prefix online gains stay positive, but frozen prefix-10 loses `-39.773` bits
+and family holdouts include failures, so the default/exception ledgers are not
+promoted as a frozen generation method.
 The literal-payload default/exception audit then rejects modal-default literal
 digit coding: the active categorical previous-emitted-digit order-2 model stays
 best, so no literal-payload fallback is promoted.
