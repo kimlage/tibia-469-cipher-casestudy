@@ -1,0 +1,178 @@
+{
+  "case_reopened": false,
+  "classification": "operation_cutpoint_scaling_generator_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "operation_cutpoint_scaling_generator_rejected",
+    "operation_length_status": "atlas_retained_after_cutpoint_scaling_gate",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_scoreboard": [
+    {
+      "book_count": 60,
+      "correction_records": 55,
+      "delta_vs_exact_atlas_records": 35,
+      "exact_books": 42,
+      "key_name": "book_mod10_x_op_count",
+      "missing_predictions": 0,
+      "row_hits": 206,
+      "template_count": 45,
+      "template_payload_records": 181,
+      "total_records": 296,
+      "truth_ops": 261
+    },
+    {
+      "book_count": 60,
+      "correction_records": 72,
+      "delta_vs_exact_atlas_records": 36,
+      "exact_books": 34,
+      "key_name": "type_sequence",
+      "missing_predictions": 0,
+      "row_hits": 189,
+      "template_count": 28,
+      "template_payload_records": 165,
+      "total_records": 297,
+      "truth_ops": 261
+    },
+    {
+      "book_count": 60,
+      "correction_records": 128,
+      "delta_vs_exact_atlas_records": 65,
+      "exact_books": 27,
+      "key_name": "copy_literal_counts",
+      "missing_predictions": 0,
+      "row_hits": 133,
+      "template_count": 24,
+      "template_payload_records": 138,
+      "total_records": 326,
+      "truth_ops": 261
+    },
+    {
+      "book_count": 60,
+      "correction_records": 147,
+      "delta_vs_exact_atlas_records": 78,
+      "exact_books": 25,
+      "key_name": "book_length_bucket_x_op_count",
+      "missing_predictions": 0,
+      "row_hits": 114,
+      "template_count": 30,
+      "template_payload_records": 132,
+      "total_records": 339,
+      "truth_ops": 261
+    },
+    {
+      "book_count": 60,
+      "correction_records": 206,
+      "delta_vs_exact_atlas_records": 84,
+      "exact_books": 15,
+      "key_name": "op_count",
+      "missing_predictions": 0,
+      "row_hits": 55,
+      "template_count": 13,
+      "template_payload_records": 79,
+      "total_records": 345,
+      "truth_ops": 261
+    }
+  ],
+  "inputs": {
+    "operation_length_motif_gate": "analysis/operation_length_motif_audit_20260621/reports/test_results/01_operation_length_motif_library_gate.json",
+    "source_free_skeleton_script": "analysis/source_free_skeleton_generation_audit_20260621/scripts/02_source_free_skeleton_grammar_gate.py"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_key": "op_count",
+      "oracle_test_delta_vs_exact_atlas_records": 106,
+      "selected_key": "book_length_bucket_x_op_count",
+      "selected_matches_oracle": false,
+      "test_book_count": 50,
+      "test_delta_vs_exact_atlas_records": 119,
+      "test_exact_books": 0,
+      "test_row_hits": 0,
+      "test_truth_ops": 182,
+      "train_delta_vs_exact_atlas_records": 0
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_key": "op_count",
+      "oracle_test_delta_vs_exact_atlas_records": 100,
+      "selected_key": "book_mod10_x_op_count",
+      "selected_matches_oracle": false,
+      "test_book_count": 40,
+      "test_delta_vs_exact_atlas_records": 131,
+      "test_exact_books": 10,
+      "test_row_hits": 10,
+      "test_truth_ops": 140,
+      "train_delta_vs_exact_atlas_records": 0
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_key": "op_count",
+      "oracle_test_delta_vs_exact_atlas_records": 91,
+      "selected_key": "book_mod10_x_op_count",
+      "selected_matches_oracle": false,
+      "test_book_count": 30,
+      "test_delta_vs_exact_atlas_records": 150,
+      "test_exact_books": 9,
+      "test_row_hits": 9,
+      "test_truth_ops": 95,
+      "train_delta_vs_exact_atlas_records": 13
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_key": "op_count",
+      "oracle_test_delta_vs_exact_atlas_records": 83,
+      "selected_key": "book_mod10_x_op_count",
+      "selected_matches_oracle": false,
+      "test_book_count": 20,
+      "test_delta_vs_exact_atlas_records": 170,
+      "test_exact_books": 7,
+      "test_row_hits": 7,
+      "test_truth_ops": 56,
+      "train_delta_vs_exact_atlas_records": 16
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_key": "op_count",
+      "oracle_test_delta_vs_exact_atlas_records": 84,
+      "selected_key": "book_mod10_x_op_count",
+      "selected_matches_oracle": false,
+      "test_book_count": 10,
+      "test_delta_vs_exact_atlas_records": 185,
+      "test_exact_books": 5,
+      "test_row_hits": 5,
+      "test_truth_ops": 20,
+      "train_delta_vs_exact_atlas_records": 20
+    }
+  ],
+  "schema": "operation_cutpoint_scaling_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "book_lengths_granted": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "op_count_or_type_sequence_granted_by_key": true,
+    "row0_origin_changed": false,
+    "tests_normalized_cutpoint_templates": true
+  },
+  "summary": {
+    "best_delta_vs_exact_atlas_records": 35,
+    "best_exact_books": 42,
+    "best_key": "book_mod10_x_op_count",
+    "best_row_hits": 206,
+    "best_template_count": 45,
+    "best_template_payload_records": 181,
+    "best_truth_ops": 261,
+    "book_count": 60,
+    "interpretation": "Normalized cutpoint templates do not generate the operation length atlas. Full-fit templates either memorize too much or need correction records, and prefix holdout never covers all future books.",
+    "key_family_count": 5,
+    "operation_count": 261,
+    "prequential_cells": 5,
+    "prequential_cover_all_cells": 0,
+    "prequential_positive_delta_cells": 5,
+    "promotes_cutpoint_scaling_generator": false
+  },
+  "translation_delta": "NONE"
+}

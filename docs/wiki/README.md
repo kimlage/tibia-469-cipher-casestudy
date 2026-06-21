@@ -798,6 +798,12 @@ An operation-length motif audit then tests whether sub-book reusable length
 motifs replace the atlas. They do not: the best full-fit motif library saves
 only `2` records while leaving `249` residual singleton lengths, and prefix/
 holdout libraries cover `0` future books without residuals.
+An operation cutpoint scaling audit then tests proportional cut templates
+scaled to each granted book length. The best full-fit family reaches `42/60`
+exact books and `206/261` row hits, but needs `45` templates plus `181`
+payload records, is `+35` records worse than the exact atlas, and has `0/5`
+cover-all holdout cells. Cutpoint scaling is therefore descriptive, not a
+generator.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and

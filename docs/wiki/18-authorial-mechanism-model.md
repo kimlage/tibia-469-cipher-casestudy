@@ -376,6 +376,13 @@ reusable sub-book length motifs. This also fails as a generator. The best
 full-fit library has only `2` motifs, saves `2` records, and still leaves
 `249` residual singleton lengths; prefix/holdout motif libraries cover `0`
 future books without residuals. The motif family is therefore not promoted.
+An operation cutpoint scaling audit then tests whether normalized operation
+cutpoints, scaled to each granted book length, replace the length atlas. They
+do not. The best full-fit `book_mod10_x_op_count` family reaches `42/60`
+exact books and `206/261` row hits, but carries `45` templates plus `181`
+payload records, is `+35` records worse than the exact atlas, and has `0/5`
+cover-all holdout cells. The proportional-cutpoint signal is descriptive, not
+a generator.
 A book order generation audit then consolidates the scattered order controls
 against the current boundary. Numeric order remains the compact canonical order
 used by the formula: full-formula and descriptor-cost gates promote no
@@ -2512,6 +2519,8 @@ book generation, not row0 pair-cell placement.
 - [Operation length Markov gate](../../analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.md)
 - [Final operation length motif audit](../../analysis/operation_length_motif_audit_20260621/reports/final_operation_length_motif_audit.md)
 - [Operation length motif library gate](../../analysis/operation_length_motif_audit_20260621/reports/test_results/01_operation_length_motif_library_gate.md)
+- [Final operation cutpoint scaling audit](../../analysis/operation_cutpoint_scaling_audit_20260621/reports/final_operation_cutpoint_scaling_audit.md)
+- [Operation cutpoint scaling gate](../../analysis/operation_cutpoint_scaling_audit_20260621/reports/test_results/01_operation_cutpoint_scaling_gate.md)
 - [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
 - [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
