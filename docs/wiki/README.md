@@ -783,6 +783,12 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A book length generation audit then makes explicit another dependency that the
+skeleton grammar gates had been granting. The active signed-Rice ledger is a
+real compression improvement (`1030 -> 566` bits, `anchor=151`, `k=5`), but it
+still declares residuals. Simple source-free policies generate only `14/70`
+exact lengths at best, and exact `70/70` requires a book-index lookup carrying
+`70` length payloads; prefix/holdout has `0/6` cover-all cells.
 A source-free skeleton grammar audit then tests the next obvious generator
 claim directly. Even granting book lengths, `13` grammar families over operation
 index, prior operation, remaining length, phase, and book-mod/order features

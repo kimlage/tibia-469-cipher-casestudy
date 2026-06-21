@@ -359,6 +359,12 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A book length generation audit then closes a dependency that the skeleton gates
+had been granting. The prior signed-Rice length ledger is reproduced as
+`1030 -> 566` bits (`anchor=151`, `k=5`), but that is residual compression, not
+length generation. Simple source-free policies reach only `14/70` exact lengths
+at best; exact `70/70` requires a book-index lookup with `70` length payloads,
+and prefix/holdout has `0/6` cover-all cells. Book length remains declared.
 A source-free skeleton grammar audit then tests the direct next step: derive the
 `261`-operation atlas from grammar contexts over operation index, prior
 operation, book length, remaining length, phase, and book-mod/order features.
@@ -2476,6 +2482,8 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
+- [Book length generation gate](../../analysis/book_length_generation_audit_20260621/reports/test_results/02_book_length_generation_gate.md)
 - [Final source-free skeleton generation audit](../../analysis/source_free_skeleton_generation_audit_20260621/reports/final_source_free_skeleton_generation_audit.md)
 - [Source-free skeleton grammar gate](../../analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.md)
 - [Final literal payload generation audit](../../analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md)

@@ -1,0 +1,246 @@
+{
+  "case_reopened": false,
+  "classification": "book_length_generator_rejected",
+  "decision": {
+    "book_length_status": "external_after_generation_gate",
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "book_length_generator_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_context_lookup_scoreboard": [
+    {
+      "context": "book_index_lookup",
+      "context_count": 70,
+      "exact_lengths": 70,
+      "length_payloads_carried": 70,
+      "row_count": 70,
+      "source_bearing_lookup": true
+    },
+    {
+      "context": "book_mod10",
+      "context_count": 10,
+      "exact_lengths": 14,
+      "length_payloads_carried": 10,
+      "row_count": 70,
+      "source_bearing_lookup": true
+    },
+    {
+      "context": "book_decade",
+      "context_count": 7,
+      "exact_lengths": 13,
+      "length_payloads_carried": 7,
+      "row_count": 70,
+      "source_bearing_lookup": true
+    },
+    {
+      "context": "book_mod7",
+      "context_count": 7,
+      "exact_lengths": 10,
+      "length_payloads_carried": 7,
+      "row_count": 70,
+      "source_bearing_lookup": true
+    },
+    {
+      "context": "book_parity",
+      "context_count": 2,
+      "exact_lengths": 7,
+      "length_payloads_carried": 2,
+      "row_count": 70,
+      "source_bearing_lookup": true
+    }
+  ],
+  "full_fit_policy_scoreboard": [
+    {
+      "exact_lengths": 14,
+      "max_abs_error": 154,
+      "mean_abs_error": 37.885714285714286,
+      "policy": "book_mod10_median",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 606,
+      "total_abs_error": 2652
+    },
+    {
+      "exact_lengths": 14,
+      "max_abs_error": 251,
+      "mean_abs_error": 70.67142857142858,
+      "policy": "book_mod10_majority",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 752,
+      "total_abs_error": 4947
+    },
+    {
+      "exact_lengths": 10,
+      "max_abs_error": 176,
+      "mean_abs_error": 42.91428571428571,
+      "policy": "previous_same_book_mod10",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 676,
+      "total_abs_error": 3004
+    },
+    {
+      "exact_lengths": 6,
+      "max_abs_error": 157,
+      "mean_abs_error": 42.3,
+      "policy": "train_majority",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 686,
+      "total_abs_error": 2961
+    },
+    {
+      "exact_lengths": 3,
+      "max_abs_error": 154,
+      "mean_abs_error": 41.7,
+      "policy": "previous_length",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 687,
+      "total_abs_error": 2919
+    },
+    {
+      "exact_lengths": 3,
+      "max_abs_error": 143,
+      "mean_abs_error": 42.357142857142854,
+      "policy": "active_anchor_151",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 709,
+      "total_abs_error": 2965
+    },
+    {
+      "exact_lengths": 2,
+      "max_abs_error": 151,
+      "mean_abs_error": 41.52857142857143,
+      "policy": "train_median",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 696,
+      "total_abs_error": 2907
+    },
+    {
+      "exact_lengths": 0,
+      "max_abs_error": 137,
+      "mean_abs_error": 45.114285714285714,
+      "policy": "linear_index_fit",
+      "row_count": 70,
+      "signed_gamma_residual_bits": 764,
+      "total_abs_error": 3158
+    }
+  ],
+  "inputs": {
+    "book_length_ledger": "analysis/book_length_generation_audit_20260621/reports/test_results/01_book_length_ledger.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 10,
+      "oracle_policy": "active_anchor_151",
+      "oracle_test_exact_lengths": 3,
+      "oracle_test_mean_abs_error": 41.88333333333333,
+      "selected_matches_oracle": false,
+      "selected_policy": "previous_same_book_mod10",
+      "test_exact_lengths": 0,
+      "test_mean_abs_error": 65.31666666666666,
+      "test_row_count": 60,
+      "test_signed_gamma_residual_bits": 684,
+      "train_exact_lengths": 10,
+      "train_row_count": 10
+    },
+    {
+      "cutoff_book": 20,
+      "oracle_policy": "train_majority",
+      "oracle_test_exact_lengths": 4,
+      "oracle_test_mean_abs_error": 41.98,
+      "selected_matches_oracle": false,
+      "selected_policy": "previous_same_book_mod10",
+      "test_exact_lengths": 4,
+      "test_mean_abs_error": 64.9,
+      "test_row_count": 50,
+      "test_signed_gamma_residual_bits": 560,
+      "train_exact_lengths": 10,
+      "train_row_count": 20
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_policy": "book_mod10_median",
+      "oracle_test_exact_lengths": 3,
+      "oracle_test_mean_abs_error": 41.375,
+      "selected_matches_oracle": true,
+      "selected_policy": "book_mod10_median",
+      "test_exact_lengths": 3,
+      "test_mean_abs_error": 41.375,
+      "test_row_count": 40,
+      "test_signed_gamma_residual_bits": 389,
+      "train_exact_lengths": 11,
+      "train_row_count": 30
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_policy": "active_anchor_151",
+      "oracle_test_exact_lengths": 2,
+      "oracle_test_mean_abs_error": 43.9,
+      "selected_matches_oracle": false,
+      "selected_policy": "previous_same_book_mod10",
+      "test_exact_lengths": 1,
+      "test_mean_abs_error": 67.1,
+      "test_row_count": 30,
+      "test_signed_gamma_residual_bits": 349,
+      "train_exact_lengths": 12,
+      "train_row_count": 40
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_policy": "active_anchor_151",
+      "oracle_test_exact_lengths": 2,
+      "oracle_test_mean_abs_error": 51.55,
+      "selected_matches_oracle": false,
+      "selected_policy": "book_mod10_median",
+      "test_exact_lengths": 1,
+      "test_mean_abs_error": 49.75,
+      "test_row_count": 20,
+      "test_signed_gamma_residual_bits": 211,
+      "train_exact_lengths": 13,
+      "train_row_count": 50
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_policy": "active_anchor_151",
+      "oracle_test_exact_lengths": 2,
+      "oracle_test_mean_abs_error": 20.5,
+      "selected_matches_oracle": false,
+      "selected_policy": "book_mod10_majority",
+      "test_exact_lengths": 0,
+      "test_mean_abs_error": 60.7,
+      "test_row_count": 10,
+      "test_signed_gamma_residual_bits": 122,
+      "train_exact_lengths": 14,
+      "train_row_count": 60
+    }
+  ],
+  "schema": "book_length_generation_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "context_lookup_marked_source_bearing": true,
+    "does_not_search_plaintext": true,
+    "row0_origin_changed": false,
+    "tested_full_fit_simple_policies": true,
+    "tested_prefix_holdout": true
+  },
+  "summary": {
+    "best_full_exact_lengths": 14,
+    "best_full_mean_abs_error": 37.885714285714286,
+    "best_full_policy": "book_mod10_median",
+    "best_full_residual_bits": 606,
+    "best_lookup_context": "book_index_lookup",
+    "best_lookup_context_count": 70,
+    "best_lookup_exact_lengths": 70,
+    "best_lookup_source_bearing": true,
+    "book_count": 70,
+    "interpretation": "Simple source-free policies do not generate the length sequence. Context lookups can memorize lengths only by carrying length payloads, so they are ledgers rather than generators.",
+    "policy_count": 8,
+    "prequential_any_exact_cells": 4,
+    "prequential_cells": 6,
+    "prequential_cover_all_cells": 0,
+    "prequential_selected_matches_oracle_cells": 1,
+    "promotes_book_length_generator": false
+  },
+  "translation_delta": "NONE"
+}
