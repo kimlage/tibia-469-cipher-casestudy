@@ -1,0 +1,345 @@
+{
+  "case_reopened": false,
+  "classification": "book49_residual_split_explained_by_fixed_control",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "book49_residual_localized_no_formula_promotion",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "book49_residual_split_explained_by_fixed_control",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate84_replay_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/84_residual_literal_payload_neutralization_gate.py",
+    "gate84_residual_literal_payload_neutralization": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/84_residual_literal_payload_neutralization_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "book49_residual_split_cause_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "book": 49,
+    "compression_bound_changed": false,
+    "controls": [
+      "observed_payload_mode",
+      "no_literal_length_charge",
+      "no_item_type_charge",
+      "no_item_or_literal_length_charge"
+    ],
+    "cutoffs": [
+      10,
+      20,
+      35
+    ],
+    "does_not_search_plaintext": true,
+    "local_two_variant_audit": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "control_rows": [
+      {
+        "control": "observed_payload_mode",
+        "cutoff_rows": [
+          {
+            "coalesced_bits": 250.21316154445424,
+            "cutoff": 10,
+            "split_bits": 250.01768002796808,
+            "split_minus_coalesced_bits": -0.1954815164861543,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.024662054234269065,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.485426827170242,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 250.30107786109176,
+            "cutoff": 20,
+            "split_bits": 250.09898292714752,
+            "split_minus_coalesced_bits": -0.20209493394423816,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.039528364186637355,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.463947099759789,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 250.67029254421462,
+            "cutoff": 35,
+            "split_bits": 250.8614223492675,
+            "split_minus_coalesced_bits": 0.19112980505289556,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.02568664366364959,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.8710135592799215,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "coalesced_prefix"
+          }
+        ],
+        "stable_winner": false,
+        "winners_by_cutoff": {
+          "10": "split_prefix",
+          "20": "split_prefix",
+          "35": "coalesced_prefix"
+        }
+      },
+      {
+        "control": "no_literal_length_charge",
+        "cutoff_rows": [
+          {
+            "coalesced_bits": 235.21316154445424,
+            "cutoff": 10,
+            "split_bits": 233.01768002796808,
+            "split_minus_coalesced_bits": -2.1954815164861543,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.024662054234269065,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.485426827170242,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 235.30107786109176,
+            "cutoff": 20,
+            "split_bits": 233.09898292714752,
+            "split_minus_coalesced_bits": -2.202094933944238,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.039528364186637355,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.463947099759789,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 235.67029254421462,
+            "cutoff": 35,
+            "split_bits": 233.8614223492675,
+            "split_minus_coalesced_bits": -1.8088701949471044,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.02568664366364959,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 1.8710135592799215,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          }
+        ],
+        "stable_winner": true,
+        "winners_by_cutoff": {
+          "10": "split_prefix",
+          "20": "split_prefix",
+          "35": "split_prefix"
+        }
+      },
+      {
+        "control": "no_item_type_charge",
+        "cutoff_rows": [
+          {
+            "coalesced_bits": 243.20716138048232,
+            "cutoff": 10,
+            "split_bits": 241.52625303682595,
+            "split_minus_coalesced_bits": -1.6809083436563697,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.024662054234269065,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 243.31122555014892,
+            "cutoff": 20,
+            "split_bits": 241.6451835164449,
+            "split_minus_coalesced_bits": -1.6660420337040307,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.039528364186637355,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 243.214333506488,
+            "cutoff": 35,
+            "split_bits": 241.534449752261,
+            "split_minus_coalesced_bits": -1.6798837542270064,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.02568664366364959,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 2.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          }
+        ],
+        "stable_winner": true,
+        "winners_by_cutoff": {
+          "10": "split_prefix",
+          "20": "split_prefix",
+          "35": "split_prefix"
+        }
+      },
+      {
+        "control": "no_item_or_literal_length_charge",
+        "cutoff_rows": [
+          {
+            "coalesced_bits": 228.20716138048232,
+            "cutoff": 10,
+            "split_bits": 224.52625303682595,
+            "split_minus_coalesced_bits": -3.6809083436563697,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.024662054234269065,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 228.31122555014892,
+            "cutoff": 20,
+            "split_bits": 224.6451835164449,
+            "split_minus_coalesced_bits": -3.6660420337040307,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.039528364186637355,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          },
+          {
+            "coalesced_bits": 228.214333506488,
+            "cutoff": 35,
+            "split_bits": 224.534449752261,
+            "split_minus_coalesced_bits": -3.6798837542270064,
+            "split_minus_coalesced_components": {
+              "copy_length_uniform": 6.643856189774734,
+              "copy_source_flag": 0.02568664366364959,
+              "copy_source_uniform_exception": 12.904070076546134,
+              "item_type": 0.0,
+              "literal_length": 0.0,
+              "literal_payload_uniform": -23.253496664211525
+            },
+            "winner": "split_prefix"
+          }
+        ],
+        "stable_winner": true,
+        "winners_by_cutoff": {
+          "10": "split_prefix",
+          "20": "split_prefix",
+          "35": "split_prefix"
+        }
+      }
+    ],
+    "interpretation": "The sole payload-neutralized residual is a local prefix split in book 49: cutoffs 10/20 choose literal-copy-literal at the start, while cutoff 35 chooses the coalesced 25-digit literal. The fixed local item/literal-length controls are audit-only; they do not emit a corpus formula.",
+    "observed_variants": {
+      "coalesced_prefix": {
+        "name": "coalesced_prefix",
+        "observed_cutoffs": [
+          35
+        ],
+        "profile": {
+          "copied_digits": 83,
+          "copy_sources": [
+            864,
+            2050,
+            867,
+            863,
+            2052,
+            7694,
+            2053
+          ],
+          "length_sequence": [
+            25,
+            17,
+            18,
+            1,
+            8,
+            18,
+            9,
+            6,
+            8,
+            5
+          ],
+          "literal_digits": 32,
+          "type_sequence": "LCCLCCCLCC"
+        },
+        "signature": "b3b64adfb80d085d"
+      },
+      "split_prefix": {
+        "name": "split_prefix",
+        "observed_cutoffs": [
+          10,
+          20
+        ],
+        "profile": {
+          "copied_digits": 90,
+          "copy_sources": [
+            2050,
+            864,
+            2050,
+            867,
+            863,
+            2052,
+            7694,
+            2053
+          ],
+          "length_sequence": [
+            11,
+            7,
+            7,
+            17,
+            18,
+            1,
+            8,
+            18,
+            9,
+            6,
+            8,
+            5
+          ],
+          "literal_digits": 25,
+          "type_sequence": "LCLCCLCCCLCC"
+        },
+        "signature": "23c8e512592b67cc"
+      }
+    },
+    "promoted": false,
+    "stable_controls": [
+      "no_literal_length_charge",
+      "no_item_type_charge",
+      "no_item_or_literal_length_charge"
+    ]
+  },
+  "translation_delta": "NONE"
+}

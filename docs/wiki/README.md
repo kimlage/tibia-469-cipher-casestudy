@@ -706,6 +706,11 @@ stability to `49/50`, and preserves `175/175` roundtrip/raw-positive
 evaluations. It costs `+170.606311` parser bits over the previous neutralized
 mode and introduces book `49` as the single remaining residual, so it is still
 not a final generator.
+The book `49` residual split audit localizes that last instability: cutoffs
+`10/20` split the prefix as `literal 11 + copy 7 + literal 7`, while cutoff
+`35` keeps a coalesced `25`-digit literal. Removing local `literal_length` or
+`item_type` charge makes the split-prefix variant win in all three cutoffs, but
+this is audit-only rather than a corpus-wide rule.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -894,6 +899,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   tests uniform literal payload as a residual simplification (`49/50` stable,
   `49` sole residual, `+170.606311` parser bits over previous neutralized
   mode),
+  localizes book `49` as a prefix split/coalescence decision (`11+7+7` versus
+  `25`, fixed local controls audit-only),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

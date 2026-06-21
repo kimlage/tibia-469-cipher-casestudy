@@ -268,6 +268,9 @@ exogenous.
 - [scripts/84_residual_literal_payload_neutralization_gate.py](scripts/84_residual_literal_payload_neutralization_gate.py) - tests uniform literal-payload cost on top of the copy-length/source-exception neutralized parser.
 - [reports/test_results/84_residual_literal_payload_neutralization_gate.md](reports/test_results/84_residual_literal_payload_neutralization_gate.md) - residual literal-payload neutralization result.
 - [reports/test_results/84_residual_literal_payload_neutralization_gate.json](reports/test_results/84_residual_literal_payload_neutralization_gate.json) - structured residual literal-payload ledger.
+- [scripts/85_book49_residual_split_cause_audit.py](scripts/85_book49_residual_split_cause_audit.py) - localizes the remaining book `49` residual as a prefix split and tests fixed local item/literal-length controls.
+- [reports/test_results/85_book49_residual_split_cause_audit.md](reports/test_results/85_book49_residual_split_cause_audit.md) - book `49` residual split cause result.
+- [reports/test_results/85_book49_residual_split_cause_audit.json](reports/test_results/85_book49_residual_split_cause_audit.json) - structured book `49` residual split ledger.
 
 ## Boundary
 
@@ -557,6 +560,12 @@ exogenous.
   book `49` as the sole residual and pays `+170.606311` parser bits over the
   previous neutralized mode. This is a narrower simplification candidate, still
   not a closed generator.
+- The book `49` residual split cause audit then localizes that final residual:
+  cutoffs `10/20` choose a `literal-copy-literal` prefix split
+  (`11+7+7`), while cutoff `35` chooses the coalesced `25`-digit literal.
+  Removing either local `literal_length` or local `item_type` charge makes the
+  split-prefix variant win in all three cutoffs, but this remains audit-only
+  and does not emit a corpus-wide formula.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
