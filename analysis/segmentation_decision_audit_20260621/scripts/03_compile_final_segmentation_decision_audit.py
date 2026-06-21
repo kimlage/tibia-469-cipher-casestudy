@@ -33,6 +33,7 @@ RESIDUAL_FEATURE = TEST_RESULTS / "21_post_repair_residual_feature_audit.json"
 BRANCH_CONTINUATION = TEST_RESULTS / "22_residual_branch_continuation_audit.json"
 BRANCH_RANKER = TEST_RESULTS / "23_branch_ranker_prequential_audit.json"
 CONTEXTUAL_MODE = TEST_RESULTS / "24_contextual_mode_selector_audit.json"
+CONTEXTUAL_STABILITY = TEST_RESULTS / "25_contextual_mode_stability_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -106,6 +107,9 @@ def main() -> None:
     contextual_mode = (
         load_json(CONTEXTUAL_MODE) if CONTEXTUAL_MODE.exists() else None
     )
+    contextual_stability = (
+        load_json(CONTEXTUAL_STABILITY) if CONTEXTUAL_STABILITY.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -150,6 +154,8 @@ def main() -> None:
         assert_boundary("branch_ranker_prequential_audit", branch_ranker)
     if contextual_mode is not None:
         assert_boundary("contextual_mode_selector_audit", contextual_mode)
+    if contextual_stability is not None:
+        assert_boundary("contextual_mode_stability_audit", contextual_stability)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -203,6 +209,9 @@ def main() -> None:
     )
     contextual_mode_summary = (
         None if contextual_mode is None else contextual_mode["summary"]
+    )
+    contextual_stability_summary = (
+        None if contextual_stability is None else contextual_stability["summary"]
     )
 
     lines = [
@@ -837,6 +846,32 @@ def main() -> None:
                 "",
             ]
         )
+    if contextual_stability_summary is not None:
+        lines.extend(
+            [
+                "## Contextual Mode Stability Control",
+                "",
+                "Gate 25 stress-tests the gate-24 `context_combo` full-fit",
+                "signal with support pruning, leave-one-book retraining, and",
+                "leave-context-out retraining.",
+                "",
+                "| Test | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---|",
+                f"| Full-fit `context_combo` | `{contextual_stability_summary['full_fit_residual_hits']}/{contextual_stability_summary['residual_decision_count']}` | `{contextual_stability_summary['full_fit_clean_false_changes']}` | weak clue |",
+                f"| Leave-one-book | `{contextual_stability_summary['leave_one_book_residual_hits']}/{contextual_stability_summary['residual_decision_count']}` | n/a | rejected |",
+                f"| Leave-context-out | `{contextual_stability_summary['leave_context_out_residual_hits']}/{contextual_stability_summary['residual_decision_count']}` | n/a | rejected |",
+                "",
+                f"- Best supported threshold: `{contextual_stability_summary['best_supported_threshold']}`.",
+                f"- Support thresholds tested: `{contextual_stability_summary['support_threshold_count']}`.",
+                "",
+                "The apparent context signal is not stable: most of the full-fit",
+                "residual repairs disappear when the held-out book is removed",
+                "from training or when low-support buckets are pruned. This",
+                "reclassifies the context table as a weak post-hoc clue, not",
+                "a generative parser rule.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -844,8 +879,9 @@ def main() -> None:
             "The next real blocker is not another local length policy or",
             "a single residual feature flag, and not a simple first-branch",
             "continuation objective or small prefix-trained branch ranker.",
-            "A finite context table has weak full-fit signal but no stable",
-            "holdout rule. The remaining blocker is a richer path/state",
+            "A finite context table has weak full-fit signal, but stability",
+            "tests collapse it under leave-one-book/context controls. The",
+            "remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -878,6 +914,7 @@ def main() -> None:
             "- [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)",
             "- [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)",
             "- [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)",
+            "- [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)",
             "",
         ]
     )

@@ -941,6 +941,9 @@ A contextual mode selector finds a weak full-fit clue: `context_combo` reaches
 `229/234` and resolves `5/10` residuals with `0` clean-control changes. It is
 not promoted because prefix/holdout keeps only `1/5` zero-false-control cells
 and `1/5` all-residual-covered cells.
+A contextual stability audit then reclassifies that clue as weak/post-hoc:
+the `5/10` full-fit gain drops to `1/10` under leave-one-book and `0/10` under
+leave-context-out, with support pruning removing most residual gains.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

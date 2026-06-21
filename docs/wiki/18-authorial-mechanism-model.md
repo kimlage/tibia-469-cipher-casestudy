@@ -575,6 +575,10 @@ a weak full-fit clue: the best context family (`context_combo`) reaches
 `229/234`, resolving `5/10` residuals with `0` clean-control changes. It is not
 promoted because prefix/holdout keeps only `1/5` zero-false-control cells and
 only `1/5` all-residual-covered cells.
+A contextual stability audit then stress-tests that clue. The full-fit
+`5/10` drops to `1/10` under leave-one-book retraining and to `0/10` under
+leave-context-out; support pruning also collapses most of the gain. The context
+table is therefore weak post-hoc evidence, not a stable parser rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2262,6 +2266,7 @@ book generation, not row0 pair-cell placement.
 - [Residual branch continuation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.md)
 - [Branch ranker prequential audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/23_branch_ranker_prequential_audit.md)
 - [Contextual mode selector audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/24_contextual_mode_selector_audit.md)
+- [Contextual mode stability audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/25_contextual_mode_stability_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

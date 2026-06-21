@@ -496,13 +496,35 @@ without false clean-control changes. It is still not promoted
 because the same selector is not prefix/holdout stable and
 does not cover future residuals reliably.
 
+## Contextual Mode Stability Control
+
+Gate 25 stress-tests the gate-24 `context_combo` full-fit
+signal with support pruning, leave-one-book retraining, and
+leave-context-out retraining.
+
+| Test | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---|
+| Full-fit `context_combo` | `5/10` | `0` | weak clue |
+| Leave-one-book | `1/10` | n/a | rejected |
+| Leave-context-out | `0/10` | n/a | rejected |
+
+- Best supported threshold: `1`.
+- Support thresholds tested: `5`.
+
+The apparent context signal is not stable: most of the full-fit
+residual repairs disappear when the held-out book is removed
+from training or when low-support buckets are pruned. This
+reclassifies the context table as a weak post-hoc clue, not
+a generative parser rule.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
 a single residual feature flag, and not a simple first-branch
 continuation objective or small prefix-trained branch ranker.
-A finite context table has weak full-fit signal but no stable
-holdout rule. The remaining blocker is a richer path/state
+A finite context table has weak full-fit signal, but stability
+tests collapse it under leave-one-book/context controls. The
+remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -535,3 +557,4 @@ or the stable projection as an oracle.
 - [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)
 - [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)
 - [Contextual mode selector audit](test_results/24_contextual_mode_selector_audit.md)
+- [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)

@@ -337,6 +337,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Residual branch continuation audit | all `10/10` stable residual operations are available as observable branches, but the best non-oracle continuation objective catches only `6/10` and changes `20` clean controls | simple path objective rejected |
 | Branch ranker prequential audit | the active baseline is `224/234` with `0/10` residual hits; best full-fit ranker is `223/234` with `0/10`; residual-only reaches `7/10` but changes `221` clean controls | learned branch ranker rejected |
 | Contextual mode selector audit | best full-fit context table reaches `229/234`, resolving `5/10` residuals with `0` clean-control changes, but prefix/holdout has only `1/5` zero-false-control cells and `1/5` all-residual-covered cells | weak full-fit clue / not promoted |
+| Contextual mode stability audit | the `context_combo` full-fit `5/10` residual gain drops to `1/10` under leave-one-book and `0/10` under leave-context-out; support pruning collapses most of the gain | weak post-hoc clue / not parser |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -545,6 +546,7 @@ Primary sources:
 [residual_branch_continuation_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.md),
 [branch_ranker_prequential_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/23_branch_ranker_prequential_audit.md),
 [contextual_mode_selector_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/24_contextual_mode_selector_audit.md),
+[contextual_mode_stability_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/25_contextual_mode_stability_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),
