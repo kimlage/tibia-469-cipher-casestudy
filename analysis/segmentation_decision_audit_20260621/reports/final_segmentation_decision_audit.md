@@ -804,6 +804,29 @@ residual first-drift choices. The nearest-neighbor shortcut is
 therefore rejected as a replacement for the retained segmentation
 decisions.
 
+## Observable State Support Boundary
+
+Gate 39 diagnoses whether the residual first-drift states are
+outside the exact-book support, contradicted by exact examples,
+or ambiguously supported under the currently exposed observable
+state families.
+
+| Diagnostic | Value |
+|---|---:|
+| Exact parser books | `50` |
+| Residual parser books | `10` |
+| Best exact-label family | `trajectory` |
+| Deterministic exact-label matches | `0/10` |
+| Supported residual states | `4/10` |
+| Contradictory residual states | `2` |
+| Prequential cells with deterministic match | `0/4` |
+
+The best observable family gives `0/10` deterministic exact-label
+matches. Six residuals are out of support and the supported
+residuals are ambiguous or contradictory. The missing mechanism
+therefore needs new latent state or a source-free target stream
+account, not another reuse rule over the exposed state.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -823,8 +846,9 @@ collapses back to the active baseline. Vote decomposition shows no
 clean residual threshold hidden inside those signals. Gate 36 closes
 that branch-choice weak-signal frontier as audit-only. Gate 37 then
 rejects simple exact-length path-template reuse. Gate 38 rejects
-nearest trajectory-state reuse. The remaining blocker is a richer
-latent path/state
+nearest trajectory-state reuse. Gate 39 shows the exposed state
+families have no deterministic residual support. The remaining
+blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -871,3 +895,4 @@ or the stable projection as an oracle.
 - [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)
 - [Path template reuse audit](test_results/37_path_template_reuse_audit.md)
 - [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)
+- [Observable state support audit](test_results/39_observable_state_support_audit.md)

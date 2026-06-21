@@ -47,6 +47,7 @@ STRUCTURAL_DECOMPOSITION = TEST_RESULTS / "35_structural_vote_residual_decomposi
 BRANCH_CHOICE_CLOSURE = TEST_RESULTS / "36_branch_choice_frontier_closure_audit.json"
 PATH_TEMPLATE_REUSE = TEST_RESULTS / "37_path_template_reuse_audit.json"
 TRAJECTORY_NEIGHBOR = TEST_RESULTS / "38_trajectory_neighbor_parser_audit.json"
+OBSERVABLE_STATE_SUPPORT = TEST_RESULTS / "39_observable_state_support_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -160,6 +161,11 @@ def main() -> None:
         if TRAJECTORY_NEIGHBOR.exists()
         else None
     )
+    observable_state_support = (
+        load_json(OBSERVABLE_STATE_SUPPORT)
+        if OBSERVABLE_STATE_SUPPORT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -234,6 +240,8 @@ def main() -> None:
         assert_boundary("path_template_reuse_audit", path_template_reuse)
     if trajectory_neighbor is not None:
         assert_boundary("trajectory_neighbor_parser_audit", trajectory_neighbor)
+    if observable_state_support is not None:
+        assert_boundary("observable_state_support_audit", observable_state_support)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -323,6 +331,9 @@ def main() -> None:
     )
     trajectory_neighbor_summary = (
         None if trajectory_neighbor is None else trajectory_neighbor["summary"]
+    )
+    observable_state_support_summary = (
+        None if observable_state_support is None else observable_state_support["summary"]
     )
 
     lines = [
@@ -1335,6 +1346,34 @@ def main() -> None:
                 "",
             ]
         )
+    if observable_state_support_summary is not None:
+        lines.extend(
+            [
+                "## Observable State Support Boundary",
+                "",
+                "Gate 39 diagnoses whether the residual first-drift states are",
+                "outside the exact-book support, contradicted by exact examples,",
+                "or ambiguously supported under the currently exposed observable",
+                "state families.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Exact parser books | `{observable_state_support_summary['exact_book_count']}` |",
+                f"| Residual parser books | `{observable_state_support_summary['residual_book_count']}` |",
+                f"| Best exact-label family | `{observable_state_support_summary['best_exact_label_family']}` |",
+                f"| Deterministic exact-label matches | `{observable_state_support_summary['best_exact_label_deterministic_matches']}/{observable_state_support_summary['best_exact_label_query_count']}` |",
+                f"| Supported residual states | `{observable_state_support_summary['best_exact_label_supported_count']}/{observable_state_support_summary['best_exact_label_query_count']}` |",
+                f"| Contradictory residual states | `{observable_state_support_summary['best_exact_label_contradiction_count']}` |",
+                f"| Prequential cells with deterministic match | `{observable_state_support_summary['prequential_cells_with_deterministic_match']}/{observable_state_support_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "The best observable family gives `0/10` deterministic exact-label",
+                "matches. Six residuals are out of support and the supported",
+                "residuals are ambiguous or contradictory. The missing mechanism",
+                "therefore needs new latent state or a source-free target stream",
+                "account, not another reuse rule over the exposed state.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1356,8 +1395,9 @@ def main() -> None:
             "clean residual threshold hidden inside those signals. Gate 36 closes",
             "that branch-choice weak-signal frontier as audit-only. Gate 37 then",
             "rejects simple exact-length path-template reuse. Gate 38 rejects",
-            "nearest trajectory-state reuse. The remaining blocker is a richer",
-            "latent path/state",
+            "nearest trajectory-state reuse. Gate 39 shows the exposed state",
+            "families have no deterministic residual support. The remaining",
+            "blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1404,6 +1444,7 @@ def main() -> None:
             "- [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)",
             "- [Path template reuse audit](test_results/37_path_template_reuse_audit.md)",
             "- [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)",
+            "- [Observable state support audit](test_results/39_observable_state_support_audit.md)",
             "",
         ]
     )

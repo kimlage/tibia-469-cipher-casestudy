@@ -666,6 +666,12 @@ and combined vectors, with `k=1/3/5`. Every tested policy explains `0/10`
 residual first-drift corrections, while shuffled labels average `0.190` hits.
 Nearest trajectory reuse is therefore rejected as the missing segmentation
 mechanism.
+An observable-state support audit then decomposes that failure. In the best
+exposed state family, only `4/10` residuals have support in exact parser books,
+`6/10` are out of support, and `0/10` have deterministic exact-label matches.
+The supported cases are ambiguous or contradictory. The next requirement is
+therefore genuinely latent state or a source-free target stream, not another
+reuse rule over the current exposed features.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2367,6 +2373,7 @@ book generation, not row0 pair-cell placement.
 - [Branch choice frontier closure audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.md)
 - [Path template reuse audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/37_path_template_reuse_audit.md)
 - [Trajectory neighbor parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/38_trajectory_neighbor_parser_audit.md)
+- [Observable state support audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/39_observable_state_support_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
