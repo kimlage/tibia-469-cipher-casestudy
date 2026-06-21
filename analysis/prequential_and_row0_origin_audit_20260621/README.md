@@ -157,6 +157,9 @@ exogenous.
 - [scripts/47_row0_parallel_provenance_bridge_audit.py](scripts/47_row0_parallel_provenance_bridge_audit.py) - integrates the independent row0 provenance front into this audit without changing book-generation bits.
 - [reports/test_results/47_row0_parallel_provenance_bridge_audit.md](reports/test_results/47_row0_parallel_provenance_bridge_audit.md) - row0 parallel provenance bridge.
 - [reports/test_results/47_row0_parallel_provenance_bridge_audit.json](reports/test_results/47_row0_parallel_provenance_bridge_audit.json) - structured row0 provenance bridge ledger.
+- [scripts/48_current_formula_dependency_scoreboard.py](scripts/48_current_formula_dependency_scoreboard.py) - re-counts retained dependencies on the latest formula and ranks the next structural blocker.
+- [reports/test_results/48_current_formula_dependency_scoreboard.md](reports/test_results/48_current_formula_dependency_scoreboard.md) - current formula dependency scoreboard.
+- [reports/test_results/48_current_formula_dependency_scoreboard.json](reports/test_results/48_current_formula_dependency_scoreboard.json) - structured dependency scoreboard ledger.
 
 ## Boundary
 
@@ -277,7 +280,11 @@ exogenous.
   selector-cost sanity checks. A row0 parallel provenance bridge then imports
   the independent provenance front: local workbook/import/reconstruction/audit
   layers are traced, but CipSoft origin remains untraced and paid worksheet
-  anchors do not beat lookup once pair and label costs are charged. The complete
+  anchors do not beat lookup once pair and label costs are charged. A current
+  formula dependency scoreboard then re-counts the latest formula directly:
+  `87` literal payload fields, `261` copy-source fields, and `261` copy-length
+  fields remain declared; the next mainline mechanical test is structural
+  source/length parsing rather than literal or item-type refinement. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

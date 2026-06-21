@@ -149,6 +149,14 @@ ROW0_PARALLEL_PROVENANCE_BRIDGE_AUDIT = (
     / "test_results"
     / "47_row0_parallel_provenance_bridge_audit.json"
 )
+CURRENT_FORMULA_DEPENDENCY_SCOREBOARD = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "48_current_formula_dependency_scoreboard.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -377,6 +385,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "row0_parallel_provenance_bridge_audit",
         row0_parallel_provenance_bridge,
     )
+    current_formula_dependency_scoreboard = load_json(CURRENT_FORMULA_DEPENDENCY_SCOREBOARD)
+    assert_analysis_boundary(
+        "current_formula_dependency_scoreboard",
+        current_formula_dependency_scoreboard,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -576,6 +589,14 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": row0_parallel_provenance_bridge["summary"],
             "decision": row0_parallel_provenance_bridge["decision"],
         },
+        "current_formula_dependency_scoreboard": {
+            "classification": current_formula_dependency_scoreboard["classification"],
+            "source": rel(CURRENT_FORMULA_DEPENDENCY_SCOREBOARD),
+            "current_formula": current_formula_dependency_scoreboard["current_formula"],
+            "rows": current_formula_dependency_scoreboard["rows"],
+            "summary": current_formula_dependency_scoreboard["summary"],
+            "decision": current_formula_dependency_scoreboard["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -613,6 +634,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_substitution_fourth_pass_status": "microscopic_single_pair_improves_bound_to_8160_825608",
             "source_substitution_saturation_status": "local_same_chunk_source_substitution_no_longer_mainline",
             "row0_parallel_provenance_status": "project_layers_traced_but_cipsoft_origin_untraced",
+            "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -666,6 +688,7 @@ def render_markdown(
     copy_length_derivation_boundary_gate_link: str,
     literal_copy_availability_gate_link: str,
     literal_payload_model_gate_link: str,
+    current_formula_dependency_scoreboard_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -707,6 +730,11 @@ def render_markdown(
         "summary"
     ]
     row0_parallel_provenance = result["row0_parallel_provenance_bridge"]["summary"]
+    current_dependency = result["current_formula_dependency_scoreboard"]
+    current_dependency_summary = current_dependency["summary"]
+    current_dependency_counts = current_dependency["current_formula"][
+        "dependency_counts"
+    ]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1356,6 +1384,22 @@ def render_markdown(
             "payload dependency is therefore retained, not removed.",
             f"See [29_literal_payload_model_gate.md]({literal_payload_model_gate_link}).",
             "",
+            "### Current Formula Dependency Scoreboard",
+            "",
+            "The current formula dependency scoreboard then re-counts the latest",
+            "local-source-bound formula directly. It roundtrips `70/70` books with",
+            f"`{current_dependency_counts['op_count']}` ops:",
+            f"`{current_dependency_counts['literal_op_count']}` literals and",
+            f"`{current_dependency_counts['copy_op_count']}` copies. It still",
+            "declares literal payload, copy source, and copy length. Copy-source",
+            "selection is encoder-canonical but decoder-declared; copy length is",
+            "partly decodable but still carries exceptions; literal payload is",
+            "mostly forced and downstream of source/length choices. The next",
+            "mainline mechanical test should therefore be a structural",
+            "decoder-known source/length parser or objective, not another local",
+            "same-chunk source edit.",
+            f"See [48_current_formula_dependency_scoreboard.md]({current_formula_dependency_scoreboard_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1439,6 +1483,7 @@ def render_markdown(
             "- Copy length is partly remodeled but not derived: target-max is encoder-only, and the compact recipe still declares all `261` copy lengths.",
             "- Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.",
             "- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.",
+            f"- The current formula dependency scoreboard maps the retained declarations on the latest formula: `{current_dependency_counts['literal_op_count']}` literal payload fields, `{current_dependency_counts['copy_op_count']}` copy-source fields, and `{current_dependency_counts['copy_op_count']}` copy-length fields; it prioritizes a structural source/length parser before more literal or item-type work.",
             "- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.",
             "- Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.",
             "- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.",
@@ -1573,6 +1618,9 @@ def main() -> None:
             ),
             literal_copy_availability_gate_link="28_literal_copy_availability_gate.md",
             literal_payload_model_gate_link="29_literal_payload_model_gate.md",
+            current_formula_dependency_scoreboard_link=(
+                "48_current_formula_dependency_scoreboard.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
                 "47_row0_parallel_provenance_bridge_audit.md"
@@ -1696,6 +1744,9 @@ def main() -> None:
             ),
             literal_payload_model_gate_link=(
                 "test_results/29_literal_payload_model_gate.md"
+            ),
+            current_formula_dependency_scoreboard_link=(
+                "test_results/48_current_formula_dependency_scoreboard.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

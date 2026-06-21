@@ -1120,6 +1120,14 @@ and cutoff `60` has `9/10` books below `250,000`. This makes a future
 book-local active-source prototype plausible by proxy, but it still does not
 solve the full active objective, adaptive counts, tie-breaking, copy source
 selection, copy length declaration, literal payload, or item-type ledger.
+The current-formula dependency scoreboard then re-counts the latest
+source-substitution formula directly: it roundtrips `70/70` with `348` ops,
+`87` literal payload fields, `261` copy-source fields, and `261` copy-length
+fields still declared. Because source selection is encoder-canonical but not
+decoder-derived, and copy length is partly decodable but still exception-heavy,
+the next mainline mechanical test is a structural decoder-known source/length
+parser or objective. Literal payload and item type are downstream unless that
+parser changes available copy choices.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1563,6 +1571,7 @@ book generation, not row0 pair-cell placement.
 - [Recipe externality audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md)
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
 - [Row0 parallel provenance bridge audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/47_row0_parallel_provenance_bridge_audit.md)
+- [Current formula dependency scoreboard](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/48_current_formula_dependency_scoreboard.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

@@ -623,6 +623,22 @@ best non-active structural context is `+19.159` bits worse. The
 payload dependency is therefore retained, not removed.
 See [29_literal_payload_model_gate.md](29_literal_payload_model_gate.md).
 
+### Current Formula Dependency Scoreboard
+
+The current formula dependency scoreboard then re-counts the latest
+local-source-bound formula directly. It roundtrips `70/70` books with
+`348` ops:
+`87` literals and
+`261` copies. It still
+declares literal payload, copy source, and copy length. Copy-source
+selection is encoder-canonical but decoder-declared; copy length is
+partly decodable but still carries exceptions; literal payload is
+mostly forced and downstream of source/length choices. The next
+mainline mechanical test should therefore be a structural
+decoder-known source/length parser or objective, not another local
+same-chunk source edit.
+See [48_current_formula_dependency_scoreboard.md](48_current_formula_dependency_scoreboard.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -697,6 +713,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - Copy length is partly remodeled but not derived: target-max is encoder-only, and the compact recipe still declares all `261` copy lengths.
 - Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
 - The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
+- The current formula dependency scoreboard maps the retained declarations on the latest formula: `87` literal payload fields, `261` copy-source fields, and `261` copy-length fields; it prioritizes a structural source/length parser before more literal or item-type work.
 - Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.
 - Item-type split-only remains a retained generation-profile stream, while compact recipe op `type` fields are derivable from operation shape.
 - The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.

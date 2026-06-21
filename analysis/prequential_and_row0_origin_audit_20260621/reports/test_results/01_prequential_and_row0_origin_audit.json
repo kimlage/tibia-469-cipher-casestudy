@@ -1714,6 +1714,136 @@
       "state_blocker_retained": true
     }
   },
+  "current_formula_dependency_scoreboard": {
+    "classification": "current_formula_dependencies_mapped_no_new_bound",
+    "current_formula": {
+      "classification": "full_corpus_source_substitution_fourth_pass_improves_bound",
+      "current_local_source_bound_bits": 8160.825607635859,
+      "dependency_counts": {
+        "book_count": 70,
+        "copied_digit_fraction": 0.9239101482731066,
+        "copied_digits": 10406,
+        "copy_op_count": 261,
+        "declared_copy_length_fields": 261,
+        "declared_copy_source_fields": 261,
+        "declared_literal_text_fields": 87,
+        "literal_digit_fraction": 0.07608985172689336,
+        "literal_digits": 857,
+        "literal_op_count": 87,
+        "op_count": 348,
+        "total_emitted_digits": 11263
+      },
+      "roundtrip_book_count": 70,
+      "roundtrip_errors": []
+    },
+    "decision": {
+      "compression_bound_status": "unchanged_8160_825608",
+      "generation_explanation_status": "remaining_dependencies_mapped",
+      "next_mainline_status": "structural_source_length_parser_before_literal_payload_or_item_type",
+      "row0_origin_status": "exogenous_under_current_evidence",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "rows": [
+      {
+        "blocker": "No primary CipSoft/source artifact or paid row0-origin formula.",
+        "coverage": "99 ordered codes / 55 unordered pair rows",
+        "current_status": "exogenous_substrate",
+        "declared_units": 99,
+        "dependency": "row0_table",
+        "evidence": {
+          "all_anchors_explicit_pair_label_net_bits": -11.851749041416053,
+          "paid_anchor_decision": "explicit_paid_anchor_model_does_not_beat_lookup",
+          "parallel_verdict": "row0_origin_exogenous_under_current_evidence"
+        },
+        "mainline_priority": "external_or_provenance",
+        "next_testable_unlock": "Primary source, fixed external source, or paid holdout-capable row0 algorithm."
+      },
+      {
+        "blocker": "Earliest-source regularity depends on future target text; state-free and distance replacements lose.",
+        "coverage": "10406 copied digits",
+        "current_status": "encoder_canonical_decoder_declared",
+        "declared_units": 261,
+        "dependency": "copy_source",
+        "evidence": {
+          "ambiguous_source_candidate_ops": 138,
+          "copy_items": 261,
+          "distance_replacement_penalty_bits": 25.551406147975285,
+          "earliest_source_hits": 261,
+          "local_source_frontier_saturated": true,
+          "state_free_penalty_bits": 15.186017251789963
+        },
+        "mainline_priority": "structural_parser",
+        "next_testable_unlock": "Joint source/length parser with decoder-known state, not same-chunk local substitution."
+      },
+      {
+        "blocker": "High-coverage target-max is encoder-only; decoder model still carries 201 exceptions.",
+        "coverage": "10406 copied digits",
+        "current_status": "partly_decodable_declared_exceptions_retained",
+        "declared_units": 261,
+        "dependency": "copy_length",
+        "evidence": {
+          "decoder_default_count": 60,
+          "decoder_exception_count": 201,
+          "encoder_target_max_decodable": false,
+          "encoder_target_max_match_count": 238,
+          "midpoint_prefix_frozen_win_count": 5
+        },
+        "mainline_priority": "structural_parser",
+        "next_testable_unlock": "Decoder-computable length rule or joint source/length objective that pays its exceptions."
+      },
+      {
+        "blocker": "Most literals are forced by copy unavailability; remaining simplifications and repairs are worse.",
+        "coverage": "857 literal digits",
+        "current_status": "mostly_forced_payload_model_retained",
+        "declared_units": 87,
+        "dependency": "literal_payload",
+        "evidence": {
+          "active_literal_payload_bits": 2613.660822752486,
+          "best_cross_op_delta_bits": 0.02743357555300463,
+          "best_modal_default_delta_bits": 38.04883314088829,
+          "forced_literal_digits": 760,
+          "optional_literal_digits": 97,
+          "order1_full_delta_bits": 95.96760019306384
+        },
+        "mainline_priority": "downstream_of_structural_parser",
+        "next_testable_unlock": "Only a new source/length representation can plausibly absorb the small optional literal frontier."
+      },
+      {
+        "blocker": "Compact op type is derivable, but the learned item-type sequence remains part of the score.",
+        "coverage": "item/copy-literal shape stream",
+        "current_status": "learned_stream_retained_not_compact_op_type_field",
+        "declared_units": 265,
+        "dependency": "item_type_stream",
+        "evidence": {
+          "item_type_stream_bits": 212.01191674175735,
+          "removed_type_fields": 348,
+          "score_delta_bits_after_type_derivation": 0.0
+        },
+        "mainline_priority": "parser_sequence_later",
+        "next_testable_unlock": "Only revisit if a full parser derives operation sequence under holdout."
+      }
+    ],
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/48_current_formula_dependency_scoreboard.json",
+    "summary": {
+      "copy_length_encoder_target_max_hits": 238,
+      "copy_source_encoder_canonical_hits": 261,
+      "literal_optional_frontier_digits": 97,
+      "mainline_next_step": "Attempt a structural decoder-known source/length parser or objective; do not resume local same-chunk source micro-sweeps.",
+      "priority_order": [
+        "structural_parser",
+        "downstream_of_structural_parser",
+        "parser_sequence_later",
+        "external_or_provenance"
+      ],
+      "remaining_declared_recipe_dependencies": [
+        "literal_payload",
+        "copy_source",
+        "copy_length"
+      ],
+      "row0_status": "exogenous_substrate",
+      "source_substitution_status": "local_source_substitution_frontier_saturated_stop_mainline"
+    }
+  },
   "cutoff60_source_state_reparse_prototype": {
     "classification": "cutoff60_source_state_reprice_roundtrip_positive_unpromoted",
     "decision": {
@@ -2136,6 +2266,7 @@
     "copy_length_derivation_status": "partly_decodable_dependency_retained",
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
     "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
+    "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
     "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
     "generation_explanation_status": "predictive_signal_partial_not_generation_method",
     "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
