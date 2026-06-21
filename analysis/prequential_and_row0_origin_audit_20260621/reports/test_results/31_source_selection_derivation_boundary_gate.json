@@ -1,0 +1,81 @@
+{
+  "case_reopened": false,
+  "classification": "source_selection_encoder_canonical_decoder_dependency_retained",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "decoder_source_dependency_status": "retained",
+    "distance_source_model_status": "rejected",
+    "generation_explanation_status": "source_origin_boundary_sharpened",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_selection_status": "encoder_canonicality_confirmed",
+    "state_free_source_model_status": "rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_canonicality": "analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.json",
+    "copy_source_canonicality_controls": "analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.json",
+    "copy_source_distance_model": "analysis/authorial_mechanism_20260620/reports/test_results/144_copy_source_distance_model_audit.json",
+    "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
+    "source_state_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "source_selection_derivation_boundary_gate.v1",
+  "summary": {
+    "active_reparse_state_key_required": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+    "ambiguous_source_candidate_ops": 138,
+    "best_state_free_default": "state_free_back_current_length",
+    "best_state_free_total_penalty_bits": 15.186017251789963,
+    "candidate_source_count_max": 14.0,
+    "candidate_source_count_mean": 2.4406130268199235,
+    "canonicality_confirmed": true,
+    "copy_items": 261,
+    "copy_source_dependency_removed_by_canonicality": false,
+    "decoder_dependency_retained": true,
+    "distance_prefix_frozen_loss_count": 5,
+    "distance_prefix_online_loss_count": 5,
+    "distance_rejected": true,
+    "distance_replacement_total_worse_than_active_bits": 25.551406147975285,
+    "distance_stream_worse_than_active_bits": 25.55140614797665,
+    "earliest_exact_chunk_rule_decoder_computable": false,
+    "earliest_source_hits": 261,
+    "interpretation": "Copy source selection is highly regular on the encoder side: every declared source is the earliest legal exact-chunk source. The rule still depends on future target text and does not remove the decoder source ledger; backward-distance and state-free replacements also fail.",
+    "latest_source_hits": 123,
+    "log2_probability_all_earliest_if_uniform_candidate_choice": -236.59630256135262,
+    "prefix_distance_gaps": [
+      {
+        "frozen_backward_minus_absolute_bits": 7.001809140991099,
+        "label": "prefix_10_future_suffix",
+        "online_backward_minus_absolute_bits": 22.116505433992188
+      },
+      {
+        "frozen_backward_minus_absolute_bits": 6.004502787388674,
+        "label": "prefix_20_future_suffix",
+        "online_backward_minus_absolute_bits": 18.1439364314906
+      },
+      {
+        "frozen_backward_minus_absolute_bits": 9.001612862359707,
+        "label": "prefix_35_future_suffix",
+        "online_backward_minus_absolute_bits": 11.571224322640774
+      },
+      {
+        "frozen_backward_minus_absolute_bits": 3.5847464741723343,
+        "label": "prefix_50_future_suffix",
+        "online_backward_minus_absolute_bits": 4.57825379481028
+      },
+      {
+        "frozen_backward_minus_absolute_bits": 3.5849608869662575,
+        "label": "prefix_60_future_suffix",
+        "online_backward_minus_absolute_bits": 4.583054404105837
+      }
+    ],
+    "prefix_split_count": 5,
+    "previous_source_hits": 0,
+    "previous_source_plus_length_hits": 5,
+    "probability_all_earliest_if_uniform_candidate_choice": 5.989851642323506e-72,
+    "random_candidate_expected_hits": 169.4726551226551,
+    "state_free_prefix_loss_count": 5,
+    "state_free_prefix_split_count": 5,
+    "unique_source_candidate_ops": 123
+  },
+  "translation_delta": "NONE"
+}

@@ -55,6 +55,8 @@ SOURCES = {
     "literal_payload_model_gate": TEST_RESULTS / "29_literal_payload_model_gate.json",
     "recipe_representation_dependency_gate": TEST_RESULTS
     / "30_recipe_representation_dependency_gate.json",
+    "source_selection_derivation_boundary_gate": TEST_RESULTS
+    / "31_source_selection_derivation_boundary_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -102,6 +104,7 @@ def make_result() -> dict[str, Any]:
     literal_copy_gate = load_json(SOURCES["literal_copy_availability_gate"])
     literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
     recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
+    source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -133,6 +136,7 @@ def make_result() -> dict[str, Any]:
         ("literal_copy_availability_gate", literal_copy_gate),
         ("literal_payload_model_gate", literal_payload_model_gate),
         ("recipe_representation_dependency_gate", recipe_representation_gate),
+        ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -927,6 +931,65 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "is_copy_source_selection_decoder_derivable",
+            "source": rel(SOURCES["source_selection_derivation_boundary_gate"]),
+            "status": "failed_encoder_canonical_but_decoder_dependency_retained",
+            "evidence": {
+                "earliest_source_hits": source_selection_gate["summary"][
+                    "earliest_source_hits"
+                ],
+                "copy_items": source_selection_gate["summary"]["copy_items"],
+                "latest_source_hits": source_selection_gate["summary"][
+                    "latest_source_hits"
+                ],
+                "previous_source_hits": source_selection_gate["summary"][
+                    "previous_source_hits"
+                ],
+                "previous_source_plus_length_hits": source_selection_gate["summary"][
+                    "previous_source_plus_length_hits"
+                ],
+                "unique_source_candidate_ops": source_selection_gate["summary"][
+                    "unique_source_candidate_ops"
+                ],
+                "ambiguous_source_candidate_ops": source_selection_gate["summary"][
+                    "ambiguous_source_candidate_ops"
+                ],
+                "random_candidate_expected_hits": source_selection_gate["summary"][
+                    "random_candidate_expected_hits"
+                ],
+                "distance_replacement_total_worse_than_active_bits": source_selection_gate[
+                    "summary"
+                ]["distance_replacement_total_worse_than_active_bits"],
+                "distance_prefix_frozen_loss_count": source_selection_gate["summary"][
+                    "distance_prefix_frozen_loss_count"
+                ],
+                "distance_prefix_online_loss_count": source_selection_gate["summary"][
+                    "distance_prefix_online_loss_count"
+                ],
+                "prefix_split_count": source_selection_gate["summary"][
+                    "prefix_split_count"
+                ],
+                "best_state_free_default": source_selection_gate["summary"][
+                    "best_state_free_default"
+                ],
+                "best_state_free_total_penalty_bits": source_selection_gate[
+                    "summary"
+                ]["best_state_free_total_penalty_bits"],
+                "earliest_exact_chunk_rule_decoder_computable": source_selection_gate[
+                    "summary"
+                ]["earliest_exact_chunk_rule_decoder_computable"],
+                "copy_source_dependency_removed_by_canonicality": source_selection_gate[
+                    "summary"
+                ]["copy_source_dependency_removed_by_canonicality"],
+            },
+            "interpretation": (
+                "Source selection is completely earliest-source canonical from "
+                "the encoder side, but the rule depends on future target text. "
+                "Distance and state-free replacements are worse, so copy source "
+                "remains declared."
+            ),
+        },
+        {
             "question": "does_copy_length_midpoint_context_generalize",
             "source": rel(SOURCES["copy_length_midpoint_context_gate"]),
             "status": "passed_midpoint_retained_searched_cutoff_rejected",
@@ -1085,6 +1148,7 @@ def make_result() -> dict[str, Any]:
             "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
             "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
             "source_state_status": "path_dependent_previous_copy_state_retained",
+            "source_selection_status": "encoder_canonical_decoder_dependency_retained",
             "copy_length_context_status": "midpoint_context_retained",
             "literal_externality_status": "reduced_not_removed",
             "literal_payload_model_status": "active_order2_retained",
@@ -1350,6 +1414,31 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['canonicality_removed_source_dependency']}; "
                 f"promoted {evidence['state_free_default_promoted']}"
             )
+        elif row["question"] == "is_copy_source_selection_decoder_derivable":
+            key = (
+                f"earliest {evidence['earliest_source_hits']}/"
+                f"{evidence['copy_items']}; latest "
+                f"{evidence['latest_source_hits']}/{evidence['copy_items']}; "
+                f"previous {evidence['previous_source_hits']}/"
+                f"{evidence['copy_items']}; prev+len "
+                f"{evidence['previous_source_plus_length_hits']}/"
+                f"{evidence['copy_items']}; unique/ambiguous "
+                f"{evidence['unique_source_candidate_ops']}/"
+                f"{evidence['ambiguous_source_candidate_ops']}; random expected "
+                f"{evidence['random_candidate_expected_hits']:.3f}; distance "
+                f"{evidence['distance_replacement_total_worse_than_active_bits']:+.3f}; "
+                f"distance losses frozen/online "
+                f"{evidence['distance_prefix_frozen_loss_count']}/"
+                f"{evidence['prefix_split_count']}, "
+                f"{evidence['distance_prefix_online_loss_count']}/"
+                f"{evidence['prefix_split_count']}; state-free "
+                f"`{evidence['best_state_free_default']}` "
+                f"{evidence['best_state_free_total_penalty_bits']:+.3f}; "
+                f"decoder-computable "
+                f"{evidence['earliest_exact_chunk_rule_decoder_computable']}; "
+                f"dependency removed "
+                f"{evidence['copy_source_dependency_removed_by_canonicality']}"
+            )
         elif row["question"] == "does_copy_length_midpoint_context_generalize":
             key = (
                 f"midpoint gain {evidence['midpoint_gain_vs_global_bits']:.3f} bits; "
@@ -1409,6 +1498,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Generation explanation: `{result['decision']['generation_explanation_status']}`.",
             f"- Numeric order: `{result['decision']['numeric_order_status']}`.",
             f"- Source state: `{result['decision']['source_state_status']}`.",
+            f"- Source selection: `{result['decision']['source_selection_status']}`.",
             f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
             f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
             f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",

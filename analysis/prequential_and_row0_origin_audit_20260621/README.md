@@ -106,6 +106,9 @@ exogenous.
 - [scripts/30_recipe_representation_dependency_gate.py](scripts/30_recipe_representation_dependency_gate.py) - checks which compact recipe fields are derivable representation artifacts and which dependencies remain declared.
 - [reports/test_results/30_recipe_representation_dependency_gate.md](reports/test_results/30_recipe_representation_dependency_gate.md) - recipe representation dependency gate result.
 - [reports/test_results/30_recipe_representation_dependency_gate.json](reports/test_results/30_recipe_representation_dependency_gate.json) - structured recipe dependency ledger.
+- [scripts/31_source_selection_derivation_boundary_gate.py](scripts/31_source_selection_derivation_boundary_gate.py) - checks whether canonical copy-source selection becomes decoder-derivable after controls, distance coding, and state-free defaults.
+- [reports/test_results/31_source_selection_derivation_boundary_gate.md](reports/test_results/31_source_selection_derivation_boundary_gate.md) - source-selection derivation boundary result.
+- [reports/test_results/31_source_selection_derivation_boundary_gate.json](reports/test_results/31_source_selection_derivation_boundary_gate.json) - structured source-selection boundary ledger.
 
 ## Boundary
 
@@ -175,7 +178,10 @@ exogenous.
   declared length, and the decoder source dependency is not removed. A
   source-state dependency gate then rejects state-free defaults as a replacement
   for the active previous-copy source/length default: the best rule is
-  `+15.186` bits worse and loses all `5/5` prefix-frozen checks. A copy-length
+  `+15.186` bits worse and loses all `5/5` prefix-frozen checks. A source-
+  selection derivation boundary gate then confirms `261/261` earliest-source
+  canonicality while rejecting decoder derivation, backward distance, and
+  state-free replacements. A copy-length
   midpoint context gate then keeps the natural `book_id < 35` split: it beats
   global by `13.839` bits, wins all `5/5` prefix-frozen checks, passes
   permutation controls (`p=0.0033`), and rejects searched cutoff `37`. A

@@ -254,6 +254,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
             "generation_explanation_status": predictive_class,
             "source_state_status": "path_dependent_previous_copy_state_retained",
+            "source_selection_status": "encoder_canonical_decoder_dependency_retained",
             "copy_length_context_status": "midpoint_context_retained_searched_cutoff_rejected",
             "literal_externality_status": "reduced_not_removed_local_repairs_rejected",
             "literal_payload_model_status": "active_order2_retained_simplifications_rejected",
@@ -292,6 +293,7 @@ def render_markdown(
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
+    source_selection_derivation_boundary_gate_link: str,
     copy_length_midpoint_context_gate_link: str,
     literal_copy_availability_gate_link: str,
     literal_payload_model_gate_link: str,
@@ -659,6 +661,20 @@ def render_markdown(
             "generation-boundary dependency, not a removable tie-break.",
             f"See [26_source_state_dependency_gate.md]({source_state_dependency_gate_link}).",
             "",
+            "### Source Selection Derivation Boundary Gate",
+            "",
+            "The source-selection boundary is then consolidated across canonicality,",
+            "negative controls, distance coding, and state-free defaults. All",
+            "`261/261` copy sources are earliest legal exact-chunk sources, while",
+            "latest source matches only `123/261`, previous source `0/261`, and",
+            "previous-source-plus-length `5/261`; random candidate choice expects",
+            "`169.473` hits. But the earliest rule depends on future target text,",
+            "so it is not decoder-computable. Backward-distance source coding is",
+            "`+25.551` bits worse and loses all prefix frozen and online splits,",
+            "and the best state-free default remains `+15.186` bits worse. Copy",
+            "source is therefore canonical but still declared.",
+            f"See [31_source_selection_derivation_boundary_gate.md]({source_selection_derivation_boundary_gate_link}).",
+            "",
             "### Copy Length Midpoint Context Gate",
             "",
             "The copy-length context is then checked as a positive generalization",
@@ -759,6 +775,7 @@ def render_markdown(
             "- The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.",
             "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.",
             "- Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.",
+            "- Copy-source selection is encoder-canonical but not decoder-derived: earliest-source hits `261/261`, while distance and state-free replacements lose.",
             "- Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.",
             "- Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.",
             "- The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.",
@@ -828,6 +845,9 @@ def main() -> None:
                 "25_source_canonicality_decodability_gate.md"
             ),
             source_state_dependency_gate_link="26_source_state_dependency_gate.md",
+            source_selection_derivation_boundary_gate_link=(
+                "31_source_selection_derivation_boundary_gate.md"
+            ),
             copy_length_midpoint_context_gate_link=(
                 "27_copy_length_midpoint_context_gate.md"
             ),
@@ -896,6 +916,9 @@ def main() -> None:
             ),
             source_state_dependency_gate_link=(
                 "test_results/26_source_state_dependency_gate.md"
+            ),
+            source_selection_derivation_boundary_gate_link=(
+                "test_results/31_source_selection_derivation_boundary_gate.md"
             ),
             copy_length_midpoint_context_gate_link=(
                 "test_results/27_copy_length_midpoint_context_gate.md"

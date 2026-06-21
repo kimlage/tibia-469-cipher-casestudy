@@ -214,6 +214,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Active reparse state-boundary audit | active copy-source default is path-dependent on previous copy source/length; exact reparse needs expanded state and reaches a cutoff-10 state proxy of `302879952` | recipe-discovery blocker localized |
 | Copy source state-free default audit | decoder-computable source defaults that avoid previous-copy state are all worse; the best `state_free_back_current_length` rule is `+15.186` bits worse and worse in every prefix frozen split | state-free source simplification rejected |
 | Source state dependency gate | canonicality does not remove source dependency and state-free defaults do not remove previous-copy source/length state; best state-free default is `+15.186` bits and loses `5/5` prefix-frozen checks | path-dependent source state retained |
+| Source selection derivation boundary gate | source selection is `261/261` earliest-source canonical, but earliest depends on future target text; backward distance is `+25.551` bits worse and state-free default is `+15.186` bits worse | encoder canonicality retained / decoder derivation rejected |
 | Copy length midpoint context audit | midpoint `book_id < 35` beats global by `13.839` bits, is rank `2/69` among one-cut boundaries, beats global in every prefix frozen split, and passes book-id permutation controls (`p=0.0033`) | midpoint context supported / no new bound |
 | Copy length midpoint context gate | natural midpoint context is retained as generalizing component; searched cutoff `37` is only `0.256` bits better and is rejected as ad-hoc | component validation strengthened / no bound promotion |
 | Literal copy availability boundary audit | `73/87` literal starts have no legal `min_len` copy candidate and `760/857` literal digits are forced at digit level; residual parser choice is localized to `14` literal starts / `97` digit positions | literal externality reduced / no new bound |
@@ -389,6 +390,7 @@ Primary sources:
 [current_active_prequential_profile_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md),
 [active_reparse_state_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md),
 [copy_source_state_free_default_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md),
+[source_selection_derivation_boundary_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.md),
 [copy_length_midpoint_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md),
 [copy_length_midpoint_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md),
 [literal_copy_availability_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md),

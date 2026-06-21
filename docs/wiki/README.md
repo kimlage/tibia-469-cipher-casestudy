@@ -480,6 +480,10 @@ is not removed from the decoder.
 A control addendum supports that tie-break: latest occurrence reaches only
 `123/261`, previous-source-plus-length only `5/261`, and random candidate
 choice would expect `169.473` hits.
+The source-selection derivation boundary gate then rejects turning that
+canonicality into decoder derivation: the earliest rule needs future target
+text, backward distance is `+25.551` bits worse, and the best state-free default
+is `+15.186` bits worse.
 The copy-length default/exception audit then remodels copy length: the
 target-max rule is mostly true but encoder-only, while a decodable
 `decoder_max_possible` default plus adaptive exceptions lowers the mechanical

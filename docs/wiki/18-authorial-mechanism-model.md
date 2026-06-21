@@ -1041,6 +1041,11 @@ A control addendum then compares that rule with alternatives: latest occurrence
 matches only `123/261`, previous-source-plus-length only `5/261`, and uniform
 random candidate choice would expect `169.473` hits (`log2 P(all earliest)
 =-236.596`).
+The source-selection derivation boundary gate then consolidates the negative
+side: earliest-source canonicality is complete, but it depends on future target
+text; backward-distance source coding is `+25.551` bits worse and loses all
+prefix splits, and the best state-free default is still `+15.186` bits worse.
+Copy source is therefore canonical but still declared.
 The copy-length default decodability audit then tests the remaining copy-length
 dependency. The high-coverage target-max rule matches `238/261` copies but is
 encoder-only because it requires future target digits. A decodable
@@ -1490,6 +1495,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
 - [Source canonicality decodability gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.md)
 - [Online copy-source canonicality controls](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md)
+- [Source selection derivation boundary gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.md)
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)

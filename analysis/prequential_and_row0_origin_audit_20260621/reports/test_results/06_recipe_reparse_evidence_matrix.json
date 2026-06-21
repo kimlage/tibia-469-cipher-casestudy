@@ -11,6 +11,7 @@
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
     "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "unchanged_exogenous",
+    "source_selection_status": "encoder_canonical_decoder_dependency_retained",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "translation_or_plaintext_status": "NONE"
   },
@@ -533,6 +534,30 @@
     },
     {
       "evidence": {
+        "ambiguous_source_candidate_ops": 138,
+        "best_state_free_default": "state_free_back_current_length",
+        "best_state_free_total_penalty_bits": 15.186017251789963,
+        "copy_items": 261,
+        "copy_source_dependency_removed_by_canonicality": false,
+        "distance_prefix_frozen_loss_count": 5,
+        "distance_prefix_online_loss_count": 5,
+        "distance_replacement_total_worse_than_active_bits": 25.551406147975285,
+        "earliest_exact_chunk_rule_decoder_computable": false,
+        "earliest_source_hits": 261,
+        "latest_source_hits": 123,
+        "prefix_split_count": 5,
+        "previous_source_hits": 0,
+        "previous_source_plus_length_hits": 5,
+        "random_candidate_expected_hits": 169.4726551226551,
+        "unique_source_candidate_ops": 123
+      },
+      "interpretation": "Source selection is completely earliest-source canonical from the encoder side, but the rule depends on future target text. Distance and state-free replacements are worse, so copy source remains declared.",
+      "question": "is_copy_source_selection_decoder_derivable",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.json",
+      "status": "failed_encoder_canonical_but_decoder_dependency_retained"
+    },
+    {
+      "evidence": {
         "best_boundary_cutoff": 37,
         "best_cutoff_delta_vs_midpoint_bits": 0.25602726488591543,
         "midpoint_boundary_rank": 2,
@@ -630,6 +655,7 @@
     "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json",
     "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
     "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
+    "source_selection_derivation_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/31_source_selection_derivation_boundary_gate.json",
     "source_state_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json"
   },
   "plaintext_claim": false,

@@ -330,6 +330,20 @@ and the best state-free rule, `state_free_back_current_length`, is
 generation-boundary dependency, not a removable tie-break.
 See [26_source_state_dependency_gate.md](26_source_state_dependency_gate.md).
 
+### Source Selection Derivation Boundary Gate
+
+The source-selection boundary is then consolidated across canonicality,
+negative controls, distance coding, and state-free defaults. All
+`261/261` copy sources are earliest legal exact-chunk sources, while
+latest source matches only `123/261`, previous source `0/261`, and
+previous-source-plus-length `5/261`; random candidate choice expects
+`169.473` hits. But the earliest rule depends on future target text,
+so it is not decoder-computable. Backward-distance source coding is
+`+25.551` bits worse and loses all prefix frozen and online splits,
+and the best state-free default remains `+15.186` bits worse. Copy
+source is therefore canonical but still declared.
+See [31_source_selection_derivation_boundary_gate.md](31_source_selection_derivation_boundary_gate.md).
+
 ### Copy Length Midpoint Context Gate
 
 The copy-length context is then checked as a positive generalization
@@ -421,6 +435,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
 - The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.
 - Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.
+- Copy-source selection is encoder-canonical but not decoder-derived: earliest-source hits `261/261`, while distance and state-free replacements lose.
 - Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.
 - Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
 - The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
