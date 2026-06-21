@@ -45,11 +45,13 @@ claim.
 | `can_order_frontier_control_orders_promote_a_formula` | `failed_no_promotable_order` | frontier best `random_04`; full raw best `numeric`; full charged best `numeric`; promotable 0; random_04 +61.452 frontier vs +521.038 charged |
 | `do_simple_source_contexts_rescue_the_cross_op_near_tie` | `failed_simple_contexts_worse` | candidate +0.027; source margin +0.027; oracle -11.209; best context `book_half` +5.872; prefix losses 5/5 |
 | `does_earliest_source_canonicality_remove_decoder_source` | `failed_encoder_side_only` | earliest 261/261; unique 123/261; ambiguous 138; decoder-computable False; dependency removed False; default/exception 5 defaults, 256 exceptions |
+| `can_state_free_source_defaults_remove_previous_copy_state` | `failed_state_dependency_retained` | required state `(book_pos, previous_item, previous_copy_source, previous_copy_length)`; best state-free `state_free_back_current_length` +15.186 bits; prefix losses 5/5; gap min/mean/max 7.652/14.615/22.840; canonicality removed dependency False; promoted False |
 
 ## Decision
 
 - Recipe externality: `partially_reduced_by_deterministic_reparse`.
 - Generation explanation: `stronger_mechanical_recipe_signal_not_final_authorial_method`.
 - Numeric order: `frontier_not_unique_and_control_orders_not_promotable`.
+- Source state: `path_dependent_previous_copy_state_retained`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

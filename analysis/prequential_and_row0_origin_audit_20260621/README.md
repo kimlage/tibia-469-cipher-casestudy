@@ -91,6 +91,9 @@ exogenous.
 - [scripts/25_source_canonicality_decodability_gate.py](scripts/25_source_canonicality_decodability_gate.py) - checks whether earliest-source canonicality removes the decoder source dependency.
 - [reports/test_results/25_source_canonicality_decodability_gate.md](reports/test_results/25_source_canonicality_decodability_gate.md) - source canonicality/decodability gate result.
 - [reports/test_results/25_source_canonicality_decodability_gate.json](reports/test_results/25_source_canonicality_decodability_gate.json) - structured source-canonicality gate ledger.
+- [scripts/26_source_state_dependency_gate.py](scripts/26_source_state_dependency_gate.py) - checks whether state-free source defaults remove previous-copy source/length state.
+- [reports/test_results/26_source_state_dependency_gate.md](reports/test_results/26_source_state_dependency_gate.md) - source state-dependency gate result.
+- [reports/test_results/26_source_state_dependency_gate.json](reports/test_results/26_source_state_dependency_gate.json) - structured source-state dependency ledger.
 
 ## Boundary
 
@@ -157,7 +160,10 @@ exogenous.
   gate then separates encoder regularity from decoder derivation: every source
   is the earliest legal occurrence of the copied chunk (`261/261`), but the rule
   depends on future target text, `138/261` source choices remain ambiguous at
-  declared length, and the decoder source dependency is not removed.
+  declared length, and the decoder source dependency is not removed. A
+  source-state dependency gate then rejects state-free defaults as a replacement
+  for the active previous-copy source/length default: the best rule is
+  `+15.186` bits worse and loses all `5/5` prefix-frozen checks.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

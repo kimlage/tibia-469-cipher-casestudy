@@ -512,6 +512,10 @@ the best decoder-computable default that avoids previous-copy state is
 `state_free_back_current_length`, still `+15.186` bits worse and worse in every
 prefix frozen split. The path-dependent source state remains the active
 recipe-discovery boundary.
+A source-state dependency gate consolidates the negative result with the
+canonicality check: earliest-source canonicality does not make source
+decoder-computable, and state-free defaults fail to remove the expanded
+previous-copy source/length state (`5/5` prefix-frozen losses).
 The copy-length midpoint context audit then supports the active `book_id < 35`
 split: midpoint beats global by `13.839` stream bits, ranks second among 69
 one-cut boundaries, wins every prefix frozen split, and passes book-id
@@ -635,7 +639,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   explicit raw-seed policy that closes that failure locally, rejects the same
   seed as a complete-formula promotion under rescoring, decomposes that
   rejection to literal-payload cost, closes exception-signaling rescue for that
-  seed path, closes the row0 hypothesis requirement matrix with zero promoted
+  seed path, gates source-state dependency and retains previous-copy
+  source/length state after state-free defaults fail, closes the row0
+  hypothesis requirement matrix with zero promoted
   origin formulas, and keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)

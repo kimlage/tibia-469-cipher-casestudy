@@ -48,6 +48,7 @@ SOURCES = {
     / "24_source_blocker_structural_context_gate.json",
     "source_canonicality_decodability_gate": TEST_RESULTS
     / "25_source_canonicality_decodability_gate.json",
+    "source_state_dependency_gate": TEST_RESULTS / "26_source_state_dependency_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -90,6 +91,7 @@ def make_result() -> dict[str, Any]:
     promotion_gate = load_json(SOURCES["order_frontier_promotion_gate"])
     source_gate = load_json(SOURCES["source_blocker_structural_context_gate"])
     source_canonicality_gate = load_json(SOURCES["source_canonicality_decodability_gate"])
+    source_state_gate = load_json(SOURCES["source_state_dependency_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -116,6 +118,7 @@ def make_result() -> dict[str, Any]:
         ("order_frontier_promotion_gate", promotion_gate),
         ("source_blocker_structural_context_gate", source_gate),
         ("source_canonicality_decodability_gate", source_canonicality_gate),
+        ("source_state_dependency_gate", source_state_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -827,6 +830,48 @@ def make_result() -> dict[str, Any]:
                 "ledger remains a decoding dependency."
             ),
         },
+        {
+            "question": "can_state_free_source_defaults_remove_previous_copy_state",
+            "source": rel(SOURCES["source_state_dependency_gate"]),
+            "status": "failed_state_dependency_retained",
+            "evidence": {
+                "required_state_key": source_state_gate["summary"][
+                    "active_reparse_state_key_required"
+                ],
+                "best_state_free_default": source_state_gate["summary"][
+                    "best_state_free_default"
+                ],
+                "best_state_free_total_penalty_bits": source_state_gate["summary"][
+                    "best_state_free_total_penalty_bits"
+                ],
+                "prefix_frozen_loss_count": source_state_gate["summary"][
+                    "prefix_frozen_loss_count"
+                ],
+                "prefix_frozen_split_count": source_state_gate["summary"][
+                    "prefix_frozen_split_count"
+                ],
+                "prefix_frozen_gap_bits_min": source_state_gate["summary"][
+                    "prefix_frozen_gap_bits_min"
+                ],
+                "prefix_frozen_gap_bits_mean": source_state_gate["summary"][
+                    "prefix_frozen_gap_bits_mean"
+                ],
+                "prefix_frozen_gap_bits_max": source_state_gate["summary"][
+                    "prefix_frozen_gap_bits_max"
+                ],
+                "canonicality_removed_source_dependency": source_state_gate["summary"][
+                    "canonicality_removed_source_dependency"
+                ],
+                "state_free_default_promoted": source_state_gate["summary"][
+                    "state_free_default_promoted"
+                ],
+            },
+            "interpretation": (
+                "The active copy-source default cannot currently be replaced by "
+                "a decoder-computable state-free rule. Previous-copy source and "
+                "length remain part of the recipe-discovery state boundary."
+            ),
+        },
     ]
 
     result = {
@@ -850,6 +895,7 @@ def make_result() -> dict[str, Any]:
             "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
             "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
             "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
+            "source_state_status": "path_dependent_previous_copy_state_retained",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1081,6 +1127,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"default/exception {evidence['default_exception_default_matches']} defaults, "
                 f"{evidence['default_exception_exceptions']} exceptions"
             )
+        elif row["question"] == "can_state_free_source_defaults_remove_previous_copy_state":
+            key = (
+                f"required state `{evidence['required_state_key']}`; best state-free "
+                f"`{evidence['best_state_free_default']}` "
+                f"{evidence['best_state_free_total_penalty_bits']:+.3f} bits; "
+                f"prefix losses {evidence['prefix_frozen_loss_count']}/"
+                f"{evidence['prefix_frozen_split_count']}; gap min/mean/max "
+                f"{evidence['prefix_frozen_gap_bits_min']:.3f}/"
+                f"{evidence['prefix_frozen_gap_bits_mean']:.3f}/"
+                f"{evidence['prefix_frozen_gap_bits_max']:.3f}; "
+                f"canonicality removed dependency "
+                f"{evidence['canonicality_removed_source_dependency']}; "
+                f"promoted {evidence['state_free_default_promoted']}"
+            )
         else:
             key = (
                 f"best raw `{evidence['best_raw']}`; best charged `{evidence['best_charged']}`; "
@@ -1096,6 +1156,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Recipe externality: `{result['decision']['recipe_externality_status']}`.",
             f"- Generation explanation: `{result['decision']['generation_explanation_status']}`.",
             f"- Numeric order: `{result['decision']['numeric_order_status']}`.",
+            f"- Source state: `{result['decision']['source_state_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

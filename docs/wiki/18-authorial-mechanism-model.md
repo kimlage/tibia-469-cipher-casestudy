@@ -4,10 +4,11 @@ page_type: finding
 context: bonelord-469
 visibility: public_candidate
 status: frozen
-updated_at: 2026-06-20
+updated_at: 2026-06-21
 moc_parent: README.md
 source_refs:
   - analysis/authorial_mechanism_20260620
+  - analysis/prequential_and_row0_origin_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -1089,6 +1090,12 @@ based on emitted length, book position, or current copy length. The best
 state-free rule is `state_free_back_current_length`, but it is still `+15.186`
 bits worse on the full corpus and worse in every prefix frozen split, so the
 path-dependent source state remains the current implementation boundary.
+A source-state dependency gate then consolidates that boundary with the
+canonicality result: earliest-source canonicality is encoder-side only, the
+active reparse state remains
+`(book_pos, previous_item, previous_copy_source, previous_copy_length)`, and
+state-free defaults lose `5/5` prefix-frozen checks. No compression bound or
+generation-method claim is promoted.
 The copy-length midpoint context audit then checks whether the active
 `book_id < 35` split is removable or merely posthoc. It is retained as
 supported context: midpoint beats global by `13.839` stream bits, ranks second
@@ -1474,6 +1481,7 @@ book generation, not row0 pair-cell placement.
 - [Current active prequential profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.md)
 - [Active reparse state-boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.md)
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
+- [Source state dependency gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.md)
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
 - [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)

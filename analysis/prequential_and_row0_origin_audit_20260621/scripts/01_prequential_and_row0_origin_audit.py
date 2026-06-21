@@ -253,6 +253,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "decision": {
             "compression_bound_status": "8558.667 bits is the frozen validation scope, not final authorial method.",
             "generation_explanation_status": predictive_class,
+            "source_state_status": "path_dependent_previous_copy_state_retained",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -285,6 +286,7 @@ def render_markdown(
     order_frontier_promotion_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
+    source_state_dependency_gate_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -623,6 +625,20 @@ def render_markdown(
             "the valid source representation.",
             f"See [25_source_canonicality_decodability_gate.md]({source_canonicality_decodability_gate_link}).",
             "",
+            "### Source State Dependency Gate",
+            "",
+            "A final source-state gate then checks whether the active previous-copy",
+            "source/length dependency can be removed by a decoder-computable",
+            "state-free default. It cannot under the tested rules. The exact active",
+            "reparse still needs state key",
+            "`(book_pos, previous_item, previous_copy_source, previous_copy_length)`,",
+            "and the best state-free rule, `state_free_back_current_length`, is",
+            "`+15.186` bits worse on the full source ledger. It also loses all",
+            "`5/5` prefix-frozen checks, with gap min/mean/max `7.652` /",
+            "`14.615` / `22.840` bits. This keeps source state as a real",
+            "generation-boundary dependency, not a removable tie-break.",
+            f"See [26_source_state_dependency_gate.md]({source_state_dependency_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -682,6 +698,7 @@ def render_markdown(
             "- `8558.667` bits remains a frozen validation scope here, not a final authorial method.",
             "- The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.",
             "- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.",
+            "- Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -743,6 +760,7 @@ def main() -> None:
             source_canonicality_decodability_gate_link=(
                 "25_source_canonicality_decodability_gate.md"
             ),
+            source_state_dependency_gate_link="26_source_state_dependency_gate.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -800,6 +818,9 @@ def main() -> None:
             ),
             source_canonicality_decodability_gate_link=(
                 "test_results/25_source_canonicality_decodability_gate.md"
+            ),
+            source_state_dependency_gate_link=(
+                "test_results/26_source_state_dependency_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

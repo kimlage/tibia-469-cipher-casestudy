@@ -1,0 +1,40 @@
+{
+  "case_reopened": false,
+  "classification": "source_state_dependency_retained_state_free_defaults_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "generation_explanation_status": "source_state_boundary_sharpened",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_state_status": "path_dependent_previous_copy_state_retained",
+    "state_free_source_default_status": "rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "active_reparse_state_boundary": "analysis/authorial_mechanism_20260620/reports/test_results/146_active_reparse_state_boundary_audit.json",
+    "copy_source_state_free_default": "analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.json",
+    "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "source_state_dependency_gate.v1",
+  "summary": {
+    "active_path_dependent_default_retained": true,
+    "active_reparse_state_key_required": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+    "all_prefix_frozen_state_free_worse": true,
+    "best_state_free_default": "state_free_back_current_length",
+    "best_state_free_stream_penalty_bits": 15.186017251790418,
+    "best_state_free_total_penalty_bits": 15.186017251789963,
+    "canonicality_removed_source_dependency": false,
+    "earliest_exact_chunk_rule_decoder_computable": false,
+    "exact_active_reparse_implemented": false,
+    "interpretation": "The active source ledger still requires previous-copy source and length state. Earliest-source canonicality is encoder-side only, and every tested state-free source default is worse on the full corpus and on every prefix-frozen split.",
+    "max_book_state_proxy_multiplier": 38968.0,
+    "old_reparse_state_key": "(book_pos, previous_item)",
+    "prefix_frozen_gap_bits_max": 22.839645662357952,
+    "prefix_frozen_gap_bits_mean": 14.615207376816631,
+    "prefix_frozen_gap_bits_min": 7.6518848233965855,
+    "prefix_frozen_loss_count": 5,
+    "prefix_frozen_split_count": 5,
+    "state_free_default_promoted": false
+  },
+  "translation_delta": "NONE"
+}

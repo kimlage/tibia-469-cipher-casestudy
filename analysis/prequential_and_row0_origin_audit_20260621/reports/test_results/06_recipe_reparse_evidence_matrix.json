@@ -7,6 +7,7 @@
     "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence and reduces same-family source memorization as an explanation for singleton holdout performance.",
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
     "row0_origin_status": "unchanged_exogenous",
+    "source_state_status": "path_dependent_previous_copy_state_retained",
     "translation_or_plaintext_status": "NONE"
   },
   "evidence_matrix": [
@@ -483,6 +484,24 @@
       "question": "does_earliest_source_canonicality_remove_decoder_source",
       "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
       "status": "failed_encoder_side_only"
+    },
+    {
+      "evidence": {
+        "best_state_free_default": "state_free_back_current_length",
+        "best_state_free_total_penalty_bits": 15.186017251789963,
+        "canonicality_removed_source_dependency": false,
+        "prefix_frozen_gap_bits_max": 22.839645662357952,
+        "prefix_frozen_gap_bits_mean": 14.615207376816631,
+        "prefix_frozen_gap_bits_min": 7.6518848233965855,
+        "prefix_frozen_loss_count": 5,
+        "prefix_frozen_split_count": 5,
+        "required_state_key": "(book_pos, previous_item, previous_copy_source, previous_copy_length)",
+        "state_free_default_promoted": false
+      },
+      "interpretation": "The active copy-source default cannot currently be replaced by a decoder-computable state-free rule. Previous-copy source and length remain part of the recipe-discovery state boundary.",
+      "question": "can_state_free_source_defaults_remove_previous_copy_state",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json",
+      "status": "failed_state_dependency_retained"
     }
   ],
   "frozen_validation_scope": {
@@ -516,7 +535,8 @@
     "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
     "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json",
     "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
-    "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json"
+    "source_canonicality_decodability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.json",
+    "source_state_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",
