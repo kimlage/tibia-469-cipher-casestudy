@@ -293,6 +293,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Decoder-side rule coverage audit | simple decoder-side rules do not promote the stable projection: best source rule `source_is_previous_copy_end` covers `6/208`, best length rule `length_is_decoder_max` covers `58/208`, best joint rule covers `2/208`, and `265` literal payload digits remain materialized | target-text dependency not removed |
 | Source tie-break artifact audit | alternate source tie policies keep identical primary cost and `50/50` stability, but do not change selected source sums (`source_sum_span=0`), so the `208/208` earliest-target-match signal is not explained as simple parser tie-break; it still depends on target chunks | target-dependent source clue retained / not promoted |
 | Source candidate collapse audit | `precompute_matches` keeps only one source per length and chooses the lower `source_pos`; `130/208` projected copy events have hidden alternate sources, so the `208/208` earliest-target-match signal is a candidate-generation artifact and gate 89 is superseded | source canonicality demoted / target-text dependency remains |
+| Full source exposure audit | on cutoff `60`, exposing all same-length sources preserves `10/10` stability and roundtrip; `latest_source` selects `10` non-earliest sources at only `+0.017676` primary bits, while earliest and previous-end-preferred policies match collapsed cost | local robustness / no source-rule promotion |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -452,6 +453,7 @@ Primary sources:
 [decoder_side_rule_coverage_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/88_decoder_side_rule_coverage_audit.md),
 [source_tiebreak_artifact_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/89_source_tiebreak_artifact_audit.md),
 [source_candidate_collapse_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/90_source_candidate_collapse_audit.md),
+[full_source_exposure_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/91_full_source_exposure_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

@@ -288,6 +288,15 @@ earliest-target-match count is therefore induced by candidate generation, not
 independent source evidence. In the stable projection, `130/208` copy events have
 hidden alternate sources, with up to `13` hidden alternatives for a single event.
 
+A full source exposure audit then tests the corrected frontier on the cutoff-60
+slice. Exposing every same-length source candidate preserves roundtrip and
+stability for all three tie policies over the `10` target books. The
+`latest_source` policy selects `10` non-earliest sources and costs only
+`+0.017676` primary bits versus the collapsed frontier; the earliest and
+previous-end-preferred policies match collapsed cost exactly. This is local
+parser robustness, not a source-generation rule, because the exposed candidates
+are still target-chunk matches.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

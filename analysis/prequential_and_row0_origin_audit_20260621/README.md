@@ -286,6 +286,9 @@ exogenous.
 - [scripts/90_source_candidate_collapse_audit.py](scripts/90_source_candidate_collapse_audit.py) - checks whether `precompute_matches` already collapses source candidates to earliest per length.
 - [reports/test_results/90_source_candidate_collapse_audit.md](reports/test_results/90_source_candidate_collapse_audit.md) - source candidate collapse correction.
 - [reports/test_results/90_source_candidate_collapse_audit.json](reports/test_results/90_source_candidate_collapse_audit.json) - structured source candidate collapse ledger.
+- [scripts/91_full_source_exposure_audit.py](scripts/91_full_source_exposure_audit.py) - exposes all same-length source candidates on the cutoff-60 stable projection.
+- [reports/test_results/91_full_source_exposure_audit.md](reports/test_results/91_full_source_exposure_audit.md) - full source exposure cutoff-60 result.
+- [reports/test_results/91_full_source_exposure_audit.json](reports/test_results/91_full_source_exposure_audit.json) - structured full source exposure ledger.
 
 ## Boundary
 
@@ -616,6 +619,13 @@ exogenous.
   projected copy events have hidden alternate sources, with up to `13` hidden
   alternatives for one event. Gate 89 is superseded for source-canonicality
   evidence.
+- The full source exposure audit then reruns the stable projection on cutoff
+  `60` with all same-length source candidates exposed. The tested slice remains
+  stable and roundtrips under all three tie policies (`10/10` books). The
+  `latest_source` policy chooses `10` non-earliest sources with only
+  `+0.017676` primary bits versus the collapsed frontier, while earliest and
+  previous-end-preferred policies match collapsed cost. This supports parser
+  robustness locally but keeps source choice target-dependent.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

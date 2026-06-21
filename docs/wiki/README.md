@@ -741,6 +741,11 @@ lower `source_pos`, so later same-length sources never reach the parser heap.
 `130/208` projected copy events have hidden alternate sources. The
 earliest-target-match signal is therefore a candidate-generation artifact, not
 independent source evidence.
+A full source exposure audit then reruns the corrected parser on cutoff `60`.
+All three tie policies remain stable and roundtrip over `10/10` books; the
+`latest_source` policy selects `10` non-earliest sources at only `+0.017676`
+primary bits versus collapsed, while the other two policies match collapsed cost.
+This is local parser robustness, not source-rule promotion.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -943,6 +948,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   not a simple tie artifact, while still target-dependent,
   corrects that reading with a source-candidate collapse audit (`130/208` copy
   events have hidden alternate sources; gate 89 superseded),
+  exposes all same-length sources on cutoff `60` and preserves `10/10` stability
+  while showing non-earliest source choices are near-ties, not generator rules,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
