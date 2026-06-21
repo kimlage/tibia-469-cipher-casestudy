@@ -750,5 +750,9 @@ Generated audits in this directory should be treated as the current state:
   occurrences, and a source-free oracle would improve by `11.209` bits, but
   the active source ledger is `0.027` bits above break-even. This is not
   promoted because the oracle is not decoder-side.
+- `154_copy_source_structural_context_audit`: tests whether simple mechanical
+  contexts reduce that source ledger. They do not: book-half is the best
+  non-global context but is `+5.872` bits worse, and it is worse than global in
+  every prefix-frozen split. Exact length and length buckets over-split harder.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -1021,6 +1021,11 @@ candidate source is the earliest of two full-length occurrences, and a
 source-free oracle would improve by `11.209` bits, but the active source ledger
 is `0.027` bits above break-even. This remains an encoder-side clue, not a
 decoder-side source derivation.
+The copy-source structural context audit then tests whether ordinary mechanical
+contexts reduce that source ledger. They do not: book-half, length bucket,
+exact length, book-position bucket, and combined contexts all worsen the global
+exception prior. Book-half is the best non-global context at `+5.872` bits and
+is worse in every prefix-frozen split.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1332,6 +1337,7 @@ book generation, not row0 pair-cell placement.
 - [Cross-op optional literal copy frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md)
 - [Cross-op near-tie decomposition](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md)
 - [Cross-op source break-even audit](../../analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.md)
+- [Copy source structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

@@ -415,6 +415,10 @@ authorial method: family/bookcase holdouts still have failures.
 - `scripts/153_cross_op_source_break_even_audit.py` - quantifies the
   source-cost break-even for that near miss: a source-free oracle would save
   `11.209` bits, but the active source ledger is `0.027` bits above break-even.
+- `scripts/154_copy_source_structural_context_audit.py` - tests book-half,
+  copy-length, book-position, and combined structural contexts for the
+  copy-source exception prior; all over-split, so the global source prior is
+  retained.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

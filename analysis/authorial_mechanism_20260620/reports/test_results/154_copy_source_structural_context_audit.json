@@ -1,0 +1,187 @@
+{
+  "best_non_global": {
+    "bits": 2996.7095964434984,
+    "context_count": 2,
+    "default_count": 5,
+    "delta_vs_global_bits": 5.871536284497324,
+    "exception_bits": 2955.4991301356677,
+    "exception_count": 256,
+    "flag_bits": 41.21046630783095,
+    "name": "book_half"
+  },
+  "case_reopened": false,
+  "classification": "copy_source_structural_contexts_rejected_global_retained",
+  "decision": {
+    "compression_bound_changed": false,
+    "global_source_context_retained": true,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE",
+    "structural_context_promoted": false
+  },
+  "full_corpus_models": {
+    "book_half": {
+      "bits": 2996.7095964434984,
+      "context_count": 2,
+      "default_count": 5,
+      "delta_vs_global_bits": 5.871536284497324,
+      "exception_bits": 2955.4991301356677,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    },
+    "book_half_x_length_bucket": {
+      "bits": 3001.241946624956,
+      "context_count": 6,
+      "default_count": 5,
+      "delta_vs_global_bits": 10.403886465955111,
+      "exception_bits": 2960.0314803171254,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    },
+    "book_position_bucket": {
+      "bits": 2999.6420057352507,
+      "context_count": 3,
+      "default_count": 5,
+      "delta_vs_global_bits": 8.803945576249589,
+      "exception_bits": 2958.43153942742,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    },
+    "copy_length_bucket": {
+      "bits": 2998.489468698683,
+      "context_count": 3,
+      "default_count": 5,
+      "delta_vs_global_bits": 7.651408539682052,
+      "exception_bits": 2957.2790023908524,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    },
+    "copy_length_exact": {
+      "bits": 3006.0780880187153,
+      "context_count": 78,
+      "default_count": 5,
+      "delta_vs_global_bits": 15.240027859714246,
+      "exception_bits": 2964.8676217108846,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    },
+    "global": {
+      "bits": 2990.838060159001,
+      "context_count": 1,
+      "default_count": 5,
+      "delta_vs_global_bits": 0.0,
+      "exception_bits": 2949.6275938511703,
+      "exception_count": 256,
+      "flag_bits": 41.21046630783095
+    }
+  },
+  "plaintext_claim": false,
+  "prefix_future_suffix": {
+    "candidate_name": "book_half",
+    "rows": [
+      {
+        "candidate_minus_global_frozen_bits": 0.06277325639848641,
+        "cutoff": 10,
+        "label": "prefix_10_future_suffix",
+        "models": {
+          "book_half": {
+            "test_frozen_bits": 2470.760488069485,
+            "train_bits": 531.6787326420553,
+            "train_context_count": 1
+          },
+          "global": {
+            "test_frozen_bits": 2470.6977148130863,
+            "train_bits": 531.6787326420553,
+            "train_context_count": 1
+          }
+        },
+        "test_events": 204,
+        "train_events": 57
+      },
+      {
+        "candidate_minus_global_frozen_bits": 1.230528238628267,
+        "cutoff": 20,
+        "label": "prefix_20_future_suffix",
+        "models": {
+          "book_half": {
+            "test_frozen_bits": 1890.4906380388572,
+            "train_bits": 1113.0477479103224,
+            "train_context_count": 1
+          },
+          "global": {
+            "test_frozen_bits": 1889.260109800229,
+            "train_bits": 1113.0477479103224,
+            "train_context_count": 1
+          }
+        },
+        "test_events": 152,
+        "train_events": 109
+      },
+      {
+        "candidate_minus_global_frozen_bits": 6.274409911420207,
+        "cutoff": 35,
+        "label": "prefix_35_future_suffix",
+        "models": {
+          "book_half": {
+            "test_frozen_bits": 1180.0298424987793,
+            "train_bits": 1821.7803958860316,
+            "train_context_count": 1
+          },
+          "global": {
+            "test_frozen_bits": 1173.755432587359,
+            "train_bits": 1821.7803958860316,
+            "train_context_count": 1
+          }
+        },
+        "test_events": 93,
+        "train_events": 168
+      },
+      {
+        "candidate_minus_global_frozen_bits": 0.3847555030206422,
+        "cutoff": 50,
+        "label": "prefix_50_future_suffix",
+        "models": {
+          "book_half": {
+            "test_frozen_bits": 624.2429844059517,
+            "train_bits": 2373.174708520511,
+            "train_context_count": 2
+          },
+          "global": {
+            "test_frozen_bits": 623.858228902931,
+            "train_bits": 2367.69056726738,
+            "train_context_count": 1
+          }
+        },
+        "test_events": 48,
+        "train_events": 213
+      },
+      {
+        "candidate_minus_global_frozen_bits": 1.192698873735452,
+        "cutoff": 60,
+        "label": "prefix_60_future_suffix",
+        "models": {
+          "book_half": {
+            "test_frozen_bits": 230.88464456790683,
+            "train_bits": 2766.7259230723216,
+            "train_context_count": 2
+          },
+          "global": {
+            "test_frozen_bits": 229.69194569417138,
+            "train_bits": 2762.0473679476854,
+            "train_context_count": 1
+          }
+        },
+        "test_events": 18,
+        "train_events": 243
+      }
+    ]
+  },
+  "schema": "copy_source_structural_context_audit.v1",
+  "scope": {
+    "active_context": "global exception source prior plus global default flag",
+    "copy_source_events": 261,
+    "question": "Do simple mechanical contexts for copy-source exception coding reduce the source ledger that blocks the cross-op near tie?"
+  },
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json",
+  "test": "154_copy_source_structural_context_audit",
+  "translation_delta": "NONE"
+}
