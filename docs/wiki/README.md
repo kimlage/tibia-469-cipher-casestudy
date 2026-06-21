@@ -672,6 +672,11 @@ prefix-sensitive choices: among `50` books seen under multiple cutoffs, `38`
 keep one exact operation signature and `12` vary; book `65` is the worst case
 with `4` signatures. That makes the remaining frontier concrete: explain or
 stabilize the prefix-sensitive paths before calling this a final generator.
+The unstable-path decomposition then classifies the `12` prefix-sensitive
+books: `9` are same-shape boundary shifts, `3` are segmentation-shape changes,
+and none is pure source-address drift. The next structural blocker is
+copy-boundary selection, especially book `65`, not another source-address
+micro-sweep.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -846,6 +851,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `175/175` roundtrip evaluations and no same-policy losses,
   audits exact parser-path stability across those cutoffs (`38/50` stable,
   `12/50` prefix-sensitive),
+  decomposes the `12` prefix-sensitive parser paths into `9` same-shape
+  boundary shifts and `3` segmentation-shape changes,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

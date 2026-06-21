@@ -250,6 +250,9 @@ exogenous.
 - [scripts/78_multi_cutoff_parser_path_stability_audit.py](scripts/78_multi_cutoff_parser_path_stability_audit.py) - checks whether exact parser paths stay invariant for the same book across different frozen cutoffs.
 - [reports/test_results/78_multi_cutoff_parser_path_stability_audit.md](reports/test_results/78_multi_cutoff_parser_path_stability_audit.md) - multi-cutoff parser path-stability result.
 - [reports/test_results/78_multi_cutoff_parser_path_stability_audit.json](reports/test_results/78_multi_cutoff_parser_path_stability_audit.json) - structured path-stability ledger.
+- [scripts/79_unstable_parser_path_decomposition_audit.py](scripts/79_unstable_parser_path_decomposition_audit.py) - decomposes the unstable parser paths into source-only, boundary-shift, or segmentation-change classes.
+- [reports/test_results/79_unstable_parser_path_decomposition_audit.md](reports/test_results/79_unstable_parser_path_decomposition_audit.md) - unstable path decomposition result.
+- [reports/test_results/79_unstable_parser_path_decomposition_audit.json](reports/test_results/79_unstable_parser_path_decomposition_audit.json) - structured unstable-path decomposition ledger.
 
 ## Boundary
 
@@ -503,6 +506,11 @@ exogenous.
   `38` keep the same exact path and `12` vary. This supports a reusable parser
   mechanism while identifying the remaining prefix-sensitive books, led by
   book `65` with `4` distinct signatures.
+- The unstable-path decomposition audit then classifies those `12` books:
+  `9/12` are same-shape boundary shifts, `3/12` are segmentation-shape changes,
+  and `0/12` are pure source-address swaps. The next structural parser task is
+  therefore boundary stabilization, especially book `65`, not another
+  source-address micro-sweep.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

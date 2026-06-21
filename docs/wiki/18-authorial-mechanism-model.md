@@ -185,6 +185,13 @@ also localizes the remaining non-authorial-looking dependency: some paths are
 still controlled by learned stream weights and tie-breaking rather than a
 prefix-invariant recipe.
 
+The unstable-path decomposition then identifies what kind of instability
+remains. Of the `12` prefix-sensitive books, `9` are same-shape boundary shifts
+and `3` are larger segmentation-shape changes; `0` are pure source-address
+swaps. The next structural mechanism question is therefore not which source
+address model to try, but how copy boundaries are selected and stabilized,
+with book `65` as the clearest stress case.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

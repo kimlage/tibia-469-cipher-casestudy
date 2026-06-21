@@ -1,0 +1,1186 @@
+{
+  "case_reopened": false,
+  "classification": "unstable_parser_paths_decomposed",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "next_work_is_boundary_stability_not_micro_sweep",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "unstable_paths_localized_to_boundary_selection",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate77_context_loader": "analysis/prequential_and_row0_origin_audit_20260621/scripts/77_multi_cutoff_sparse_suffix_parser_validation.py",
+    "gate78_path_replay": "analysis/prequential_and_row0_origin_audit_20260621/scripts/78_multi_cutoff_parser_path_stability_audit.py",
+    "gate78_path_stability": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/78_multi_cutoff_parser_path_stability_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "unstable_parser_path_decomposition_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "unstable_books_from_gate78": true
+  },
+  "summary": {
+    "book_rows": [
+      {
+        "book": 21,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_cutoffs": [
+          10
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 176,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              197,
+              2114,
+              2275
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              7,
+              135,
+              34
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 55.46153057563602
+            },
+            "signature": "3d67956f8f5b3285",
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 176,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              197,
+              2114,
+              2273
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              7,
+              133,
+              36
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 54.926563938644804
+            },
+            "signature": "45e96b26269960af",
+            "type_sequence": "CCC"
+          }
+        ]
+      },
+      {
+        "book": 24,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_cutoffs": [
+          10
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 119,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              2119,
+              3507,
+              3401
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              37,
+              70,
+              12
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 56.27688565472161
+            },
+            "signature": "e213fe1406e7f85b",
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 119,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              2119,
+              3506,
+              3401
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              36,
+              71,
+              12
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 55.807524884819856
+            },
+            "signature": "e1475f1a390e1c76",
+            "type_sequence": "CCC"
+          }
+        ]
+      },
+      {
+        "book": 28,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_cutoffs": [
+          10
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 146,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              744,
+              2778,
+              2160,
+              2821,
+              2397
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              89,
+              6,
+              12,
+              21,
+              18
+            ],
+            "literal_digits": 0,
+            "op_count": 5,
+            "parser_bits_by_cutoff": {
+              "10": 89.57426091119223
+            },
+            "signature": "8cb38b3003324679",
+            "type_sequence": "CCCCC"
+          },
+          {
+            "copied_digits": 146,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              744,
+              2778,
+              2161,
+              2821,
+              2397
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              89,
+              7,
+              11,
+              21,
+              18
+            ],
+            "literal_digits": 0,
+            "op_count": 5,
+            "parser_bits_by_cutoff": {
+              "20": 90.64898778090101
+            },
+            "signature": "ee53cae37f654670",
+            "type_sequence": "CCCCC"
+          }
+        ]
+      },
+      {
+        "book": 30,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_cutoffs": [
+          10
+        ],
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 150,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              4065,
+              255,
+              2160,
+              2232,
+              2118,
+              2197
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              17,
+              6,
+              37,
+              20,
+              42,
+              28
+            ],
+            "literal_digits": 0,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 115.55791197326346
+            },
+            "signature": "efd825fa783e1134",
+            "type_sequence": "CCCCCC"
+          },
+          {
+            "copied_digits": 144,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              4065,
+              2160,
+              2232,
+              2117,
+              2197
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              17,
+              6,
+              37,
+              19,
+              43,
+              28
+            ],
+            "literal_digits": 6,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "20": 113.74653892208008
+            },
+            "signature": "c6ce2b68e2686234",
+            "type_sequence": "CLCCCC"
+          }
+        ]
+      },
+      {
+        "book": 34,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_cutoffs": [
+          10
+        ],
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 116,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              505,
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              4,
+              6,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "literal_digits": 7,
+            "op_count": 9,
+            "parser_bits_by_cutoff": {
+              "10": 156.25307336072072
+            },
+            "signature": "e99aa6f75bb6e35a",
+            "type_sequence": "LCCLCCCCC"
+          },
+          {
+            "copied_digits": 110,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              2965,
+              511,
+              129,
+              475,
+              183,
+              492
+            ],
+            "cutoffs": [
+              20
+            ],
+            "length_sequence": [
+              10,
+              45,
+              3,
+              11,
+              22,
+              14,
+              5,
+              13
+            ],
+            "literal_digits": 13,
+            "op_count": 8,
+            "parser_bits_by_cutoff": {
+              "20": 154.1126061846831
+            },
+            "signature": "f82f5fc3fbe15a4a",
+            "type_sequence": "LCLCCCCC"
+          }
+        ]
+      },
+      {
+        "book": 35,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_cutoffs": [
+          10,
+          20
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 286,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              881,
+              16
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              28,
+              258
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 40.299693010852934,
+              "20": 39.3797121576986
+            },
+            "signature": "9ad7a00cacd455fa",
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 286,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              5146,
+              147
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              159,
+              127
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.9715068514536
+            },
+            "signature": "9503157fe0c3c10a",
+            "type_sequence": "CC"
+          }
+        ]
+      },
+      {
+        "book": 39,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_cutoffs": [
+          10,
+          20
+        ],
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 57,
+            "copy_default_flags": [
+              false,
+              true
+            ],
+            "copy_sources": [
+              2520,
+              2525
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              5,
+              2,
+              52
+            ],
+            "literal_digits": 2,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 39.57880081932022,
+              "20": 38.65481268989216
+            },
+            "signature": "ce5b37868920b08f",
+            "type_sequence": "CLC"
+          },
+          {
+            "copied_digits": 52,
+            "copy_default_flags": [
+              false
+            ],
+            "copy_sources": [
+              2525
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              7,
+              52
+            ],
+            "literal_digits": 7,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.47797464391341
+            },
+            "signature": "51d57fd93b8c610f",
+            "type_sequence": "LC"
+          }
+        ]
+      },
+      {
+        "book": 46,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_cutoffs": [
+          20,
+          35
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 253,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              6987,
+              2320,
+              701
+            ],
+            "cutoffs": [
+              20,
+              35
+            ],
+            "length_sequence": [
+              124,
+              19,
+              110
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 60.169752728849865,
+              "35": 59.59674100668019
+            },
+            "signature": "082d332652d09d96",
+            "type_sequence": "CCC"
+          },
+          {
+            "copied_digits": 253,
+            "copy_default_flags": [
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              6987,
+              2320,
+              695
+            ],
+            "cutoffs": [
+              10
+            ],
+            "length_sequence": [
+              124,
+              13,
+              116
+            ],
+            "literal_digits": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 60.1374439776009
+            },
+            "signature": "ed189d1ff20e1df0",
+            "type_sequence": "CCC"
+          }
+        ]
+      },
+      {
+        "book": 51,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 268,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              6977,
+              7235
+            ],
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "length_sequence": [
+              134,
+              134
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 42.33465103383144,
+              "20": 42.40643227643134,
+              "35": 42.02218610165427
+            },
+            "signature": "3d8ce3a7f7ec8553",
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 268,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              6977,
+              7228
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              127,
+              141
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "50": 40.72138698264061
+            },
+            "signature": "50e022dfd76cf1c8",
+            "type_sequence": "CC"
+          }
+        ]
+      },
+      {
+        "book": 56,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 263,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6053,
+              2167,
+              2157,
+              242
+            ],
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              13,
+              72,
+              10,
+              9,
+              21
+            ],
+            "literal_digits": 3,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "10": 198.24460159703182,
+              "20": 198.01380741507478,
+              "35": 196.02292174658274
+            },
+            "signature": "01a0656cc3c5fb37",
+            "type_sequence": "CCCCLCCCCC"
+          },
+          {
+            "copied_digits": 263,
+            "copy_default_flags": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "copy_sources": [
+              2272,
+              2177,
+              4068,
+              2312,
+              2234,
+              6052,
+              2167,
+              2157,
+              241
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              40,
+              36,
+              53,
+              9,
+              3,
+              12,
+              73,
+              10,
+              8,
+              22
+            ],
+            "literal_digits": 3,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "50": 193.61107993247114
+            },
+            "signature": "fef1188b432b704b",
+            "type_sequence": "CCCCLCCCCC"
+          }
+        ]
+      },
+      {
+        "book": 61,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_cutoffs": [
+          35,
+          50,
+          60
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_summaries": [
+          {
+            "copied_digits": 145,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4514,
+              3033
+            ],
+            "cutoffs": [
+              35,
+              50,
+              60
+            ],
+            "length_sequence": [
+              112,
+              33
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.594952581701975,
+              "50": 37.624224785498356,
+              "60": 37.038697119479224
+            },
+            "signature": "dc08d5469e078553",
+            "type_sequence": "CC"
+          },
+          {
+            "copied_digits": 145,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4514,
+              3043
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              122,
+              23
+            ],
+            "literal_digits": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 39.30658885691348,
+              "20": 39.37476170886111
+            },
+            "signature": "fdeb0d8988185207",
+            "type_sequence": "CC"
+          }
+        ]
+      },
+      {
+        "book": 65,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_cutoffs": [
+          10,
+          20
+        ],
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 4,
+        "variant_summaries": [
+          {
+            "copied_digits": 166,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4511,
+              3043
+            ],
+            "cutoffs": [
+              10,
+              20
+            ],
+            "length_sequence": [
+              125,
+              41,
+              3
+            ],
+            "literal_digits": 3,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 49.6061872945861,
+              "20": 49.779416714366945
+            },
+            "signature": "eaf0b833144ee1c3",
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4511,
+              3033
+            ],
+            "cutoffs": [
+              35
+            ],
+            "length_sequence": [
+              115,
+              51,
+              3
+            ],
+            "literal_digits": 3,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "35": 48.75799808684888
+            },
+            "signature": "1792f6a37c523309",
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4511,
+              7028
+            ],
+            "cutoffs": [
+              50
+            ],
+            "length_sequence": [
+              111,
+              55,
+              3
+            ],
+            "literal_digits": 3,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "50": 48.24392329536552
+            },
+            "signature": "17f495347bea8db8",
+            "type_sequence": "CCL"
+          },
+          {
+            "copied_digits": 166,
+            "copy_default_flags": [
+              false,
+              false
+            ],
+            "copy_sources": [
+              4511,
+              7029
+            ],
+            "cutoffs": [
+              60
+            ],
+            "length_sequence": [
+              112,
+              54,
+              3
+            ],
+            "literal_digits": 3,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "60": 46.82631377496156
+            },
+            "signature": "5bea3cd9dc3c044a",
+            "type_sequence": "CCL"
+          }
+        ]
+      }
+    ],
+    "class_counts": {
+      "boundary_shift_same_shape": 9,
+      "segmentation_shape_change": 3
+    },
+    "interpretation": "The unstable parser paths are primarily boundary/segmentation choice problems rather than pure source-address swaps. This narrows the next structural task: stabilize copy boundary selection under frozen prefixes, especially book 65, instead of searching for another compression-only parameter.",
+    "max_variant_count": 4,
+    "unstable_book_count": 12,
+    "upstream_gate78_summary": {
+      "stable_exact_path_book_count": 38,
+      "stable_exact_path_fraction": 0.76,
+      "unstable_exact_path_book_count": 12
+    },
+    "worst_books": [
+      {
+        "book": 65,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 4,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ],
+          [
+            50
+          ],
+          [
+            60
+          ]
+        ]
+      },
+      {
+        "book": 21,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 24,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 28,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 30,
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 34,
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 35,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ]
+        ]
+      },
+      {
+        "book": 39,
+        "instability_class": "segmentation_shape_change",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ]
+        ]
+      },
+      {
+        "book": 46,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            20,
+            35
+          ],
+          [
+            10
+          ]
+        ]
+      },
+      {
+        "book": 51,
+        "instability_class": "boundary_shift_same_shape",
+        "variant_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20,
+            35
+          ],
+          [
+            50
+          ]
+        ]
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}
