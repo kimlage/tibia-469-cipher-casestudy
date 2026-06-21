@@ -2956,6 +2956,7 @@
     "source_substitution_third_pass_status": "microscopic_single_pair_improves_bound_to_8160_825917",
     "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
     "targetmax_resegmentation_formula_status": "promoted_bound_8158_766094",
+    "targetmax_resegmentation_saturation_status": "promoted_bound_8156_050355_saturated",
     "targetmax_resegmentation_second_pass_status": "promoted_bound_8157_065654",
     "translation_or_plaintext_status": "NONE"
   },
@@ -19726,6 +19727,89 @@
       "roundtrip_error_count": 0,
       "score_error_count": 0,
       "slack": 4
+    }
+  },
+  "targetmax_resegmentation_saturation": {
+    "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_saturated_formula_469.json",
+    "classification": "targetmax_resegmentation_saturated_with_improvements",
+    "decision": {
+      "compression_bound_status": "improved_to_targetmax_resegmentation_saturated_bound",
+      "generation_explanation_status": "resegmentation_family_saturated_no_row0_change",
+      "next_mainline_status": "return_to_structural_source_length_parser_or_holdout_predictive_parser",
+      "row0_origin_status": "unchanged_exogenous",
+      "targetmax_resegmentation_status": "saturated_under_exact_greedy_frontier",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "passes": [
+      {
+        "book": 56,
+        "component_delta_bits": {
+          "copy_length_bits": 0.0,
+          "copy_source_bits": -0.9998436865444091,
+          "item_type_bits": 0.0,
+          "literal_bits_no_payload": 0.0,
+          "literal_payload_bits": 0.0
+        },
+        "following_op_type": "copy",
+        "gain_bits": 0.9998436865444091,
+        "improving_candidate_count": 2,
+        "input_total_bits": 8157.065654431436,
+        "mode": "preserve_next_mode",
+        "op_index": 8,
+        "output_total_bits": 8156.065810744892,
+        "pass_index": 1,
+        "slack": 1,
+        "stale_exception_count": 2,
+        "tested_candidate_count": 42,
+        "valid_candidate_count": 38
+      },
+      {
+        "book": 51,
+        "component_delta_bits": {
+          "copy_length_bits": -0.016679855799793586,
+          "copy_source_bits": 0.0012240307733009104,
+          "item_type_bits": 0.0,
+          "literal_bits_no_payload": 0.0,
+          "literal_payload_bits": 0.0
+        },
+        "following_op_type": "copy",
+        "gain_bits": 0.015455825026037928,
+        "improving_candidate_count": 1,
+        "input_total_bits": 8156.065810744892,
+        "mode": "preserve_next_mode",
+        "op_index": 0,
+        "output_total_bits": 8156.050354919866,
+        "pass_index": 2,
+        "slack": 7,
+        "stale_exception_count": 3,
+        "tested_candidate_count": 40,
+        "valid_candidate_count": 36
+      }
+    ],
+    "scope": {
+      "analysis_only": true,
+      "exact_component_scorer_reproduces_current_bound": true,
+      "plaintext_or_translation_claim": false,
+      "row0_origin_changed": false,
+      "search_policy": "greedy_best_exact_gain_per_pass"
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/55_targetmax_resegmentation_saturation_gate.json",
+    "summary": {
+      "final_improving_candidate_count": 0,
+      "final_stale_exception_count": 4,
+      "final_tested_candidate_count": 38,
+      "final_total_bits": 8156.050354919866,
+      "final_valid_candidate_count": 34,
+      "initial_total_bits": 8157.065654431436,
+      "interpretation": "The exact target-max resegmentation family is saturated under the greedy scorer: positive candidates are promoted, then the final frontier has no exact positive candidate.",
+      "inventory": {
+        "copied_digits": 10407,
+        "copy_items": 261,
+        "literal_digits": 856,
+        "literal_runs": 87
+      },
+      "promoted_pass_count": 2,
+      "total_gain_bits": 1.015299511570447
     }
   },
   "targetmax_resegmentation_second_pass": {

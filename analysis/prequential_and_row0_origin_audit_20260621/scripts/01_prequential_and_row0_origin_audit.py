@@ -205,6 +205,14 @@ TARGETMAX_RESEGMENTATION_SECOND_PASS_GATE = (
     / "test_results"
     / "54_targetmax_resegmentation_second_pass_gate.json"
 )
+TARGETMAX_RESEGMENTATION_SATURATION_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "55_targetmax_resegmentation_saturation_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -474,6 +482,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "targetmax_resegmentation_second_pass_gate",
         targetmax_resegmentation_second_pass,
     )
+    targetmax_resegmentation_saturation = load_json(
+        TARGETMAX_RESEGMENTATION_SATURATION_GATE
+    )
+    assert_analysis_boundary(
+        "targetmax_resegmentation_saturation_gate",
+        targetmax_resegmentation_saturation,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -734,6 +749,17 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
                 "candidate_output_formula"
             ],
         },
+        "targetmax_resegmentation_saturation": {
+            "classification": targetmax_resegmentation_saturation["classification"],
+            "source": rel(TARGETMAX_RESEGMENTATION_SATURATION_GATE),
+            "scope": targetmax_resegmentation_saturation["scope"],
+            "summary": targetmax_resegmentation_saturation["summary"],
+            "passes": targetmax_resegmentation_saturation["passes"],
+            "decision": targetmax_resegmentation_saturation["decision"],
+            "candidate_output_formula": targetmax_resegmentation_saturation[
+                "candidate_output_formula"
+            ],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -778,6 +804,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
             "targetmax_resegmentation_formula_status": "promoted_bound_8158_766094",
             "targetmax_resegmentation_second_pass_status": "promoted_bound_8157_065654",
+            "targetmax_resegmentation_saturation_status": "promoted_bound_8156_050355_saturated",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -838,6 +865,7 @@ def render_markdown(
     targetmax_resegmentation_candidate_audit_link: str,
     targetmax_resegmentation_formula_gate_link: str,
     targetmax_resegmentation_second_pass_gate_link: str,
+    targetmax_resegmentation_saturation_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -896,6 +924,9 @@ def render_markdown(
     ]
     targetmax_formula = result["targetmax_resegmentation_formula"]["summary"]
     targetmax_second_pass = result["targetmax_resegmentation_second_pass"][
+        "summary"
+    ]
+    targetmax_saturation = result["targetmax_resegmentation_saturation"][
         "summary"
     ]
 
@@ -1698,6 +1729,23 @@ def render_markdown(
             "compression-bound update only; `row0` and semantics are unchanged.",
             f"See [54_targetmax_resegmentation_second_pass_gate.md]({targetmax_resegmentation_second_pass_gate_link}).",
             "",
+            "### Target-Max Resegmentation Saturation Gate",
+            "",
+            "A saturation gate then continues the same exact greedy frontier until "
+            "no positive candidate remains. Starting from "
+            f"`{targetmax_saturation['initial_total_bits']:.6f}` bits, it promotes "
+            f"`{targetmax_saturation['promoted_pass_count']}` additional passes and "
+            f"ends at `{targetmax_saturation['final_total_bits']:.6f}` bits, a "
+            f"total gain of `{targetmax_saturation['total_gain_bits']:+.6f}` bits.",
+            "The final frontier tests "
+            f"`{targetmax_saturation['final_tested_candidate_count']}` candidates, "
+            f"with `{targetmax_saturation['final_valid_candidate_count']}` valid "
+            f"and `{targetmax_saturation['final_improving_candidate_count']}` "
+            "improving candidates. This closes the local target-max "
+            "resegmentation family under this scorer; it is not a row0 derivation "
+            "or semantic claim.",
+            f"See [55_targetmax_resegmentation_saturation_gate.md]({targetmax_resegmentation_saturation_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1799,6 +1847,7 @@ def render_markdown(
             "- The source-substitution saturation audit freezes repeated same-chunk local source edits as no longer mainline: the last three gains sum to `0.001484` bits and are dwarfed by selector-cost sanity checks.",
             "- Exact scoring promotes one target-max resegmentation from the proxy frontier, lowering the active bound from `8160.825608` to `8158.766094` bits with zero row0 or semantic change.",
             "- A second exact target-max resegmentation lowers the active bound again from `8158.766094` to `8157.065654` bits; this is still a mechanical bound update, not row0 derivation or semantics.",
+            "- A saturation gate promotes the final two positive target-max resegmentations and closes the local frontier at `8156.050355` bits with zero exact improving candidates remaining.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -1938,6 +1987,9 @@ def main() -> None:
             ),
             targetmax_resegmentation_second_pass_gate_link=(
                 "54_targetmax_resegmentation_second_pass_gate.md"
+            ),
+            targetmax_resegmentation_saturation_gate_link=(
+                "55_targetmax_resegmentation_saturation_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2083,6 +2135,9 @@ def main() -> None:
             ),
             targetmax_resegmentation_second_pass_gate_link=(
                 "test_results/54_targetmax_resegmentation_second_pass_gate.md"
+            ),
+            targetmax_resegmentation_saturation_gate_link=(
+                "test_results/55_targetmax_resegmentation_saturation_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

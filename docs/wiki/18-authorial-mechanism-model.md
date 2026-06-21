@@ -106,8 +106,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469` | `8160.8256` | `0.0003` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_formula_469` | `8158.7661` | `2.0595` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_second_pass_formula_469` | `8157.0657` | `1.7004` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_saturated_formula_469` | `8156.0504` | `1.0153` |
 
-The `8157.0657` row is the current `compression_bound`, not a final authorial
+The `8156.0504` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1167,6 +1168,13 @@ that promotion. It skips the stale exception already changed by gate 53, tests
 `8158.766094` to `8157.065654` bits, for a `+1.700440`-bit gain. This is
 still a mechanical compression-bound update only; `row0` origin, plaintext,
 and semantics remain unchanged.
+A saturation gate then continues the exact greedy target-max frontier. It
+promotes two more positive passes, book `56` op `8` and book `51` op `0`,
+and reduces the bound from `8157.065654` to `8156.050355` bits. The final
+frontier tests `38` candidates, with `34` valid and `0` exact improvements.
+This closes the local target-max resegmentation family under the current
+scorer, but it is still not a row0 derivation, plaintext claim, or final
+authorial method.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1617,6 +1625,7 @@ book generation, not row0 pair-cell placement.
 - [Target-max resegmentation candidate audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.md)
 - [Target-max resegmentation formula gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/53_targetmax_resegmentation_formula_gate.md)
 - [Target-max resegmentation second-pass gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/54_targetmax_resegmentation_second_pass_gate.md)
+- [Target-max resegmentation saturation gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/55_targetmax_resegmentation_saturation_gate.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)

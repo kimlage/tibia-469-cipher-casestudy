@@ -178,6 +178,9 @@ exogenous.
 - [scripts/54_targetmax_resegmentation_second_pass_gate.py](scripts/54_targetmax_resegmentation_second_pass_gate.py) - retests remaining compatible target-max resegmentations after the first promoted rewrite.
 - [reports/test_results/54_targetmax_resegmentation_second_pass_gate.md](reports/test_results/54_targetmax_resegmentation_second_pass_gate.md) - target-max resegmentation second-pass gate.
 - [reports/test_results/54_targetmax_resegmentation_second_pass_gate.json](reports/test_results/54_targetmax_resegmentation_second_pass_gate.json) - structured second-pass resegmentation ledger.
+- [scripts/55_targetmax_resegmentation_saturation_gate.py](scripts/55_targetmax_resegmentation_saturation_gate.py) - greedily promotes exact target-max resegmentations until the local frontier has no positive candidate.
+- [reports/test_results/55_targetmax_resegmentation_saturation_gate.md](reports/test_results/55_targetmax_resegmentation_saturation_gate.md) - target-max resegmentation saturation gate.
+- [reports/test_results/55_targetmax_resegmentation_saturation_gate.json](reports/test_results/55_targetmax_resegmentation_saturation_gate.json) - structured target-max saturation ledger.
 
 ## Boundary
 
@@ -325,7 +328,10 @@ exogenous.
   resegmentation to `8158.766094` bits, a `+2.059513`-bit compression-bound
   gain. A second exact gate then retests remaining compatible candidates and
   promotes book `2` op `9`, lowering the bound again to `8157.065654` bits
-  (`+1.700440`). These changes affect neither `row0` origin nor semantics.
+  (`+1.700440`). A saturation gate then promotes the final two exact positive
+  target-max resegmentations and closes this local frontier at `8156.050355`
+  bits, with `0` exact improving candidates left. These changes affect neither
+  `row0` origin nor semantics.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

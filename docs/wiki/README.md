@@ -657,6 +657,9 @@ compression-bound gain. `row0` origin and semantic status remain unchanged.
 A second exact pass then retests the remaining compatible candidates, promotes
 book `2` op `9`, and lowers the mechanical bound again to `8157.065654` bits
 (`+1.700440`). `row0` origin and semantic status still remain unchanged.
+The saturation gate promotes two final positive target-max passes and closes
+that local frontier at `8156.050355` bits with `0` exact improving candidates
+remaining. `row0` origin and semantic status still remain unchanged.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -744,7 +747,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   tradeoff, maps copy-length target-max exceptions to resegmentation
   boundaries, opens and exact-scores a local target-max resegmentation path,
   promotes the resulting `8158.766094`-bit mechanical bound, then promotes a
-  second exact target-max resegmentation to `8157.065654` bits, rejects paid
+  second exact target-max resegmentation to `8157.065654` bits, saturates that
+  local target-max frontier at `8156.050355` bits, rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

@@ -253,6 +253,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Target-max resegmentation candidate audit | local extend-and-trim rewrites produce `42/46` valid candidates and `5` proxy improvements; best proxy is book `9` op `0` at `-2.059513` bits | candidate path opened / exact scorer required |
 | Target-max resegmentation formula gate | exact component scorer reproduces the current bound and promotes book `9` op `0` resegmentation, lowering the bound from `8160.825608` to `8158.766094` (`+2.059513`) | strongest mechanical bound / row0 unchanged |
 | Target-max resegmentation second-pass gate | after the first rewrite, exact scorer tests `44` remaining candidates, finds `4` improvements, and promotes book `2` op `9`, lowering the bound to `8157.065654` (`+1.700440`) | strongest mechanical bound / row0 unchanged |
+| Target-max resegmentation saturation gate | greedy exact continuation promotes two final positive passes, lowers the bound to `8156.050355`, and leaves `0` exact improving candidates in the local target-max frontier | local resegmentation family saturated / row0 unchanged |
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
@@ -424,6 +425,7 @@ Primary sources:
 [targetmax_resegmentation_candidate_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.md),
 [targetmax_resegmentation_formula_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/53_targetmax_resegmentation_formula_gate.md),
 [targetmax_resegmentation_second_pass_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/54_targetmax_resegmentation_second_pass_gate.md),
+[targetmax_resegmentation_saturation_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/55_targetmax_resegmentation_saturation_gate.md),
 [copy_length_midpoint_context_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md),
 [copy_length_midpoint_context_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md),
 [literal_copy_availability_boundary_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md),
