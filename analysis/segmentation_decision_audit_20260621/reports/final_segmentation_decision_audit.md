@@ -1406,6 +1406,29 @@ is still worse than the residual lookup lower bound, the best
 zero-false-positive observable detector hits only one residual,
 and prefix/holdout never finds an exact site detector.
 
+## Beam Markov State Selector Gate
+
+Gate 63 tests whether the missing downstream selector is a
+small sequential state rule over the width-5 beam. Teacher-forced
+state is diagnostic only; promotion requires free-run state.
+
+| Diagnostic | Value |
+|---|---:|
+| Best teacher-forced context | `prev_rank_x_beam_combo` |
+| Best teacher-forced hits | `231/234` |
+| Best free-run context | `prev_rank_x_beam_combo` |
+| Best free-run hits | `230/234` |
+| Best free-run residual hits | `9/10` |
+| Best free-run clean false changes | `3` |
+| Prefix/holdout cover-all cells | `0/5` |
+| Best free-run net vs lookup | `159.472` bits |
+
+The Markov state view is a stronger full-fit clue than the raw
+top-1 beam baseline: free-run state reaches `230/234` and `9/10`
+residuals with `3` clean false changes. It is not a promoted
+selector, because the paid table is much worse than lookup and
+prefix/holdout still has `0/5` cover-all cells.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1504,6 +1527,10 @@ to five macro classes, but the site-selection cost remains larger
 than the saving, the paid patch program is `+2.490` bits worse
 than lookup, and the best clean observable detector hits only
 `1/10` residuals.
+Gate 63 then tests a small Markov selector over beam ranks. It
+improves full-fit free-run behavior to `230/234` with `9/10`
+residuals and `3` clean false changes, but it costs `+159.472`
+bits versus lookup and still has `0/5` cover-all holdout cells.
 The remaining blocker is therefore a downstream selector or richer
 latent path/state segmentation account for why the parser waits,
 copies, or understops at the remaining mixed residual sites,
@@ -1575,3 +1602,4 @@ or the stable projection as an oracle.
 - [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)
 - [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)
 - [Residual patch program gate](test_results/62_residual_patch_program_gate.md)
+- [Beam Markov state selector gate](test_results/63_beam_markov_state_selector_gate.md)

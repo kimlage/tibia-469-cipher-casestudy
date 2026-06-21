@@ -1003,9 +1003,12 @@ also fails: the best hierarchy ties the unstable full-fit row only at support
 holdout cells. A residual patch program gate then decomposes the residuals
 into macro edits: ten choices collapse to five macro classes, but the paid
 macro program is still `+2.490` bits worse than lookup, the best clean detector
-hits only `1/10`, and prefix/holdout exact detector cells remain `0/5`. The
+hits only `1/10`, and prefix/holdout exact detector cells remain `0/5`. A
+Markov beam-state selector then improves the full-fit free-run signal to
+`230/234` and `9/10` residuals with `3` clean false changes, but the paid table
+is `+159.472` bits worse than lookup and holdout remains `0/5` cover-all. The
 blocker is therefore a richer latent path/state selector, not another local
-branch-choice combination or a residual macro-codebook.
+branch-choice combination, residual macro-codebook, or small Markov rank table.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

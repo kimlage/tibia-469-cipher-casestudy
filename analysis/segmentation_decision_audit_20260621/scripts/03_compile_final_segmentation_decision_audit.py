@@ -87,6 +87,9 @@ BEAM_RANK_SELECTOR = TEST_RESULTS / "59_beam_rank_selector_gate.json"
 BEAM_SELECTOR_STABILITY = TEST_RESULTS / "60_beam_selector_stability_gate.json"
 BEAM_HIERARCHICAL_BACKOFF = TEST_RESULTS / "61_beam_hierarchical_backoff_gate.json"
 RESIDUAL_PATCH_PROGRAM = TEST_RESULTS / "62_residual_patch_program_gate.json"
+BEAM_MARKOV_STATE_SELECTOR = (
+    TEST_RESULTS / "63_beam_markov_state_selector_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -316,6 +319,11 @@ def main() -> None:
         if RESIDUAL_PATCH_PROGRAM.exists()
         else None
     )
+    beam_markov_state_selector = (
+        load_json(BEAM_MARKOV_STATE_SELECTOR)
+        if BEAM_MARKOV_STATE_SELECTOR.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -447,6 +455,8 @@ def main() -> None:
         assert_boundary("beam_hierarchical_backoff_gate", beam_hierarchical_backoff)
     if residual_patch_program is not None:
         assert_boundary("residual_patch_program_gate", residual_patch_program)
+    if beam_markov_state_selector is not None:
+        assert_boundary("beam_markov_state_selector_gate", beam_markov_state_selector)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -638,6 +648,11 @@ def main() -> None:
     )
     residual_patch_program_summary = (
         None if residual_patch_program is None else residual_patch_program["summary"]
+    )
+    beam_markov_state_selector_summary = (
+        None
+        if beam_markov_state_selector is None
+        else beam_markov_state_selector["summary"]
     )
 
     lines = [
@@ -2373,6 +2388,34 @@ def main() -> None:
                 "",
             ]
         )
+    if beam_markov_state_selector_summary is not None:
+        lines.extend(
+            [
+                "## Beam Markov State Selector Gate",
+                "",
+                "Gate 63 tests whether the missing downstream selector is a",
+                "small sequential state rule over the width-5 beam. Teacher-forced",
+                "state is diagnostic only; promotion requires free-run state.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best teacher-forced context | `{beam_markov_state_selector_summary['best_teacher_context']}` |",
+                f"| Best teacher-forced hits | `{beam_markov_state_selector_summary['best_teacher_total_hits']}/{beam_markov_state_selector_summary['decision_count']}` |",
+                f"| Best free-run context | `{beam_markov_state_selector_summary['best_free_context']}` |",
+                f"| Best free-run hits | `{beam_markov_state_selector_summary['best_free_total_hits']}/{beam_markov_state_selector_summary['best_free_total_total']}` |",
+                f"| Best free-run residual hits | `{beam_markov_state_selector_summary['best_free_residual_hits']}/{beam_markov_state_selector_summary['best_free_residual_total']}` |",
+                f"| Best free-run clean false changes | `{beam_markov_state_selector_summary['best_free_clean_false_changes']}` |",
+                f"| Prefix/holdout cover-all cells | `{beam_markov_state_selector_summary['prequential_cover_all_test_cells']}/{beam_markov_state_selector_summary['prequential_cells']}` |",
+                f"| Best free-run net vs lookup | `{beam_markov_state_selector_summary['best_free_net_vs_lookup_bits']:.3f}` bits |",
+                "",
+                "The Markov state view is a stronger full-fit clue than the raw",
+                "top-1 beam baseline: free-run state reaches `230/234` and `9/10`",
+                "residuals with `3` clean false changes. It is not a promoted",
+                "selector, because the paid table is much worse than lookup and",
+                "prefix/holdout still has `0/5` cover-all cells.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2473,6 +2516,10 @@ def main() -> None:
             "than the saving, the paid patch program is `+2.490` bits worse",
             "than lookup, and the best clean observable detector hits only",
             "`1/10` residuals.",
+            "Gate 63 then tests a small Markov selector over beam ranks. It",
+            "improves full-fit free-run behavior to `230/234` with `9/10`",
+            "residuals and `3` clean false changes, but it costs `+159.472`",
+            "bits versus lookup and still has `0/5` cover-all holdout cells.",
             "The remaining blocker is therefore a downstream selector or richer",
             "latent path/state segmentation account for why the parser waits,",
             "copies, or understops at the remaining mixed residual sites,",
@@ -2544,6 +2591,7 @@ def main() -> None:
             "- [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)",
             "- [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)",
             "- [Residual patch program gate](test_results/62_residual_patch_program_gate.md)",
+            "- [Beam Markov state selector gate](test_results/63_beam_markov_state_selector_gate.md)",
             "",
         ]
     )

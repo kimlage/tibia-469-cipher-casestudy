@@ -799,6 +799,11 @@ classes, but the site cost alone is `56.631` bits, the cheapest paid macro
 program is still `+2.490` bits worse than lookup, the best zero-false-positive
 detector hits only `1/10`, and prefix/holdout exact detector cells are `0/5`.
 This is a useful blocker decomposition, not a promoted parser rule.
+A beam Markov state selector then tests a richer sequential-state variant over
+the surviving width-5 beam. Free-run state reaches `230/234`, including `9/10`
+residuals with `3` clean false changes, so there is a real full-fit state clue.
+It still costs `+159.472` bits versus lookup and has `0/5` cover-all
+prefix/holdout cells, so the selector is not promoted.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2524,6 +2529,7 @@ book generation, not row0 pair-cell placement.
 - [Beam selector stability gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/60_beam_selector_stability_gate.md)
 - [Beam hierarchical backoff gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/61_beam_hierarchical_backoff_gate.md)
 - [Residual patch program gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/62_residual_patch_program_gate.md)
+- [Beam Markov state selector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/63_beam_markov_state_selector_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
