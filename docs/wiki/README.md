@@ -818,6 +818,11 @@ blocker: target positions derive once lengths are known and operation type is
 mostly downstream from length/copy availability, but source-free length rules
 cover only `116/261`, copy-length rules cover `55/208`, literal-length rules
 cover `5/53`, and all `261` copy-length fields remain retained.
+A decoder length candidate ambiguity audit then checks a generous version of
+the same question: even granting op type and copy source, only `5/261` lengths
+are forced; `256/261` remain ambiguous, with median `89` candidate lengths and
+`1555.548` log2 candidate-space bits. Length selection remains a real parser
+objective.
 A recent-gates row0 compatibility refresh then checks gates `76..107` together:
 the parser/skeleton/type advances remain compatible with row0 being an accepted
 substrate, but they do not predict row0 labels under holdout, beat the paid row0

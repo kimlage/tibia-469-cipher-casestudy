@@ -346,6 +346,9 @@ exogenous.
 - [scripts/110_operation_length_dependency_ledger.py](scripts/110_operation_length_dependency_ledger.py) - consolidates why the operation-length atlas remains the current skeleton blocker.
 - [reports/test_results/110_operation_length_dependency_ledger.md](reports/test_results/110_operation_length_dependency_ledger.md) - operation-length dependency ledger.
 - [reports/test_results/110_operation_length_dependency_ledger.json](reports/test_results/110_operation_length_dependency_ledger.json) - structured operation-length dependency ledger.
+- [scripts/111_decoder_length_candidate_ambiguity_audit.py](scripts/111_decoder_length_candidate_ambiguity_audit.py) - measures decoder-side length ambiguity even when op type and copy source are granted.
+- [reports/test_results/111_decoder_length_candidate_ambiguity_audit.md](reports/test_results/111_decoder_length_candidate_ambiguity_audit.md) - decoder length candidate ambiguity audit.
+- [reports/test_results/111_decoder_length_candidate_ambiguity_audit.json](reports/test_results/111_decoder_length_candidate_ambiguity_audit.json) - structured decoder length ambiguity ledger.
 
 ## Boundary
 
@@ -433,6 +436,11 @@ exogenous.
   but the atlas itself remains. Source-free length coverage is only `116/261`,
   copy-length coverage is `55/208`, literal-length coverage is `5/53`, and the
   compact recipe still retains `261` copy-length fields.
+- Decoder length candidate ambiguity: even granting op type and granting copy
+  source for copy rows, only `5/261` lengths are forced by syntax/capacity;
+  `256/261` remain ambiguous, with median candidate count `89` and about
+  `1555.548` bits of candidate space. Length selection is therefore still a
+  real generator problem, not a field-ordering artifact.
 - Seed-primacy integration: the final seed front is incorporated as
   `AUDIT_ONLY_COMPRESSION`. Operational books `0..9` are rejected as privileged
   seeds under seed-only controls, posthoc high-coverage seed sets are recorded

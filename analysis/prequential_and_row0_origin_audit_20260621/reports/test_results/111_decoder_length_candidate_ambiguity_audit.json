@@ -1,0 +1,271 @@
+{
+  "case_reopened": false,
+  "classification": "decoder_length_candidates_ambiguous_dependency_retained",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "length_candidate_ambiguity_blocks_generator_promotion",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "length_sequence_not_forced_even_with_type_and_source_granted",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate110_operation_length_dependency": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/110_operation_length_dependency_ledger.json",
+    "gate88_decoder_side_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/88_decoder_side_rule_coverage_audit.json"
+  },
+  "plaintext_claim": false,
+  "sample_rows": {
+    "largest_copy_candidate_sets": [
+      {
+        "book": 35,
+        "candidate_count_granting_source": 278,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 159,
+        "decoder_max_possible_after_declared_source": 282,
+        "op_index": 0
+      },
+      {
+        "book": 10,
+        "candidate_count_granting_source": 272,
+        "declared_is_decoder_max": true,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 276,
+        "decoder_max_possible_after_declared_source": 276,
+        "op_index": 1
+      },
+      {
+        "book": 17,
+        "candidate_count_granting_source": 270,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 7,
+        "decoder_max_possible_after_declared_source": 274,
+        "op_index": 0
+      },
+      {
+        "book": 59,
+        "candidate_count_granting_source": 268,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 141,
+        "decoder_max_possible_after_declared_source": 272,
+        "op_index": 0
+      },
+      {
+        "book": 58,
+        "candidate_count_granting_source": 268,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 24,
+        "decoder_max_possible_after_declared_source": 272,
+        "op_index": 0
+      },
+      {
+        "book": 53,
+        "candidate_count_granting_source": 267,
+        "declared_is_decoder_max": true,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 271,
+        "decoder_max_possible_after_declared_source": 271,
+        "op_index": 0
+      },
+      {
+        "book": 51,
+        "candidate_count_granting_source": 264,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 134,
+        "decoder_max_possible_after_declared_source": 268,
+        "op_index": 0
+      },
+      {
+        "book": 56,
+        "candidate_count_granting_source": 262,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 40,
+        "decoder_max_possible_after_declared_source": 266,
+        "op_index": 0
+      },
+      {
+        "book": 17,
+        "candidate_count_granting_source": 262,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 6,
+        "decoder_max_possible_after_declared_source": 266,
+        "op_index": 2
+      },
+      {
+        "book": 17,
+        "candidate_count_granting_source": 254,
+        "declared_is_decoder_max": false,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_min_len": false,
+        "declared_length": 133,
+        "decoder_max_possible_after_declared_source": 258,
+        "op_index": 4
+      }
+    ],
+    "largest_literal_candidate_sets": [
+      {
+        "book": 10,
+        "candidate_count_granting_type": 281,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 5,
+        "op_index": 0,
+        "remaining_book_digits": 281
+      },
+      {
+        "book": 17,
+        "candidate_count_granting_type": 267,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 9,
+        "op_index": 1,
+        "remaining_book_digits": 267
+      },
+      {
+        "book": 58,
+        "candidate_count_granting_type": 248,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 3,
+        "op_index": 1,
+        "remaining_book_digits": 248
+      },
+      {
+        "book": 23,
+        "candidate_count_granting_type": 177,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 4,
+        "op_index": 0,
+        "remaining_book_digits": 177
+      },
+      {
+        "book": 65,
+        "candidate_count_granting_type": 169,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 3,
+        "op_index": 0,
+        "remaining_book_digits": 169
+      },
+      {
+        "book": 57,
+        "candidate_count_granting_type": 161,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 28,
+        "op_index": 2,
+        "remaining_book_digits": 161
+      },
+      {
+        "book": 23,
+        "candidate_count_granting_type": 159,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 7,
+        "op_index": 2,
+        "remaining_book_digits": 159
+      },
+      {
+        "book": 60,
+        "candidate_count_granting_type": 151,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 1,
+        "op_index": 0,
+        "remaining_book_digits": 151
+      },
+      {
+        "book": 26,
+        "candidate_count_granting_type": 149,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 5,
+        "op_index": 2,
+        "remaining_book_digits": 149
+      },
+      {
+        "book": 15,
+        "candidate_count_granting_type": 143,
+        "declared_is_forced_by_candidate_set": false,
+        "declared_is_remaining": false,
+        "declared_length": 1,
+        "op_index": 0,
+        "remaining_book_digits": 143
+      }
+    ]
+  },
+  "schema": "decoder_length_candidate_ambiguity_audit.v1",
+  "scope": {
+    "ambiguity_ledger_only": true,
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "generous_assumption_for_copy_rows": "op_type_and_copy_source_granted",
+    "generous_assumption_for_literal_rows": "op_type_granted_payload_unknown",
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "all_candidate_count_summary": {
+      "ambiguous_count": 256,
+      "forced_count": 5,
+      "max": 281,
+      "mean": 94.14942528735632,
+      "median": 89.0,
+      "min": 1,
+      "n": 261,
+      "total_log2_candidate_space": 1555.5480794919317
+    },
+    "ambiguous_length_count_under_generous_assumptions": 256,
+    "copy_candidate_count_summary": {
+      "ambiguous_count": 204,
+      "forced_count": 4,
+      "max": 278,
+      "mean": 94.41346153846153,
+      "median": 86.0,
+      "min": 1,
+      "n": 208,
+      "total_log2_candidate_space": 1246.3141798236068
+    },
+    "copy_count": 208,
+    "copy_declared_decoder_max_fraction": 0.27884615384615385,
+    "copy_declared_decoder_max_hits": 58,
+    "forced_length_count_under_generous_assumptions": 5,
+    "interpretation": "Even under generous decoder assumptions, operation lengths are not forced. For copy operations this audit grants the declared source and op type, then counts every syntactically possible length from min_len to decoder_max. For literal operations it grants op type but not payload, so every positive remaining length is possible. The resulting candidate sets remain widely ambiguous, so the length atlas cannot be replaced by a forced decoder-side rule at this frontier.",
+    "literal_candidate_count_summary": {
+      "ambiguous_count": 52,
+      "forced_count": 1,
+      "max": 281,
+      "mean": 93.11320754716981,
+      "median": 94.0,
+      "min": 1,
+      "n": 53,
+      "total_log2_candidate_space": 309.2338996683251
+    },
+    "literal_count": 53,
+    "literal_declared_remaining_fraction": 0.09433962264150944,
+    "literal_declared_remaining_hits": 5,
+    "operation_count": 261,
+    "promotes_length_generator": false,
+    "total_log2_candidate_space_under_generous_assumptions": 1555.5480794919317
+  },
+  "translation_delta": "NONE"
+}

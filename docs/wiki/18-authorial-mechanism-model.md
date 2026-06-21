@@ -405,6 +405,14 @@ length rules cover `5/53`, and all `261` copy-length fields remain retained.
 So the next generator question is length selection, not another op-type or
 target-position ledger.
 
+A decoder length candidate ambiguity audit makes that blocker harder to dismiss.
+Even under generous assumptions where operation type is granted and copy source
+is granted for copy rows, only `5/261` operation lengths are forced by syntax
+and remaining capacity. The other `256/261` remain ambiguous, with median
+candidate count `89` and roughly `1555.548` log2 candidate-space bits. That
+means length selection still needs a real rule or parser objective; it is not
+just a redundant field-ordering artifact.
+
 A recent-gates row0 compatibility refresh then checks gates `76..107` as one
 unit against the independent row0 provenance front. The result is unchanged:
 parser validation, path-stability controls, decoder/source-policy controls,
@@ -2089,6 +2097,7 @@ book generation, not row0 pair-cell placement.
 - [Operation type dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.md)
 - [Recent gates row0 compatibility refresh](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.md)
 - [Operation length dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/110_operation_length_dependency_ledger.md)
+- [Decoder length candidate ambiguity audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/111_decoder_length_candidate_ambiguity_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed primacy integration audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md)
