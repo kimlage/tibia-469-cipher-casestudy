@@ -244,6 +244,9 @@ exogenous.
 - [scripts/76_cutoff60_sparse_suffix_parser_gate.py](scripts/76_cutoff60_sparse_suffix_parser_gate.py) - runs the sparse source/length parser over the full cutoff-60 suffix with previous-copy-end state carried between books.
 - [reports/test_results/76_cutoff60_sparse_suffix_parser_gate.md](reports/test_results/76_cutoff60_sparse_suffix_parser_gate.md) - cutoff-60 sparse suffix parser result.
 - [reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json](reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json) - structured sparse suffix parser ledger.
+- [scripts/77_multi_cutoff_sparse_suffix_parser_validation.py](scripts/77_multi_cutoff_sparse_suffix_parser_validation.py) - repeats the sparse suffix parser over cutoffs `10/20/35/50/60` with frozen prefix counts.
+- [reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.md](reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.md) - multi-cutoff sparse suffix validation result.
+- [reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json](reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json) - structured multi-cutoff validation ledger.
 
 ## Boundary
 
@@ -485,6 +488,13 @@ exogenous.
   parser bits, and ties same-policy reprice across all books with only
   `383,548` transition evaluations. This is a real parser execution step, not
   a new compression bound or corpus-wide generator promotion.
+- The multi-cutoff sparse suffix validation then repeats that setup for cutoffs
+  `10/20/35/50/60`: all `175/175` suffix book evaluations roundtrip and beat
+  raw digit uniform, the parser is better/tie/worse than same-policy reprice in
+  `12/163/0` cells, and the aggregate parser-minus-reprice delta is
+  `-12.180052` bits. This strengthens predictive parser evidence, but it is
+  not a new compression bound because the rows are overlapping validation cuts,
+  not one charged corpus recipe.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

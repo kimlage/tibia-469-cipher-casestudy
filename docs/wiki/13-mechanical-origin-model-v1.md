@@ -279,6 +279,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Sparse hard-book source/length parser | sparse Dijkstra over reachable states roundtrips cutoff-60 hard book `66` in `0.033s`, with `41,832` transitions versus the `26,096,904` transition proxy (`623.9x` reduction) | hard local parser blocker removed / no bound promotion |
 | Post-parser row0 compatibility audit | gates 71-74 are checked against the row0 front; none predicts row0 labels under holdout, beats paid lookup, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / parser-only progress |
 | Cutoff-60 sparse suffix parser | sparse Dijkstra parses books `60..69` sequentially with `previous_copy_end` carried between books; `10/10` roundtrip, `10/10` raw-positive, `368.531807` parser bits, and `383,548` transitions | suffix parser executable / no bound promotion |
+| Multi-cutoff sparse suffix validation | cutoffs `10/20/35/50/60` all execute with frozen prefix counts; `175/175` suffix book evaluations roundtrip and beat raw, with parser better/tie/worse than same-policy reprice in `12/163/0` cells | predictive parser evidence strengthened / no bound promotion |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -424,6 +425,7 @@ Primary sources:
 [sparse_hard_book_source_length_parser_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/74_sparse_hard_book_source_length_parser_gate.md),
 [post_parser_row0_compatibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/75_post_parser_row0_compatibility_audit.md),
 [cutoff60_sparse_suffix_parser_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/76_cutoff60_sparse_suffix_parser_gate.md),
+[multi_cutoff_sparse_suffix_parser_validation.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

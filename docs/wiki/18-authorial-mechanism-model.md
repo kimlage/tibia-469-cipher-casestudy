@@ -167,6 +167,15 @@ that the source/length parser is executable as a mechanism, but it is still a
 single-cutoff suffix gate with frozen train counts, so it does not promote a
 new compression bound or final authorial method.
 
+The multi-cutoff validation repeats the sparse suffix parse at cutoffs
+`10/20/35/50/60`, freezing train counts at each prefix. All `175/175` suffix
+book evaluations roundtrip and beat raw digit uniform; against the same-policy
+reprice, the parser is better/tie/worse in `12/163/0` cells and improves the
+overlapping validation total by `12.180052` bits. This is the strongest parser
+execution evidence so far because it survives several train/test boundaries,
+but it remains validation evidence rather than a new corpus bound: the rows
+overlap and do not constitute one charged 70-book recipe.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

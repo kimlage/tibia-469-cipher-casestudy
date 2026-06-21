@@ -661,6 +661,12 @@ books `60..69` in order, carrying `previous_copy_end` between books: `10/10`
 roundtrip, `10/10` raw-positive, `368.531807` parser bits, and `383,548`
 transition evaluations. It ties the same-policy reprice, so this is parser
 execution progress rather than a new compression bound.
+The multi-cutoff sparse suffix validation then repeats the same parser at
+cutoffs `10/20/35/50/60`: `175/175` suffix book evaluations roundtrip and
+beat raw digit uniform, and parser vs same-policy reprice is `12/163/0`
+better/tie/worse with a `-12.180052` bit aggregate validation delta. This
+strengthens predictive parser evidence, while still not promoting a new bound
+because the validation cuts overlap.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -831,6 +837,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   advances are book-formula/parser-only,
   runs the sparse source/length parser across the full cutoff-60 suffix with
   `10/10` roundtrip while leaving the compression bound unchanged,
+  validates the sparse suffix parser across cutoffs `10/20/35/50/60` with
+  `175/175` roundtrip evaluations and no same-policy losses,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
