@@ -730,5 +730,10 @@ Generated audits in this directory should be treated as the current state:
   level; digit-level availability leaves `97` optional literal positions.
   The remaining externality is localized to `14` literal starts where copy
   candidates exist but the cost parser chose literals.
+- `150_optional_literal_copy_repair_frontier`: tests the lowest-risk repair
+  family for that residual set: replace a prefix of one optional literal run
+  with a legal prior copy, leaving any literal suffix intact. It scores `74`
+  candidates across `5` eligible starts under the full active ledger; none
+  improves, and the best is `+1.180` bits worse.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

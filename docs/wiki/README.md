@@ -459,6 +459,10 @@ recipe dependency: `73/87` literal starts have no legal `min_len` copy
 candidate, and `760/857` literal digits are forced at digit level. The residual
 choice frontier is now localized to `14` literal starts and `97` literal digit
 positions where copy candidates exist.
+The optional literal copy repair frontier then checks the simplest repair:
+single in-literal copy-prefix substitutions for eligible optional starts. It
+scores `74` candidates across `5` starts; none improves, and the best remains
+`+1.180` bits worse under the active ledger.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

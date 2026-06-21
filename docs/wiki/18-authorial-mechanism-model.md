@@ -1000,6 +1000,12 @@ granularity, `760/857` literal digits are forced by copy unavailability. The
 residual parser frontier is localized to `14` literal starts and `97` literal
 digit positions where a copy candidate exists but the cost parser chose
 literal text.
+The optional literal copy repair frontier then tests the simplest repair family
+for that residual set: replacing a prefix of one optional literal run with a
+legal prior copy. It scores `74` candidates across `5` eligible starts under
+the full active ledger; no candidate improves, and the best remains `+1.180`
+bits worse. Broader repairs crossing operation boundaries remain a separate
+frontier.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1307,6 +1313,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
+- [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

@@ -403,6 +403,9 @@ authorial method: family/bookcase holdouts still have failures.
   literal runs forced by no legal copy candidate from residual parser choices;
   `73/87` literal starts are forced, leaving `14` optional literal starts as
   the remaining literal recipe frontier.
+- `scripts/150_optional_literal_copy_repair_frontier.py` - tests single
+  in-literal copy-prefix repairs for the optional literal starts; all `74`
+  scored candidates are worse, with the best still `+1.180` bits.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
