@@ -823,6 +823,9 @@ the same question: even granting op type and copy source, only `5/261` lengths
 are forced; `256/261` remain ambiguous, with median `89` candidate lengths and
 `1555.548` log2 candidate-space bits. Length selection remains a real parser
 objective.
+A decoder length policy audit then rejects fixed min/max/quartile/median/
+previous-length shortcuts: the best policy is `max_candidate`, but it hits only
+`63/261` rows (`58/208` copies and `5/53` literals).
 A recent-gates row0 compatibility refresh then checks gates `76..107` together:
 the parser/skeleton/type advances remain compatible with row0 being an accepted
 substrate, but they do not predict row0 labels under holdout, beat the paid row0

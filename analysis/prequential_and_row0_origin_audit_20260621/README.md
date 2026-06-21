@@ -349,6 +349,9 @@ exogenous.
 - [scripts/111_decoder_length_candidate_ambiguity_audit.py](scripts/111_decoder_length_candidate_ambiguity_audit.py) - measures decoder-side length ambiguity even when op type and copy source are granted.
 - [reports/test_results/111_decoder_length_candidate_ambiguity_audit.md](reports/test_results/111_decoder_length_candidate_ambiguity_audit.md) - decoder length candidate ambiguity audit.
 - [reports/test_results/111_decoder_length_candidate_ambiguity_audit.json](reports/test_results/111_decoder_length_candidate_ambiguity_audit.json) - structured decoder length ambiguity ledger.
+- [scripts/112_decoder_length_policy_audit.py](scripts/112_decoder_length_policy_audit.py) - tests fixed decoder-side policies over the length candidate sets.
+- [reports/test_results/112_decoder_length_policy_audit.md](reports/test_results/112_decoder_length_policy_audit.md) - decoder length policy audit.
+- [reports/test_results/112_decoder_length_policy_audit.json](reports/test_results/112_decoder_length_policy_audit.json) - structured decoder length policy ledger.
 
 ## Boundary
 
@@ -441,6 +444,10 @@ exogenous.
   `256/261` remain ambiguous, with median candidate count `89` and about
   `1555.548` bits of candidate space. Length selection is therefore still a
   real generator problem, not a field-ordering artifact.
+- Decoder length policy audit: fixed policies over those candidate sets do not
+  rescue the generator. The best policy, `max_candidate`, hits only `63/261`
+  (`58/208` copies and `5/53` literals), while min/median/quartile/previous
+  length variants are worse. This rejects the simple candidate-policy shortcut.
 - Seed-primacy integration: the final seed front is incorporated as
   `AUDIT_ONLY_COMPRESSION`. Operational books `0..9` are rejected as privileged
   seeds under seed-only controls, posthoc high-coverage seed sets are recorded

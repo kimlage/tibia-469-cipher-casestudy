@@ -1,0 +1,1298 @@
+{
+  "case_reopened": false,
+  "classification": "simple_length_candidate_policies_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "simple_length_policy_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "length_choice_not_simple_candidate_policy",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate111_decoder_length_candidate_ambiguity": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/111_decoder_length_candidate_ambiguity_audit.json"
+  },
+  "plaintext_claim": false,
+  "policy_rows": [
+    {
+      "copy_hits": 7,
+      "copy_total": 208,
+      "coverage": 0.05747126436781609,
+      "hits": 15,
+      "literal_hits": 8,
+      "literal_total": 53,
+      "policy": "min_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 5
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 58,
+      "copy_total": 208,
+      "coverage": 0.2413793103448276,
+      "hits": 63,
+      "literal_hits": 5,
+      "literal_total": 53,
+      "policy": "max_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 131
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 124
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 88
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 135
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 116
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 100
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 81
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 67
+        },
+        {
+          "book": 12,
+          "candidate_count": 47,
+          "candidate_high": 51,
+          "candidate_low": 5,
+          "declared_length": 13,
+          "op_index": 9,
+          "op_type": "copy",
+          "predicted_length": 51
+        },
+        {
+          "book": 12,
+          "candidate_count": 34,
+          "candidate_high": 38,
+          "candidate_low": 5,
+          "declared_length": 31,
+          "op_index": 10,
+          "op_type": "copy",
+          "predicted_length": 38
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 5,
+      "copy_total": 208,
+      "coverage": 0.03065134099616858,
+      "hits": 8,
+      "literal_hits": 3,
+      "literal_total": 53,
+      "policy": "q25_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 73
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 36
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 35
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 26
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 18
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 38
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 33
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 29
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 24
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 20
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 9,
+      "copy_total": 208,
+      "coverage": 0.0421455938697318,
+      "hits": 11,
+      "literal_hits": 2,
+      "literal_total": 53,
+      "policy": "median_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 140
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 68
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 64
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 46
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 32
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 70
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 60
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 52
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 43
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 36
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 7,
+      "copy_total": 208,
+      "coverage": 0.034482758620689655,
+      "hits": 9,
+      "literal_hits": 2,
+      "literal_total": 53,
+      "policy": "q75_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 208
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 100
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 94
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 67
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 45
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 102
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 88
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 76
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 62
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 52
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 22,
+      "copy_total": 208,
+      "coverage": 0.12643678160919541,
+      "hits": 33,
+      "literal_hits": 11,
+      "literal_total": 53,
+      "policy": "previous_length_else_min",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 7
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 29
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 30
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 19
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 12
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 10
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 14
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 40,
+      "copy_total": 208,
+      "coverage": 0.19540229885057472,
+      "hits": 51,
+      "literal_hits": 11,
+      "literal_total": 53,
+      "policy": "previous_length_else_max",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 131
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 7
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 29
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 30
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 135
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 19
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 12
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 10
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 14
+        },
+        {
+          "book": 12,
+          "candidate_count": 47,
+          "candidate_high": 51,
+          "candidate_low": 5,
+          "declared_length": 13,
+          "op_index": 9,
+          "op_type": "copy",
+          "predicted_length": 12
+        }
+      ],
+      "total": 261
+    },
+    {
+      "copy_hits": 21,
+      "copy_total": 208,
+      "coverage": 0.12260536398467432,
+      "hits": 32,
+      "literal_hits": 11,
+      "literal_total": 53,
+      "policy": "previous_length_else_median",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 140
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 68
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 7
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 29
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 30
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 70
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 19
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 12
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 10
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 14
+        }
+      ],
+      "total": 261
+    }
+  ],
+  "schema": "decoder_length_policy_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "fixed_policy_audit_only": true,
+    "new_formula_emitted": false,
+    "policy_set": [
+      "max_candidate",
+      "median_candidate",
+      "min_candidate",
+      "previous_length_else_max",
+      "previous_length_else_median",
+      "previous_length_else_min",
+      "q25_candidate",
+      "q75_candidate"
+    ],
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "best_copy_policy": {
+      "copy_hits": 58,
+      "copy_total": 208,
+      "coverage": 0.2413793103448276,
+      "hits": 63,
+      "literal_hits": 5,
+      "literal_total": 53,
+      "policy": "max_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 131
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 124
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 88
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 135
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 116
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 100
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 81
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 67
+        },
+        {
+          "book": 12,
+          "candidate_count": 47,
+          "candidate_high": 51,
+          "candidate_low": 5,
+          "declared_length": 13,
+          "op_index": 9,
+          "op_type": "copy",
+          "predicted_length": 51
+        },
+        {
+          "book": 12,
+          "candidate_count": 34,
+          "candidate_high": 38,
+          "candidate_low": 5,
+          "declared_length": 31,
+          "op_index": 10,
+          "op_type": "copy",
+          "predicted_length": 38
+        }
+      ],
+      "total": 261
+    },
+    "best_literal_policy": {
+      "copy_hits": 22,
+      "copy_total": 208,
+      "coverage": 0.12643678160919541,
+      "hits": 33,
+      "literal_hits": 11,
+      "literal_total": 53,
+      "policy": "previous_length_else_min",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 10,
+          "candidate_count": 272,
+          "candidate_high": 276,
+          "candidate_low": 5,
+          "declared_length": 276,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 7
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 29
+        },
+        {
+          "book": 11,
+          "candidate_count": 54,
+          "candidate_high": 58,
+          "candidate_low": 5,
+          "declared_length": 58,
+          "op_index": 5,
+          "op_type": "copy",
+          "predicted_length": 30
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 5
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 19
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 12
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 10
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 14
+        }
+      ],
+      "total": 261
+    },
+    "best_policy": {
+      "copy_hits": 58,
+      "copy_total": 208,
+      "coverage": 0.2413793103448276,
+      "hits": 63,
+      "literal_hits": 5,
+      "literal_total": 53,
+      "policy": "max_candidate",
+      "promotes_policy": false,
+      "sample_failures": [
+        {
+          "book": 11,
+          "candidate_count": 127,
+          "candidate_high": 131,
+          "candidate_low": 5,
+          "declared_length": 7,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 131
+        },
+        {
+          "book": 11,
+          "candidate_count": 120,
+          "candidate_high": 124,
+          "candidate_low": 5,
+          "declared_length": 29,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 124
+        },
+        {
+          "book": 11,
+          "candidate_count": 84,
+          "candidate_high": 88,
+          "candidate_low": 5,
+          "declared_length": 30,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 88
+        },
+        {
+          "book": 12,
+          "candidate_count": 131,
+          "candidate_high": 135,
+          "candidate_low": 5,
+          "declared_length": 19,
+          "op_index": 1,
+          "op_type": "copy",
+          "predicted_length": 135
+        },
+        {
+          "book": 12,
+          "candidate_count": 112,
+          "candidate_high": 116,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 2,
+          "op_type": "copy",
+          "predicted_length": 116
+        },
+        {
+          "book": 12,
+          "candidate_count": 96,
+          "candidate_high": 100,
+          "candidate_low": 5,
+          "declared_length": 10,
+          "op_index": 4,
+          "op_type": "copy",
+          "predicted_length": 100
+        },
+        {
+          "book": 12,
+          "candidate_count": 77,
+          "candidate_high": 81,
+          "candidate_low": 5,
+          "declared_length": 14,
+          "op_index": 6,
+          "op_type": "copy",
+          "predicted_length": 81
+        },
+        {
+          "book": 12,
+          "candidate_count": 63,
+          "candidate_high": 67,
+          "candidate_low": 5,
+          "declared_length": 12,
+          "op_index": 7,
+          "op_type": "copy",
+          "predicted_length": 67
+        },
+        {
+          "book": 12,
+          "candidate_count": 47,
+          "candidate_high": 51,
+          "candidate_low": 5,
+          "declared_length": 13,
+          "op_index": 9,
+          "op_type": "copy",
+          "predicted_length": 51
+        },
+        {
+          "book": 12,
+          "candidate_count": 34,
+          "candidate_high": 38,
+          "candidate_low": 5,
+          "declared_length": 31,
+          "op_index": 10,
+          "op_type": "copy",
+          "predicted_length": 38
+        }
+      ],
+      "total": 261
+    },
+    "copy_count": 208,
+    "interpretation": "Fixed decoder-side length policies do not explain the length sequence. The best tested policy is only a partial boundary diagnostic, not a generator: declared lengths are spread across candidate sets rather than being consistently min, max, median, quartile, or previous-length choices. Length selection remains a retained parser objective.",
+    "literal_count": 53,
+    "operation_count": 261,
+    "policy_count": 8,
+    "position_summary": {
+      "declared_lower_quarter_rows": 131,
+      "declared_max_hits": 58,
+      "declared_min_hits": 10,
+      "declared_upper_quarter_rows": 73,
+      "forced_rows": 5,
+      "mean_normalized_position": 0.389952755441788
+    },
+    "promotes_length_policy": false
+  },
+  "translation_delta": "NONE"
+}

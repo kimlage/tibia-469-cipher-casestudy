@@ -413,6 +413,13 @@ candidate count `89` and roughly `1555.548` log2 candidate-space bits. That
 means length selection still needs a real rule or parser objective; it is not
 just a redundant field-ordering artifact.
 
+A decoder length policy audit then rejects the simplest version of that rule.
+Fixed min/max/quartile/median/previous-length policies over the candidate sets
+do not recover the declared sequence. The best policy is `max_candidate`, but it
+hits only `63/261` rows (`58/208` copies and `5/53` literals). Declared lengths
+are spread across candidate sets, so a promoted generator would need a richer
+length objective than a fixed candidate policy.
+
 A recent-gates row0 compatibility refresh then checks gates `76..107` as one
 unit against the independent row0 provenance front. The result is unchanged:
 parser validation, path-stability controls, decoder/source-policy controls,
@@ -2098,6 +2105,7 @@ book generation, not row0 pair-cell placement.
 - [Recent gates row0 compatibility refresh](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.md)
 - [Operation length dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/110_operation_length_dependency_ledger.md)
 - [Decoder length candidate ambiguity audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/111_decoder_length_candidate_ambiguity_audit.md)
+- [Decoder length policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/112_decoder_length_policy_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed primacy integration audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md)
