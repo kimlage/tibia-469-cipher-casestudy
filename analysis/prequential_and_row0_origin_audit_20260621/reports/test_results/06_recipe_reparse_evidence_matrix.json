@@ -158,6 +158,48 @@
     },
     {
       "evidence": {
+        "beats_raw_count": 70,
+        "book_count": 70,
+        "failure_books": [],
+        "max_gain_vs_raw_bits": 926.974556597275,
+        "mean_gain_vs_raw_bits": 469.30696133116663,
+        "min_gain_vs_raw_bits": 96.05517848827662,
+        "roundtrip_book_count": 70,
+        "weakest_books": [
+          {
+            "book": 25,
+            "book_length_digits": 35,
+            "gain_vs_raw_bits": 96.05517848827662
+          },
+          {
+            "book": 49,
+            "book_length_digits": 115,
+            "gain_vs_raw_bits": 124.65719767020033
+          },
+          {
+            "book": 39,
+            "book_length_digits": 59,
+            "gain_vs_raw_bits": 154.0727910756309
+          },
+          {
+            "book": 54,
+            "book_length_digits": 57,
+            "gain_vs_raw_bits": 154.6089599530878
+          },
+          {
+            "book": 20,
+            "book_length_digits": 63,
+            "gain_vs_raw_bits": 169.64411386978742
+          }
+        ]
+      },
+      "interpretation": "Every individual book can be mechanically reparsed from the other 69 books with positive gain versus raw digit coding. This is item-level redundancy evidence, not an authorial-order proof.",
+      "question": "does_single_book_holdout_reparse_without_self",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.json",
+      "status": "passed_singleton_complement_inventory"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -195,6 +237,7 @@
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",
+    "leave_one_book_out_no_self": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/13_leave_one_book_out_no_self_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",

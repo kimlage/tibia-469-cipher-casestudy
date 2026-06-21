@@ -52,6 +52,9 @@ exogenous.
 - [scripts/12_family_holdout_no_test_carryover_audit.py](scripts/12_family_holdout_no_test_carryover_audit.py) - tests family holdout reparsing without cross-book carryover inside the held-out family.
 - [reports/test_results/12_family_holdout_no_test_carryover_audit.md](reports/test_results/12_family_holdout_no_test_carryover_audit.md) - no-test-carryover family holdout result.
 - [reports/test_results/12_family_holdout_no_test_carryover_audit.json](reports/test_results/12_family_holdout_no_test_carryover_audit.json) - structured no-test-carryover ledger.
+- [scripts/13_leave_one_book_out_no_self_audit.py](scripts/13_leave_one_book_out_no_self_audit.py) - tests each individual book against an inventory made from the other 69 books only.
+- [reports/test_results/13_leave_one_book_out_no_self_audit.md](reports/test_results/13_leave_one_book_out_no_self_audit.md) - singleton holdout no-self result.
+- [reports/test_results/13_leave_one_book_out_no_self_audit.json](reports/test_results/13_leave_one_book_out_no_self_audit.json) - structured singleton holdout ledger.
 
 ## Boundary
 
@@ -81,7 +84,9 @@ exogenous.
   families before correction to `19/19` after correction. A stricter
   no-test-carryover variant still beats raw digit coding in `19/19` families,
   so the positive family signal does not require earlier held-out books to feed
-  later held-out books.
+  later held-out books. Singleton leave-one-book-out reparsing also roundtrips
+  `70/70` books and beats raw digit coding in `70/70`, with minimum gain
+  `96.055` bits.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

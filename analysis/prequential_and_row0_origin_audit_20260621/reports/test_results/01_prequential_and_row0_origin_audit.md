@@ -151,6 +151,16 @@ This shows the family signal does not depend on letting earlier held-out
 books feed later held-out books.
 See [12_family_holdout_no_test_carryover_audit.md](12_family_holdout_no_test_carryover_audit.md).
 
+### Leave-One-Book-Out No-Self Audit
+
+At singleton granularity, every book is then held out individually and
+reparsed from the other `69` books only. All `70/70` books roundtrip and
+beat raw digit coding; mean gain is `469.307` bits and the weakest gain
+is still `96.055` bits. This confirms item-level mechanical redundancy,
+while still not proving an authorial order because the inventory is the
+full complement of other books.
+See [13_leave_one_book_out_no_self_audit.md](13_leave_one_book_out_no_self_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -200,7 +210,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, and a no-test-carryover variant still beats raw in `19/19`.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, and singleton leave-one-book-out reparsing beats raw in `70/70`.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

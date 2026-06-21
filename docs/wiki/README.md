@@ -405,6 +405,9 @@ reparse-vs-active beat/tie coverage from `15/19` to `19/19`, while preserving
 `19/19` raw-digit wins.
 A no-test-carryover family variant still beats raw digits in `19/19` families
 when each held-out book starts only from the training-complement inventory.
+A singleton leave-one-book-out audit then beats raw digit coding in `70/70`
+books using only the other `69` books as inventory, with minimum gain
+`96.055` bits.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -585,9 +588,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   family losses to copy-address overhead or exact tie, shows those address
   losses vanish under same-coordinate repricing, records `19/19`
   address-corrected family beat/tie coverage, verifies that no-test-carryover
-  family holdouts still beat raw in `19/19`, closes the row0 hypothesis
-  requirement matrix with zero promoted origin formulas, and keeps row0 origin
-  exogenous with translation delta zero.
+  family holdouts still beat raw in `19/19`, adds `70/70` singleton no-self
+  holdout wins against raw, closes the row0 hypothesis requirement matrix with
+  zero promoted origin formulas, and keeps row0 origin exogenous with
+  translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

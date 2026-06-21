@@ -25,6 +25,7 @@ SOURCES = {
     / "11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_no_test_carryover": TEST_RESULTS
     / "12_family_holdout_no_test_carryover_audit.json",
+    "leave_one_book_out_no_self": TEST_RESULTS / "13_leave_one_book_out_no_self_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -54,6 +55,7 @@ def make_result() -> dict[str, Any]:
     address_space = load_json(SOURCES["family_holdout_address_space"])
     address_corrected = load_json(SOURCES["family_holdout_address_corrected_scoreboard"])
     no_test_carryover = load_json(SOURCES["family_holdout_no_test_carryover"])
+    leave_one_out = load_json(SOURCES["leave_one_book_out_no_self"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -67,6 +69,7 @@ def make_result() -> dict[str, Any]:
         ("family_holdout_address_space", address_space),
         ("family_holdout_address_corrected_scoreboard", address_corrected),
         ("family_holdout_no_test_carryover", no_test_carryover),
+        ("leave_one_book_out_no_self", leave_one_out),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -319,6 +322,26 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_single_book_holdout_reparse_without_self",
+            "source": rel(SOURCES["leave_one_book_out_no_self"]),
+            "status": "passed_singleton_complement_inventory",
+            "evidence": {
+                "book_count": leave_one_out["summary"]["book_count"],
+                "roundtrip_book_count": leave_one_out["summary"]["roundtrip_book_count"],
+                "beats_raw_count": leave_one_out["summary"]["beats_raw_count"],
+                "mean_gain_vs_raw_bits": leave_one_out["summary"]["mean_gain_vs_raw_bits"],
+                "min_gain_vs_raw_bits": leave_one_out["summary"]["min_gain_vs_raw_bits"],
+                "max_gain_vs_raw_bits": leave_one_out["summary"]["max_gain_vs_raw_bits"],
+                "failure_books": leave_one_out["summary"]["failure_books"],
+                "weakest_books": leave_one_out["summary"]["weakest_books"][:5],
+            },
+            "interpretation": (
+                "Every individual book can be mechanically reparsed from the "
+                "other 69 books with positive gain versus raw digit coding. This "
+                "is item-level redundancy evidence, not an authorial-order proof."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -484,6 +507,13 @@ def write_result(result: dict[str, Any]) -> None:
                 f"no-carry beats raw {evidence['no_test_carryover_beats_raw_count']}/"
                 f"{evidence['family_count']}; mean gain "
                 f"{evidence['mean_no_test_carryover_gain_vs_raw_bits']:.3f} bits"
+            )
+        elif row["question"] == "does_single_book_holdout_reparse_without_self":
+            key = (
+                f"roundtrip {evidence['roundtrip_book_count']}/{evidence['book_count']}; "
+                f"beats raw {evidence['beats_raw_count']}/{evidence['book_count']}; "
+                f"mean gain {evidence['mean_gain_vs_raw_bits']:.3f}; "
+                f"min gain {evidence['min_gain_vs_raw_bits']:.3f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

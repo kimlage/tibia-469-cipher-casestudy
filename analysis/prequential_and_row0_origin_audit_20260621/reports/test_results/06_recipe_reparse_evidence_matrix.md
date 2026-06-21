@@ -30,6 +30,7 @@ claim.
 | `do_family_copy_address_losses_survive_same_coordinate_repricing` | `failed_as_real_reparse_loss` | original losses 4/5; rebased nonpositive 5/5; mean delta 4.667 -> 0.000 bits |
 | `does_family_holdout_reparse_beat_active_after_address_correction` | `passed_address_corrected_family_holdout` | beats raw 19/19; beats/ties active 15/19 -> 19/19; mean reparse-active -139.959 -> -161.381 |
 | `does_family_holdout_reparse_depend_on_test_carryover` | `passed_no_test_carryover_raw_baseline` | roundtrip 19/19; no-carry beats raw 19/19; mean gain 1054.570 bits |
+| `does_single_book_holdout_reparse_without_self` | `passed_singleton_complement_inventory` | roundtrip 70/70; beats raw 70/70; mean gain 469.307; min gain 96.055 |
 | `does_online_reparse_reduce_full_corpus_recipe_cost` | `passed_as_mechanical_compile_not_semantic_claim` | 8558.667 -> 8343.062 bits; gain 215.605; roundtrip 70/70 |
 | `does_numeric_online_order_survive_order_controls` | `passed_against_tested_orders` | best raw `numeric`; best charged `numeric`; 6 random orders |
 

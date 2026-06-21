@@ -1,0 +1,1903 @@
+{
+  "case_reopened": false,
+  "classification": "leave_one_book_out_no_self_predictive",
+  "decision": {
+    "generation_explanation_status": "stronger_but_still_partial",
+    "row0_origin_status": "unchanged_exogenous",
+    "singleton_holdout_status": "predictive_signal_retained_without_self",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "no_test_carryover_helper": "analysis/prequential_and_row0_origin_audit_20260621/scripts/12_family_holdout_no_test_carryover_audit.py",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+    "trainset_controls": "analysis/authorial_mechanism_20260620/scripts/128_prequential_recipe_reparse_trainset_controls.py"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "beats_raw": true,
+      "book": 0,
+      "book_length_digits": 144,
+      "component_bits": {
+        "copy_address_bits": 13.440220327914352,
+        "copy_length_stream_bits": 7.317412613764869,
+        "item_type_stream_bits": 1.4854268271702418,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 456.11458589493066,
+      "inventory": {
+        "copied_digits": 144,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.243059768849463,
+      "raw_uniform_bits": 478.35764566378015,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 1,
+      "book_length_digits": 92,
+      "component_bits": {
+        "copy_address_bits": 13.446954039279555,
+        "copy_length_stream_bits": 6.9886846867721655,
+        "item_type_stream_bits": 1.5145731728297582,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 283.6671728307558,
+      "inventory": {
+        "copied_digits": 92,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.950211898881477,
+      "raw_uniform_bits": 305.6173847296373,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 2,
+      "book_length_digits": 177,
+      "component_bits": {
+        "copy_address_bits": 26.878744589378748,
+        "copy_length_stream_bits": 14.608716854020573,
+        "item_type_stream_bits": 2.804196887142691,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 543.6896144645211,
+      "inventory": {
+        "copied_digits": 177,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 44.29165833054201,
+      "raw_uniform_bits": 587.9812727950631,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 3,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 13.440739423014273,
+        "copy_length_stream_bits": 8.257387842692651,
+        "item_type_stream_bits": 1.628031222613042,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 441.7437747959108,
+      "inventory": {
+        "copied_digits": 140,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 23.32615848831997,
+      "raw_uniform_bits": 465.06993328423073,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 4,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 107.58961774030627,
+        "copy_length_stream_bits": 41.54742671652513,
+        "item_type_stream_bits": 10.801323944104379,
+        "literal_length_bits": 12.0,
+        "literal_payload_bits": 27.830638217777647
+      },
+      "gain_vs_raw_bits": 265.3009266655173,
+      "inventory": {
+        "copied_digits": 132,
+        "copy_items": 8,
+        "literal_digits": 8,
+        "literal_runs": 3
+      },
+      "leave_one_out_reparse_bits": 199.76900661871343,
+      "raw_uniform_bits": 465.06993328423073,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 5,
+      "book_length_digits": 273,
+      "component_bits": {
+        "copy_address_bits": 13.423378576518493,
+        "copy_length_stream_bits": 8.79766152585376,
+        "item_type_stream_bits": 1.5849625007211563,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 883.0803673011566,
+      "inventory": {
+        "copied_digits": 273,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 23.80600260309341,
+      "raw_uniform_bits": 906.8863699042499,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 6,
+      "book_length_digits": 175,
+      "component_bits": {
+        "copy_address_bits": 147.91009878598982,
+        "copy_length_stream_bits": 56.314743741618386,
+        "item_type_stream_bits": 5.559476812356745,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 14.889888922254954
+      },
+      "gain_vs_raw_bits": 352.66320834306845,
+      "inventory": {
+        "copied_digits": 169,
+        "copy_items": 11,
+        "literal_digits": 6,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 228.6742082622199,
+      "raw_uniform_bits": 581.3374166052884,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 7,
+      "book_length_digits": 106,
+      "component_bits": {
+        "copy_address_bits": 53.79580160007871,
+        "copy_length_stream_bits": 21.140332973910606,
+        "item_type_stream_bits": 5.29653469421379,
+        "literal_length_bits": 10.0,
+        "literal_payload_bits": 86.76220997980496
+      },
+      "gain_vs_raw_bits": 175.12949881005233,
+      "inventory": {
+        "copied_digits": 81,
+        "copy_items": 4,
+        "literal_digits": 25,
+        "literal_runs": 3
+      },
+      "leave_one_out_reparse_bits": 176.9948792480081,
+      "raw_uniform_bits": 352.1243780580604,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 8,
+      "book_length_digits": 155,
+      "component_bits": {
+        "copy_address_bits": 13.43879185257826,
+        "copy_length_stream_bits": 8.348728154231077,
+        "item_type_stream_bits": 0.30868551810651007,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 492.80264918262526,
+      "inventory": {
+        "copied_digits": 155,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.096205524915845,
+      "raw_uniform_bits": 514.8988547075411,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 9,
+      "book_length_digits": 294,
+      "component_bits": {
+        "copy_address_bits": 26.87620227913957,
+        "copy_length_stream_bits": 14.092612632977538,
+        "item_type_stream_bits": 0.6673147749389386,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 8.036173612553512
+      },
+      "gain_vs_raw_bits": 926.974556597275,
+      "inventory": {
+        "copied_digits": 291,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 49.67230329960955,
+      "raw_uniform_bits": 976.6468598968845,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 10,
+      "book_length_digits": 281,
+      "component_bits": {
+        "copy_address_bits": 13.422327623974558,
+        "copy_length_stream_bits": 8.829722735086058,
+        "item_type_stream_bits": 0.33518419158962914,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 910.8745601126985,
+      "inventory": {
+        "copied_digits": 281,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.587234550650244,
+      "raw_uniform_bits": 933.4617946633488,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 11,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441128621804697,
+        "copy_length_stream_bits": 7.271463027904375,
+        "item_type_stream_bits": 0.32046268588286364,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 434.0710946639767,
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.033054335591935,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 12,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441128621804697,
+        "copy_length_stream_bits": 7.243173983472951,
+        "item_type_stream_bits": 0.31443355834043807,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 434.1054128359505,
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.998736163618087,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 13,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 26.8879512321191,
+        "copy_length_stream_bits": 13.63952913613776,
+        "item_type_stream_bits": 0.6349643797123404,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 427.22941663114887,
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 41.162444747969204,
+      "raw_uniform_bits": 468.39186137911804,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 14,
+      "book_length_digits": 133,
+      "component_bits": {
+        "copy_address_bits": 53.804269958998596,
+        "copy_length_stream_bits": 19.564361799251685,
+        "item_type_stream_bits": 5.235411286327841,
+        "literal_length_bits": 9.0,
+        "literal_payload_bits": 42.01283536304133
+      },
+      "gain_vs_raw_bits": 312.19955821239967,
+      "inventory": {
+        "copied_digits": 116,
+        "copy_items": 4,
+        "literal_digits": 17,
+        "literal_runs": 3
+      },
+      "leave_one_out_reparse_bits": 129.61687840761945,
+      "raw_uniform_bits": 441.81643662001915,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 15,
+      "book_length_digits": 143,
+      "component_bits": {
+        "copy_address_bits": 26.887433345410216,
+        "copy_length_stream_bits": 14.224491636858914,
+        "item_type_stream_bits": 0.655853671017611,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 433.267938915606,
+      "inventory": {
+        "copied_digits": 143,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 41.76777865328674,
+      "raw_uniform_bits": 475.0357175688928,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 16,
+      "book_length_digits": 174,
+      "component_bits": {
+        "copy_address_bits": 67.24849164722414,
+        "copy_length_stream_bits": 26.180183930272154,
+        "item_type_stream_bits": 1.587410949280851,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 482.9994019836239,
+      "inventory": {
+        "copied_digits": 174,
+        "copy_items": 5,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 95.01608652677714,
+      "raw_uniform_bits": 578.015488510401,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 17,
+      "book_length_digits": 274,
+      "component_bits": {
+        "copy_address_bits": 53.721005977871926,
+        "copy_length_stream_bits": 26.67125477104759,
+        "item_type_stream_bits": 1.2404106379622908,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 828.5756266122554,
+      "inventory": {
+        "copied_digits": 274,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 81.6326713868818,
+      "raw_uniform_bits": 910.2082979991372,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 18,
+      "book_length_digits": 93,
+      "component_bits": {
+        "copy_address_bits": 26.900224097359633,
+        "copy_length_stream_bits": 15.575480157524826,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 265.7993195877792,
+      "inventory": {
+        "copied_digits": 93,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 43.13999323674546,
+      "raw_uniform_bits": 308.9393128245247,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 19,
+      "book_length_digits": 129,
+      "component_bits": {
+        "copy_address_bits": 40.34200416747594,
+        "copy_length_stream_bits": 21.25625783919738,
+        "item_type_stream_bits": 1.000972162408408,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 365.929490071388,
+      "inventory": {
+        "copied_digits": 129,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 62.599234169081726,
+      "raw_uniform_bits": 428.5287242404697,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 20,
+      "book_length_digits": 63,
+      "component_bits": {
+        "copy_address_bits": 26.903323120674816,
+        "copy_length_stream_bits": 12.054332981672324,
+        "item_type_stream_bits": 0.6797000057692496,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 169.64411386978742,
+      "inventory": {
+        "copied_digits": 63,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 39.63735610811639,
+      "raw_uniform_bits": 209.2814699779038,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 21,
+      "book_length_digits": 176,
+      "component_bits": {
+        "copy_address_bits": 26.890745681425244,
+        "copy_length_stream_bits": 13.241288042458098,
+        "item_type_stream_bits": 0.6673147749389386,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 543.8599962013535,
+      "inventory": {
+        "copied_digits": 176,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 40.79934849882228,
+      "raw_uniform_bits": 584.6593447001758,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 22,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441128621804697,
+        "copy_length_stream_bits": 8.285402218862249,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 433.0469728469132,
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.057176152655416,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 23,
+      "book_length_digits": 177,
+      "component_bits": {
+        "copy_address_bits": 94.1270196243785,
+        "copy_length_stream_bits": 40.011187978999445,
+        "item_type_stream_bits": 10.39169631296278,
+        "literal_length_bits": 17.0,
+        "literal_payload_bits": 79.74433433225902
+      },
+      "gain_vs_raw_bits": 346.7070345464634,
+      "inventory": {
+        "copied_digits": 150,
+        "copy_items": 7,
+        "literal_digits": 27,
+        "literal_runs": 4
+      },
+      "leave_one_out_reparse_bits": 241.27423824859972,
+      "raw_uniform_bits": 587.9812727950631,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 24,
+      "book_length_digits": 119,
+      "component_bits": {
+        "copy_address_bits": 40.348830528646104,
+        "copy_length_stream_bits": 19.152879594688525,
+        "item_type_stream_bits": 1.000972162408408,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 334.80676100585305,
+      "inventory": {
+        "copied_digits": 119,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 60.502682285743035,
+      "raw_uniform_bits": 395.3094432915961,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 25,
+      "book_length_digits": 35,
+      "component_bits": {
+        "copy_address_bits": 13.454299293619899,
+        "copy_length_stream_bits": 6.434628227636725,
+        "item_type_stream_bits": 0.3233773115244322,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 96.05517848827662,
+      "inventory": {
+        "copied_digits": 35,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.212304832781054,
+      "raw_uniform_bits": 116.26748332105768,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 26,
+      "book_length_digits": 170,
+      "component_bits": {
+        "copy_address_bits": 53.75490515967756,
+        "copy_length_stream_bits": 22.221956179589995,
+        "item_type_stream_bits": 1.3407367663585166,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 487.4101780252255,
+      "inventory": {
+        "copied_digits": 170,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 77.31759810562608,
+      "raw_uniform_bits": 564.7277761308516,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 27,
+      "book_length_digits": 124,
+      "component_bits": {
+        "copy_address_bits": 13.442813937675153,
+        "copy_length_stream_bits": 8.199672344836365,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 389.9459521715329,
+      "inventory": {
+        "copied_digits": 124,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.97313159449999,
+      "raw_uniform_bits": 411.9190837660329,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 28,
+      "book_length_digits": 146,
+      "component_bits": {
+        "copy_address_bits": 13.43996071030687,
+        "copy_length_stream_bits": 8.312882955284355,
+        "item_type_stream_bits": 0.336725096815443,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 462.9119330911482,
+      "inventory": {
+        "copied_digits": 146,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.089568762406667,
+      "raw_uniform_bits": 485.0015018535549,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 29,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 26.89232481628516,
+        "copy_length_stream_bits": 13.369597346278677,
+        "item_type_stream_bits": 0.6703683831792583,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 460.67885178224856,
+      "inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 40.9322905457431,
+      "raw_uniform_bits": 501.6111423279917,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 30,
+      "book_length_digits": 150,
+      "component_bits": {
+        "copy_address_bits": 67.23394223778836,
+        "copy_length_stream_bits": 34.970701773625976,
+        "item_type_stream_bits": 3.611433196770613,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.753477931908797
+      },
+      "gain_vs_raw_bits": 378.7196590930106,
+      "inventory": {
+        "copied_digits": 144,
+        "copy_items": 5,
+        "literal_digits": 6,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 119.56955514009374,
+      "raw_uniform_bits": 498.2892142331043,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 31,
+      "book_length_digits": 248,
+      "component_bits": {
+        "copy_address_bits": 107.51333059576682,
+        "copy_length_stream_bits": 51.31348875003347,
+        "item_type_stream_bits": 2.7314752739107666,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 662.2798729123547,
+      "inventory": {
+        "copied_digits": 248,
+        "copy_items": 8,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 161.55829461971106,
+      "raw_uniform_bits": 823.8381675320658,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 32,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441128621804697,
+        "copy_length_stream_bits": 7.280770770130602,
+        "item_type_stream_bits": 0.32483969030726567,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 434.057409917326,
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.046739082242567,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 33,
+      "book_length_digits": 134,
+      "component_bits": {
+        "copy_address_bits": 13.441517715628486,
+        "copy_length_stream_bits": 8.266786540694902,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 423.09941514659465,
+      "inventory": {
+        "copied_digits": 134,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.038949568311857,
+      "raw_uniform_bits": 445.1383647149065,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 34,
+      "book_length_digits": 123,
+      "component_bits": {
+        "copy_address_bits": 80.71482344542272,
+        "copy_length_stream_bits": 29.203345463530162,
+        "item_type_stream_bits": 5.91980396465576,
+        "literal_length_bits": 9.0,
+        "literal_payload_bits": 36.09390222953591
+      },
+      "gain_vs_raw_bits": 247.66528056800098,
+      "inventory": {
+        "copied_digits": 110,
+        "copy_items": 6,
+        "literal_digits": 13,
+        "literal_runs": 2
+      },
+      "leave_one_out_reparse_bits": 160.9318751031446,
+      "raw_uniform_bits": 408.5971556711456,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 35,
+      "book_length_digits": 286,
+      "component_bits": {
+        "copy_address_bits": 26.844523585594263,
+        "copy_length_stream_bits": 14.305451076543749,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 908.2571714937866,
+      "inventory": {
+        "copied_digits": 286,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 41.81426364399901,
+      "raw_uniform_bits": 950.0714351377856,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 36,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 80.6785836630545,
+        "copy_length_stream_bits": 33.34013752441373,
+        "item_type_stream_bits": 2.0296818017688345,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 339.0557460103316,
+      "inventory": {
+        "copied_digits": 137,
+        "copy_items": 6,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 116.04840298923703,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 37,
+      "book_length_digits": 160,
+      "component_bits": {
+        "copy_address_bits": 26.882639364847464,
+        "copy_length_stream_bits": 15.514375035210623,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 488.44719180005893,
+      "inventory": {
+        "copied_digits": 160,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 43.06130338191909,
+      "raw_uniform_bits": 531.508495181978,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 38,
+      "book_length_digits": 134,
+      "component_bits": {
+        "copy_address_bits": 40.355765819758055,
+        "copy_length_stream_bits": 12.548072651084917,
+        "item_type_stream_bits": 4.9863253864440065,
+        "literal_length_bits": 8.0,
+        "literal_payload_bits": 11.002815015607098
+      },
+      "gain_vs_raw_bits": 368.2453858420124,
+      "inventory": {
+        "copied_digits": 130,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "leave_one_out_reparse_bits": 76.8929788728941,
+      "raw_uniform_bits": 445.1383647149065,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 39,
+      "book_length_digits": 59,
+      "component_bits": {
+        "copy_address_bits": 13.45211251457386,
+        "copy_length_stream_bits": 4.405992359675837,
+        "item_type_stream_bits": 2.3103401206121505,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 17.752521527861624
+      },
+      "gain_vs_raw_bits": 154.0727910756309,
+      "inventory": {
+        "copied_digits": 52,
+        "copy_items": 1,
+        "literal_digits": 7,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 41.920966522723475,
+      "raw_uniform_bits": 195.99375759835436,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 40,
+      "book_length_digits": 168,
+      "component_bits": {
+        "copy_address_bits": 40.34530341424,
+        "copy_length_stream_bits": 15.055790814565905,
+        "item_type_stream_bits": 2.957141866066556,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 10.50779464019871
+      },
+      "gain_vs_raw_bits": 485.2178892060057,
+      "inventory": {
+        "copied_digits": 165,
+        "copy_items": 3,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 72.86603073507118,
+      "raw_uniform_bits": 558.0839199410768,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 41,
+      "book_length_digits": 136,
+      "component_bits": {
+        "copy_address_bits": 53.78970593154499,
+        "copy_length_stream_bits": 23.833704873142693,
+        "item_type_stream_bits": 1.3407367663585166,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 372.818073333635,
+      "inventory": {
+        "copied_digits": 136,
+        "copy_items": 4,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 78.96414757104621,
+      "raw_uniform_bits": 451.78222090468125,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 42,
+      "book_length_digits": 187,
+      "component_bits": {
+        "copy_address_bits": 67.22056498688423,
+        "copy_length_stream_bits": 30.00996812374994,
+        "item_type_stream_bits": 3.610012250239685,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 15.73859369482281
+      },
+      "gain_vs_raw_bits": 500.6214146882401,
+      "inventory": {
+        "copied_digits": 183,
+        "copy_items": 5,
+        "literal_digits": 4,
+        "literal_runs": 2
+      },
+      "leave_one_out_reparse_bits": 120.57913905569667,
+      "raw_uniform_bits": 621.2005537439368,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 43,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 13.440609666748422,
+        "copy_length_stream_bits": 6.266786540694901,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 448.35232068074424,
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.039540698373823,
+      "raw_uniform_bits": 468.39186137911804,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 44,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.442554786418683,
+        "copy_length_stream_bits": 6.129283016944966,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 398.65895766151345,
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 19.90398229429415,
+      "raw_uniform_bits": 418.5629399558076,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 45,
+      "book_length_digits": 149,
+      "component_bits": {
+        "copy_address_bits": 26.8858791273268,
+        "copy_length_stream_bits": 11.714245517666123,
+        "item_type_stream_bits": 0.6673147749389386,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 455.69984671828513,
+      "inventory": {
+        "copied_digits": 149,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 39.26743941993186,
+      "raw_uniform_bits": 494.967286138217,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 46,
+      "book_length_digits": 253,
+      "component_bits": {
+        "copy_address_bits": 13.426002613329361,
+        "copy_length_stream_bits": 8.434628227636725,
+        "item_type_stream_bits": 0.3336573874694693,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 818.2535197780671,
+      "inventory": {
+        "copied_digits": 253,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.194288228435553,
+      "raw_uniform_bits": 840.4478080065027,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 47,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.442554786418683,
+        "copy_length_stream_bits": 6.721099188707185,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 398.06864066869326,
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.494299287114337,
+      "raw_uniform_bits": 418.5629399558076,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 48,
+      "book_length_digits": 169,
+      "component_bits": {
+        "copy_address_bits": 26.88082182248751,
+        "copy_length_stream_bits": 11.755889026008543,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 522.1048482056073,
+      "inventory": {
+        "copied_digits": 169,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 39.30099983035705,
+      "raw_uniform_bits": 561.4058480359643,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 49,
+      "book_length_digits": 115,
+      "component_bits": {
+        "copy_address_bits": 94.1718320915561,
+        "copy_length_stream_bits": 28.61584690605302,
+        "item_type_stream_bits": 8.338954850890808,
+        "literal_length_bits": 15.0,
+        "literal_payload_bits": 111.23789939334644
+      },
+      "gain_vs_raw_bits": 124.65719767020033,
+      "inventory": {
+        "copied_digits": 83,
+        "copy_items": 7,
+        "literal_digits": 32,
+        "literal_runs": 3
+      },
+      "leave_one_out_reparse_bits": 257.36453324184635,
+      "raw_uniform_bits": 382.0217309120467,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 50,
+      "book_length_digits": 141,
+      "component_bits": {
+        "copy_address_bits": 13.440609666748422,
+        "copy_length_stream_bits": 6.857980995127572,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 447.7626254052536,
+      "inventory": {
+        "copied_digits": 141,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.629235973864464,
+      "raw_uniform_bits": 468.39186137911804,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 51,
+      "book_length_digits": 268,
+      "component_bits": {
+        "copy_address_bits": 26.85487956840388,
+        "copy_length_stream_bits": 14.182355554070389,
+        "item_type_stream_bits": 0.6673147749389386,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 848.5721795323998,
+      "inventory": {
+        "copied_digits": 268,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 41.70454989741321,
+      "raw_uniform_bits": 890.276729429813,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 52,
+      "book_length_digits": 137,
+      "component_bits": {
+        "copy_address_bits": 13.441517715628486,
+        "copy_length_stream_bits": 7.787902559391432,
+        "item_type_stream_bits": 2.2817709684153797,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 9.78135971352466
+      },
+      "gain_vs_raw_bits": 417.8115980426087,
+      "inventory": {
+        "copied_digits": 134,
+        "copy_items": 1,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 37.29255095695996,
+      "raw_uniform_bits": 455.1041489995686,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 53,
+      "book_length_digits": 271,
+      "component_bits": {
+        "copy_address_bits": 13.423641195075856,
+        "copy_length_stream_bits": 8.51175265376738,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 877.9749753747014,
+      "inventory": {
+        "copied_digits": 271,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.267538339773736,
+      "raw_uniform_bits": 900.2425137144752,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 54,
+      "book_length_digits": 57,
+      "component_bits": {
+        "copy_address_bits": 26.909234327799112,
+        "copy_length_stream_bits": 7.167418145831737,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 154.6089599530878,
+      "inventory": {
+        "copied_digits": 57,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 34.74094145549185,
+      "raw_uniform_bits": 189.34990140857965,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 55,
+      "book_length_digits": 116,
+      "component_bits": {
+        "copy_address_bits": 40.341880954159535,
+        "copy_length_stream_bits": 21.672363184079146,
+        "item_type_stream_bits": 1.000972162408408,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 10.285113188501441
+      },
+      "gain_vs_raw_bits": 312.0433295177855,
+      "inventory": {
+        "copied_digits": 112,
+        "copy_items": 3,
+        "literal_digits": 4,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 73.30032948914852,
+      "raw_uniform_bits": 385.343659006934,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 56,
+      "book_length_digits": 266,
+      "component_bits": {
+        "copy_address_bits": 120.98069134412128,
+        "copy_length_stream_bits": 51.00689983468115,
+        "item_type_stream_bits": 4.952717212008942,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 11.099676554859684
+      },
+      "gain_vs_raw_bits": 691.5928882943672,
+      "inventory": {
+        "copied_digits": 263,
+        "copy_items": 9,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 192.03998494567105,
+      "raw_uniform_bits": 883.6328732400383,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 57,
+      "book_length_digits": 230,
+      "component_bits": {
+        "copy_address_bits": 80.65515790081432,
+        "copy_length_stream_bits": 42.46595639609596,
+        "item_type_stream_bits": 3.941003624666954,
+        "literal_length_bits": 7.0,
+        "literal_payload_bits": 104.65258408448827
+      },
+      "gain_vs_raw_bits": 525.3287598180278,
+      "inventory": {
+        "copied_digits": 198,
+        "copy_items": 6,
+        "literal_digits": 32,
+        "literal_runs": 2
+      },
+      "leave_one_out_reparse_bits": 238.7147020060655,
+      "raw_uniform_bits": 764.0434618240934,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 58,
+      "book_length_digits": 272,
+      "component_bits": {
+        "copy_address_bits": 26.853831758620956,
+        "copy_length_stream_bits": 14.216808999978841,
+        "item_type_stream_bits": 0.6526308242566029,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 861.8411702265062,
+      "inventory": {
+        "copied_digits": 272,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 41.7232715828564,
+      "raw_uniform_bits": 903.5644418093625,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 59,
+      "book_length_digits": 272,
+      "component_bits": {
+        "copy_address_bits": 40.31404916404563,
+        "copy_length_stream_bits": 18.57891808078449,
+        "item_type_stream_bits": 1.000972162408408,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 843.6705024021239,
+      "inventory": {
+        "copied_digits": 272,
+        "copy_items": 3,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 59.89393940723852,
+      "raw_uniform_bits": 903.5644418093625,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 60,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 53.781692470518934,
+        "copy_length_stream_bits": 21.3410871358951,
+        "item_type_stream_bits": 3.2807046249867247,
+        "literal_length_bits": 4.0,
+        "literal_payload_bits": 4.459431618637297
+      },
+      "gain_vs_raw_bits": 414.7482264779536,
+      "inventory": {
+        "copied_digits": 150,
+        "copy_items": 4,
+        "literal_digits": 1,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 86.86291585003806,
+      "raw_uniform_bits": 501.6111423279917,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 61,
+      "book_length_digits": 145,
+      "component_bits": {
+        "copy_address_bits": 13.440090524950488,
+        "copy_length_stream_bits": 7.882643049361842,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 460.0246956934247,
+      "inventory": {
+        "copied_digits": 145,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.65487806524283,
+      "raw_uniform_bits": 481.6795737586675,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 62,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 13.442554786418683,
+        "copy_length_stream_bits": 6.721099188707185,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 398.06864066869326,
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 20.494299287114337,
+      "raw_uniform_bits": 418.5629399558076,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 63,
+      "book_length_digits": 126,
+      "component_bits": {
+        "copy_address_bits": 26.891187354149235,
+        "copy_length_stream_bits": 13.348451537407128,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 377.6590120823903,
+      "inventory": {
+        "copied_digits": 126,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 40.90392787341736,
+      "raw_uniform_bits": 418.5629399558076,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 64,
+      "book_length_digits": 151,
+      "component_bits": {
+        "copy_address_bits": 26.888460107194284,
+        "copy_length_stream_bits": 15.074559623110463,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 458.9838336158259,
+      "inventory": {
+        "copied_digits": 151,
+        "copy_items": 2,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 42.62730871216574,
+      "raw_uniform_bits": 501.6111423279917,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 65,
+      "book_length_digits": 169,
+      "component_bits": {
+        "copy_address_bits": 26.888569241307465,
+        "copy_length_stream_bits": 12.29395055176067,
+        "item_type_stream_bits": 0.664288981860998,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 7.199672344836301
+      },
+      "gain_vs_raw_bits": 514.3593669161988,
+      "inventory": {
+        "copied_digits": 166,
+        "copy_items": 2,
+        "literal_digits": 3,
+        "literal_runs": 1
+      },
+      "leave_one_out_reparse_bits": 47.04648111976543,
+      "raw_uniform_bits": 561.4058480359643,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 66,
+      "book_length_digits": 210,
+      "component_bits": {
+        "copy_address_bits": 13.431628182620894,
+        "copy_length_stream_bits": 8.252665432450248,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 675.5899609992865,
+      "inventory": {
+        "copied_digits": 210,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 22.014938927059614,
+      "raw_uniform_bits": 697.6048999263461,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 67,
+      "book_length_digits": 98,
+      "component_bits": {
+        "copy_address_bits": 13.446178674674245,
+        "copy_length_stream_bits": 7.409390936137702,
+        "item_type_stream_bits": 0.332144490930499,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 304.36123919721905,
+      "inventory": {
+        "copied_digits": 98,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.187714101742447,
+      "raw_uniform_bits": 325.5489532989615,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 68,
+      "book_length_digits": 143,
+      "component_bits": {
+        "copy_address_bits": 13.440350119200563,
+        "copy_length_stream_bits": 7.876516946564999,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 453.38820519113875,
+      "inventory": {
+        "copied_digits": 143,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.647512377754033,
+      "raw_uniform_bits": 475.0357175688928,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    },
+    {
+      "beats_raw": true,
+      "book": 69,
+      "book_length_digits": 140,
+      "component_bits": {
+        "copy_address_bits": 13.440739423014273,
+        "copy_length_stream_bits": 7.839203788096944,
+        "item_type_stream_bits": 0.3306453119884713,
+        "literal_length_bits": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "gain_vs_raw_bits": 443.45934476113104,
+      "inventory": {
+        "copied_digits": 140,
+        "copy_items": 1,
+        "literal_digits": 0,
+        "literal_runs": 0
+      },
+      "leave_one_out_reparse_bits": 21.610588523099686,
+      "raw_uniform_bits": 465.06993328423073,
+      "validation": {
+        "book_count": 1,
+        "books_roundtrip_ok": 1,
+        "errors": []
+      }
+    }
+  ],
+  "schema": "leave_one_book_out_no_self_audit.v1",
+  "summary": {
+    "beats_raw_count": 70,
+    "book_count": 70,
+    "failure_books": [],
+    "interpretation": "At singleton granularity, every book roundtrips and beats raw digit coding when the parser can use only the other 69 books as inventory. This strengthens mutual mechanical redundancy evidence without proving an authorial order or row0 origin.",
+    "max_gain_vs_raw_bits": 926.974556597275,
+    "mean_gain_vs_raw_bits": 469.30696133116663,
+    "mean_reparse_bits": 65.19126913620993,
+    "min_gain_vs_raw_bits": 96.05517848827662,
+    "roundtrip_book_count": 70,
+    "weakest_books": [
+      {
+        "book": 25,
+        "book_length_digits": 35,
+        "gain_vs_raw_bits": 96.05517848827662
+      },
+      {
+        "book": 49,
+        "book_length_digits": 115,
+        "gain_vs_raw_bits": 124.65719767020033
+      },
+      {
+        "book": 39,
+        "book_length_digits": 59,
+        "gain_vs_raw_bits": 154.0727910756309
+      },
+      {
+        "book": 54,
+        "book_length_digits": 57,
+        "gain_vs_raw_bits": 154.6089599530878
+      },
+      {
+        "book": 20,
+        "book_length_digits": 63,
+        "gain_vs_raw_bits": 169.64411386978742
+      },
+      {
+        "book": 7,
+        "book_length_digits": 106,
+        "gain_vs_raw_bits": 175.12949881005233
+      },
+      {
+        "book": 34,
+        "book_length_digits": 123,
+        "gain_vs_raw_bits": 247.66528056800098
+      },
+      {
+        "book": 4,
+        "book_length_digits": 140,
+        "gain_vs_raw_bits": 265.3009266655173
+      },
+      {
+        "book": 18,
+        "book_length_digits": 93,
+        "gain_vs_raw_bits": 265.7993195877792
+      },
+      {
+        "book": 1,
+        "book_length_digits": 92,
+        "gain_vs_raw_bits": 283.6671728307558
+      }
+    ]
+  },
+  "translation_delta": "NONE"
+}
