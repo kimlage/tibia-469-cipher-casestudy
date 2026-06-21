@@ -364,6 +364,12 @@ type library has `193` type entries plus `60` book assignments and saves only
 records, the full representation is `514` records, `+253` versus the exact
 skeleton atlas. The motifs remain descriptive; they are not a generator or
 promoted library.
+A copy-availability type exception ledger then tests the stronger
+target-dependent clue. Min-length copy availability contains every copy event
+(`208/208`) and forces `36` literal rows, leaving only `17` available-copy
+literal exceptions; shuffled controls do not match that error level. The clue is
+still `AUDIT_ONLY`: it depends on target text/copy availability and the
+conditioned skeleton ledger is `278` records, `+17` versus the exact atlas.
 
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
@@ -2011,6 +2017,7 @@ book generation, not row0 pair-cell placement.
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
+- [Copy availability type exception ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/103_copy_availability_type_exception_ledger.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)

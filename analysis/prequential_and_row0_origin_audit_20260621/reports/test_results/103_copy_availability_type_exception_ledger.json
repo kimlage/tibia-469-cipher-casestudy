@@ -1,0 +1,239 @@
+{
+  "case_reopened": false,
+  "classification": "copy_availability_type_exception_audit_only",
+  "contingency": {
+    "copy|available_true": 208,
+    "literal|available_false": 36,
+    "literal|available_true": 17
+  },
+  "controls": {
+    "book_availability_shuffle": {
+      "empirical_p_errors_lte_observed": 0.0,
+      "max": 87,
+      "mean": 65.8378,
+      "median": 65.0,
+      "min": 45,
+      "trials": 20000
+    },
+    "corpus_availability_shuffle": {
+      "empirical_p_errors_lte_observed": 0.0,
+      "max": 89,
+      "mean": 74.3334,
+      "median": 75.0,
+      "min": 57,
+      "trials": 20000
+    },
+    "hypergeom_all_copies_inside_available_set": {
+      "log_p": -70.96533996581287,
+      "p": 1.5140647430330111e-31
+    },
+    "random_seed": 469103,
+    "trials": 20000
+  },
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "target_dependent_type_clue_audit_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "exact_atlas_retained",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate99_exact_skeleton_dependency_ledger": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.json"
+  },
+  "optional_literal_exception_rows": [
+    {
+      "book": 10,
+      "length": 5,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 281,
+      "target_start": 0
+    },
+    {
+      "book": 12,
+      "length": 2,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 137,
+      "target_start": 0
+    },
+    {
+      "book": 12,
+      "length": 4,
+      "op_index": 9,
+      "previous_in_book_length": 12,
+      "previous_in_book_type": "copy",
+      "remaining": 55,
+      "target_start": 82
+    },
+    {
+      "book": 14,
+      "length": 5,
+      "op_index": 2,
+      "previous_in_book_length": 6,
+      "previous_in_book_type": "copy",
+      "remaining": 88,
+      "target_start": 45
+    },
+    {
+      "book": 16,
+      "length": 1,
+      "op_index": 7,
+      "previous_in_book_length": 6,
+      "previous_in_book_type": "copy",
+      "remaining": 24,
+      "target_start": 150
+    },
+    {
+      "book": 16,
+      "length": 1,
+      "op_index": 9,
+      "previous_in_book_length": 13,
+      "previous_in_book_type": "copy",
+      "remaining": 10,
+      "target_start": 164
+    },
+    {
+      "book": 17,
+      "length": 3,
+      "op_index": 3,
+      "previous_in_book_length": 133,
+      "previous_in_book_type": "copy",
+      "remaining": 125,
+      "target_start": 149
+    },
+    {
+      "book": 25,
+      "length": 3,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 35,
+      "target_start": 0
+    },
+    {
+      "book": 26,
+      "length": 5,
+      "op_index": 2,
+      "previous_in_book_length": 10,
+      "previous_in_book_type": "copy",
+      "remaining": 149,
+      "target_start": 21
+    },
+    {
+      "book": 32,
+      "length": 2,
+      "op_index": 1,
+      "previous_in_book_length": 11,
+      "previous_in_book_type": "copy",
+      "remaining": 126,
+      "target_start": 11
+    },
+    {
+      "book": 38,
+      "length": 2,
+      "op_index": 1,
+      "previous_in_book_length": 112,
+      "previous_in_book_type": "copy",
+      "remaining": 22,
+      "target_start": 112
+    },
+    {
+      "book": 39,
+      "length": 2,
+      "op_index": 1,
+      "previous_in_book_length": 5,
+      "previous_in_book_type": "copy",
+      "remaining": 54,
+      "target_start": 5
+    },
+    {
+      "book": 42,
+      "length": 2,
+      "op_index": 3,
+      "previous_in_book_length": 12,
+      "previous_in_book_type": "copy",
+      "remaining": 98,
+      "target_start": 89
+    },
+    {
+      "book": 44,
+      "length": 5,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 126,
+      "target_start": 0
+    },
+    {
+      "book": 52,
+      "length": 3,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 137,
+      "target_start": 0
+    },
+    {
+      "book": 58,
+      "length": 3,
+      "op_index": 1,
+      "previous_in_book_length": 24,
+      "previous_in_book_type": "copy",
+      "remaining": 248,
+      "target_start": 24
+    },
+    {
+      "book": 65,
+      "length": 3,
+      "op_index": 0,
+      "previous_in_book_length": null,
+      "previous_in_book_type": null,
+      "remaining": 169,
+      "target_start": 0
+    }
+  ],
+  "plaintext_claim": false,
+  "schema": "copy_availability_type_exception_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "target_text_dependency_retained": true,
+    "tests_target_dependent_copy_availability": true
+  },
+  "summary": {
+    "always_copy_errors": 53,
+    "always_literal_errors": 208,
+    "availability_conditioned_skeleton_records": 278,
+    "availability_conditioned_total_records": 539,
+    "availability_rule_coverage": 0.9348659003831418,
+    "availability_rule_errors": 17,
+    "availability_rule_hits": 244,
+    "copy_available_rows": 225,
+    "copy_count": 208,
+    "copy_recall_given_availability": 1.0,
+    "copy_unavailable_rows": 36,
+    "error_delta_vs_always_copy": -36,
+    "exact_atlas_records": 261,
+    "forced_literal_rows": 36,
+    "interpretation": "Target-dependent copy availability contains every copy event and forces 36 literal rows; only 17 available-copy literal exceptions remain. This is a strong mechanical clue about op type, but it depends on target text/copy availability and, after length/source/payload records are paid, it does not replace the exact skeleton atlas with a smaller generator.",
+    "literal_count": 53,
+    "literal_forced_share": 0.6792452830188679,
+    "op_count": 261,
+    "optional_literal_exceptions": 17,
+    "promotes_generator": false,
+    "record_delta_vs_exact_skeleton_atlas": 17,
+    "record_delta_vs_gate99_total_materialized": 17,
+    "target_dependent_type_exception_fields": 17,
+    "type_field_delta_vs_explicit_op_types": -244,
+    "unavailable_copy_exceptions": 0
+  },
+  "translation_delta": "NONE"
+}

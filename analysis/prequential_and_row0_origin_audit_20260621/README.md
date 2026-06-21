@@ -322,6 +322,9 @@ exogenous.
 - [scripts/102_type_motif_library_ledger.py](scripts/102_type_motif_library_ledger.py) - prices repeated operation-type motifs against the exact skeleton atlas.
 - [reports/test_results/102_type_motif_library_ledger.md](reports/test_results/102_type_motif_library_ledger.md) - type motif library ledger result.
 - [reports/test_results/102_type_motif_library_ledger.json](reports/test_results/102_type_motif_library_ledger.json) - structured type motif library ledger.
+- [scripts/103_copy_availability_type_exception_ledger.py](scripts/103_copy_availability_type_exception_ledger.py) - tests target-dependent copy availability as an operation-type exception ledger.
+- [reports/test_results/103_copy_availability_type_exception_ledger.md](reports/test_results/103_copy_availability_type_exception_ledger.md) - copy-availability type exception result.
+- [reports/test_results/103_copy_availability_type_exception_ledger.json](reports/test_results/103_copy_availability_type_exception_ledger.json) - structured copy-availability type exception ledger.
 
 ## Boundary
 
@@ -372,6 +375,11 @@ exogenous.
   residuals. The representation still requires `261` residual length/target
   records, for `514` total records (`+253` vs the exact skeleton atlas), so no
   type-motif library is promoted.
+- Copy-availability type boundary: target-dependent copy availability contains
+  every copy event (`208/208`) and forces `36` literals, leaving only `17`
+  available-copy literal exceptions. This beats shuffled controls, but it still
+  depends on target text/copy availability and yields `278` conditioned skeleton
+  records (`+17` vs exact atlas), so it is `AUDIT_ONLY`.
 - Predictive result: partial learned-component signal, not a final authorial
   generation method. The follow-up failure audit narrows the family failures to
   small component/sample-size stress cases; the train-CV selector audit then
