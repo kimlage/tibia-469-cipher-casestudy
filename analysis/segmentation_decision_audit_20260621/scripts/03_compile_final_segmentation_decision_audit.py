@@ -76,6 +76,9 @@ BOOK_START_COPY_SUBCLASS = (
 OBSERVABLE_SIGNATURE_SUPPORT = (
     TEST_RESULTS / "55_observable_signature_support_gate.json"
 )
+SEQUENTIAL_SIGNATURE_SUPPORT = (
+    TEST_RESULTS / "56_sequential_signature_support_gate.json"
+)
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -272,6 +275,11 @@ def main() -> None:
         if OBSERVABLE_SIGNATURE_SUPPORT.exists()
         else None
     )
+    sequential_signature_support = (
+        load_json(SEQUENTIAL_SIGNATURE_SUPPORT)
+        if SEQUENTIAL_SIGNATURE_SUPPORT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -386,6 +394,10 @@ def main() -> None:
     if observable_signature_support is not None:
         assert_boundary(
             "observable_signature_support_gate", observable_signature_support
+        )
+    if sequential_signature_support is not None:
+        assert_boundary(
+            "sequential_signature_support_gate", sequential_signature_support
         )
 
     ts = trace["summary"]
@@ -549,6 +561,11 @@ def main() -> None:
         None
         if observable_signature_support is None
         else observable_signature_support["summary"]
+    )
+    sequential_signature_support_summary = (
+        None
+        if sequential_signature_support is None
+        else sequential_signature_support["summary"]
     )
 
     lines = [
@@ -2070,6 +2087,39 @@ def main() -> None:
                 "",
             ]
         )
+    if sequential_signature_support_summary is not None:
+        lines.extend(
+            [
+                "## Sequential Signature Support Gate",
+                "",
+                "Gate 56 asks whether gate 55 failed only because the static",
+                "candidate signature lacks short path memory. It augments",
+                "candidate signatures with previous one or two operation shapes",
+                "and prior copy/literal counts inside the book. For a first-drift",
+                "residual, that prior path is observable because earlier operations",
+                "still match the active parser.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Sequential signature families | `{sequential_signature_support_summary['signature_family_count']}` |",
+                f"| Label modes | `{sequential_signature_support_summary['label_mode_count']}` |",
+                f"| Best signature | `{sequential_signature_support_summary['best_signature']}` |",
+                f"| Best label mode | `{sequential_signature_support_summary['best_label_mode']}` |",
+                f"| Best deterministic matches | `{sequential_signature_support_summary['best_deterministic_matches']}/{sequential_signature_support_summary['best_query_count']}` |",
+                f"| Best supported residuals | `{sequential_signature_support_summary['best_supported_count']}/{sequential_signature_support_summary['best_query_count']}` |",
+                f"| Best status counts | `{sequential_signature_support_summary['best_status_counts']}` |",
+                f"| Prequential cells with deterministic match | `{sequential_signature_support_summary['prequential_cells_with_deterministic_match']}/{sequential_signature_support_summary['prequential_cells_with_residuals']}` |",
+                f"| Prequential cover-all-residual cells | `{sequential_signature_support_summary['prequential_cover_all_residual_cells']}/{sequential_signature_support_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "Short observable path memory makes the support problem worse,",
+                "not better. Across all tested sequential signatures, the residual",
+                "queries have no support: the best result is `0/10` deterministic",
+                "matches and `0/10` supported residuals, with `10/10` out of",
+                "support. Prefix/holdout likewise has no deterministic held-out",
+                "residual match.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2141,6 +2191,9 @@ def main() -> None:
             "rejects it: the best signature has `0/10` deterministic residual",
             "matches, with most residuals out of support and `0/4` holdout",
             "cells containing any deterministic match.",
+            "Gate 56 adds short prior path memory to those candidate signatures",
+            "and rejects that too: every residual query is out of support under",
+            "the tested sequential signatures.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -2205,6 +2258,7 @@ def main() -> None:
             "- [Source interval cost gate](test_results/53_source_interval_cost_gate.md)",
             "- [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)",
             "- [Observable signature support gate](test_results/55_observable_signature_support_gate.md)",
+            "- [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)",
             "",
         ]
     )

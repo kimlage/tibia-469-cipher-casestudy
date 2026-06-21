@@ -1227,6 +1227,34 @@ among alternatives. Prefix/holdout also has `0/4` cells with
 any deterministic residual match, so the exposed candidate
 state does not supply a reusable segmentation rule.
 
+## Sequential Signature Support Gate
+
+Gate 56 asks whether gate 55 failed only because the static
+candidate signature lacks short path memory. It augments
+candidate signatures with previous one or two operation shapes
+and prior copy/literal counts inside the book. For a first-drift
+residual, that prior path is observable because earlier operations
+still match the active parser.
+
+| Diagnostic | Value |
+|---|---:|
+| Sequential signature families | `10` |
+| Label modes | `3` |
+| Best signature | `prev2_stable_x_decision_coarse` |
+| Best label mode | `stable_shape_label` |
+| Best deterministic matches | `0/10` |
+| Best supported residuals | `0/10` |
+| Best status counts | `{'out_of_support': 10}` |
+| Prequential cells with deterministic match | `0/4` |
+| Prequential cover-all-residual cells | `0/4` |
+
+Short observable path memory makes the support problem worse,
+not better. Across all tested sequential signatures, the residual
+queries have no support: the best result is `0/10` deterministic
+matches and `0/10` supported residuals, with `10/10` out of
+support. Prefix/holdout likewise has no deterministic held-out
+residual match.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1296,6 +1324,9 @@ Gate 55 then tests observable candidate-signature support and
 rejects it: the best signature has `0/10` deterministic residual
 matches, with most residuals out of support and `0/4` holdout
 cells containing any deterministic match.
+Gate 56 adds short prior path memory to those candidate signatures
+and rejects that too: every residual query is out of support under
+the tested sequential signatures.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1360,3 +1391,4 @@ or the stable projection as an oracle.
 - [Source interval cost gate](test_results/53_source_interval_cost_gate.md)
 - [Book-start copy subclass gate](test_results/54_book_start_copy_subclass_gate.md)
 - [Observable signature support gate](test_results/55_observable_signature_support_gate.md)
+- [Sequential signature support gate](test_results/56_sequential_signature_support_gate.md)

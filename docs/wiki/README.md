@@ -1263,6 +1263,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   tests observable candidate-signature support and rejects it: the best
   signature has `0/10` deterministic residual matches, `7/10` out of support,
   and `0/4` holdout cells with any deterministic match,
+  adds short prior path memory to those signatures and rejects that too: all
+  `10/10` residual queries are out of support under the tested sequential
+  signatures,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
