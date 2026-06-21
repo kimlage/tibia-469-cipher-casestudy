@@ -629,5 +629,9 @@ Generated audits in this directory should be treated as the current state:
   online parser into a full-corpus formula. It roundtrips `70/70` and lowers
   `compression_bound` from `8558.667` to `8343.062` bits (`-215.605`) without
   changing row0 or opening a semantic route.
+- `130_online_reparse_order_control_audit`: tests the promoted online parser
+  against reverse, parity, length-derived, and 6 seeded random book orders.
+  Numeric order remains best; the best random raw order is still `+188.584`
+  bits worse before arbitrary-order description cost.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

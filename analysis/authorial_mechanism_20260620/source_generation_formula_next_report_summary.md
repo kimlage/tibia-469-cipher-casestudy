@@ -596,6 +596,11 @@ Coverage of the remaining report recommendations and follow-on refinements:
   the same parser becomes a full-corpus formula, roundtrips `70/70`, and lowers
   `compression_bound` from `8558.667` to `8343.062` bits (`-215.605`), with no
   row0 or semantic claim.
+- online reparse order controls are now covered by
+  [`130_online_reparse_order_control_audit.py`](scripts/130_online_reparse_order_control_audit.py);
+  numeric order remains best among reverse, parity, length-derived, and 6
+  seeded random controls. The best random raw order is still `+188.584` bits
+  worse before the `log2(70!)` arbitrary-order charge.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

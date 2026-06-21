@@ -336,6 +336,9 @@ as `compression_bound`, not as a final authorial method.
   deterministic online parser into a full-corpus formula and promotes it only
   if it beats the active split-only bound with `70/70` roundtrip and no
   row0/semantic claim.
+- `scripts/130_online_reparse_order_control_audit.py` - controls the promoted
+  online parser against reverse, parity, length-derived, and random book
+  orders; numeric order remains best in the tested controls.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

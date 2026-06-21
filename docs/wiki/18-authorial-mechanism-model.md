@@ -881,6 +881,11 @@ full corpus as a deterministic formula. It roundtrips `70/70` and lowers the
 bound from `8558.667` to `8343.062` bits, but it is still mechanical only:
 row0 origin and semantics are unchanged.
 
+The online reparse order-control audit then checks whether this is arbitrary
+book-order overfitting. Numeric order remains best against reverse, parity,
+length-derived, and 6 seeded random orders; the best random raw order is still
+`+188.584` bits worse before charging `log2(70!)` for arbitrary order.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1156,6 +1161,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
 - [Online deterministic reparse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.md)
+- [Online reparse order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.md)
 
 ## Boundary
 
