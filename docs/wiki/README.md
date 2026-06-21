@@ -711,6 +711,13 @@ The book `49` residual split audit localizes that last instability: cutoffs
 `35` keeps a coalesced `25`-digit literal. Removing local `literal_length` or
 `item_type` charge makes the split-prefix variant win in all three cutoffs, but
 this is audit-only rather than a corpus-wide rule.
+A global item/literal-length control gate then applies those local controls to
+the full multi-cutoff parser set. Removing `item_type` charge closes exact path
+stability at `50/50`; removing both `item_type` and `literal_length` also reaches
+`50/50` and gives the best parser-bit delta (`-770.657134` versus the
+payload-uniform baseline), with `175/175` roundtrip/raw-positive evaluations.
+This is parser-stability progress only: `row0 unchanged`, no compression-bound
+promotion, and no semantic claim.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -901,6 +908,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   mode),
   localizes book `49` as a prefix split/coalescence decision (`11+7+7` versus
   `25`, fixed local controls audit-only),
+  applies those controls globally and closes exact path stability at `50/50`
+  under no-item-type or no-item-plus-literal-length charge, while keeping row0
+  unchanged,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

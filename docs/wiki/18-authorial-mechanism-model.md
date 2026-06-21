@@ -245,6 +245,14 @@ charge or the `item_type` charge makes the split-prefix variant win in all
 three cutoffs. This explains the residual as a prefix split/coalescence
 decision, but it is not yet a corpus-wide generator rule.
 
+A global item/literal-length control gate then tests those local controls across
+the full multi-cutoff parser set. Removing `item_type` charge closes exact path
+stability at `50/50`; removing both `item_type` and `literal_length` also reaches
+`50/50` and gives the best parser-bit delta (`-770.657134` versus the
+payload-uniform baseline), while preserving `175/175` roundtrip/raw-positive
+evaluations. This is a parser-stability simplification: it does not change the
+`8154.676268` compression bound, explain `row0`, or add plaintext evidence.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

@@ -271,6 +271,9 @@ exogenous.
 - [scripts/85_book49_residual_split_cause_audit.py](scripts/85_book49_residual_split_cause_audit.py) - localizes the remaining book `49` residual as a prefix split and tests fixed local item/literal-length controls.
 - [reports/test_results/85_book49_residual_split_cause_audit.md](reports/test_results/85_book49_residual_split_cause_audit.md) - book `49` residual split cause result.
 - [reports/test_results/85_book49_residual_split_cause_audit.json](reports/test_results/85_book49_residual_split_cause_audit.json) - structured book `49` residual split ledger.
+- [scripts/86_global_item_literal_length_control_gate.py](scripts/86_global_item_literal_length_control_gate.py) - applies the book `49` local item/literal-length controls globally.
+- [reports/test_results/86_global_item_literal_length_control_gate.md](reports/test_results/86_global_item_literal_length_control_gate.md) - global item/literal-length control result.
+- [reports/test_results/86_global_item_literal_length_control_gate.json](reports/test_results/86_global_item_literal_length_control_gate.json) - structured global item/literal-length control ledger.
 
 ## Boundary
 
@@ -566,6 +569,13 @@ exogenous.
   Removing either local `literal_length` or local `item_type` charge makes the
   split-prefix variant win in all three cutoffs, but this remains audit-only
   and does not emit a corpus-wide formula.
+- The global item/literal-length control gate then tests those local controls
+  corpus-wide. Removing `item_type` charge closes exact path stability at
+  `50/50`; removing both `item_type` and `literal_length` also reaches `50/50`
+  and gives the best parser-bit delta (`-770.657134` versus the
+  payload-uniform baseline), with `175/175` roundtrip/raw-positive evaluations.
+  This is a parser-stability simplification, not a compression-bound change or
+  row0-origin result.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
