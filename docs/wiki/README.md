@@ -794,6 +794,10 @@ Even granting book lengths and operation types, `11` Markov/context grammars
 do not generate the `261` operation lengths: the best full-fit context gets
 only `9/60` exact books and `43/261` generated row hits, with `0/5`
 cover-all holdout cells.
+An operation-length motif audit then tests whether sub-book reusable length
+motifs replace the atlas. They do not: the best full-fit motif library saves
+only `2` records while leaving `249` residual singleton lengths, and prefix/
+holdout libraries cover `0` future books without residuals.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and

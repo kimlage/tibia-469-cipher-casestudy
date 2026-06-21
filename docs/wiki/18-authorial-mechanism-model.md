@@ -371,6 +371,11 @@ generous assumptions: book lengths and operation types are granted, and only the
 families (`op_index_x_type`) produces only `9/60` exact books, `43/261`
 generated row hits, and `52/261` rowwise hits, with `0/5` cover-all holdout
 cells. The operation-length atlas remains retained.
+An operation-length motif audit then tests a non-Markov structural alternative:
+reusable sub-book length motifs. This also fails as a generator. The best
+full-fit library has only `2` motifs, saves `2` records, and still leaves
+`249` residual singleton lengths; prefix/holdout motif libraries cover `0`
+future books without residuals. The motif family is therefore not promoted.
 A book order generation audit then consolidates the scattered order controls
 against the current boundary. Numeric order remains the compact canonical order
 used by the formula: full-formula and descriptor-cost gates promote no
@@ -2505,6 +2510,8 @@ book generation, not row0 pair-cell placement.
 - [Generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.md)
 - [Final operation length Markov audit](../../analysis/operation_length_markov_audit_20260621/reports/final_operation_length_markov_audit.md)
 - [Operation length Markov gate](../../analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.md)
+- [Final operation length motif audit](../../analysis/operation_length_motif_audit_20260621/reports/final_operation_length_motif_audit.md)
+- [Operation length motif library gate](../../analysis/operation_length_motif_audit_20260621/reports/test_results/01_operation_length_motif_library_gate.md)
 - [Final book order generation audit](../../analysis/book_order_generation_audit_20260621/reports/final_book_order_generation_audit.md)
 - [Book order dependency gate](../../analysis/book_order_generation_audit_20260621/reports/test_results/01_book_order_dependency_gate.md)
 - [Final book length generation audit](../../analysis/book_length_generation_audit_20260621/reports/final_book_length_generation_audit.md)
