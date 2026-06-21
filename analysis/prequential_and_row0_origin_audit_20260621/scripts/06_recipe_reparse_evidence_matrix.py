@@ -21,6 +21,8 @@ SOURCES = {
     "reparse_family_loss_decomposition": TEST_RESULTS
     / "09_recipe_reparse_family_loss_decomposition.json",
     "family_holdout_address_space": TEST_RESULTS / "10_family_holdout_address_space_audit.json",
+    "family_holdout_address_corrected_scoreboard": TEST_RESULTS
+    / "11_family_holdout_address_corrected_scoreboard.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -48,6 +50,7 @@ def make_result() -> dict[str, Any]:
     family_holdout = load_json(SOURCES["reparse_family_holdout"])
     family_loss_decomposition = load_json(SOURCES["reparse_family_loss_decomposition"])
     address_space = load_json(SOURCES["family_holdout_address_space"])
+    address_corrected = load_json(SOURCES["family_holdout_address_corrected_scoreboard"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -59,6 +62,7 @@ def make_result() -> dict[str, Any]:
         ("reparse_family_holdout", family_holdout),
         ("reparse_family_loss_decomposition", family_loss_decomposition),
         ("family_holdout_address_space", address_space),
+        ("family_holdout_address_corrected_scoreboard", address_corrected),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -249,6 +253,38 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_family_holdout_reparse_beat_active_after_address_correction",
+            "source": rel(SOURCES["family_holdout_address_corrected_scoreboard"]),
+            "status": "passed_address_corrected_family_holdout",
+            "evidence": {
+                "family_count": address_corrected["summary"]["family_count"],
+                "reparse_beats_raw_count": address_corrected["summary"][
+                    "reparse_beats_raw_count"
+                ],
+                "original_reparse_beats_or_ties_active_count": address_corrected["summary"][
+                    "original_reparse_beats_or_ties_active_count"
+                ],
+                "address_corrected_reparse_beats_or_ties_active_count": address_corrected[
+                    "summary"
+                ]["address_corrected_reparse_beats_or_ties_active_count"],
+                "mean_original_reparse_minus_active_bits": address_corrected["summary"][
+                    "mean_original_reparse_minus_active_bits"
+                ],
+                "mean_address_corrected_reparse_minus_active_bits": address_corrected[
+                    "summary"
+                ]["mean_address_corrected_reparse_minus_active_bits"],
+                "address_corrected_worse_labels": address_corrected["summary"][
+                    "address_corrected_worse_labels"
+                ],
+            },
+            "interpretation": (
+                "Under same-coordinate copy-address costs, deterministic reparse "
+                "beats or ties the active family recipe for every public-bookcase "
+                "family. This strengthens predictive recipe validation while "
+                "leaving row0 and semantics unchanged."
+            ),
+        },
+        {
             "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
             "source": rel(SOURCES["online_reparse_compile"]),
             "status": "passed_as_mechanical_compile_not_semantic_claim",
@@ -397,6 +433,16 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['family_count']}; mean delta "
                 f"{evidence['mean_original_address_delta_bits']:.3f} -> "
                 f"{evidence['mean_rebased_address_delta_bits']:.3f} bits"
+            )
+        elif row["question"] == "does_family_holdout_reparse_beat_active_after_address_correction":
+            key = (
+                f"beats raw {evidence['reparse_beats_raw_count']}/{evidence['family_count']}; "
+                f"beats/ties active {evidence['original_reparse_beats_or_ties_active_count']}/"
+                f"{evidence['family_count']} -> "
+                f"{evidence['address_corrected_reparse_beats_or_ties_active_count']}/"
+                f"{evidence['family_count']}; mean reparse-active "
+                f"{evidence['mean_original_reparse_minus_active_bits']:.3f} -> "
+                f"{evidence['mean_address_corrected_reparse_minus_active_bits']:.3f}"
             )
         elif row["question"] == "does_online_reparse_reduce_full_corpus_recipe_cost":
             key = (

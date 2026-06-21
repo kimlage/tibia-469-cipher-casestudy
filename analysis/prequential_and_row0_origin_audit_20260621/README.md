@@ -46,6 +46,9 @@ exogenous.
 - [scripts/10_family_holdout_address_space_audit.py](scripts/10_family_holdout_address_space_audit.py) - tests whether the remaining family copy-address losses survive same-coordinate repricing.
 - [reports/test_results/10_family_holdout_address_space_audit.md](reports/test_results/10_family_holdout_address_space_audit.md) - address-space repricing result.
 - [reports/test_results/10_family_holdout_address_space_audit.json](reports/test_results/10_family_holdout_address_space_audit.json) - structured address-space ledger.
+- [scripts/11_family_holdout_address_corrected_scoreboard.py](scripts/11_family_holdout_address_corrected_scoreboard.py) - applies the address-space correction to every public-bookcase family holdout.
+- [reports/test_results/11_family_holdout_address_corrected_scoreboard.md](reports/test_results/11_family_holdout_address_corrected_scoreboard.md) - address-corrected family scoreboard.
+- [reports/test_results/11_family_holdout_address_corrected_scoreboard.json](reports/test_results/11_family_holdout_address_corrected_scoreboard.json) - structured address-corrected family ledger.
 
 ## Boundary
 
@@ -70,7 +73,9 @@ exogenous.
   than changed literal/copy inventory. Same-coordinate address repricing then
   shows those copy-address losses are artifacts of comparing reparse addresses
   emitted after the training complement against active addresses charged in
-  original global numeric positions.
+  original global numeric positions. Applying that correction across every
+  public-bookcase family changes the active comparison from `15/19` beat-or-tie
+  families before correction to `19/19` after correction.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

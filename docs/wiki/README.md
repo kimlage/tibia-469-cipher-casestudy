@@ -400,6 +400,9 @@ A same-coordinate address-space audit then shows those copy-address losses are
 comparison artifacts: repricing the active recipe in the heldout-after-train
 coordinate system drops the mean address delta from `4.667` bits to
 approximately `0.000` bits.
+Applying that correction to all public-bookcase families changes the
+reparse-vs-active beat/tie coverage from `15/19` to `19/19`, while preserving
+`19/19` raw-digit wins.
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -578,9 +581,10 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   externality through deterministic-reparse evidence and multi-cutoff train-set
   controls, adds public-bookcase family holdout evidence, localizes remaining
   family losses to copy-address overhead or exact tie, shows those address
-  losses vanish under same-coordinate repricing, closes the row0
-  hypothesis requirement matrix with zero promoted origin formulas, and keeps
-  row0 origin exogenous with translation delta zero.
+  losses vanish under same-coordinate repricing, records `19/19`
+  address-corrected family beat/tie coverage, closes the row0 hypothesis
+  requirement matrix with zero promoted origin formulas, and keeps row0 origin
+  exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)
   and the per-iteration plans in [docs/plans/](../plans/README.md). Some figures

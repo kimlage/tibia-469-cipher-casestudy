@@ -131,6 +131,16 @@ The prior active-recipe local wins were therefore an address-space
 comparison artifact, not a reparse failure.
 See [10_family_holdout_address_space_audit.md](test_results/10_family_holdout_address_space_audit.md).
 
+### Address-Corrected Family Scoreboard
+
+Applying the same correction to all public-bookcase family holdouts
+changes the active comparison from `15/19` beat-or-tie families before
+correction to `19/19` after correction. Reparse still beats raw digits
+in `19/19` families, and the mean reparse-minus-active gap moves from
+`-139.959` to `-161.381` bits. This is stronger predictive recipe
+evidence, still not row0 derivation or semantics.
+See [11_family_holdout_address_corrected_scoreboard.md](test_results/11_family_holdout_address_corrected_scoreboard.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -180,7 +190,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, including public-bookcase family holdouts; the remaining copy-address family losses vanish under same-coordinate repricing, so they are not real reparse failures.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

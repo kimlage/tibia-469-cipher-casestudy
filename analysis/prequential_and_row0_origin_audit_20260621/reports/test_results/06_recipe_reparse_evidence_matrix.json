@@ -128,6 +128,21 @@
     },
     {
       "evidence": {
+        "address_corrected_reparse_beats_or_ties_active_count": 19,
+        "address_corrected_worse_labels": [],
+        "family_count": 19,
+        "mean_address_corrected_reparse_minus_active_bits": -161.3805405585797,
+        "mean_original_reparse_minus_active_bits": -139.95940246532848,
+        "original_reparse_beats_or_ties_active_count": 15,
+        "reparse_beats_raw_count": 19
+      },
+      "interpretation": "Under same-coordinate copy-address costs, deterministic reparse beats or ties the active family recipe for every public-bookcase family. This strengthens predictive recipe validation while leaving row0 and semantics unchanged.",
+      "question": "does_family_holdout_reparse_beat_active_after_address_correction",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
+      "status": "passed_address_corrected_family_holdout"
+    },
+    {
+      "evidence": {
         "active_scope_bits": 8558.666806283434,
         "candidate_gain_vs_active_bits": 215.60486134796702,
         "candidate_total_bits": 8343.061944935467,
@@ -162,6 +177,7 @@
     "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
   },
   "inputs": {
+    "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
