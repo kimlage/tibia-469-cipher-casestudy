@@ -887,6 +887,9 @@ cells. The blocker is not a simple missed-copy threshold.
 A peak-strength control rejects the opposite shortcut too: requiring stronger
 local peaks up to `min_peak_len30` does not beat `48/60`; `min_peak_len6` only
 ties while trading understops for missed-copy/overstop failures.
+A residual-context audit then tests `64` simple parser-state predicates; the
+best flag catches only `4/12` residual drifts with `3` false positives, so the
+remaining boundary problem is not a single local context rule.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

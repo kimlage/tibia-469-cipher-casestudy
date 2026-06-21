@@ -208,6 +208,27 @@ and overstop failures; larger thresholds degrade sharply. The
 remaining literal-understop cases are therefore not solved by a
 simple weak-peak filter.
 
+## Residual Context Predicate Control
+
+After local-threshold rescues failed, gate 12 asks whether simple
+observable parser-state predicates can identify the remaining
+first-drift decisions well enough to become correction rules.
+
+| Predicate family | Best result | Boundary |
+|---|---|---|
+| `peak_len_le5` | TP/FP/FN `4/3/8`, precision `0.571`, recall `0.333` | rejected |
+
+- Decision rows: `221`.
+- Error rows: `12`.
+- Predicate count: `64`.
+- Prequential selected predicate matches suffix oracle in `2/5` cells.
+
+The best simple flag, `peak_len_le5`, catches only `4/12` residual
+errors and also flags clean decisions. Broader predicates catch more
+errors only by creating many false positives. The remaining drift
+therefore looks like a mixed path/state problem rather than a
+single observable local context rule.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -228,3 +249,4 @@ or changed skeleton/literal accounting.
 - [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)
 - [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)
 - [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)
+- [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)

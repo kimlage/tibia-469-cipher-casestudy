@@ -20,6 +20,7 @@ INTEGRATED_ONLINE = TEST_RESULTS / "08_integrated_online_literal_parser_audit.js
 POLICY_DRIFT = TEST_RESULTS / "09_integrated_parser_policy_and_drift_audit.json"
 OVERRIDE = TEST_RESULTS / "10_integrated_parser_override_audit.json"
 PEAK_STRENGTH = TEST_RESULTS / "11_integrated_parser_peak_strength_audit.json"
+RESIDUAL_CONTEXT = TEST_RESULTS / "12_integrated_parser_residual_context_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -60,6 +61,9 @@ def main() -> None:
     policy_drift = load_json(POLICY_DRIFT) if POLICY_DRIFT.exists() else None
     override = load_json(OVERRIDE) if OVERRIDE.exists() else None
     peak_strength = load_json(PEAK_STRENGTH) if PEAK_STRENGTH.exists() else None
+    residual_context = (
+        load_json(RESIDUAL_CONTEXT) if RESIDUAL_CONTEXT.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -78,6 +82,8 @@ def main() -> None:
         assert_boundary("integrated_parser_override_audit", override)
     if peak_strength is not None:
         assert_boundary("integrated_parser_peak_strength_audit", peak_strength)
+    if residual_context is not None:
+        assert_boundary("integrated_parser_residual_context_audit", residual_context)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -95,6 +101,9 @@ def main() -> None:
     policy_drift_summary = None if policy_drift is None else policy_drift["summary"]
     override_summary = None if override is None else override["summary"]
     peak_summary = None if peak_strength is None else peak_strength["summary"]
+    residual_context_summary = (
+        None if residual_context is None else residual_context["summary"]
+    )
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -368,6 +377,33 @@ def main() -> None:
                 "",
             ]
         )
+    if residual_context_summary is not None:
+        best = residual_context_summary["best_predicate"]
+        lines.extend(
+            [
+                "## Residual Context Predicate Control",
+                "",
+                "After local-threshold rescues failed, gate 12 asks whether simple",
+                "observable parser-state predicates can identify the remaining",
+                "first-drift decisions well enough to become correction rules.",
+                "",
+                "| Predicate family | Best result | Boundary |",
+                "|---|---|---|",
+                f"| `{best['predicate']}` | TP/FP/FN `{best['tp']}/{best['fp']}/{best['fn']}`, precision `{best['precision']:.3f}`, recall `{best['recall']:.3f}` | rejected |",
+                "",
+                f"- Decision rows: `{residual_context_summary['decision_rows']}`.",
+                f"- Error rows: `{residual_context_summary['error_rows']}`.",
+                f"- Predicate count: `{residual_context_summary['predicate_count']}`.",
+                f"- Prequential selected predicate matches suffix oracle in `{residual_context_summary['prequential_selected_matches_oracle_cells']}/{residual_context_summary['prequential_cells']}` cells.",
+                "",
+                "The best simple flag, `peak_len_le5`, catches only `4/12` residual",
+                "errors and also flags clean decisions. Broader predicates catch more",
+                "errors only by creating many false positives. The remaining drift",
+                "therefore looks like a mixed path/state problem rather than a",
+                "single observable local context rule.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -390,6 +426,7 @@ def main() -> None:
             "- [Integrated parser policy and drift audit](test_results/09_integrated_parser_policy_and_drift_audit.md)",
             "- [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)",
             "- [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)",
+            "- [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)",
             "",
         ]
     )
