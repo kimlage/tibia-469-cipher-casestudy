@@ -827,6 +827,30 @@ residuals are ambiguous or contradictory. The missing mechanism
 therefore needs new latent state or a source-free target stream
 account, not another reuse rule over the exposed state.
 
+## Latent State Requirement Boundary
+
+Gate 40 tests whether simple observable latent-state splits
+repair the gate-39 support failure. It tries book parity,
+book modulo/decade/half, operation index, target half, and
+active-operation splits across the trajectory/context/combined
+families.
+
+| Diagnostic | Value |
+|---|---:|
+| Score count | `33` |
+| Best split | `trajectory + target_half` |
+| Deterministic matches | `0/10` |
+| Supported residual states | `4/10` |
+| Out-of-support residual states | `6/10` |
+| Residuals needing latent resolution | `10` |
+| Distinct stable labels needing resolution | `9` |
+| Minimum oracle bits for distinct labels | `3.170` |
+
+No simple split produces deterministic residual matches. A
+candidate latent state would need to explain all `10` remaining
+residual distinctions, with `9` distinct stable labels still
+unaccounted for by the exposed state.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -847,8 +871,9 @@ clean residual threshold hidden inside those signals. Gate 36 closes
 that branch-choice weak-signal frontier as audit-only. Gate 37 then
 rejects simple exact-length path-template reuse. Gate 38 rejects
 nearest trajectory-state reuse. Gate 39 shows the exposed state
-families have no deterministic residual support. The remaining
-blocker is a richer latent path/state
+families have no deterministic residual support. Gate 40 shows
+simple observable splits still leave `10` residual distinctions
+needing latent resolution. The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -896,3 +921,4 @@ or the stable projection as an oracle.
 - [Path template reuse audit](test_results/37_path_template_reuse_audit.md)
 - [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)
 - [Observable state support audit](test_results/39_observable_state_support_audit.md)
+- [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)

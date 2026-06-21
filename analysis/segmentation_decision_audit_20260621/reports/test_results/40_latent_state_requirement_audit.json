@@ -1,0 +1,687 @@
+{
+  "best_prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "deterministic_matches": 0,
+      "query_count": 8,
+      "status_counts": {
+        "ambiguous_excludes_stable": 3,
+        "out_of_support": 5
+      },
+      "supported_count": 3
+    },
+    {
+      "cutoff_book": 30,
+      "deterministic_matches": 0,
+      "query_count": 5,
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "out_of_support": 4
+      },
+      "supported_count": 1
+    },
+    {
+      "cutoff_book": 40,
+      "deterministic_matches": 0,
+      "query_count": 3,
+      "status_counts": {
+        "out_of_support": 3
+      },
+      "supported_count": 0
+    },
+    {
+      "cutoff_book": 50,
+      "deterministic_matches": 0,
+      "query_count": 2,
+      "status_counts": {
+        "out_of_support": 2
+      },
+      "supported_count": 0
+    },
+    {
+      "cutoff_book": 60,
+      "deterministic_matches": 0,
+      "query_count": 0,
+      "status_counts": {},
+      "supported_count": 0
+    }
+  ],
+  "best_rows": [
+    {
+      "active_label": [
+        "literal",
+        27
+      ],
+      "book": 14,
+      "deterministic_match": false,
+      "label_count": 39,
+      "op_index": 0,
+      "stable_label": [
+        "literal",
+        39
+      ],
+      "status": "ambiguous_excludes_stable",
+      "support": 50
+    },
+    {
+      "active_label": [
+        "copy",
+        8
+      ],
+      "book": 16,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 9,
+      "stable_label": [
+        "literal",
+        1
+      ],
+      "status": "out_of_support",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        3
+      ],
+      "book": 20,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 2,
+      "stable_label": [
+        "copy",
+        10
+      ],
+      "status": "out_of_support",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        7
+      ],
+      "book": 21,
+      "deterministic_match": false,
+      "label_count": 39,
+      "op_index": 0,
+      "stable_label": [
+        "copy",
+        9
+      ],
+      "status": "ambiguous_includes_stable",
+      "support": 50
+    },
+    {
+      "active_label": [
+        "literal",
+        1
+      ],
+      "book": 26,
+      "deterministic_match": false,
+      "label_count": 39,
+      "op_index": 0,
+      "stable_label": [
+        "copy",
+        11
+      ],
+      "status": "ambiguous_includes_stable",
+      "support": 50
+    },
+    {
+      "active_label": [
+        "literal",
+        5
+      ],
+      "book": 34,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 7,
+      "stable_label": [
+        "copy",
+        5
+      ],
+      "status": "out_of_support",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        7
+      ],
+      "book": 39,
+      "deterministic_match": false,
+      "label_count": 39,
+      "op_index": 0,
+      "stable_label": [
+        "copy",
+        5
+      ],
+      "status": "ambiguous_excludes_stable",
+      "support": 50
+    },
+    {
+      "active_label": [
+        "literal",
+        1
+      ],
+      "book": 45,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 1,
+      "stable_label": [
+        "copy",
+        8
+      ],
+      "status": "out_of_support",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "copy",
+        45
+      ],
+      "book": 55,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 2,
+      "stable_label": [
+        "copy",
+        44
+      ],
+      "status": "out_of_support",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        17
+      ],
+      "book": 57,
+      "deterministic_match": false,
+      "label_count": 0,
+      "op_index": 2,
+      "stable_label": [
+        "literal",
+        28
+      ],
+      "status": "out_of_support",
+      "support": 0
+    }
+  ],
+  "case_reopened": false,
+  "classification": "latent_state_requirement_audit_only",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "latent_state_requirement_audit_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "latent_state_requirement_quantified",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "observable_state_support_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/39_observable_state_support_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "latent_state_requirement_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "promotes_parser_rule": false,
+    "quantifies_latent_state_requirement": true,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true
+  },
+  "scoreboard": [
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "book_half",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "book_parity",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "none",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "op_index_bucket",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "op_index_parity",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "target_half",
+      "status_counts": {
+        "ambiguous_excludes_stable": 2,
+        "ambiguous_includes_stable": 2,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 3,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "book_mod3",
+      "status_counts": {
+        "ambiguous_excludes_stable": 3,
+        "ambiguous_includes_stable": 1,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 3,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "book_mod5",
+      "status_counts": {
+        "ambiguous_excludes_stable": 3,
+        "ambiguous_includes_stable": 1,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 4,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "active_length_bucket",
+      "status_counts": {
+        "ambiguous_excludes_stable": 3,
+        "deterministic_contradiction": 1,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 4,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "active_type",
+      "status_counts": {
+        "ambiguous_excludes_stable": 4,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 4,
+      "deterministic_matches": 0,
+      "family": "trajectory",
+      "out_of_support_count": 6,
+      "split": "book_decade",
+      "status_counts": {
+        "ambiguous_excludes_stable": 4,
+        "out_of_support": 6
+      },
+      "supported_count": 4
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 8,
+      "split": "active_length_bucket",
+      "status_counts": {
+        "ambiguous_includes_stable": 1,
+        "deterministic_contradiction": 1,
+        "out_of_support": 8
+      },
+      "supported_count": 2
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 8,
+      "split": "active_type",
+      "status_counts": {
+        "ambiguous_includes_stable": 1,
+        "deterministic_contradiction": 1,
+        "out_of_support": 8
+      },
+      "supported_count": 2
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 8,
+      "split": "none",
+      "status_counts": {
+        "ambiguous_includes_stable": 1,
+        "deterministic_contradiction": 1,
+        "out_of_support": 8
+      },
+      "supported_count": 2
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 8,
+      "split": "book_half",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "deterministic_contradiction": 1,
+        "out_of_support": 8
+      },
+      "supported_count": 2
+    },
+    {
+      "contradiction_count": 2,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 8,
+      "split": "target_half",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "deterministic_contradiction": 1,
+        "out_of_support": 8
+      },
+      "supported_count": 2
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "book_mod3",
+      "status_counts": {
+        "ambiguous_includes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "book_parity",
+      "status_counts": {
+        "ambiguous_includes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "book_decade",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "book_mod5",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "op_index_bucket",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 1,
+      "deterministic_matches": 0,
+      "family": "context",
+      "out_of_support_count": 9,
+      "split": "op_index_parity",
+      "status_counts": {
+        "ambiguous_excludes_stable": 1,
+        "out_of_support": 9
+      },
+      "supported_count": 1
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "active_length_bucket",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "active_type",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "book_decade",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "book_half",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "book_mod3",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "book_mod5",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "book_parity",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "none",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "op_index_bucket",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "op_index_parity",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    },
+    {
+      "contradiction_count": 0,
+      "deterministic_matches": 0,
+      "family": "combined",
+      "out_of_support_count": 10,
+      "split": "target_half",
+      "status_counts": {
+        "out_of_support": 10
+      },
+      "supported_count": 0
+    }
+  ],
+  "summary": {
+    "best_deterministic_matches": 0,
+    "best_family": "trajectory",
+    "best_out_of_support_count": 6,
+    "best_query_count": 10,
+    "best_split": "target_half",
+    "best_supported_count": 4,
+    "distinct_stable_labels_needing_resolution": 9,
+    "exact_book_count": 50,
+    "families_tested": [
+      "trajectory",
+      "context",
+      "combined"
+    ],
+    "interpretation": "Latent-state requirement tests whether simple observable splits of the exposed state repair the support failure, and records a lower bound on residual distinctions if they do not.",
+    "minimum_oracle_bits_for_distinct_labels": 3.169925001442312,
+    "minimum_oracle_bits_for_residual_index": 3.321928094887362,
+    "prequential_cells_with_match": 0,
+    "prequential_cells_with_residuals": 4,
+    "promotes_latent_state_split_parser": false,
+    "residual_book_count": 10,
+    "residual_books": [
+      14,
+      16,
+      20,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "residuals_needing_latent_resolution": 10,
+    "score_count": 33,
+    "splits_tested": [
+      "none",
+      "book_parity",
+      "book_mod3",
+      "book_mod5",
+      "book_decade",
+      "book_half",
+      "op_index_parity",
+      "op_index_bucket",
+      "target_half",
+      "active_type",
+      "active_length_bucket"
+    ],
+    "status_label_pairs_needing_resolution": 10
+  },
+  "translation_delta": "NONE"
+}

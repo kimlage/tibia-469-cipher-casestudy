@@ -48,6 +48,7 @@ BRANCH_CHOICE_CLOSURE = TEST_RESULTS / "36_branch_choice_frontier_closure_audit.
 PATH_TEMPLATE_REUSE = TEST_RESULTS / "37_path_template_reuse_audit.json"
 TRAJECTORY_NEIGHBOR = TEST_RESULTS / "38_trajectory_neighbor_parser_audit.json"
 OBSERVABLE_STATE_SUPPORT = TEST_RESULTS / "39_observable_state_support_audit.json"
+LATENT_STATE_REQUIREMENT = TEST_RESULTS / "40_latent_state_requirement_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -166,6 +167,11 @@ def main() -> None:
         if OBSERVABLE_STATE_SUPPORT.exists()
         else None
     )
+    latent_state_requirement = (
+        load_json(LATENT_STATE_REQUIREMENT)
+        if LATENT_STATE_REQUIREMENT.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -242,6 +248,8 @@ def main() -> None:
         assert_boundary("trajectory_neighbor_parser_audit", trajectory_neighbor)
     if observable_state_support is not None:
         assert_boundary("observable_state_support_audit", observable_state_support)
+    if latent_state_requirement is not None:
+        assert_boundary("latent_state_requirement_audit", latent_state_requirement)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -334,6 +342,9 @@ def main() -> None:
     )
     observable_state_support_summary = (
         None if observable_state_support is None else observable_state_support["summary"]
+    )
+    latent_state_requirement_summary = (
+        None if latent_state_requirement is None else latent_state_requirement["summary"]
     )
 
     lines = [
@@ -1374,6 +1385,35 @@ def main() -> None:
                 "",
             ]
         )
+    if latent_state_requirement_summary is not None:
+        lines.extend(
+            [
+                "## Latent State Requirement Boundary",
+                "",
+                "Gate 40 tests whether simple observable latent-state splits",
+                "repair the gate-39 support failure. It tries book parity,",
+                "book modulo/decade/half, operation index, target half, and",
+                "active-operation splits across the trajectory/context/combined",
+                "families.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Score count | `{latent_state_requirement_summary['score_count']}` |",
+                f"| Best split | `{latent_state_requirement_summary['best_family']} + {latent_state_requirement_summary['best_split']}` |",
+                f"| Deterministic matches | `{latent_state_requirement_summary['best_deterministic_matches']}/{latent_state_requirement_summary['best_query_count']}` |",
+                f"| Supported residual states | `{latent_state_requirement_summary['best_supported_count']}/{latent_state_requirement_summary['best_query_count']}` |",
+                f"| Out-of-support residual states | `{latent_state_requirement_summary['best_out_of_support_count']}/{latent_state_requirement_summary['best_query_count']}` |",
+                f"| Residuals needing latent resolution | `{latent_state_requirement_summary['residuals_needing_latent_resolution']}` |",
+                f"| Distinct stable labels needing resolution | `{latent_state_requirement_summary['distinct_stable_labels_needing_resolution']}` |",
+                f"| Minimum oracle bits for distinct labels | `{latent_state_requirement_summary['minimum_oracle_bits_for_distinct_labels']:.3f}` |",
+                "",
+                "No simple split produces deterministic residual matches. A",
+                "candidate latent state would need to explain all `10` remaining",
+                "residual distinctions, with `9` distinct stable labels still",
+                "unaccounted for by the exposed state.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1396,8 +1436,9 @@ def main() -> None:
             "that branch-choice weak-signal frontier as audit-only. Gate 37 then",
             "rejects simple exact-length path-template reuse. Gate 38 rejects",
             "nearest trajectory-state reuse. Gate 39 shows the exposed state",
-            "families have no deterministic residual support. The remaining",
-            "blocker is a richer latent path/state",
+            "families have no deterministic residual support. Gate 40 shows",
+            "simple observable splits still leave `10` residual distinctions",
+            "needing latent resolution. The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1445,6 +1486,7 @@ def main() -> None:
             "- [Path template reuse audit](test_results/37_path_template_reuse_audit.md)",
             "- [Trajectory neighbor parser audit](test_results/38_trajectory_neighbor_parser_audit.md)",
             "- [Observable state support audit](test_results/39_observable_state_support_audit.md)",
+            "- [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)",
             "",
         ]
     )
