@@ -67,6 +67,8 @@ SOURCES = {
     / "37_cutoff60_source_state_reparse_prototype_gate.json",
     "multicutoff_source_state_reparse_reprice_gate": TEST_RESULTS
     / "38_multicutoff_source_state_reparse_reprice_gate.json",
+    "multicutoff_source_choice_optimizer_gate": TEST_RESULTS
+    / "39_multicutoff_source_choice_optimizer_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -130,6 +132,9 @@ def make_result() -> dict[str, Any]:
     multicutoff_source_state_reprice_gate = load_json(
         SOURCES["multicutoff_source_state_reparse_reprice_gate"]
     )
+    source_choice_optimizer_gate = load_json(
+        SOURCES["multicutoff_source_choice_optimizer_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -175,6 +180,7 @@ def make_result() -> dict[str, Any]:
             "multicutoff_source_state_reparse_reprice_gate",
             multicutoff_source_state_reprice_gate,
         ),
+        ("multicutoff_source_choice_optimizer_gate", source_choice_optimizer_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -947,6 +953,53 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "can_fixed_segmentation_source_choice_improve_repricing",
+            "source": rel(SOURCES["multicutoff_source_choice_optimizer_gate"]),
+            "status": "failed_no_cheaper_source_choices_found",
+            "evidence": {
+                "cutoff_count": source_choice_optimizer_gate["summary"][
+                    "cutoff_count"
+                ],
+                "all_roundtrip": source_choice_optimizer_gate["summary"][
+                    "all_roundtrip"
+                ],
+                "all_books_beat_raw": source_choice_optimizer_gate["summary"][
+                    "all_books_beat_raw"
+                ],
+                "aggregate_beats_reprice_cutoff_count": source_choice_optimizer_gate[
+                    "summary"
+                ]["aggregate_beats_reprice_cutoff_count"],
+                "aggregate_beats_uniform_cutoff_count": source_choice_optimizer_gate[
+                    "summary"
+                ]["aggregate_beats_uniform_cutoff_count"],
+                "total_bits": source_choice_optimizer_gate["summary"]["total_bits"],
+                "total_reprice_bits": source_choice_optimizer_gate["summary"][
+                    "total_reprice_bits"
+                ],
+                "total_source_choice_minus_reprice_bits": source_choice_optimizer_gate[
+                    "summary"
+                ]["total_source_choice_minus_reprice_bits"],
+                "total_source_choice_minus_uniform_address_bits": source_choice_optimizer_gate[
+                    "summary"
+                ]["total_source_choice_minus_uniform_address_bits"],
+                "total_changed_sources": source_choice_optimizer_gate["summary"][
+                    "total_changed_sources"
+                ],
+                "total_copy_items": source_choice_optimizer_gate["summary"][
+                    "total_copy_items"
+                ],
+                "not_segmentation_reoptimization": source_choice_optimizer_gate[
+                    "scope"
+                ]["not_segmentation_reoptimization"],
+            },
+            "interpretation": (
+                "A greedy source-choice optimizer over fixed segmentation and "
+                "copy lengths changes no sources. The next source-state advance "
+                "therefore needs segmentation, copy-length, or global path-state "
+                "optimization rather than local source substitution."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1586,6 +1639,7 @@ def make_result() -> dict[str, Any]:
             "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
             "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
             "multicutoff_source_state_reprice_status": "aggregate_generalizes_reprice_only_unpromoted",
+            "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1848,6 +1902,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['total_source_exceptions']}; reoptimized "
                 f"{not evidence['not_recipe_reoptimization']}"
             )
+        elif row["question"] == "can_fixed_segmentation_source_choice_improve_repricing":
+            key = (
+                f"cutoffs {evidence['cutoff_count']}; roundtrip "
+                f"{evidence['all_roundtrip']}; raw wins "
+                f"{evidence['all_books_beat_raw']}; reprice wins "
+                f"{evidence['aggregate_beats_reprice_cutoff_count']}/"
+                f"{evidence['cutoff_count']}; bits "
+                f"{evidence['total_bits']:.3f} vs reprice "
+                f"{evidence['total_reprice_bits']:.3f}; delta "
+                f"{evidence['total_source_choice_minus_reprice_bits']:+.3f}; "
+                f"changed sources {evidence['total_changed_sources']}/"
+                f"{evidence['total_copy_items']}; segmentation reoptimized "
+                f"{not evidence['not_segmentation_reoptimization']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2058,6 +2126,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Active reparse feasibility: `{result['decision']['active_reparse_feasibility_status']}`.",
             f"- Source-state reparse prototype: `{result['decision']['source_state_reparse_prototype_status']}`.",
             f"- Multi-cutoff source-state reprice: `{result['decision']['multicutoff_source_state_reprice_status']}`.",
+            f"- Source-choice optimizer: `{result['decision']['source_choice_optimizer_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

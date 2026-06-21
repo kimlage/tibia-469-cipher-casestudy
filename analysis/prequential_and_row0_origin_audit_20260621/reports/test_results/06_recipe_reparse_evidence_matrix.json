@@ -17,6 +17,7 @@
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
     "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "unchanged_exogenous",
+    "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
     "source_selection_status": "encoder_canonical_decoder_dependency_retained",
     "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
@@ -495,6 +496,26 @@
     },
     {
       "evidence": {
+        "aggregate_beats_reprice_cutoff_count": 0,
+        "aggregate_beats_uniform_cutoff_count": 5,
+        "all_books_beat_raw": true,
+        "all_roundtrip": true,
+        "cutoff_count": 5,
+        "not_segmentation_reoptimization": true,
+        "total_bits": 12016.568510572548,
+        "total_changed_sources": 0,
+        "total_copy_items": 514,
+        "total_reprice_bits": 12016.568510572548,
+        "total_source_choice_minus_reprice_bits": 0.0,
+        "total_source_choice_minus_uniform_address_bits": -112.96813777915372
+      },
+      "interpretation": "A greedy source-choice optimizer over fixed segmentation and copy lengths changes no sources. The next source-state advance therefore needs segmentation, copy-length, or global path-state optimization rather than local source substitution.",
+      "question": "can_fixed_segmentation_source_choice_improve_repricing",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/39_multicutoff_source_choice_optimizer_gate.json",
+      "status": "failed_no_cheaper_source_choices_found"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -804,6 +825,7 @@
     "leave_one_book_out_source_attribution": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/14_leave_one_book_out_source_attribution_audit.json",
     "literal_copy_availability_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/28_literal_copy_availability_gate.json",
     "literal_payload_model_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.json",
+    "multicutoff_source_choice_optimizer_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/39_multicutoff_source_choice_optimizer_gate.json",
     "multicutoff_source_state_reparse_reprice_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json",
     "online_bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
     "online_order_frontier_controls": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.json",

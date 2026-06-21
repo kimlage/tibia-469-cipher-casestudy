@@ -532,6 +532,9 @@ The same repricing generalizes across cutoffs `10/20/35/50/60`: `5/5` cutoffs
 beat uniform-address reparse in aggregate, totaling `-112.968` bits, but this
 still reprices existing deterministic recipes rather than discovering
 source-state-optimal recipes.
+A fixed-segmentation source-choice optimizer then changes `0/514` sources and
+adds `+0.000` bits versus repricing, closing the simple local source-only
+improvement path.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

@@ -130,6 +130,9 @@ exogenous.
 - [scripts/38_multicutoff_source_state_reparse_reprice_gate.py](scripts/38_multicutoff_source_state_reparse_reprice_gate.py) - repeats source-state repricing over prefix cutoffs `10/20/35/50/60`.
 - [reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.md](reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.md) - multi-cutoff source-state reprice result.
 - [reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json](reports/test_results/38_multicutoff_source_state_reparse_reprice_gate.json) - structured multi-cutoff source-state reprice ledger.
+- [scripts/39_multicutoff_source_choice_optimizer_gate.py](scripts/39_multicutoff_source_choice_optimizer_gate.py) - tests greedy source substitutions while keeping deterministic reparse segmentation and copy lengths fixed.
+- [reports/test_results/39_multicutoff_source_choice_optimizer_gate.md](reports/test_results/39_multicutoff_source_choice_optimizer_gate.md) - fixed-segmentation source-choice optimizer result.
+- [reports/test_results/39_multicutoff_source_choice_optimizer_gate.json](reports/test_results/39_multicutoff_source_choice_optimizer_gate.json) - structured source-choice optimizer ledger.
 
 ## Boundary
 
@@ -240,7 +243,10 @@ exogenous.
   is promoted. Repeating the same repricing over cutoffs `10/20/35/50/60`
   generalizes the aggregate signal: `5/5` cutoffs beat uniform-address reparse,
   totaling `-112.968` bits, while still not promoting a source-state-aware
-  recipe optimizer.
+  recipe optimizer. A fixed-segmentation source-choice optimizer then closes a
+  simple local improvement path: it changes `0/514` sources and has `+0.000`
+  bits against the repriced ledger, so future source-state work must alter
+  segmentation, copy lengths, or use a global path-state objective.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

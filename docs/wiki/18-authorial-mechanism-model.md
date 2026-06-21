@@ -1127,6 +1127,12 @@ positive against raw digit coding, and `5/5` cutoffs beat uniform-address
 reparse in aggregate, totaling `-112.968` bits. This validates the
 `previous_copy_end` source ledger over reparsed recipes, but it is still
 repricing only rather than source-state-aware recipe discovery.
+A fixed-segmentation source-choice optimizer then closes the simplest local
+improvement path: changing only copy source positions while preserving copied
+chunks and copy lengths changes `0/514` sources and gives `+0.000` bits versus
+the repriced ledger. Future source-state gains must therefore come from
+segmentation, copy-length, or global path-state optimization rather than local
+source substitution.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry
