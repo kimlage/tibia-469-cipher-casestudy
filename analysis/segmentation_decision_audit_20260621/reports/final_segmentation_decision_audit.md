@@ -649,6 +649,29 @@ Even with stable-projection history granted, source-state continuity
 does not become a parser rule: it catches some residuals but still
 changes clean decisions and fails the clean holdout gate.
 
+## Phase/Grid Segmentation Control
+
+Gate 32 tests whether branch choices preserve a simple cycle
+or grid phase over target boundary, operation length, source,
+source end, or source-target alignment. Cycles tested are
+`2/3/4/5/8/10/16/20`.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best phase/grid policy `source_mod0_10` | `225/234` | `1/10` | `0` | weak full-fit clue, rejected rule |
+
+- Phase/grid policies tested: `64`.
+- Prequential zero-clean-false-change cells: `1/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+- Prequential selected matches oracle cells: `1/5`.
+
+The `source_mod0_10/20` family gives a one-residual full-fit
+clue without false clean-control changes, but it does not
+generalize under prefix/holdout and leaves `9/10` residuals
+unexplained. Phase/grid alignment is therefore not the missing
+segmentation parser.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -661,7 +684,8 @@ small observable decision tree still misses held-out residuals.
 Target-side boundary recurrence and near-future copy opportunity
 are also rejected. Book-local source-state continuity is rejected
 as well, and even the global carryover source-state upper bound
-fails clean holdout. The remaining blocker is a richer path/state
+fails clean holdout. A simple phase/grid rule gives only a weak
+one-residual full-fit clue. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -701,3 +725,4 @@ or the stable projection as an oracle.
 - [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)
 - [Source state continuity audit](test_results/30_source_state_continuity_audit.md)
 - [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)
+- [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)

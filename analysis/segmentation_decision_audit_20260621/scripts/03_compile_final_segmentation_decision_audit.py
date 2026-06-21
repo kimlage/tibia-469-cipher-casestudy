@@ -40,6 +40,7 @@ TARGET_BOUNDARY = TEST_RESULTS / "28_target_boundary_recurrence_audit.json"
 FUTURE_COPY = TEST_RESULTS / "29_future_copy_opportunity_audit.json"
 SOURCE_STATE = TEST_RESULTS / "30_source_state_continuity_audit.json"
 GLOBAL_SOURCE_STATE = TEST_RESULTS / "31_global_source_state_continuity_audit.json"
+PHASE_GRID = TEST_RESULTS / "32_phase_grid_segmentation_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -126,6 +127,7 @@ def main() -> None:
     global_source_state = (
         load_json(GLOBAL_SOURCE_STATE) if GLOBAL_SOURCE_STATE.exists() else None
     )
+    phase_grid = load_json(PHASE_GRID) if PHASE_GRID.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -184,6 +186,8 @@ def main() -> None:
         assert_boundary("source_state_continuity_audit", source_state)
     if global_source_state is not None:
         assert_boundary("global_source_state_continuity_audit", global_source_state)
+    if phase_grid is not None:
+        assert_boundary("phase_grid_segmentation_audit", phase_grid)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -255,6 +259,7 @@ def main() -> None:
     global_source_state_summary = (
         None if global_source_state is None else global_source_state["summary"]
     )
+    phase_grid_summary = None if phase_grid is None else phase_grid["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -1076,6 +1081,34 @@ def main() -> None:
                 "",
             ]
         )
+    if phase_grid_summary is not None:
+        lines.extend(
+            [
+                "## Phase/Grid Segmentation Control",
+                "",
+                "Gate 32 tests whether branch choices preserve a simple cycle",
+                "or grid phase over target boundary, operation length, source,",
+                "source end, or source-target alignment. Cycles tested are",
+                "`2/3/4/5/8/10/16/20`.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{phase_grid_summary['active_baseline_total_hits']}/{phase_grid_summary['decision_count']}` | `{phase_grid_summary['active_baseline_residual_hits']}/{phase_grid_summary['residual_decision_count']}` | `{phase_grid_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best phase/grid policy `{phase_grid_summary['best_policy']}` | `{phase_grid_summary['best_total_hits']}/{phase_grid_summary['decision_count']}` | `{phase_grid_summary['best_residual_hits']}/{phase_grid_summary['residual_decision_count']}` | `{phase_grid_summary['best_clean_false_changes']}` | weak full-fit clue, rejected rule |",
+                "",
+                f"- Phase/grid policies tested: `{phase_grid_summary['policy_count']}`.",
+                f"- Prequential zero-clean-false-change cells: `{phase_grid_summary['prequential_zero_clean_false_change_cells']}/{phase_grid_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{phase_grid_summary['prequential_cover_all_test_residual_cells']}/{phase_grid_summary['prequential_cells']}`.",
+                f"- Prequential selected matches oracle cells: `{phase_grid_summary['prequential_selected_matches_oracle_cells']}/{phase_grid_summary['prequential_cells']}`.",
+                "",
+                "The `source_mod0_10/20` family gives a one-residual full-fit",
+                "clue without false clean-control changes, but it does not",
+                "generalize under prefix/holdout and leaves `9/10` residuals",
+                "unexplained. Phase/grid alignment is therefore not the missing",
+                "segmentation parser.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1090,7 +1123,8 @@ def main() -> None:
             "Target-side boundary recurrence and near-future copy opportunity",
             "are also rejected. Book-local source-state continuity is rejected",
             "as well, and even the global carryover source-state upper bound",
-            "fails clean holdout. The remaining blocker is a richer path/state",
+            "fails clean holdout. A simple phase/grid rule gives only a weak",
+            "one-residual full-fit clue. The remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1130,6 +1164,7 @@ def main() -> None:
             "- [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)",
             "- [Source state continuity audit](test_results/30_source_state_continuity_audit.md)",
             "- [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)",
+            "- [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)",
             "",
         ]
     )

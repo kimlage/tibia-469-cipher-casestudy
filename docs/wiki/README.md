@@ -968,6 +968,10 @@ A global carryover source-state upper bound then grants stable-projection
 history across books and still rejects the hypothesis: `min_source_delta`
 again catches `6/10` residuals, changes `13` clean controls, and has `0/5`
 zero-clean-false-change holdout cells.
+A phase/grid audit tests short cycles over target boundaries, operation
+lengths, source, source end, and source-target phase. The best clue,
+`source_mod0_10/20`, catches only `1/10` residual without false clean changes
+and recovers no held-out residuals, so it is not a parser rule.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

@@ -625,6 +625,11 @@ previous-copy state across books. This favorable upper bound still does not
 promote: `min_source_delta` again catches `6/10` residuals, changes `13` clean
 controls, and has `0/5` zero-clean-false-change holdout cells. Carryover source
 state is therefore not the missing segmentation rule.
+A phase/grid segmentation audit then tests short cycles
+`2/3/4/5/8/10/16/20` over target boundary, length, source, source end, and
+source-target phase. The best `source_mod0_10/20` clue catches only `1/10`
+residual with `0` clean false changes, and prefix/holdout recovers no held-out
+residuals. This is recorded as a weak full-fit clue, not a parser rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2319,6 +2324,7 @@ book generation, not row0 pair-cell placement.
 - [Future copy opportunity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/29_future_copy_opportunity_audit.md)
 - [Source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/30_source_state_continuity_audit.md)
 - [Global source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/31_global_source_state_continuity_audit.md)
+- [Phase grid segmentation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/32_phase_grid_segmentation_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
