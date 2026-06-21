@@ -759,6 +759,12 @@ A second pass over the same post-target-max source frontier still finds another 
 The search covers `380` singles and `71321` pairs. This is still fixed-recipe compression bookkeeping, not stronger generation evidence.
 See [57_post_targetmax_source_substitution_second_pass_gate.md](test_results/57_post_targetmax_source_substitution_second_pass_gate.md).
 
+### Post-Target-Max Source Substitution Stop Audit
+
+The follow-up stop audit freezes this micro-frontier as non-mainline: the two post-target-max source passes sum to only `0.000369` bits while the minimum selector floor total is larger by `32.244` bits.
+It does not run a third pass and keeps the current compression bound at `8156.049986` bits. Next work should return to structural source/length parsing, holdout-predictive parser improvement, or row0-origin evidence.
+See [58_post_targetmax_source_substitution_stop_audit.md](test_results/58_post_targetmax_source_substitution_stop_audit.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -854,6 +860,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](test_results/47_row0_parallel_
 - A saturation gate promotes the final two positive target-max resegmentations and closes the local frontier at `8156.050355` bits with zero exact improving candidates remaining.
 - Rerunning the source-substitution frontier after target-max saturation finds one microscopic pair gain, moving the bound to `8156.050167` bits; this remains fixed-recipe compression bookkeeping.
 - A second post-target-max source-substitution pass finds another microscopic pair gain, moving the bound to `8156.049986` bits; this is still not generation evidence.
+- The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

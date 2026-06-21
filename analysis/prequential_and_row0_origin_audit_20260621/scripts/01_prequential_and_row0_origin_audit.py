@@ -229,6 +229,14 @@ POST_TARGETMAX_SOURCE_SUBSTITUTION_SECOND_PASS_GATE = (
     / "test_results"
     / "57_post_targetmax_source_substitution_second_pass_gate.json"
 )
+POST_TARGETMAX_SOURCE_SUBSTITUTION_STOP_AUDIT = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "58_post_targetmax_source_substitution_stop_audit.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -518,6 +526,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "post_targetmax_source_substitution_second_pass_gate",
         post_targetmax_source_substitution_second_pass,
+    )
+    post_targetmax_source_substitution_stop = load_json(
+        POST_TARGETMAX_SOURCE_SUBSTITUTION_STOP_AUDIT
+    )
+    assert_analysis_boundary(
+        "post_targetmax_source_substitution_stop_audit",
+        post_targetmax_source_substitution_stop,
     )
 
     predictive = legacy["predictive_validation"]
@@ -812,6 +827,16 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
                 "candidate_output_formula"
             ],
         },
+        "post_targetmax_source_substitution_stop": {
+            "classification": post_targetmax_source_substitution_stop[
+                "classification"
+            ],
+            "source": rel(POST_TARGETMAX_SOURCE_SUBSTITUTION_STOP_AUDIT),
+            "scope": post_targetmax_source_substitution_stop["scope"],
+            "summary": post_targetmax_source_substitution_stop["summary"],
+            "rows": post_targetmax_source_substitution_stop["rows"],
+            "decision": post_targetmax_source_substitution_stop["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -859,6 +884,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "targetmax_resegmentation_saturation_status": "promoted_bound_8156_050355_saturated",
             "post_targetmax_source_substitution_status": "promoted_bound_8156_050167_microscopic",
             "post_targetmax_source_substitution_second_pass_status": "promoted_bound_8156_049986_microscopic",
+            "post_targetmax_source_substitution_stop_status": "micro_frontier_frozen_not_mainline",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -922,6 +948,7 @@ def render_markdown(
     targetmax_resegmentation_saturation_gate_link: str,
     post_targetmax_source_substitution_frontier_gate_link: str,
     post_targetmax_source_substitution_second_pass_gate_link: str,
+    post_targetmax_source_substitution_stop_audit_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -991,6 +1018,9 @@ def render_markdown(
     post_targetmax_source_second = result[
         "post_targetmax_source_substitution_second_pass"
     ]["summary"]
+    post_targetmax_source_stop = result["post_targetmax_source_substitution_stop"][
+        "summary"
+    ]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1839,6 +1869,20 @@ def render_markdown(
             "generation evidence.",
             f"See [57_post_targetmax_source_substitution_second_pass_gate.md]({post_targetmax_source_substitution_second_pass_gate_link}).",
             "",
+            "### Post-Target-Max Source Substitution Stop Audit",
+            "",
+            "The follow-up stop audit freezes this micro-frontier as non-mainline: "
+            "the two post-target-max source passes sum to only "
+            f"`{post_targetmax_source_stop['post_targetmax_cumulative_gain_bits']:.6f}` "
+            "bits while the minimum selector floor total is larger by "
+            f"`{post_targetmax_source_stop['selector_floor_total_minus_cumulative_gain_bits']:.3f}` "
+            "bits.",
+            "It does not run a third pass and keeps the current compression bound at "
+            f"`{post_targetmax_source_stop['current_compression_bound_bits']:.6f}` "
+            "bits. Next work should return to structural source/length parsing, "
+            "holdout-predictive parser improvement, or row0-origin evidence.",
+            f"See [58_post_targetmax_source_substitution_stop_audit.md]({post_targetmax_source_substitution_stop_audit_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1943,6 +1987,7 @@ def render_markdown(
             "- A saturation gate promotes the final two positive target-max resegmentations and closes the local frontier at `8156.050355` bits with zero exact improving candidates remaining.",
             "- Rerunning the source-substitution frontier after target-max saturation finds one microscopic pair gain, moving the bound to `8156.050167` bits; this remains fixed-recipe compression bookkeeping.",
             "- A second post-target-max source-substitution pass finds another microscopic pair gain, moving the bound to `8156.049986` bits; this is still not generation evidence.",
+            "- The post-target-max source-substitution stop audit freezes that micro-frontier as non-mainline: cumulative gain is only `0.000369` bits and selector-cost sanity checks dominate.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2091,6 +2136,9 @@ def main() -> None:
             ),
             post_targetmax_source_substitution_second_pass_gate_link=(
                 "57_post_targetmax_source_substitution_second_pass_gate.md"
+            ),
+            post_targetmax_source_substitution_stop_audit_link=(
+                "58_post_targetmax_source_substitution_stop_audit.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2245,6 +2293,9 @@ def main() -> None:
             ),
             post_targetmax_source_substitution_second_pass_gate_link=(
                 "test_results/57_post_targetmax_source_substitution_second_pass_gate.md"
+            ),
+            post_targetmax_source_substitution_stop_audit_link=(
+                "test_results/58_post_targetmax_source_substitution_stop_audit.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

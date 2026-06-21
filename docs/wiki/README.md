@@ -665,6 +665,8 @@ microscopic pair gain, moving the bound to `8156.050167` bits. This is
 compression bookkeeping, not stronger generation evidence.
 A second pass on that reopened source frontier moves the bound to
 `8156.049986` bits, again only as compression bookkeeping.
+The stop audit freezes that micro-frontier as non-mainline: the cumulative
+gain is only `0.000369` bits, and selector-cost sanity checks dominate.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -755,7 +757,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   second exact target-max resegmentation to `8157.065654` bits, saturates that
   local target-max frontier at `8156.050355` bits, records a microscopic
   post-target-max source substitution bound of `8156.050167` bits and a second
-  pass at `8156.049986` bits, rejects paid
+  pass at `8156.049986` bits, freezes that micro-frontier under a stop audit,
+  rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**

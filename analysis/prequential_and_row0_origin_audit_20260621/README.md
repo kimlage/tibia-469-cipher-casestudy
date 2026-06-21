@@ -187,6 +187,9 @@ exogenous.
 - [scripts/57_post_targetmax_source_substitution_second_pass_gate.py](scripts/57_post_targetmax_source_substitution_second_pass_gate.py) - reruns exact same-chunk source substitution on the post-target-max source-substituted formula.
 - [reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.md](reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.md) - post-target-max source substitution second-pass gate.
 - [reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.json](reports/test_results/57_post_targetmax_source_substitution_second_pass_gate.json) - structured post-target-max second-pass source substitution ledger.
+- [scripts/58_post_targetmax_source_substitution_stop_audit.py](scripts/58_post_targetmax_source_substitution_stop_audit.py) - freezes the post-target-max source-substitution micro-frontier as non-mainline under explicit selector-cost checks.
+- [reports/test_results/58_post_targetmax_source_substitution_stop_audit.md](reports/test_results/58_post_targetmax_source_substitution_stop_audit.md) - post-target-max source substitution stop decision.
+- [reports/test_results/58_post_targetmax_source_substitution_stop_audit.json](reports/test_results/58_post_targetmax_source_substitution_stop_audit.json) - structured post-target-max source stop ledger.
 
 ## Boundary
 
@@ -340,7 +343,9 @@ exogenous.
   `row0` origin nor semantics. Rerunning same-chunk source substitutions after
   that saturation finds a microscopic pair gain and moves the bound to
   `8156.050167` bits; a second pass moves it to `8156.049986` bits. These
-  are fixed-recipe compression bookkeeping only.
+  are fixed-recipe compression bookkeeping only. The stop audit freezes this
+  micro-frontier as non-mainline: the cumulative gain is `0.000369` bits, and
+  selector-cost sanity checks dominate.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
