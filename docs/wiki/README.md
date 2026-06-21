@@ -789,6 +789,12 @@ all remain non-generated under their respective gates (`0/5` promoted
 generators). The materialized-unit floor is `593` (`1` order + `70` lengths +
 `261` skeleton records + `208` source fields + `53` literal chunks), so the
 state is a robust parser/atlas boundary, not a source-free generator.
+An operation count generation audit then isolates the first skeleton field
+before any cutpoint selection. The best source-free model,
+`context_book_mod10_x_length_bucket`, hits `40/60` books and gives an
+audit-only full-fit paid-record reduction (`55` records versus a `60`-record
+exact atlas), but it misses `20` books and has `0/5` holdout cells that cover
+all books or beat random p95.
 An operation-length Markov audit then attacks the skeleton blocker directly.
 Even granting book lengths and operation types, `11` Markov/context grammars
 do not generate the `261` operation lengths: the best full-fit context gets

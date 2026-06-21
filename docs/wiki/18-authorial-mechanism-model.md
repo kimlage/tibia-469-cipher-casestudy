@@ -365,6 +365,12 @@ literal payload. No dependency has a promoted generator (`0/5`), and the
 materialized-unit floor is `593`: `1` order, `70` lengths, `261` skeleton
 records, `208` source fields, and `53` literal chunks. This is the cleanest
 current summary of the boundary: robust parser/atlas, not source-free generator.
+An operation count generation audit then tests the first skeleton field before
+cutpoints are chosen. The best source-free model,
+`context_book_mod10_x_length_bucket`, hits `40/60` books and gives a small
+audit-only full-fit reduction from `60` exact op-count records to `55` paid
+records. It is not promoted: it still misses `20` books and has `0/5`
+prefix/holdout cells that cover all books or beat random p95.
 An operation-length Markov audit then tests the skeleton blocker directly under
 generous assumptions: book lengths and operation types are granted, and only the
 `261` operation lengths must be generated. The best of `11` Markov/context
@@ -2527,6 +2533,8 @@ book generation, not row0 pair-cell placement.
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
 - [Final generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/final_generation_boundary_closure_audit.md)
 - [Generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.md)
+- [Final operation count generation audit](../../analysis/operation_count_generation_audit_20260621/reports/final_operation_count_generation_audit.md)
+- [Operation count generation gate](../../analysis/operation_count_generation_audit_20260621/reports/test_results/01_operation_count_generation_gate.md)
 - [Final operation length Markov audit](../../analysis/operation_length_markov_audit_20260621/reports/final_operation_length_markov_audit.md)
 - [Operation length Markov gate](../../analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.md)
 - [Final operation length motif audit](../../analysis/operation_length_motif_audit_20260621/reports/final_operation_length_motif_audit.md)
