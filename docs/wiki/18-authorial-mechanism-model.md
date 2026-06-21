@@ -600,6 +600,12 @@ and `4/10` residual hits with `0` clean-control changes in full fit, but
 prefix/holdout recovers `0` held-out residuals in every split that contains
 residuals. The branch choice is therefore not explained by a small observable
 decision tree over the current branch/position predicates.
+A target-boundary recurrence audit then tests the chunk-boundary version of the
+same segmentation question. If the stable branch preserved a recurrent
+target-side boundary, raw context recurrence around `target_start + length`
+should prefer it. It does not: the best recurrence policy reaches only
+`31/234`, catches `1/10` residuals, changes `194` clean controls, and is worse
+than random-boundary controls on total hits.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2290,6 +2296,7 @@ book generation, not row0 pair-cell placement.
 - [Contextual mode stability audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/25_contextual_mode_stability_audit.md)
 - [Hierarchical context backoff audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/26_hierarchical_context_backoff_audit.md)
 - [Observable decision tree policy audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/27_observable_decision_tree_policy_audit.md)
+- [Target boundary recurrence audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/28_target_boundary_recurrence_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

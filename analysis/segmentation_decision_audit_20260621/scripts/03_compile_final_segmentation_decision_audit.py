@@ -36,6 +36,7 @@ CONTEXTUAL_MODE = TEST_RESULTS / "24_contextual_mode_selector_audit.json"
 CONTEXTUAL_STABILITY = TEST_RESULTS / "25_contextual_mode_stability_audit.json"
 HIERARCHICAL_BACKOFF = TEST_RESULTS / "26_hierarchical_context_backoff_audit.json"
 OBSERVABLE_TREE = TEST_RESULTS / "27_observable_decision_tree_policy_audit.json"
+TARGET_BOUNDARY = TEST_RESULTS / "28_target_boundary_recurrence_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -116,6 +117,7 @@ def main() -> None:
         load_json(HIERARCHICAL_BACKOFF) if HIERARCHICAL_BACKOFF.exists() else None
     )
     observable_tree = load_json(OBSERVABLE_TREE) if OBSERVABLE_TREE.exists() else None
+    target_boundary = load_json(TARGET_BOUNDARY) if TARGET_BOUNDARY.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -166,6 +168,8 @@ def main() -> None:
         assert_boundary("hierarchical_context_backoff_audit", hierarchical_backoff)
     if observable_tree is not None:
         assert_boundary("observable_decision_tree_policy_audit", observable_tree)
+    if target_boundary is not None:
+        assert_boundary("target_boundary_recurrence_audit", target_boundary)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -228,6 +232,9 @@ def main() -> None:
     )
     observable_tree_summary = (
         None if observable_tree is None else observable_tree["summary"]
+    )
+    target_boundary_summary = (
+        None if target_boundary is None else target_boundary["summary"]
     )
 
     lines = [
@@ -942,6 +949,33 @@ def main() -> None:
                 "",
             ]
         )
+    if target_boundary_summary is not None:
+        lines.extend(
+            [
+                "## Target Boundary Recurrence Control",
+                "",
+                "Gate 28 tests whether branch choices preserve more recurrent",
+                "target-side chunk boundaries. Each branch defines a next boundary",
+                "at `target_start + length`; recurrence policies score raw digit",
+                "context around that boundary.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{target_boundary_summary['active_baseline_total_hits']}/{target_boundary_summary['decision_count']}` | `{target_boundary_summary['active_baseline_residual_hits']}/{target_boundary_summary['residual_decision_count']}` | `{target_boundary_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best recurrence policy `{target_boundary_summary['best_recurrence_policy']}` | `{target_boundary_summary['best_recurrence_total_hits']}/{target_boundary_summary['decision_count']}` | `{target_boundary_summary['best_recurrence_residual_hits']}/{target_boundary_summary['residual_decision_count']}` | `{target_boundary_summary['best_recurrence_clean_false_changes']}` | rejected |",
+                "",
+                f"- Recurrence policies tested: `{target_boundary_summary['policy_count']}`.",
+                f"- Radii tested: `{target_boundary_summary['radii']}`.",
+                f"- Prequential zero-clean-false-change cells: `{target_boundary_summary['prequential_zero_clean_false_change_cells']}/{target_boundary_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{target_boundary_summary['prequential_cover_all_test_residual_cells']}/{target_boundary_summary['prequential_cells']}`.",
+                "",
+                "Target-side boundary recurrence is not the missing segmentation",
+                "rule. The best recurrence policy gets only `1/10` residuals,",
+                "changes `194` clean controls, and is worse than random-boundary",
+                "controls on total hits.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -952,7 +986,8 @@ def main() -> None:
             "A finite context table has weak full-fit signal, but stability",
             "tests collapse it under leave-one-book/context controls. The",
             "hierarchical backoff variant still fails clean holdout, and a",
-            "small observable decision tree still misses held-out residuals. The",
+            "small observable decision tree still misses held-out residuals.",
+            "Target-side boundary recurrence is also rejected. The",
             "remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -989,6 +1024,7 @@ def main() -> None:
             "- [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)",
             "- [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)",
             "- [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)",
+            "- [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)",
             "",
         ]
     )

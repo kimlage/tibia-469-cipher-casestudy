@@ -561,6 +561,28 @@ residuals and recovers `0` held-out residuals in every split that
 contains residuals. This rejects a small observable finite-state
 decision tree as the missing parser.
 
+## Target Boundary Recurrence Control
+
+Gate 28 tests whether branch choices preserve more recurrent
+target-side chunk boundaries. Each branch defines a next boundary
+at `target_start + length`; recurrence policies score raw digit
+context around that boundary.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best recurrence policy `max_left_right_r8` | `31/234` | `1/10` | `194` | rejected |
+
+- Recurrence policies tested: `11`.
+- Radii tested: `[2, 3, 4, 6, 8]`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+Target-side boundary recurrence is not the missing segmentation
+rule. The best recurrence policy gets only `1/10` residuals,
+changes `194` clean controls, and is worse than random-boundary
+controls on total hits.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -569,7 +591,8 @@ continuation objective or small prefix-trained branch ranker.
 A finite context table has weak full-fit signal, but stability
 tests collapse it under leave-one-book/context controls. The
 hierarchical backoff variant still fails clean holdout, and a
-small observable decision tree still misses held-out residuals. The
+small observable decision tree still misses held-out residuals.
+Target-side boundary recurrence is also rejected. The
 remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -606,3 +629,4 @@ or the stable projection as an oracle.
 - [Contextual mode stability audit](test_results/25_contextual_mode_stability_audit.md)
 - [Hierarchical context backoff audit](test_results/26_hierarchical_context_backoff_audit.md)
 - [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)
+- [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)

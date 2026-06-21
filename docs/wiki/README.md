@@ -951,6 +951,10 @@ An observable decision-tree policy audit then rejects the stronger small
 finite-state parser version: best full-fit tree reaches `228/234` and `4/10`
 residuals with `0` clean-control changes, but prefix/holdout recovers `0`
 held-out residuals in every split that contains residuals.
+A target-boundary recurrence audit rejects the chunk-boundary variant:
+recurrence around `target_start + length` reaches only `31/234`, `1/10`
+residuals, and `194` clean false changes, worse than random-boundary controls
+on total hits.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
