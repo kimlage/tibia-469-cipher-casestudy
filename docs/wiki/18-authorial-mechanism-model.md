@@ -1102,6 +1102,9 @@ supported context: midpoint beats global by `13.839` stream bits, ranks second
 among all 69 one-cut boundaries, beats global in every prefix frozen split,
 and passes book-id permutation controls (`p=0.0033`). The searched cutoff `37`
 is not promoted because it gains only `0.256` bits over the natural midpoint.
+A prequential-side gate now records the same result as component validation:
+the midpoint context generalizes, while the searched cutoff remains rejected as
+ad-hoc local tuning rather than a new generation formula.
 The literal copy availability boundary audit then narrows the remaining
 literal-payload externality. `73/87` literal starts have no legal `min_len`
 copy candidate, covering `788/857` literal digits at item level; at digit
@@ -1483,6 +1486,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source state-free default audit](../../analysis/authorial_mechanism_20260620/reports/test_results/147_copy_source_state_free_default_audit.md)
 - [Source state dependency gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.md)
 - [Copy length midpoint context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.md)
+- [Copy length midpoint context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.md)
 - [Literal copy availability boundary audit](../../analysis/authorial_mechanism_20260620/reports/test_results/149_literal_copy_availability_boundary_audit.md)
 - [Optional literal copy repair frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/150_optional_literal_copy_repair_frontier.md)
 - [Cross-op optional literal copy frontier](../../analysis/authorial_mechanism_20260620/reports/test_results/151_cross_op_optional_literal_copy_frontier.md)

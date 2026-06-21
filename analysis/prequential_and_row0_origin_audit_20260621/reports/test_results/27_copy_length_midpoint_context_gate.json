@@ -1,0 +1,47 @@
+{
+  "case_reopened": false,
+  "classification": "copy_length_midpoint_context_generalizes_searched_cutoff_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "copy_length_context_status": "midpoint_context_retained",
+    "generation_explanation_status": "copy_length_context_generalization_strengthened",
+    "row0_origin_status": "unchanged_exogenous",
+    "searched_boundary_status": "cutoff_37_not_promoted",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_length_midpoint_context": "analysis/authorial_mechanism_20260620/reports/test_results/148_copy_length_midpoint_context_audit.json",
+    "current_active_prequential_profile": "analysis/authorial_mechanism_20260620/reports/test_results/145_current_active_prequential_profile_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "copy_length_midpoint_context_gate.v1",
+  "summary": {
+    "active_prequential_formula_bits": 8177.3166531229235,
+    "active_prequential_recipe_discovery_proved": false,
+    "best_boundary_cutoff": 37,
+    "best_boundary_gain_vs_global_bits": 14.094599161951237,
+    "best_boundary_stream_bits": 1340.5498262047909,
+    "best_cutoff_delta_vs_midpoint_bits": 0.25602726488591543,
+    "copy_length_events": 261,
+    "global_stream_bits": 1354.644425366742,
+    "interpretation": "The natural book midpoint is supported as a copy-length context: it beats global on full corpus, every tested prefix-frozen split, and book-id permutation controls. The searched cutoff 37 is only 0.256 bits better, so it remains an ad-hoc boundary and is not promoted.",
+    "midpoint_35_stream_bits": 1340.8058534696768,
+    "midpoint_boundary_rank": 2,
+    "midpoint_context_counts": {
+      "first_half": 168,
+      "second_half": 93
+    },
+    "midpoint_gain_vs_global_bits": 13.838571897065322,
+    "midpoint_supported": true,
+    "p_permuted_best_boundary_gain_ge_observed": 0.0033222591362126247,
+    "p_permuted_midpoint_gain_ge_observed": 0.0033222591362126247,
+    "permutation_control_count": 300,
+    "prefix_frozen_midpoint_minus_global_bits_max": -5.49341349778112,
+    "prefix_frozen_midpoint_minus_global_bits_mean": -15.41506768288516,
+    "prefix_frozen_midpoint_minus_global_bits_min": -26.41571288994669,
+    "prefix_frozen_midpoint_win_count": 5,
+    "prefix_frozen_split_count": 5,
+    "searched_boundary_promoted": false
+  },
+  "translation_delta": "NONE"
+}

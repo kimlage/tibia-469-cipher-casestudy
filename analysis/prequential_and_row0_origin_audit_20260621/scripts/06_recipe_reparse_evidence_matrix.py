@@ -49,6 +49,8 @@ SOURCES = {
     "source_canonicality_decodability_gate": TEST_RESULTS
     / "25_source_canonicality_decodability_gate.json",
     "source_state_dependency_gate": TEST_RESULTS / "26_source_state_dependency_gate.json",
+    "copy_length_midpoint_context_gate": TEST_RESULTS
+    / "27_copy_length_midpoint_context_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -92,6 +94,7 @@ def make_result() -> dict[str, Any]:
     source_gate = load_json(SOURCES["source_blocker_structural_context_gate"])
     source_canonicality_gate = load_json(SOURCES["source_canonicality_decodability_gate"])
     source_state_gate = load_json(SOURCES["source_state_dependency_gate"])
+    copy_length_midpoint_gate = load_json(SOURCES["copy_length_midpoint_context_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -119,6 +122,7 @@ def make_result() -> dict[str, Any]:
         ("source_blocker_structural_context_gate", source_gate),
         ("source_canonicality_decodability_gate", source_canonicality_gate),
         ("source_state_dependency_gate", source_state_gate),
+        ("copy_length_midpoint_context_gate", copy_length_midpoint_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -872,6 +876,51 @@ def make_result() -> dict[str, Any]:
                 "length remain part of the recipe-discovery state boundary."
             ),
         },
+        {
+            "question": "does_copy_length_midpoint_context_generalize",
+            "source": rel(SOURCES["copy_length_midpoint_context_gate"]),
+            "status": "passed_midpoint_retained_searched_cutoff_rejected",
+            "evidence": {
+                "midpoint_gain_vs_global_bits": copy_length_midpoint_gate["summary"][
+                    "midpoint_gain_vs_global_bits"
+                ],
+                "best_boundary_cutoff": copy_length_midpoint_gate["summary"][
+                    "best_boundary_cutoff"
+                ],
+                "best_cutoff_delta_vs_midpoint_bits": copy_length_midpoint_gate[
+                    "summary"
+                ]["best_cutoff_delta_vs_midpoint_bits"],
+                "midpoint_boundary_rank": copy_length_midpoint_gate["summary"][
+                    "midpoint_boundary_rank"
+                ],
+                "prefix_frozen_midpoint_win_count": copy_length_midpoint_gate[
+                    "summary"
+                ]["prefix_frozen_midpoint_win_count"],
+                "prefix_frozen_split_count": copy_length_midpoint_gate["summary"][
+                    "prefix_frozen_split_count"
+                ],
+                "prefix_frozen_midpoint_minus_global_bits_min": copy_length_midpoint_gate[
+                    "summary"
+                ]["prefix_frozen_midpoint_minus_global_bits_min"],
+                "prefix_frozen_midpoint_minus_global_bits_mean": copy_length_midpoint_gate[
+                    "summary"
+                ]["prefix_frozen_midpoint_minus_global_bits_mean"],
+                "prefix_frozen_midpoint_minus_global_bits_max": copy_length_midpoint_gate[
+                    "summary"
+                ]["prefix_frozen_midpoint_minus_global_bits_max"],
+                "p_permuted_midpoint_gain_ge_observed": copy_length_midpoint_gate[
+                    "summary"
+                ]["p_permuted_midpoint_gain_ge_observed"],
+                "searched_boundary_promoted": copy_length_midpoint_gate["summary"][
+                    "searched_boundary_promoted"
+                ],
+            },
+            "interpretation": (
+                "The natural book-midpoint context is a supported copy-length "
+                "component, while the slightly better searched cutoff is rejected "
+                "as ad-hoc local tuning."
+            ),
+        },
     ]
 
     result = {
@@ -896,6 +945,7 @@ def make_result() -> dict[str, Any]:
             "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
             "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
             "source_state_status": "path_dependent_previous_copy_state_retained",
+            "copy_length_context_status": "midpoint_context_retained",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1141,6 +1191,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['canonicality_removed_source_dependency']}; "
                 f"promoted {evidence['state_free_default_promoted']}"
             )
+        elif row["question"] == "does_copy_length_midpoint_context_generalize":
+            key = (
+                f"midpoint gain {evidence['midpoint_gain_vs_global_bits']:.3f} bits; "
+                f"rank {evidence['midpoint_boundary_rank']}; best cutoff "
+                f"{evidence['best_boundary_cutoff']} is "
+                f"{evidence['best_cutoff_delta_vs_midpoint_bits']:.3f} bits better; "
+                f"prefix wins {evidence['prefix_frozen_midpoint_win_count']}/"
+                f"{evidence['prefix_frozen_split_count']}; frozen gap min/mean/max "
+                f"{evidence['prefix_frozen_midpoint_minus_global_bits_min']:.3f}/"
+                f"{evidence['prefix_frozen_midpoint_minus_global_bits_mean']:.3f}/"
+                f"{evidence['prefix_frozen_midpoint_minus_global_bits_max']:.3f}; "
+                f"perm p={evidence['p_permuted_midpoint_gain_ge_observed']:.4f}; "
+                f"searched promoted {evidence['searched_boundary_promoted']}"
+            )
         else:
             key = (
                 f"best raw `{evidence['best_raw']}`; best charged `{evidence['best_charged']}`; "
@@ -1157,6 +1221,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Generation explanation: `{result['decision']['generation_explanation_status']}`.",
             f"- Numeric order: `{result['decision']['numeric_order_status']}`.",
             f"- Source state: `{result['decision']['source_state_status']}`.",
+            f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

@@ -2,6 +2,7 @@
   "case_reopened": false,
   "classification": "recipe_externality_reduced_but_generation_claim_still_partial",
   "decision": {
+    "copy_length_context_status": "midpoint_context_retained",
     "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
     "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
     "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence and reduces same-family source memorization as an explanation for singleton holdout performance.",
@@ -502,6 +503,25 @@
       "question": "can_state_free_source_defaults_remove_previous_copy_state",
       "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/26_source_state_dependency_gate.json",
       "status": "failed_state_dependency_retained"
+    },
+    {
+      "evidence": {
+        "best_boundary_cutoff": 37,
+        "best_cutoff_delta_vs_midpoint_bits": 0.25602726488591543,
+        "midpoint_boundary_rank": 2,
+        "midpoint_gain_vs_global_bits": 13.838571897065322,
+        "p_permuted_midpoint_gain_ge_observed": 0.0033222591362126247,
+        "prefix_frozen_midpoint_minus_global_bits_max": -5.49341349778112,
+        "prefix_frozen_midpoint_minus_global_bits_mean": -15.41506768288516,
+        "prefix_frozen_midpoint_minus_global_bits_min": -26.41571288994669,
+        "prefix_frozen_midpoint_win_count": 5,
+        "prefix_frozen_split_count": 5,
+        "searched_boundary_promoted": false
+      },
+      "interpretation": "The natural book-midpoint context is a supported copy-length component, while the slightly better searched cutoff is rejected as ad-hoc local tuning.",
+      "question": "does_copy_length_midpoint_context_generalize",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
+      "status": "passed_midpoint_retained_searched_cutoff_rejected"
     }
   ],
   "frozen_validation_scope": {
@@ -511,6 +531,7 @@
     "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
   },
   "inputs": {
+    "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",

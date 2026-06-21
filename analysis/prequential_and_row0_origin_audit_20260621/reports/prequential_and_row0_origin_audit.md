@@ -318,6 +318,18 @@ and the best state-free rule, `state_free_back_current_length`, is
 generation-boundary dependency, not a removable tie-break.
 See [26_source_state_dependency_gate.md](test_results/26_source_state_dependency_gate.md).
 
+### Copy Length Midpoint Context Gate
+
+The copy-length context is then checked as a positive generalization
+case. The active natural midpoint split, `book_id < 35`, beats the
+global copy-length context by `13.839` bits, ranks `2` among all
+one-cut boundaries, wins all `5/5` prefix-frozen future-suffix checks,
+and passes book-id permutation controls (`p=0.0033`). The best searched
+cutoff, `37`, is only `0.256` bits better than midpoint, so it is not
+promoted as a new boundary. This strengthens one learned mechanical
+component while leaving the full recipe and row0 origin unchanged.
+See [27_copy_length_midpoint_context_gate.md](test_results/27_copy_length_midpoint_context_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -369,6 +381,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
 - The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence; after same-coordinate address correction, public-bookcase family reparse beats or ties the active family recipe in `19/19` families, a no-test-carryover variant still beats raw in `19/19`, singleton leave-one-book-out reparsing beats raw in `70/70`, singleton copy sources are attributed, the signal survives book-bounded and same-family-excluded source constraints, the online previous-books-only frontier is positive after the bootstrap book, and a raw book-0 seed policy closes the remaining local failure but fails complete-formula promotion because literal-payload cost dominates and any exception signal would require negative cost.
 - Source-state simplification is rejected: canonicality is encoder-side only, and state-free source defaults lose to the active previous-copy source/length default in the full ledger and every tested prefix-frozen split.
+- Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

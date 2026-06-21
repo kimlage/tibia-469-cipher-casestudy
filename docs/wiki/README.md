@@ -516,11 +516,11 @@ A source-state dependency gate consolidates the negative result with the
 canonicality check: earliest-source canonicality does not make source
 decoder-computable, and state-free defaults fail to remove the expanded
 previous-copy source/length state (`5/5` prefix-frozen losses).
-The copy-length midpoint context audit then supports the active `book_id < 35`
-split: midpoint beats global by `13.839` stream bits, ranks second among 69
-one-cut boundaries, wins every prefix frozen split, and passes book-id
-permutation controls (`p=0.0033`). The searched cutoff `37` is not promoted for
-only `0.256` bits over the natural midpoint.
+The copy-length midpoint context gate then supports the active `book_id < 35`
+split as component validation: midpoint beats global by `13.839` stream bits,
+ranks second among 69 one-cut boundaries, wins every prefix frozen split, and
+passes book-id permutation controls (`p=0.0033`). The searched cutoff `37` is
+not promoted for only `0.256` bits over the natural midpoint.
 The literal copy availability boundary audit narrows the remaining literal
 recipe dependency: `73/87` literal starts have no legal `min_len` copy
 candidate, and `760/857` literal digits are forced at digit level. The residual

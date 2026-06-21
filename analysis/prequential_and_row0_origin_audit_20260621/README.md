@@ -94,6 +94,9 @@ exogenous.
 - [scripts/26_source_state_dependency_gate.py](scripts/26_source_state_dependency_gate.py) - checks whether state-free source defaults remove previous-copy source/length state.
 - [reports/test_results/26_source_state_dependency_gate.md](reports/test_results/26_source_state_dependency_gate.md) - source state-dependency gate result.
 - [reports/test_results/26_source_state_dependency_gate.json](reports/test_results/26_source_state_dependency_gate.json) - structured source-state dependency ledger.
+- [scripts/27_copy_length_midpoint_context_gate.py](scripts/27_copy_length_midpoint_context_gate.py) - checks whether the copy-length midpoint context generalizes without promoting a searched cutoff.
+- [reports/test_results/27_copy_length_midpoint_context_gate.md](reports/test_results/27_copy_length_midpoint_context_gate.md) - copy-length midpoint context gate result.
+- [reports/test_results/27_copy_length_midpoint_context_gate.json](reports/test_results/27_copy_length_midpoint_context_gate.json) - structured copy-length midpoint ledger.
 
 ## Boundary
 
@@ -163,7 +166,10 @@ exogenous.
   declared length, and the decoder source dependency is not removed. A
   source-state dependency gate then rejects state-free defaults as a replacement
   for the active previous-copy source/length default: the best rule is
-  `+15.186` bits worse and loses all `5/5` prefix-frozen checks.
+  `+15.186` bits worse and loses all `5/5` prefix-frozen checks. A copy-length
+  midpoint context gate then keeps the natural `book_id < 35` split: it beats
+  global by `13.839` bits, wins all `5/5` prefix-frozen checks, passes
+  permutation controls (`p=0.0033`), and rejects searched cutoff `37`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
