@@ -874,6 +874,29 @@ ad hoc residual lookup, and even the first-drift lookup is not a
 complete parser because the oracle still needs at least `11`
 correction events.
 
+## Compact Latent Rule Frontier
+
+Gate 42 tests whether a small residual-visible latent rule can
+beat the gate-41 lookup after paying predicate and label IDs.
+It scores single-rule and two-rule sets over book, operation,
+and active-operation features.
+
+| Diagnostic | Value |
+|---|---:|
+| Predicate count | `49` |
+| Candidate rule sets | `6276` |
+| Baseline lookup bits | `79.361` |
+| Best apparent net bits vs lookup | `-5.243` |
+| Best apparent false positives | `1` |
+| Best zero-false-positive net bits vs lookup | `1.773` |
+| Best zero-false-positive hits | `1` |
+| Prequential cells with held-out hit | `0/4` |
+
+The only apparent MDL win uses a false positive. The best
+zero-false-positive rule is worse than lookup, and no selected
+rule gets a held-out residual hit. Compact residual-visible
+latent rules are therefore rejected.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -897,7 +920,8 @@ nearest trajectory-state reuse. Gate 39 shows the exposed state
 families have no deterministic residual support. Gate 40 shows
 simple observable splits still leave `10` residual distinctions
 needing latent resolution. Gate 41 prices a pure latent lookup at
-least `79.361` bits before rule cost. The remaining blocker is a richer latent path/state
+least `79.361` bits before rule cost. Gate 42 rejects compact
+residual-visible latent rules against that lookup. The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -947,3 +971,4 @@ or the stable projection as an oracle.
 - [Observable state support audit](test_results/39_observable_state_support_audit.md)
 - [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)
 - [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)
+- [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)

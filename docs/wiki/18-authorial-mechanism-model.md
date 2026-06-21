@@ -684,6 +684,11 @@ A latent-state lookup cost gate then prices the ad hoc fallback. Selecting the
 variant costs `90.269` bits. The full post-repair oracle needs at least `11`
 correction events, so even this lookup is not a full parser. A latent state is
 therefore useful only if it supplies a compact rule, not merely a name.
+A compact latent rule frontier then tests that requirement directly. It charges
+`6276` single/two-rule residual-visible rule sets against the `79.361`-bit
+lookup. The only apparent MDL win has a false positive; the best
+zero-false-positive rule is `+1.773` bits worse than lookup and gets `0/4`
+held-out hits. Compact residual-visible latent rules are therefore rejected.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2388,6 +2393,7 @@ book generation, not row0 pair-cell placement.
 - [Observable state support audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/39_observable_state_support_audit.md)
 - [Latent state requirement audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/40_latent_state_requirement_audit.md)
 - [Latent state lookup cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.md)
+- [Compact latent rule frontier](../../analysis/segmentation_decision_audit_20260621/reports/test_results/42_compact_latent_rule_frontier.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

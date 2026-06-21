@@ -50,6 +50,7 @@ TRAJECTORY_NEIGHBOR = TEST_RESULTS / "38_trajectory_neighbor_parser_audit.json"
 OBSERVABLE_STATE_SUPPORT = TEST_RESULTS / "39_observable_state_support_audit.json"
 LATENT_STATE_REQUIREMENT = TEST_RESULTS / "40_latent_state_requirement_audit.json"
 LATENT_LOOKUP_COST = TEST_RESULTS / "41_latent_state_lookup_cost_gate.json"
+COMPACT_LATENT_RULE = TEST_RESULTS / "42_compact_latent_rule_frontier.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -178,6 +179,11 @@ def main() -> None:
         if LATENT_LOOKUP_COST.exists()
         else None
     )
+    compact_latent_rule = (
+        load_json(COMPACT_LATENT_RULE)
+        if COMPACT_LATENT_RULE.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -258,6 +264,8 @@ def main() -> None:
         assert_boundary("latent_state_requirement_audit", latent_state_requirement)
     if latent_lookup_cost is not None:
         assert_boundary("latent_state_lookup_cost_gate", latent_lookup_cost)
+    if compact_latent_rule is not None:
+        assert_boundary("compact_latent_rule_frontier", compact_latent_rule)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -356,6 +364,9 @@ def main() -> None:
     )
     latent_lookup_cost_summary = (
         None if latent_lookup_cost is None else latent_lookup_cost["summary"]
+    )
+    compact_latent_rule_summary = (
+        None if compact_latent_rule is None else compact_latent_rule["summary"]
     )
 
     lines = [
@@ -1453,6 +1464,34 @@ def main() -> None:
                 "",
             ]
         )
+    if compact_latent_rule_summary is not None:
+        lines.extend(
+            [
+                "## Compact Latent Rule Frontier",
+                "",
+                "Gate 42 tests whether a small residual-visible latent rule can",
+                "beat the gate-41 lookup after paying predicate and label IDs.",
+                "It scores single-rule and two-rule sets over book, operation,",
+                "and active-operation features.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Predicate count | `{compact_latent_rule_summary['predicate_count']}` |",
+                f"| Candidate rule sets | `{compact_latent_rule_summary['candidate_rule_sets']}` |",
+                f"| Baseline lookup bits | `{compact_latent_rule_summary['baseline_lookup_bits']:.3f}` |",
+                f"| Best apparent net bits vs lookup | `{compact_latent_rule_summary['best_net_bits_vs_lookup']:.3f}` |",
+                f"| Best apparent false positives | `{compact_latent_rule_summary['best_false_positive_count']}` |",
+                f"| Best zero-false-positive net bits vs lookup | `{compact_latent_rule_summary['best_zero_false_positive_net_bits_vs_lookup']:.3f}` |",
+                f"| Best zero-false-positive hits | `{compact_latent_rule_summary['best_zero_false_positive_hit_count']}` |",
+                f"| Prequential cells with held-out hit | `{compact_latent_rule_summary['prequential_cells_with_hit']}/{compact_latent_rule_summary['prequential_cells_with_test']}` |",
+                "",
+                "The only apparent MDL win uses a false positive. The best",
+                "zero-false-positive rule is worse than lookup, and no selected",
+                "rule gets a held-out residual hit. Compact residual-visible",
+                "latent rules are therefore rejected.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1478,7 +1517,8 @@ def main() -> None:
             "families have no deterministic residual support. Gate 40 shows",
             "simple observable splits still leave `10` residual distinctions",
             "needing latent resolution. Gate 41 prices a pure latent lookup at",
-            "least `79.361` bits before rule cost. The remaining blocker is a richer latent path/state",
+            "least `79.361` bits before rule cost. Gate 42 rejects compact",
+            "residual-visible latent rules against that lookup. The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1528,6 +1568,7 @@ def main() -> None:
             "- [Observable state support audit](test_results/39_observable_state_support_audit.md)",
             "- [Latent state requirement audit](test_results/40_latent_state_requirement_audit.md)",
             "- [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)",
+            "- [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)",
             "",
         ]
     )

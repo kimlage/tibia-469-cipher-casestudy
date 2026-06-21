@@ -1,0 +1,762 @@
+{
+  "best_rule": {
+    "false_positive_count": 1,
+    "hit_books": [
+      34,
+      39
+    ],
+    "hit_count": 2,
+    "net_bits_vs_lookup": -5.243400697552289,
+    "remaining_lookup_bits": 64.33283683642586,
+    "rule_bits": 9.78463484555752,
+    "rule_count": 1,
+    "rules": [
+      {
+        "label": [
+          "copy",
+          5
+        ],
+        "predicate": "book_mod5_4"
+      }
+    ],
+    "total_bits": 74.11747168198337,
+    "unresolved_count": 8
+  },
+  "best_zero_false_positive_rule": {
+    "false_positive_count": 0,
+    "hit_books": [
+      57
+    ],
+    "hit_count": 1,
+    "net_bits_vs_lookup": 1.773407590134255,
+    "remaining_lookup_bits": 71.3496451241124,
+    "rule_bits": 9.78463484555752,
+    "rule_count": 1,
+    "rules": [
+      {
+        "label": [
+          "literal",
+          28
+        ],
+        "predicate": "book_mod5_2"
+      }
+    ],
+    "total_bits": 81.13427996966992,
+    "unresolved_count": 9
+  },
+  "case_reopened": false,
+  "classification": "compact_latent_rule_rejected_cost_or_holdout",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "compact_latent_rule_rejected_cost_or_holdout",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "compact_latent_rule_tested",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "latent_state_lookup_cost_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "selected_net_bits_vs_lookup": 1.7293524100563324,
+      "selected_rules": [
+        {
+          "label": [
+            "literal",
+            39
+          ],
+          "predicate": "op_even"
+        }
+      ],
+      "test_count": 8,
+      "test_false_positives": 6,
+      "test_hits": 0,
+      "train_count": 2
+    },
+    {
+      "cutoff_book": 30,
+      "selected_net_bits_vs_lookup": 1.745715856265221,
+      "selected_rules": [
+        {
+          "label": [
+            "copy",
+            9
+          ],
+          "predicate": "book_parity_1"
+        }
+      ],
+      "test_count": 5,
+      "test_false_positives": 4,
+      "test_hits": 0,
+      "train_count": 5
+    },
+    {
+      "cutoff_book": 40,
+      "selected_net_bits_vs_lookup": -5.2766941525498225,
+      "selected_rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        }
+      ],
+      "test_count": 3,
+      "test_false_positives": 0,
+      "test_hits": 0,
+      "train_count": 7
+    },
+    {
+      "cutoff_book": 50,
+      "selected_net_bits_vs_lookup": -5.265638964040825,
+      "selected_rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        }
+      ],
+      "test_count": 2,
+      "test_false_positives": 0,
+      "test_hits": 0,
+      "train_count": 8
+    },
+    {
+      "cutoff_book": 60,
+      "selected_net_bits_vs_lookup": 0.0,
+      "selected_rules": [],
+      "test_count": 0,
+      "test_false_positives": 0,
+      "test_hits": 0,
+      "train_count": 10
+    }
+  ],
+  "schema": "compact_latent_rule_frontier.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true,
+    "tests_compact_latent_rule_against_lookup": true
+  },
+  "summary": {
+    "baseline_lookup_bits": 79.36087237953566,
+    "best_false_positive_count": 1,
+    "best_hit_count": 2,
+    "best_net_bits_vs_lookup": -5.243400697552289,
+    "best_rule_count": 1,
+    "best_total_bits": 74.11747168198337,
+    "best_unresolved_count": 8,
+    "best_zero_false_positive_hit_count": 1,
+    "best_zero_false_positive_net_bits_vs_lookup": 1.773407590134255,
+    "best_zero_false_positive_total_bits": 81.13427996966992,
+    "best_zero_false_positive_unresolved_count": 9,
+    "candidate_rule_sets": 6276,
+    "decision_universe": 267,
+    "interpretation": "Compact latent rules are scored only if they beat the residual lookup after paying predicate and label IDs. Hits without a net MDL gain or holdout stability are not generation progress.",
+    "label_count": 9,
+    "predicate_count": 49,
+    "prequential_cells_with_hit": 0,
+    "prequential_cells_with_test": 4,
+    "promotes_compact_latent_rule": false,
+    "residual_count": 10
+  },
+  "top_scoreboard": [
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39
+      ],
+      "hit_count": 2,
+      "net_bits_vs_lookup": -5.243400697552289,
+      "remaining_lookup_bits": 64.33283683642586,
+      "rule_bits": 9.78463484555752,
+      "rule_count": 1,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        }
+      ],
+      "total_bits": 74.11747168198337,
+      "unresolved_count": 8
+    },
+    {
+      "false_positive_count": 5,
+      "hit_books": [
+        34,
+        39
+      ],
+      "hit_count": 2,
+      "net_bits_vs_lookup": -5.243400697552289,
+      "remaining_lookup_bits": 64.33283683642586,
+      "rule_bits": 9.78463484555752,
+      "rule_count": 1,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_lt_40"
+        }
+      ],
+      "total_bits": 74.11747168198337,
+      "unresolved_count": 8
+    },
+    {
+      "false_positive_count": 6,
+      "hit_books": [
+        34,
+        39
+      ],
+      "hit_count": 2,
+      "net_bits_vs_lookup": -5.243400697552289,
+      "remaining_lookup_bits": 64.33283683642586,
+      "rule_bits": 9.78463484555752,
+      "rule_count": 1,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "active_type_literal"
+        }
+      ],
+      "total_bits": 74.11747168198337,
+      "unresolved_count": 8
+    },
+    {
+      "false_positive_count": 8,
+      "hit_books": [
+        34,
+        39
+      ],
+      "hit_count": 2,
+      "net_bits_vs_lookup": -5.243400697552289,
+      "remaining_lookup_bits": 64.33283683642586,
+      "rule_bits": 9.78463484555752,
+      "rule_count": 1,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "all"
+        }
+      ],
+      "total_bits": 74.11747168198337,
+      "unresolved_count": 8
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        57
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "literal",
+            28
+          ],
+          "predicate": "book_mod5_2"
+        },
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        14,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            39
+          ],
+          "predicate": "book_eq_14"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        16,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            1
+          ],
+          "predicate": "book_eq_16"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        20,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            10
+          ],
+          "predicate": "book_eq_20"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        21,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            9
+          ],
+          "predicate": "book_eq_21"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        26,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            11
+          ],
+          "predicate": "book_eq_26"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        45
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            8
+          ],
+          "predicate": "book_eq_45"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        55
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            44
+          ],
+          "predicate": "book_eq_55"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        57
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            28
+          ],
+          "predicate": "book_eq_57"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        45
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            8
+          ],
+          "predicate": "op_eq_1"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        16,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            1
+          ],
+          "predicate": "op_eq_9"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        20,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            10
+          ],
+          "predicate": "active_len_3"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        21,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "copy",
+            9
+          ],
+          "predicate": "active_len_7"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        16,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            1
+          ],
+          "predicate": "active_len_8"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        34,
+        39,
+        57
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            28
+          ],
+          "predicate": "active_len_17"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    },
+    {
+      "false_positive_count": 1,
+      "hit_books": [
+        14,
+        34,
+        39
+      ],
+      "hit_count": 3,
+      "net_bits_vs_lookup": -3.481133665023222,
+      "remaining_lookup_bits": 56.3104690233974,
+      "rule_bits": 19.56926969111504,
+      "rule_count": 2,
+      "rules": [
+        {
+          "label": [
+            "copy",
+            5
+          ],
+          "predicate": "book_mod5_4"
+        },
+        {
+          "label": [
+            "literal",
+            39
+          ],
+          "predicate": "active_len_27"
+        }
+      ],
+      "total_bits": 75.87973871451244,
+      "unresolved_count": 7
+    }
+  ],
+  "translation_delta": "NONE"
+}
