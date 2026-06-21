@@ -883,6 +883,12 @@ components, while `4272.791` bits (`49.924%`) remain fixed recipe or
 non-learned ledger. The prequential split scores rows extracted from the full
 formula; it does not discover held-out literal/copy segmentation or copy
 source addresses.
+A recipe-reparse evidence matrix then checks whether that fixed-recipe
+externality is total. It is not: deterministic reparse roundtrips all
+prefix-held-out suffixes, beats the active suffix recipes under frozen counts,
+and beats content controls. The stronger order claim remains partial, because a
+focused cutoff-`50` train-set control lets random same-size training inventories
+match or exceed the numeric prefix (`p=0.1538`).
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1318,6 +1324,7 @@ book generation, not row0 pair-cell placement.
 - [Train-CV component selector audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/03_train_cv_component_selector_audit.md)
 - [Recipe externality audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md)
 - [Row0 hypothesis requirement audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/05_row0_hypothesis_requirement_audit.md)
+- [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

@@ -88,6 +88,17 @@ formula before splitting; they do not discover held-out literal/copy
 segmentation or copy source addresses.
 See [04_recipe_externality_audit.md](test_results/04_recipe_externality_audit.md).
 
+### Recipe Reparse Evidence Matrix
+
+A follow-up evidence matrix then checks whether the later deterministic
+reparse audits actually reduce that fixed-recipe externality. They do:
+deterministic reparse roundtrips all future suffixes at cutoffs
+`10/20/35/50/60` and beats the active suffix recipe under frozen counts.
+Content controls are also weaker. The boundary remains partial because
+the focused train-set control shows random same-size training inventories
+can match or exceed the numeric prefix (`p=0.1538`).
+See [06_recipe_reparse_evidence_matrix.md](test_results/06_recipe_reparse_evidence_matrix.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -137,7 +148,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 
 - `8558.667` bits remains a frozen validation scope here, not a final authorial method.
 - The learned component signal survives prefix and block holdout but fails some family holdouts, so it is not promoted beyond partial predictive structure.
-- The prequential evidence is conditional on a full-corpus fixed recipe, so it is component validation rather than full recipe discovery.
+- The full-corpus fixed-recipe limitation is partially reduced by deterministic reparse evidence, but the generation claim remains partial.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

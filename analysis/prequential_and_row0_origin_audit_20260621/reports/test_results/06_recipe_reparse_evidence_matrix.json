@@ -1,0 +1,108 @@
+{
+  "case_reopened": false,
+  "classification": "recipe_externality_reduced_but_generation_claim_still_partial",
+  "decision": {
+    "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
+    "numeric_order_status": "supported_against_order_controls_but_not_unique_against_random_train_inventories",
+    "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence.",
+    "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "evidence_matrix": [
+    {
+      "evidence": {
+        "all_reparse_beats_active_recipe": true,
+        "all_roundtrip": true,
+        "cutoffs": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "max_reparse_minus_active_bits": -22.009655705935245,
+        "mean_reparse_minus_active_bits": -112.71958597535681
+      },
+      "interpretation": "The fixed parser can rediscover useful held-out recipes under frozen train-prefix component counts.",
+      "question": "does_deterministic_reparse_roundtrip_future_suffixes",
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",
+      "status": "passed"
+    },
+    {
+      "evidence": {
+        "control_trials": 8,
+        "cutoffs": [
+          20,
+          35,
+          50
+        ],
+        "observed_beats_all_control_means": true,
+        "observed_stronger_than_random_same_lengths_at_all_cutoffs": true
+      },
+      "interpretation": "Observed suffixes are not behaving like generic random or shuffled decimal strings, although the small control count limits p-value resolution.",
+      "question": "does_reparse_signal_beat_content_controls",
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",
+      "status": "passed_low_trial_count"
+    },
+    {
+      "evidence": {
+        "cutoff": 50,
+        "numeric_prefix_specific_at_all_cutoffs": false,
+        "observed_gain_vs_raw_bits": 10441.679356279594,
+        "p_random_ge_observed": 0.15384615384615385,
+        "random_train_max_gain_bits": 10489.489390235345,
+        "random_train_mean_gain_bits": 9473.486059931087
+      },
+      "interpretation": "The copy/reference mechanism is predictive, but random same-size training inventories can match or exceed the numeric prefix in the focused train-set control.",
+      "question": "is_numeric_prefix_training_uniquely_supported",
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
+      "status": "failed_as_authorial_order_proof"
+    },
+    {
+      "evidence": {
+        "active_scope_bits": 8558.666806283434,
+        "candidate_gain_vs_active_bits": 215.60486134796702,
+        "candidate_total_bits": 8343.061944935467,
+        "roundtrip": "70/70",
+        "row0_origin_changed": false,
+        "semantic_delta": "NONE"
+      },
+      "interpretation": "The deterministic online parser reduces recipe cost mechanically, but it does not derive row0 or introduce plaintext.",
+      "question": "does_online_reparse_reduce_full_corpus_recipe_cost",
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
+      "status": "passed_as_mechanical_compile_not_semantic_claim"
+    },
+    {
+      "evidence": {
+        "arbitrary_order_descriptor_bits": 332.4532653795422,
+        "best_charged": "numeric",
+        "best_raw": "numeric",
+        "numeric_recomputed_bits": 8343.061944935467,
+        "random_order_count": 6,
+        "random_raw_min_bits": 8531.646302549669
+      },
+      "interpretation": "Numeric order is compact under the tested named and random order controls, but arbitrary order search is not promoted.",
+      "question": "does_numeric_online_order_survive_order_controls",
+      "source": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
+      "status": "passed_against_tested_orders"
+    }
+  ],
+  "frozen_validation_scope": {
+    "compression_bound_bits": 8558.666806283434,
+    "fixed_or_nonlearned_ledger_bits": 4272.791228101202,
+    "fixed_or_nonlearned_ledger_share": 0.4992356081632116,
+    "note": "The matrix uses 8558.667 bits as validation scope. Later online reparse bits are evidence about recipe discovery, not semantic progress."
+  },
+  "inputs": {
+    "online_reparse_compile": "analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.json",
+    "online_reparse_order_controls": "analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.json",
+    "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",
+    "recipe_externality": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
+    "reparse_content_controls": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",
+    "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json"
+  },
+  "plaintext_claim": false,
+  "schema": "recipe_reparse_evidence_matrix.v1",
+  "translation_delta": "NONE"
+}

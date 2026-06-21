@@ -31,6 +31,9 @@ exogenous.
 - [scripts/05_row0_hypothesis_requirement_audit.py](scripts/05_row0_hypothesis_requirement_audit.py) - forces each row0-origin hypothesis through the same algorithm/cost/coverage/control checklist.
 - [reports/test_results/05_row0_hypothesis_requirement_audit.md](reports/test_results/05_row0_hypothesis_requirement_audit.md) - row0 hypothesis requirement matrix.
 - [reports/test_results/05_row0_hypothesis_requirement_audit.json](reports/test_results/05_row0_hypothesis_requirement_audit.json) - structured requirement ledger.
+- [scripts/06_recipe_reparse_evidence_matrix.py](scripts/06_recipe_reparse_evidence_matrix.py) - checks whether deterministic reparse evidence reduces the fixed-recipe externality.
+- [reports/test_results/06_recipe_reparse_evidence_matrix.md](reports/test_results/06_recipe_reparse_evidence_matrix.md) - recipe-reparse evidence matrix.
+- [reports/test_results/06_recipe_reparse_evidence_matrix.json](reports/test_results/06_recipe_reparse_evidence_matrix.json) - structured recipe-reparse ledger.
 
 ## Boundary
 
@@ -41,7 +44,10 @@ exogenous.
   the failures. The recipe-externality audit then quantifies the remaining
   limitation: about half of the `8558.667`-bit ledger is still fixed-recipe or
   non-learned cost, and the prequential split scores rows extracted from the
-  full formula rather than discovering held-out recipes.
+  full formula rather than discovering held-out recipes. The recipe-reparse
+  evidence matrix partially reduces that limitation: deterministic reparse
+  roundtrips held-out suffixes and beats content controls, but numeric prefix
+  training is not unique against random same-size train inventories.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

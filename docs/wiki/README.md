@@ -383,6 +383,11 @@ origin remains exogenous.
 The recipe-externality audit quantifies the boundary: `4285.876/8558.667`
 bits are actually prequentially scored learned components, while `4272.791`
 bits remain fixed-recipe or non-learned ledger extracted from the full formula.
+The recipe-reparse evidence matrix reduces that limitation: deterministic
+reparse roundtrips all prefix-held-out suffixes and beats active suffix recipes
+plus content controls, while still rejecting the stronger claim that numeric
+prefix training is uniquely authorial because random same-size train inventories
+can match it at cutoff `50` (`p=0.1538`).
 The row0 requirement-matrix follow-up closes the requested hypothesis checklist:
 six origin families have explicit algorithm/cost/coverage/control entries, and
 promoted row0-origin formulas remain `0`.
@@ -557,7 +562,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   freezes `8558.667` bits as a validation scope, classifies the learned
   component signal as partial under family holdouts, decomposes the family
   failures as component/sample-size stress cases, rejects a train-only
-  component fallback, quantifies the fixed-recipe externality, closes the row0
+  component fallback, quantifies and partly reduces the fixed-recipe
+  externality through a deterministic-reparse evidence matrix, closes the row0
   hypothesis requirement matrix with zero promoted origin formulas, and keeps
   row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
