@@ -200,6 +200,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Canonical online recipe formula | materializes the pruned formula without book `length` or copy `target_start`; preserves `8343.062` bits and `70/70` | former compact bound representation |
 | Literal-length-derived recipe formula | literal op `length` is derived from literal `text`; removes 87 more redundant fields and preserves `8343.062` bits and `70/70` | tighter recipe representation |
 | Op-type-derived recipe formula | op `type` is derived from field shape; removes 348 more redundant fields and preserves `8343.062` bits and `70/70` | remaining op dependencies: literal text, copy source, copy length |
+| Recipe representation dependency gate | consolidates the compact recipe compiles: `766` independent fields are derivable and removed with `+0.000` bit delta and `70/70`, while literal text, copy source, and copy length remain declared | derivable recipe fields closed / dependencies retained |
 | Copy source canonicality audit | all 261 copy sources are the earliest legal occurrence of the copied chunk at declared length; only 123 are unique | canonical encoder rule / source still required for decoding |
 | Source canonicality decodability gate | earliest-source canonicality is `261/261`, but the rule depends on future target chunk, `138/261` choices are ambiguous at declared length, and source dependency is not removed | encoder regularity / decoder source retained |
 | Copy source canonicality controls | earliest occurrence remains `261/261`; latest occurrence is `123/261`, previous-source-plus-length is `5/261`, and random candidate choice expects `169.473` hits | source tie-break support / no decoder removal |
@@ -375,6 +376,7 @@ Primary sources:
 [canonical_online_recipe_formula_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md),
 [literal_length_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md),
 [op_type_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md),
+[recipe_representation_dependency_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/30_recipe_representation_dependency_gate.md),
 [copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md),
 [source_canonicality_decodability_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.md),
 [online_copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md),

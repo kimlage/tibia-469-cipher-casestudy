@@ -1,0 +1,53 @@
+{
+  "case_reopened": false,
+  "classification": "recipe_representation_artifacts_removed_dependencies_retained",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "generation_explanation_status": "recipe_description_simplified_not_final_method",
+    "recipe_representation_status": "derivable_fields_removed",
+    "remaining_recipe_dependency_status": "literal_text_copy_source_copy_length_retained",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "canonical_online_recipe_formula_compile": "analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.json",
+    "literal_length_derived_recipe_compile": "analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.json",
+    "online_formula_recipe_prune": "analysis/authorial_mechanism_20260620/reports/test_results/131_online_formula_recipe_prune_audit.json",
+    "op_type_derived_recipe_compile": "analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.json"
+  },
+  "plaintext_claim": false,
+  "schema": "recipe_representation_dependency_gate.v1",
+  "summary": {
+    "active_bits": 8343.061944935467,
+    "ambiguous_or_unclassifiable_ops": 0,
+    "copied_digit_fraction": 0.9239101482731066,
+    "dependencies_retained": true,
+    "derivable_fields_removed": true,
+    "final_type_derived_bits": 8343.061944935467,
+    "interpretation": "Book length, copy target_start, literal length, and operation type are representation artifacts under the compact online recipe. Removing them preserves the 8343.062-bit score and 70/70 roundtrip. Literal text, copy source, and copy length remain declared operation-level dependencies.",
+    "literal_digit_fraction": 0.07608985172689336,
+    "recipe_json_bytes_active": 24355,
+    "recipe_json_bytes_type_derived": 12633,
+    "remaining_declared_dependencies": {
+      "copied_digits": 10406,
+      "copy_length_fields": 261,
+      "copy_source_fields": 261,
+      "literal_digits": 857,
+      "literal_text_fields": 87
+    },
+    "removed_book_length_fields": 70,
+    "removed_copy_target_start_fields": 261,
+    "removed_independent_field_count": 766,
+    "removed_literal_length_fields": 87,
+    "removed_type_fields": 348,
+    "roundtrip_ok": 70,
+    "score_delta_bits": 0.0,
+    "stage_byte_savings": {
+      "active_to_canonical": 5612,
+      "canonical_to_literal_length_derived": 977,
+      "literal_length_to_type_derived": 5133
+    },
+    "total_recipe_json_byte_saving": 11722
+  },
+  "translation_delta": "NONE"
+}

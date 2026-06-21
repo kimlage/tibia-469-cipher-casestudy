@@ -103,6 +103,9 @@ exogenous.
 - [scripts/29_literal_payload_model_gate.py](scripts/29_literal_payload_model_gate.py) - checks whether the remaining literal payload model can be simplified after the availability gate.
 - [reports/test_results/29_literal_payload_model_gate.md](reports/test_results/29_literal_payload_model_gate.md) - literal payload model gate result.
 - [reports/test_results/29_literal_payload_model_gate.json](reports/test_results/29_literal_payload_model_gate.json) - structured literal payload model ledger.
+- [scripts/30_recipe_representation_dependency_gate.py](scripts/30_recipe_representation_dependency_gate.py) - checks which compact recipe fields are derivable representation artifacts and which dependencies remain declared.
+- [reports/test_results/30_recipe_representation_dependency_gate.md](reports/test_results/30_recipe_representation_dependency_gate.md) - recipe representation dependency gate result.
+- [reports/test_results/30_recipe_representation_dependency_gate.json](reports/test_results/30_recipe_representation_dependency_gate.json) - structured recipe dependency ledger.
 
 ## Boundary
 
@@ -181,7 +184,10 @@ exogenous.
   candidate, while in-literal and cross-op local repairs remain worse. A
   literal payload model gate then retains the active order-2 previous-emitted-
   digit model: order-1 is worse on full corpus and aggregate prefix totals, and
-  modal default/exception plus simple structural contexts are also worse.
+  modal default/exception plus simple structural contexts are also worse. A
+  recipe representation dependency gate then removes derivable book length,
+  copy target start, literal length, and op type fields while retaining literal
+  text, copy source, and copy length as declared dependencies.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

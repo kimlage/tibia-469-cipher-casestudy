@@ -278,6 +278,18 @@ nonnegative descriptor. The frontier metric is therefore retained as
 a predictive diagnostic, not a compression-bound promotion score.
 See [23_order_frontier_promotion_gate.md](test_results/23_order_frontier_promotion_gate.md).
 
+### Recipe Representation Dependency Gate
+
+The compact online recipe representation is then audited as a dependency
+ledger. Book `length`, copy `target_start`, literal `length`, and op
+`type` are derivable representation artifacts: removing `70 + 261 +
+87 + 348` fields preserves `8343.062` bits and `70/70` roundtrip.
+The recipe JSON shrinks from `24355` bytes to `12633` bytes. The
+remaining declared operation-level dependencies are still literal
+text (`87` fields / `857` digits), copy source (`261` fields), and
+copy length (`261` fields).
+See [30_recipe_representation_dependency_gate.md](test_results/30_recipe_representation_dependency_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -412,6 +424,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - Copy-length midpoint context is retained as a generalizing natural split; the searched cutoff `37` is rejected as ad-hoc for only `0.256` bits over midpoint.
 - Literal externality is reduced but not removed: most literal payload is forced by copy unavailability, and the residual local repair families are worse under the active ledger.
 - The literal payload model remains order-2 previous-emitted-digit context: order-1, modal default/exception coding, and simple structural contexts all fail as replacements.
+- Recipe representation artifacts are removed without changing the score: book length, copy target start, literal length, and op type are derivable; literal text, copy source, and copy length remain declared.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

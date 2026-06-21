@@ -1025,6 +1025,9 @@ The op-type-derived recipe compile then removes op `type` as an independent
 field: `text` implies literal, while `source_digit_pos` plus `length` implies
 copy. Literal text, copy source, and copy length are now the remaining
 operation-level recipe dependencies.
+The recipe representation dependency gate consolidates those compiles: `766`
+independent recipe fields are derivable with `+0.000` bit delta and `70/70`,
+while literal text, copy source, and copy length remain declared dependencies.
 The copy-source canonicality audit then checks whether those remaining source
 fields are arbitrary. All 261 copy sources are the earliest legal occurrence of
 the copied chunk at the declared length; only 123 are unique, so this is an
@@ -1483,6 +1486,7 @@ book generation, not row0 pair-cell placement.
 - [Canonical online recipe formula compile](../../analysis/authorial_mechanism_20260620/reports/test_results/132_canonical_online_recipe_formula_compile.md)
 - [Literal-length-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md)
 - [Op-type-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md)
+- [Recipe representation dependency gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/30_recipe_representation_dependency_gate.md)
 - [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
 - [Source canonicality decodability gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/25_source_canonicality_decodability_gate.md)
 - [Online copy-source canonicality controls](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md)

@@ -467,6 +467,9 @@ The literal-length-derived compile removes literal op `length` as an independent
 field; copy `length` remains declared.
 The op-type-derived compile removes explicit op `type`; field shape now
 distinguishes literal from copy.
+The recipe representation dependency gate consolidates those compiles: `766`
+independent fields are derivable, while literal text, copy source, and copy
+length remain declared dependencies.
 The copy-source canonicality audit shows all copy sources are earliest legal
 occurrences of their copied chunks; source is canonical for encoding but still
 required for decoding.

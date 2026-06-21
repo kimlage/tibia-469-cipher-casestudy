@@ -53,6 +53,8 @@ SOURCES = {
     / "27_copy_length_midpoint_context_gate.json",
     "literal_copy_availability_gate": TEST_RESULTS / "28_literal_copy_availability_gate.json",
     "literal_payload_model_gate": TEST_RESULTS / "29_literal_payload_model_gate.json",
+    "recipe_representation_dependency_gate": TEST_RESULTS
+    / "30_recipe_representation_dependency_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -99,6 +101,7 @@ def make_result() -> dict[str, Any]:
     copy_length_midpoint_gate = load_json(SOURCES["copy_length_midpoint_context_gate"])
     literal_copy_gate = load_json(SOURCES["literal_copy_availability_gate"])
     literal_payload_model_gate = load_json(SOURCES["literal_payload_model_gate"])
+    recipe_representation_gate = load_json(SOURCES["recipe_representation_dependency_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -129,6 +132,7 @@ def make_result() -> dict[str, Any]:
         ("copy_length_midpoint_context_gate", copy_length_midpoint_gate),
         ("literal_copy_availability_gate", literal_copy_gate),
         ("literal_payload_model_gate", literal_payload_model_gate),
+        ("recipe_representation_dependency_gate", recipe_representation_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -514,6 +518,46 @@ def make_result() -> dict[str, Any]:
             "interpretation": (
                 "The deterministic online parser reduces recipe cost mechanically, "
                 "but it does not derive row0 or introduce plaintext."
+            ),
+        },
+        {
+            "question": "which_recipe_fields_are_derivable_representation_artifacts",
+            "source": rel(SOURCES["recipe_representation_dependency_gate"]),
+            "status": "passed_derivable_fields_removed_dependencies_retained",
+            "evidence": {
+                "active_bits": recipe_representation_gate["summary"]["active_bits"],
+                "final_type_derived_bits": recipe_representation_gate["summary"][
+                    "final_type_derived_bits"
+                ],
+                "score_delta_bits": recipe_representation_gate["summary"][
+                    "score_delta_bits"
+                ],
+                "removed_book_length_fields": recipe_representation_gate["summary"][
+                    "removed_book_length_fields"
+                ],
+                "removed_copy_target_start_fields": recipe_representation_gate[
+                    "summary"
+                ]["removed_copy_target_start_fields"],
+                "removed_literal_length_fields": recipe_representation_gate[
+                    "summary"
+                ]["removed_literal_length_fields"],
+                "removed_type_fields": recipe_representation_gate["summary"][
+                    "removed_type_fields"
+                ],
+                "removed_independent_field_count": recipe_representation_gate[
+                    "summary"
+                ]["removed_independent_field_count"],
+                "total_recipe_json_byte_saving": recipe_representation_gate[
+                    "summary"
+                ]["total_recipe_json_byte_saving"],
+                "remaining_declared_dependencies": recipe_representation_gate[
+                    "summary"
+                ]["remaining_declared_dependencies"],
+            },
+            "interpretation": (
+                "Book length, copy target_start, literal length, and op type are "
+                "derivable in the compact recipe; literal text, copy source, and "
+                "copy length remain declared dependencies."
             ),
         },
         {
@@ -1044,6 +1088,7 @@ def make_result() -> dict[str, Any]:
             "copy_length_context_status": "midpoint_context_retained",
             "literal_externality_status": "reduced_not_removed",
             "literal_payload_model_status": "active_order2_retained",
+            "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1190,6 +1235,22 @@ def write_result(result: dict[str, Any]) -> None:
             key = (
                 f"{evidence['active_scope_bits']:.3f} -> {evidence['candidate_total_bits']:.3f} bits; "
                 f"gain {evidence['candidate_gain_vs_active_bits']:.3f}; roundtrip {evidence['roundtrip']}"
+            )
+        elif row["question"] == "which_recipe_fields_are_derivable_representation_artifacts":
+            deps = evidence["remaining_declared_dependencies"]
+            key = (
+                f"bits {evidence['active_bits']:.3f} -> "
+                f"{evidence['final_type_derived_bits']:.3f}; "
+                f"delta {evidence['score_delta_bits']:+.12f}; removed fields "
+                f"book_length {evidence['removed_book_length_fields']}, "
+                f"copy_target {evidence['removed_copy_target_start_fields']}, "
+                f"literal_length {evidence['removed_literal_length_fields']}, "
+                f"type {evidence['removed_type_fields']} "
+                f"(total {evidence['removed_independent_field_count']}); "
+                f"JSON saved {evidence['total_recipe_json_byte_saving']}; "
+                f"remaining literal_text {deps['literal_text_fields']}, "
+                f"copy_source {deps['copy_source_fields']}, "
+                f"copy_length {deps['copy_length_fields']}"
             )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
@@ -1351,6 +1412,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Copy-length context: `{result['decision']['copy_length_context_status']}`.",
             f"- Literal externality: `{result['decision']['literal_externality_status']}`.",
             f"- Literal payload model: `{result['decision']['literal_payload_model_status']}`.",
+            f"- Recipe representation: `{result['decision']['recipe_representation_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

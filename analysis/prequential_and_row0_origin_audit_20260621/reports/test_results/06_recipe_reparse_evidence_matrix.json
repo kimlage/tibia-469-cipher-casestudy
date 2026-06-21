@@ -9,6 +9,7 @@
     "numeric_order_status": "frontier_not_unique_and_control_orders_not_promotable",
     "progress_claim": "This increases predictive/generative validation by showing the fixed-recipe limitation is not total: a deterministic parser can rediscover held-out recipes. It also falsifies the stronger claim that numeric prefix training is uniquely authorial evidence and reduces same-family source memorization as an explanation for singleton holdout performance.",
     "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
+    "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "unchanged_exogenous",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "translation_or_plaintext_status": "NONE"
@@ -326,6 +327,30 @@
     },
     {
       "evidence": {
+        "active_bits": 8343.061944935467,
+        "final_type_derived_bits": 8343.061944935467,
+        "remaining_declared_dependencies": {
+          "copied_digits": 10406,
+          "copy_length_fields": 261,
+          "copy_source_fields": 261,
+          "literal_digits": 857,
+          "literal_text_fields": 87
+        },
+        "removed_book_length_fields": 70,
+        "removed_copy_target_start_fields": 261,
+        "removed_independent_field_count": 766,
+        "removed_literal_length_fields": 87,
+        "removed_type_fields": 348,
+        "score_delta_bits": 0.0,
+        "total_recipe_json_byte_saving": 11722
+      },
+      "interpretation": "Book length, copy target_start, literal length, and op type are derivable in the compact recipe; literal text, copy source, and copy length remain declared dependencies.",
+      "question": "which_recipe_fields_are_derivable_representation_artifacts",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/30_recipe_representation_dependency_gate.json",
+      "status": "passed_derivable_fields_removed_dependencies_retained"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -594,6 +619,7 @@
     "order_frontier_promotion_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.json",
     "prequential_recipe_reparse": "analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.json",
     "recipe_externality": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
+    "recipe_representation_dependency_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/30_recipe_representation_dependency_gate.json",
     "reparse_content_controls": "analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.json",
     "reparse_family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
     "reparse_family_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
