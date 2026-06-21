@@ -615,5 +615,10 @@ Generated audits in this directory should be treated as the current state:
   under the same frozen counts on all five cutoffs. This is stronger predictive
   evidence for the copy/reference mechanism, but it is split-specific and does
   not alter the full-corpus `compression_bound`.
+- `127_prequential_recipe_reparse_controls`: controls that reparse result
+  against random same-length, per-book shuffled, and suffix-pool shuffled test
+  books at cutoffs `20/35/50`. The observed suffixes remain far better than all
+  control means; controls have negative gain versus raw digits while observed
+  gains remain large and positive.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

@@ -384,6 +384,9 @@ The recipe reparse audit strengthens that result: with frozen train-prefix
 component counts, a deterministic LZ parser roundtrips every future suffix and
 beats the active full-corpus recipe under the same frozen counts, while still
 remaining split-specific analysis rather than a new bound.
+The reparse controls then show this is not generic behavior on same-length
+random or shuffled decimal strings: controls lose against raw digits while real
+suffixes keep large positive gains.
 The row0 origin frontier audit then indexes matrix/rule/orbit/tape-feature/
 low-rank/render/eye/provenance tests and classifies that front as
 `row0_origin_frontier_saturated_current_corpus`: row0 remains open, but no

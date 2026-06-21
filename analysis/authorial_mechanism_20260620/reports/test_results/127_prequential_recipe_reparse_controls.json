@@ -1,0 +1,161 @@
+{
+  "boundary": {
+    "case_reopened": false,
+    "compression_bound_changed": false,
+    "plaintext_claim": false,
+    "row0_origin_changed": false,
+    "translation_claim": false
+  },
+  "classification": "controlled_recipe_reparse_signal_above_negative_controls",
+  "control_cutoffs": [
+    20,
+    35,
+    50
+  ],
+  "control_trials": 8,
+  "rows": [
+    {
+      "control_roundtrip_failures": {
+        "random_same_lengths": 0,
+        "shuffle_each_book": 0,
+        "shuffle_suffix_pool": 0
+      },
+      "controls": {
+        "random_same_lengths": {
+          "max": -2487.730030818002,
+          "mean": -2586.012381823609,
+          "min": -2694.570897754322,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 73.4139079897612,
+          "trials": 8
+        },
+        "shuffle_each_book": {
+          "max": -2315.14660984655,
+          "mean": -2453.166451604735,
+          "min": -2538.631663250988,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 76.10206793997637,
+          "trials": 8
+        },
+        "shuffle_suffix_pool": {
+          "max": -2423.531943476046,
+          "mean": -2499.708390935629,
+          "min": -2612.81026328239,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 57.9451637112333,
+          "trials": 8
+        }
+      },
+      "cutoff": 20,
+      "observed": {
+        "bits": 3483.662080133127,
+        "gain_vs_raw_bits": 22842.618071849218,
+        "raw_uniform_bits": 26326.280151982344,
+        "roundtrip": {
+          "book_count": 50,
+          "books_roundtrip_ok": 50,
+          "errors": []
+        }
+      },
+      "test_book_count": 50
+    },
+    {
+      "control_roundtrip_failures": {
+        "random_same_lengths": 0,
+        "shuffle_each_book": 0,
+        "shuffle_suffix_pool": 0
+      },
+      "controls": {
+        "random_same_lengths": {
+          "max": -1815.9003341643293,
+          "mean": -1950.3177380727693,
+          "min": -2053.3074439936463,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 73.30508943059694,
+          "trials": 8
+        },
+        "shuffle_each_book": {
+          "max": -1755.996632317463,
+          "mean": -1861.6572844982243,
+          "min": -1934.387236893137,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 54.567891947312816,
+          "trials": 8
+        },
+        "shuffle_suffix_pool": {
+          "max": -1781.9865464158538,
+          "mean": -1875.0971342993257,
+          "min": -1946.6379480710093,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 52.971529813285336,
+          "trials": 8
+        }
+      },
+      "cutoff": 35,
+      "observed": {
+        "bits": 2219.8943582345596,
+        "gain_vs_raw_bits": 17163.5560754332,
+        "raw_uniform_bits": 19383.45043366776,
+        "roundtrip": {
+          "book_count": 35,
+          "books_roundtrip_ok": 35,
+          "errors": []
+        }
+      },
+      "test_book_count": 35
+    },
+    {
+      "control_roundtrip_failures": {
+        "random_same_lengths": 0,
+        "shuffle_each_book": 0,
+        "shuffle_suffix_pool": 0
+      },
+      "controls": {
+        "random_same_lengths": {
+          "max": -1117.0549660883207,
+          "mean": -1140.3878280724357,
+          "min": -1173.070201364786,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 17.82888207232363,
+          "trials": 8
+        },
+        "shuffle_each_book": {
+          "max": -1019.7483637367568,
+          "mean": -1106.350592219963,
+          "min": -1144.3931542581722,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 44.713385742231345,
+          "trials": 8
+        },
+        "shuffle_suffix_pool": {
+          "max": -1080.9156015132285,
+          "mean": -1114.517393676528,
+          "min": -1158.4228151209518,
+          "p_control_ge_observed": 0.1111111111111111,
+          "sd": 30.611735473372566,
+          "trials": 8
+        }
+      },
+      "cutoff": 50,
+      "observed": {
+        "bits": 1148.5277667824114,
+        "gain_vs_raw_bits": 10441.679356279594,
+        "raw_uniform_bits": 11590.207123062006,
+        "roundtrip": {
+          "book_count": 20,
+          "books_roundtrip_ok": 20,
+          "errors": []
+        }
+      },
+      "test_book_count": 20
+    }
+  ],
+  "schema": "prequential_recipe_reparse_controls.v1",
+  "source_audit": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py",
+  "summary": {
+    "observed_beats_all_control_means": true,
+    "observed_stronger_than_random_same_lengths_at_all_cutoffs": true
+  },
+  "test": "127_prequential_recipe_reparse_controls",
+  "translation_delta": "NONE"
+}

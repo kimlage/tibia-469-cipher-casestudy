@@ -327,6 +327,9 @@ book-midpoint copy-length context, `alpha=1`, declared item-type split at book
 - `scripts/126_prequential_recipe_reparse_audit.py` - tests the audit-125
   recipe limitation by reparsing future suffix books with frozen train-prefix
   component counts and a deterministic LZ parser.
+- `scripts/127_prequential_recipe_reparse_controls.py` - controls the
+  deterministic suffix reparse against random same-length books and shuffled
+  suffix/book digit controls.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

@@ -862,6 +862,13 @@ under the same frozen counts on all five cutoffs. This strengthens the
 mechanical copy/reference explanation, but it remains split-specific analysis;
 it does not lower the full-corpus `compression_bound` or derive row0.
 
+The recipe-reparse control audit then tests whether this is generic LZ behavior.
+At cutoffs `20/35/50`, random same-length, per-book-shuffled, and suffix-pool
+shuffled test books all have negative gain versus raw digits, while the real
+suffixes retain large positive gains. This upgrades the result from
+component-only validation to controlled predictive recipe evidence, still
+without changing the bound or making a semantic claim.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1134,6 +1141,7 @@ book generation, not row0 pair-cell placement.
 - [Item-type split-only alpha resweep](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md)
 - [Prequential and row0 origin audit](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
+- [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 
 ## Boundary
 

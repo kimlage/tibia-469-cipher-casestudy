@@ -579,6 +579,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   recipe on all five prefix cutoffs. This strengthens predictive validation of
   the mechanical copy/reference layer, but remains split-specific analysis and
   does not change `compression_bound`.
+- prequential recipe reparse controls are now covered by
+  [`127_prequential_recipe_reparse_controls.py`](scripts/127_prequential_recipe_reparse_controls.py);
+  at cutoffs `20/35/50`, observed suffixes beat random same-length,
+  per-book-shuffled, and suffix-pool-shuffled controls. Control gains are
+  negative while observed gains remain large and positive, so the audit-126
+  signal is not generic LZ behavior on arbitrary same-length decimal strings.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

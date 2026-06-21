@@ -170,6 +170,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Item-type split-only alpha resweep | after the split-only promotion, `alpha=2` remains best at `8558.667`; nearest alternate `alpha=1` is `+0.309` bits worse | retained parameter frontier |
 | Prequential and row0 origin audit | freezes `8558.667` as `compression_bound`; learned components beat uniform on all prefix future-suffix splits, but random same-size train controls are usually stronger, and row0 origin remains exogenous across manual/permutation/grid/order/external/workbook hypotheses | predictive component evidence / row0 still exogenous |
 | Prequential recipe reparse audit | with frozen train-prefix component counts, a deterministic LZ parser roundtrips every future suffix and beats the active full-corpus recipe under the same frozen counts on all five cutoffs | predictive recipe evidence / split-specific analysis only |
+| Prequential recipe reparse controls | at cutoffs `20/35/50`, real suffixes beat random same-length, per-book-shuffled, and suffix-pool-shuffled controls; controls have negative gain versus raw digits | controlled predictive recipe evidence |
 | Row0 origin frontier audit | matrix/rule/orbit/tape-feature/low-rank/render/eye/provenance tests are indexed together; no family yields a charged, controlled, holdout-capable pair-label formula | current-corpus frontier saturated / row0 origin still open |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
@@ -291,6 +292,7 @@ Primary sources:
 [item_type_split_only_alpha_resweep.md](../../analysis/authorial_mechanism_20260620/reports/test_results/124_item_type_split_only_alpha_resweep.md),
 [prequential_and_row0_origin_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
+[prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [residual_coverage_mdl_report.md](../../analysis/mechanism_model_20260618/residual_coverage_mdl_report.md),
 [external_holdout_chayenne_ytc_report.md](../../analysis/generator_search_20260618/external_holdout_chayenne_ytc_report.md),
 [zero_compact_rule_report.md](../../analysis/generator_search_20260618/zero_compact_rule_report.md).
