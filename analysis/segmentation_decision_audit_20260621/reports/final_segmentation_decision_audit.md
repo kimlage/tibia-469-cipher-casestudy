@@ -67,6 +67,22 @@ parser clue, not a replacement for the full skeleton ledger.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, fan gloss, semantic reading, or case reopening is introduced.
 
+## Dependency Reduction Ledger
+
+| Representation | Operation/skeleton records | Literal chunks | Copy/source exception records | Parser rule records | Total materialized records |
+|---|---:|---:|---:|---:|---:|
+| Exact skeleton ledger | `261` | `53` | `208` | `0` | `522` |
+| Target-text parser projection | `262` | `54` | `1` | `1` | `318` |
+
+- Materialized record delta: `-204`.
+- Conditional copy `(source,length)` fields removed: `414`.
+- Full greedy source-free parser exact books: `39/60`.
+- Full greedy mismatch books: `[10, 12, 13, 14, 16, 17, 23, 25, 26, 32, 34, 38, 39, 42, 44, 49, 52, 55, 57, 58, 65]`.
+
+The dependency reduction is therefore real but conditional. It needs
+target text and the stable projection's copy starts; it does not derive
+the full operation sequence source-free.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -79,3 +95,4 @@ target text or changing the skeleton/literal accounting.
 
 - [Segmentation decision trace](test_results/01_segmentation_decision_trace.md)
 - [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)
+- [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)

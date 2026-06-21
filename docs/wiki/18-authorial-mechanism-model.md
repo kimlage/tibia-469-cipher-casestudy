@@ -457,6 +457,11 @@ is promoted only as a mechanical segmentation clue for target-text-aware
 parsing: it reduces declared copy `(source,length)` dependence under that
 parser view, but it does not generate the target digit stream source-free and
 does not replace the full skeleton/literal ledger.
+A parser dependency reduction ledger quantifies that boundary. Against the
+exact skeleton ledger, the conditional target-text parser projection reduces
+materialized records from `522` to `318` and removes `414` copy
+`(source,length)` fields. The source-free greedy control is exact for only
+`39/60` non-seed books, so the operation-start atlas remains retained.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2123,6 +2128,7 @@ book generation, not row0 pair-cell placement.
 - [Final segmentation decision audit](../../analysis/segmentation_decision_audit_20260621/reports/final_segmentation_decision_audit.md)
 - [Segmentation decision trace](../../analysis/segmentation_decision_audit_20260621/reports/test_results/01_segmentation_decision_trace.md)
 - [Structural segmentation hypothesis audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.md)
+- [Parser dependency reduction ledger](../../analysis/segmentation_decision_audit_20260621/reports/test_results/04_parser_dependency_reduction_ledger.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

@@ -854,6 +854,11 @@ recovers `207/208` copy pairs, versus random global-max source expectation
 `119.739/208`. This is a promoted mechanical segmentation clue for
 target-text-aware parsing, but not a source-free generator and not a row0,
 plaintext, or translation change.
+A parser dependency reduction ledger then quantifies the gain: under the
+target-text parser projection, materialized records drop from `522` to `318`
+and `414` copy `(source,length)` fields are conditionally removed. The full
+greedy source-free parser is exact for only `39/60` non-seed books, so the
+operation-start atlas remains the blocker.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

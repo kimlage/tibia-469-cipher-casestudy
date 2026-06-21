@@ -12,6 +12,7 @@ TEST_RESULTS = REPORTS / "test_results"
 
 TRACE = TEST_RESULTS / "01_segmentation_decision_trace.json"
 STRUCTURAL = TEST_RESULTS / "02_structural_segmentation_hypothesis_audit.json"
+DEPENDENCY = TEST_RESULTS / "04_parser_dependency_reduction_ledger.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -40,12 +41,17 @@ def assert_boundary(name: str, data: dict[str, Any]) -> None:
 def main() -> None:
     trace = load_json(TRACE)
     structural = load_json(STRUCTURAL)
+    dependency = load_json(DEPENDENCY) if DEPENDENCY.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
+    if dependency is not None:
+        assert_boundary("parser_dependency_reduction_ledger", dependency)
 
     ts = trace["summary"]
     ss = structural["summary"]
     exception_rows = structural["exception_rows"]
+    dep_ledger = None if dependency is None else dependency["ledger"]
+    greedy = None if dependency is None else dependency["full_greedy_parser_control"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -129,6 +135,34 @@ def main() -> None:
             "- Row0 remains exogenous and unchanged.",
             "- No plaintext, translation, fan gloss, semantic reading, or case reopening is introduced.",
             "",
+        ]
+    )
+    if dep_ledger is not None and greedy is not None:
+        base = dep_ledger["baseline_exact_skeleton"]
+        parser = dep_ledger["target_text_parser_projection"]
+        delta = dep_ledger["delta_vs_exact_skeleton"]
+        lines.extend(
+            [
+                "## Dependency Reduction Ledger",
+                "",
+                "| Representation | Operation/skeleton records | Literal chunks | Copy/source exception records | Parser rule records | Total materialized records |",
+                "|---|---:|---:|---:|---:|---:|",
+                f"| Exact skeleton ledger | `{base['skeleton_atlas_records']}` | `{base['literal_payload_chunks']}` | `{base['copy_source_fields']}` | `0` | `{base['total_materialized_records']}` |",
+                f"| Target-text parser projection | `{parser['stable_projection_operation_records']}` | `{parser['literal_payload_chunks']}` | `{parser['copy_exception_records']}` | `{parser['parser_rule_records']}` | `{parser['total_materialized_records']}` |",
+                "",
+                f"- Materialized record delta: `{delta['materialized_record_delta']}`.",
+                f"- Conditional copy `(source,length)` fields removed: `{delta['copy_pair_fields_removed_conditionally']}`.",
+                f"- Full greedy source-free parser exact books: `{greedy['exact_book_count']}/{greedy['tested_books']}`.",
+                f"- Full greedy mismatch books: `{greedy['mismatch_books']}`.",
+                "",
+                "The dependency reduction is therefore real but conditional. It needs",
+                "target text and the stable projection's copy starts; it does not derive",
+                "the full operation sequence source-free.",
+                "",
+            ]
+        )
+    lines.extend(
+        [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy. It is a",
@@ -141,6 +175,7 @@ def main() -> None:
             "",
             "- [Segmentation decision trace](test_results/01_segmentation_decision_trace.md)",
             "- [Structural segmentation hypothesis audit](test_results/02_structural_segmentation_hypothesis_audit.md)",
+            "- [Parser dependency reduction ledger](test_results/04_parser_dependency_reduction_ledger.md)",
             "",
         ]
     )
