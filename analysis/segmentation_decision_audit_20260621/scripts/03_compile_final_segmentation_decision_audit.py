@@ -38,6 +38,7 @@ HIERARCHICAL_BACKOFF = TEST_RESULTS / "26_hierarchical_context_backoff_audit.jso
 OBSERVABLE_TREE = TEST_RESULTS / "27_observable_decision_tree_policy_audit.json"
 TARGET_BOUNDARY = TEST_RESULTS / "28_target_boundary_recurrence_audit.json"
 FUTURE_COPY = TEST_RESULTS / "29_future_copy_opportunity_audit.json"
+SOURCE_STATE = TEST_RESULTS / "30_source_state_continuity_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -120,6 +121,7 @@ def main() -> None:
     observable_tree = load_json(OBSERVABLE_TREE) if OBSERVABLE_TREE.exists() else None
     target_boundary = load_json(TARGET_BOUNDARY) if TARGET_BOUNDARY.exists() else None
     future_copy = load_json(FUTURE_COPY) if FUTURE_COPY.exists() else None
+    source_state = load_json(SOURCE_STATE) if SOURCE_STATE.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -174,6 +176,8 @@ def main() -> None:
         assert_boundary("target_boundary_recurrence_audit", target_boundary)
     if future_copy is not None:
         assert_boundary("future_copy_opportunity_audit", future_copy)
+    if source_state is not None:
+        assert_boundary("source_state_continuity_audit", source_state)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -241,6 +245,7 @@ def main() -> None:
         None if target_boundary is None else target_boundary["summary"]
     )
     future_copy_summary = None if future_copy is None else future_copy["summary"]
+    source_state_summary = None if source_state is None else source_state["summary"]
 
     lines = [
         "# Final Segmentation Decision Audit",
@@ -1007,6 +1012,34 @@ def main() -> None:
                 "",
             ]
         )
+    if source_state_summary is not None:
+        lines.extend(
+            [
+                "## Source State Continuity Control",
+                "",
+                "Gate 30 tests whether branch choices preserve continuity with",
+                "the previous copy in the accepted book-local prefix path: same",
+                "source, source at previous source end, same source end, or",
+                "minimum source/length deltas.",
+                "",
+                "| Policy | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{source_state_summary['active_baseline_total_hits']}/{source_state_summary['decision_count']}` | `{source_state_summary['active_baseline_residual_hits']}/{source_state_summary['residual_decision_count']}` | `{source_state_summary['active_baseline_clean_false_changes']}` | retained control |",
+                f"| Best source-state policy `{source_state_summary['best_policy']}` | `{source_state_summary['best_total_hits']}/{source_state_summary['decision_count']}` | `{source_state_summary['best_residual_hits']}/{source_state_summary['residual_decision_count']}` | `{source_state_summary['best_clean_false_changes']}` | rejected |",
+                "",
+                f"- Decisions with previous-copy state: `{source_state_summary['eligible_prev_copy_decisions']}`.",
+                f"- Residual decisions with previous-copy state: `{source_state_summary['eligible_prev_copy_residual_decisions']}/{source_state_summary['residual_decision_count']}`.",
+                f"- Best eligible residual hits: `{source_state_summary['best_eligible_residual_hits']}/{source_state_summary['best_eligible_residual_total']}`.",
+                f"- Prequential zero-clean-false-change cells: `{source_state_summary['prequential_zero_clean_false_change_cells']}/{source_state_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{source_state_summary['prequential_cover_all_test_residual_cells']}/{source_state_summary['prequential_cells']}`.",
+                "",
+                "Book-local source-state continuity is not the missing parser",
+                "rule. It is stronger than shuffled source-state controls and",
+                "does catch some residuals, but the gain is bought by changing",
+                "clean decisions and it fails the clean holdout gate.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1019,8 +1052,8 @@ def main() -> None:
             "hierarchical backoff variant still fails clean holdout, and a",
             "small observable decision tree still misses held-out residuals.",
             "Target-side boundary recurrence and near-future copy opportunity",
-            "are also rejected. The",
-            "remaining blocker is a richer path/state",
+            "are also rejected. Book-local source-state continuity is rejected",
+            "as well. The remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1058,6 +1091,7 @@ def main() -> None:
             "- [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)",
             "- [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)",
             "- [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)",
+            "- [Source state continuity audit](test_results/30_source_state_continuity_audit.md)",
             "",
         ]
     )

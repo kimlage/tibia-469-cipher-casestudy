@@ -10,6 +10,7 @@ source_refs:
   - analysis/authorial_mechanism_20260620
   - analysis/prequential_and_row0_origin_audit_20260621
   - analysis/authorial_provenance_audit_20260621
+  - analysis/segmentation_decision_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -612,6 +613,13 @@ availability in the next few target positions. That also fails. The best
 opportunity policy reaches `96/234`, catches `2/10` residuals, and changes
 `130` clean controls; randomized opportunity features are stronger on total
 hits.
+A source-state continuity audit then tests the remaining cheap path-state idea:
+maybe the stable branch keeps continuity with the previous copy source,
+source-end, or length in the accepted book-local prefix. This is also rejected.
+The best policy, `min_source_delta`, catches `6/10` residuals and is stronger
+than shuffled source-state controls, but it changes `13` clean controls and
+has `0/5` zero-clean-false-change holdout cells. This does not change row0,
+plaintext, translation, or the `8154.676268` compression bound.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2304,6 +2312,7 @@ book generation, not row0 pair-cell placement.
 - [Observable decision tree policy audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/27_observable_decision_tree_policy_audit.md)
 - [Target boundary recurrence audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/28_target_boundary_recurrence_audit.md)
 - [Future copy opportunity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/29_future_copy_opportunity_audit.md)
+- [Source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/30_source_state_continuity_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

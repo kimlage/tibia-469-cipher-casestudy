@@ -959,6 +959,11 @@ A future copy opportunity audit rejects the local-consequence variant:
 near-future copy availability reaches only `96/234`, `2/10` residuals, and
 `130` clean false changes, while randomized opportunity features are stronger
 on total hits.
+A source-state continuity audit rejects the remaining cheap path-state variant:
+book-local previous-copy continuity is stronger than shuffled controls and
+`min_source_delta` catches `6/10` residuals, but it changes `13` clean controls
+and has `0/5` zero-clean-false-change holdout cells. The blocker is still a
+richer segmentation parser, not row0, plaintext, or translation.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

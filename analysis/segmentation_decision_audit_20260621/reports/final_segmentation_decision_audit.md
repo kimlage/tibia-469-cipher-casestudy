@@ -604,6 +604,29 @@ choices. The best policy catches only `2/10` residuals and changes
 `130` clean controls, while randomized feature controls do better
 on total hits.
 
+## Source State Continuity Control
+
+Gate 30 tests whether branch choices preserve continuity with
+the previous copy in the accepted book-local prefix path: same
+source, source at previous source end, same source end, or
+minimum source/length deltas.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best source-state policy `min_source_delta` | `217/234` | `6/10` | `13` | rejected |
+
+- Decisions with previous-copy state: `162`.
+- Residual decisions with previous-copy state: `6/10`.
+- Best eligible residual hits: `3/6`.
+- Prequential zero-clean-false-change cells: `0/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+Book-local source-state continuity is not the missing parser
+rule. It is stronger than shuffled source-state controls and
+does catch some residuals, but the gain is bought by changing
+clean decisions and it fails the clean holdout gate.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -614,8 +637,8 @@ tests collapse it under leave-one-book/context controls. The
 hierarchical backoff variant still fails clean holdout, and a
 small observable decision tree still misses held-out residuals.
 Target-side boundary recurrence and near-future copy opportunity
-are also rejected. The
-remaining blocker is a richer path/state
+are also rejected. Book-local source-state continuity is rejected
+as well. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -653,3 +676,4 @@ or the stable projection as an oracle.
 - [Observable decision tree policy audit](test_results/27_observable_decision_tree_policy_audit.md)
 - [Target boundary recurrence audit](test_results/28_target_boundary_recurrence_audit.md)
 - [Future copy opportunity audit](test_results/29_future_copy_opportunity_audit.md)
+- [Source state continuity audit](test_results/30_source_state_continuity_audit.md)

@@ -14,6 +14,7 @@ source_refs:
   - analysis/row0_origin_parallel_20260621
   - analysis/row0_real_origin_search_20260621
   - analysis/authorial_provenance_audit_20260621
+  - analysis/segmentation_decision_audit_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -343,6 +344,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Observable decision tree policy audit | a small observable tree improves full-fit to `228/234` and `4/10` residuals with `0` clean-control changes, but prefix/holdout recovers `0` held-out residuals in every split that contains residuals | small finite-state parser rejected |
 | Target boundary recurrence audit | scoring branches by recurrence of target-side boundary context performs poorly: best recurrence policy reaches only `31/234`, `1/10` residuals, and `194` clean false changes; random boundary controls do better on total hits | recurrent-boundary segmentation rejected |
 | Future copy opportunity audit | scoring branches by near-future copy availability reaches only `96/234`, `2/10` residuals, and `130` clean false changes; randomized feature controls are stronger on total hits | copy-opportunity lookahead rejected |
+| Source state continuity audit | book-local previous-copy continuity is stronger than shuffled controls and best `min_source_delta` catches `6/10` residuals, but it changes `13` clean controls and has `0/5` zero-clean-false-change holdout cells | source-state continuity rejected |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -559,6 +561,7 @@ Primary sources:
 [observable_decision_tree_policy_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/27_observable_decision_tree_policy_audit.md),
 [target_boundary_recurrence_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/28_target_boundary_recurrence_audit.md),
 [future_copy_opportunity_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/29_future_copy_opportunity_audit.md),
+[source_state_continuity_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/30_source_state_continuity_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),
