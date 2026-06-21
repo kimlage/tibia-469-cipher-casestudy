@@ -17,6 +17,7 @@
     "recipe_representation_status": "derivable_fields_removed_dependencies_retained",
     "row0_origin_status": "unchanged_exogenous",
     "source_selection_status": "encoder_canonical_decoder_dependency_retained",
+    "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
     "source_state_status": "path_dependent_previous_copy_state_retained",
     "translation_or_plaintext_status": "NONE"
   },
@@ -456,6 +457,25 @@
     },
     {
       "evidence": {
+        "beats_raw_book_count": 10,
+        "beats_uniform_address_reparse_book_count": 4,
+        "book_count": 10,
+        "gain_vs_raw_digit_uniform_bits": 4478.513523461408,
+        "not_recipe_reoptimization": true,
+        "roundtrip_book_count": 10,
+        "source_default_count": 1,
+        "source_exception_count": 17,
+        "source_state_bits": 368.17956697925246,
+        "source_state_minus_uniform_address_bits": -10.2405933673449,
+        "uniform_address_reparse_bits": 378.42016034659736
+      },
+      "interpretation": "The compressed source-state ledger can be executed on cutoff-60 deterministic reparse recipes and is cheaper than uniform source addresses in aggregate, but it is a repricing test rather than source-state recipe reoptimization.",
+      "question": "does_cutoff60_reparse_execute_with_source_state_repricing",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json",
+      "status": "cutoff60_source_state_reprice_roundtrip_positive_unpromoted"
+    },
+    {
+      "evidence": {
         "after_bootstrap_book_count": 69,
         "book_bounded_after_bootstrap_beats_raw_count": 69,
         "book_bounded_online_beats_raw_count": 69,
@@ -754,6 +774,7 @@
     "copy_length_midpoint_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/27_copy_length_midpoint_context_gate.json",
     "copy_source_state_compression_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/35_copy_source_state_compression_gate.json",
     "current_active_profile_boundary_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/34_current_active_profile_boundary_gate.json",
+    "cutoff60_source_state_reparse_prototype_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json",
     "family_holdout_address_corrected_scoreboard": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/11_family_holdout_address_corrected_scoreboard.json",
     "family_holdout_address_space": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/10_family_holdout_address_space_audit.json",
     "family_holdout_no_test_carryover": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/12_family_holdout_no_test_carryover_audit.json",

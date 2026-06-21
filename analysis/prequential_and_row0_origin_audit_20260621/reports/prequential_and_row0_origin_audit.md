@@ -367,6 +367,23 @@ selection, copy length declaration, literal payload, or item-type
 dependencies. It is a prototype frontier, not a parser promotion.
 See [36_active_reparse_feasibility_after_state_compression_gate.md](test_results/36_active_reparse_feasibility_after_state_compression_gate.md).
 
+### Cutoff 60 Source-State Reparse Prototype Gate
+
+A cutoff-60 prototype then executes the cheaper operational step:
+deterministic reparse recipes are repriced with the active
+`previous_copy_end` default/exception source ledger. The result
+roundtrips `10`/
+`10` held-out books, beats
+raw digit coding in `10`/
+`10`, and is
+`-10.241`
+bits versus the old uniform-address reparse comparator in aggregate.
+Only
+`4`/
+`10` books improve individually,
+and no source-state recipe reoptimization is performed.
+See [37_cutoff60_source_state_reparse_prototype_gate.md](test_results/37_cutoff60_source_state_reparse_prototype_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -534,6 +551,7 @@ See [05_row0_hypothesis_requirement_audit.md](test_results/05_row0_hypothesis_re
 - The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.
 - Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.
 - After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.
+- Cutoff-60 deterministic reparse recipes can be repriced with the active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins, and `-10.241` aggregate bits versus uniform-address reparse, but only `4/10` books improve individually and no recipe is reoptimized.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

@@ -1115,6 +1115,12 @@ and cutoff `60` has `9/10` books below `250,000`. This makes a future
 book-local active-source prototype plausible by proxy, but it still does not
 solve the full active objective, adaptive counts, tie-breaking, copy source
 selection, copy length declaration, literal payload, or item-type ledger.
+A cutoff-60 source-state prototype then executes the cheaper next step by
+repricing deterministic reparse recipes with the active `previous_copy_end`
+source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
+`10/10`, and is `-10.241` aggregate bits versus uniform-address reparse, but
+only `4/10` books improve individually and no source-state recipe
+reoptimization is promoted.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry

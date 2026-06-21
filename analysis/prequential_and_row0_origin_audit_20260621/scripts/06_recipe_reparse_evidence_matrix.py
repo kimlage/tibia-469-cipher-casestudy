@@ -63,6 +63,8 @@ SOURCES = {
     / "35_copy_source_state_compression_gate.json",
     "active_reparse_feasibility_after_state_compression_gate": TEST_RESULTS
     / "36_active_reparse_feasibility_after_state_compression_gate.json",
+    "cutoff60_source_state_reparse_prototype_gate": TEST_RESULTS
+    / "37_cutoff60_source_state_reparse_prototype_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -120,6 +122,9 @@ def make_result() -> dict[str, Any]:
     active_reparse_feasibility_gate = load_json(
         SOURCES["active_reparse_feasibility_after_state_compression_gate"]
     )
+    source_state_reparse_prototype_gate = load_json(
+        SOURCES["cutoff60_source_state_reparse_prototype_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -160,6 +165,7 @@ def make_result() -> dict[str, Any]:
             "active_reparse_feasibility_after_state_compression_gate",
             active_reparse_feasibility_gate,
         ),
+        ("cutoff60_source_state_reparse_prototype_gate", source_state_reparse_prototype_gate),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -833,6 +839,56 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_cutoff60_reparse_execute_with_source_state_repricing",
+            "source": rel(SOURCES["cutoff60_source_state_reparse_prototype_gate"]),
+            "status": "cutoff60_source_state_reprice_roundtrip_positive_unpromoted",
+            "evidence": {
+                "roundtrip_book_count": source_state_reparse_prototype_gate["summary"][
+                    "roundtrip_book_count"
+                ],
+                "book_count": source_state_reparse_prototype_gate["summary"][
+                    "book_count"
+                ],
+                "beats_raw_book_count": source_state_reparse_prototype_gate["summary"][
+                    "beats_raw_book_count"
+                ],
+                "beats_uniform_address_reparse_book_count": (
+                    source_state_reparse_prototype_gate["summary"][
+                        "beats_uniform_address_reparse_book_count"
+                    ]
+                ),
+                "source_state_bits": source_state_reparse_prototype_gate["summary"][
+                    "aggregate"
+                ]["bits"],
+                "uniform_address_reparse_bits": source_state_reparse_prototype_gate[
+                    "summary"
+                ]["aggregate"]["uniform_address_reparse_bits"],
+                "source_state_minus_uniform_address_bits": (
+                    source_state_reparse_prototype_gate["summary"]["aggregate"][
+                        "source_state_minus_uniform_address_bits"
+                    ]
+                ),
+                "gain_vs_raw_digit_uniform_bits": source_state_reparse_prototype_gate[
+                    "summary"
+                ]["aggregate"]["gain_vs_raw_digit_uniform_bits"],
+                "source_default_count": source_state_reparse_prototype_gate[
+                    "summary"
+                ]["aggregate"]["source_default_count"],
+                "source_exception_count": source_state_reparse_prototype_gate[
+                    "summary"
+                ]["aggregate"]["source_exception_count"],
+                "not_recipe_reoptimization": source_state_reparse_prototype_gate[
+                    "scope"
+                ]["not_recipe_reoptimization"],
+            },
+            "interpretation": (
+                "The compressed source-state ledger can be executed on cutoff-60 "
+                "deterministic reparse recipes and is cheaper than uniform source "
+                "addresses in aggregate, but it is a repricing test rather than "
+                "source-state recipe reoptimization."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1470,6 +1526,7 @@ def make_result() -> dict[str, Any]:
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
+            "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -1702,6 +1759,22 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['cutoff60_book_count']}; parser promoted "
                 f"{evidence['parser_promoted']}"
             )
+        elif row["question"] == "does_cutoff60_reparse_execute_with_source_state_repricing":
+            key = (
+                f"roundtrip {evidence['roundtrip_book_count']}/"
+                f"{evidence['book_count']}; raw wins "
+                f"{evidence['beats_raw_book_count']}/{evidence['book_count']}; "
+                f"uniform-address wins "
+                f"{evidence['beats_uniform_address_reparse_book_count']}/"
+                f"{evidence['book_count']}; bits "
+                f"{evidence['source_state_bits']:.3f} vs "
+                f"{evidence['uniform_address_reparse_bits']:.3f}; delta "
+                f"{evidence['source_state_minus_uniform_address_bits']:+.3f}; "
+                f"raw gain {evidence['gain_vs_raw_digit_uniform_bits']:.3f}; "
+                f"default/exception {evidence['source_default_count']}/"
+                f"{evidence['source_exception_count']}; reoptimized "
+                f"{not evidence['not_recipe_reoptimization']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -1910,6 +1983,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Current active profile: `{result['decision']['current_active_profile_status']}`.",
             f"- Copy source state compression: `{result['decision']['copy_source_state_compression_status']}`.",
             f"- Active reparse feasibility: `{result['decision']['active_reparse_feasibility_status']}`.",
+            f"- Source-state reparse prototype: `{result['decision']['source_state_reparse_prototype_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

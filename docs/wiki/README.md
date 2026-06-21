@@ -524,6 +524,10 @@ The active-reparse feasibility follow-up narrows the next implementation
 frontier: all tested book-level end-state proxies are below `1,000,000`, and
 cutoff `60` has `9/10` books below `250,000`, but the complete active parser
 is still not promoted.
+A cutoff-60 prototype then reprices deterministic reparse recipes with the
+active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins,
+and `-10.241` aggregate bits versus uniform-address reparse, while only `4/10`
+books improve individually and no recipe reoptimization is promoted.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

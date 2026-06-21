@@ -124,6 +124,9 @@ exogenous.
 - [scripts/36_active_reparse_feasibility_after_state_compression_gate.py](scripts/36_active_reparse_feasibility_after_state_compression_gate.py) - checks whether source-state compression changes the active-reparse implementation frontier.
 - [reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.md](reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.md) - active-reparse feasibility frontier.
 - [reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.json](reports/test_results/36_active_reparse_feasibility_after_state_compression_gate.json) - structured active-reparse feasibility ledger.
+- [scripts/37_cutoff60_source_state_reparse_prototype_gate.py](scripts/37_cutoff60_source_state_reparse_prototype_gate.py) - reprices cutoff-60 deterministic reparse recipes with the active previous-copy-end source ledger.
+- [reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.md](reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.md) - cutoff-60 source-state reparse prototype.
+- [reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json](reports/test_results/37_cutoff60_source_state_reparse_prototype_gate.json) - structured cutoff-60 source-state prototype ledger.
 
 ## Boundary
 
@@ -226,7 +229,12 @@ exogenous.
   cutoff `60` has `9/10` books below `250000`. The complete active parser is
   still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
-  remain unresolved.
+  remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
+  recipes with the active `previous_copy_end` source ledger: `10/10` books
+  roundtrip, `10/10` beat raw digit coding, and aggregate cost is `-10.241`
+  bits versus uniform-address reparse. This is still repricing only: just
+  `4/10` books improve individually and no source-state recipe reoptimization
+  is promoted.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

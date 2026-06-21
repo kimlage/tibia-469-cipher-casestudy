@@ -61,6 +61,14 @@ ACTIVE_REPARSE_FEASIBILITY_GATE = (
     / "test_results"
     / "36_active_reparse_feasibility_after_state_compression_gate.json"
 )
+CUTOFF60_SOURCE_STATE_REPARSE_PROTOTYPE_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "37_cutoff60_source_state_reparse_prototype_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -218,6 +226,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "active_reparse_feasibility_after_state_compression_gate",
         active_reparse_feasibility_gate,
     )
+    source_state_reparse_prototype_gate = load_json(
+        CUTOFF60_SOURCE_STATE_REPARSE_PROTOTYPE_GATE
+    )
+    assert_analysis_boundary(
+        "cutoff60_source_state_reparse_prototype_gate",
+        source_state_reparse_prototype_gate,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -318,6 +333,13 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": active_reparse_feasibility_gate["summary"],
             "decision": active_reparse_feasibility_gate["decision"],
         },
+        "cutoff60_source_state_reparse_prototype": {
+            "classification": source_state_reparse_prototype_gate["classification"],
+            "source": rel(CUTOFF60_SOURCE_STATE_REPARSE_PROTOTYPE_GATE),
+            "summary": source_state_reparse_prototype_gate["summary"],
+            "scope": source_state_reparse_prototype_gate["scope"],
+            "decision": source_state_reparse_prototype_gate["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -344,6 +366,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
             "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
             "active_reparse_feasibility_status": "source_state_dimension_reduced_parser_unpromoted",
+            "source_state_reparse_prototype_status": "cutoff60_reprice_executable_roundtrips_but_unpromoted",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -379,6 +402,7 @@ def render_markdown(
     current_active_profile_boundary_gate_link: str,
     copy_source_state_compression_gate_link: str,
     active_reparse_feasibility_gate_link: str,
+    cutoff60_source_state_reparse_prototype_gate_link: str,
     source_blocker_structural_context_gate_link: str,
     source_canonicality_decodability_gate_link: str,
     source_state_dependency_gate_link: str,
@@ -401,6 +425,10 @@ def render_markdown(
     reparse_feasibility = result[
         "active_reparse_feasibility_after_state_compression"
     ]["summary"]
+    source_reparse_prototype = result["cutoff60_source_state_reparse_prototype"][
+        "summary"
+    ]
+    source_reparse_aggregate = source_reparse_prototype["aggregate"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -794,6 +822,23 @@ def render_markdown(
             "dependencies. It is a prototype frontier, not a parser promotion.",
             f"See [36_active_reparse_feasibility_after_state_compression_gate.md]({active_reparse_feasibility_gate_link}).",
             "",
+            "### Cutoff 60 Source-State Reparse Prototype Gate",
+            "",
+            "A cutoff-60 prototype then executes the cheaper operational step:",
+            "deterministic reparse recipes are repriced with the active",
+            "`previous_copy_end` default/exception source ledger. The result",
+            f"roundtrips `{source_reparse_prototype['roundtrip_book_count']}`/",
+            f"`{source_reparse_prototype['book_count']}` held-out books, beats",
+            f"raw digit coding in `{source_reparse_prototype['beats_raw_book_count']}`/",
+            f"`{source_reparse_prototype['book_count']}`, and is",
+            f"`{source_reparse_aggregate['source_state_minus_uniform_address_bits']:+.3f}`",
+            "bits versus the old uniform-address reparse comparator in aggregate.",
+            "Only",
+            f"`{source_reparse_prototype['beats_uniform_address_reparse_book_count']}`/",
+            f"`{source_reparse_prototype['book_count']}` books improve individually,",
+            "and no source-state recipe reoptimization is performed.",
+            f"See [37_cutoff60_source_state_reparse_prototype_gate.md]({cutoff60_source_state_reparse_prototype_gate_link}).",
+            "",
             "### Source Blocker Structural Context Gate",
             "",
             "The remaining cross-op optional-literal near tie is then tested as a",
@@ -970,6 +1015,7 @@ def render_markdown(
             "- The current active `8177.317`-bit profile has positive frozen gain on every tested prefix, block, and public-bookcase family split, but recipe discovery remains blocked by path-dependent copy-source state.",
             "- Copy-source state is compressed from previous `(source, length)` to `previous_copy_end`, preserving the active default/exception ledger and reducing the candidate-state proxy, but no active parser is promoted.",
             "- After that compression, every tested book-level source-state proxy is below one million and the late-cutoff frontier is smaller, so a book-local active-source prototype is now plausible by proxy; the complete active parser is still unpromoted.",
+            "- Cutoff-60 deterministic reparse recipes can be repriced with the active `previous_copy_end` source ledger: `10/10` roundtrip, `10/10` raw wins, and `-10.241` aggregate bits versus uniform-address reparse, but only `4/10` books improve individually and no recipe is reoptimized.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
             "- No translation, plaintext, or case reopening is introduced.",
@@ -1039,6 +1085,9 @@ def main() -> None:
             ),
             active_reparse_feasibility_gate_link=(
                 "36_active_reparse_feasibility_after_state_compression_gate.md"
+            ),
+            cutoff60_source_state_reparse_prototype_gate_link=(
+                "37_cutoff60_source_state_reparse_prototype_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "24_source_blocker_structural_context_gate.md"
@@ -1124,6 +1173,9 @@ def main() -> None:
             ),
             active_reparse_feasibility_gate_link=(
                 "test_results/36_active_reparse_feasibility_after_state_compression_gate.md"
+            ),
+            cutoff60_source_state_reparse_prototype_gate_link=(
+                "test_results/37_cutoff60_source_state_reparse_prototype_gate.md"
             ),
             source_blocker_structural_context_gate_link=(
                 "test_results/24_source_blocker_structural_context_gate.md"
