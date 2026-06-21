@@ -674,5 +674,10 @@ Generated audits in this directory should be treated as the current state:
   structure improves payload coding. Literal-run offset, run-length bucket,
   book half/parity, and bounded combinations with `prev2` all over-split the
   stream; no structural literal-payload context is promoted.
+- `140_online_copy_source_canonicality_audit`: adds controls to audit 135's
+  source canonicality result. Earliest occurrence remains `261/261`, while
+  latest occurrence reaches only `123/261`, previous-source-plus-length reaches
+  `5/261`, and uniform random candidate choice would expect `169.473` hits
+  with `log2 P(all earliest)=-236.596`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

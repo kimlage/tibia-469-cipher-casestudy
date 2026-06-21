@@ -180,6 +180,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Literal-length-derived recipe formula | literal op `length` is derived from literal `text`; removes 87 more redundant fields and preserves `8343.062` bits and `70/70` | tighter recipe representation |
 | Op-type-derived recipe formula | op `type` is derived from field shape; removes 348 more redundant fields and preserves `8343.062` bits and `70/70` | remaining op dependencies: literal text, copy source, copy length |
 | Copy source canonicality audit | all 261 copy sources are the earliest legal occurrence of the copied chunk at declared length; only 123 are unique | canonical encoder rule / source still required for decoding |
+| Copy source canonicality controls | earliest occurrence remains `261/261`; latest occurrence is `123/261`, previous-source-plus-length is `5/261`, and random candidate choice expects `169.473` hits | source tie-break support / no decoder removal |
 | Copy length default/exception formula | target-max extension is high-coverage but encoder-only; decodable `decoder_max_possible` default plus adaptive exceptions lowers copy-length cost and promotes the bound to `8206.178` bits | copy length remodeled / row0 unchanged |
 | Copy source default/exception formula | previous-source-plus-length default is decodable but sparse; adaptive exception-source coding lowers copy-address cost and promotes the bound to `8177.317` bits | copy source remodeled / row0 unchanged |
 | Literal payload default/exception audit | modal-default/exception literal digit coding is decodable but worse than the active categorical previous-emitted-digit order-2 model | rejected fallback / no new bound |
@@ -315,6 +316,7 @@ Primary sources:
 [literal_length_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md),
 [op_type_derived_recipe_compile.md](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md),
 [copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md),
+[online_copy_source_canonicality_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md),
 [copy_length_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md),
 [copy_source_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md),
 [literal_payload_default_decodability_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md),

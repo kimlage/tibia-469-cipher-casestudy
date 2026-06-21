@@ -650,6 +650,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   literal-run offset, run-length bucket, book half/parity, and bounded
   combinations with `prev2` all over-split the stream. The active categorical
   previous-emitted-digit order-2 model remains best.
+- copy-source canonicality controls are now covered by
+  [`140_online_copy_source_canonicality_audit.py`](scripts/140_online_copy_source_canonicality_audit.py);
+  audit 135's earliest-occurrence rule remains `261/261`, while latest
+  occurrence is only `123/261`, previous-source-plus-length is `5/261`, and
+  uniform random candidate choice would expect `169.473` hits (`log2 P(all
+  earliest)=-236.596`).
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -411,6 +411,9 @@ distinguishes literal from copy.
 The copy-source canonicality audit shows all copy sources are earliest legal
 occurrences of their copied chunks; source is canonical for encoding but still
 required for decoding.
+A control addendum supports that tie-break: latest occurrence reaches only
+`123/261`, previous-source-plus-length only `5/261`, and random candidate
+choice would expect `169.473` hits.
 The copy-length default/exception audit then remodels copy length: the
 target-max rule is mostly true but encoder-only, while a decodable
 `decoder_max_possible` default plus adaptive exceptions lowers the mechanical

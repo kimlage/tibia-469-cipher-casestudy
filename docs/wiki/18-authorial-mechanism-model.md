@@ -931,6 +931,10 @@ The copy-source canonicality audit then checks whether those remaining source
 fields are arbitrary. All 261 copy sources are the earliest legal occurrence of
 the copied chunk at the declared length; only 123 are unique, so this is an
 encoder-side canonicality result, not a decoder-side source removal.
+A control addendum then compares that rule with alternatives: latest occurrence
+matches only `123/261`, previous-source-plus-length only `5/261`, and uniform
+random candidate choice would expect `169.473` hits (`log2 P(all earliest)
+=-236.596`).
 The copy-length default decodability audit then tests the remaining copy-length
 dependency. The high-coverage target-max rule matches `238/261` copies but is
 encoder-only because it requires future target digits. A decodable
@@ -1239,6 +1243,7 @@ book generation, not row0 pair-cell placement.
 - [Literal-length-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/133_literal_length_derived_recipe_compile.md)
 - [Op-type-derived recipe compile](../../analysis/authorial_mechanism_20260620/reports/test_results/134_op_type_derived_recipe_compile.md)
 - [Copy source canonicality audit](../../analysis/authorial_mechanism_20260620/reports/test_results/135_copy_source_canonicality_audit.md)
+- [Online copy-source canonicality controls](../../analysis/authorial_mechanism_20260620/reports/test_results/140_online_copy_source_canonicality_audit.md)
 - [Copy length default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/136_copy_length_default_decodability_audit.md)
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)

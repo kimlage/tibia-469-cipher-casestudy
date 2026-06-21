@@ -366,6 +366,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/139_literal_payload_structural_context_audit.py` - tests structural
   literal-run contexts such as offset, run-length bucket, and book half/parity;
   all over-split the stream, so no literal-payload context is promoted.
+- `scripts/140_online_copy_source_canonicality_audit.py` - adds controls to
+  the copy-source canonicality result: earliest occurrence remains `261/261`,
+  while random candidate choice would expect only `169.473` hits.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.
