@@ -959,6 +959,12 @@ exception directly. Book `0` costs `488.857` bits under the online parser but
 bits and changes the local ledger to `70/70` wins-or-ties against raw (`69/70`
 strict wins). This closes the local bootstrap failure as accounting, not as a
 new promoted bound or authorial proof.
+A seeded online formula rescore audit then checks that boundary against the
+complete formula scorer. Promotion is rejected: the existing online formula is
+`8343.062` bits, replacing book `0` with one literal seed gives `8344.041`
+bits (`+0.979`), and the book-bounded seeded formula gives `8648.260` bits
+(`+305.198`). The seed remains a bootstrap explanation, not a better full
+formula.
 A row0 requirement-matrix follow-up then normalizes the origin side of the
 same audit: manual lookup, permutation/group, 10x10 grid, order/frequency,
 external text, and workbook/script artifact hypotheses all have explicit
@@ -1407,6 +1413,7 @@ book generation, not row0 pair-cell placement.
 - [Leave-one-book-out family-excluded source audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/16_leave_one_book_out_family_excluded_source_audit.md)
 - [Online prefix book frontier audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/17_online_prefix_book_frontier_audit.md)
 - [Online bootstrap seed policy audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.md)
+- [Seeded online formula rescore audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)

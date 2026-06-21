@@ -70,6 +70,9 @@ exogenous.
 - [scripts/18_online_bootstrap_seed_policy_audit.py](scripts/18_online_bootstrap_seed_policy_audit.py) - tests whether an explicit raw seed for book 0 closes the online cold-start failure.
 - [reports/test_results/18_online_bootstrap_seed_policy_audit.md](reports/test_results/18_online_bootstrap_seed_policy_audit.md) - online bootstrap seed policy result.
 - [reports/test_results/18_online_bootstrap_seed_policy_audit.json](reports/test_results/18_online_bootstrap_seed_policy_audit.json) - structured bootstrap seed policy ledger.
+- [scripts/19_seeded_online_formula_rescore_audit.py](scripts/19_seeded_online_formula_rescore_audit.py) - converts the book-0 seed policy back into formula recipes and rescoring under the complete active ledger.
+- [reports/test_results/19_seeded_online_formula_rescore_audit.md](reports/test_results/19_seeded_online_formula_rescore_audit.md) - seeded online formula rescore result.
+- [reports/test_results/19_seeded_online_formula_rescore_audit.json](reports/test_results/19_seeded_online_formula_rescore_audit.json) - structured seeded-rescore ledger.
 
 ## Boundary
 
@@ -114,7 +117,9 @@ exogenous.
   the cold-start book `0`; after bootstrap it wins in `69/69`. A bootstrap
   seed-policy audit charges book `0` as an explicit raw seed and closes the
   local failure as `70/70` wins-or-ties, while not promoting a new compression
-  bound or authorial proof.
+  bound or authorial proof. A full formula rescore then rejects promotion:
+  seeded online is `+0.979` bits worse than the existing `8343.062`-bit online
+  formula, and the book-bounded seeded formula is `+305.198` bits worse.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

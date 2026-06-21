@@ -1,0 +1,135 @@
+{
+  "bootstrap_policy_reference": {
+    "note": "Audit 18 is a per-book seed accounting ledger. This audit asks whether the same seed idea survives the complete formula scorer.",
+    "raw_seeded_failure_books": [],
+    "raw_seeded_stream_saving_vs_online_bits": 10.498855747274263
+  },
+  "candidates": [
+    {
+      "candidate": "online_reparse_formula",
+      "component_bits": {
+        "copy_address_bits": 3031.699845800606,
+        "copy_length_code_bits": 1485.6893596406167,
+        "item_type_split_only_stream_bits": 212.01191674175735,
+        "literal_bits_no_payload": 380.0,
+        "literal_payload_bits": 2613.660822752486
+      },
+      "component_delta_vs_online_bits": {
+        "copy_address_bits": 0.0,
+        "copy_length_code_bits": 0.0,
+        "item_type_split_only_stream_bits": 0.0,
+        "literal_bits_no_payload": 0.0,
+        "literal_payload_bits": 0.0
+      },
+      "delta_vs_online_bits": 0.0,
+      "interpretation": "Existing deterministic online formula from audit 129.",
+      "inventory": {
+        "copied_digits": 10406,
+        "copy_items": 261,
+        "literal_digits": 857,
+        "literal_runs": 87
+      },
+      "status": "baseline_promoted_elsewhere",
+      "total_bits": 8343.061944935467,
+      "validation": {
+        "book_count": 70,
+        "books_roundtrip_ok": 70,
+        "errors": []
+      }
+    },
+    {
+      "candidate": "seeded_online_formula_rescored",
+      "component_bits": {
+        "copy_address_bits": 3012.220065536577,
+        "copy_length_code_bits": 1477.9193109775194,
+        "item_type_split_only_stream_bits": 210.41934105692633,
+        "literal_bits_no_payload": 372.0,
+        "literal_payload_bits": 2651.4820566917506
+      },
+      "component_delta_vs_online_bits": {
+        "copy_address_bits": -19.47978026402916,
+        "copy_length_code_bits": -7.770048663097214,
+        "item_type_split_only_stream_bits": -1.5925756848310186,
+        "literal_bits_no_payload": -8.0,
+        "literal_payload_bits": 37.8212339392644
+      },
+      "delta_vs_online_bits": 0.978829327306812,
+      "interpretation": "Book 0 is replaced by one full literal seed inside the existing online formula and then rescored under the complete active ledger.",
+      "inventory": {
+        "copied_digits": 10390,
+        "copy_items": 258,
+        "literal_digits": 873,
+        "literal_runs": 84
+      },
+      "status": "rejected_as_full_scorer_promotion",
+      "total_bits": 8344.040774262774,
+      "validation": {
+        "book_count": 70,
+        "books_roundtrip_ok": 70,
+        "errors": []
+      }
+    },
+    {
+      "candidate": "book_bounded_seeded_online_formula_rescored",
+      "component_bits": {
+        "copy_address_bits": 3168.111567901037,
+        "copy_length_code_bits": 1555.5075433479387,
+        "item_type_split_only_stream_bits": 214.57993492783865,
+        "literal_bits_no_payload": 372.0,
+        "literal_payload_bits": 2718.060826030361
+      },
+      "component_delta_vs_online_bits": {
+        "copy_address_bits": 136.41172210043078,
+        "copy_length_code_bits": 69.81818370732208,
+        "item_type_split_only_stream_bits": 2.5680181860813036,
+        "literal_bits_no_payload": -8.0,
+        "literal_payload_bits": 104.40000327787493
+      },
+      "delta_vs_online_bits": 305.197927271709,
+      "interpretation": "Book 0 is a literal seed and books 1-69 are reparsed from previous books only with book-bounded source constraints, then rescored under the complete active ledger.",
+      "inventory": {
+        "copied_digits": 10367,
+        "copy_items": 270,
+        "literal_digits": 896,
+        "literal_runs": 85
+      },
+      "status": "rejected_as_full_scorer_promotion",
+      "total_bits": 8648.259872207176,
+      "validation": {
+        "book_count": 70,
+        "books_roundtrip_ok": 70,
+        "errors": []
+      }
+    }
+  ],
+  "case_reopened": false,
+  "classification": "seed_policy_rejected_by_full_formula_rescore",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "generation_explanation_status": "seed_caveat_clarified_but_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_policy_status": "useful_bootstrap_accounting_not_formula_promotion",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "book_bounded_parser": "analysis/prequential_and_row0_origin_audit_20260621/scripts/15_leave_one_book_out_book_bounded_source_audit.py",
+    "bootstrap_seed_policy": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/18_online_bootstrap_seed_policy_audit.json",
+    "online_compile": "analysis/authorial_mechanism_20260620/scripts/129_online_deterministic_reparse_compile.py",
+    "online_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_formula_469.json",
+    "recipe_reparse": "analysis/authorial_mechanism_20260620/scripts/126_prequential_recipe_reparse_audit.py"
+  },
+  "plaintext_claim": false,
+  "schema": "seeded_online_formula_rescore_audit.v1",
+  "summary": {
+    "all_roundtrip": true,
+    "book_bounded_seeded_delta_vs_online_bits": 305.197927271709,
+    "book_bounded_seeded_formula_bits": 8648.259872207176,
+    "interpretation": "The raw seed closes the per-book cold-start failure, but once converted into formula recipes and rescored under the complete ledger, it does not beat the existing online formula.",
+    "online_formula_bits": 8343.061944935467,
+    "promoted_candidate_count": 0,
+    "promoted_candidates": [],
+    "seeded_online_delta_vs_online_bits": 0.978829327306812,
+    "seeded_online_formula_bits": 8344.040774262774
+  },
+  "translation_delta": "NONE"
+}

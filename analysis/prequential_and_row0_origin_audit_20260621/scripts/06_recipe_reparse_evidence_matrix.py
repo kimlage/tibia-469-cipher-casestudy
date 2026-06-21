@@ -35,6 +35,8 @@ SOURCES = {
     "online_prefix_book_frontier": TEST_RESULTS / "17_online_prefix_book_frontier_audit.json",
     "online_bootstrap_seed_policy": TEST_RESULTS
     / "18_online_bootstrap_seed_policy_audit.json",
+    "seeded_online_formula_rescore": TEST_RESULTS
+    / "19_seeded_online_formula_rescore_audit.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -70,6 +72,7 @@ def make_result() -> dict[str, Any]:
     family_excluded = load_json(SOURCES["leave_one_book_out_family_excluded_source"])
     online_frontier = load_json(SOURCES["online_prefix_book_frontier"])
     bootstrap_seed = load_json(SOURCES["online_bootstrap_seed_policy"])
+    seeded_rescore = load_json(SOURCES["seeded_online_formula_rescore"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -89,6 +92,7 @@ def make_result() -> dict[str, Any]:
         ("leave_one_book_out_family_excluded_source", family_excluded),
         ("online_prefix_book_frontier", online_frontier),
         ("online_bootstrap_seed_policy", bootstrap_seed),
+        ("seeded_online_formula_rescore", seeded_rescore),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -552,6 +556,36 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "does_book0_seed_survive_complete_formula_rescoring",
+            "source": rel(SOURCES["seeded_online_formula_rescore"]),
+            "status": "failed_as_formula_promotion",
+            "evidence": {
+                "online_formula_bits": seeded_rescore["summary"]["online_formula_bits"],
+                "seeded_online_formula_bits": seeded_rescore["summary"][
+                    "seeded_online_formula_bits"
+                ],
+                "seeded_online_delta_vs_online_bits": seeded_rescore["summary"][
+                    "seeded_online_delta_vs_online_bits"
+                ],
+                "book_bounded_seeded_formula_bits": seeded_rescore["summary"][
+                    "book_bounded_seeded_formula_bits"
+                ],
+                "book_bounded_seeded_delta_vs_online_bits": seeded_rescore["summary"][
+                    "book_bounded_seeded_delta_vs_online_bits"
+                ],
+                "promoted_candidate_count": seeded_rescore["summary"][
+                    "promoted_candidate_count"
+                ],
+                "promoted_candidates": seeded_rescore["summary"]["promoted_candidates"],
+                "all_roundtrip": seeded_rescore["summary"]["all_roundtrip"],
+            },
+            "interpretation": (
+                "The seed policy is useful as local bootstrap accounting, but "
+                "converting it into formula recipes and rescoring under the full "
+                "ledger does not beat the existing online formula."
+            ),
+        },
+        {
             "question": "does_numeric_online_order_survive_order_controls",
             "source": rel(SOURCES["online_reparse_order_controls"]),
             "status": "passed_against_tested_orders",
@@ -755,6 +789,15 @@ def write_result(result: dict[str, Any]) -> None:
                 f"strict wins {evidence['raw_seeded_strict_raw_wins']}/70; "
                 f"failures {evidence['raw_seeded_failure_books']}; stream saving "
                 f"{evidence['raw_seeded_stream_saving_vs_online_bits']:.3f}"
+            )
+        elif row["question"] == "does_book0_seed_survive_complete_formula_rescoring":
+            key = (
+                f"seeded {evidence['seeded_online_formula_bits']:.3f} vs online "
+                f"{evidence['online_formula_bits']:.3f}; delta "
+                f"{evidence['seeded_online_delta_vs_online_bits']:.3f}; "
+                f"book-bounded delta "
+                f"{evidence['book_bounded_seeded_delta_vs_online_bits']:.3f}; "
+                f"promoted {evidence['promoted_candidate_count']}"
             )
         else:
             key = (

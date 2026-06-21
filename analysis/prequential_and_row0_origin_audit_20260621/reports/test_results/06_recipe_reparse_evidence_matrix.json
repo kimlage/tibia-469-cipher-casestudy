@@ -358,6 +358,22 @@
     },
     {
       "evidence": {
+        "all_roundtrip": true,
+        "book_bounded_seeded_delta_vs_online_bits": 305.197927271709,
+        "book_bounded_seeded_formula_bits": 8648.259872207176,
+        "online_formula_bits": 8343.061944935467,
+        "promoted_candidate_count": 0,
+        "promoted_candidates": [],
+        "seeded_online_delta_vs_online_bits": 0.978829327306812,
+        "seeded_online_formula_bits": 8344.040774262774
+      },
+      "interpretation": "The seed policy is useful as local bootstrap accounting, but converting it into formula recipes and rescoring under the full ledger does not beat the existing online formula.",
+      "question": "does_book0_seed_survive_complete_formula_rescoring",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
+      "status": "failed_as_formula_promotion"
+    },
+    {
+      "evidence": {
         "arbitrary_order_descriptor_bits": 332.4532653795422,
         "best_charged": "numeric",
         "best_raw": "numeric",
@@ -395,7 +411,8 @@
     "reparse_family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
     "reparse_family_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/09_recipe_reparse_family_loss_decomposition.json",
     "reparse_trainset_controls": "analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.json",
-    "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json"
+    "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json",
+    "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",
