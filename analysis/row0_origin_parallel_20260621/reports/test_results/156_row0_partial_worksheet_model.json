@@ -1,0 +1,119 @@
+{
+  "anchor_count": 13,
+  "anchors": [
+    {
+      "anchor_family": "unique_star_cell",
+      "classification": "AUDIT_ONLY",
+      "label": "*",
+      "pair": "00",
+      "reason": "Only `00` maps to `*`; useful worksheet anchor but not externally sourced."
+    },
+    {
+      "anchor_family": "directed_conflict_cell",
+      "classification": "PROMOTED_MECHANICAL_CLUE",
+      "label": "I/N",
+      "pair": "19",
+      "reason": "`19 -> I` versus `91 -> N` is the sole directed conflict."
+    },
+    {
+      "anchor_family": "missing_forward_surface_cell",
+      "classification": "PROMOTED_MECHANICAL_CLUE",
+      "label": "N",
+      "pair": "39",
+      "reason": "`39` is absent while `93 -> N` exists."
+    },
+    {
+      "anchor_family": "rare_singleton_R",
+      "classification": "WEAK_CLUE",
+      "label": "R",
+      "pair": "02",
+      "reason": "Singleton rare label placement; descriptive only."
+    },
+    {
+      "anchor_family": "rare_singleton_O",
+      "classification": "WEAK_CLUE",
+      "label": "O",
+      "pair": "23",
+      "reason": "Singleton rare label placement; descriptive only."
+    },
+    {
+      "anchor_family": "rare_singleton_S",
+      "classification": "WEAK_CLUE",
+      "label": "S",
+      "pair": "27",
+      "reason": "Singleton rare label placement; descriptive only."
+    },
+    {
+      "anchor_family": "rare_singleton_B",
+      "classification": "WEAK_CLUE",
+      "label": "B",
+      "pair": "34",
+      "reason": "Singleton rare label placement; descriptive only."
+    },
+    {
+      "anchor_family": "rare_singleton_C",
+      "classification": "WEAK_CLUE",
+      "label": "C",
+      "pair": "68",
+      "reason": "Singleton rare label placement; descriptive only."
+    },
+    {
+      "anchor_family": "diagonal_E_pressure",
+      "classification": "WEAK_CLUE",
+      "label": "E",
+      "pair": "11",
+      "reason": "One of five diagonal E cells; diagonal pressure is partial."
+    },
+    {
+      "anchor_family": "diagonal_E_pressure",
+      "classification": "WEAK_CLUE",
+      "label": "E",
+      "pair": "33",
+      "reason": "One of five diagonal E cells; diagonal pressure is partial."
+    },
+    {
+      "anchor_family": "diagonal_E_pressure",
+      "classification": "WEAK_CLUE",
+      "label": "E",
+      "pair": "44",
+      "reason": "One of five diagonal E cells; diagonal pressure is partial."
+    },
+    {
+      "anchor_family": "diagonal_E_pressure",
+      "classification": "WEAK_CLUE",
+      "label": "E",
+      "pair": "66",
+      "reason": "One of five diagonal E cells; diagonal pressure is partial."
+    },
+    {
+      "anchor_family": "diagonal_E_pressure",
+      "classification": "WEAK_CLUE",
+      "label": "E",
+      "pair": "99",
+      "reason": "One of five diagonal E cells; diagonal pressure is partial."
+    }
+  ],
+  "classification": "WEAK_CLUE",
+  "frozen_pairs": [
+    "00",
+    "02",
+    "11",
+    "19",
+    "23",
+    "27",
+    "33",
+    "34",
+    "39",
+    "44",
+    "66",
+    "68",
+    "99"
+  ],
+  "interpretation": "A semimanual worksheet model is more honest than a pure formula: a small set of surface/rare/diagonal anchors plus residual lookup. It reduces nominal residual lookup, but only before paying anchor/source costs.",
+  "lookup_bits_before": 160.52070273483628,
+  "nominal_bits_reduction_before_anchor_cost": 54.17762190535416,
+  "promotion_decision": "not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid",
+  "residual_lookup_bits_after_freezing_anchors": 106.34308082948212,
+  "schema": "row0_partial_worksheet_model.v1",
+  "translation_delta": "NONE"
+}

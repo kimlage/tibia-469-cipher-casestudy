@@ -1,0 +1,538 @@
+{
+  "classification": "AUDIT_ONLY",
+  "decision": "project_row0_provenance_partially_traced_but_cipsoft_origin_untraced",
+  "risk_register": [
+    {
+      "assessment": "not ruled out for project-level representation; current repo shows workbook/import/reconstruction layers before the frozen code-symbol grid.",
+      "mitigation": "treat row0 as project substrate unless a primary pre-project source is identified.",
+      "risk": "tooling_introduced_structure"
+    },
+    {
+      "assessment": "external row0/tibiasecrets/s2ward scripts are audit lanes, not accepted origin evidence.",
+      "mitigation": "do not promote community matches without primary fixed source and controls.",
+      "risk": "community_source_contamination"
+    },
+    {
+      "assessment": "row0_code_symbol_probe reconstructs from decodedbase/books digit model; useful validation but not an independent origin.",
+      "mitigation": "separate project reconstruction from CipSoft/authorial source claims.",
+      "risk": "reconstruction_policy_leakage"
+    }
+  ],
+  "schema": "row0_deep_provenance_audit.v1",
+  "scripts": [
+    {
+      "artifact": "export_workbook_to_sqlite",
+      "classification": "preservation_importer_not_row0_generator",
+      "risk": "low_generation_risk_high_source_importance",
+      "signals": {
+        "exists": true,
+        "hit_count": 22,
+        "hits": [
+          {
+            "line": 14,
+            "text": "- `cells`: lossless-ish cell dump with raw and cached values"
+          },
+          {
+            "line": 15,
+            "text": "- `row_json`: JSON row payloads for each non-empty row"
+          },
+          {
+            "line": 16,
+            "text": "- `sheet__<name>` convenience tables with one TEXT column per detected header"
+          },
+          {
+            "line": 99,
+            "text": "def cell_formula(cell: Cell | ReadOnlyCell) -> Optional[str]:"
+          },
+          {
+            "line": 194,
+            "text": "CREATE TABLE IF NOT EXISTS cells ("
+          },
+          {
+            "line": 203,
+            "text": "raw_value_text TEXT,"
+          },
+          {
+            "line": 205,
+            "text": "formula_text TEXT,"
+          },
+          {
+            "line": 210,
+            "text": "CREATE TABLE IF NOT EXISTS row_json ("
+          },
+          {
+            "line": 214,
+            "text": "row_json TEXT NOT NULL,"
+          },
+          {
+            "line": 218,
+            "text": "CREATE INDEX IF NOT EXISTS idx_cells_sheet_row ON cells (sheet_name, row_index);"
+          },
+          {
+            "line": 219,
+            "text": "CREATE INDEX IF NOT EXISTS idx_cells_sheet_col ON cells (sheet_name, column_index);"
+          },
+          {
+            "line": 220,
+            "text": "CREATE INDEX IF NOT EXISTS idx_row_json_sheet_row ON row_json (sheet_name, row_index);"
+          },
+          {
+            "line": 260,
+            "text": "table_name = f\"sheet__{normalize_identifier(sheet_name, 'sheet')}\""
+          },
+          {
+            "line": 365,
+            "text": "formula_text = cell_formula(raw_cell)"
+          },
+          {
+            "line": 367,
+            "text": "if raw_text is not None or cached_text is not None or formula_text is not None:"
+          },
+          {
+            "line": 371,
+            "text": "INSERT INTO cells ("
+          },
+          {
+            "line": 373,
+            "text": "data_type, python_type, raw_value_text, cached_value_text, formula_text, number_format"
+          },
+          {
+            "line": 387,
+            "text": "formula_text,"
+          },
+          {
+            "line": 402,
+            "text": "INSERT INTO row_json (export_id, sheet_name, row_index, row_json)"
+          },
+          {
+            "line": 457,
+            "text": "total_cells = 0"
+          },
+          {
+            "line": 463,
+            "text": "total_cells += cell_rows"
+          },
+          {
+            "line": 475,
+            "text": "\"cell_rows\": total_cells,"
+          }
+        ],
+        "path": "scripts/export_workbook_to_sqlite.py"
+      }
+    },
+    {
+      "artifact": "row0_code_symbol_probe",
+      "classification": "project_reconstruction_probe_not_cipsoft_origin",
+      "risk": "medium_reconstruction_policy_risk",
+      "signals": {
+        "exists": true,
+        "hit_count": 27,
+        "hits": [
+          {
+            "line": 5,
+            "text": "- decodedbase length equals baselen;"
+          },
+          {
+            "line": 56,
+            "text": "decodedbase_len INTEGER NOT NULL,"
+          },
+          {
+            "line": 63,
+            "text": "reconstructed_code_stream TEXT NOT NULL,"
+          },
+          {
+            "line": 64,
+            "text": "decodedbase TEXT NOT NULL,"
+          },
+          {
+            "line": 69,
+            "text": "CREATE TABLE IF NOT EXISTS row0_code_symbol_counts ("
+          },
+          {
+            "line": 90,
+            "text": "ON row0_code_symbol_counts(run_id, code, occurrence_count DESC);"
+          },
+          {
+            "line": 116,
+            "text": "def reconstruct_book(row: sqlite3.Row) -> dict[str, Any]:"
+          },
+          {
+            "line": 118,
+            "text": "decodedbase = row[\"decodedbase\"] or \"\""
+          },
+          {
+            "line": 119,
+            "text": "baselen = as_int(row[\"baselen\"], len(decodedbase))"
+          },
+          {
+            "line": 122,
+            "text": "omit_codes = parse_codes(row[\"omitcodes\"])"
+          },
+          {
+            "line": 130,
+            "text": "if len(decodedbase) != baselen:"
+          },
+          {
+            "line": 132,
+            "text": "for idx, symbol in enumerate(decodedbase, start=1):"
+          },
+          {
+            "line": 154,
+            "text": "\"decodedbase_len\": len(decodedbase),"
+          },
+          {
+            "line": 163,
+            "text": "\"decodedbase\": decodedbase,"
+          },
+          {
+            "line": 181,
+            "text": "b.decodedbase,"
+          },
+          {
+            "line": 185,
+            "text": "m.omitcodes"
+          },
+          {
+            "line": 206,
+            "text": "code_symbol_counts: dict[tuple[str, str], Counter[str]] = defaultdict(Counter)"
+          },
+          {
+            "line": 213,
+            "text": "rec = reconstruct_book(row)"
+          },
+          {
+            "line": 220,
+            "text": "code_symbol_counts[(code, symbol)][\"omitted\" if omitted else \"written\"] += 1"
+          },
+          {
+            "line": 224,
+            "text": "(run_id, bookid, baselen, decodedbase_len, digitslen, consumed_digits,"
+          },
+          {
+            "line": 226,
+            "text": "reconstructed_code_stream, decodedbase, payload_json)"
+          },
+          {
+            "line": 233,
+            "text": "rec[\"decodedbase_len\"],"
+          },
+          {
+            "line": 241,
+            "text": "rec[\"decodedbase\"],"
+          },
+          {
+            "line": 248,
+            "text": "for (code, symbol), counts in sorted(code_symbol_counts.items()):"
+          }
+        ],
+        "path": "scripts/sqlite_row0_code_symbol_probe.py"
+      }
+    },
+    {
+      "artifact": "q3_tables",
+      "classification": "sqlite_schema_introspection_only",
+      "risk": "low",
+      "signals": {
+        "exists": true,
+        "hit_count": 2,
+        "hits": [
+          {
+            "line": 4,
+            "text": "names = [r[0] for r in cur.execute(\"SELECT name FROM sqlite_master WHERE type='table'\").fetchall()]"
+          },
+          {
+            "line": 5,
+            "text": "print(\"total tables:\", len(names))"
+          }
+        ],
+        "path": "analysis/audit_20260609/q3_tables.py"
+      }
+    },
+    {
+      "artifact": "external_row0_literal_decode",
+      "classification": "external_phrase_audit_not_origin_source",
+      "risk": "semantic_overreach_risk_if_misused",
+      "signals": {
+        "exists": true,
+        "hit_count": 8,
+        "hits": [
+          {
+            "line": 11,
+            "text": "PHRASES = ["
+          },
+          {
+            "line": 29,
+            "text": "def decode_word(raw: str, mapping: dict[str, str]) -> dict[str, Any]:"
+          },
+          {
+            "line": 37,
+            "text": "decoded = \"\".join(mapping.get(pair, \"?\") for pair in pairs)"
+          },
+          {
+            "line": 48,
+            "text": "mapping = {}"
+          },
+          {
+            "line": 52,
+            "text": "from row0_code_symbol_counts"
+          },
+          {
+            "line": 57,
+            "text": "mapping.setdefault(str(row[\"code\"]), str(row[\"symbol\"]))"
+          },
+          {
+            "line": 84,
+            "text": "for phrase_id, phrase in PHRASES:"
+          },
+          {
+            "line": 86,
+            "text": "decoded_words = [decode_word(word, mapping) for word in words]"
+          }
+        ],
+        "path": "scripts/sqlite_external_row0_literal_decode_audit.py"
+      }
+    }
+  ],
+  "tracked_row0_related_paths": [
+    "analysis/audit_20260609/q3_tables.py",
+    "analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.json",
+    "analysis/authorial_mechanism_20260620/reports/test_results/119_row0_origin_frontier_audit.md",
+    "analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.json",
+    "analysis/authorial_mechanism_20260620/reports/test_results/125_prequential_and_row0_origin_audit.md",
+    "analysis/authorial_mechanism_20260620/scripts/119_row0_origin_frontier_audit.py",
+    "analysis/authorial_mechanism_20260620/scripts/125_prequential_and_row0_origin_audit.py",
+    "analysis/mechanism_model_20260618/code_symbol_grid.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/README.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/prequential_and_row0_origin_audit.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/01_prequential_and_row0_origin_audit.json",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/01_prequential_and_row0_origin_audit.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/02_family_holdout_failure_audit.json",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/02_family_holdout_failure_audit.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/03_train_cv_component_selector_audit.json",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/03_train_cv_component_selector_audit.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.json",
+    "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/04_recipe_externality_audit.md",
+    "analysis/prequential_and_row0_origin_audit_20260621/scripts/01_prequential_and_row0_origin_audit.py",
+    "analysis/prequential_and_row0_origin_audit_20260621/scripts/02_family_holdout_failure_audit.py",
+    "analysis/prequential_and_row0_origin_audit_20260621/scripts/03_train_cv_component_selector_audit.py",
+    "analysis/prequential_and_row0_origin_audit_20260621/scripts/04_recipe_externality_audit.py",
+    "analysis/row0_origin_parallel_20260621/README.md",
+    "analysis/row0_origin_parallel_20260621/hypothesis_registry.json",
+    "analysis/row0_origin_parallel_20260621/hypothesis_registry.yaml",
+    "analysis/row0_origin_parallel_20260621/reports/final_row0_origin_parallel_report.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/141_row0_run_manifest.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/141_row0_run_manifest.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/142_row0_canonical_features_compile.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/142_row0_canonical_features_compile.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/143_row0_lookup_baseline_mdl.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/143_row0_lookup_baseline_mdl.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/144_row0_priority_layer_mdl.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/144_row0_priority_layer_mdl.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/145_row0_latent_behavior_partition.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/145_row0_latent_behavior_partition.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/146_row0_fill_order_inventory_search.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/146_row0_fill_order_inventory_search.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/147_row0_lore_fixed_order_audit.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/147_row0_lore_fixed_order_audit.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/148_row0_eye_digit_geometry_audit.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/148_row0_eye_digit_geometry_audit.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/149_row0_ordered_surface_origin_audit.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/149_row0_ordered_surface_origin_audit.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/150_row0_external_anchor_holdout.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/150_row0_external_anchor_holdout.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/151_row0_artifact_provenance_audit.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/151_row0_artifact_provenance_audit.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/152_row0_adversarial_refuter.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/152_row0_adversarial_refuter.md",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/153_row0_summary_report_compile.json",
+    "analysis/row0_origin_parallel_20260621/reports/test_results/153_row0_summary_report_compile.md",
+    "analysis/row0_origin_parallel_20260621/run_manifest.json",
+    "analysis/row0_origin_parallel_20260621/scripts/141_row0_run_manifest.py",
+    "analysis/row0_origin_parallel_20260621/scripts/142_row0_canonical_features_compile.py",
+    "analysis/row0_origin_parallel_20260621/scripts/143_row0_lookup_baseline_mdl.py",
+    "analysis/row0_origin_parallel_20260621/scripts/144_row0_priority_layer_mdl.py",
+    "analysis/row0_origin_parallel_20260621/scripts/145_row0_latent_behavior_partition.py",
+    "analysis/row0_origin_parallel_20260621/scripts/146_row0_fill_order_inventory_search.py",
+    "analysis/row0_origin_parallel_20260621/scripts/147_row0_lore_fixed_order_audit.py",
+    "analysis/row0_origin_parallel_20260621/scripts/148_row0_eye_digit_geometry_audit.py",
+    "analysis/row0_origin_parallel_20260621/scripts/149_row0_ordered_surface_origin_audit.py",
+    "analysis/row0_origin_parallel_20260621/scripts/150_row0_external_anchor_holdout.py",
+    "analysis/row0_origin_parallel_20260621/scripts/151_row0_artifact_provenance_audit.py",
+    "analysis/row0_origin_parallel_20260621/scripts/152_row0_adversarial_refuter.py",
+    "analysis/row0_origin_parallel_20260621/scripts/153_row0_summary_report_compile.py",
+    "analysis/row0_origin_parallel_20260621/scripts/row0_parallel_pipeline.py",
+    "archive/bonelord_469_iter141.xlsx",
+    "bonelord_469_iter129.xlsx",
+    "bonelord_469_iter129_frontier.xlsx",
+    "bonelord_469_iter129_stab.xlsx",
+    "scripts/sqlite_apply_row0_function_policy.py",
+    "scripts/sqlite_apply_row0_subfunction_policy.py",
+    "scripts/sqlite_article160_semantic_claim_audit.py",
+    "scripts/sqlite_confirmed_external_row0_projection.py",
+    "scripts/sqlite_export_functional_row0_view.py",
+    "scripts/sqlite_external_row0_lcs_probe.py",
+    "scripts/sqlite_external_row0_literal_decode_audit.py",
+    "scripts/sqlite_import_s2ward_corpus_audit.py",
+    "scripts/sqlite_map_s2ward_indices_to_books.py",
+    "scripts/sqlite_map_s2ward_rearrange_lines_to_books.py",
+    "scripts/sqlite_project_s2ward_extra_row0.py",
+    "scripts/sqlite_raw_row0_motif_function_gate.py",
+    "scripts/sqlite_raw_row0_motif_refined_frontier_gate.py",
+    "scripts/sqlite_raw_row0_motif_scorer.py",
+    "scripts/sqlite_residual_row0_phase_risk_gate_v1.py",
+    "scripts/sqlite_row0_base_frontier.py",
+    "scripts/sqlite_row0_code_symbol_probe.py",
+    "scripts/sqlite_row0_function_registry.py",
+    "scripts/sqlite_row0_omission_probe.py",
+    "scripts/sqlite_row0_path_reconstruction_probe.py",
+    "scripts/sqlite_row0_phase_operator_path_gate_v1.py",
+    "scripts/sqlite_row0_variant_aware_frontier.py",
+    "scripts/sqlite_s2ward_residual_fragment_coverage_gate.py",
+    "scripts/sqlite_s2ward_residual_fragment_probe.py",
+    "scripts/sqlite_tetranacci_row0_marker_control_probe.py",
+    "scripts/sqlite_tibiasecrets_article160_audit.py",
+    "scripts/sqlite_tibiasecrets_key_table_compare.py"
+  ],
+  "translation_delta": "NONE",
+  "workbooks": [
+    {
+      "classification": "legacy_workbook_snapshot_or_derived_project_artifact",
+      "exists": true,
+      "first_sheet_names": [
+        "README",
+        "Iter151_Summary",
+        "Iter150_Summary",
+        "Iter149_Summary",
+        "Iter148_Summary",
+        "Iter147_Summary",
+        "Iter146_Summary",
+        "Iter145_Summary",
+        "Iter144_Summary",
+        "Iter143_Summary",
+        "Iter142_Summary",
+        "Iter125_Summary"
+      ],
+      "key_sheet_names": [
+        "KeyTable",
+        "BooksDigitModel_v118",
+        "DigitOmissionStats_v118",
+        "OmissionCompare_v120",
+        "ExternalGroundTruthCheck_v120",
+        "GroundTruthSources_v121",
+        "GroundTruthSources_v122",
+        "GroundTruthSources_v129",
+        "DigitCodeMap_Auto",
+        "DigitCodeContext_Auto",
+        "GroundTruthPolicy_Auto"
+      ],
+      "path": "bonelord_469_iter129.xlsx",
+      "sha256": "310578e7a0bd4ae3736cd16a48243f833082234f0ea84c9789e4bc85a461c64e",
+      "sheet_count": 1926,
+      "size_bytes": 18110642
+    },
+    {
+      "classification": "legacy_workbook_snapshot_or_derived_project_artifact",
+      "exists": true,
+      "first_sheet_names": [
+        "README",
+        "Iter151_Summary",
+        "Iter150_Summary",
+        "Iter149_Summary",
+        "Iter148_Summary",
+        "Iter147_Summary",
+        "Iter146_Summary",
+        "Iter145_Summary",
+        "Iter144_Summary",
+        "Iter143_Summary",
+        "Iter142_Summary",
+        "Iter125_Summary"
+      ],
+      "key_sheet_names": [
+        "KeyTable",
+        "BooksDigitModel_v118",
+        "DigitOmissionStats_v118",
+        "OmissionCompare_v120",
+        "ExternalGroundTruthCheck_v120",
+        "GroundTruthSources_v121",
+        "GroundTruthSources_v122",
+        "GroundTruthSources_v129",
+        "DigitCodeMap_Auto",
+        "DigitCodeContext_Auto",
+        "GroundTruthPolicy_Auto"
+      ],
+      "path": "bonelord_469_iter129_frontier.xlsx",
+      "sha256": "f3b39d0179f3052c4cf04b1e4d6c8909a9d6de1e183e646c8be1efa4cf47dac2",
+      "sheet_count": 1491,
+      "size_bytes": 15698350
+    },
+    {
+      "classification": "legacy_workbook_snapshot_or_derived_project_artifact",
+      "exists": true,
+      "first_sheet_names": [
+        "README",
+        "Iter151_Summary",
+        "Iter150_Summary",
+        "Iter149_Summary",
+        "Iter148_Summary",
+        "Iter147_Summary",
+        "Iter146_Summary",
+        "Iter145_Summary",
+        "Iter144_Summary",
+        "Iter143_Summary",
+        "Iter142_Summary",
+        "Iter125_Summary"
+      ],
+      "key_sheet_names": [
+        "KeyTable",
+        "BooksDigitModel_v118",
+        "DigitOmissionStats_v118",
+        "OmissionCompare_v120",
+        "ExternalGroundTruthCheck_v120",
+        "GroundTruthSources_v121",
+        "GroundTruthSources_v122",
+        "GroundTruthSources_v129",
+        "DigitCodeMap_Auto",
+        "DigitCodeContext_Auto",
+        "GroundTruthPolicy_Auto"
+      ],
+      "path": "bonelord_469_iter129_stab.xlsx",
+      "sha256": "9dfbaa91a5227dc9c76476b56fc41eba5436b374b739a8a4fb7f3840b5c25109",
+      "sheet_count": 1491,
+      "size_bytes": 15698340
+    },
+    {
+      "classification": "legacy_workbook_snapshot_or_derived_project_artifact",
+      "exists": true,
+      "first_sheet_names": [
+        "AnchorDigitVariantExplain_v139",
+        "T4C1_AlignedBackbone_v139",
+        "T4C1_BookBlockPaths_v139",
+        "T4C1_AssemblyEdges_v139",
+        "T4C1_AssemblyBlocks_v139",
+        "T4C1_Offsets_v139",
+        "Iter139_Summary",
+        "README",
+        "Iter138_Summary",
+        "AnchorCribs_v138",
+        "AnchorCribDigitVariants_v138",
+        "AnchorCribOccurrences_v138"
+      ],
+      "key_sheet_names": [
+        "KeyTable",
+        "BooksDigitModel_v118",
+        "DigitOmissionStats_v118",
+        "OmissionCompare_v120",
+        "ExternalGroundTruthCheck_v120",
+        "GroundTruthSources_v121",
+        "GroundTruthSources_v122",
+        "GroundTruthSources_v129",
+        "KeyTableCrossValidation_v132",
+        "CodePairModel_v136"
+      ],
+      "path": "archive/bonelord_469_iter141.xlsx",
+      "sha256": "0544543759ac168510b2bd58598fd6bef4f1fec2995ced9eecf206852e2d1b60",
+      "sheet_count": 173,
+      "size_bytes": 579102
+    }
+  ]
+}

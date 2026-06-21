@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import csv
 import hashlib
-import itertools
 import json
 import math
+import re
 import random
 import subprocess
 from collections import Counter, defaultdict
@@ -83,6 +83,8 @@ INPUTS = {
     "wiki_open_questions": ROOT / "docs/wiki/09-open-questions.md",
     "workbook_export_script": ROOT / "scripts/export_workbook_to_sqlite.py",
     "q3_tables": ROOT / "analysis/audit_20260609/q3_tables.py",
+    "row0_code_symbol_probe": ROOT / "scripts/sqlite_row0_code_symbol_probe.py",
+    "external_row0_literal_decode": ROOT / "scripts/sqlite_external_row0_literal_decode_audit.py",
 }
 
 SEVEN_SEG = {
@@ -511,6 +513,73 @@ def source_summary(name: str, path: list[str] | None = None) -> Any:
     if path:
         return json_leaf(data, path)
     return data
+
+
+def workbook_summary(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {"path": rel(path), "exists": False}
+    key_patterns = re.compile(r"keytable|digitcode|codepair|row0|booksdigit|omission|groundtruth", re.I)
+    try:
+        raw = subprocess.check_output(["unzip", "-p", str(path), "xl/workbook.xml"], cwd=ROOT)
+        workbook = raw.decode("utf-8", errors="replace")
+        sheet_names = re.findall(r'<sheet[^>]+name="([^"]+)"', workbook)
+        key_sheets = [name for name in sheet_names if key_patterns.search(name)]
+        return {
+            "path": rel(path),
+            "exists": True,
+            "size_bytes": path.stat().st_size,
+            "sha256": sha256_file(path),
+            "sheet_count": len(sheet_names),
+            "key_sheet_names": key_sheets[:40],
+            "first_sheet_names": sheet_names[:12],
+            "classification": "legacy_workbook_snapshot_or_derived_project_artifact",
+        }
+    except Exception as exc:
+        return {"path": rel(path), "exists": True, "error": str(exc), "classification": "unreadable_workbook"}
+
+
+def script_signal(path: Path, patterns: list[str]) -> dict[str, Any]:
+    text = path.read_text(encoding="utf-8", errors="replace") if path.exists() else ""
+    hits = []
+    for lineno, line in enumerate(text.splitlines(), start=1):
+        low = line.lower()
+        if any(pattern.lower() in low for pattern in patterns):
+            hits.append({"line": lineno, "text": line.strip()[:220]})
+    return {"path": rel(path), "exists": path.exists(), "hit_count": len(hits), "hits": hits[:24]}
+
+
+def residual_lookup_bits_after_freezing(rows: list[dict[str, Any]], frozen_pairs: set[str]) -> float:
+    residual_counts = Counter(label_for_model(row) for row in rows if row["pair"] not in frozen_pairs)
+    return inventory_sequence_bits(residual_counts)
+
+
+def worksheet_anchor_rows() -> list[dict[str, Any]]:
+    labels = {row["pair"]: label_for_model(row) for row in pair_rows()}
+    anchors = [
+        ("00", "unique_star_cell", "AUDIT_ONLY", "Only `00` maps to `*`; useful worksheet anchor but not externally sourced."),
+        ("19", "directed_conflict_cell", "PROMOTED_MECHANICAL_CLUE", "`19 -> I` versus `91 -> N` is the sole directed conflict."),
+        ("39", "missing_forward_surface_cell", "PROMOTED_MECHANICAL_CLUE", "`39` is absent while `93 -> N` exists."),
+        ("02", "rare_singleton_R", "WEAK_CLUE", "Singleton rare label placement; descriptive only."),
+        ("23", "rare_singleton_O", "WEAK_CLUE", "Singleton rare label placement; descriptive only."),
+        ("27", "rare_singleton_S", "WEAK_CLUE", "Singleton rare label placement; descriptive only."),
+        ("34", "rare_singleton_B", "WEAK_CLUE", "Singleton rare label placement; descriptive only."),
+        ("68", "rare_singleton_C", "WEAK_CLUE", "Singleton rare label placement; descriptive only."),
+        ("11", "diagonal_E_pressure", "WEAK_CLUE", "One of five diagonal E cells; diagonal pressure is partial."),
+        ("33", "diagonal_E_pressure", "WEAK_CLUE", "One of five diagonal E cells; diagonal pressure is partial."),
+        ("44", "diagonal_E_pressure", "WEAK_CLUE", "One of five diagonal E cells; diagonal pressure is partial."),
+        ("66", "diagonal_E_pressure", "WEAK_CLUE", "One of five diagonal E cells; diagonal pressure is partial."),
+        ("99", "diagonal_E_pressure", "WEAK_CLUE", "One of five diagonal E cells; diagonal pressure is partial."),
+    ]
+    return [
+        {
+            "pair": pair,
+            "label": labels[pair],
+            "anchor_family": family,
+            "classification": classification,
+            "reason": reason,
+        }
+        for pair, family, classification, reason in anchors
+    ]
 
 
 def run_141() -> dict[str, Any]:
@@ -1199,6 +1268,354 @@ def run_153() -> dict[str, Any]:
     return final
 
 
+def run_154() -> dict[str, Any]:
+    workbooks = [
+        ROOT / "bonelord_469_iter129.xlsx",
+        ROOT / "bonelord_469_iter129_frontier.xlsx",
+        ROOT / "bonelord_469_iter129_stab.xlsx",
+        ROOT / "archive/bonelord_469_iter141.xlsx",
+    ]
+    workbook_rows = [workbook_summary(path) for path in workbooks]
+    script_rows = [
+        {
+            "artifact": "export_workbook_to_sqlite",
+            "classification": "preservation_importer_not_row0_generator",
+            "signals": script_signal(INPUTS["workbook_export_script"], ["cells", "row_json", "sheet__", "raw_value", "formula"]),
+            "risk": "low_generation_risk_high_source_importance",
+        },
+        {
+            "artifact": "row0_code_symbol_probe",
+            "classification": "project_reconstruction_probe_not_cipsoft_origin",
+            "signals": script_signal(INPUTS["row0_code_symbol_probe"], ["decodedbase", "omitcodes", "code_symbol_counts", "reconstruct"]),
+            "risk": "medium_reconstruction_policy_risk",
+        },
+        {
+            "artifact": "q3_tables",
+            "classification": "sqlite_schema_introspection_only",
+            "signals": script_signal(INPUTS["q3_tables"], ["sqlite_master", "table"]),
+            "risk": "low",
+        },
+        {
+            "artifact": "external_row0_literal_decode",
+            "classification": "external_phrase_audit_not_origin_source",
+            "signals": script_signal(INPUTS["external_row0_literal_decode"], ["PHRASES", "mapping", "row0_code_symbol_counts"]),
+            "risk": "semantic_overreach_risk_if_misused",
+        },
+    ]
+    tracked = git_output(["ls-files"]).splitlines()
+    row0_tracked = [
+        path for path in tracked
+        if any(token in path.lower() for token in ["row0", "code_symbol_grid", "q3_tables", "bonelord_469", "s2ward", "article160", "tibiasecrets"])
+    ]
+    result = {
+        "schema": "row0_deep_provenance_audit.v1",
+        "classification": "AUDIT_ONLY",
+        "translation_delta": "NONE",
+        "decision": "project_row0_provenance_partially_traced_but_cipsoft_origin_untraced",
+        "workbooks": workbook_rows,
+        "scripts": script_rows,
+        "tracked_row0_related_paths": row0_tracked,
+        "risk_register": [
+            {
+                "risk": "tooling_introduced_structure",
+                "assessment": "not ruled out for project-level representation; current repo shows workbook/import/reconstruction layers before the frozen code-symbol grid.",
+                "mitigation": "treat row0 as project substrate unless a primary pre-project source is identified.",
+            },
+            {
+                "risk": "community_source_contamination",
+                "assessment": "external row0/tibiasecrets/s2ward scripts are audit lanes, not accepted origin evidence.",
+                "mitigation": "do not promote community matches without primary fixed source and controls.",
+            },
+            {
+                "risk": "reconstruction_policy_leakage",
+                "assessment": "row0_code_symbol_probe reconstructs from decodedbase/books digit model; useful validation but not an independent origin.",
+                "mitigation": "separate project reconstruction from CipSoft/authorial source claims.",
+            },
+        ],
+    }
+    write_json(TEST_RESULTS / "154_row0_deep_provenance_audit.json", result)
+    lines = [
+        "# 154. Row0 Deep Provenance Audit",
+        "",
+        "Classification: `AUDIT_ONLY`",
+        "Translation delta: `NONE`",
+        "",
+        "Decision: `project_row0_provenance_partially_traced_but_cipsoft_origin_untraced`.",
+        "",
+        "## Workbook inventory",
+        "",
+        "| Workbook | Sheets | Key row0-adjacent sheets | Classification |",
+        "|---|---:|---|---|",
+    ]
+    for row in workbook_rows:
+        lines.append(
+            f"| `{row['path']}` | `{row.get('sheet_count', 'n/a')}` | `{', '.join(row.get('key_sheet_names', [])[:8]) or 'none'}` | `{row.get('classification')}` |"
+        )
+    lines += [
+        "",
+        "## Script provenance",
+        "",
+        "| Artifact | Classification | Risk |",
+        "|---|---|---|",
+    ]
+    for row in script_rows:
+        lines.append(f"| `{row['artifact']}` | `{row['classification']}` | `{row['risk']}` |")
+    lines += [
+        "",
+        "## Interpretation",
+        "",
+        "The repository can explain how row0 is preserved, imported, reconstructed, and audited inside the project. It still does not identify a primary CipSoft source or authorial generator for the pair-label placement.",
+    ]
+    write_md(TEST_RESULTS / "154_row0_deep_provenance_audit.md", lines)
+    return result
+
+
+def run_155() -> dict[str, Any]:
+    baseline = load_json(TEST_RESULTS / "143_row0_lookup_baseline_mdl.json")
+    priority = load_json(TEST_RESULTS / "144_row0_priority_layer_mdl.json")
+    fill = load_json(TEST_RESULTS / "146_row0_fill_order_inventory_search.json")
+    surface = load_json(TEST_RESULTS / "149_row0_ordered_surface_origin_audit.json")
+    external = load_json(TEST_RESULTS / "150_row0_external_anchor_holdout.json")
+    rows = [
+        {
+            "candidate": "lookup_baseline",
+            "classification": "AUDIT_ONLY",
+            "labels_predicted_holdout": 0,
+            "diagnostic_hits": 55,
+            "bits_below_lookup_after_costs": 0.0,
+            "explains_39_and_19_91": "stores_only",
+            "survives_controls": "not_applicable",
+            "external_source_validated": False,
+        },
+        {
+            "candidate": "priority_layer_stumps",
+            "classification": priority["classification"],
+            "labels_predicted_holdout": priority["best_rule"]["loo_hits"],
+            "diagnostic_hits": priority["best_rule"]["hits"],
+            "bits_below_lookup_after_costs": 0.0,
+            "explains_39_and_19_91": "no",
+            "survives_controls": priority["label_shuffle_control"]["p_control_ge_observed"] < 0.05,
+            "external_source_validated": False,
+        },
+        {
+            "candidate": "fixed_order_inventory_fill",
+            "classification": fill["classification"],
+            "labels_predicted_holdout": 0,
+            "diagnostic_hits": fill["observed_best_hits"],
+            "bits_below_lookup_after_costs": 0.0,
+            "explains_39_and_19_91": "no",
+            "survives_controls": fill["random_order_control"]["p_control_ge_observed"] < 0.05,
+            "external_source_validated": False,
+        },
+        {
+            "candidate": "ordered_surface_render_layer",
+            "classification": surface["classification"],
+            "labels_predicted_holdout": 0,
+            "diagnostic_hits": 2,
+            "bits_below_lookup_after_costs": 0.0,
+            "explains_39_and_19_91": "yes_surface_only",
+            "survives_controls": True,
+            "external_source_validated": False,
+        },
+        {
+            "candidate": "external_fixed_source",
+            "classification": external["classification"],
+            "labels_predicted_holdout": 0,
+            "diagnostic_hits": 0,
+            "bits_below_lookup_after_costs": 0.0,
+            "explains_39_and_19_91": "blocked",
+            "survives_controls": False,
+            "external_source_validated": False,
+        },
+    ]
+    write_csv(DATA / "row0_improvement_scoreboard.csv", rows, list(rows[0].keys()))
+    result = {
+        "schema": "row0_improvement_scoreboard.v1",
+        "classification": "AUDIT_ONLY",
+        "translation_delta": "NONE",
+        "lookup_baseline_bits": baseline["bits_lookup_given_inventory"],
+        "scoreboard": rows,
+        "decision": "score_row0_progress_separately_from_book_generation_bits",
+    }
+    write_json(TEST_RESULTS / "155_row0_improvement_scoreboard.json", result)
+    lines = [
+        "# 155. Row0 Improvement Scoreboard",
+        "",
+        "Classification: `AUDIT_ONLY`",
+        "Translation delta: `NONE`",
+        "",
+        f"Lookup baseline: `{baseline['bits_lookup_given_inventory']:.3f}` bits.",
+        "",
+        "| Candidate | Class | Holdout labels | Diagnostic hits | Bits below lookup | 39/19/91 | Controls | External source |",
+        "|---|---|---:|---:|---:|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| `{row['candidate']}` | `{row['classification']}` | `{row['labels_predicted_holdout']}` | `{row['diagnostic_hits']}` | `{row['bits_below_lookup_after_costs']}` | `{row['explains_39_and_19_91']}` | `{row['survives_controls']}` | `{row['external_source_validated']}` |"
+        )
+    lines += [
+        "",
+        "This scoreboard is intentionally row0-only. Book-generator compression does not move it unless it predicts row0 labels or explains the special ordered-surface facts.",
+    ]
+    write_md(TEST_RESULTS / "155_row0_improvement_scoreboard.md", lines)
+    return result
+
+
+def run_156() -> dict[str, Any]:
+    rows = pair_rows()
+    anchors = worksheet_anchor_rows()
+    frozen_pairs = {row["pair"] for row in anchors}
+    baseline_bits = inventory_sequence_bits(inventory(rows))
+    residual_bits = residual_lookup_bits_after_freezing(rows, frozen_pairs)
+    nominal_delta = baseline_bits - residual_bits
+    write_csv(DATA / "row0_partial_worksheet_model.csv", anchors, ["pair", "label", "anchor_family", "classification", "reason"])
+    result = {
+        "schema": "row0_partial_worksheet_model.v1",
+        "classification": "WEAK_CLUE",
+        "translation_delta": "NONE",
+        "anchor_count": len(anchors),
+        "frozen_pairs": sorted(frozen_pairs),
+        "lookup_bits_before": baseline_bits,
+        "residual_lookup_bits_after_freezing_anchors": residual_bits,
+        "nominal_bits_reduction_before_anchor_cost": nominal_delta,
+        "promotion_decision": "not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid",
+        "anchors": anchors,
+        "interpretation": "A semimanual worksheet model is more honest than a pure formula: a small set of surface/rare/diagonal anchors plus residual lookup. It reduces nominal residual lookup, but only before paying anchor/source costs.",
+    }
+    write_json(TEST_RESULTS / "156_row0_partial_worksheet_model.json", result)
+    lines = [
+        "# 156. Row0 Partial Worksheet Model",
+        "",
+        "Classification: `WEAK_CLUE`",
+        "Translation delta: `NONE`",
+        "",
+        f"Anchors declared: `{len(anchors)}`.",
+        f"Lookup bits before anchors: `{baseline_bits:.3f}`.",
+        f"Residual lookup bits after freezing anchors: `{residual_bits:.3f}`.",
+        f"Nominal reduction before anchor/source cost: `{nominal_delta:.3f}` bits.",
+        "",
+        "Promotion decision: `not_promoted_as_origin_formula_anchor_cost_and_externality_not_paid`.",
+        "",
+        "| Pair | Label | Anchor family | Classification |",
+        "|---|---|---|---|",
+    ]
+    for row in anchors:
+        lines.append(f"| `{row['pair']}` | `{row['label']}` | `{row['anchor_family']}` | `{row['classification']}` |")
+    lines += [
+        "",
+        "This is the current best *shape* of an authorial worksheet hypothesis, not a proof. It explicitly leaves the rest as lookup residual.",
+    ]
+    write_md(TEST_RESULTS / "156_row0_partial_worksheet_model.md", lines)
+    return result
+
+
+def run_157() -> dict[str, Any]:
+    rows = {row["pair"]: row for row in pair_rows()}
+    ledger = [
+        {
+            "fact": "39_absent",
+            "observed": "ordered code 39 is absent",
+            "paired_fact": "93 exists and maps to N",
+            "status": "PROMOTED_MECHANICAL_CLUE",
+            "natural_explanation": "directed render/surface exception, not unordered pair-label origin",
+            "open_gap": "why this exact directed cell is omitted remains externally untraced",
+        },
+        {
+            "fact": "19_91_conflict",
+            "observed": "19 maps to I while 91 maps to N",
+            "paired_fact": "sole unordered-pair conflict",
+            "status": "PROMOTED_MECHANICAL_CLUE",
+            "natural_explanation": "ordered-surface asymmetry",
+            "open_gap": "no fixed source predicts I for 19 and N for 91",
+        },
+        {
+            "fact": "54_55_purity",
+            "observed": "all non-19 unordered pairs have one effective label after allowing missing 39",
+            "paired_fact": "pair folding is real",
+            "status": "PROMOTED_MECHANICAL_CLUE",
+            "natural_explanation": "unordered pair matrix with two directed exceptions",
+            "open_gap": "folding does not assign the actual labels",
+        },
+    ]
+    write_csv(DATA / "row0_surface_exception_ledger.csv", ledger, list(ledger[0].keys()))
+    result = {
+        "schema": "row0_surface_exception_focus.v1",
+        "classification": "PROMOTED_MECHANICAL_CLUE",
+        "translation_delta": "NONE",
+        "ledger": ledger,
+        "pair_19": rows["19"],
+        "pair_39": rows["39"],
+        "decision": "surface_ordered_asymmetry_is_real_but_label_origin_unresolved",
+    }
+    write_json(TEST_RESULTS / "157_row0_surface_exception_focus.json", result)
+    lines = [
+        "# 157. Row0 Surface Exception Focus",
+        "",
+        "Classification: `PROMOTED_MECHANICAL_CLUE`",
+        "Translation delta: `NONE`",
+        "",
+        "| Fact | Status | Natural explanation | Open gap |",
+        "|---|---|---|---|",
+    ]
+    for row in ledger:
+        lines.append(f"| `{row['fact']}` | `{row['status']}` | {row['natural_explanation']} | {row['open_gap']} |")
+    write_md(TEST_RESULTS / "157_row0_surface_exception_focus.md", lines)
+    return result
+
+
+def run_158() -> dict[str, Any]:
+    provenance = load_json(TEST_RESULTS / "154_row0_deep_provenance_audit.json")
+    scoreboard = load_json(TEST_RESULTS / "155_row0_improvement_scoreboard.json")
+    worksheet = load_json(TEST_RESULTS / "156_row0_partial_worksheet_model.json")
+    surface = load_json(TEST_RESULTS / "157_row0_surface_exception_focus.json")
+    synthesis = {
+        "schema": "row0_next_frontier_synthesis.v1",
+        "classification": "AUDIT_ONLY",
+        "translation_delta": "NONE",
+        "frontier_order": [
+            "provenance_primary_source_search",
+            "ordered_surface_exception_source",
+            "partial_worksheet_anchor_costing",
+            "label_blind_pair_behavior_retest_only_if_new_features",
+        ],
+        "decisions": {
+            "provenance": provenance["decision"],
+            "scoreboard": scoreboard["decision"],
+            "worksheet": worksheet["promotion_decision"],
+            "surface": surface["decision"],
+            "overall": "row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction",
+        },
+    }
+    write_json(TEST_RESULTS / "158_row0_next_frontier_synthesis.json", synthesis)
+    lines = [
+        "# 158. Row0 Next Frontier Synthesis",
+        "",
+        "Classification: `AUDIT_ONLY`",
+        "Translation delta: `NONE`",
+        "",
+        "## Decision",
+        "",
+        "`row0_advance_requires_primary_source_or_paid_partial_worksheet_anchor_reduction`.",
+        "",
+        "## Priority order",
+        "",
+        "1. Provenance primary-source search: identify whether row0 entered through workbook/tooling/community reconstruction or an older fixed source.",
+        "2. Ordered-surface exception source: look for a fixed source that naturally predicts missing `39`, present `93`, and `19/91` direction.",
+        "3. Partial worksheet anchor costing: keep only anchors that pay their rule/source cost and reduce residual lookup.",
+        "4. Label-blind pair behavior retest only if new provenance/corpus features appear.",
+        "",
+        "## Current state",
+        "",
+        "- No `PROMOTED_ORIGIN_FORMULA`.",
+        "- Surface asymmetry is a real mechanical clue.",
+        "- Partial worksheet model is plausible but currently weak because anchor/source costs are unpaid.",
+        "- External source remains the only likely strong unlock.",
+    ]
+    write_md(TEST_RESULTS / "158_row0_next_frontier_synthesis.md", lines)
+    write_md(REPORTS / "row0_next_frontier_report.md", lines)
+    return synthesis
+
+
 STEPS = {
     "141": run_141,
     "142": run_142,
@@ -1213,6 +1630,11 @@ STEPS = {
     "151": run_151,
     "152": run_152,
     "153": run_153,
+    "154": run_154,
+    "155": run_155,
+    "156": run_156,
+    "157": run_157,
+    "158": run_158,
 }
 
 
@@ -1230,6 +1652,8 @@ def write_readme() -> None:
         "This front investigates the origin of `row0` independently from the concurrent book-generation formula work.",
         "",
         "Boundary: no plaintext, no fan-gloss promotion, no attempt to improve the main formula except as input evidence. The final report is [reports/final_row0_origin_parallel_report.md](reports/final_row0_origin_parallel_report.md).",
+        "",
+        "The focused next-frontier report is [reports/row0_next_frontier_report.md](reports/row0_next_frontier_report.md).",
     ]
     write_md(BASE / "README.md", lines)
 
@@ -1237,7 +1661,7 @@ def write_readme() -> None:
 def run_all() -> None:
     ensure_dirs()
     write_readme()
-    for step in [str(number) for number in range(141, 154)]:
+    for step in [str(number) for number in range(141, 159)]:
         STEPS[step]()
 
 

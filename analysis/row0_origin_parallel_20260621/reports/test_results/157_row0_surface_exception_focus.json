@@ -1,0 +1,56 @@
+{
+  "classification": "PROMOTED_MECHANICAL_CLUE",
+  "decision": "surface_ordered_asymmetry_is_real_but_label_origin_unresolved",
+  "ledger": [
+    {
+      "fact": "39_absent",
+      "natural_explanation": "directed render/surface exception, not unordered pair-label origin",
+      "observed": "ordered code 39 is absent",
+      "open_gap": "why this exact directed cell is omitted remains externally untraced",
+      "paired_fact": "93 exists and maps to N",
+      "status": "PROMOTED_MECHANICAL_CLUE"
+    },
+    {
+      "fact": "19_91_conflict",
+      "natural_explanation": "ordered-surface asymmetry",
+      "observed": "19 maps to I while 91 maps to N",
+      "open_gap": "no fixed source predicts I for 19 and N for 91",
+      "paired_fact": "sole unordered-pair conflict",
+      "status": "PROMOTED_MECHANICAL_CLUE"
+    },
+    {
+      "fact": "54_55_purity",
+      "natural_explanation": "unordered pair matrix with two directed exceptions",
+      "observed": "all non-19 unordered pairs have one effective label after allowing missing 39",
+      "open_gap": "folding does not assign the actual labels",
+      "paired_fact": "pair folding is real",
+      "status": "PROMOTED_MECHANICAL_CLUE"
+    }
+  ],
+  "pair_19": {
+    "i": 1,
+    "is_conflict": true,
+    "is_diagonal": false,
+    "is_reverse_missing": false,
+    "j": 9,
+    "label": "I/N",
+    "ordered_codes": "19|91",
+    "ordered_labels": "I|N",
+    "pair": "19",
+    "status": "conflict"
+  },
+  "pair_39": {
+    "i": 3,
+    "is_conflict": false,
+    "is_diagonal": false,
+    "is_reverse_missing": true,
+    "j": 9,
+    "label": "N",
+    "ordered_codes": "93",
+    "ordered_labels": "N",
+    "pair": "39",
+    "status": "reverse_missing"
+  },
+  "schema": "row0_surface_exception_focus.v1",
+  "translation_delta": "NONE"
+}

@@ -1,0 +1,14 @@
+pair,label,anchor_family,classification,reason
+00,*,unique_star_cell,AUDIT_ONLY,Only `00` maps to `*`; useful worksheet anchor but not externally sourced.
+19,I/N,directed_conflict_cell,PROMOTED_MECHANICAL_CLUE,`19 -> I` versus `91 -> N` is the sole directed conflict.
+39,N,missing_forward_surface_cell,PROMOTED_MECHANICAL_CLUE,`39` is absent while `93 -> N` exists.
+02,R,rare_singleton_R,WEAK_CLUE,Singleton rare label placement; descriptive only.
+23,O,rare_singleton_O,WEAK_CLUE,Singleton rare label placement; descriptive only.
+27,S,rare_singleton_S,WEAK_CLUE,Singleton rare label placement; descriptive only.
+34,B,rare_singleton_B,WEAK_CLUE,Singleton rare label placement; descriptive only.
+68,C,rare_singleton_C,WEAK_CLUE,Singleton rare label placement; descriptive only.
+11,E,diagonal_E_pressure,WEAK_CLUE,One of five diagonal E cells; diagonal pressure is partial.
+33,E,diagonal_E_pressure,WEAK_CLUE,One of five diagonal E cells; diagonal pressure is partial.
+44,E,diagonal_E_pressure,WEAK_CLUE,One of five diagonal E cells; diagonal pressure is partial.
+66,E,diagonal_E_pressure,WEAK_CLUE,One of five diagonal E cells; diagonal pressure is partial.
+99,E,diagonal_E_pressure,WEAK_CLUE,One of five diagonal E cells; diagonal pressure is partial.

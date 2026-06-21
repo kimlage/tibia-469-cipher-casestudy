@@ -1,0 +1,59 @@
+{
+  "classification": "AUDIT_ONLY",
+  "decision": "score_row0_progress_separately_from_book_generation_bits",
+  "lookup_baseline_bits": 160.52070273483628,
+  "schema": "row0_improvement_scoreboard.v1",
+  "scoreboard": [
+    {
+      "bits_below_lookup_after_costs": 0.0,
+      "candidate": "lookup_baseline",
+      "classification": "AUDIT_ONLY",
+      "diagnostic_hits": 55,
+      "explains_39_and_19_91": "stores_only",
+      "external_source_validated": false,
+      "labels_predicted_holdout": 0,
+      "survives_controls": "not_applicable"
+    },
+    {
+      "bits_below_lookup_after_costs": 0.0,
+      "candidate": "priority_layer_stumps",
+      "classification": "REJECTED_CONTROL",
+      "diagnostic_hits": 15,
+      "explains_39_and_19_91": "no",
+      "external_source_validated": false,
+      "labels_predicted_holdout": 15,
+      "survives_controls": false
+    },
+    {
+      "bits_below_lookup_after_costs": 0.0,
+      "candidate": "fixed_order_inventory_fill",
+      "classification": "REJECTED_CONTROL",
+      "diagnostic_hits": 8,
+      "explains_39_and_19_91": "no",
+      "external_source_validated": false,
+      "labels_predicted_holdout": 0,
+      "survives_controls": false
+    },
+    {
+      "bits_below_lookup_after_costs": 0.0,
+      "candidate": "ordered_surface_render_layer",
+      "classification": "PROMOTED_MECHANICAL_CLUE",
+      "diagnostic_hits": 2,
+      "explains_39_and_19_91": "yes_surface_only",
+      "external_source_validated": false,
+      "labels_predicted_holdout": 0,
+      "survives_controls": true
+    },
+    {
+      "bits_below_lookup_after_costs": 0.0,
+      "candidate": "external_fixed_source",
+      "classification": "BLOCKED_NEEDS_EXTERNAL_SOURCE",
+      "diagnostic_hits": 0,
+      "explains_39_and_19_91": "blocked",
+      "external_source_validated": false,
+      "labels_predicted_holdout": 0,
+      "survives_controls": false
+    }
+  ],
+  "translation_delta": "NONE"
+}
