@@ -452,6 +452,21 @@
       "question": "can_order_frontier_control_orders_promote_a_formula",
       "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/23_order_frontier_promotion_gate.json",
       "status": "failed_no_promotable_order"
+    },
+    {
+      "evidence": {
+        "best_context_prefix_frozen_loss_count": 5,
+        "best_non_global_context": "book_half",
+        "best_non_global_context_delta_vs_global_bits": 5.871536284497324,
+        "cross_op_candidate_delta_bits": 0.02743357555300463,
+        "no_source_oracle_delta_bits": -11.209103631023481,
+        "prefix_frozen_split_count": 5,
+        "source_delta_margin_over_break_even_bits": 0.02743357555300463
+      },
+      "interpretation": "The tight cross-op near miss is blocked by decodable source cost. Simple structural source contexts do not remove that blocker.",
+      "question": "do_simple_source_contexts_rescue_the_cross_op_near_tie",
+      "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json",
+      "status": "failed_simple_contexts_worse"
     }
   ],
   "frozen_validation_scope": {
@@ -483,7 +498,8 @@
     "reparse_trainset_multicutoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.json",
     "seed_exception_signal_cost": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.json",
     "seeded_online_formula_rescore": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.json",
-    "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json"
+    "seeded_rescore_loss_decomposition": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.json",
+    "source_blocker_structural_context_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.json"
   },
   "plaintext_claim": false,
   "schema": "recipe_reparse_evidence_matrix.v1",

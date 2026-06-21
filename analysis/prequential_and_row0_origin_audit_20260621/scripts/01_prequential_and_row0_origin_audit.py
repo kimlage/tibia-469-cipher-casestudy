@@ -283,6 +283,7 @@ def render_markdown(
     seed_exception_signal_cost_link: str,
     online_order_frontier_controls_link: str,
     order_frontier_promotion_gate_link: str,
+    source_blocker_structural_context_gate_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -595,6 +596,19 @@ def render_markdown(
             "a predictive diagnostic, not a compression-bound promotion score.",
             f"See [23_order_frontier_promotion_gate.md]({order_frontier_promotion_gate_link}).",
             "",
+            "### Source Blocker Structural Context Gate",
+            "",
+            "The remaining cross-op optional-literal near tie is then tested as a",
+            "source-cost blocker. The candidate is only `+0.027` bits worse than",
+            "active, and a source-free oracle would be `-11.209` bits better, but",
+            "that oracle is not decodable because it removes the required copy-source",
+            "choice. The best tested simple source context, `book_half`, is still",
+            "`+5.872` bits worse than the global source prior and loses in `5/5`",
+            "prefix-frozen splits. This localizes the next source frontier: a future",
+            "advance needs a new source derivation or representation, not a simple",
+            "declared context split.",
+            f"See [24_source_blocker_structural_context_gate.md]({source_blocker_structural_context_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -709,6 +723,9 @@ def main() -> None:
             seed_exception_signal_cost_link="21_seed_exception_signal_cost_audit.md",
             online_order_frontier_controls_link="22_online_order_frontier_controls.md",
             order_frontier_promotion_gate_link="23_order_frontier_promotion_gate.md",
+            source_blocker_structural_context_gate_link=(
+                "24_source_blocker_structural_context_gate.md"
+            ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -760,6 +777,9 @@ def main() -> None:
             ),
             order_frontier_promotion_gate_link=(
                 "test_results/23_order_frontier_promotion_gate.md"
+            ),
+            source_blocker_structural_context_gate_link=(
+                "test_results/24_source_blocker_structural_context_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

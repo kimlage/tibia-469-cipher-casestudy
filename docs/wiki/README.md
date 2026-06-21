@@ -535,6 +535,10 @@ source ledger sits `0.027` bits above break-even.
 The copy-source structural context audit then rejects simple context fixes for
 that source ledger: book-half is the best non-global context but is still
 `+5.872` bits worse, and it loses every prefix-frozen split.
+The source blocker structural context gate folds those two checks together:
+the near tie is only `+0.027` bits worse and a source-free oracle would be
+`-11.209`, but the best decodable simple context is still worse in full corpus
+and in `5/5` prefix-frozen splits.
 The current literal-payload profile audit then rejects carrying forward the old
 order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
 the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.

@@ -278,6 +278,19 @@ nonnegative descriptor. The frontier metric is therefore retained as
 a predictive diagnostic, not a compression-bound promotion score.
 See [23_order_frontier_promotion_gate.md](test_results/23_order_frontier_promotion_gate.md).
 
+### Source Blocker Structural Context Gate
+
+The remaining cross-op optional-literal near tie is then tested as a
+source-cost blocker. The candidate is only `+0.027` bits worse than
+active, and a source-free oracle would be `-11.209` bits better, but
+that oracle is not decodable because it removes the required copy-source
+choice. The best tested simple source context, `book_half`, is still
+`+5.872` bits worse than the global source prior and loses in `5/5`
+prefix-frozen splits. This localizes the next source frontier: a future
+advance needs a new source derivation or representation, not a simple
+declared context split.
+See [24_source_blocker_structural_context_gate.md](test_results/24_source_blocker_structural_context_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

@@ -85,6 +85,9 @@ exogenous.
 - [scripts/23_order_frontier_promotion_gate.py](scripts/23_order_frontier_promotion_gate.py) - checks whether any non-numeric order-frontier control can promote under the complete formula ledger and descriptor cost.
 - [reports/test_results/23_order_frontier_promotion_gate.md](reports/test_results/23_order_frontier_promotion_gate.md) - order frontier promotion-gate result.
 - [reports/test_results/23_order_frontier_promotion_gate.json](reports/test_results/23_order_frontier_promotion_gate.json) - structured order-promotion gate ledger.
+- [scripts/24_source_blocker_structural_context_gate.py](scripts/24_source_blocker_structural_context_gate.py) - checks whether simple source contexts rescue the cross-op near-tie source blocker.
+- [reports/test_results/24_source_blocker_structural_context_gate.md](reports/test_results/24_source_blocker_structural_context_gate.md) - source blocker structural-context gate result.
+- [reports/test_results/24_source_blocker_structural_context_gate.json](reports/test_results/24_source_blocker_structural_context_gate.json) - structured source-blocker gate ledger.
 
 ## Boundary
 
@@ -143,7 +146,11 @@ exogenous.
   in total gain. A promotion gate then checks the complete online formula
   ledger: `random_04` is `+188.584` bits worse before descriptor cost and
   `+521.038` bits worse after descriptor cost, leaving `0` promotable
-  non-numeric orders.
+  non-numeric orders. A source-blocker gate then closes the simple-context
+  rescue for the tight cross-op near tie: the candidate is only `+0.027` bits
+  worse and a source-free oracle would be `-11.209` bits, but the best
+  decodable simple source context (`book_half`) is `+5.872` bits worse than
+  global and loses all `5/5` prefix-frozen checks.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

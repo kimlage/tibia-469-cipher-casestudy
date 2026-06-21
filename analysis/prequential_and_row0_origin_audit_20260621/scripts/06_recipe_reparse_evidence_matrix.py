@@ -44,6 +44,8 @@ SOURCES = {
     / "22_online_order_frontier_controls.json",
     "order_frontier_promotion_gate": TEST_RESULTS
     / "23_order_frontier_promotion_gate.json",
+    "source_blocker_structural_context_gate": TEST_RESULTS
+    / "24_source_blocker_structural_context_gate.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -84,6 +86,7 @@ def make_result() -> dict[str, Any]:
     seed_signal = load_json(SOURCES["seed_exception_signal_cost"])
     order_frontier = load_json(SOURCES["online_order_frontier_controls"])
     promotion_gate = load_json(SOURCES["order_frontier_promotion_gate"])
+    source_gate = load_json(SOURCES["source_blocker_structural_context_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -108,6 +111,7 @@ def make_result() -> dict[str, Any]:
         ("seed_exception_signal_cost", seed_signal),
         ("online_order_frontier_controls", order_frontier),
         ("order_frontier_promotion_gate", promotion_gate),
+        ("source_blocker_structural_context_gate", source_gate),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -753,6 +757,38 @@ def make_result() -> dict[str, Any]:
                 "predictive diagnostic, not a compression-bound promotion score."
             ),
         },
+        {
+            "question": "do_simple_source_contexts_rescue_the_cross_op_near_tie",
+            "source": rel(SOURCES["source_blocker_structural_context_gate"]),
+            "status": "failed_simple_contexts_worse",
+            "evidence": {
+                "cross_op_candidate_delta_bits": source_gate["summary"][
+                    "cross_op_candidate_delta_bits"
+                ],
+                "source_delta_margin_over_break_even_bits": source_gate["summary"][
+                    "source_delta_margin_over_break_even_bits"
+                ],
+                "no_source_oracle_delta_bits": source_gate["summary"][
+                    "no_source_oracle_delta_bits"
+                ],
+                "best_non_global_context": source_gate["summary"][
+                    "best_non_global_context"
+                ],
+                "best_non_global_context_delta_vs_global_bits": source_gate["summary"][
+                    "best_non_global_context_delta_vs_global_bits"
+                ],
+                "best_context_prefix_frozen_loss_count": source_gate["summary"][
+                    "best_context_prefix_frozen_loss_count"
+                ],
+                "prefix_frozen_split_count": source_gate["summary"][
+                    "prefix_frozen_split_count"
+                ],
+            },
+            "interpretation": (
+                "The tight cross-op near miss is blocked by decodable source cost. "
+                "Simple structural source contexts do not remove that blocker."
+            ),
+        },
     ]
 
     result = {
@@ -984,6 +1020,16 @@ def write_result(result: dict[str, Any]) -> None:
                 f"promotable {evidence['promotable_order_count']}; random_04 "
                 f"{evidence['random_04_frontier_total_delta_vs_numeric_bits']:+.3f} "
                 f"frontier vs {evidence['random_04_full_formula_charged_delta_vs_numeric_bits']:+.3f} charged"
+            )
+        elif row["question"] == "do_simple_source_contexts_rescue_the_cross_op_near_tie":
+            key = (
+                f"candidate {evidence['cross_op_candidate_delta_bits']:+.3f}; "
+                f"source margin {evidence['source_delta_margin_over_break_even_bits']:+.3f}; "
+                f"oracle {evidence['no_source_oracle_delta_bits']:+.3f}; "
+                f"best context `{evidence['best_non_global_context']}` "
+                f"{evidence['best_non_global_context_delta_vs_global_bits']:+.3f}; "
+                f"prefix losses {evidence['best_context_prefix_frozen_loss_count']}/"
+                f"{evidence['prefix_frozen_split_count']}"
             )
         else:
             key = (

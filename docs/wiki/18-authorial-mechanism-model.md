@@ -1137,6 +1137,13 @@ contexts reduce that source ledger. They do not: book-half, length bucket,
 exact length, book-position bucket, and combined contexts all worsen the global
 exception prior. Book-half is the best non-global context at `+5.872` bits and
 is worse in every prefix-frozen split.
+The source blocker structural context gate then folds the near-tie and source
+context audits into one promotion test. The cross-op candidate is only `+0.027`
+bits worse than active, and a source-free oracle would be `-11.209` bits, but
+that oracle is non-decodable. The best decodable simple context, book-half, is
+`+5.872` bits worse than the global source prior and loses all `5/5`
+prefix-frozen checks. Simple declared source contexts are therefore closed as a
+rescue path for this near tie.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1468,6 +1475,7 @@ book generation, not row0 pair-cell placement.
 - [Cross-op near-tie decomposition](../../analysis/authorial_mechanism_20260620/reports/test_results/152_cross_op_near_tie_decomposition.md)
 - [Cross-op source break-even audit](../../analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.md)
 - [Copy source structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.md)
+- [Source blocker structural context gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/24_source_blocker_structural_context_gate.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

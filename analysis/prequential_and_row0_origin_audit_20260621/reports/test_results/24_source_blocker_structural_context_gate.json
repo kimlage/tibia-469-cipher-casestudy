@@ -1,0 +1,35 @@
+{
+  "case_reopened": false,
+  "classification": "simple_source_contexts_do_not_rescue_cross_op_near_tie",
+  "decision": {
+    "compression_bound_status": "unchanged",
+    "cross_op_candidate_status": "not_promoted",
+    "generation_explanation_status": "source_blocker_localized",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_context_status": "simple_structural_contexts_rejected",
+    "source_free_oracle_status": "not_promoted_non_decodable",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_structural_context": "analysis/authorial_mechanism_20260620/reports/test_results/154_copy_source_structural_context_audit.json",
+    "cross_op_source_break_even": "analysis/authorial_mechanism_20260620/reports/test_results/153_cross_op_source_break_even_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "source_blocker_structural_context_gate.v1",
+  "summary": {
+    "active_copy_source_delta_bits": 11.236537206576486,
+    "best_context_max_prefix_frozen_delta_bits": 6.274409911420207,
+    "best_context_min_prefix_frozen_delta_bits": 0.06277325639848641,
+    "best_context_prefix_frozen_loss_count": 5,
+    "best_non_global_context": "book_half",
+    "best_non_global_context_delta_vs_global_bits": 5.871536284497324,
+    "best_non_global_context_full_bits": 2996.7095964434984,
+    "cross_op_candidate_delta_bits": 0.02743357555300463,
+    "interpretation": "The cross-op candidate is blocked only narrowly by source cost, but the tested simple source contexts worsen the full source stream and every prefix-frozen split. The next source advance needs a new derivation or representation, not a simple declared context split.",
+    "no_source_oracle_delta_bits": -11.209103631023481,
+    "prefix_frozen_split_count": 5,
+    "source_delta_margin_over_break_even_bits": 0.02743357555300463,
+    "structural_context_promoted": false
+  },
+  "translation_delta": "NONE"
+}
