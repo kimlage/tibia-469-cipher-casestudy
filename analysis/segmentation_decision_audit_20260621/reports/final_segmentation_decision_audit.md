@@ -740,6 +740,27 @@ would also move. At threshold `4`, book `39` remains but one clean
 control remains as well. The weak-signal front is therefore
 diagnostically decomposed, not promoted.
 
+## Branch Choice Frontier Closure
+
+Gate 36 closes the current branch-choice weak-signal frontier as
+audit-only. It compiles gates `16-35`, including oracle repairs,
+observable repair policies, context tables, source-state rules,
+phase/grid rules, nearest-context recurrence, consensus, and vote
+decomposition.
+
+| Diagnostic | Value |
+|---|---:|
+| Gates audited | `20` |
+| Non-oracle gates audited | `18` |
+| Complete promoted parser rules | `0` |
+| Partial promoted rule clues | `0` |
+| Clean-zero partial non-oracle rules | `4` |
+
+The closure result is not a new parser. It says the stable residual
+branch is oracle-repairable, but the tested non-oracle weak-signal
+families do not justify another local branch-choice combination
+under current evidence.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -756,7 +777,9 @@ fails clean holdout. A simple phase/grid rule gives only a weak
 one-residual full-fit clue. Raw context nearest-neighbor recurrence
 is also rejected, and consensus over the weak structural signals
 collapses back to the active baseline. Vote decomposition shows no
-clean residual threshold hidden inside those signals. The remaining blocker is a richer path/state
+clean residual threshold hidden inside those signals. Gate 36 closes
+that branch-choice weak-signal frontier as audit-only. The remaining
+blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -800,3 +823,4 @@ or the stable projection as an oracle.
 - [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)
 - [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)
 - [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)
+- [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)

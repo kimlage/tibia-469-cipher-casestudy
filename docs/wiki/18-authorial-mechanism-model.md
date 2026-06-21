@@ -645,6 +645,14 @@ A residual vote decomposition closes that weak-signal front. Threshold `3`
 would correctly flag only books `16` and `39`, but also moves `18` clean
 controls; threshold `4` leaves only book `39` and still has `1` clean false
 move. The structural vote family therefore has no hidden clean cutoff.
+A branch-choice frontier closure audit then compiles gates `16-35` as one
+ledger. It audits `20` gates, including oracle repairs, observable repairs,
+finite context tables, source-state rules, phase/grid rules, recurrence,
+consensus, and vote decomposition. It promotes `0` complete parser rules:
+the stable residual branch is oracle-repairable, but the tested non-oracle
+weak-signal families do not justify another local branch-choice combination.
+This is a closure result, not a new generator; the next blocker remains a
+richer path/state segmentation mechanism or a source-free target digit account.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2343,6 +2351,7 @@ book generation, not row0 pair-cell placement.
 - [Context nearest branch audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/33_context_nearest_branch_audit.md)
 - [Structural signal consensus audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/34_structural_signal_consensus_audit.md)
 - [Structural vote residual decomposition](../../analysis/segmentation_decision_audit_20260621/reports/test_results/35_structural_vote_residual_decomposition.md)
+- [Branch choice frontier closure audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

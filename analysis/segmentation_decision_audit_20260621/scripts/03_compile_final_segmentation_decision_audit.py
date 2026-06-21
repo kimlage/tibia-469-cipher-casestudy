@@ -44,6 +44,7 @@ PHASE_GRID = TEST_RESULTS / "32_phase_grid_segmentation_audit.json"
 CONTEXT_NEAREST = TEST_RESULTS / "33_context_nearest_branch_audit.json"
 STRUCTURAL_CONSENSUS = TEST_RESULTS / "34_structural_signal_consensus_audit.json"
 STRUCTURAL_DECOMPOSITION = TEST_RESULTS / "35_structural_vote_residual_decomposition.json"
+BRANCH_CHOICE_CLOSURE = TEST_RESULTS / "36_branch_choice_frontier_closure_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -142,6 +143,11 @@ def main() -> None:
         if STRUCTURAL_DECOMPOSITION.exists()
         else None
     )
+    branch_choice_closure = (
+        load_json(BRANCH_CHOICE_CLOSURE)
+        if BRANCH_CHOICE_CLOSURE.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -210,6 +216,8 @@ def main() -> None:
         assert_boundary(
             "structural_vote_residual_decomposition", structural_decomposition
         )
+    if branch_choice_closure is not None:
+        assert_boundary("branch_choice_frontier_closure_audit", branch_choice_closure)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -290,6 +298,9 @@ def main() -> None:
     )
     structural_decomposition_summary = (
         None if structural_decomposition is None else structural_decomposition["summary"]
+    )
+    branch_choice_closure_summary = (
+        None if branch_choice_closure is None else branch_choice_closure["summary"]
     )
 
     lines = [
@@ -1223,6 +1234,32 @@ def main() -> None:
                 "",
             ]
         )
+    if branch_choice_closure_summary is not None:
+        lines.extend(
+            [
+                "## Branch Choice Frontier Closure",
+                "",
+                "Gate 36 closes the current branch-choice weak-signal frontier as",
+                "audit-only. It compiles gates `16-35`, including oracle repairs,",
+                "observable repair policies, context tables, source-state rules,",
+                "phase/grid rules, nearest-context recurrence, consensus, and vote",
+                "decomposition.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Gates audited | `{branch_choice_closure_summary['gate_count']}` |",
+                f"| Non-oracle gates audited | `{branch_choice_closure_summary['non_oracle_gate_count']}` |",
+                f"| Complete promoted parser rules | `{branch_choice_closure_summary['complete_promoted_parser_rules']}` |",
+                f"| Partial promoted rule clues | `{branch_choice_closure_summary['partial_promoted_rule_count']}` |",
+                f"| Clean-zero partial non-oracle rules | `{branch_choice_closure_summary['clean_zero_nonoracle_partial_rule_count']}` |",
+                "",
+                "The closure result is not a new parser. It says the stable residual",
+                "branch is oracle-repairable, but the tested non-oracle weak-signal",
+                "families do not justify another local branch-choice combination",
+                "under current evidence.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1241,7 +1278,9 @@ def main() -> None:
             "one-residual full-fit clue. Raw context nearest-neighbor recurrence",
             "is also rejected, and consensus over the weak structural signals",
             "collapses back to the active baseline. Vote decomposition shows no",
-            "clean residual threshold hidden inside those signals. The remaining blocker is a richer path/state",
+            "clean residual threshold hidden inside those signals. Gate 36 closes",
+            "that branch-choice weak-signal frontier as audit-only. The remaining",
+            "blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1285,6 +1324,7 @@ def main() -> None:
             "- [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)",
             "- [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)",
             "- [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)",
+            "- [Branch choice frontier closure audit](test_results/36_branch_choice_frontier_closure_audit.md)",
             "",
         ]
     )

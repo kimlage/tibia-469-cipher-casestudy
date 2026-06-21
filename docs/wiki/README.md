@@ -1213,6 +1213,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects operational seed `0..9` as mechanically privileged under seed-only
   coverage controls,
   keeps prefix-trained seed selection as partial predictive signal only,
+  closes the branch-choice weak-signal frontier after gates `16-35` with `0`
+  complete promoted parser rules, leaving richer path/state segmentation as
+  the next blocker,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:
