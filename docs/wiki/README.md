@@ -746,6 +746,11 @@ All three tie policies remain stable and roundtrip over `10/10` books; the
 `latest_source` policy selects `10` non-earliest sources at only `+0.017676`
 primary bits versus collapsed, while the other two policies match collapsed cost.
 This is local parser robustness, not source-rule promotion.
+A full-source latest multi-cutoff probe then tests cutoffs `50/60` under that
+same disruptive policy. It roundtrips and beats raw in `30/30` evaluations, and
+books `60..69` stay exact-path stable across both cutoffs (`10/10`) while `35`
+non-earliest sources are selected. This is partial multi-cutoff robustness, not a
+full formula promotion.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -950,6 +955,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   events have hidden alternate sources; gate 89 superseded),
   exposes all same-length sources on cutoff `60` and preserves `10/10` stability
   while showing non-earliest source choices are near-ties, not generator rules,
+  extends `latest_source` full-source exposure to cutoffs `50/60` and keeps
+  books `60..69` stable (`10/10`),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

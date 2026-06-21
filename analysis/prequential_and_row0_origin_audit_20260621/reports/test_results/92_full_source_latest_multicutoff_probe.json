@@ -1,0 +1,265 @@
+{
+  "case_reopened": false,
+  "classification": "full_source_latest_multicutoff_stable",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "full_source_latest_multicutoff_probe_only",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_rule_status": "full_source_latest_multicutoff_stable",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate91_full_source_exposure": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/91_full_source_exposure_audit.json",
+    "gate91_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/91_full_source_exposure_audit.py"
+  },
+  "plaintext_claim": false,
+  "schema": "full_source_latest_multicutoff_probe.v1",
+  "scope": {
+    "all_same_length_sources_exposed": true,
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "policy": "latest_source",
+    "row0_origin_changed": false,
+    "tested_cutoffs": [
+      50,
+      60
+    ]
+  },
+  "summary": {
+    "all_multi_cutoff_books_stable": true,
+    "all_raw_positive": true,
+    "all_roundtrip": true,
+    "book_count": 20,
+    "book_rows": [
+      {
+        "book": 50,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 51,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 52,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 53,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 54,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 55,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 56,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 6,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 57,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 58,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 59,
+        "cutoff_count": 1,
+        "cutoffs": [
+          50
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 60,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 6,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 61,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 62,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 63,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 64,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 65,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 66,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 67,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 68,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true
+      },
+      {
+        "book": 69,
+        "cutoff_count": 2,
+        "cutoffs": [
+          50,
+          60
+        ],
+        "non_earliest_source_count": 0,
+        "signature_count": 1,
+        "stable_exact_path": true
+      }
+    ],
+    "elapsed_seconds": 40.83537462505046,
+    "hidden_candidate_count": 1246561,
+    "interpretation": "The most disruptive full-source tie policy from gate 91 is tested over cutoffs 50 and 60, giving books 60-69 two observations for exact-path stability under exposed sources.",
+    "max_candidates_at_position": 1351,
+    "multi_cutoff_book_count": 10,
+    "multi_cutoff_stable_book_count": 10,
+    "multi_cutoff_unstable_book_count": 0,
+    "positions_with_hidden_sources": 4641,
+    "raw_positive_book_evaluations": 30,
+    "roundtrip_book_evaluations": 30,
+    "target_book_evaluations": 30,
+    "total_copy_items": 67,
+    "total_literal_digits": 49,
+    "total_non_earliest_source_count": 35,
+    "total_primary_parser_bits": 1460.6292760652436,
+    "unstable_books": []
+  },
+  "translation_delta": "NONE"
+}

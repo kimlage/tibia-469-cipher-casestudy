@@ -297,6 +297,15 @@ previous-end-preferred policies match collapsed cost exactly. This is local
 parser robustness, not a source-generation rule, because the exposed candidates
 are still target-chunk matches.
 
+A full-source latest multi-cutoff probe then expands the same correction to
+cutoffs `50` and `60` for the most disruptive tie policy. It roundtrips and beats
+raw in `30/30` book evaluations, and books `60..69` remain exact-path stable
+across both cutoffs (`10/10`). The parser selects `35` non-earliest sources while
+exposing `1246561` hidden candidates. This is stronger partial stability evidence
+for the parser, but still not a formula promotion: source candidates remain
+target-chunk matches, and the full five-cutoff all-policy exposure remains
+unrun.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

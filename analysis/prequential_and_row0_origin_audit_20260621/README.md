@@ -289,6 +289,9 @@ exogenous.
 - [scripts/91_full_source_exposure_audit.py](scripts/91_full_source_exposure_audit.py) - exposes all same-length source candidates on the cutoff-60 stable projection.
 - [reports/test_results/91_full_source_exposure_audit.md](reports/test_results/91_full_source_exposure_audit.md) - full source exposure cutoff-60 result.
 - [reports/test_results/91_full_source_exposure_audit.json](reports/test_results/91_full_source_exposure_audit.json) - structured full source exposure ledger.
+- [scripts/92_full_source_latest_multicutoff_probe.py](scripts/92_full_source_latest_multicutoff_probe.py) - probes latest-source full source exposure on cutoffs `50/60`.
+- [reports/test_results/92_full_source_latest_multicutoff_probe.md](reports/test_results/92_full_source_latest_multicutoff_probe.md) - full source latest multi-cutoff probe result.
+- [reports/test_results/92_full_source_latest_multicutoff_probe.json](reports/test_results/92_full_source_latest_multicutoff_probe.json) - structured full source latest multi-cutoff ledger.
 
 ## Boundary
 
@@ -626,6 +629,12 @@ exogenous.
   `+0.017676` primary bits versus the collapsed frontier, while earliest and
   previous-end-preferred policies match collapsed cost. This supports parser
   robustness locally but keeps source choice target-dependent.
+- The full-source latest multi-cutoff probe then extends the disruptive
+  `latest_source` policy to cutoffs `50/60`. It roundtrips and beats raw on
+  `30/30` evaluations, keeps the `10` books observed at both cutoffs stable
+  (`10/10`), and selects `35` non-earliest sources while exposing `1246561`
+  hidden candidates. This strengthens local parser robustness under exposed
+  sources, but remains a probe rather than a full multi-cutoff formula.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
