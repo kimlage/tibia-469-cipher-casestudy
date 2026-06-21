@@ -45,6 +45,7 @@ claim.
 | `can_fixed_segmentation_source_choice_improve_repricing` | `failed_no_cheaper_source_choices_found` | cutoffs 5; roundtrip True; raw wins True; reprice wins 0/5; bits 12016.569 vs reprice 12016.569; delta +0.000; changed sources 0/514; segmentation reoptimized False |
 | `can_global_source_path_improve_fixed_segmentation` | `passed_partial_global_source_path_improves_reprice` | cutoffs 5; roundtrip True; raw wins True; reprice wins 5/5; bits 11974.209 vs reprice 12016.569; delta -42.359; changed sources 10/514; defaults/exceptions 21/493; max states 14; segmentation reoptimized False |
 | `can_full_corpus_source_path_improve_formula_bound` | `passed_fixed_recipe_source_path_formula_improves_bound` | active 8177.317; candidate 8162.412; gain +14.905; copy-source 3002.838 -> 2987.933; changed 2/261; defaults/exceptions 7/254; max states 14; fixed segmentation True; fixed lengths True |
+| `can_single_pair_source_substitution_improve_formula_bound` | `passed_single_pair_source_substitution_improves_bound` | active 8162.412; candidate 8160.827; gain +1.585; copy-source 2987.933 -> 2986.348; singles 12/376; pairs 2686/69849; best arity 2; triples searched False |
 | `where_is_the_online_prefix_per_book_frontier` | `passed_after_bootstrap_with_book0_failure` | book-bounded raw wins 69/70; after bootstrap 69/69; failures [0]; mean gain 419.761; break-even book 2 |
 | `does_an_explicit_book0_seed_close_the_online_bootstrap_failure` | `passed_as_bootstrap_accounting_not_bound_promotion` | book0 online-raw 10.499 bits; seed wins/ties 70/70; strict wins 69/70; failures []; stream saving 10.499 |
 | `does_book0_seed_survive_complete_formula_rescoring` | `failed_as_formula_promotion` | seeded 8344.041 vs online 8343.062; delta 0.979; book-bounded delta 305.198; promoted 0 |
@@ -83,5 +84,6 @@ claim.
 - Source-choice optimizer: `fixed_segmentation_source_choice_no_change_boundary`.
 - Global source-path optimizer: `fixed_segmentation_global_source_path_improves_unpromoted`.
 - Full-corpus source-path formula: `fixed_recipe_source_path_improves_bound_to_8162_412`.
+- Source substitution frontier: `single_pair_source_substitution_improves_bound_to_8160_827`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

@@ -139,6 +139,9 @@ exogenous.
 - [scripts/41_full_corpus_source_path_formula_gate.py](scripts/41_full_corpus_source_path_formula_gate.py) - tests whether global source-path substitutions survive the full adaptive source-stream rescore.
 - [reports/test_results/41_full_corpus_source_path_formula_gate.md](reports/test_results/41_full_corpus_source_path_formula_gate.md) - full-corpus source-path formula result.
 - [reports/test_results/41_full_corpus_source_path_formula_gate.json](reports/test_results/41_full_corpus_source_path_formula_gate.json) - structured full-corpus source-path formula ledger.
+- [scripts/42_full_corpus_source_substitution_frontier_gate.py](scripts/42_full_corpus_source_substitution_frontier_gate.py) - exhaustively tests single and pair same-chunk source substitutions under adaptive rescore.
+- [reports/test_results/42_full_corpus_source_substitution_frontier_gate.md](reports/test_results/42_full_corpus_source_substitution_frontier_gate.md) - source substitution frontier result.
+- [reports/test_results/42_full_corpus_source_substitution_frontier_gate.json](reports/test_results/42_full_corpus_source_substitution_frontier_gate.json) - structured source substitution frontier ledger.
 
 ## Boundary
 
@@ -244,7 +247,11 @@ exogenous.
   `2/261` source positions lowers the adaptive copy-source stream enough to
   move the active mechanical bound from `8177.317` to `8162.412` bits. This
   remains fixed in segmentation and copy lengths, so the complete parser is
-  still unpromoted because the full active objective, adaptive counts, tie
+  still unpromoted. A single/pair source-substitution frontier then searches
+  `376` singles and `69849` pairs exactly under adaptive rescore and lowers the
+  bound again from `8162.412` to `8160.827` bits; triples and higher-order
+  substitutions remain unsearched. The complete parser is still unpromoted
+  because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse
   recipes with the active `previous_copy_end` source ledger: `10/10` books

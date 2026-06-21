@@ -73,6 +73,8 @@ SOURCES = {
     / "40_multicutoff_global_source_path_optimizer_gate.json",
     "full_corpus_source_path_formula_gate": TEST_RESULTS
     / "41_full_corpus_source_path_formula_gate.json",
+    "full_corpus_source_substitution_frontier_gate": TEST_RESULTS
+    / "42_full_corpus_source_substitution_frontier_gate.json",
     "source_selection_derivation_boundary_gate": TEST_RESULTS
     / "31_source_selection_derivation_boundary_gate.json",
     "copy_length_derivation_boundary_gate": TEST_RESULTS
@@ -145,6 +147,9 @@ def make_result() -> dict[str, Any]:
     full_corpus_source_path_formula_gate = load_json(
         SOURCES["full_corpus_source_path_formula_gate"]
     )
+    full_corpus_source_substitution_frontier_gate = load_json(
+        SOURCES["full_corpus_source_substitution_frontier_gate"]
+    )
     source_selection_gate = load_json(SOURCES["source_selection_derivation_boundary_gate"])
     copy_length_derivation_gate = load_json(SOURCES["copy_length_derivation_boundary_gate"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
@@ -193,6 +198,10 @@ def make_result() -> dict[str, Any]:
         ("multicutoff_source_choice_optimizer_gate", source_choice_optimizer_gate),
         ("multicutoff_global_source_path_optimizer_gate", global_source_path_optimizer_gate),
         ("full_corpus_source_path_formula_gate", full_corpus_source_path_formula_gate),
+        (
+            "full_corpus_source_substitution_frontier_gate",
+            full_corpus_source_substitution_frontier_gate,
+        ),
         ("source_selection_derivation_boundary_gate", source_selection_gate),
         ("copy_length_derivation_boundary_gate", copy_length_derivation_gate),
         ("online_reparse_compile", online_compile),
@@ -1131,6 +1140,58 @@ def make_result() -> dict[str, Any]:
             ),
         },
         {
+            "question": "can_single_pair_source_substitution_improve_formula_bound",
+            "source": rel(SOURCES["full_corpus_source_substitution_frontier_gate"]),
+            "status": "passed_single_pair_source_substitution_improves_bound",
+            "evidence": {
+                "active_total_bits": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["active_total_bits"],
+                "candidate_total_bits": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["candidate_total_bits"],
+                "candidate_gain_bits": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["candidate_gain_bits"],
+                "active_copy_source_bits": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["active_copy_source_bits"],
+                "candidate_copy_source_bits": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["candidate_copy_source_bits"],
+                "copy_event_count": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["copy_event_count"],
+                "single_substitution_count": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["single_substitution_count"],
+                "positive_single_count": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["positive_single_count"],
+                "pair_substitution_count": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["pair_substitution_count"],
+                "positive_pair_count": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["positive_pair_count"],
+                "best_arity": full_corpus_source_substitution_frontier_gate[
+                    "summary"
+                ]["best_arity"],
+                "candidate_output_formula": full_corpus_source_substitution_frontier_gate[
+                    "candidate_output_formula"
+                ],
+                "searched_triples_or_higher": full_corpus_source_substitution_frontier_gate[
+                    "scope"
+                ]["searched_triples_or_higher"],
+            },
+            "interpretation": (
+                "Exact single and pair same-chunk source substitution search "
+                "finds one further fixed-recipe source improvement. This lowers "
+                "the bound but leaves triples/higher and active parser discovery "
+                "outside the gate."
+            ),
+        },
+        {
             "question": "where_is_the_online_prefix_per_book_frontier",
             "source": rel(SOURCES["online_prefix_book_frontier"]),
             "status": "passed_after_bootstrap_with_book0_failure",
@@ -1773,6 +1834,7 @@ def make_result() -> dict[str, Any]:
             "source_choice_optimizer_status": "fixed_segmentation_source_choice_no_change_boundary",
             "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
             "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
+            "source_substitution_frontier_status": "single_pair_source_substitution_improves_bound_to_8160_827",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -2080,6 +2142,20 @@ def write_result(result: dict[str, Any]) -> None:
                 f"{evidence['fixed_segmentation']}; fixed lengths "
                 f"{evidence['fixed_copy_lengths']}"
             )
+        elif row["question"] == "can_single_pair_source_substitution_improve_formula_bound":
+            key = (
+                f"active {evidence['active_total_bits']:.3f}; candidate "
+                f"{evidence['candidate_total_bits']:.3f}; gain "
+                f"{evidence['candidate_gain_bits']:+.3f}; copy-source "
+                f"{evidence['active_copy_source_bits']:.3f} -> "
+                f"{evidence['candidate_copy_source_bits']:.3f}; singles "
+                f"{evidence['positive_single_count']}/"
+                f"{evidence['single_substitution_count']}; pairs "
+                f"{evidence['positive_pair_count']}/"
+                f"{evidence['pair_substitution_count']}; best arity "
+                f"{evidence['best_arity']}; triples searched "
+                f"{evidence['searched_triples_or_higher']}"
+            )
         elif row["question"] == "where_is_the_online_prefix_per_book_frontier":
             key = (
                 f"book-bounded raw wins {evidence['book_bounded_online_beats_raw_count']}/"
@@ -2293,6 +2369,7 @@ def write_result(result: dict[str, Any]) -> None:
             f"- Source-choice optimizer: `{result['decision']['source_choice_optimizer_status']}`.",
             f"- Global source-path optimizer: `{result['decision']['global_source_path_optimizer_status']}`.",
             f"- Full-corpus source-path formula: `{result['decision']['full_corpus_source_path_formula_status']}`.",
+            f"- Source substitution frontier: `{result['decision']['source_substitution_frontier_status']}`.",
             "- Row0 origin remains exogenous.",
             "- No plaintext, translation, or case-reopening claim is introduced.",
         ]

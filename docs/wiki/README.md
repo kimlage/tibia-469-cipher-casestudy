@@ -544,6 +544,10 @@ A full-corpus fixed-recipe source-path formula gate then verifies the same idea
 under the real adaptive source-stream rescore: changing `2/261` source
 positions lowers the active mechanical bound from `8177.317` to `8162.412`
 bits, while segmentation and copy lengths remain fixed.
+A single/pair source-substitution frontier then searches `376` singles and
+`69849` pairs exactly under adaptive rescore; the best pair lowers the active
+mechanical bound again from `8162.412` to `8160.827` bits. Triples and higher
+source-substitution orders remain unsearched.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker: the current copy-source default is path-dependent on previous copy
 source plus length. Exact active reparse needs an expanded previous-copy state,

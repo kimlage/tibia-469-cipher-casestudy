@@ -450,6 +450,23 @@ copy-source ledger drops from
 Segmentation and copy lengths remain fixed.
 See [41_full_corpus_source_path_formula_gate.md](41_full_corpus_source_path_formula_gate.md).
 
+### Full-Corpus Source Substitution Frontier Gate
+
+The promoted fixed-recipe source-path formula is then checked for a
+local single/pair substitution frontier. Every same-chunk legal source
+single and pair is rescored under the full adaptive source stream. The
+best pair changes two source positions and improves the bound from
+`8162.412` to
+`8160.827` bits,
+a gain of
+`+1.585` bits.
+The gate searches
+`376` singles
+and
+`69849` pairs;
+triples and higher-order substitutions remain outside this frontier.
+See [42_full_corpus_source_substitution_frontier_gate.md](42_full_corpus_source_substitution_frontier_gate.md).
+
 ### Source Blocker Structural Context Gate
 
 The remaining cross-op optional-literal near tie is then tested as a
@@ -622,6 +639,7 @@ See [05_row0_hypothesis_requirement_audit.md](05_row0_hypothesis_requirement_aud
 - Fixed-segmentation source-choice optimization finds `0/514` cheaper source substitutions, so the simple source-only improvement path is closed under the immediate `previous_copy_end` cost.
 - Global fixed-segmentation source-path optimization improves the repriced ledger by `-42.359` bits, changing `10/514` sources with max DP state count `14`; segmentation and copy lengths remain fixed.
 - Full-corpus fixed-recipe source-path optimization survives adaptive rescore and lowers the active bound from `8177.317` to `8162.412` bits by changing `2/261` source positions; segmentation and copy lengths remain fixed.
+- Full-corpus single/pair source-substitution frontier search lowers the active bound from `8162.412` to `8160.827` bits; triples and higher-order substitutions remain unsearched.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
 - No translation, plaintext, or case reopening is introduced.

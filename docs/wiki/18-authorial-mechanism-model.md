@@ -100,8 +100,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_default_exception_formula_469` | `8206.2` | `136.9` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469` | `8177.3` | `28.9` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_path_optimized_formula_469` | `8162.4` | `14.9` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_frontier_formula_469` | `8160.8` | `1.6` |
 
-The `8162.4` row is the current `compression_bound`, not a final authorial
+The `8160.8` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1146,6 +1147,12 @@ signal survives the real adaptive source-stream score. It does: changing
 `2987.933` bits and moves the active fixed-recipe bound from `8177.317` to
 `8162.412` bits. The recipe segmentation and copy lengths remain fixed, so
 this improves the compression bound without proving complete parser discovery.
+The full-corpus source-substitution frontier then exhaustively checks all
+single and pair same-chunk legal source substitutions under the real adaptive
+source score. It searches `376` singles and `69849` pairs; the best pair changes
+book `7` op `1` and book `14` op `2`, lowering the bound from `8162.412` to
+`8160.827` bits. Triples and higher-order source substitutions remain
+unsearched, and segmentation/copy lengths remain fixed.
 The active reparse state-boundary audit then localizes the recipe-discovery
 blocker. The current copy-source default depends on the previous copy source
 plus previous copy length, so exact active reparse must carry
