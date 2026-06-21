@@ -265,6 +265,9 @@ exogenous.
 - [scripts/83_component_neutralized_residual_tradeoff_audit.py](scripts/83_component_neutralized_residual_tradeoff_audit.py) - localizes resolved, persistent, introduced, and full-source residual instabilities after component neutralization.
 - [reports/test_results/83_component_neutralized_residual_tradeoff_audit.md](reports/test_results/83_component_neutralized_residual_tradeoff_audit.md) - residual tradeoff result.
 - [reports/test_results/83_component_neutralized_residual_tradeoff_audit.json](reports/test_results/83_component_neutralized_residual_tradeoff_audit.json) - structured residual tradeoff ledger.
+- [scripts/84_residual_literal_payload_neutralization_gate.py](scripts/84_residual_literal_payload_neutralization_gate.py) - tests uniform literal-payload cost on top of the copy-length/source-exception neutralized parser.
+- [reports/test_results/84_residual_literal_payload_neutralization_gate.md](reports/test_results/84_residual_literal_payload_neutralization_gate.md) - residual literal-payload neutralization result.
+- [reports/test_results/84_residual_literal_payload_neutralization_gate.json](reports/test_results/84_residual_literal_payload_neutralization_gate.json) - structured residual literal-payload ledger.
 
 ## Boundary
 
@@ -548,6 +551,12 @@ exogenous.
   uniformization changes the residual pair to books `35` and `45` but costs
   another `+367.448154` bits over the best mode, so source-flag uniformization
   is not promoted.
+- The residual literal-payload neutralization gate then tests the remaining
+  segmentation pressure. Adding uniform literal-payload cost resolves books
+  `26` and `34` and improves exact path stability to `49/50`, but introduces
+  book `49` as the sole residual and pays `+170.606311` parser bits over the
+  previous neutralized mode. This is a narrower simplification candidate, still
+  not a closed generator.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

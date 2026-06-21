@@ -229,6 +229,14 @@ changes the residual pair to books `35` and `45`, but costs an additional
 therefore not promoted; the remaining structural question is a narrow residual
 mechanism for books `26` and `34`.
 
+A residual literal-payload neutralization gate then tests that narrow question.
+Adding uniform digit payload cost on top of the uniform copy-length and
+source-exception parser resolves both books `26` and `34`, improves exact
+multi-cutoff path stability to `49/50`, and preserves `175/175`
+roundtrip/raw-positive evaluations. It also pays `+170.606311` parser bits over
+the previous neutralized mode and introduces book `49` as the sole residual.
+So the residual frontier moves from `26`/`34` to `49`; it does not disappear.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

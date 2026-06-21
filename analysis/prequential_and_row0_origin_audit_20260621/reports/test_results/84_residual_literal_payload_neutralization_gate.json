@@ -1,0 +1,859 @@
+{
+  "case_reopened": false,
+  "classification": "literal_payload_neutralization_improves_residual_stability",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "literal_payload_neutralization_tested_for_residuals",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "literal_payload_neutralization_improves_residual_stability",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate82_component_neutralized_path_stability": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/82_component_neutralized_path_stability_gate.json",
+    "gate82_replay_script": "analysis/prequential_and_row0_origin_audit_20260621/scripts/82_component_neutralized_path_stability_gate.py",
+    "gate83_residual_tradeoff": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/83_component_neutralized_residual_tradeoff_audit.json"
+  },
+  "plaintext_claim": false,
+  "schema": "residual_literal_payload_neutralization_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "base_mode": "uniform_copy_length_and_source_exception",
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "payload_mode": "uniform_copy_length_source_exception_and_literal_payload",
+    "row0_origin_changed": false,
+    "uniform_literal_payload_cost": "digit_uniform_log2_10"
+  },
+  "summary": {
+    "base_stable_exact_path_book_count": 48,
+    "base_unstable_books": [
+      26,
+      34
+    ],
+    "elapsed_seconds": 8.012603291892447,
+    "interpretation": "Uniform literal-payload cost tests whether the remaining neutralized-parser residuals are caused by learned payload pressure. Promotion would require improved global path stability without introducing a worse residual frontier.",
+    "introduced_vs_base_books": [
+      49
+    ],
+    "payload_mode_summary": {
+      "book_count_with_multiple_cutoffs": 50,
+      "book_rows": [
+        {
+          "book": 10,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 11,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 12,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 13,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 14,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 15,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 16,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 17,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 18,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 19,
+          "cutoff_count": 1,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10
+            ]
+          ]
+        },
+        {
+          "book": 20,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 21,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 22,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 23,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 24,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 25,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 26,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 27,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 28,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 29,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 30,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 31,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 32,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 33,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 34,
+          "cutoff_count": 2,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ]
+          ]
+        },
+        {
+          "book": 35,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 36,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 37,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 38,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 39,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 40,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 41,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 42,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 43,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 44,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 45,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 46,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 47,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 48,
+          "cutoff_count": 3,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35
+            ]
+          ]
+        },
+        {
+          "book": 49,
+          "cutoff_count": 3,
+          "signature_count": 2,
+          "stable_exact_path": false,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ],
+            [
+              35
+            ]
+          ]
+        },
+        {
+          "book": 50,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 51,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 52,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 53,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 54,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 55,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 56,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 57,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 58,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 59,
+          "cutoff_count": 4,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50
+            ]
+          ]
+        },
+        {
+          "book": 60,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 61,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 62,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 63,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 64,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 65,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 66,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 67,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 68,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        },
+        {
+          "book": 69,
+          "cutoff_count": 5,
+          "signature_count": 1,
+          "stable_exact_path": true,
+          "variant_cutoffs": [
+            [
+              10,
+              20,
+              35,
+              50,
+              60
+            ]
+          ]
+        }
+      ],
+      "cost_mode": "uniform_copy_length_source_exception_and_literal_payload",
+      "max_signature_count_per_book": 2,
+      "raw_positive_book_evaluations": 175,
+      "raw_positive_delta_vs_base": 0,
+      "roundtrip_book_evaluations": 175,
+      "stable_book_delta_vs_base": 1,
+      "stable_exact_path_book_count": 49,
+      "stable_exact_path_fraction": 0.98,
+      "total_parser_bits": 12230.422814979862,
+      "total_parser_bits_delta_vs_active": 238.21193316679637,
+      "total_parser_bits_delta_vs_base": 170.60631078148617,
+      "total_parser_evaluations": 175,
+      "total_raw_digit_uniform_bits": 93927.51688294017,
+      "total_transition_evaluations": 10701963,
+      "total_unique_book_signatures": 51,
+      "unstable_books": [
+        {
+          "book": 49,
+          "signature_count": 2,
+          "variant_cutoffs": [
+            [
+              10,
+              20
+            ],
+            [
+              35
+            ]
+          ]
+        }
+      ],
+      "unstable_exact_path_book_count": 1
+    },
+    "persistent_vs_base_books": [],
+    "resolved_vs_base_books": [
+      26,
+      34
+    ]
+  },
+  "translation_delta": "NONE"
+}

@@ -700,6 +700,12 @@ book `26` is newly introduced. Uniformizing the full source model changes the
 residual pair to `35`/`45` at another `+367.448154` bits over the best
 neutralized mode, so source-flag uniformization is rejected as the next
 simplification.
+A residual literal-payload neutralization gate then moves the frontier again:
+uniform literal payload resolves books `26` and `34`, improves exact path
+stability to `49/50`, and preserves `175/175` roundtrip/raw-positive
+evaluations. It costs `+170.606311` parser bits over the previous neutralized
+mode and introduces book `49` as the single remaining residual, so it is still
+not a final generator.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -885,6 +891,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   still unstable),
   localizes the residual tradeoff (`11/12` active instabilities resolved,
   `34` persistent, `26` introduced; full-source uniformization rejected),
+  tests uniform literal payload as a residual simplification (`49/50` stable,
+  `49` sole residual, `+170.606311` parser bits over previous neutralized
+  mode),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
