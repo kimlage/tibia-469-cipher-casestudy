@@ -565,6 +565,11 @@ residual operations, and an oracle stable-prefix score chooses all of them, but
 the best non-oracle continuation objective (`balanced_ops_literals`) chooses
 only `6/10` while changing `20` clean controls. Simple branch consequences over
 operation count, literal mass, or copied mass are therefore rejected.
+A branch-ranker prequential audit then tests whether the same path choice can be
+learned from prefix books. It cannot: the active-branch baseline is `224/234`
+with `0/10` residual hits, while the best full-fit ranker is worse at `223/234`
+and still hits `0/10` residuals. A residual-only mode can hit `7/10`, but only by
+changing `221` clean controls. No learned branch ranker is promoted.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2250,6 +2255,7 @@ book generation, not row0 pair-cell placement.
 - [Post-repair residual oracle audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/20_post_repair_residual_oracle_audit.md)
 - [Post-repair residual feature audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/21_post_repair_residual_feature_audit.md)
 - [Residual branch continuation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.md)
+- [Branch ranker prequential audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/23_branch_ranker_prequential_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

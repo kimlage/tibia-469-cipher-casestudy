@@ -31,6 +31,7 @@ TWO_STAGE_REPAIR = TEST_RESULTS / "19_two_stage_conditional_repair_audit.json"
 POST_REPAIR_ORACLE = TEST_RESULTS / "20_post_repair_residual_oracle_audit.json"
 RESIDUAL_FEATURE = TEST_RESULTS / "21_post_repair_residual_feature_audit.json"
 BRANCH_CONTINUATION = TEST_RESULTS / "22_residual_branch_continuation_audit.json"
+BRANCH_RANKER = TEST_RESULTS / "23_branch_ranker_prequential_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -100,6 +101,7 @@ def main() -> None:
     branch_continuation = (
         load_json(BRANCH_CONTINUATION) if BRANCH_CONTINUATION.exists() else None
     )
+    branch_ranker = load_json(BRANCH_RANKER) if BRANCH_RANKER.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -140,6 +142,8 @@ def main() -> None:
         assert_boundary("post_repair_residual_feature_audit", residual_feature)
     if branch_continuation is not None:
         assert_boundary("residual_branch_continuation_audit", branch_continuation)
+    if branch_ranker is not None:
+        assert_boundary("branch_ranker_prequential_audit", branch_ranker)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -187,6 +191,9 @@ def main() -> None:
     )
     branch_continuation_summary = (
         None if branch_continuation is None else branch_continuation["summary"]
+    )
+    branch_ranker_summary = (
+        None if branch_ranker is None else branch_ranker["summary"]
     )
 
     lines = [
@@ -767,15 +774,43 @@ def main() -> None:
                 "",
             ]
         )
+    if branch_ranker_summary is not None:
+        lines.extend(
+            [
+                "## Branch Ranker Prequential Control",
+                "",
+                "Gate 23 tests whether a small pairwise branch ranker can learn",
+                "the missing path/state preference from prefix books. The ranker",
+                "uses observable branch and continuation features; stable",
+                "projection is used only as the train/evaluation label.",
+                "",
+                "| Model | Total hits | Residual hits | Clean false changes | Boundary |",
+                "|---|---:|---:|---:|---|",
+                f"| Active branch baseline | `{branch_ranker_summary['baseline_active_total_hits']}/{branch_ranker_summary['decision_count']}` | `{branch_ranker_summary['baseline_active_residual_hits']}/{branch_ranker_summary['residual_decision_count']}` | `{branch_ranker_summary['baseline_active_clean_false_changes']}` | retained control |",
+                f"| Best full-fit ranker `{branch_ranker_summary['best_full_fit_mode']}` | `{branch_ranker_summary['full_fit_total_hits']}/{branch_ranker_summary['decision_count']}` | `{branch_ranker_summary['full_fit_residual_hits']}/{branch_ranker_summary['residual_decision_count']}` | `{branch_ranker_summary['full_fit_clean_false_changes']}` | rejected |",
+                "",
+                f"- Training modes: `{branch_ranker_summary['training_modes']}`.",
+                f"- Prequential zero-clean-false-change cells: `{branch_ranker_summary['prequential_zero_clean_false_change_cells']}/{branch_ranker_summary['prequential_cells']}`.",
+                f"- Prequential cover-all-test-residual cells: `{branch_ranker_summary['prequential_cover_all_test_residual_cells']}/{branch_ranker_summary['prequential_cells']}`.",
+                "",
+                "The learned ranker does not improve the retained active parser.",
+                "Modes that preserve clean controls still miss all residuals,",
+                "while residual-only weighting can hit some residual branches",
+                "only by destroying the clean-control path. This rejects a",
+                "small learned branch ranker as the missing generative parser.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
             "",
             "The next real blocker is not another local length policy or",
             "a single residual feature flag, and not a simple first-branch",
-            "continuation objective. It is a richer path/state segmentation",
-            "account for why the parser waits, copies, or understops at the",
-            "remaining mixed residual sites, or a source-free",
+            "continuation objective or small prefix-trained branch ranker.",
+            "It is a richer path/state segmentation account for why the",
+            "parser waits, copies, or understops at the remaining mixed",
+            "residual sites, or a source-free",
             "account of why the target digit stream exists.",
             "Any promoted parser must close the residual drift without",
             "smuggling in declared literal windows, target text generation,",
@@ -804,6 +839,7 @@ def main() -> None:
             "- [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)",
             "- [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)",
             "- [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)",
+            "- [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)",
             "",
         ]
     )

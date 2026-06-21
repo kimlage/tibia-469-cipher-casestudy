@@ -933,6 +933,10 @@ A residual branch continuation audit then tests whether simple first-branch
 consequences explain the same choices. They do not: all `10/10` stable residual
 operations are available as observable branches, but the best non-oracle
 objective catches only `6/10` and changes `20` clean controls.
+A branch-ranker prequential audit then rejects a learned small ranker: the
+active baseline is `224/234` with `0/10` residual hits; the best full-fit ranker
+is `223/234` with `0/10`; residual-only weighting reaches `7/10` only by
+changing `221` clean controls.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

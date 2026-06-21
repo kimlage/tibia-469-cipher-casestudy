@@ -1,0 +1,512 @@
+{
+  "baseline_active_score": {
+    "clean_false_change_books_sample": [],
+    "clean_false_changes": 0,
+    "clean_hits": 224,
+    "clean_total": 224,
+    "residual_hits": 0,
+    "residual_miss_books": [
+      14,
+      16,
+      20,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "residual_total": 10,
+    "total_hits": 224,
+    "total_total": 234
+  },
+  "case_reopened": false,
+  "classification": "branch_ranker_prequential_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "branch_ranker_prequential_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "branch_ranker_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_mode_scoreboard": [
+    {
+      "clean_false_changes": 1,
+      "mode": "residual_weight20",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "total_hits": 223
+    },
+    {
+      "clean_false_changes": 2,
+      "mode": "uniform",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "total_hits": 222
+    },
+    {
+      "clean_false_changes": 3,
+      "mode": "residual_weight5",
+      "residual_hits": 0,
+      "residual_miss_books": [
+        14,
+        16,
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "total_hits": 221
+    },
+    {
+      "clean_false_changes": 221,
+      "mode": "residual_only",
+      "residual_hits": 7,
+      "residual_miss_books": [
+        14,
+        16,
+        20
+      ],
+      "total_hits": 10
+    }
+  ],
+  "full_fit_score": {
+    "clean_false_change_books_sample": [
+      65
+    ],
+    "clean_false_changes": 1,
+    "clean_hits": 223,
+    "clean_total": 224,
+    "residual_hits": 0,
+    "residual_miss_books": [
+      14,
+      16,
+      20,
+      21,
+      26,
+      34,
+      39,
+      45,
+      55,
+      57
+    ],
+    "residual_total": 10,
+    "total_hits": 223,
+    "total_total": 234
+  },
+  "full_fit_top_weights": [
+    {
+      "feature": "suffix_copy_share",
+      "weight": 9.14919347798944
+    },
+    {
+      "feature": "is_active",
+      "weight": 5.0
+    },
+    {
+      "feature": "suffix_copy_digits_scaled",
+      "weight": 3.3700000000000196
+    },
+    {
+      "feature": "suffix_literal_digits_scaled",
+      "weight": -3.3700000000000117
+    },
+    {
+      "feature": "suffix_ops_scaled",
+      "weight": -2.400000000000001
+    },
+    {
+      "feature": "len_le1",
+      "weight": -2.0
+    },
+    {
+      "feature": "len_scaled",
+      "weight": 1.8166666666666749
+    },
+    {
+      "feature": "delta_active_len_scaled",
+      "weight": 1.8166666666666595
+    },
+    {
+      "feature": "len_le5",
+      "weight": 1.0
+    },
+    {
+      "feature": "suffix_copy_count_scaled",
+      "weight": -0.16666666666666824
+    },
+    {
+      "feature": "bias",
+      "weight": 0.0
+    },
+    {
+      "feature": "is_copy",
+      "weight": 0.0
+    }
+  ],
+  "inputs": {
+    "residual_branch_continuation_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/22_residual_branch_continuation_audit.json"
+  },
+  "permutation_control": {
+    "clean_false_changes_min": 22,
+    "controls": 100,
+    "p_total_hits_ge_real": 0.009900990099009901,
+    "residual_hits_max": 6,
+    "total_hits_max": 207,
+    "total_hits_median": 2,
+    "total_hits_min": 0
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "oracle_mode": "residual_weight20",
+      "oracle_test_residual_hits": 1,
+      "oracle_test_total_hits": 156,
+      "selected_matches_oracle_total_hits": false,
+      "selected_mode": "uniform",
+      "test_clean_false_changes": 0,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [
+        20,
+        21,
+        26,
+        34,
+        39,
+        45,
+        55,
+        57
+      ],
+      "test_residual_total": 8,
+      "test_total": 163,
+      "test_total_hits": 155,
+      "top_weights": [
+        {
+          "feature": "is_active",
+          "weight": 4.0
+        },
+        {
+          "feature": "len_ge10",
+          "weight": 1.0
+        },
+        {
+          "feature": "len_le1",
+          "weight": 1.0
+        },
+        {
+          "feature": "len_le5",
+          "weight": -1.0
+        },
+        {
+          "feature": "suffix_copy_share",
+          "weight": 0.24261179855637194
+        },
+        {
+          "feature": "suffix_literal_digits_scaled",
+          "weight": -0.2100000000000003
+        },
+        {
+          "feature": "suffix_copy_digits_scaled",
+          "weight": 0.2099999999999984
+        },
+        {
+          "feature": "suffix_ops_scaled",
+          "weight": -0.19999999999999996
+        }
+      ],
+      "train_clean_false_changes": 0,
+      "train_residual_hits": 0,
+      "train_residual_total": 2,
+      "train_total": 71,
+      "train_total_hits": 69
+    },
+    {
+      "cutoff_book": 30,
+      "oracle_mode": "uniform",
+      "oracle_test_residual_hits": 1,
+      "oracle_test_total_hits": 122,
+      "selected_matches_oracle_total_hits": true,
+      "selected_mode": "uniform",
+      "test_clean_false_changes": 4,
+      "test_residual_hits": 1,
+      "test_residual_miss_books": [
+        34,
+        45,
+        55,
+        57
+      ],
+      "test_residual_total": 5,
+      "test_total": 130,
+      "test_total_hits": 122,
+      "top_weights": [
+        {
+          "feature": "is_active",
+          "weight": 5.0
+        },
+        {
+          "feature": "suffix_copy_share",
+          "weight": 2.0458945516668168
+        },
+        {
+          "feature": "len_ge10",
+          "weight": 2.0
+        },
+        {
+          "feature": "suffix_literal_digits_scaled",
+          "weight": -1.03
+        },
+        {
+          "feature": "suffix_copy_digits_scaled",
+          "weight": 1.0299999999999943
+        },
+        {
+          "feature": "is_copy",
+          "weight": 1.0
+        },
+        {
+          "feature": "is_immediate_copy_branch",
+          "weight": 1.0
+        },
+        {
+          "feature": "is_literal",
+          "weight": -1.0
+        }
+      ],
+      "train_clean_false_changes": 3,
+      "train_residual_hits": 3,
+      "train_residual_total": 5,
+      "train_total": 104,
+      "train_total_hits": 99
+    },
+    {
+      "cutoff_book": 40,
+      "oracle_mode": "uniform",
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 81,
+      "selected_matches_oracle_total_hits": true,
+      "selected_mode": "uniform",
+      "test_clean_false_changes": 4,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [
+        45,
+        55,
+        57
+      ],
+      "test_residual_total": 3,
+      "test_total": 88,
+      "test_total_hits": 81,
+      "top_weights": [
+        {
+          "feature": "is_active",
+          "weight": 5.0
+        },
+        {
+          "feature": "suffix_copy_share",
+          "weight": 4.08015787134739
+        },
+        {
+          "feature": "len_ge10",
+          "weight": 3.0
+        },
+        {
+          "feature": "len_le5",
+          "weight": 2.0
+        },
+        {
+          "feature": "suffix_literal_digits_scaled",
+          "weight": -1.2000000000000004
+        },
+        {
+          "feature": "suffix_copy_digits_scaled",
+          "weight": 1.199999999999996
+        },
+        {
+          "feature": "is_copy",
+          "weight": 1.0
+        },
+        {
+          "feature": "is_immediate_copy_branch",
+          "weight": 1.0
+        }
+      ],
+      "train_clean_false_changes": 3,
+      "train_residual_hits": 4,
+      "train_residual_total": 7,
+      "train_total": 146,
+      "train_total_hits": 140
+    },
+    {
+      "cutoff_book": 50,
+      "oracle_mode": "uniform",
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 45,
+      "selected_matches_oracle_total_hits": true,
+      "selected_mode": "residual_weight5",
+      "test_clean_false_changes": 3,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [
+        55,
+        57
+      ],
+      "test_residual_total": 2,
+      "test_total": 50,
+      "test_total_hits": 45,
+      "top_weights": [
+        {
+          "feature": "suffix_copy_share",
+          "weight": 4.104940278564924
+        },
+        {
+          "feature": "is_active",
+          "weight": 3.0
+        },
+        {
+          "feature": "len_ge10",
+          "weight": 2.0
+        },
+        {
+          "feature": "suffix_literal_digits_scaled",
+          "weight": -1.795000000000004
+        },
+        {
+          "feature": "suffix_copy_digits_scaled",
+          "weight": 1.7949999999999984
+        },
+        {
+          "feature": "suffix_ops_scaled",
+          "weight": -1.2666666666666666
+        },
+        {
+          "feature": "is_copy",
+          "weight": 1.0
+        },
+        {
+          "feature": "is_immediate_copy_branch",
+          "weight": 1.0
+        }
+      ],
+      "train_clean_false_changes": 10,
+      "train_residual_hits": 6,
+      "train_residual_total": 8,
+      "train_total": 184,
+      "train_total_hits": 172
+    },
+    {
+      "cutoff_book": 60,
+      "oracle_mode": "uniform",
+      "oracle_test_residual_hits": 0,
+      "oracle_test_total_hits": 19,
+      "selected_matches_oracle_total_hits": true,
+      "selected_mode": "residual_weight20",
+      "test_clean_false_changes": 1,
+      "test_residual_hits": 0,
+      "test_residual_miss_books": [],
+      "test_residual_total": 0,
+      "test_total": 20,
+      "test_total_hits": 19,
+      "top_weights": [
+        {
+          "feature": "suffix_copy_share",
+          "weight": 10.533111856720055
+        },
+        {
+          "feature": "suffix_copy_digits_scaled",
+          "weight": 4.640000000000006
+        },
+        {
+          "feature": "suffix_literal_digits_scaled",
+          "weight": -4.639999999999992
+        },
+        {
+          "feature": "is_active",
+          "weight": 3.0
+        },
+        {
+          "feature": "len_le1",
+          "weight": -3.0
+        },
+        {
+          "feature": "suffix_ops_scaled",
+          "weight": -2.6333333333333346
+        },
+        {
+          "feature": "len_scaled",
+          "weight": 1.5666666666666786
+        },
+        {
+          "feature": "delta_active_len_scaled",
+          "weight": 1.5666666666666609
+        }
+      ],
+      "train_clean_false_changes": 2,
+      "train_residual_hits": 2,
+      "train_residual_total": 10,
+      "train_total": 214,
+      "train_total_hits": 204
+    }
+  ],
+  "schema": "branch_ranker_prequential_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "declared_literal_windows_granted": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "stable_projection_used_as_training_label": true,
+    "target_text_required": true
+  },
+  "summary": {
+    "baseline_active_clean_false_changes": 0,
+    "baseline_active_residual_hits": 0,
+    "baseline_active_total_hits": 224,
+    "best_full_fit_mode": "residual_weight20",
+    "clean_control_count": 224,
+    "decision_count": 234,
+    "epochs": 8,
+    "feature_count": 17,
+    "full_fit_clean_false_changes": 1,
+    "full_fit_residual_hits": 0,
+    "full_fit_total_hits": 223,
+    "interpretation": "Gate 23 trains a small pairwise branch ranker on prefix stable-projection labels and evaluates it on future books. Features are observable branch and continuation metrics; stable prefix match is not used as a feature.",
+    "prequential_cells": 5,
+    "prequential_cover_all_test_residual_cells": 1,
+    "prequential_zero_clean_false_change_cells": 1,
+    "promotes_branch_ranker": false,
+    "residual_decision_count": 10,
+    "training_modes": [
+      "uniform",
+      "residual_weight5",
+      "residual_weight20",
+      "residual_only"
+    ]
+  },
+  "translation_delta": "NONE"
+}

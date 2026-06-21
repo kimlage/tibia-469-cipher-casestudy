@@ -452,13 +452,36 @@ residual set and changes already-correct controls. The missing
 mechanism is therefore not just a first-branch objective over
 operation count, literal mass, or copied mass.
 
+## Branch Ranker Prequential Control
+
+Gate 23 tests whether a small pairwise branch ranker can learn
+the missing path/state preference from prefix books. The ranker
+uses observable branch and continuation features; stable
+projection is used only as the train/evaluation label.
+
+| Model | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best full-fit ranker `residual_weight20` | `223/234` | `0/10` | `1` | rejected |
+
+- Training modes: `['uniform', 'residual_weight5', 'residual_weight20', 'residual_only']`.
+- Prequential zero-clean-false-change cells: `1/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+
+The learned ranker does not improve the retained active parser.
+Modes that preserve clean controls still miss all residuals,
+while residual-only weighting can hit some residual branches
+only by destroying the clean-control path. This rejects a
+small learned branch ranker as the missing generative parser.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
 a single residual feature flag, and not a simple first-branch
-continuation objective. It is a richer path/state segmentation
-account for why the parser waits, copies, or understops at the
-remaining mixed residual sites, or a source-free
+continuation objective or small prefix-trained branch ranker.
+It is a richer path/state segmentation account for why the
+parser waits, copies, or understops at the remaining mixed
+residual sites, or a source-free
 account of why the target digit stream exists.
 Any promoted parser must close the residual drift without
 smuggling in declared literal windows, target text generation,
@@ -487,3 +510,4 @@ or the stable projection as an oracle.
 - [Post-repair residual oracle audit](test_results/20_post_repair_residual_oracle_audit.md)
 - [Post-repair residual feature audit](test_results/21_post_repair_residual_feature_audit.md)
 - [Residual branch continuation audit](test_results/22_residual_branch_continuation_audit.md)
+- [Branch ranker prequential audit](test_results/23_branch_ranker_prequential_audit.md)
