@@ -656,6 +656,11 @@ parser gates against the independent row0 front: the recent advances do not
 predict row0 labels under holdout, beat paid row0 lookup, explain `39`/`93`/
 `19/91` beyond the existing surface clue, or add CipSoft/authorial provenance.
 The result is `row0 unchanged`.
+The cutoff-60 sparse suffix parser gate then executes the parser over all
+books `60..69` in order, carrying `previous_copy_end` between books: `10/10`
+roundtrip, `10/10` raw-positive, `368.531807` parser bits, and `383,548`
+transition evaluations. It ties the same-policy reprice, so this is parser
+execution progress rather than a new compression bound.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -824,6 +829,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   parser implementation,
   checks gates 71-74 against row0 and records `row0 unchanged` because the
   advances are book-formula/parser-only,
+  runs the sparse source/length parser across the full cutoff-60 suffix with
+  `10/10` roundtrip while leaving the compression bound unchanged,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

@@ -158,6 +158,15 @@ beyond the existing surface clue, or adds CipSoft/authorial provenance. The
 row0 conclusion is therefore unchanged: parser progress belongs to the book
 formula, not to the origin of the 10x10 table.
 
+The cutoff-60 sparse suffix parser gate then carries that parser through the
+entire held-out suffix. Books `60..69` roundtrip in sequence with
+`previous_copy_end` carried between books; all `10/10` beat raw digit uniform,
+the parser totals `368.531807` bits, and it ties the same-policy reprice across
+all books with `383,548` transition evaluations. This is stronger evidence
+that the source/length parser is executable as a mechanism, but it is still a
+single-cutoff suffix gate with frozen train counts, so it does not promote a
+new compression bound or final authorial method.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

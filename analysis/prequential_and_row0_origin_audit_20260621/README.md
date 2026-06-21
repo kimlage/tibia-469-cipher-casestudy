@@ -241,6 +241,9 @@ exogenous.
 - [scripts/75_post_parser_row0_compatibility_audit.py](scripts/75_post_parser_row0_compatibility_audit.py) - checks whether gates 71-74 change row0 origin or only advance the downstream book formula/parser.
 - [reports/test_results/75_post_parser_row0_compatibility_audit.md](reports/test_results/75_post_parser_row0_compatibility_audit.md) - post-parser row0 compatibility result.
 - [reports/test_results/75_post_parser_row0_compatibility_audit.json](reports/test_results/75_post_parser_row0_compatibility_audit.json) - structured post-parser compatibility ledger.
+- [scripts/76_cutoff60_sparse_suffix_parser_gate.py](scripts/76_cutoff60_sparse_suffix_parser_gate.py) - runs the sparse source/length parser over the full cutoff-60 suffix with previous-copy-end state carried between books.
+- [reports/test_results/76_cutoff60_sparse_suffix_parser_gate.md](reports/test_results/76_cutoff60_sparse_suffix_parser_gate.md) - cutoff-60 sparse suffix parser result.
+- [reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json](reports/test_results/76_cutoff60_sparse_suffix_parser_gate.json) - structured sparse suffix parser ledger.
 
 ## Boundary
 
@@ -476,6 +479,12 @@ exogenous.
   beats the row0 lookup baseline after paid anchor/rule costs, explains `39`,
   `93`, or `19/91` beyond the existing surface clue, or adds CipSoft/authorial
   provenance. The result is explicitly `row0 unchanged`.
+- The cutoff-60 sparse suffix parser gate then runs the sparse parser across
+  books `60..69` in sequence, carrying `previous_copy_end` between books. It
+  roundtrips `10/10`, beats raw digit uniform on `10/10`, totals `368.531807`
+  parser bits, and ties same-policy reprice across all books with only
+  `383,548` transition evaluations. This is a real parser execution step, not
+  a new compression bound or corpus-wide generator promotion.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;
