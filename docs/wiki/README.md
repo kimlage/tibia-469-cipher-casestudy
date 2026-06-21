@@ -789,6 +789,11 @@ all remain non-generated under their respective gates (`0/5` promoted
 generators). The materialized-unit floor is `593` (`1` order + `70` lengths +
 `261` skeleton records + `208` source fields + `53` literal chunks), so the
 state is a robust parser/atlas boundary, not a source-free generator.
+An operation-length Markov audit then attacks the skeleton blocker directly.
+Even granting book lengths and operation types, `11` Markov/context grammars
+do not generate the `261` operation lengths: the best full-fit context gets
+only `9/60` exact books and `43/261` generated row hits, with `0/5`
+cover-all holdout cells.
 A book order generation audit then consolidates the scattered order controls.
 Numeric order remains the compact canonical order used by the formula: no
 tested non-numeric order promotes after full-formula and descriptor costs, and
