@@ -1231,6 +1231,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   rejects strict source-free book/op ordinal residual rules (`4495` structural
   rule sets; best clean rule hits `1/10`, costs `+1.651` bits, and has `0/4`
   held-out hits),
+  rejects operation n-gram grammars trained on exact parser books (`9` grammar
+  families; `0/10` residual hits; lowest-net unigram has `10` false positives),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

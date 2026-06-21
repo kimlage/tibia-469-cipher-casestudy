@@ -54,6 +54,7 @@ COMPACT_LATENT_RULE = TEST_RESULTS / "42_compact_latent_rule_frontier.json"
 SOURCE_FREE_RESIDUAL_RULE = (
     TEST_RESULTS / "43_source_free_residual_rule_gate.json"
 )
+OPERATION_NGRAM_GRAMMAR = TEST_RESULTS / "44_operation_ngram_grammar_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -192,6 +193,11 @@ def main() -> None:
         if SOURCE_FREE_RESIDUAL_RULE.exists()
         else None
     )
+    operation_ngram_grammar = (
+        load_json(OPERATION_NGRAM_GRAMMAR)
+        if OPERATION_NGRAM_GRAMMAR.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -276,6 +282,8 @@ def main() -> None:
         assert_boundary("compact_latent_rule_frontier", compact_latent_rule)
     if source_free_residual_rule is not None:
         assert_boundary("source_free_residual_rule_gate", source_free_residual_rule)
+    if operation_ngram_grammar is not None:
+        assert_boundary("operation_ngram_grammar_gate", operation_ngram_grammar)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -382,6 +390,11 @@ def main() -> None:
         None
         if source_free_residual_rule is None
         else source_free_residual_rule["summary"]
+    )
+    operation_ngram_grammar_summary = (
+        None
+        if operation_ngram_grammar is None
+        else operation_ngram_grammar["summary"]
     )
 
     lines = [
@@ -1538,6 +1551,39 @@ def main() -> None:
                 "",
             ]
         )
+    if operation_ngram_grammar_summary is not None:
+        lines.extend(
+            [
+                "## Operation N-Gram Grammar Gate",
+                "",
+                "Gate 44 tests whether the remaining first-drift residuals are",
+                "explained by a small operation-sequence grammar trained only",
+                "on exact parser books. It tries unigram, op-bucket, previous",
+                "operation type, previous operation label, and previous-label",
+                "plus op-bucket contexts.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Families tested | `{len(operation_ngram_grammar_summary['families_tested'])}` |",
+                f"| Best family | `{operation_ngram_grammar_summary['best_family']}` |",
+                f"| Best hits | `{operation_ngram_grammar_summary['best_hit_count']}/{operation_ngram_grammar_summary['residual_count']}` |",
+                f"| Best false positives | `{operation_ngram_grammar_summary['best_false_positive_count']}` |",
+                f"| Best unsupported residuals | `{operation_ngram_grammar_summary['best_unsupported_count']}` |",
+                f"| Best context count | `{operation_ngram_grammar_summary['best_context_count']}` |",
+                f"| Lowest net family | `{operation_ngram_grammar_summary['minimum_net_family']}` |",
+                f"| Lowest net bits vs lookup | `{operation_ngram_grammar_summary['minimum_net_bits_vs_lookup']:.3f}` |",
+                f"| Lowest-net false positives | `{operation_ngram_grammar_summary['minimum_net_false_positive_count']}` |",
+                f"| Prequential cells with held-out hit | `{operation_ngram_grammar_summary['prequential_cells_with_hit']}/{operation_ngram_grammar_summary['prequential_cells_with_test']}` |",
+                f"| Shuffle p_ge_observed | `{operation_ngram_grammar_summary['shuffle_p_ge_observed']:.4f}` |",
+                "",
+                "No operation n-gram grammar is promoted. The safest richer",
+                "contexts explain `0` residuals and become unsupported; the",
+                "lowest-cost unigram model still has `10` false positives. This",
+                "rejects a compact operation-sequence grammar as the missing",
+                "latent path/state mechanism.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1568,7 +1614,10 @@ def main() -> None:
             "rejects strict source-free book/op ordinal residual rules: the",
             "only apparent win uses a false positive, clean rules are worse",
             "than lookup, and prefix-selected rules recover no held-out",
-            "residuals. The remaining blocker is a richer latent path/state",
+            "residuals. Gate 44 rejects operation n-gram path grammar as well:",
+            "all tested operation-sequence contexts get `0/10` residual hits,",
+            "with either false positives or unsupported residuals. The",
+            "remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1620,6 +1669,7 @@ def main() -> None:
             "- [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)",
             "- [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)",
             "- [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)",
+            "- [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)",
             "",
         ]
     )

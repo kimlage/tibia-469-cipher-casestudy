@@ -696,6 +696,12 @@ structural win again needs a false positive; the best clean rule hits only
 get `0/4` held-out hits. This rejects the source-free ordinal selector path
 and leaves the blocker at a richer latent path/state mechanism or an actual
 source-free account for the target digit stream.
+An operation n-gram grammar gate then tests a different path-state hypothesis:
+train unigram, op-bucket, previous-type, previous-label, and previous-label
+plus op-bucket grammars on the `50` exact parser books, then predict the
+`10` residual first-drift choices. Every family gets `0/10` hits. Richer
+contexts become unsupported; the lowest-net unigram has `10` false positives.
+This rejects a compact operation-sequence grammar as the missing latent state.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2402,6 +2408,7 @@ book generation, not row0 pair-cell placement.
 - [Latent state lookup cost gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.md)
 - [Compact latent rule frontier](../../analysis/segmentation_decision_audit_20260621/reports/test_results/42_compact_latent_rule_frontier.md)
 - [Source-free residual rule gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/43_source_free_residual_rule_gate.md)
+- [Operation n-gram grammar gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/44_operation_ngram_grammar_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

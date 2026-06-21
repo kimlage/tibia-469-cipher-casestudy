@@ -923,6 +923,34 @@ no held-out residual hits. The source-free ordinal shortcut is
 therefore rejected; the missing mechanism still needs a real
 target-stream or richer latent path/state account.
 
+## Operation N-Gram Grammar Gate
+
+Gate 44 tests whether the remaining first-drift residuals are
+explained by a small operation-sequence grammar trained only
+on exact parser books. It tries unigram, op-bucket, previous
+operation type, previous operation label, and previous-label
+plus op-bucket contexts.
+
+| Diagnostic | Value |
+|---|---:|
+| Families tested | `9` |
+| Best family | `prev2_op_bucket` |
+| Best hits | `0/10` |
+| Best false positives | `4` |
+| Best unsupported residuals | `6` |
+| Best context count | `145` |
+| Lowest net family | `unigram` |
+| Lowest net bits vs lookup | `4.170` |
+| Lowest-net false positives | `10` |
+| Prequential cells with held-out hit | `0/4` |
+| Shuffle p_ge_observed | `1.0000` |
+
+No operation n-gram grammar is promoted. The safest richer
+contexts explain `0` residuals and become unsupported; the
+lowest-cost unigram model still has `10` false positives. This
+rejects a compact operation-sequence grammar as the missing
+latent path/state mechanism.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -951,7 +979,10 @@ residual-visible latent rules against that lookup. Gate 43 then
 rejects strict source-free book/op ordinal residual rules: the
 only apparent win uses a false positive, clean rules are worse
 than lookup, and prefix-selected rules recover no held-out
-residuals. The remaining blocker is a richer latent path/state
+residuals. Gate 44 rejects operation n-gram path grammar as well:
+all tested operation-sequence contexts get `0/10` residual hits,
+with either false positives or unsupported residuals. The
+remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -1003,3 +1034,4 @@ or the stable projection as an oracle.
 - [Latent state lookup cost gate](test_results/41_latent_state_lookup_cost_gate.md)
 - [Compact latent rule frontier](test_results/42_compact_latent_rule_frontier.md)
 - [Source-free residual rule gate](test_results/43_source_free_residual_rule_gate.md)
+- [Operation n-gram grammar gate](test_results/44_operation_ngram_grammar_gate.md)

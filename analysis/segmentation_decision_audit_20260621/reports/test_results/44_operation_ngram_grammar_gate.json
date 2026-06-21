@@ -1,0 +1,368 @@
+{
+  "best_rows": [
+    {
+      "active_label": [
+        "literal",
+        27
+      ],
+      "book": 14,
+      "choice_count": 39,
+      "context": "(('BOS', 0), ('BOS', 0), ('op_bucket', 0))",
+      "op_index": 0,
+      "predicted_label": [
+        "literal",
+        3
+      ],
+      "stable_label": [
+        "literal",
+        39
+      ],
+      "status": "false_positive",
+      "support": 3
+    },
+    {
+      "active_label": [
+        "copy",
+        8
+      ],
+      "book": 16,
+      "choice_count": 0,
+      "context": "(('literal', 1), ('copy', 13), ('op_bucket', 8))",
+      "op_index": 9,
+      "predicted_label": null,
+      "stable_label": [
+        "literal",
+        1
+      ],
+      "status": "unsupported",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        3
+      ],
+      "book": 20,
+      "choice_count": 0,
+      "context": "(('copy', 15), ('copy', 6), ('op_bucket', 2))",
+      "op_index": 2,
+      "predicted_label": null,
+      "stable_label": [
+        "copy",
+        10
+      ],
+      "status": "unsupported",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        7
+      ],
+      "book": 21,
+      "choice_count": 39,
+      "context": "(('BOS', 0), ('BOS', 0), ('op_bucket', 0))",
+      "op_index": 0,
+      "predicted_label": [
+        "literal",
+        3
+      ],
+      "stable_label": [
+        "copy",
+        9
+      ],
+      "status": "false_positive",
+      "support": 3
+    },
+    {
+      "active_label": [
+        "literal",
+        1
+      ],
+      "book": 26,
+      "choice_count": 39,
+      "context": "(('BOS', 0), ('BOS', 0), ('op_bucket', 0))",
+      "op_index": 0,
+      "predicted_label": [
+        "literal",
+        3
+      ],
+      "stable_label": [
+        "copy",
+        11
+      ],
+      "status": "false_positive",
+      "support": 3
+    },
+    {
+      "active_label": [
+        "literal",
+        5
+      ],
+      "book": 34,
+      "choice_count": 0,
+      "context": "(('copy', 23), ('copy', 13), ('op_bucket', 7))",
+      "op_index": 7,
+      "predicted_label": null,
+      "stable_label": [
+        "copy",
+        5
+      ],
+      "status": "unsupported",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        7
+      ],
+      "book": 39,
+      "choice_count": 39,
+      "context": "(('BOS', 0), ('BOS', 0), ('op_bucket', 0))",
+      "op_index": 0,
+      "predicted_label": [
+        "literal",
+        3
+      ],
+      "stable_label": [
+        "copy",
+        5
+      ],
+      "status": "false_positive",
+      "support": 3
+    },
+    {
+      "active_label": [
+        "literal",
+        1
+      ],
+      "book": 45,
+      "choice_count": 0,
+      "context": "(('BOS', 0), ('copy', 62), ('op_bucket', 1))",
+      "op_index": 1,
+      "predicted_label": null,
+      "stable_label": [
+        "copy",
+        8
+      ],
+      "status": "unsupported",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "copy",
+        45
+      ],
+      "book": 55,
+      "choice_count": 0,
+      "context": "(('copy', 13), ('copy', 54), ('op_bucket', 2))",
+      "op_index": 2,
+      "predicted_label": null,
+      "stable_label": [
+        "copy",
+        44
+      ],
+      "status": "unsupported",
+      "support": 0
+    },
+    {
+      "active_label": [
+        "literal",
+        17
+      ],
+      "book": 57,
+      "choice_count": 0,
+      "context": "(('copy', 28), ('copy', 41), ('op_bucket', 2))",
+      "op_index": 2,
+      "predicted_label": null,
+      "stable_label": [
+        "literal",
+        28
+      ],
+      "status": "unsupported",
+      "support": 0
+    }
+  ],
+  "case_reopened": false,
+  "classification": "operation_ngram_grammar_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "operation_ngram_grammar_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "operation_ngram_grammar_tested",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "latent_lookup_cost_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/41_latent_state_lookup_cost_gate.json",
+    "source_free_residual_rule_gate": "analysis/segmentation_decision_audit_20260621/reports/test_results/43_source_free_residual_rule_gate.json",
+    "trajectory_neighbor_parser_script": "analysis/segmentation_decision_audit_20260621/scripts/38_trajectory_neighbor_parser_audit.py"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff_book": 20,
+      "false_positives": 3,
+      "hits": 0,
+      "net_bits_vs_lookup": 524.585809168292,
+      "test_residuals": 8,
+      "unsupported": 5
+    },
+    {
+      "cutoff_book": 30,
+      "false_positives": 1,
+      "hits": 0,
+      "net_bits_vs_lookup": 768.0739991632734,
+      "test_residuals": 5,
+      "unsupported": 4
+    },
+    {
+      "cutoff_book": 40,
+      "false_positives": 0,
+      "hits": 0,
+      "net_bits_vs_lookup": 1069.1288805306701,
+      "test_residuals": 3,
+      "unsupported": 3
+    },
+    {
+      "cutoff_book": 50,
+      "false_positives": 0,
+      "hits": 0,
+      "net_bits_vs_lookup": 1366.830059334131,
+      "test_residuals": 2,
+      "unsupported": 2
+    },
+    {
+      "cutoff_book": 60,
+      "false_positives": 0,
+      "hits": 0,
+      "net_bits_vs_lookup": 1543.7101205631889,
+      "test_residuals": 0,
+      "unsupported": 0
+    }
+  ],
+  "schema": "operation_ngram_grammar_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "promotes_parser_rule": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required": true,
+    "tests_operation_sequence_grammar": true
+  },
+  "scoreboard": [
+    {
+      "false_positive_count": 4,
+      "family": "prev2_op_bucket",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 1645.7259432613007,
+      "table_context_count": 145,
+      "unsupported_count": 6
+    },
+    {
+      "false_positive_count": 4,
+      "family": "prev3",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 1658.5234358070602,
+      "table_context_count": 146,
+      "unsupported_count": 6
+    },
+    {
+      "false_positive_count": 5,
+      "family": "prev2",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 1607.393441174473,
+      "table_context_count": 142,
+      "unsupported_count": 5
+    },
+    {
+      "false_positive_count": 6,
+      "family": "prev1_op_bucket",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 1379.3910426668192,
+      "table_context_count": 124,
+      "unsupported_count": 4
+    },
+    {
+      "false_positive_count": 7,
+      "family": "prev1",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 685.8129508573056,
+      "table_context_count": 67,
+      "unsupported_count": 3
+    },
+    {
+      "false_positive_count": 10,
+      "family": "unigram",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 4.169925001442309,
+      "table_context_count": 1,
+      "unsupported_count": 0
+    },
+    {
+      "false_positive_count": 10,
+      "family": "prev1_type",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 17.264662506490396,
+      "table_context_count": 3,
+      "unsupported_count": 0
+    },
+    {
+      "false_positive_count": 10,
+      "family": "prev2_type",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 40.529325012980806,
+      "table_context_count": 6,
+      "unsupported_count": 0
+    },
+    {
+      "false_positive_count": 10,
+      "family": "op_bucket",
+      "hit_count": 0,
+      "net_bits_vs_lookup": 66.05865002596161,
+      "table_context_count": 9,
+      "unsupported_count": 0
+    }
+  ],
+  "shuffle_control": {
+    "family": "prev2_op_bucket",
+    "observed_hits": 0,
+    "p_ge_observed": 1.0,
+    "shuffle_ge_observed_count": 400,
+    "shuffle_max": 1,
+    "shuffle_mean": 0.1975,
+    "shuffle_min": 0,
+    "trials": 400
+  },
+  "summary": {
+    "best_context_count": 145,
+    "best_false_positive_count": 4,
+    "best_family": "prev2_op_bucket",
+    "best_hit_count": 0,
+    "best_structural_family_net_bits_vs_lookup": 1645.7259432613007,
+    "best_unsupported_count": 6,
+    "exact_book_count": 50,
+    "families_tested": [
+      "unigram",
+      "op_bucket",
+      "prev1_type",
+      "prev2_type",
+      "prev1",
+      "prev2",
+      "prev3",
+      "prev1_op_bucket",
+      "prev2_op_bucket"
+    ],
+    "interpretation": "This gate tests whether residual first-drift choices are explained by a small operation-sequence grammar over prior operation labels and op index, trained only on exact parser books. It is path-grammar evidence, not a compression sweep.",
+    "minimum_net_bits_vs_lookup": 4.169925001442309,
+    "minimum_net_false_positive_count": 10,
+    "minimum_net_family": "unigram",
+    "prequential_cells_with_hit": 0,
+    "prequential_cells_with_test": 4,
+    "promotes_operation_ngram_grammar": false,
+    "residual_book_count": 10,
+    "residual_count": 10,
+    "shuffle_p_ge_observed": 1.0
+  },
+  "translation_delta": "NONE"
+}
