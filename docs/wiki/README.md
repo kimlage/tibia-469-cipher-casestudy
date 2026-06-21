@@ -403,6 +403,12 @@ approximately `0.000` bits.
 Applying that correction to all public-bookcase families changes the
 reparse-vs-active beat/tie coverage from `15/19` to `19/19`, while preserving
 `19/19` raw-digit wins.
+The online order frontier control then sharpens the order boundary: numeric
+order keeps `69/69` after-bootstrap raw wins, but the same criterion is not
+unique because `10/11` tested orders pass, including `6/6` seeded random orders;
+`random_04` is `+0.549` bits better in mean after-bootstrap gain and `+61.452`
+bits better in total gain. The online frontier remains predictive-parser
+evidence, not numeric-order proof.
 A no-test-carryover family variant still beats raw digits in `19/19` families
 when each held-out book starts only from the training-complement inventory.
 A singleton leave-one-book-out audit then beats raw digit coding in `70/70`

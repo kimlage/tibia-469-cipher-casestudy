@@ -252,6 +252,20 @@ so the seed exception cannot become a promoted formula under any
 nonnegative signaling cost.
 See [21_seed_exception_signal_cost_audit.md](test_results/21_seed_exception_signal_cost_audit.md).
 
+### Online Order Frontier Controls
+
+The per-book online frontier is then tested against the same order
+families used by the aggregate order-control audit. Numeric order still
+beats raw digit coding in `69/69` books after its first bootstrap
+position, but that criterion is not unique: `10/11` tested orders have
+perfect after-bootstrap raw wins, including `6/6` seeded random orders.
+The best after-bootstrap mean-gain and total-gain order is `random_04`,
+at `+0.549` bits versus numeric mean after-bootstrap gain and `+61.452`
+bits versus numeric total gain. This keeps the online frontier as
+predictive-parser evidence but rejects the stronger claim that the
+per-book frontier proves numeric book order.
+See [22_online_order_frontier_controls.md](test_results/22_online_order_frontier_controls.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`

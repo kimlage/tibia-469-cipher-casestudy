@@ -40,6 +40,8 @@ SOURCES = {
     "seeded_rescore_loss_decomposition": TEST_RESULTS
     / "20_seeded_rescore_loss_decomposition.json",
     "seed_exception_signal_cost": TEST_RESULTS / "21_seed_exception_signal_cost_audit.json",
+    "online_order_frontier_controls": TEST_RESULTS
+    / "22_online_order_frontier_controls.json",
     "online_reparse_compile": AUTHORIAL_RESULTS / "129_online_deterministic_reparse_compile.json",
     "online_reparse_order_controls": AUTHORIAL_RESULTS / "130_online_reparse_order_control_audit.json",
 }
@@ -78,6 +80,7 @@ def make_result() -> dict[str, Any]:
     seeded_rescore = load_json(SOURCES["seeded_online_formula_rescore"])
     seeded_loss = load_json(SOURCES["seeded_rescore_loss_decomposition"])
     seed_signal = load_json(SOURCES["seed_exception_signal_cost"])
+    order_frontier = load_json(SOURCES["online_order_frontier_controls"])
     online_compile = load_json(SOURCES["online_reparse_compile"])
     order_controls = load_json(SOURCES["online_reparse_order_controls"])
 
@@ -100,6 +103,7 @@ def make_result() -> dict[str, Any]:
         ("seeded_online_formula_rescore", seeded_rescore),
         ("seeded_rescore_loss_decomposition", seeded_loss),
         ("seed_exception_signal_cost", seed_signal),
+        ("online_order_frontier_controls", order_frontier),
         ("online_reparse_compile", online_compile),
         ("online_reparse_order_controls", order_controls),
     ]:
@@ -674,6 +678,44 @@ def make_result() -> dict[str, Any]:
                 "controls, but arbitrary order search is not promoted."
             ),
         },
+        {
+            "question": "is_the_online_prefix_book_frontier_numeric_order_unique",
+            "source": rel(SOURCES["online_order_frontier_controls"]),
+            "status": "failed_as_numeric_order_uniqueness_proof",
+            "evidence": {
+                "numeric_after_bootstrap_beats_raw_count": order_frontier["summary"][
+                    "numeric_after_bootstrap_beats_raw_count"
+                ],
+                "after_bootstrap_book_count": order_frontier["summary"][
+                    "after_bootstrap_book_count"
+                ],
+                "orders_with_perfect_after_bootstrap_count": order_frontier["summary"][
+                    "orders_with_perfect_after_bootstrap_count"
+                ],
+                "order_count": order_frontier["controls"]["order_count"],
+                "random_orders_with_perfect_after_bootstrap_count": order_frontier["summary"][
+                    "random_orders_with_perfect_after_bootstrap_count"
+                ],
+                "random_order_count": order_frontier["controls"]["random_order_count"],
+                "best_after_bootstrap_mean_gain_order": order_frontier["summary"][
+                    "best_after_bootstrap_mean_gain_order"
+                ]["name"],
+                "best_after_bootstrap_mean_gain_delta_vs_numeric_bits": order_frontier[
+                    "summary"
+                ]["best_after_bootstrap_mean_gain_order"]["delta_vs_numeric_bits"],
+                "best_total_gain_order": order_frontier["summary"]["best_total_gain_order"][
+                    "name"
+                ],
+                "best_total_gain_delta_vs_numeric_bits": order_frontier["summary"][
+                    "best_total_gain_order"
+                ]["delta_vs_numeric_bits"],
+            },
+            "interpretation": (
+                "The numeric online frontier still predicts after bootstrap, but "
+                "the same per-book criterion is matched by simple and random "
+                "control orders. It cannot prove numeric order on its own."
+            ),
+        },
     ]
 
     result = {
@@ -696,7 +738,7 @@ def make_result() -> dict[str, Any]:
         "decision": {
             "recipe_externality_status": "partially_reduced_by_deterministic_reparse",
             "generation_explanation_status": "stronger_mechanical_recipe_signal_not_final_authorial_method",
-            "numeric_order_status": "supported_against_order_controls_but_not_unique_against_random_train_inventories",
+            "numeric_order_status": "aggregate_order_supported_but_per_book_frontier_not_unique",
             "row0_origin_status": "unchanged_exogenous",
             "translation_or_plaintext_status": "NONE",
             "progress_claim": (
@@ -884,6 +926,18 @@ def write_result(result: dict[str, Any]) -> None:
                 f"required descriptor < {evidence['promotion_threshold_descriptor_bits']:.3f}; "
                 f"nonnegative promotes {evidence['nonnegative_descriptor_can_promote']}; "
                 f"one-book index delta {evidence['one_book_index_full_delta_bits']:.3f}"
+            )
+        elif row["question"] == "is_the_online_prefix_book_frontier_numeric_order_unique":
+            key = (
+                f"numeric after-bootstrap "
+                f"{evidence['numeric_after_bootstrap_beats_raw_count']}/"
+                f"{evidence['after_bootstrap_book_count']}; perfect controls "
+                f"{evidence['orders_with_perfect_after_bootstrap_count']}/"
+                f"{evidence['order_count']}; random perfect "
+                f"{evidence['random_orders_with_perfect_after_bootstrap_count']}/"
+                f"{evidence['random_order_count']}; best mean "
+                f"`{evidence['best_after_bootstrap_mean_gain_order']}` "
+                f"{evidence['best_after_bootstrap_mean_gain_delta_vs_numeric_bits']:+.3f} bits"
             )
         else:
             key = (

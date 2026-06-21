@@ -281,6 +281,7 @@ def render_markdown(
     seeded_online_formula_rescore_link: str,
     seeded_rescore_loss_decomposition_link: str,
     seed_exception_signal_cost_link: str,
+    online_order_frontier_controls_link: str,
     row0_requirement_link: str,
 ) -> str:
     prefix = result["predictive_validation"]["prefix_future_suffix"]["rows"]
@@ -567,6 +568,20 @@ def render_markdown(
             "nonnegative signaling cost.",
             f"See [21_seed_exception_signal_cost_audit.md]({seed_exception_signal_cost_link}).",
             "",
+            "### Online Order Frontier Controls",
+            "",
+            "The per-book online frontier is then tested against the same order",
+            "families used by the aggregate order-control audit. Numeric order still",
+            "beats raw digit coding in `69/69` books after its first bootstrap",
+            "position, but that criterion is not unique: `10/11` tested orders have",
+            "perfect after-bootstrap raw wins, including `6/6` seeded random orders.",
+            "The best after-bootstrap mean-gain and total-gain order is `random_04`,",
+            "at `+0.549` bits versus numeric mean after-bootstrap gain and `+61.452`",
+            "bits versus numeric total gain. This keeps the online frontier as",
+            "predictive-parser evidence but rejects the stronger claim that the",
+            "per-book frontier proves numeric book order.",
+            f"See [22_online_order_frontier_controls.md]({online_order_frontier_controls_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -679,6 +694,7 @@ def main() -> None:
                 "20_seeded_rescore_loss_decomposition.md"
             ),
             seed_exception_signal_cost_link="21_seed_exception_signal_cost_audit.md",
+            online_order_frontier_controls_link="22_online_order_frontier_controls.md",
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
         ),
         encoding="utf-8",
@@ -724,6 +740,9 @@ def main() -> None:
             ),
             seed_exception_signal_cost_link=(
                 "test_results/21_seed_exception_signal_cost_audit.md"
+            ),
+            online_order_frontier_controls_link=(
+                "test_results/22_online_order_frontier_controls.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
         ),

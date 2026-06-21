@@ -79,6 +79,9 @@ exogenous.
 - [scripts/21_seed_exception_signal_cost_audit.py](scripts/21_seed_exception_signal_cost_audit.py) - tests whether exception signaling can rescue the book-0 seed as a formula promotion.
 - [reports/test_results/21_seed_exception_signal_cost_audit.md](reports/test_results/21_seed_exception_signal_cost_audit.md) - seed exception signal-cost result.
 - [reports/test_results/21_seed_exception_signal_cost_audit.json](reports/test_results/21_seed_exception_signal_cost_audit.json) - structured seed signal-cost ledger.
+- [scripts/22_online_order_frontier_controls.py](scripts/22_online_order_frontier_controls.py) - reruns the book-bounded online frontier under named and random order controls.
+- [reports/test_results/22_online_order_frontier_controls.md](reports/test_results/22_online_order_frontier_controls.md) - online order frontier control result.
+- [reports/test_results/22_online_order_frontier_controls.json](reports/test_results/22_online_order_frontier_controls.json) - structured online order frontier ledger.
 
 ## Boundary
 
@@ -130,6 +133,11 @@ exogenous.
   bits but adds `37.821` literal-payload bits under full scoring. Exception
   signaling cannot rescue promotion: even a zero-cost deterministic fallback is
   `+0.979` bits worse, and promotion would require a negative descriptor cost.
+  Order-frontier controls then show the online prefix result is predictive but
+  not numeric-order-unique: numeric keeps `69/69` after-bootstrap raw wins, but
+  `10/11` tested orders do too, including `6/6` seeded random orders; `random_04`
+  beats numeric by `+0.549` bits in mean after-bootstrap gain and `+61.452` bits
+  in total gain.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

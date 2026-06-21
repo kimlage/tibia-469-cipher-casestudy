@@ -41,11 +41,12 @@ claim.
 | `why_does_seeded_rescore_fail` | `explained_by_literal_payload_penalty` | payload penalty 37.821; non-payload savings 36.842; net 0.979; local seed saving 10.499 |
 | `can_exception_signaling_rescue_the_book0_seed` | `failed_requires_negative_descriptor_cost` | zero-cost delta 0.979; required descriptor < -0.979; nonnegative promotes False; one-book index delta 7.108 |
 | `does_numeric_online_order_survive_order_controls` | `passed_against_tested_orders` | best raw `numeric`; best charged `numeric`; 6 random orders |
+| `is_the_online_prefix_book_frontier_numeric_order_unique` | `failed_as_numeric_order_uniqueness_proof` | numeric after-bootstrap 69/69; perfect controls 10/11; random perfect 6/6; best mean `random_04` +0.549 bits |
 
 ## Decision
 
 - Recipe externality: `partially_reduced_by_deterministic_reparse`.
 - Generation explanation: `stronger_mechanical_recipe_signal_not_final_authorial_method`.
-- Numeric order: `supported_against_order_controls_but_not_unique_against_random_train_inventories`.
+- Numeric order: `aggregate_order_supported_but_per_book_frontier_not_unique`.
 - Row0 origin remains exogenous.
 - No plaintext, translation, or case-reopening claim is introduced.

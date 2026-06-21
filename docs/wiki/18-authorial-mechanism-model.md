@@ -1103,6 +1103,14 @@ legal prior copy. It scores `74` candidates across `5` eligible starts under
 the full active ledger; no candidate improves, and the best remains `+1.180`
 bits worse. Broader repairs crossing operation boundaries remain a separate
 frontier.
+The online order frontier controls then test the per-book online-prefix
+frontier against the same named and random order controls used by the aggregate
+order audit. Numeric order still has `69/69` after-bootstrap raw wins, but this
+criterion is not unique: `10/11` tested orders also pass, including `6/6`
+seeded random orders, and `random_04` beats numeric by `+0.549` bits in mean
+after-bootstrap gain and `+61.452` bits in total gain. This keeps the online
+frontier as predictive-parser evidence while rejecting the stronger claim that
+the per-book frontier proves numeric order.
 The cross-op optional literal copy frontier then tests that broader local
 family. It permits a replacement copy to cross the literal boundary and consume
 following operations before trimming the remaining recipe. It scores `465`
@@ -1425,6 +1433,7 @@ book generation, not row0 pair-cell placement.
 - [Seeded online formula rescore audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/19_seeded_online_formula_rescore_audit.md)
 - [Seeded rescore loss decomposition](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/20_seeded_rescore_loss_decomposition.md)
 - [Seed exception signal cost audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/21_seed_exception_signal_cost_audit.md)
+- [Online order frontier controls](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/22_online_order_frontier_controls.md)
 - [Prequential recipe reparse audit](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md)
 - [Prequential recipe reparse controls](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md)
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
