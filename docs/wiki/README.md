@@ -735,6 +735,12 @@ source signal directly. Alternate source tie policies keep identical primary cos
 and `50/50` stability, but do not change selected source sums, so the signal is
 not reduced to simple parser ordering. It remains target-dependent because the
 target chunk is still needed to select the match.
+A source candidate collapse audit then supersedes that source-canonicality
+reading: `precompute_matches` keeps only one source per length and chooses the
+lower `source_pos`, so later same-length sources never reach the parser heap.
+`130/208` projected copy events have hidden alternate sources. The
+earliest-target-match signal is therefore a candidate-generation artifact, not
+independent source evidence.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -935,6 +941,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   best source, `58/208` best length, `2/208` best joint),
   checks source tie-break controls and finds the earliest-target-match signal is
   not a simple tie artifact, while still target-dependent,
+  corrects that reading with a source-candidate collapse audit (`130/208` copy
+  events have hidden alternate sources; gate 89 superseded),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

@@ -283,6 +283,9 @@ exogenous.
 - [scripts/89_source_tiebreak_artifact_audit.py](scripts/89_source_tiebreak_artifact_audit.py) - tests whether the `208/208` earliest-target-match source signal is only parser tie-break.
 - [reports/test_results/89_source_tiebreak_artifact_audit.md](reports/test_results/89_source_tiebreak_artifact_audit.md) - source tie-break artifact result.
 - [reports/test_results/89_source_tiebreak_artifact_audit.json](reports/test_results/89_source_tiebreak_artifact_audit.json) - structured source tie-break artifact ledger.
+- [scripts/90_source_candidate_collapse_audit.py](scripts/90_source_candidate_collapse_audit.py) - checks whether `precompute_matches` already collapses source candidates to earliest per length.
+- [reports/test_results/90_source_candidate_collapse_audit.md](reports/test_results/90_source_candidate_collapse_audit.md) - source candidate collapse correction.
+- [reports/test_results/90_source_candidate_collapse_audit.json](reports/test_results/90_source_candidate_collapse_audit.json) - structured source candidate collapse ledger.
 
 ## Boundary
 
@@ -606,6 +609,13 @@ exogenous.
   (`11459.765681`) and `50/50` stability, but source sums do not change
   (`source_sum_span=0`). The tie-break artifact hypothesis is therefore not
   supported, but the rule still remains target-dependent and is not promoted.
+- The source candidate collapse audit then corrects that interpretation:
+  `precompute_matches` stores one source per length and keeps the lower
+  `source_pos`, so the heap never saw later same-length sources. The `208/208`
+  earliest-target-match result is induced by candidate generation; `130/208`
+  projected copy events have hidden alternate sources, with up to `13` hidden
+  alternatives for one event. Gate 89 is superseded for source-canonicality
+  evidence.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

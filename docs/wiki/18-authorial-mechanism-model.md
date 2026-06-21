@@ -280,6 +280,14 @@ not move (`source_sum_span=0`). So the signal is not explained as a simple parse
 tie-break artifact. It remains target-dependent, however, because
 earliest-target-match cannot be chosen without the target chunk.
 
+That reading is then corrected by a source candidate collapse audit.
+`precompute_matches` does not expose all same-length sources to the parser: it
+stores one source per length and chooses the lower `source_pos`. As a result, the
+heap in gate 89 could not switch to later same-length matches. The `208/208`
+earliest-target-match count is therefore induced by candidate generation, not
+independent source evidence. In the stable projection, `130/208` copy events have
+hidden alternate sources, with up to `13` hidden alternatives for a single event.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`
