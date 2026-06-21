@@ -86,6 +86,7 @@ BEAM_SURVIVAL_BUDGET = TEST_RESULTS / "58_beam_survival_budget_gate.json"
 BEAM_RANK_SELECTOR = TEST_RESULTS / "59_beam_rank_selector_gate.json"
 BEAM_SELECTOR_STABILITY = TEST_RESULTS / "60_beam_selector_stability_gate.json"
 BEAM_HIERARCHICAL_BACKOFF = TEST_RESULTS / "61_beam_hierarchical_backoff_gate.json"
+RESIDUAL_PATCH_PROGRAM = TEST_RESULTS / "62_residual_patch_program_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -310,6 +311,11 @@ def main() -> None:
         if BEAM_HIERARCHICAL_BACKOFF.exists()
         else None
     )
+    residual_patch_program = (
+        load_json(RESIDUAL_PATCH_PROGRAM)
+        if RESIDUAL_PATCH_PROGRAM.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -439,6 +445,8 @@ def main() -> None:
         assert_boundary("beam_selector_stability_gate", beam_selector_stability)
     if beam_hierarchical_backoff is not None:
         assert_boundary("beam_hierarchical_backoff_gate", beam_hierarchical_backoff)
+    if residual_patch_program is not None:
+        assert_boundary("residual_patch_program_gate", residual_patch_program)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -627,6 +635,9 @@ def main() -> None:
         None
         if beam_hierarchical_backoff is None
         else beam_hierarchical_backoff["summary"]
+    )
+    residual_patch_program_summary = (
+        None if residual_patch_program is None else residual_patch_program["summary"]
     )
 
     lines = [
@@ -2333,6 +2344,35 @@ def main() -> None:
                 "",
             ]
         )
+    if residual_patch_program_summary is not None:
+        lines.extend(
+            [
+                "## Residual Patch Program Gate",
+                "",
+                "Gate 62 tests whether the remaining residual branch choices",
+                "compress into a compact patch program rather than ten unrelated",
+                "stable labels. It separates patch-label compression from the",
+                "site-selection problem.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Best patch mode | `{residual_patch_program_summary['best_patch_mode']}` |",
+                f"| Best patch distinct labels | `{residual_patch_program_summary['best_patch_distinct_labels']}` |",
+                f"| Best patch singletons | `{residual_patch_program_summary['best_patch_singletons']}` |",
+                f"| Site bits alone | `{residual_patch_program_summary['site_bits']:.3f}` |",
+                f"| Best patch net vs lookup | `{residual_patch_program_summary['best_patch_net_vs_lookup_bits']:.3f}` bits |",
+                f"| Best zero-FP detector hits | `{residual_patch_program_summary['best_zero_fp_detector_tp']}/{residual_patch_program_summary['residual_decision_count']}` |",
+                f"| Prefix/holdout exact detector cells | `{residual_patch_program_summary['prequential_exact_detector_cells']}/{residual_patch_program_summary['prequential_cells']}` |",
+                "",
+                "The residuals do have a weak macro-patch structure: five macro",
+                "classes cover the ten sites. That is not enough to promote a",
+                "parser. The site cost dominates, the cheapest paid patch program",
+                "is still worse than the residual lookup lower bound, the best",
+                "zero-false-positive observable detector hits only one residual,",
+                "and prefix/holdout never finds an exact site detector.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -2427,6 +2467,12 @@ def main() -> None:
             "and also fails: it ties the unstable full-fit result only with",
             "support `1`, increases table cost, and keeps `0/5` cover-all",
             "holdout cells.",
+            "Gate 62 decomposes the residuals as macro-patches and finds a",
+            "weak but non-promoting clue: the ten residual choices collapse",
+            "to five macro classes, but the site-selection cost remains larger",
+            "than the saving, the paid patch program is `+2.490` bits worse",
+            "than lookup, and the best clean observable detector hits only",
+            "`1/10` residuals.",
             "The remaining blocker is therefore a downstream selector or richer",
             "latent path/state segmentation account for why the parser waits,",
             "copies, or understops at the remaining mixed residual sites,",
@@ -2497,6 +2543,7 @@ def main() -> None:
             "- [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)",
             "- [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)",
             "- [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)",
+            "- [Residual patch program gate](test_results/62_residual_patch_program_gate.md)",
             "",
         ]
     )

@@ -1382,6 +1382,30 @@ the unstable full-fit `230/234`, `10/10` residual row only at
 support `1`, grows the paid context table to `88` entries,
 and remains `0/5` on prefix/holdout cover-all cells.
 
+## Residual Patch Program Gate
+
+Gate 62 tests whether the remaining residual branch choices
+compress into a compact patch program rather than ten unrelated
+stable labels. It separates patch-label compression from the
+site-selection problem.
+
+| Diagnostic | Value |
+|---|---:|
+| Best patch mode | `macro` |
+| Best patch distinct labels | `5` |
+| Best patch singletons | `2` |
+| Site bits alone | `56.631` |
+| Best patch net vs lookup | `2.490` bits |
+| Best zero-FP detector hits | `1/10` |
+| Prefix/holdout exact detector cells | `0/5` |
+
+The residuals do have a weak macro-patch structure: five macro
+classes cover the ten sites. That is not enough to promote a
+parser. The site cost dominates, the cheapest paid patch program
+is still worse than the residual lookup lower bound, the best
+zero-false-positive observable detector hits only one residual,
+and prefix/holdout never finds an exact site detector.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1474,6 +1498,12 @@ Gate 61 tests hierarchical backoff over the same beam contexts
 and also fails: it ties the unstable full-fit result only with
 support `1`, increases table cost, and keeps `0/5` cover-all
 holdout cells.
+Gate 62 decomposes the residuals as macro-patches and finds a
+weak but non-promoting clue: the ten residual choices collapse
+to five macro classes, but the site-selection cost remains larger
+than the saving, the paid patch program is `+2.490` bits worse
+than lookup, and the best clean observable detector hits only
+`1/10` residuals.
 The remaining blocker is therefore a downstream selector or richer
 latent path/state segmentation account for why the parser waits,
 copies, or understops at the remaining mixed residual sites,
@@ -1544,3 +1574,4 @@ or the stable projection as an oracle.
 - [Beam rank selector gate](test_results/59_beam_rank_selector_gate.md)
 - [Beam selector stability gate](test_results/60_beam_selector_stability_gate.md)
 - [Beam hierarchical backoff gate](test_results/61_beam_hierarchical_backoff_gate.md)
+- [Residual patch program gate](test_results/62_residual_patch_program_gate.md)

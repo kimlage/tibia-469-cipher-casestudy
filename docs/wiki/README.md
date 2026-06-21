@@ -1000,8 +1000,12 @@ the best setting still needs support threshold `1`, leave-one-book keeps only
 `0/5` on cover-all cells. Hierarchical backoff over the same beam contexts
 also fails: the best hierarchy ties the unstable full-fit row only at support
 `1`, costs `+166.286` bits versus lookup, and remains `0/5` on cover-all
-holdout cells. The blocker is therefore a richer latent path/state selector,
-not another local branch-choice combination.
+holdout cells. A residual patch program gate then decomposes the residuals
+into macro edits: ten choices collapse to five macro classes, but the paid
+macro program is still `+2.490` bits worse than lookup, the best clean detector
+hits only `1/10`, and prefix/holdout exact detector cells remain `0/5`. The
+blocker is therefore a richer latent path/state selector, not another local
+branch-choice combination or a residual macro-codebook.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

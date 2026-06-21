@@ -793,6 +793,12 @@ over-specific context granularity. It is not: the best hierarchy,
 `global_to_beam_combo`, ties the unstable full-fit row only at support `1`,
 grows the paid table to `88` contexts, costs `+166.286` bits versus lookup, and
 still has `0/5` cover-all holdout cells.
+A residual patch program gate then decomposes the remaining choices rather than
+trying another selector. The ten residuals do compress to five macro patch
+classes, but the site cost alone is `56.631` bits, the cheapest paid macro
+program is still `+2.490` bits worse than lookup, the best zero-false-positive
+detector hits only `1/10`, and prefix/holdout exact detector cells are `0/5`.
+This is a useful blocker decomposition, not a promoted parser rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2517,6 +2523,7 @@ book generation, not row0 pair-cell placement.
 - [Beam rank selector gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/59_beam_rank_selector_gate.md)
 - [Beam selector stability gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/60_beam_selector_stability_gate.md)
 - [Beam hierarchical backoff gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/61_beam_hierarchical_backoff_gate.md)
+- [Residual patch program gate](../../analysis/segmentation_decision_audit_20260621/reports/test_results/62_residual_patch_program_gate.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)
