@@ -720,6 +720,26 @@ catch one residual only by introducing false clean-control
 changes. Combining weak signals therefore does not solve the
 branch-choice problem.
 
+## Structural Vote Residual Decomposition
+
+Gate 35 decomposes the rejected weak-signal frontier decision by
+decision. It counts how many structural votes support the stable
+branch in each residual and how often the same non-active support
+appears in clean controls.
+
+| Diagnostic | Value |
+|---|---:|
+| Residual stable-support histogram | `{'0': 2, '2': 6, '3': 1, '4': 1}` |
+| Clean top-nonactive-support histogram | `{'0': 3, '1': 82, '2': 121, '3': 17, '4': 1}` |
+| Residuals with stable support >=3 | `2/10` |
+| Clean rows with nonactive support >=3 | `18` |
+
+There is no hidden clean threshold. At threshold `3`, only books
+`16` and `39` would be correctly flagged, while `18` clean controls
+would also move. At threshold `4`, book `39` remains but one clean
+control remains as well. The weak-signal front is therefore
+diagnostically decomposed, not promoted.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -735,7 +755,8 @@ as well, and even the global carryover source-state upper bound
 fails clean holdout. A simple phase/grid rule gives only a weak
 one-residual full-fit clue. Raw context nearest-neighbor recurrence
 is also rejected, and consensus over the weak structural signals
-collapses back to the active baseline. The remaining blocker is a richer path/state
+collapses back to the active baseline. Vote decomposition shows no
+clean residual threshold hidden inside those signals. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -778,3 +799,4 @@ or the stable projection as an oracle.
 - [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)
 - [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)
 - [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)
+- [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)

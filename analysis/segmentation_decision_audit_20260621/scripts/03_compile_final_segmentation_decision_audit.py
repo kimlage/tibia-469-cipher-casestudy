@@ -43,6 +43,7 @@ GLOBAL_SOURCE_STATE = TEST_RESULTS / "31_global_source_state_continuity_audit.js
 PHASE_GRID = TEST_RESULTS / "32_phase_grid_segmentation_audit.json"
 CONTEXT_NEAREST = TEST_RESULTS / "33_context_nearest_branch_audit.json"
 STRUCTURAL_CONSENSUS = TEST_RESULTS / "34_structural_signal_consensus_audit.json"
+STRUCTURAL_DECOMPOSITION = TEST_RESULTS / "35_structural_vote_residual_decomposition.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -136,6 +137,11 @@ def main() -> None:
     structural_consensus = (
         load_json(STRUCTURAL_CONSENSUS) if STRUCTURAL_CONSENSUS.exists() else None
     )
+    structural_decomposition = (
+        load_json(STRUCTURAL_DECOMPOSITION)
+        if STRUCTURAL_DECOMPOSITION.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -200,6 +206,10 @@ def main() -> None:
         assert_boundary("context_nearest_branch_audit", context_nearest)
     if structural_consensus is not None:
         assert_boundary("structural_signal_consensus_audit", structural_consensus)
+    if structural_decomposition is not None:
+        assert_boundary(
+            "structural_vote_residual_decomposition", structural_decomposition
+        )
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -277,6 +287,9 @@ def main() -> None:
     )
     structural_consensus_summary = (
         None if structural_consensus is None else structural_consensus["summary"]
+    )
+    structural_decomposition_summary = (
+        None if structural_decomposition is None else structural_decomposition["summary"]
     )
 
     lines = [
@@ -1185,6 +1198,31 @@ def main() -> None:
                 "",
             ]
         )
+    if structural_decomposition_summary is not None:
+        lines.extend(
+            [
+                "## Structural Vote Residual Decomposition",
+                "",
+                "Gate 35 decomposes the rejected weak-signal frontier decision by",
+                "decision. It counts how many structural votes support the stable",
+                "branch in each residual and how often the same non-active support",
+                "appears in clean controls.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Residual stable-support histogram | `{structural_decomposition_summary['residual_stable_support_histogram']}` |",
+                f"| Clean top-nonactive-support histogram | `{structural_decomposition_summary['clean_top_nonactive_support_histogram']}` |",
+                f"| Residuals with stable support >=3 | `{structural_decomposition_summary['residuals_with_stable_support_ge_3']}/{structural_decomposition_summary['residual_decision_count']}` |",
+                f"| Clean rows with nonactive support >=3 | `{structural_decomposition_summary['clean_rows_with_nonactive_support_ge_3']}` |",
+                "",
+                "There is no hidden clean threshold. At threshold `3`, only books",
+                "`16` and `39` would be correctly flagged, while `18` clean controls",
+                "would also move. At threshold `4`, book `39` remains but one clean",
+                "control remains as well. The weak-signal front is therefore",
+                "diagnostically decomposed, not promoted.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1202,7 +1240,8 @@ def main() -> None:
             "fails clean holdout. A simple phase/grid rule gives only a weak",
             "one-residual full-fit clue. Raw context nearest-neighbor recurrence",
             "is also rejected, and consensus over the weak structural signals",
-            "collapses back to the active baseline. The remaining blocker is a richer path/state",
+            "collapses back to the active baseline. Vote decomposition shows no",
+            "clean residual threshold hidden inside those signals. The remaining blocker is a richer path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
             "account of why the target digit stream exists.",
@@ -1245,6 +1284,7 @@ def main() -> None:
             "- [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)",
             "- [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)",
             "- [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)",
+            "- [Structural vote residual decomposition](test_results/35_structural_vote_residual_decomposition.md)",
             "",
         ]
     )

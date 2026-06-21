@@ -980,6 +980,9 @@ A structural-signal consensus audit then combines source-state, phase/grid,
 future-copy, and boundary-recurrence votes. The only clean result ties the
 active baseline at `224/234`, recovers `0/10` residuals, and lower-threshold
 variants introduce false clean-control changes.
+A residual vote decomposition confirms there is no hidden clean cutoff:
+threshold `3` catches only books `16/39` and also moves `18` clean controls;
+threshold `4` leaves only book `39` and still has one clean false move.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
