@@ -279,6 +279,9 @@ A deterministic online reparse compile later lowers the bound to `8343.062`
 while preserving `translation_delta: NONE`; row0 origin remains exogenous.
 The follow-up order control supports numeric order against reverse, parity,
 length-derived, and 6 seeded random controls, but it does not derive `row0`.
+A recipe-prune audit removes derivable book `length` and copy `target_start`
+fields in-memory without changing `8343.062`; the remaining copy source/length
+and literal payload fields remain declared dependencies.
 
 The row0 origin frontier audit consolidates the current table-origin evidence:
 matrix generators, rule covers, the `6<->9` orbit, tape features, low-rank

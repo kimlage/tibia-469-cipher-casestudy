@@ -633,5 +633,9 @@ Generated audits in this directory should be treated as the current state:
   against reverse, parity, length-derived, and 6 seeded random book orders.
   Numeric order remains best; the best random raw order is still `+188.584`
   bits worse before arbitrary-order description cost.
+- `131_online_formula_recipe_prune_audit`: removes book `length` and copy
+  `target_start` in-memory as derivable representation fields. The stripped
+  projection preserves `8343.062` bits and `70/70`, reducing recipe JSON by
+  `5612` bytes without changing the active bound.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

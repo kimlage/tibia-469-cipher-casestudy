@@ -886,6 +886,11 @@ book-order overfitting. Numeric order remains best against reverse, parity,
 length-derived, and 6 seeded random orders; the best random raw order is still
 `+188.584` bits worse before charging `log2(70!)` for arbitrary order.
 
+The online formula recipe-prune audit then separates representation artifacts
+from required recipe dependencies. Book `length` and copy `target_start` are
+derivable; removing them in-memory preserves `8343.062` bits and `70/70`, while
+literal payload plus copy source/length fields remain required declarations.
+
 The row0 origin frontier audit then indexes the existing table-origin tests
 directly instead of tuning the book compressor again. Matrix generators, pair
 rule covers, the `6<->9` orbit, tape features, low-rank factors, structural
@@ -1162,6 +1167,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential recipe train-set controls](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md)
 - [Online deterministic reparse compile](../../analysis/authorial_mechanism_20260620/reports/test_results/129_online_deterministic_reparse_compile.md)
 - [Online reparse order control audit](../../analysis/authorial_mechanism_20260620/reports/test_results/130_online_reparse_order_control_audit.md)
+- [Online formula recipe prune audit](../../analysis/authorial_mechanism_20260620/reports/test_results/131_online_formula_recipe_prune_audit.md)
 
 ## Boundary
 

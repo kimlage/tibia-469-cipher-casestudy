@@ -339,6 +339,9 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/130_online_reparse_order_control_audit.py` - controls the promoted
   online parser against reverse, parity, length-derived, and random book
   orders; numeric order remains best in the tested controls.
+- `scripts/131_online_formula_recipe_prune_audit.py` - checks which active
+  recipe fields are derivable; book `length` and copy `target_start` can be
+  pruned losslessly in a canonical projection.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

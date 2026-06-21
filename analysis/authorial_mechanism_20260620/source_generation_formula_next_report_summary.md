@@ -601,6 +601,10 @@ Coverage of the remaining report recommendations and follow-on refinements:
   numeric order remains best among reverse, parity, length-derived, and 6
   seeded random controls. The best random raw order is still `+188.584` bits
   worse before the `log2(70!)` arbitrary-order charge.
+- online formula recipe pruning is now covered by
+  [`131_online_formula_recipe_prune_audit.py`](scripts/131_online_formula_recipe_prune_audit.py);
+  book `length` and copy `target_start` are derivable representation fields.
+  Removing them in-memory preserves `8343.062` bits and `70/70` roundtrip.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

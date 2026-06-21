@@ -1,0 +1,57 @@
+{
+  "active_compression_bound_bits": 8343.061944935467,
+  "active_recomputed_bits": 8343.061944935467,
+  "active_roundtrip_ok": 70,
+  "boundary": {
+    "active_formula_file_rewritten": false,
+    "authorial_intent_claim": false,
+    "compression_bound_changed": false,
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "classification": "lossless_recipe_representation_simplification",
+  "interpretation": {
+    "book_length": "derivable from op lengths and checked against canonical book digit length",
+    "not_removed": [
+      "literal text payload",
+      "literal run lengths",
+      "copy source_digit_pos",
+      "copy lengths",
+      "item sequence implied by op type"
+    ],
+    "target_start": "derivable from cumulative emitted length within each book"
+  },
+  "recipe_json_bytes": {
+    "active": 24355,
+    "saved": 5612,
+    "stripped_projection": 18743
+  },
+  "remaining_recipe_dependency_stats": {
+    "books": 70,
+    "copied_digit_fraction": 0.9239101482731066,
+    "copied_digits": 10406,
+    "copy_length_fields": 261,
+    "copy_ops": 261,
+    "copy_source_fields": 261,
+    "literal_digit_fraction": 0.07608985172689336,
+    "literal_digits": 857,
+    "literal_length_fields": 87,
+    "literal_ops": 87,
+    "literal_text_fields": 87,
+    "ops": 348
+  },
+  "removed_fields": {
+    "book_length_fields": 70,
+    "book_length_mismatches": [],
+    "copy_target_start_fields": 261,
+    "literal_length_mismatches": [],
+    "target_start_mismatches": []
+  },
+  "schema": "online_formula_recipe_prune_audit.v1",
+  "score_delta_bits": 0.0,
+  "source_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_midpoint_alpha1_itemctx_splitonly_online_reparse_formula_469.json",
+  "stripped_recomputed_bits": 8343.061944935467,
+  "stripped_roundtrip_ok": 70,
+  "test": "131_online_formula_recipe_prune_audit",
+  "translation_delta": "NONE"
+}
