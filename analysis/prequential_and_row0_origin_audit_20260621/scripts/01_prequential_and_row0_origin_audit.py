@@ -189,6 +189,14 @@ TARGETMAX_RESEGMENTATION_CANDIDATE_AUDIT = (
     / "test_results"
     / "52_targetmax_resegmentation_candidate_audit.json"
 )
+TARGETMAX_RESEGMENTATION_FORMULA_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "53_targetmax_resegmentation_formula_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -446,6 +454,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
         "targetmax_resegmentation_candidate_audit",
         targetmax_resegmentation_candidate,
     )
+    targetmax_resegmentation_formula = load_json(TARGETMAX_RESEGMENTATION_FORMULA_GATE)
+    assert_analysis_boundary(
+        "targetmax_resegmentation_formula_gate",
+        targetmax_resegmentation_formula,
+    )
 
     predictive = legacy["predictive_validation"]
     prefix = predictive["prefix_future_suffix_splits"]
@@ -686,6 +699,16 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": targetmax_resegmentation_candidate["summary"],
             "decision": targetmax_resegmentation_candidate["decision"],
         },
+        "targetmax_resegmentation_formula": {
+            "classification": targetmax_resegmentation_formula["classification"],
+            "source": rel(TARGETMAX_RESEGMENTATION_FORMULA_GATE),
+            "scope": targetmax_resegmentation_formula["scope"],
+            "summary": targetmax_resegmentation_formula["summary"],
+            "decision": targetmax_resegmentation_formula["decision"],
+            "candidate_output_formula": targetmax_resegmentation_formula[
+                "candidate_output_formula"
+            ],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -728,6 +751,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "source_canonicality_tradeoff_status": "all_earliest_profile_costed_not_promoted",
             "copy_length_segmentation_exception_status": "target_max_exceptions_are_partial_next_op_intrusions",
             "targetmax_resegmentation_candidate_status": "local_proxy_improvements_unpromoted",
+            "targetmax_resegmentation_formula_status": "promoted_bound_8158_766094",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -786,6 +810,7 @@ def render_markdown(
     source_canonicality_tradeoff_audit_link: str,
     copy_length_segmentation_exception_audit_link: str,
     targetmax_resegmentation_candidate_audit_link: str,
+    targetmax_resegmentation_formula_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -842,6 +867,7 @@ def render_markdown(
     targetmax_resegmentation = result["targetmax_resegmentation_candidate"][
         "summary"
     ]
+    targetmax_formula = result["targetmax_resegmentation_formula"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -1595,6 +1621,29 @@ def render_markdown(
             "resegmentation.",
             f"See [52_targetmax_resegmentation_candidate_audit.md]({targetmax_resegmentation_candidate_audit_link}).",
             "",
+            "### Target-Max Resegmentation Formula Gate",
+            "",
+            "The exact component scorer then checks the best proxy candidate against "
+            "the current source-substitution ledger. It reproduces the current bound "
+            f"at `{targetmax_formula['current_exact_total_bits']:.6f}` bits, then "
+            f"promotes the book `{targetmax_formula['book']}` op "
+            f"`{targetmax_formula['op_index']}` `{targetmax_formula['mode']}` "
+            f"resegmentation with slack `{targetmax_formula['slack']}`.",
+            "The candidate lowers the bound from "
+            f"`{targetmax_formula['current_total_bits']:.6f}` to "
+            f"`{targetmax_formula['candidate_total_bits']:.6f}` bits, a gain of "
+            f"`{targetmax_formula['candidate_gain_bits']:+.6f}` bits. The "
+            "improvement is almost entirely copy-length cost "
+            f"(`{targetmax_formula['component_delta_bits']['copy_length_bits']:+.6f}` "
+            "bits), with a small copy-source penalty "
+            f"(`{targetmax_formula['component_delta_bits']['copy_source_bits']:+.6f}` "
+            "bits), and zero literal-payload/item-type change.",
+            "Roundtrip and score errors are both "
+            f"`{targetmax_formula['roundtrip_error_count']}`/"
+            f"`{targetmax_formula['score_error_count']}`. This is a real "
+            "compression-bound promotion, not row0 derivation or semantics.",
+            f"See [53_targetmax_resegmentation_formula_gate.md]({targetmax_resegmentation_formula_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -1694,6 +1743,7 @@ def render_markdown(
             "- A third single/pair source-substitution pass finds another microscopic `+0.000503` bit gain, lowering the active bound to `8160.825917`; local source substitutions are saturating.",
             "- A fourth single/pair source-substitution pass finds another microscopic `+0.000310` bit gain, lowering the active bound to `8160.825608`; local source substitutions are saturating.",
             "- The source-substitution saturation audit freezes repeated same-chunk local source edits as no longer mainline: the last three gains sum to `0.001484` bits and are dwarfed by selector-cost sanity checks.",
+            "- Exact scoring promotes one target-max resegmentation from the proxy frontier, lowering the active bound from `8160.825608` to `8158.766094` bits with zero row0 or semantic change.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -1827,6 +1877,9 @@ def main() -> None:
             ),
             targetmax_resegmentation_candidate_audit_link=(
                 "52_targetmax_resegmentation_candidate_audit.md"
+            ),
+            targetmax_resegmentation_formula_gate_link=(
+                "53_targetmax_resegmentation_formula_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -1966,6 +2019,9 @@ def main() -> None:
             ),
             targetmax_resegmentation_candidate_audit_link=(
                 "test_results/52_targetmax_resegmentation_candidate_audit.md"
+            ),
+            targetmax_resegmentation_formula_gate_link=(
+                "test_results/53_targetmax_resegmentation_formula_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

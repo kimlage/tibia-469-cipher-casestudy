@@ -1,0 +1,54 @@
+{
+  "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_formula_469.json",
+  "case_reopened": false,
+  "classification": "targetmax_resegmentation_formula_improves_bound",
+  "decision": {
+    "compression_bound_status": "improved_by_targetmax_resegmentation",
+    "generation_explanation_status": "resegmentation_path_promoted_single_step",
+    "next_mainline_status": "test additional compatible targetmax_resegmentations_under_exact_scorer",
+    "row0_origin_status": "unchanged_exogenous",
+    "targetmax_resegmentation_status": "single_candidate_promoted",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "candidate_gate": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.json",
+    "current_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469.json"
+  },
+  "plaintext_claim": false,
+  "schema": "targetmax_resegmentation_formula_gate.v1",
+  "scope": {
+    "candidate_source": "best candidate from gate52",
+    "exact_component_scorer_reproduces_current_bound": true,
+    "plaintext_or_translation_claim": false,
+    "row0_origin_changed": false,
+    "single_candidate": true
+  },
+  "summary": {
+    "book": 9,
+    "candidate_gain_bits": 2.059513486281503,
+    "candidate_total_bits": 8158.766094149578,
+    "component_delta_bits": {
+      "copy_length_bits": -2.0628666430261546,
+      "copy_source_bits": 0.0033531567469253787,
+      "item_type_bits": 0.0,
+      "literal_bits_no_payload": 0.0,
+      "literal_payload_bits": 0.0
+    },
+    "current_exact_total_bits": 8160.8256076358575,
+    "current_total_bits": 8160.825607635859,
+    "interpretation": "The exact component scorer reproduces the current bound and promotes the best local target-max resegmentation candidate as a real mechanical bound improvement.",
+    "inventory": {
+      "copied_digits": 10406,
+      "copy_items": 261,
+      "literal_digits": 857,
+      "literal_runs": 87
+    },
+    "mode": "preserve_next_mode",
+    "op_index": 0,
+    "roundtrip_error_count": 0,
+    "score_error_count": 0,
+    "slack": 4
+  },
+  "translation_delta": "NONE"
+}

@@ -650,6 +650,10 @@ A local target-max resegmentation candidate audit tests that rewrite directly:
 proxy; the best is book `9` op `0` at `-2.059513` bits. This is a candidate
 path only until exact current-ledger scoring or a joint reparse objective
 validates it.
+An exact formula gate now validates that candidate under the active component
+scorer: it reproduces the `8160.825608`-bit bound and promotes the same book
+`9` op `0` resegmentation to `8158.766094` bits, a `+2.059513`-bit mechanical
+compression-bound gain. `row0` origin and semantic status remain unchanged.
 Semantic delta remains zero. → [page 18](18-authorial-mechanism-model.md)
 
 **Post-review closure (2026-06-19):** the remaining review action items are
@@ -735,8 +739,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   hypothesis requirement matrix with zero promoted origin formulas, records
   the source-length joint derivability boundary, prices the source canonicality
   tradeoff, maps copy-length target-max exceptions to resegmentation
-  boundaries, opens a proxy-scored local target-max resegmentation candidate
-  path, rejects paid partial worksheet anchors as a row0-origin formula, and
+  boundaries, opens and exact-scores a local target-max resegmentation path,
+  promotes the resulting `8158.766094`-bit mechanical bound, rejects paid
+  partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.
 - **Historical (superseded, retained for provenance):**
   [docs/469_frozen_deliverable_2026-06-01.md](../469_frozen_deliverable_2026-06-01.md)

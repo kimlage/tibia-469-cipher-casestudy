@@ -172,6 +172,9 @@ exogenous.
 - [scripts/52_targetmax_resegmentation_candidate_audit.py](scripts/52_targetmax_resegmentation_candidate_audit.py) - tests local target-max resegmentation candidates and scores them as proxy diagnostics.
 - [reports/test_results/52_targetmax_resegmentation_candidate_audit.md](reports/test_results/52_targetmax_resegmentation_candidate_audit.md) - target-max resegmentation candidate result.
 - [reports/test_results/52_targetmax_resegmentation_candidate_audit.json](reports/test_results/52_targetmax_resegmentation_candidate_audit.json) - structured target-max resegmentation candidate ledger.
+- [scripts/53_targetmax_resegmentation_formula_gate.py](scripts/53_targetmax_resegmentation_formula_gate.py) - validates the best target-max resegmentation candidate under the exact active component scorer.
+- [reports/test_results/53_targetmax_resegmentation_formula_gate.md](reports/test_results/53_targetmax_resegmentation_formula_gate.md) - target-max resegmentation formula gate.
+- [reports/test_results/53_targetmax_resegmentation_formula_gate.json](reports/test_results/53_targetmax_resegmentation_formula_gate.json) - structured target-max resegmentation formula ledger.
 
 ## Boundary
 
@@ -313,8 +316,11 @@ exogenous.
   resegmentation problem rather than a scalar default problem. A local
   target-max resegmentation candidate audit then tests the direct rewrite:
   `42/46` candidates are valid, `5` are proxy improvements, and the best proxy
-  candidate is `-2.059513` bits at book `9` op `0`; it remains unpromoted
-  until an exact current-bound scorer or joint reparse objective validates it. The complete
+  candidate is `-2.059513` bits at book `9` op `0`. The exact formula gate
+  then validates that candidate against the active component scorer: it
+  reproduces the current `8160.825608`-bit bound and promotes the same
+  resegmentation to `8158.766094` bits, a `+2.059513`-bit compression-bound
+  gain. This changes neither `row0` origin nor semantics. The complete
   parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

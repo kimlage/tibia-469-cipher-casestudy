@@ -104,8 +104,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_second_pass_formula_469` | `8160.826` | `0.001` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_third_pass_formula_469` | `8160.8259` | `0.0005` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_substitution_fourth_pass_formula_469` | `8160.8256` | `0.0003` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_resegmentation_formula_469` | `8158.7661` | `2.0595` |
 
-The `8160.8256` row is the current `compression_bound`, not a final authorial
+The `8158.7661` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1153,6 +1154,11 @@ candidate is book `9` op `0` in `preserve_next_mode`, with delta
 `-2.059513` bits. This is not a promoted bound because the candidate total is
 a compatible-component proxy; promotion requires exact scoring under the current
 source-substitution ledger or a joint reparse objective.
+A formula gate then runs that exact scoring step. It reproduces the current
+`8160.825608`-bit bound and promotes the same book `9` op `0`
+`preserve_next_mode` resegmentation, lowering the bound to `8158.766094` bits
+for a `+2.059513`-bit gain. The gain is a mechanical compression-bound update
+only; `row0` origin, plaintext, and semantics remain unchanged.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in
@@ -1601,6 +1607,7 @@ book generation, not row0 pair-cell placement.
 - [Source canonicality tradeoff audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/50_source_canonicality_tradeoff_audit.md)
 - [Copy length segmentation exception audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/51_copy_length_segmentation_exception_audit.md)
 - [Target-max resegmentation candidate audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/52_targetmax_resegmentation_candidate_audit.md)
+- [Target-max resegmentation formula gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/53_targetmax_resegmentation_formula_gate.md)
 - [Recipe reparse evidence matrix](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/06_recipe_reparse_evidence_matrix.md)
 - [Recipe reparse train-set multi-cutoff](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/07_recipe_reparse_trainset_multicutoff.md)
 - [Recipe reparse family holdout](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.md)
