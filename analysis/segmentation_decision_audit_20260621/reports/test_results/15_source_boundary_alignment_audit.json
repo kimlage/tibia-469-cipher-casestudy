@@ -1,0 +1,285 @@
+{
+  "candidate_control_expected_hits": {
+    "all_candidate": {
+      "source_end_on_operation_boundary": 6.867220027463548,
+      "source_interval_equals_single_prior_chunk": 0.8428799232916484,
+      "source_start_on_operation_boundary": 19.641709145371905
+    },
+    "global_max_candidate": {
+      "source_end_on_operation_boundary": 28.579761904761906,
+      "source_interval_equals_single_prior_chunk": 0.3333333333333333,
+      "source_start_on_operation_boundary": 25.68717948717949
+    }
+  },
+  "case_reopened": false,
+  "classification": "source_boundary_block_hypothesis_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "source_boundary_block_hypothesis_rejected",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_dependency_status": "source_boundary_chunking_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "flag_hits": {
+    "source_end_on_book_boundary": 18,
+    "source_end_on_operation_boundary": 29,
+    "source_interval_equals_single_prior_chunk": 0,
+    "source_interval_has_no_internal_operation_boundary": 111,
+    "source_start_on_book_boundary": 17,
+    "source_start_on_operation_boundary": 28
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "integrated_parser_policy_and_drift_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/09_integrated_parser_policy_and_drift_audit.json",
+    "segmentation_trace_script": "analysis/segmentation_decision_audit_20260621/scripts/01_segmentation_decision_trace.py",
+    "structural_segmentation_hypothesis_audit": "analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.json"
+  },
+  "plaintext_claim": false,
+  "policy_scoreboard": [
+    {
+      "coverage": 0.9951923076923077,
+      "hits": 207,
+      "misses": 1,
+      "policy": "earliest",
+      "total": 208
+    },
+    {
+      "coverage": 0.9519230769230769,
+      "hits": 198,
+      "misses": 10,
+      "policy": "end_boundary_then_earliest",
+      "total": 208
+    },
+    {
+      "coverage": 0.9567307692307693,
+      "hits": 199,
+      "misses": 9,
+      "policy": "start_boundary_then_earliest",
+      "total": 208
+    },
+    {
+      "coverage": 0.9903846153846154,
+      "hits": 206,
+      "misses": 2,
+      "policy": "both_boundaries_then_earliest",
+      "total": 208
+    },
+    {
+      "coverage": 0.8028846153846154,
+      "hits": 167,
+      "misses": 41,
+      "policy": "no_internal_boundary_then_earliest",
+      "total": 208
+    }
+  ],
+  "sample_single_chunk_misses": [
+    {
+      "book": 10,
+      "flags": {
+        "internal_operation_boundary_count": 2,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": false,
+        "source_start_on_book_boundary": true,
+        "source_start_on_operation_boundary": true
+      },
+      "length": 276,
+      "op_index": 1,
+      "source": 0
+    },
+    {
+      "book": 11,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 7,
+      "op_index": 1,
+      "source": 1334
+    },
+    {
+      "book": 11,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 29,
+      "op_index": 2,
+      "source": 833
+    },
+    {
+      "book": 11,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 30,
+      "op_index": 4,
+      "source": 1349
+    },
+    {
+      "book": 11,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 58,
+      "op_index": 5,
+      "source": 862
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 19,
+      "op_index": 1,
+      "source": 314
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 12,
+      "op_index": 2,
+      "source": 853
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 10,
+      "op_index": 4,
+      "source": 12
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 14,
+      "op_index": 6,
+      "source": 446
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 12,
+      "op_index": 7,
+      "source": 207
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": true,
+        "source_start_on_operation_boundary": true
+      },
+      "length": 13,
+      "op_index": 9,
+      "source": 413
+    },
+    {
+      "book": 12,
+      "flags": {
+        "internal_operation_boundary_count": 0,
+        "source_end_on_book_boundary": false,
+        "source_end_on_operation_boundary": false,
+        "source_interval_equals_single_prior_chunk": false,
+        "source_interval_has_no_internal_operation_boundary": true,
+        "source_start_on_book_boundary": false,
+        "source_start_on_operation_boundary": false
+      },
+      "length": 31,
+      "op_index": 10,
+      "source": 1304
+    }
+  ],
+  "schema": "source_boundary_alignment_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "declared_literal_windows_granted": false,
+    "row0_origin_changed": false,
+    "source_free_digit_generator_emitted": false,
+    "target_text_required_for_candidate_enumeration": true,
+    "tests_source_side_operation_boundaries": true
+  },
+  "summary": {
+    "all_candidate_expected_source_end_on_operation_boundary": 6.867220027463548,
+    "best_boundary_policy": "both_boundaries_then_earliest",
+    "best_boundary_policy_hits": 206,
+    "boundary_policy_lift_vs_earliest": -1,
+    "copy_count": 208,
+    "earliest_global_max_hits": 207,
+    "global_max_expected_source_end_on_operation_boundary": 28.579761904761906,
+    "interpretation": "Source-side operation boundaries do not explain copy chunking. Only a small minority of declared copies start or end on an available prior operation boundary, almost none equal one prior chunk, and boundary-aware global-max tie-breakers are worse than the existing earliest-source rule.",
+    "promotes_boundary_rule": false,
+    "source_end_on_book_boundary": 18,
+    "source_end_on_operation_boundary": 29,
+    "source_interval_equals_single_prior_chunk": 0,
+    "source_interval_has_no_internal_operation_boundary": 111,
+    "source_start_on_book_boundary": 17,
+    "source_start_on_operation_boundary": 28
+  },
+  "translation_delta": "NONE"
+}

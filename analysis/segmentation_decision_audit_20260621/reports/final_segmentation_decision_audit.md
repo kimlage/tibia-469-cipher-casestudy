@@ -271,6 +271,25 @@ The richer cost family improves over crude objectives only slightly
 parser. A small linear feature cost over obvious copy/literal
 features is therefore not the missing segmentation mechanism.
 
+## Source Boundary Alignment Control
+
+Gate 15 tests the structural block/chunk hypothesis that copies
+reuse already segmented source-side operation chunks.
+
+| Boundary measure | Hits |
+|---|---:|
+| Source starts on prior operation boundary | `28/208` |
+| Source ends on prior operation boundary | `29/208` |
+| Source interval equals one prior chunk | `0/208` |
+
+- Best boundary-aware source tie policy: `both_boundaries_then_earliest` with `206/208` hits.
+- Lift vs existing earliest-source rule: `-1`.
+
+Source-side chunk boundaries do not explain the retained
+segmentation. Boundary-aware tie-breakers are worse than the
+existing earliest-source global-max rule, so the block-copy
+hypothesis is rejected as a generation mechanism.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -294,3 +313,4 @@ or changed skeleton/literal accounting.
 - [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)
 - [Global objective parser audit](test_results/13_global_objective_parser_audit.md)
 - [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)
+- [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)

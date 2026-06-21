@@ -518,6 +518,12 @@ family: literal mass, copy base cost, copy reward, short-copy penalty, and
 book-start-copy penalty. The best of `16` profiles reaches only `26/60`, still
 far below `48/60`, so a small linear cost over obvious copy/literal features is
 also rejected.
+The next structural shortcut, source-side block reuse, is also rejected.
+Declared copy sources start on prior operation boundaries only `28/208` times,
+end on them `29/208` times, and equal one prior operation chunk `0/208` times.
+Boundary-aware source tie-breakers are worse than the existing earliest-source
+global-max rule (`206/208` vs `207/208`), so operation chunking is not the
+missing segmentation mechanism.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2195,6 +2201,7 @@ book generation, not row0 pair-cell placement.
 - [Integrated parser residual context audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/12_integrated_parser_residual_context_audit.md)
 - [Global objective parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.md)
 - [Feature weighted global parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/14_feature_weighted_global_parser_audit.md)
+- [Source boundary alignment audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/15_source_boundary_alignment_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

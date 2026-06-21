@@ -896,6 +896,11 @@ the `48/60` local parser.
 A feature-weighted DP with `16` simple structural cost profiles improves only
 to `26/60`, so obvious linear copy/literal costs also do not recover the
 segmentation mechanism.
+A source-boundary alignment audit then rejects the block-copy shortcut:
+declared copy sources start on prior operation boundaries only `28/208` times,
+end on them `29/208` times, and equal one prior chunk `0/208` times.
+Boundary-aware tie-breakers lose to the existing earliest-source rule (`206/208` vs
+`207/208`), so source-side operation chunking is not the missing parser rule.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

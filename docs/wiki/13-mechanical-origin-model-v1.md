@@ -327,6 +327,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Integrated parser residual context audit | `64` observable parser-state predicates are tested against the `12` residual drifts; best `peak_len_le5` reaches only TP/FP/FN `4/3/8`, precision `0.571`, recall `0.333` | simple context rule rejected |
 | Global objective parser audit | book-local DP under six simple global objectives is stable but wrong: best `balanced_ops_literals` reaches only `23/60`, below the `48/60` window5 parser | crude global objective rejected |
 | Feature-weighted global parser audit | `16` linear cost profiles over literal mass, copy base cost, copy reward, short-copy penalty, and book-start-copy penalty top out at `26/60`, below `48/60` | small feature cost rejected |
+| Source boundary alignment audit | source-side operation/book chunk reuse fails: starts on prior operation boundaries `28/208`, ends `29/208`, single-prior-chunk copies `0/208`, and the best boundary-aware tie policy gets `206/208` vs `207/208` for earliest source | block-copy segmentation hypothesis rejected |
 | Seed primacy audit | treating books `0..9` as declared seeds covers `8664/9567` non-seed digits, below random k=10 median `9005`, while the best k=10 posthoc seed covers `9734` digits; seed-set choice remains external | `AUDIT_ONLY_COMPRESSION` / no seed-origin promotion |
 | Prequential seed selection audit | prefix-trained greedy seeds beat random median in `7/7` cells and p95 in `6/7`, but still trail suffix-oracle posthoc seeds; operational prefixes beat random median in only `1/7` | partial predictive seed signal / not promoted |
 | Seed primacy integration audit | the final seed report is integrated into the main prequential/row0 boundary; operational `0..9` is rejected, posthoc high-coverage cores stay compression-only, and prequential seed selection is partial but not promotable | seed front incorporated / no origin or row0 change |
@@ -525,6 +526,7 @@ Primary sources:
 [integrated_parser_residual_context_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/12_integrated_parser_residual_context_audit.md),
 [global_objective_parser_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.md),
 [feature_weighted_global_parser_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/14_feature_weighted_global_parser_audit.md),
+[source_boundary_alignment_audit.md](../../analysis/segmentation_decision_audit_20260621/reports/test_results/15_source_boundary_alignment_audit.md),
 [final_seed_primacy_audit.md](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md),
 [prequential_seed_selection_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md),
 [seed_requirement_closure_audit.md](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md),

@@ -23,6 +23,7 @@ PEAK_STRENGTH = TEST_RESULTS / "11_integrated_parser_peak_strength_audit.json"
 RESIDUAL_CONTEXT = TEST_RESULTS / "12_integrated_parser_residual_context_audit.json"
 GLOBAL_OBJECTIVE = TEST_RESULTS / "13_global_objective_parser_audit.json"
 FEATURE_WEIGHTED = TEST_RESULTS / "14_feature_weighted_global_parser_audit.json"
+SOURCE_BOUNDARY = TEST_RESULTS / "15_source_boundary_alignment_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -72,6 +73,7 @@ def main() -> None:
     feature_weighted = (
         load_json(FEATURE_WEIGHTED) if FEATURE_WEIGHTED.exists() else None
     )
+    source_boundary = load_json(SOURCE_BOUNDARY) if SOURCE_BOUNDARY.exists() else None
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -96,6 +98,8 @@ def main() -> None:
         assert_boundary("global_objective_parser_audit", global_objective)
     if feature_weighted is not None:
         assert_boundary("feature_weighted_global_parser_audit", feature_weighted)
+    if source_boundary is not None:
+        assert_boundary("source_boundary_alignment_audit", source_boundary)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -121,6 +125,9 @@ def main() -> None:
     )
     feature_weighted_summary = (
         None if feature_weighted is None else feature_weighted["summary"]
+    )
+    source_boundary_summary = (
+        None if source_boundary is None else source_boundary["summary"]
     )
 
     lines = [
@@ -474,6 +481,30 @@ def main() -> None:
                 "",
             ]
         )
+    if source_boundary_summary is not None:
+        lines.extend(
+            [
+                "## Source Boundary Alignment Control",
+                "",
+                "Gate 15 tests the structural block/chunk hypothesis that copies",
+                "reuse already segmented source-side operation chunks.",
+                "",
+                "| Boundary measure | Hits |",
+                "|---|---:|",
+                f"| Source starts on prior operation boundary | `{source_boundary_summary['source_start_on_operation_boundary']}/{source_boundary_summary['copy_count']}` |",
+                f"| Source ends on prior operation boundary | `{source_boundary_summary['source_end_on_operation_boundary']}/{source_boundary_summary['copy_count']}` |",
+                f"| Source interval equals one prior chunk | `{source_boundary_summary['source_interval_equals_single_prior_chunk']}/{source_boundary_summary['copy_count']}` |",
+                "",
+                f"- Best boundary-aware source tie policy: `{source_boundary_summary['best_boundary_policy']}` with `{source_boundary_summary['best_boundary_policy_hits']}/{source_boundary_summary['copy_count']}` hits.",
+                f"- Lift vs existing earliest-source rule: `{source_boundary_summary['boundary_policy_lift_vs_earliest']}`.",
+                "",
+                "Source-side chunk boundaries do not explain the retained",
+                "segmentation. Boundary-aware tie-breakers are worse than the",
+                "existing earliest-source global-max rule, so the block-copy",
+                "hypothesis is rejected as a generation mechanism.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -499,6 +530,7 @@ def main() -> None:
             "- [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)",
             "- [Global objective parser audit](test_results/13_global_objective_parser_audit.md)",
             "- [Feature weighted global parser audit](test_results/14_feature_weighted_global_parser_audit.md)",
+            "- [Source boundary alignment audit](test_results/15_source_boundary_alignment_audit.md)",
             "",
         ]
     )
