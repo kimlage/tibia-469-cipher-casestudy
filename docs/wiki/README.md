@@ -782,6 +782,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   reopens the local-window boundary with partial shifts (`2/229` exact
   improvements) and promotes the best shift to a new `8155.261037`-bit
   mechanical bound with `70/70` roundtrip,
+  promotes a second partial shift to `8154.676268` bits and then saturates the
+  remaining partial-shift frontier (`0/221` improvements),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

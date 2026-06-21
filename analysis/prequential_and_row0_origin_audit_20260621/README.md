@@ -214,6 +214,15 @@ exogenous.
 - [scripts/66_partial_boundary_shift_formula_gate.py](scripts/66_partial_boundary_shift_formula_gate.py) - promotes the best exact-scored partial boundary shift into a formula.
 - [reports/test_results/66_partial_boundary_shift_formula_gate.md](reports/test_results/66_partial_boundary_shift_formula_gate.md) - partial-boundary formula gate.
 - [reports/test_results/66_partial_boundary_shift_formula_gate.json](reports/test_results/66_partial_boundary_shift_formula_gate.json) - structured partial-boundary promotion ledger.
+- [scripts/67_partial_boundary_shift_second_pass_gate.py](scripts/67_partial_boundary_shift_second_pass_gate.py) - reruns partial-shift scoring after the first partial-boundary promotion.
+- [reports/test_results/67_partial_boundary_shift_second_pass_gate.md](reports/test_results/67_partial_boundary_shift_second_pass_gate.md) - partial-boundary second-pass result.
+- [reports/test_results/67_partial_boundary_shift_second_pass_gate.json](reports/test_results/67_partial_boundary_shift_second_pass_gate.json) - structured second-pass partial-boundary ledger.
+- [scripts/68_partial_boundary_shift_second_pass_formula_gate.py](scripts/68_partial_boundary_shift_second_pass_formula_gate.py) - promotes the second-pass partial-boundary shift into a formula.
+- [reports/test_results/68_partial_boundary_shift_second_pass_formula_gate.md](reports/test_results/68_partial_boundary_shift_second_pass_formula_gate.md) - second-pass partial-boundary formula gate.
+- [reports/test_results/68_partial_boundary_shift_second_pass_formula_gate.json](reports/test_results/68_partial_boundary_shift_second_pass_formula_gate.json) - structured second-pass promotion ledger.
+- [scripts/69_partial_boundary_shift_saturation_gate.py](scripts/69_partial_boundary_shift_saturation_gate.py) - closes the partial-boundary shift family after the two promotions.
+- [reports/test_results/69_partial_boundary_shift_saturation_gate.md](reports/test_results/69_partial_boundary_shift_saturation_gate.md) - partial-boundary saturation result.
+- [reports/test_results/69_partial_boundary_shift_saturation_gate.json](reports/test_results/69_partial_boundary_shift_saturation_gate.json) - structured partial-boundary saturation ledger.
 
 ## Boundary
 
@@ -393,7 +402,11 @@ exogenous.
   improving. The promotion gate materializes the best one, book `10` op `0`
   with `preserve_next_mode` and delta `3` of slack `72`, lowering the active
   bound from `8156.049986` to `8155.261037` bits with `70/70` roundtrip and
-  zero score errors.
+  zero score errors. A second pass then finds one more exact improvement: book
+  `46` op `1`, `preserve_next_mode`, delta `1` of slack `3`, lowering the bound
+  again to `8154.676268` bits. A saturation gate then tests the remaining
+  `221` partial-shift candidates and finds `0` improvements; the best remaining
+  valid candidate is still `-0.000163` bits worse.
   The complete parser is still unpromoted because the full active objective, adaptive counts, tie
   breaking, source/length dependencies, literal payload, and item-type ledger
   remain unresolved. A cutoff-60 prototype then reprices deterministic reparse

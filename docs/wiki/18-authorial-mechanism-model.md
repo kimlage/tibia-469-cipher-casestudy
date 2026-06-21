@@ -110,8 +110,9 @@ The follow-up benchmark compares the cost ladder directly:
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_formula_469` | `8156.0502` | `0.0002` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_formula_469` | `8156.0500` | `0.0002` |
 | `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_partial_boundary_shift_formula_469` | `8155.2610` | `0.7889` |
+| `sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_targetmax_saturated_source_substitution_second_pass_partial_boundary_shift_second_pass_formula_469` | `8154.6763` | `0.5848` |
 
-The `8155.2610` row is the current `compression_bound`, not a final authorial
+The `8154.6763` row is the current `compression_bound`, not a final authorial
 method. From this point, mainline progress requires holdout behavior,
 structural mechanism, simplification, or row0/table-origin evidence rather than
 more small post-hoc component sweeps.
@@ -1231,6 +1232,14 @@ in `preserve_next_mode` with delta `3` of slack `72`, lowering the mechanical
 bound from `8156.049986` to `8155.261037` bits with `70/70` roundtrip. The
 gain is source-ledger driven (`copy_source_bits -0.997536`, `copy_length_bits +0.208587`)
 and changes neither `row0` origin nor semantics.
+A second partial-boundary pass then promotes book `46` op `1`, also in
+`preserve_next_mode`, with delta `1` of slack `3`. It lowers the bound again
+from `8155.261037` to `8154.676268` bits with `70/70` roundtrip. The gain is
+copy-length-ledger driven (`copy_length_bits -0.584963`, `copy_source_bits +0.000194`).
+A saturation gate then tests `221` remaining partial-shift
+candidates, finds `0` improvements, and leaves the best valid remaining shift
+`-0.000163` bits worse. This closes the local partial-shift family at the
+current scorer.
 A cutoff-60 source-state prototype then executes the cheaper next step by
 repricing deterministic reparse recipes with the active `previous_copy_end`
 source ledger. It roundtrips `10/10` held-out books, beats raw digit coding in

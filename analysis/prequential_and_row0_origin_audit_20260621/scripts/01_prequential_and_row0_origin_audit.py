@@ -301,6 +301,30 @@ PARTIAL_BOUNDARY_SHIFT_FORMULA_GATE = (
     / "test_results"
     / "66_partial_boundary_shift_formula_gate.json"
 )
+PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "67_partial_boundary_shift_second_pass_gate.json"
+)
+PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_FORMULA_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "68_partial_boundary_shift_second_pass_formula_gate.json"
+)
+PARTIAL_BOUNDARY_SHIFT_SATURATION_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "69_partial_boundary_shift_saturation_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -653,6 +677,27 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "partial_boundary_shift_formula_gate",
         partial_boundary_shift_formula,
+    )
+    partial_boundary_shift_second_pass = load_json(
+        PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_GATE
+    )
+    assert_analysis_boundary(
+        "partial_boundary_shift_second_pass_gate",
+        partial_boundary_shift_second_pass,
+    )
+    partial_boundary_shift_second_pass_formula = load_json(
+        PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_FORMULA_GATE
+    )
+    assert_analysis_boundary(
+        "partial_boundary_shift_second_pass_formula_gate",
+        partial_boundary_shift_second_pass_formula,
+    )
+    partial_boundary_shift_saturation = load_json(
+        PARTIAL_BOUNDARY_SHIFT_SATURATION_GATE
+    )
+    assert_analysis_boundary(
+        "partial_boundary_shift_saturation_gate",
+        partial_boundary_shift_saturation,
     )
 
     predictive = legacy["predictive_validation"]
@@ -1031,6 +1076,29 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "summary": partial_boundary_shift_formula["summary"],
             "decision": partial_boundary_shift_formula["decision"],
         },
+        "partial_boundary_shift_second_pass": {
+            "classification": partial_boundary_shift_second_pass["classification"],
+            "source": rel(PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_GATE),
+            "scope": partial_boundary_shift_second_pass["scope"],
+            "summary": partial_boundary_shift_second_pass["summary"],
+            "decision": partial_boundary_shift_second_pass["decision"],
+        },
+        "partial_boundary_shift_second_pass_formula": {
+            "classification": partial_boundary_shift_second_pass_formula[
+                "classification"
+            ],
+            "source": rel(PARTIAL_BOUNDARY_SHIFT_SECOND_PASS_FORMULA_GATE),
+            "scope": partial_boundary_shift_second_pass_formula["scope"],
+            "summary": partial_boundary_shift_second_pass_formula["summary"],
+            "decision": partial_boundary_shift_second_pass_formula["decision"],
+        },
+        "partial_boundary_shift_saturation": {
+            "classification": partial_boundary_shift_saturation["classification"],
+            "source": rel(PARTIAL_BOUNDARY_SHIFT_SATURATION_GATE),
+            "scope": partial_boundary_shift_saturation["scope"],
+            "summary": partial_boundary_shift_saturation["summary"],
+            "decision": partial_boundary_shift_saturation["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -1087,6 +1155,9 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "active_exception_finite_state_status": "finite_state_contexts_do_not_replace_explicit_exception_list",
             "active_exception_partial_boundary_shift_status": "partial_shift_candidate_found",
             "partial_boundary_shift_formula_status": "promoted_bound_8155_261037",
+            "partial_boundary_shift_second_pass_status": "second_partial_shift_candidate_found",
+            "partial_boundary_shift_second_pass_formula_status": "promoted_bound_8154_676268",
+            "partial_boundary_shift_saturation_status": "saturated_no_remaining_partial_shift_improvements",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1159,6 +1230,9 @@ def render_markdown(
     active_exception_finite_state_model_gate_link: str,
     active_exception_partial_boundary_shift_gate_link: str,
     partial_boundary_shift_formula_gate_link: str,
+    partial_boundary_shift_second_pass_gate_link: str,
+    partial_boundary_shift_second_pass_formula_gate_link: str,
+    partial_boundary_shift_saturation_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1247,6 +1321,11 @@ def render_markdown(
     finite_state = result["active_exception_finite_state_model"]["summary"]
     partial_shift = result["active_exception_partial_boundary_shift"]["summary"]
     partial_shift_formula = result["partial_boundary_shift_formula"]["summary"]
+    partial_shift_second = result["partial_boundary_shift_second_pass"]["summary"]
+    partial_shift_second_formula = result["partial_boundary_shift_second_pass_formula"][
+        "summary"
+    ]
+    partial_shift_saturation = result["partial_boundary_shift_saturation"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2240,6 +2319,50 @@ def render_markdown(
             f"`{partial_shift_formula['component_delta_bits']}`.",
             f"See [66_partial_boundary_shift_formula_gate.md]({partial_boundary_shift_formula_gate_link}).",
             "",
+            "### Partial Boundary Shift Second Pass",
+            "",
+            "After the first partial shift promotion, the second-pass gate "
+            "recomputes active topology and exact-scores the remaining local "
+            "partial shifts. It tests "
+            f"`{partial_shift_second['candidate_count']}` candidates, with "
+            f"`{partial_shift_second['valid_candidate_count']}` valid and "
+            f"`{partial_shift_second['improving_candidate_count']}` improving. "
+            "The surviving candidate is book "
+            f"`{partial_shift_second['best_valid_candidate']['book']}` op "
+            f"`{partial_shift_second['best_valid_candidate']['op_index']}`, "
+            "delta "
+            f"`{partial_shift_second['best_valid_candidate']['delta']}` of "
+            f"slack `{partial_shift_second['best_valid_candidate']['target_max_slack']}`, "
+            "with gain "
+            f"`{partial_shift_second['best_valid_candidate']['candidate_gain_bits']:+.6f}` "
+            "bits.",
+            f"See [67_partial_boundary_shift_second_pass_gate.md]({partial_boundary_shift_second_pass_gate_link}).",
+            "",
+            "### Partial Boundary Shift Second-Pass Formula Gate",
+            "",
+            "The second promotion gate materializes that candidate with `70/70` "
+            "roundtrip and exact scorer agreement. The bound moves from "
+            f"`{partial_shift_second_formula['current_total_bits']:.6f}` to "
+            f"`{partial_shift_second_formula['candidate_total_bits']:.6f}` bits, "
+            "a "
+            f"`{partial_shift_second_formula['candidate_gain_bits']:+.6f}` bit "
+            "gain. Component delta is "
+            f"`{partial_shift_second_formula['component_delta_bits']}`.",
+            f"See [68_partial_boundary_shift_second_pass_formula_gate.md]({partial_boundary_shift_second_pass_formula_gate_link}).",
+            "",
+            "### Partial Boundary Shift Saturation Gate",
+            "",
+            "A saturation gate then reruns the same partial-shift family after "
+            "both promotions. It tests "
+            f"`{partial_shift_saturation['candidate_count']}` candidates, with "
+            f"`{partial_shift_saturation['valid_candidate_count']}` valid and "
+            f"`{partial_shift_saturation['improving_candidate_count']}` improving. "
+            "The best remaining valid candidate is still "
+            f"`{partial_shift_saturation['best_valid_candidate']['candidate_gain_bits']:+.6f}` "
+            "bits, so this local partial-shift frontier is closed at "
+            "`8154.676268` bits.",
+            f"See [69_partial_boundary_shift_saturation_gate.md]({partial_boundary_shift_saturation_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2352,6 +2475,7 @@ def render_markdown(
             "- The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.",
             "- The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.",
             "- The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.",
+            "- A second partial-boundary pass promotes book `46` op `1` delta `1`, lowering the bound again to `8154.676268` bits; a saturation gate then finds `0/221` remaining improvements.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2527,6 +2651,15 @@ def main() -> None:
             ),
             partial_boundary_shift_formula_gate_link=(
                 "66_partial_boundary_shift_formula_gate.md"
+            ),
+            partial_boundary_shift_second_pass_gate_link=(
+                "67_partial_boundary_shift_second_pass_gate.md"
+            ),
+            partial_boundary_shift_second_pass_formula_gate_link=(
+                "68_partial_boundary_shift_second_pass_formula_gate.md"
+            ),
+            partial_boundary_shift_saturation_gate_link=(
+                "69_partial_boundary_shift_saturation_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2708,6 +2841,15 @@ def main() -> None:
             ),
             partial_boundary_shift_formula_gate_link=(
                 "test_results/66_partial_boundary_shift_formula_gate.md"
+            ),
+            partial_boundary_shift_second_pass_gate_link=(
+                "test_results/67_partial_boundary_shift_second_pass_gate.md"
+            ),
+            partial_boundary_shift_second_pass_formula_gate_link=(
+                "test_results/68_partial_boundary_shift_second_pass_formula_gate.md"
+            ),
+            partial_boundary_shift_saturation_gate_link=(
+                "test_results/69_partial_boundary_shift_saturation_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(

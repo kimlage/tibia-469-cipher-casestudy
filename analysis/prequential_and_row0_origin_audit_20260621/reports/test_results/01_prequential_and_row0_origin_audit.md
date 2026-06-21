@@ -810,6 +810,21 @@ See [65_active_exception_partial_boundary_shift_gate.md](65_active_exception_par
 A promotion gate then reapplies that best partial shift, validates the exact scorer and `70/70` roundtrip, and materializes a new mechanical formula. The bound moves from `8156.049986` to `8155.261037` bits, a `+0.788949` bit gain. The component delta is source-driven: `{'copy_length_bits': 0.2085866218112642, 'copy_source_bits': -0.9975359600484808, 'item_type_bits': 0.0, 'literal_bits_no_payload': 0.0, 'literal_payload_bits': 0.0}`.
 See [66_partial_boundary_shift_formula_gate.md](66_partial_boundary_shift_formula_gate.md).
 
+### Partial Boundary Shift Second Pass
+
+After the first partial shift promotion, the second-pass gate recomputes active topology and exact-scores the remaining local partial shifts. It tests `223` candidates, with `207` valid and `1` improving. The surviving candidate is book `46` op `1`, delta `1` of slack `3`, with gain `+0.584769` bits.
+See [67_partial_boundary_shift_second_pass_gate.md](67_partial_boundary_shift_second_pass_gate.md).
+
+### Partial Boundary Shift Second-Pass Formula Gate
+
+The second promotion gate materializes that candidate with `70/70` roundtrip and exact scorer agreement. The bound moves from `8155.261037` to `8154.676268` bits, a `+0.584769` bit gain. Component delta is `{'copy_length_bits': -0.5849625007213035, 'copy_source_bits': 0.0001937934102897998, 'item_type_bits': 0.0, 'literal_bits_no_payload': 0.0, 'literal_payload_bits': 0.0}`.
+See [68_partial_boundary_shift_second_pass_formula_gate.md](68_partial_boundary_shift_second_pass_formula_gate.md).
+
+### Partial Boundary Shift Saturation Gate
+
+A saturation gate then reruns the same partial-shift family after both promotions. It tests `221` candidates, with `205` valid and `0` improving. The best remaining valid candidate is still `-0.000163` bits, so this local partial-shift frontier is closed at `8154.676268` bits.
+See [69_partial_boundary_shift_saturation_gate.md](69_partial_boundary_shift_saturation_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -913,6 +928,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - The active exception stop-rule separability gate finds `0` exact simple separators for the `19` residual boundaries; the best rule has F1 `0.265060`, many false positives, and is not decoder-valid.
 - The active exception finite-state model gate tests `231` online context models; the best costs `112.749463` bits, `+17.943077` worse than an explicit exception list, with permutation `p=0.638000`.
 - The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.
+- A second partial-boundary pass promotes book `46` op `1` delta `1`, lowering the bound again to `8154.676268` bits; a saturation gate then finds `0/221` remaining improvements.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.
