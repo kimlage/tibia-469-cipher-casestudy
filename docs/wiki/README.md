@@ -890,6 +890,9 @@ ties while trading understops for missed-copy/overstop failures.
 A residual-context audit then tests `64` simple parser-state predicates; the
 best flag catches only `4/12` residual drifts with `3` false positives, so the
 remaining boundary problem is not a single local context rule.
+A global-objective parser audit then rejects the broad shortcut too: book-local
+DP under simple operation/literal/copy objectives tops out at `23/60`, below
+the `48/60` local parser.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

@@ -229,6 +229,28 @@ errors only by creating many false positives. The remaining drift
 therefore looks like a mixed path/state problem rather than a
 single observable local context rule.
 
+## Global Objective Parser Control
+
+Gate 13 tests a broader path-state hypothesis: dynamic programming
+per book under simple global objectives over operations, literal
+mass, and copy mass, without declared operation starts.
+
+| Parser family | Best exact books | Boundary |
+|---|---:|---|
+| Window-5 local parser | `48/60` | retained baseline |
+| Simple global objectives | `23/60` | rejected |
+
+- Best objective: `balanced_ops_literals`.
+- Exact-book delta vs window5: `-25`.
+- Prequential selected objective matches suffix oracle in `5/5` cells.
+
+The global DP objectives are stable but wrong: the best reaches only
+`23/60`, far below the `48/60` local-parser baseline. Simple
+global minimization of ops, literals, copies, or copy mass therefore
+does not explain the retained stable segmentation. Any next path-state
+model needs a richer learned or structural cost, not a crude global
+objective.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy. It is a
@@ -250,3 +272,4 @@ or changed skeleton/literal accounting.
 - [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)
 - [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)
 - [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)
+- [Global objective parser audit](test_results/13_global_objective_parser_audit.md)

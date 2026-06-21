@@ -507,6 +507,12 @@ candidate correction flags. The best, `peak_len_le5`, reaches only TP/FP/FN
 `0.333`; prefix-selected predicates match the suffix oracle in only `2/5`
 cells. The residual frontier is therefore not closed by a single simple local
 context flag.
+A global-objective parser audit then tests the broader path-state shortcut:
+book-local dynamic programming under six simple objectives over operation
+count, literal mass, and copy mass. The objectives are stable under prefix
+selection but wrong; the best reaches only `23/60`, far below the `48/60`
+window5 parser. This rejects crude global optimization as the missing
+segmentation rule.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2182,6 +2188,7 @@ book generation, not row0 pair-cell placement.
 - [Integrated parser override audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/10_integrated_parser_override_audit.md)
 - [Integrated parser peak strength audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/11_integrated_parser_peak_strength_audit.md)
 - [Integrated parser residual context audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/12_integrated_parser_residual_context_audit.md)
+- [Global objective parser audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/13_global_objective_parser_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

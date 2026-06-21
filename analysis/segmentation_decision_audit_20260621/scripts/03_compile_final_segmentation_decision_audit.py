@@ -21,6 +21,7 @@ POLICY_DRIFT = TEST_RESULTS / "09_integrated_parser_policy_and_drift_audit.json"
 OVERRIDE = TEST_RESULTS / "10_integrated_parser_override_audit.json"
 PEAK_STRENGTH = TEST_RESULTS / "11_integrated_parser_peak_strength_audit.json"
 RESIDUAL_CONTEXT = TEST_RESULTS / "12_integrated_parser_residual_context_audit.json"
+GLOBAL_OBJECTIVE = TEST_RESULTS / "13_global_objective_parser_audit.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -64,6 +65,9 @@ def main() -> None:
     residual_context = (
         load_json(RESIDUAL_CONTEXT) if RESIDUAL_CONTEXT.exists() else None
     )
+    global_objective = (
+        load_json(GLOBAL_OBJECTIVE) if GLOBAL_OBJECTIVE.exists() else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -84,6 +88,8 @@ def main() -> None:
         assert_boundary("integrated_parser_peak_strength_audit", peak_strength)
     if residual_context is not None:
         assert_boundary("integrated_parser_residual_context_audit", residual_context)
+    if global_objective is not None:
+        assert_boundary("global_objective_parser_audit", global_objective)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -103,6 +109,9 @@ def main() -> None:
     peak_summary = None if peak_strength is None else peak_strength["summary"]
     residual_context_summary = (
         None if residual_context is None else residual_context["summary"]
+    )
+    global_objective_summary = (
+        None if global_objective is None else global_objective["summary"]
     )
 
     lines = [
@@ -404,6 +413,33 @@ def main() -> None:
                 "",
             ]
         )
+    if global_objective_summary is not None:
+        lines.extend(
+            [
+                "## Global Objective Parser Control",
+                "",
+                "Gate 13 tests a broader path-state hypothesis: dynamic programming",
+                "per book under simple global objectives over operations, literal",
+                "mass, and copy mass, without declared operation starts.",
+                "",
+                "| Parser family | Best exact books | Boundary |",
+                "|---|---:|---|",
+                f"| Window-5 local parser | `{global_objective_summary['baseline_window5_exact_books']}/60` | retained baseline |",
+                f"| Simple global objectives | `{global_objective_summary['best_exact_books']}/60` | rejected |",
+                "",
+                f"- Best objective: `{global_objective_summary['best_objective']}`.",
+                f"- Exact-book delta vs window5: `{global_objective_summary['exact_improvement_vs_window5']}`.",
+                f"- Prequential selected objective matches suffix oracle in `{global_objective_summary['prequential_selected_matches_oracle_cells']}/{global_objective_summary['prequential_cells']}` cells.",
+                "",
+                "The global DP objectives are stable but wrong: the best reaches only",
+                "`23/60`, far below the `48/60` local-parser baseline. Simple",
+                "global minimization of ops, literals, copies, or copy mass therefore",
+                "does not explain the retained stable segmentation. Any next path-state",
+                "model needs a richer learned or structural cost, not a crude global",
+                "objective.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -427,6 +463,7 @@ def main() -> None:
             "- [Integrated parser override audit](test_results/10_integrated_parser_override_audit.md)",
             "- [Integrated parser peak strength audit](test_results/11_integrated_parser_peak_strength_audit.md)",
             "- [Integrated parser residual context audit](test_results/12_integrated_parser_residual_context_audit.md)",
+            "- [Global objective parser audit](test_results/13_global_objective_parser_audit.md)",
             "",
         ]
     )
