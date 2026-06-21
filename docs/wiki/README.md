@@ -1248,6 +1248,9 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   records source-interval context as a weak non-promoted clue (`5/10`
   residuals, `p=0.002`, but `189` clean false changes and `0/4` cover-all
   holdout cells),
+  gates that source-interval clue with observable predicates but still does
+  not promote it (`5/10` residuals with `4` clean false changes; best zero-FP
+  rule `3/10`),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   integrates the Chayenne public-surface audit as a narrow provenance clue:

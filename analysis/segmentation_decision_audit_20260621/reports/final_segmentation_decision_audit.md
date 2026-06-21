@@ -1097,6 +1097,31 @@ choice, but it changes `189` clean controls and has no
 prefix/holdout split that covers all residuals. It therefore
 does not remove the retained source/length dependency.
 
+## Source Interval Precision Gate
+
+Gate 51 tests whether the gate-50 source-interval weak clue
+can be turned into a precise repair rule. A source-interval
+policy may fire only when an observable predicate says it is
+safe; otherwise the active branch is retained.
+
+| Diagnostic | Value |
+|---|---:|
+| Policies | `12` |
+| Predicates | `1780` |
+| Scored rules | `30720` |
+| Best rule | `max_payload_occurrences` / `changes_type_eq_True__and__source_target_interval_distance_ge_3` |
+| Best residual hits | `5/10` |
+| Best clean false changes | `4` |
+| Best zero-FP residual hits | `3/10` |
+| Prequential cover-all-residual cells | `0/4` |
+
+The source-interval signal still does not promote. Predicate
+gating reduces the destructive `189` clean false changes from
+gate 50 to `4` in the best full-fit rule, but that rule still
+misses half the residuals and is not clean. The best zero-FP
+rule covers only `3/10`, and prefix/holdout never covers all
+held-out residuals.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -1146,6 +1171,9 @@ Gate 50 records a source-interval weak clue: source-target
 neighborhood similarity catches `5/10` residuals, but only by
 changing `189` clean controls and with `0/4` cover-all
 holdout cells.
+Gate 51 then gates that source-interval signal with observable
+predicates; the best full-fit rule still has `4` clean false
+changes, and the best zero-FP rule covers only `3/10` residuals.
 The remaining blocker is a richer latent path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
@@ -1205,3 +1233,4 @@ or the stable projection as an oracle.
 - [Residual site detector gate](test_results/48_residual_site_detector_gate.md)
 - [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)
 - [Source interval context gate](test_results/50_source_interval_context_gate.md)
+- [Source interval precision gate](test_results/51_source_interval_precision_gate.md)

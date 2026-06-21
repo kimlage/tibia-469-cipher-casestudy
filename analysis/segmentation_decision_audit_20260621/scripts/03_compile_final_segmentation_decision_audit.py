@@ -65,6 +65,7 @@ BRANCH_RANK_EXCEPTION_COST = (
 RESIDUAL_SITE_DETECTOR = TEST_RESULTS / "48_residual_site_detector_gate.json"
 BOOK_SKELETON_ALIGNMENT = TEST_RESULTS / "49_book_skeleton_alignment_gate.json"
 SOURCE_INTERVAL_CONTEXT = TEST_RESULTS / "50_source_interval_context_gate.json"
+SOURCE_INTERVAL_PRECISION = TEST_RESULTS / "51_source_interval_precision_gate.json"
 FINAL = REPORTS / "final_segmentation_decision_audit.md"
 
 
@@ -238,6 +239,11 @@ def main() -> None:
         if SOURCE_INTERVAL_CONTEXT.exists()
         else None
     )
+    source_interval_precision = (
+        load_json(SOURCE_INTERVAL_PRECISION)
+        if SOURCE_INTERVAL_PRECISION.exists()
+        else None
+    )
     assert_boundary("segmentation_decision_trace", trace)
     assert_boundary("structural_segmentation_hypothesis", structural)
     if dependency is not None:
@@ -338,6 +344,8 @@ def main() -> None:
         assert_boundary("book_skeleton_alignment_gate", book_skeleton_alignment)
     if source_interval_context is not None:
         assert_boundary("source_interval_context_gate", source_interval_context)
+    if source_interval_precision is not None:
+        assert_boundary("source_interval_precision_gate", source_interval_precision)
 
     ts = trace["summary"]
     ss = structural["summary"]
@@ -477,6 +485,11 @@ def main() -> None:
         None
         if source_interval_context is None
         else source_interval_context["summary"]
+    )
+    source_interval_precision_summary = (
+        None
+        if source_interval_precision is None
+        else source_interval_precision["summary"]
     )
 
     lines = [
@@ -1843,6 +1856,36 @@ def main() -> None:
                 "",
             ]
         )
+    if source_interval_precision_summary is not None:
+        lines.extend(
+            [
+                "## Source Interval Precision Gate",
+                "",
+                "Gate 51 tests whether the gate-50 source-interval weak clue",
+                "can be turned into a precise repair rule. A source-interval",
+                "policy may fire only when an observable predicate says it is",
+                "safe; otherwise the active branch is retained.",
+                "",
+                "| Diagnostic | Value |",
+                "|---|---:|",
+                f"| Policies | `{source_interval_precision_summary['policy_count']}` |",
+                f"| Predicates | `{source_interval_precision_summary['predicate_count']}` |",
+                f"| Scored rules | `{source_interval_precision_summary['scored_rule_count']}` |",
+                f"| Best rule | `{source_interval_precision_summary['best_policy']}` / `{source_interval_precision_summary['best_predicate']}` |",
+                f"| Best residual hits | `{source_interval_precision_summary['best_residual_hits']}/{source_interval_precision_summary['best_residual_total']}` |",
+                f"| Best clean false changes | `{source_interval_precision_summary['best_clean_false_changes']}` |",
+                f"| Best zero-FP residual hits | `{source_interval_precision_summary['best_zero_fp_residual_hits']}/{source_interval_precision_summary['best_zero_fp_residual_total']}` |",
+                f"| Prequential cover-all-residual cells | `{source_interval_precision_summary['prequential_cover_all_residual_cells']}/{source_interval_precision_summary['prequential_cells_with_residuals']}` |",
+                "",
+                "The source-interval signal still does not promote. Predicate",
+                "gating reduces the destructive `189` clean false changes from",
+                "gate 50 to `4` in the best full-fit rule, but that rule still",
+                "misses half the residuals and is not clean. The best zero-FP",
+                "rule covers only `3/10`, and prefix/holdout never covers all",
+                "held-out residuals.",
+                "",
+            ]
+        )
     lines.extend(
         [
             "## Next Blocker",
@@ -1894,6 +1937,9 @@ def main() -> None:
             "neighborhood similarity catches `5/10` residuals, but only by",
             "changing `189` clean controls and with `0/4` cover-all",
             "holdout cells.",
+            "Gate 51 then gates that source-interval signal with observable",
+            "predicates; the best full-fit rule still has `4` clean false",
+            "changes, and the best zero-FP rule covers only `3/10` residuals.",
             "The remaining blocker is a richer latent path/state",
             "segmentation account for why the parser waits, copies, or",
             "understops at the remaining mixed residual sites, or a source-free",
@@ -1953,6 +1999,7 @@ def main() -> None:
             "- [Residual site detector gate](test_results/48_residual_site_detector_gate.md)",
             "- [Book skeleton alignment gate](test_results/49_book_skeleton_alignment_gate.md)",
             "- [Source interval context gate](test_results/50_source_interval_context_gate.md)",
+            "- [Source interval precision gate](test_results/51_source_interval_precision_gate.md)",
             "",
         ]
     )
