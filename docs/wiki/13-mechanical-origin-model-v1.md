@@ -271,6 +271,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Row0 next-frontier audit | lookup baseline is `160.521` bits; 13 worksheet anchors reduce nominal residual lookup to `106.343` bits before anchor/source costs, while ordered-surface facts (`39` absent, `19/91` conflict, `54/55` purity) promote only a mechanical clue | no origin formula / primary source or paid anchor reduction required |
 | Row0 paid anchor reduction gate | all 13 worksheet anchors save `54.178` bits only before costs; after explicit pair+label cost the net is `-11.852` bits, and rare-singleton anchors only break even despite strong nominal controls | partial worksheet remains descriptive / no origin formula |
 | Recent formula row0 compatibility audit | partial-boundary book-formula improvements lower the downstream bound to `8154.676268`, but no gate predicts row0 labels under holdout, beats row0 lookup after costs, explains `39`/`93`/`19/91`, or adds CipSoft/authorial provenance | row0 unchanged / book formula only |
+| Final formula dependency refresh | the `8154.676268` formula still has `609` retained operation dependency fields; target-max coverage stays `242/261`, declared-source+decoder-max `60/261`, unique-source+decoder-max `28/261`, and previous-end+decoder-max `1/261` | source/length parser still required |
 | Tape MDL gain | Rough total gain `6597.1` bits over literal module table | accepted compression evidence |
 | Residual exact repeats | MDL-pruned `exact_repeat` covers `1683/2083` residual digits; about `400` digits remain literal | accepted secondary mechanical layer |
 | Chayenne holdout | minLen=8 coverage `45/49`; Avar Tar minLen=8 coverage `0/115` | secondary validation only |
@@ -409,6 +410,7 @@ Primary sources:
 [row0_next_frontier_report.md](../../analysis/row0_origin_parallel_20260621/reports/row0_next_frontier_report.md),
 [row0_paid_anchor_reduction_gate.md](../../analysis/row0_origin_parallel_20260621/reports/test_results/159_row0_paid_anchor_reduction_gate.md),
 [recent_formula_row0_compatibility_audit.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/70_recent_formula_row0_compatibility_audit.md),
+[final_formula_dependency_refresh_gate.md](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.md),
 [prequential_recipe_reparse_audit.md](../../analysis/authorial_mechanism_20260620/reports/test_results/126_prequential_recipe_reparse_audit.md),
 [prequential_recipe_reparse_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/127_prequential_recipe_reparse_controls.md),
 [prequential_recipe_reparse_trainset_controls.md](../../analysis/authorial_mechanism_20260620/reports/test_results/128_prequential_recipe_reparse_trainset_controls.md),

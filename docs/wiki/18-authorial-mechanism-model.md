@@ -123,6 +123,13 @@ row0: no recent formula gate predicts row0 labels under holdout, beats lookup
 after paid anchor/rule costs, explains `39`/`93`/`19/91`, or adds
 CipSoft/authorial provenance. The result is `row0 unchanged`.
 
+The final dependency refresh adds the mechanical boundary for the current
+formula: the `8154.6763`-bit bound still retains `609` operation dependency
+fields, with source/length derivation unchanged at declared-source+decoder-max
+`60/261`, unique-source+decoder-max `28/261`, and previous-end+decoder-max
+`1/261`. The next real formula work remains source/length parser derivation,
+not another local boundary-shift pass.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`

@@ -226,6 +226,9 @@ exogenous.
 - [scripts/70_recent_formula_row0_compatibility_audit.py](scripts/70_recent_formula_row0_compatibility_audit.py) - checks whether the latest book-formula promotions change the independent row0-origin conclusion.
 - [reports/test_results/70_recent_formula_row0_compatibility_audit.md](reports/test_results/70_recent_formula_row0_compatibility_audit.md) - recent formula / row0 compatibility result.
 - [reports/test_results/70_recent_formula_row0_compatibility_audit.json](reports/test_results/70_recent_formula_row0_compatibility_audit.json) - structured compatibility ledger.
+- [scripts/71_final_formula_dependency_refresh_gate.py](scripts/71_final_formula_dependency_refresh_gate.py) - refreshes the source/length dependency scoreboard on the final `8154.676268`-bit formula.
+- [reports/test_results/71_final_formula_dependency_refresh_gate.md](reports/test_results/71_final_formula_dependency_refresh_gate.md) - final formula dependency refresh.
+- [reports/test_results/71_final_formula_dependency_refresh_gate.json](reports/test_results/71_final_formula_dependency_refresh_gate.json) - structured final dependency ledger.
 
 ## Boundary
 
@@ -433,6 +436,11 @@ exogenous.
   book-generation formula, with no row0-label holdout predictor, no lookup-cost
   reduction after paid anchors, no explanation of `39`/`93`/`19/91`, and no new
   CipSoft/authorial provenance.
+- The final formula dependency refresh then checks whether those promotions
+  changed the structural source/length frontier. They did not: target-max
+  coverage remains `242/261`, declared-source+decoder-max remains `60/261`,
+  unique-source+decoder-max remains `28/261`, previous-end+decoder-max remains
+  `1/261`, and retained operation dependency fields remain `609`.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

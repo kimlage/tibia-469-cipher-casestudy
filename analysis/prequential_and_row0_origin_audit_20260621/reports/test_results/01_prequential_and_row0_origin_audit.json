@@ -4097,6 +4097,7 @@
     "copy_source_state_compression_status": "previous_pair_state_compressed_to_previous_end",
     "current_active_profile_status": "8177_bound_validated_recipe_discovery_blocked",
     "current_formula_dependency_status": "structural_source_length_parser_is_next_mainline",
+    "final_formula_dependency_refresh_status": "source_length_dependency_boundary_unchanged",
     "full_corpus_source_path_formula_status": "fixed_recipe_source_path_improves_bound_to_8162_412",
     "generation_explanation_status": "predictive_signal_partial_not_generation_method",
     "global_source_path_optimizer_status": "fixed_segmentation_global_source_path_improves_unpromoted",
@@ -4131,6 +4132,90 @@
     "targetmax_resegmentation_saturation_status": "promoted_bound_8156_050355_saturated",
     "targetmax_resegmentation_second_pass_status": "promoted_bound_8157_065654",
     "translation_or_plaintext_status": "NONE"
+  },
+  "final_formula_dependency_refresh": {
+    "classification": "final_formula_dependency_refresh_decoder_boundary_unchanged",
+    "decision": {
+      "compression_bound_status": "unchanged_8154_676268",
+      "generation_explanation_status": "book_formula_bound_improved_dependency_boundary_unchanged",
+      "row0_origin_status": "unchanged_exogenous",
+      "source_length_joint_status": "source_length_parser_still_required",
+      "translation_or_plaintext_status": "NONE"
+    },
+    "declared_dependency_counts": {
+      "copied_digits": 10407,
+      "copy_op_count": 261,
+      "declared_copy_length_fields": 261,
+      "declared_copy_source_fields": 261,
+      "declared_literal_payload_fields": 87,
+      "declared_operation_dependency_fields": 609,
+      "literal_digits": 856,
+      "literal_op_count": 87,
+      "op_count": 348
+    },
+    "deltas_vs_gate60_active": {
+      "copied_digits": 0,
+      "copy_event_count": 0,
+      "decoder_max_length_hits_after_declared_source": 0,
+      "earliest_source_hits_at_declared_length": 0,
+      "encoder_target_max_length_hits_after_declared_source": 0,
+      "joint_declared_source_decoder_max_hits": 0,
+      "joint_encoder_earliest_target_max_hits": 0,
+      "joint_previous_end_decoder_max_hits": 0,
+      "joint_unique_source_decoder_max_hits": 0,
+      "joint_unique_source_target_max_hits": 0,
+      "latest_source_hits_at_declared_length": 0,
+      "unique_source_hits_at_declared_length": 0
+    },
+    "final_formula_summary": {
+      "copied_digits": 10407,
+      "copy_event_count": 261,
+      "decoder_max_length_hits_after_declared_source": 60,
+      "earliest_source_hits_at_declared_length": 247,
+      "encoder_target_max_length_hits_after_declared_source": 242,
+      "joint_declared_source_decoder_max_hits": 60,
+      "joint_encoder_earliest_target_max_hits": 230,
+      "joint_previous_end_decoder_max_hits": 1,
+      "joint_unique_source_decoder_max_hits": 28,
+      "joint_unique_source_target_max_hits": 118,
+      "latest_source_hits_at_declared_length": 128,
+      "permutation_controls": {
+        "decoder_max_hit_summary": {
+          "max": 8,
+          "mean": 1.934,
+          "median": 2.0,
+          "min": 0,
+          "n": 1000
+        },
+        "p_permuted_decoder_max_hits_ge_observed": 0.0,
+        "p_permuted_target_max_hits_ge_observed": 0.0,
+        "seed": 469,
+        "target_max_hit_summary": {
+          "max": 16,
+          "mean": 7.288,
+          "median": 7.0,
+          "min": 0,
+          "n": 1000
+        },
+        "trials": 1000
+      },
+      "unique_source_hits_at_declared_length": 123
+    },
+    "source": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json",
+    "summary": {
+      "copy_event_count": 261,
+      "declared_operation_dependency_fields": 609,
+      "declared_source_decoder_max_delta_after_partial_shifts": 0,
+      "decoder_valid_joint_rule_improved": false,
+      "encoder_targetmax_rule_improved": false,
+      "final_total_bits": 8154.676268216349,
+      "interpretation": "The final partial-boundary promotions improve the compression bound, but they do not change the source/length dependency scoreboard: encoder target-max coverage and every decoder-valid joint rule remain unchanged versus the gate-60 active formula. The next mechanical blocker remains a source/length parser or derivation, not another local boundary shift.",
+      "previous_end_decoder_max_delta_after_partial_shifts": 0,
+      "previous_gate60_active_bound_bits": null,
+      "structural_blocker": "source_length_parser_still_required",
+      "target_max_hit_delta_after_partial_shifts": 0,
+      "unique_source_decoder_max_delta_after_partial_shifts": 0
+    }
   },
   "full_corpus_source_path_formula": {
     "candidate_output_formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_path_optimized_formula_469.json",

@@ -831,6 +831,13 @@ A compatibility gate then asks whether those recent book-formula promotions chan
 Result: `book_generation_improved_row0_unchanged`; `row0 unchanged`.
 See [70_recent_formula_row0_compatibility_audit.md](70_recent_formula_row0_compatibility_audit.md).
 
+### Final Formula Dependency Refresh Gate
+
+The final formula is then rescored as a dependency ledger. The
+partial-boundary promotions lower the bound, but do not change the
+source/length structural frontier: encoder target-max coverage stays `242`/`261`, declared-source+decoder-max stays `60`/`261`, unique-source+decoder-max stays `28`/`261`, and previous-end+decoder-max stays `1`/`261`. The retained declared operation dependency ledger remains `609` fields.
+See [71_final_formula_dependency_refresh_gate.md](71_final_formula_dependency_refresh_gate.md).
+
 ## Row0 Origin Boundary
 
 Row0 classification: `row0_origin_remains_exogenous`
@@ -936,6 +943,7 @@ See [47_row0_parallel_provenance_bridge_audit.md](47_row0_parallel_provenance_br
 - The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.
 - A second partial-boundary pass promotes book `46` op `1` delta `1`, lowering the bound again to `8154.676268` bits; a saturation gate then finds `0/221` remaining improvements.
 - The recent formula row0 compatibility audit records `row0 unchanged`: the latest bound improvements are book-formula changes only and do not predict row0 labels, beat lookup after costs, explain `39`/`93`/`19/91`, or add provenance.
+- The final formula dependency refresh shows that the partial-boundary promotions do not change the source/length scoreboard: declared-source+decoder-max remains `60/261`, unique-source+decoder-max `28/261`, previous-end+decoder-max `1/261`, and retained operation dependency fields remain `609`.
 - All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.
 - The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.
 - `row0` continues exogenous: the active book generator assumes the table rather than deriving it.

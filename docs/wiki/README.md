@@ -632,6 +632,11 @@ The latest row0 compatibility gate keeps that boundary unchanged after the
 `8154.676268` partial-boundary promotions: the improvement is downstream book
 formula only, with no row0-label holdout predictor, paid lookup reduction,
 surface-clue derivation, or new provenance.
+The final formula dependency refresh then checks whether the lower bound also
+changed the structural source/length frontier. It did not: target-max coverage
+stays `242/261`, declared-source+decoder-max stays `60/261`,
+unique-source+decoder-max stays `28/261`, previous-end+decoder-max stays
+`1/261`, and retained operation dependency fields remain `609`.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -790,6 +795,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   remaining partial-shift frontier (`0/221` improvements),
   confirms by compatibility audit that those formula promotions leave `row0`
   unchanged,
+  confirms by final dependency refresh that source/length derivation is still
+  unchanged and `609` operation dependency fields remain declared,
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

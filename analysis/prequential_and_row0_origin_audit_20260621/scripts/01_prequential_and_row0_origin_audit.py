@@ -333,6 +333,14 @@ RECENT_FORMULA_ROW0_COMPATIBILITY_AUDIT = (
     / "test_results"
     / "70_recent_formula_row0_compatibility_audit.json"
 )
+FINAL_FORMULA_DEPENDENCY_REFRESH_GATE = (
+    ROOT
+    / "analysis"
+    / "prequential_and_row0_origin_audit_20260621"
+    / "reports"
+    / "test_results"
+    / "71_final_formula_dependency_refresh_gate.json"
+)
 
 SCOPE_COMPRESSION_BOUND_BITS = 8558.666806283434
 KNOWN_LATER_COMPRESSION_ONLY_BOUND_BITS = 8343.061944935467
@@ -713,6 +721,11 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
     assert_analysis_boundary(
         "recent_formula_row0_compatibility_audit",
         recent_formula_row0_compatibility,
+    )
+    final_formula_dependency_refresh = load_json(FINAL_FORMULA_DEPENDENCY_REFRESH_GATE)
+    assert_analysis_boundary(
+        "final_formula_dependency_refresh_gate",
+        final_formula_dependency_refresh,
     )
 
     predictive = legacy["predictive_validation"]
@@ -1121,6 +1134,21 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "taxonomy": recent_formula_row0_compatibility["taxonomy"],
             "decision": recent_formula_row0_compatibility["decision"],
         },
+        "final_formula_dependency_refresh": {
+            "classification": final_formula_dependency_refresh["classification"],
+            "source": rel(FINAL_FORMULA_DEPENDENCY_REFRESH_GATE),
+            "summary": final_formula_dependency_refresh["summary"],
+            "final_formula_summary": final_formula_dependency_refresh[
+                "final_formula_summary"
+            ],
+            "deltas_vs_gate60_active": final_formula_dependency_refresh[
+                "deltas_vs_gate60_active"
+            ],
+            "declared_dependency_counts": final_formula_dependency_refresh[
+                "declared_dependency_counts"
+            ],
+            "decision": final_formula_dependency_refresh["decision"],
+        },
         "progress_criterion": {
             "counts_as_progress": [
                 "Prefix/block/family holdout validation or falsification.",
@@ -1181,6 +1209,7 @@ def make_result(legacy: dict[str, Any]) -> dict[str, Any]:
             "partial_boundary_shift_second_pass_formula_status": "promoted_bound_8154_676268",
             "partial_boundary_shift_saturation_status": "saturated_no_remaining_partial_shift_improvements",
             "recent_formula_row0_compatibility_status": "book_formula_improved_row0_unchanged",
+            "final_formula_dependency_refresh_status": "source_length_dependency_boundary_unchanged",
             "row0_origin_status": "exogenous_under_current_evidence",
             "translation_or_plaintext_status": "NONE",
         },
@@ -1257,6 +1286,7 @@ def render_markdown(
     partial_boundary_shift_second_pass_formula_gate_link: str,
     partial_boundary_shift_saturation_gate_link: str,
     recent_formula_row0_compatibility_audit_link: str,
+    final_formula_dependency_refresh_gate_link: str,
     row0_requirement_link: str,
     row0_parallel_provenance_bridge_link: str,
 ) -> str:
@@ -1351,6 +1381,7 @@ def render_markdown(
     ]
     partial_shift_saturation = result["partial_boundary_shift_saturation"]["summary"]
     recent_row0_compatibility = result["recent_formula_row0_compatibility"]["summary"]
+    final_dependency_refresh = result["final_formula_dependency_refresh"]["summary"]
 
     lines = [
         "# Prequential and Row0 Origin Audit",
@@ -2401,6 +2432,24 @@ def render_markdown(
             "`row0 unchanged`.",
             f"See [70_recent_formula_row0_compatibility_audit.md]({recent_formula_row0_compatibility_audit_link}).",
             "",
+            "### Final Formula Dependency Refresh Gate",
+            "",
+            "The final formula is then rescored as a dependency ledger. The",
+            "partial-boundary promotions lower the bound, but do not change the",
+            (
+                "source/length structural frontier: encoder target-max coverage "
+                f"stays `{result['final_formula_dependency_refresh']['final_formula_summary']['encoder_target_max_length_hits_after_declared_source']}`/"
+                f"`{final_dependency_refresh['copy_event_count']}`, declared-source+decoder-max "
+                f"stays `{result['final_formula_dependency_refresh']['final_formula_summary']['joint_declared_source_decoder_max_hits']}`/"
+                f"`{final_dependency_refresh['copy_event_count']}`, unique-source+decoder-max "
+                f"stays `{result['final_formula_dependency_refresh']['final_formula_summary']['joint_unique_source_decoder_max_hits']}`/"
+                f"`{final_dependency_refresh['copy_event_count']}`, and previous-end+decoder-max "
+                f"stays `{result['final_formula_dependency_refresh']['final_formula_summary']['joint_previous_end_decoder_max_hits']}`/"
+                f"`{final_dependency_refresh['copy_event_count']}`. The retained declared operation "
+                f"dependency ledger remains `{final_dependency_refresh['declared_operation_dependency_fields']}` fields."
+            ),
+            f"See [71_final_formula_dependency_refresh_gate.md]({final_formula_dependency_refresh_gate_link}).",
+            "",
             "## Row0 Origin Boundary",
             "",
             f"Row0 classification: `{result['row0_origin']['classification']}`",
@@ -2515,6 +2564,7 @@ def render_markdown(
             "- The active exception partial-boundary gate tests `229` local shifts and finds `2` exact improvements; the promoted book `10` op `0` delta `3` shift lowers the bound to `8155.261037` bits.",
             "- A second partial-boundary pass promotes book `46` op `1` delta `1`, lowering the bound again to `8154.676268` bits; a saturation gate then finds `0/221` remaining improvements.",
             "- The recent formula row0 compatibility audit records `row0 unchanged`: the latest bound improvements are book-formula changes only and do not predict row0 labels, beat lookup after costs, explain `39`/`93`/`19/91`, or add provenance.",
+            "- The final formula dependency refresh shows that the partial-boundary promotions do not change the source/length scoreboard: declared-source+decoder-max remains `60/261`, unique-source+decoder-max `28/261`, previous-end+decoder-max `1/261`, and retained operation dependency fields remain `609`.",
             "- All requested row0-origin hypothesis families have been checklist-audited; none passes as an origin formula.",
             "- The row0 parallel provenance bridge traces workbook/import/reconstruction/audit layers but leaves CipSoft origin untraced; paid worksheet anchors do not beat lookup once pair and label costs are charged.",
             "- `row0` continues exogenous: the active book generator assumes the table rather than deriving it.",
@@ -2702,6 +2752,9 @@ def main() -> None:
             ),
             recent_formula_row0_compatibility_audit_link=(
                 "70_recent_formula_row0_compatibility_audit.md"
+            ),
+            final_formula_dependency_refresh_gate_link=(
+                "71_final_formula_dependency_refresh_gate.md"
             ),
             row0_requirement_link="05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
@@ -2895,6 +2948,9 @@ def main() -> None:
             ),
             recent_formula_row0_compatibility_audit_link=(
                 "test_results/70_recent_formula_row0_compatibility_audit.md"
+            ),
+            final_formula_dependency_refresh_gate_link=(
+                "test_results/71_final_formula_dependency_refresh_gate.md"
             ),
             row0_requirement_link="test_results/05_row0_hypothesis_requirement_audit.md",
             row0_parallel_provenance_bridge_link=(
