@@ -976,6 +976,10 @@ A raw-context nearest-branch audit then rejects memorized local context as the
 explanation: the best leave-one-book policy is worse than the active baseline,
 recovers `0/10` residuals, changes `8` clean controls, and is matched by
 shuffled training labels.
+A structural-signal consensus audit then combines source-state, phase/grid,
+future-copy, and boundary-recurrence votes. The only clean result ties the
+active baseline at `224/234`, recovers `0/10` residuals, and lower-threshold
+variants introduce false clean-control changes.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline

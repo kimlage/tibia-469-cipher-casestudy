@@ -635,6 +635,12 @@ recurs with stable branch actions. It does not: the best leave-one-book nearest
 policy is worse than the active baseline (`216/234` vs `224/234`), recovers
 `0/10` residuals, changes `8` clean controls, and is matched or exceeded by
 shuffled training labels.
+A structural-signal consensus audit then asks whether the weak clues only work
+when they agree. Four families vote: source-state, phase/grid, near-future
+copy, and recurrent boundary. Precision comes only by refusing to move: the
+best consensus ties the active baseline at `224/234`, recovers `0/10`
+residuals, and changes `0` clean controls. Lower-threshold variants can move,
+but introduce false clean-control changes.
 
 A seed-primacy integration audit incorporates that final report into the main
 prequential/row0 boundary. The operational `0..9` seed hypothesis is rejected,
@@ -2331,6 +2337,7 @@ book generation, not row0 pair-cell placement.
 - [Global source state continuity audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/31_global_source_state_continuity_audit.md)
 - [Phase grid segmentation audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/32_phase_grid_segmentation_audit.md)
 - [Context nearest branch audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/33_context_nearest_branch_audit.md)
+- [Structural signal consensus audit](../../analysis/segmentation_decision_audit_20260621/reports/test_results/34_structural_signal_consensus_audit.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed requirement closure audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/04_seed_requirement_closure_audit.md)

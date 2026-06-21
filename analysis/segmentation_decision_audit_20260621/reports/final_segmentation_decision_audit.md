@@ -695,6 +695,31 @@ the branch decisions. It is worse than the active baseline,
 recovers `0/10` residuals, and shuffled training labels match
 or exceed it.
 
+## Structural Signal Consensus Control
+
+Gate 34 tests whether weak structural signals become usable only
+when independent families agree. Four families vote on each branch:
+source-state continuity, phase/grid, near-future copy opportunity,
+and recurrent target boundary. The parser switches away from the
+active branch only if enough families choose the same non-active
+branch.
+
+| Policy | Total hits | Residual hits | Clean false changes | Boundary |
+|---|---:|---:|---:|---|
+| Active branch baseline | `224/234` | `0/10` | `0` | retained control |
+| Best consensus `k3:source=global_min_source_delta:phase=source_mod0_10:future=max_copy_positions:boundary=max_left_right_r8` | `224/234` | `0/10` | `0` | rejected |
+
+- Consensus configs tested: `48`.
+- Prequential zero-clean-false-change cells: `4/5`.
+- Prequential cover-all-test-residual cells: `1/5`.
+- Prequential selected matches oracle cells: `4/5`.
+
+Consensus improves precision by refusing to move, but then it
+recovers `0/10` residuals. The lower-threshold train choice can
+catch one residual only by introducing false clean-control
+changes. Combining weak signals therefore does not solve the
+branch-choice problem.
+
 ## Next Blocker
 
 The next real blocker is not another local length policy or
@@ -709,7 +734,8 @@ are also rejected. Book-local source-state continuity is rejected
 as well, and even the global carryover source-state upper bound
 fails clean holdout. A simple phase/grid rule gives only a weak
 one-residual full-fit clue. Raw context nearest-neighbor recurrence
-is also rejected. The remaining blocker is a richer path/state
+is also rejected, and consensus over the weak structural signals
+collapses back to the active baseline. The remaining blocker is a richer path/state
 segmentation account for why the parser waits, copies, or
 understops at the remaining mixed residual sites, or a source-free
 account of why the target digit stream exists.
@@ -751,3 +777,4 @@ or the stable projection as an oracle.
 - [Global source state continuity audit](test_results/31_global_source_state_continuity_audit.md)
 - [Phase grid segmentation audit](test_results/32_phase_grid_segmentation_audit.md)
 - [Context nearest branch audit](test_results/33_context_nearest_branch_audit.md)
+- [Structural signal consensus audit](test_results/34_structural_signal_consensus_audit.md)
