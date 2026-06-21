@@ -813,6 +813,11 @@ An operation-type dependency ledger consolidates that boundary: `op_type` drops
 conceptually from `261` explicit fields to `3` residual errors, but the retained
 length atlas leaves `264` type+length records, so this is dependency
 clarification rather than a promoted generator.
+An operation-length dependency ledger then isolates the remaining skeleton
+blocker: target positions derive once lengths are known and operation type is
+mostly downstream from length/copy availability, but source-free length rules
+cover only `116/261`, copy-length rules cover `55/208`, literal-length rules
+cover `5/53`, and all `261` copy-length fields remain retained.
 A recent-gates row0 compatibility refresh then checks gates `76..107` together:
 the parser/skeleton/type advances remain compatible with row0 being an accepted
 substrate, but they do not predict row0 labels under holdout, beat the paid row0

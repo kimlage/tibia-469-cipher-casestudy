@@ -1,0 +1,81 @@
+{
+  "case_reopened": false,
+  "classification": "operation_length_dependency_retained",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "length_atlas_retained_generator_not_promoted",
+    "row0_origin_status": "unchanged_exogenous",
+    "skeleton_status": "position_and_type_partly_derived_length_sequence_retained",
+    "source_dependency_status": "retained_declared_dependency",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate100_skeleton_rule_coverage": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.json",
+    "gate104_target_position_derivation": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/104_target_position_derivation_ledger.json",
+    "gate107_operation_type_dependency": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.json",
+    "gate32_copy_length_derivation_boundary": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/32_copy_length_derivation_boundary_gate.json",
+    "gate71_final_formula_dependency_refresh": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/71_final_formula_dependency_refresh_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "operation_length_dependency_ledger.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_new_compression_sweep": true,
+    "does_not_search_plaintext": true,
+    "ledger_only": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "best_source_free_copy_length_rule": {
+      "coverage": 0.2644230769230769,
+      "hits": 55,
+      "rule": "copy_length_is_remaining_book",
+      "total": 208
+    },
+    "best_source_free_length_rule": {
+      "coverage": 0.4444444444444444,
+      "hits": 116,
+      "rule": "length_gte_20",
+      "total": 261
+    },
+    "best_source_free_literal_length_rule": {
+      "coverage": 0.09433962264150944,
+      "hits": 5,
+      "rule": "literal_length_is_remaining_book",
+      "total": 53
+    },
+    "copy_count": 208,
+    "copy_length_boundary": {
+      "copy_length_fields_retained_in_compact_recipe": 261,
+      "decoder_max_possible_default_count": 60,
+      "decoder_max_possible_exception_count": 201,
+      "dependency_retained": true,
+      "encoder_target_max_decodable": false
+    },
+    "current_compression_bound_bits": 8154.676268216349,
+    "declared_operation_dependency_fields": 609,
+    "final_source_length_refresh": {
+      "copy_event_count": 261,
+      "declared_source_decoder_max_delta_after_partial_shifts": 0,
+      "decoder_valid_joint_rule_improved": false,
+      "encoder_targetmax_rule_improved": false,
+      "previous_end_decoder_max_delta_after_partial_shifts": 0,
+      "structural_blocker": "source_length_parser_still_required",
+      "unique_source_decoder_max_delta_after_partial_shifts": 0
+    },
+    "interpretation": "Target positions are derived once the length sequence is known, and operation type is mostly derivable if target copy availability and the length atlas are allowed. The remaining blocker is the length sequence itself: current source-free length rules cover at most 116/261 operation lengths, copy-specific source-free rules cover only 55/208 copy lengths, literal length rules cover only 5/53 literal lengths, and the compact recipe still retains all 261 copy-length fields. The current model therefore explains positions and most type decisions downstream of length, but it does not yet generate the operation-length atlas.",
+    "length_atlas_records_retained": 261,
+    "length_blocker_record_share_after_type_rule": 0.9886363636363636,
+    "length_records_removed_by_current_rules": 0,
+    "literal_count": 53,
+    "op_type_residual_after_rule": 3,
+    "operation_count": 261,
+    "promotes_length_generator": false,
+    "target_start_dependency_removed": true,
+    "target_start_fields_derived_from_lengths": 261,
+    "type_length_records_after_type_rule": 264
+  },
+  "translation_delta": "NONE"
+}

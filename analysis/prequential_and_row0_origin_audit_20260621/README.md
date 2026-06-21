@@ -343,6 +343,9 @@ exogenous.
 - [scripts/109_seed_primacy_integration_audit.py](scripts/109_seed_primacy_integration_audit.py) - integrates the final seed-primacy audit into the main prequential/row0 boundary.
 - [reports/test_results/109_seed_primacy_integration_audit.md](reports/test_results/109_seed_primacy_integration_audit.md) - seed-primacy integration audit.
 - [reports/test_results/109_seed_primacy_integration_audit.json](reports/test_results/109_seed_primacy_integration_audit.json) - structured seed-primacy integration ledger.
+- [scripts/110_operation_length_dependency_ledger.py](scripts/110_operation_length_dependency_ledger.py) - consolidates why the operation-length atlas remains the current skeleton blocker.
+- [reports/test_results/110_operation_length_dependency_ledger.md](reports/test_results/110_operation_length_dependency_ledger.md) - operation-length dependency ledger.
+- [reports/test_results/110_operation_length_dependency_ledger.json](reports/test_results/110_operation_length_dependency_ledger.json) - structured operation-length dependency ledger.
 
 ## Boundary
 
@@ -425,6 +428,11 @@ exogenous.
   `261` fields to `3` residual errors. Materialized type+length records are
   still `264` (`+3` vs the exact skeleton atlas), so this is dependency
   clarification rather than a new generator or bound.
+- Operation-length dependency ledger: target positions derive once lengths are
+  known and op-type mostly follows from copy availability plus the length atlas,
+  but the atlas itself remains. Source-free length coverage is only `116/261`,
+  copy-length coverage is `55/208`, literal-length coverage is `5/53`, and the
+  compact recipe still retains `261` copy-length fields.
 - Seed-primacy integration: the final seed front is incorporated as
   `AUDIT_ONLY_COMPRESSION`. Operational books `0..9` are rejected as privileged
   seeds under seed-only controls, posthoc high-coverage seed sets are recorded

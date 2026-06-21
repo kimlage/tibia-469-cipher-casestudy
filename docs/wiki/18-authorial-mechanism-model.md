@@ -396,6 +396,15 @@ ledger is still `264` records, `+3` versus the exact skeleton atlas, and source
 choices plus literal payload remain external. This clarifies dependency; it
 does not promote a generator or change the bound.
 
+An operation-length dependency ledger then freezes the sharper blocker. Target
+positions are derived once the length sequence is known, and most operation type
+decisions become downstream of length plus copy availability. The length
+sequence itself is still not generated: source-free rules cover only `116/261`
+operation lengths, copy-specific source-free rules cover `55/208`, literal
+length rules cover `5/53`, and all `261` copy-length fields remain retained.
+So the next generator question is length selection, not another op-type or
+target-position ledger.
+
 A recent-gates row0 compatibility refresh then checks gates `76..107` as one
 unit against the independent row0 provenance front. The result is unchanged:
 parser validation, path-stability controls, decoder/source-policy controls,
@@ -2079,6 +2088,7 @@ book generation, not row0 pair-cell placement.
 - [Prequential optional literal rule validation](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/106_prequential_optional_literal_rule_validation.md)
 - [Operation type dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/107_operation_type_dependency_ledger.md)
 - [Recent gates row0 compatibility refresh](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/108_recent_gates_row0_compatibility_refresh.md)
+- [Operation length dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/110_operation_length_dependency_ledger.md)
 - [Final seed primacy audit](../../analysis/seed_primacy_audit_20260621/reports/final_seed_primacy_audit.md)
 - [Prequential seed selection audit](../../analysis/seed_primacy_audit_20260621/reports/test_results/03_prequential_seed_selection_audit.md)
 - [Seed primacy integration audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/109_seed_primacy_integration_audit.md)
