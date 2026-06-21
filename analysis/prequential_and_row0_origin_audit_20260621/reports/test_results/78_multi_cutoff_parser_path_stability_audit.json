@@ -1,0 +1,4991 @@
+{
+  "case_reopened": false,
+  "classification": "multi_cutoff_parser_paths_partially_stable",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generation_explanation_status": "parser_mechanism_supported_but_path_instability_remains",
+    "row0_origin_status": "unchanged_exogenous",
+    "source_length_parser_status": "path_stability_partial_not_final",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "gate76_sparse_parser_reference": "analysis/prequential_and_row0_origin_audit_20260621/scripts/76_cutoff60_sparse_suffix_parser_gate.py",
+    "gate77_context_loader": "analysis/prequential_and_row0_origin_audit_20260621/scripts/77_multi_cutoff_sparse_suffix_parser_validation.py",
+    "gate77_validation": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json"
+  },
+  "plaintext_claim": false,
+  "schema": "multi_cutoff_parser_path_stability_audit.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "cutoffs": [
+      10,
+      20,
+      35,
+      50,
+      60
+    ],
+    "does_not_search_plaintext": true,
+    "exact_path_signature_fields": [
+      "type",
+      "target_start",
+      "source",
+      "length",
+      "forced",
+      "source_default"
+    ],
+    "new_formula_emitted": false,
+    "row0_origin_changed": false
+  },
+  "summary": {
+    "book_count_with_multiple_cutoffs": 50,
+    "book_rows": [
+      {
+        "book": 10,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "f34ca38fc03359a8",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 281,
+            "copy_items": 2,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 5,
+                "source": 869,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 276,
+                "source": 0,
+                "source_default": false,
+                "target_start": 5,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 34.616931766168555
+            },
+            "signature": "f34ca38fc03359a8"
+          }
+        ]
+      },
+      {
+        "book": 11,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "f5b306bdc3ea2096",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 124,
+            "copy_items": 4,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 6,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 7,
+                "source": 1334,
+                "source_default": false,
+                "target_start": 6,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 29,
+                "source": 833,
+                "source_default": false,
+                "target_start": 13,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "target_start": 42,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 30,
+                "source": 1349,
+                "source_default": false,
+                "target_start": 49,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 58,
+                "source": 862,
+                "source_default": false,
+                "target_start": 79,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 13,
+            "literal_runs": 2,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 122.70777765574817
+            },
+            "signature": "f5b306bdc3ea2096"
+          }
+        ]
+      },
+      {
+        "book": 12,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "18e74d59db253c4c",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 119,
+            "copy_items": 9,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 19,
+                "source": 314,
+                "source_default": false,
+                "target_start": 2,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 853,
+                "source_default": false,
+                "target_start": 21,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 4,
+                "target_start": 33,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 10,
+                "source": 12,
+                "source_default": false,
+                "target_start": 37,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "target_start": 47,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 14,
+                "source": 446,
+                "source_default": false,
+                "target_start": 56,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 11,
+                "source": 207,
+                "source_default": false,
+                "target_start": 70,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 101,
+                "source_default": false,
+                "target_start": 81,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 226,
+                "source_default": false,
+                "target_start": 93,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 30,
+                "source": 242,
+                "source_default": false,
+                "target_start": 99,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "source": 231,
+                "source_default": false,
+                "target_start": 129,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": true,
+            "literal_digits": 18,
+            "literal_runs": 4,
+            "op_count": 13,
+            "parser_bits_by_cutoff": {
+              "10": 211.26079343203457
+            },
+            "signature": "18e74d59db253c4c"
+          }
+        ]
+      },
+      {
+        "book": 13,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "83d91b21e7e57a5b",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 132,
+            "copy_items": 7,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 26,
+                "source": 2225,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 26,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 19,
+                "source": 527,
+                "source_default": false,
+                "target_start": 28,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 1,
+                "target_start": 47,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 7,
+                "source": 4,
+                "source_default": false,
+                "target_start": 48,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 14,
+                "source": 1361,
+                "source_default": false,
+                "target_start": 55,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "target_start": 69,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 7,
+                "source": 1976,
+                "source_default": false,
+                "target_start": 75,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 90,
+                "source_default": false,
+                "target_start": 82,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 53,
+                "source": 349,
+                "source_default": false,
+                "target_start": 88,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 9,
+            "literal_runs": 3,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "10": 158.57805802301192
+            },
+            "signature": "83d91b21e7e57a5b"
+          }
+        ]
+      },
+      {
+        "book": 14,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "91ca804bab505480",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 80,
+            "copy_items": 4,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 50,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 39,
+                "source": 1654,
+                "source_default": false,
+                "target_start": 50,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 26,
+                "source": 154,
+                "source_default": false,
+                "target_start": 89,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 889,
+                "source_default": false,
+                "target_start": 115,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 868,
+                "source_default": false,
+                "target_start": 121,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 3,
+                "target_start": 130,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 53,
+            "literal_runs": 2,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 222.32388552461637
+            },
+            "signature": "91ca804bab505480"
+          }
+        ]
+      },
+      {
+        "book": 15,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "f6b17035c305ea31",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 141,
+            "copy_items": 9,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 1,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 13,
+                "source": 37,
+                "source_default": false,
+                "target_start": 1,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 14,
+                "source": 131,
+                "source_default": false,
+                "target_start": 14,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 11,
+                "source": 701,
+                "source_default": false,
+                "target_start": 28,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 1,
+                "target_start": 39,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 22,
+                "source": 1335,
+                "source_default": false,
+                "target_start": 40,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 33,
+                "source": 469,
+                "source_default": false,
+                "target_start": 62,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "source": 1392,
+                "source_default": false,
+                "target_start": 95,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 17,
+                "source": 510,
+                "source_default": false,
+                "target_start": 102,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 11,
+                "source": 436,
+                "source_default": false,
+                "target_start": 119,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 13,
+                "source": 297,
+                "source_default": false,
+                "target_start": 130,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 2,
+            "literal_runs": 2,
+            "op_count": 11,
+            "parser_bits_by_cutoff": {
+              "10": 173.38384713276508
+            },
+            "signature": "f6b17035c305ea31"
+          }
+        ]
+      },
+      {
+        "book": 16,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "862b46d5a0485fdc",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 157,
+            "copy_items": 6,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 106,
+                "source": 2562,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "target_start": 106,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 11,
+                "source": 2497,
+                "source_default": false,
+                "target_start": 112,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 123,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 7,
+                "source": 56,
+                "source_default": false,
+                "target_start": 125,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 865,
+                "source_default": false,
+                "target_start": 132,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "target_start": 144,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 13,
+                "source": 1341,
+                "source_default": false,
+                "target_start": 151,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 8,
+                "source": 473,
+                "source_default": false,
+                "target_start": 164,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 2,
+                "target_start": 172,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 17,
+            "literal_runs": 4,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "10": 158.62250315923336
+            },
+            "signature": "862b46d5a0485fdc"
+          }
+        ]
+      },
+      {
+        "book": 17,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "7eb2e523c615c0d3",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 241,
+            "copy_items": 7,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 7,
+                "source": 106,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "target_start": 7,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 133,
+                "source": 420,
+                "source_default": false,
+                "target_start": 16,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 149,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 40,
+                "source": 113,
+                "source_default": false,
+                "target_start": 152,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "target_start": 192,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 9,
+                "source": 367,
+                "source_default": false,
+                "target_start": 204,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2514,
+                "source_default": false,
+                "target_start": 213,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "target_start": 222,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 11,
+                "source": 2507,
+                "source_default": false,
+                "target_start": 227,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 32,
+                "source": 2393,
+                "source_default": false,
+                "target_start": 238,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 4,
+                "target_start": 270,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 33,
+            "literal_runs": 5,
+            "op_count": 12,
+            "parser_bits_by_cutoff": {
+              "10": 245.19362804706333
+            },
+            "signature": "7eb2e523c615c0d3"
+          }
+        ]
+      },
+      {
+        "book": 18,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "c78ec2fd3a9b2504",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 93,
+            "copy_items": 2,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 51,
+                "source": 87,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 42,
+                "source": 196,
+                "source_default": false,
+                "target_start": 51,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 38.28365707289742
+            },
+            "signature": "c78ec2fd3a9b2504"
+          }
+        ]
+      },
+      {
+        "book": 19,
+        "cutoff_count": 1,
+        "cutoffs_tested": [
+          10
+        ],
+        "dominant_signature": "803d2328e1ad5330",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 129,
+            "copy_items": 3,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 36,
+                "source": 238,
+                "source_default": true,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 48,
+                "source": 148,
+                "source_default": false,
+                "target_start": 36,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 45,
+                "source": 881,
+                "source_default": false,
+                "target_start": 84,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 52.46334532707862
+            },
+            "signature": "803d2328e1ad5330"
+          }
+        ]
+      },
+      {
+        "book": 20,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "4488aaa91f7d7a83",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 63,
+            "copy_items": 7,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 15,
+                "source": 1377,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 190,
+                "source_default": false,
+                "target_start": 15,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 180,
+                "source_default": false,
+                "target_start": 21,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2154,
+                "source_default": false,
+                "target_start": 30,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 844,
+                "source_default": false,
+                "target_start": 39,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 459,
+                "source_default": false,
+                "target_start": 45,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 252,
+                "source_default": false,
+                "target_start": 54,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 7,
+            "parser_bits_by_cutoff": {
+              "10": 111.11123618082254,
+              "20": 111.9222798164533
+            },
+            "signature": "4488aaa91f7d7a83"
+          }
+        ]
+      },
+      {
+        "book": 21,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "3d67956f8f5b3285",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 176,
+            "copy_items": 3,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 7,
+                "source": 197,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 135,
+                "source": 2114,
+                "source_default": false,
+                "target_start": 7,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 34,
+                "source": 2275,
+                "source_default": false,
+                "target_start": 142,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 55.46153057563602
+            },
+            "signature": "3d67956f8f5b3285"
+          },
+          {
+            "copied_digits": 176,
+            "copy_items": 3,
+            "cutoffs": [
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 7,
+                "source": 197,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 133,
+                "source": 2114,
+                "source_default": false,
+                "target_start": 7,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 36,
+                "source": 2273,
+                "source_default": false,
+                "target_start": 140,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 54.926563938644804
+            },
+            "signature": "45e96b26269960af"
+          }
+        ]
+      },
+      {
+        "book": 22,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "1a61f3552897fac1",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 137,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 137,
+                "source": 274,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.04969074054997,
+              "20": 20.441019673683996
+            },
+            "signature": "1a61f3552897fac1"
+          }
+        ]
+      },
+      {
+        "book": 23,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "ba4fd0ebda20ff18",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 156,
+            "copy_items": 8,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 4,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 14,
+                "source": 341,
+                "source_default": false,
+                "target_start": 4,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "target_start": 18,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 34,
+                "source": 379,
+                "source_default": false,
+                "target_start": 25,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 36,
+                "source": 236,
+                "source_default": false,
+                "target_start": 59,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 292,
+                "source_default": false,
+                "target_start": 95,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 286,
+                "source_default": false,
+                "target_start": 104,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "target_start": 110,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 11,
+                "source": 275,
+                "source_default": false,
+                "target_start": 117,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 24,
+                "source": 355,
+                "source_default": false,
+                "target_start": 128,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 152,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 22,
+                "source": 319,
+                "source_default": false,
+                "target_start": 155,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 21,
+            "literal_runs": 4,
+            "op_count": 12,
+            "parser_bits_by_cutoff": {
+              "10": 229.12343006856526,
+              "20": 224.699827341607
+            },
+            "signature": "ba4fd0ebda20ff18"
+          }
+        ]
+      },
+      {
+        "book": 24,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "e213fe1406e7f85b",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 119,
+            "copy_items": 3,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 37,
+                "source": 2119,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 70,
+                "source": 3507,
+                "source_default": false,
+                "target_start": 37,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 3401,
+                "source_default": false,
+                "target_start": 107,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 56.27688565472161
+            },
+            "signature": "e213fe1406e7f85b"
+          },
+          {
+            "copied_digits": 119,
+            "copy_items": 3,
+            "cutoffs": [
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 36,
+                "source": 2119,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 71,
+                "source": 3506,
+                "source_default": false,
+                "target_start": 36,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 3401,
+                "source_default": false,
+                "target_start": 107,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 55.807524884819856
+            },
+            "signature": "e1475f1a390e1c76"
+          }
+        ]
+      },
+      {
+        "book": 25,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "d6bb92ac4d80592d",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 32,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 32,
+                "source": 2525,
+                "source_default": false,
+                "target_start": 3,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 31.11544761534377,
+              "20": 30.62527713320372
+            },
+            "signature": "d6bb92ac4d80592d"
+          }
+        ]
+      },
+      {
+        "book": 26,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "920c569dd09c8bd0",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 170,
+            "copy_items": 4,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 11,
+                "source": 3054,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 822,
+                "source_default": false,
+                "target_start": 11,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 1386,
+                "source_default": false,
+                "target_start": 21,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 143,
+                "source": 3402,
+                "source_default": false,
+                "target_start": 27,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 4,
+            "parser_bits_by_cutoff": {
+              "10": 74.53715335826342,
+              "20": 74.33104558021569
+            },
+            "signature": "920c569dd09c8bd0"
+          }
+        ]
+      },
+      {
+        "book": 27,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "0eca4ec0b92ebd29",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 124,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 124,
+                "source": 147,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.172309481883,
+              "20": 20.578625685780995
+            },
+            "signature": "0eca4ec0b92ebd29"
+          }
+        ]
+      },
+      {
+        "book": 28,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "8cb38b3003324679",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 146,
+            "copy_items": 5,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 89,
+                "source": 744,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 2778,
+                "source_default": false,
+                "target_start": 89,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 2160,
+                "source_default": false,
+                "target_start": 95,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 21,
+                "source": 2821,
+                "source_default": false,
+                "target_start": 107,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 18,
+                "source": 2397,
+                "source_default": false,
+                "target_start": 128,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 5,
+            "parser_bits_by_cutoff": {
+              "10": 89.57426091119223
+            },
+            "signature": "8cb38b3003324679"
+          },
+          {
+            "copied_digits": 146,
+            "copy_items": 5,
+            "cutoffs": [
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 89,
+                "source": 744,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "source": 2778,
+                "source_default": false,
+                "target_start": 89,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 11,
+                "source": 2161,
+                "source_default": false,
+                "target_start": 96,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 21,
+                "source": 2821,
+                "source_default": false,
+                "target_start": 107,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 18,
+                "source": 2397,
+                "source_default": false,
+                "target_start": 128,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 5,
+            "parser_bits_by_cutoff": {
+              "20": 90.64898778090101
+            },
+            "signature": "ee53cae37f654670"
+          }
+        ]
+      },
+      {
+        "book": 29,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "1b8f814bdcb3f063",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 151,
+            "copy_items": 4,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 117,
+                "source": 432,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 17,
+                "source": 1379,
+                "source_default": false,
+                "target_start": 117,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "source": 2851,
+                "source_default": false,
+                "target_start": 134,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 3033,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 4,
+            "parser_bits_by_cutoff": {
+              "10": 71.66507772189031,
+              "20": 71.75555837077371
+            },
+            "signature": "1b8f814bdcb3f063"
+          }
+        ]
+      },
+      {
+        "book": 30,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "efd825fa783e1134",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 150,
+            "copy_items": 6,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 17,
+                "source": 4065,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 255,
+                "source_default": false,
+                "target_start": 17,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 37,
+                "source": 2160,
+                "source_default": false,
+                "target_start": 23,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 20,
+                "source": 2232,
+                "source_default": false,
+                "target_start": 60,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 42,
+                "source": 2118,
+                "source_default": false,
+                "target_start": 80,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 28,
+                "source": 2197,
+                "source_default": false,
+                "target_start": 122,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 115.55791197326346
+            },
+            "signature": "efd825fa783e1134"
+          },
+          {
+            "copied_digits": 144,
+            "copy_items": 5,
+            "cutoffs": [
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 17,
+                "source": 4065,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "target_start": 17,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 37,
+                "source": 2160,
+                "source_default": false,
+                "target_start": 23,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 19,
+                "source": 2232,
+                "source_default": false,
+                "target_start": 60,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 43,
+                "source": 2117,
+                "source_default": false,
+                "target_start": 79,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 28,
+                "source": 2197,
+                "source_default": false,
+                "target_start": 122,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 6,
+            "literal_runs": 1,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "20": 113.74653892208008
+            },
+            "signature": "c6ce2b68e2686234"
+          }
+        ]
+      },
+      {
+        "book": 31,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "255cfc276e3c823e",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 248,
+            "copy_items": 8,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 9,
+                "source": 147,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 44,
+                "source": 177,
+                "source_default": false,
+                "target_start": 9,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 20,
+                "source": 251,
+                "source_default": false,
+                "target_start": 53,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 30,
+                "source": 147,
+                "source_default": false,
+                "target_start": 73,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 38,
+                "source": 233,
+                "source_default": false,
+                "target_start": 103,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 52,
+                "source": 158,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 221,
+                "source_default": false,
+                "target_start": 193,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 43,
+                "source": 208,
+                "source_default": false,
+                "target_start": 205,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 8,
+            "parser_bits_by_cutoff": {
+              "10": 159.62877049342637,
+              "20": 159.4969561109086
+            },
+            "signature": "255cfc276e3c823e"
+          }
+        ]
+      },
+      {
+        "book": 32,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "a301a2793a31848f",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 135,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 11,
+                "source": 3105,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 11,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 124,
+                "source": 1976,
+                "source_default": false,
+                "target_start": 13,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 2,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 50.95145228537608,
+              "20": 47.94407992457575
+            },
+            "signature": "a301a2793a31848f"
+          }
+        ]
+      },
+      {
+        "book": 33,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "72bce563fef020b5",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 134,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 134,
+                "source": 13,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.551913774329847,
+              "20": 20.942182647380594
+            },
+            "signature": "72bce563fef020b5"
+          }
+        ]
+      },
+      {
+        "book": 34,
+        "cutoff_count": 2,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature": "e99aa6f75bb6e35a",
+        "dominant_signature_cutoff_count": 1,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 116,
+            "copy_items": 7,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 4,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 6,
+                "source": 505,
+                "source_default": false,
+                "target_start": 4,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 45,
+                "source": 2965,
+                "source_default": false,
+                "target_start": 10,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 55,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 11,
+                "source": 511,
+                "source_default": false,
+                "target_start": 58,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 22,
+                "source": 129,
+                "source_default": false,
+                "target_start": 69,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 14,
+                "source": 475,
+                "source_default": false,
+                "target_start": 91,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "source": 183,
+                "source_default": false,
+                "target_start": 105,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 13,
+                "source": 492,
+                "source_default": false,
+                "target_start": 110,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 7,
+            "literal_runs": 2,
+            "op_count": 9,
+            "parser_bits_by_cutoff": {
+              "10": 156.25307336072072
+            },
+            "signature": "e99aa6f75bb6e35a"
+          },
+          {
+            "copied_digits": 110,
+            "copy_items": 6,
+            "cutoffs": [
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 10,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 45,
+                "source": 2965,
+                "source_default": false,
+                "target_start": 10,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 55,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 11,
+                "source": 511,
+                "source_default": false,
+                "target_start": 58,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 22,
+                "source": 129,
+                "source_default": false,
+                "target_start": 69,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 14,
+                "source": 475,
+                "source_default": false,
+                "target_start": 91,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "source": 183,
+                "source_default": false,
+                "target_start": 105,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 13,
+                "source": 492,
+                "source_default": false,
+                "target_start": 110,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 13,
+            "literal_runs": 2,
+            "op_count": 8,
+            "parser_bits_by_cutoff": {
+              "20": 154.1126061846831
+            },
+            "signature": "f82f5fc3fbe15a4a"
+          }
+        ]
+      },
+      {
+        "book": 35,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "9ad7a00cacd455fa",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 286,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 28,
+                "source": 881,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 258,
+                "source": 16,
+                "source_default": false,
+                "target_start": 28,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 40.299693010852934,
+              "20": 39.3797121576986
+            },
+            "signature": "9ad7a00cacd455fa"
+          },
+          {
+            "copied_digits": 286,
+            "copy_items": 2,
+            "cutoffs": [
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 159,
+                "source": 5146,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 127,
+                "source": 147,
+                "source_default": false,
+                "target_start": 159,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.9715068514536
+            },
+            "signature": "9503157fe0c3c10a"
+          }
+        ]
+      },
+      {
+        "book": 36,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "36e2e469b45b5b83",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 137,
+            "copy_items": 6,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 8,
+                "source": 1983,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 890,
+                "source_default": false,
+                "target_start": 8,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 40,
+                "source": 2044,
+                "source_default": false,
+                "target_start": 18,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 20,
+                "source": 7,
+                "source_default": false,
+                "target_start": 58,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 7,
+                "source": 2327,
+                "source_default": false,
+                "target_start": 78,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 52,
+                "source": 1992,
+                "source_default": false,
+                "target_start": 85,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 117.45532066147587,
+              "20": 117.69117325184124,
+              "35": 116.56200458502491
+            },
+            "signature": "36e2e469b45b5b83"
+          }
+        ]
+      },
+      {
+        "book": 37,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "f806b7644d09fddf",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 160,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 49,
+                "source": 1644,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 111,
+                "source": 1247,
+                "source_default": false,
+                "target_start": 49,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 40.417444592518116,
+              "20": 39.49556022209481,
+              "35": 39.11867109365894
+            },
+            "signature": "f806b7644d09fddf"
+          }
+        ]
+      },
+      {
+        "book": 38,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "b24837ac94890bb5",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 130,
+            "copy_items": 3,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 112,
+                "source": 2280,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 112,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 12,
+                "source": 832,
+                "source_default": false,
+                "target_start": 114,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 126,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 6,
+                "source": 2392,
+                "source_default": false,
+                "target_start": 128,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 4,
+            "literal_runs": 2,
+            "op_count": 5,
+            "parser_bits_by_cutoff": {
+              "10": 71.53591661413533,
+              "20": 71.98464397395959,
+              "35": 72.77075007843935
+            },
+            "signature": "b24837ac94890bb5"
+          }
+        ]
+      },
+      {
+        "book": 39,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "ce5b37868920b08f",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 57,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 5,
+                "source": 2520,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 5,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 52,
+                "source": 2525,
+                "source_default": true,
+                "target_start": 7,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 2,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 39.57880081932022,
+              "20": 38.65481268989216
+            },
+            "signature": "ce5b37868920b08f"
+          },
+          {
+            "copied_digits": 52,
+            "copy_items": 1,
+            "cutoffs": [
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 7,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 52,
+                "source": 2525,
+                "source_default": false,
+                "target_start": 7,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 7,
+            "literal_runs": 1,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.47797464391341
+            },
+            "signature": "51d57fd93b8c610f"
+          }
+        ]
+      },
+      {
+        "book": 40,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "623190152d0d2e54",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 165,
+            "copy_items": 3,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 97,
+                "source": 1581,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 97,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 63,
+                "source": 4423,
+                "source_default": false,
+                "target_start": 100,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "source": 118,
+                "source_default": false,
+                "target_start": 163,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 4,
+            "parser_bits_by_cutoff": {
+              "10": 68.03617060299723,
+              "20": 68.58081947344888,
+              "35": 68.7398192393757
+            },
+            "signature": "623190152d0d2e54"
+          }
+        ]
+      },
+      {
+        "book": 41,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "2f74073e2f27d0e2",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 136,
+            "copy_items": 4,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 19,
+                "source": 123,
+                "source_default": true,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 35,
+                "source": 360,
+                "source_default": false,
+                "target_start": 19,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 65,
+                "source": 142,
+                "source_default": false,
+                "target_start": 54,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 17,
+                "source": 78,
+                "source_default": false,
+                "target_start": 119,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 4,
+            "parser_bits_by_cutoff": {
+              "10": 70.34735010088133,
+              "20": 69.8000598518112,
+              "35": 69.65730277708694
+            },
+            "signature": "2f74073e2f27d0e2"
+          }
+        ]
+      },
+      {
+        "book": 42,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "04c9b7b049ba390b",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 183,
+            "copy_items": 5,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 22,
+                "source": 95,
+                "source_default": true,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 55,
+                "source": 207,
+                "source_default": false,
+                "target_start": 22,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 12,
+                "source": 347,
+                "source_default": false,
+                "target_start": 77,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 2,
+                "target_start": 89,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 85,
+                "source": 262,
+                "source_default": false,
+                "target_start": 91,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 398,
+                "source_default": false,
+                "target_start": 176,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 2,
+                "target_start": 185,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 4,
+            "literal_runs": 2,
+            "op_count": 7,
+            "parser_bits_by_cutoff": {
+              "10": 110.79285445193247,
+              "20": 109.52218035550582,
+              "35": 110.18017758177938
+            },
+            "signature": "04c9b7b049ba390b"
+          }
+        ]
+      },
+      {
+        "book": 43,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "05a6f3cde31182ff",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 141,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 141,
+                "source": 5059,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.48015450430906,
+              "20": 20.517745607539826,
+              "35": 20.327599710708387
+            },
+            "signature": "05a6f3cde31182ff"
+          }
+        ]
+      },
+      {
+        "book": 44,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "a1b801a9899bd045",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 121,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 5,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 121,
+                "source": 413,
+                "source_default": false,
+                "target_start": 5,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 5,
+            "literal_runs": 1,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 37.72299613196816,
+              "20": 35.65644053963574,
+              "35": 35.663941830604045
+            },
+            "signature": "a1b801a9899bd045"
+          }
+        ]
+      },
+      {
+        "book": 45,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "4c322f935fac2e0c",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 149,
+            "copy_items": 3,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 62,
+                "source": 2972,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 8,
+                "source": 2850,
+                "source_default": false,
+                "target_start": 62,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 79,
+                "source": 3033,
+                "source_default": false,
+                "target_start": 70,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 60.12513168110161,
+              "20": 60.23650245941383,
+              "35": 58.664435517825105
+            },
+            "signature": "4c322f935fac2e0c"
+          }
+        ]
+      },
+      {
+        "book": 46,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "082d332652d09d96",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 253,
+            "copy_items": 3,
+            "cutoffs": [
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 124,
+                "source": 6987,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 19,
+                "source": 2320,
+                "source_default": false,
+                "target_start": 124,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 110,
+                "source": 701,
+                "source_default": false,
+                "target_start": 143,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "20": 60.169752728849865,
+              "35": 59.59674100668019
+            },
+            "signature": "082d332652d09d96"
+          },
+          {
+            "copied_digits": 253,
+            "copy_items": 3,
+            "cutoffs": [
+              10
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 124,
+                "source": 6987,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 13,
+                "source": 2320,
+                "source_default": false,
+                "target_start": 124,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 116,
+                "source": 695,
+                "source_default": false,
+                "target_start": 137,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 60.1374439776009
+            },
+            "signature": "ed189d1ff20e1df0"
+          }
+        ]
+      },
+      {
+        "book": 47,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "bd457a6b0e3b4ccf",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 126,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 126,
+                "source": 811,
+                "source_default": true,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 13.450810307540019,
+              "20": 12.789693456107702,
+              "35": 13.215895362951144
+            },
+            "signature": "bd457a6b0e3b4ccf"
+          }
+        ]
+      },
+      {
+        "book": 48,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "b85131ba5969c668",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 169,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 112,
+                "source": 721,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 57,
+                "source": 4428,
+                "source_default": false,
+                "target_start": 112,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 40.201156239318294,
+              "20": 40.27377389001231,
+              "35": 39.8907204615947
+            },
+            "signature": "b85131ba5969c668"
+          }
+        ]
+      },
+      {
+        "book": 49,
+        "cutoff_count": 3,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature": "b3b64adfb80d085d",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 83,
+            "copy_items": 7,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 25,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 17,
+                "source": 864,
+                "source_default": false,
+                "target_start": 25,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 18,
+                "source": 2050,
+                "source_default": false,
+                "target_start": 42,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 1,
+                "target_start": 60,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 8,
+                "source": 867,
+                "source_default": false,
+                "target_start": 61,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 18,
+                "source": 863,
+                "source_default": false,
+                "target_start": 69,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2052,
+                "source_default": false,
+                "target_start": 87,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "target_start": 96,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 8,
+                "source": 7694,
+                "source_default": false,
+                "target_start": 102,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 5,
+                "source": 2053,
+                "source_default": false,
+                "target_start": 110,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 32,
+            "literal_runs": 3,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "10": 253.30920708414183,
+              "20": 255.16655909845116,
+              "35": 256.20870348632957
+            },
+            "signature": "b3b64adfb80d085d"
+          }
+        ]
+      },
+      {
+        "book": 50,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "e160dc135f718a62",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 141,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 141,
+                "source": 1536,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.69418345271088,
+              "20": 20.730310595964585,
+              "35": 20.538462824318433,
+              "50": 19.93822841379665
+            },
+            "signature": "e160dc135f718a62"
+          }
+        ]
+      },
+      {
+        "book": 51,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "3d8ce3a7f7ec8553",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 268,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 134,
+                "source": 6977,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 134,
+                "source": 7235,
+                "source_default": false,
+                "target_start": 134,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 42.33465103383144,
+              "20": 42.40643227643134,
+              "35": 42.02218610165427
+            },
+            "signature": "3d8ce3a7f7ec8553"
+          },
+          {
+            "copied_digits": 268,
+            "copy_items": 2,
+            "cutoffs": [
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 127,
+                "source": 6977,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 141,
+                "source": 7228,
+                "source_default": false,
+                "target_start": 127,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "50": 40.72138698264061
+            },
+            "signature": "50e022dfd76cf1c8"
+          }
+        ]
+      },
+      {
+        "book": 52,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "197d73b22f013974",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 134,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 134,
+                "source": 6836,
+                "source_default": false,
+                "target_start": 3,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 31.83285673810326,
+              "20": 31.838584451015855,
+              "35": 32.19017653573188,
+              "50": 32.69241099563787
+            },
+            "signature": "197d73b22f013974"
+          }
+        ]
+      },
+      {
+        "book": 53,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "63b52cb327387541",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 271,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 271,
+                "source": 7130,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 21.754144502792826,
+              "20": 21.789674208959152,
+              "35": 21.597130833875248,
+              "50": 21.819480668088197
+            },
+            "signature": "63b52cb327387541"
+          }
+        ]
+      },
+      {
+        "book": 54,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "ae4324fb05133ba6",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 57,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 51,
+                "source": 3350,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 6,
+                "source": 30,
+                "source_default": false,
+                "target_start": 51,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 33.21522523042144,
+              "20": 33.28569880371544,
+              "35": 32.89976560102102,
+              "50": 33.84613289116482
+            },
+            "signature": "ae4324fb05133ba6"
+          }
+        ]
+      },
+      {
+        "book": 55,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "ec50ce82447da56a",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 112,
+            "copy_items": 3,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 13,
+                "source": 2638,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 54,
+                "source": 2748,
+                "source_default": false,
+                "target_start": 13,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 45,
+                "source": 2757,
+                "source_default": false,
+                "target_start": 67,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 4,
+                "target_start": 112,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 4,
+            "literal_runs": 1,
+            "op_count": 4,
+            "parser_bits_by_cutoff": {
+              "10": 71.25230605808929,
+              "20": 71.20727000993305,
+              "35": 69.96975111836875,
+              "50": 71.77185334854164
+            },
+            "signature": "ec50ce82447da56a"
+          }
+        ]
+      },
+      {
+        "book": 56,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "01a0656cc3c5fb37",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 263,
+            "copy_items": 9,
+            "cutoffs": [
+              10,
+              20,
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 40,
+                "source": 2272,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 36,
+                "source": 2177,
+                "source_default": false,
+                "target_start": 40,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 53,
+                "source": 4068,
+                "source_default": false,
+                "target_start": 76,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2312,
+                "source_default": false,
+                "target_start": 129,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 138,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 13,
+                "source": 2234,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 72,
+                "source": 6053,
+                "source_default": false,
+                "target_start": 154,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 2167,
+                "source_default": false,
+                "target_start": 226,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2157,
+                "source_default": false,
+                "target_start": 236,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 21,
+                "source": 242,
+                "source_default": false,
+                "target_start": 245,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "10": 198.24460159703182,
+              "20": 198.01380741507478,
+              "35": 196.02292174658274
+            },
+            "signature": "01a0656cc3c5fb37"
+          },
+          {
+            "copied_digits": 263,
+            "copy_items": 9,
+            "cutoffs": [
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 40,
+                "source": 2272,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 36,
+                "source": 2177,
+                "source_default": false,
+                "target_start": 40,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 53,
+                "source": 4068,
+                "source_default": false,
+                "target_start": 76,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 9,
+                "source": 2312,
+                "source_default": false,
+                "target_start": 129,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 138,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 12,
+                "source": 2234,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 73,
+                "source": 6052,
+                "source_default": false,
+                "target_start": 153,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 2167,
+                "source_default": false,
+                "target_start": 226,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 8,
+                "source": 2157,
+                "source_default": false,
+                "target_start": 236,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 22,
+                "source": 241,
+                "source_default": false,
+                "target_start": 244,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 10,
+            "parser_bits_by_cutoff": {
+              "50": 193.61107993247114
+            },
+            "signature": "fef1188b432b704b"
+          }
+        ]
+      },
+      {
+        "book": 57,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "660ffeaa43a33e29",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 198,
+            "copy_items": 6,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 28,
+                "source": 4910,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 41,
+                "source": 4939,
+                "source_default": false,
+                "target_start": 28,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 28,
+                "target_start": 69,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 44,
+                "source": 4848,
+                "source_default": false,
+                "target_start": 97,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 33,
+                "source": 4859,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 10,
+                "source": 240,
+                "source_default": false,
+                "target_start": 174,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 42,
+                "source": 4892,
+                "source_default": false,
+                "target_start": 184,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 4,
+                "target_start": 226,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 32,
+            "literal_runs": 2,
+            "op_count": 8,
+            "parser_bits_by_cutoff": {
+              "10": 230.20871444203485,
+              "20": 231.97903335267296,
+              "35": 231.56363159620736,
+              "50": 232.73856659011452
+            },
+            "signature": "660ffeaa43a33e29"
+          }
+        ]
+      },
+      {
+        "book": 58,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "073871c760a5c47c",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 269,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 24,
+                "source": 3060,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 3,
+                "target_start": 24,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 245,
+                "source": 5034,
+                "source_default": false,
+                "target_start": 27,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 57.37057713898482,
+              "20": 57.51212666513062,
+              "35": 57.767990424579985,
+              "50": 58.3249688698357
+            },
+            "signature": "073871c760a5c47c"
+          }
+        ]
+      },
+      {
+        "book": 59,
+        "cutoff_count": 4,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature": "341c9a73775db950",
+        "dominant_signature_cutoff_count": 4,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 272,
+            "copy_items": 3,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 141,
+                "source": 5059,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 52,
+                "source": 9260,
+                "source_default": false,
+                "target_start": 141,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 79,
+                "source": 42,
+                "source_default": false,
+                "target_start": 193,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 62.998939357283916,
+              "20": 63.102021455228666,
+              "35": 62.52030263557881,
+              "50": 59.09609706633918
+            },
+            "signature": "341c9a73775db950"
+          }
+        ]
+      },
+      {
+        "book": 60,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "d73ebf2f9267aa16",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 150,
+            "copy_items": 5,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 1,
+                "target_start": 0,
+                "type": "literal"
+              },
+              {
+                "forced": true,
+                "length": 9,
+                "source": 1379,
+                "source_default": false,
+                "target_start": 1,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 53,
+                "source": 3048,
+                "source_default": false,
+                "target_start": 10,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 52,
+                "source": 1327,
+                "source_default": false,
+                "target_start": 63,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 14,
+                "source": 1388,
+                "source_default": false,
+                "target_start": 115,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 22,
+                "source": 7025,
+                "source_default": false,
+                "target_start": 129,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 1,
+            "literal_runs": 1,
+            "op_count": 6,
+            "parser_bits_by_cutoff": {
+              "10": 108.47624933366754,
+              "20": 107.91851645117599,
+              "35": 106.61081734577625,
+              "50": 105.72137351881072,
+              "60": 104.74052869918404
+            },
+            "signature": "d73ebf2f9267aa16"
+          }
+        ]
+      },
+      {
+        "book": 61,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "dc08d5469e078553",
+        "dominant_signature_cutoff_count": 3,
+        "signature_count": 2,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 145,
+            "copy_items": 2,
+            "cutoffs": [
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 112,
+                "source": 4514,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 33,
+                "source": 3033,
+                "source_default": false,
+                "target_start": 112,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "35": 38.594952581701975,
+              "50": 37.624224785498356,
+              "60": 37.038697119479224
+            },
+            "signature": "dc08d5469e078553"
+          },
+          {
+            "copied_digits": 145,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 122,
+                "source": 4514,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 23,
+                "source": 3043,
+                "source_default": false,
+                "target_start": 122,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 39.30658885691348,
+              "20": 39.37476170886111
+            },
+            "signature": "fdeb0d8988185207"
+          }
+        ]
+      },
+      {
+        "book": 62,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "b179c5b081075f9a",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 126,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 126,
+                "source": 424,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.902305666253554,
+              "20": 20.93633284006233,
+              "35": 20.74203728839234,
+              "50": 20.16526169514772,
+              "60": 20.31925412945344
+            },
+            "signature": "b179c5b081075f9a"
+          }
+        ]
+      },
+      {
+        "book": 63,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "2f305c9fa6fce06c",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 126,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 47,
+                "source": 6978,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 79,
+                "source": 1247,
+                "source_default": false,
+                "target_start": 47,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 41.144866075757214,
+              "20": 40.21271526357998,
+              "35": 39.8238846244263,
+              "50": 39.18445622414506,
+              "60": 38.99655185779898
+            },
+            "signature": "2f305c9fa6fce06c"
+          }
+        ]
+      },
+      {
+        "book": 64,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "c295705ed06f810a",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 151,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 76,
+                "source": 1326,
+                "source_default": true,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 75,
+                "source": 7025,
+                "source_default": false,
+                "target_start": 76,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 2,
+            "parser_bits_by_cutoff": {
+              "10": 33.886935505592554,
+              "20": 33.25962451590144,
+              "35": 33.49127245398553,
+              "50": 33.7161813404391,
+              "60": 34.31130702914444
+            },
+            "signature": "c295705ed06f810a"
+          }
+        ]
+      },
+      {
+        "book": 65,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "eaf0b833144ee1c3",
+        "dominant_signature_cutoff_count": 2,
+        "signature_count": 4,
+        "stable_exact_path": false,
+        "variant_summaries": [
+          {
+            "copied_digits": 166,
+            "copy_items": 2,
+            "cutoffs": [
+              10,
+              20
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 125,
+                "source": 4511,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 41,
+                "source": 3043,
+                "source_default": false,
+                "target_start": 125,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 3,
+                "target_start": 166,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "10": 49.6061872945861,
+              "20": 49.779416714366945
+            },
+            "signature": "eaf0b833144ee1c3"
+          },
+          {
+            "copied_digits": 166,
+            "copy_items": 2,
+            "cutoffs": [
+              35
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 115,
+                "source": 4511,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 51,
+                "source": 3033,
+                "source_default": false,
+                "target_start": 115,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 3,
+                "target_start": 166,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "35": 48.75799808684888
+            },
+            "signature": "1792f6a37c523309"
+          },
+          {
+            "copied_digits": 166,
+            "copy_items": 2,
+            "cutoffs": [
+              50
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 111,
+                "source": 4511,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 55,
+                "source": 7028,
+                "source_default": false,
+                "target_start": 111,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 3,
+                "target_start": 166,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "50": 48.24392329536552
+            },
+            "signature": "17f495347bea8db8"
+          },
+          {
+            "copied_digits": 166,
+            "copy_items": 2,
+            "cutoffs": [
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 112,
+                "source": 4511,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              },
+              {
+                "forced": false,
+                "length": 54,
+                "source": 7029,
+                "source_default": false,
+                "target_start": 112,
+                "type": "copy"
+              },
+              {
+                "forced": true,
+                "length": 3,
+                "target_start": 166,
+                "type": "literal"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 3,
+            "literal_runs": 1,
+            "op_count": 3,
+            "parser_bits_by_cutoff": {
+              "60": 46.82631377496156
+            },
+            "signature": "5bea3cd9dc3c044a"
+          }
+        ]
+      },
+      {
+        "book": 66,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "0a89d18b11ab6a55",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 210,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 210,
+                "source": 1696,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 21.73714800601534,
+              "20": 21.77079799412482,
+              "35": 21.575928784393575,
+              "50": 21.85720416677684,
+              "60": 21.974211575895644
+            },
+            "signature": "0a89d18b11ab6a55"
+          }
+        ]
+      },
+      {
+        "book": 67,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "8ac416f90442158f",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 98,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 98,
+                "source": 205,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 20.633214486726782,
+              "20": 20.66673587892724,
+              "35": 20.47184962041822,
+              "50": 20.924481237493175,
+              "60": 21.125535955896282
+            },
+            "signature": "8ac416f90442158f"
+          }
+        ]
+      },
+      {
+        "book": 68,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "dfe8f7b09099050d",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 143,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 143,
+                "source": 2869,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 21.21043978908705,
+              "20": 21.243902841529607,
+              "35": 21.04894841861246,
+              "50": 21.441652313869678,
+              "60": 21.611372000732146
+            },
+            "signature": "dfe8f7b09099050d"
+          }
+        ]
+      },
+      {
+        "book": 69,
+        "cutoff_count": 5,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature": "ed5cca888853f8a0",
+        "dominant_signature_cutoff_count": 5,
+        "signature_count": 1,
+        "stable_exact_path": true,
+        "variant_summaries": [
+          {
+            "copied_digits": 140,
+            "copy_items": 1,
+            "cutoffs": [
+              10,
+              20,
+              35,
+              50,
+              60
+            ],
+            "example_ops": [
+              {
+                "forced": false,
+                "length": 140,
+                "source": 1546,
+                "source_default": false,
+                "target_start": 0,
+                "type": "copy"
+              }
+            ],
+            "example_ops_truncated": false,
+            "literal_digits": 0,
+            "literal_runs": 0,
+            "op_count": 1,
+            "parser_bits_by_cutoff": {
+              "10": 21.197542027057942,
+              "20": 21.230921782868712,
+              "35": 21.035870025471272,
+              "50": 21.42809942406709,
+              "60": 21.58803534776818
+            },
+            "signature": "ed5cca888853f8a0"
+          }
+        ]
+      }
+    ],
+    "elapsed_seconds": 10.736831749905832,
+    "interpretation": "The sparse parser is executable and predictive across cutoffs, but exact operation paths are only partially stable under different frozen prefixes. Stable books support a reusable mechanism; unstable books identify where the current objective still depends on learned stream weights and tie-breaking rather than a prefix-invariant authorial recipe.",
+    "max_signature_count_per_book": 4,
+    "most_unstable_books": [
+      {
+        "book": 65,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50,
+          60
+        ],
+        "dominant_signature_cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 4,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ],
+          [
+            50
+          ],
+          [
+            60
+          ]
+        ]
+      },
+      {
+        "book": 21,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature_cutoffs": [
+          10
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 24,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature_cutoffs": [
+          10
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 28,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature_cutoffs": [
+          10
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 30,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature_cutoffs": [
+          10
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 34,
+        "cutoffs_tested": [
+          10,
+          20
+        ],
+        "dominant_signature_cutoffs": [
+          10
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10
+          ],
+          [
+            20
+          ]
+        ]
+      },
+      {
+        "book": 35,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature_cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ]
+        ]
+      },
+      {
+        "book": 39,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature_cutoffs": [
+          10,
+          20
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20
+          ],
+          [
+            35
+          ]
+        ]
+      },
+      {
+        "book": 46,
+        "cutoffs_tested": [
+          10,
+          20,
+          35
+        ],
+        "dominant_signature_cutoffs": [
+          20,
+          35
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            20,
+            35
+          ],
+          [
+            10
+          ]
+        ]
+      },
+      {
+        "book": 51,
+        "cutoffs_tested": [
+          10,
+          20,
+          35,
+          50
+        ],
+        "dominant_signature_cutoffs": [
+          10,
+          20,
+          35
+        ],
+        "signature_count": 2,
+        "variant_cutoffs": [
+          [
+            10,
+            20,
+            35
+          ],
+          [
+            50
+          ]
+        ]
+      }
+    ],
+    "stable_exact_path_book_count": 38,
+    "stable_exact_path_fraction": 0.76,
+    "total_parser_evaluations": 175,
+    "total_transition_evaluations": 12714003,
+    "total_unique_book_signatures": 64,
+    "total_visited_states": 2952367,
+    "unstable_exact_path_book_count": 12
+  },
+  "translation_delta": "NONE"
+}

@@ -667,6 +667,11 @@ beat raw digit uniform, and parser vs same-policy reprice is `12/163/0`
 better/tie/worse with a `-12.180052` bit aggregate validation delta. This
 strengthens predictive parser evidence, while still not promoting a new bound
 because the validation cuts overlap.
+A path-stability follow-up then distinguishes reusable parser structure from
+prefix-sensitive choices: among `50` books seen under multiple cutoffs, `38`
+keep one exact operation signature and `12` vary; book `65` is the worst case
+with `4` signatures. That makes the remaining frontier concrete: explain or
+stabilize the prefix-sensitive paths before calling this a final generator.
 The current-formula dependency scoreboard then re-counts the latest formula:
 `87` literal fields, `261` copy-source fields, and `261` copy-length fields
 remain declared, so structural source/length parsing is the next mainline
@@ -839,6 +844,8 @@ from the committed workbooks via [`scripts/`](../../scripts/README.md).
   `10/10` roundtrip while leaving the compression bound unchanged,
   validates the sparse suffix parser across cutoffs `10/20/35/50/60` with
   `175/175` roundtrip evaluations and no same-policy losses,
+  audits exact parser-path stability across those cutoffs (`38/50` stable,
+  `12/50` prefix-sensitive),
   rejects paid
   partial worksheet anchors as a row0-origin formula, and
   keeps row0 origin exogenous with translation delta zero.

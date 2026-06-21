@@ -247,6 +247,9 @@ exogenous.
 - [scripts/77_multi_cutoff_sparse_suffix_parser_validation.py](scripts/77_multi_cutoff_sparse_suffix_parser_validation.py) - repeats the sparse suffix parser over cutoffs `10/20/35/50/60` with frozen prefix counts.
 - [reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.md](reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.md) - multi-cutoff sparse suffix validation result.
 - [reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json](reports/test_results/77_multi_cutoff_sparse_suffix_parser_validation.json) - structured multi-cutoff validation ledger.
+- [scripts/78_multi_cutoff_parser_path_stability_audit.py](scripts/78_multi_cutoff_parser_path_stability_audit.py) - checks whether exact parser paths stay invariant for the same book across different frozen cutoffs.
+- [reports/test_results/78_multi_cutoff_parser_path_stability_audit.md](reports/test_results/78_multi_cutoff_parser_path_stability_audit.md) - multi-cutoff parser path-stability result.
+- [reports/test_results/78_multi_cutoff_parser_path_stability_audit.json](reports/test_results/78_multi_cutoff_parser_path_stability_audit.json) - structured path-stability ledger.
 
 ## Boundary
 
@@ -495,6 +498,11 @@ exogenous.
   `-12.180052` bits. This strengthens predictive parser evidence, but it is
   not a new compression bound because the rows are overlapping validation cuts,
   not one charged corpus recipe.
+- The path-stability audit then replays those `175` parser evaluations with
+  exact operation signatures. Among the `50` books seen under multiple cutoffs,
+  `38` keep the same exact path and `12` vary. This supports a reusable parser
+  mechanism while identifying the remaining prefix-sensitive books, led by
+  book `65` with `4` distinct signatures.
 - Row0 result: `row0_origin_remains_exogenous`.
 - Requirement follow-up: all six requested row0-origin families have explicit
   algorithm, cost or cost note, coverage, contradiction, and control entries;

@@ -176,6 +176,15 @@ execution evidence so far because it survives several train/test boundaries,
 but it remains validation evidence rather than a new corpus bound: the rows
 overlap and do not constitute one charged 70-book recipe.
 
+The path-stability audit adds the missing caution. Replaying the same `175`
+evaluations with exact operation signatures shows that `38/50` books observed
+under multiple cutoffs keep a single exact parser path, while `12/50` change
+path as the frozen prefix changes; book `65` is the worst case with `4`
+distinct signatures. This supports the parser as a reusable mechanism, but it
+also localizes the remaining non-authorial-looking dependency: some paths are
+still controlled by learned stream weights and tie-breaking rather than a
+prefix-invariant recipe.
+
 Negative controls separate this from random substring opportunity: component
 digit shuffles and random length-matched literals both saved `0.0` bits in 400
 runs (`p=0.0025`). A stricter same-book component exclusion still saved `646.3`
