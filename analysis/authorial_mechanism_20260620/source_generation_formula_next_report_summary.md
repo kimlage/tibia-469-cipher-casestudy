@@ -668,6 +668,12 @@ Coverage of the remaining report recommendations and follow-on refinements:
   keep `8177.317` bits as `compression_bound`, but the frozen-prefix
   generation-explanation profile is `8206.178` bits because copy-source
   default/exception is retained only as compression-bound evidence.
+- current literal-payload profiling is now covered by
+  [`143_current_literal_payload_profile_audit.py`](scripts/143_current_literal_payload_profile_audit.py);
+  the earlier order-1 generation-profile result does not transfer to the
+  current online-reparse/default-exception recipe. Order-1 is `+95.968` bits on
+  full corpus and `+28.609` bits worse in aggregate frozen prefix tests, so
+  order-2 is retained for the current profile.
 - DP plus externally supplied fine physical order remains open only if a source
   gives a non-ambiguous tile/slot/orientation/read-order layer at zero search
   cost.

@@ -429,6 +429,9 @@ promoted as a frozen generation method.
 A component-profile compile now records the split explicitly: `8177.317` bits
 is the `compression_bound`, while `8206.178` bits is the frozen-prefix
 generation-explanation profile for this layer.
+The current literal-payload profile audit then rejects carrying forward the old
+order-1 simplification: on the current recipe, order-1 is `+95.968` bits on
+the full corpus and `+28.609` bits worse in aggregate frozen prefix tests.
 The literal-payload default/exception audit then rejects modal-default literal
 digit coding: the active categorical previous-emitted-digit order-2 model stays
 best, so no literal-payload fallback is promoted.

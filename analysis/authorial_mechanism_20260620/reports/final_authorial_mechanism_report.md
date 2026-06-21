@@ -690,5 +690,9 @@ Generated audits in this directory should be treated as the current state:
   the frozen-prefix generation-explanation profile is `8206.178` bits:
   copy-length default/exception is retained for frozen explanation, but
   copy-source default/exception is compression-bound-only.
+- `143_current_literal_payload_profile_audit`: retests the older
+  literal-payload order-1 profile on the current recipe. It is not retained:
+  order-1 is `+95.968` bits on the full corpus and `+28.609` bits worse in
+  aggregate frozen prefix tests, despite winning cutoffs `20/35/50`.
 
 Any improvement must reduce cost or beat controls. No semantic route is opened.

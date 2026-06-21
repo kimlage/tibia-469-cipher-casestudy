@@ -375,6 +375,8 @@ as `compression_bound`, not as a final authorial method.
 - `scripts/142_default_exception_component_profile.py` - separates
   `compression_bound` (`8177.317` bits) from the frozen-prefix generation
   profile (`8206.178` bits) after audit 141.
+- `scripts/143_current_literal_payload_profile_audit.py` - retests the old
+  literal-payload order-1 profile on the current recipe and retains order-2.
 - `reports/` - generated and human-readable outputs.
 
 Translation delta: `NONE`.

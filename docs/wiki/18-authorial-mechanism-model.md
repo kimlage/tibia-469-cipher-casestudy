@@ -959,6 +959,11 @@ the active `compression_bound`, while the frozen-prefix generation-explanation
 profile is `8206.178` bits. Copy-length default/exception is retained for the
 frozen explanation; copy-source default/exception is compression-bound-only
 until a train-frozen source model beats legal uniform.
+The current literal-payload profile audit then retests an older simplification
+claim on the updated recipe. Literal payload order-1 no longer qualifies for
+the current profile: it is `+95.968` bits on the full corpus and `+28.609`
+bits worse in aggregate frozen prefix tests, despite winning cutoffs
+`20/35/50`. The current profile therefore keeps order-2.
 The literal-payload default decodability audit then tests whether the largest
 remaining digit stream can use a modal default plus exceptions. It cannot:
 the active categorical previous-emitted-digit order-2 model remains best, and
@@ -1259,6 +1264,7 @@ book generation, not row0 pair-cell placement.
 - [Copy source default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/137_copy_source_default_decodability_audit.md)
 - [Default/exception prequential validation](../../analysis/authorial_mechanism_20260620/reports/test_results/141_default_exception_prequential_validation.md)
 - [Default/exception component profile](../../analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.md)
+- [Current literal payload profile audit](../../analysis/authorial_mechanism_20260620/reports/test_results/143_current_literal_payload_profile_audit.md)
 - [Literal payload default decodability audit](../../analysis/authorial_mechanism_20260620/reports/test_results/138_literal_payload_default_decodability_audit.md)
 - [Literal payload structural context audit](../../analysis/authorial_mechanism_20260620/reports/test_results/139_literal_payload_structural_context_audit.md)
 

@@ -1,0 +1,196 @@
+{
+  "case_reopened": false,
+  "classification": "literal_payload_order2_retained_for_current_profile",
+  "comparison": {
+    "order1_frozen_delta_vs_order2_total_bits": 28.608503801074853,
+    "order1_frozen_win_cutoffs": [
+      20,
+      35,
+      50
+    ],
+    "order1_full_corpus_delta_vs_order2_bits": 95.96760019306384,
+    "order1_online_delta_vs_order2_total_bits": 47.34555627026942
+  },
+  "decision": {
+    "compression_bound_changed": false,
+    "generation_explanation_profile_bits": 8206.178438764528,
+    "generation_explanation_profile_bits_changed": false,
+    "literal_payload_profile": "order2_retained",
+    "reason": "Order1 wins some intermediate frozen splits, but it is worse on full corpus and worse in aggregate prefix online/frozen totals under the current online-reparse recipe.",
+    "row0_origin_changed": false,
+    "semantic_delta": "NONE"
+  },
+  "full_corpus": {
+    "0": {
+      "bits": 2842.4315749465445,
+      "context_count": 1,
+      "order": 0
+    },
+    "1": {
+      "bits": 2709.62842294555,
+      "context_count": 11,
+      "order": 1
+    },
+    "2": {
+      "bits": 2613.660822752486,
+      "context_count": 98,
+      "order": 2
+    },
+    "3": {
+      "bits": 2706.054084400152,
+      "context_count": 407,
+      "order": 3
+    }
+  },
+  "plaintext_claim": false,
+  "prefix_splits": [
+    {
+      "cutoff": 10,
+      "order1": {
+        "cutoff": 10,
+        "frozen_gain_vs_uniform_bits": 82.52561149226142,
+        "online_gain_vs_uniform_bits": 88.46701948139957,
+        "order": 1,
+        "test_digits": 292,
+        "test_frozen_bits": 887.4773922148484,
+        "test_online_bits": 881.5359842257102,
+        "train_bits": 1828.0924387198388,
+        "train_digits": 565,
+        "uniform_bits": 970.0030037071098
+      },
+      "order2": {
+        "cutoff": 10,
+        "frozen_gain_vs_uniform_bits": 118.07026506976592,
+        "online_gain_vs_uniform_bits": 134.17033908778808,
+        "order": 2,
+        "test_digits": 292,
+        "test_frozen_bits": 851.9327386373438,
+        "test_online_bits": 835.8326646193217,
+        "train_bits": 1777.8281581331544,
+        "train_digits": 565,
+        "uniform_bits": 970.0030037071098
+      }
+    },
+    {
+      "cutoff": 20,
+      "order1": {
+        "cutoff": 20,
+        "frozen_gain_vs_uniform_bits": 46.6406545216019,
+        "online_gain_vs_uniform_bits": 46.95060737666569,
+        "order": 1,
+        "test_digits": 142,
+        "test_frozen_bits": 425.0731349524035,
+        "test_online_bits": 424.7631820973397,
+        "train_bits": 2284.86524084821,
+        "train_digits": 715,
+        "uniform_bits": 471.7137894740054
+      },
+      "order2": {
+        "cutoff": 20,
+        "frozen_gain_vs_uniform_bits": 45.65296064098004,
+        "online_gain_vs_uniform_bits": 49.721728679060334,
+        "order": 2,
+        "test_digits": 142,
+        "test_frozen_bits": 426.06082883302537,
+        "test_online_bits": 421.9920607949451,
+        "train_bits": 2191.668761957534,
+        "train_digits": 715,
+        "uniform_bits": 471.7137894740054
+      }
+    },
+    {
+      "cutoff": 35,
+      "order1": {
+        "cutoff": 35,
+        "frozen_gain_vs_uniform_bits": 25.65141057037914,
+        "online_gain_vs_uniform_bits": 25.332339873144008,
+        "order": 1,
+        "test_digits": 97,
+        "test_frozen_bits": 296.575614633695,
+        "test_online_bits": 296.89468533093014,
+        "train_bits": 2412.7337376146197,
+        "train_digits": 760,
+        "uniform_bits": 322.22702520407415
+      },
+      "order2": {
+        "cutoff": 35,
+        "frozen_gain_vs_uniform_bits": 18.733042726429915,
+        "online_gain_vs_uniform_bits": 21.623691146296494,
+        "order": 2,
+        "test_digits": 97,
+        "test_frozen_bits": 303.49398247764424,
+        "test_online_bits": 300.60333405777766,
+        "train_bits": 2313.0574886947024,
+        "train_digits": 760,
+        "uniform_bits": 322.22702520407415
+      }
+    },
+    {
+      "cutoff": 50,
+      "order1": {
+        "cutoff": 50,
+        "frozen_gain_vs_uniform_bits": 13.107163945863107,
+        "online_gain_vs_uniform_bits": 14.19478024022078,
+        "order": 1,
+        "test_digits": 49,
+        "test_frozen_bits": 149.66731270361765,
+        "test_online_bits": 148.57969640925998,
+        "train_bits": 2561.04872653629,
+        "train_digits": 808,
+        "uniform_bits": 162.77447664948076
+      },
+      "order2": {
+        "cutoff": 50,
+        "frozen_gain_vs_uniform_bits": 13.027131844256417,
+        "online_gain_vs_uniform_bits": 15.724600278806435,
+        "order": 2,
+        "test_digits": 49,
+        "test_frozen_bits": 149.74734480522434,
+        "test_online_bits": 147.04987637067433,
+        "train_bits": 2466.6109463818098,
+        "train_digits": 808,
+        "uniform_bits": 162.77447664948076
+      }
+    },
+    {
+      "cutoff": 60,
+      "order1": {
+        "cutoff": 60,
+        "frozen_gain_vs_uniform_bits": 1.6184653743856323,
+        "online_gain_vs_uniform_bits": 1.6184653743856323,
+        "order": 1,
+        "test_digits": 4,
+        "test_frozen_bits": 11.669247005163816,
+        "test_online_bits": 11.669247005163816,
+        "train_bits": 2697.959175940386,
+        "train_digits": 853,
+        "uniform_bits": 13.287712379549449
+      },
+      "order2": {
+        "cutoff": 60,
+        "frozen_gain_vs_uniform_bits": 2.6684094241337615,
+        "online_gain_vs_uniform_bits": 2.6684094241337615,
+        "order": 2,
+        "test_digits": 4,
+        "test_frozen_bits": 10.619302955415687,
+        "test_online_bits": 10.619302955415687,
+        "train_bits": 2603.04151979707,
+        "train_digits": 853,
+        "uniform_bits": 13.287712379549449
+      }
+    }
+  ],
+  "schema": "current_literal_payload_profile_audit.v1",
+  "scope": {
+    "active_compression_bound_bits": 8177.3166531229235,
+    "active_literal_payload_bits": 2613.660822752486,
+    "literal_digit_count": 857,
+    "prior_generation_profile_bits": 8206.178438764528
+  },
+  "sources": {
+    "default_exception_component_profile": "analysis/authorial_mechanism_20260620/reports/test_results/142_default_exception_component_profile.json",
+    "formula": "analysis/authorial_mechanism_20260620/sequential_lz_digit_address_contextual_bounded_adaptive_copy_length_source_default_exception_formula_469.json"
+  },
+  "test": "143_current_literal_payload_profile_audit",
+  "translation_delta": "NONE"
+}
