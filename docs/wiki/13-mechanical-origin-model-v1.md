@@ -17,6 +17,7 @@ source_refs:
   - analysis/segmentation_decision_audit_20260621
   - analysis/target_digit_boundary_threshold_audit_20260621
   - analysis/target_digit_boundary_peak_audit_20260621
+  - analysis/target_digit_boundary_island_audit_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -363,6 +364,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Skeleton dependency after boundary pruning | consolidates the promoted boundary clue after charging op-count: op-count costs `432.765` bits, exact full cutpoint atlas is `1570.073` bits, pruned full atlas is `1464.127` bits, so the dependency reduction remains `105.946` bits but op-count and `115` missed cutpoints stay external | dependency reduced / skeleton not generated |
 | Target digit boundary threshold audit | tests threshold-generated boundary sets without granting op-count; best `right_ge:4` policy reduces the `1570.073`-bit full cutpoint atlas to `924.379` paid correction bits after policy charge, saving `645.694` bits and beating random p95, but still needs `948` FP/FN corrections and has `0/60` exact books | dependency reduced / endpoint generator not promoted |
 | Target digit boundary peak audit | tests whether the same signal should be sharpened to local peaks/non-maximum-suppressed rank peaks; best `nms_rank:top=0.05:gap=3` cuts correction events from `948` to `504` but loses `29.746` bits versus the threshold gate, adds `37` missed cutpoints, and has `0/60` exact books | peak replacement not promoted |
+| Target digit boundary island audit | tests contiguous high-surprisal islands plus offsets against the flat threshold candidate-set code; best `right_ge:4` has `782` islands and `94` occupied single-hit islands, but costs `16.625` bits more than the same-policy threshold code and beats threshold in only `2/5` prefix-selected cells | island code rejected |
 | Skeleton rule coverage audit | simple decoder-visible rules do not generate the skeleton: best op-type rule is `always_copy` at `208/261`, best length rule is `116/261`, and target-dependent availability is only `208/261` | simple generator rejected |
 | Skeleton template reuse audit | exact skeleton reuse is sparse (`58` unique templates across `60` books; only pairs `43/50` and `47/62` repeat), while type-sequence motifs repeat without length-template reuse | template-library promotion rejected |
 | Type motif library ledger | type motifs repeat, but a type library has `193` entries plus `60` assignments and still leaves `261` length/target residual records; full representation is `514` records, `+253` vs exact atlas | type motif library rejected |
@@ -611,6 +613,8 @@ Primary sources:
 [target_digit_boundary_threshold_gate.md](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.md),
 [final_target_digit_boundary_peak_audit.md](../../analysis/target_digit_boundary_peak_audit_20260621/reports/final_target_digit_boundary_peak_audit.md),
 [target_digit_boundary_peak_gate.md](../../analysis/target_digit_boundary_peak_audit_20260621/reports/test_results/01_target_digit_boundary_peak_gate.md),
+[final_target_digit_boundary_island_audit.md](../../analysis/target_digit_boundary_island_audit_20260621/reports/final_target_digit_boundary_island_audit.md),
+[target_digit_boundary_island_gate.md](../../analysis/target_digit_boundary_island_audit_20260621/reports/test_results/01_target_digit_boundary_island_gate.md),
 [final_literal_payload_generation_audit.md](../../analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md),
 [literal_payload_context_gate.md](../../analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.md),
 [final_copy_source_generation_audit.md](../../analysis/copy_source_generation_audit_20260621/reports/final_copy_source_generation_audit.md),

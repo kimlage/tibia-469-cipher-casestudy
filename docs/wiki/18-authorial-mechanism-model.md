@@ -13,6 +13,7 @@ source_refs:
   - analysis/segmentation_decision_audit_20260621
   - analysis/target_digit_boundary_threshold_audit_20260621
   - analysis/target_digit_boundary_peak_audit_20260621
+  - analysis/target_digit_boundary_island_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -548,6 +549,13 @@ it reduces predicted boundaries from `935` to `417` and correction events from
 `615.947` bits after policy charge, `29.746` bits worse than the threshold
 gate, and does so by adding `37` missed true cutpoints; exact books remain
 `0/60`.
+A target digit boundary island audit then tests a more regional interpretation:
+describe contiguous high-surprisal islands and offsets inside them. This keeps
+the best policy at `right_ge:4`; the occupied islands are clean singletons
+(`94` occupied, `0` multi-hit), so the diagnostic is real. The code is still
+worse: island correction costs `941.005` bits after policy charge, `16.625`
+bits more than the flat threshold candidate-set code, and prefix-selected
+island coding beats same-policy threshold coding in only `2/5` cells.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2700,6 +2708,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary threshold gate](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.md)
 - [Final target digit boundary peak audit](../../analysis/target_digit_boundary_peak_audit_20260621/reports/final_target_digit_boundary_peak_audit.md)
 - [Target digit boundary peak gate](../../analysis/target_digit_boundary_peak_audit_20260621/reports/test_results/01_target_digit_boundary_peak_gate.md)
+- [Final target digit boundary island audit](../../analysis/target_digit_boundary_island_audit_20260621/reports/final_target_digit_boundary_island_audit.md)
+- [Target digit boundary island gate](../../analysis/target_digit_boundary_island_audit_20260621/reports/test_results/01_target_digit_boundary_island_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
