@@ -32,6 +32,7 @@ source_refs:
   - analysis/schedule_state_multistream_pilot_audit_20260622
   - analysis/book_multiset_order_factorization_audit_20260622
   - analysis/within_book_order_program_audit_20260622
+  - analysis/sequence_mutation_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -855,6 +856,13 @@ emit the exact token order. They cost `606.765` bits versus `587.378` uniform
 order bits (`+19.387`), beat shuffled-train p95 in only `1/5` cells, and beat
 shuffled-test p95 in `0/5`. Beam20 keeps some short/nontrivial true sequences,
 but the charged order field is not reduced, so this route is not promoted.
+A sequence mutation program audit then tests the joint alternative: derive a
+held-out book's operation-token sequence as an edit script from a previous
+training-book sequence. Even as an optimistic lower bound, the selected policies
+cost `4742.368` bits versus `3525.674` sequence-unigram bits (`+1216.694`
+worse), beat shuffled-train p95 in `0/5` cells, and the oracle source lower
+bound with paid source index is still `+832.040` bits worse than unigram. So
+book-sequence mutation is rejected as the next generator route.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3217,6 +3225,8 @@ book generation, not row0 pair-cell placement.
 - [Book multiset/order factorization gate](../../analysis/book_multiset_order_factorization_audit_20260622/reports/test_results/01_book_multiset_order_factorization_gate.md)
 - [Final within-book order program audit](../../analysis/within_book_order_program_audit_20260622/reports/final_within_book_order_program_audit.md)
 - [Within-book order program gate](../../analysis/within_book_order_program_audit_20260622/reports/test_results/01_within_book_order_program_gate.md)
+- [Final sequence mutation program audit](../../analysis/sequence_mutation_program_audit_20260622/reports/final_sequence_mutation_program_audit.md)
+- [Sequence mutation program gate](../../analysis/sequence_mutation_program_audit_20260622/reports/test_results/01_sequence_mutation_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
