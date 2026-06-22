@@ -71,6 +71,7 @@ source_refs:
   - analysis/seed_bootstrap_decision_policy_audit_20260622
   - analysis/unified_innovation_payload_audit_20260622
   - analysis/executable_v7_unified_innovation_payload_audit_20260622
+  - analysis/innovation_replay_policy_frontier_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3632,6 +3633,7 @@ book generation, not row0 pair-cell placement.
 - [Seed bootstrap decision-policy audit](../../analysis/seed_bootstrap_decision_policy_audit_20260622/reports/final_seed_bootstrap_decision_policy_audit.md)
 - [Unified innovation payload audit](../../analysis/unified_innovation_payload_audit_20260622/reports/final_unified_innovation_payload_audit.md)
 - [Executable v7 unified innovation payload audit](../../analysis/executable_v7_unified_innovation_payload_audit_20260622/reports/final_executable_v7_unified_innovation_payload_audit.md)
+- [Innovation replay policy frontier audit](../../analysis/innovation_replay_policy_frontier_audit_20260622/reports/final_innovation_replay_policy_frontier_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3772,6 +3774,17 @@ fall from v6 `9699.003` to v7 `7192.151`. This is the strongest executable
 dependency reduction in the current line, but the limitation is unchanged: the
 innovation replay is target-conditioned, so the next blocker is the policy or
 origin process that introduces innovation chunks.
+
+A policy-frontier audit tests the simplest version of that blocker. It gives
+the decoder only emitted material, total innovation-stream length, and the
+residual literal tape, then tries online policies based on literal-prefix reuse
+and suffix continuation. Nothing promotes: the best policy is effectively
+`literal_only`, reproduces only the first `242/1962` digits, and is
+`+4906.133` bits worse than the v7 replay after suffix correction. Boundary
+diagnostics are also weak (`5/62` replay event starts, `5/62` ends, and `0/39`
+copy source start+end pairs align with the tested boundaries). This keeps the
+v7 ledger promoted, but identifies the exact unresolved mechanism: copy vs
+literal decisions and copy source/length policy for the innovation stream.
 
 ## Boundary
 
