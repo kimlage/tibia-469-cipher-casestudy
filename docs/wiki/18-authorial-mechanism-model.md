@@ -3672,12 +3672,14 @@ level, not another isolated source/endpoint codec.
 The causal event graph audit then tests that main question. It converts the v6
 decoder into a graph of seed spans, literal innovation spans, copy intervals,
 operation spans, source-boundary/endpoint marks, and causal edges. As a ledger
-the graph is useful, but prefix/family macro induction does not become a
-smaller generator: `72` split-stream rows are tested, the best macro delta is
-still `+88.238` bits versus direct event labels, `0` rows are positive, only
-`2/72` beat shuffled p05, and shuffled literal tape preserves `0/53` literal
-chunks. The result is `causal_event_graph_program_not_promoted`; the blocker
-remains origin of innovation/content, not another isolated local selector.
+the graph is useful (`261` event nodes / `1120` edges), but prefix/family macro
+induction does not become a smaller generator: v6 remains the executable
+baseline at `4065.013` external bits excluding seed, while the best exact-token
+prefix macro program is `+86.439` bits versus the minimal v2 test ledger and
+produces `0` nontrivial exact books without correction. High-level tokens cover
+shape but not exact residual fields. The result is
+`causal_event_graph_program_not_promoted`; the blocker remains origin of
+innovation/content, not another isolated local selector.
 
 An innovation-lineage basis audit then tests that blocker directly. It
 propagates every emitted digit back to a seed or literal innovation atom and

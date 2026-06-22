@@ -8,19 +8,19 @@ Case reopened: `False`
 
 ## Summary
 
-This audit converts the current executable v6 decoder into a causal event graph with seed spans, literal innovation spans, copy source spans, operation spans, source-boundary/endpoint marks, and edges for emitting, copying, consuming literal tape, deriving sources, and creating marks.
+This audit converts the current executable v6 decoder into a causal event graph. The graph has operation, literal-innovation, copy-interval, source-boundary, and endpoint-reuse edges, then tests whether event macros learned in prefix can replace the residual tapes.
 
-The graph has `261` operation events. The current executable baseline remains `4065.013` external bits excluding seed.
+The executable baseline is unchanged: v6 roundtrips `70/70`, external bits excluding seed are `4065.013`, including seed `9699.003`, and the narrow v5 -> v6 literal-span reduction is `32.320` bits.
 
-Prefix/family macro tests cover `72` split-stream rows. The best macro delta versus direct event labels is `88.238` bits; `0` rows are positive, `2` beat shuffled p05, and only `1` tested sequence is generated without raw corrections.
+The causal graph materializes `261` event nodes and `1120` edges. Copy source classes are `{'fallback': 90, 'end_only': 55, 'both_endpoint_interval': 52, 'literal_span_source': 11}`.
 
-Required controls do not rescue the route: same-multiset shuffled graph controls are beaten in only a small minority of rows, permuted book order and randomized source-span controls remain non-promoting, shuffled macro labels do not expose a hidden paid saving, and shuffled literal tape does not preserve the literal innovation schedule.
+The macro program is not promoted. The best exact-token prefix holdout is cutoff `60` with delta `86.439` bits versus the minimal v2 test ledger and `0` nontrivial exact books without correction. High-level tokens cover more shape but still do not replace exact residual fields in the executable v6 ledger.
 
 ## Decision
 
 `causal_event_graph_program_not_promoted`.
 
-The current blocker is still origin of innovation/content rather than a local source/endpoint/composition selector. The causal graph is useful as a ledger, but the tested macros do not become a smaller executable generation program.
+The graph improves the residual accounting surface, but it does not become a smaller frozen program. The remaining blocker is origin/content: residual composition, remaining copy fallback hints, literal payload, seed payload, and row0 remain external.
 
 `row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.
 
