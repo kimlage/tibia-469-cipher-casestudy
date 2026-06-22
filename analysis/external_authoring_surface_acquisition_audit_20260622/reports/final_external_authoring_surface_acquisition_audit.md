@@ -99,3 +99,13 @@ No v9 reduction is claimed.
 - [05_clean_topology_v9_integration_harness.py](../scripts/05_clean_topology_v9_integration_harness.py)
 - [05_clean_topology_v9_integration_harness.json](test_results/05_clean_topology_v9_integration_harness.json)
 - [05_clean_topology_v9_integration_harness.md](test_results/05_clean_topology_v9_integration_harness.md)
+
+## Clean Topology v9 Control Protocol
+
+A pre-registered executable control protocol now exists for future rights-clean topology CSV inputs.
+It will run prefix/leave-container holdouts, feature selection on training data, and topology-label permutation controls against v9 streams.
+The current template input has `1` unique match and does not meet coverage thresholds, so no source is integrated and no v9 reduction is claimed.
+
+- [06_clean_topology_v9_control_protocol.py](../scripts/06_clean_topology_v9_control_protocol.py)
+- [06_clean_topology_v9_control_protocol.json](test_results/06_clean_topology_v9_control_protocol.json)
+- [06_clean_topology_v9_control_protocol.md](test_results/06_clean_topology_v9_control_protocol.md)

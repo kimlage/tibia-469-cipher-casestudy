@@ -1,0 +1,62 @@
+{
+  "case_reopened": false,
+  "classification": "clean_topology_v9_controls_preregistered_not_run_coverage_insufficient",
+  "compression_bound_status": "unchanged",
+  "coverage_ok": false,
+  "decision": {
+    "external_surface_integrated": false,
+    "promoted_targets": [],
+    "reason": "coverage_insufficient",
+    "v9_reduction_bits": 0.0
+  },
+  "input_csv": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv",
+  "joined_v9_rows": 0,
+  "match_summary": {
+    "ambiguous_matches": 0,
+    "derived_matched_books": [],
+    "input_rows": 1,
+    "matched_books": [
+      4
+    ],
+    "unique_matches": 1,
+    "unmatched": 0
+  },
+  "plaintext_claim": false,
+  "protocol": {
+    "alpha": 0.5,
+    "features": [
+      "container",
+      "slot_bucket",
+      "coord_bucket",
+      "container_x_slot_bucket",
+      "container_x_op_pos"
+    ],
+    "minimum_coverage": {
+      "derived_matched_books": 10,
+      "split_count": 3,
+      "total_matched_books": 20
+    },
+    "prefix_cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "promotion_rule": "positive total heldout saving and beats topology-label permutation p95",
+    "random_trials": 150,
+    "targets": [
+      "coarse_control",
+      "op_type",
+      "copy_hint_rank_bucket"
+    ]
+  },
+  "retrieved_at_utc": "2026-06-22T22:48:13.059213+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "clean_topology_v9_control_protocol.v1",
+  "scope": "analysis_only_clean_topology_v9_control_protocol",
+  "split_count": 0,
+  "target_results": {},
+  "translation_delta": "NONE",
+  "validation_errors": []
+}

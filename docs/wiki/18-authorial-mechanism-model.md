@@ -3882,6 +3882,14 @@ running topology feature diagnostics. Running it on the current template yields
 `1` unique seed-book match, `0` derived-book matches, `0` joined v9 rows, and
 therefore no claimed reduction.
 
+The clean topology v9 control protocol then pre-registers the statistical gate
+for such a future source: prefix and leave-container holdouts, train-only
+feature selection, and topology-label permutation controls over `coarse_control`,
+`op_type`, and `copy_hint_rank_bucket`. The current template still has only `1`
+unique seed-book match, `0` derived-book matches, `0` joined v9 rows, and `0`
+usable splits, so this is an executable future test contract, not a promoted
+authoring surface or v9 reduction.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
