@@ -1,7 +1,7 @@
 # Final Latent Transducer Generation Audit
 
 Status: `analysis_only`
-Classification: `latent_transducer_closed_loop_high_external_control_surface_mapped`
+Classification: `latent_transducer_closed_loop_high_external_control_copy_pruning_mapped`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -44,6 +44,12 @@ boundaries, and copy sources together, instead of relying on the fixed
 - Rescue surface exact/near internal cutpoint fraction: `0.015589` / `0.047344`.
 - Rescue surface operation-start fraction: `0.015589`.
 - Rescue surface early <=20% fraction: `0.215935`.
+- Copy-state diagnostic copy-surface last-kind counts: `{'copy': 16, 'literal': 1705}`.
+- Copy-state diagnostic true-copy event fraction inside copy spans: `0.009297`.
+- Copy-state diagnostic copy ops tested: `32`.
+- Copy-state diagnostic source-match ops: `32/32`.
+- Copy-state diagnostic inventory/pruned prefix digit fraction: `0.857258` / `0.000000`.
+- Copy-state diagnostic ops with any pruned prefix: `0`.
 
 The new route tests the right object: a single parser where literal, copy,
 length, source, and boundary decisions compete in one beam. But this first
@@ -62,7 +68,16 @@ skeleton after decoding. The failures are not concentrated at visible
 boundaries: only `27/1732` are exact internal cutpoints and `82/1732`
 are within one digit of an internal cutpoint, while `1721/1732` fall
 inside canonical copy spans. That leaves the blocker at decoder-visible
-copy-state/content control, not a simple boundary trigger.
+copy-state/content control, not a simple boundary trigger. A copy-state
+diagnostic then asks whether those failures come from absent source
+material or from candidate pruning/ranking. The answer is narrow but
+useful: inside copy spans, only `16/1721` rescue events arrive via a
+copy emission; `1705/1721` arrive by single literal steps. For the `32`
+sampled canonical copy ops, the source payload matches in `32/32` and
+some correct prefix exists in the raw inventory in `32/32`, covering
+`1063/1240` copy digits, but the pruned candidate set contains a correct
+prefix in `0/32`. The live blocker is therefore candidate pruning/ranking
+or copy-continuation state, not missing prior material.
 
 ## Decision
 
@@ -71,6 +86,7 @@ copy-state/content control, not a simple boundary trigger.
 - Closed-loop digit survival is rejected under the current beam.
 - The rescue ledger is high external-control, so oracle steering is not promoted as a compact latent state.
 - Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.
+- Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.
 - Promotion requires nontrivial exact holdout books and paid correction reduction.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
@@ -82,3 +98,4 @@ copy-state/content control, not a simple boundary trigger.
 - [Closed loop digit survival gate](test_results/03_closed_loop_digit_survival_gate.md)
 - [Closed loop rescue ledger](test_results/04_closed_loop_rescue_ledger.md)
 - [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)
+- [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)

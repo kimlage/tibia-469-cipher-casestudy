@@ -639,6 +639,15 @@ internal cutpoints account for only `27/1732` events, near-cutpoints for
 `82/1732`, and operation starts for `27/1732`. So the missing state is not a
 simple visible-boundary trigger; it is a decoder-visible copy-state/content
 control problem.
+A copy-state rescue diagnostic then separates missing source material from
+candidate pruning/ranking. In the same rescue trace, only `16/1721` copy-span
+rescues arrive via a copy emission, while `1705/1721` arrive by single literal
+steps. On the sampled canonical copy ops, the declared source payload matches
+the target in `32/32`, and some correct prefix exists in the raw copy inventory
+for `32/32`, covering `1063/1240` copy digits. But the pruned candidate set
+contains a correct prefix for `0/32` copy ops. This does not promote a
+generator, but it sharply locates the next constructive route: copy candidate
+ranking/pruning or a copy-continuation state, not another boundary detector.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2931,6 +2940,7 @@ book generation, not row0 pair-cell placement.
 - [Closed loop digit survival gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/03_closed_loop_digit_survival_gate.md)
 - [Closed loop rescue ledger](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/04_closed_loop_rescue_ledger.md)
 - [Closed loop rescue surface audit](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/05_closed_loop_rescue_surface_audit.md)
+- [Copy state rescue diagnostic](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/06_copy_state_rescue_diagnostic.md)
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)

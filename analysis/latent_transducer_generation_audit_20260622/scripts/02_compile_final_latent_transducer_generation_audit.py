@@ -14,6 +14,7 @@ BEAM_GATE = TEST_RESULTS / "01_latent_transducer_beam_gate.json"
 CLOSED_LOOP_GATE = TEST_RESULTS / "03_closed_loop_digit_survival_gate.json"
 RESCUE_LEDGER = TEST_RESULTS / "04_closed_loop_rescue_ledger.json"
 RESCUE_SURFACE = TEST_RESULTS / "05_closed_loop_rescue_surface_audit.json"
+COPY_DIAGNOSTIC = TEST_RESULTS / "06_copy_state_rescue_diagnostic.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -40,16 +41,20 @@ def main() -> None:
     closed_loop_gate = load_json(CLOSED_LOOP_GATE)
     rescue_ledger = load_json(RESCUE_LEDGER)
     rescue_surface = load_json(RESCUE_SURFACE)
+    copy_diagnostic = load_json(COPY_DIAGNOSTIC)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
     assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     assert_boundary("closed_loop_rescue_ledger", rescue_ledger)
     assert_boundary("closed_loop_rescue_surface_audit", rescue_surface)
+    assert_boundary("copy_state_rescue_diagnostic", copy_diagnostic)
     s = beam_gate["summary"]
     c = closed_loop_gate["summary"]
     r = rescue_ledger["summary"]
     rs = rescue_surface["summary"]
+    ce = copy_diagnostic["event_summary"]
+    cc = copy_diagnostic["copy_op_summary"]
     if rescue_ledger["classification"] == "closed_loop_rescue_high_external_control":
-        classification = "latent_transducer_closed_loop_high_external_control_surface_mapped"
+        classification = "latent_transducer_closed_loop_high_external_control_copy_pruning_mapped"
     else:
         classification = beam_gate["classification"]
     lines = [
@@ -99,6 +104,12 @@ def main() -> None:
         f"- Rescue surface exact/near internal cutpoint fraction: `{rs['at_internal_cutpoint_fraction']:.6f}` / `{rs['near_internal_cutpoint_fraction']:.6f}`.",
         f"- Rescue surface operation-start fraction: `{rs['at_op_start_fraction']:.6f}`.",
         f"- Rescue surface early <=20% fraction: `{rs['early_20pct_fraction']:.6f}`.",
+        f"- Copy-state diagnostic copy-surface last-kind counts: `{ce['copy_surface_last_kind_counts']}`.",
+        f"- Copy-state diagnostic true-copy event fraction inside copy spans: `{ce['copy_surface_true_copy_event_fraction']:.6f}`.",
+        f"- Copy-state diagnostic copy ops tested: `{cc['copy_ops_tested']}`.",
+        f"- Copy-state diagnostic source-match ops: `{cc['source_match_ops']}/{cc['copy_ops_tested']}`.",
+        f"- Copy-state diagnostic inventory/pruned prefix digit fraction: `{cc['inventory_prefix_digit_fraction']:.6f}` / `{cc['pruned_prefix_digit_fraction']:.6f}`.",
+        f"- Copy-state diagnostic ops with any pruned prefix: `{cc['ops_with_any_pruned_prefix']}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
@@ -117,7 +128,16 @@ def main() -> None:
         "boundaries: only `27/1732` are exact internal cutpoints and `82/1732`",
         "are within one digit of an internal cutpoint, while `1721/1732` fall",
         "inside canonical copy spans. That leaves the blocker at decoder-visible",
-        "copy-state/content control, not a simple boundary trigger.",
+        "copy-state/content control, not a simple boundary trigger. A copy-state",
+        "diagnostic then asks whether those failures come from absent source",
+        "material or from candidate pruning/ranking. The answer is narrow but",
+        "useful: inside copy spans, only `16/1721` rescue events arrive via a",
+        "copy emission; `1705/1721` arrive by single literal steps. For the `32`",
+        "sampled canonical copy ops, the source payload matches in `32/32` and",
+        "some correct prefix exists in the raw inventory in `32/32`, covering",
+        "`1063/1240` copy digits, but the pruned candidate set contains a correct",
+        "prefix in `0/32`. The live blocker is therefore candidate pruning/ranking",
+        "or copy-continuation state, not missing prior material.",
         "",
         "## Decision",
         "",
@@ -126,6 +146,7 @@ def main() -> None:
         "- Closed-loop digit survival is rejected under the current beam.",
         "- The rescue ledger is high external-control, so oracle steering is not promoted as a compact latent state.",
         "- Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.",
+        "- Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -137,6 +158,7 @@ def main() -> None:
         "- [Closed loop digit survival gate](test_results/03_closed_loop_digit_survival_gate.md)",
         "- [Closed loop rescue ledger](test_results/04_closed_loop_rescue_ledger.md)",
         "- [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)",
+        "- [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
