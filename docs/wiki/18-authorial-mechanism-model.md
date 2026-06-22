@@ -81,6 +81,7 @@ source_refs:
   - analysis/nonlocal_event_policy_program_audit_20260622
   - analysis/causal_content_aware_event_policy_audit_20260622
   - analysis/global_content_objective_event_program_audit_20260622
+  - analysis/primary_authoring_surface_search_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3952,6 +3953,19 @@ the best generated prefix reaches only `1300/1962` digits. This demotes simple
 global literal/copy cost minimization; remaining progress now requires a new
 causal state not already represented by emitted content, literal tape, and copy
 lineage, or a primary authoring surface.
+
+A targeted primary authoring-surface search then checks the remaining external
+route directly against public surfaces: official CipSoft/Tibia pages, known
+community corpus/theory pages, and community analysis repositories. It finds
+`0` promoted primary surfaces. The official domains checked are official, but
+they do not expose the 469 object/container/slot/read-order or versioned
+authoring layer needed by v9. The community surfaces remain corpus, theory, or
+post-hoc analysis surfaces already covered by earlier controls. The old Tibia
+source-code/map leak remains rejected as a provenance route: community
+acceptance or alt-server reuse is not CipSoft authorization, not a rights-clean
+license, and not usable evidence for this repository. The live route now
+requires a user-provided/authorized object-layer artifact, official/in-game
+capture, public licensed object-layer data, or a genuinely new causal state.
 
 ## Boundary
 

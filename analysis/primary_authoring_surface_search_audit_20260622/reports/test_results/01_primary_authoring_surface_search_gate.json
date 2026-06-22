@@ -1,0 +1,352 @@
+{
+  "candidate_matrix": [
+    {
+      "classification": "OFFICIAL_SURFACE_NO_469_OBJECT_LAYER",
+      "domain": {
+        "community_domain": false,
+        "github_domain": false,
+        "official_domain": true
+      },
+      "expected_role": "official publisher page; can only promote if it exposes 469 object topology or authoring fields",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 1647
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": false
+      },
+      "reason": "official/current surface does not expose the 469 object-layer fields required by the decoder",
+      "snippet": "CipSoft - Tibia CipSoft --> Toggle navigation News Games Tibia TibiaME The Settlers Online Persist Online LiteBringer Career Partners Company Press Contact Tibia TibiaME The Settlers Online Persist Online LiteBringer INFINITE WORLDS Tibia is not only one of the first MMORPGs ever, but also one of the most successful. Since 1997 more than 32 million accounts ",
+      "source_class": "official_generic",
+      "source_id": "cipsoft_tibia_game_page",
+      "title": "",
+      "url": "https://www.cipsoft.com/en/games/tibia",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "OFFICIAL_SURFACE_NO_469_OBJECT_LAYER",
+      "domain": {
+        "community_domain": false,
+        "github_domain": false,
+        "official_domain": true
+      },
+      "expected_role": "official game news surface; can only promote if it exposes 469 object topology or authoring fields",
+      "fetch": {
+        "content_type": "text/html; charset=UTF-8",
+        "error": "HTTPError:403",
+        "ok": false,
+        "status": 403,
+        "text_chars_sampled": 58
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": false,
+        "has_object_layer_markers": false
+      },
+      "reason": "official/current surface does not expose the 469 object-layer fields required by the decoder",
+      "snippet": "Just a moment... Enable JavaScript and cookies to continue",
+      "source_class": "official_generic",
+      "source_id": "tibia_com_news_probe",
+      "title": "",
+      "url": "https://www.tibia.com/news/",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "HISTORICAL_DOMAIN_NO_USABLE_CURRENT_SURFACE",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "historical domain probe mentioned by community sources; usable only if current surface exposes primary data",
+      "fetch": {
+        "content_type": null,
+        "error": "URLError:<urlopen error _ssl.c:983: The handshake operation timed out>",
+        "ok": false,
+        "status": null,
+        "text_chars_sampled": 0
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": false,
+        "has_object_layer_markers": false
+      },
+      "reason": "current reachable domain surface is not a primary 469 object-layer dataset",
+      "snippet": "",
+      "source_class": "historical_domain_probe",
+      "source_id": "tibia_org_historical_domain_probe",
+      "title": "",
+      "url": "https://www.tibia.org/",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_CORPUS_SURFACE_ALREADY_TESTED_NO_PRIMARY_CONTROL",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "community library/corpus page; useful for coverage, not primary authoring provenance",
+      "fetch": {
+        "content_type": "text/html; charset=UTF-8",
+        "error": "HTTPError:403",
+        "ok": false,
+        "status": 403,
+        "text_chars_sampled": 58
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": false,
+        "has_object_layer_markers": false
+      },
+      "reason": "community corpus pages can mirror book text but do not supply primary authoring topology/control fields",
+      "snippet": "Just a moment... Enable JavaScript and cookies to continue",
+      "source_class": "community_corpus",
+      "source_id": "tibia_fandom_hellgate_library",
+      "title": "",
+      "url": "https://tibia.fandom.com/wiki/Hellgate_Library",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_CORPUS_SURFACE_ALREADY_TESTED_NO_PRIMARY_CONTROL",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "community book page; useful for corpus string checks, not primary topology/control",
+      "fetch": {
+        "content_type": "text/html; charset=UTF-8",
+        "error": "HTTPError:403",
+        "ok": false,
+        "status": 403,
+        "text_chars_sampled": 58
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": false,
+        "has_object_layer_markers": false
+      },
+      "reason": "community corpus pages can mirror book text but do not supply primary authoring topology/control fields",
+      "snippet": "Just a moment... Enable JavaScript and cookies to continue",
+      "source_class": "community_corpus",
+      "source_id": "tibia_fandom_book_page",
+      "title": "",
+      "url": "https://tibia.fandom.com/wiki/9457655996_%28Book%29",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_THEORY_SURFACE_NO_DECODER_FIELDS",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "community theory/provenance article; audit-only unless it provides primary object-layer data",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 10727
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": true,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": false
+      },
+      "reason": "community theory/provenance writing is audit-only and does not reduce v9 external fields",
+      "snippet": "TibiaSecrets.com About Us Bonelord Tome Our Publications Transcripts Contact About Us Bonelord Tome Our Publications Transcripts Contact THE HELLGATE\u2019S AVERAGES THE HELLGATE\u2019S AVERAGES 2024-05-20 Written by: Bacca Chewie Views: 1361 EN Switch to light mode This is one of the articles that was submitted to the Secrets of Tibia 3 contest. It was written by Bac",
+      "source_class": "community_theory",
+      "source_id": "tibiasecrets_article166",
+      "title": "",
+      "url": "https://www.tibiasecrets.com/article166",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_THEORY_SURFACE_NO_DECODER_FIELDS",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "community theory/provenance article; audit-only unless it provides primary object-layer data",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 19811
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": true,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": true
+      },
+      "reason": "community theory/provenance writing is audit-only and does not reduce v9 external fields",
+      "snippet": "TibiaSecrets.com About Us Bonelord Tome Our Publications Transcripts Contact About Us Bonelord Tome Our Publications Transcripts Contact The Great Tibian Cipher: Unraveling the Mystery of the Bonelord Language The Great Tibian Cipher: Unraveling the Mystery of the Bonelord Language 2024-05-06 Written by: Antonio Stradivarius Views: 1856 EN Switch to light mo",
+      "source_class": "community_theory",
+      "source_id": "tibiasecrets_article160",
+      "title": "",
+      "url": "https://tibiasecrets.com/article160",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_ANALYSIS_SURFACE_ALREADY_TESTED",
+      "domain": {
+        "community_domain": true,
+        "github_domain": true,
+        "official_domain": false
+      },
+      "expected_role": "community analysis repository; already in the tested non-primary surface class",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 3185
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": true,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": false
+      },
+      "reason": "community repository/posthoc analysis class was already probed and not promoted as primary authoring provenance",
+      "snippet": "GitHub - s2ward/469: The bonelord language in Tibia \u00b7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespace",
+      "source_class": "community_analysis_repo",
+      "source_id": "s2ward_469",
+      "title": "",
+      "url": "https://github.com/s2ward/469",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_ANALYSIS_SURFACE_ALREADY_TESTED",
+      "domain": {
+        "community_domain": true,
+        "github_domain": true,
+        "official_domain": false
+      },
+      "expected_role": "Tales/LIBSearch community database surface; already probed as non-primary for v9 reduction",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 2898
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": false
+      },
+      "reason": "community repository/posthoc analysis class was already probed and not promoted as primary authoring provenance",
+      "snippet": "GitHub - s2ward/tibia: A repository for all things Tibia, with advanced NPC transcript and library database management. \u00b7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry New Integrate extern",
+      "source_class": "community_analysis_repo",
+      "source_id": "s2ward_tibia",
+      "title": "",
+      "url": "https://github.com/s2ward/tibia",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "COMMUNITY_ANALYSIS_SURFACE_ALREADY_TESTED",
+      "domain": {
+        "community_domain": true,
+        "github_domain": true,
+        "official_domain": false
+      },
+      "expected_role": "community bookcase mapping repository; already probed as posthoc/non-primary",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 7551
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": true,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": true
+      },
+      "reason": "community repository/posthoc analysis class was already probed and not promoted as primary authoring provenance",
+      "snippet": "GitHub - arturoornelasb/tibia-bonelord-469-cipher: First candidate solution to Tibia's 25-year-old Bonelord 469 cipher. Hellgate Library 70 books decoded with 94.6% word coverage. Includes research papers, decoded narratives, novel cryptanalytic techniques (BoLWP, CAAR, CADST), and full analysis pipeline. \u00b7 GitHub Skip to content Navigation Menu Toggle navig",
+      "source_class": "community_analysis_repo",
+      "source_id": "arturo_bookcase_repo",
+      "title": "",
+      "url": "https://github.com/arturoornelasb/tibia-bonelord-469-cipher",
+      "v9_reduction_bits": 0.0
+    },
+    {
+      "classification": "AUDIT_ONLY_NO_PRIMARY_CONTROL",
+      "domain": {
+        "community_domain": true,
+        "github_domain": false,
+        "official_domain": false
+      },
+      "expected_role": "community service surface; may document LIBSearch but is not itself primary CipSoft provenance",
+      "fetch": {
+        "content_type": "text/html; charset=utf-8",
+        "error": null,
+        "ok": true,
+        "status": 200,
+        "text_chars_sampled": 3347
+      },
+      "has_required_authoring_surface": false,
+      "markers": {
+        "has_469_markers": false,
+        "has_authoring_markers": true,
+        "has_object_layer_markers": false
+      },
+      "reason": "surface does not provide a promotable primary/rights-clean decoder control field",
+      "snippet": "Services - Tales of Tibia Home Services npsearch libsearch Magic Web Projects Project Overview Changelog & History Bounties Blog About essential Home Services npsearch libsearch Magic Web Projects Project Overview Changelog & History Bounties Blog About essential Menu Services Various tools and projects research Blog, research, updates and more. npsearch Sea",
+      "source_class": "community_service",
+      "source_id": "tales_services",
+      "title": "",
+      "url": "https://talesoftibia.com/services/",
+      "v9_reduction_bits": 0.0
+    }
+  ],
+  "case_reopened": false,
+  "classification": "primary_authoring_surface_not_found_targeted_search",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "classification_reason": "no checked public candidate provides an admissible primary object-layer/control surface",
+    "external_surface_integrated": false,
+    "leak_route_accepted": false,
+    "next_acceptable_input": "official/in-game capture, user-authorized object-layer export, or public licensed data with book text/prefix, coordinates, container/bookcase id, slot/read order, version/date, and rights"
+  },
+  "leak_policy": {
+    "allowed_alternative": "official/in-game capture, user-authorized object-layer export, or public licensed data with book text/prefix, coordinates, container/bookcase id, slot/read order, version/date, and rights",
+    "can_obtain_or_use": false,
+    "reason": "community acceptance or alt-server reuse is not CipSoft authorization, not a rights-clean license, and not admissible as project evidence",
+    "source_class": "leaked_proprietary_tibia_source_or_map",
+    "status": "REJECTED_PROVENANCE_CONTROL"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:34:23.878293+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "primary_authoring_surface_search_gate.v1",
+  "scope": "analysis_only_targeted_public_primary_surface_search",
+  "summary": {
+    "candidate_count": 11,
+    "community_candidates_checked": 9,
+    "official_candidates_checked": 2,
+    "promoted_primary_surfaces": 0,
+    "v9_reduction_bits": 0.0
+  },
+  "translation_delta": "NONE"
+}

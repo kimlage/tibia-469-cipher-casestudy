@@ -16,6 +16,7 @@
     "innovation_policy": "analysis/innovation_replay_policy_frontier_audit_20260622/reports/test_results/01_innovation_replay_policy_frontier_gate.json",
     "nonlocal_event_policy": "analysis/nonlocal_event_policy_program_audit_20260622/reports/test_results/01_nonlocal_event_policy_program_gate.json",
     "post_v9": "analysis/post_v9_generator_frontier_synthesis_audit_20260622/reports/test_results/01_post_v9_generator_frontier_synthesis.json",
+    "primary_surface_search": "analysis/primary_authoring_surface_search_audit_20260622/reports/test_results/01_primary_authoring_surface_search_gate.json",
     "v9": "analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/test_results/01_executable_v9_innovation_copy_continuation_gate.json"
   },
   "next_work_contract": {
@@ -26,6 +27,7 @@
     ],
     "do_not_count_as_progress": [
       "another public text mirror or community topology list without new fields",
+      "another broad public search over the same official-generic/community surfaces without new terms or evidence",
       "leaked proprietary source/map data",
       "local source/length/copy-hint/literal subcodec with small bit gain",
       "simple n-gram/phase event grammar over replay events",
@@ -35,7 +37,7 @@
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-22T23:27:17.742367+00:00",
+  "retrieved_at_utc": "2026-06-22T23:34:23.941525+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -101,11 +103,32 @@
           "coverage": "63 books, 231 v9 rows",
           "source": "arturo_bookcase_mapping",
           "v9_reduction_bits": 0.0
+        },
+        {
+          "blocking_issue": "no checked public candidate provides an admissible primary object-layer/control surface",
+          "classification": "primary_authoring_surface_not_found_targeted_search",
+          "coverage": "11 public candidates, 2 official-domain candidates",
+          "source": "targeted_primary_authoring_surface_search",
+          "v9_reduction_bits": 0.0
         }
       ],
       "reason": "tested surfaces either lack object/slot/versioned authoring data or fail v9 residual controls",
       "route": "public_or_community_external_surfaces",
       "status": "SATURATED_UNDER_CURRENT_EVIDENCE"
+    },
+    {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "candidate_count": 11,
+        "community_candidates_checked": 9,
+        "leak_route_accepted": false,
+        "next_acceptable_input": "official/in-game capture, user-authorized object-layer export, or public licensed data with book text/prefix, coordinates, container/bookcase id, slot/read order, version/date, and rights",
+        "official_candidates_checked": 2,
+        "promoted_primary_surfaces": 0
+      },
+      "reason": "targeted public search found no admissible primary object-layer/control surface; leaked proprietary material remains rejected",
+      "route": "targeted_primary_surface_search",
+      "status": "TESTED_NO_SOURCE_FOUND"
     },
     {
       "counts_as_next_progress": true,
@@ -160,7 +183,7 @@
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
         "must_use_new_information": [
-          "external authoring surface",
+          "external authoring surface not already covered by targeted public/community search",
           "new causal state beyond emitted-content/literal-tape/copy-lineage",
           "event beam survival rather than rank-only trace",
           "paid corrections with prefix/family holdout"

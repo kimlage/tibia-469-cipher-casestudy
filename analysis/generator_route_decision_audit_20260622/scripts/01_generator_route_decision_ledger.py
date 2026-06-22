@@ -49,6 +49,8 @@ INPUTS = {
     / "analysis/causal_content_aware_event_policy_audit_20260622/reports/test_results/01_causal_content_aware_event_policy_gate.json",
     "global_content_objective": ROOT
     / "analysis/global_content_objective_event_program_audit_20260622/reports/test_results/01_global_content_objective_event_program_gate.json",
+    "primary_surface_search": ROOT
+    / "analysis/primary_authoring_surface_search_audit_20260622/reports/test_results/01_primary_authoring_surface_search_gate.json",
 }
 
 
@@ -73,6 +75,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     nonlocal_event = data["nonlocal_event_policy"]
     content_event = data["causal_content_aware_event_policy"]
     global_objective = data["global_content_objective"]
+    primary_search = data["primary_surface_search"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -85,6 +88,10 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(nonlocal_event["decision"]["nonlocal_event_policy_promoted"] is False, "nonlocal event policy unexpectedly promoted")
     require(content_event["decision"]["causal_content_aware_policy_promoted"] is False, "content-aware event policy unexpectedly promoted")
     require(global_objective["decision"]["global_content_objective_promoted"] is False, "global content objective unexpectedly promoted")
+    require(primary_search["classification"] == "primary_authoring_surface_not_found_targeted_search", "targeted primary surface search unexpected classification")
+    require(primary_search["summary"]["promoted_primary_surfaces"] == 0, "targeted primary surface search unexpectedly promoted a source")
+    require(primary_search["decision"]["external_surface_integrated"] is False, "targeted primary surface unexpectedly integrated")
+    require(primary_search["decision"]["leak_route_accepted"] is False, "leak route unexpectedly accepted")
 
     public_surface_rows = [
         {
@@ -114,6 +121,13 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "coverage": f"{arturo['match_summary']['unique_matched_books']} books, {arturo['joined_v9_rows']} v9 rows",
             "blocking_issue": arturo["decision"]["classification_reason"],
             "v9_reduction_bits": arturo["decision"]["v9_reduction_bits"],
+        },
+        {
+            "source": "targeted_primary_authoring_surface_search",
+            "classification": primary_search["classification"],
+            "coverage": f"{primary_search['summary']['candidate_count']} public candidates, {primary_search['summary']['official_candidates_checked']} official-domain candidates",
+            "blocking_issue": primary_search["decision"]["classification_reason"],
+            "v9_reduction_bits": primary_search["summary"]["v9_reduction_bits"],
         },
     ]
 
@@ -158,6 +172,20 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "evidence": public_surface_rows,
             "counts_as_next_progress": False,
             "reason": "tested surfaces either lack object/slot/versioned authoring data or fail v9 residual controls",
+        },
+        {
+            "route": "targeted_primary_surface_search",
+            "status": "TESTED_NO_SOURCE_FOUND",
+            "evidence": {
+                "candidate_count": primary_search["summary"]["candidate_count"],
+                "official_candidates_checked": primary_search["summary"]["official_candidates_checked"],
+                "community_candidates_checked": primary_search["summary"]["community_candidates_checked"],
+                "promoted_primary_surfaces": primary_search["summary"]["promoted_primary_surfaces"],
+                "leak_route_accepted": primary_search["decision"]["leak_route_accepted"],
+                "next_acceptable_input": primary_search["decision"]["next_acceptable_input"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "targeted public search found no admissible primary object-layer/control surface; leaked proprietary material remains rejected",
         },
         {
             "route": "rights_clean_primary_authoring_surface",
@@ -218,7 +246,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                     "simple_global_content_objective_event_program",
                 ],
                 "must_use_new_information": [
-                    "external authoring surface",
+                    "external authoring surface not already covered by targeted public/community search",
                     "new causal state beyond emitted-content/literal-tape/copy-lineage",
                     "event beam survival rather than rank-only trace",
                     "paid corrections with prefix/family holdout",
@@ -237,6 +265,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             ],
             "do_not_count_as_progress": [
                 "another public text mirror or community topology list without new fields",
+                "another broad public search over the same official-generic/community surfaces without new terms or evidence",
                 "leaked proprietary source/map data",
                 "local source/length/copy-hint/literal subcodec with small bit gain",
                 "simple n-gram/phase event grammar over replay events",
@@ -313,17 +342,18 @@ def write_final_report(result: dict[str, Any]) -> None:
         "## Summary",
         "",
         "The current executable frontier remains v9, not a final authorial generator.",
-        "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, and licensed community bookcase mapping.",
+        "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, and a targeted official/community primary-surface search.",
         "None reduces v9 residual fields under the required controls.",
+        "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
-        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
+        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
         "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, and target-free literal/copy cost minimization are now tested and not promoted.",
         "",
         "## Decision",
         "",
         "`post_external_generator_route_frontier_narrowed_no_formula_promoted`.",
         "",
-        "No new formula is promoted. No external source is integrated. The next useful internal work must attack event policy jointly, not residual fields one by one.",
+        "No new formula is promoted. No external source is integrated. The next useful work requires new admissible information or a genuinely new causal state, not more residual-field subcodecs.",
         "",
         "## Reproducible Artifacts",
         "",

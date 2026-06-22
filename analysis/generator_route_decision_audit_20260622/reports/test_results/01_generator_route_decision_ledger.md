@@ -18,6 +18,7 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `more_internal_micro_codecs` | `REJECTED_AS_MAINLINE_PROGRESS` | `False` | small positive defaults are below promotion threshold/control-close and do not create a parser/generator |
 | `simple_online_innovation_replay_policy` | `TESTED_NOT_PROMOTED` | `False` | literal-only/online policies do not recover the event schedule or source-length choices |
 | `public_or_community_external_surfaces` | `SATURATED_UNDER_CURRENT_EVIDENCE` | `False` | tested surfaces either lack object/slot/versioned authoring data or fail v9 residual controls |
+| `targeted_primary_surface_search` | `TESTED_NO_SOURCE_FOUND` | `False` | targeted public search found no admissible primary object-layer/control surface; leaked proprietary material remains rejected |
 | `rights_clean_primary_authoring_surface` | `OPEN_REQUIRES_NEW_SOURCE` | `True` | source must be rights-clean/primary or user-authorized, match books, expose object/container/slot/order or versioned authoring fields, and reduce v9 residual streams in holdout above permutations |
 | `simple_nonlocal_event_sequence_program` | `TESTED_NOT_PROMOTED` | `False` | n-gram/phase sequence models over replay events do not reduce the joint event policy stream or keep true suffixes in beam |
 | `causal_content_aware_event_policy_program` | `WEAK_RANK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | content-aware candidate ranking reduces loose raw-choice cost but does not keep true event suffixes in beam |
@@ -34,6 +35,7 @@ Progress now means one of:
 Do not count as progress:
 
 - another public text mirror or community topology list without new fields
+- another broad public search over the same official-generic/community surfaces without new terms or evidence
 - leaked proprietary source/map data
 - local source/length/copy-hint/literal subcodec with small bit gain
 - simple n-gram/phase event grammar over replay events
