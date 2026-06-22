@@ -45,6 +45,8 @@ INPUTS = {
     / "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/08_arturo_bookcase_mapping_control_probe.json",
     "nonlocal_event_policy": ROOT
     / "analysis/nonlocal_event_policy_program_audit_20260622/reports/test_results/01_nonlocal_event_policy_program_gate.json",
+    "causal_content_aware_event_policy": ROOT
+    / "analysis/causal_content_aware_event_policy_audit_20260622/reports/test_results/01_causal_content_aware_event_policy_gate.json",
 }
 
 
@@ -67,6 +69,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     control_protocol = data["external_06"]
     leaked_boundary = data["external_03"]
     nonlocal_event = data["nonlocal_event_policy"]
+    content_event = data["causal_content_aware_event_policy"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -77,6 +80,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(control_protocol["decision"]["v9_reduction_bits"] == 0.0, "clean topology protocol unexpectedly reduces v9")
     require("reject" in leaked_boundary["classification"].lower() or leaked_boundary["decision"]["external_surface_integrated"] is False, "leak boundary unexpectedly integrated")
     require(nonlocal_event["decision"]["nonlocal_event_policy_promoted"] is False, "nonlocal event policy unexpectedly promoted")
+    require(content_event["decision"]["causal_content_aware_policy_promoted"] is False, "content-aware event policy unexpectedly promoted")
 
     public_surface_rows = [
         {
@@ -177,19 +181,35 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
         },
         {
             "route": "causal_content_aware_event_policy_program",
-            "status": "OPEN_INTERNAL_ROUTE_REQUIRES_NEW_MECHANISM",
+            "status": "WEAK_RANK_CLUE_NOT_EXECUTABLE_PROGRAM",
+            "evidence": {
+                "total_rank_saving_bits": content_event["summary"]["total_saving_bits"],
+                "positive_splits": content_event["summary"]["positive_splits"],
+                "beam_exact_splits": content_event["summary"]["beam_exact_splits"],
+                "top20_total": content_event["summary"]["top20_total"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "content-aware candidate ranking reduces loose raw-choice cost but does not keep true event suffixes in beam",
+        },
+        {
+            "route": "global_content_objective_or_external_authoring_surface",
+            "status": "OPEN_REQUIRES_STRONGER_MECHANISM_OR_SOURCE",
             "evidence": {
                 "blocker": post_v9["decision"]["next_blocker"],
-                "rejected_simple_route": "simple_nonlocal_event_sequence_program",
+                "rejected_simple_routes": [
+                    "simple_nonlocal_event_sequence_program",
+                    "causal_content_aware_event_policy_program",
+                ],
                 "must_use_new_information": [
-                    "content-addressed state",
                     "global event objective",
                     "lineage/copy availability beyond event n-grams",
+                    "event beam survival rather than rank-only trace",
+                    "external authoring surface if available",
                     "paid corrections with prefix/family holdout",
                 ],
             },
             "counts_as_next_progress": True,
-            "promotion_test": "must generate replay event schedule and copy/literal/source-length choices in prefix/family holdout using content/lineage state, or reduce declared external fields after paying program/corrections",
+            "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout or integrate a primary source that reduces declared external fields after paying program/corrections",
         },
     ]
     return {
@@ -197,13 +217,14 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
         "next_work_contract": {
             "do_next": [
                 "acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol",
-                "design a content-aware causal event-policy program over v9 replay events, with train-prefix/family holdout and paid corrections",
+                "design a global content-objective event program that keeps true replay suffixes in beam",
             ],
             "do_not_count_as_progress": [
                 "another public text mirror or community topology list without new fields",
                 "leaked proprietary source/map data",
                 "local source/length/copy-hint/literal subcodec with small bit gain",
                 "simple n-gram/phase event grammar over replay events",
+                "rank-only content-aware event traces that do not survive beam decoding",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
@@ -223,7 +244,7 @@ def write_markdown(result: dict[str, Any]) -> None:
         "## Summary",
         "",
         "This audit consolidates the current generator frontier after v9 and the public external-surface probes.",
-        "It does not promote a new formula. It narrows the live work to two routes: a rights-clean primary authoring surface, or a content-aware causal event-policy program.",
+        "It does not promote a new formula. It narrows the live work to two routes: a rights-clean primary authoring surface, or a global content-objective event program that survives beam decoding.",
         "",
         "## Route Ledger",
         "",
@@ -278,8 +299,8 @@ def write_final_report(result: dict[str, Any]) -> None:
         "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, and licensed community bookcase mapping.",
         "None reduces v9 residual fields under the required controls.",
         "",
-        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a content-aware causal event-policy program for the v9 innovation replay.",
-        "Simple n-gram/phase sequence grammars over the replay events are now tested and not promoted.",
+        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a global content-objective event program for the v9 innovation replay.",
+        "Simple n-gram/phase sequence grammars and rank-only content-aware event traces are now tested and not promoted.",
         "",
         "## Decision",
         "",

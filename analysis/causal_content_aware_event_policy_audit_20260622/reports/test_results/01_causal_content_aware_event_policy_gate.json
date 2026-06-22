@@ -1,0 +1,139 @@
+{
+  "case_reopened": false,
+  "classification": "causal_content_aware_event_policy_not_promoted",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "causal_content_aware_policy_promoted": false,
+    "next_blocker": "candidate ranking is insufficient without a stronger global objective or external authoring source",
+    "reason": "content-aware ranking does not produce a complete event decoder; true suffixes do not survive finite beams",
+    "v9_reduction_bits": 0.0
+  },
+  "inputs": {
+    "payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json",
+    "v9_gate": "analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/test_results/01_executable_v9_innovation_copy_continuation_gate.json"
+  },
+  "plaintext_claim": false,
+  "policies": [
+    "longest_copy_then_literal",
+    "continuation_then_longest_copy",
+    "recent_long_copy",
+    "literal_long_then_copy",
+    "low_address_then_copy"
+  ],
+  "retrieved_at_utc": "2026-06-22T23:21:05.466470+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "causal_content_aware_event_policy_gate.v1",
+  "scope": "analysis_only_causal_content_aware_event_policy",
+  "splits": [
+    {
+      "beam": [
+        {
+          "beam_width": 8,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 32,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 128,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        }
+      ],
+      "cutoff": 20,
+      "events": 42,
+      "model_cost_bits": 2.321928094887362,
+      "policy": "literal_long_then_copy",
+      "rank_bits": 502.8381193225368,
+      "raw_choice_bits": 669.7347001083464,
+      "saving_bits": 166.8965807858096,
+      "top1": 1,
+      "top20": 2,
+      "top5": 1
+    },
+    {
+      "beam": [
+        {
+          "beam_width": 8,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 32,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 128,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        }
+      ],
+      "cutoff": 35,
+      "events": 27,
+      "model_cost_bits": 2.321928094887362,
+      "policy": "literal_long_then_copy",
+      "rank_bits": 320.96021506844625,
+      "raw_choice_bits": 435.80371584318226,
+      "saving_bits": 114.84350077473601,
+      "top1": 1,
+      "top20": 2,
+      "top5": 1
+    },
+    {
+      "beam": [
+        {
+          "beam_width": 8,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 32,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        },
+        {
+          "beam_width": 128,
+          "events_tested": 8,
+          "exact_suffix_in_beam": false,
+          "true_survives_events": 0
+        }
+      ],
+      "cutoff": 50,
+      "events": 12,
+      "model_cost_bits": 2.321928094887362,
+      "policy": "literal_long_then_copy",
+      "rank_bits": 124.7117969316427,
+      "raw_choice_bits": 196.61303736436273,
+      "saving_bits": 71.90124043272003,
+      "top1": 1,
+      "top20": 2,
+      "top5": 1
+    }
+  ],
+  "summary": {
+    "beam_exact_splits": 0,
+    "event_count": 62,
+    "literal_tape_digits": 962,
+    "positive_splits": 3,
+    "promoted": false,
+    "top1_total": 3,
+    "top20_total": 6,
+    "top5_total": 3,
+    "total_rank_bits": 948.5101313226257,
+    "total_raw_choice_bits": 1302.1514533158913,
+    "total_saving_bits": 353.64132199326565
+  },
+  "translation_delta": "NONE"
+}

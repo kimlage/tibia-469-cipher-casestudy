@@ -11,8 +11,8 @@ The current executable frontier remains v9, not a final authorial generator.
 Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, and licensed community bookcase mapping.
 None reduces v9 residual fields under the required controls.
 
-The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a content-aware causal event-policy program for the v9 innovation replay.
-Simple n-gram/phase sequence grammars over the replay events are now tested and not promoted.
+The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a global content-objective event program for the v9 innovation replay.
+Simple n-gram/phase sequence grammars and rank-only content-aware event traces are now tested and not promoted.
 
 ## Decision
 

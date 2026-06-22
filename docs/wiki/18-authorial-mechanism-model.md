@@ -79,6 +79,7 @@ source_refs:
   - analysis/external_authoring_surface_acquisition_audit_20260622
   - analysis/generator_route_decision_audit_20260622
   - analysis/nonlocal_event_policy_program_audit_20260622
+  - analysis/causal_content_aware_event_policy_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3931,6 +3932,15 @@ positive holdout splits and `0` exact suffix beam hits. The true suffix leaves
 the beam after at most a few events. This does not close every possible causal
 event program, but it rejects simple nonlocal n-gram/phase event grammars as
 the missing generator.
+
+The causal content-aware event-policy gate then tests whether emitted content,
+literal-tape position, and copy-lineage features are enough to choose replay
+events. It finds a real but insufficient ranking clue: event ranks save
+`353.641` bits against a loose raw candidate-choice baseline across `3/3`
+positive prefix holdouts. But it still has `0/3` exact suffix beam hits; the
+true suffix does not survive even the pilot beams. This is not promoted as v10
+or as a generator. The internal route now requires a stronger global
+content-objective program, not rank-only event traces.
 
 ## Boundary
 
