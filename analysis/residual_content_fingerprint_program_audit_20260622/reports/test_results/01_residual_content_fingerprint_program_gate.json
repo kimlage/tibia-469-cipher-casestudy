@@ -1,0 +1,2351 @@
+{
+  "case_reopened": false,
+  "classification": "residual_content_fingerprint_program_not_promoted",
+  "compression_bound_status": "unchanged",
+  "control": {
+    "beats_p05_delta": false,
+    "beats_p95_unique": false,
+    "observed_delta": 245.8042222362185,
+    "observed_unique_match_events": 0,
+    "p05_delta": 241.63493290167924,
+    "p05_unique": 0,
+    "p50_delta": 248.6872645810122,
+    "p50_unique": 0,
+    "p95_delta": 255.28861820266684,
+    "p95_unique": 0,
+    "trials": 200
+  },
+  "decision": {
+    "next_blocker": "paid content fingerprints do not yet establish a compact content-selection program for the v6 fallback tape",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "family_holdouts": [
+    {
+      "label": "hellgate_public_bookcase_1",
+      "selected_policy": "prefix_1",
+      "test_delta": 26.696504627715328,
+      "test_rows": 7,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_13",
+      "selected_policy": "prefix_1",
+      "test_delta": 27.538108272941628,
+      "test_rows": 7,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_2",
+      "selected_policy": "prefix_1",
+      "test_delta": 23.48038317650881,
+      "test_rows": 8,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_20",
+      "selected_policy": "prefix_1",
+      "test_delta": 3.6736135921552115,
+      "test_rows": 1,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_21",
+      "selected_policy": "prefix_1",
+      "test_delta": 7.009150438786937,
+      "test_rows": 1,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_23",
+      "selected_policy": "prefix_1",
+      "test_delta": 10.90574604918443,
+      "test_rows": 3,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_27",
+      "selected_policy": "prefix_1",
+      "test_delta": 11.878503641567445,
+      "test_rows": 2,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_3",
+      "selected_policy": "prefix_1",
+      "test_delta": 11.972513685414885,
+      "test_rows": 2,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_30",
+      "selected_policy": "prefix_1",
+      "test_delta": 4.771406239495233,
+      "test_rows": 1,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_33",
+      "selected_policy": "prefix_1",
+      "test_delta": 10.488646699733216,
+      "test_rows": 3,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_4",
+      "selected_policy": "prefix_1",
+      "test_delta": 8.34929164146881,
+      "test_rows": 2,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_40",
+      "selected_policy": "prefix_1",
+      "test_delta": 10.788037853120613,
+      "test_rows": 3,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_6",
+      "selected_policy": "prefix_1",
+      "test_delta": 5.959978662980882,
+      "test_rows": 1,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_7",
+      "selected_policy": "prefix_1",
+      "test_delta": 23.38060530147952,
+      "test_rows": 9,
+      "test_unique_match_events": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_8",
+      "selected_policy": "prefix_1",
+      "test_delta": 9.102778959078094,
+      "test_rows": 2,
+      "test_unique_match_events": 0
+    }
+  ],
+  "inputs": {
+    "content_basis_final": "analysis/residual_content_basis_program_audit_20260622/reports/final_residual_content_basis_program_audit.md",
+    "executable_v6_gate": "analysis/executable_v6_literal_span_origin_audit_20260622/reports/test_results/01_executable_v6_literal_span_origin_gate.json",
+    "family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
+    "lineage_script": "analysis/innovation_lineage_basis_audit_20260622/scripts/01_innovation_lineage_basis_gate.py",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "policy_scores": {
+    "edge_2": {
+      "average_match_count": 38.855555555555554,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1034.5554458485908,
+      "delta_vs_copy_hint": 254.98449437709837,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 2,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 11.287712379549449,
+          "book": 10,
+          "fingerprint": "95",
+          "match_count": 25,
+          "op_index": 1
+        },
+        {
+          "bits": 10.813781191217036,
+          "book": 11,
+          "fingerprint": "95",
+          "match_count": 18,
+          "op_index": 2
+        },
+        {
+          "bits": 9.643856189774723,
+          "book": 11,
+          "fingerprint": "39",
+          "match_count": 8,
+          "op_index": 5
+        },
+        {
+          "bits": 9.643856189774723,
+          "book": 12,
+          "fingerprint": "35",
+          "match_count": 8,
+          "op_index": 2
+        },
+        {
+          "bits": 9.813781191217036,
+          "book": 12,
+          "fingerprint": "01",
+          "match_count": 9,
+          "op_index": 4
+        },
+        {
+          "bits": 9.643856189774723,
+          "book": 12,
+          "fingerprint": "34",
+          "match_count": 8,
+          "op_index": 6
+        },
+        {
+          "bits": 10.103287808412022,
+          "book": 12,
+          "fingerprint": "78",
+          "match_count": 11,
+          "op_index": 10
+        },
+        {
+          "bits": 8.965784284662087,
+          "book": 12,
+          "fingerprint": "68",
+          "match_count": 5,
+          "op_index": 13
+        },
+        {
+          "bits": 10.103287808412022,
+          "book": 13,
+          "fingerprint": "58",
+          "match_count": 11,
+          "op_index": 4
+        },
+        {
+          "bits": 6.643856189774724,
+          "book": 13,
+          "fingerprint": "33",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 10.344295907915816,
+          "book": 13,
+          "fingerprint": "21",
+          "match_count": 13,
+          "op_index": 7
+        },
+        {
+          "bits": 10.550746785383243,
+          "book": 14,
+          "fingerprint": "40",
+          "match_count": 15,
+          "op_index": 4
+        },
+        {
+          "bits": 9.451211111832329,
+          "book": 14,
+          "fingerprint": "46",
+          "match_count": 7,
+          "op_index": 5
+        },
+        {
+          "bits": 11.103287808412022,
+          "book": 15,
+          "fingerprint": "18",
+          "match_count": 22,
+          "op_index": 3
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 15,
+          "fingerprint": "61",
+          "match_count": 30,
+          "op_index": 6
+        },
+        {
+          "bits": 9.643856189774723,
+          "book": 15,
+          "fingerprint": "47",
+          "match_count": 8,
+          "op_index": 7
+        },
+        {
+          "bits": 11.287712379549449,
+          "book": 15,
+          "fingerprint": "12",
+          "match_count": 25,
+          "op_index": 9
+        },
+        {
+          "bits": 10.344295907915816,
+          "book": 16,
+          "fingerprint": "84",
+          "match_count": 13,
+          "op_index": 2
+        },
+        {
+          "bits": 9.813781191217036,
+          "book": 16,
+          "fingerprint": "93",
+          "match_count": 9,
+          "op_index": 4
+        },
+        {
+          "bits": 10.103287808412022,
+          "book": 16,
+          "fingerprint": "68",
+          "match_count": 11,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 1
+    },
+    "edge_3": {
+      "average_match_count": 6.455555555555556,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1093.975942724825,
+      "delta_vs_copy_hint": 314.4049912533326,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 3,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 12.550746785383243,
+          "book": 10,
+          "fingerprint": "955",
+          "match_count": 6,
+          "op_index": 1
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 11,
+          "fingerprint": "955",
+          "match_count": 4,
+          "op_index": 2
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 11,
+          "fingerprint": "349",
+          "match_count": 3,
+          "op_index": 5
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 12,
+          "fingerprint": "365",
+          "match_count": 3,
+          "op_index": 2
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 12,
+          "fingerprint": "011",
+          "match_count": 3,
+          "op_index": 4
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 12,
+          "fingerprint": "364",
+          "match_count": 2,
+          "op_index": 6
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 12,
+          "fingerprint": "788",
+          "match_count": 3,
+          "op_index": 10
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 12,
+          "fingerprint": "658",
+          "match_count": 1,
+          "op_index": 13
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 13,
+          "fingerprint": "518",
+          "match_count": 3,
+          "op_index": 4
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 13,
+          "fingerprint": "303",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 13,
+          "fingerprint": "271",
+          "match_count": 6,
+          "op_index": 7
+        },
+        {
+          "bits": 12.287712379549449,
+          "book": 14,
+          "fingerprint": "460",
+          "match_count": 5,
+          "op_index": 4
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 14,
+          "fingerprint": "426",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 15,
+          "fingerprint": "198",
+          "match_count": 4,
+          "op_index": 3
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 15,
+          "fingerprint": "671",
+          "match_count": 4,
+          "op_index": 6
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 15,
+          "fingerprint": "457",
+          "match_count": 2,
+          "op_index": 7
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 15,
+          "fingerprint": "122",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 16,
+          "fingerprint": "854",
+          "match_count": 3,
+          "op_index": 2
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 16,
+          "fingerprint": "913",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 16,
+          "fingerprint": "658",
+          "match_count": 3,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 10
+    },
+    "edge_4": {
+      "average_match_count": 1.6555555555555554,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1245.8794484527675,
+      "delta_vs_copy_hint": 466.3084969812751,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 4,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 14.287712379549449,
+          "book": 10,
+          "fingerprint": "9565",
+          "match_count": 2,
+          "op_index": 1
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 11,
+          "fingerprint": "9535",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 11,
+          "fingerprint": "3499",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "3645",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "0121",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "3624",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "7848",
+          "match_count": 1,
+          "op_index": 10
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "6528",
+          "match_count": 1,
+          "op_index": 13
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 13,
+          "fingerprint": "5178",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 13,
+          "fingerprint": "3083",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 13,
+          "fingerprint": "2751",
+          "match_count": 3,
+          "op_index": 7
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 14,
+          "fingerprint": "4690",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 14,
+          "fingerprint": "4256",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "1938",
+          "match_count": 1,
+          "op_index": 3
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "6711",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "4527",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "1262",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 16,
+          "fingerprint": "8504",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 16,
+          "fingerprint": "9103",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 16,
+          "fingerprint": "6588",
+          "match_count": 1,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 56
+    },
+    "edge_5": {
+      "average_match_count": 1.2333333333333334,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1517.2663863912528,
+      "delta_vs_copy_hint": 737.6954349197604,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 5,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 16.609640474436812,
+          "book": 10,
+          "fingerprint": "95665",
+          "match_count": 1,
+          "op_index": 1
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 11,
+          "fingerprint": "95335",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 11,
+          "fingerprint": "34599",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "36445",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "01921",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "36424",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "78148",
+          "match_count": 1,
+          "op_index": 10
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "65128",
+          "match_count": 1,
+          "op_index": 13
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 13,
+          "fingerprint": "51378",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 13,
+          "fingerprint": "30483",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 13,
+          "fingerprint": "27551",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 14,
+          "fingerprint": "46490",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 14,
+          "fingerprint": "42156",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 15,
+          "fingerprint": "19738",
+          "match_count": 1,
+          "op_index": 3
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 15,
+          "fingerprint": "67011",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 15,
+          "fingerprint": "45227",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 15,
+          "fingerprint": "12862",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 16,
+          "fingerprint": "85604",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 16,
+          "fingerprint": "91103",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 16,
+          "fingerprint": "65188",
+          "match_count": 1,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 74
+    },
+    "edge_6": {
+      "average_match_count": 1.0777777777777777,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1791.045311955954,
+      "delta_vs_copy_hint": 1011.4743604844616,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 6,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 19.931568569324174,
+          "book": 10,
+          "fingerprint": "956365",
+          "match_count": 1,
+          "op_index": 1
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 11,
+          "fingerprint": "953435",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 11,
+          "fingerprint": "345199",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 12,
+          "fingerprint": "364345",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 12,
+          "fingerprint": "019521",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 12,
+          "fingerprint": "364724",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 12,
+          "fingerprint": "781648",
+          "match_count": 1,
+          "op_index": 10
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "65128",
+          "match_count": 1,
+          "op_index": 13
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 13,
+          "fingerprint": "513478",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 13,
+          "fingerprint": "304783",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 13,
+          "fingerprint": "275651",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 14,
+          "fingerprint": "464190",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 14,
+          "fingerprint": "421956",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 15,
+          "fingerprint": "197438",
+          "match_count": 1,
+          "op_index": 3
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 15,
+          "fingerprint": "670911",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 15,
+          "fingerprint": "452727",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 15,
+          "fingerprint": "128362",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 16,
+          "fingerprint": "856904",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 16,
+          "fingerprint": "911003",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 16,
+          "fingerprint": "651288",
+          "match_count": 1,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 84
+    },
+    "edge_8": {
+      "average_match_count": 1.0,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 2329.2565570167653,
+      "delta_vs_copy_hint": 1549.685605545273,
+      "fingerprint_kind": "edge",
+      "fingerprint_width": 8,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 26.575424759098897,
+          "book": 10,
+          "fingerprint": "95610365",
+          "match_count": 1,
+          "op_index": 1
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 11,
+          "fingerprint": "95372435",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 11,
+          "fingerprint": "34510199",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 12,
+          "fingerprint": "36465345",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 12,
+          "fingerprint": "01929521",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 23.253496664211536,
+          "book": 12,
+          "fingerprint": "3646724",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 12,
+          "fingerprint": "78161648",
+          "match_count": 1,
+          "op_index": 10
+        },
+        {
+          "bits": 16.609640474436812,
+          "book": 12,
+          "fingerprint": "65128",
+          "match_count": 1,
+          "op_index": 13
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 13,
+          "fingerprint": "51353478",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 13,
+          "fingerprint": "30462783",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 13,
+          "fingerprint": "27587651",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 14,
+          "fingerprint": "46475190",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 23.253496664211536,
+          "book": 14,
+          "fingerprint": "4215956",
+          "match_count": 1,
+          "op_index": 5
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 15,
+          "fingerprint": "19729438",
+          "match_count": 1,
+          "op_index": 3
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 15,
+          "fingerprint": "67041911",
+          "match_count": 1,
+          "op_index": 6
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 15,
+          "fingerprint": "45219727",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 15,
+          "fingerprint": "12880362",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 26.575424759098897,
+          "book": 16,
+          "fingerprint": "85611904",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 23.253496664211536,
+          "book": 16,
+          "fingerprint": "9118003",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 19.931568569324174,
+          "book": 16,
+          "fingerprint": "651288",
+          "match_count": 1,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 90
+    },
+    "prefix_1": {
+      "average_match_count": 340.03333333333336,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1025.375173707711,
+      "delta_vs_copy_hint": 245.8042222362185,
+      "fingerprint_kind": "prefix",
+      "fingerprint_width": 1,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 10.287712379549449,
+          "book": 10,
+          "fingerprint": "9",
+          "match_count": 125,
+          "op_index": 1
+        },
+        {
+          "bits": 10.116343961237469,
+          "book": 11,
+          "fingerprint": "9",
+          "match_count": 111,
+          "op_index": 2
+        },
+        {
+          "bits": 9.679480099505446,
+          "book": 11,
+          "fingerprint": "3",
+          "match_count": 82,
+          "op_index": 5
+        },
+        {
+          "bits": 9.29920801838728,
+          "book": 12,
+          "fingerprint": "3",
+          "match_count": 63,
+          "op_index": 2
+        },
+        {
+          "bits": 9.51175265376738,
+          "book": 12,
+          "fingerprint": "0",
+          "match_count": 73,
+          "op_index": 4
+        },
+        {
+          "bits": 9.022367813028454,
+          "book": 12,
+          "fingerprint": "3",
+          "match_count": 52,
+          "op_index": 6
+        },
+        {
+          "bits": 9.994353436858857,
+          "book": 12,
+          "fingerprint": "7",
+          "match_count": 102,
+          "op_index": 10
+        },
+        {
+          "bits": 9.845490050944376,
+          "book": 12,
+          "fingerprint": "6",
+          "match_count": 92,
+          "op_index": 13
+        },
+        {
+          "bits": 10.419960177847889,
+          "book": 13,
+          "fingerprint": "5",
+          "match_count": 137,
+          "op_index": 4
+        },
+        {
+          "bits": 9.451211111832329,
+          "book": 13,
+          "fingerprint": "3",
+          "match_count": 70,
+          "op_index": 5
+        },
+        {
+          "bits": 9.861086905995393,
+          "book": 13,
+          "fingerprint": "2",
+          "match_count": 93,
+          "op_index": 7
+        },
+        {
+          "bits": 10.73978060977326,
+          "book": 14,
+          "fingerprint": "4",
+          "match_count": 171,
+          "op_index": 4
+        },
+        {
+          "bits": 10.116343961237469,
+          "book": 14,
+          "fingerprint": "4",
+          "match_count": 111,
+          "op_index": 5
+        },
+        {
+          "bits": 11.129283016944965,
+          "book": 15,
+          "fingerprint": "1",
+          "match_count": 224,
+          "op_index": 3
+        },
+        {
+          "bits": 10.987264012072538,
+          "book": 15,
+          "fingerprint": "6",
+          "match_count": 203,
+          "op_index": 6
+        },
+        {
+          "bits": 10.252665432450248,
+          "book": 15,
+          "fingerprint": "4",
+          "match_count": 122,
+          "op_index": 7
+        },
+        {
+          "bits": 11.198445041452361,
+          "book": 15,
+          "fingerprint": "1",
+          "match_count": 235,
+          "op_index": 9
+        },
+        {
+          "bits": 10.550746785383243,
+          "book": 16,
+          "fingerprint": "8",
+          "match_count": 150,
+          "op_index": 2
+        },
+        {
+          "bits": 10.06339508128851,
+          "book": 16,
+          "fingerprint": "9",
+          "match_count": 107,
+          "op_index": 4
+        },
+        {
+          "bits": 10.192292814470767,
+          "book": 16,
+          "fingerprint": "6",
+          "match_count": 117,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 0
+    },
+    "prefix_2": {
+      "average_match_count": 50.8,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1054.7933139542106,
+      "delta_vs_copy_hint": 275.22236248271815,
+      "fingerprint_kind": "prefix",
+      "fingerprint_width": 2,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 11.398743691938193,
+          "book": 10,
+          "fingerprint": "95",
+          "match_count": 27,
+          "op_index": 1
+        },
+        {
+          "bits": 11.167418145831737,
+          "book": 11,
+          "fingerprint": "95",
+          "match_count": 23,
+          "op_index": 2
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 11,
+          "fingerprint": "34",
+          "match_count": 17,
+          "op_index": 5
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 12,
+          "fingerprint": "36",
+          "match_count": 17,
+          "op_index": 2
+        },
+        {
+          "bits": 10.344295907915816,
+          "book": 12,
+          "fingerprint": "01",
+          "match_count": 13,
+          "op_index": 4
+        },
+        {
+          "bits": 10.451211111832329,
+          "book": 12,
+          "fingerprint": "36",
+          "match_count": 14,
+          "op_index": 6
+        },
+        {
+          "bits": 10.550746785383243,
+          "book": 12,
+          "fingerprint": "78",
+          "match_count": 15,
+          "op_index": 10
+        },
+        {
+          "bits": 10.451211111832329,
+          "book": 12,
+          "fingerprint": "65",
+          "match_count": 14,
+          "op_index": 13
+        },
+        {
+          "bits": 11.813781191217036,
+          "book": 13,
+          "fingerprint": "51",
+          "match_count": 36,
+          "op_index": 4
+        },
+        {
+          "bits": 8.643856189774723,
+          "book": 13,
+          "fingerprint": "30",
+          "match_count": 4,
+          "op_index": 5
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 13,
+          "fingerprint": "27",
+          "match_count": 17,
+          "op_index": 7
+        },
+        {
+          "bits": 12.344295907915816,
+          "book": 14,
+          "fingerprint": "46",
+          "match_count": 52,
+          "op_index": 4
+        },
+        {
+          "bits": 9.228818690495881,
+          "book": 14,
+          "fingerprint": "42",
+          "match_count": 6,
+          "op_index": 5
+        },
+        {
+          "bits": 12.287712379549449,
+          "book": 15,
+          "fingerprint": "19",
+          "match_count": 50,
+          "op_index": 3
+        },
+        {
+          "bits": 11.5980525001616,
+          "book": 15,
+          "fingerprint": "67",
+          "match_count": 31,
+          "op_index": 6
+        },
+        {
+          "bits": 11.451211111832329,
+          "book": 15,
+          "fingerprint": "45",
+          "match_count": 28,
+          "op_index": 7
+        },
+        {
+          "bits": 11.451211111832329,
+          "book": 15,
+          "fingerprint": "12",
+          "match_count": 28,
+          "op_index": 9
+        },
+        {
+          "bits": 11.228818690495881,
+          "book": 16,
+          "fingerprint": "85",
+          "match_count": 24,
+          "op_index": 2
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 16,
+          "fingerprint": "91",
+          "match_count": 17,
+          "op_index": 4
+        },
+        {
+          "bits": 11.036173612553485,
+          "book": 16,
+          "fingerprint": "65",
+          "match_count": 21,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 0
+    },
+    "prefix_3": {
+      "average_match_count": 18.38888888888889,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1193.9717329694179,
+      "delta_vs_copy_hint": 414.40078149792544,
+      "fingerprint_kind": "prefix",
+      "fingerprint_width": 3,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 12.77313920671969,
+          "book": 10,
+          "fingerprint": "956",
+          "match_count": 7,
+          "op_index": 1
+        },
+        {
+          "bits": 12.287712379549449,
+          "book": 11,
+          "fingerprint": "953",
+          "match_count": 5,
+          "op_index": 2
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 11,
+          "fingerprint": "345",
+          "match_count": 4,
+          "op_index": 5
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 12,
+          "fingerprint": "364",
+          "match_count": 10,
+          "op_index": 2
+        },
+        {
+          "bits": 12.77313920671969,
+          "book": 12,
+          "fingerprint": "019",
+          "match_count": 7,
+          "op_index": 4
+        },
+        {
+          "bits": 12.77313920671969,
+          "book": 12,
+          "fingerprint": "364",
+          "match_count": 7,
+          "op_index": 6
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 12,
+          "fingerprint": "781",
+          "match_count": 3,
+          "op_index": 10
+        },
+        {
+          "bits": 12.287712379549449,
+          "book": 12,
+          "fingerprint": "651",
+          "match_count": 5,
+          "op_index": 13
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 13,
+          "fingerprint": "513",
+          "match_count": 2,
+          "op_index": 4
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 13,
+          "fingerprint": "304",
+          "match_count": 4,
+          "op_index": 5
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 13,
+          "fingerprint": "275",
+          "match_count": 4,
+          "op_index": 7
+        },
+        {
+          "bits": 13.66622400280318,
+          "book": 14,
+          "fingerprint": "464",
+          "match_count": 13,
+          "op_index": 4
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 14,
+          "fingerprint": "421",
+          "match_count": 4,
+          "op_index": 5
+        },
+        {
+          "bits": 13.425215903299385,
+          "book": 15,
+          "fingerprint": "197",
+          "match_count": 11,
+          "op_index": 3
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 15,
+          "fingerprint": "670",
+          "match_count": 6,
+          "op_index": 6
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 15,
+          "fingerprint": "452",
+          "match_count": 6,
+          "op_index": 7
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "128",
+          "match_count": 10,
+          "op_index": 9
+        },
+        {
+          "bits": 13.1357092861044,
+          "book": 16,
+          "fingerprint": "856",
+          "match_count": 9,
+          "op_index": 2
+        },
+        {
+          "bits": 13.425215903299385,
+          "book": 16,
+          "fingerprint": "911",
+          "match_count": 11,
+          "op_index": 4
+        },
+        {
+          "bits": 13.1357092861044,
+          "book": 16,
+          "fingerprint": "651",
+          "match_count": 9,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 2
+    },
+    "prefix_4": {
+      "average_match_count": 9.4,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1396.8980418676786,
+      "delta_vs_copy_hint": 617.3270903961861,
+      "fingerprint_kind": "prefix",
+      "fingerprint_width": 4,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 14.872674880270605,
+          "book": 10,
+          "fingerprint": "9561",
+          "match_count": 3,
+          "op_index": 1
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 11,
+          "fingerprint": "9537",
+          "match_count": 3,
+          "op_index": 2
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 11,
+          "fingerprint": "3451",
+          "match_count": 3,
+          "op_index": 5
+        },
+        {
+          "bits": 16.287712379549447,
+          "book": 12,
+          "fingerprint": "3646",
+          "match_count": 8,
+          "op_index": 2
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 12,
+          "fingerprint": "0192",
+          "match_count": 2,
+          "op_index": 4
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 12,
+          "fingerprint": "3646",
+          "match_count": 5,
+          "op_index": 6
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 12,
+          "fingerprint": "7816",
+          "match_count": 2,
+          "op_index": 10
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 12,
+          "fingerprint": "6512",
+          "match_count": 3,
+          "op_index": 13
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 13,
+          "fingerprint": "5135",
+          "match_count": 2,
+          "op_index": 4
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 13,
+          "fingerprint": "3046",
+          "match_count": 3,
+          "op_index": 5
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 13,
+          "fingerprint": "2758",
+          "match_count": 1,
+          "op_index": 7
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 14,
+          "fingerprint": "4647",
+          "match_count": 1,
+          "op_index": 4
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 14,
+          "fingerprint": "4215",
+          "match_count": 3,
+          "op_index": 5
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 15,
+          "fingerprint": "1972",
+          "match_count": 5,
+          "op_index": 3
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 15,
+          "fingerprint": "6704",
+          "match_count": 2,
+          "op_index": 6
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 15,
+          "fingerprint": "4521",
+          "match_count": 3,
+          "op_index": 7
+        },
+        {
+          "bits": 16.287712379549447,
+          "book": 15,
+          "fingerprint": "1288",
+          "match_count": 8,
+          "op_index": 9
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 16,
+          "fingerprint": "8561",
+          "match_count": 5,
+          "op_index": 2
+        },
+        {
+          "bits": 16.095067301607052,
+          "book": 16,
+          "fingerprint": "9118",
+          "match_count": 7,
+          "op_index": 4
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 16,
+          "fingerprint": "6512",
+          "match_count": 5,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 12
+    },
+    "suffix_1": {
+      "average_match_count": 353.72222222222223,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1032.0942415230863,
+      "delta_vs_copy_hint": 252.5232900515939,
+      "fingerprint_kind": "suffix",
+      "fingerprint_width": 1,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 10.958552715431011,
+          "book": 10,
+          "fingerprint": "5",
+          "match_count": 199,
+          "op_index": 1
+        },
+        {
+          "bits": 10.76487159073609,
+          "book": 11,
+          "fingerprint": "5",
+          "match_count": 174,
+          "op_index": 2
+        },
+        {
+          "bits": 10.276124405274237,
+          "book": 11,
+          "fingerprint": "9",
+          "match_count": 124,
+          "op_index": 5
+        },
+        {
+          "bits": 10.625708843064466,
+          "book": 12,
+          "fingerprint": "5",
+          "match_count": 158,
+          "op_index": 2
+        },
+        {
+          "bits": 10.76487159073609,
+          "book": 12,
+          "fingerprint": "1",
+          "match_count": 174,
+          "op_index": 4
+        },
+        {
+          "bits": 10.090112419664289,
+          "book": 12,
+          "fingerprint": "4",
+          "match_count": 109,
+          "op_index": 6
+        },
+        {
+          "bits": 10.192292814470767,
+          "book": 12,
+          "fingerprint": "8",
+          "match_count": 117,
+          "op_index": 10
+        },
+        {
+          "bits": 9.491853096329674,
+          "book": 12,
+          "fingerprint": "8",
+          "match_count": 72,
+          "op_index": 13
+        },
+        {
+          "bits": 9.936637939002571,
+          "book": 13,
+          "fingerprint": "8",
+          "match_count": 98,
+          "op_index": 4
+        },
+        {
+          "bits": 9.451211111832329,
+          "book": 13,
+          "fingerprint": "3",
+          "match_count": 70,
+          "op_index": 5
+        },
+        {
+          "bits": 10.78135971352466,
+          "book": 13,
+          "fingerprint": "1",
+          "match_count": 176,
+          "op_index": 7
+        },
+        {
+          "bits": 10.192292814470767,
+          "book": 14,
+          "fingerprint": "0",
+          "match_count": 117,
+          "op_index": 4
+        },
+        {
+          "bits": 10.204571144249204,
+          "book": 14,
+          "fingerprint": "6",
+          "match_count": 118,
+          "op_index": 5
+        },
+        {
+          "bits": 10.377210530388552,
+          "book": 15,
+          "fingerprint": "8",
+          "match_count": 133,
+          "op_index": 3
+        },
+        {
+          "bits": 11.5980525001616,
+          "book": 15,
+          "fingerprint": "1",
+          "match_count": 310,
+          "op_index": 6
+        },
+        {
+          "bits": 10.14210705730255,
+          "book": 15,
+          "fingerprint": "7",
+          "match_count": 113,
+          "op_index": 7
+        },
+        {
+          "bits": 10.240791332161956,
+          "book": 15,
+          "fingerprint": "2",
+          "match_count": 121,
+          "op_index": 9
+        },
+        {
+          "bits": 10.61654884377899,
+          "book": 16,
+          "fingerprint": "4",
+          "match_count": 157,
+          "op_index": 2
+        },
+        {
+          "bits": 9.531381460516313,
+          "book": 16,
+          "fingerprint": "3",
+          "match_count": 74,
+          "op_index": 4
+        },
+        {
+          "bits": 10.00842862207058,
+          "book": 16,
+          "fingerprint": "8",
+          "match_count": 103,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 0
+    },
+    "suffix_2": {
+      "average_match_count": 41.6,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1037.890047700064,
+      "delta_vs_copy_hint": 258.31909622857165,
+      "fingerprint_kind": "suffix",
+      "fingerprint_width": 2,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 11.287712379549449,
+          "book": 10,
+          "fingerprint": "65",
+          "match_count": 25,
+          "op_index": 1
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 11,
+          "fingerprint": "35",
+          "match_count": 17,
+          "op_index": 2
+        },
+        {
+          "bits": 10.344295907915816,
+          "book": 11,
+          "fingerprint": "99",
+          "match_count": 13,
+          "op_index": 5
+        },
+        {
+          "bits": 11.5980525001616,
+          "book": 12,
+          "fingerprint": "45",
+          "match_count": 31,
+          "op_index": 2
+        },
+        {
+          "bits": 11.643856189774723,
+          "book": 12,
+          "fingerprint": "21",
+          "match_count": 32,
+          "op_index": 4
+        },
+        {
+          "bits": 9.451211111832329,
+          "book": 12,
+          "fingerprint": "24",
+          "match_count": 7,
+          "op_index": 6
+        },
+        {
+          "bits": 10.550746785383243,
+          "book": 12,
+          "fingerprint": "48",
+          "match_count": 15,
+          "op_index": 10
+        },
+        {
+          "bits": 10.228818690495881,
+          "book": 12,
+          "fingerprint": "28",
+          "match_count": 12,
+          "op_index": 13
+        },
+        {
+          "bits": 10.344295907915816,
+          "book": 13,
+          "fingerprint": "78",
+          "match_count": 13,
+          "op_index": 4
+        },
+        {
+          "bits": 8.965784284662087,
+          "book": 13,
+          "fingerprint": "83",
+          "match_count": 5,
+          "op_index": 5
+        },
+        {
+          "bits": 12.001408194392809,
+          "book": 13,
+          "fingerprint": "51",
+          "match_count": 41,
+          "op_index": 7
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 14,
+          "fingerprint": "90",
+          "match_count": 10,
+          "op_index": 4
+        },
+        {
+          "bits": 10.451211111832329,
+          "book": 14,
+          "fingerprint": "56",
+          "match_count": 14,
+          "op_index": 5
+        },
+        {
+          "bits": 8.228818690495881,
+          "book": 15,
+          "fingerprint": "38",
+          "match_count": 3,
+          "op_index": 3
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 15,
+          "fingerprint": "11",
+          "match_count": 60,
+          "op_index": 6
+        },
+        {
+          "bits": 11.036173612553485,
+          "book": 15,
+          "fingerprint": "27",
+          "match_count": 21,
+          "op_index": 7
+        },
+        {
+          "bits": 8.643856189774723,
+          "book": 15,
+          "fingerprint": "62",
+          "match_count": 4,
+          "op_index": 9
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 16,
+          "fingerprint": "04",
+          "match_count": 20,
+          "op_index": 2
+        },
+        {
+          "bits": 10.228818690495881,
+          "book": 16,
+          "fingerprint": "03",
+          "match_count": 12,
+          "op_index": 4
+        },
+        {
+          "bits": 10.731319031025063,
+          "book": 16,
+          "fingerprint": "88",
+          "match_count": 17,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 0
+    },
+    "suffix_3": {
+      "average_match_count": 13.633333333333333,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1180.170136569628,
+      "delta_vs_copy_hint": 400.59918509813565,
+      "fingerprint_kind": "suffix",
+      "fingerprint_width": 3,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 10.965784284662087,
+          "book": 10,
+          "fingerprint": "365",
+          "match_count": 2,
+          "op_index": 1
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 11,
+          "fingerprint": "435",
+          "match_count": 6,
+          "op_index": 2
+        },
+        {
+          "bits": 12.965784284662087,
+          "book": 11,
+          "fingerprint": "199",
+          "match_count": 8,
+          "op_index": 5
+        },
+        {
+          "bits": 12.287712379549449,
+          "book": 12,
+          "fingerprint": "345",
+          "match_count": 5,
+          "op_index": 2
+        },
+        {
+          "bits": 13.1357092861044,
+          "book": 12,
+          "fingerprint": "521",
+          "match_count": 9,
+          "op_index": 4
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 12,
+          "fingerprint": "724",
+          "match_count": 4,
+          "op_index": 6
+        },
+        {
+          "bits": 12.965784284662087,
+          "book": 12,
+          "fingerprint": "648",
+          "match_count": 8,
+          "op_index": 10
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 12,
+          "fingerprint": "128",
+          "match_count": 6,
+          "op_index": 13
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 13,
+          "fingerprint": "478",
+          "match_count": 2,
+          "op_index": 4
+        },
+        {
+          "bits": 10.965784284662087,
+          "book": 13,
+          "fingerprint": "783",
+          "match_count": 2,
+          "op_index": 5
+        },
+        {
+          "bits": 13.425215903299385,
+          "book": 13,
+          "fingerprint": "651",
+          "match_count": 11,
+          "op_index": 7
+        },
+        {
+          "bits": 12.550746785383243,
+          "book": 14,
+          "fingerprint": "190",
+          "match_count": 6,
+          "op_index": 4
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 14,
+          "fingerprint": "956",
+          "match_count": 3,
+          "op_index": 5
+        },
+        {
+          "bits": 11.550746785383243,
+          "book": 15,
+          "fingerprint": "438",
+          "match_count": 3,
+          "op_index": 3
+        },
+        {
+          "bits": 14.28771237954945,
+          "book": 15,
+          "fingerprint": "911",
+          "match_count": 20,
+          "op_index": 6
+        },
+        {
+          "bits": 13.1357092861044,
+          "book": 15,
+          "fingerprint": "727",
+          "match_count": 9,
+          "op_index": 7
+        },
+        {
+          "bits": 9.965784284662087,
+          "book": 15,
+          "fingerprint": "362",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 11.965784284662087,
+          "book": 16,
+          "fingerprint": "904",
+          "match_count": 4,
+          "op_index": 2
+        },
+        {
+          "bits": 12.965784284662087,
+          "book": 16,
+          "fingerprint": "003",
+          "match_count": 8,
+          "op_index": 4
+        },
+        {
+          "bits": 12.965784284662087,
+          "book": 16,
+          "fingerprint": "288",
+          "match_count": 8,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 6
+    },
+    "suffix_4": {
+      "average_match_count": 7.533333333333333,
+      "baseline_copy_hint_bits": 779.5709514714924,
+      "coded_bits": 1397.675137553465,
+      "delta_vs_copy_hint": 618.1041860819726,
+      "fingerprint_kind": "suffix",
+      "fingerprint_width": 4,
+      "model_declaration_bits": 3.9068905956085187,
+      "rows": 90,
+      "sample_events": [
+        {
+          "bits": 14.287712379549449,
+          "book": 10,
+          "fingerprint": "0365",
+          "match_count": 2,
+          "op_index": 1
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 11,
+          "fingerprint": "2435",
+          "match_count": 1,
+          "op_index": 2
+        },
+        {
+          "bits": 15.287712379549449,
+          "book": 11,
+          "fingerprint": "0199",
+          "match_count": 4,
+          "op_index": 5
+        },
+        {
+          "bits": 15.287712379549449,
+          "book": 12,
+          "fingerprint": "5345",
+          "match_count": 4,
+          "op_index": 2
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 12,
+          "fingerprint": "9521",
+          "match_count": 5,
+          "op_index": 4
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 12,
+          "fingerprint": "6724",
+          "match_count": 2,
+          "op_index": 6
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 12,
+          "fingerprint": "1648",
+          "match_count": 3,
+          "op_index": 10
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 12,
+          "fingerprint": "5128",
+          "match_count": 2,
+          "op_index": 13
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 13,
+          "fingerprint": "3478",
+          "match_count": 2,
+          "op_index": 4
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 13,
+          "fingerprint": "2783",
+          "match_count": 2,
+          "op_index": 5
+        },
+        {
+          "bits": 16.095067301607052,
+          "book": 13,
+          "fingerprint": "7651",
+          "match_count": 7,
+          "op_index": 7
+        },
+        {
+          "bits": 14.872674880270605,
+          "book": 14,
+          "fingerprint": "5190",
+          "match_count": 3,
+          "op_index": 4
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 14,
+          "fingerprint": "5956",
+          "match_count": 2,
+          "op_index": 5
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 15,
+          "fingerprint": "9438",
+          "match_count": 2,
+          "op_index": 3
+        },
+        {
+          "bits": 16.747143998186747,
+          "book": 15,
+          "fingerprint": "1911",
+          "match_count": 11,
+          "op_index": 6
+        },
+        {
+          "bits": 15.872674880270605,
+          "book": 15,
+          "fingerprint": "9727",
+          "match_count": 6,
+          "op_index": 7
+        },
+        {
+          "bits": 13.287712379549449,
+          "book": 15,
+          "fingerprint": "0362",
+          "match_count": 1,
+          "op_index": 9
+        },
+        {
+          "bits": 14.287712379549449,
+          "book": 16,
+          "fingerprint": "1904",
+          "match_count": 2,
+          "op_index": 2
+        },
+        {
+          "bits": 15.60964047443681,
+          "book": 16,
+          "fingerprint": "8003",
+          "match_count": 5,
+          "op_index": 4
+        },
+        {
+          "bits": 16.095067301607052,
+          "book": 16,
+          "fingerprint": "1288",
+          "match_count": 7,
+          "op_index": 6
+        }
+      ],
+      "unique_match_events": 13
+    }
+  },
+  "prefix_holdouts": [
+    {
+      "cutoff": 20,
+      "selected_policy": "edge_2",
+      "test_delta": 189.23118950906792,
+      "test_rows": 63,
+      "test_unique_match_events": 0,
+      "train_delta": 65.75330486803048,
+      "train_rows": 27
+    },
+    {
+      "cutoff": 30,
+      "selected_policy": "prefix_1",
+      "test_delta": 144.35586785476187,
+      "test_rows": 52,
+      "test_unique_match_events": 0,
+      "train_delta": 101.44835438145623,
+      "train_rows": 38
+    },
+    {
+      "cutoff": 40,
+      "selected_policy": "prefix_1",
+      "test_delta": 104.97822692656956,
+      "test_rows": 38,
+      "test_unique_match_events": 0,
+      "train_delta": 140.82599530964882,
+      "train_rows": 52
+    },
+    {
+      "cutoff": 50,
+      "selected_policy": "prefix_1",
+      "test_delta": 61.629028123904845,
+      "test_rows": 23,
+      "test_unique_match_events": 0,
+      "train_delta": 184.17519411231353,
+      "train_rows": 67
+    },
+    {
+      "cutoff": 60,
+      "selected_policy": "prefix_1",
+      "test_delta": 18.710894848768646,
+      "test_rows": 7,
+      "test_unique_match_events": 0,
+      "train_delta": 227.0933273874498,
+      "train_rows": 83
+    }
+  ],
+  "row0_status": "unchanged_exogenous",
+  "schema": "residual_content_fingerprint_program_gate.v1",
+  "scope": "analysis_only_residual_content_fingerprint",
+  "summary": {
+    "best_delta_vs_copy_hint": 245.8042222362185,
+    "best_policy": "prefix_1",
+    "best_unique_match_events": 0,
+    "classification": "residual_content_fingerprint_program_not_promoted",
+    "fallback_rows_after_v6": 90,
+    "family_positive_splits": 0,
+    "prefix_positive_splits": 0,
+    "promoted": false,
+    "v6_external_bits_excluding_seed": 4065.0134193177782
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "lineage_atom_count": 63,
+    "lineage_digits": 11263,
+    "roundtrip_70_70": true,
+    "validation_errors": []
+  }
+}

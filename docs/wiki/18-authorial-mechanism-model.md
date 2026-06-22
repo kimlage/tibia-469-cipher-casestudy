@@ -65,6 +65,7 @@ source_refs:
   - analysis/innovation_lineage_basis_audit_20260622
   - analysis/lineage_signature_library_audit_20260622
   - analysis/residual_content_basis_program_audit_20260622
+  - analysis/residual_content_fingerprint_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3620,6 +3621,7 @@ book generation, not row0 pair-cell placement.
 - [Innovation lineage basis audit](../../analysis/innovation_lineage_basis_audit_20260622/reports/final_innovation_lineage_basis_audit.md)
 - [Lineage signature library audit](../../analysis/lineage_signature_library_audit_20260622/reports/final_lineage_signature_library_audit.md)
 - [Residual content-basis program audit](../../analysis/residual_content_basis_program_audit_20260622/reports/final_residual_content_basis_program_audit.md)
+- [Residual content-fingerprint program audit](../../analysis/residual_content_fingerprint_program_audit_20260622/reports/final_residual_content_fingerprint_program_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3695,6 +3697,14 @@ not promote: exact reuse hits only `1/90` and costs `+3.419` bits versus the
 current copy-hint tape, while substring reuse hits `38/90` but costs
 `+157.970` bits. Prefix support is `0/5`, family support is `0`, and shuffled
 controls are not beaten. Residual content origin therefore remains external.
+
+A paid content-fingerprint gate tests the same blocker from the other side:
+given exact length, can a short prefix/suffix/edge fingerprint select the
+copied chunk from prior material more cheaply than a copy hint? No. The best
+policy is `prefix_1`, already `+245.804` bits worse than copy-hint and with
+`0` unique content selections. Longer edge fingerprints eventually become
+unique (`edge_8` has `90/90` unique selections), but at `+1549.686` bits. The
+route is therefore not a smaller content-selection program.
 
 ## Boundary
 
