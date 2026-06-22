@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_BOOKSTART_DOMINATED_INTERNAL_TRIGGER_REJECTED`
+Classification: `INNOVATION_STREAM_BOOKSTART_MODE_REJECTED_INTERNAL_TRIGGER_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -78,6 +78,10 @@ plus a small external innovation tape made from the literal payload?
 - Internal target-conditioned boundary-candidate start hits: `0/70`.
 - Internal target-conditioned boundary-candidate delta vs global: `-5.285` bits.
 - Promotes internal boundary-candidate trigger: `False`.
+- Book-start mode literal/copy counts: `13/47`.
+- Book-start mode best feature: `book_decade`.
+- Book-start mode best feature delta vs global: `-4.000` bits.
+- Promotes book-start mode: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -103,7 +107,9 @@ three-way `nonstart/literal/copy` labels. The decoder-visible boundary
 candidate gate removes target-conditioned copy availability from that
 candidate-label problem and decomposes book-start versus internal starts.
 The internal decomposition gate then removes book-start candidates from
-the target-conditioned candidate-label problem itself.
+the target-conditioned candidate-label problem itself. The book-start
+mode gate then asks whether the remaining first-operation literal/copy
+choice has a target-free rule beyond global majority.
 
 ## Decision
 
@@ -124,6 +130,7 @@ the target-conditioned candidate-label problem itself.
 - Boundary-candidate trigger policy is promoted as a composed dependency-reduction clue, but still leaves missed operation starts and target-conditioned copy availability unresolved.
 - Decoder-visible boundary-candidate trigger policy is promoted only as a book-start clue; the internal-only trigger decomposition is not promoted.
 - Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.
+- Book-start mode policy is rejected: the existence of a first operation is structural, but its literal/copy mode remains declared.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -141,3 +148,4 @@ the target-conditioned candidate-label problem itself.
 - [Boundary candidate trigger gate](test_results/10_boundary_candidate_trigger_gate.md)
 - [Decoder visible boundary candidate trigger gate](test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)
 - [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)
+- [Book start mode gate](test_results/13_book_start_mode_gate.md)
