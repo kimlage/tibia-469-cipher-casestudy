@@ -53,6 +53,7 @@ source_refs:
   - analysis/event_aligned_chunk_library_audit_20260622
   - analysis/source_boundary_candidate_program_audit_20260622
   - analysis/executable_v3_source_boundary_program_audit_20260622
+  - analysis/executable_v3_source_boundary_robustness_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1074,6 +1075,15 @@ source-boundary reduction inside the executable ledger. The new breakdown is
 This is real generation-program progress, but still not a complete formula:
 `179/208` copy intervals, literal innovation, seed payload, and row0 remain
 external.
+The v3 robustness audit then checks the most important risk: whether that route
+was only a full-corpus selected winner. It pays `4.392` bits to declare one of
+`7` boundary systems and one of `3` policies, leaving the full-fit v3 gain still
+positive at `-138.598` bits. More importantly, when system and policy are
+selected using only prefix books and frozen for the suffix, all `5/5` suffix
+splits remain positive with aggregate delta `-226.100` bits; the selected system
+is `event_plus_surprisal_top20` in `4/5` splits and `surprisal_top20` in the
+earliest split. This keeps v3 promoted as a robust partial executable-program
+reduction, while preserving the same external blockers.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3474,6 +3484,8 @@ book generation, not row0 pair-cell placement.
 - [Source-boundary candidate program gate](../../analysis/source_boundary_candidate_program_audit_20260622/reports/test_results/01_source_boundary_candidate_program_gate.md)
 - [Final executable v3 source-boundary program audit](../../analysis/executable_v3_source_boundary_program_audit_20260622/reports/final_executable_v3_source_boundary_program_audit.md)
 - [Executable v3 source-boundary program gate](../../analysis/executable_v3_source_boundary_program_audit_20260622/reports/test_results/01_executable_v3_source_boundary_program_gate.md)
+- [Final executable v3 source-boundary robustness audit](../../analysis/executable_v3_source_boundary_robustness_audit_20260622/reports/final_executable_v3_source_boundary_robustness_audit.md)
+- [Executable v3 source-boundary robustness gate](../../analysis/executable_v3_source_boundary_robustness_audit_20260622/reports/test_results/01_executable_v3_source_boundary_robustness_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

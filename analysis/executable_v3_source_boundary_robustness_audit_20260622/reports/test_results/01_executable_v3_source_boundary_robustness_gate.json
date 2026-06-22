@@ -1,0 +1,97 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V3_SOURCE_BOUNDARY_ROBUST",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "next_blocker": "179/208 fallback copy intervals remain; next work should derive additional source-boundary systems or fallback structure without posthoc full-corpus selection",
+    "plaintext_claim": false,
+    "robust_promotion_retained": true,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v3_source_boundary_program_gate": "analysis/executable_v3_source_boundary_program_audit_20260622/reports/test_results/01_executable_v3_source_boundary_program_gate.json",
+    "source_boundary_candidate_program_gate": "analysis/source_boundary_candidate_program_audit_20260622/reports/test_results/01_source_boundary_candidate_program_gate.json"
+  },
+  "plaintext_claim": false,
+  "prefix_selection_rows": [
+    {
+      "cutoff": 20,
+      "selected_policy": "long_recent",
+      "selected_system": "surprisal_top20",
+      "test_bits": 2240.0221827763953,
+      "test_delta_vs_v2": -63.14425129315987,
+      "test_hits": 9,
+      "test_v2_bits": 2303.166434069555,
+      "train_bits": 1071.19845201871,
+      "train_delta_vs_v2": -48.817770734124,
+      "train_hits": 11
+    },
+    {
+      "cutoff": 30,
+      "selected_policy": "long_recent",
+      "selected_system": "event_plus_surprisal_top20",
+      "test_bits": 1715.2995681823704,
+      "test_delta_vs_v2": -71.46319328474101,
+      "test_hits": 9,
+      "test_v2_bits": 1786.7627614671114,
+      "train_bits": 1564.8923727415545,
+      "train_delta_vs_v2": -71.52752261372325,
+      "train_hits": 20
+    },
+    {
+      "cutoff": 40,
+      "selected_policy": "long_recent",
+      "selected_system": "event_plus_surprisal_top20",
+      "test_bits": 1220.1568159080216,
+      "test_delta_vs_v2": -54.19677998073416,
+      "test_hits": 6,
+      "test_v2_bits": 1274.3535958887558,
+      "train_bits": 2060.035125015903,
+      "train_delta_vs_v2": -88.79393591773078,
+      "train_hits": 23
+    },
+    {
+      "cutoff": 50,
+      "selected_policy": "long_recent",
+      "selected_system": "event_plus_surprisal_top20",
+      "test_bits": 747.6301915267528,
+      "test_delta_vs_v2": -26.376941571648786,
+      "test_hits": 3,
+      "test_v2_bits": 774.0071330984016,
+      "train_bits": 2532.561749397171,
+      "train_delta_vs_v2": -116.61377432681684,
+      "train_hits": 26
+    },
+    {
+      "cutoff": 60,
+      "selected_policy": "long_recent",
+      "selected_system": "event_plus_surprisal_top20",
+      "test_bits": 224.03312240983723,
+      "test_delta_vs_v2": -10.91835192472854,
+      "test_hits": 1,
+      "test_v2_bits": 234.95147433456577,
+      "train_bits": 3056.1588185140863,
+      "train_delta_vs_v2": -132.07236397373708,
+      "train_hits": 28
+    }
+  ],
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v3_source_boundary_robustness_gate.v1",
+  "scope": "analysis_only_executable_v3_source_boundary_robustness",
+  "summary": {
+    "declaration_bits_system_plus_policy": 4.39231742277876,
+    "fullfit_delta_after_declaration": -138.59839847568458,
+    "fullfit_delta_before_declaration": -142.99071589846335,
+    "policies_tested": 3,
+    "positive_prefix_selected_splits": 5,
+    "prefix_selected_system_histogram": {
+      "event_plus_surprisal_top20": 4,
+      "surprisal_top20": 1
+    },
+    "robust": true,
+    "systems_tested": 7,
+    "total_prefix_selected_test_delta": -226.09951805501237
+  },
+  "translation_delta": "NONE"
+}
