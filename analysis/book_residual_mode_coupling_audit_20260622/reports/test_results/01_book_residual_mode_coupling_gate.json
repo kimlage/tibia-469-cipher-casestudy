@@ -1,0 +1,828 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_BOOK_RESIDUAL_MODE_COUPLING",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "beats_shuffled_p05": true,
+    "beats_shuffled_p50": true,
+    "beats_shuffled_p95": true,
+    "shuffled_mean": 684.3286349908967,
+    "shuffled_p05": 621.3757756536163,
+    "shuffled_p50": 682.4766800367813,
+    "shuffled_p95": 755.4290715956922,
+    "trials": 500
+  },
+  "decision": {
+    "generator_promoted": false,
+    "joint_mode_promoted": true,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_frontier_synthesis": "analysis/executable_program_frontier_synthesis_audit_20260622/reports/final_executable_program_frontier_synthesis_audit.md",
+    "family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "book_residual_mode_coupling_gate.v1",
+  "scope": "analysis_only_book_level_joint_residual_mode",
+  "summary": {
+    "book_count": 60,
+    "exact_joint_hits": 108,
+    "fields": [
+      "op_count_class",
+      "literal_digit_class",
+      "literal_op_class",
+      "copy_hint_bits_class",
+      "composition_bits_class"
+    ],
+    "positive_splits": 20,
+    "promoted_variants": [
+      "all_fields",
+      "no_derived_shape",
+      "external_burden_only"
+    ],
+    "shuffled_p95": 755.4290715956922,
+    "split_count": 20,
+    "test_books_repeated": 186,
+    "total_independent_bits": 2055.479925326166,
+    "total_joint_bits": 938.2108514088969,
+    "total_saving_bits": 1117.269073917269,
+    "weak_variants": []
+  },
+  "translation_delta": "NONE",
+  "variant_results": {
+    "all_fields": {
+      "alphabet_sizes": {
+        "coarse_shape_class": 4,
+        "composition_bits_class": 5,
+        "copy_hint_bits_class": 4,
+        "joint": 34,
+        "literal_digit_class": 5,
+        "literal_op_class": 5,
+        "op_count_class": 5
+      },
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": true,
+        "beats_shuffled_p95": true,
+        "shuffled_mean": 1021.6979638708013,
+        "shuffled_p05": 954.9339054529883,
+        "shuffled_p50": 1017.919372388104,
+        "shuffled_p95": 1102.8757999074153,
+        "trials": 500
+      },
+      "fields": [
+        "op_count_class",
+        "literal_digit_class",
+        "literal_op_class",
+        "copy_hint_bits_class",
+        "composition_bits_class",
+        "coarse_shape_class"
+      ],
+      "split_rows": [
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 13,
+          "independent_bits": 765.6443474949812,
+          "joint_bits": 269.7248250995194,
+          "label": "prefix_20",
+          "saving_bits": 495.91952239546174,
+          "split_type": "prefix",
+          "test_books": 50,
+          "train_books": 10
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 21,
+          "independent_bits": 517.0639413619829,
+          "joint_bits": 212.789314925389,
+          "label": "prefix_30",
+          "saving_bits": 304.27462643659385,
+          "split_type": "prefix",
+          "test_books": 40,
+          "train_books": 20
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 16,
+          "independent_bits": 368.5566115880456,
+          "joint_bits": 162.34096800667012,
+          "label": "prefix_40",
+          "saving_bits": 206.21564358137547,
+          "split_type": "prefix",
+          "test_books": 30,
+          "train_books": 30
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 10,
+          "independent_bits": 245.46205370645288,
+          "joint_bits": 111.98394801586315,
+          "label": "prefix_50",
+          "saving_bits": 133.47810569058973,
+          "split_type": "prefix",
+          "test_books": 20,
+          "train_books": 40
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 8,
+          "independent_bits": 112.90452227113445,
+          "joint_bits": 51.904376301757644,
+          "label": "prefix_60",
+          "saving_bits": 61.00014596937681,
+          "split_type": "prefix",
+          "test_books": 10,
+          "train_books": 50
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 0,
+          "independent_bits": 37.14673838946113,
+          "joint_bits": 17.042599881712917,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": 20.10413850774821,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 35.29963995619995,
+          "joint_bits": 20.512882879466915,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": 14.786757076733032,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 0,
+          "independent_bits": 35.324176255135434,
+          "joint_bits": 17.042599881712917,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": 18.281576373422517,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 21.58479837803034,
+          "joint_bits": 13.342160163571824,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": 8.242638214458514,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 3,
+          "independent_bits": 29.22447034944655,
+          "joint_bits": 14.97253126544605,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": 14.2519390840005,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 17.92656564969901,
+          "joint_bits": 13.342160163571824,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": 4.584405486127187,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 18.559075552435985,
+          "joint_bits": 11.020232068684463,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": 7.538843483751522,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 19.676212295995885,
+          "joint_bits": 14.235244959655313,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": 5.440967336340572,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 23.32476079046793,
+          "joint_bits": 11.998205762354464,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": 11.326555028113466,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 17.83306025783032,
+          "joint_bits": 9.641720445430733,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": 8.191339812399585,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 35.226327168350615,
+          "joint_bits": 20.512882879466915,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": 14.7134442888837,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 3,
+          "independent_bits": 48.65260484216012,
+          "joint_bits": 24.71490411616162,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": 23.937700725998504,
+          "split_type": "family",
+          "test_books": 4,
+          "train_books": 56
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 26.84623201036745,
+          "joint_bits": 15.45763738099176,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": 11.38859462937569,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 31.583896583189897,
+          "joint_bits": 16.812443161325824,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": 14.771453421864074,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 22.444872942568693,
+          "joint_bits": 11.998205762354464,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": 10.446667180214229,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        }
+      ],
+      "summary": {
+        "exact_joint_hits": 90,
+        "positive_splits": 20,
+        "split_count": 20,
+        "test_books_repeated": 186,
+        "total_independent_bits": 2430.2849078439363,
+        "total_joint_bits": 1041.3898431211073,
+        "total_saving_bits": 1388.895064722829
+      }
+    },
+    "external_burden_only": {
+      "alphabet_sizes": {
+        "composition_bits_class": 5,
+        "copy_hint_bits_class": 4,
+        "joint": 21,
+        "literal_digit_class": 5
+      },
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": true,
+        "beats_shuffled_p95": true,
+        "shuffled_mean": 78.5453216662625,
+        "shuffled_p05": 23.19833125540049,
+        "shuffled_p50": 78.01078821799615,
+        "shuffled_p95": 132.10217440457427,
+        "trials": 500
+      },
+      "fields": [
+        "literal_digit_class",
+        "copy_hint_bits_class",
+        "composition_bits_class"
+      ],
+      "split_rows": [
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 20,
+          "independent_bits": 370.0986152796429,
+          "joint_bits": 237.76331271720218,
+          "label": "prefix_20",
+          "saving_bits": 132.33530256244072,
+          "split_type": "prefix",
+          "test_books": 50,
+          "train_books": 10
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 26,
+          "independent_bits": 270.6411431252643,
+          "joint_bits": 184.21182975949233,
+          "label": "prefix_30",
+          "saving_bits": 86.42931336577197,
+          "split_type": "prefix",
+          "test_books": 40,
+          "train_books": 20
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 23,
+          "independent_bits": 187.8310265336447,
+          "joint_bits": 133.124438129328,
+          "label": "prefix_40",
+          "saving_bits": 54.706588404316676,
+          "split_type": "prefix",
+          "test_books": 30,
+          "train_books": 30
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 15,
+          "independent_bits": 124.25947406462872,
+          "joint_bits": 92.65151894356512,
+          "label": "prefix_50",
+          "saving_bits": 31.607955121063597,
+          "split_type": "prefix",
+          "test_books": 20,
+          "train_books": 40
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 10,
+          "independent_bits": 58.28684133428553,
+          "joint_bits": 41.73173843891086,
+          "label": "prefix_60",
+          "saving_bits": 16.555102895374674,
+          "split_type": "prefix",
+          "test_books": 10,
+          "train_books": 50
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 18.313691442233804,
+          "joint_bits": 14.196064165921053,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": 4.117627276312751,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 17.482990303668977,
+          "joint_bits": 16.406018355735945,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": 1.076971947933032,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 17.90682922350118,
+          "joint_bits": 14.196064165921053,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": 3.7107650575801276,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 1,
+          "independent_bits": 10.70623403939187,
+          "joint_bits": 11.69356382539187,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": -0.9873297860000001,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 3,
+          "independent_bits": 16.029185292459367,
+          "joint_bits": 11.327067014341125,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": 4.702118278118242,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 9.382527735254792,
+          "joint_bits": 7.967245475425172,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": 1.4152822598296195,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 10.14628217127002,
+          "joint_bits": 7.606100984141531,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": 2.540181187128489,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 10.046201158441818,
+          "joint_bits": 8.886208903334266,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": 1.1599922551075519,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 11.13686839372173,
+          "joint_bits": 8.886208903334266,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": 2.2506594903874646,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 9.540561110382065,
+          "joint_bits": 7.786673229783352,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": 1.7538878805987128,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 3,
+          "independent_bits": 17.376884330568974,
+          "joint_bits": 14.084090260848585,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": 3.2927940697203884,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 4,
+          "independent_bits": 23.027064527575117,
+          "joint_bits": 17.16788261609233,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": 5.859181911482786,
+          "split_type": "family",
+          "test_books": 4,
+          "train_books": 56
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 11.637413774766703,
+          "joint_bits": 10.651743649697243,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": 0.9856701250694595,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 16.995862582071496,
+          "joint_bits": 14.821055855014793,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": 2.174806727056703,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 1.584962500721156,
+          "exact_joint_hits": 2,
+          "independent_bits": 10.919575940840371,
+          "joint_bits": 9.371635730504508,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": 1.547940210335863,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        }
+      ],
+      "summary": {
+        "exact_joint_hits": 125,
+        "positive_splits": 19,
+        "split_count": 20,
+        "test_books_repeated": 186,
+        "total_independent_bits": 1221.7652723636145,
+        "total_joint_bits": 864.5304611239856,
+        "total_saving_bits": 357.2348112396289
+      }
+    },
+    "no_derived_shape": {
+      "alphabet_sizes": {
+        "composition_bits_class": 5,
+        "copy_hint_bits_class": 4,
+        "joint": 27,
+        "literal_digit_class": 5,
+        "literal_op_class": 5,
+        "op_count_class": 5
+      },
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": true,
+        "beats_shuffled_p95": true,
+        "shuffled_mean": 684.3286349908967,
+        "shuffled_p05": 621.3757756536163,
+        "shuffled_p50": 682.4766800367813,
+        "shuffled_p95": 755.4290715956922,
+        "trials": 500
+      },
+      "fields": [
+        "op_count_class",
+        "literal_digit_class",
+        "literal_op_class",
+        "copy_hint_bits_class",
+        "composition_bits_class"
+      ],
+      "split_rows": [
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 16,
+          "independent_bits": 644.028687666182,
+          "joint_bits": 254.69197066723063,
+          "label": "prefix_20",
+          "saving_bits": 389.3367169989514,
+          "split_type": "prefix",
+          "test_books": 50,
+          "train_books": 10
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 23,
+          "independent_bits": 443.0040733616376,
+          "joint_bits": 196.27578344039736,
+          "label": "prefix_30",
+          "saving_bits": 246.72828992124025,
+          "split_type": "prefix",
+          "test_books": 40,
+          "train_books": 20
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 20,
+          "independent_bits": 312.453001124758,
+          "joint_bits": 143.60408807752694,
+          "label": "prefix_40",
+          "saving_bits": 168.84891304723104,
+          "split_type": "prefix",
+          "test_books": 30,
+          "train_books": 30
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 13,
+          "independent_bits": 203.33858975114978,
+          "joint_bits": 98.4040918578025,
+          "label": "prefix_50",
+          "saving_bits": 104.93449789334728,
+          "split_type": "prefix",
+          "test_books": 20,
+          "train_books": 40
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 9,
+          "independent_bits": 95.57453546956795,
+          "joint_bits": 44.75188102877393,
+          "label": "prefix_60",
+          "saving_bits": 50.82265444079402,
+          "split_type": "prefix",
+          "test_books": 10,
+          "train_books": 50
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 0,
+          "independent_bits": 32.38008111035811,
+          "joint_bits": 16.64167076844414,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": 15.738410341913973,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 30.85828642493847,
+          "joint_bits": 18.24872905575407,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": 12.609557369184401,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 0,
+          "independent_bits": 31.98714126785786,
+          "joint_bits": 16.64167076844414,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": 15.345470499413722,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 1,
+          "independent_bits": 18.247763390752766,
+          "joint_bits": 12.734780172835622,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": 5.512983217917144,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 3,
+          "independent_bits": 25.760302565050623,
+          "joint_bits": 12.252239874551218,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": 13.508062690499404,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 1,
+          "independent_bits": 15.675503885531294,
+          "joint_bits": 12.734780172835622,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": 2.9407237126956716,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 16.30801378826827,
+          "joint_bits": 8.647317331585283,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": 7.660696456682986,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 16.339177308718316,
+          "joint_bits": 9.927425250778018,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": 6.411752057940298,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 18.798691978800345,
+          "joint_bits": 9.746853005136197,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": 9.051838973664148,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 15.581998493662603,
+          "joint_bits": 8.827889577227104,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": 6.754108916435499,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 3,
+          "independent_bits": 29.699000413979288,
+          "joint_bits": 15.926800960866705,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": 13.772199453112583,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 4,
+          "independent_bits": 37.56755813142843,
+          "joint_bits": 18.15948275914781,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": 19.408075372280617,
+          "split_type": "family",
+          "test_books": 4,
+          "train_books": 56
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 1,
+          "independent_bits": 22.079574731264437,
+          "joint_bits": 13.834315846386536,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": 8.2452588848779,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 28.119728798793965,
+          "joint_bits": 15.926800960866705,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": 12.19292783792726,
+          "split_type": "family",
+          "test_books": 3,
+          "train_books": 57
+        },
+        {
+          "descriptor_bits": 2.321928094887362,
+          "exact_joint_hits": 2,
+          "independent_bits": 17.678215663465686,
+          "joint_bits": 10.232279832306439,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": 7.445935831159247,
+          "split_type": "family",
+          "test_books": 2,
+          "train_books": 58
+        }
+      ],
+      "summary": {
+        "exact_joint_hits": 108,
+        "positive_splits": 20,
+        "split_count": 20,
+        "test_books_repeated": 186,
+        "total_independent_bits": 2055.479925326166,
+        "total_joint_bits": 938.2108514088969,
+        "total_saving_bits": 1117.269073917269
+      }
+    }
+  }
+}

@@ -36,6 +36,7 @@ source_refs:
   - analysis/generative_route_frontier_synthesis_audit_20260622
   - analysis/digit_content_boundary_transducer_audit_20260622
   - analysis/physical_topology_control_signal_audit_20260622
+  - analysis/book_residual_mode_coupling_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -907,6 +908,16 @@ composition bits (`+89.777`), because `147` recovered copy starts add
 `488.323` bits of lag tax, and it beats random top-K p05 in `0/5` cells. The
 right-surprisal signal is therefore not rescued as an executable boundary
 program.
+A book residual-mode coupling audit then steps above individual fields and
+tests whether the remaining external burdens synchronize at book level. This is
+the first positive result after the boundary/topology closures: the primary
+no-derived-shape joint mode costs `938.211` bits versus `2055.480` independent
+field bits (`1117.269` saved), is positive in `20/20` prefix/family splits, and
+beats shuffled-within-stream p95 (`755.429`). The stricter burden-only variant
+also survives (`357.235` saved versus p95 `132.102`). This does not generate
+exact `type:length`, literal payload, or copy hints, but it promotes a new
+representation target: a latent book-mode program over residual burdens rather
+than more local endpoint/source selectors.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
