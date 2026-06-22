@@ -29,6 +29,7 @@ source_refs:
   - analysis/markov_chunk_content_prior_audit_20260622
   - analysis/latent_state_route_synthesis_audit_20260622
   - analysis/latent_nonlocal_state_program_pilot_audit_20260622
+  - analysis/schedule_state_multistream_pilot_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -833,6 +834,13 @@ model captures multistream coupling (`3204.220` bits versus `5342.667`
 factorized and `3747.315` unigram), but it fails the order/nonlocal control:
 it beats same-multiset shuffled p05 in `0/5` prefix cells. This is retained as
 a multistream coupling clue, not a promoted nonlocal state generator.
+A schedule-state multistream pilot then asks whether that HMM clue can be tied
+to visible book/operation schedule states instead of hidden state. The
+train-selected decoder-visible schedule models cost `3559.712` bits versus
+`5212.286` factorized bits (`-1652.574`) and beat factorized streams in `5/5`
+prefix cells, but they beat same-book shuffled p05 in `0/5` cells. Diagnostic
+remaining/target-position states are cheaper but grant skeleton information.
+So this remains a schedule/multistream clue, not an executable generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3189,6 +3197,8 @@ book generation, not row0 pair-cell placement.
 - [Latent-state route synthesis](../../analysis/latent_state_route_synthesis_audit_20260622/reports/test_results/01_latent_state_route_synthesis.md)
 - [Final latent nonlocal state program pilot audit](../../analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/final_latent_nonlocal_state_program_pilot_audit.md)
 - [Latent nonlocal state program pilot](../../analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/test_results/01_latent_nonlocal_state_program_pilot.md)
+- [Final schedule-state multistream pilot audit](../../analysis/schedule_state_multistream_pilot_audit_20260622/reports/final_schedule_state_multistream_pilot_audit.md)
+- [Schedule-state multistream pilot](../../analysis/schedule_state_multistream_pilot_audit_20260622/reports/test_results/01_schedule_state_multistream_pilot.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
