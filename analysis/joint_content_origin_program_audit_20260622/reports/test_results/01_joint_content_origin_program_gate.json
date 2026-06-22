@@ -1,0 +1,182 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_LITERAL_SPAN_CONTENT_ORIGIN_SUBPROGRAM",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "best_model_source_position_control": {
+      "beats_p05": true,
+      "observed_bits_after_declaration": 858.7981218658744,
+      "p05": 875.0775822596144,
+      "p50": 887.2976022236209,
+      "p95": 894.9542790198567,
+      "trials": 250
+    },
+    "literal_mark_source_position_control": {
+      "beats_p05": false,
+      "observed_bits_after_declaration": 1323.6912700683051,
+      "p05": 989.2921279686498,
+      "p50": 1026.6972666255588,
+      "p95": 1059.515866547165,
+      "trials": 250
+    },
+    "prior_op_mark_source_position_control": {
+      "beats_p05": false,
+      "observed_bits_after_declaration": 1049.1790874312876,
+      "p05": 992.1235393220381,
+      "p50": 1031.1546492276664,
+      "p95": 1066.0406248208856,
+      "trials": 250
+    }
+  },
+  "decision": {
+    "next_blocker": "copy fallback exact origin remains external unless a content-origin model beats copy hints under holdout and controls",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "holdouts": [
+    {
+      "cutoff": 20,
+      "selected_model": "literal_span_offset",
+      "test_baseline_copy_hint_bits": 669.9157065887773,
+      "test_delta_after_declaration_vs_copy_hint": -31.423728340412936,
+      "test_model_bits_after_declaration": 638.4919782483644,
+      "test_rows": 73,
+      "test_rows_missing_fallback_to_copy_hint": 63,
+      "train_best_delta_after_declaration": 1.4260005490350807,
+      "train_rows": 28
+    },
+    {
+      "cutoff": 30,
+      "selected_model": "literal_span_offset",
+      "test_baseline_copy_hint_bits": 541.7794264144202,
+      "test_delta_after_declaration_vs_copy_hint": -16.413774871157102,
+      "test_model_bits_after_declaration": 525.3656515432631,
+      "test_rows": 58,
+      "test_rows_missing_fallback_to_copy_hint": 52,
+      "train_best_delta_after_declaration": -13.583952920220838,
+      "train_rows": 43
+    },
+    {
+      "cutoff": 40,
+      "selected_model": "literal_span_offset",
+      "test_baseline_copy_hint_bits": 395.9761802914522,
+      "test_delta_after_declaration_vs_copy_hint": -9.017037810223087,
+      "test_model_bits_after_declaration": 386.9591424812291,
+      "test_rows": 42,
+      "test_rows_missing_fallback_to_copy_hint": 38,
+      "train_best_delta_after_declaration": -20.98068998115457,
+      "train_rows": 59
+    },
+    {
+      "cutoff": 50,
+      "selected_model": "literal_span_offset",
+      "test_baseline_copy_hint_bits": 261.43062657422877,
+      "test_delta_after_declaration_vs_copy_hint": -9.017037810223115,
+      "test_model_bits_after_declaration": 252.41358876400565,
+      "test_rows": 27,
+      "test_rows_missing_fallback_to_copy_hint": 23,
+      "train_best_delta_after_declaration": -20.98068998115457,
+      "train_rows": 74
+    },
+    {
+      "cutoff": 60,
+      "selected_model": "literal_span_offset",
+      "test_baseline_copy_hint_bits": 89.72382243936042,
+      "test_delta_after_declaration_vs_copy_hint": 1.8756460310046634,
+      "test_model_bits_after_declaration": 91.59946847036508,
+      "test_rows": 9,
+      "test_rows_missing_fallback_to_copy_hint": 7,
+      "train_best_delta_after_declaration": -31.873373822382177,
+      "train_rows": 92
+    }
+  ],
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "content_addressed_event_gate": "analysis/content_addressed_event_program_audit_20260622/reports/test_results/01_content_addressed_event_program_gate.json",
+    "executable_v5_gate": "analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_gate.json",
+    "near_source_mark_offset_script": "analysis/v5_near_source_mark_offset_audit_20260622/scripts/01_v5_near_source_mark_offset_gate.py",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json",
+    "v5_frontier_synthesis": "analysis/v5_external_dependency_frontier_synthesis_audit_20260622/reports/test_results/01_v5_external_dependency_frontier_synthesis.json"
+  },
+  "literal_payload": {
+    "literal_digits": 266,
+    "literal_payload_bits_uniform": 883.6328732400383,
+    "literal_payload_status": "still_paid_external_innovation_tape",
+    "literal_runs": 53
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "joint_content_origin_program_gate.v1",
+  "scope": "analysis_only_joint_content_origin_program",
+  "summary": {
+    "baseline_copy_hint_bits": 891.1177777521392,
+    "best_model": "literal_span_offset",
+    "best_model_delta_after_declaration": -32.319655886264854,
+    "candidate_external_bits_excluding_seed": 4065.0134193177782,
+    "candidate_external_delta_vs_v5": -32.319655886264854,
+    "fallback_copy_events": 101,
+    "holdout_positive_splits": 4,
+    "literal_nearest_exact_mark_count": 6,
+    "literal_nearest_median_abs_offset": 394,
+    "model_rows": {
+      "literal_span_offset": {
+        "bits_before_declaration": 856.476193770987,
+        "coverage": 11,
+        "delta_after_declaration_vs_copy_hint": -32.319655886264854,
+        "missing_fallback_to_copy_hint": 90,
+        "model_declaration_bits": 2.321928094887362,
+        "total_bits_after_declaration": 858.7981218658744
+      },
+      "literal_start_end_nearest": {
+        "bits_before_declaration": 1321.3693419734177,
+        "coverage": 101,
+        "delta_after_declaration_vs_copy_hint": 432.5734923161659,
+        "missing_fallback_to_copy_hint": 0,
+        "model_declaration_bits": 2.321928094887362,
+        "total_bits_after_declaration": 1323.6912700683051
+      },
+      "prior_op_span_offset": {
+        "bits_before_declaration": 1230.0592984163904,
+        "coverage": 101,
+        "delta_after_declaration_vs_copy_hint": 341.26344875913867,
+        "missing_fallback_to_copy_hint": 0,
+        "model_declaration_bits": 2.321928094887362,
+        "total_bits_after_declaration": 1232.3812265112779
+      },
+      "prior_op_start_end_nearest": {
+        "bits_before_declaration": 1046.8571593364002,
+        "coverage": 101,
+        "delta_after_declaration_vs_copy_hint": 158.0613096791484,
+        "missing_fallback_to_copy_hint": 0,
+        "model_declaration_bits": 2.321928094887362,
+        "total_bits_after_declaration": 1049.1790874312876
+      },
+      "seed_or_literal_span_offset": {
+        "bits_before_declaration": 1081.560038748557,
+        "coverage": 67,
+        "delta_after_declaration_vs_copy_hint": 192.76418909130518,
+        "missing_fallback_to_copy_hint": 34,
+        "model_declaration_bits": 2.321928094887362,
+        "total_bits_after_declaration": 1083.8819668434444
+      }
+    },
+    "prior_op_span_hits": 101,
+    "promoted": true,
+    "promoted_scope": "literal_span_offset_for_11_v5_fallback_copy_origins",
+    "seed_or_literal_span_hits": 67,
+    "source_inside_prior_literal_count": 11,
+    "source_inside_seed_count": 56,
+    "v5_external_bits_excluding_seed": 4097.333075204043,
+    "validation_errors": [],
+    "validation_roundtrip_derived_books": 60
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "fallback_events": 101,
+    "literal_events": 53,
+    "roundtrip_derived_books": 60,
+    "seed_spans": 10
+  }
+}

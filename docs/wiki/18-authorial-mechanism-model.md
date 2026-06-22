@@ -57,6 +57,9 @@ source_refs:
   - analysis/boundary_mark_propagation_program_audit_20260622
   - analysis/one_sided_source_boundary_program_audit_20260622
   - analysis/executable_v4_one_sided_boundary_program_audit_20260622
+  - analysis/executable_v5_source_endpoint_memory_audit_20260622
+  - analysis/v5_external_dependency_frontier_synthesis_audit_20260622
+  - analysis/joint_content_origin_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3606,6 +3609,7 @@ book generation, not row0 pair-cell placement.
 - [V4 unanchored copy residual audit](../../analysis/v4_unanchored_copy_residual_audit_20260622/reports/final_v4_unanchored_copy_residual_audit.md)
 - [Unanchored copy-origin representation audit](../../analysis/unanchored_copy_origin_representation_audit_20260622/reports/final_unanchored_copy_origin_representation_audit.md)
 - [Executable v5 source-endpoint memory audit](../../analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/final_executable_v5_source_endpoint_memory_audit.md)
+- [Joint content-origin program audit](../../analysis/joint_content_origin_program_audit_20260622/reports/final_joint_content_origin_program_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3620,6 +3624,24 @@ the representation family. Copy classes shift to `52` fully-derived intervals,
 
 This changes the executable dependency ledger only. It does not change `row0`,
 plaintext, translation, semantics, or the separate `compression_bound`.
+
+## Literal-span content-origin subprogram
+
+The v5 frontier synthesis identifies copy fallback identity, literal payload,
+and residual composition as the main non-seed blockers. A joint content-origin
+gate then tests whether fallback copy sources can be addressed through already
+emitted content origins instead of an independent copy-hint tape. The promoted
+piece is narrow: `literal_span_offset` applies to only `11/101` v5 fallback
+copy events, but it costs `858.798` bits after declaration versus `891.118`
+copy-hint bits, saving `32.320` bits. It has `4/5` positive prefix holdout
+splits and beats the random source-position p05 control (`858.798` vs
+`875.078`).
+
+Integrated as a limited executable-ledger reduction, this moves external bits
+excluding seed from v5 `4097.333` to `4065.013`. It is not a complete
+content-origin generator: most fallback copy origins, literal payload, seed
+payload, `row0`, plaintext, translation, semantics, and the separate
+`compression_bound` remain unchanged.
 
 ## Boundary
 
