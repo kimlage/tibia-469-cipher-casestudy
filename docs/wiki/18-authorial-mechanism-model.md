@@ -46,6 +46,7 @@ source_refs:
   - analysis/internal_start_beam_capacity_audit_20260622
   - analysis/internal_start_beam_control_audit_20260622
   - analysis/internal_start_beam_paid_control_audit_20260622
+  - analysis/online_x64_coarse_control_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -790,7 +791,7 @@ saving), even with `0.000` model/grammar descriptor bits charged. The true
 sequence is in beam `66/186` times (`16` nontrivial), but top-1 exact books are
 all trivial (`38` books, `0` nontrivial). The book-level controller therefore
 remains a predictive clue, not an executable program component.
-An executable program frontier synthesis then consolidates the current state:
+An executable program frontier synthesis then consolidates the pre-x64 state:
 the explicit decoder still roundtrips `70/70`, but the representation now has
 `0` promoted executable tape reductions. External tape cost remains
 `4358.858` bits excluding seed and `9992.848` including seed. The rejected
@@ -800,6 +801,10 @@ tape removal (`-1609.513` bits), and book-level controller integration
 representation is useful for accounting, but the next real generator route
 needs a representation change, most likely a joint chunk-origin program, not
 another local field codec.
+This frontier is later superseded for one field only: the online x64
+coarse-control program below reduces the executable coarse-control tape. The
+older conclusion still applies to macro/templates, source tape removal, and the
+other residual tapes.
 A joint chunk-origin route audit then makes that representation change
 explicit. Exact target-chunk dictionaries are rejected (`256/261` operation
 chunks unique; all-chunk dictionary `+32442.167` bits versus the
@@ -999,6 +1004,17 @@ same-multiset shuffled controls reach only `466.838` bits saving at p95 and
 reduction candidate. It still leaves the fine residual composition index,
 literal payload, copy/source hints, seed payload, and `row0` outside the
 generator.
+An online executable follow-up then runs the x64 controller once over books
+`10..69`, training only on previous decoded/corrected books. This is the first
+promoted executable tape reduction in the current decoder contract: `37/60`
+coarse sequences and `78/261` ops are generated without coarse correction,
+`41/201` internal starts are generated, and paid coarse-control cost falls to
+`876.412` bits versus the current minimal coarse ledger at `935.675`
+(`+59.263` bits). Same-multiset controls are negative at p95 against the minimal
+ledger (`-51.784`), and coarse+composition falls from `1601.457` to `1542.194`
+bits. This is real generation-program progress, but still only for the coarse
+control tape: fine residual composition, literal payload, copy/source hints,
+seed payload, and `row0` remain external.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3385,6 +3401,8 @@ book generation, not row0 pair-cell placement.
 - [Internal start beam control gate](../../analysis/internal_start_beam_control_audit_20260622/reports/test_results/01_internal_start_beam_control_gate.md)
 - [Final internal start beam paid-control audit](../../analysis/internal_start_beam_paid_control_audit_20260622/reports/final_internal_start_beam_paid_control_audit.md)
 - [Internal start beam paid-control gate](../../analysis/internal_start_beam_paid_control_audit_20260622/reports/test_results/01_internal_start_beam_paid_control_gate.md)
+- [Final online x64 coarse-control program audit](../../analysis/online_x64_coarse_control_program_audit_20260622/reports/final_online_x64_coarse_control_program_audit.md)
+- [Online x64 coarse-control program gate](../../analysis/online_x64_coarse_control_program_audit_20260622/reports/test_results/01_online_x64_coarse_control_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

@@ -1,0 +1,1212 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_ONLINE_X64_MINIMAL_LEDGER_REDUCTION",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "generated_internal_starts_p95": 84.0,
+    "saving_vs_explicit_opcount_coarse_bits_mean": 148.3612813093283,
+    "saving_vs_explicit_opcount_coarse_bits_p95": 188.21606431971523,
+    "saving_vs_minimal_coarse_bits_mean": -91.63871869067161,
+    "saving_vs_minimal_coarse_bits_p95": -51.783935680284685,
+    "sequence_hits_p95": 22.049999999999955,
+    "trials": 500
+  },
+  "decision": {
+    "beats_explicit_same_multiset_controls": true,
+    "beats_minimal_same_multiset_controls": true,
+    "generator_promoted": false,
+    "reduces_current_minimal_coarse_ledger": true,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "book_level_controller_script": "analysis/book_level_coarse_length_controller_audit_20260622/scripts/01_book_level_coarse_length_controller_gate.py",
+    "minimal_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json",
+    "paid_x64_control_gate": "analysis/internal_start_beam_paid_control_audit_20260622/reports/test_results/01_internal_start_beam_paid_control_gate.json",
+    "random_seed": 46920260886,
+    "random_trials": 500,
+    "width": "x64"
+  },
+  "minimal_ledger_reference": {
+    "coarse_control_bits_uniform": 935.6752126882244,
+    "coarse_plus_composition_bits": 1601.4570698724688,
+    "composition_index_bits": 665.7818571842444
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "book": 10,
+      "book_length": 281,
+      "composition_bits": 3.0,
+      "decoded_candidates": 0,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 11.169925001442312,
+      "op_count": 2,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": false,
+      "top_sequence": []
+    },
+    {
+      "book": 11,
+      "book_length": 137,
+      "composition_bits": 13.680359523513713,
+      "decoded_candidates": 314,
+      "explicit_opcount_coarse_bits": 25.509775004326936,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 5,
+      "minimal_coarse_bits": 21.509775004326936,
+      "online_paid_coarse_bits": 25.509775004326936,
+      "op_count": 6,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 6,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 12,
+      "book_length": 137,
+      "composition_bits": 39.058075653820715,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 54.18947501009619,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 13,
+      "minimal_coarse_bits": 50.18947501009619,
+      "online_paid_coarse_bits": 54.18947501009619,
+      "op_count": 14,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 14,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 13,
+      "book_length": 141,
+      "composition_bits": 25.733483769209595,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 36.2646625064904,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 8,
+      "minimal_coarse_bits": 32.2646625064904,
+      "online_paid_coarse_bits": 36.2646625064904,
+      "op_count": 9,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 9,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 14,
+      "book_length": 133,
+      "composition_bits": 23.372925621637012,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 32.67970000576925,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 7,
+      "minimal_coarse_bits": 28.67970000576925,
+      "online_paid_coarse_bits": 32.67970000576925,
+      "op_count": 8,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 8,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 15,
+      "book_length": 143,
+      "composition_bits": 29.619666348674762,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 43.43458750793272,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 10,
+      "minimal_coarse_bits": 39.43458750793272,
+      "online_paid_coarse_bits": 43.43458750793272,
+      "op_count": 11,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 11,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p",
+        "literal:len_0008"
+      ]
+    },
+    {
+      "book": 16,
+      "book_length": 174,
+      "composition_bits": 32.99994089050179,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 47.01955000865387,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 11,
+      "minimal_coarse_bits": 43.01955000865387,
+      "online_paid_coarse_bits": 47.01955000865387,
+      "op_count": 12,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 12,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p",
+        "literal:len_0008"
+      ]
+    },
+    {
+      "book": 17,
+      "book_length": 274,
+      "composition_bits": 34.126035767486286,
+      "decoded_candidates": 567,
+      "explicit_opcount_coarse_bits": 47.01955000865387,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 11,
+      "minimal_coarse_bits": 43.01955000865387,
+      "online_paid_coarse_bits": 47.01955000865387,
+      "op_count": 12,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 12,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p",
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 18,
+      "book_length": 93,
+      "composition_bits": 4.807354922057604,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 15,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.9068905956085187,
+      "op_count": 2,
+      "rank_bits": 3.9068905956085187,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128",
+        "literal:len_0008"
+      ]
+    },
+    {
+      "book": 19,
+      "book_length": 129,
+      "composition_bits": 8.954196310386875,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 2,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 1.0,
+      "op_count": 3,
+      "rank_bits": 1.0,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 20,
+      "book_length": 63,
+      "composition_bits": 17.03737535776324,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 29.094737505048094,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 6,
+      "minimal_coarse_bits": 25.094737505048094,
+      "online_paid_coarse_bits": 29.094737505048094,
+      "op_count": 7,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 7,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0064",
+        "literal:len_0008"
+      ]
+    },
+    {
+      "book": 21,
+      "book_length": 176,
+      "composition_bits": 6.9886846867721655,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 261,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 8.027905996569885,
+      "op_count": 3,
+      "rank_bits": 8.027905996569885,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 22,
+      "book_length": 137,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 8,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 3.0,
+      "op_count": 1,
+      "rank_bits": 3.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 23,
+      "book_length": 177,
+      "composition_bits": 34.42837242560489,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 47.01955000865387,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 11,
+      "minimal_coarse_bits": 43.01955000865387,
+      "online_paid_coarse_bits": 47.01955000865387,
+      "op_count": 12,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 12,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 24,
+      "book_length": 119,
+      "composition_bits": 6.247927513443585,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 102,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 6.672425341971495,
+      "op_count": 3,
+      "rank_bits": 6.672425341971495,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 25,
+      "book_length": 35,
+      "composition_bits": 2.584962500721156,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 11,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.4594316186372973,
+      "op_count": 2,
+      "rank_bits": 3.4594316186372973,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 26,
+      "book_length": 170,
+      "composition_bits": 9.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 18.339850002884624,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 3,
+      "minimal_coarse_bits": 14.339850002884624,
+      "online_paid_coarse_bits": 18.339850002884624,
+      "op_count": 4,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 4,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 27,
+      "book_length": 124,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 3,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 1.584962500721156,
+      "op_count": 1,
+      "rank_bits": 1.584962500721156,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 28,
+      "book_length": 146,
+      "composition_bits": 13.981388896117206,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 21.92481250360578,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 4,
+      "minimal_coarse_bits": 17.92481250360578,
+      "online_paid_coarse_bits": 21.92481250360578,
+      "op_count": 5,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 5,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 29,
+      "book_length": 151,
+      "composition_bits": 10.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 18.339850002884624,
+      "generated_internal_starts": 3,
+      "hit_rank": 523,
+      "internal_starts": 3,
+      "minimal_coarse_bits": 14.339850002884624,
+      "online_paid_coarse_bits": 9.030667136246942,
+      "op_count": 4,
+      "rank_bits": 9.030667136246942,
+      "scored_sequence_op_count": 4,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 30,
+      "book_length": 150,
+      "composition_bits": 17.987913478393562,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 25.509775004326936,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 5,
+      "minimal_coarse_bits": 21.509775004326936,
+      "online_paid_coarse_bits": 25.509775004326936,
+      "op_count": 6,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 6,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 31,
+      "book_length": 248,
+      "composition_bits": 27.65937492397432,
+      "decoded_candidates": 680,
+      "explicit_opcount_coarse_bits": 32.67970000576925,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 7,
+      "minimal_coarse_bits": 28.67970000576925,
+      "online_paid_coarse_bits": 32.67970000576925,
+      "op_count": 8,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 8,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 32,
+      "book_length": 137,
+      "composition_bits": 6.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 82,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 6.357552004618084,
+      "op_count": 3,
+      "rank_bits": 6.357552004618084,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 33,
+      "book_length": 134,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 34,
+      "book_length": 123,
+      "composition_bits": 24.867854754062996,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 36.2646625064904,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 8,
+      "minimal_coarse_bits": 32.2646625064904,
+      "online_paid_coarse_bits": 36.2646625064904,
+      "op_count": 9,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 9,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 35,
+      "book_length": 286,
+      "composition_bits": 6.0,
+      "decoded_candidates": 541,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 12,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.584962500721156,
+      "op_count": 2,
+      "rank_bits": 3.584962500721156,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 36,
+      "book_length": 137,
+      "composition_bits": 17.642390208053904,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 25.509775004326936,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 5,
+      "minimal_coarse_bits": 21.509775004326936,
+      "online_paid_coarse_bits": 25.509775004326936,
+      "op_count": 6,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 6,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 37,
+      "book_length": 160,
+      "composition_bits": 5.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 10,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.321928094887362,
+      "op_count": 2,
+      "rank_bits": 3.321928094887362,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 38,
+      "book_length": 134,
+      "composition_bits": 12.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 21.92481250360578,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 4,
+      "minimal_coarse_bits": 17.92481250360578,
+      "online_paid_coarse_bits": 21.92481250360578,
+      "op_count": 5,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 5,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 39,
+      "book_length": 59,
+      "composition_bits": 6.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 258,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 8.011227255423254,
+      "op_count": 3,
+      "rank_bits": 8.011227255423254,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0016",
+        "copy:len_0064"
+      ]
+    },
+    {
+      "book": 40,
+      "book_length": 168,
+      "composition_bits": 10.97513145692134,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 18.339850002884624,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 3,
+      "minimal_coarse_bits": 14.339850002884624,
+      "online_paid_coarse_bits": 18.339850002884624,
+      "op_count": 4,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 4,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 41,
+      "book_length": 136,
+      "composition_bits": 5.129283016944966,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 18.339850002884624,
+      "generated_internal_starts": 3,
+      "hit_rank": 275,
+      "internal_starts": 3,
+      "minimal_coarse_bits": 14.339850002884624,
+      "online_paid_coarse_bits": 8.103287808412022,
+      "op_count": 4,
+      "rank_bits": 8.103287808412022,
+      "scored_sequence_op_count": 4,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 42,
+      "book_length": 187,
+      "composition_bits": 20.86314573662351,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 29.094737505048094,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 6,
+      "minimal_coarse_bits": 25.094737505048094,
+      "online_paid_coarse_bits": 29.094737505048094,
+      "op_count": 7,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 7,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 43,
+      "book_length": 141,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 44,
+      "book_length": 126,
+      "composition_bits": 3.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 7,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 2.807354922057604,
+      "op_count": 2,
+      "rank_bits": 2.807354922057604,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 45,
+      "book_length": 149,
+      "composition_bits": 8.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 71,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 6.149747119504682,
+      "op_count": 3,
+      "rank_bits": 6.149747119504682,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 46,
+      "book_length": 253,
+      "composition_bits": 8.832890014164741,
+      "decoded_candidates": 570,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 58,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 5.857980995127572,
+      "op_count": 3,
+      "rank_bits": 5.857980995127572,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 47,
+      "book_length": 126,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 48,
+      "book_length": 169,
+      "composition_bits": 4.584962500721156,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 4,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 2.0,
+      "op_count": 2,
+      "rank_bits": 2.0,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 49,
+      "book_length": 115,
+      "composition_bits": 32.86640011004419,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 47.01955000865387,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 11,
+      "minimal_coarse_bits": 43.01955000865387,
+      "online_paid_coarse_bits": 47.01955000865387,
+      "op_count": 12,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 12,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 50,
+      "book_length": 141,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 51,
+      "book_length": 268,
+      "composition_bits": 3.4594316186372973,
+      "decoded_candidates": 442,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 13,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.700439718141092,
+      "op_count": 2,
+      "rank_bits": 3.700439718141092,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 52,
+      "book_length": 137,
+      "composition_bits": 3.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 15,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.9068905956085187,
+      "op_count": 2,
+      "rank_bits": 3.9068905956085187,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 53,
+      "book_length": 271,
+      "composition_bits": 0.0,
+      "decoded_candidates": 458,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 54,
+      "book_length": 57,
+      "composition_bits": 3.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 8,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.0,
+      "op_count": 2,
+      "rank_bits": 3.0,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0064",
+        "literal:len_0008"
+      ]
+    },
+    {
+      "book": 55,
+      "book_length": 116,
+      "composition_bits": 10.853309555403674,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 18.339850002884624,
+      "generated_internal_starts": 3,
+      "hit_rank": 517,
+      "internal_starts": 3,
+      "minimal_coarse_bits": 14.339850002884624,
+      "online_paid_coarse_bits": 9.014020470314934,
+      "op_count": 4,
+      "rank_bits": 9.014020470314934,
+      "scored_sequence_op_count": 4,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 56,
+      "book_length": 266,
+      "composition_bits": 30.63606060252945,
+      "decoded_candidates": 435,
+      "explicit_opcount_coarse_bits": 39.84962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 9,
+      "minimal_coarse_bits": 35.84962500721156,
+      "online_paid_coarse_bits": 39.84962500721156,
+      "op_count": 10,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 10,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 57,
+      "book_length": 230,
+      "composition_bits": 26.798096393222945,
+      "decoded_candidates": 1213,
+      "explicit_opcount_coarse_bits": 32.67970000576925,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 7,
+      "minimal_coarse_bits": 28.67970000576925,
+      "online_paid_coarse_bits": 32.67970000576925,
+      "op_count": 8,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 8,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 58,
+      "book_length": 272,
+      "composition_bits": 7.0,
+      "decoded_candidates": 1437,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 121,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 6.918863237274595,
+      "op_count": 3,
+      "rank_bits": 6.918863237274595,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 59,
+      "book_length": 272,
+      "composition_bits": 9.930737337562887,
+      "decoded_candidates": 1445,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 27,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 4.754887502163468,
+      "op_count": 3,
+      "rank_bits": 4.754887502163468,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 60,
+      "book_length": 151,
+      "composition_bits": 17.756712675508098,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 25.509775004326936,
+      "generated_internal_starts": 0,
+      "hit_rank": null,
+      "internal_starts": 5,
+      "minimal_coarse_bits": 21.509775004326936,
+      "online_paid_coarse_bits": 25.509775004326936,
+      "op_count": 6,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 6,
+      "sequence_in_beam": false,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 61,
+      "book_length": 145,
+      "composition_bits": 4.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 13,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 3.700439718141092,
+      "op_count": 2,
+      "rank_bits": 3.700439718141092,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 62,
+      "book_length": 126,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 63,
+      "book_length": 126,
+      "composition_bits": 4.857980995127572,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 4,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 2.0,
+      "op_count": 2,
+      "rank_bits": 2.0,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 64,
+      "book_length": 151,
+      "composition_bits": 4.459431618637297,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 11.169925001442312,
+      "generated_internal_starts": 1,
+      "hit_rank": 4,
+      "internal_starts": 1,
+      "minimal_coarse_bits": 7.169925001442312,
+      "online_paid_coarse_bits": 2.0,
+      "op_count": 2,
+      "rank_bits": 2.0,
+      "scored_sequence_op_count": 2,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 65,
+      "book_length": 169,
+      "composition_bits": 7.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 14.754887502163468,
+      "generated_internal_starts": 2,
+      "hit_rank": 90,
+      "internal_starts": 2,
+      "minimal_coarse_bits": 10.754887502163468,
+      "online_paid_coarse_bits": 6.491853096329675,
+      "op_count": 3,
+      "rank_bits": 6.491853096329675,
+      "scored_sequence_op_count": 3,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 66,
+      "book_length": 210,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 67,
+      "book_length": 98,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0128"
+      ]
+    },
+    {
+      "book": 68,
+      "book_length": 143,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 69,
+      "book_length": 140,
+      "composition_bits": 0.0,
+      "decoded_candidates": 1920,
+      "explicit_opcount_coarse_bits": 7.584962500721156,
+      "generated_internal_starts": 0,
+      "hit_rank": 1,
+      "internal_starts": 0,
+      "minimal_coarse_bits": 3.584962500721156,
+      "online_paid_coarse_bits": 0.0,
+      "op_count": 1,
+      "rank_bits": 0.0,
+      "scored_sequence_op_count": 1,
+      "sequence_in_beam": true,
+      "top_sequence": [
+        "copy:len_0256p"
+      ]
+    }
+  ],
+  "schema": "online_x64_coarse_control_program_gate.v1",
+  "scope": "analysis_only_online_executable_coarse_control_program",
+  "summary": {
+    "classification": "PROMOTED_ONLINE_X64_MINIMAL_LEDGER_REDUCTION",
+    "composition_bits": 665.7818571842444,
+    "correction_bits": 748.0481376319716,
+    "explicit_opcount_coarse_bits": 1175.6752126882213,
+    "generated_internal_starts": 41.0,
+    "minimal_coarse_bits": 935.6752126882213,
+    "minimal_coarse_plus_composition_bits": 1601.4570698724656,
+    "online_coarse_plus_composition_bits": 1542.1937130446963,
+    "online_exact_books_without_correction": 37.0,
+    "online_exact_ops_without_correction": 78,
+    "online_paid_coarse_bits": 876.411855860452,
+    "rank_bits": 128.3637182284804,
+    "saving_vs_explicit_opcount_coarse_bits": 299.26335682776937,
+    "saving_vs_minimal_coarse_bits": 59.26335682776937,
+    "sequence_hits": 37.0,
+    "test_books": 60.0,
+    "test_internal_starts": 201.0,
+    "test_ops": 261.0
+  },
+  "translation_delta": "NONE"
+}
