@@ -24,6 +24,7 @@ source_refs:
   - analysis/book_level_controller_program_integration_audit_20260622
   - analysis/executable_program_frontier_synthesis_audit_20260622
   - analysis/joint_chunk_origin_route_audit_20260622
+  - analysis/joint_chunk_origin_beam_pilot_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -788,6 +789,16 @@ the missing target chunk. The selected next gate is
 `joint_chunk_origin_beam_pilot`, which must propose chunk-origin hypotheses
 jointly with source choice, length, and literal innovation; no generator is
 promoted by this route-selection audit.
+A bucket-level chunk-origin beam pilot then executes the first constrained
+version of that route. Granting op start, copy type, previous material, and
+only the coarse length bucket, the best prior-chunk ranking policy costs
+`2649.756` bits for `208` copy ops. That is a real signal against uniform
+bucket candidates (`507.351` bits saved; `5/5` prefix holdouts beat random
+p05), but it is still worse than the exact-length copy hint (`1873.768` bits)
+and raw source address (`2550.594` bits), with only `5/208` top-80 hits. This
+keeps joint chunk-origin open as a representation route, but not as an
+executable program component; the next blocker is a sharper target-free
+length/chunk prior.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3134,6 +3145,8 @@ book generation, not row0 pair-cell placement.
 - [Executable program frontier synthesis](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.md)
 - [Final joint chunk-origin route audit](../../analysis/joint_chunk_origin_route_audit_20260622/reports/final_joint_chunk_origin_route_audit.md)
 - [Joint chunk-origin route gate](../../analysis/joint_chunk_origin_route_audit_20260622/reports/test_results/01_joint_chunk_origin_route_gate.md)
+- [Final joint chunk-origin beam pilot audit](../../analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/final_joint_chunk_origin_beam_pilot_audit.md)
+- [Bucket chunk-origin beam pilot](../../analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/test_results/01_bucket_chunk_origin_beam_pilot.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
