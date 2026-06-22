@@ -450,6 +450,12 @@ matches `39/53` chunks but carries `222` payload digits in its table, costs
 `+44.588` bits versus raw uniform literal payload after paid corrections, and
 has `0/5` prefix/holdout cells with any exact chunk. The payload remains
 external rather than generated.
+A literal payload reference subcodec audit then tests a narrower constructive
+possibility: replace already-seen whole chunks with declared prior references.
+The recurrence is genuine (`38` chunks / `103` digits occurred before), and
+`11` chunks / `48` digits save `30.001` bits before mode cost. Once mode and
+source costs are paid, the subcodec is `+22.999` bits worse than raw payload,
+so prior occurrence remains a clue rather than a promoted payload mechanism.
 A copy-source generation audit then tests the other residual external field
 after granting exact skeleton and literal payload. The ledger has `208` copy
 events, with the canonical source equal to earliest matching in `200/208`, but
@@ -2584,6 +2590,8 @@ book generation, not row0 pair-cell placement.
 - [Source-free skeleton grammar gate](../../analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.md)
 - [Final literal payload generation audit](../../analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md)
 - [Literal payload context gate](../../analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.md)
+- [Final literal payload reference subcodec audit](../../analysis/literal_payload_reference_subcodec_audit_20260621/reports/final_literal_payload_reference_subcodec_audit.md)
+- [Literal payload reference subcodec gate](../../analysis/literal_payload_reference_subcodec_audit_20260621/reports/test_results/01_literal_payload_reference_subcodec_gate.md)
 - [Final copy source generation audit](../../analysis/copy_source_generation_audit_20260621/reports/final_copy_source_generation_audit.md)
 - [Copy source context gate](../../analysis/copy_source_generation_audit_20260621/reports/test_results/03_copy_source_context_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
