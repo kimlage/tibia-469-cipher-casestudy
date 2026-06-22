@@ -44,6 +44,7 @@ source_refs:
   - analysis/parser_decoder_frontier_synthesis_audit_20260622
   - analysis/target_free_internal_start_program_audit_20260622
   - analysis/internal_start_beam_capacity_audit_20260622
+  - analysis/internal_start_beam_control_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -982,6 +983,13 @@ declaration (`+61.328` bits). This promotes only an internal-start
 capacity-ledger reduction candidate, not an exact generator: `41/150` coarse
 sequences still miss the beam and most internal starts still require residual
 correction.
+The follow-up same-multiset control audit validates that the x64 result is not
+just generic beam capacity. Under the same decoded beams, the real payload gets
+`109` sequence hits and `98` generated internal starts, above shuffled-payload
+p95 values of `63` and `56`. This upgrades the x64 route to a controlled
+capacity-ledger candidate, but still not to an executable generation formula:
+missed coarse sequences, residual composition indices, and correction fields
+remain paid.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3364,6 +3372,8 @@ book generation, not row0 pair-cell placement.
 - [Final parser/decoder frontier synthesis audit](../../analysis/parser_decoder_frontier_synthesis_audit_20260622/reports/final_parser_decoder_frontier_synthesis_audit.md)
 - [Final target-free internal start program audit](../../analysis/target_free_internal_start_program_audit_20260622/reports/final_target_free_internal_start_program_audit.md)
 - [Final internal start beam capacity audit](../../analysis/internal_start_beam_capacity_audit_20260622/reports/final_internal_start_beam_capacity_audit.md)
+- [Final internal start beam control audit](../../analysis/internal_start_beam_control_audit_20260622/reports/final_internal_start_beam_control_audit.md)
+- [Internal start beam control gate](../../analysis/internal_start_beam_control_audit_20260622/reports/test_results/01_internal_start_beam_control_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

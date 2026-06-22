@@ -1,0 +1,103 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_X64_INTERNAL_START_CAPACITY_CONTROLLED_CANDIDATE",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "generated_internal_starts_mean": 46.845,
+    "generated_internal_starts_p95": 56.0,
+    "rank_bits_for_hits_mean": 173.98750599398744,
+    "sequence_hits_mean": 55.925,
+    "sequence_hits_p95": 63.0,
+    "trials": 200
+  },
+  "cutoff_rows": [
+    {
+      "control": {
+        "generated_internal_starts_p95": 17.0,
+        "sequence_hits_p95": 19.0
+      },
+      "cutoff": 20,
+      "real": {
+        "generated_internal_starts": 27,
+        "rank_bits_for_hits": 129.35001384233175,
+        "sequence_hits": 31
+      }
+    },
+    {
+      "control": {
+        "generated_internal_starts_p95": 18.0,
+        "sequence_hits_p95": 18.0
+      },
+      "cutoff": 30,
+      "real": {
+        "generated_internal_starts": 27,
+        "rank_bits_for_hits": 95.38626720353186,
+        "sequence_hits": 28
+      }
+    },
+    {
+      "control": {
+        "generated_internal_starts_p95": 16.0,
+        "sequence_hits_p95": 16.0
+      },
+      "cutoff": 40,
+      "real": {
+        "generated_internal_starts": 24,
+        "rank_bits_for_hits": 73.92419712517848,
+        "sequence_hits": 24
+      }
+    },
+    {
+      "control": {
+        "generated_internal_starts_p95": 10.0,
+        "sequence_hits_p95": 12.0
+      },
+      "cutoff": 50,
+      "real": {
+        "generated_internal_starts": 15,
+        "rank_bits_for_hits": 47.24639878376384,
+        "sequence_hits": 17
+      }
+    },
+    {
+      "control": {
+        "generated_internal_starts_p95": 5.0,
+        "sequence_hits_p95": 7.0
+      },
+      "cutoff": 60,
+      "real": {
+        "generated_internal_starts": 5,
+        "rank_bits_for_hits": 13.911111061926714,
+        "sequence_hits": 9
+      }
+    }
+  ],
+  "decision": {
+    "beats_same_multiset_controls": true,
+    "generator_promoted": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "book_level_controller_script": "analysis/book_level_coarse_length_controller_audit_20260622/scripts/01_book_level_coarse_length_controller_gate.py",
+    "internal_start_beam_capacity_gate": "analysis/internal_start_beam_capacity_audit_20260622/reports/test_results/01_internal_start_beam_capacity_gate.json",
+    "random_seed": 46920260686,
+    "random_trials": 200
+  },
+  "plaintext_claim": false,
+  "real": {
+    "generated_internal_starts": 98.0,
+    "rank_bits_for_hits": 359.8179880167326,
+    "sequence_hits": 109.0
+  },
+  "schema": "internal_start_beam_control_gate.v1",
+  "scope": "analysis_only_same_multiset_control_for_x64_internal_start_capacity",
+  "summary": {
+    "beats_same_multiset_controls": true,
+    "classification": "PROMOTED_X64_INTERNAL_START_CAPACITY_CONTROLLED_CANDIDATE",
+    "real_generated_internal_starts": 98.0,
+    "real_sequence_hits": 109.0,
+    "x64_capacity_saving_bits": 61.32785841617624
+  },
+  "translation_delta": "NONE"
+}
