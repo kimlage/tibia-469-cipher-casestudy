@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_SKELETON_REPLACEMENT_REJECTED`
+Classification: `INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_HYBRID_TAPE_SUBCODEC_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -42,6 +42,12 @@ plus a small external innovation tape made from the literal payload?
 - Seed-walk best saving vs raw tape: `-223.209`.
 - Promotes seed-walk subcodec: `False`.
 - Weak seed-walk clue: `False`.
+- Hybrid tape best strategy/min_len: `max_cover` / `5`.
+- Hybrid tape best total bits: `1075.983`.
+- Hybrid tape best saving vs raw: `-192.350`.
+- Hybrid tape best copy/literal digits: `90` / `176`.
+- Promotes hybrid tape subcodec: `False`.
+- Weak hybrid tape subcodec clue: `False`.
 - Tape schedule best feature: `global_majority`.
 - Tape schedule exact books: `33/50`.
 - Tape schedule saving vs count baseline: `221.844` bits.
@@ -138,7 +144,11 @@ then removes the type grant by encoding each operation as one
 `type:length` control symbol. This pair stream also beats shuffled paid
 controls in `4/5` cutoffs, but it is far more expensive than simply
 declaring fixed-op-count cutpoints plus types. That closes the most
-direct control-tape replacement route under the current features.
+direct control-tape replacement route under the current features. The
+hybrid tape-subcodec gate then strengthens the literal-payload check by
+allowing paid references to both seed text and prior emitted tape. It is
+still rejected: the best paid hybrid costs more than raw tape, so the
+literal innovation tape remains an external payload dependency.
 
 ## Decision
 
@@ -164,6 +174,7 @@ direct control-tape replacement route under the current features.
 - Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.
 - The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.
 - Joint type-length control structure is promoted only as a weak control-stream clue; skeleton replacement is rejected.
+- Hybrid seed+prior-tape subcodec is rejected: paid references do not beat raw literal tape.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -185,3 +196,4 @@ direct control-tape replacement route under the current features.
 - [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)
 - [Length control tape gate](test_results/15_length_control_tape_gate.md)
 - [Joint type-length control tape gate](test_results/16_joint_type_length_control_tape_gate.md)
+- [Hybrid innovation tape subcodec gate](test_results/17_hybrid_innovation_tape_subcodec_gate.md)

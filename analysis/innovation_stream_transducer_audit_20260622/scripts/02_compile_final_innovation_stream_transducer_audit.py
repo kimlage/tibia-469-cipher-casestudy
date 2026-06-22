@@ -29,6 +29,7 @@ BOOK_START_MODE_GATE = TEST_RESULTS / "13_book_start_mode_gate.json"
 FRONTIER_LEDGER = TEST_RESULTS / "14_generation_dependency_frontier_ledger.json"
 LENGTH_CONTROL_GATE = TEST_RESULTS / "15_length_control_tape_gate.json"
 JOINT_CONTROL_GATE = TEST_RESULTS / "16_joint_type_length_control_tape_gate.json"
+HYBRID_TAPE_SUBCODEC_GATE = TEST_RESULTS / "17_hybrid_innovation_tape_subcodec_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -70,6 +71,7 @@ def main() -> None:
     frontier = load_json(FRONTIER_LEDGER)
     length_control = load_json(LENGTH_CONTROL_GATE)
     joint_control = load_json(JOINT_CONTROL_GATE)
+    hybrid_tape = load_json(HYBRID_TAPE_SUBCODEC_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -91,6 +93,7 @@ def main() -> None:
     assert_boundary("generation_dependency_frontier_ledger", frontier)
     assert_boundary("length_control_tape_gate", length_control)
     assert_boundary("joint_type_length_control_tape_gate", joint_control)
+    assert_boundary("hybrid_innovation_tape_subcodec_gate", hybrid_tape)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -106,7 +109,14 @@ def main() -> None:
     ae = frontier["summary"]
     af = length_control["summary"]
     ag = joint_control["summary"]
+    ah = hybrid_tape["summary"]
     if (
+        joint_control["summary"]["promotes_joint_type_length_control_clue"]
+        and not joint_control["summary"]["promotes_skeleton_replacement"]
+        and not hybrid_tape["summary"]["promotes_hybrid_subcodec"]
+    ):
+        classification = "INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_HYBRID_TAPE_SUBCODEC_REJECTED"
+    elif (
         joint_control["summary"]["promotes_joint_type_length_control_clue"]
         and not joint_control["summary"]["promotes_skeleton_replacement"]
     ):
@@ -205,6 +215,12 @@ def main() -> None:
         f"- Seed-walk best saving vs raw tape: `{w['best_walk_saving_vs_raw_bits']:.3f}`.",
         f"- Promotes seed-walk subcodec: `{w['promotes_seed_walk_subcodec']}`.",
         f"- Weak seed-walk clue: `{w['weak_seed_walk_clue']}`.",
+        f"- Hybrid tape best strategy/min_len: `{ah['best_strategy']}` / `{ah['best_min_len']}`.",
+        f"- Hybrid tape best total bits: `{ah['best_total_bits']:.3f}`.",
+        f"- Hybrid tape best saving vs raw: `{ah['best_saving_vs_raw_bits']:.3f}`.",
+        f"- Hybrid tape best copy/literal digits: `{ah['best_copy_digits']}` / `{ah['best_literal_digits']}`.",
+        f"- Promotes hybrid tape subcodec: `{ah['promotes_hybrid_subcodec']}`.",
+        f"- Weak hybrid tape subcodec clue: `{ah['weak_hybrid_subcodec_clue']}`.",
         f"- Tape schedule best feature: `{x['best_feature']}`.",
         f"- Tape schedule exact books: `{x['best_exact_books']}/{x['best_test_books']}`.",
         f"- Tape schedule saving vs count baseline: `{x['best_saving_vs_baseline_bits']:.3f}` bits.",
@@ -301,7 +317,11 @@ def main() -> None:
         "`type:length` control symbol. This pair stream also beats shuffled paid",
         "controls in `4/5` cutoffs, but it is far more expensive than simply",
         "declaring fixed-op-count cutpoints plus types. That closes the most",
-        "direct control-tape replacement route under the current features.",
+        "direct control-tape replacement route under the current features. The",
+        "hybrid tape-subcodec gate then strengthens the literal-payload check by",
+        "allowing paid references to both seed text and prior emitted tape. It is",
+        "still rejected: the best paid hybrid costs more than raw tape, so the",
+        "literal innovation tape remains an external payload dependency.",
         "",
         "## Decision",
         "",
@@ -327,6 +347,7 @@ def main() -> None:
         "- Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.",
         "- The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.",
         "- Joint type-length control structure is promoted only as a weak control-stream clue; skeleton replacement is rejected.",
+        "- Hybrid seed+prior-tape subcodec is rejected: paid references do not beat raw literal tape.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -348,6 +369,7 @@ def main() -> None:
         "- [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)",
         "- [Length control tape gate](test_results/15_length_control_tape_gate.md)",
         "- [Joint type-length control tape gate](test_results/16_joint_type_length_control_tape_gate.md)",
+        "- [Hybrid innovation tape subcodec gate](test_results/17_hybrid_innovation_tape_subcodec_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
