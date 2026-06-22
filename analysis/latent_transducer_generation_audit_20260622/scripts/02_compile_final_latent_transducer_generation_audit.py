@@ -16,6 +16,7 @@ RESCUE_LEDGER = TEST_RESULTS / "04_closed_loop_rescue_ledger.json"
 RESCUE_SURFACE = TEST_RESULTS / "05_closed_loop_rescue_surface_audit.json"
 COPY_DIAGNOSTIC = TEST_RESULTS / "06_copy_state_rescue_diagnostic.json"
 RANKING_FRONTIER = TEST_RESULTS / "07_copy_candidate_ranking_frontier.json"
+COPY_HINT_LOWER_BOUND = TEST_RESULTS / "08_copy_hint_stream_lower_bound.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -44,12 +45,14 @@ def main() -> None:
     rescue_surface = load_json(RESCUE_SURFACE)
     copy_diagnostic = load_json(COPY_DIAGNOSTIC)
     ranking_frontier = load_json(RANKING_FRONTIER)
+    copy_hint_lower_bound = load_json(COPY_HINT_LOWER_BOUND)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
     assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     assert_boundary("closed_loop_rescue_ledger", rescue_ledger)
     assert_boundary("closed_loop_rescue_surface_audit", rescue_surface)
     assert_boundary("copy_state_rescue_diagnostic", copy_diagnostic)
     assert_boundary("copy_candidate_ranking_frontier", ranking_frontier)
+    assert_boundary("copy_hint_stream_lower_bound", copy_hint_lower_bound)
     s = beam_gate["summary"]
     c = closed_loop_gate["summary"]
     r = rescue_ledger["summary"]
@@ -57,8 +60,9 @@ def main() -> None:
     ce = copy_diagnostic["event_summary"]
     cc = copy_diagnostic["copy_op_summary"]
     rf = ranking_frontier["summary"]
+    ch = copy_hint_lower_bound["summary"]
     if rescue_ledger["classification"] == "closed_loop_rescue_high_external_control":
-        classification = "latent_transducer_closed_loop_copy_ranking_frontier_open"
+        classification = "latent_transducer_copy_hint_stream_lower_bound_open"
     else:
         classification = beam_gate["classification"]
     lines = [
@@ -119,6 +123,11 @@ def main() -> None:
         f"- Ranking frontier best prefix digit fraction: `{rf['best_unique_prefix_digit_fraction']:.6f}`.",
         f"- Ranking frontier random digit p95 beaten: `{rf['best_beats_random_digit_p95']}`.",
         f"- Ranking frontier promotes copy ranking rule: `{rf['promotes_copy_ranking_rule']}`.",
+        f"- Copy hint lower-bound best policy: `{ch['best_policy']}`.",
+        f"- Copy hint lower-bound rank bits: `{ch['best_policy_rank_bits']:.3f}`.",
+        f"- Copy hint lower-bound source-address bits: `{ch['source_address_bits']:.3f}`.",
+        f"- Copy hint lower-bound saving vs source address: `{ch['best_policy_saving_vs_source_address_bits']:.3f}`.",
+        f"- Copy hint lower-bound fraction of raw copied-digit bits: `{ch['best_policy_fraction_of_raw_literal_bits']:.6f}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
@@ -152,7 +161,15 @@ def main() -> None:
         "policy, `longest_recent`, improves over current source-penalty pruning",
         "from `6` to `56` prefix digits and narrowly beats random top-80 digit p95",
         "(`55`), but still covers only `56/1240` copy digits. Simple chunk ranking",
-        "is therefore a weak clue, not a promoted copy-control rule.",
+        "is therefore a weak clue, not a promoted copy-control rule. A copy hint",
+        "stream lower-bound then asks the constructive version: if op start, copy",
+        "type, length, and prior material are granted, how much paid chunk choice",
+        "remains? The best known-length rank code is `frequent_longest` at",
+        "`1873.768` bits for all `208` copy ops and `9301` copied digits, saving",
+        "`676.826` bits versus raw source addressing and costing only `0.060645`",
+        "of literalizing the copied digits. That opens a real paid-control-stream",
+        "route, but it is not a generator because starts, types, and lengths are",
+        "still granted.",
         "",
         "## Decision",
         "",
@@ -163,6 +180,7 @@ def main() -> None:
         "- Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.",
         "- Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.",
         "- Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.",
+        "- The copy hint lower bound reduces declared source addressing if length is granted, but it remains an external stream to explain.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -176,6 +194,7 @@ def main() -> None:
         "- [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)",
         "- [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)",
         "- [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)",
+        "- [Copy hint stream lower bound](test_results/08_copy_hint_stream_lower_bound.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

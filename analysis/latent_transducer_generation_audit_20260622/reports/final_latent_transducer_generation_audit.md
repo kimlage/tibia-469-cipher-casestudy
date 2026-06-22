@@ -1,7 +1,7 @@
 # Final Latent Transducer Generation Audit
 
 Status: `analysis_only`
-Classification: `latent_transducer_closed_loop_copy_ranking_frontier_open`
+Classification: `latent_transducer_copy_hint_stream_lower_bound_open`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -55,6 +55,11 @@ boundaries, and copy sources together, instead of relying on the fixed
 - Ranking frontier best prefix digit fraction: `0.045161`.
 - Ranking frontier random digit p95 beaten: `True`.
 - Ranking frontier promotes copy ranking rule: `False`.
+- Copy hint lower-bound best policy: `frequent_longest`.
+- Copy hint lower-bound rank bits: `1873.768`.
+- Copy hint lower-bound source-address bits: `2550.594`.
+- Copy hint lower-bound saving vs source address: `676.826`.
+- Copy hint lower-bound fraction of raw copied-digit bits: `0.060645`.
 
 The new route tests the right object: a single parser where literal, copy,
 length, source, and boundary decisions compete in one beam. But this first
@@ -88,7 +93,15 @@ that blocker at the same top-80 budget. They do not. The best unique-op
 policy, `longest_recent`, improves over current source-penalty pruning
 from `6` to `56` prefix digits and narrowly beats random top-80 digit p95
 (`55`), but still covers only `56/1240` copy digits. Simple chunk ranking
-is therefore a weak clue, not a promoted copy-control rule.
+is therefore a weak clue, not a promoted copy-control rule. A copy hint
+stream lower-bound then asks the constructive version: if op start, copy
+type, length, and prior material are granted, how much paid chunk choice
+remains? The best known-length rank code is `frequent_longest` at
+`1873.768` bits for all `208` copy ops and `9301` copied digits, saving
+`676.826` bits versus raw source addressing and costing only `0.060645`
+of literalizing the copied digits. That opens a real paid-control-stream
+route, but it is not a generator because starts, types, and lengths are
+still granted.
 
 ## Decision
 
@@ -99,6 +112,7 @@ is therefore a weak clue, not a promoted copy-control rule.
 - Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.
 - Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.
 - Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.
+- The copy hint lower bound reduces declared source addressing if length is granted, but it remains an external stream to explain.
 - Promotion requires nontrivial exact holdout books and paid correction reduction.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
@@ -112,3 +126,4 @@ is therefore a weak clue, not a promoted copy-control rule.
 - [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)
 - [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)
 - [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)
+- [Copy hint stream lower bound](test_results/08_copy_hint_stream_lower_bound.md)
