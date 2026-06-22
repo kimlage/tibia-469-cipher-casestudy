@@ -1,0 +1,95 @@
+{
+  "case_reopened": false,
+  "classification": "executable_program_frontier_requires_representation_change",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "current_executable_contract_roundtrip": true,
+    "next_route": "joint_chunk_origin_or_new_representation_required",
+    "promoted_executable_tape_reductions": 0,
+    "rejected_executable_program_routes": 3,
+    "row0_status": "unchanged_exogenous"
+  },
+  "inputs": {
+    "book_controller_gate": "analysis/book_level_controller_program_integration_audit_20260622/reports/test_results/01_book_level_controller_program_integration_gate.json",
+    "composition_gate": "analysis/composition_index_structure_audit_20260622/reports/test_results/01_composition_index_structure_gate.json",
+    "contract": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/01_executable_decoder_contract.json",
+    "ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json",
+    "macro_gate": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/03_macro_program_gate.json",
+    "source_gate": "analysis/source_tape_removal_program_audit_20260622/reports/test_results/01_source_tape_removal_program_gate.json"
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "baseline_bits": 5633.990048928967,
+      "best_attempt_delta_bits": null,
+      "best_executable_attempt": "seed_primacy_audit_prior",
+      "classification": "EXTERNAL_RETAINED",
+      "evidence": "seed payload is required by current executable contract; prior seed-primacy controls did not promote books 0..9 as special authorial seeds",
+      "external_tape": "seed_books_0_9",
+      "next_blocker": "needs external authorial/source evidence or a new generator that reduces seed payload without posthoc seed selection"
+    },
+    {
+      "baseline_bits": 1601.4570698724688,
+      "best_attempt_delta_bits": -244.88079047108297,
+      "best_executable_attempt": "book_level_controller_program_integration",
+      "classification": "EXECUTABLE_REDUCTION_REJECTED",
+      "evidence": "controller+corrections 4069.056 vs baseline 3824.176; true sequence in beam 66/186; top1 nontrivial exact books 0",
+      "external_tape": "coarse_control_plus_composition_index",
+      "next_blocker": "requires a different coarse/length representation, not another local beam-rank codec"
+    },
+    {
+      "baseline_bits": 1873.7679263981051,
+      "best_attempt_delta_bits": -1609.5128618791682,
+      "best_executable_attempt": "decoder_visible_source_tape_removal",
+      "classification": "EXECUTABLE_REDUCTION_REJECTED",
+      "evidence": "default hits 22/537, policy+exception 6672.081 vs copy-hint baseline 5062.568",
+      "external_tape": "copy_source_hint",
+      "next_blocker": "source remains target-chunk dependent unless a joint chunk-origin generator is found"
+    },
+    {
+      "baseline_bits": 883.6328732400382,
+      "best_attempt_delta_bits": null,
+      "best_executable_attempt": "innovation_stream_transducer_prior",
+      "classification": "WEAK_CLUE_NOT_EXECUTABLE_REDUCTION",
+      "evidence": "literal tape has prior structure clues, but paid tape subcodecs and closed-loop generation were not promoted",
+      "external_tape": "literal_payload",
+      "next_blocker": "needs integration with operation/chunk generation, not a standalone literal-payload codec"
+    },
+    {
+      "baseline_bits": 1601.4570698724688,
+      "best_attempt_delta_bits": -4942.610663544955,
+      "best_executable_attempt": "minimal_external_tape_macro_program",
+      "classification": "EXECUTABLE_MACRO_PROGRAM_REJECTED",
+      "evidence": "macro/template program reduction -4942.611; nontrivial exact books 1",
+      "external_tape": "macro_template_program",
+      "next_blocker": "macro grammar over current IR is too expensive; representation needs to change"
+    },
+    {
+      "baseline_bits": 665.7818571842444,
+      "best_attempt_delta_bits": -13.327492691044107,
+      "best_executable_attempt": "composition_index_structure_audit",
+      "classification": "FIELD_STRUCTURE_REJECTED",
+      "evidence": "best rank model saving -13.327 vs random p95 -13.273",
+      "external_tape": "composition_index_rank_structure",
+      "next_blocker": "composition index remains payload until tied to a different book-level generator"
+    },
+    {
+      "baseline_bits": null,
+      "best_attempt_delta_bits": null,
+      "best_executable_attempt": "shared_innovation_tape_audit",
+      "classification": "WEAK_CLUE_NOT_EXECUTABLE_REDUCTION",
+      "evidence": "shared literal/length tape clue did not beat direct residual declaration",
+      "external_tape": "shared_literal_length_tape",
+      "next_blocker": "only useful if a joint program consumes one innovation stream across operation and literal choices"
+    }
+  ],
+  "scope": "analysis_only_executable_program_frontier_synthesis",
+  "summary": {
+    "external_bits_excluding_seed": 4358.85786951061,
+    "external_bits_including_seed": 9992.847918439576,
+    "promoted_executable_tape_reductions": 0,
+    "rejected_executable_program_routes": 3,
+    "roundtrip_70_70": true
+  },
+  "translation_delta": "NONE"
+}

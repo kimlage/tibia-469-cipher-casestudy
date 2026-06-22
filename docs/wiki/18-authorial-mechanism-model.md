@@ -22,6 +22,7 @@ source_refs:
   - analysis/minimal_external_tape_program_audit_20260622
   - analysis/source_tape_removal_program_audit_20260622
   - analysis/book_level_controller_program_integration_audit_20260622
+  - analysis/executable_program_frontier_synthesis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -766,6 +767,16 @@ saving), even with `0.000` model/grammar descriptor bits charged. The true
 sequence is in beam `66/186` times (`16` nontrivial), but top-1 exact books are
 all trivial (`38` books, `0` nontrivial). The book-level controller therefore
 remains a predictive clue, not an executable program component.
+An executable program frontier synthesis then consolidates the current state:
+the explicit decoder still roundtrips `70/70`, but the representation now has
+`0` promoted executable tape reductions. External tape cost remains
+`4358.858` bits excluding seed and `9992.848` including seed. The rejected
+routes are macro/template program (`-4942.611` bits), decoder-visible source
+tape removal (`-1609.513` bits), and book-level controller integration
+(`-244.881` bits). The conclusion is methodological: the current tape-ledger
+representation is useful for accounting, but the next real generator route
+needs a representation change, most likely a joint chunk-origin program, not
+another local field codec.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3108,6 +3119,8 @@ book generation, not row0 pair-cell placement.
 - [Source tape removal program gate](../../analysis/source_tape_removal_program_audit_20260622/reports/test_results/01_source_tape_removal_program_gate.md)
 - [Final book-level controller program integration audit](../../analysis/book_level_controller_program_integration_audit_20260622/reports/final_book_level_controller_program_integration_audit.md)
 - [Book-level controller program integration gate](../../analysis/book_level_controller_program_integration_audit_20260622/reports/test_results/01_book_level_controller_program_integration_gate.md)
+- [Final executable program frontier synthesis audit](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/final_executable_program_frontier_synthesis_audit.md)
+- [Executable program frontier synthesis](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
