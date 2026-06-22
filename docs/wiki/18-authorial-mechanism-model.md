@@ -40,6 +40,7 @@ source_refs:
   - analysis/latent_book_mode_program_audit_20260622
   - analysis/residual_mode_header_codec_audit_20260622
   - analysis/residual_burden_cross_prediction_audit_20260622
+  - analysis/paid_control_context_payload_codec_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -944,6 +945,14 @@ only before header cost: literal-digit, copy-hint, and composition burden save
 controls; after paying the mode headers they become `-787.181`, `-639.919`,
 and `-703.874`. This keeps the residual-mode result as a real synchronization
 clue while blocking promotion as ledger reduction.
+A paid-control context payload codec gate then removes the new-header cost by
+using only already-paid or derived fields: coarse `type:length_bucket`,
+operation-position bucket, book-length bucket, and op-count bucket. That route
+also fails to reduce the executable residual: literal payload digits save
+`-61.049` bits, copy-hint rank buckets save `-61.147`, and composition-index
+quantile buckets save `-60.345`, with no shuffled-target p95 win. The current
+paid/derived control fields therefore do not explain the payload residual
+streams.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3322,6 +3331,7 @@ book generation, not row0 pair-cell placement.
 - [Final digit content boundary transducer audit](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/final_digit_content_boundary_transducer_audit.md)
 - [All-position boundary transducer gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/01_all_position_boundary_transducer_gate.md)
 - [Start candidate ranking gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/02_start_candidate_ranking_gate.md)
+- [Final paid-control context payload codec audit](../../analysis/paid_control_context_payload_codec_audit_20260622/reports/final_paid_control_context_payload_codec_audit.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

@@ -1,0 +1,793 @@
+{
+  "case_reopened": false,
+  "classification": "PAID_CONTROL_CONTEXT_PAYLOAD_CODEC_NOT_PROMOTED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "generator_promoted": false,
+    "promoted_targets": [],
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE",
+    "weak_targets": []
+  },
+  "inputs": {
+    "residual_burden_cross_prediction_gate": "analysis/residual_burden_cross_prediction_audit_20260622/reports/test_results/01_residual_burden_cross_prediction_gate.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "paid_control_context_payload_codec_gate.v1",
+  "scope": "analysis_only_context_codec_over_already_paid_control_fields",
+  "summary": {
+    "promoted_targets": [],
+    "target_summaries": {
+      "composition_quantile10": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 525.2925726848094,
+        "global_bits": 464.9479149475653,
+        "positive_splits": 1,
+        "saving_bits": -60.34465773724412,
+        "shuffled_p95": -49.33744470203919,
+        "split_count": 20,
+        "symbol_count": 136,
+        "target": "composition_quantile10"
+      },
+      "copy_hint_rank_bucket": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 1827.7395594781144,
+        "global_bits": 1766.5923227500336,
+        "positive_splits": 0,
+        "saving_bits": -61.14723672808077,
+        "shuffled_p95": -56.14709844115191,
+        "split_count": 20,
+        "symbol_count": 537,
+        "target": "copy_hint_rank_bucket"
+      },
+      "literal_payload_digits": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 1605.2249223686495,
+        "global_bits": 1544.175521031031,
+        "positive_splits": 1,
+        "saving_bits": -61.04940133761852,
+        "shuffled_p95": -14.049477731769912,
+        "split_count": 20,
+        "symbol_count": 464,
+        "target": "literal_payload_digits"
+      }
+    },
+    "weak_targets": []
+  },
+  "target_results": {
+    "composition_quantile10": {
+      "alphabet_size": 10,
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": true,
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -68.5875348063437,
+        "shuffled_p05": -90.08318200621483,
+        "shuffled_p50": -69.96093225614442,
+        "shuffled_p95": -49.33744470203919,
+        "trials": 50
+      },
+      "split_rows": [
+        {
+          "feature": "op_count",
+          "feature_bits": 132.16697824636495,
+          "global_bits": 139.76096451804406,
+          "label": "prefix_20",
+          "saving_bits": 7.593986271679114,
+          "split_type": "prefix",
+          "symbol_count": 38,
+          "target": "composition_quantile10",
+          "test_books": 50
+        },
+        {
+          "feature": "coarse_x_book_length",
+          "feature_bits": 105.91368852875664,
+          "global_bits": 101.09674368186425,
+          "label": "prefix_30",
+          "saving_bits": -4.816944846892383,
+          "split_type": "prefix",
+          "symbol_count": 30,
+          "target": "composition_quantile10",
+          "test_books": 40
+        },
+        {
+          "feature": "coarse_x_book_length",
+          "feature_bits": 78.87457418210276,
+          "global_bits": 67.85325904168458,
+          "label": "prefix_40",
+          "saving_bits": -11.021315140418181,
+          "split_type": "prefix",
+          "symbol_count": 21,
+          "target": "composition_quantile10",
+          "test_books": 30
+        },
+        {
+          "feature": "coarse_x_book_length",
+          "feature_bits": 50.44086657082287,
+          "global_bits": 40.403184840122236,
+          "label": "prefix_50",
+          "saving_bits": -10.037681730700633,
+          "split_type": "prefix",
+          "symbol_count": 13,
+          "target": "composition_quantile10",
+          "test_books": 20
+        },
+        {
+          "feature": "coarse_x_book_length",
+          "feature_bits": 24.428491035332247,
+          "global_bits": 15.920164086019044,
+          "label": "prefix_60",
+          "saving_bits": -8.508326949313203,
+          "split_type": "prefix",
+          "symbol_count": 5,
+          "target": "composition_quantile10",
+          "test_books": 10
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 9.244760234364902,
+          "global_bits": 8.95253326116423,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": -0.2922269732006715,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 12.562242424221072,
+          "global_bits": 9.723334210984387,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": -2.838908213236685,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "composition_quantile10",
+          "test_books": 3
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 10.39231742277876,
+          "global_bits": 10.174925682500678,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": -0.2173917402780816,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 9.683313658114232,
+          "global_bits": 7.511960669778249,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": -2.1713529883359826,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 6.467504919172979,
+          "global_bits": 5.169925001442312,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": -1.2975799177306673,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 3
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 8.318316841334983,
+          "global_bits": 6.425987446668397,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": -1.8923293946665867,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 5.733354340613827,
+          "global_bits": 3.0,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": -2.733354340613827,
+          "split_type": "family",
+          "symbol_count": 1,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 9.055282435501189,
+          "global_bits": 5.943971247660807,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": -3.111311187840382,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 5.733354340613827,
+          "global_bits": 3.53051471669878,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": -2.202839623915047,
+          "split_type": "family",
+          "symbol_count": 1,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 9.23585468114301,
+          "global_bits": 7.8529975876133165,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": -1.3828570935296938,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 12.005849075696688,
+          "global_bits": 9.601772231103471,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": -2.4040768445932166,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "composition_quantile10",
+          "test_books": 3
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 7.762960802699151,
+          "global_bits": 5.926998169057093,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": -1.8359626336420583,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 4
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 11.377210530388552,
+          "global_bits": 7.511960669778249,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": -3.8652498606103034,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "composition_quantile10",
+          "test_books": 2
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 13.088297492729152,
+          "global_bits": 8.586717885381184,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": -4.501579607347969,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "composition_quantile10",
+          "test_books": 3
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 2.807354922057604,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": -2.807354922057604,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "composition_quantile10",
+          "test_books": 2
+        }
+      ],
+      "summary": {
+        "feature_bits": 525.2925726848094,
+        "global_bits": 464.9479149475653,
+        "positive_splits": 1,
+        "saving_bits": -60.34465773724412,
+        "split_count": 20,
+        "symbol_count": 136,
+        "target": "composition_quantile10"
+      }
+    },
+    "copy_hint_rank_bucket": {
+      "alphabet_size": 12,
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": false,
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -67.38697979345892,
+        "shuffled_p05": -109.52096308648811,
+        "shuffled_p50": -56.14709844115214,
+        "shuffled_p95": -56.14709844115191,
+        "trials": 50
+      },
+      "split_rows": [
+        {
+          "feature": "global",
+          "feature_bits": 517.3089738773272,
+          "global_bits": 514.5016189552696,
+          "label": "prefix_20",
+          "saving_bits": -2.807354922057584,
+          "split_type": "prefix",
+          "symbol_count": 155,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 50
+        },
+        {
+          "feature": "global",
+          "feature_bits": 411.1615221331531,
+          "global_bits": 408.3541672110955,
+          "label": "prefix_30",
+          "saving_bits": -2.807354922057584,
+          "split_type": "prefix",
+          "symbol_count": 119,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 40
+        },
+        {
+          "feature": "global",
+          "feature_bits": 267.75289009095775,
+          "global_bits": 264.94553516890016,
+          "label": "prefix_40",
+          "saving_bits": -2.807354922057584,
+          "split_type": "prefix",
+          "symbol_count": 80,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 30
+        },
+        {
+          "feature": "global",
+          "feature_bits": 172.103097645286,
+          "global_bits": 169.2957427232284,
+          "label": "prefix_50",
+          "saving_bits": -2.8073549220576126,
+          "split_type": "prefix",
+          "symbol_count": 49,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 20
+        },
+        {
+          "feature": "global",
+          "feature_bits": 66.93401173689458,
+          "global_bits": 64.12665681483698,
+          "label": "prefix_60",
+          "saving_bits": -2.8073549220575984,
+          "split_type": "prefix",
+          "symbol_count": 18,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 10
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 52.065844941339535,
+          "global_bits": 47.9578368676342,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": -4.108008073705335,
+          "split_type": "family",
+          "symbol_count": 14,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 43.757114984456756,
+          "global_bits": 37.41496160214191,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": -6.342153382314848,
+          "split_type": "family",
+          "symbol_count": 12,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 3
+        },
+        {
+          "feature": "global",
+          "feature_bits": 49.1876904961748,
+          "global_bits": 46.3803355741172,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "family",
+          "symbol_count": 16,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "global",
+          "feature_bits": 17.421996722297077,
+          "global_bits": 14.614641800239474,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "family",
+          "symbol_count": 4,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 16.30413018179639,
+          "global_bits": 13.363620143082361,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": -2.9405100387140273,
+          "split_type": "family",
+          "symbol_count": 5,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 3
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 26.247550930993228,
+          "global_bits": 24.634229110620396,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": -1.613321820372832,
+          "split_type": "family",
+          "symbol_count": 9,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 13.410595738646107,
+          "global_bits": 8.771269394592778,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": -4.6393263440533286,
+          "split_type": "family",
+          "symbol_count": 4,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "global",
+          "feature_bits": 31.835692228707224,
+          "global_bits": 29.028337306649618,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "family",
+          "symbol_count": 10,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 11.776658124834688,
+          "global_bits": 9.353215514603608,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": -2.4234426102310795,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 14.667198808992392,
+          "global_bits": 10.997822459410934,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": -3.6693763495814586,
+          "split_type": "family",
+          "symbol_count": 5,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 19.935386179254728,
+          "global_bits": 16.680158730971062,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": -3.255227448283666,
+          "split_type": "family",
+          "symbol_count": 7,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 3
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 19.158429362604487,
+          "global_bits": 14.51871020139971,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": -4.639719161204777,
+          "split_type": "family",
+          "symbol_count": 5,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 4
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 15.901113390771028,
+          "global_bits": 14.9275383646642,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": -0.973575026106829,
+          "split_type": "family",
+          "symbol_count": 5,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        },
+        {
+          "feature": "global",
+          "feature_bits": 49.27711116434309,
+          "global_bits": 46.469756242285484,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "family",
+          "symbol_count": 15,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 3
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 11.532550739284266,
+          "global_bits": 10.256168564290034,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": -1.2763821749942323,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 2
+        }
+      ],
+      "summary": {
+        "feature_bits": 1827.7395594781144,
+        "global_bits": 1766.5923227500336,
+        "positive_splits": 0,
+        "saving_bits": -61.14723672808077,
+        "split_count": 20,
+        "symbol_count": 537,
+        "target": "copy_hint_rank_bucket"
+      }
+    },
+    "literal_payload_digits": {
+      "alphabet_size": 10,
+      "controls": {
+        "beats_shuffled_p05": true,
+        "beats_shuffled_p50": false,
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -47.046524270410806,
+        "shuffled_p05": -102.06961631077229,
+        "shuffled_p50": -45.06808417311049,
+        "shuffled_p95": -14.049477731769912,
+        "trials": 50
+      },
+      "split_rows": [
+        {
+          "feature": "coarse",
+          "feature_bits": 431.10387829027144,
+          "global_bits": 422.20228066193965,
+          "label": "prefix_20",
+          "saving_bits": -8.901597628331785,
+          "split_type": "prefix",
+          "symbol_count": 126,
+          "target": "literal_payload_digits",
+          "test_books": 50
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 329.4257688659437,
+          "global_bits": 322.30544009126066,
+          "label": "prefix_30",
+          "saving_bits": -7.12032877468306,
+          "split_type": "prefix",
+          "symbol_count": 97,
+          "target": "literal_payload_digits",
+          "test_books": 40
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 274.0080726737069,
+          "global_bits": 272.0975014138051,
+          "label": "prefix_40",
+          "saving_bits": -1.9105712599018148,
+          "split_type": "prefix",
+          "symbol_count": 82,
+          "target": "literal_payload_digits",
+          "test_books": 30
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 149.9886375165643,
+          "global_bits": 149.0748009934077,
+          "label": "prefix_50",
+          "saving_bits": -0.9138365231565899,
+          "split_type": "prefix",
+          "symbol_count": 45,
+          "target": "literal_payload_digits",
+          "test_books": 20
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 15.098234580685737,
+          "global_bits": 12.62966525555401,
+          "label": "prefix_60",
+          "saving_bits": -2.468569325131728,
+          "split_type": "prefix",
+          "symbol_count": 4,
+          "target": "literal_payload_digits",
+          "test_books": 10
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 214.44791512110402,
+          "global_bits": 210.94637937860293,
+          "label": "family_hellgate_public_bookcase_1",
+          "saving_bits": -3.5015357425010905,
+          "split_type": "family",
+          "symbol_count": 63,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 24.3693751937579,
+          "global_bits": 22.687327926813715,
+          "label": "family_hellgate_public_bookcase_13",
+          "saving_bits": -1.6820472669441848,
+          "split_type": "family",
+          "symbol_count": 7,
+          "target": "literal_payload_digits",
+          "test_books": 3
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 46.79259307255889,
+          "global_bits": 43.25243980911996,
+          "label": "family_hellgate_public_bookcase_2",
+          "saving_bits": -3.540153263438924,
+          "split_type": "family",
+          "symbol_count": 13,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 17.10740391688425,
+          "global_bits": 16.850660242213653,
+          "label": "family_hellgate_public_bookcase_20",
+          "saving_bits": -0.25674367467059866,
+          "split_type": "family",
+          "symbol_count": 5,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_21",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 3
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_23",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_27",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_3",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 12.282922934799789,
+          "global_bits": 6.5397620455788665,
+          "label": "family_hellgate_public_bookcase_30",
+          "saving_bits": -5.743160889220922,
+          "split_type": "family",
+          "symbol_count": 2,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_33",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 23.780287795026066,
+          "global_bits": 26.575278242682494,
+          "label": "family_hellgate_public_bookcase_4",
+          "saving_bits": 2.794990447656428,
+          "split_type": "family",
+          "symbol_count": 8,
+          "target": "literal_payload_digits",
+          "test_books": 3
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 15.529360830102888,
+          "global_bits": 10.148408388891179,
+          "label": "family_hellgate_public_bookcase_40",
+          "saving_bits": -5.38095244121171,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "literal_payload_digits",
+          "test_books": 4
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 21.02542079254054,
+          "global_bits": 19.529153180379875,
+          "label": "family_hellgate_public_bookcase_6",
+          "saving_bits": -1.4962676121606648,
+          "split_type": "family",
+          "symbol_count": 6,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 11.245500776049045,
+          "global_bits": 9.336423400781088,
+          "label": "family_hellgate_public_bookcase_7",
+          "saving_bits": -1.909077375267957,
+          "split_type": "family",
+          "symbol_count": 3,
+          "target": "literal_payload_digits",
+          "test_books": 3
+        },
+        {
+          "feature": "prev_digit",
+          "feature_bits": 3.169925001442312,
+          "global_bits": 0.0,
+          "label": "family_hellgate_public_bookcase_8",
+          "saving_bits": -3.169925001442312,
+          "split_type": "family",
+          "symbol_count": 0,
+          "target": "literal_payload_digits",
+          "test_books": 2
+        }
+      ],
+      "summary": {
+        "feature_bits": 1605.2249223686495,
+        "global_bits": 1544.175521031031,
+        "positive_splits": 1,
+        "saving_bits": -61.04940133761852,
+        "split_count": 20,
+        "symbol_count": 464,
+        "target": "literal_payload_digits"
+      }
+    }
+  },
+  "translation_delta": "NONE"
+}
