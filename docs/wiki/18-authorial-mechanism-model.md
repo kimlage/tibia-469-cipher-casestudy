@@ -494,6 +494,13 @@ derived60, beating same-book-histogram shuffled controls in both scopes.
 This is not promoted as a generator: it still requires residual arithmetic
 bits to emit the exact books and says nothing by itself about operation
 chunk endpoints.
+A target digit boundary audit then connects that clue to segmentation rather
+than only payload coding. Training `prev2_digits` on prior books, internal
+operation cutpoints have mean right-surprisal `3.808645`, far above random
+same-book cutpoint p95 `2.293949`; `88/201` cutpoints fall in their book's top
+right-surprisal decile. This is promoted as a boundary clue. It is not an
+endpoint generator: selecting each book's top-k surprisal positions recovers
+only `57/201` internal cutpoints and `0/48` nontrivial books exactly.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2632,6 +2639,8 @@ book generation, not row0 pair-cell placement.
 - [Target chunk signature gate](../../analysis/target_chunk_signature_audit_20260621/reports/test_results/01_target_chunk_signature_gate.md)
 - [Final target digit process audit](../../analysis/target_digit_process_audit_20260621/reports/final_target_digit_process_audit.md)
 - [Target digit process gate](../../analysis/target_digit_process_audit_20260621/reports/test_results/01_target_digit_process_gate.md)
+- [Final target digit boundary audit](../../analysis/target_digit_boundary_audit_20260621/reports/final_target_digit_boundary_audit.md)
+- [Target digit boundary gate](../../analysis/target_digit_boundary_audit_20260621/reports/test_results/01_target_digit_boundary_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
