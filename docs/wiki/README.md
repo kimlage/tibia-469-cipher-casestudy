@@ -783,6 +783,12 @@ external fields fall from `609` active fields to `261` fields (`208` copy-source
 fields plus `53` literal payload chunks), while the stable skeleton atlas itself
 has `261` records. This is dependency-ledger progress, not a new compression
 bound or decoder-side generator.
+A skeleton decoder ambiguity audit then measures why that skeleton still cannot
+stand as a generator. Granting the exact skeleton still leaves at least
+`2550.594` bits of legal source branching plus `883.633` bits of literal
+payload branching, for a combined decoder ambiguity lower bound of `3434.227`
+bits (`10^1033.805` choices). Target-oracle matching sources are diagnostic
+only because they grant the future copied chunk.
 A generation-boundary closure audit then consolidates the current state:
 book order, book lengths, operation skeleton, copy sources, and literal payload
 all remain non-generated under their respective gates (`0/5` promoted

@@ -359,6 +359,12 @@ Compared with `609` active external dependency fields, the skeleton atlas leaves
 while the atlas itself has `261` stable operation skeleton records. Total
 materialized atlas+external records are therefore `522`: a real dependency-ledger
 improvement, but not a compression-bound change or generator promotion.
+A skeleton decoder ambiguity audit then prices the same boundary from the
+decoder side. Even after granting the exact skeleton, legal copy-source
+branching contributes `2550.594` bits and literal payload contributes
+`883.633` bits, leaving a combined lower-bound ambiguity of `3434.227` bits
+(`10^1033.805` choices). The target-oracle matching-source residual is only
+diagnostic because it grants the future copied chunk.
 A generation boundary closure audit then consolidates the current post-gate
 state across book order, book lengths, operation skeleton, copy sources, and
 literal payload. No dependency has a promoted generator (`0/5`), and the
@@ -2548,6 +2554,8 @@ book generation, not row0 pair-cell placement.
 - [Source policy selector boundary](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/97_source_policy_selector_boundary.md)
 - [Full source exact skeleton invariance](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/98_full_source_exact_skeleton_invariance.md)
 - [Exact skeleton dependency ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/99_exact_skeleton_dependency_ledger.md)
+- [Final skeleton decoder ambiguity audit](../../analysis/skeleton_decoder_ambiguity_audit_20260621/reports/final_skeleton_decoder_ambiguity_audit.md)
+- [Skeleton decoder ambiguity gate](../../analysis/skeleton_decoder_ambiguity_audit_20260621/reports/test_results/01_skeleton_decoder_ambiguity_gate.md)
 - [Final generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/final_generation_boundary_closure_audit.md)
 - [Generation boundary closure audit](../../analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.md)
 - [Final operation count generation audit](../../analysis/operation_count_generation_audit_20260621/reports/final_operation_count_generation_audit.md)
