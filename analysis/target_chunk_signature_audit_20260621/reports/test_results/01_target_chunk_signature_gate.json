@@ -1,0 +1,558 @@
+{
+  "case_reopened": false,
+  "classification": "target_chunk_signature_generator_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_signature_generator": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "literal_payload_ledger": "analysis/literal_payload_generation_audit_20260621/reports/test_results/01_literal_payload_ledger.json",
+    "target_chunk_dictionary_gate": "analysis/target_chunk_dictionary_audit_20260621/reports/test_results/01_target_chunk_dictionary_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "target_chunk_signature_gate_v1",
+  "scope": "analysis_only_target_stream_signature_control",
+  "signature_families": [
+    {
+      "empirical_signature_assignment_bits": 190.01221963954316,
+      "feature_class": "non_payload",
+      "max_bucket_size": 208,
+      "mean_bucket_size": 130.5,
+      "name": "kind",
+      "signature_count": 2,
+      "singleton_row_fraction": 0.0,
+      "singleton_rows": 0,
+      "singleton_signatures": 0,
+      "top_buckets": [
+        {
+          "count": 208,
+          "signature": "copy"
+        },
+        {
+          "count": 53,
+          "signature": "literal"
+        }
+      ],
+      "within_signature_exact_selector_bits": 1905.2712454651967
+    },
+    {
+      "empirical_signature_assignment_bits": 1579.5600928757847,
+      "feature_class": "non_payload",
+      "max_bucket_size": 11,
+      "mean_bucket_size": 2.6907216494845363,
+      "name": "kind_x_length",
+      "signature_count": 97,
+      "singleton_row_fraction": 0.19923371647509577,
+      "singleton_rows": 52,
+      "singleton_signatures": 52,
+      "top_buckets": [
+        {
+          "count": 11,
+          "signature": "copy|L=9"
+        },
+        {
+          "count": 10,
+          "signature": "literal|L=2"
+        },
+        {
+          "count": 10,
+          "signature": "literal|L=3"
+        },
+        {
+          "count": 9,
+          "signature": "copy|L=10"
+        },
+        {
+          "count": 9,
+          "signature": "copy|L=12"
+        },
+        {
+          "count": 9,
+          "signature": "copy|L=13"
+        },
+        {
+          "count": 9,
+          "signature": "copy|L=7"
+        },
+        {
+          "count": 9,
+          "signature": "copy|L=8"
+        }
+      ],
+      "within_signature_exact_selector_bits": 515.7233722289536
+    },
+    {
+      "empirical_signature_assignment_bits": 814.1021374934695,
+      "feature_class": "non_payload",
+      "max_bucket_size": 48,
+      "mean_bucket_size": 21.75,
+      "name": "kind_x_length_bucket",
+      "signature_count": 12,
+      "singleton_row_fraction": 0.0,
+      "singleton_rows": 0,
+      "singleton_signatures": 0,
+      "top_buckets": [
+        {
+          "count": 48,
+          "signature": "copy|B=021_050"
+        },
+        {
+          "count": 46,
+          "signature": "copy|B=006_010"
+        },
+        {
+          "count": 46,
+          "signature": "copy|B=011_020"
+        },
+        {
+          "count": 33,
+          "signature": "copy|B=101_plus"
+        },
+        {
+          "count": 28,
+          "signature": "copy|B=051_100"
+        },
+        {
+          "count": 20,
+          "signature": "literal|B=002_003"
+        },
+        {
+          "count": 12,
+          "signature": "literal|B=004_005"
+        },
+        {
+          "count": 8,
+          "signature": "literal|B=001"
+        }
+      ],
+      "within_signature_exact_selector_bits": 1281.1813276112705
+    },
+    {
+      "empirical_signature_assignment_bits": 1250.3384330102624,
+      "feature_class": "non_payload",
+      "max_bucket_size": 28,
+      "mean_bucket_size": 6.365853658536586,
+      "name": "kind_x_length_bucket_x_op_phase",
+      "signature_count": 41,
+      "singleton_row_fraction": 0.03065134099616858,
+      "singleton_rows": 8,
+      "singleton_signatures": 8,
+      "top_buckets": [
+        {
+          "count": 28,
+          "signature": "copy|B=101_plus|P=first"
+        },
+        {
+          "count": 17,
+          "signature": "copy|B=006_010|P=mid"
+        },
+        {
+          "count": 17,
+          "signature": "copy|B=021_050|P=first"
+        },
+        {
+          "count": 16,
+          "signature": "copy|B=006_010|P=first"
+        },
+        {
+          "count": 15,
+          "signature": "copy|B=011_020|P=early"
+        },
+        {
+          "count": 14,
+          "signature": "copy|B=051_100|P=first"
+        },
+        {
+          "count": 13,
+          "signature": "copy|B=021_050|P=mid"
+        },
+        {
+          "count": 12,
+          "signature": "copy|B=021_050|P=early"
+        }
+      ],
+      "within_signature_exact_selector_bits": 844.9450320944767
+    },
+    {
+      "empirical_signature_assignment_bits": 1599.6341843044402,
+      "feature_class": "non_payload",
+      "max_bucket_size": 10,
+      "mean_bucket_size": 3.070588235294118,
+      "name": "kind_x_book_mod10_x_length_bucket",
+      "signature_count": 85,
+      "singleton_row_fraction": 0.0842911877394636,
+      "singleton_rows": 22,
+      "singleton_signatures": 22,
+      "top_buckets": [
+        {
+          "count": 10,
+          "signature": "copy|M=6|B=006_010"
+        },
+        {
+          "count": 9,
+          "signature": "copy|M=1|B=021_050"
+        },
+        {
+          "count": 8,
+          "signature": "copy|M=5|B=011_020"
+        },
+        {
+          "count": 8,
+          "signature": "copy|M=7|B=021_050"
+        },
+        {
+          "count": 7,
+          "signature": "copy|M=0|B=006_010"
+        },
+        {
+          "count": 7,
+          "signature": "copy|M=2|B=011_020"
+        },
+        {
+          "count": 7,
+          "signature": "copy|M=6|B=011_020"
+        },
+        {
+          "count": 6,
+          "signature": "copy|M=3|B=021_050"
+        }
+      ],
+      "within_signature_exact_selector_bits": 495.6492808002978
+    },
+    {
+      "empirical_signature_assignment_bits": 2001.0188025982466,
+      "feature_class": "payload_edge",
+      "max_bucket_size": 4,
+      "mean_bucket_size": 1.2027649769585254,
+      "name": "kind_x_length_bucket_x_first_last",
+      "observed_selector_bits_delta_vs_random_mean": 7.6755538783398265,
+      "observed_signature_count_delta_vs_random_mean": -2.818000000000012,
+      "random_control": {
+        "random_seed": 46920260621,
+        "selector_bits_mean": 86.58910862815058,
+        "selector_bits_p05": 68.75488750216347,
+        "selector_bits_p95": 105.78767063614184,
+        "selector_bits_std": 11.149227317061337,
+        "signature_count_mean": 219.818,
+        "signature_count_p05": 211.0,
+        "signature_count_p95": 228.0,
+        "singleton_rows_mean": 183.868,
+        "singleton_rows_p05": 169.0,
+        "singleton_rows_p95": 199.0,
+        "trials": 500
+      },
+      "signature_count": 217,
+      "singleton_row_fraction": 0.6896551724137931,
+      "singleton_rows": 180,
+      "singleton_signatures": 180,
+      "top_buckets": [
+        {
+          "count": 4,
+          "signature": "copy|B=021_050|E=5|5"
+        },
+        {
+          "count": 4,
+          "signature": "copy|B=021_050|E=5|8"
+        },
+        {
+          "count": 3,
+          "signature": "copy|B=006_010|E=6|9"
+        },
+        {
+          "count": 3,
+          "signature": "copy|B=051_100|E=2|7"
+        },
+        {
+          "count": 3,
+          "signature": "copy|B=101_plus|E=8|4"
+        },
+        {
+          "count": 2,
+          "signature": "copy|B=006_010|E=1|4"
+        },
+        {
+          "count": 2,
+          "signature": "copy|B=006_010|E=4|6"
+        },
+        {
+          "count": 2,
+          "signature": "copy|B=006_010|E=4|7"
+        }
+      ],
+      "within_signature_exact_selector_bits": 94.26466250649041
+    },
+    {
+      "empirical_signature_assignment_bits": 2085.283465104738,
+      "feature_class": "payload_edge",
+      "max_bucket_size": 2,
+      "mean_bucket_size": 1.01953125,
+      "name": "kind_x_length_bucket_x_first2_last2",
+      "observed_selector_bits_delta_vs_random_mean": 3.1032683814567426,
+      "observed_signature_count_delta_vs_random_mean": -1.740000000000009,
+      "random_control": {
+        "random_seed": 46920260621,
+        "selector_bits_mean": 6.8967316185432574,
+        "selector_bits_p05": 2.0,
+        "selector_bits_p95": 11.60964047443681,
+        "selector_bits_std": 2.8354226095589645,
+        "signature_count_mean": 257.74,
+        "signature_count_p05": 256.0,
+        "signature_count_p95": 260.0,
+        "singleton_rows_mean": 254.932,
+        "singleton_rows_p05": 251.0,
+        "singleton_rows_p95": 259.0,
+        "trials": 500
+      },
+      "signature_count": 256,
+      "singleton_row_fraction": 0.9616858237547893,
+      "singleton_rows": 251,
+      "singleton_signatures": 251,
+      "top_buckets": [
+        {
+          "count": 2,
+          "signature": "copy|B=101_plus|E=81|94"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|E=6|6"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|E=7|7"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|E=9|9"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=002_003|E=19|19"
+        },
+        {
+          "count": 1,
+          "signature": "copy|B=004_005|E=45|65"
+        },
+        {
+          "count": 1,
+          "signature": "copy|B=004_005|E=51|81"
+        },
+        {
+          "count": 1,
+          "signature": "copy|B=004_005|E=57|52"
+        }
+      ],
+      "within_signature_exact_selector_bits": 10.0
+    },
+    {
+      "empirical_signature_assignment_bits": 1577.2381109661767,
+      "feature_class": "payload_histogram",
+      "max_bucket_size": 33,
+      "mean_bucket_size": 1.8251748251748252,
+      "name": "kind_x_length_bucket_x_digit_support",
+      "observed_selector_bits_delta_vs_random_mean": 11.921274997335843,
+      "observed_signature_count_delta_vs_random_mean": -8.912000000000006,
+      "random_control": {
+        "random_seed": 46920260621,
+        "selector_bits_mean": 506.1240791412253,
+        "selector_bits_p05": 479.82079430835415,
+        "selector_bits_p95": 532.2723848340778,
+        "selector_bits_std": 15.942274368152436,
+        "signature_count_mean": 151.912,
+        "signature_count_p05": 146.0,
+        "signature_count_p95": 157.04999999999995,
+        "singleton_rows_mean": 134.586,
+        "singleton_rows_p05": 125.0,
+        "singleton_rows_p95": 144.0,
+        "trials": 500
+      },
+      "signature_count": 143,
+      "singleton_row_fraction": 0.45977011494252873,
+      "singleton_rows": 120,
+      "singleton_signatures": 120,
+      "top_buckets": [
+        {
+          "count": 33,
+          "signature": "copy|B=101_plus|S=0123456789"
+        },
+        {
+          "count": 32,
+          "signature": "copy|B=021_050|S=0123456789"
+        },
+        {
+          "count": 25,
+          "signature": "copy|B=051_100|S=0123456789"
+        },
+        {
+          "count": 6,
+          "signature": "copy|B=021_050|S=012456789"
+        },
+        {
+          "count": 5,
+          "signature": "copy|B=011_020|S=01245678"
+        },
+        {
+          "count": 5,
+          "signature": "copy|B=021_050|S=012345689"
+        },
+        {
+          "count": 3,
+          "signature": "copy|B=011_020|S=0123456789"
+        },
+        {
+          "count": 2,
+          "signature": "copy|B=006_010|S=125789"
+        }
+      ],
+      "within_signature_exact_selector_bits": 518.0453541385612
+    },
+    {
+      "empirical_signature_assignment_bits": 1605.3051419155888,
+      "feature_class": "payload_checksum",
+      "max_bucket_size": 10,
+      "mean_bucket_size": 2.9,
+      "name": "kind_x_length_bucket_x_digit_sum_mod10",
+      "observed_selector_bits_delta_vs_random_mean": -7.393353854809618,
+      "observed_signature_count_delta_vs_random_mean": 3.9080000000000013,
+      "random_control": {
+        "random_seed": 46920260621,
+        "selector_bits_mean": 497.3716770439589,
+        "selector_bits_p05": 482.79500241994634,
+        "selector_bits_p95": 513.4746359242267,
+        "selector_bits_std": 9.67828439592609,
+        "signature_count_mean": 86.092,
+        "signature_count_p05": 82.0,
+        "signature_count_p95": 90.0,
+        "singleton_rows_mean": 25.932,
+        "singleton_rows_p05": 20.0,
+        "singleton_rows_p95": 31.0,
+        "trials": 500
+      },
+      "signature_count": 90,
+      "singleton_row_fraction": 0.12260536398467432,
+      "singleton_rows": 32,
+      "singleton_signatures": 32,
+      "top_buckets": [
+        {
+          "count": 10,
+          "signature": "copy|B=021_050|C=3"
+        },
+        {
+          "count": 8,
+          "signature": "copy|B=011_020|C=6"
+        },
+        {
+          "count": 8,
+          "signature": "copy|B=101_plus|C=5"
+        },
+        {
+          "count": 7,
+          "signature": "copy|B=011_020|C=9"
+        },
+        {
+          "count": 6,
+          "signature": "copy|B=006_010|C=1"
+        },
+        {
+          "count": 6,
+          "signature": "copy|B=006_010|C=2"
+        },
+        {
+          "count": 6,
+          "signature": "copy|B=006_010|C=3"
+        },
+        {
+          "count": 6,
+          "signature": "copy|B=006_010|C=7"
+        }
+      ],
+      "within_signature_exact_selector_bits": 489.9783231891493
+    },
+    {
+      "empirical_signature_assignment_bits": 2083.283465104738,
+      "feature_class": "payload_histogram",
+      "max_bucket_size": 2,
+      "mean_bucket_size": 1.0235294117647058,
+      "name": "kind_x_length_bucket_x_histogram_shape",
+      "observed_selector_bits_delta_vs_random_mean": 4.677072881370203,
+      "observed_signature_count_delta_vs_random_mean": -2.541999999999973,
+      "random_control": {
+        "random_seed": 46920260621,
+        "selector_bits_mean": 7.322927118629797,
+        "selector_bits_p05": 2.0,
+        "selector_bits_p95": 12.754887502163468,
+        "selector_bits_std": 3.0725554451809987,
+        "signature_count_mean": 257.542,
+        "signature_count_p05": 255.0,
+        "signature_count_p95": 260.0,
+        "singleton_rows_mean": 254.576,
+        "singleton_rows_p05": 250.0,
+        "singleton_rows_p95": 259.0,
+        "trials": 500
+      },
+      "signature_count": 255,
+      "singleton_row_fraction": 0.9540229885057471,
+      "singleton_rows": 249,
+      "singleton_signatures": 249,
+      "top_buckets": [
+        {
+          "count": 2,
+          "signature": "copy|B=101_plus|H=10,21,12,12,21,18,14,10,13,10"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|H=0,0,0,0,0,0,0,0,0,1"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|H=0,0,0,0,0,0,0,1,0,0"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=001|H=0,0,0,0,0,0,1,0,0,0"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=002_003|H=0,1,0,0,0,0,0,0,0,1"
+        },
+        {
+          "count": 2,
+          "signature": "literal|B=002_003|H=0,1,0,0,0,1,0,0,0,0"
+        },
+        {
+          "count": 1,
+          "signature": "copy|B=004_005|H=0,0,0,0,1,2,0,1,0,1"
+        },
+        {
+          "count": 1,
+          "signature": "copy|B=004_005|H=0,0,0,0,1,2,1,1,0,0"
+        }
+      ],
+      "within_signature_exact_selector_bits": 12.0
+    }
+  ],
+  "summary": {
+    "best_non_payload_family": "kind_x_book_mod10_x_length_bucket",
+    "best_non_payload_selector_bits": 495.6492808002978,
+    "best_non_payload_signature_count": 85,
+    "best_non_payload_singleton_rows": 22,
+    "copy_chunk_count": 208,
+    "exact_chunk_unique_count": 256,
+    "exact_chunk_unique_fraction": 0.9808429118773946,
+    "interpretation": "Non-payload signatures compress labels only by leaving almost all target digits unresolved. Payload-derived signatures become more specific, but their behavior is consistent with ordinary same-length random digit strings and therefore does not provide a source-free target-stream generator.",
+    "least_unique_payload_family": "kind_x_length_bucket_x_digit_sum_mod10",
+    "least_unique_payload_selector_bits": 489.9783231891493,
+    "least_unique_payload_signature_count": 90,
+    "literal_chunk_count": 53,
+    "most_exact_payload_family": "kind_x_length_bucket_x_first2_last2",
+    "most_exact_payload_signature_count": 256,
+    "most_exact_payload_singleton_rows": 251,
+    "operation_chunk_count": 261,
+    "promotes_signature_generator": false,
+    "target_stream_digit_count": 9567,
+    "target_stream_raw_bits": 31780.886083787394
+  },
+  "translation_delta": "NONE"
+}

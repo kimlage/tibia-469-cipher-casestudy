@@ -477,6 +477,14 @@ Overall `256/261` chunks are unique and copy chunks are `207/208` unique; an
 all-chunk dictionary is `+32442.167` bits worse than the target-conditioned
 baseline. The target stream therefore needs a richer latent/state mechanism,
 not a literal dictionary of copied chunks.
+A target-chunk signature audit then tests the next shallow abstraction:
+coarse signatures instead of exact chunks. It also fails as a generator.
+The best non-payload family (`kind_x_book_mod10_x_length_bucket`) has `85`
+signatures and `495.649` exact-selector bits, but only because it leaves the
+target digits unresolved. Payload-derived signatures become nearly exact
+(`251/261` singleton rows under first2/last2), and same-length random controls
+show that this specificity is ordinary payload leakage rather than a
+source-free target-stream rule.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2611,6 +2619,8 @@ book generation, not row0 pair-cell placement.
 - [Target-conditioned source collapse gate](../../analysis/target_conditioned_source_collapse_audit_20260621/reports/test_results/01_target_conditioned_source_collapse_gate.md)
 - [Final target chunk dictionary audit](../../analysis/target_chunk_dictionary_audit_20260621/reports/final_target_chunk_dictionary_audit.md)
 - [Target chunk dictionary gate](../../analysis/target_chunk_dictionary_audit_20260621/reports/test_results/01_target_chunk_dictionary_gate.md)
+- [Final target chunk signature audit](../../analysis/target_chunk_signature_audit_20260621/reports/final_target_chunk_signature_audit.md)
+- [Target chunk signature gate](../../analysis/target_chunk_signature_audit_20260621/reports/test_results/01_target_chunk_signature_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
