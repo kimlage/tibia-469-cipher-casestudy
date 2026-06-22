@@ -31,6 +31,7 @@ source_refs:
   - analysis/latent_nonlocal_state_program_pilot_audit_20260622
   - analysis/schedule_state_multistream_pilot_audit_20260622
   - analysis/book_multiset_order_factorization_audit_20260622
+  - analysis/within_book_order_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -848,6 +849,12 @@ plus `587.378` exact within-book order-index bits. The bag saves only `57.222`
 bits versus the global joint-token bag and beats permuted-feature p95 in `0/5`
 prefix cells. This confirms that the schedule/HMM clue is mostly distributional
 and order-index external, not a promoted book-composition program.
+A within-book order program gate then attacks the order-index field directly:
+given the true per-book multiset, prefix-trained no-replacement policies try to
+emit the exact token order. They cost `606.765` bits versus `587.378` uniform
+order bits (`+19.387`), beat shuffled-train p95 in only `1/5` cells, and beat
+shuffled-test p95 in `0/5`. Beam20 keeps some short/nontrivial true sequences,
+but the charged order field is not reduced, so this route is not promoted.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3208,6 +3215,8 @@ book generation, not row0 pair-cell placement.
 - [Schedule-state multistream pilot](../../analysis/schedule_state_multistream_pilot_audit_20260622/reports/test_results/01_schedule_state_multistream_pilot.md)
 - [Final book multiset/order factorization audit](../../analysis/book_multiset_order_factorization_audit_20260622/reports/final_book_multiset_order_factorization_audit.md)
 - [Book multiset/order factorization gate](../../analysis/book_multiset_order_factorization_audit_20260622/reports/test_results/01_book_multiset_order_factorization_gate.md)
+- [Final within-book order program audit](../../analysis/within_book_order_program_audit_20260622/reports/final_within_book_order_program_audit.md)
+- [Within-book order program gate](../../analysis/within_book_order_program_audit_20260622/reports/test_results/01_within_book_order_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

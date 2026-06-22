@@ -1,0 +1,731 @@
+{
+  "case_reopened": false,
+  "classification": "WITHIN_BOOK_ORDER_PROGRAM_NOT_PROMOTED",
+  "compression_bound_status": "unchanged",
+  "cutoff_rows": [
+    {
+      "beats_shuffled_test_p95": false,
+      "beats_shuffled_train_p95": false,
+      "cutoff": 20,
+      "family_scores": [
+        {
+          "family": "global",
+          "loo_train_mdl_bits": 186.4580306895477
+        },
+        {
+          "family": "position",
+          "loo_train_mdl_bits": 179.57094666908782
+        },
+        {
+          "family": "book_phase",
+          "loo_train_mdl_bits": 186.4580306895477
+        },
+        {
+          "family": "phase_position",
+          "loo_train_mdl_bits": 179.57094666908782
+        },
+        {
+          "family": "prev_control",
+          "loo_train_mdl_bits": 160.84222621338142
+        },
+        {
+          "family": "prev_op_type",
+          "loo_train_mdl_bits": 165.78401446750766
+        },
+        {
+          "family": "prev_length_bucket",
+          "loo_train_mdl_bits": 166.25054683556047
+        },
+        {
+          "family": "prev_behavior",
+          "loo_train_mdl_bits": 195.55863472044354
+        },
+        {
+          "family": "prev_control_position",
+          "loo_train_mdl_bits": 195.69552917825263
+        },
+        {
+          "family": "prev_op_type_position",
+          "loo_train_mdl_bits": 171.79935765230329
+        }
+      ],
+      "greedy_exact_books": 15,
+      "greedy_nontrivial_exact_books": 1,
+      "nontrivial_true_sequence_in_beam": 15,
+      "policy_order_bits": 229.22838421337147,
+      "saving_vs_uniform_order": -0.9614820497073708,
+      "selected_family": "prev_control",
+      "shuffled_test_controls": {
+        "saving_mean": -7.83726292604341,
+        "saving_p05": -16.448878484232722,
+        "saving_p50": -7.724090588934928,
+        "saving_p95": 0.12703424338363334,
+        "seed": 46920270622,
+        "trials": 300
+      },
+      "shuffled_train_controls": {
+        "saving_mean": -5.166505336074704,
+        "saving_p05": -11.186572409613945,
+        "saving_p50": -5.253698315611956,
+        "saving_p95": 0.4466215367246775,
+        "seed": 46920260622,
+        "trials": 300
+      },
+      "test_books": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "test_ops": 182,
+      "top1_accuracy": 0.521978021978022,
+      "top1_hits": 95,
+      "train_books": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "true_sequence_in_beam": 38,
+      "uniform_order_bits": 228.2669021636641
+    },
+    {
+      "beats_shuffled_test_p95": false,
+      "beats_shuffled_train_p95": false,
+      "cutoff": 30,
+      "family_scores": [
+        {
+          "family": "global",
+          "loo_train_mdl_bits": 260.42464704129657
+        },
+        {
+          "family": "position",
+          "loo_train_mdl_bits": 248.70752629012497
+        },
+        {
+          "family": "book_phase",
+          "loo_train_mdl_bits": 257.24946846658395
+        },
+        {
+          "family": "phase_position",
+          "loo_train_mdl_bits": 252.741783534104
+        },
+        {
+          "family": "prev_control",
+          "loo_train_mdl_bits": 231.39514391556787
+        },
+        {
+          "family": "prev_op_type",
+          "loo_train_mdl_bits": 235.51560826577884
+        },
+        {
+          "family": "prev_length_bucket",
+          "loo_train_mdl_bits": 240.6133267847059
+        },
+        {
+          "family": "prev_behavior",
+          "loo_train_mdl_bits": 278.99578816831365
+        },
+        {
+          "family": "prev_control_position",
+          "loo_train_mdl_bits": 265.00728206142315
+        },
+        {
+          "family": "prev_op_type_position",
+          "loo_train_mdl_bits": 238.74827328547744
+        }
+      ],
+      "greedy_exact_books": 14,
+      "greedy_nontrivial_exact_books": 2,
+      "nontrivial_true_sequence_in_beam": 10,
+      "policy_order_bits": 175.95611724652423,
+      "saving_vs_uniform_order": -5.485656433094817,
+      "selected_family": "prev_control",
+      "shuffled_test_controls": {
+        "saving_mean": -9.33463816228584,
+        "saving_p05": -18.46308356286403,
+        "saving_p50": -9.56658813861793,
+        "saving_p95": -0.6611278070437834,
+        "seed": 46920270623,
+        "trials": 300
+      },
+      "shuffled_train_controls": {
+        "saving_mean": -7.197708004362355,
+        "saving_p05": -12.55478979659,
+        "saving_p50": -7.105082046057703,
+        "saving_p95": -2.334521409458091,
+        "seed": 46920260623,
+        "trials": 300
+      },
+      "test_books": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "test_ops": 140,
+      "top1_accuracy": 0.5214285714285715,
+      "top1_hits": 73,
+      "train_books": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "true_sequence_in_beam": 30,
+      "uniform_order_bits": 170.4704608134294
+    },
+    {
+      "beats_shuffled_test_p95": false,
+      "beats_shuffled_train_p95": true,
+      "cutoff": 40,
+      "family_scores": [
+        {
+          "family": "global",
+          "loo_train_mdl_bits": 323.6800129673379
+        },
+        {
+          "family": "position",
+          "loo_train_mdl_bits": 329.6080919702589
+        },
+        {
+          "family": "book_phase",
+          "loo_train_mdl_bits": 331.56632377465513
+        },
+        {
+          "family": "phase_position",
+          "loo_train_mdl_bits": 333.92535408913045
+        },
+        {
+          "family": "prev_control",
+          "loo_train_mdl_bits": 315.55880244930296
+        },
+        {
+          "family": "prev_op_type",
+          "loo_train_mdl_bits": 313.0769005179343
+        },
+        {
+          "family": "prev_length_bucket",
+          "loo_train_mdl_bits": 323.44284077975306
+        },
+        {
+          "family": "prev_behavior",
+          "loo_train_mdl_bits": 369.9362616200497
+        },
+        {
+          "family": "prev_control_position",
+          "loo_train_mdl_bits": 347.57759799827613
+        },
+        {
+          "family": "prev_op_type_position",
+          "loo_train_mdl_bits": 321.12650565583675
+        }
+      ],
+      "greedy_exact_books": 12,
+      "greedy_nontrivial_exact_books": 1,
+      "nontrivial_true_sequence_in_beam": 8,
+      "policy_order_bits": 120.65377212695648,
+      "saving_vs_uniform_order": -8.42721164073295,
+      "selected_family": "prev_op_type",
+      "shuffled_test_controls": {
+        "saving_mean": -14.305140099448769,
+        "saving_p05": -26.31865919856962,
+        "saving_p50": -14.667947090106566,
+        "saving_p95": -1.0497683251561085,
+        "seed": 46920270624,
+        "trials": 300
+      },
+      "shuffled_train_controls": {
+        "saving_mean": -16.04210858507145,
+        "saving_p05": -21.552627381258347,
+        "saving_p50": -15.965720102045807,
+        "saving_p95": -11.230716943137793,
+        "seed": 46920260624,
+        "trials": 300
+      },
+      "test_books": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "test_ops": 95,
+      "top1_accuracy": 0.5789473684210527,
+      "top1_hits": 55,
+      "train_books": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "true_sequence_in_beam": 25,
+      "uniform_order_bits": 112.22656048622353
+    },
+    {
+      "beats_shuffled_test_p95": false,
+      "beats_shuffled_train_p95": false,
+      "cutoff": 50,
+      "family_scores": [
+        {
+          "family": "global",
+          "loo_train_mdl_bits": 389.7680519604676
+        },
+        {
+          "family": "position",
+          "loo_train_mdl_bits": 392.061986580701
+        },
+        {
+          "family": "book_phase",
+          "loo_train_mdl_bits": 411.76843002223467
+        },
+        {
+          "family": "phase_position",
+          "loo_train_mdl_bits": 401.69582534065813
+        },
+        {
+          "family": "prev_control",
+          "loo_train_mdl_bits": 367.76446856490605
+        },
+        {
+          "family": "prev_op_type",
+          "loo_train_mdl_bits": 369.6325678755995
+        },
+        {
+          "family": "prev_length_bucket",
+          "loo_train_mdl_bits": 379.8864803924784
+        },
+        {
+          "family": "prev_behavior",
+          "loo_train_mdl_bits": 437.01257788549776
+        },
+        {
+          "family": "prev_control_position",
+          "loo_train_mdl_bits": 395.7198789920351
+        },
+        {
+          "family": "prev_op_type_position",
+          "loo_train_mdl_bits": 381.68657642786064
+        }
+      ],
+      "greedy_exact_books": 10,
+      "greedy_nontrivial_exact_books": 0,
+      "nontrivial_true_sequence_in_beam": 3,
+      "policy_order_bits": 64.99318938381403,
+      "saving_vs_uniform_order": -3.6561796522166503,
+      "selected_family": "prev_control",
+      "shuffled_test_controls": {
+        "saving_mean": -4.370332558522782,
+        "saving_p05": -9.924812503605793,
+        "saving_p50": -4.544584299200423,
+        "saving_p95": 1.0123755354906336,
+        "seed": 46920270625,
+        "trials": 300
+      },
+      "shuffled_train_controls": {
+        "saving_mean": -2.9737980518460323,
+        "saving_p05": -6.689624696638063,
+        "saving_p50": -3.118831969053076,
+        "saving_p95": 0.8607922921861828,
+        "seed": 46920260625,
+        "trials": 300
+      },
+      "test_books": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "test_ops": 56,
+      "top1_accuracy": 0.5892857142857143,
+      "top1_hits": 33,
+      "train_books": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "true_sequence_in_beam": 16,
+      "uniform_order_bits": 61.33700973159738
+    },
+    {
+      "beats_shuffled_test_p95": false,
+      "beats_shuffled_train_p95": false,
+      "cutoff": 60,
+      "family_scores": [
+        {
+          "family": "global",
+          "loo_train_mdl_bits": 445.97387728411263
+        },
+        {
+          "family": "position",
+          "loo_train_mdl_bits": 451.2448187861545
+        },
+        {
+          "family": "book_phase",
+          "loo_train_mdl_bits": 465.50319102576935
+        },
+        {
+          "family": "phase_position",
+          "loo_train_mdl_bits": 466.38074264514984
+        },
+        {
+          "family": "prev_control",
+          "loo_train_mdl_bits": 433.95310459699533
+        },
+        {
+          "family": "prev_op_type",
+          "loo_train_mdl_bits": 424.17666943527274
+        },
+        {
+          "family": "prev_length_bucket",
+          "loo_train_mdl_bits": 447.072530902778
+        },
+        {
+          "family": "prev_behavior",
+          "loo_train_mdl_bits": 494.05013501964805
+        },
+        {
+          "family": "prev_control_position",
+          "loo_train_mdl_bits": 456.5013746829435
+        },
+        {
+          "family": "prev_op_type_position",
+          "loo_train_mdl_bits": 436.54444253845753
+        }
+      ],
+      "greedy_exact_books": 6,
+      "greedy_nontrivial_exact_books": 0,
+      "nontrivial_true_sequence_in_beam": 1,
+      "policy_order_bits": 15.93336280696971,
+      "saving_vs_uniform_order": -0.8565472099188796,
+      "selected_family": "prev_op_type",
+      "shuffled_test_controls": {
+        "saving_mean": -2.4149463295799114,
+        "saving_p05": -6.249031911385389,
+        "saving_p50": -2.4194834043100375,
+        "saving_p95": 1.8983402922445887,
+        "seed": 46920270626,
+        "trials": 300
+      },
+      "shuffled_train_controls": {
+        "saving_mean": 1.0324253126885194,
+        "saving_p05": -1.590361666958513,
+        "saving_p50": 0.9068905956085178,
+        "saving_p95": 4.091315166745945,
+        "seed": 46920260626,
+        "trials": 300
+      },
+      "test_books": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "test_ops": 20,
+      "top1_accuracy": 0.65,
+      "top1_hits": 13,
+      "train_books": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "true_sequence_in_beam": 9,
+      "uniform_order_bits": 15.07681559705083
+    }
+  ],
+  "decision": {
+    "generator_promoted": false,
+    "grants_book_multiset": true,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE",
+    "why_not_generator": "This gate grants the exact per-book multiset. Even if an order policy works, a full generator still needs to generate the multiset and the payload/copy fields. Promotion additionally requires controls."
+  },
+  "inputs": {
+    "book_multiset_order_factorization": "analysis/book_multiset_order_factorization_audit_20260622/reports/test_results/01_book_multiset_order_factorization_gate.json",
+    "unified_residual_control_ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "within_book_order_program_gate.v1",
+  "scope": "analysis_only_order_policy_given_true_book_multiset",
+  "summary": {
+    "beam_width": 20,
+    "beats_shuffled_test_p95_cells": 0,
+    "beats_shuffled_train_p95_cells": 1,
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "total_greedy_exact_books": 57,
+    "total_greedy_nontrivial_exact_books": 4,
+    "total_nontrivial_true_sequence_in_beam": 37,
+    "total_policy_order_bits": 606.7648257776359,
+    "total_saving_vs_uniform_order": -19.38707698567066,
+    "total_true_sequence_in_beam": 118,
+    "total_uniform_order_bits": 587.3777487919652
+  },
+  "translation_delta": "NONE"
+}
