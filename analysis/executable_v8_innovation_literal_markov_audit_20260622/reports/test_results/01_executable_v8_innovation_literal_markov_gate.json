@@ -1,0 +1,97 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V8_INNOVATION_LITERAL_MARKOV_LEDGER",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "same_multiset_literal_shuffle": {
+      "beats_p05": true,
+      "real_cost": 2956.130938574901,
+      "shuffled_p05": 3364.3875179396728,
+      "shuffled_p50": 3400.349617568426,
+      "shuffled_p95": 3425.3634618729147,
+      "trials": 100
+    }
+  },
+  "decision": {
+    "executable_v8_promoted": true,
+    "generation_explanation_status": "probabilistic_literal_payload_dependency_reduced_not_plaintext",
+    "next_blocker": "innovation replay copy/literal decision and copy source-length policy remain external",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "holdouts": [
+    {
+      "cutoff": 256,
+      "raw_suffix_bits": 2345.2812349904775,
+      "selected_order": 2,
+      "suffix_delta_vs_raw": -187.59276854705922,
+      "suffix_markov_bits": 2157.6884664434183,
+      "train_best_delta_vs_raw": -51.97112015968139
+    },
+    {
+      "cutoff": 512,
+      "raw_suffix_bits": 1494.867642699313,
+      "selected_order": 2,
+      "suffix_delta_vs_raw": -82.44144660901793,
+      "suffix_markov_bits": 1412.426196090295,
+      "train_best_delta_vs_raw": -157.12244209772462
+    },
+    {
+      "cutoff": 768,
+      "raw_suffix_bits": 644.4540504081483,
+      "selected_order": 2,
+      "suffix_delta_vs_raw": -41.119617736520695,
+      "suffix_markov_bits": 603.3344326716276,
+      "train_best_delta_vs_raw": -198.44427097022026
+    }
+  ],
+  "inputs": {
+    "executable_v7_gate": "analysis/executable_v7_unified_innovation_payload_audit_20260622/reports/test_results/01_executable_v7_unified_innovation_payload_gate.json",
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "order_costs": {
+    "0": {
+      "cost_bits": 3191.3236061457005,
+      "delta_vs_raw_bits": -4.371221135942051
+    },
+    "1": {
+      "cost_bits": 3110.353645763737,
+      "delta_vs_raw_bits": -85.34118151790562
+    },
+    "2": {
+      "cost_bits": 2956.130938574901,
+      "delta_vs_raw_bits": -239.56388870674164
+    },
+    "3": {
+      "cost_bits": 2996.6742868882966,
+      "delta_vs_raw_bits": -199.02054039334598
+    },
+    "4": {
+      "cost_bits": 3100.1068793521936,
+      "delta_vs_raw_bits": -95.587947929449
+    }
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v8_innovation_literal_markov_gate.v1",
+  "scope": "analysis_only_executable_v8_innovation_literal_markov",
+  "summary": {
+    "declaration_bits": 2.321928094887362,
+    "delta_vs_v7_total_bits": -237.24196061185376,
+    "literal_digits": 962,
+    "positive_holdouts": 3,
+    "promoted": true,
+    "raw_literal_bits": 3195.6948272816426,
+    "selected_markov_bits_after_declaration": 2958.4528666697884,
+    "selected_order": 2,
+    "v7_external_bits_total_content_included": 7192.150614310004,
+    "v8_external_bits_total_content_included": 6954.90865369815
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "literal_digits": 962,
+    "v7_roundtrip_70_70": true
+  }
+}

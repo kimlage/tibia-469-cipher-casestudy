@@ -72,6 +72,7 @@ source_refs:
   - analysis/unified_innovation_payload_audit_20260622
   - analysis/executable_v7_unified_innovation_payload_audit_20260622
   - analysis/innovation_replay_policy_frontier_audit_20260622
+  - analysis/executable_v8_innovation_literal_markov_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3634,6 +3635,7 @@ book generation, not row0 pair-cell placement.
 - [Unified innovation payload audit](../../analysis/unified_innovation_payload_audit_20260622/reports/final_unified_innovation_payload_audit.md)
 - [Executable v7 unified innovation payload audit](../../analysis/executable_v7_unified_innovation_payload_audit_20260622/reports/final_executable_v7_unified_innovation_payload_audit.md)
 - [Innovation replay policy frontier audit](../../analysis/innovation_replay_policy_frontier_audit_20260622/reports/final_innovation_replay_policy_frontier_audit.md)
+- [Executable v8 innovation-literal Markov audit](../../analysis/executable_v8_innovation_literal_markov_audit_20260622/reports/final_executable_v8_innovation_literal_markov_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3785,6 +3787,17 @@ diagnostics are also weak (`5/62` replay event starts, `5/62` ends, and `0/39`
 copy source start+end pairs align with the tested boundaries). This keeps the
 v7 ledger promoted, but identifies the exact unresolved mechanism: copy vs
 literal decisions and copy source/length policy for the innovation stream.
+
+The next executable integration reduces a different part of the same replay
+without pretending to solve that policy. The `962` literal digits inside the v7
+innovation replay are coded with a prequential digit-Markov model. Order `2`
+is selected after paying declaration cost: raw literal declaration is
+`3195.695` bits, Markov-coded literal content is `2958.453` bits after
+declaration, and total content-included ledger cost moves from v7 `7192.151`
+to v8 `6954.909`. Same-multiset literal shuffles are beaten at p05 and prefix
+holdouts are positive in `3/3` splits. This promotes a probabilistic literal
+content ledger, not plaintext and not a source-free replay policy; replay
+events and copy decisions remain external.
 
 ## Boundary
 
