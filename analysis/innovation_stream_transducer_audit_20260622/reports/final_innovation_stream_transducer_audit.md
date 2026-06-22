@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED`
+Classification: `INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_TARGET_FREE_TRIGGER_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -58,6 +58,12 @@ plus a small external innovation tape made from the literal payload?
 - Trigger best feature exact delta vs global: `17`.
 - Trigger forced literal ops with no copy available: `36/53`.
 - Promotes conditional trigger clue: `True`.
+- Decoder-visible trigger best feature: `next_digit_seen`.
+- Decoder-visible trigger exact ops: `155/182`.
+- Decoder-visible trigger literal hits: `0/27`.
+- Decoder-visible trigger delta vs global: `-4.807` bits.
+- Target-conditioning gap bits: `48.262`.
+- Promotes decoder-visible trigger: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -74,7 +80,9 @@ The schedule gate asks whether per-book tape consumption can be predicted
 from online mechanical features beyond a global sparsity baseline. The
 trigger gate then moves one level down, asking whether literal-vs-copy
 can be predicted at known operation starts when true-prefix,
-target-conditioned copy availability is granted.
+target-conditioned copy availability is granted. The decoder-visible
+trigger gate removes that target-conditioned availability while still
+granting known operation starts and true tape state.
 
 ## Decision
 
@@ -91,6 +99,7 @@ target-conditioned copy availability is granted.
 - Tape schedule sparsity is retained only as a weak clue.
 - Conditional trigger policy is promoted as a dependency-reduction clue: copy availability explains many literal/copy decisions after paying table/correction cost.
 - The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.
+- Decoder-visible trigger policy is rejected: without target-conditioned copy availability, the trigger clue collapses to the copy-majority baseline.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -104,3 +113,4 @@ target-conditioned copy availability is granted.
 - [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)
 - [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)
 - [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)
+- [Decoder visible trigger policy gate](test_results/09_decoder_visible_trigger_policy_gate.md)

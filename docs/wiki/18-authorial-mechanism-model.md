@@ -676,6 +676,13 @@ saves `48.262` bits versus literal-site lookup after table/correction cost.
 This explains `36/53` literal ops as places where no copy is available, but it
 still does not derive operation starts, copy source, copy length, or a
 closed-loop digit stream.
+A decoder-visible trigger policy gate then removes that target-conditioned
+availability while still granting known operation starts, true prior prefix, and
+true tape state. The clue collapses: the best decoder-visible feature is
+`next_digit_seen`, but it gets the same `155/182` ops as the global copy-majority
+baseline, hits `0/27` literals, and costs `-4.807` bits after feature charge.
+The target-conditioning gap is therefore the full `48.262` bits from the
+conditional trigger gate.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2852,6 +2859,7 @@ book generation, not row0 pair-cell placement.
 - [Seed walk source model gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/06_seed_walk_source_model_gate.md)
 - [Innovation tape schedule gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/07_innovation_tape_schedule_gate.md)
 - [Tape trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/08_tape_trigger_policy_gate.md)
+- [Decoder visible trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/09_decoder_visible_trigger_policy_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
