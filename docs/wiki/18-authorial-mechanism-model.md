@@ -14,6 +14,7 @@ source_refs:
   - analysis/target_digit_boundary_threshold_audit_20260621
   - analysis/target_digit_boundary_peak_audit_20260621
   - analysis/target_digit_boundary_island_audit_20260621
+  - analysis/target_digit_boundary_miss_residual_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -556,6 +557,13 @@ the best policy at `right_ge:4`; the occupied islands are clean singletons
 worse: island correction costs `941.005` bits after policy charge, `16.625`
 bits more than the flat threshold candidate-set code, and prefix-selected
 island coding beats same-policy threshold coding in only `2/5` cells.
+A target digit boundary miss-residual audit then asks whether the `107`
+cutpoints outside `right_ge:4` have a second-stage rule. Full fit is promising:
+the best residual policy, `near_primary:1`, improves the paid ledger by
+`69.462` bits over the threshold gate and beats random p95. It is not promoted,
+because the policy selects `1452` residual candidates for only `38` true missed
+cutpoints, precision is `0.026171`, exact outside books remain `0/60`, and
+prefix-selected validation is positive in only `4/5` cells.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2710,6 +2718,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary peak gate](../../analysis/target_digit_boundary_peak_audit_20260621/reports/test_results/01_target_digit_boundary_peak_gate.md)
 - [Final target digit boundary island audit](../../analysis/target_digit_boundary_island_audit_20260621/reports/final_target_digit_boundary_island_audit.md)
 - [Target digit boundary island gate](../../analysis/target_digit_boundary_island_audit_20260621/reports/test_results/01_target_digit_boundary_island_gate.md)
+- [Final target digit boundary miss residual audit](../../analysis/target_digit_boundary_miss_residual_audit_20260621/reports/final_target_digit_boundary_miss_residual_audit.md)
+- [Target digit boundary miss residual gate](../../analysis/target_digit_boundary_miss_residual_audit_20260621/reports/test_results/01_target_digit_boundary_miss_residual_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
