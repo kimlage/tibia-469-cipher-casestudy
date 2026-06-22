@@ -1,0 +1,302 @@
+{
+  "case_reopened": false,
+  "classification": "target_digit_boundary_type_rule_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_boundary_type_rule": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "target_digit_boundary_rankcode_gate": "analysis/target_digit_boundary_rankcode_audit_20260621/reports/test_results/01_target_digit_boundary_rankcode_gate.json"
+  },
+  "plaintext_claim": false,
+  "predicate_rows": [
+    {
+      "delta_vs_majority_hits": -30,
+      "hits": 131,
+      "literal_when_true": true,
+      "predicate": "delta_negative",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -38,
+      "hits": 123,
+      "literal_when_true": true,
+      "predicate": "rank_bottom70",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -49,
+      "hits": 112,
+      "literal_when_true": true,
+      "predicate": "right_surprisal_lt3",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -51,
+      "hits": 110,
+      "literal_when_true": true,
+      "predicate": "rank_top10",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -51,
+      "hits": 110,
+      "literal_when_true": false,
+      "predicate": "rank_top20",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -55,
+      "hits": 106,
+      "literal_when_true": true,
+      "predicate": "delta_lt1",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -59,
+      "hits": 102,
+      "literal_when_true": false,
+      "predicate": "right_surprisal_ge4",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -62,
+      "hits": 99,
+      "literal_when_true": true,
+      "predicate": "right_surprisal_ge4",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -66,
+      "hits": 95,
+      "literal_when_true": false,
+      "predicate": "delta_lt1",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -70,
+      "hits": 91,
+      "literal_when_true": false,
+      "predicate": "rank_top10",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -70,
+      "hits": 91,
+      "literal_when_true": true,
+      "predicate": "rank_top20",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -72,
+      "hits": 89,
+      "literal_when_true": false,
+      "predicate": "right_surprisal_lt3",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -83,
+      "hits": 78,
+      "literal_when_true": false,
+      "predicate": "rank_bottom70",
+      "total": 201
+    },
+    {
+      "delta_vs_majority_hits": -91,
+      "hits": 70,
+      "literal_when_true": false,
+      "predicate": "delta_negative",
+      "total": 201
+    }
+  ],
+  "prequential_rows": [
+    {
+      "context": "rank_top10",
+      "cutoff": 20,
+      "delta_vs_majority_hits": 0,
+      "hits": 113,
+      "majority_hits": 113,
+      "total": 132
+    },
+    {
+      "context": "rank_top10",
+      "cutoff": 30,
+      "delta_vs_majority_hits": 0,
+      "hits": 85,
+      "majority_hits": 85,
+      "total": 100
+    },
+    {
+      "context": "rank_top10",
+      "cutoff": 40,
+      "delta_vs_majority_hits": 0,
+      "hits": 55,
+      "majority_hits": 55,
+      "total": 65
+    },
+    {
+      "context": "rank_top10",
+      "cutoff": 50,
+      "delta_vs_majority_hits": 0,
+      "hits": 32,
+      "majority_hits": 32,
+      "total": 36
+    },
+    {
+      "context": "rank_top10",
+      "cutoff": 60,
+      "delta_vs_majority_hits": 0,
+      "hits": 10,
+      "majority_hits": 10,
+      "total": 10
+    },
+    {
+      "context": "rank_decile",
+      "cutoff": 20,
+      "delta_vs_majority_hits": -10,
+      "hits": 103,
+      "majority_hits": 113,
+      "total": 132
+    },
+    {
+      "context": "rank_decile",
+      "cutoff": 30,
+      "delta_vs_majority_hits": -3,
+      "hits": 82,
+      "majority_hits": 85,
+      "total": 100
+    },
+    {
+      "context": "rank_decile",
+      "cutoff": 40,
+      "delta_vs_majority_hits": -3,
+      "hits": 52,
+      "majority_hits": 55,
+      "total": 65
+    },
+    {
+      "context": "rank_decile",
+      "cutoff": 50,
+      "delta_vs_majority_hits": 0,
+      "hits": 32,
+      "majority_hits": 32,
+      "total": 36
+    },
+    {
+      "context": "rank_decile",
+      "cutoff": 60,
+      "delta_vs_majority_hits": 0,
+      "hits": 10,
+      "majority_hits": 10,
+      "total": 10
+    },
+    {
+      "context": "right_surprisal_bin",
+      "cutoff": 20,
+      "delta_vs_majority_hits": 0,
+      "hits": 113,
+      "majority_hits": 113,
+      "total": 132
+    },
+    {
+      "context": "right_surprisal_bin",
+      "cutoff": 30,
+      "delta_vs_majority_hits": 0,
+      "hits": 85,
+      "majority_hits": 85,
+      "total": 100
+    },
+    {
+      "context": "right_surprisal_bin",
+      "cutoff": 40,
+      "delta_vs_majority_hits": 0,
+      "hits": 55,
+      "majority_hits": 55,
+      "total": 65
+    },
+    {
+      "context": "right_surprisal_bin",
+      "cutoff": 50,
+      "delta_vs_majority_hits": 0,
+      "hits": 32,
+      "majority_hits": 32,
+      "total": 36
+    },
+    {
+      "context": "right_surprisal_bin",
+      "cutoff": 60,
+      "delta_vs_majority_hits": 0,
+      "hits": 10,
+      "majority_hits": 10,
+      "total": 10
+    },
+    {
+      "context": "delta_sign",
+      "cutoff": 20,
+      "delta_vs_majority_hits": 0,
+      "hits": 113,
+      "majority_hits": 113,
+      "total": 132
+    },
+    {
+      "context": "delta_sign",
+      "cutoff": 30,
+      "delta_vs_majority_hits": 0,
+      "hits": 85,
+      "majority_hits": 85,
+      "total": 100
+    },
+    {
+      "context": "delta_sign",
+      "cutoff": 40,
+      "delta_vs_majority_hits": 0,
+      "hits": 55,
+      "majority_hits": 55,
+      "total": 65
+    },
+    {
+      "context": "delta_sign",
+      "cutoff": 50,
+      "delta_vs_majority_hits": 0,
+      "hits": 32,
+      "majority_hits": 32,
+      "total": 36
+    },
+    {
+      "context": "delta_sign",
+      "cutoff": 60,
+      "delta_vs_majority_hits": 0,
+      "hits": 10,
+      "majority_hits": 10,
+      "total": 10
+    }
+  ],
+  "schema": "target_digit_boundary_type_gate_v1",
+  "scope": "analysis_only_boundary_surprisal_next_type",
+  "summary": {
+    "best_predicate": {
+      "delta_vs_majority_hits": -30,
+      "hits": 131,
+      "literal_when_true": true,
+      "predicate": "delta_negative",
+      "total": 201
+    },
+    "best_prequential_delta_vs_majority_hits": 0,
+    "boundary_count": 201,
+    "interpretation": "Prev2 boundary surprisal helps locate cutpoints, but does not predict whether the next operation is copy or literal. The copy-majority baseline remains unbeaten.",
+    "majority_hits": 161,
+    "majority_type": "copy",
+    "next_type_counts": {
+      "copy": 161,
+      "literal": 40
+    },
+    "prequential_cells": 20,
+    "prequential_cells_with_positive_delta": 0,
+    "promotes_boundary_type_rule": false
+  },
+  "translation_delta": "NONE"
+}
