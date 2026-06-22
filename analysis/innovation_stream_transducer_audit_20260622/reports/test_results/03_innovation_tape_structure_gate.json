@@ -1,0 +1,145 @@
+{
+  "case_reopened": false,
+  "classification": "innovation_tape_structure_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_tape_structure": true,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "innovation_tape_replay_gate": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.json"
+  },
+  "markov_rows": [
+    {
+      "beats_control_p05": false,
+      "bits": 904.6636050960667,
+      "bits_per_digit": 3.4009909966017546,
+      "control_mean": 904.6636050960672,
+      "control_p05": 904.6636050960665,
+      "order": 0
+    },
+    {
+      "beats_control_p05": true,
+      "bits": 896.2744895930324,
+      "bits_per_digit": 3.369452968394859,
+      "control_mean": 951.1010283881775,
+      "control_p05": 936.4883168983589,
+      "order": 1
+    },
+    {
+      "beats_control_p05": true,
+      "bits": 879.6087867723335,
+      "bits_per_digit": 3.3067999502719303,
+      "control_mean": 912.0440959835481,
+      "control_p05": 898.869343410616,
+      "order": 2
+    }
+  ],
+  "plaintext_claim": false,
+  "prior_tape_cover_rows": [
+    {
+      "beats_control_p95": false,
+      "control_mean": 198.486,
+      "control_p95": 206.0,
+      "copy_items": 85,
+      "coverage_fraction": 0.7706766917293233,
+      "covered_digits": 205,
+      "literal_digits": 61,
+      "min_len": 2
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 69.892,
+      "control_p95": 86.0,
+      "copy_items": 30,
+      "coverage_fraction": 0.38721804511278196,
+      "covered_digits": 103,
+      "literal_digits": 163,
+      "min_len": 3
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 11.961,
+      "control_p95": 24.0,
+      "copy_items": 12,
+      "coverage_fraction": 0.19548872180451127,
+      "covered_digits": 52,
+      "literal_digits": 214,
+      "min_len": 4
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 1.519,
+      "control_p95": 6.0,
+      "copy_items": 3,
+      "coverage_fraction": 0.06015037593984962,
+      "covered_digits": 16,
+      "literal_digits": 250,
+      "min_len": 5
+    }
+  ],
+  "schema": "innovation_tape_structure_gate_v1",
+  "scope": "analysis_only_innovation_tape_structure_controls",
+  "seed_cover_rows": [
+    {
+      "beats_control_p95": true,
+      "control_mean": 262.614,
+      "control_p95": 265.0,
+      "copy_items": 86,
+      "coverage_fraction": 1.0,
+      "covered_digits": 266,
+      "literal_digits": 0,
+      "min_len": 2
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 170.355,
+      "control_p95": 187.0,
+      "copy_items": 63,
+      "coverage_fraction": 0.868421052631579,
+      "covered_digits": 231,
+      "literal_digits": 35,
+      "min_len": 3
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 51.074,
+      "control_p95": 71.0,
+      "copy_items": 34,
+      "coverage_fraction": 0.575187969924812,
+      "covered_digits": 153,
+      "literal_digits": 113,
+      "min_len": 4
+    },
+    {
+      "beats_control_p95": true,
+      "control_mean": 9.194,
+      "control_p95": 20.0,
+      "copy_items": 16,
+      "coverage_fraction": 0.32706766917293234,
+      "covered_digits": 87,
+      "literal_digits": 179,
+      "min_len": 5
+    }
+  ],
+  "summary": {
+    "best_markov_bits": 879.6087867723335,
+    "best_markov_bpd": 3.3067999502719303,
+    "best_markov_control_p05": 898.869343410616,
+    "best_markov_order": 2,
+    "best_prior_control_p95": 206.0,
+    "best_prior_covered_digits": 205,
+    "best_prior_min_len": 2,
+    "best_seed_control_p95": 265.0,
+    "best_seed_covered_digits": 266,
+    "best_seed_min_len": 2,
+    "interpretation": "This gate asks whether the innovation tape itself has a mechanical source: seed-derived coverage, self-recurrence, or prequential digit structure beyond shuffled controls.",
+    "literal_tape_digits": 266,
+    "promotes_tape_structure": true,
+    "seed_text_digits": 1696
+  },
+  "translation_delta": "NONE"
+}

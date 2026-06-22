@@ -625,6 +625,17 @@ current beam, the true book is never top-1 or present in the finished beam
 prefix fraction is only `0.007754`. This rejects the current model as a
 closed-loop digit generator: the teacher-forced parser clue does not yet become
 a self-generating process.
+An innovation stream transducer audit then reframes the problem more
+constructively: instead of demanding free digit generation, treat the `266`
+literal-payload digits as one external innovation tape. The first replay gate
+does not promote a generator: the best target-conditioned policy gets `22/60`
+exact books but does not beat shuffled-tape p95 (`23`), and blind replay gets
+`0/60`. The second gate does open a live clue, however. The tape itself has
+structure beyond same-multiset shuffles: seed coverage at minlen `3/4/5`
+covers `231`, `153`, and `87` digits versus shuffled p95 `187`, `71`, and
+`20`, and prequential Markov order `2` costs `879.609` bits versus shuffled
+p05 `898.869`. This promotes tape structure, not a complete transducer; the
+remaining blocker is the state/rule that decides when to consume the tape.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2793,6 +2804,9 @@ book generation, not row0 pair-cell placement.
 - [Final latent transducer generation audit](../../analysis/latent_transducer_generation_audit_20260622/reports/final_latent_transducer_generation_audit.md)
 - [Latent transducer beam gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/01_latent_transducer_beam_gate.md)
 - [Closed loop digit survival gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/03_closed_loop_digit_survival_gate.md)
+- [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
+- [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
+- [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
