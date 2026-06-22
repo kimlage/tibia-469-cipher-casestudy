@@ -1,0 +1,726 @@
+{
+  "case_reopened": false,
+  "classification": "PARTIAL_TOPOLOGY_CONTROL_SIGNAL_NOT_PROMOTED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "fine_topology_available": false,
+    "generator_promoted": false,
+    "promoted_targets": [],
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE",
+    "weak_targets": []
+  },
+  "inputs": {
+    "public_topology_manifest": "analysis/physical_topology_20260620/tables/hellgate_public_bookcase_manifest.csv",
+    "public_topology_manifest_audit": "analysis/physical_topology_20260620/reports/test_results/01_public_topology_manifest_audit.json",
+    "topology_mechanical_signal_audit": "analysis/physical_topology_20260620/reports/test_results/02_topology_mechanical_signal_audit.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "physical_topology_control_signal_gate.v1",
+  "scope": "analysis_only_partial_public_topology_vs_residual_control_streams",
+  "summary": {
+    "covered_books": 54,
+    "covered_operations": 237,
+    "random_trials": 150,
+    "resolved_unique_topology_books": 64,
+    "target_summaries": {
+      "coarse_control": {
+        "beats_permutation_p95": false,
+        "permutation_p95": -49.292267243384,
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 1814.7201001773167,
+        "total_saving_bits": -107.14855488950934,
+        "total_target_rows": 584,
+        "total_topology_bits": 1921.868655066826
+      },
+      "copy_hint_rank_bucket": {
+        "beats_permutation_p95": false,
+        "permutation_p95": -27.863520620000145,
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 1603.1814136738517,
+        "total_saving_bits": -102.87256541961756,
+        "total_target_rows": 493,
+        "total_topology_bits": 1706.0539790934693
+      },
+      "op_type": {
+        "beats_permutation_p95": false,
+        "permutation_p95": -41.98755469023712,
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 395.7624109318724,
+        "total_saving_bits": -46.438561897747206,
+        "total_target_rows": 584,
+        "total_topology_bits": 442.2009728296196
+      }
+    }
+  },
+  "target_results": {
+    "coarse_control": {
+      "alphabet_size": 9,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -86.81248710607349,
+        "permutation_p05": -128.16631902554968,
+        "permutation_p50": -84.60356950634923,
+        "permutation_p95": -49.292267243384,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 549.4807793728055,
+          "label": "prefix_20",
+          "saving_bits": -27.258163701474018,
+          "split_type": "prefix",
+          "target_rows": 169,
+          "topology_bits": 576.7389430742795,
+          "train_books": 8
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 395.0049284672276,
+          "label": "prefix_30",
+          "saving_bits": -37.654831733820686,
+          "split_type": "prefix",
+          "target_rows": 127,
+          "topology_bits": 432.6597602010483,
+          "train_books": 18
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 256.24278433368306,
+          "label": "prefix_40",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "topology_bits": 258.56471242857043,
+          "train_books": 28
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 140.2799144758289,
+          "label": "prefix_50",
+          "saving_bits": -2.762781841129538,
+          "split_type": "prefix",
+          "target_rows": 44,
+          "topology_bits": 143.04269631695843,
+          "train_books": 37
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 59.565405240790696,
+          "label": "prefix_60",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 19,
+          "topology_bits": 61.88733333567806,
+          "train_books": 45
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 64.68537231918215,
+          "label": "leave_bookcase_01",
+          "saving_bits": -2.321928094887369,
+          "split_type": "leave_bookcase",
+          "target_rows": 22,
+          "topology_bits": 67.00730041406952,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 60.52299688007707,
+          "label": "leave_bookcase_02",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 23,
+          "topology_bits": 62.844924974964435,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 27.805688397117176,
+          "label": "leave_bookcase_03",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "topology_bits": 30.127616492004538,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 24.791436159517353,
+          "label": "leave_bookcase_04",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "topology_bits": 27.113364254404715,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 21.682815222571477,
+          "label": "leave_bookcase_06",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 8,
+          "topology_bits": 24.00474331745884,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 43.085397683435815,
+          "label": "leave_bookcase_07",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "topology_bits": 45.40732577832318,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 8.297988687145423,
+          "label": "leave_bookcase_08",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "topology_bits": 10.619916782032785,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 41.68201637431147,
+          "label": "leave_bookcase_13",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "topology_bits": 44.003944469198835,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 14.742808744824064,
+          "label": "leave_bookcase_20",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 17.064736839711426,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 16.533598289008566,
+          "label": "leave_bookcase_21",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 18.855526383895928,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 25.908600140572776,
+          "label": "leave_bookcase_23",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "topology_bits": 28.230528235460138,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 13.06920771085576,
+          "label": "leave_bookcase_27",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 15.391135805743122,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 12.11519742916181,
+          "label": "leave_bookcase_30",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 14.437125524049172,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 14.316642801554703,
+          "label": "leave_bookcase_33",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 16.638570896442065,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 24.906521447645197,
+          "label": "leave_bookcase_40",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 6,
+          "topology_bits": 27.22844954253256,
+          "train_books": 50
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 1814.7201001773167,
+        "total_saving_bits": -107.14855488950934,
+        "total_target_rows": 584,
+        "total_topology_bits": 1921.868655066826
+      }
+    },
+    "copy_hint_rank_bucket": {
+      "alphabet_size": 12,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -67.88325526102233,
+        "permutation_p05": -107.37921084613072,
+        "permutation_p50": -67.5344576111329,
+        "permutation_p95": -27.863520620000145,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 472.2934395291232,
+          "label": "prefix_20",
+          "saving_bits": -19.329982280671345,
+          "split_type": "prefix",
+          "target_rows": 144,
+          "topology_bits": 491.62342180979454,
+          "train_books": 8
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 365.5981424376105,
+          "label": "prefix_30",
+          "saving_bits": -12.875218385262485,
+          "split_type": "prefix",
+          "target_rows": 108,
+          "topology_bits": 378.47336082287296,
+          "train_books": 18
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 225.5306829126456,
+          "label": "prefix_40",
+          "saving_bits": -8.920682163523963,
+          "split_type": "prefix",
+          "target_rows": 69,
+          "topology_bits": 234.45136507616957,
+          "train_books": 28
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 133.25476471544897,
+          "label": "prefix_50",
+          "saving_bits": -8.421251718748238,
+          "split_type": "prefix",
+          "target_rows": 39,
+          "topology_bits": 141.6760164341972,
+          "train_books": 37
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 60.163457689270295,
+          "label": "prefix_60",
+          "saving_bits": -2.2511759455405524,
+          "split_type": "prefix",
+          "target_rows": 17,
+          "topology_bits": 62.41463363481085,
+          "train_books": 45
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 48.34178893232184,
+          "label": "leave_bookcase_01",
+          "saving_bits": -2.5527142251152313,
+          "split_type": "leave_bookcase",
+          "target_rows": 14,
+          "topology_bits": 50.89450315743707,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 46.37170908273537,
+          "label": "leave_bookcase_02",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "topology_bits": 48.69363717762273,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 29.396525578328536,
+          "label": "leave_bookcase_03",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "topology_bits": 31.718453673215897,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 16.484938340178665,
+          "label": "leave_bookcase_04",
+          "saving_bits": -3.0644584320752273,
+          "split_type": "leave_bookcase",
+          "target_rows": 7,
+          "topology_bits": 19.549396772253893,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 15.524260796162109,
+          "label": "leave_bookcase_06",
+          "saving_bits": -2.5600060906673487,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 18.084266886829457,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 47.227835970782344,
+          "label": "leave_bookcase_07",
+          "saving_bits": -9.658376754324102,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "topology_bits": 56.886212725106446,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 10.188598428951002,
+          "label": "leave_bookcase_08",
+          "saving_bits": -2.3485737395118065,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "topology_bits": 12.537172168462808,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 36.646386963826195,
+          "label": "leave_bookcase_13",
+          "saving_bits": -1.4022542122031254,
+          "split_type": "leave_bookcase",
+          "target_rows": 12,
+          "topology_bits": 38.04864117602932,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 15.082031732722994,
+          "label": "leave_bookcase_20",
+          "saving_bits": -0.9157644670274632,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 15.997796199750457,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 12.97128481401849,
+          "label": "leave_bookcase_21",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 15.293212908905852,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 24.824287357333905,
+          "label": "leave_bookcase_23",
+          "saving_bits": -5.035964691267804,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "topology_bits": 29.86025204860171,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 8.511453517974712,
+          "label": "leave_bookcase_27",
+          "saving_bits": -3.5923726803916445,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 12.103826198366356,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 9.713575805576834,
+          "label": "leave_bookcase_30",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 3,
+          "topology_bits": 12.035503900464196,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 10.672426660935102,
+          "label": "leave_bookcase_33",
+          "saving_bits": -2.5411876402448215,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 13.213614301179923,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_entry_bucket",
+          "global_bits": 14.383822407905072,
+          "label": "leave_bookcase_40",
+          "saving_bits": -8.114869613492946,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 22.498692021398018,
+          "train_books": 50
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 1603.1814136738517,
+        "total_saving_bits": -102.87256541961756,
+        "total_target_rows": 493,
+        "total_topology_bits": 1706.0539790934693
+      }
+    },
+    "op_type": {
+      "alphabet_size": 2,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -52.735967937462526,
+        "permutation_p05": -64.26077975585076,
+        "permutation_p50": -52.815837579796494,
+        "permutation_p95": -41.98755469023712,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 122.40543698771184,
+          "label": "prefix_20",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 169,
+          "topology_bits": 124.7273650825992,
+          "train_books": 8
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 83.50310561878531,
+          "label": "prefix_30",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 127,
+          "topology_bits": 85.82503371367268,
+          "train_books": 18
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 53.18010125978924,
+          "label": "prefix_40",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "topology_bits": 55.5020293546766,
+          "train_books": 28
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 24.865425020100037,
+          "label": "prefix_50",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 44,
+          "topology_bits": 27.1873531149874,
+          "train_books": 37
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 10.24590335819447,
+          "label": "prefix_60",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 19,
+          "topology_bits": 12.567831453081832,
+          "train_books": 45
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 23.68793783638296,
+          "label": "leave_bookcase_01",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 22,
+          "topology_bits": 26.009865931270323,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 21.67615390101079,
+          "label": "leave_bookcase_02",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 23,
+          "topology_bits": 23.99808199589815,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 3.370349872775708,
+          "label": "leave_bookcase_03",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "topology_bits": 5.69227796766307,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 6.899791042572613,
+          "label": "leave_bookcase_04",
+          "saving_bits": -2.3219280948873626,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "topology_bits": 9.221719137459976,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 8.660343231551792,
+          "label": "leave_bookcase_06",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 8,
+          "topology_bits": 10.982271326439154,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase_x_length_bucket",
+          "global_bits": 7.341586745925254,
+          "label": "leave_bookcase_07",
+          "saving_bits": -2.3219280948873626,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "topology_bits": 9.663514840812617,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 0.648444672186354,
+          "label": "leave_bookcase_08",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "topology_bits": 2.9703727670737163,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 10.828935037556182,
+          "label": "leave_bookcase_13",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "topology_bits": 13.150863132443543,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 3.6096446311424195,
+          "label": "leave_bookcase_20",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 5.931572726029781,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 1.6445538401673847,
+          "label": "leave_bookcase_21",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 3.966481935054747,
+          "train_books": 51
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 3.0184024509107394,
+          "label": "leave_bookcase_23",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "topology_bits": 5.340330545798102,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 1.3093315973126667,
+          "label": "leave_bookcase_27",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 3.631259692200029,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 3.290059711075857,
+          "label": "leave_bookcase_30",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "topology_bits": 5.611987805963219,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 1.6445538401673847,
+          "label": "leave_bookcase_33",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "topology_bits": 3.966481935054747,
+          "train_books": 52
+        },
+        {
+          "feature": "topology_bookcase",
+          "global_bits": 3.9323502765533855,
+          "label": "leave_bookcase_40",
+          "saving_bits": -2.321928094887362,
+          "split_type": "leave_bookcase",
+          "target_rows": 6,
+          "topology_bits": 6.254278371440748,
+          "train_books": 50
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_global_bits": 395.7624109318724,
+        "total_saving_bits": -46.438561897747206,
+        "total_target_rows": 584,
+        "total_topology_bits": 442.2009728296196
+      }
+    }
+  },
+  "translation_delta": "NONE"
+}

@@ -8,6 +8,7 @@ updated_at: 2026-06-20
 moc_parent: README.md
 source_refs:
   - analysis/physical_topology_20260620
+  - analysis/physical_topology_control_signal_audit_20260622
 ---
 
 # 17. Physical Library Topology
@@ -75,6 +76,15 @@ bits (`+169.8`), and candidate-filled ambiguous orders cost more. This further
 supports the blocker: the public overview/bookcase seed is not an accepted
 authorial read order.
 
+The follow-up control-signal audit tests the remaining topology-progress
+condition directly: whether partial public bookcase/order metadata predicts
+residual executable-decoder streams. It does not. Over resolved unique topology
+coverage (`54` derived books, `237` operations), topology features are worse
+than global coding for coarse control (`-107.149` bits), copy-hint rank bucket
+(`-102.873` bits), and op type (`-46.439` bits), with `0/20` positive splits
+for each target and no permutation-p95 wins. Public topology therefore remains
+a bounded manifest/context clue, not a generation-control program.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
@@ -82,6 +92,7 @@ authorial read order.
 - [Public topology manifest audit](../../analysis/physical_topology_20260620/reports/test_results/01_public_topology_manifest_audit.md)
 - [Topology mechanical signal audit](../../analysis/physical_topology_20260620/reports/test_results/02_topology_mechanical_signal_audit.md)
 - [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
+- [Physical topology control signal audit](../../analysis/physical_topology_control_signal_audit_20260622/reports/final_physical_topology_control_signal_audit.md)
 
 ## What Counts As Future Progress
 

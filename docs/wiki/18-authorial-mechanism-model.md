@@ -35,6 +35,7 @@ source_refs:
   - analysis/sequence_mutation_program_audit_20260622
   - analysis/generative_route_frontier_synthesis_audit_20260622
   - analysis/digit_content_boundary_transducer_audit_20260622
+  - analysis/physical_topology_control_signal_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1554,6 +1555,15 @@ orders that fill ambiguous public rows cost still more. Because the manifest
 has only `64` resolved unique books, `6` ambiguous rows, one duplicate resolved
 row, and no fine tile/slot/orientation/read-order layer, no physical or
 authorial order is promoted.
+
+A later physical topology control-signal audit tests a narrower generator
+variant: use partial public bookcase/order metadata to predict residual control
+streams in the executable decoder. It also fails. On resolved unique topology
+coverage, topology-conditioned coding is worse than global coding for coarse
+control (`-107.149` bits), copy-hint rank bucket (`-102.873` bits), and op type
+(`-46.439` bits), with `0/20` positive splits for each stream and no
+permutation-p95 wins. This closes public macro-topology as a current control
+program unless finer authoritative tile/slot topology appears.
 
 Literal-seed addressing is also only an optimistic clue. If copy sources are
 allowed to address prior literal runs without paying a source-mode cost, the
