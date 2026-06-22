@@ -897,6 +897,15 @@ composition bits and captures `71/343` starts, but beats random top-K p05 in
 stronger (`1665.114` bits, `171/343` starts, `4/5` cells), but it looks at the
 next digit and is not promotable as an executable generator. This closes the
 surprisal shortcut: useful alignment clue, not a decoder-visible start program.
+A lagged-surprisal boundary contract gate then tests the charitable
+reinterpretation: let the generator emit the first digit of a new segment, then
+mark the boundary one digit late. That makes right-surprisal less oracle-like,
+but it has to pay for copied first digits that are externalized before the copy
+can begin. The lagged contract costs `2153.437` bits versus `2063.661` exact
+composition bits (`+89.777`), because `147` recovered copy starts add
+`488.323` bits of lag tax, and it beats random top-K p05 in `0/5` cells. The
+right-surprisal signal is therefore not rescued as an executable boundary
+program.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
