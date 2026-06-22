@@ -1,0 +1,211 @@
+{
+  "case_reopened": false,
+  "classification": "target_chunk_dictionary_rejected",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "copy_source_status": "still_downstream_if_target_stream_exists",
+    "row0_origin_status": "unchanged_exogenous",
+    "target_stream_status": "chunk_dictionary_rejected",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "dictionary_costs": {
+    "all_chunks": {
+      "assignment_bits": 2088.0,
+      "dictionary_digits": 9421,
+      "repeated_chunk_count": 5,
+      "repeated_digits": 292,
+      "repeated_only_assignment_bits": 23.21928094887362,
+      "repeated_only_dictionary_digits": 146,
+      "repeated_only_total_bits": 31319.103862882715,
+      "repeated_row_count": 10,
+      "row_count": 261,
+      "singleton_row_count": 251,
+      "total_bits": 33383.88458193384,
+      "unique_chunk_count": 256,
+      "unique_fraction": 0.9808429118773946
+    },
+    "copy_chunks": {
+      "assignment_bits": 1600.2452871598596,
+      "dictionary_digits": 9160,
+      "repeated_chunk_count": 1,
+      "repeated_digits": 282,
+      "repeated_only_assignment_bits": 0.0,
+      "repeated_only_dictionary_digits": 141,
+      "repeated_only_total_bits": 30428.861349168237,
+      "repeated_row_count": 2,
+      "row_count": 208,
+      "singleton_row_count": 206,
+      "total_bits": 32029.106636328095,
+      "unique_chunk_count": 207,
+      "unique_fraction": 0.9951923076923077
+    },
+    "literal_chunks": {
+      "assignment_bits": 297.579621738106,
+      "dictionary_digits": 261,
+      "repeated_chunk_count": 4,
+      "repeated_digits": 10,
+      "repeated_only_assignment_bits": 16.0,
+      "repeated_only_dictionary_digits": 5,
+      "repeated_only_total_bits": 883.0232327656015,
+      "repeated_row_count": 8,
+      "row_count": 53,
+      "singleton_row_count": 45,
+      "total_bits": 1164.6028545037075,
+      "unique_chunk_count": 49,
+      "unique_fraction": 0.9245283018867925
+    }
+  },
+  "inputs": {
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "literal_payload_ledger": "analysis/literal_payload_generation_audit_20260621/reports/test_results/01_literal_payload_ledger.json",
+    "target_conditioned_source_collapse": "analysis/target_conditioned_source_collapse_audit_20260621/reports/test_results/01_target_conditioned_source_collapse_gate.json"
+  },
+  "plaintext_claim": false,
+  "repeated_examples": [
+    {
+      "chunk": "819537243485625108114636467243554600361451912112888304646797278316013451586042158577445451904504215956151353478019288952160199364672431427894",
+      "count": 2,
+      "length": 141,
+      "locations": [
+        {
+          "book": 43,
+          "kind": "copy",
+          "op_index": 0,
+          "target_start": 0
+        },
+        {
+          "book": 59,
+          "kind": "copy",
+          "op_index": 0,
+          "target_start": 0
+        }
+      ]
+    },
+    {
+      "chunk": "19",
+      "count": 2,
+      "length": 2,
+      "locations": [
+        {
+          "book": 39,
+          "kind": "literal",
+          "op_index": 1,
+          "target_start": 5
+        },
+        {
+          "book": 42,
+          "kind": "literal",
+          "op_index": 3,
+          "target_start": 89
+        }
+      ]
+    },
+    {
+      "chunk": "6",
+      "count": 2,
+      "length": 1,
+      "locations": [
+        {
+          "book": 13,
+          "kind": "literal",
+          "op_index": 3,
+          "target_start": 47
+        },
+        {
+          "book": 16,
+          "kind": "literal",
+          "op_index": 9,
+          "target_start": 164
+        }
+      ]
+    },
+    {
+      "chunk": "7",
+      "count": 2,
+      "length": 1,
+      "locations": [
+        {
+          "book": 15,
+          "kind": "literal",
+          "op_index": 0,
+          "target_start": 0
+        },
+        {
+          "book": 16,
+          "kind": "literal",
+          "op_index": 7,
+          "target_start": 150
+        }
+      ]
+    },
+    {
+      "chunk": "9",
+      "count": 2,
+      "length": 1,
+      "locations": [
+        {
+          "book": 16,
+          "kind": "literal",
+          "op_index": 11,
+          "target_start": 173
+        },
+        {
+          "book": 60,
+          "kind": "literal",
+          "op_index": 0,
+          "target_start": 0
+        }
+      ]
+    }
+  ],
+  "schema": "target_chunk_dictionary_gate.v1",
+  "scope": {
+    "analysis_only": true,
+    "compression_bound_changed": false,
+    "does_not_search_plaintext": true,
+    "new_formula_emitted": false,
+    "row0_origin_changed": false,
+    "target_stream_dictionary_test": true
+  },
+  "summary": {
+    "all_chunk_dictionary_bits": 33383.88458193384,
+    "all_chunk_dictionary_delta_vs_baseline": 32442.16670505327,
+    "all_chunk_repeated_only_bits": 31319.103862882715,
+    "all_chunk_repeated_only_delta_vs_raw_stream": -461.782220904679,
+    "all_repeated_chunks": 5,
+    "all_repeated_digits": 292,
+    "all_repeated_rows": 10,
+    "all_unique_chunks": 256,
+    "all_unique_fraction": 0.9808429118773946,
+    "copy_chunk_count": 208,
+    "copy_digit_count": 9301,
+    "copy_length_stats": {
+      "max": 276,
+      "mean": 44.71634615384615,
+      "min": 5
+    },
+    "copy_repeated_chunks": 1,
+    "copy_repeated_digits": 282,
+    "copy_repeated_rows": 2,
+    "copy_unique_chunks": 207,
+    "copy_unique_fraction": 0.9951923076923077,
+    "interpretation": "The target-conditioned source-collapse clue makes a target-stream account attractive, but exact target chunks do not form a compact dictionary. A dictionary would mostly repackage copied payload content rather than generate it.",
+    "literal_chunk_count": 53,
+    "literal_digit_count": 266,
+    "literal_length_stats": {
+      "max": 39,
+      "mean": 5.018867924528302,
+      "min": 1
+    },
+    "literal_repeated_chunks": 4,
+    "literal_repeated_digits": 10,
+    "literal_repeated_rows": 8,
+    "literal_unique_chunks": 49,
+    "literal_unique_fraction": 0.9245283018867925,
+    "operation_chunk_count": 261,
+    "promotes_target_chunk_dictionary": false,
+    "target_conditioned_baseline_bits": 941.7178768805672,
+    "target_stream_raw_bits": 31780.886083787394
+  },
+  "translation_delta": "NONE"
+}

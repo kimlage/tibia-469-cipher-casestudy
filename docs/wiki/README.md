@@ -885,6 +885,11 @@ mostly collapses to earliest matching source (`200/208`) plus `8` exceptions;
 that earliest+exception account costs `58.085` bits, `-174.817` versus oracle
 rank bits, and is far outside random rank controls. It is a mechanical clue,
 not a decoder generator, because it grants the future target chunk.
+A target-chunk dictionary audit then rejects the simplest way to supply that
+target stream. Exact operation chunks are nearly unique (`256/261` overall;
+copy chunks `207/208` unique), so an all-chunk dictionary is `+32442.167` bits
+worse than the target-conditioned baseline. The remaining path therefore needs
+richer latent/state generation, not a literal dictionary of copied chunks.
 A skeleton rule coverage audit then rejects replacing the atlas with simple
 rules: best op-type coverage is `208/261`, best length coverage is `116/261`,
 and even target-dependent copy availability reaches only `208/261`.

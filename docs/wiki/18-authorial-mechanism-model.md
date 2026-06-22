@@ -471,6 +471,12 @@ remaining `8` exceptions cost only `58.085` bits, `-174.817` versus oracle
 rank bits, with random rank controls never reaching the observed earliest-hit
 count. This promotes a target-conditioned mechanical clue, but not a decoder
 generator: the missing condition is still generation of the target chunk.
+A target-chunk dictionary audit then tests the most direct target-stream
+account: exact operation chunks as a reusable library. It fails sharply.
+Overall `256/261` chunks are unique and copy chunks are `207/208` unique; an
+all-chunk dictionary is `+32442.167` bits worse than the target-conditioned
+baseline. The target stream therefore needs a richer latent/state mechanism,
+not a literal dictionary of copied chunks.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2603,6 +2609,8 @@ book generation, not row0 pair-cell placement.
 - [Copy source context gate](../../analysis/copy_source_generation_audit_20260621/reports/test_results/03_copy_source_context_gate.md)
 - [Final target-conditioned source collapse audit](../../analysis/target_conditioned_source_collapse_audit_20260621/reports/final_target_conditioned_source_collapse_audit.md)
 - [Target-conditioned source collapse gate](../../analysis/target_conditioned_source_collapse_audit_20260621/reports/test_results/01_target_conditioned_source_collapse_gate.md)
+- [Final target chunk dictionary audit](../../analysis/target_chunk_dictionary_audit_20260621/reports/final_target_chunk_dictionary_audit.md)
+- [Target chunk dictionary gate](../../analysis/target_chunk_dictionary_audit_20260621/reports/test_results/01_target_chunk_dictionary_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
