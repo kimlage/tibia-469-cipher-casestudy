@@ -3890,6 +3890,16 @@ unique seed-book match, `0` derived-book matches, `0` joined v9 rows, and `0`
 usable splits, so this is an executable future test contract, not a promoted
 authoring surface or v9 reduction.
 
+The Tales/LIBSearch book database then tests the strongest public corpus
+surface found so far. It matches all `70` canonical 469 books and joins all
+`261` v9 operation rows, with version/location/map-link metadata. That coverage
+does not translate into a generator: the source lacks a root LICENSE file,
+container identity, and slot/read order; the map links collapse to `2` unique
+coordinates; and heldout diagnostics are negative for coarse control
+(`-84.396` bits), op type (`-25.249`), and copy-hint rank bucket (`-12.925`).
+It is therefore recorded as `WEAK_PROVENANCE_CLUE_CORPUS_LOCATION_SURFACE`,
+not as an external control source or v9 reduction.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work

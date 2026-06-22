@@ -50,6 +50,8 @@ No external source is acquired or integrated into v9. Net v9 reduction: `0.0` bi
 - https://tibiamaps.io/guides/map-file-format
 - https://tibiamaps.io/guides/minimap-file-format
 - https://tibia.fandom.com/wiki/Hellgate_Library
+- https://github.com/s2ward/tibia
+- https://talesoftibia.com/services/
 
 ## Reproducible Artifacts
 
@@ -109,3 +111,13 @@ The current template input has `1` unique match and does not meet coverage thres
 - [06_clean_topology_v9_control_protocol.py](../scripts/06_clean_topology_v9_control_protocol.py)
 - [06_clean_topology_v9_control_protocol.json](test_results/06_clean_topology_v9_control_protocol.json)
 - [06_clean_topology_v9_control_protocol.md](test_results/06_clean_topology_v9_control_protocol.md)
+
+## Tales/LIBSearch Book Database Probe
+
+The Tales/LIBSearch `s2ward/tibia` book database is a stronger public corpus surface than a plain text mirror: it matches the canonical 469 books and carries version, location, and TibiaMaps links.
+In the current probe it matches `70` canonical 469 books, but the matched records collapse to `2` unique map coordinate(s), expose no container identity, expose no slot/read order, and the repository root has no observed LICENSE file.
+Heldout v9 feature diagnostics are therefore audit-only; the source is not integrated and v9 reduction remains `0.0` bits.
+
+- [07_tales_libsearch_book_database_probe.py](../scripts/07_tales_libsearch_book_database_probe.py)
+- [07_tales_libsearch_book_database_probe.json](test_results/07_tales_libsearch_book_database_probe.json)
+- [07_tales_libsearch_book_database_probe.md](test_results/07_tales_libsearch_book_database_probe.md)

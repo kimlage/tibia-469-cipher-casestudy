@@ -137,6 +137,16 @@ controls for v9 targets (`coarse_control`, `op_type`, and
 only `1` unique seed-book match, `0` derived-book matches, `0` joined v9 rows,
 and `0` usable splits, so the protocol is recorded but not run or promoted.
 
+The Tales/LIBSearch `s2ward/tibia` book database is a stronger public corpus
+surface than a plain mirror: it gives exact text, version, location, and
+TibiaMaps links for all `70` canonical 469 books, covering all `261` v9
+operation rows. It still does not become a topology control source. The matched
+records collapse to only `2` unique map coordinates, expose no container
+identity or slot/read order, and the repository root has no observed LICENSE
+file. Heldout diagnostics are negative for coarse control (`-84.396` bits),
+op type (`-25.249`), and copy-hint rank bucket (`-12.925`), so this is a
+`WEAK_PROVENANCE_CLUE`, not a v9 reduction.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
@@ -148,6 +158,7 @@ and `0` usable splits, so the protocol is recorded but not run or promoted.
 - [External authoring surface acquisition audit](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/final_external_authoring_surface_acquisition_audit.md)
 - [Clean topology contract template](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv)
 - [Clean topology v9 control protocol](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/06_clean_topology_v9_control_protocol.md)
+- [Tales/LIBSearch book database probe](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/07_tales_libsearch_book_database_probe.md)
 
 ## What Counts As Future Progress
 
