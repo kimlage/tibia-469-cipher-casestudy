@@ -38,6 +38,7 @@ source_refs:
   - analysis/physical_topology_control_signal_audit_20260622
   - analysis/book_residual_mode_coupling_audit_20260622
   - analysis/latent_book_mode_program_audit_20260622
+  - analysis/residual_mode_header_codec_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -927,6 +928,14 @@ bits (`-53.707` saving), has only `2/20` positive splits, and does not beat
 shuffled-mode p95. The coupling remains useful evidence that residual burdens
 are synchronized, but the mode is still a paid compact label under current
 features, not a generated book controller.
+A residual-mode header codec gate then tests whether the mode is at least
+useful as a paid external header for exact decoder tapes. It is not. The header
+codec saves only `110.682` bits on coarse control, loses `7.887` bits on
+literal payload, and pays `891.772` mode-header bits, ending at `10950.680`
+bits versus `10161.703` baseline (`-788.977`) with `0/20` positive splits. The
+real modes are less bad than shuffled modes, but they still do not reduce the
+executable ledger after header cost. The residual mode therefore remains a
+structural coupling clue, not a paid codec or generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
