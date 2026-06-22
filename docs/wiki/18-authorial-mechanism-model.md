@@ -45,6 +45,7 @@ source_refs:
   - analysis/target_free_internal_start_program_audit_20260622
   - analysis/internal_start_beam_capacity_audit_20260622
   - analysis/internal_start_beam_control_audit_20260622
+  - analysis/internal_start_beam_paid_control_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -990,6 +991,14 @@ p95 values of `63` and `56`. This upgrades the x64 route to a controlled
 capacity-ledger candidate, but still not to an executable generation formula:
 missed coarse sequences, residual composition indices, and correction fields
 remain paid.
+A stricter paid-control gate then verifies that the same result also survives
+as a cost reduction, not merely as higher hit count. The real x64 coarse-control
+tape pays `1549.117` bits and saves `818.269` bits against direct declaration;
+same-multiset shuffled controls reach only `466.838` bits saving at p95 and
+`1900.549` paid bits at p05. This promotes a controlled coarse-control tape
+reduction candidate. It still leaves the fine residual composition index,
+literal payload, copy/source hints, seed payload, and `row0` outside the
+generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3374,6 +3383,8 @@ book generation, not row0 pair-cell placement.
 - [Final internal start beam capacity audit](../../analysis/internal_start_beam_capacity_audit_20260622/reports/final_internal_start_beam_capacity_audit.md)
 - [Final internal start beam control audit](../../analysis/internal_start_beam_control_audit_20260622/reports/final_internal_start_beam_control_audit.md)
 - [Internal start beam control gate](../../analysis/internal_start_beam_control_audit_20260622/reports/test_results/01_internal_start_beam_control_gate.md)
+- [Final internal start beam paid-control audit](../../analysis/internal_start_beam_paid_control_audit_20260622/reports/final_internal_start_beam_paid_control_audit.md)
+- [Internal start beam paid-control gate](../../analysis/internal_start_beam_paid_control_audit_20260622/reports/test_results/01_internal_start_beam_paid_control_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

@@ -1,0 +1,145 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_X64_INTERNAL_START_PAID_CONTROLLED_CANDIDATE",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "coarse_paid_bits_mean": 1952.6463160069297,
+    "coarse_paid_bits_p05": 1900.5487674831113,
+    "coarse_saving_bits_mean": 414.74019684859996,
+    "coarse_saving_bits_p95": 466.83774537241806,
+    "generated_internal_starts_p95": 55.0,
+    "rank_bits_mean": 173.13427897494338,
+    "sequence_hits_p95": 62.04999999999998,
+    "trials": 200
+  },
+  "cutoff_rows": [
+    {
+      "control": {
+        "coarse_saving_bits_mean": 92.25068103398736,
+        "coarse_saving_bits_p95": 118.08790460984333,
+        "sequence_hits_p95": 18.0
+      },
+      "cutoff": 20,
+      "real": {
+        "coarse_direct_bits": 852.4631751312503,
+        "coarse_paid_bits": 649.8853639317551,
+        "coarse_saving_bits": 202.57781119949516,
+        "correction_bits": 520.5353500894234,
+        "generated_internal_starts": 27.0,
+        "literal_ops": 27.0,
+        "rank_bits": 129.35001384233175,
+        "sequence_hits": 31.0
+      }
+    },
+    {
+      "control": {
+        "coarse_saving_bits_mean": 108.75503505477677,
+        "coarse_saving_bits_p95": 137.67999748986236,
+        "sequence_hits_p95": 18.0
+      },
+      "cutoff": 30,
+      "real": {
+        "coarse_direct_bits": 661.8947501009618,
+        "coarse_paid_bits": 448.1080797648301,
+        "coarse_saving_bits": 213.7866703361317,
+        "correction_bits": 352.72181256129824,
+        "generated_internal_starts": 27.0,
+        "literal_ops": 21.0,
+        "rank_bits": 95.38626720353186,
+        "sequence_hits": 28.0
+      }
+    },
+    {
+      "control": {
+        "coarse_saving_bits_mean": 100.33299355444046,
+        "coarse_saving_bits_p95": 130.56094420938035,
+        "sequence_hits_p95": 16.0
+      },
+      "cutoff": 40,
+      "real": {
+        "coarse_direct_bits": 460.5714375685097,
+        "coarse_paid_bits": 266.41743465907285,
+        "coarse_saving_bits": 194.15400290943683,
+        "correction_bits": 192.49323753389436,
+        "generated_internal_starts": 24.0,
+        "literal_ops": 15.0,
+        "rank_bits": 73.92419712517848,
+        "sequence_hits": 24.0
+      }
+    },
+    {
+      "control": {
+        "coarse_saving_bits_mean": 68.77832377433135,
+        "coarse_saving_bits_p95": 92.24789697530775,
+        "sequence_hits_p95": 11.049999999999983
+      },
+      "cutoff": 50,
+      "real": {
+        "coarse_direct_bits": 280.75790004038464,
+        "coarse_paid_bits": 145.28549880107158,
+        "coarse_saving_bits": 135.47240123931306,
+        "correction_bits": 98.03910001730775,
+        "generated_internal_starts": 15.0,
+        "literal_ops": 7.0,
+        "rank_bits": 47.24639878376384,
+        "sequence_hits": 17.0
+      }
+    },
+    {
+      "control": {
+        "coarse_saving_bits_mean": 44.29434360496353,
+        "coarse_saving_bits_p95": 64.3577719108819,
+        "sequence_hits_p95": 8.0
+      },
+      "cutoff": 60,
+      "real": {
+        "coarse_direct_bits": 111.69925001442314,
+        "coarse_paid_bits": 39.42088606625365,
+        "coarse_saving_bits": 72.2783639481695,
+        "correction_bits": 25.509775004326936,
+        "generated_internal_starts": 5.0,
+        "literal_ops": 2.0,
+        "rank_bits": 13.911111061926714,
+        "sequence_hits": 9.0
+      }
+    }
+  ],
+  "decision": {
+    "beats_paid_same_multiset_controls": true,
+    "generator_promoted": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "book_level_controller_script": "analysis/book_level_coarse_length_controller_audit_20260622/scripts/01_book_level_coarse_length_controller_gate.py",
+    "internal_start_beam_capacity_gate": "analysis/internal_start_beam_capacity_audit_20260622/reports/test_results/01_internal_start_beam_capacity_gate.json",
+    "internal_start_beam_control_gate": "analysis/internal_start_beam_control_audit_20260622/reports/test_results/01_internal_start_beam_control_gate.json",
+    "random_seed": 46920260786,
+    "random_trials": 200,
+    "width": "x64"
+  },
+  "plaintext_claim": false,
+  "real": {
+    "coarse_direct_bits": 2367.38651285553,
+    "coarse_paid_bits": 1549.1172632229832,
+    "coarse_saving_bits": 818.2692496325462,
+    "correction_bits": 1189.2992752062507,
+    "generated_internal_starts": 98.0,
+    "literal_ops": 72.0,
+    "rank_bits": 359.8179880167326,
+    "sequence_hits": 109.0
+  },
+  "schema": "internal_start_beam_paid_control_gate.v1",
+  "scope": "analysis_only_paid_same_multiset_control_for_x64_coarse_control_tape",
+  "summary": {
+    "beats_paid_same_multiset_controls": true,
+    "classification": "PROMOTED_X64_INTERNAL_START_PAID_CONTROLLED_CANDIDATE",
+    "control_coarse_paid_bits_p05": 1900.5487674831113,
+    "control_coarse_saving_bits_p95": 466.83774537241806,
+    "real_coarse_paid_bits": 1549.1172632229832,
+    "real_coarse_saving_bits": 818.2692496325462,
+    "real_generated_internal_starts": 98.0,
+    "real_sequence_hits": 109.0
+  },
+  "translation_delta": "NONE"
+}
