@@ -1,0 +1,180 @@
+{
+  "case_reopened": false,
+  "classification": "closed_loop_rescue_surface_audit_only",
+  "cutoff_rows": [
+    {
+      "at_internal_cutpoint": 7,
+      "at_internal_cutpoint_fraction": 0.024305555555555556,
+      "at_op_start": 7,
+      "at_op_start_fraction": 0.024305555555555556,
+      "copy_surface_fraction": 0.9965277777777778,
+      "cutoff": 20,
+      "early_20pct_events": 63,
+      "early_20pct_fraction": 0.21875,
+      "early_5pct_events": 14,
+      "early_5pct_fraction": 0.04861111111111111,
+      "event_count": 288,
+      "literal_surface_fraction": 0.0,
+      "mean_rank_bits": 12.242869263153734,
+      "near_internal_cutpoint": 19,
+      "near_internal_cutpoint_fraction": 0.06597222222222222,
+      "sample_books": [
+        20,
+        45,
+        69
+      ],
+      "surface_counts": {
+        "book_end": 1,
+        "copy": 287
+      }
+    },
+    {
+      "at_internal_cutpoint": 5,
+      "at_internal_cutpoint_fraction": 0.014326647564469915,
+      "at_op_start": 5,
+      "at_op_start_fraction": 0.014326647564469915,
+      "copy_surface_fraction": 1.0,
+      "cutoff": 30,
+      "early_20pct_events": 80,
+      "early_20pct_fraction": 0.22922636103151864,
+      "early_5pct_events": 18,
+      "early_5pct_fraction": 0.05157593123209169,
+      "event_count": 349,
+      "literal_surface_fraction": 0.0,
+      "mean_rank_bits": 12.396056701719848,
+      "near_internal_cutpoint": 15,
+      "near_internal_cutpoint_fraction": 0.04297994269340974,
+      "sample_books": [
+        30,
+        50,
+        69
+      ],
+      "surface_counts": {
+        "copy": 349
+      }
+    },
+    {
+      "at_internal_cutpoint": 6,
+      "at_internal_cutpoint_fraction": 0.01729106628242075,
+      "at_op_start": 6,
+      "at_op_start_fraction": 0.01729106628242075,
+      "copy_surface_fraction": 0.9855907780979827,
+      "cutoff": 40,
+      "early_20pct_events": 66,
+      "early_20pct_fraction": 0.19020172910662825,
+      "early_5pct_events": 17,
+      "early_5pct_fraction": 0.04899135446685879,
+      "event_count": 347,
+      "literal_surface_fraction": 0.008645533141210375,
+      "mean_rank_bits": 12.287309663817487,
+      "near_internal_cutpoint": 17,
+      "near_internal_cutpoint_fraction": 0.04899135446685879,
+      "sample_books": [
+        40,
+        55,
+        69
+      ],
+      "surface_counts": {
+        "book_end": 2,
+        "copy": 342,
+        "literal": 3
+      }
+    },
+    {
+      "at_internal_cutpoint": 4,
+      "at_internal_cutpoint_fraction": 0.011235955056179775,
+      "at_op_start": 4,
+      "at_op_start_fraction": 0.011235955056179775,
+      "copy_surface_fraction": 0.9971910112359551,
+      "cutoff": 50,
+      "early_20pct_events": 80,
+      "early_20pct_fraction": 0.2247191011235955,
+      "early_5pct_events": 18,
+      "early_5pct_fraction": 0.05056179775280899,
+      "event_count": 356,
+      "literal_surface_fraction": 0.0,
+      "mean_rank_bits": 12.366721282753858,
+      "near_internal_cutpoint": 13,
+      "near_internal_cutpoint_fraction": 0.03651685393258427,
+      "sample_books": [
+        50,
+        60,
+        69
+      ],
+      "surface_counts": {
+        "book_end": 1,
+        "copy": 355
+      }
+    },
+    {
+      "at_internal_cutpoint": 5,
+      "at_internal_cutpoint_fraction": 0.012755102040816327,
+      "at_op_start": 5,
+      "at_op_start_fraction": 0.012755102040816327,
+      "copy_surface_fraction": 0.9897959183673469,
+      "cutoff": 60,
+      "early_20pct_events": 85,
+      "early_20pct_fraction": 0.21683673469387754,
+      "early_5pct_events": 19,
+      "early_5pct_fraction": 0.04846938775510204,
+      "event_count": 392,
+      "literal_surface_fraction": 0.00510204081632653,
+      "mean_rank_bits": 12.463131212697027,
+      "near_internal_cutpoint": 18,
+      "near_internal_cutpoint_fraction": 0.04591836734693878,
+      "sample_books": [
+        60,
+        65,
+        69
+      ],
+      "surface_counts": {
+        "book_end": 2,
+        "copy": 388,
+        "literal": 2
+      }
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generator_status": "not_promoted",
+    "promotes_rescue_surface": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "closed_loop_rescue_ledger": "analysis/latent_transducer_generation_audit_20260622/reports/test_results/04_closed_loop_rescue_ledger.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "closed_loop_rescue_surface_audit_v1",
+  "scope": "analysis_only_missing_state_surface_classification",
+  "summary": {
+    "at_internal_cutpoint": 27,
+    "at_internal_cutpoint_fraction": 0.01558891454965358,
+    "at_op_start": 27,
+    "at_op_start_fraction": 0.01558891454965358,
+    "copy_surface_fraction": 0.99364896073903,
+    "cutoff": "all",
+    "cutoff_count": 5,
+    "early_20pct_events": 374,
+    "early_20pct_fraction": 0.21593533487297922,
+    "early_5pct_events": 86,
+    "early_5pct_fraction": 0.049653579676674366,
+    "event_count": 1732,
+    "interpretation": "This audit classifies oracle rescue events from the sampled closed-loop rescue ledger against the canonical skeleton. It does not use the skeleton for generation; it asks whether the missing closed-loop state has an obvious surface such as operation boundaries or literal interiors.",
+    "literal_surface_fraction": 0.002886836027713626,
+    "mean_rank_bits": 12.357948500040866,
+    "near_internal_cutpoint": 82,
+    "near_internal_cutpoint_fraction": 0.04734411085450346,
+    "promotes_rescue_surface": false,
+    "sample_book_instances": 15,
+    "sample_books": [],
+    "surface_counts": {
+      "book_end": 6,
+      "copy": 1721,
+      "literal": 5
+    }
+  },
+  "translation_delta": "NONE"
+}

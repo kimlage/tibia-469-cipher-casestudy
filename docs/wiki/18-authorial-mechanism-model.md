@@ -632,6 +632,13 @@ exact but require `1732` rescues, `21403.967` rescue bits, and `3.069669x` the
 raw digit cost; no sampled book needs zero rescues, and the first rescue happens
 near the first `1.5%` of each book. This is high external control, not a
 near-miss beam-width artifact.
+A rescue surface audit then maps those rescue events back onto the canonical
+skeleton after decoding. It classifies `1732` rescue events: `1721` fall inside
+canonical copy spans, only `5` inside literal spans, and `6` at book end. Exact
+internal cutpoints account for only `27/1732` events, near-cutpoints for
+`82/1732`, and operation starts for `27/1732`. So the missing state is not a
+simple visible-boundary trigger; it is a decoder-visible copy-state/content
+control problem.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2923,6 +2930,7 @@ book generation, not row0 pair-cell placement.
 - [Latent transducer beam gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/01_latent_transducer_beam_gate.md)
 - [Closed loop digit survival gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/03_closed_loop_digit_survival_gate.md)
 - [Closed loop rescue ledger](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/04_closed_loop_rescue_ledger.md)
+- [Closed loop rescue surface audit](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/05_closed_loop_rescue_surface_audit.md)
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)

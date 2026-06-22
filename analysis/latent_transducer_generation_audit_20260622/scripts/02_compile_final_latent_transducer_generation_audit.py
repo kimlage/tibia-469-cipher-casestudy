@@ -13,6 +13,7 @@ TEST_RESULTS = REPORTS / "test_results"
 BEAM_GATE = TEST_RESULTS / "01_latent_transducer_beam_gate.json"
 CLOSED_LOOP_GATE = TEST_RESULTS / "03_closed_loop_digit_survival_gate.json"
 RESCUE_LEDGER = TEST_RESULTS / "04_closed_loop_rescue_ledger.json"
+RESCUE_SURFACE = TEST_RESULTS / "05_closed_loop_rescue_surface_audit.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -38,14 +39,17 @@ def main() -> None:
     beam_gate = load_json(BEAM_GATE)
     closed_loop_gate = load_json(CLOSED_LOOP_GATE)
     rescue_ledger = load_json(RESCUE_LEDGER)
+    rescue_surface = load_json(RESCUE_SURFACE)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
     assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     assert_boundary("closed_loop_rescue_ledger", rescue_ledger)
+    assert_boundary("closed_loop_rescue_surface_audit", rescue_surface)
     s = beam_gate["summary"]
     c = closed_loop_gate["summary"]
     r = rescue_ledger["summary"]
+    rs = rescue_surface["summary"]
     if rescue_ledger["classification"] == "closed_loop_rescue_high_external_control":
-        classification = "latent_transducer_closed_loop_high_external_control"
+        classification = "latent_transducer_closed_loop_high_external_control_surface_mapped"
     else:
         classification = beam_gate["classification"]
     lines = [
@@ -89,6 +93,12 @@ def main() -> None:
         f"- Rescue ledger rescue/raw ratio: `{r['rescue_bits_fraction_of_raw']:.6f}`.",
         f"- Rescue ledger max true-prefix rank: `{r['max_true_rank']}`.",
         f"- Rescue ledger low external-control regime: `{r['low_external_control_regime']}`.",
+        f"- Rescue surface events classified: `{rs['event_count']}`.",
+        f"- Rescue surface counts: `{rs['surface_counts']}`.",
+        f"- Rescue surface copy/literal fraction: `{rs['copy_surface_fraction']:.6f}` / `{rs['literal_surface_fraction']:.6f}`.",
+        f"- Rescue surface exact/near internal cutpoint fraction: `{rs['at_internal_cutpoint_fraction']:.6f}` / `{rs['near_internal_cutpoint_fraction']:.6f}`.",
+        f"- Rescue surface operation-start fraction: `{rs['at_op_start_fraction']:.6f}`.",
+        f"- Rescue surface early <=20% fraction: `{rs['early_20pct_fraction']:.6f}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
@@ -102,7 +112,12 @@ def main() -> None:
         "books per cutoff, every instance needs rescues and the rescue ledger costs",
         "more than raw digit emission. The closed-loop blocker is therefore a",
         "substantial missing state/control problem, not a near-miss beam-width",
-        "artifact.",
+        "artifact. A surface audit maps those rescues back onto the canonical",
+        "skeleton after decoding. The failures are not concentrated at visible",
+        "boundaries: only `27/1732` are exact internal cutpoints and `82/1732`",
+        "are within one digit of an internal cutpoint, while `1721/1732` fall",
+        "inside canonical copy spans. That leaves the blocker at decoder-visible",
+        "copy-state/content control, not a simple boundary trigger.",
         "",
         "## Decision",
         "",
@@ -110,6 +125,7 @@ def main() -> None:
         "- The first beam gate is a parser/generator prototype, not a promoted formula.",
         "- Closed-loop digit survival is rejected under the current beam.",
         "- The rescue ledger is high external-control, so oracle steering is not promoted as a compact latent state.",
+        "- Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -120,6 +136,7 @@ def main() -> None:
         "- [Latent transducer beam gate](test_results/01_latent_transducer_beam_gate.md)",
         "- [Closed loop digit survival gate](test_results/03_closed_loop_digit_survival_gate.md)",
         "- [Closed loop rescue ledger](test_results/04_closed_loop_rescue_ledger.md)",
+        "- [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
