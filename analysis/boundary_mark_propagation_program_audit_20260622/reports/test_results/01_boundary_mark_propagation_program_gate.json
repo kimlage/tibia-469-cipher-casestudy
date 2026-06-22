@@ -1,0 +1,98 @@
+{
+  "case_reopened": false,
+  "classification": "boundary_mark_propagation_not_promoted",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "boundary_mark_propagation_promoted": false,
+    "next_blocker": "boundary propagation does not explain enough additional fallback intervals",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v3_source_boundary_program_gate": "analysis/executable_v3_source_boundary_program_audit_20260622/reports/test_results/01_executable_v3_source_boundary_program_gate.json",
+    "source_boundary_script": "analysis/source_boundary_candidate_program_audit_20260622/scripts/01_source_boundary_candidate_program_gate.py",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "mode_summaries": [
+    {
+      "baseline_v3_residual_bits": 3280.191940923925,
+      "candidate_interval_count_mean_hit": 6318.620689655172,
+      "composition_bits": 511.9611209227452,
+      "copy_hits": 29,
+      "copy_misses": 179,
+      "copy_ops": 208,
+      "delta_vs_v3_residual_bits": 0.0,
+      "fallback_copy_hint_bits": 1609.5212639400006,
+      "literal_payload_bits": 883.6328732400384,
+      "mode": "base_no_propagation",
+      "rank_bits": 275.0766828211407,
+      "residual_bits": 3280.191940923925
+    },
+    {
+      "baseline_v3_residual_bits": 3280.191940923925,
+      "candidate_interval_count_mean_hit": 6318.620689655172,
+      "composition_bits": 511.9611209227452,
+      "copy_hits": 29,
+      "copy_misses": 179,
+      "copy_ops": 208,
+      "delta_vs_v3_residual_bits": 0.0,
+      "fallback_copy_hint_bits": 1609.5212639400006,
+      "literal_payload_bits": 883.6328732400384,
+      "mode": "event_only_propagation",
+      "rank_bits": 275.0766828211407,
+      "residual_bits": 3280.191940923925
+    },
+    {
+      "baseline_v3_residual_bits": 3280.191940923925,
+      "candidate_interval_count_mean_hit": 21753.354166666668,
+      "composition_bits": 451.319848734237,
+      "copy_hits": 48,
+      "copy_misses": 160,
+      "copy_ops": 208,
+      "delta_vs_v3_residual_bits": 15.412428584197642,
+      "fallback_copy_hint_bits": 1433.8029042121375,
+      "literal_payload_bits": 883.6328732400384,
+      "mode": "shuffled_propagation",
+      "rank_bits": 526.8487433217095,
+      "residual_bits": 3295.6043695081225
+    },
+    {
+      "baseline_v3_residual_bits": 3280.191940923925,
+      "candidate_interval_count_mean_hit": 8955.79411764706,
+      "composition_bits": 493.9536293890617,
+      "copy_hits": 34,
+      "copy_misses": 174,
+      "copy_ops": 208,
+      "delta_vs_v3_residual_bits": 0.3590249873254834,
+      "fallback_copy_hint_bits": 1558.196113270155,
+      "literal_payload_bits": 883.6328732400384,
+      "mode": "propagated_marks",
+      "rank_bits": 344.7683500119955,
+      "residual_bits": 3280.5509659112504
+    }
+  ],
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "boundary_mark_propagation_program_gate.v1",
+  "scope": "analysis_only_boundary_mark_propagation_program",
+  "summary": {
+    "baseline_v3_residual_bits": 3280.191940923925,
+    "best_mode": "base_no_propagation",
+    "candidate_interval_count_mean_hit": 8955.79411764706,
+    "composition_bits": 493.9536293890617,
+    "copy_hits": 34,
+    "copy_misses": 174,
+    "copy_ops": 208,
+    "delta_hits_vs_event_only": 5,
+    "delta_hits_vs_shuffled": -14,
+    "delta_vs_v3_residual_bits": 0.3590249873254834,
+    "fallback_copy_hint_bits": 1558.196113270155,
+    "literal_payload_bits": 883.6328732400384,
+    "mode": "propagated_marks",
+    "promoted": false,
+    "rank_bits": 344.7683500119955,
+    "residual_bits": 3280.5509659112504
+  },
+  "translation_delta": "NONE"
+}
