@@ -30,6 +30,7 @@ source_refs:
   - analysis/latent_state_route_synthesis_audit_20260622
   - analysis/latent_nonlocal_state_program_pilot_audit_20260622
   - analysis/schedule_state_multistream_pilot_audit_20260622
+  - analysis/book_multiset_order_factorization_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -841,6 +842,12 @@ train-selected decoder-visible schedule models cost `3559.712` bits versus
 prefix cells, but they beat same-book shuffled p05 in `0/5` cells. Diagnostic
 remaining/target-position states are cheaper but grant skeleton information.
 So this remains a schedule/multistream clue, not an executable generator.
+A book multiset/order factorization audit then decomposes that schedule signal.
+The same `3559.712` bits split into `2972.334` per-book joint-token bag bits
+plus `587.378` exact within-book order-index bits. The bag saves only `57.222`
+bits versus the global joint-token bag and beats permuted-feature p95 in `0/5`
+prefix cells. This confirms that the schedule/HMM clue is mostly distributional
+and order-index external, not a promoted book-composition program.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3199,6 +3206,8 @@ book generation, not row0 pair-cell placement.
 - [Latent nonlocal state program pilot](../../analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/test_results/01_latent_nonlocal_state_program_pilot.md)
 - [Final schedule-state multistream pilot audit](../../analysis/schedule_state_multistream_pilot_audit_20260622/reports/final_schedule_state_multistream_pilot_audit.md)
 - [Schedule-state multistream pilot](../../analysis/schedule_state_multistream_pilot_audit_20260622/reports/test_results/01_schedule_state_multistream_pilot.md)
+- [Final book multiset/order factorization audit](../../analysis/book_multiset_order_factorization_audit_20260622/reports/final_book_multiset_order_factorization_audit.md)
+- [Book multiset/order factorization gate](../../analysis/book_multiset_order_factorization_audit_20260622/reports/test_results/01_book_multiset_order_factorization_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
