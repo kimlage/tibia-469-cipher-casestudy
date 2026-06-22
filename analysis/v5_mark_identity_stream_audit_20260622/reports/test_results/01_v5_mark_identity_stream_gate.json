@@ -1,0 +1,41 @@
+{
+  "case_reopened": false,
+  "classification": "V5_MARK_IDENTITY_STREAM_NOT_PROMOTED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "next_blocker": "exact source-mark identity remains external; simple rank/delta streams do not beat copy hints",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "v5_near_source_mark_offset_gate": "analysis/v5_near_source_mark_offset_audit_20260622/reports/test_results/01_v5_near_source_mark_offset_gate.json",
+    "v5_near_source_mark_offset_script": "analysis/v5_near_source_mark_offset_audit_20260622/scripts/01_v5_near_source_mark_offset_gate.py"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "v5_mark_identity_stream_gate.v1",
+  "scope": "analysis_only_v5_mark_identity_stream",
+  "summary": {
+    "best_valid_delta_vs_copy_hint": 105.6344492636573,
+    "best_valid_model": "global_delta_rank_plus_offset",
+    "copy_hint_bits": 891.1177777521392,
+    "delta_abs_median": 274,
+    "model_bits": {
+      "absolute_rank_plus_offset": 1044.1481724575174,
+      "book_delta_rank_plus_offset": 1018.9675685916324,
+      "global_delta_rank_plus_offset": 996.7522270157965,
+      "invalid_rank_bucket_plus_offset_lower_bound": 455.8700428579305
+    },
+    "model_deltas_vs_copy_hint": {
+      "absolute_rank_plus_offset": 153.03039470537817,
+      "book_delta_rank_plus_offset": 127.84979083949315,
+      "global_delta_rank_plus_offset": 105.6344492636573,
+      "invalid_rank_bucket_plus_offset_lower_bound": -435.2477348942087
+    },
+    "promoted": false,
+    "rank_median": 705,
+    "rows": 101
+  },
+  "translation_delta": "NONE"
+}
