@@ -16,6 +16,7 @@ SYNC_GATE = TEST_RESULTS / "04_tape_synchronized_closed_loop_gate.json"
 SEED_SUBCODEC_GATE = TEST_RESULTS / "05_seed_derived_tape_subcodec_gate.json"
 SEED_WALK_GATE = TEST_RESULTS / "06_seed_walk_source_model_gate.json"
 SCHEDULE_GATE = TEST_RESULTS / "07_innovation_tape_schedule_gate.json"
+TRIGGER_GATE = TEST_RESULTS / "08_tape_trigger_policy_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -44,19 +45,26 @@ def main() -> None:
     seed_subcodec = load_json(SEED_SUBCODEC_GATE)
     seed_walk = load_json(SEED_WALK_GATE)
     schedule = load_json(SCHEDULE_GATE)
+    trigger = load_json(TRIGGER_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
     assert_boundary("seed_derived_tape_subcodec_gate", seed_subcodec)
     assert_boundary("seed_walk_source_model_gate", seed_walk)
     assert_boundary("innovation_tape_schedule_gate", schedule)
+    assert_boundary("tape_trigger_policy_gate", trigger)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
     v = seed_subcodec["summary"]
     w = seed_walk["summary"]
     x = schedule["summary"]
-    if schedule["summary"]["promotes_schedule_model"]:
+    y = trigger["summary"]
+    if trigger["summary"]["promotes_conditional_trigger_clue"]:
+        classification = "INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED"
+    elif trigger["summary"]["weak_conditional_trigger_clue"]:
+        classification = "INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_WEAK"
+    elif schedule["summary"]["promotes_schedule_model"]:
         classification = "INNOVATION_STREAM_TAPE_SCHEDULE_PROMOTED"
     elif schedule["summary"]["weak_schedule_clue"]:
         classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SCHEDULE_SPARSITY_WEAK"
@@ -126,6 +134,13 @@ def main() -> None:
         f"- Tape schedule best feature delta exact: `{x['best_feature_delta_exact']}`.",
         f"- Tape schedule random exact p95: `{x['random_exact_p95']:.3f}`.",
         f"- Promotes tape schedule: `{x['promotes_schedule_model']}`.",
+        f"- Trigger best feature: `{y['best_feature']}`.",
+        f"- Trigger best feature exact ops: `{y['best_feature_exact_ops']}/{y['best_feature_test_ops']}`.",
+        f"- Trigger best feature literal hits: `{y['best_feature_literal_hits']}/{y['best_feature_test_literal_ops']}`.",
+        f"- Trigger best feature delta vs global: `{y['best_feature_delta_bits_vs_global']:.3f}` bits.",
+        f"- Trigger best feature exact delta vs global: `{y['best_feature_delta_exact_vs_global']}`.",
+        f"- Trigger forced literal ops with no copy available: `{y['forced_literal_ops_no_copy_available']}/{y['literal_ops']}`.",
+        f"- Promotes conditional trigger clue: `{y['promotes_conditional_trigger_clue']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -139,7 +154,10 @@ def main() -> None:
         "real dependency reduction for the tape itself. The seed-walk gate then",
         "tests whether source addresses can be replaced by a cheaper source walk.",
         "The schedule gate asks whether per-book tape consumption can be predicted",
-        "from online mechanical features beyond a global sparsity baseline.",
+        "from online mechanical features beyond a global sparsity baseline. The",
+        "trigger gate then moves one level down, asking whether literal-vs-copy",
+        "can be predicted at known operation starts when true-prefix,",
+        "target-conditioned copy availability is granted.",
         "",
         "## Decision",
         "",
@@ -154,6 +172,8 @@ def main() -> None:
         "- Seed-walk source model is rejected because deltas are more expensive than absolute source positions.",
         "- Tape schedule feature model is not promoted unless it improves over global-majority sparsity.",
         "- Tape schedule sparsity is retained only as a weak clue.",
+        "- Conditional trigger policy is promoted as a dependency-reduction clue: copy availability explains many literal/copy decisions after paying table/correction cost.",
+        "- The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -166,6 +186,7 @@ def main() -> None:
         "- [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)",
         "- [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)",
         "- [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)",
+        "- [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SCHEDULE_SPARSITY_WEAK`
+Classification: `INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -51,6 +51,13 @@ plus a small external innovation tape made from the literal payload?
 - Tape schedule best feature delta exact: `0`.
 - Tape schedule random exact p95: `31.000`.
 - Promotes tape schedule: `False`.
+- Trigger best feature: `copy_available`.
+- Trigger best feature exact ops: `172/182`.
+- Trigger best feature literal hits: `17/27`.
+- Trigger best feature delta vs global: `48.262` bits.
+- Trigger best feature exact delta vs global: `17`.
+- Trigger forced literal ops with no copy available: `36/53`.
+- Promotes conditional trigger clue: `True`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -64,7 +71,10 @@ are granted. The seed-subcodec gate prices the seed-coverage clue as a
 real dependency reduction for the tape itself. The seed-walk gate then
 tests whether source addresses can be replaced by a cheaper source walk.
 The schedule gate asks whether per-book tape consumption can be predicted
-from online mechanical features beyond a global sparsity baseline.
+from online mechanical features beyond a global sparsity baseline. The
+trigger gate then moves one level down, asking whether literal-vs-copy
+can be predicted at known operation starts when true-prefix,
+target-conditioned copy availability is granted.
 
 ## Decision
 
@@ -79,6 +89,8 @@ from online mechanical features beyond a global sparsity baseline.
 - Seed-walk source model is rejected because deltas are more expensive than absolute source positions.
 - Tape schedule feature model is not promoted unless it improves over global-majority sparsity.
 - Tape schedule sparsity is retained only as a weak clue.
+- Conditional trigger policy is promoted as a dependency-reduction clue: copy availability explains many literal/copy decisions after paying table/correction cost.
+- The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -91,3 +103,4 @@ from online mechanical features beyond a global sparsity baseline.
 - [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)
 - [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)
 - [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)
+- [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)

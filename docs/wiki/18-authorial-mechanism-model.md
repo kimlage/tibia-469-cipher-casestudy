@@ -667,6 +667,15 @@ simply predicting the sparse majority count, giving `33/50` exact books at
 cutoff `20` and saving `221.844` count bits, while the best real feature is
 `5.585` bits worse and adds `0` exact books. This keeps schedule sparsity as a
 weak clue but leaves the actual consume/copy state unresolved.
+A tape trigger policy gate then tests the consume/copy state at a narrower,
+explicitly conditional level: known operation starts are granted, and copy
+availability is measured against the true target under the true prefix. Under
+those grants, `copy_available` is promoted as a dependency-reduction clue: at
+cutoff `20` it gets `172/182` holdout ops right, hits `17/27` literal ops, and
+saves `48.262` bits versus literal-site lookup after table/correction cost.
+This explains `36/53` literal ops as places where no copy is available, but it
+still does not derive operation starts, copy source, copy length, or a
+closed-loop digit stream.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2842,6 +2851,7 @@ book generation, not row0 pair-cell placement.
 - [Seed derived tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/05_seed_derived_tape_subcodec_gate.md)
 - [Seed walk source model gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/06_seed_walk_source_model_gate.md)
 - [Innovation tape schedule gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/07_innovation_tape_schedule_gate.md)
+- [Tape trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/08_tape_trigger_policy_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
