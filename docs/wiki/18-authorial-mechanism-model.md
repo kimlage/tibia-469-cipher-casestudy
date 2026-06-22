@@ -11,6 +11,7 @@ source_refs:
   - analysis/prequential_and_row0_origin_audit_20260621
   - analysis/authorial_provenance_audit_20260621
   - analysis/segmentation_decision_audit_20260621
+  - analysis/target_digit_boundary_threshold_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -530,6 +531,14 @@ and the pruned full atlas is `1464.127` bits. The promoted dependency
 reduction remains `105.946` bits, but the result is still not a skeleton
 generator: op-counts, `115` missed cutpoints, and copy/literal type remain
 external.
+A stricter target digit boundary threshold audit then removes the op-count
+grant from the predictor itself. The best global threshold, `right_ge:4`,
+predicts `935` candidate boundaries, hits `94/201` true cutpoints, and reduces
+the `1570.073`-bit full cutpoint atlas to `924.379` correction bits after
+policy charge, a `645.694`-bit dependency reduction. It also beats random p95
+and stays positive in `5/5` prefix-selected suffix cells. This still is not a
+generator: precision is only `0.100535`, the code pays `948` FP/FN corrections,
+and exact books remain `0/60`.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2678,6 +2687,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary type gate](../../analysis/target_digit_boundary_type_audit_20260621/reports/test_results/01_target_digit_boundary_type_gate.md)
 - [Final skeleton dependency after boundary pruning audit](../../analysis/skeleton_dependency_after_boundary_pruning_20260621/reports/final_skeleton_dependency_after_boundary_pruning_audit.md)
 - [Skeleton dependency after boundary pruning gate](../../analysis/skeleton_dependency_after_boundary_pruning_20260621/reports/test_results/01_skeleton_dependency_after_boundary_pruning_gate.md)
+- [Final target digit boundary threshold audit](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/final_target_digit_boundary_threshold_audit.md)
+- [Target digit boundary threshold gate](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

@@ -15,6 +15,7 @@ source_refs:
   - analysis/row0_real_origin_search_20260621
   - analysis/authorial_provenance_audit_20260621
   - analysis/segmentation_decision_audit_20260621
+  - analysis/target_digit_boundary_threshold_audit_20260621
 ---
 
 # 13. Mechanical Origin Model v1
@@ -359,6 +360,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Target digit boundary rank-code audit | tests whether full rank-bin coding of `prev2` right-surprisal cutpoint ranks improves the pruning clue; full-fit `top5_10_20_50` saves `118.400` bits after scheme charge and beats random p95, but prefix-selected suffix validation is positive in only `4/5` cells | weak diagnostic / not promoted |
 | Target digit boundary type audit | tests whether the same `prev2` boundary features predict next op type after internal cutpoints; copy-majority baseline is `161/201`, best predicate reaches only `131/201`, and prequential context tables have `0/20` positive-delta cells | op-type transfer rejected |
 | Skeleton dependency after boundary pruning | consolidates the promoted boundary clue after charging op-count: op-count costs `432.765` bits, exact full cutpoint atlas is `1570.073` bits, pruned full atlas is `1464.127` bits, so the dependency reduction remains `105.946` bits but op-count and `115` missed cutpoints stay external | dependency reduced / skeleton not generated |
+| Target digit boundary threshold audit | tests threshold-generated boundary sets without granting op-count; best `right_ge:4` policy reduces the `1570.073`-bit full cutpoint atlas to `924.379` paid correction bits after policy charge, saving `645.694` bits and beating random p95, but still needs `948` FP/FN corrections and has `0/60` exact books | dependency reduced / endpoint generator not promoted |
 | Skeleton rule coverage audit | simple decoder-visible rules do not generate the skeleton: best op-type rule is `always_copy` at `208/261`, best length rule is `116/261`, and target-dependent availability is only `208/261` | simple generator rejected |
 | Skeleton template reuse audit | exact skeleton reuse is sparse (`58` unique templates across `60` books; only pairs `43/50` and `47/62` repeat), while type-sequence motifs repeat without length-template reuse | template-library promotion rejected |
 | Type motif library ledger | type motifs repeat, but a type library has `193` entries plus `60` assignments and still leaves `261` length/target residual records; full representation is `514` records, `+253` vs exact atlas | type motif library rejected |
@@ -603,6 +605,8 @@ Primary sources:
 [book_length_generation_gate.md](../../analysis/book_length_generation_audit_20260621/reports/test_results/02_book_length_generation_gate.md),
 [final_source_free_skeleton_generation_audit.md](../../analysis/source_free_skeleton_generation_audit_20260621/reports/final_source_free_skeleton_generation_audit.md),
 [source_free_skeleton_grammar_gate.md](../../analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.md),
+[final_target_digit_boundary_threshold_audit.md](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/final_target_digit_boundary_threshold_audit.md),
+[target_digit_boundary_threshold_gate.md](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.md),
 [final_literal_payload_generation_audit.md](../../analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md),
 [literal_payload_context_gate.md](../../analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.md),
 [final_copy_source_generation_audit.md](../../analysis/copy_source_generation_audit_20260621/reports/final_copy_source_generation_audit.md),
