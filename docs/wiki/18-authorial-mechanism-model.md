@@ -671,6 +671,16 @@ controls are less bad at p95 (`-1048.351`). So the lower-bound stream remains a
 valid dependency-reduction target, but simple rank buckets over length,
 occurrence, candidate count, op index, or target-start context do not explain
 it.
+A unified control program audit then stops opening local gates and consolidates
+the residuals in one ledger. The ledger covers `261` ops, `208` copies, `53`
+literal runs, and `266` innovation digits; target starts are derived in
+`261/261` rows from prior lengths. Replacing raw source addresses with copy
+hints and a joint `type:length` control stream organizes the residual from
+`5289.866` to `3532.404` bits, but the holdout generator still produces `0`
+exact books and `0` exact ops without the atlas/control streams. Only
+`previous_op_to_next_control_symbol` is promoted as a non-tautological coupling
+clue. This is a partial synchronization clue, not a unified authorial control
+program; `row0`, plaintext, and the compression bound remain unchanged.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2983,6 +2993,9 @@ book generation, not row0 pair-cell placement.
 - [Generation dependency frontier ledger](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.md)
 - [Length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/15_length_control_tape_gate.md)
 - [Joint type-length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/16_joint_type_length_control_tape_gate.md)
+- [Final unified control program audit](../../analysis/unified_control_program_audit_20260622/reports/final_unified_control_program_audit.md)
+- [Unified residual control ledger](../../analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.md)
+- [Unified control program tests](../../analysis/unified_control_program_audit_20260622/reports/test_results/02_unified_control_program_tests.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
 - [Book control header gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/18_book_control_header_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
