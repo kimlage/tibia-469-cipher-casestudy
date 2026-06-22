@@ -598,7 +598,10 @@ first positive result on the joint-parser route. The best feature,
 charge, is positive in `5/5` prefix cells, and beats same-count random boundary
 p95 (`167.705` bits before feature charge). It is still not an exact parser:
 it emits a boundary probability distribution and does not derive exact
-endpoints.
+endpoints. A follow-up endpoint decoder grants the true per-book internal
+cutpoint count and still fails: it recovers only `9/343` cutpoints, beats
+same-count random endpoint p95 in `0/5` cells, and decodes `0` nontrivial books
+exactly. The hazard is therefore a coding prior, not an endpoint selector.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2762,6 +2765,7 @@ book generation, not row0 pair-cell placement.
 - [Final joint target stream parser audit](../../analysis/joint_target_stream_parser_audit_20260622/reports/final_joint_target_stream_parser_audit.md)
 - [Joint boundary digit gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/01_joint_boundary_digit_gate.md)
 - [Boundary hazard state gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/02_boundary_hazard_state_gate.md)
+- [Boundary hazard endpoint decoder gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/03_boundary_hazard_endpoint_decoder_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
