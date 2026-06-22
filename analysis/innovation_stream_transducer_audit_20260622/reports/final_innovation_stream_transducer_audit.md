@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER`
+Classification: `INNOVATION_STREAM_LENGTH_CONTROL_CLUE_PROMOTED_CUTPOINT_REPLACEMENT_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -85,6 +85,13 @@ plus a small external innovation tape made from the literal payload?
 - Frontier main blocker: `internal_operation_starts`.
 - Frontier internal ops: `201`.
 - Frontier right_ge:4 missed internal starts: `107`.
+- Length-control unique lengths: `89`.
+- Length-control raw composition bits with fixed op counts: `1137.308`.
+- Length-control beats shuffled paid p95 cutoffs: `4/5`.
+- Length-control type-granted best cutoffs: `4/5`.
+- Length-control beats fixed-op composition cutoffs: `0/5`.
+- Promotes length-control clue: `True`.
+- Promotes cutpoint replacement: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -113,7 +120,14 @@ The internal decomposition gate then removes book-start candidates from
 the target-conditioned candidate-label problem itself. The book-start
 mode gate then asks whether the remaining first-operation literal/copy
 choice has a target-free rule beyond global majority. The frontier
-ledger consolidates the surviving dependencies after these gates.
+ledger consolidates the surviving dependencies after these gates. The
+length-control gate then tests a different constructive framing: if the
+operation lengths are treated as a control tape, internal starts follow
+by cumulative sum. That stream has prefix-holdout structure beyond
+shuffled controls, but the useful contexts usually require operation
+type and the paid model does not beat fixed-op-count cutpoint
+composition. It is therefore a clue about the control stream, not a
+replacement for the internal-start atlas.
 
 ## Decision
 
@@ -136,6 +150,8 @@ ledger consolidates the surviving dependencies after these gates.
 - Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.
 - Book-start mode policy is rejected: the existence of a first operation is structural, but its literal/copy mode remains declared.
 - The consolidated frontier identifies internal operation-start generation as the main blocker.
+- Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.
+- The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -155,3 +171,4 @@ ledger consolidates the surviving dependencies after these gates.
 - [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)
 - [Book start mode gate](test_results/13_book_start_mode_gate.md)
 - [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)
+- [Length control tape gate](test_results/15_length_control_tape_gate.md)

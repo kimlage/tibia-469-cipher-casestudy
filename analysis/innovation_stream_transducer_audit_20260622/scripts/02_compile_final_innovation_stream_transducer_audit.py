@@ -27,6 +27,7 @@ INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE = (
 )
 BOOK_START_MODE_GATE = TEST_RESULTS / "13_book_start_mode_gate.json"
 FRONTIER_LEDGER = TEST_RESULTS / "14_generation_dependency_frontier_ledger.json"
+LENGTH_CONTROL_GATE = TEST_RESULTS / "15_length_control_tape_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -66,6 +67,7 @@ def main() -> None:
     )
     book_start_mode = load_json(BOOK_START_MODE_GATE)
     frontier = load_json(FRONTIER_LEDGER)
+    length_control = load_json(LENGTH_CONTROL_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -85,6 +87,7 @@ def main() -> None:
     )
     assert_boundary("book_start_mode_gate", book_start_mode)
     assert_boundary("generation_dependency_frontier_ledger", frontier)
+    assert_boundary("length_control_tape_gate", length_control)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -98,7 +101,13 @@ def main() -> None:
     ac = internal_boundary_candidate_trigger["summary"]
     ad = book_start_mode["summary"]
     ae = frontier["summary"]
-    if frontier["classification"] == "GENERATION_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER":
+    af = length_control["summary"]
+    if (
+        length_control["summary"]["promotes_predictive_length_control_clue"]
+        and not length_control["summary"]["promotes_cutpoint_replacement"]
+    ):
+        classification = "INNOVATION_STREAM_LENGTH_CONTROL_CLUE_PROMOTED_CUTPOINT_REPLACEMENT_REJECTED"
+    elif frontier["classification"] == "GENERATION_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER":
         classification = "INNOVATION_STREAM_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER"
     elif (
         not book_start_mode["summary"]["promotes_book_start_mode"]
@@ -230,6 +239,13 @@ def main() -> None:
         f"- Frontier main blocker: `{frontier['decision']['main_blocker']}`.",
         f"- Frontier internal ops: `{ae['internal_ops']}`.",
         f"- Frontier right_ge:4 missed internal starts: `{ae['right_ge4_missed_internal_starts']}`.",
+        f"- Length-control unique lengths: `{af['unique_lengths']}`.",
+        f"- Length-control raw composition bits with fixed op counts: `{af['raw_composition_bits_fixed_op_counts_all_books']:.3f}`.",
+        f"- Length-control beats shuffled paid p95 cutoffs: `{af['beats_shuffle_paid_p95_cutoffs']}/{len(af['cutoffs_tested'])}`.",
+        f"- Length-control type-granted best cutoffs: `{af['type_granted_best_cutoffs']}/{len(af['cutoffs_tested'])}`.",
+        f"- Length-control beats fixed-op composition cutoffs: `{af['beats_fixed_op_composition_cutoffs']}/{len(af['cutoffs_tested'])}`.",
+        f"- Promotes length-control clue: `{af['promotes_predictive_length_control_clue']}`.",
+        f"- Promotes cutpoint replacement: `{af['promotes_cutpoint_replacement']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -258,7 +274,14 @@ def main() -> None:
         "the target-conditioned candidate-label problem itself. The book-start",
         "mode gate then asks whether the remaining first-operation literal/copy",
         "choice has a target-free rule beyond global majority. The frontier",
-        "ledger consolidates the surviving dependencies after these gates.",
+        "ledger consolidates the surviving dependencies after these gates. The",
+        "length-control gate then tests a different constructive framing: if the",
+        "operation lengths are treated as a control tape, internal starts follow",
+        "by cumulative sum. That stream has prefix-holdout structure beyond",
+        "shuffled controls, but the useful contexts usually require operation",
+        "type and the paid model does not beat fixed-op-count cutpoint",
+        "composition. It is therefore a clue about the control stream, not a",
+        "replacement for the internal-start atlas.",
         "",
         "## Decision",
         "",
@@ -281,6 +304,8 @@ def main() -> None:
         "- Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.",
         "- Book-start mode policy is rejected: the existence of a first operation is structural, but its literal/copy mode remains declared.",
         "- The consolidated frontier identifies internal operation-start generation as the main blocker.",
+        "- Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.",
+        "- The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -300,6 +325,7 @@ def main() -> None:
         "- [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)",
         "- [Book start mode gate](test_results/13_book_start_mode_gate.md)",
         "- [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)",
+        "- [Length control tape gate](test_results/15_length_control_tape_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

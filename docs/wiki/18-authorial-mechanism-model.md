@@ -722,6 +722,14 @@ book-start ops and `201` internal ops; the `right_ge:4` candidate set contains
 do not promote even with target-conditioned copy availability. The next aligned
 route is therefore internal operation-start generation without a target-future
 oracle, not more book-start or mode selectors.
+A length-control tape gate then tests whether those internal starts can be
+reframed as a smaller external control stream: if book lengths and operation
+lengths are granted, starts follow by cumulative sum. This opens a real clue but
+not a generator. The length stream beats shuffled paid controls in `4/5`
+prefix-holdout cutoffs, but the best paid feature requires the operation type
+stream in `4/5` cutoffs and beats fixed-op-count cutpoint composition in `0/5`.
+So the length tape has predictive structure, while cutpoint replacement and
+source-free skeleton generation remain rejected.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2904,6 +2912,7 @@ book generation, not row0 pair-cell placement.
 - [Internal boundary candidate trigger decomposition gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)
 - [Book start mode gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/13_book_start_mode_gate.md)
 - [Generation dependency frontier ledger](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.md)
+- [Length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/15_length_control_tape_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

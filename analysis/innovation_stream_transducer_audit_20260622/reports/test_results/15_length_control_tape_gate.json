@@ -1,0 +1,673 @@
+{
+  "case_reopened": false,
+  "classification": "length_control_tape_predictive_clue_not_cutpoint_replacement",
+  "cutoff_rows": [
+    {
+      "beats_fixed_op_composition": false,
+      "beats_shuffle_paid_p95": true,
+      "best_feature": "book_start_x_type",
+      "best_feature_bits": 1128.8617330305494,
+      "best_feature_contexts": 4,
+      "best_feature_requires_type_stream": true,
+      "best_feature_saving_vs_global_bits": 48.823099902753256,
+      "best_paid_feature": "type",
+      "best_paid_feature_bits": 1133.3866026265698,
+      "best_paid_feature_contexts": 2,
+      "best_paid_feature_model_cost_bits": 15.951466861932795,
+      "best_paid_feature_paid_bits": 1149.3380694885027,
+      "best_paid_feature_requires_type_stream": true,
+      "best_paid_saving_vs_composition_bits": -373.8375510619592,
+      "best_paid_saving_vs_global_bits": 28.346763444800082,
+      "composition_bits_fixed_op_counts": 775.5005184265435,
+      "control": {
+        "best_paid_saving_vs_composition_mean": -386.0330969092883,
+        "best_paid_saving_vs_composition_p95": -366.4299272841826,
+        "best_paid_saving_vs_global_mean": 0.11138785791783984,
+        "best_paid_saving_vs_global_p95": 0.0,
+        "best_saving_vs_global_mean": 5.9909942110905705,
+        "best_saving_vs_global_p95": 18.69755229077793,
+        "trials": 500
+      },
+      "cutoff": 20,
+      "feature_rows": [
+        {
+          "bits": 1177.6848329333027,
+          "context_count": 1,
+          "feature": "global",
+          "model_cost_bits": 0.0,
+          "paid_bits": 1177.6848329333027,
+          "paid_saving_vs_global_bits": 0.0,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 0.0
+        },
+        {
+          "bits": 1133.3866026265698,
+          "context_count": 2,
+          "feature": "type",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 1149.3380694885027,
+          "paid_saving_vs_global_bits": 28.346763444800082,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 44.298230306732876
+        },
+        {
+          "bits": 1161.8786991371005,
+          "context_count": 2,
+          "feature": "book_start",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 1177.8301659990334,
+          "paid_saving_vs_global_bits": -0.14533306573062,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 15.806133796202175
+        },
+        {
+          "bits": 1166.3917214939772,
+          "context_count": 7,
+          "feature": "remaining_bucket",
+          "model_cost_bits": 48.33013401676478,
+          "paid_bits": 1214.721855510742,
+          "paid_saving_vs_global_bits": -37.03702257743932,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 11.293111439325457
+        },
+        {
+          "bits": 1186.0994928578602,
+          "context_count": 10,
+          "feature": "prev_length_bucket",
+          "model_cost_bits": 67.75733430966397,
+          "paid_bits": 1253.8568271675242,
+          "paid_saving_vs_global_bits": -76.17199423422153,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": -8.414659924557554
+        },
+        {
+          "bits": 1162.4648393880584,
+          "context_count": 3,
+          "feature": "prev_type",
+          "model_cost_bits": 22.427200292899194,
+          "paid_bits": 1184.8920396809576,
+          "paid_saving_vs_global_bits": -7.207206747654915,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 15.219993545244279
+        },
+        {
+          "bits": 1149.426477956956,
+          "context_count": 13,
+          "feature": "type_x_remaining",
+          "model_cost_bits": 87.18453460256318,
+          "paid_bits": 1236.6110125595192,
+          "paid_saving_vs_global_bits": -58.92617962621647,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 28.25835497634671
+        },
+        {
+          "bits": 1172.6568867848998,
+          "context_count": 33,
+          "feature": "prev_x_remaining",
+          "model_cost_bits": 216.6992032218911,
+          "paid_bits": 1389.356090006791,
+          "paid_saving_vs_global_bits": -211.67125707348825,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 5.027946148402862
+        },
+        {
+          "bits": 1128.8617330305494,
+          "context_count": 4,
+          "feature": "book_start_x_type",
+          "model_cost_bits": 28.90293372386559,
+          "paid_bits": 1157.764666754415,
+          "paid_saving_vs_global_bits": 19.920166178887666,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 48.823099902753256
+        }
+      ],
+      "global_bits": 1177.6848329333027,
+      "global_contexts": 1,
+      "test_books": 50,
+      "test_ops": 182,
+      "train_ops": 79
+    },
+    {
+      "beats_fixed_op_composition": false,
+      "beats_shuffle_paid_p95": true,
+      "best_feature": "book_start_x_type",
+      "best_feature_bits": 872.2012620068901,
+      "best_feature_contexts": 4,
+      "best_feature_requires_type_stream": true,
+      "best_feature_saving_vs_global_bits": 60.34888100761793,
+      "best_paid_feature": "book_start_x_type",
+      "best_paid_feature_bits": 872.2012620068901,
+      "best_paid_feature_contexts": 4,
+      "best_paid_feature_model_cost_bits": 28.90293372386559,
+      "best_paid_feature_paid_bits": 901.1041957307557,
+      "best_paid_feature_requires_type_stream": true,
+      "best_paid_saving_vs_composition_bits": -302.2938650108789,
+      "best_paid_saving_vs_global_bits": 31.445947283752343,
+      "composition_bits_fixed_op_counts": 598.8103307198768,
+      "control": {
+        "best_paid_saving_vs_composition_mean": -293.35012186798485,
+        "best_paid_saving_vs_composition_p95": -275.9507130839819,
+        "best_paid_saving_vs_global_mean": 0.06647611646310923,
+        "best_paid_saving_vs_global_p95": 0.0,
+        "best_saving_vs_global_mean": 5.943225359051393,
+        "best_saving_vs_global_p95": 19.604382465732876,
+        "trials": 500
+      },
+      "cutoff": 30,
+      "feature_rows": [
+        {
+          "bits": 932.5501430145081,
+          "context_count": 1,
+          "feature": "global",
+          "model_cost_bits": 0.0,
+          "paid_bits": 932.5501430145081,
+          "paid_saving_vs_global_bits": 0.0,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 0.0
+        },
+        {
+          "bits": 889.47807866855,
+          "context_count": 2,
+          "feature": "type",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 905.4295455304828,
+          "paid_saving_vs_global_bits": 27.120597484025303,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 43.0720643459581
+        },
+        {
+          "bits": 904.4546617348119,
+          "context_count": 2,
+          "feature": "book_start",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 920.4061285967447,
+          "paid_saving_vs_global_bits": 12.144014417763378,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 28.095481279696173
+        },
+        {
+          "bits": 908.0935928181304,
+          "context_count": 7,
+          "feature": "remaining_bucket",
+          "model_cost_bits": 48.33013401676478,
+          "paid_bits": 956.4237268348952,
+          "paid_saving_vs_global_bits": -23.873583820387147,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 24.456550196377634
+        },
+        {
+          "bits": 901.2294647281262,
+          "context_count": 10,
+          "feature": "prev_length_bucket",
+          "model_cost_bits": 67.75733430966397,
+          "paid_bits": 968.9867990377902,
+          "paid_saving_vs_global_bits": -36.436656023282126,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 31.32067828638185
+        },
+        {
+          "bits": 892.1983535615709,
+          "context_count": 3,
+          "feature": "prev_type",
+          "model_cost_bits": 22.427200292899194,
+          "paid_bits": 914.6255538544701,
+          "paid_saving_vs_global_bits": 17.924589160037975,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 40.35178945293717
+        },
+        {
+          "bits": 884.874028503413,
+          "context_count": 13,
+          "feature": "type_x_remaining",
+          "model_cost_bits": 87.18453460256318,
+          "paid_bits": 972.0585631059762,
+          "paid_saving_vs_global_bits": -39.508420091468096,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 47.67611451109508
+        },
+        {
+          "bits": 917.7137727971406,
+          "context_count": 43,
+          "feature": "prev_x_remaining",
+          "model_cost_bits": 281.4565375315551,
+          "paid_bits": 1199.1703103286957,
+          "paid_saving_vs_global_bits": -266.6201673141876,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 14.836370217367516
+        },
+        {
+          "bits": 872.2012620068901,
+          "context_count": 4,
+          "feature": "book_start_x_type",
+          "model_cost_bits": 28.90293372386559,
+          "paid_bits": 901.1041957307557,
+          "paid_saving_vs_global_bits": 31.445947283752343,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 60.34888100761793
+        }
+      ],
+      "global_bits": 932.5501430145081,
+      "global_contexts": 1,
+      "test_books": 40,
+      "test_ops": 140,
+      "train_ops": 121
+    },
+    {
+      "beats_fixed_op_composition": false,
+      "beats_shuffle_paid_p95": true,
+      "best_feature": "book_start_x_type",
+      "best_feature_bits": 599.9007838592704,
+      "best_feature_contexts": 4,
+      "best_feature_requires_type_stream": true,
+      "best_feature_saving_vs_global_bits": 45.468610261101844,
+      "best_paid_feature": "book_start_x_type",
+      "best_paid_feature_bits": 599.9007838592704,
+      "best_paid_feature_contexts": 4,
+      "best_paid_feature_model_cost_bits": 28.90293372386559,
+      "best_paid_feature_paid_bits": 628.803717583136,
+      "best_paid_feature_requires_type_stream": true,
+      "best_paid_saving_vs_composition_bits": -233.42522691871375,
+      "best_paid_saving_vs_global_bits": 16.565676537236254,
+      "composition_bits_fixed_op_counts": 395.3784906644222,
+      "control": {
+        "best_paid_saving_vs_composition_mean": -208.55733558838648,
+        "best_paid_saving_vs_composition_p95": -191.86277542590295,
+        "best_paid_saving_vs_global_mean": 0.014863379098601349,
+        "best_paid_saving_vs_global_p95": 0.0,
+        "best_saving_vs_global_mean": 5.579080130932717,
+        "best_saving_vs_global_p95": 17.041343949996318,
+        "trials": 500
+      },
+      "cutoff": 40,
+      "feature_rows": [
+        {
+          "bits": 645.3693941203722,
+          "context_count": 1,
+          "feature": "global",
+          "model_cost_bits": 0.0,
+          "paid_bits": 645.3693941203722,
+          "paid_saving_vs_global_bits": 0.0,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 0.0
+        },
+        {
+          "bits": 615.2915927902146,
+          "context_count": 2,
+          "feature": "type",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 631.2430596521474,
+          "paid_saving_vs_global_bits": 14.126334468224831,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 30.077801330157627
+        },
+        {
+          "bits": 620.7508143667914,
+          "context_count": 2,
+          "feature": "book_start",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 636.7022812287241,
+          "paid_saving_vs_global_bits": 8.667112891648094,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 24.61857975358089
+        },
+        {
+          "bits": 631.2172271429944,
+          "context_count": 7,
+          "feature": "remaining_bucket",
+          "model_cost_bits": 48.33013401676478,
+          "paid_bits": 679.5473611597591,
+          "paid_saving_vs_global_bits": -34.17796703938691,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 14.152166977377874
+        },
+        {
+          "bits": 612.7029451465904,
+          "context_count": 11,
+          "feature": "prev_length_bucket",
+          "model_cost_bits": 74.23306774063037,
+          "paid_bits": 686.9360128872208,
+          "paid_saving_vs_global_bits": -41.56661876684855,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 32.666448973781826
+        },
+        {
+          "bits": 608.8765327434892,
+          "context_count": 3,
+          "feature": "prev_type",
+          "model_cost_bits": 22.427200292899194,
+          "paid_bits": 631.3037330363884,
+          "paid_saving_vs_global_bits": 14.065661083983876,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 36.49286137688307
+        },
+        {
+          "bits": 612.6671247965185,
+          "context_count": 13,
+          "feature": "type_x_remaining",
+          "model_cost_bits": 87.18453460256318,
+          "paid_bits": 699.8516593990817,
+          "paid_saving_vs_global_bits": -54.48226527870939,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 32.702269323853784
+        },
+        {
+          "bits": 615.2273792760941,
+          "context_count": 49,
+          "feature": "prev_x_remaining",
+          "model_cost_bits": 320.3109381173535,
+          "paid_bits": 935.5383173934476,
+          "paid_saving_vs_global_bits": -290.16892327307534,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 30.14201484427815
+        },
+        {
+          "bits": 599.9007838592704,
+          "context_count": 4,
+          "feature": "book_start_x_type",
+          "model_cost_bits": 28.90293372386559,
+          "paid_bits": 628.803717583136,
+          "paid_saving_vs_global_bits": 16.565676537236254,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 45.468610261101844
+        }
+      ],
+      "global_bits": 645.3693941203722,
+      "global_contexts": 1,
+      "test_books": 30,
+      "test_ops": 95,
+      "train_ops": 166
+    },
+    {
+      "beats_fixed_op_composition": false,
+      "beats_shuffle_paid_p95": true,
+      "best_feature": "book_start_x_type",
+      "best_feature_bits": 359.2568917110502,
+      "best_feature_contexts": 4,
+      "best_feature_requires_type_stream": true,
+      "best_feature_saving_vs_global_bits": 35.19255684409393,
+      "best_paid_feature": "book_start_x_type",
+      "best_paid_feature_bits": 359.2568917110502,
+      "best_paid_feature_contexts": 4,
+      "best_paid_feature_model_cost_bits": 28.90293372386559,
+      "best_paid_feature_paid_bits": 388.1598254349158,
+      "best_paid_feature_requires_type_stream": true,
+      "best_paid_saving_vs_composition_bits": -158.469154571272,
+      "best_paid_saving_vs_global_bits": 6.289623120228338,
+      "composition_bits_fixed_op_counts": 229.69067086364376,
+      "control": {
+        "best_paid_saving_vs_composition_mean": -127.37936140081014,
+        "best_paid_saving_vs_composition_p95": -111.37249173610378,
+        "best_paid_saving_vs_global_mean": 0.0027141536670635775,
+        "best_paid_saving_vs_global_p95": 0.0,
+        "best_saving_vs_global_mean": 5.734859333559098,
+        "best_saving_vs_global_p95": 17.24795764062251,
+        "trials": 500
+      },
+      "cutoff": 50,
+      "feature_rows": [
+        {
+          "bits": 394.4494485551441,
+          "context_count": 1,
+          "feature": "global",
+          "model_cost_bits": 0.0,
+          "paid_bits": 394.4494485551441,
+          "paid_saving_vs_global_bits": 0.0,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 0.0
+        },
+        {
+          "bits": 373.04521874399484,
+          "context_count": 2,
+          "feature": "type",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 388.9966856059276,
+          "paid_saving_vs_global_bits": 5.452762949216469,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 21.404229811149264
+        },
+        {
+          "bits": 375.47527640479046,
+          "context_count": 2,
+          "feature": "book_start",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 391.42674326672324,
+          "paid_saving_vs_global_bits": 3.022705288420843,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 18.97417215035364
+        },
+        {
+          "bits": 375.9353029131473,
+          "context_count": 7,
+          "feature": "remaining_bucket",
+          "model_cost_bits": 48.33013401676478,
+          "paid_bits": 424.2654369299121,
+          "paid_saving_vs_global_bits": -29.815988374768004,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 18.514145641996777
+        },
+        {
+          "bits": 373.2454870195302,
+          "context_count": 11,
+          "feature": "prev_length_bucket",
+          "model_cost_bits": 74.23306774063037,
+          "paid_bits": 447.47855476016053,
+          "paid_saving_vs_global_bits": -53.02910620501645,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 21.203961535613928
+        },
+        {
+          "bits": 368.2497856222516,
+          "context_count": 3,
+          "feature": "prev_type",
+          "model_cost_bits": 22.427200292899194,
+          "paid_bits": 390.6769859151508,
+          "paid_saving_vs_global_bits": 3.7724626399933285,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 26.199662932892522
+        },
+        {
+          "bits": 363.43556948763575,
+          "context_count": 14,
+          "feature": "type_x_remaining",
+          "model_cost_bits": 93.66026803352956,
+          "paid_bits": 457.0958375211653,
+          "paid_saving_vs_global_bits": -62.646388966021206,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 31.013879067508356
+        },
+        {
+          "bits": 368.32691881773343,
+          "context_count": 52,
+          "feature": "prev_x_remaining",
+          "model_cost_bits": 339.7381384102527,
+          "paid_bits": 708.0650572279861,
+          "paid_saving_vs_global_bits": -313.61560867284203,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 26.122529737410673
+        },
+        {
+          "bits": 359.2568917110502,
+          "context_count": 4,
+          "feature": "book_start_x_type",
+          "model_cost_bits": 28.90293372386559,
+          "paid_bits": 388.1598254349158,
+          "paid_saving_vs_global_bits": 6.289623120228338,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 35.19255684409393
+        }
+      ],
+      "global_bits": 394.4494485551441,
+      "global_contexts": 1,
+      "test_books": 20,
+      "test_ops": 56,
+      "train_ops": 205
+    },
+    {
+      "beats_fixed_op_composition": false,
+      "beats_shuffle_paid_p95": false,
+      "best_feature": "prev_x_remaining",
+      "best_feature_bits": 131.01059377477898,
+      "best_feature_contexts": 53,
+      "best_feature_requires_type_stream": false,
+      "best_feature_saving_vs_global_bits": 19.885544039127154,
+      "best_paid_feature": "global",
+      "best_paid_feature_bits": 150.89613781390614,
+      "best_paid_feature_contexts": 1,
+      "best_paid_feature_model_cost_bits": 0.0,
+      "best_paid_feature_paid_bits": 150.89613781390614,
+      "best_paid_feature_requires_type_stream": false,
+      "best_paid_saving_vs_composition_bits": -86.61554123735806,
+      "best_paid_saving_vs_global_bits": 0.0,
+      "composition_bits_fixed_op_counts": 64.28059657654808,
+      "control": {
+        "best_paid_saving_vs_composition_mean": -62.671765617966855,
+        "best_paid_saving_vs_composition_p95": -51.78853165438494,
+        "best_paid_saving_vs_global_mean": 0.0,
+        "best_paid_saving_vs_global_p95": 0.0,
+        "best_saving_vs_global_mean": 3.6161652786973693,
+        "best_saving_vs_global_p95": 9.785505377163135,
+        "trials": 500
+      },
+      "cutoff": 60,
+      "feature_rows": [
+        {
+          "bits": 150.89613781390614,
+          "context_count": 1,
+          "feature": "global",
+          "model_cost_bits": 0.0,
+          "paid_bits": 150.89613781390614,
+          "paid_saving_vs_global_bits": 0.0,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 0.0
+        },
+        {
+          "bits": 142.7572953212758,
+          "context_count": 2,
+          "feature": "type",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 158.7087621832086,
+          "paid_saving_vs_global_bits": -7.8126243693024495,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 8.138842492630346
+        },
+        {
+          "bits": 137.17644462821508,
+          "context_count": 2,
+          "feature": "book_start",
+          "model_cost_bits": 15.951466861932795,
+          "paid_bits": 153.12791149014788,
+          "paid_saving_vs_global_bits": -2.2317736762417386,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 13.719693185691057
+        },
+        {
+          "bits": 140.48838345219528,
+          "context_count": 7,
+          "feature": "remaining_bucket",
+          "model_cost_bits": 48.33013401676478,
+          "paid_bits": 188.81851746896007,
+          "paid_saving_vs_global_bits": -37.92237965505392,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 10.407754361710857
+        },
+        {
+          "bits": 137.6037044101301,
+          "context_count": 11,
+          "feature": "prev_length_bucket",
+          "model_cost_bits": 74.23306774063037,
+          "paid_bits": 211.83677215076045,
+          "paid_saving_vs_global_bits": -60.94063433685433,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 13.292433403776045
+        },
+        {
+          "bits": 137.18313593642716,
+          "context_count": 3,
+          "feature": "prev_type",
+          "model_cost_bits": 22.427200292899194,
+          "paid_bits": 159.61033622932635,
+          "paid_saving_vs_global_bits": -8.71419841542022,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 13.713001877478973
+        },
+        {
+          "bits": 135.44603271636618,
+          "context_count": 14,
+          "feature": "type_x_remaining",
+          "model_cost_bits": 93.66026803352956,
+          "paid_bits": 229.10630074989575,
+          "paid_saving_vs_global_bits": -78.2101629359896,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 15.45010509753996
+        },
+        {
+          "bits": 131.01059377477898,
+          "context_count": 53,
+          "feature": "prev_x_remaining",
+          "model_cost_bits": 346.2138718412191,
+          "paid_bits": 477.22446561599804,
+          "paid_saving_vs_global_bits": -326.32832780209196,
+          "requires_type_stream": false,
+          "saving_vs_global_bits": 19.885544039127154
+        },
+        {
+          "bits": 131.6873666076359,
+          "context_count": 4,
+          "feature": "book_start_x_type",
+          "model_cost_bits": 28.90293372386559,
+          "paid_bits": 160.5903003315015,
+          "paid_saving_vs_global_bits": -9.694162517595363,
+          "requires_type_stream": true,
+          "saving_vs_global_bits": 19.208771206270228
+        }
+      ],
+      "global_bits": 150.89613781390614,
+      "global_contexts": 1,
+      "test_books": 10,
+      "test_ops": 20,
+      "train_ops": 241
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generator_status": "not_promoted",
+    "promotes_cutpoint_replacement": false,
+    "promotes_predictive_length_control_clue": true,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "generation_dependency_frontier_ledger": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "length_control_tape_gate_v1",
+  "scope": "analysis_only_internal_start_length_control_stream",
+  "summary": {
+    "beats_fixed_op_composition_cutoffs": 0,
+    "beats_shuffle_paid_p95_cutoffs": 4,
+    "best_paid_feature_modes": {
+      "book_start_x_type": 3,
+      "global": 1,
+      "type": 1
+    },
+    "canonical_ops": 261,
+    "cutoffs_tested": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "derived_books": 60,
+    "internal_operation_starts": 201,
+    "interpretation": "This gate treats the operation lengths as a possible control tape: if book lengths and length stream are granted, internal starts follow by cumulative sum. It asks whether that stream has prefix-holdout structure beyond shuffled controls, and separately whether the paid model beats a uniform fixed-op-count cutpoint composition.",
+    "promotes_cutpoint_replacement": false,
+    "promotes_predictive_length_control_clue": true,
+    "random_trials": 500,
+    "raw_composition_bits_fixed_op_counts_all_books": 1137.307943809916,
+    "type_granted_best_cutoffs": 4,
+    "unique_lengths": 89
+  },
+  "translation_delta": "NONE"
+}
