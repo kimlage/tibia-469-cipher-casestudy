@@ -1,0 +1,555 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V7_UNIFIED_INNOVATION_PAYLOAD_LEDGER",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "executable_v7_promoted": true,
+    "generation_explanation_status": "executable_payload_dependency_reduced_not_source_free_generator",
+    "next_blocker": "policy/origin for introducing innovation chunks; residual composition, fallback copy hints, and row0 remain external",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v6_gate": "analysis/executable_v6_literal_span_origin_audit_20260622/reports/test_results/01_executable_v6_literal_span_origin_gate.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json",
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "payload_segment_checks": [
+    {
+      "end": 144,
+      "kind": "seed_book",
+      "label": "seed_book_0",
+      "length": 144,
+      "matches_recorded_segment": true,
+      "start": 0
+    },
+    {
+      "end": 236,
+      "kind": "seed_book",
+      "label": "seed_book_1",
+      "length": 92,
+      "matches_recorded_segment": true,
+      "start": 144
+    },
+    {
+      "end": 413,
+      "kind": "seed_book",
+      "label": "seed_book_2",
+      "length": 177,
+      "matches_recorded_segment": true,
+      "start": 236
+    },
+    {
+      "end": 553,
+      "kind": "seed_book",
+      "label": "seed_book_3",
+      "length": 140,
+      "matches_recorded_segment": true,
+      "start": 413
+    },
+    {
+      "end": 693,
+      "kind": "seed_book",
+      "label": "seed_book_4",
+      "length": 140,
+      "matches_recorded_segment": true,
+      "start": 553
+    },
+    {
+      "end": 966,
+      "kind": "seed_book",
+      "label": "seed_book_5",
+      "length": 273,
+      "matches_recorded_segment": true,
+      "start": 693
+    },
+    {
+      "end": 1141,
+      "kind": "seed_book",
+      "label": "seed_book_6",
+      "length": 175,
+      "matches_recorded_segment": true,
+      "start": 966
+    },
+    {
+      "end": 1247,
+      "kind": "seed_book",
+      "label": "seed_book_7",
+      "length": 106,
+      "matches_recorded_segment": true,
+      "start": 1141
+    },
+    {
+      "end": 1402,
+      "kind": "seed_book",
+      "label": "seed_book_8",
+      "length": 155,
+      "matches_recorded_segment": true,
+      "start": 1247
+    },
+    {
+      "end": 1696,
+      "kind": "seed_book",
+      "label": "seed_book_9",
+      "length": 294,
+      "matches_recorded_segment": true,
+      "start": 1402
+    },
+    {
+      "end": 1701,
+      "kind": "derived_literal",
+      "label": "literal_b10_op0_0_5",
+      "length": 5,
+      "matches_recorded_segment": true,
+      "start": 1696
+    },
+    {
+      "end": 1707,
+      "kind": "derived_literal",
+      "label": "literal_b11_op0_5_11",
+      "length": 6,
+      "matches_recorded_segment": true,
+      "start": 1701
+    },
+    {
+      "end": 1714,
+      "kind": "derived_literal",
+      "label": "literal_b11_op3_11_18",
+      "length": 7,
+      "matches_recorded_segment": true,
+      "start": 1707
+    },
+    {
+      "end": 1716,
+      "kind": "derived_literal",
+      "label": "literal_b12_op0_18_20",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1714
+    },
+    {
+      "end": 1720,
+      "kind": "derived_literal",
+      "label": "literal_b12_op3_20_24",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1716
+    },
+    {
+      "end": 1724,
+      "kind": "derived_literal",
+      "label": "literal_b12_op5_24_28",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1720
+    },
+    {
+      "end": 1728,
+      "kind": "derived_literal",
+      "label": "literal_b12_op9_28_32",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1724
+    },
+    {
+      "end": 1730,
+      "kind": "derived_literal",
+      "label": "literal_b12_op12_32_34",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1728
+    },
+    {
+      "end": 1732,
+      "kind": "derived_literal",
+      "label": "literal_b13_op1_34_36",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1730
+    },
+    {
+      "end": 1733,
+      "kind": "derived_literal",
+      "label": "literal_b13_op3_36_37",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1732
+    },
+    {
+      "end": 1744,
+      "kind": "derived_literal",
+      "label": "literal_b13_op6_37_48",
+      "length": 11,
+      "matches_recorded_segment": true,
+      "start": 1733
+    },
+    {
+      "end": 1783,
+      "kind": "derived_literal",
+      "label": "literal_b14_op0_48_87",
+      "length": 39,
+      "matches_recorded_segment": true,
+      "start": 1744
+    },
+    {
+      "end": 1788,
+      "kind": "derived_literal",
+      "label": "literal_b14_op2_87_92",
+      "length": 5,
+      "matches_recorded_segment": true,
+      "start": 1783
+    },
+    {
+      "end": 1791,
+      "kind": "derived_literal",
+      "label": "literal_b14_op7_92_95",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1788
+    },
+    {
+      "end": 1792,
+      "kind": "derived_literal",
+      "label": "literal_b15_op0_95_96",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1791
+    },
+    {
+      "end": 1793,
+      "kind": "derived_literal",
+      "label": "literal_b15_op4_96_97",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1792
+    },
+    {
+      "end": 1799,
+      "kind": "derived_literal",
+      "label": "literal_b16_op1_97_103",
+      "length": 6,
+      "matches_recorded_segment": true,
+      "start": 1793
+    },
+    {
+      "end": 1801,
+      "kind": "derived_literal",
+      "label": "literal_b16_op3_103_105",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1799
+    },
+    {
+      "end": 1802,
+      "kind": "derived_literal",
+      "label": "literal_b16_op7_105_106",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1801
+    },
+    {
+      "end": 1803,
+      "kind": "derived_literal",
+      "label": "literal_b16_op9_106_107",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1802
+    },
+    {
+      "end": 1804,
+      "kind": "derived_literal",
+      "label": "literal_b16_op11_107_108",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1803
+    },
+    {
+      "end": 1813,
+      "kind": "derived_literal",
+      "label": "literal_b17_op1_108_117",
+      "length": 9,
+      "matches_recorded_segment": true,
+      "start": 1804
+    },
+    {
+      "end": 1816,
+      "kind": "derived_literal",
+      "label": "literal_b17_op3_117_120",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1813
+    },
+    {
+      "end": 1828,
+      "kind": "derived_literal",
+      "label": "literal_b17_op5_120_132",
+      "length": 12,
+      "matches_recorded_segment": true,
+      "start": 1816
+    },
+    {
+      "end": 1832,
+      "kind": "derived_literal",
+      "label": "literal_b17_op8_132_136",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1828
+    },
+    {
+      "end": 1836,
+      "kind": "derived_literal",
+      "label": "literal_b17_op11_136_140",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1832
+    },
+    {
+      "end": 1840,
+      "kind": "derived_literal",
+      "label": "literal_b23_op0_140_144",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1836
+    },
+    {
+      "end": 1847,
+      "kind": "derived_literal",
+      "label": "literal_b23_op2_144_151",
+      "length": 7,
+      "matches_recorded_segment": true,
+      "start": 1840
+    },
+    {
+      "end": 1854,
+      "kind": "derived_literal",
+      "label": "literal_b23_op7_151_158",
+      "length": 7,
+      "matches_recorded_segment": true,
+      "start": 1847
+    },
+    {
+      "end": 1857,
+      "kind": "derived_literal",
+      "label": "literal_b23_op10_158_161",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1854
+    },
+    {
+      "end": 1860,
+      "kind": "derived_literal",
+      "label": "literal_b25_op0_161_164",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1857
+    },
+    {
+      "end": 1865,
+      "kind": "derived_literal",
+      "label": "literal_b26_op2_164_169",
+      "length": 5,
+      "matches_recorded_segment": true,
+      "start": 1860
+    },
+    {
+      "end": 1867,
+      "kind": "derived_literal",
+      "label": "literal_b32_op1_169_171",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1865
+    },
+    {
+      "end": 1871,
+      "kind": "derived_literal",
+      "label": "literal_b34_op0_171_175",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1867
+    },
+    {
+      "end": 1874,
+      "kind": "derived_literal",
+      "label": "literal_b34_op3_175_178",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1871
+    },
+    {
+      "end": 1876,
+      "kind": "derived_literal",
+      "label": "literal_b38_op1_178_180",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1874
+    },
+    {
+      "end": 1878,
+      "kind": "derived_literal",
+      "label": "literal_b38_op3_180_182",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1876
+    },
+    {
+      "end": 1880,
+      "kind": "derived_literal",
+      "label": "literal_b39_op1_182_184",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1878
+    },
+    {
+      "end": 1883,
+      "kind": "derived_literal",
+      "label": "literal_b40_op1_184_187",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1880
+    },
+    {
+      "end": 1885,
+      "kind": "derived_literal",
+      "label": "literal_b42_op3_187_189",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1883
+    },
+    {
+      "end": 1887,
+      "kind": "derived_literal",
+      "label": "literal_b42_op6_189_191",
+      "length": 2,
+      "matches_recorded_segment": true,
+      "start": 1885
+    },
+    {
+      "end": 1892,
+      "kind": "derived_literal",
+      "label": "literal_b44_op0_191_196",
+      "length": 5,
+      "matches_recorded_segment": true,
+      "start": 1887
+    },
+    {
+      "end": 1903,
+      "kind": "derived_literal",
+      "label": "literal_b49_op0_196_207",
+      "length": 11,
+      "matches_recorded_segment": true,
+      "start": 1892
+    },
+    {
+      "end": 1910,
+      "kind": "derived_literal",
+      "label": "literal_b49_op2_207_214",
+      "length": 7,
+      "matches_recorded_segment": true,
+      "start": 1903
+    },
+    {
+      "end": 1911,
+      "kind": "derived_literal",
+      "label": "literal_b49_op5_214_215",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1910
+    },
+    {
+      "end": 1917,
+      "kind": "derived_literal",
+      "label": "literal_b49_op9_215_221",
+      "length": 6,
+      "matches_recorded_segment": true,
+      "start": 1911
+    },
+    {
+      "end": 1920,
+      "kind": "derived_literal",
+      "label": "literal_b52_op0_221_224",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1917
+    },
+    {
+      "end": 1923,
+      "kind": "derived_literal",
+      "label": "literal_b56_op4_224_227",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1920
+    },
+    {
+      "end": 1951,
+      "kind": "derived_literal",
+      "label": "literal_b57_op2_227_255",
+      "length": 28,
+      "matches_recorded_segment": true,
+      "start": 1923
+    },
+    {
+      "end": 1955,
+      "kind": "derived_literal",
+      "label": "literal_b57_op7_255_259",
+      "length": 4,
+      "matches_recorded_segment": true,
+      "start": 1951
+    },
+    {
+      "end": 1958,
+      "kind": "derived_literal",
+      "label": "literal_b58_op1_259_262",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1955
+    },
+    {
+      "end": 1959,
+      "kind": "derived_literal",
+      "label": "literal_b60_op0_262_263",
+      "length": 1,
+      "matches_recorded_segment": true,
+      "start": 1958
+    },
+    {
+      "end": 1962,
+      "kind": "derived_literal",
+      "label": "literal_b65_op0_263_266",
+      "length": 3,
+      "matches_recorded_segment": true,
+      "start": 1959
+    }
+  ],
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v7_unified_innovation_payload_gate.v1",
+  "scope": "analysis_only_executable_v7_unified_innovation_payload",
+  "summary": {
+    "candidate_v7_external_bits_total_content_included": 7192.150614310004,
+    "copy_bits": 1863.4249407956356,
+    "delta_vs_v6_including_seed": -2506.8528539367408,
+    "literal_payload_bits_replaced": 883.6328732400384,
+    "online_x64_coarse_bits": 876.412,
+    "payload_replay_bits": 4010.7700682322643,
+    "payload_replay_copy_ops": 39,
+    "payload_replay_literal_runs": 23,
+    "residual_composition_bits": 439.958642781383,
+    "seed_payload_bits_replaced": 5633.990048928967,
+    "source_class_counts": {
+      "both_endpoint_interval": 52,
+      "end_only": 55,
+      "fallback": 90,
+      "literal_span_source": 11
+    },
+    "v6_external_bits_including_seed": 9699.003468246745,
+    "v7_roundtrip_70_70": true
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "exact_books": 70,
+    "literal_payloads_consumed": 53,
+    "roundtrip_70_70": true
+  }
+}

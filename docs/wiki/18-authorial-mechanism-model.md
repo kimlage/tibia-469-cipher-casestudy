@@ -70,6 +70,7 @@ source_refs:
   - analysis/seed_bootstrap_transducer_program_audit_20260622
   - analysis/seed_bootstrap_decision_policy_audit_20260622
   - analysis/unified_innovation_payload_audit_20260622
+  - analysis/executable_v7_unified_innovation_payload_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3630,6 +3631,7 @@ book generation, not row0 pair-cell placement.
 - [Seed bootstrap transducer program audit](../../analysis/seed_bootstrap_transducer_program_audit_20260622/reports/final_seed_bootstrap_transducer_program_audit.md)
 - [Seed bootstrap decision-policy audit](../../analysis/seed_bootstrap_decision_policy_audit_20260622/reports/final_seed_bootstrap_decision_policy_audit.md)
 - [Unified innovation payload audit](../../analysis/unified_innovation_payload_audit_20260622/reports/final_unified_innovation_payload_audit.md)
+- [Executable v7 unified innovation payload audit](../../analysis/executable_v7_unified_innovation_payload_audit_20260622/reports/final_executable_v7_unified_innovation_payload_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3760,6 +3762,16 @@ has `4/4` positive replay holdouts. The caveat is essential: the replay ledger
 is still target-conditioned and does not explain why or when the innovation
 chunks are introduced. It reduces declared payload dependency; it does not
 promote a source-free generator.
+
+The executable v7 integration closes the accounting loop for that promoted
+payload ledger. Instead of granting seed books and derived literal payloads as
+separate raw tapes, v7 replays the paid innovation stream, splits it into seed
+and literal segments, and feeds those payloads into the v6 operation/source/
+length decoder. Roundtrip remains `70/70`; total external bits including seed
+fall from v6 `9699.003` to v7 `7192.151`. This is the strongest executable
+dependency reduction in the current line, but the limitation is unchanged: the
+innovation replay is target-conditioned, so the next blocker is the policy or
+origin process that introduces innovation chunks.
 
 ## Boundary
 
