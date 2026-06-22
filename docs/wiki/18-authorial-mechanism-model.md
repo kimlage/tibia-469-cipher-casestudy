@@ -648,6 +648,13 @@ for `32/32`, covering `1063/1240` copy digits. But the pruned candidate set
 contains a correct prefix for `0/32` copy ops. This does not promote a
 generator, but it sharply locates the next constructive route: copy candidate
 ranking/pruning or a copy-continuation state, not another boundary detector.
+A copy-candidate ranking frontier then tests the simplest target-free rescue at
+the same top-80 budget. The current source-penalty pruning keeps only `6/1240`
+copy prefix digits on the unique sampled ops. The best simple policy,
+`longest_recent`, improves that to `56/1240` and barely beats random top-80
+digit p95 (`55`), but this is only `0.045161` of the copy digits. Simple chunk
+ranking is therefore not a generator component; the constructive route now
+needs richer copy-control state or a paid copy hint stream.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2941,6 +2948,7 @@ book generation, not row0 pair-cell placement.
 - [Closed loop rescue ledger](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/04_closed_loop_rescue_ledger.md)
 - [Closed loop rescue surface audit](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/05_closed_loop_rescue_surface_audit.md)
 - [Copy state rescue diagnostic](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/06_copy_state_rescue_diagnostic.md)
+- [Copy candidate ranking frontier](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/07_copy_candidate_ranking_frontier.md)
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)

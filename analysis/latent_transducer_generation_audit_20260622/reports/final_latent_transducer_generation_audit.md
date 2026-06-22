@@ -1,7 +1,7 @@
 # Final Latent Transducer Generation Audit
 
 Status: `analysis_only`
-Classification: `latent_transducer_closed_loop_high_external_control_copy_pruning_mapped`
+Classification: `latent_transducer_closed_loop_copy_ranking_frontier_open`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -50,6 +50,11 @@ boundaries, and copy sources together, instead of relying on the fixed
 - Copy-state diagnostic source-match ops: `32/32`.
 - Copy-state diagnostic inventory/pruned prefix digit fraction: `0.857258` / `0.000000`.
 - Copy-state diagnostic ops with any pruned prefix: `0`.
+- Ranking frontier best policy: `longest_recent`.
+- Ranking frontier current/best prefix digits: `6` / `56`.
+- Ranking frontier best prefix digit fraction: `0.045161`.
+- Ranking frontier random digit p95 beaten: `True`.
+- Ranking frontier promotes copy ranking rule: `False`.
 
 The new route tests the right object: a single parser where literal, copy,
 length, source, and boundary decisions compete in one beam. But this first
@@ -77,7 +82,13 @@ sampled canonical copy ops, the source payload matches in `32/32` and
 some correct prefix exists in the raw inventory in `32/32`, covering
 `1063/1240` copy digits, but the pruned candidate set contains a correct
 prefix in `0/32`. The live blocker is therefore candidate pruning/ranking
-or copy-continuation state, not missing prior material.
+or copy-continuation state, not missing prior material. A copy-candidate
+ranking frontier then tests whether simple target-free rankings solve
+that blocker at the same top-80 budget. They do not. The best unique-op
+policy, `longest_recent`, improves over current source-penalty pruning
+from `6` to `56` prefix digits and narrowly beats random top-80 digit p95
+(`55`), but still covers only `56/1240` copy digits. Simple chunk ranking
+is therefore a weak clue, not a promoted copy-control rule.
 
 ## Decision
 
@@ -87,6 +98,7 @@ or copy-continuation state, not missing prior material.
 - The rescue ledger is high external-control, so oracle steering is not promoted as a compact latent state.
 - Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.
 - Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.
+- Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.
 - Promotion requires nontrivial exact holdout books and paid correction reduction.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
@@ -99,3 +111,4 @@ or copy-continuation state, not missing prior material.
 - [Closed loop rescue ledger](test_results/04_closed_loop_rescue_ledger.md)
 - [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)
 - [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)
+- [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)

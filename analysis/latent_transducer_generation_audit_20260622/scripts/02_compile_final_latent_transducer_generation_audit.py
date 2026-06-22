@@ -15,6 +15,7 @@ CLOSED_LOOP_GATE = TEST_RESULTS / "03_closed_loop_digit_survival_gate.json"
 RESCUE_LEDGER = TEST_RESULTS / "04_closed_loop_rescue_ledger.json"
 RESCUE_SURFACE = TEST_RESULTS / "05_closed_loop_rescue_surface_audit.json"
 COPY_DIAGNOSTIC = TEST_RESULTS / "06_copy_state_rescue_diagnostic.json"
+RANKING_FRONTIER = TEST_RESULTS / "07_copy_candidate_ranking_frontier.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -42,19 +43,22 @@ def main() -> None:
     rescue_ledger = load_json(RESCUE_LEDGER)
     rescue_surface = load_json(RESCUE_SURFACE)
     copy_diagnostic = load_json(COPY_DIAGNOSTIC)
+    ranking_frontier = load_json(RANKING_FRONTIER)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
     assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     assert_boundary("closed_loop_rescue_ledger", rescue_ledger)
     assert_boundary("closed_loop_rescue_surface_audit", rescue_surface)
     assert_boundary("copy_state_rescue_diagnostic", copy_diagnostic)
+    assert_boundary("copy_candidate_ranking_frontier", ranking_frontier)
     s = beam_gate["summary"]
     c = closed_loop_gate["summary"]
     r = rescue_ledger["summary"]
     rs = rescue_surface["summary"]
     ce = copy_diagnostic["event_summary"]
     cc = copy_diagnostic["copy_op_summary"]
+    rf = ranking_frontier["summary"]
     if rescue_ledger["classification"] == "closed_loop_rescue_high_external_control":
-        classification = "latent_transducer_closed_loop_high_external_control_copy_pruning_mapped"
+        classification = "latent_transducer_closed_loop_copy_ranking_frontier_open"
     else:
         classification = beam_gate["classification"]
     lines = [
@@ -110,6 +114,11 @@ def main() -> None:
         f"- Copy-state diagnostic source-match ops: `{cc['source_match_ops']}/{cc['copy_ops_tested']}`.",
         f"- Copy-state diagnostic inventory/pruned prefix digit fraction: `{cc['inventory_prefix_digit_fraction']:.6f}` / `{cc['pruned_prefix_digit_fraction']:.6f}`.",
         f"- Copy-state diagnostic ops with any pruned prefix: `{cc['ops_with_any_pruned_prefix']}`.",
+        f"- Ranking frontier best policy: `{rf['best_unique_policy']}`.",
+        f"- Ranking frontier current/best prefix digits: `{rf['current_unique_prefix_digits']}` / `{rf['best_unique_prefix_digits']}`.",
+        f"- Ranking frontier best prefix digit fraction: `{rf['best_unique_prefix_digit_fraction']:.6f}`.",
+        f"- Ranking frontier random digit p95 beaten: `{rf['best_beats_random_digit_p95']}`.",
+        f"- Ranking frontier promotes copy ranking rule: `{rf['promotes_copy_ranking_rule']}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
@@ -137,7 +146,13 @@ def main() -> None:
         "some correct prefix exists in the raw inventory in `32/32`, covering",
         "`1063/1240` copy digits, but the pruned candidate set contains a correct",
         "prefix in `0/32`. The live blocker is therefore candidate pruning/ranking",
-        "or copy-continuation state, not missing prior material.",
+        "or copy-continuation state, not missing prior material. A copy-candidate",
+        "ranking frontier then tests whether simple target-free rankings solve",
+        "that blocker at the same top-80 budget. They do not. The best unique-op",
+        "policy, `longest_recent`, improves over current source-penalty pruning",
+        "from `6` to `56` prefix digits and narrowly beats random top-80 digit p95",
+        "(`55`), but still covers only `56/1240` copy digits. Simple chunk ranking",
+        "is therefore a weak clue, not a promoted copy-control rule.",
         "",
         "## Decision",
         "",
@@ -147,6 +162,7 @@ def main() -> None:
         "- The rescue ledger is high external-control, so oracle steering is not promoted as a compact latent state.",
         "- Rescue surface labels are diagnostic only; they do not produce a decoder-visible state.",
         "- Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.",
+        "- Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -159,6 +175,7 @@ def main() -> None:
         "- [Closed loop rescue ledger](test_results/04_closed_loop_rescue_ledger.md)",
         "- [Closed loop rescue surface audit](test_results/05_closed_loop_rescue_surface_audit.md)",
         "- [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)",
+        "- [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

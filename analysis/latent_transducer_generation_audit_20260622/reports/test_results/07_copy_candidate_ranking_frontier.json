@@ -1,0 +1,262 @@
+{
+  "case_reopened": false,
+  "classification": "simple_copy_candidate_ranking_not_promoted",
+  "cutoff_rows": [
+    {
+      "best_hits": 3,
+      "best_policy": "frequent_longest",
+      "best_prefix_digit_fraction": 0.05113636363636364,
+      "best_prefix_digits": 18,
+      "copy_ops": 11,
+      "current_hits": 1,
+      "current_prefix_digits": 6,
+      "cutoff": 20,
+      "sample_books": [
+        20,
+        45,
+        69
+      ]
+    },
+    {
+      "best_hits": 3,
+      "best_policy": "frequent_longest",
+      "best_prefix_digit_fraction": 0.037122969837587005,
+      "best_prefix_digits": 16,
+      "copy_ops": 8,
+      "current_hits": 0,
+      "current_prefix_digits": 0,
+      "cutoff": 30,
+      "sample_books": [
+        30,
+        50,
+        69
+      ]
+    },
+    {
+      "best_hits": 2,
+      "best_policy": "recent_longest",
+      "best_prefix_digit_fraction": 0.11401425178147269,
+      "best_prefix_digits": 48,
+      "copy_ops": 8,
+      "current_hits": 0,
+      "current_prefix_digits": 0,
+      "cutoff": 40,
+      "sample_books": [
+        40,
+        55,
+        69
+      ]
+    },
+    {
+      "best_hits": 2,
+      "best_policy": "frequent_longest",
+      "best_prefix_digit_fraction": 0.02320185614849188,
+      "best_prefix_digits": 10,
+      "copy_ops": 7,
+      "current_hits": 0,
+      "current_prefix_digits": 0,
+      "cutoff": 50,
+      "sample_books": [
+        50,
+        60,
+        69
+      ]
+    },
+    {
+      "best_hits": 2,
+      "best_policy": "frequent_longest",
+      "best_prefix_digit_fraction": 0.021929824561403508,
+      "best_prefix_digits": 10,
+      "copy_ops": 8,
+      "current_hits": 0,
+      "current_prefix_digits": 0,
+      "cutoff": 60,
+      "sample_books": [
+        60,
+        65,
+        69
+      ]
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_copy_ranking_rule": false,
+    "promotes_generator": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "copy_state_rescue_diagnostic": "analysis/latent_transducer_generation_audit_20260622/reports/test_results/06_copy_state_rescue_diagnostic.json"
+  },
+  "interpretation": "Target-free ranking policies can improve over the current source penalty pruning, with longest/recent and frequency-first variants providing weak signals, but the best policy still retains only a small fraction of canonical copy digits. This keeps copy candidate ranking open as a blocker, not as a solved generator component.",
+  "length_choices": [
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    15,
+    20,
+    30,
+    40,
+    60,
+    80,
+    120,
+    160
+  ],
+  "plaintext_claim": false,
+  "policy_summaries_instance_weighted": {
+    "current_source_penalty": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 0,
+      "hit_fraction": 0.023809523809523808,
+      "hits": 1,
+      "policy": "current_source_penalty",
+      "prefix_digit_fraction": 0.0028694404591104736,
+      "prefix_digits": 6
+    },
+    "earliest_longest": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 0,
+      "hit_fraction": 0.023809523809523808,
+      "hits": 1,
+      "policy": "earliest_longest",
+      "prefix_digit_fraction": 0.0028694404591104736,
+      "prefix_digits": 6
+    },
+    "frequent_longest": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 1,
+      "hit_fraction": 0.2857142857142857,
+      "hits": 12,
+      "policy": "frequent_longest",
+      "prefix_digit_fraction": 0.030607364897178385,
+      "prefix_digits": 64
+    },
+    "longest_recent": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 2,
+      "hit_fraction": 0.07142857142857142,
+      "hits": 3,
+      "policy": "longest_recent",
+      "prefix_digit_fraction": 0.026781444285031087,
+      "prefix_digits": 56
+    },
+    "rare_longest": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 0,
+      "hit_fraction": 0.0,
+      "hits": 0,
+      "policy": "rare_longest",
+      "prefix_digit_fraction": 0.0,
+      "prefix_digits": 0
+    },
+    "recent_longest": {
+      "copy_digits": 2091,
+      "copy_ops": 42,
+      "full_hits": 0,
+      "hit_fraction": 0.047619047619047616,
+      "hits": 2,
+      "policy": "recent_longest",
+      "prefix_digit_fraction": 0.02295552367288379,
+      "prefix_digits": 48
+    }
+  },
+  "policy_summaries_unique_ops": {
+    "current_source_penalty": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 0,
+      "hit_fraction": 0.03125,
+      "hits": 1,
+      "policy": "current_source_penalty",
+      "prefix_digit_fraction": 0.004838709677419355,
+      "prefix_digits": 6
+    },
+    "earliest_longest": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 0,
+      "hit_fraction": 0.03125,
+      "hits": 1,
+      "policy": "earliest_longest",
+      "prefix_digit_fraction": 0.004838709677419355,
+      "prefix_digits": 6
+    },
+    "frequent_longest": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 1,
+      "hit_fraction": 0.21875,
+      "hits": 7,
+      "policy": "frequent_longest",
+      "prefix_digit_fraction": 0.031451612903225803,
+      "prefix_digits": 39
+    },
+    "longest_recent": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 2,
+      "hit_fraction": 0.09375,
+      "hits": 3,
+      "policy": "longest_recent",
+      "prefix_digit_fraction": 0.04516129032258064,
+      "prefix_digits": 56
+    },
+    "rare_longest": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 0,
+      "hit_fraction": 0.0,
+      "hits": 0,
+      "policy": "rare_longest",
+      "prefix_digit_fraction": 0.0,
+      "prefix_digits": 0
+    },
+    "recent_longest": {
+      "copy_digits": 1240,
+      "copy_ops": 32,
+      "full_hits": 0,
+      "hit_fraction": 0.0625,
+      "hits": 2,
+      "policy": "recent_longest",
+      "prefix_digit_fraction": 0.03870967741935484,
+      "prefix_digits": 48
+    }
+  },
+  "random_control_unique_ops": {
+    "digit_mean": 15.498,
+    "digit_p95": 55,
+    "hit_mean": 1.38,
+    "hit_p95": 3,
+    "top_k": 80,
+    "trials": 500
+  },
+  "schema": "copy_candidate_ranking_frontier_v1",
+  "scope": "analysis_only_target_free_chunk_ranking_frontier",
+  "summary": {
+    "best_beats_random_digit_p95": true,
+    "best_unique_hits": 3,
+    "best_unique_policy": "longest_recent",
+    "best_unique_prefix_digit_fraction": 0.04516129032258064,
+    "best_unique_prefix_digits": 56,
+    "current_unique_hits": 1,
+    "current_unique_prefix_digits": 6,
+    "instance_copy_ops": 42,
+    "promotes_copy_ranking_rule": false,
+    "raw_copy_digits": 1240,
+    "raw_inventory_prefix_digit_fraction": 0.8572580645161291,
+    "raw_inventory_prefix_digits": 1063,
+    "unique_copy_ops": 32
+  },
+  "top_k": 80,
+  "translation_delta": "NONE"
+}
