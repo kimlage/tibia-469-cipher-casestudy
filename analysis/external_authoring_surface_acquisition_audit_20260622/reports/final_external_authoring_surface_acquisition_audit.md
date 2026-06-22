@@ -89,3 +89,13 @@ No source is integrated into v9 and net v9 reduction remains `0.0` bits.
 - [04_clean_topology_contract_validator.json](test_results/04_clean_topology_contract_validator.json)
 - [04_clean_topology_contract_validator.md](test_results/04_clean_topology_contract_validator.md)
 - [04_clean_topology_contract_template.csv](test_results/04_clean_topology_contract_template.csv)
+
+## Clean Topology v9 Integration Harness
+
+A v9 integration harness now matches rights-clean topology CSV rows to canonical books and prepares topology feature tests against v9 operation streams.
+The current template input has `1` unique match and does not meet coverage thresholds, so no source is integrated.
+No v9 reduction is claimed.
+
+- [05_clean_topology_v9_integration_harness.py](../scripts/05_clean_topology_v9_integration_harness.py)
+- [05_clean_topology_v9_integration_harness.json](test_results/05_clean_topology_v9_integration_harness.json)
+- [05_clean_topology_v9_integration_harness.md](test_results/05_clean_topology_v9_integration_harness.md)

@@ -121,6 +121,14 @@ clean POI-level data (`4861` markers) but contain no Hellgate/Library/Bonelord/
 Beholder hits and no book object layer. No topology source is integrated into
 v9.
 
+The clean topology v9 integration harness then connects the contract to the
+current executable decoder frontier. It matches rights-clean CSV rows to
+canonical book digits, joins matched books to v9 operation streams, and only
+runs topology feature diagnostics after coverage reaches at least `20` total
+books and `10` derived books. The current template has `1` unique seed-book
+match and `0` derived-book matches, so it correctly produces no v9 integration
+and no reduction.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)

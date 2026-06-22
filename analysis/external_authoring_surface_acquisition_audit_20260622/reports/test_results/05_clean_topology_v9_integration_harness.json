@@ -1,0 +1,36 @@
+{
+  "case_reopened": false,
+  "classification": "clean_topology_v9_harness_ready_no_current_source_integrated",
+  "compression_bound_status": "unchanged",
+  "coverage_ok": false,
+  "decision": {
+    "external_surface_integrated": false,
+    "next_step": "provide a rights-clean CSV with enough uniquely matched books to run v9 topology controls",
+    "reason": "coverage_insufficient",
+    "v9_reduction_bits": 0.0
+  },
+  "diagnostics": [],
+  "input_csv": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv",
+  "joined_v9_rows": 0,
+  "match_summary": {
+    "ambiguous_matches": 0,
+    "derived_matched_books": [],
+    "input_rows": 1,
+    "matched_books": [
+      4
+    ],
+    "unique_matches": 1,
+    "unmatched": 0
+  },
+  "minimum_coverage": {
+    "derived_matched_books": 10,
+    "total_matched_books": 20
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T22:43:07.999452+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "clean_topology_v9_integration_harness.v1",
+  "scope": "analysis_only_clean_topology_v9_integration_harness",
+  "translation_delta": "NONE",
+  "validation_errors": []
+}

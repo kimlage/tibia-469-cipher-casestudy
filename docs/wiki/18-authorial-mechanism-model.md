@@ -3875,6 +3875,13 @@ bookcase manifest does not satisfy the contract, and TibiaMaps public
 Beholder hits and no book object layer. This does not move v9, but it turns the
 external-source blocker into a concrete input format and validation gate.
 
+The v9 integration harness now closes the loop for any future clean topology
+source: it matches CSV rows to canonical book digits, joins them to v9 operation
+streams, and requires at least `20` matched books and `10` derived books before
+running topology feature diagnostics. Running it on the current template yields
+`1` unique seed-book match, `0` derived-book matches, `0` joined v9 rows, and
+therefore no claimed reduction.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
