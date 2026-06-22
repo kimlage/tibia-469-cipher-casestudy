@@ -11,6 +11,7 @@ REPORTS = HERE / "reports"
 TEST_RESULTS = REPORTS / "test_results"
 
 BEAM_GATE = TEST_RESULTS / "01_latent_transducer_beam_gate.json"
+CLOSED_LOOP_GATE = TEST_RESULTS / "03_closed_loop_digit_survival_gate.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -34,8 +35,11 @@ def assert_boundary(name: str, data: dict[str, Any]) -> None:
 
 def main() -> None:
     beam_gate = load_json(BEAM_GATE)
+    closed_loop_gate = load_json(CLOSED_LOOP_GATE)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
+    assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     s = beam_gate["summary"]
+    c = closed_loop_gate["summary"]
     classification = beam_gate["classification"]
     lines = [
         "# Final Latent Transducer Generation Audit",
@@ -66,17 +70,24 @@ def main() -> None:
         f"- Aggregate cutpoint saving vs atlas: `{s['aggregate_cutpoint_saving_vs_atlas_bits']:.3f}`.",
         f"- Predicted literal digits: `{s['aggregate_predicted_literal_digits']}`.",
         f"- Canonical literal digits: `{s['aggregate_canonical_literal_digits']}`.",
+        f"- Closed-loop top-1 exact books: `{c['top1_exact_books']}/{c['tested_book_instances']}`.",
+        f"- Closed-loop exact books surviving finished beam: `{c['exact_in_finished_beam_books']}/{c['tested_book_instances']}`.",
+        f"- Closed-loop true-prefix survival books: `{c['true_prefix_survival_books']}/{c['tested_book_instances']}`.",
+        f"- Closed-loop mean true-prefix max fraction: `{c['mean_true_prefix_max_fraction']:.6f}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
         "gate is still teacher-forced by the target digit stream and does not",
         "promote a closed-loop generator unless it produces nontrivial exact books",
-        "under holdout.",
+        "under holdout. A second survival gate removes within-book target teacher",
+        "forcing while still granting book length and true prior material; the",
+        "true stream does not survive as a closed-loop generator.",
         "",
         "## Decision",
         "",
         "- The route changes from local endpoint/source selectors to a joint latent-transducer audit.",
         "- The first beam gate is a parser/generator prototype, not a promoted formula.",
+        "- Closed-loop digit survival is rejected under the current beam.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -85,6 +96,7 @@ def main() -> None:
         "## Sources",
         "",
         "- [Latent transducer beam gate](test_results/01_latent_transducer_beam_gate.md)",
+        "- [Closed loop digit survival gate](test_results/03_closed_loop_digit_survival_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

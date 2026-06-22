@@ -617,6 +617,14 @@ teacher-forced by the target digit stream, recovers `224/343` held-out
 cutpoints, beats random cutpoint p95 in `5/5` cells, and saves `675.669` paid
 cutpoint-correction bits versus the cutpoint atlas, but reaches `0` nontrivial
 exact books and only `131/421` source+length hits.
+A closed-loop digit survival gate then removes within-book target teacher
+forcing. It still grants book length and true prior material, so this is a
+generous survival test rather than a complete corpus generator. Under the
+current beam, the true book is never top-1 or present in the finished beam
+(`0/150`), true-prefix survival is also `0/150`, and the mean maximum true
+prefix fraction is only `0.007754`. This rejects the current model as a
+closed-loop digit generator: the teacher-forced parser clue does not yet become
+a self-generating process.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2784,6 +2792,7 @@ book generation, not row0 pair-cell placement.
 - [Combined boundary endpoint decoder gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/04_combined_boundary_endpoint_decoder_gate.md)
 - [Final latent transducer generation audit](../../analysis/latent_transducer_generation_audit_20260622/reports/final_latent_transducer_generation_audit.md)
 - [Latent transducer beam gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/01_latent_transducer_beam_gate.md)
+- [Closed loop digit survival gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/03_closed_loop_digit_survival_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
