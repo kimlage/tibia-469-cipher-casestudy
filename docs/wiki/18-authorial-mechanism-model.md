@@ -16,6 +16,7 @@ source_refs:
   - analysis/target_digit_boundary_island_audit_20260621
   - analysis/target_digit_boundary_miss_residual_audit_20260621
   - analysis/target_digit_boundary_miss_transition_audit_20260621
+  - analysis/skeleton_generation_route_review_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -573,6 +574,15 @@ this is not promoted: random relabel controls with the same category sizes
 reach p95 `44.763` bits before feature charge, above the observed `39.806`,
 and chunk-recurrence features are sparse. This rejects transition/chunk class
 labels as a reliable explanation for the missed endpoints.
+A skeleton generation route review then consolidates the current strategic
+state instead of adding another local sweep. Across `8` route families, there
+are `0` promoted generator routes, `2` promoted clue/dependency routes, and
+`5` rejected, weak, or deferred routes. This changes the recommended path:
+boundary-frontier work is saturated as a main route. The next aligned work is
+not another local cutpoint/length/miss-label policy, but a joint
+target-stream/parser or explicit latent-state account that emits digits and
+boundaries together instead of choosing endpoints after the target text is
+known.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2731,6 +2741,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary miss residual gate](../../analysis/target_digit_boundary_miss_residual_audit_20260621/reports/test_results/01_target_digit_boundary_miss_residual_gate.md)
 - [Final target digit boundary miss transition audit](../../analysis/target_digit_boundary_miss_transition_audit_20260621/reports/final_target_digit_boundary_miss_transition_audit.md)
 - [Target digit boundary miss transition gate](../../analysis/target_digit_boundary_miss_transition_audit_20260621/reports/test_results/01_target_digit_boundary_miss_transition_gate.md)
+- [Final skeleton generation route review](../../analysis/skeleton_generation_route_review_20260622/reports/final_skeleton_generation_route_review.md)
+- [Skeleton generation route review](../../analysis/skeleton_generation_route_review_20260622/reports/test_results/01_skeleton_generation_route_review.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

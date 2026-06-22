@@ -1,0 +1,95 @@
+{
+  "case_reopened": false,
+  "classification": "skeleton_generation_route_review_boundary_frontier_saturated",
+  "decision": {
+    "case_reopened": false,
+    "compression_bound_status": "unchanged_8154_676268",
+    "recommended_next_route": "joint_target_stream_parser_or_latent_state",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "copy_source": "analysis/copy_source_generation_audit_20260621/reports/test_results/03_copy_source_context_gate.json",
+    "generation_boundary": "analysis/generation_boundary_closure_audit_20260621/reports/test_results/01_generation_boundary_closure_audit.json",
+    "literal_payload": "analysis/literal_payload_generation_audit_20260621/reports/test_results/02_literal_payload_context_gate.json",
+    "operation_cutpoint_lattice": "analysis/operation_cutpoint_lattice_audit_20260621/reports/test_results/01_operation_cutpoint_lattice_gate.json",
+    "operation_cutpoint_scaling": "analysis/operation_cutpoint_scaling_audit_20260621/reports/test_results/01_operation_cutpoint_scaling_gate.json",
+    "operation_length_markov": "analysis/operation_length_markov_audit_20260621/reports/test_results/01_operation_length_markov_gate.json",
+    "operation_recursive_partition": "analysis/operation_recursive_partition_audit_20260621/reports/test_results/01_operation_recursive_partition_gate.json",
+    "source_free_skeleton": "analysis/source_free_skeleton_generation_audit_20260621/reports/test_results/02_source_free_skeleton_grammar_gate.json",
+    "target_boundary_miss_residual": "analysis/target_digit_boundary_miss_residual_audit_20260621/reports/test_results/01_target_digit_boundary_miss_residual_gate.json",
+    "target_boundary_miss_transition": "analysis/target_digit_boundary_miss_transition_audit_20260621/reports/test_results/01_target_digit_boundary_miss_transition_gate.json",
+    "target_boundary_threshold": "analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.json",
+    "target_digit_process": "analysis/target_digit_process_audit_20260621/reports/test_results/01_target_digit_process_gate.json"
+  },
+  "plaintext_claim": false,
+  "routes": [
+    {
+      "evidence": "promoted_generators=0/5; materialized_unit_floor=593; next_blocker=operation_skeleton",
+      "next_action": "keep operation_skeleton as first-class blocker",
+      "route": "dependency_boundary",
+      "status": "OPEN_BLOCKER"
+    },
+    {
+      "evidence": "best_exact_books=3/60; op_hits=14/261; preq_cover_all=0/5",
+      "next_action": "do not continue simple context grammar sweeps",
+      "route": "simple_source_free_skeleton_grammar",
+      "status": "REJECTED_CONTROL"
+    },
+    {
+      "evidence": "best_exact_books=9/60; rowwise_exact_lengths=52/261; preq_cover_all=0/5",
+      "next_action": "do not rerun local length Markov/context policies",
+      "route": "operation_length_contexts",
+      "status": "REJECTED_CONTROL"
+    },
+    {
+      "evidence": "scaling_exact_books=42/60 but record_delta=35; lattice_hits=159/201 below_random_mean_lift=-2.357; recursive_hits=11/201",
+      "next_action": "do not continue proportional grid/recursive split paths",
+      "route": "scaled_or_lattice_cutpoint_geometry",
+      "status": "REJECTED_CONTROL"
+    },
+    {
+      "evidence": "best_model=prev2_digits; derived60_bpd=2.108869; beats_shuffled=True; promotes_generator=False",
+      "next_action": "promote only as target-stream prior; exact residual still required",
+      "route": "target_digit_stream",
+      "status": "PROMOTED_MECHANICAL_CLUE_NOT_GENERATOR"
+    },
+    {
+      "evidence": "best_policy=right_ge:4; saving=645.694; tp_fp_fn=94/841/107; exact_books=0/60",
+      "next_action": "retain as pruning/coding clue only",
+      "route": "target_digit_boundary_candidates",
+      "status": "PROMOTED_DEPENDENCY_REDUCTION_NOT_GENERATOR"
+    },
+    {
+      "evidence": "residual_delta=69.462 but preq=4/5; transition_best=shape beats_random_p95=False",
+      "next_action": "stop treating miss labels as the next generator route",
+      "route": "boundary_residual_labels",
+      "status": "WEAK_OR_REJECTED"
+    },
+    {
+      "evidence": "literal_promoted=False; copy_source_promoted=False; both assume exact skeleton is granted",
+      "next_action": "defer source/payload work until skeleton dependency falls",
+      "route": "downstream_after_exact_skeleton",
+      "status": "DEFERRED_REJECTED_UNTIL_SKELETON_GENERATED"
+    }
+  ],
+  "schema": "skeleton_generation_route_review_v1",
+  "scope": "analysis_only_route_selection_after_boundary_frontier",
+  "summary": {
+    "continue_route": "joint_target_stream_parser_or_latent_state",
+    "decision": "The current evidence says to stop local cutpoint/length/miss-label sweeps. The only live route that still aligns with a generator is a joint target-stream/parser or explicit latent-state account that emits digits and boundaries together, rather than choosing endpoints after the target text is known.",
+    "open_blocker": "operation_skeleton",
+    "promoted_dependency_or_clue_routes": 2,
+    "promoted_generator_routes": 0,
+    "rejected_or_weak_routes": 5,
+    "route_count": 8,
+    "stop_routes": [
+      "simple_source_free_skeleton_grammar",
+      "local_operation_length_context_sweeps",
+      "proportional_cutpoint_grids",
+      "boundary_miss_label_classification",
+      "downstream_source_payload_before_skeleton"
+    ]
+  },
+  "translation_delta": "NONE"
+}
