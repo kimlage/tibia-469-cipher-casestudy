@@ -1,0 +1,104 @@
+{
+  "case_reopened": false,
+  "classification": "LATENT_NONLOCAL_STATE_ROUTE_REQUIRED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "continue_joint_chunk_origin": true,
+    "local_prior_routes_closed": true,
+    "next_gate": "latent_nonlocal_state_program_pilot",
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "bucket_chunk_origin_beam": "analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/test_results/01_bucket_chunk_origin_beam_pilot.json",
+    "chunk_length_prior": "analysis/chunk_length_prior_integration_audit_20260622/reports/test_results/01_chunk_length_prior_integration_gate.json",
+    "executable_frontier": "analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.json",
+    "joint_chunk_origin_route": "analysis/joint_chunk_origin_route_audit_20260622/reports/test_results/01_joint_chunk_origin_route_gate.json",
+    "markov_content_prior": "analysis/markov_chunk_content_prior_audit_20260622/reports/test_results/01_markov_chunk_content_prior_gate.json",
+    "stateful_control_program": "analysis/stateful_control_program_audit_20260622/reports/test_results/01_stateful_control_program_gate.json",
+    "unified_control_program": "analysis/unified_control_program_audit_20260622/reports/test_results/02_unified_control_program_tests.json"
+  },
+  "next_gate": {
+    "granted": [
+      "book order",
+      "book lengths",
+      "seed books 0..9",
+      "row0 as exogenous substrate",
+      "previous emitted material"
+    ],
+    "immediate_negative_condition": [
+      "if it decomposes into independent local priors for length, content, or source, classify as already closed",
+      "if correction bits dominate direct external tape declaration, classify as parser clue only"
+    ],
+    "minimum_success": [
+      "nontrivial held-out exact book or exact operation subsequence without atlas correction",
+      "or paid reduction of combined control+length+literal+copy-hint ledger under prefix/family holdout",
+      "and stronger than same-multiset, same-length, digit-shuffled, and permuted-order controls"
+    ],
+    "name": "latent_nonlocal_state_program_pilot",
+    "not_granted": [
+      "exact operation skeleton",
+      "exact type:length stream",
+      "exact copy length",
+      "exact target chunk",
+      "copy source/hint tape",
+      "literal payload as an independent tape"
+    ],
+    "purpose": "test a hidden/nonlocal state that jointly emits or keeps in beam operation control, length/chunk origin, literal innovation, and copy availability, rather than scoring those fields independently"
+  },
+  "plaintext_claim": false,
+  "route_rows": [
+    {
+      "decision": "ledger retained, generator not promoted",
+      "evidence": "roundtrip=True; promoted_reductions=0; external_bits_excluding_seed=4358.858",
+      "route": "current_executable_tape_program",
+      "status": "FRONTIER"
+    },
+    {
+      "decision": "route remains aligned only if it becomes a joint state program",
+      "evidence": "next_gate=joint_chunk_origin_beam_pilot; rejected_routes=3",
+      "route": "joint_chunk_origin_route",
+      "status": "OPEN_ROUTE"
+    },
+    {
+      "decision": "bucket-level candidate sets remain too broad",
+      "evidence": "rank_bits=2649.756; exact_hint_bits=1873.768; top80=5/208",
+      "route": "bucket_chunk_origin_rank",
+      "status": "WEAK_CLUE_NOT_EXECUTABLE"
+    },
+    {
+      "decision": "simple length context cannot be the next route",
+      "evidence": "full_fit_delta=-103.509; holdout_positive=0/5",
+      "route": "copy_length_prior_then_hint",
+      "status": "POSTHOC_NOT_PROMOTED"
+    },
+    {
+      "decision": "prev2 remains digit/boundary clue, not chunk selector",
+      "evidence": "content_first_delta=245.829; beats_freq=0/5",
+      "route": "prev2_content_prior_for_chunks",
+      "status": "REJECTED_CONTROL"
+    },
+    {
+      "decision": "observable previous/remaining state is not enough",
+      "evidence": "best_model=remaining_prev_bucket; delta_vs_independent=-1001.211; greedy_exact_books=0; beam20_nontrivial=0",
+      "route": "observable_stateful_control",
+      "status": "REJECTED_CONTROL"
+    },
+    {
+      "decision": "coupling clue exists but does not generate program",
+      "evidence": "exact_books_without_atlas=0; exact_ops_without_atlas=0; promoted_couplings=1",
+      "route": "unified_control_coupling",
+      "status": "PARTIAL_CLUE_NOT_GENERATOR"
+    }
+  ],
+  "schema": "latent_state_route_synthesis.v1",
+  "scope": "analysis_only_route_synthesis_after_local_joint_chunk_origin_priors",
+  "summary": {
+    "closed_local_routes": 4,
+    "frontier_routes": 1,
+    "next_gate": "latent_nonlocal_state_program_pilot",
+    "open_routes": 1,
+    "partial_clues": 2
+  },
+  "translation_delta": "NONE"
+}

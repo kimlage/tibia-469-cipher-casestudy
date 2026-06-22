@@ -27,6 +27,7 @@ source_refs:
   - analysis/joint_chunk_origin_beam_pilot_audit_20260622
   - analysis/chunk_length_prior_integration_audit_20260622
   - analysis/markov_chunk_content_prior_audit_20260622
+  - analysis/latent_state_route_synthesis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -816,6 +817,15 @@ beat frequency/recency in `0/5` prefix holdouts and cost `4244.687` aggregate
 bits versus `3998.858` for frequency/recency (`+245.829`). Markov as a
 frequency/recency tie-breaker gives no improvement. The `prev2` clue therefore
 remains scoped to digit/boundary statistics, not chunk selection.
+A latent-state route synthesis then consolidates the local route failures. The
+current executable tape program is still only a ledger, bucket chunk-origin is
+too broad, copy-length prior is posthoc, `prev2` content is not a chunk
+selector, observable previous/remaining state is rejected, and unified coupling
+still gives `0` exact books/ops without atlas. The next aligned route is
+`latent_nonlocal_state_program_pilot`: a hidden/nonlocal state program that
+jointly accounts for control, length/chunk origin, literal innovation, and copy
+availability. Isolated length/content/source priors are closed as the main
+route unless they are embedded in that joint state program.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3168,6 +3178,8 @@ book generation, not row0 pair-cell placement.
 - [Chunk length-prior integration gate](../../analysis/chunk_length_prior_integration_audit_20260622/reports/test_results/01_chunk_length_prior_integration_gate.md)
 - [Final Markov chunk-content prior audit](../../analysis/markov_chunk_content_prior_audit_20260622/reports/final_markov_chunk_content_prior_audit.md)
 - [Markov chunk-content prior gate](../../analysis/markov_chunk_content_prior_audit_20260622/reports/test_results/01_markov_chunk_content_prior_gate.md)
+- [Final latent-state route synthesis audit](../../analysis/latent_state_route_synthesis_audit_20260622/reports/final_latent_state_route_synthesis_audit.md)
+- [Latent-state route synthesis](../../analysis/latent_state_route_synthesis_audit_20260622/reports/test_results/01_latent_state_route_synthesis.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
