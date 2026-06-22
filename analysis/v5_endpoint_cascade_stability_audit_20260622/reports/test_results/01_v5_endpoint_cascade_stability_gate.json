@@ -1,0 +1,143 @@
+{
+  "case_reopened": false,
+  "classification": "WEAK_V5_ENDPOINT_CASCADE_FULLFIT_ONLY",
+  "compression_bound_status": "unchanged",
+  "control": {
+    "random_trials": 300,
+    "shuffled_residual_p05": 3221.7143482286724,
+    "shuffled_residual_p50": 3234.392890656649
+  },
+  "decision": {
+    "next_blocker": "v5 endpoint cascade is full-fit positive but not prefix-holdout stable",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v5_source_endpoint_memory_gate": "analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_gate.json"
+  },
+  "plaintext_claim": false,
+  "policy_summaries": [
+    {
+      "class_counts": {
+        "both": 52,
+        "end": 55,
+        "fallback": 101
+      },
+      "composition_bits": 439.958642781383,
+      "copy_bits": 1895.7445966819005,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "policy": "end_first",
+      "residual_bits": 3219.3361127033218
+    },
+    {
+      "class_counts": {
+        "both": 52,
+        "fallback": 115,
+        "start": 41
+      },
+      "composition_bits": 439.958642781383,
+      "copy_bits": 1910.409714755533,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "policy": "start_first",
+      "residual_bits": 3234.0012307769543
+    },
+    {
+      "class_counts": {
+        "both": 52,
+        "end": 55,
+        "fallback": 60,
+        "start": 41
+      },
+      "composition_bits": 439.958642781383,
+      "copy_bits": 1881.8031139067891,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "policy": "end_then_start",
+      "residual_bits": 3205.3946299282106
+    },
+    {
+      "class_counts": {
+        "both": 52,
+        "end": 55,
+        "fallback": 60,
+        "start": 41
+      },
+      "composition_bits": 439.958642781383,
+      "copy_bits": 1881.8031139067891,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "policy": "start_then_end",
+      "residual_bits": 3205.3946299282106
+    }
+  ],
+  "prefix_selection_rows": [
+    {
+      "cutoff": 20,
+      "selected_policy": "end_then_start",
+      "test_delta_vs_v5": -4.4771336653093385,
+      "test_residual_bits": 2166.5729834722683,
+      "train_delta_vs_v5": -9.464349109802015,
+      "train_residual_bits": 1038.821646455942
+    },
+    {
+      "cutoff": 30,
+      "selected_policy": "end_then_start",
+      "test_delta_vs_v5": 4.733842144515165,
+      "test_residual_bits": 1699.7239366150852,
+      "train_delta_vs_v5": -18.675324919626746,
+      "train_residual_bits": 1505.6706933131254
+    },
+    {
+      "cutoff": 40,
+      "selected_policy": "end_then_start",
+      "test_delta_vs_v5": 8.81387421925956,
+      "test_residual_bits": 1206.8058629696923,
+      "train_delta_vs_v5": -22.755356994370686,
+      "train_residual_bits": 1998.5887669585186
+    },
+    {
+      "cutoff": 50,
+      "selected_policy": "end_then_start",
+      "test_delta_vs_v5": -0.02133406186760567,
+      "test_residual_bits": 735.1312161193875,
+      "train_delta_vs_v5": -13.920148713243634,
+      "train_residual_bits": 2470.263413808823
+    },
+    {
+      "cutoff": 60,
+      "selected_policy": "end_then_start",
+      "test_delta_vs_v5": 3.6297773947495955,
+      "test_residual_bits": 224.8792732490935,
+      "train_delta_vs_v5": -17.57126016986149,
+      "train_residual_bits": 2980.515356679117
+    }
+  ],
+  "row0_status": "unchanged_exogenous",
+  "schema": "v5_endpoint_cascade_stability_gate.v1",
+  "scope": "analysis_only_v5_endpoint_cascade_stability",
+  "summary": {
+    "best_delta_after_declaration_vs_v5": -13.52644527583243,
+    "class_counts": {
+      "both": 52,
+      "end": 55,
+      "fallback": 60,
+      "start": 41
+    },
+    "composition_bits": 439.958642781383,
+    "copy_bits": 1881.8031139067891,
+    "copy_ops": 208,
+    "declaration_bits_policy_family": 2.0,
+    "literal_payload_bits": 883.6328732400384,
+    "policy": "end_then_start",
+    "positive_prefix_splits": 2,
+    "promoted": false,
+    "residual_bits": 3205.3946299282106,
+    "total_prefix_test_delta_vs_v5": 12.679026031347377,
+    "v5_residual_bits": 3220.921075204043,
+    "weak_fullfit_only": true
+  },
+  "translation_delta": "NONE"
+}
