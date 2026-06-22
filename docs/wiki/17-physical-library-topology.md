@@ -110,6 +110,17 @@ enough to establish permission or clean provenance. A usable topology input
 must instead be official/in-game, public licensed, user-authorized, or otherwise
 rights-cleared metadata with the required object/container/slot/order fields.
 
+The clean topology contract validator makes that route executable. It writes a
+CSV template with required fields (`source_id`, `source_rights`,
+`source_version_or_date`, exact book text/prefix, `x/y/z`,
+`container_or_bookcase_id`, `slot_or_read_order`, and `capture_method`) and
+tests current public data as negative controls. The existing Hellgate public
+bookcase manifest fails the contract because it lacks rights/provenance,
+coordinates, object identity, and slot/read order. TibiaMaps public markers are
+clean POI-level data (`4861` markers) but contain no Hellgate/Library/Bonelord/
+Beholder hits and no book object layer. No topology source is integrated into
+v9.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
@@ -119,6 +130,7 @@ rights-cleared metadata with the required object/container/slot/order fields.
 - [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
 - [Physical topology control signal audit](../../analysis/physical_topology_control_signal_audit_20260622/reports/final_physical_topology_control_signal_audit.md)
 - [External authoring surface acquisition audit](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/final_external_authoring_surface_acquisition_audit.md)
+- [Clean topology contract template](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv)
 
 ## What Counts As Future Progress
 

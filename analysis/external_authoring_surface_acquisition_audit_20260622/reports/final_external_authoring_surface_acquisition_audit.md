@@ -78,3 +78,14 @@ No source is integrated into v9 and net v9 reduction remains `0.0` bits.
 - [03_leaked_source_boundary_and_clean_topology_contract.py](../scripts/03_leaked_source_boundary_and_clean_topology_contract.py)
 - [03_leaked_source_boundary_and_clean_topology_contract.json](test_results/03_leaked_source_boundary_and_clean_topology_contract.json)
 - [03_leaked_source_boundary_and_clean_topology_contract.md](test_results/03_leaked_source_boundary_and_clean_topology_contract.md)
+
+## Clean Topology Contract Validator
+
+A contract validator now defines the executable CSV shape for rights-cleared topology evidence.
+The current public Hellgate manifest fails the contract, and TibiaMaps public markers are POI-level data without Hellgate/book object slots.
+No source is integrated into v9 and net v9 reduction remains `0.0` bits.
+
+- [04_clean_topology_contract_validator.py](../scripts/04_clean_topology_contract_validator.py)
+- [04_clean_topology_contract_validator.json](test_results/04_clean_topology_contract_validator.json)
+- [04_clean_topology_contract_validator.md](test_results/04_clean_topology_contract_validator.md)
+- [04_clean_topology_contract_template.csv](test_results/04_clean_topology_contract_template.csv)

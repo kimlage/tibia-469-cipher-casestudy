@@ -3867,6 +3867,14 @@ it. The acceptable path remains a rights-cleared object-layer CSV/JSON,
 official/in-game capture, public licensed data, or versioned authoring artifact
 that can be tested against v9 fields with permutation and holdout controls.
 
+The clean topology contract validator makes that acceptable path operational:
+it emits a CSV template for rights-cleared object/container/slot/order metadata
+and tests available public data as negative controls. The public Hellgate
+bookcase manifest does not satisfy the contract, and TibiaMaps public
+`markers.json` has `4861` POI markers but no Hellgate/Library/Bonelord/
+Beholder hits and no book object layer. This does not move v9, but it turns the
+external-source blocker into a concrete input format and validation gate.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work

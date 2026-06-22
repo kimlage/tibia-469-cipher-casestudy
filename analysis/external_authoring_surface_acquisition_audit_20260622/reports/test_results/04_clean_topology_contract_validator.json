@@ -1,0 +1,117 @@
+{
+  "case_reopened": false,
+  "classification": "clean_topology_contract_ready_public_sources_still_insufficient",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "clean_contract_ready": true,
+    "external_surface_acquired": false,
+    "next_acceptable_input": "fill the template with rights-cleared object/container/slot/order metadata",
+    "public_manifest_can_test_v9_topology": false,
+    "tibiamaps_markers_can_test_v9_topology": false,
+    "v9_reduction_bits": 0.0
+  },
+  "negative_controls": {
+    "public_hellgate_bookcase_manifest": {
+      "can_test_v9_topology": false,
+      "contract_valid": false,
+      "header": [
+        "hg_public_entry",
+        "location",
+        "room_or_library",
+        "bookcase_public",
+        "public_title_prefix",
+        "local_match_status",
+        "local_bookid",
+        "candidate_local_bookids",
+        "source_url",
+        "confidence",
+        "notes"
+      ],
+      "missing_required_fields": [
+        "source_id",
+        "source_rights",
+        "source_version_or_date",
+        "book_text_or_exact_prefix",
+        "x",
+        "y",
+        "z",
+        "container_or_bookcase_id",
+        "slot_or_read_order",
+        "capture_method"
+      ],
+      "path": "analysis/physical_topology_20260620/tables/hellgate_public_bookcase_manifest.csv",
+      "present_optional_fields": [
+        "notes"
+      ],
+      "row_count": 71,
+      "row_errors": []
+    },
+    "tibiamaps_markers": {
+      "classification": "PUBLIC_LICENSED_MARKER_DATA_AUDIT_ONLY_NO_BOOK_OBJECT_LAYER",
+      "has_required_book_object_layer": false,
+      "license_context": "tibiamaps/tibia-map-data repository is MIT-licensed, but markers are POI coordinates rather than object slots",
+      "marker_count": 4861,
+      "nonempty_description_count": 70,
+      "sample_hits": {},
+      "term_hit_counts": {
+        "469": 0,
+        "beholder": 0,
+        "bonelord": 0,
+        "hellgate": 0,
+        "library": 0
+      },
+      "url": "https://raw.githubusercontent.com/tibiamaps/tibia-map-data/main/extra/points-of-interest/markers.json"
+    }
+  },
+  "optional_fields": [
+    "orientation_or_side",
+    "notes"
+  ],
+  "plaintext_claim": false,
+  "required_fields": [
+    "source_id",
+    "source_rights",
+    "source_version_or_date",
+    "book_text_or_exact_prefix",
+    "x",
+    "y",
+    "z",
+    "container_or_bookcase_id",
+    "slot_or_read_order",
+    "capture_method"
+  ],
+  "retrieved_at_utc": "2026-06-22T22:40:09.627004+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "clean_topology_contract_validator.v1",
+  "scope": "analysis_only_clean_topology_contract_validator",
+  "template": {
+    "path": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv",
+    "validation": {
+      "can_test_v9_topology": true,
+      "contract_valid": true,
+      "header": [
+        "source_id",
+        "source_rights",
+        "source_version_or_date",
+        "book_text_or_exact_prefix",
+        "x",
+        "y",
+        "z",
+        "container_or_bookcase_id",
+        "slot_or_read_order",
+        "capture_method",
+        "orientation_or_side",
+        "notes"
+      ],
+      "missing_required_fields": [],
+      "path": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv",
+      "present_optional_fields": [
+        "orientation_or_side",
+        "notes"
+      ],
+      "row_count": 1,
+      "row_errors": []
+    }
+  },
+  "translation_delta": "NONE"
+}
