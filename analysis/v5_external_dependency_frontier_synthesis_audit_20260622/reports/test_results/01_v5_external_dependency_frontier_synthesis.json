@@ -1,0 +1,127 @@
+{
+  "blocker_components": {
+    "copy_fallback_hint_bits": 891.1177777521392,
+    "literal_payload_bits": 883.6328732400384,
+    "residual_composition_bits": 439.958642781383,
+    "seed_payload_bits": 5633.990048928967
+  },
+  "case_reopened": false,
+  "classification": "V5_EXTERNAL_DEPENDENCY_FRONTIER_SYNTHESIS",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "next_constructive_route": "joint_content_origin_program",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v5": "analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_gate.json",
+    "literal_payload_generation_final": "analysis/literal_payload_generation_audit_20260621/reports/final_literal_payload_generation_audit.md",
+    "literal_payload_reference_final": "analysis/literal_payload_reference_subcodec_audit_20260621/reports/final_literal_payload_reference_subcodec_audit.md",
+    "mark_identity_stream": "analysis/v5_mark_identity_stream_audit_20260622/reports/test_results/01_v5_mark_identity_stream_gate.json",
+    "near_source_mark_offset": "analysis/v5_near_source_mark_offset_audit_20260622/reports/test_results/01_v5_near_source_mark_offset_gate.json",
+    "shared_literal_length_tape": "analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.json",
+    "v5_endpoint_cascade": "analysis/v5_endpoint_cascade_stability_audit_20260622/reports/test_results/01_v5_endpoint_cascade_stability_gate.json",
+    "v5_robustness": "analysis/executable_v5_source_endpoint_memory_robustness_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_robustness_gate.json"
+  },
+  "next_route": {
+    "description": "A future constructive route must jointly model exact copy-origin mark identity and literal innovation payload as content-origin choices. Local endpoint priority, local offsets, exact rank-delta streams, and literal reference subcodecs are closed under current evidence.",
+    "name": "joint_content_origin_program",
+    "promotion_requirements": [
+      "reduce copy_fallback_hint_bits or literal_payload_bits after paying exact identity/payload costs",
+      "survive prefix/suffix holdout or shuffled/source-mark controls",
+      "remain executable with 70/70 roundtrip and no target-content oracle"
+    ]
+  },
+  "paid_components": {
+    "copy_fallback_hint_bits": 891.1177777521392,
+    "literal_payload_bits": 883.6328732400384,
+    "online_x64_coarse_bits": 876.412,
+    "representation_declaration_bits": 1.584962500721156,
+    "residual_composition_bits": 439.958642781383,
+    "seed_payload_bits": 5633.990048928967
+  },
+  "plaintext_claim": false,
+  "route_ledger": [
+    {
+      "evidence": "external excluding seed 4109.138 -> 4097.333; robust=True",
+      "route": "executable_v5_source_endpoint_memory",
+      "status": "promoted"
+    },
+    {
+      "evidence": "full-fit delta -13.526; prefix positive 2/5",
+      "route": "v5_endpoint_priority_cascade",
+      "status": "weak_fullfit_only_not_promoted"
+    },
+    {
+      "evidence": "offset-only delta -760.558; paid source delta 153.030",
+      "route": "near_source_mark_offset",
+      "status": "rejected_lower_bound_only"
+    },
+    {
+      "evidence": "best valid global_delta_rank_plus_offset delta 105.634; invalid bucket lower bound -435.248",
+      "route": "source_mark_identity_stream",
+      "status": "rejected_exact_stream"
+    },
+    {
+      "evidence": "source-free literal payload generator rejected; prefix/holdout exact chunks 0/5",
+      "route": "literal_payload_generation",
+      "status": "closed_not_promoted"
+    },
+    {
+      "evidence": "prior-reference recurrence loses after mode/source cost",
+      "route": "literal_reference_subcodec",
+      "status": "closed_not_promoted"
+    },
+    {
+      "evidence": "literal tape retained only as weak shared-innovation clue",
+      "route": "shared_literal_length_tape",
+      "status": "weak_clue_not_promoted"
+    }
+  ],
+  "row0_status": "unchanged_exogenous",
+  "schema": "v5_external_dependency_frontier_synthesis.v1",
+  "scope": "analysis_only_v5_external_dependency_frontier_synthesis",
+  "summary": {
+    "largest_nonseed_blocker_components": [
+      {
+        "bits": 891.1177777521392,
+        "component": "copy_fallback_hint_bits"
+      },
+      {
+        "bits": 883.6328732400384,
+        "component": "literal_payload_bits"
+      },
+      {
+        "bits": 439.958642781383,
+        "component": "residual_composition_bits"
+      }
+    ],
+    "largest_nonseed_paid_components": [
+      {
+        "bits": 891.1177777521392,
+        "component": "copy_fallback_hint_bits"
+      },
+      {
+        "bits": 883.6328732400384,
+        "component": "literal_payload_bits"
+      },
+      {
+        "bits": 876.412,
+        "component": "online_x64_coarse_bits"
+      },
+      {
+        "bits": 439.958642781383,
+        "component": "residual_composition_bits"
+      },
+      {
+        "bits": 1.584962500721156,
+        "component": "representation_declaration_bits"
+      }
+    ],
+    "promoted_frontier": "executable_v5_source_endpoint_memory",
+    "v5_external_bits_excluding_seed": 4097.333075204043,
+    "v5_external_bits_including_seed": 9731.32312413301
+  },
+  "translation_delta": "NONE"
+}
