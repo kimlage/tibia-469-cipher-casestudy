@@ -62,6 +62,7 @@ source_refs:
   - analysis/joint_content_origin_program_audit_20260622
   - analysis/executable_v6_literal_span_origin_audit_20260622
   - analysis/causal_event_graph_program_audit_20260622
+  - analysis/innovation_lineage_basis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3614,6 +3615,7 @@ book generation, not row0 pair-cell placement.
 - [Joint content-origin program audit](../../analysis/joint_content_origin_program_audit_20260622/reports/final_joint_content_origin_program_audit.md)
 - [Executable v6 literal-span origin audit](../../analysis/executable_v6_literal_span_origin_audit_20260622/reports/final_executable_v6_literal_span_origin_audit.md)
 - [Causal event graph program audit](../../analysis/causal_event_graph_program_audit_20260622/reports/final_causal_event_graph_program_audit.md)
+- [Innovation lineage basis audit](../../analysis/innovation_lineage_basis_audit_20260622/reports/final_innovation_lineage_basis_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3664,6 +3666,15 @@ still `+88.238` bits versus direct event labels, `0` rows are positive, only
 `2/72` beat shuffled p05, and shuffled literal tape preserves `0/53` literal
 chunks. The result is `causal_event_graph_program_not_promoted`; the blocker
 remains origin of innovation/content, not another isolated local selector.
+
+An innovation-lineage basis audit then tests that blocker directly. It
+propagates every emitted digit back to a seed or literal innovation atom and
+asks whether the remaining `90` v6 fallback copy origins can be addressed in
+that basis. The provenance is informative (`55/90` sources are contiguous
+single-atom intervals, all from seed atoms), but the paid address program is
+worse: `1022.251` bits versus `779.571` copy-hint bits, `0/5` positive prefix
+splits, and no win against randomized-lineage controls. The lineage basis is
+therefore retained as provenance only, not as a generator.
 
 ## Boundary
 

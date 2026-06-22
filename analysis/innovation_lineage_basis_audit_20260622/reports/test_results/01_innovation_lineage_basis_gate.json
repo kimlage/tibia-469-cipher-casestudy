@@ -1,0 +1,687 @@
+{
+  "case_reopened": false,
+  "classification": "innovation_lineage_basis_not_promoted",
+  "compression_bound_status": "unchanged",
+  "control": {
+    "baseline_copy_hint_bits": 779.5709514714924,
+    "beats_p05": false,
+    "observed_bits_after_declaration": 1022.2509243337785,
+    "observed_delta": 242.67997286228604,
+    "p05_delta": 85.6928808898715,
+    "p50_delta": 106.01591371379948,
+    "p95_delta": 130.49249219819808,
+    "trials": 200
+  },
+  "decision": {
+    "next_blocker": "remaining fallback source choices are not explained by a compact seed/literal innovation lineage basis",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "family_holdouts": [
+    {
+      "label": "hellgate_public_bookcase_1",
+      "test_delta_after_declaration": 36.01203728477992,
+      "test_rows": 7,
+      "test_single_atom_coverage": 7
+    },
+    {
+      "label": "hellgate_public_bookcase_13",
+      "test_delta_after_declaration": 31.791250265055112,
+      "test_rows": 7,
+      "test_single_atom_coverage": 6
+    },
+    {
+      "label": "hellgate_public_bookcase_2",
+      "test_delta_after_declaration": 27.3377120091685,
+      "test_rows": 8,
+      "test_single_atom_coverage": 6
+    },
+    {
+      "label": "hellgate_public_bookcase_20",
+      "test_delta_after_declaration": 2.2287858306514234,
+      "test_rows": 1,
+      "test_single_atom_coverage": 1
+    },
+    {
+      "label": "hellgate_public_bookcase_21",
+      "test_delta_after_declaration": 5.109170970363214,
+      "test_rows": 1,
+      "test_single_atom_coverage": 1
+    },
+    {
+      "label": "hellgate_public_bookcase_23",
+      "test_delta_after_declaration": 9.88322978903274,
+      "test_rows": 3,
+      "test_single_atom_coverage": 2
+    },
+    {
+      "label": "hellgate_public_bookcase_27",
+      "test_delta_after_declaration": 11.931772173710506,
+      "test_rows": 2,
+      "test_single_atom_coverage": 2
+    },
+    {
+      "label": "hellgate_public_bookcase_3",
+      "test_delta_after_declaration": 12.070601973634414,
+      "test_rows": 2,
+      "test_single_atom_coverage": 2
+    },
+    {
+      "label": "hellgate_public_bookcase_30",
+      "test_delta_after_declaration": 2.0,
+      "test_rows": 1,
+      "test_single_atom_coverage": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_33",
+      "test_delta_after_declaration": 9.778339255610412,
+      "test_rows": 3,
+      "test_single_atom_coverage": 2
+    },
+    {
+      "label": "hellgate_public_bookcase_4",
+      "test_delta_after_declaration": 2.0,
+      "test_rows": 2,
+      "test_single_atom_coverage": 0
+    },
+    {
+      "label": "hellgate_public_bookcase_40",
+      "test_delta_after_declaration": 3.222392421336444,
+      "test_rows": 3,
+      "test_single_atom_coverage": 1
+    },
+    {
+      "label": "hellgate_public_bookcase_6",
+      "test_delta_after_declaration": 5.905344712748699,
+      "test_rows": 1,
+      "test_single_atom_coverage": 1
+    },
+    {
+      "label": "hellgate_public_bookcase_7",
+      "test_delta_after_declaration": 19.38161129873218,
+      "test_rows": 9,
+      "test_single_atom_coverage": 3
+    },
+    {
+      "label": "hellgate_public_bookcase_8",
+      "test_delta_after_declaration": 2.866765542211933,
+      "test_rows": 2,
+      "test_single_atom_coverage": 1
+    }
+  ],
+  "inputs": {
+    "causal_graph_final": "analysis/causal_event_graph_program_audit_20260622/reports/final_causal_event_graph_program_audit.md",
+    "executable_v6_final": "analysis/executable_v6_literal_span_origin_audit_20260622/reports/final_executable_v6_literal_span_origin_audit.md",
+    "executable_v6_gate": "analysis/executable_v6_literal_span_origin_audit_20260622/reports/test_results/01_executable_v6_literal_span_origin_gate.json",
+    "family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "prefix_holdouts": [
+    {
+      "cutoff": 20,
+      "test_delta_after_declaration": 148.5976712078692,
+      "test_rows": 63,
+      "test_single_atom_coverage": 33
+    },
+    {
+      "cutoff": 30,
+      "test_delta_after_declaration": 114.62790633168049,
+      "test_rows": 52,
+      "test_single_atom_coverage": 26
+    },
+    {
+      "cutoff": 40,
+      "test_delta_after_declaration": 79.18850508242241,
+      "test_rows": 38,
+      "test_single_atom_coverage": 18
+    },
+    {
+      "cutoff": 50,
+      "test_delta_after_declaration": 33.32663196960189,
+      "test_rows": 23,
+      "test_single_atom_coverage": 8
+    },
+    {
+      "cutoff": 60,
+      "test_delta_after_declaration": 9.036842529400673,
+      "test_rows": 7,
+      "test_single_atom_coverage": 3
+    }
+  ],
+  "row0_status": "unchanged_exogenous",
+  "schema": "innovation_lineage_basis_gate.v1",
+  "scope": "analysis_only_innovation_lineage_basis",
+  "summary": {
+    "baseline_copy_hint_bits": 779.5709514714924,
+    "coverage": 55,
+    "delta_after_declaration_vs_copy_hint": 242.67997286228604,
+    "fallback_rows_after_v6": 90,
+    "lineage_address_bits_before_declaration": 1020.2509243337785,
+    "lineage_atom_count": 63,
+    "lineage_digits": 11263,
+    "model_declaration_bits": 2.0,
+    "prefix_positive_splits": 0,
+    "promoted": false,
+    "rows": 90,
+    "single_atom_by_kind": {
+      "seed": 55
+    },
+    "total_bits_after_declaration": 1022.2509243337785,
+    "v6_external_bits_excluding_seed": 4065.0134193177782
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "atom_count": 63,
+    "atoms": [
+      {
+        "atom_id": 0,
+        "book": 0,
+        "kind": "seed",
+        "length": 144,
+        "op_index": null,
+        "start": 0
+      },
+      {
+        "atom_id": 1,
+        "book": 1,
+        "kind": "seed",
+        "length": 92,
+        "op_index": null,
+        "start": 144
+      },
+      {
+        "atom_id": 2,
+        "book": 2,
+        "kind": "seed",
+        "length": 177,
+        "op_index": null,
+        "start": 236
+      },
+      {
+        "atom_id": 3,
+        "book": 3,
+        "kind": "seed",
+        "length": 140,
+        "op_index": null,
+        "start": 413
+      },
+      {
+        "atom_id": 4,
+        "book": 4,
+        "kind": "seed",
+        "length": 140,
+        "op_index": null,
+        "start": 553
+      },
+      {
+        "atom_id": 5,
+        "book": 5,
+        "kind": "seed",
+        "length": 273,
+        "op_index": null,
+        "start": 693
+      },
+      {
+        "atom_id": 6,
+        "book": 6,
+        "kind": "seed",
+        "length": 175,
+        "op_index": null,
+        "start": 966
+      },
+      {
+        "atom_id": 7,
+        "book": 7,
+        "kind": "seed",
+        "length": 106,
+        "op_index": null,
+        "start": 1141
+      },
+      {
+        "atom_id": 8,
+        "book": 8,
+        "kind": "seed",
+        "length": 155,
+        "op_index": null,
+        "start": 1247
+      },
+      {
+        "atom_id": 9,
+        "book": 9,
+        "kind": "seed",
+        "length": 294,
+        "op_index": null,
+        "start": 1402
+      },
+      {
+        "atom_id": 10,
+        "book": 10,
+        "kind": "literal",
+        "length": 5,
+        "op_index": 0,
+        "start": 1696
+      },
+      {
+        "atom_id": 11,
+        "book": 11,
+        "kind": "literal",
+        "length": 6,
+        "op_index": 0,
+        "start": 1977
+      },
+      {
+        "atom_id": 12,
+        "book": 11,
+        "kind": "literal",
+        "length": 7,
+        "op_index": 3,
+        "start": 2019
+      },
+      {
+        "atom_id": 13,
+        "book": 12,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 0,
+        "start": 2114
+      },
+      {
+        "atom_id": 14,
+        "book": 12,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 3,
+        "start": 2147
+      },
+      {
+        "atom_id": 15,
+        "book": 12,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 5,
+        "start": 2161
+      },
+      {
+        "atom_id": 16,
+        "book": 12,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 9,
+        "start": 2196
+      },
+      {
+        "atom_id": 17,
+        "book": 12,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 12,
+        "start": 2244
+      },
+      {
+        "atom_id": 18,
+        "book": 13,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 1,
+        "start": 2277
+      },
+      {
+        "atom_id": 19,
+        "book": 13,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 3,
+        "start": 2298
+      },
+      {
+        "atom_id": 20,
+        "book": 13,
+        "kind": "literal",
+        "length": 11,
+        "op_index": 6,
+        "start": 2320
+      },
+      {
+        "atom_id": 21,
+        "book": 14,
+        "kind": "literal",
+        "length": 39,
+        "op_index": 0,
+        "start": 2392
+      },
+      {
+        "atom_id": 22,
+        "book": 14,
+        "kind": "literal",
+        "length": 5,
+        "op_index": 2,
+        "start": 2437
+      },
+      {
+        "atom_id": 23,
+        "book": 14,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 7,
+        "start": 2522
+      },
+      {
+        "atom_id": 24,
+        "book": 15,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 0,
+        "start": 2525
+      },
+      {
+        "atom_id": 25,
+        "book": 15,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 4,
+        "start": 2564
+      },
+      {
+        "atom_id": 26,
+        "book": 16,
+        "kind": "literal",
+        "length": 6,
+        "op_index": 1,
+        "start": 2774
+      },
+      {
+        "atom_id": 27,
+        "book": 16,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 3,
+        "start": 2791
+      },
+      {
+        "atom_id": 28,
+        "book": 16,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 7,
+        "start": 2818
+      },
+      {
+        "atom_id": 29,
+        "book": 16,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 9,
+        "start": 2832
+      },
+      {
+        "atom_id": 30,
+        "book": 16,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 11,
+        "start": 2841
+      },
+      {
+        "atom_id": 31,
+        "book": 17,
+        "kind": "literal",
+        "length": 9,
+        "op_index": 1,
+        "start": 2849
+      },
+      {
+        "atom_id": 32,
+        "book": 17,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 3,
+        "start": 2991
+      },
+      {
+        "atom_id": 33,
+        "book": 17,
+        "kind": "literal",
+        "length": 12,
+        "op_index": 5,
+        "start": 3034
+      },
+      {
+        "atom_id": 34,
+        "book": 17,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 8,
+        "start": 3065
+      },
+      {
+        "atom_id": 35,
+        "book": 17,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 11,
+        "start": 3112
+      },
+      {
+        "atom_id": 36,
+        "book": 23,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 0,
+        "start": 3714
+      },
+      {
+        "atom_id": 37,
+        "book": 23,
+        "kind": "literal",
+        "length": 7,
+        "op_index": 2,
+        "start": 3732
+      },
+      {
+        "atom_id": 38,
+        "book": 23,
+        "kind": "literal",
+        "length": 7,
+        "op_index": 7,
+        "start": 3824
+      },
+      {
+        "atom_id": 39,
+        "book": 23,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 10,
+        "start": 3866
+      },
+      {
+        "atom_id": 40,
+        "book": 25,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 0,
+        "start": 4010
+      },
+      {
+        "atom_id": 41,
+        "book": 26,
+        "kind": "literal",
+        "length": 5,
+        "op_index": 2,
+        "start": 4066
+      },
+      {
+        "atom_id": 42,
+        "book": 32,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 1,
+        "start": 5045
+      },
+      {
+        "atom_id": 43,
+        "book": 34,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 0,
+        "start": 5305
+      },
+      {
+        "atom_id": 44,
+        "book": 34,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 3,
+        "start": 5360
+      },
+      {
+        "atom_id": 45,
+        "book": 38,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 1,
+        "start": 6123
+      },
+      {
+        "atom_id": 46,
+        "book": 38,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 3,
+        "start": 6137
+      },
+      {
+        "atom_id": 47,
+        "book": 39,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 1,
+        "start": 6150
+      },
+      {
+        "atom_id": 48,
+        "book": 40,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 1,
+        "start": 6301
+      },
+      {
+        "atom_id": 49,
+        "book": 42,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 3,
+        "start": 6597
+      },
+      {
+        "atom_id": 50,
+        "book": 42,
+        "kind": "literal",
+        "length": 2,
+        "op_index": 6,
+        "start": 6693
+      },
+      {
+        "atom_id": 51,
+        "book": 44,
+        "kind": "literal",
+        "length": 5,
+        "op_index": 0,
+        "start": 6836
+      },
+      {
+        "atom_id": 52,
+        "book": 49,
+        "kind": "literal",
+        "length": 11,
+        "op_index": 0,
+        "start": 7659
+      },
+      {
+        "atom_id": 53,
+        "book": 49,
+        "kind": "literal",
+        "length": 7,
+        "op_index": 2,
+        "start": 7677
+      },
+      {
+        "atom_id": 54,
+        "book": 49,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 5,
+        "start": 7719
+      },
+      {
+        "atom_id": 55,
+        "book": 49,
+        "kind": "literal",
+        "length": 6,
+        "op_index": 9,
+        "start": 7755
+      },
+      {
+        "atom_id": 56,
+        "book": 52,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 0,
+        "start": 8183
+      },
+      {
+        "atom_id": 57,
+        "book": 56,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 4,
+        "start": 8902
+      },
+      {
+        "atom_id": 58,
+        "book": 57,
+        "kind": "literal",
+        "length": 28,
+        "op_index": 2,
+        "start": 9099
+      },
+      {
+        "atom_id": 59,
+        "book": 57,
+        "kind": "literal",
+        "length": 4,
+        "op_index": 7,
+        "start": 9256
+      },
+      {
+        "atom_id": 60,
+        "book": 58,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 1,
+        "start": 9284
+      },
+      {
+        "atom_id": 61,
+        "book": 60,
+        "kind": "literal",
+        "length": 1,
+        "op_index": 0,
+        "start": 9804
+      },
+      {
+        "atom_id": 62,
+        "book": 65,
+        "kind": "literal",
+        "length": 3,
+        "op_index": 0,
+        "start": 10503
+      }
+    ],
+    "errors": [],
+    "lineage_digits": 11263,
+    "roundtrip_70_70": true
+  }
+}
