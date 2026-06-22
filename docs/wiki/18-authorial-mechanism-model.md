@@ -51,6 +51,7 @@ source_refs:
   - analysis/executable_v2_remaining_tape_coupling_audit_20260622
   - analysis/content_addressed_event_program_audit_20260622
   - analysis/event_aligned_chunk_library_audit_20260622
+  - analysis/source_boundary_candidate_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1052,6 +1053,16 @@ boundaries still save `51.361` bits and the aligned-hit rank does not beat the
 random p05 control. The route is therefore
 `event_aligned_chunk_library_not_promoted`; most copy content remains subchunk
 material whose origin is not explained by previous event boundaries.
+The source-boundary candidate audit then targets that subchunk blocker directly.
+Instead of choosing arbitrary content, it chooses intervals between
+decoder-visible boundaries in previous material: book/event boundaries,
+source-side `prev2` surprisal boundaries, and their unions. The best system,
+`event_plus_surprisal_top20` with `long_recent` interval ranking, derives
+`29/208` copy source intervals, reduces the v2 residual from `3423.183` to
+`3280.192` bits (`-142.991`), improves all `5/5` prefix holdouts, and beats the
+random-boundary p95 hit count (`29` versus `15`). This is promoted only as a
+partial source-boundary program: `179` copy intervals still require fallback
+copy hints, and the result does not touch row0, plaintext, or semantics.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3448,6 +3459,8 @@ book generation, not row0 pair-cell placement.
 - [Content-addressed event program gate](../../analysis/content_addressed_event_program_audit_20260622/reports/test_results/01_content_addressed_event_program_gate.md)
 - [Final event-aligned chunk library audit](../../analysis/event_aligned_chunk_library_audit_20260622/reports/final_event_aligned_chunk_library_audit.md)
 - [Event-aligned chunk library gate](../../analysis/event_aligned_chunk_library_audit_20260622/reports/test_results/01_event_aligned_chunk_library_gate.md)
+- [Final source-boundary candidate program audit](../../analysis/source_boundary_candidate_program_audit_20260622/reports/final_source_boundary_candidate_program_audit.md)
+- [Source-boundary candidate program gate](../../analysis/source_boundary_candidate_program_audit_20260622/reports/test_results/01_source_boundary_candidate_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
