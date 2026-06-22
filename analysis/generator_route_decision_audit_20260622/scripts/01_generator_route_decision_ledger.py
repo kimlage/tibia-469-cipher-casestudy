@@ -43,6 +43,8 @@ INPUTS = {
     / "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/07_tales_libsearch_book_database_probe.json",
     "external_08": ROOT
     / "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/08_arturo_bookcase_mapping_control_probe.json",
+    "nonlocal_event_policy": ROOT
+    / "analysis/nonlocal_event_policy_program_audit_20260622/reports/test_results/01_nonlocal_event_policy_program_gate.json",
 }
 
 
@@ -64,6 +66,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     arturo = data["external_08"]
     control_protocol = data["external_06"]
     leaked_boundary = data["external_03"]
+    nonlocal_event = data["nonlocal_event_policy"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -73,6 +76,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(arturo["decision"]["v9_reduction_bits"] == 0.0, "Arturo probe unexpectedly reduces v9")
     require(control_protocol["decision"]["v9_reduction_bits"] == 0.0, "clean topology protocol unexpectedly reduces v9")
     require("reject" in leaked_boundary["classification"].lower() or leaked_boundary["decision"]["external_surface_integrated"] is False, "leak boundary unexpectedly integrated")
+    require(nonlocal_event["decision"]["nonlocal_event_policy_promoted"] is False, "nonlocal event policy unexpectedly promoted")
 
     public_surface_rows = [
         {
@@ -160,19 +164,32 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "promotion_test": "source must be rights-clean/primary or user-authorized, match books, expose object/container/slot/order or versioned authoring fields, and reduce v9 residual streams in holdout above permutations",
         },
         {
-            "route": "nonlocal_event_policy_program",
-            "status": "OPEN_INTERNAL_ROUTE",
+            "route": "simple_nonlocal_event_sequence_program",
+            "status": "TESTED_NOT_PROMOTED",
+            "evidence": {
+                "main_stream": nonlocal_event["decision"]["main_stream"],
+                "main_total_saving_bits": nonlocal_event["streams"]["type_length_sourcebucket"]["summary"]["total_saving_bits"],
+                "main_positive_splits": nonlocal_event["streams"]["type_length_sourcebucket"]["summary"]["positive_splits"],
+                "main_exact_suffix_beam_hits": nonlocal_event["streams"]["type_length_sourcebucket"]["summary"]["exact_suffix_beam_hits"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "n-gram/phase sequence models over replay events do not reduce the joint event policy stream or keep true suffixes in beam",
+        },
+        {
+            "route": "causal_content_aware_event_policy_program",
+            "status": "OPEN_INTERNAL_ROUTE_REQUIRES_NEW_MECHANISM",
             "evidence": {
                 "blocker": post_v9["decision"]["next_blocker"],
-                "must_not_retest": [
-                    "copy-length defaults alone",
-                    "literal payload Markov alone",
-                    "bookcase/order metadata without new provenance",
-                    "row0/plaintext/translation",
+                "rejected_simple_route": "simple_nonlocal_event_sequence_program",
+                "must_use_new_information": [
+                    "content-addressed state",
+                    "global event objective",
+                    "lineage/copy availability beyond event n-grams",
+                    "paid corrections with prefix/family holdout",
                 ],
             },
             "counts_as_next_progress": True,
-            "promotion_test": "must generate replay event schedule and copy/literal/source-length choices in prefix/family holdout, or reduce declared external fields after paying program/corrections",
+            "promotion_test": "must generate replay event schedule and copy/literal/source-length choices in prefix/family holdout using content/lineage state, or reduce declared external fields after paying program/corrections",
         },
     ]
     return {
@@ -180,12 +197,13 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
         "next_work_contract": {
             "do_next": [
                 "acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol",
-                "design a nonlocal event-policy program over v9 replay events, with train-prefix/family holdout and paid corrections",
+                "design a content-aware causal event-policy program over v9 replay events, with train-prefix/family holdout and paid corrections",
             ],
             "do_not_count_as_progress": [
                 "another public text mirror or community topology list without new fields",
                 "leaked proprietary source/map data",
                 "local source/length/copy-hint/literal subcodec with small bit gain",
+                "simple n-gram/phase event grammar over replay events",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
@@ -205,7 +223,7 @@ def write_markdown(result: dict[str, Any]) -> None:
         "## Summary",
         "",
         "This audit consolidates the current generator frontier after v9 and the public external-surface probes.",
-        "It does not promote a new formula. It narrows the live work to two routes: a rights-clean primary authoring surface, or a nonlocal event-policy program.",
+        "It does not promote a new formula. It narrows the live work to two routes: a rights-clean primary authoring surface, or a content-aware causal event-policy program.",
         "",
         "## Route Ledger",
         "",
@@ -260,7 +278,8 @@ def write_final_report(result: dict[str, Any]) -> None:
         "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, and licensed community bookcase mapping.",
         "None reduces v9 residual fields under the required controls.",
         "",
-        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a nonlocal event-policy program for the v9 innovation replay.",
+        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface, or build a content-aware causal event-policy program for the v9 innovation replay.",
+        "Simple n-gram/phase sequence grammars over the replay events are now tested and not promoted.",
         "",
         "## Decision",
         "",

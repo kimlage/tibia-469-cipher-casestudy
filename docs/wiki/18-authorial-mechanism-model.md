@@ -78,6 +78,7 @@ source_refs:
   - analysis/authoring_surface_provenance_audit_20260622
   - analysis/external_authoring_surface_acquisition_audit_20260622
   - analysis/generator_route_decision_audit_20260622
+  - analysis/nonlocal_event_policy_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3920,6 +3921,16 @@ nonlocal event-policy program that generates replay schedule plus copy/literal/
 source-length choices in holdout after paying corrections. More public mirrors,
 leaked data, small residual field codecs, and row0/plaintext reopening do not
 count as progress.
+
+The first nonlocal event-policy program gate tests that second route directly
+at the replay-event level. It models the `62` innovation replay events as joint
+symbol streams rather than separate fields. The easier `type:length` stream is
+negative (`-15.097` bits total saving), and the main
+`type:length:source_bucket` stream is also negative (`-12.766`), with `0/3`
+positive holdout splits and `0` exact suffix beam hits. The true suffix leaves
+the beam after at most a few events. This does not close every possible causal
+event program, but it rejects simple nonlocal n-gram/phase event grammars as
+the missing generator.
 
 ## Boundary
 
