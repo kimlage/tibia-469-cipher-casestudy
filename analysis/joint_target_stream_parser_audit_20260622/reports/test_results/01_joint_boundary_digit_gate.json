@@ -1,0 +1,511 @@
+{
+  "aggregate_rows": [
+    {
+      "aggregate_baseline_bits": 83039.01170053975,
+      "aggregate_gain_vs_baseline_bits": 0.0,
+      "aggregate_model_bits": 83039.01170053975,
+      "cells": 5,
+      "model": "separate_context_boundary",
+      "order": 0,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 83039.01170053975,
+      "aggregate_gain_vs_baseline_bits": -29.950103159454557,
+      "aggregate_model_bits": 83068.9618036992,
+      "cells": 5,
+      "model": "joint_pair_context",
+      "order": 0,
+      "positive_cells": 2
+    },
+    {
+      "aggregate_baseline_bits": 75258.66615817498,
+      "aggregate_gain_vs_baseline_bits": -60.777223605769905,
+      "aggregate_model_bits": 75319.44338178076,
+      "cells": 5,
+      "model": "separate_context_boundary",
+      "order": 1,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 75258.66615817498,
+      "aggregate_gain_vs_baseline_bits": -292.2132187485922,
+      "aggregate_model_bits": 75550.87937692358,
+      "cells": 5,
+      "model": "joint_pair_context",
+      "order": 1,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 53460.222694567914,
+      "aggregate_gain_vs_baseline_bits": -258.3106075886062,
+      "aggregate_model_bits": 53718.53330215652,
+      "cells": 5,
+      "model": "separate_context_boundary",
+      "order": 2,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 53460.222694567914,
+      "aggregate_gain_vs_baseline_bits": -2229.6133206267546,
+      "aggregate_model_bits": 55689.83601519467,
+      "cells": 5,
+      "model": "joint_pair_context",
+      "order": 2,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 38259.679120024186,
+      "aggregate_gain_vs_baseline_bits": -1146.7749702855815,
+      "aggregate_model_bits": 39406.454090309766,
+      "cells": 5,
+      "model": "separate_context_boundary",
+      "order": 3,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_baseline_bits": 38259.679120024186,
+      "aggregate_gain_vs_baseline_bits": -6724.36973895228,
+      "aggregate_model_bits": 44984.048858976465,
+      "cells": 5,
+      "model": "joint_pair_context",
+      "order": 3,
+      "positive_cells": 0
+    }
+  ],
+  "case_reopened": false,
+  "classification": "joint_boundary_digit_pair_model_rejected",
+  "cutoff_rows": [
+    {
+      "baseline_bits": 26890.19981845846,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": 0.0,
+      "model": "separate_context_boundary",
+      "model_bits": 26890.19981845846,
+      "order": 0,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 26890.19981845846,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -17.062049829030002,
+      "model": "joint_pair_context",
+      "model_bits": 26907.26186828749,
+      "order": 0,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 22436.887416912487,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": 0.0,
+      "model": "separate_context_boundary",
+      "model_bits": 22436.887416912487,
+      "order": 0,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 22436.887416912487,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -9.886972975411481,
+      "model": "joint_pair_context",
+      "model_bits": 22446.774389887898,
+      "order": 0,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 17082.354090813456,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": 0.0,
+      "model": "separate_context_boundary",
+      "model_bits": 17082.354090813456,
+      "order": 0,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 17082.354090813456,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -4.543602459129033,
+      "model": "joint_pair_context",
+      "model_bits": 17086.897693272585,
+      "order": 0,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 11741.28519346275,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": 0.0,
+      "model": "separate_context_boundary",
+      "model_bits": 11741.28519346275,
+      "order": 0,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 11741.28519346275,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": 0.18556551434994617,
+      "model": "joint_pair_context",
+      "model_bits": 11741.0996279484,
+      "order": 0,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 4888.285180892602,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": 0.0,
+      "model": "separate_context_boundary",
+      "model_bits": 4888.285180892602,
+      "order": 0,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 4888.285180892602,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": 1.356956589766014,
+      "model": "joint_pair_context",
+      "model_bits": 4886.928224302836,
+      "order": 0,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 24302.765016325186,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -26.485166552400187,
+      "model": "separate_context_boundary",
+      "model_bits": 24329.250182877586,
+      "order": 1,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 24302.765016325186,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -115.51345924849738,
+      "model": "joint_pair_context",
+      "model_bits": 24418.278475573683,
+      "order": 1,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 20376.385515926,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -16.911181629267958,
+      "model": "separate_context_boundary",
+      "model_bits": 20393.296697555266,
+      "order": 1,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 20376.385515926,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -75.47746839192769,
+      "model": "joint_pair_context",
+      "model_bits": 20451.862984317926,
+      "order": 1,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 15553.099568210488,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -9.444047567889356,
+      "model": "separate_context_boundary",
+      "model_bits": 15562.543615778377,
+      "order": 1,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 15553.099568210488,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -52.43681500971434,
+      "model": "joint_pair_context",
+      "model_bits": 15605.536383220202,
+      "order": 1,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 10606.768569847663,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -6.266515866003829,
+      "model": "separate_context_boundary",
+      "model_bits": 10613.035085713667,
+      "order": 1,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 10606.768569847663,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -37.96896868839758,
+      "model": "joint_pair_context",
+      "model_bits": 10644.737538536061,
+      "order": 1,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 4419.647487865646,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -1.6703119902085746,
+      "model": "separate_context_boundary",
+      "model_bits": 4421.317799855855,
+      "order": 1,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 4419.647487865646,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -10.816507410055237,
+      "model": "joint_pair_context",
+      "model_bits": 4430.463995275702,
+      "order": 1,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 17394.716078073157,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -107.32554526406966,
+      "model": "separate_context_boundary",
+      "model_bits": 17502.041623337227,
+      "order": 2,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 17394.716078073157,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -927.7975664419573,
+      "model": "joint_pair_context",
+      "model_bits": 18322.513644515115,
+      "order": 2,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 14506.44860158827,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -68.44715105791693,
+      "model": "separate_context_boundary",
+      "model_bits": 14574.895752646187,
+      "order": 2,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 14506.44860158827,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -612.0841069470698,
+      "model": "joint_pair_context",
+      "model_bits": 15118.53270853534,
+      "order": 2,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 11095.189544984867,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -51.10148904566449,
+      "model": "separate_context_boundary",
+      "model_bits": 11146.291034030532,
+      "order": 2,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 11095.189544984867,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -392.14629743279875,
+      "model": "joint_pair_context",
+      "model_bits": 11487.335842417666,
+      "order": 2,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 7396.230576987803,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -25.469900889313976,
+      "model": "separate_context_boundary",
+      "model_bits": 7421.700477877117,
+      "order": 2,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 7396.230576987803,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -215.7919129885795,
+      "model": "joint_pair_context",
+      "model_bits": 7612.0224899763825,
+      "order": 2,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 3067.637892933815,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -5.966521331641161,
+      "model": "separate_context_boundary",
+      "model_bits": 3073.604414265456,
+      "order": 2,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 3067.637892933815,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -81.79343681634919,
+      "model": "joint_pair_context",
+      "model_bits": 3149.431329750164,
+      "order": 2,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 13198.437950105228,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -458.4146199072202,
+      "model": "separate_context_boundary",
+      "model_bits": 13656.852570012448,
+      "order": 3,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 13198.437950105228,
+      "cutoff": 20,
+      "gain_vs_baseline_bits": -2544.936655877178,
+      "model": "joint_pair_context",
+      "model_bits": 15743.374605982406,
+      "order": 3,
+      "test_boundary_count": 132,
+      "test_digit_count": 7925
+    },
+    {
+      "baseline_bits": 10551.595839425067,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -321.8450777109683,
+      "model": "separate_context_boundary",
+      "model_bits": 10873.440917136035,
+      "order": 3,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 10551.595839425067,
+      "cutoff": 30,
+      "gain_vs_baseline_bits": -1866.7562751372534,
+      "model": "joint_pair_context",
+      "model_bits": 12418.35211456232,
+      "order": 3,
+      "test_boundary_count": 100,
+      "test_digit_count": 6627
+    },
+    {
+      "baseline_bits": 7726.151210177175,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -214.20797737757584,
+      "model": "separate_context_boundary",
+      "model_bits": 7940.359187554751,
+      "order": 3,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 7726.151210177175,
+      "cutoff": 40,
+      "gain_vs_baseline_bits": -1279.257138504665,
+      "model": "joint_pair_context",
+      "model_bits": 9005.40834868184,
+      "order": 3,
+      "test_boundary_count": 65,
+      "test_digit_count": 5059
+    },
+    {
+      "baseline_bits": 4904.7543034836735,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -119.37211535228107,
+      "model": "separate_context_boundary",
+      "model_bits": 5024.126418835955,
+      "order": 3,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 4904.7543034836735,
+      "cutoff": 50,
+      "gain_vs_baseline_bits": -750.9986459002866,
+      "model": "joint_pair_context",
+      "model_bits": 5655.75294938396,
+      "order": 3,
+      "test_boundary_count": 36,
+      "test_digit_count": 3489
+    },
+    {
+      "baseline_bits": 1878.7398168330442,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -32.93517993753608,
+      "model": "separate_context_boundary",
+      "model_bits": 1911.6749967705803,
+      "order": 3,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    },
+    {
+      "baseline_bits": 1878.7398168330442,
+      "cutoff": 60,
+      "gain_vs_baseline_bits": -282.4210235328969,
+      "model": "joint_pair_context",
+      "model_bits": 2161.160840365941,
+      "order": 3,
+      "test_boundary_count": 10,
+      "test_digit_count": 1459
+    }
+  ],
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_joint_parser": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "route_review": "analysis/skeleton_generation_route_review_20260622/reports/test_results/01_skeleton_generation_route_review.json"
+  },
+  "plaintext_claim": false,
+  "schema": "joint_boundary_digit_gate_v1",
+  "scope": "analysis_only_joint_target_stream_parser_first_gate",
+  "summary": {
+    "best_aggregate_gain_vs_baseline_bits": -29.950103159454557,
+    "best_cells": 5,
+    "best_nontrivial_model": "joint_pair_context_order0",
+    "best_positive_cells": 2,
+    "cutoff_count": 5,
+    "interpretation": "A simple joint emission of boundary flag and digit does not beat a factorized prevN digit model plus global boundary-rate baseline under prefix holdout. This falsifies the simplest joint target-stream parser route; a future latent-state parser must add real state, not just pair the current boundary flag with the current digit.",
+    "model_count": 2,
+    "orders_tested": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "promotes_joint_parser": false
+  },
+  "translation_delta": "NONE"
+}

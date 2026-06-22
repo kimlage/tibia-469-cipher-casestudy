@@ -17,6 +17,7 @@ source_refs:
   - analysis/target_digit_boundary_miss_residual_audit_20260621
   - analysis/target_digit_boundary_miss_transition_audit_20260621
   - analysis/skeleton_generation_route_review_20260622
+  - analysis/joint_target_stream_parser_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -583,6 +584,13 @@ not another local cutpoint/length/miss-label policy, but a joint
 target-stream/parser or explicit latent-state account that emits digits and
 boundaries together instead of choosing endpoints after the target text is
 known.
+A first joint target-stream parser gate then tests the simplest version of
+that route: emit `(boundary flag, digit)` pairs under prefix-trained contexts.
+It fails. The best nontrivial model, `joint_pair_context_order0`, is
+`-29.950` aggregate bits versus the factorized digit+global-boundary baseline
+and is positive in only `2/5` prefix cells. This rejects the simple pair-token
+model, not the broader latent-state route; a future parser needs real state,
+not just coupling the current boundary flag to the current digit.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2743,6 +2751,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary miss transition gate](../../analysis/target_digit_boundary_miss_transition_audit_20260621/reports/test_results/01_target_digit_boundary_miss_transition_gate.md)
 - [Final skeleton generation route review](../../analysis/skeleton_generation_route_review_20260622/reports/final_skeleton_generation_route_review.md)
 - [Skeleton generation route review](../../analysis/skeleton_generation_route_review_20260622/reports/test_results/01_skeleton_generation_route_review.md)
+- [Final joint target stream parser audit](../../analysis/joint_target_stream_parser_audit_20260622/reports/final_joint_target_stream_parser_audit.md)
+- [Joint boundary digit gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/01_joint_boundary_digit_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
