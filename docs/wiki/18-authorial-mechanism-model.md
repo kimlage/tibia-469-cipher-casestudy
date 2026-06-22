@@ -501,6 +501,15 @@ same-book cutpoint p95 `2.293949`; `88/201` cutpoints fall in their book's top
 right-surprisal decile. This is promoted as a boundary clue. It is not an
 endpoint generator: selecting each book's top-k surprisal positions recovers
 only `57/201` internal cutpoints and `0/48` nontrivial books exactly.
+A target digit boundary pruning audit then prices the same clue as a dependency
+reduction rather than only an enrichment statistic. Taking the top `0.1`
+right-surprisal band per book covers `86/201` internal cutpoints and reduces
+the paid cutpoint atlas from `1137.308` bits to `1031.362` bits after charging
+the q choice, a `105.946` bit reduction. Random same-size candidate bands have
+p95 saving `-37.498` bits. Prefix-selected suffix checks stay positive in
+`5/5` cells before the global q-choice charge and `4/5` after it. This promotes
+a boundary-pruning clue, not an endpoint generator, because `115` cutpoints
+remain outside the band and still need declarations.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2641,6 +2650,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit process gate](../../analysis/target_digit_process_audit_20260621/reports/test_results/01_target_digit_process_gate.md)
 - [Final target digit boundary audit](../../analysis/target_digit_boundary_audit_20260621/reports/final_target_digit_boundary_audit.md)
 - [Target digit boundary gate](../../analysis/target_digit_boundary_audit_20260621/reports/test_results/01_target_digit_boundary_gate.md)
+- [Final target digit boundary pruning audit](../../analysis/target_digit_boundary_pruning_audit_20260621/reports/final_target_digit_boundary_pruning_audit.md)
+- [Target digit boundary pruning gate](../../analysis/target_digit_boundary_pruning_audit_20260621/reports/test_results/01_target_digit_boundary_pruning_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
