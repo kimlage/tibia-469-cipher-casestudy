@@ -523,6 +523,13 @@ baseline is `161/201`, while the best surprisal/rank predicate reaches only
 `131/201`; prefix/suffix context tables have `0/20` positive-delta cells.
 The `prev2` boundary clue is therefore scoped to endpoint candidate pruning,
 not copy/literal type selection.
+A skeleton dependency refresh then charges the number of cutpoints per book
+explicitly. Op-count declaration costs `432.765` bits under a uniform
+book-length code. The exact full cutpoint atlas is therefore `1570.073` bits,
+and the pruned full atlas is `1464.127` bits. The promoted dependency
+reduction remains `105.946` bits, but the result is still not a skeleton
+generator: op-counts, `115` missed cutpoints, and copy/literal type remain
+external.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2669,6 +2676,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary rank-code gate](../../analysis/target_digit_boundary_rankcode_audit_20260621/reports/test_results/01_target_digit_boundary_rankcode_gate.md)
 - [Final target digit boundary type audit](../../analysis/target_digit_boundary_type_audit_20260621/reports/final_target_digit_boundary_type_audit.md)
 - [Target digit boundary type gate](../../analysis/target_digit_boundary_type_audit_20260621/reports/test_results/01_target_digit_boundary_type_gate.md)
+- [Final skeleton dependency after boundary pruning audit](../../analysis/skeleton_dependency_after_boundary_pruning_20260621/reports/final_skeleton_dependency_after_boundary_pruning_audit.md)
+- [Skeleton dependency after boundary pruning gate](../../analysis/skeleton_dependency_after_boundary_pruning_20260621/reports/test_results/01_skeleton_dependency_after_boundary_pruning_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
