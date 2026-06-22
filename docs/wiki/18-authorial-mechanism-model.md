@@ -974,12 +974,14 @@ starts before corrections and costs `3146.578` bits versus `2811.673` for
 explicit opcount+cutpoint+type declaration. It is therefore a weak clue, not a
 promoted internal-start program.
 An internal-start beam-capacity gate then tests whether that failure is merely
-beam width. Wider beams improve coverage monotonically: x32 reaches `101/150`
-true coarse sequences and `78/343` internal starts before correction. But after
-charging the width choice, rank, residual composition, and corrections, it still
-costs `2815.682` bits versus `2811.673` for explicit opcount+cutpoint+type
-declaration (`-4.010` bits). The route is retained as a near-bound capacity
-clue; it still needs a better ranking/state model before promotion.
+beam width. Wider beams improve coverage monotonically: x64 reaches `109/150`
+true coarse sequences and `98/343` internal starts before correction. After
+charging width choice, rank, residual composition, and corrections, it costs
+`2750.345` bits versus `2811.673` for explicit opcount+cutpoint+type
+declaration (`+61.328` bits). This promotes only an internal-start
+capacity-ledger reduction candidate, not an exact generator: `41/150` coarse
+sequences still miss the beam and most internal starts still require residual
+correction.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),

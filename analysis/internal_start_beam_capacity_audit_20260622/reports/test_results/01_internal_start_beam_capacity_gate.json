@@ -1,12 +1,12 @@
 {
   "case_reopened": false,
-  "classification": "WEAK_BEAM_CAPACITY_ROUTE_RETAINED",
+  "classification": "PROMOTED_INTERNAL_START_CAPACITY_LEDGER_REDUCTION_CANDIDATE",
   "compression_bound_status": "unchanged",
   "decision": {
-    "best_by_hits": "x32",
-    "best_by_paid_cost": "x32",
+    "best_by_hits": "x64",
+    "best_by_paid_cost": "x64",
     "coverage_improved": true,
-    "paid_reduction": false,
+    "paid_reduction": true,
     "row0_status": "unchanged_exogenous",
     "translation_delta": "NONE"
   },
@@ -29,11 +29,11 @@
       "label": "baseline",
       "nontrivial_books": 107,
       "program_bits": 3146.577955409763,
-      "program_bits_with_width_id": 3149.1629179104843,
+      "program_bits_with_width_id": 3149.3853103318206,
       "rank_bits": 52.13347001255168,
       "saving_vs_explicit_opcount_cutpoint_bits": -482.91734815872815,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -334.9050937571046,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -337.4900562578259,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -337.7124486791622,
       "seq_beam": 12,
       "sequence_hit_books": 56,
       "sequence_hit_rate": 0.37333333333333335,
@@ -41,7 +41,7 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
     },
     {
       "book_beam": 60,
@@ -54,11 +54,11 @@
       "label": "x2",
       "nontrivial_books": 107,
       "program_bits": 3089.958467072315,
-      "program_bits_with_width_id": 3092.5434295730365,
+      "program_bits_with_width_id": 3092.765821994373,
       "rank_bits": 84.8733816866421,
       "saving_vs_explicit_opcount_cutpoint_bits": -426.2978598212803,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -278.2856054196568,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -280.8705679203781,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -281.0929603417144,
       "seq_beam": 24,
       "sequence_hit_books": 64,
       "sequence_hit_rate": 0.4266666666666667,
@@ -66,7 +66,7 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
     },
     {
       "book_beam": 120,
@@ -79,11 +79,11 @@
       "label": "x4",
       "nontrivial_books": 107,
       "program_bits": 2953.661208221069,
-      "program_bits_with_width_id": 2956.2461707217903,
+      "program_bits_with_width_id": 2956.4685631431266,
       "rank_bits": 160.38966036352156,
       "saving_vs_explicit_opcount_cutpoint_bits": -290.00060097003416,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -141.98834656841063,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -144.57330906913194,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -144.79570149046822,
       "seq_beam": 48,
       "sequence_hit_books": 82,
       "sequence_hit_rate": 0.5466666666666666,
@@ -91,7 +91,7 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
     },
     {
       "book_beam": 240,
@@ -104,11 +104,11 @@
       "label": "x8",
       "nontrivial_books": 107,
       "program_bits": 2928.4153370419253,
-      "program_bits_with_width_id": 2931.0002995426466,
+      "program_bits_with_width_id": 2931.222691963983,
       "rank_bits": 186.99341419158915,
       "saving_vs_explicit_opcount_cutpoint_bits": -264.75472979089045,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -116.74247538926693,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -119.32743788998823,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -119.54983031132451,
       "seq_beam": 96,
       "sequence_hit_books": 86,
       "sequence_hit_rate": 0.5733333333333334,
@@ -116,7 +116,7 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
     },
     {
       "book_beam": 480,
@@ -129,11 +129,11 @@
       "label": "x16",
       "nontrivial_books": 107,
       "program_bits": 2880.210081098605,
-      "program_bits_with_width_id": 2882.795043599326,
+      "program_bits_with_width_id": 2883.0174360206624,
       "rank_bits": 227.31748326124986,
       "saving_vs_explicit_opcount_cutpoint_bits": -216.54947384756997,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -68.53721944594645,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -71.12218194666775,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -71.34457436800403,
       "seq_beam": 192,
       "sequence_hit_books": 92,
       "sequence_hit_rate": 0.6133333333333333,
@@ -141,7 +141,7 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
     },
     {
       "book_beam": 960,
@@ -154,11 +154,11 @@
       "label": "x32",
       "nontrivial_books": 107,
       "program_bits": 2813.097445129381,
-      "program_bits_with_width_id": 2815.6824076301023,
+      "program_bits_with_width_id": 2815.9048000514385,
       "rank_bits": 292.99883481149686,
       "saving_vs_explicit_opcount_cutpoint_bits": -149.43683787834607,
       "saving_vs_explicit_opcount_cutpoint_type_bits": -1.424583476722546,
-      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -4.0095459774438496,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": -4.23193839878013,
       "seq_beam": 384,
       "sequence_hit_books": 101,
       "sequence_hit_rate": 0.6733333333333333,
@@ -166,21 +166,46 @@
       "test_books": 150,
       "test_internal_starts": 343,
       "test_ops": 493,
-      "width_id_bits": 2.584962500721156
+      "width_id_bits": 2.807354922057604
+    },
+    {
+      "book_beam": 1920,
+      "composition_bits": 1198.4203850914414,
+      "correction_bits": 1189.2992752062507,
+      "explicit_opcount_cutpoint_bits": 2663.660607251035,
+      "explicit_opcount_cutpoint_type_bits": 2811.6728616526584,
+      "generated_internal_start_fraction": 0.2857142857142857,
+      "generated_internal_starts_before_correction": 98,
+      "label": "x64",
+      "nontrivial_books": 107,
+      "program_bits": 2747.5376483144246,
+      "program_bits_with_width_id": 2750.345003236482,
+      "rank_bits": 359.8179880167326,
+      "saving_vs_explicit_opcount_cutpoint_bits": -83.8770410633897,
+      "saving_vs_explicit_opcount_cutpoint_type_bits": 64.13521333823383,
+      "saving_vs_explicit_opcount_cutpoint_type_bits_with_width_id": 61.32785841617624,
+      "seq_beam": 768,
+      "sequence_hit_books": 109,
+      "sequence_hit_rate": 0.7266666666666667,
+      "sequence_miss_books": 41,
+      "test_books": 150,
+      "test_internal_starts": 343,
+      "test_ops": 493,
+      "width_id_bits": 2.807354922057604
     }
   ],
   "schema": "internal_start_beam_capacity_gate.v1",
   "scope": "analysis_only_beam_capacity_curve_for_target_free_internal_starts",
   "summary": {
     "best_pair": "book_length__op_count",
-    "best_width_by_hits": "x32",
-    "best_width_by_paid_cost": "x32",
-    "classification": "WEAK_BEAM_CAPACITY_ROUTE_RETAINED",
+    "best_width_by_hits": "x64",
+    "best_width_by_paid_cost": "x64",
+    "classification": "PROMOTED_INTERNAL_START_CAPACITY_LEDGER_REDUCTION_CANDIDATE",
     "coverage_improved": true,
-    "max_generated_internal_starts": 78,
-    "max_sequence_hits": 101,
-    "paid_reduction": false,
-    "route_boundary": "larger beams test capacity only; promotion still requires paid ledger reduction, not more covered examples"
+    "max_generated_internal_starts": 98,
+    "max_sequence_hits": 109,
+    "paid_reduction": true,
+    "route_boundary": "larger beams test capacity only; paid ledger reduction promotes a candidate, while exact generator status still requires exact coverage without residual sequence corrections"
   },
   "translation_delta": "NONE"
 }

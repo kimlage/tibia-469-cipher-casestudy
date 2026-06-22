@@ -68,6 +68,7 @@ WIDTHS = [
     {"label": "x8", "seq_beam": 96, "book_beam": 240},
     {"label": "x16", "seq_beam": 192, "book_beam": 480},
     {"label": "x32", "seq_beam": 384, "book_beam": 960},
+    {"label": "x64", "seq_beam": 768, "book_beam": 1920},
 ]
 
 
@@ -181,6 +182,8 @@ def make_result() -> dict[str, Any]:
     classification = (
         "PROMOTED_INTERNAL_START_BEAM_CAPACITY_PROGRAM"
         if paid_reduction and exact_coverage
+        else "PROMOTED_INTERNAL_START_CAPACITY_LEDGER_REDUCTION_CANDIDATE"
+        if paid_reduction
         else "WEAK_BEAM_CAPACITY_ROUTE_RETAINED"
         if coverage_improved and not paid_reduction
         else "INTERNAL_START_BEAM_CAPACITY_ROUTE_NOT_PROMOTED"
@@ -219,8 +222,9 @@ def make_result() -> dict[str, Any]:
             "max_sequence_hits": best_by_hits["sequence_hit_books"],
             "paid_reduction": paid_reduction,
             "route_boundary": (
-                "larger beams test capacity only; promotion still requires paid "
-                "ledger reduction, not more covered examples"
+                "larger beams test capacity only; paid ledger reduction promotes "
+                "a candidate, while exact generator status still requires exact "
+                "coverage without residual sequence corrections"
             ),
         },
         "translation_delta": "NONE",
@@ -275,8 +279,9 @@ def write_markdown(result: dict[str, Any], path: Path) -> None:
     )
     if result["decision"]["paid_reduction"]:
         lines.append(
-            "A wider beam reduces the paid ledger and should be promoted as a real "
-            "program candidate."
+            "A wider beam reduces the paid ledger and should be promoted only as "
+            "a capacity-ledger candidate unless it also reaches exact coverage. "
+            "The remaining misses still require explicit corrections."
         )
     elif result["decision"]["coverage_improved"]:
         lines.append(
