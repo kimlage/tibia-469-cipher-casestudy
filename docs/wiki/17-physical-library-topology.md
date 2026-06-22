@@ -147,6 +147,15 @@ file. Heldout diagnostics are negative for coarse control (`-84.396` bits),
 op type (`-25.249`), and copy-hint rank bucket (`-12.925`), so this is a
 `WEAK_PROVENANCE_CLUE`, not a v9 reduction.
 
+The `arturoornelasb/tibia-bonelord-469-cipher` repository supplies a licensed
+community `bookcase_mapping.json` with bookcase/slot labels, but it is
+post-hoc/community analysis rather than primary authoring provenance. The audit
+uses only that topology file, not the repository's semantic mapping/plaintext
+claims. It matches `63` canonical books, joins `231` v9 rows, and still has
+negative total heldout savings for coarse control (`-105.714` bits), op type
+(`-67.441`), and copy-hint rank bucket (`-65.026`). It is therefore a rejected
+provenance control, not an external generator input.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
@@ -159,6 +168,7 @@ op type (`-25.249`), and copy-hint rank bucket (`-12.925`), so this is a
 - [Clean topology contract template](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv)
 - [Clean topology v9 control protocol](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/06_clean_topology_v9_control_protocol.md)
 - [Tales/LIBSearch book database probe](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/07_tales_libsearch_book_database_probe.md)
+- [Arturo bookcase mapping control probe](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/08_arturo_bookcase_mapping_control_probe.md)
 
 ## What Counts As Future Progress
 

@@ -3900,6 +3900,15 @@ coordinates; and heldout diagnostics are negative for coarse control
 It is therefore recorded as `WEAK_PROVENANCE_CLUE_CORPUS_LOCATION_SURFACE`,
 not as an external control source or v9 reduction.
 
+A licensed community bookcase mapping from
+`arturoornelasb/tibia-bonelord-469-cipher` then tests the stronger
+bookcase/slot variant without using that repository's semantic solution files.
+It covers `63` canonical books and `231` v9 operation rows, but remains
+post-hoc/community provenance and has negative total heldout savings for coarse
+control (`-105.714` bits), op type (`-67.441`), and copy-hint rank bucket
+(`-65.026`). This rejects the public bookcase/slot route as a v9 control
+source under current evidence.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work

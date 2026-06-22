@@ -52,6 +52,7 @@ No external source is acquired or integrated into v9. Net v9 reduction: `0.0` bi
 - https://tibia.fandom.com/wiki/Hellgate_Library
 - https://github.com/s2ward/tibia
 - https://talesoftibia.com/services/
+- https://github.com/arturoornelasb/tibia-bonelord-469-cipher
 
 ## Reproducible Artifacts
 
@@ -121,3 +122,13 @@ Heldout v9 feature diagnostics are therefore audit-only; the source is not integ
 - [07_tales_libsearch_book_database_probe.py](../scripts/07_tales_libsearch_book_database_probe.py)
 - [07_tales_libsearch_book_database_probe.json](test_results/07_tales_libsearch_book_database_probe.json)
 - [07_tales_libsearch_book_database_probe.md](test_results/07_tales_libsearch_book_database_probe.md)
+
+## Arturo Bookcase Mapping Control Probe
+
+The `arturoornelasb/tibia-bonelord-469-cipher` repository was probed only for its public `bookcase_mapping.json` topology surface; semantic mapping/plaintext artifacts were not read or used.
+It provides `63` unique canonical matches and `231` joined v9 operation rows, but remains community/posthoc provenance rather than primary authoring evidence.
+Heldout topology diagnostics do not promote it as an external control source; no source is integrated and v9 reduction remains `0.0` bits.
+
+- [08_arturo_bookcase_mapping_control_probe.py](../scripts/08_arturo_bookcase_mapping_control_probe.py)
+- [08_arturo_bookcase_mapping_control_probe.json](test_results/08_arturo_bookcase_mapping_control_probe.json)
+- [08_arturo_bookcase_mapping_control_probe.md](test_results/08_arturo_bookcase_mapping_control_probe.md)

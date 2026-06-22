@@ -1,0 +1,718 @@
+{
+  "case_reopened": false,
+  "classification": "REJECTED_PROVENANCE_CONTROL_COMMUNITY_BOOKCASE_SURFACE",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "classification_reason": "community bookcase topology does not reduce v9 residual streams above controls",
+    "external_surface_integrated": false,
+    "promoted_external_control_source": false,
+    "promoted_targets_as_weak_clue_only": [],
+    "v9_reduction_bits": 0.0
+  },
+  "features": [
+    "bookcase",
+    "bookcase_number_bucket",
+    "slot_in_bookcase",
+    "library_number_decile",
+    "library_number_quartile",
+    "bookcase_x_slot",
+    "bookcase_x_op_pos"
+  ],
+  "joined_v9_rows": 231,
+  "match_summary": {
+    "ambiguous_matches": 3,
+    "derived_matched_books": 53,
+    "duplicate_book_rows": 0,
+    "source_rows": 71,
+    "unique_matched_books": 63,
+    "unique_matches": 63,
+    "unmatched": 5
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:01:50.339987+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "arturo_bookcase_mapping_control_probe.v1",
+  "scope": "analysis_only_external_bookcase_mapping_control_probe",
+  "source": {
+    "bookcase_url": "https://raw.githubusercontent.com/arturoornelasb/tibia-bonelord-469-cipher/master/data/bookcase_mapping.json",
+    "data_readme_error": null,
+    "data_readme_http_status": 200,
+    "data_readme_mentions_solution": true,
+    "data_readme_url": "https://raw.githubusercontent.com/arturoornelasb/tibia-bonelord-469-cipher/master/data/README.md",
+    "license_error": null,
+    "license_http_status": 200,
+    "license_present": true,
+    "license_url": "https://raw.githubusercontent.com/arturoornelasb/tibia-bonelord-469-cipher/master/LICENSE",
+    "mapping_http_status": 200,
+    "repository": "https://github.com/arturoornelasb/tibia-bonelord-469-cipher",
+    "source_is_primary_authoring_provenance": false
+  },
+  "target_results": {
+    "coarse_control": {
+      "alphabet_size": 9,
+      "permutation_controls": {
+        "beats_permutation_p95": true,
+        "permutation_mean": -179.0116891809743,
+        "permutation_p05": -246.22006683225698,
+        "permutation_p50": -178.32681534409753,
+        "permutation_p95": -114.81097333404125,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 562.066745491773,
+          "global_bits": 551.0488150275031,
+          "label": "prefix_20",
+          "saving_bits": -11.017930464269853,
+          "split_type": "prefix",
+          "target_rows": 169,
+          "train_books": 7
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 420.82419113506234,
+          "global_bits": 395.61317133309905,
+          "label": "prefix_30",
+          "saving_bits": -25.21101980196329,
+          "split_type": "prefix",
+          "target_rows": 127,
+          "train_books": 17
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 275.54827718965487,
+          "global_bits": 255.89198875942566,
+          "label": "prefix_40",
+          "saving_bits": -19.65628843022921,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "train_books": 27
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 142.59852489699304,
+          "global_bits": 139.79116997493543,
+          "label": "prefix_50",
+          "saving_bits": -2.8073549220576126,
+          "split_type": "prefix",
+          "target_rows": 44,
+          "train_books": 36
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 58.42887580130334,
+          "global_bits": 59.379442464872305,
+          "label": "prefix_60",
+          "saving_bits": 0.9505666635689636,
+          "split_type": "prefix",
+          "target_rows": 19,
+          "train_books": 44
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 7.451211111832329,
+          "global_bits": 8.224782475092386,
+          "label": "leave_bookcase_Eighth Bookcase",
+          "saving_bits": 0.7735713632600572,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 67.78297652220266,
+          "global_bits": 64.97562160014506,
+          "label": "leave_bookcase_First Bookcase",
+          "saving_bits": -2.8073549220575984,
+          "split_type": "leave_bookcase",
+          "target_rows": 22,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 27.560019865762023,
+          "global_bits": 24.752664943704417,
+          "label": "leave_bookcase_Fortieth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 6,
+          "train_books": 49
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 34.04000769757056,
+          "global_bits": 24.726184447155468,
+          "label": "leave_bookcase_Fourth Bookcase",
+          "saving_bits": -9.31382325041509,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 63.31336154931156,
+          "global_bits": 60.50600662725395,
+          "label": "leave_bookcase_Second Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 23,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 45.806864206715986,
+          "global_bits": 42.99950928465838,
+          "label": "leave_bookcase_Seventh Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "train_books": 50
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 27.370206878417207,
+          "global_bits": 21.737823587929242,
+          "label": "leave_bookcase_Sixth Bookcase",
+          "saving_bits": -5.632383290487965,
+          "split_type": "leave_bookcase",
+          "target_rows": 8,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 30.47508530018309,
+          "global_bits": 27.667730378125484,
+          "label": "leave_bookcase_Third Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 44.5949661207002,
+          "global_bits": 41.787611198642594,
+          "label": "leave_bookcase_Thirteenth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 14.844432004640197,
+          "global_bits": 12.037077082582593,
+          "label": "leave_bookcase_Thirtieth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 20.10451301524409,
+          "global_bits": 14.35671508464711,
+          "label": "leave_bookcase_Thirty-Third Bookcase",
+          "saving_bits": -5.747797930596981,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 18.856071160456956,
+          "global_bits": 14.713602538839222,
+          "label": "leave_bookcase_Twentieth Bookcase",
+          "saving_bits": -4.142468621617734,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 14.545514709501132,
+          "global_bits": 16.38830856383362,
+          "label": "leave_bookcase_Twenty-First Bookcase",
+          "saving_bits": 1.842793854332486,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 50
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 16.20934391039414,
+          "global_bits": 13.013176906489036,
+          "label": "leave_bookcase_Twenty-Seventh Bookcase",
+          "saving_bits": -3.196167003905103,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "library_number_decile",
+          "feature_bits": 28.863466935207313,
+          "global_bits": 25.958853693626867,
+          "label": "leave_bookcase_Twenty-Third Bookcase",
+          "saving_bits": -2.9046132415804458,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "train_books": 51
+        }
+      ],
+      "summary": {
+        "positive_splits": 3,
+        "split_count": 20,
+        "total_feature_bits": 1921.284655502926,
+        "total_global_bits": 1815.570255972561,
+        "total_saving_bits": -105.714399530365
+      }
+    },
+    "copy_hint_rank_bucket": {
+      "alphabet_size": 12,
+      "permutation_controls": {
+        "beats_permutation_p95": true,
+        "permutation_mean": -114.41189709136646,
+        "permutation_p05": -163.0580821192498,
+        "permutation_p50": -113.16740054904233,
+        "permutation_p95": -75.26426831949603,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 475.75937203096396,
+          "global_bits": 473.22519540243337,
+          "label": "prefix_20",
+          "saving_bits": -2.534176628530588,
+          "split_type": "prefix",
+          "target_rows": 144,
+          "train_books": 7
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 378.35315240408323,
+          "global_bits": 366.39389203990055,
+          "label": "prefix_30",
+          "saving_bits": -11.959260364182683,
+          "split_type": "prefix",
+          "target_rows": 108,
+          "train_books": 17
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 228.95266113120547,
+          "global_bits": 226.14530620914786,
+          "label": "prefix_40",
+          "saving_bits": -2.8073549220576126,
+          "split_type": "prefix",
+          "target_rows": 69,
+          "train_books": 27
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 136.2992970994409,
+          "global_bits": 133.4919421773833,
+          "label": "prefix_50",
+          "saving_bits": -2.8073549220576126,
+          "split_type": "prefix",
+          "target_rows": 39,
+          "train_books": 36
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 63.08551615798224,
+          "global_bits": 60.278161235924635,
+          "label": "prefix_60",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "prefix",
+          "target_rows": 17,
+          "train_books": 44
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 12.935838883296245,
+          "global_bits": 10.128483961238642,
+          "label": "leave_bookcase_Eighth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 51.037357724516816,
+          "global_bits": 48.23000280245921,
+          "label": "leave_bookcase_First Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 14,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 17.181022855561757,
+          "global_bits": 14.373667933504153,
+          "label": "leave_bookcase_Fortieth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 49
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 19.43817571516009,
+          "global_bits": 16.630820793102483,
+          "label": "leave_bookcase_Fourth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 7,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 49.144880727598874,
+          "global_bits": 46.33752580554127,
+          "label": "leave_bookcase_Second Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 50.06324650719453,
+          "global_bits": 47.25589158513692,
+          "label": "leave_bookcase_Seventh Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 18.248484810732233,
+          "global_bits": 15.441129888674627,
+          "label": "leave_bookcase_Sixth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 32.02184069267812,
+          "global_bits": 29.214485770620513,
+          "label": "leave_bookcase_Third Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 39.5720463513445,
+          "global_bits": 36.76469142928689,
+          "label": "leave_bookcase_Thirteenth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 12,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 12.430286888493415,
+          "global_bits": 9.62293196643581,
+          "label": "leave_bookcase_Thirtieth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 3,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 13.666630064761163,
+          "global_bits": 10.85927514270356,
+          "label": "leave_bookcase_Thirty-Third Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 17.767892058606524,
+          "global_bits": 14.960537136548918,
+          "label": "leave_bookcase_Twentieth Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 15.895336021958444,
+          "global_bits": 13.08798109990084,
+          "label": "leave_bookcase_Twenty-First Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 11.466681970481153,
+          "global_bits": 8.659327048423549,
+          "label": "leave_bookcase_Twenty-Seventh Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 27.547282378495503,
+          "global_bits": 24.739927456437897,
+          "label": "leave_bookcase_Twenty-Third Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "train_books": 51
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_feature_bits": 1670.8670024745552,
+        "total_global_bits": 1605.841176884805,
+        "total_saving_bits": -65.02582558975017
+      }
+    },
+    "op_type": {
+      "alphabet_size": 2,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -63.23411455130218,
+        "permutation_p05": -78.2931636257938,
+        "permutation_p50": -62.63676381418613,
+        "permutation_p95": -48.923775906679815,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 126.97135789596538,
+          "global_bits": 122.26921215220449,
+          "label": "prefix_20",
+          "saving_bits": -4.7021457437608944,
+          "split_type": "prefix",
+          "target_rows": 169,
+          "train_books": 7
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 85.8670061486588,
+          "global_bits": 83.0596512266012,
+          "label": "prefix_30",
+          "saving_bits": -2.8073549220575984,
+          "split_type": "prefix",
+          "target_rows": 127,
+          "train_books": 17
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 55.8000366603649,
+          "global_bits": 52.9926817383073,
+          "label": "prefix_40",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "train_books": 27
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 27.531739755731603,
+          "global_bits": 24.724384833673998,
+          "label": "prefix_50",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "prefix",
+          "target_rows": 44,
+          "train_books": 36
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 12.993545841333223,
+          "global_bits": 10.186190919275619,
+          "label": "prefix_60",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "prefix",
+          "target_rows": 19,
+          "train_books": 44
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 3.4433810118255623,
+          "global_bits": 0.6360260897679582,
+          "label": "leave_bookcase_Eighth Bookcase",
+          "saving_bits": -2.807354922057604,
+          "split_type": "leave_bookcase",
+          "target_rows": 2,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 26.66387106342781,
+          "global_bits": 23.856516141370204,
+          "label": "leave_bookcase_First Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 22,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 6.733566575603579,
+          "global_bits": 3.926211653545975,
+          "label": "leave_bookcase_Fortieth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 6,
+          "train_books": 49
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 9.71468679288153,
+          "global_bits": 6.907331870823926,
+          "label": "leave_bookcase_Fourth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 24.591062310666835,
+          "global_bits": 21.78370738860923,
+          "label": "leave_bookcase_Second Bookcase",
+          "saving_bits": -2.8073549220576055,
+          "split_type": "leave_bookcase",
+          "target_rows": 23,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 10.078850033114517,
+          "global_bits": 7.271495111056913,
+          "label": "leave_bookcase_Seventh Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 16,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 15.430372679703746,
+          "global_bits": 8.711537878068974,
+          "label": "leave_bookcase_Sixth Bookcase",
+          "saving_bits": -6.718834801634772,
+          "split_type": "leave_bookcase",
+          "target_rows": 8,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 8.332765152345392,
+          "global_bits": 3.3089149307892565,
+          "label": "leave_bookcase_Third Bookcase",
+          "saving_bits": -5.023850221556135,
+          "split_type": "leave_bookcase",
+          "target_rows": 10,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 13.637451885795864,
+          "global_bits": 10.83009696373826,
+          "label": "leave_bookcase_Thirteenth Bookcase",
+          "saving_bits": -2.8073549220576037,
+          "split_type": "leave_bookcase",
+          "target_rows": 15,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 6.104272789220535,
+          "global_bits": 3.296917867162931,
+          "label": "leave_bookcase_Thirtieth Bookcase",
+          "saving_bits": -2.807354922057604,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 4.470231617491959,
+          "global_bits": 1.6136137464758216,
+          "label": "leave_bookcase_Thirty-Third Bookcase",
+          "saving_bits": -2.8566178710161374,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 8.338734017479073,
+          "global_bits": 3.6099983904186583,
+          "label": "leave_bookcase_Twentieth Bookcase",
+          "saving_bits": -4.728735627060415,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase",
+          "feature_bits": 4.420968668533426,
+          "global_bits": 1.6136137464758216,
+          "label": "leave_bookcase_Twenty-First Bookcase",
+          "saving_bits": -2.8073549220576046,
+          "split_type": "leave_bookcase",
+          "target_rows": 5,
+          "train_books": 50
+        },
+        {
+          "feature": "bookcase_number_bucket",
+          "feature_bits": 5.392807103598803,
+          "global_bits": 1.2845494415894485,
+          "label": "leave_bookcase_Twenty-Seventh Bookcase",
+          "saving_bits": -4.108257662009354,
+          "split_type": "leave_bookcase",
+          "target_rows": 4,
+          "train_books": 51
+        },
+        {
+          "feature": "bookcase_x_slot",
+          "feature_bits": 5.770377091811948,
+          "global_bits": 2.9630221697543435,
+          "label": "leave_bookcase_Twenty-Third Bookcase",
+          "saving_bits": -2.8073549220576046,
+          "split_type": "leave_bookcase",
+          "target_rows": 9,
+          "train_books": 51
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 20,
+        "total_feature_bits": 462.2870850955545,
+        "total_global_bits": 394.84567425971034,
+        "total_saving_bits": -67.44141083584417
+      }
+    }
+  },
+  "targets": [
+    "coarse_control",
+    "op_type",
+    "copy_hint_rank_bucket"
+  ],
+  "translation_delta": "NONE"
+}
