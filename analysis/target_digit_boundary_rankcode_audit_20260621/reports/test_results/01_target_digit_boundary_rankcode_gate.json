@@ -1,0 +1,349 @@
+{
+  "case_reopened": false,
+  "classification": "target_digit_boundary_rankcode_weak_not_promoted",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_boundary_rankcode_clue": false,
+    "promotes_endpoint_generator": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "full_fit_rows": [
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        86,
+        115
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1030.9468059388264,
+      "model_bits_before_scheme_charge": 1028.3618434381053,
+      "random_control": {
+        "random_seed": 46920261598,
+        "saving_mean": -48.931977938135915,
+        "saving_p05": -58.487652393606375,
+        "saving_p95": -37.96499765171141,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 106.36113787108948,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 108.94610037181064,
+      "scheme": "top10_rest",
+      "scheme_choice_bits": 2.584962500721156
+    },
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        86,
+        27,
+        43,
+        45
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1027.4974538621518,
+      "model_bits_before_scheme_charge": 1024.9124913614307,
+      "random_control": {
+        "random_seed": 46920261446,
+        "saving_mean": -47.4405564292224,
+        "saving_p05": -60.498822881291204,
+        "saving_p95": -33.00219046639018,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 109.81048994776407,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 112.39545244848523,
+      "scheme": "top10_20_50",
+      "scheme_choice_bits": 2.584962500721156
+    },
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        63,
+        23,
+        27,
+        43,
+        45
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1018.9080193019139,
+      "model_bits_before_scheme_charge": 1016.3230568011927,
+      "random_control": {
+        "random_seed": 46920261594,
+        "saving_mean": -74.60699105965382,
+        "saving_p05": -90.29909193842386,
+        "saving_p95": -57.82174374951276,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 118.3999245080021,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 120.98488700872326,
+      "scheme": "top5_10_20_50",
+      "scheme_choice_bits": 2.584962500721156
+    },
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        63,
+        23,
+        17,
+        10,
+        21,
+        22,
+        45
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1032.506531612788,
+      "model_bits_before_scheme_charge": 1029.921569112067,
+      "random_control": {
+        "random_seed": 46920261985,
+        "saving_mean": -88.47964629402448,
+        "saving_p05": -106.36786969328669,
+        "saving_p95": -69.65563995017823,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 104.80141219712792,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 107.38637469784908,
+      "scheme": "top5_10_15_20_30_50",
+      "scheme_choice_bits": 2.584962500721156
+    },
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        86,
+        27,
+        21,
+        11,
+        11,
+        10,
+        8,
+        11,
+        10,
+        6
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1086.2351928220996,
+      "model_bits_before_scheme_charge": 1083.6502303213786,
+      "random_control": {
+        "random_seed": 46920261350,
+        "saving_mean": -17.39004472413762,
+        "saving_p05": -27.326279603874173,
+        "saving_p95": -7.1397034516577795,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 51.072750987816256,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 53.65771348853741,
+      "scheme": "deciles",
+      "scheme_choice_bits": 2.584962500721156
+    },
+    {
+      "baseline_bits": 1137.307943809916,
+      "bin_totals": [
+        63,
+        23,
+        17,
+        10,
+        11,
+        10,
+        6,
+        5,
+        5,
+        6,
+        7,
+        3,
+        1,
+        7,
+        6,
+        5,
+        6,
+        4,
+        5,
+        1
+      ],
+      "book_count": 60,
+      "cutpoint_count": 201,
+      "model_bits_after_scheme_charge": 1102.3833851084862,
+      "model_bits_before_scheme_charge": 1099.7984226077651,
+      "random_control": {
+        "random_seed": 46920261495,
+        "saving_mean": -13.906067108559501,
+        "saving_p05": -22.758127737654434,
+        "saving_p95": -4.7972013031964025,
+        "trials": 1000
+      },
+      "saving_after_scheme_charge": 34.92455870142968,
+      "saving_beats_random_p95": true,
+      "saving_before_scheme_charge": 37.509521202150836,
+      "scheme": "ventiles",
+      "scheme_choice_bits": 2.584962500721156
+    }
+  ],
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "target_digit_boundary_pruning_gate": "analysis/target_digit_boundary_pruning_audit_20260621/reports/test_results/01_target_digit_boundary_pruning_gate.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff": 20,
+      "selected_scheme": "top10_rest",
+      "test_bin_totals": [
+        62,
+        70
+      ],
+      "test_cutpoints": 132,
+      "test_saving_after_scheme_charge": 85.7306353445239,
+      "test_saving_before_scheme_charge": 88.31559784524507,
+      "train_saving_before_scheme_charge": 20.63050252656592
+    },
+    {
+      "cutoff": 30,
+      "selected_scheme": "top5_10_20_50",
+      "test_bin_totals": [
+        34,
+        14,
+        13,
+        22,
+        17
+      ],
+      "test_cutpoints": 100,
+      "test_saving_after_scheme_charge": 77.04370318696797,
+      "test_saving_before_scheme_charge": 79.62866568768914,
+      "train_saving_before_scheme_charge": 41.356221321034354
+    },
+    {
+      "cutoff": 40,
+      "selected_scheme": "top5_10_20_50",
+      "test_bin_totals": [
+        21,
+        10,
+        9,
+        13,
+        12
+      ],
+      "test_cutpoints": 65,
+      "test_saving_after_scheme_charge": 48.21451697381881,
+      "test_saving_before_scheme_charge": 50.799479474539964,
+      "train_saving_before_scheme_charge": 70.18540753418335
+    },
+    {
+      "cutoff": 50,
+      "selected_scheme": "top5_10_20_50",
+      "test_bin_totals": [
+        11,
+        6,
+        4,
+        9,
+        6
+      ],
+      "test_cutpoints": 36,
+      "test_saving_after_scheme_charge": 25.831043295506937,
+      "test_saving_before_scheme_charge": 28.41600579622809,
+      "train_saving_before_scheme_charge": 92.56888121249528
+    },
+    {
+      "cutoff": 60,
+      "selected_scheme": "top5_10_20_50",
+      "test_bin_totals": [
+        2,
+        1,
+        0,
+        4,
+        3
+      ],
+      "test_cutpoints": 10,
+      "test_saving_after_scheme_charge": -2.9145575433318474,
+      "test_saving_before_scheme_charge": -0.3295950426106913,
+      "train_saving_before_scheme_charge": 121.31448205133404
+    }
+  ],
+  "schema": "target_digit_boundary_rankcode_gate_v1",
+  "schemes": {
+    "deciles": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "top10_20_50": [
+      0.1,
+      0.2,
+      0.5
+    ],
+    "top10_rest": [
+      0.1
+    ],
+    "top5_10_15_20_30_50": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.5
+    ],
+    "top5_10_20_50": [
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "ventiles": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ]
+  },
+  "scope": "analysis_only_cutpoint_rank_distribution_code",
+  "summary": {
+    "best_baseline_bits": 1137.307943809916,
+    "best_beats_random_p95": true,
+    "best_bin_totals": [
+      63,
+      23,
+      27,
+      43,
+      45
+    ],
+    "best_model_bits_after_scheme_charge": 1018.9080193019139,
+    "best_random_saving_p95": -57.82174374951276,
+    "best_saving_after_scheme_charge": 118.3999245080021,
+    "best_scheme": "top5_10_20_50",
+    "book_count": 60,
+    "candidate_position_count": 9507,
+    "cutpoint_count": 201,
+    "interpretation": "A fixed rank-bin code over prev2 right-surprisal ranks reduces the paid cutpoint atlas more than the one-band pruning code in full fit, but it fails the strict all-suffix promotion gate. It remains a weak diagnostic, not a promoted parser component.",
+    "prequential_cells": 5,
+    "prequential_positive_test_saving_after_scheme_charge_cells": 4,
+    "promotes_boundary_rankcode_clue": false,
+    "promotes_endpoint_generator": false
+  },
+  "translation_delta": "NONE"
+}

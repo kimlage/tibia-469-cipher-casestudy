@@ -510,6 +510,13 @@ p95 saving `-37.498` bits. Prefix-selected suffix checks stay positive in
 `5/5` cells before the global q-choice charge and `4/5` after it. This promotes
 a boundary-pruning clue, not an endpoint generator, because `115` cutpoints
 remain outside the band and still need declarations.
+A target digit boundary rank-code audit then tests whether the full rank
+distribution strengthens the same clue. In full fit, `top5_10_20_50` rank bins
+save `118.400` bits after scheme charge and beat random p95. It is not
+promoted, because prefix-selected suffix validation is positive in only `4/5`
+cells. This records a useful promotion boundary: rank bins are a stronger
+descriptive full-fit code, but the promoted result remains the simpler
+boundary-pruning clue.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2652,6 +2659,8 @@ book generation, not row0 pair-cell placement.
 - [Target digit boundary gate](../../analysis/target_digit_boundary_audit_20260621/reports/test_results/01_target_digit_boundary_gate.md)
 - [Final target digit boundary pruning audit](../../analysis/target_digit_boundary_pruning_audit_20260621/reports/final_target_digit_boundary_pruning_audit.md)
 - [Target digit boundary pruning gate](../../analysis/target_digit_boundary_pruning_audit_20260621/reports/test_results/01_target_digit_boundary_pruning_gate.md)
+- [Final target digit boundary rank-code audit](../../analysis/target_digit_boundary_rankcode_audit_20260621/reports/final_target_digit_boundary_rankcode_audit.md)
+- [Target digit boundary rank-code gate](../../analysis/target_digit_boundary_rankcode_audit_20260621/reports/test_results/01_target_digit_boundary_rankcode_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
