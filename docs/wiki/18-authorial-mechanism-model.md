@@ -711,6 +711,18 @@ control, and beats same-multiset shuffled p95 (`116.843`). Beam20 recovers
 nontrivial held-out coarse sequences in every cutoff. This promotes a
 coarse-control program candidate only: op-count, exact within-bucket residuals,
 literal innovation, copy hints, seed books, and row0 remain external.
+A book-level coarse length controller audit then removes that op-count grant
+inside an integrated book-level test. Given `book_length`, the decoder scores
+latent op-count candidates, generates coarse `type:length_bucket` sequences,
+filters by bucket-sum feasibility, and represents exact residual lengths as a
+composition index. This promotes the strongest current generation candidate:
+true op-count survives in beam `120/150` times, true coarse sequence survives
+`56/150` times (`13` nontrivial), above same-multiset p95 `37`, and residual
+coding improves from `1031.010` independent bits to `665.782` composition-index
+bits. Integrated latent beam plus residual composition costs `3146.578` bits
+versus `4478.440` for separated op-count/coarse/residual declaration. It is
+still not a complete generator: coarse-sequence corrections, composition index,
+literal innovation, copy hints, seeds, and row0 remain external.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3041,6 +3053,8 @@ book generation, not row0 pair-cell placement.
 - [Length innovation factor gate](../../analysis/length_innovation_factor_audit_20260622/reports/test_results/01_length_innovation_factor_gate.md)
 - [Final coarse control program audit](../../analysis/coarse_control_program_audit_20260622/reports/final_coarse_control_program_audit.md)
 - [Coarse control program gate](../../analysis/coarse_control_program_audit_20260622/reports/test_results/01_coarse_control_program_gate.md)
+- [Final book-level coarse length controller audit](../../analysis/book_level_coarse_length_controller_audit_20260622/reports/final_book_level_coarse_length_controller_audit.md)
+- [Book-level coarse length controller gate](../../analysis/book_level_coarse_length_controller_audit_20260622/reports/test_results/01_book_level_coarse_length_controller_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

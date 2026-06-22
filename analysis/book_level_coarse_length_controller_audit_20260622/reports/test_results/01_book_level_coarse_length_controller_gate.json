@@ -1,0 +1,3638 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "best_pair": "book_length__op_count",
+    "promoted_pairs": [
+      "global__op_count",
+      "global__count_x_pos",
+      "book_length__op_count",
+      "book_length__count_x_pos",
+      "phase_x_length__op_count",
+      "phase_x_length__count_x_pos"
+    ],
+    "row0_status": "unchanged_exogenous"
+  },
+  "inputs": {
+    "book_beam_width": 30,
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json",
+    "max_opcount": 16,
+    "random_trials": 100,
+    "seq_beam_width": 12
+  },
+  "integrated_cost": {
+    "best_pair_rows": [
+      {
+        "coarse_model": "op_count",
+        "count_model": "book_length",
+        "cutoff": 20,
+        "latent_beam_plus_composition": 1207.2548662812278,
+        "opcount_coarse_separated_uniform_residual": 1604.0264143058034,
+        "opcount_granted_coarse_model_plus_composition": 1066.830425336983
+      },
+      {
+        "coarse_model": "op_count",
+        "count_model": "book_length",
+        "cutoff": 30,
+        "latent_beam_plus_composition": 910.6330950249596,
+        "opcount_coarse_separated_uniform_residual": 1257.6225340414396,
+        "opcount_granted_coarse_model_plus_composition": 777.3023773129981
+      },
+      {
+        "coarse_model": "op_count",
+        "count_model": "book_length",
+        "cutoff": 40,
+        "latent_beam_plus_composition": 593.2924267860712,
+        "opcount_coarse_separated_uniform_residual": 876.6555907579257,
+        "opcount_granted_coarse_model_plus_composition": 495.26896280424927
+      },
+      {
+        "coarse_model": "op_count",
+        "count_model": "book_length",
+        "cutoff": 50,
+        "latent_beam_plus_composition": 341.9819639246898,
+        "opcount_coarse_separated_uniform_residual": 535.2332208908857,
+        "opcount_granted_coarse_model_plus_composition": 285.43858044951065
+      },
+      {
+        "coarse_model": "op_count",
+        "count_model": "book_length",
+        "cutoff": 60,
+        "latent_beam_plus_composition": 93.4156033928142,
+        "opcount_coarse_separated_uniform_residual": 204.90206258201306,
+        "opcount_granted_coarse_model_plus_composition": 86.55381472540586
+      }
+    ],
+    "summary": {
+      "latent_beam_plus_composition": 3146.5779554097626,
+      "opcount_coarse_separated_uniform_residual": 4478.439822578068,
+      "opcount_granted_coarse_model_plus_composition": 2711.394160629147
+    }
+  },
+  "pair_results": {
+    "book_length__count_x_pos": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "count_x_pos",
+      "count_model": "book_length",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 716.7639251168272,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 16,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 24.072017428548,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 4,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 560.1203125901443,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 34,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 6.169925001442312,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 369.9669250591348,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 25,
+          "exact_sequence_in_beam": 11,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 48,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 4.169925001442312,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 18,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.0,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 9,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.321928094887362,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 38,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1903.609062806491,
+        "exact_opcount_in_beam": 124,
+        "exact_sequence_in_beam": 55,
+        "hit_rank_bits": 40.73379552631999,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 12,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 44
+      }
+    },
+    "book_length__op_count": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 727.9338501182694,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 15,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 3,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 28.8911977860024,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 552.5353500894232,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 31,
+          "exact_sequence_in_beam": 13,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 7.936637939002571,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 358.79700005769246,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 24,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 44,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            }
+          ],
+          "hit_rank_bits": 7.491853096329674,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 17,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.9068905956085183,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 10,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.9068905956085183,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 37,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1896.02410030577,
+        "exact_opcount_in_beam": 120,
+        "exact_sequence_in_beam": 56,
+        "hit_rank_bits": 52.13347001255168,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 13,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 45
+      }
+    },
+    "global__count_x_pos": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "count_x_pos",
+      "count_model": "global",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 716.7639251168272,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 16,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 29.8726748802706,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 4,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 560.1203125901443,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 34,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 4.906890595608518,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 369.9669250591348,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 25,
+          "exact_sequence_in_beam": 11,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 48,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 4.169925001442312,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 18,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 2.584962500721156,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 9,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.0,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 36,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1903.609062806491,
+        "exact_opcount_in_beam": 124,
+        "exact_sequence_in_beam": 55,
+        "hit_rank_bits": 44.53445297804259,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 12,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 45
+      }
+    },
+    "global__op_count": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "op_count",
+      "count_model": "global",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 727.9338501182694,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 15,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 35.28633654934877,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 9
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 552.5353500894232,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 31,
+          "exact_sequence_in_beam": 13,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 7.1292830169449655,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 358.79700005769246,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 24,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 44,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            }
+          ],
+          "hit_rank_bits": 5.491853096329674,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 17,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.584962500721156,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 10,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.584962500721156,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 38,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1896.02410030577,
+        "exact_opcount_in_beam": 120,
+        "exact_sequence_in_beam": 56,
+        "hit_rank_bits": 55.077397664065714,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 13,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 42
+      }
+    },
+    "phase_x_length__count_x_pos": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "count_x_pos",
+      "count_model": "phase_x_length",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 716.7639251168272,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 16,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 29.8726748802706,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 4,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 560.1203125901443,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 34,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 4.906890595608518,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 11
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 369.9669250591348,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 25,
+          "exact_sequence_in_beam": 11,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 48,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 4.169925001442312,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 18,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "literal:len_0008",
+                "copy:len_0064"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 2.584962500721156,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 9,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.0,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 35,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1903.609062806491,
+        "exact_opcount_in_beam": 124,
+        "exact_sequence_in_beam": 55,
+        "hit_rank_bits": 44.53445297804259,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 12,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 45
+      }
+    },
+    "phase_x_length__op_count": {
+      "classification": "PROMOTED_BOOK_LEVEL_CONTROLLER_CANDIDATE",
+      "coarse_model": "op_count",
+      "count_model": "phase_x_length",
+      "cutoff_rows": [
+        {
+          "composition_bits": 450.42981837695606,
+          "correction_miss_bits": 727.9338501182694,
+          "cutoff": 20,
+          "exact_opcount_in_beam": 38,
+          "exact_sequence_in_beam": 15,
+          "examples": [
+            {
+              "book": 20,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 21,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 23,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 12,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0008",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 24,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0064"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 25,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 26,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            }
+          ],
+          "hit_rank_bits": 35.28633654934877,
+          "nontrivial_books": 38,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 751.563239174553,
+          "test_books": 50,
+          "top1_exact_opcount": 9
+        },
+        {
+          "composition_bits": 350.1611069965339,
+          "correction_miss_bits": 552.5353500894232,
+          "cutoff": 30,
+          "exact_opcount_in_beam": 31,
+          "exact_sequence_in_beam": 13,
+          "examples": [
+            {
+              "book": 30,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 31,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064"
+              ]
+            },
+            {
+              "book": 32,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 34,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 9,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0008",
+                "copy:len_0064",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0032",
+                "copy:len_0016",
+                "copy:len_0008",
+                "copy:len_0016"
+              ]
+            },
+            {
+              "book": 35,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 36,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "copy:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0032",
+                "copy:len_0008",
+                "copy:len_0064"
+              ]
+            }
+          ],
+          "hit_rank_bits": 7.1292830169449655,
+          "nontrivial_books": 30,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 595.7277839404778,
+          "test_books": 40,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 227.0035736320491,
+          "correction_miss_bits": 358.79700005769246,
+          "cutoff": 40,
+          "exact_opcount_in_beam": 24,
+          "exact_sequence_in_beam": 12,
+          "examples": [
+            {
+              "book": 40,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0128",
+                "literal:len_0008",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 41,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 42,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 7,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0128",
+                "copy:len_0016",
+                "literal:len_0008"
+              ]
+            },
+            {
+              "book": 44,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 45,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008",
+                "copy:len_0128"
+              ]
+            },
+            {
+              "book": 46,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032",
+                "copy:len_0128"
+              ]
+            }
+          ],
+          "hit_rank_bits": 5.491853096329674,
+          "nontrivial_books": 21,
+          "nontrivial_exact_sequence_in_beam": 3,
+          "residual_uniform_bits": 416.0841531894158,
+          "test_books": 30,
+          "top1_exact_opcount": 10
+        },
+        {
+          "composition_bits": 132.75176079662924,
+          "correction_miss_bits": 205.323312532452,
+          "cutoff": 50,
+          "exact_opcount_in_beam": 17,
+          "exact_sequence_in_beam": 9,
+          "examples": [
+            {
+              "book": 51,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0256p",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 52,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p"
+              ]
+            },
+            {
+              "book": 54,
+              "top_count": 2,
+              "top_sequence": [
+                "copy:len_0064",
+                "literal:len_0008"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 55,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0128"
+              ],
+              "true_count": 4,
+              "true_sequence": [
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0008"
+              ]
+            },
+            {
+              "book": 56,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 10,
+              "true_sequence": [
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0128",
+                "copy:len_0016",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 57,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 8,
+              "true_sequence": [
+                "copy:len_0032",
+                "copy:len_0064",
+                "literal:len_0032",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0064",
+                "literal:len_0008"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.584962500721156,
+          "nontrivial_books": 13,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 254.475320850501,
+          "test_books": 20,
+          "top1_exact_opcount": 8
+        },
+        {
+          "composition_bits": 38.07412528927297,
+          "correction_miss_bits": 51.43458750793272,
+          "cutoff": 60,
+          "exact_opcount_in_beam": 10,
+          "exact_sequence_in_beam": 7,
+          "examples": [
+            {
+              "book": 60,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 6,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0016",
+                "copy:len_0064",
+                "copy:len_0064",
+                "copy:len_0016",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 61,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 2,
+              "true_sequence": [
+                "copy:len_0128",
+                "copy:len_0032"
+              ]
+            },
+            {
+              "book": 65,
+              "top_count": 1,
+              "top_sequence": [
+                "copy:len_0256p"
+              ],
+              "true_count": 3,
+              "true_sequence": [
+                "literal:len_0008",
+                "copy:len_0256p",
+                "copy:len_0032"
+              ]
+            }
+          ],
+          "hit_rank_bits": 3.584962500721156,
+          "nontrivial_books": 5,
+          "nontrivial_exact_sequence_in_beam": 2,
+          "residual_uniform_bits": 93.20281256758994,
+          "test_books": 10,
+          "top1_exact_opcount": 5
+        }
+      ],
+      "random_exact_sequence_p95": 37,
+      "totals": {
+        "composition_bits": 1198.4203850914414,
+        "correction_miss_bits": 1896.02410030577,
+        "exact_opcount_in_beam": 120,
+        "exact_sequence_in_beam": 56,
+        "hit_rank_bits": 55.077397664065714,
+        "nontrivial_books": 107,
+        "nontrivial_exact_sequence_in_beam": 13,
+        "residual_uniform_bits": 2111.0533097225375,
+        "test_books": 150,
+        "top1_exact_opcount": 42
+      }
+    }
+  },
+  "plaintext_claim": false,
+  "residual_composition": {
+    "classification": "PROMOTED_RESIDUAL_COMPOSITION_CODEC",
+    "rows": [
+      {
+        "book": 10,
+        "composition_bits": 3.0,
+        "composition_count": 8,
+        "op_count": 2,
+        "saving_bits": 7.257387842692651,
+        "trivial": false,
+        "uniform_bits": 10.257387842692651
+      },
+      {
+        "book": 11,
+        "composition_bits": 13.680359523513713,
+        "composition_count": 13128,
+        "op_count": 6,
+        "saving_bits": 8.319640476486287,
+        "trivial": false,
+        "uniform_bits": 22.0
+      },
+      {
+        "book": 12,
+        "composition_bits": 39.058075653820715,
+        "composition_count": 572337687872,
+        "op_count": 14,
+        "saving_bits": 4.9419243461792846,
+        "trivial": false,
+        "uniform_bits": 44.0
+      },
+      {
+        "book": 13,
+        "composition_bits": 25.733483769209595,
+        "composition_count": 55789248,
+        "op_count": 9,
+        "saving_bits": 5.266516230790405,
+        "trivial": false,
+        "uniform_bits": 31.0
+      },
+      {
+        "book": 14,
+        "composition_bits": 23.372925621637012,
+        "composition_count": 10863048,
+        "op_count": 8,
+        "saving_bits": 5.6270743783629875,
+        "trivial": false,
+        "uniform_bits": 29.0
+      },
+      {
+        "book": 15,
+        "composition_bits": 29.619666348674762,
+        "composition_count": 824912781,
+        "op_count": 11,
+        "saving_bits": 6.3803336513252376,
+        "trivial": false,
+        "uniform_bits": 36.0
+      },
+      {
+        "book": 16,
+        "composition_bits": 32.99994089050179,
+        "composition_count": 8589582656,
+        "op_count": 12,
+        "saving_bits": 6.00005910949821,
+        "trivial": false,
+        "uniform_bits": 39.0
+      },
+      {
+        "book": 17,
+        "composition_bits": 34.126035767486286,
+        "composition_count": 18748235456,
+        "op_count": 12,
+        "saving_bits": 9.063788791393733,
+        "trivial": false,
+        "uniform_bits": 43.18982455888002
+      },
+      {
+        "book": 18,
+        "composition_bits": 4.807354922057604,
+        "composition_count": 28,
+        "op_count": 2,
+        "saving_bits": 5.192645077942396,
+        "trivial": false,
+        "uniform_bits": 10.0
+      },
+      {
+        "book": 19,
+        "composition_bits": 8.954196310386875,
+        "composition_count": 496,
+        "op_count": 3,
+        "saving_bits": 6.045803689613125,
+        "trivial": false,
+        "uniform_bits": 15.0
+      },
+      {
+        "book": 20,
+        "composition_bits": 17.03737535776324,
+        "composition_count": 134512,
+        "op_count": 7,
+        "saving_bits": 3.9626246422367615,
+        "trivial": false,
+        "uniform_bits": 21.0
+      },
+      {
+        "book": 21,
+        "composition_bits": 6.9886846867721655,
+        "composition_count": 127,
+        "op_count": 3,
+        "saving_bits": 5.596277813948991,
+        "trivial": false,
+        "uniform_bits": 12.584962500721156
+      },
+      {
+        "book": 22,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 3.169925001442312,
+        "trivial": true,
+        "uniform_bits": 3.169925001442312
+      },
+      {
+        "book": 23,
+        "composition_bits": 34.42837242560489,
+        "composition_count": 23119200000,
+        "op_count": 12,
+        "saving_bits": 7.571627574395109,
+        "trivial": false,
+        "uniform_bits": 42.0
+      },
+      {
+        "book": 24,
+        "composition_bits": 6.247927513443585,
+        "composition_count": 76,
+        "op_count": 3,
+        "saving_bits": 7.533432200081075,
+        "trivial": false,
+        "uniform_bits": 13.78135971352466
+      },
+      {
+        "book": 25,
+        "composition_bits": 2.584962500721156,
+        "composition_count": 6,
+        "op_count": 2,
+        "saving_bits": 4.415037499278844,
+        "trivial": false,
+        "uniform_bits": 7.0
+      },
+      {
+        "book": 26,
+        "composition_bits": 9.0,
+        "composition_count": 512,
+        "op_count": 4,
+        "saving_bits": 5.39231742277876,
+        "trivial": false,
+        "uniform_bits": 14.39231742277876
+      },
+      {
+        "book": 27,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 5.906890595608519,
+        "trivial": true,
+        "uniform_bits": 5.906890595608519
+      },
+      {
+        "book": 28,
+        "composition_bits": 13.981388896117206,
+        "composition_count": 16174,
+        "op_count": 5,
+        "saving_bits": 6.018611103882794,
+        "trivial": false,
+        "uniform_bits": 20.0
+      },
+      {
+        "book": 29,
+        "composition_bits": 10.0,
+        "composition_count": 1024,
+        "op_count": 4,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 16.0
+      },
+      {
+        "book": 30,
+        "composition_bits": 17.987913478393562,
+        "composition_count": 259957,
+        "op_count": 6,
+        "saving_bits": 7.012086521606438,
+        "trivial": false,
+        "uniform_bits": 25.0
+      },
+      {
+        "book": 31,
+        "composition_bits": 27.65937492397432,
+        "composition_count": 211983234,
+        "op_count": 8,
+        "saving_bits": 6.340625076025681,
+        "trivial": false,
+        "uniform_bits": 34.0
+      },
+      {
+        "book": 32,
+        "composition_bits": 6.0,
+        "composition_count": 64,
+        "op_count": 3,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 12.0
+      },
+      {
+        "book": 33,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 2.584962500721156,
+        "trivial": true,
+        "uniform_bits": 2.584962500721156
+      },
+      {
+        "book": 34,
+        "composition_bits": 24.867854754062996,
+        "composition_count": 30617534,
+        "op_count": 9,
+        "saving_bits": 5.132145245937004,
+        "trivial": false,
+        "uniform_bits": 30.0
+      },
+      {
+        "book": 35,
+        "composition_bits": 6.0,
+        "composition_count": 64,
+        "op_count": 2,
+        "saving_bits": 7.303780748177104,
+        "trivial": false,
+        "uniform_bits": 13.303780748177104
+      },
+      {
+        "book": 36,
+        "composition_bits": 17.642390208053904,
+        "composition_count": 204592,
+        "op_count": 6,
+        "saving_bits": 5.357609791946096,
+        "trivial": false,
+        "uniform_bits": 23.0
+      },
+      {
+        "book": 37,
+        "composition_bits": 5.0,
+        "composition_count": 32,
+        "op_count": 2,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 11.0
+      },
+      {
+        "book": 38,
+        "composition_bits": 12.0,
+        "composition_count": 4096,
+        "op_count": 5,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 18.0
+      },
+      {
+        "book": 39,
+        "composition_bits": 6.0,
+        "composition_count": 64,
+        "op_count": 3,
+        "saving_bits": 4.754887502163468,
+        "trivial": false,
+        "uniform_bits": 10.754887502163468
+      },
+      {
+        "book": 40,
+        "composition_bits": 10.97513145692134,
+        "composition_count": 2013,
+        "op_count": 4,
+        "saving_bits": 6.024868543078661,
+        "trivial": false,
+        "uniform_bits": 17.0
+      },
+      {
+        "book": 41,
+        "composition_bits": 5.129283016944966,
+        "composition_count": 35,
+        "op_count": 4,
+        "saving_bits": 13.870716983055033,
+        "trivial": false,
+        "uniform_bits": 19.0
+      },
+      {
+        "book": 42,
+        "composition_bits": 20.86314573662351,
+        "composition_count": 1907360,
+        "op_count": 7,
+        "saving_bits": 6.136854263376492,
+        "trivial": false,
+        "uniform_bits": 27.0
+      },
+      {
+        "book": 43,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 3.700439718141092,
+        "trivial": true,
+        "uniform_bits": 3.700439718141092
+      },
+      {
+        "book": 44,
+        "composition_bits": 3.0,
+        "composition_count": 8,
+        "op_count": 2,
+        "saving_bits": 5.954196310386875,
+        "trivial": false,
+        "uniform_bits": 8.954196310386875
+      },
+      {
+        "book": 45,
+        "composition_bits": 8.0,
+        "composition_count": 256,
+        "op_count": 3,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 14.0
+      },
+      {
+        "book": 46,
+        "composition_bits": 8.832890014164741,
+        "composition_count": 456,
+        "op_count": 3,
+        "saving_bits": 7.167109985835259,
+        "trivial": false,
+        "uniform_bits": 16.0
+      },
+      {
+        "book": 47,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 5.954196310386875,
+        "trivial": true,
+        "uniform_bits": 5.954196310386875
+      },
+      {
+        "book": 48,
+        "composition_bits": 4.584962500721156,
+        "composition_count": 24,
+        "op_count": 2,
+        "saving_bits": 6.415037499278844,
+        "trivial": false,
+        "uniform_bits": 11.0
+      },
+      {
+        "book": 49,
+        "composition_bits": 32.86640011004419,
+        "composition_count": 7830189680,
+        "op_count": 12,
+        "saving_bits": 6.133599889955811,
+        "trivial": false,
+        "uniform_bits": 39.0
+      },
+      {
+        "book": 50,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 3.700439718141092,
+        "trivial": true,
+        "uniform_bits": 3.700439718141092
+      },
+      {
+        "book": 51,
+        "composition_bits": 3.4594316186372973,
+        "composition_count": 11,
+        "op_count": 2,
+        "saving_bits": 10.799134415252635,
+        "trivial": false,
+        "uniform_bits": 14.258566033889933
+      },
+      {
+        "book": 52,
+        "composition_bits": 3.0,
+        "composition_count": 8,
+        "op_count": 2,
+        "saving_bits": 3.169925001442312,
+        "trivial": false,
+        "uniform_bits": 6.169925001442312
+      },
+      {
+        "book": 53,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 7.159871336778389,
+        "trivial": true,
+        "uniform_bits": 7.159871336778389
+      },
+      {
+        "book": 54,
+        "composition_bits": 3.0,
+        "composition_count": 8,
+        "op_count": 2,
+        "saving_bits": 4.643856189774724,
+        "trivial": false,
+        "uniform_bits": 7.643856189774724
+      },
+      {
+        "book": 55,
+        "composition_bits": 10.853309555403674,
+        "composition_count": 1850,
+        "op_count": 4,
+        "saving_bits": 5.1466904445963255,
+        "trivial": false,
+        "uniform_bits": 16.0
+      },
+      {
+        "book": 56,
+        "composition_bits": 30.63606060252945,
+        "composition_count": 1668680498,
+        "op_count": 10,
+        "saving_bits": 9.36393939747055,
+        "trivial": false,
+        "uniform_bits": 40.0
+      },
+      {
+        "book": 57,
+        "composition_bits": 26.798096393222945,
+        "composition_count": 116689248,
+        "op_count": 8,
+        "saving_bits": 7.201903606777055,
+        "trivial": false,
+        "uniform_bits": 34.0
+      },
+      {
+        "book": 58,
+        "composition_bits": 7.0,
+        "composition_count": 128,
+        "op_count": 3,
+        "saving_bits": 7.169925001442312,
+        "trivial": false,
+        "uniform_bits": 14.169925001442312
+      },
+      {
+        "book": 59,
+        "composition_bits": 9.930737337562887,
+        "composition_count": 976,
+        "op_count": 3,
+        "saving_bits": 8.239187663879425,
+        "trivial": false,
+        "uniform_bits": 18.169925001442312
+      },
+      {
+        "book": 60,
+        "composition_bits": 17.756712675508098,
+        "composition_count": 221464,
+        "op_count": 6,
+        "saving_bits": 5.243287324491902,
+        "trivial": false,
+        "uniform_bits": 23.0
+      },
+      {
+        "book": 61,
+        "composition_bits": 4.0,
+        "composition_count": 16,
+        "op_count": 2,
+        "saving_bits": 6.0,
+        "trivial": false,
+        "uniform_bits": 10.0
+      },
+      {
+        "book": 62,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 5.954196310386875,
+        "trivial": true,
+        "uniform_bits": 5.954196310386875
+      },
+      {
+        "book": 63,
+        "composition_bits": 4.857980995127572,
+        "composition_count": 29,
+        "op_count": 2,
+        "saving_bits": 6.096215315259303,
+        "trivial": false,
+        "uniform_bits": 10.954196310386875
+      },
+      {
+        "book": 64,
+        "composition_bits": 4.459431618637297,
+        "composition_count": 22,
+        "op_count": 2,
+        "saving_bits": 7.540568381362703,
+        "trivial": false,
+        "uniform_bits": 12.0
+      },
+      {
+        "book": 65,
+        "composition_bits": 7.0,
+        "composition_count": 128,
+        "op_count": 3,
+        "saving_bits": 5.357552004618084,
+        "trivial": false,
+        "uniform_bits": 12.357552004618084
+      },
+      {
+        "book": 66,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 6.357552004618084,
+        "trivial": true,
+        "uniform_bits": 6.357552004618084
+      },
+      {
+        "book": 67,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 5.087462841250339,
+        "trivial": true,
+        "uniform_bits": 5.087462841250339
+      },
+      {
+        "book": 68,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 3.9068905956085187,
+        "trivial": true,
+        "uniform_bits": 3.9068905956085187
+      },
+      {
+        "book": 69,
+        "composition_bits": 0.0,
+        "composition_count": 1,
+        "op_count": 1,
+        "saving_bits": 3.584962500721156,
+        "trivial": true,
+        "uniform_bits": 3.584962500721156
+      }
+    ],
+    "summary": {
+      "books": 60,
+      "nontrivial_books": 48,
+      "saving_bits": 365.2285943918813,
+      "total_composition_bits": 665.7818571842444,
+      "total_uniform_bits": 1031.0104515761257,
+      "trivial_books": 12
+    }
+  },
+  "scope": "analysis_only_book_level_coarse_length_controller",
+  "translation_delta": "NONE"
+}
