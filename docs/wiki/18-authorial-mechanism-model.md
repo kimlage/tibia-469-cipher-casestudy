@@ -701,6 +701,13 @@ and saves `87.064` bits versus three-way lookup. The internal-only decomposition
 does not promote: after removing book starts, the best row hits `0/3` internal
 starts and is `-5.044` bits versus the global baseline. So this is a book-start
 invariance clue, not an internal skeleton parser.
+An internal boundary-candidate trigger decomposition then runs the stricter
+version of that same check while retaining target-conditioned copy availability.
+It also rejects the internal route: after removing book-start candidates, the
+best non-global row hits `0/70` internal starts at cutoff `20` and is `-5.285`
+bits versus the internal nonstart-majority baseline. The full `169.492` bit
+all-candidate trigger delta is therefore book-start dominated, not evidence of
+an internal operation-start parser.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2880,6 +2887,7 @@ book generation, not row0 pair-cell placement.
 - [Decoder visible trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/09_decoder_visible_trigger_policy_gate.md)
 - [Boundary candidate trigger gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/10_boundary_candidate_trigger_gate.md)
 - [Decoder visible boundary candidate trigger gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)
+- [Internal boundary candidate trigger decomposition gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

@@ -22,6 +22,9 @@ BOUNDARY_CANDIDATE_TRIGGER_GATE = TEST_RESULTS / "10_boundary_candidate_trigger_
 DECODER_VISIBLE_BOUNDARY_CANDIDATE_TRIGGER_GATE = (
     TEST_RESULTS / "11_decoder_visible_boundary_candidate_trigger_gate.json"
 )
+INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE = (
+    TEST_RESULTS / "12_internal_boundary_candidate_trigger_decomposition_gate.json"
+)
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -56,6 +59,9 @@ def main() -> None:
     decoder_visible_boundary_candidate_trigger = load_json(
         DECODER_VISIBLE_BOUNDARY_CANDIDATE_TRIGGER_GATE
     )
+    internal_boundary_candidate_trigger = load_json(
+        INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE
+    )
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -69,6 +75,10 @@ def main() -> None:
         "decoder_visible_boundary_candidate_trigger_gate",
         decoder_visible_boundary_candidate_trigger,
     )
+    assert_boundary(
+        "internal_boundary_candidate_trigger_decomposition_gate",
+        internal_boundary_candidate_trigger,
+    )
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -79,7 +89,17 @@ def main() -> None:
     z = decoder_visible_trigger["summary"]
     aa = boundary_candidate_trigger["summary"]
     ab = decoder_visible_boundary_candidate_trigger["summary"]
-    if decoder_visible_boundary_candidate_trigger["summary"][
+    ac = internal_boundary_candidate_trigger["summary"]
+    if (
+        decoder_visible_boundary_candidate_trigger["summary"][
+            "promotes_decoder_visible_boundary_candidate_trigger"
+        ]
+        and not internal_boundary_candidate_trigger["summary"][
+            "promotes_internal_boundary_candidate_trigger"
+        ]
+    ):
+        classification = "INNOVATION_STREAM_BOOKSTART_DOMINATED_INTERNAL_TRIGGER_REJECTED"
+    elif decoder_visible_boundary_candidate_trigger["summary"][
         "promotes_decoder_visible_boundary_candidate_trigger"
     ]:
         classification = "INNOVATION_STREAM_DECODER_VISIBLE_BOOKSTART_TRIGGER_CLUE_PROMOTED_INTERNAL_REJECTED"
@@ -183,6 +203,9 @@ def main() -> None:
         f"- Decoder-visible boundary-candidate delta vs global: `{ab['best_feature_delta_bits_vs_global']:.3f}` bits.",
         f"- Internal decoder-visible boundary-candidate start hits: `{ab['internal_best_feature_start_hits']}/{ab['internal_best_feature_actual_starts']}`.",
         f"- Promotes internal decoder-visible boundary-candidate trigger: `{ab['promotes_internal_decoder_visible_boundary_candidate_trigger']}`.",
+        f"- Internal target-conditioned boundary-candidate start hits: `{ac['best_feature_start_hits']}/{ac['best_feature_actual_starts']}`.",
+        f"- Internal target-conditioned boundary-candidate delta vs global: `{ac['best_feature_delta_bits_vs_global']:.3f}` bits.",
+        f"- Promotes internal boundary-candidate trigger: `{ac['promotes_internal_boundary_candidate_trigger']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -207,6 +230,8 @@ def main() -> None:
         "three-way `nonstart/literal/copy` labels. The decoder-visible boundary",
         "candidate gate removes target-conditioned copy availability from that",
         "candidate-label problem and decomposes book-start versus internal starts.",
+        "The internal decomposition gate then removes book-start candidates from",
+        "the target-conditioned candidate-label problem itself.",
         "",
         "## Decision",
         "",
@@ -226,6 +251,7 @@ def main() -> None:
         "- Decoder-visible trigger policy is rejected: without target-conditioned copy availability, the trigger clue collapses to the copy-majority baseline.",
         "- Boundary-candidate trigger policy is promoted as a composed dependency-reduction clue, but still leaves missed operation starts and target-conditioned copy availability unresolved.",
         "- Decoder-visible boundary-candidate trigger policy is promoted only as a book-start clue; the internal-only trigger decomposition is not promoted.",
+        "- Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -242,6 +268,7 @@ def main() -> None:
         "- [Decoder visible trigger policy gate](test_results/09_decoder_visible_trigger_policy_gate.md)",
         "- [Boundary candidate trigger gate](test_results/10_boundary_candidate_trigger_gate.md)",
         "- [Decoder visible boundary candidate trigger gate](test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)",
+        "- [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
