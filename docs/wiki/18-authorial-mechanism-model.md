@@ -73,6 +73,7 @@ source_refs:
   - analysis/executable_v7_unified_innovation_payload_audit_20260622
   - analysis/innovation_replay_policy_frontier_audit_20260622
   - analysis/executable_v8_innovation_literal_markov_audit_20260622
+  - analysis/executable_v9_innovation_copy_continuation_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3636,6 +3637,7 @@ book generation, not row0 pair-cell placement.
 - [Executable v7 unified innovation payload audit](../../analysis/executable_v7_unified_innovation_payload_audit_20260622/reports/final_executable_v7_unified_innovation_payload_audit.md)
 - [Innovation replay policy frontier audit](../../analysis/innovation_replay_policy_frontier_audit_20260622/reports/final_innovation_replay_policy_frontier_audit.md)
 - [Executable v8 innovation-literal Markov audit](../../analysis/executable_v8_innovation_literal_markov_audit_20260622/reports/final_executable_v8_innovation_literal_markov_audit.md)
+- [Executable v9 innovation copy-continuation audit](../../analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/final_executable_v9_innovation_copy_continuation_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3798,6 +3800,17 @@ to v8 `6954.909`. Same-multiset literal shuffles are beaten at p05 and prefix
 holdouts are positive in `3/3` splits. This promotes a probabilistic literal
 content ledger, not plaintext and not a source-free replay policy; replay
 events and copy decisions remain external.
+
+The v9 integration then removes a small amount of copy-source payload from the
+same replay. For copy events that immediately follow another copy and continue
+both target and source cursors, the current source is derived as
+`previous_source + previous_length`. There are `17` copy-after-copy
+opportunities and `5` true continuations; after paying a combinatorial index
+for the continuation sites, source savings are `37.624` bits net and total
+content-included cost moves from v8 `6954.909` to v9 `6917.285`. This is an
+executable dependency reduction, but random-label controls are close, so it is
+not strong evidence for a broad causal program. The unresolved blocker remains
+the replay schedule and non-continuation copy source/length policy.
 
 ## Boundary
 
