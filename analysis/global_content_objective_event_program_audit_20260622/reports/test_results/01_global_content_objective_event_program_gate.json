@@ -1,0 +1,136 @@
+{
+  "beam_widths": [
+    16,
+    64
+  ],
+  "case_reopened": false,
+  "classification": "global_content_objective_event_program_not_promoted",
+  "compression_bound_status": "unchanged",
+  "cutoffs": [
+    20,
+    35,
+    50
+  ],
+  "decision": {
+    "global_content_objective_promoted": false,
+    "next_blocker": "objective is insufficient without external authoring surface or a stronger causal state",
+    "reason": "target-free global event objective does not keep or generate the true innovation suffix",
+    "v9_reduction_bits": 0.0
+  },
+  "inputs": {
+    "payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json",
+    "v9_gate": "analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/test_results/01_executable_v9_innovation_copy_continuation_gate.json"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:27:17.682291+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "global_content_objective_event_program_gate.v1",
+  "scope": "analysis_only_global_content_objective_event_program",
+  "splits": [
+    {
+      "cutoff": 20,
+      "decodes": [
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 695,
+          "best_len": 1015,
+          "best_literal_pos": 531,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 16,
+          "true_action_survives": 0,
+          "width": 16
+        },
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 695,
+          "best_len": 1015,
+          "best_literal_pos": 531,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 64,
+          "true_action_survives": 0,
+          "width": 64
+        }
+      ],
+      "literal_remaining": 431,
+      "prefix_digits": 695,
+      "remaining_digits": 1267
+    },
+    {
+      "cutoff": 35,
+      "decodes": [
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 1053,
+          "best_len": 1373,
+          "best_literal_pos": 602,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 16,
+          "true_action_survives": 0,
+          "width": 16
+        },
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 1053,
+          "best_len": 1373,
+          "best_literal_pos": 602,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 64,
+          "true_action_survives": 0,
+          "width": 64
+        }
+      ],
+      "literal_remaining": 360,
+      "prefix_digits": 1053,
+      "remaining_digits": 909
+    },
+    {
+      "cutoff": 50,
+      "decodes": [
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 1300,
+          "best_len": 1620,
+          "best_literal_pos": 641,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 16,
+          "true_action_survives": 0,
+          "width": 16
+        },
+        {
+          "best_action_count": 40,
+          "best_cost": 40.0,
+          "best_exact_prefix_digits": 1300,
+          "best_len": 1620,
+          "best_literal_pos": 641,
+          "exact_target_in_beam": false,
+          "exact_target_rank": null,
+          "final_beam_size": 64,
+          "true_action_survives": 0,
+          "width": 64
+        }
+      ],
+      "literal_remaining": 321,
+      "prefix_digits": 1300,
+      "remaining_digits": 662
+    }
+  ],
+  "summary": {
+    "best_exact_prefix_digits": 1300,
+    "exact_beam_splits": 0,
+    "literal_tape_digits": 962,
+    "max_true_action_survives": 0,
+    "promoted": false,
+    "target_digits": 1962
+  },
+  "translation_delta": "NONE"
+}

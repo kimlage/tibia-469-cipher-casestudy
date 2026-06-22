@@ -80,6 +80,7 @@ source_refs:
   - analysis/generator_route_decision_audit_20260622
   - analysis/nonlocal_event_policy_program_audit_20260622
   - analysis/causal_content_aware_event_policy_audit_20260622
+  - analysis/global_content_objective_event_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3941,6 +3942,16 @@ positive prefix holdouts. But it still has `0/3` exact suffix beam hits; the
 true suffix does not survive even the pilot beams. This is not promoted as v10
 or as a generator. The internal route now requires a stronger global
 content-objective program, not rank-only event traces.
+
+The first target-free global content-objective gate then gives that stronger
+route its cleanest pilot: starting from true emitted prefixes, with only final
+stream length and remaining literal tape, it minimizes literal/copy event cost
+without scoring against target content. It also fails as a decoder. The true
+suffix is in `0/3` final beams, true replay actions survive `0` events, and
+the best generated prefix reaches only `1300/1962` digits. This demotes simple
+global literal/copy cost minimization; remaining progress now requires a new
+causal state not already represented by emitted content, literal tape, and copy
+lineage, or a primary authoring surface.
 
 ## Boundary
 

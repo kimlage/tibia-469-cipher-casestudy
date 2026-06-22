@@ -8,7 +8,7 @@ Case reopened: `False`
 ## Summary
 
 This audit consolidates the current generator frontier after v9 and the public external-surface probes.
-It does not promote a new formula. It narrows the live work to two routes: a rights-clean primary authoring surface, or a global content-objective event program that survives beam decoding.
+It does not promote a new formula. It narrows the live work to one real route class: new information, either from a primary authoring surface or from a causal state not yet represented.
 
 ## Route Ledger
 
@@ -21,14 +21,15 @@ It does not promote a new formula. It narrows the live work to two routes: a rig
 | `rights_clean_primary_authoring_surface` | `OPEN_REQUIRES_NEW_SOURCE` | `True` | source must be rights-clean/primary or user-authorized, match books, expose object/container/slot/order or versioned authoring fields, and reduce v9 residual streams in holdout above permutations |
 | `simple_nonlocal_event_sequence_program` | `TESTED_NOT_PROMOTED` | `False` | n-gram/phase sequence models over replay events do not reduce the joint event policy stream or keep true suffixes in beam |
 | `causal_content_aware_event_policy_program` | `WEAK_RANK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | content-aware candidate ranking reduces loose raw-choice cost but does not keep true event suffixes in beam |
-| `global_content_objective_or_external_authoring_surface` | `OPEN_REQUIRES_STRONGER_MECHANISM_OR_SOURCE` | `True` | must keep/generate replay event suffixes in prefix/family holdout or integrate a primary source that reduces declared external fields after paying program/corrections |
+| `simple_global_content_objective_event_program` | `TESTED_NOT_PROMOTED` | `False` | target-free cost minimization over literal/copy events does not keep the true suffix in beam |
+| `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
 
 ## Next Work Contract
 
 Progress now means one of:
 
 - acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol
-- design a global content-objective event program that keeps true replay suffixes in beam
+- introduce new causal state beyond emitted content/literal tape/copy lineage, or integrate a primary authoring source
 
 Do not count as progress:
 
@@ -37,6 +38,7 @@ Do not count as progress:
 - local source/length/copy-hint/literal subcodec with small bit gain
 - simple n-gram/phase event grammar over replay events
 - rank-only content-aware event traces that do not survive beam decoding
+- target-free literal/copy cost minimization that loses the true suffix immediately
 - semantic/plaintext/row0 reopening
 
 ## Decision
