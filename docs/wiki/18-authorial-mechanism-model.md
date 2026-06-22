@@ -63,6 +63,7 @@ source_refs:
   - analysis/executable_v6_literal_span_origin_audit_20260622
   - analysis/causal_event_graph_program_audit_20260622
   - analysis/innovation_lineage_basis_audit_20260622
+  - analysis/lineage_signature_library_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3616,6 +3617,7 @@ book generation, not row0 pair-cell placement.
 - [Executable v6 literal-span origin audit](../../analysis/executable_v6_literal_span_origin_audit_20260622/reports/final_executable_v6_literal_span_origin_audit.md)
 - [Causal event graph program audit](../../analysis/causal_event_graph_program_audit_20260622/reports/final_causal_event_graph_program_audit.md)
 - [Innovation lineage basis audit](../../analysis/innovation_lineage_basis_audit_20260622/reports/final_innovation_lineage_basis_audit.md)
+- [Lineage signature library audit](../../analysis/lineage_signature_library_audit_20260622/reports/final_lineage_signature_library_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3675,6 +3677,14 @@ single-atom intervals, all from seed atoms), but the paid address program is
 worse: `1022.251` bits versus `779.571` copy-hint bits, `0/5` positive prefix
 splits, and no win against randomized-lineage controls. The lineage basis is
 therefore retained as provenance only, not as a generator.
+
+A follow-up lineage-signature library gate asks whether those remaining
+fallback chunks share reusable causal signatures rather than event-by-event
+copy hints. They do not under the paid tests: the best
+`signature_kind_run_lengths` family needs `63` signatures and costs
+`1516.786` bits versus `779.571` copy-hint bits (`+737.215`), with `0/5`
+positive prefix splits and no shuffled-control win. This keeps the blocker at
+content/origin selection, not graph organization.
 
 ## Boundary
 
