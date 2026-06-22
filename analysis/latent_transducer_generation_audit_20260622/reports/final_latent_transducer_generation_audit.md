@@ -1,7 +1,7 @@
 # Final Latent Transducer Generation Audit
 
 Status: `analysis_only`
-Classification: `latent_transducer_copy_hint_stream_lower_bound_open`
+Classification: `latent_transducer_copy_hint_stream_external_after_structure_gate`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -60,6 +60,11 @@ boundaries, and copy sources together, instead of relying on the fixed
 - Copy hint lower-bound source-address bits: `2550.594`.
 - Copy hint lower-bound saving vs source address: `676.826`.
 - Copy hint lower-bound fraction of raw copied-digit bits: `0.060645`.
+- Copy hint structure direct rank bits over cutoffs: `3998.858`.
+- Copy hint structure best bucket+offset bits: `5162.759`.
+- Copy hint structure saving vs direct rank bits: `-1163.901`.
+- Copy hint structure random p95: `-1048.351`.
+- Copy hint structure promoted: `False`.
 
 The new route tests the right object: a single parser where literal, copy,
 length, source, and boundary decisions compete in one beam. But this first
@@ -101,7 +106,13 @@ remains? The best known-length rank code is `frequent_longest` at
 `676.826` bits versus raw source addressing and costing only `0.060645`
 of literalizing the copied digits. That opens a real paid-control-stream
 route, but it is not a generator because starts, types, and lengths are
-still granted.
+still granted. A structure gate then tests whether that paid rank stream
+has simple prequential structure. It does not: direct rank coding over
+the prefix/suffix cutoffs costs `3998.858` bits, while the best
+bucket-plus-offset feature code costs `5162.759` bits (`-1163.901`
+saving), and even shuffled bucket controls are less bad at p95
+(`-1048.351`). The copy hint lower bound remains useful, but its rank
+stream is still external under these simple contexts.
 
 ## Decision
 
@@ -113,6 +124,7 @@ still granted.
 - Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.
 - Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.
 - The copy hint lower bound reduces declared source addressing if length is granted, but it remains an external stream to explain.
+- Simple prequential rank-bucket structure is rejected for that copy hint stream.
 - Promotion requires nontrivial exact holdout books and paid correction reduction.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
@@ -127,3 +139,4 @@ still granted.
 - [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)
 - [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)
 - [Copy hint stream lower bound](test_results/08_copy_hint_stream_lower_bound.md)
+- [Copy hint stream structure gate](test_results/09_copy_hint_stream_structure_gate.md)

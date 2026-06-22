@@ -663,6 +663,14 @@ digits, versus `2550.594` raw source-address bits and `2366.891` uniform
 same-length chunk bits. This promotes a useful lower bound for a paid
 copy-control stream (`676.826` bits saved versus source addressing), but not a
 generator: starts, types, and lengths are still external.
+A copy hint stream structure gate then tests whether that paid rank stream has
+simple prequential structure. It does not. Across prefix/suffix cutoffs, direct
+rank coding costs `3998.858` bits, while the best bucket-plus-offset feature
+code costs `5162.759` bits, for `-1163.901` bits of saving. Shuffled bucket
+controls are less bad at p95 (`-1048.351`). So the lower-bound stream remains a
+valid dependency-reduction target, but simple rank buckets over length,
+occurrence, candidate count, op index, or target-start context do not explain
+it.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2958,6 +2966,7 @@ book generation, not row0 pair-cell placement.
 - [Copy state rescue diagnostic](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/06_copy_state_rescue_diagnostic.md)
 - [Copy candidate ranking frontier](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/07_copy_candidate_ranking_frontier.md)
 - [Copy hint stream lower bound](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/08_copy_hint_stream_lower_bound.md)
+- [Copy hint stream structure gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/09_copy_hint_stream_structure_gate.md)
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)

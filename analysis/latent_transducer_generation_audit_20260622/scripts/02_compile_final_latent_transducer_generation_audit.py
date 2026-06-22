@@ -17,6 +17,7 @@ RESCUE_SURFACE = TEST_RESULTS / "05_closed_loop_rescue_surface_audit.json"
 COPY_DIAGNOSTIC = TEST_RESULTS / "06_copy_state_rescue_diagnostic.json"
 RANKING_FRONTIER = TEST_RESULTS / "07_copy_candidate_ranking_frontier.json"
 COPY_HINT_LOWER_BOUND = TEST_RESULTS / "08_copy_hint_stream_lower_bound.json"
+COPY_HINT_STRUCTURE = TEST_RESULTS / "09_copy_hint_stream_structure_gate.json"
 OUT = REPORTS / "final_latent_transducer_generation_audit.md"
 
 
@@ -46,6 +47,7 @@ def main() -> None:
     copy_diagnostic = load_json(COPY_DIAGNOSTIC)
     ranking_frontier = load_json(RANKING_FRONTIER)
     copy_hint_lower_bound = load_json(COPY_HINT_LOWER_BOUND)
+    copy_hint_structure = load_json(COPY_HINT_STRUCTURE)
     assert_boundary("latent_transducer_beam_gate", beam_gate)
     assert_boundary("closed_loop_digit_survival_gate", closed_loop_gate)
     assert_boundary("closed_loop_rescue_ledger", rescue_ledger)
@@ -53,6 +55,7 @@ def main() -> None:
     assert_boundary("copy_state_rescue_diagnostic", copy_diagnostic)
     assert_boundary("copy_candidate_ranking_frontier", ranking_frontier)
     assert_boundary("copy_hint_stream_lower_bound", copy_hint_lower_bound)
+    assert_boundary("copy_hint_stream_structure_gate", copy_hint_structure)
     s = beam_gate["summary"]
     c = closed_loop_gate["summary"]
     r = rescue_ledger["summary"]
@@ -61,8 +64,9 @@ def main() -> None:
     cc = copy_diagnostic["copy_op_summary"]
     rf = ranking_frontier["summary"]
     ch = copy_hint_lower_bound["summary"]
+    cs = copy_hint_structure["summary"]
     if rescue_ledger["classification"] == "closed_loop_rescue_high_external_control":
-        classification = "latent_transducer_copy_hint_stream_lower_bound_open"
+        classification = "latent_transducer_copy_hint_stream_external_after_structure_gate"
     else:
         classification = beam_gate["classification"]
     lines = [
@@ -128,6 +132,11 @@ def main() -> None:
         f"- Copy hint lower-bound source-address bits: `{ch['source_address_bits']:.3f}`.",
         f"- Copy hint lower-bound saving vs source address: `{ch['best_policy_saving_vs_source_address_bits']:.3f}`.",
         f"- Copy hint lower-bound fraction of raw copied-digit bits: `{ch['best_policy_fraction_of_raw_literal_bits']:.6f}`.",
+        f"- Copy hint structure direct rank bits over cutoffs: `{cs['total_rank_bits_over_cutoffs']:.3f}`.",
+        f"- Copy hint structure best bucket+offset bits: `{cs['best_total_bucket_offset_bits']:.3f}`.",
+        f"- Copy hint structure saving vs direct rank bits: `{cs['total_saving_vs_rank_bits']:.3f}`.",
+        f"- Copy hint structure random p95: `{cs['random_saving_p95']:.3f}`.",
+        f"- Copy hint structure promoted: `{cs['promotes_hint_structure']}`.",
         "",
         "The new route tests the right object: a single parser where literal, copy,",
         "length, source, and boundary decisions compete in one beam. But this first",
@@ -169,7 +178,13 @@ def main() -> None:
         "`676.826` bits versus raw source addressing and costing only `0.060645`",
         "of literalizing the copied digits. That opens a real paid-control-stream",
         "route, but it is not a generator because starts, types, and lengths are",
-        "still granted.",
+        "still granted. A structure gate then tests whether that paid rank stream",
+        "has simple prequential structure. It does not: direct rank coding over",
+        "the prefix/suffix cutoffs costs `3998.858` bits, while the best",
+        "bucket-plus-offset feature code costs `5162.759` bits (`-1163.901`",
+        "saving), and even shuffled bucket controls are less bad at p95",
+        "(`-1048.351`). The copy hint lower bound remains useful, but its rank",
+        "stream is still external under these simple contexts.",
         "",
         "## Decision",
         "",
@@ -181,6 +196,7 @@ def main() -> None:
         "- Copy-state diagnostics identify a concrete next route: replace blind cheapest-chunk pruning with a decoder-visible copy-control state.",
         "- Simple target-free chunk ranking is insufficient; a paid copy hint/control stream is now the cleaner constructive route.",
         "- The copy hint lower bound reduces declared source addressing if length is granted, but it remains an external stream to explain.",
+        "- Simple prequential rank-bucket structure is rejected for that copy hint stream.",
         "- Promotion requires nontrivial exact holdout books and paid correction reduction.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -195,6 +211,7 @@ def main() -> None:
         "- [Copy state rescue diagnostic](test_results/06_copy_state_rescue_diagnostic.md)",
         "- [Copy candidate ranking frontier](test_results/07_copy_candidate_ranking_frontier.md)",
         "- [Copy hint stream lower bound](test_results/08_copy_hint_stream_lower_bound.md)",
+        "- [Copy hint stream structure gate](test_results/09_copy_hint_stream_structure_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
