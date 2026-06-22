@@ -879,6 +879,12 @@ Decoder-visible policies fail (`8/208` best chunk hits; `1/60` exact books), and
 best source-bearing context is full-fit/posthoc (`173/208`, `+199.919` bits
 versus raw source declaration, `0/5` cover-all holdout cells). Copy source
 therefore also remains external.
+A target-conditioned source-collapse audit then separates the source blocker
+from the target-stream blocker. If the copied chunk is granted, source choice
+mostly collapses to earliest matching source (`200/208`) plus `8` exceptions;
+that earliest+exception account costs `58.085` bits, `-174.817` versus oracle
+rank bits, and is far outside random rank controls. It is a mechanical clue,
+not a decoder generator, because it grants the future target chunk.
 A skeleton rule coverage audit then rejects replacing the atlas with simple
 rules: best op-type coverage is `208/261`, best length coverage is `116/261`,
 and even target-dependent copy availability reaches only `208/261`.

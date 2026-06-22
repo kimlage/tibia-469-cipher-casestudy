@@ -464,6 +464,13 @@ best decoder-visible policy reaches only `8/208` chunk hits and `1/60` exact
 books; the best source-bearing context reaches `173/208` full-fit hits but is
 `+199.919` bits worse than raw source declaration and has `0/5` cover-all
 holdout cells. Copy source remains declared.
+A target-conditioned source-collapse audit then asks whether source choice is
+really primary once the copied chunk is known. Under that granted target-stream
+condition, `200/208` copies choose the earliest matching source and the
+remaining `8` exceptions cost only `58.085` bits, `-174.817` versus oracle
+rank bits, with random rank controls never reaching the observed earliest-hit
+count. This promotes a target-conditioned mechanical clue, but not a decoder
+generator: the missing condition is still generation of the target chunk.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2594,6 +2601,8 @@ book generation, not row0 pair-cell placement.
 - [Literal payload reference subcodec gate](../../analysis/literal_payload_reference_subcodec_audit_20260621/reports/test_results/01_literal_payload_reference_subcodec_gate.md)
 - [Final copy source generation audit](../../analysis/copy_source_generation_audit_20260621/reports/final_copy_source_generation_audit.md)
 - [Copy source context gate](../../analysis/copy_source_generation_audit_20260621/reports/test_results/03_copy_source_context_gate.md)
+- [Final target-conditioned source collapse audit](../../analysis/target_conditioned_source_collapse_audit_20260621/reports/final_target_conditioned_source_collapse_audit.md)
+- [Target-conditioned source collapse gate](../../analysis/target_conditioned_source_collapse_audit_20260621/reports/test_results/01_target_conditioned_source_collapse_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
