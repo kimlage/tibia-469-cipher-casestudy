@@ -1,0 +1,280 @@
+{
+  "case_reopened": false,
+  "classification": "EXECUTABLE_V2_REMAINING_TAPES_STILL_EXTERNAL",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "generator_promoted": false,
+    "promoted_targets": [],
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE",
+    "weak_targets": []
+  },
+  "inputs": {
+    "composition_index_gate": "analysis/composition_index_structure_audit_20260622/reports/test_results/01_composition_index_structure_gate.json",
+    "executable_v2_ledger_gate": "analysis/executable_v2_residual_coupling_audit_20260622/reports/test_results/01_executable_v2_residual_coupling_gate.json",
+    "minimal_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json",
+    "online_x64_coarse_control_program": "analysis/online_x64_coarse_control_program_audit_20260622/reports/test_results/01_online_x64_coarse_control_program_gate.json",
+    "random_trials": 100
+  },
+  "plaintext_claim": false,
+  "schema": "executable_v2_remaining_tape_coupling_gate.v1",
+  "scope": "analysis_only_online_x64_state_coupling_for_remaining_external_tapes",
+  "summary": {
+    "promoted_targets": [],
+    "target_summaries": {
+      "composition_quantile10": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 385.9521482923826,
+        "global_bits": 365.0343161677342,
+        "positive_splits": 1,
+        "saving_bits": -20.91783212464844,
+        "shuffled_p95": -7.317965286890683,
+        "split_count": 5,
+        "symbol_count": 107,
+        "target": "composition_quantile10"
+      },
+      "copy_hint_rank_bucket": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 1459.0305963032645,
+        "global_bits": 1421.2237208733306,
+        "positive_splits": 0,
+        "saving_bits": -37.806875429933825,
+        "shuffled_p95": -17.924812503605608,
+        "split_count": 5,
+        "symbol_count": 421,
+        "target": "copy_hint_rank_bucket"
+      },
+      "literal_payload_digits": {
+        "beats_shuffled_p95": false,
+        "feature_bits": 1213.974394970642,
+        "global_bits": 1178.3096884159672,
+        "positive_splits": 0,
+        "saving_bits": -35.664706554674694,
+        "shuffled_p95": 8.192308342810975,
+        "split_count": 5,
+        "symbol_count": 354,
+        "target": "literal_payload_digits"
+      }
+    },
+    "weak_targets": []
+  },
+  "target_results": {
+    "composition_quantile10": {
+      "alphabet_size": 10,
+      "controls": {
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -28.045255437147297,
+        "shuffled_p05": -48.33070085953216,
+        "shuffled_p50": -29.11162220607855,
+        "shuffled_p95": -7.317965286890683,
+        "trials": 100
+      },
+      "split_rows": [
+        {
+          "feature": "op_count",
+          "feature_bits": 132.9445858250285,
+          "global_bits": 139.76096451804406,
+          "label": "prefix_20",
+          "saving_bits": 6.816378693015565,
+          "symbol_count": 38,
+          "target": "composition_quantile10",
+          "test_books": 50
+        },
+        {
+          "feature": "online_status_x_coarse",
+          "feature_bits": 104.6806199459614,
+          "global_bits": 101.09674368186425,
+          "label": "prefix_30",
+          "saving_bits": -3.5838762640971424,
+          "symbol_count": 30,
+          "target": "composition_quantile10",
+          "test_books": 40
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 78.38434918642973,
+          "global_bits": 67.85325904168458,
+          "label": "prefix_40",
+          "saving_bits": -10.53109014474515,
+          "symbol_count": 21,
+          "target": "composition_quantile10",
+          "test_books": 30
+        },
+        {
+          "feature": "coarse",
+          "feature_bits": 51.72888153685735,
+          "global_bits": 40.403184840122236,
+          "label": "prefix_50",
+          "saving_bits": -11.325696696735115,
+          "symbol_count": 13,
+          "target": "composition_quantile10",
+          "test_books": 20
+        },
+        {
+          "feature": "op_count",
+          "feature_bits": 18.21371179810567,
+          "global_bits": 15.920164086019044,
+          "label": "prefix_60",
+          "saving_bits": -2.2935477120866263,
+          "symbol_count": 5,
+          "target": "composition_quantile10",
+          "test_books": 10
+        }
+      ],
+      "summary": {
+        "feature_bits": 385.9521482923826,
+        "global_bits": 365.0343161677342,
+        "positive_splits": 1,
+        "saving_bits": -20.91783212464844,
+        "split_count": 5,
+        "symbol_count": 107,
+        "target": "composition_quantile10"
+      }
+    },
+    "copy_hint_rank_bucket": {
+      "alphabet_size": 12,
+      "controls": {
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -47.56762622600081,
+        "shuffled_p05": -105.5161585969056,
+        "shuffled_p50": -42.20602801527093,
+        "shuffled_p95": -17.924812503605608,
+        "trials": 100
+      },
+      "split_rows": [
+        {
+          "feature": "online_status",
+          "feature_bits": 537.9686443823188,
+          "global_bits": 514.5016189552696,
+          "label": "prefix_20",
+          "saving_bits": -23.46702542704918,
+          "symbol_count": 155,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 50
+        },
+        {
+          "feature": "global",
+          "feature_bits": 411.93912971181663,
+          "global_bits": 408.3541672110955,
+          "label": "prefix_30",
+          "saving_bits": -3.584962500721133,
+          "symbol_count": 119,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 40
+        },
+        {
+          "feature": "global",
+          "feature_bits": 268.5304976696213,
+          "global_bits": 264.94553516890016,
+          "label": "prefix_40",
+          "saving_bits": -3.584962500721133,
+          "symbol_count": 80,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 30
+        },
+        {
+          "feature": "global",
+          "feature_bits": 172.88070522394955,
+          "global_bits": 169.2957427232284,
+          "label": "prefix_50",
+          "saving_bits": -3.5849625007211614,
+          "symbol_count": 49,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 20
+        },
+        {
+          "feature": "global",
+          "feature_bits": 67.71161931555814,
+          "global_bits": 64.12665681483698,
+          "label": "prefix_60",
+          "saving_bits": -3.5849625007211614,
+          "symbol_count": 18,
+          "target": "copy_hint_rank_bucket",
+          "test_books": 10
+        }
+      ],
+      "summary": {
+        "feature_bits": 1459.0305963032645,
+        "global_bits": 1421.2237208733306,
+        "positive_splits": 0,
+        "saving_bits": -37.806875429933825,
+        "split_count": 5,
+        "symbol_count": 421,
+        "target": "copy_hint_rank_bucket"
+      }
+    },
+    "literal_payload_digits": {
+      "alphabet_size": 10,
+      "controls": {
+        "beats_shuffled_p95": false,
+        "shuffled_mean": -26.959292158571685,
+        "shuffled_p05": -70.6738772482829,
+        "shuffled_p50": -29.44426032986371,
+        "shuffled_p95": 8.192308342810975,
+        "trials": 100
+      },
+      "split_rows": [
+        {
+          "feature": "coarse",
+          "feature_bits": 431.8408438844376,
+          "global_bits": 422.20228066193965,
+          "label": "prefix_20",
+          "saving_bits": -9.638563222497964,
+          "symbol_count": 126,
+          "target": "literal_payload_digits",
+          "test_books": 50
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 330.1627344601099,
+          "global_bits": 322.30544009126066,
+          "label": "prefix_30",
+          "saving_bits": -7.857294368849239,
+          "symbol_count": 97,
+          "target": "literal_payload_digits",
+          "test_books": 40
+        },
+        {
+          "feature": "online_status_x_prev_digit",
+          "feature_bits": 279.65630214257794,
+          "global_bits": 272.0975014138051,
+          "label": "prefix_40",
+          "saving_bits": -7.558800728772837,
+          "symbol_count": 82,
+          "target": "literal_payload_digits",
+          "test_books": 30
+        },
+        {
+          "feature": "online_status_x_prev_digit",
+          "feature_bits": 156.4793143086645,
+          "global_bits": 149.0748009934077,
+          "label": "prefix_50",
+          "saving_bits": -7.404513315256793,
+          "symbol_count": 45,
+          "target": "literal_payload_digits",
+          "test_books": 20
+        },
+        {
+          "feature": "coarse_x_prev_digit",
+          "feature_bits": 15.835200174851945,
+          "global_bits": 12.62966525555401,
+          "label": "prefix_60",
+          "saving_bits": -3.2055349192979357,
+          "symbol_count": 4,
+          "target": "literal_payload_digits",
+          "test_books": 10
+        }
+      ],
+      "summary": {
+        "feature_bits": 1213.974394970642,
+        "global_bits": 1178.3096884159672,
+        "positive_splits": 0,
+        "saving_bits": -35.664706554674694,
+        "split_count": 5,
+        "symbol_count": 354,
+        "target": "literal_payload_digits"
+      }
+    }
+  },
+  "translation_delta": "NONE"
+}

@@ -48,6 +48,7 @@ source_refs:
   - analysis/internal_start_beam_paid_control_audit_20260622
   - analysis/online_x64_coarse_control_program_audit_20260622
   - analysis/executable_v2_residual_coupling_audit_20260622
+  - analysis/executable_v2_remaining_tape_coupling_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1024,6 +1025,13 @@ state also predicts the exact composition index. It does not: the best
 `op_count` context costs `1300.041` bits versus `1198.420` uniform composition
 bits, with shuffled-train p95 saving only `-9.046`. The v2 ledger is promoted;
 the fine composition index remains external.
+The remaining-tape coupling gate then tests the broader possibility that the
+online x64 state is a latent residual state for the other tapes. It is not under
+current evidence: composition quantile is `-20.918` bits versus global, copy-hint
+rank bucket is `-37.807`, and literal payload digits are `-35.665`; none beats
+shuffled controls and no weak target remains. The x64 result is therefore a
+localized executable coarse-control improvement, not a shared generator for
+composition, copy hints, or literal innovation.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3414,6 +3422,8 @@ book generation, not row0 pair-cell placement.
 - [Online x64 coarse-control program gate](../../analysis/online_x64_coarse_control_program_audit_20260622/reports/test_results/01_online_x64_coarse_control_program_gate.md)
 - [Final executable v2 residual coupling audit](../../analysis/executable_v2_residual_coupling_audit_20260622/reports/final_executable_v2_residual_coupling_audit.md)
 - [Executable v2 residual coupling gate](../../analysis/executable_v2_residual_coupling_audit_20260622/reports/test_results/01_executable_v2_residual_coupling_gate.md)
+- [Final executable v2 remaining-tape coupling audit](../../analysis/executable_v2_remaining_tape_coupling_audit_20260622/reports/final_executable_v2_remaining_tape_coupling_audit.md)
+- [Executable v2 remaining-tape coupling gate](../../analysis/executable_v2_remaining_tape_coupling_audit_20260622/reports/test_results/01_executable_v2_remaining_tape_coupling_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
