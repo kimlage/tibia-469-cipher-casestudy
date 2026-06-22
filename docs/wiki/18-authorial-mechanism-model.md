@@ -39,6 +39,7 @@ source_refs:
   - analysis/book_residual_mode_coupling_audit_20260622
   - analysis/latent_book_mode_program_audit_20260622
   - analysis/residual_mode_header_codec_audit_20260622
+  - analysis/residual_burden_cross_prediction_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -936,6 +937,13 @@ bits versus `10161.703` baseline (`-788.977`) with `0/20` positive splits. The
 real modes are less bad than shuffled modes, but they still do not reduce the
 executable ledger after header cost. The residual mode therefore remains a
 structural coupling clue, not a paid codec or generator.
+A residual burden cross-prediction audit then checks whether cheaper
+leave-one-field-out modes can at least predict each burden class. They can, but
+only before header cost: literal-digit, copy-hint, and composition burden save
+`68.293`, `160.010`, and `166.167` bits conditionally, all above shuffled
+controls; after paying the mode headers they become `-787.181`, `-639.919`,
+and `-703.874`. This keeps the residual-mode result as a real synchronization
+clue while blocking promotion as ledger reduction.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
