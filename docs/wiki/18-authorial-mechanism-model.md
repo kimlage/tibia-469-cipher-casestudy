@@ -742,6 +742,11 @@ It cannot under paid costs: the best hybrid is `max_cover` at minlen `5`,
 copies `90` digits, but costs `1075.983` bits versus `883.633` raw tape bits
 (`-192.350` saving). So tape structure remains a clue, while the literal tape
 payload remains external.
+A book-control header gate then tests whether `op_count`, literal-op count, and
+tape consumption can be generated as one per-book controller. It is rejected as
+a predictive clue: the best feature is always global and beats shuffled
+predictive controls in `0/5` cutoffs. The joint header is cheaper than separate
+field coding in `5/5` cutoffs, but that is packaging, not generation.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2927,6 +2932,7 @@ book generation, not row0 pair-cell placement.
 - [Length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/15_length_control_tape_gate.md)
 - [Joint type-length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/16_joint_type_length_control_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
+- [Book control header gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/18_book_control_header_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

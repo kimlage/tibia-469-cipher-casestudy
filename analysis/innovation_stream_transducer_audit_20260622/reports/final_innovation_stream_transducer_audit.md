@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_HYBRID_TAPE_SUBCODEC_REJECTED`
+Classification: `INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_HEADER_AND_TAPE_SUBCODECS_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -48,6 +48,11 @@ plus a small external innovation tape made from the literal payload?
 - Hybrid tape best copy/literal digits: `90` / `176`.
 - Promotes hybrid tape subcodec: `False`.
 - Weak hybrid tape subcodec clue: `False`.
+- Book-control header alphabet size: `29`.
+- Book-control header beats shuffled p95 cutoffs: `0/5`.
+- Book-control header beats separate fields cutoffs: `5/5`.
+- Promotes book-control header clue: `False`.
+- Promotes joint header replacement: `False`.
 - Tape schedule best feature: `global_majority`.
 - Tape schedule exact books: `33/50`.
 - Tape schedule saving vs count baseline: `221.844` bits.
@@ -148,7 +153,12 @@ direct control-tape replacement route under the current features. The
 hybrid tape-subcodec gate then strengthens the literal-payload check by
 allowing paid references to both seed text and prior emitted tape. It is
 still rejected: the best paid hybrid costs more than raw tape, so the
-literal innovation tape remains an external payload dependency.
+literal innovation tape remains an external payload dependency. The
+book-control header gate then asks whether `op_count`, literal-op count,
+and tape consumption form a predictive per-book controller. They do not:
+the joint header packages fields more cheaply than separate coding, but
+the best feature is always global and beats shuffled predictive controls
+in `0/5` cutoffs.
 
 ## Decision
 
@@ -175,6 +185,7 @@ literal innovation tape remains an external payload dependency.
 - The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.
 - Joint type-length control structure is promoted only as a weak control-stream clue; skeleton replacement is rejected.
 - Hybrid seed+prior-tape subcodec is rejected: paid references do not beat raw literal tape.
+- Book-control header packaging is not promoted as a predictive clue: it beats separate field coding but not shuffled predictive controls.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -197,3 +208,4 @@ literal innovation tape remains an external payload dependency.
 - [Length control tape gate](test_results/15_length_control_tape_gate.md)
 - [Joint type-length control tape gate](test_results/16_joint_type_length_control_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](test_results/17_hybrid_innovation_tape_subcodec_gate.md)
+- [Book control header gate](test_results/18_book_control_header_gate.md)
