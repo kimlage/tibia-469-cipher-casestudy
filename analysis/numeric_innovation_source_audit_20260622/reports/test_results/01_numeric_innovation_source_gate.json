@@ -1,0 +1,249 @@
+{
+  "best_parse": {
+    "all_minlens": [
+      {
+        "copied_digits": 907,
+        "copy_bits": 2717.5573736127394,
+        "copy_ops": 148,
+        "delta_vs_raw_bits": 642.5227878602891,
+        "literal_bits": 4435.634140106167,
+        "literal_digits": 1055,
+        "literal_runs": 133,
+        "min_len": 6,
+        "model_bits": 6.954196310386875,
+        "raw_bits": 6517.622922169005,
+        "total_bits": 7160.145710029294
+      },
+      {
+        "copied_digits": 24,
+        "copy_bits": 54.72572606980897,
+        "copy_ops": 3,
+        "delta_vs_raw_bits": 9.953648102899024,
+        "literal_bits": 6465.896647891708,
+        "literal_digits": 1938,
+        "literal_runs": 4,
+        "min_len": 8,
+        "model_bits": 6.954196310386875,
+        "raw_bits": 6517.622922169005,
+        "total_bits": 6527.576570271904
+      },
+      {
+        "copied_digits": 0,
+        "copy_bits": 0,
+        "copy_ops": 0,
+        "delta_vs_raw_bits": 13.954196310386578,
+        "literal_bits": 6524.622922169005,
+        "literal_digits": 1962,
+        "literal_runs": 1,
+        "min_len": 10,
+        "model_bits": 6.954196310386875,
+        "raw_bits": 6517.622922169005,
+        "total_bits": 6531.577118479391
+      },
+      {
+        "copied_digits": 0,
+        "copy_bits": 0,
+        "copy_ops": 0,
+        "delta_vs_raw_bits": 13.954196310386578,
+        "literal_bits": 6524.622922169005,
+        "literal_digits": 1962,
+        "literal_runs": 1,
+        "min_len": 12,
+        "model_bits": 6.954196310386875,
+        "raw_bits": 6517.622922169005,
+        "total_bits": 6531.577118479391
+      }
+    ],
+    "best": {
+      "copied_digits": 24,
+      "copy_bits": 54.72572606980897,
+      "copy_ops": 3,
+      "delta_vs_raw_bits": 9.953648102899024,
+      "literal_bits": 6465.896647891708,
+      "literal_digits": 1938,
+      "literal_runs": 4,
+      "min_len": 8,
+      "model_bits": 6.954196310386875,
+      "raw_bits": 6517.622922169005,
+      "total_bits": 6527.576570271904
+    },
+    "best_min_len": 8,
+    "event_samples": [
+      {
+        "kind": "literal",
+        "length": 344,
+        "start": 0,
+        "text": "95615135347801928895216019936467243142789431519118651281911800356114726116467136464612197858576519729219727816705467118001401525517519118018944522953452744647261145145194856114519083045765122821773508434856284770908895243485611216480065867563561145191991180036468895219911036512889672127788943887215128895219618003114572785726118576421970968057"
+      },
+      {
+        "kind": "external_copy",
+        "length": 8,
+        "offset": 4627,
+        "source_class": "lcg_control",
+        "source_id": "lcg_small_seed_1",
+        "start": 344
+      },
+      {
+        "kind": "literal",
+        "length": 410,
+        "start": 352,
+        "text": "27570584521765219727830464876515956461141451988997511216151807816705121648006586114312889500362496847560199658550649967046726114580036904220464845191188952197712889521959457655236467211911800357576546094576559967046726114580512164800658611431288950036249684756019032364672119178121977128895219518003575765460670965855064690422046484519118895275857651972788943887215128895219618003114572785726118576421970968057"
+      },
+      {
+        "kind": "external_copy",
+        "length": 8,
+        "offset": 4627,
+        "source_class": "lcg_control",
+        "source_id": "lcg_small_seed_1",
+        "start": 762
+      },
+      {
+        "kind": "literal",
+        "length": 699,
+        "start": 770,
+        "text": "275705845217652197278304648765159564611414519889975112161518005953724348562510811463646724353451586042158577445451904504215956151353478019288952160199364672431427894315191186512819118003561147261130464843534515860421576515956461901865595372434856251081450421595615135347801928891151914145198899714636467285775112161518006724314278943144545521601993641281911800356114726118435345158675112167610625140815953478019288911519141451988997146364751352854215765159564619018655953724385464726114514519485611451908304576512282177350843485627563561145191991180036468895219911843508124348561145191211288830464679727831601746483494343545219721275857651972788943887215128895219618003114572785726118576421970968057"
+      },
+      {
+        "kind": "external_copy",
+        "length": 8,
+        "offset": 4627,
+        "source_class": "lcg_control",
+        "source_id": "lcg_small_seed_1",
+        "start": 1469
+      },
+      {
+        "kind": "literal",
+        "length": 485,
+        "start": 1477,
+        "text": "27570584521765219727830464876515956461141451988997511216151800595372434856251081146364672435345158604215857744545190450421595615135347801928895216019936467243142789431519118651281911800356114726116467136464612197803651204215792827546003656275697351972008969673405792878302031180657191894343464651800911464671288652731436455076974770909603634709201285794349673219688903115036457180219943434046722205112198641915219726797577144527451930450483895946688980521036499159911867451919914649965"
+      }
+    ]
+  },
+  "case_reopened": false,
+  "classification": "numeric_innovation_source_not_promoted",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "random_sources": {
+      "copied_digits_p95": 56,
+      "delta_p05": 1.9525516879239149,
+      "delta_p50": 11.287164172061239,
+      "delta_p95": 13.954196310386578,
+      "trials": 20
+    },
+    "shuffled_target": {
+      "copied_digits_p95": 42,
+      "delta_p05": 0.8942062063579215,
+      "delta_p50": 9.953648102899024,
+      "delta_p95": 13.954196310386578,
+      "trials": 20
+    }
+  },
+  "decision": {
+    "external_field_reduced": false,
+    "next_blocker": "innovation content origin remains external; simple numeric sources are not sufficient",
+    "numeric_innovation_source_promoted": false,
+    "reason": "numeric source bank does not reduce the innovation tape after paid source/offset/length costs and controls",
+    "v9_reduction_bits": 0.0
+  },
+  "holdouts": [
+    {
+      "cutoff": 512,
+      "selected_min_len": 8,
+      "test_copied_digits": 16,
+      "test_copy_ops": 2,
+      "test_delta_vs_raw_bits": 11.287164172061239,
+      "test_digits": 1450,
+      "train_delta_vs_raw_bits": 12.62068024122459
+    },
+    {
+      "cutoff": 1024,
+      "selected_min_len": 8,
+      "test_copied_digits": 8,
+      "test_copy_ops": 1,
+      "test_delta_vs_raw_bits": 12.620680241224363,
+      "test_digits": 938,
+      "train_delta_vs_raw_bits": 11.287164172061694
+    },
+    {
+      "cutoff": 1536,
+      "selected_min_len": 8,
+      "test_copied_digits": 0,
+      "test_copy_ops": 0,
+      "test_delta_vs_raw_bits": 13.954196310386806,
+      "test_digits": 426,
+      "train_delta_vs_raw_bits": 9.953648102898114
+    }
+  ],
+  "inputs": {
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:49:03.336364+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "numeric_innovation_source_gate.v1",
+  "scope": "analysis_only_external_numeric_content_source_for_innovation_tape",
+  "source_bank": {
+    "min_lens": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "source_classes": [
+      "constant",
+      "lcg_control",
+      "sequence"
+    ],
+    "source_count": 31,
+    "source_digits_each": 5000,
+    "source_ids": [
+      "const_pi",
+      "const_e",
+      "const_sqrt2",
+      "const_sqrt3",
+      "const_sqrt5",
+      "const_phi",
+      "const_ln2",
+      "const_ln10",
+      "const_catalan",
+      "const_euler",
+      "seq_primes",
+      "seq_squares",
+      "seq_fibonacci",
+      "seq_powers2",
+      "seq_powers3",
+      "lcg_ansi_seed_1",
+      "lcg_small_seed_1",
+      "lcg_ansi_seed_469",
+      "lcg_small_seed_469",
+      "lcg_ansi_seed_3478",
+      "lcg_small_seed_3478",
+      "lcg_ansi_seed_486486",
+      "lcg_small_seed_486486",
+      "lcg_ansi_seed_43153",
+      "lcg_small_seed_43153",
+      "lcg_ansi_seed_34784",
+      "lcg_small_seed_34784",
+      "lcg_ansi_seed_74032",
+      "lcg_small_seed_74032",
+      "lcg_ansi_seed_45331",
+      "lcg_small_seed_45331"
+    ]
+  },
+  "summary": {
+    "beats_random_source_p05": false,
+    "beats_shuffled_target_p05": false,
+    "best_min_len": 8,
+    "best_total_bits": 6527.576570271904,
+    "copied_digits": 24,
+    "copy_ops": 3,
+    "delta_vs_raw_bits": 9.953648102899024,
+    "holdout_count": 3,
+    "innovation_digits": 1962,
+    "literal_digits": 1938,
+    "positive_holdouts": 0,
+    "promoted": false,
+    "raw_bits": 6517.622922169005
+  },
+  "translation_delta": "NONE"
+}

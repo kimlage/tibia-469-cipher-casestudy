@@ -16,6 +16,7 @@
     "innovation_demand_coupling": "analysis/innovation_demand_coupling_audit_20260622/reports/test_results/01_innovation_demand_coupling_gate.json",
     "innovation_policy": "analysis/innovation_replay_policy_frontier_audit_20260622/reports/test_results/01_innovation_replay_policy_frontier_gate.json",
     "nonlocal_event_policy": "analysis/nonlocal_event_policy_program_audit_20260622/reports/test_results/01_nonlocal_event_policy_program_gate.json",
+    "numeric_innovation_source": "analysis/numeric_innovation_source_audit_20260622/reports/test_results/01_numeric_innovation_source_gate.json",
     "post_v9": "analysis/post_v9_generator_frontier_synthesis_audit_20260622/reports/test_results/01_post_v9_generator_frontier_synthesis.json",
     "primary_surface_search": "analysis/primary_authoring_surface_search_audit_20260622/reports/test_results/01_primary_authoring_surface_search_gate.json",
     "v9": "analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/test_results/01_executable_v9_innovation_copy_continuation_gate.json"
@@ -35,11 +36,12 @@
       "rank-only content-aware event traces that do not survive beam decoding",
       "target-free literal/copy cost minimization that loses the true suffix immediately",
       "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
+      "small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-22T23:40:41.363193+00:00",
+  "retrieved_at_utc": "2026-06-22T23:49:48.921934+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -196,6 +198,24 @@
       "status": "WEAK_CLUE_NOT_EXECUTABLE_PROGRAM"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "beats_random_source_p05": false,
+        "beats_shuffled_target_p05": false,
+        "classification": "numeric_innovation_source_not_promoted",
+        "copied_digits": 24,
+        "delta_vs_raw_bits": 9.953648102899024,
+        "holdout_count": 3,
+        "innovation_digits": 1962,
+        "positive_holdouts": 0,
+        "source_count": 31,
+        "source_digits_each": 5000
+      },
+      "reason": "mathematical constants/simple sequences/fixed PRNG controls do not provide the innovation content source after paid costs and controls",
+      "route": "simple_numeric_innovation_source",
+      "status": "TESTED_NOT_PROMOTED"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
@@ -209,7 +229,8 @@
           "simple_nonlocal_event_sequence_program",
           "causal_content_aware_event_policy_program",
           "simple_global_content_objective_event_program",
-          "innovation_demand_coupling_state"
+          "innovation_demand_coupling_state",
+          "simple_numeric_innovation_source"
         ]
       },
       "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",

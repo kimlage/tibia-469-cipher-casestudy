@@ -83,6 +83,7 @@ source_refs:
   - analysis/global_content_objective_event_program_audit_20260622
   - analysis/primary_authoring_surface_search_audit_20260622
   - analysis/innovation_demand_coupling_audit_20260622
+  - analysis/numeric_innovation_source_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3978,6 +3979,14 @@ boundaries, and a paid demand-boundary codec is worse than raw boundary
 declaration (`-2.366` bits saved). This does not reduce v9 or promote a replay
 policy. The missing state must be stronger than emitted content, literal tape,
 copy lineage, and downstream-demand segment containment.
+
+A numeric innovation-source gate then tests a constructive content-origin
+route: mathematical constants, simple integer sequences, and fixed PRNG controls
+as external sources for the `1962`-digit unified innovation tape. The best paid
+parse copies only `24` digits in `3` copy ops, costs `+9.954` bits versus raw
+declaration, has `0/3` positive prefix holdouts, and does not beat random-source
+or shuffled-target controls. Simple numeric sources are therefore not promoted
+as the missing innovation content source.
 
 ## Boundary
 

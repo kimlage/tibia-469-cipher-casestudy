@@ -13,7 +13,7 @@ None reduces v9 residual fields under the required controls.
 The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.
 
 The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.
-Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, and downstream-demand segment coupling are now tested and not promoted as executable programs.
+Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, downstream-demand segment coupling, and simple numeric-source content banks are now tested and not promoted as executable programs.
 
 ## Decision
 
