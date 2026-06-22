@@ -25,6 +25,7 @@ source_refs:
   - analysis/executable_program_frontier_synthesis_audit_20260622
   - analysis/joint_chunk_origin_route_audit_20260622
   - analysis/joint_chunk_origin_beam_pilot_audit_20260622
+  - analysis/chunk_length_prior_integration_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -799,6 +800,14 @@ and raw source address (`2550.594` bits), with only `5/208` top-80 hits. This
 keeps joint chunk-origin open as a representation route, but not as an
 executable program component; the next blocker is a sharper target-free
 length/chunk prior.
+A chunk length-prior integration audit then tests that direct rescue as a
+two-stage program: pay a prefix-trained copy-length prior inside the coarse
+bucket, then use the same-length copy hint. Full-fit, `bucket_opcount_pos`
+looks attractive (`562.273` length-prior bits; `2436.040` with copy hint,
+`-103.509` bits versus composition-index + copy-hint), but it does not
+generalize: prefix holdout gives `0/5` positive-saving cells against uniform
+feasible length. The length-prior rescue is therefore posthoc under current
+evidence and not an executable generator component.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3147,6 +3156,8 @@ book generation, not row0 pair-cell placement.
 - [Joint chunk-origin route gate](../../analysis/joint_chunk_origin_route_audit_20260622/reports/test_results/01_joint_chunk_origin_route_gate.md)
 - [Final joint chunk-origin beam pilot audit](../../analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/final_joint_chunk_origin_beam_pilot_audit.md)
 - [Bucket chunk-origin beam pilot](../../analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/test_results/01_bucket_chunk_origin_beam_pilot.md)
+- [Final chunk length-prior integration audit](../../analysis/chunk_length_prior_integration_audit_20260622/reports/final_chunk_length_prior_integration_audit.md)
+- [Chunk length-prior integration gate](../../analysis/chunk_length_prior_integration_audit_20260622/reports/test_results/01_chunk_length_prior_integration_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
