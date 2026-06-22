@@ -75,6 +75,7 @@ source_refs:
   - analysis/executable_v8_innovation_literal_markov_audit_20260622
   - analysis/executable_v9_innovation_copy_continuation_audit_20260622
   - analysis/post_v9_generator_frontier_synthesis_audit_20260622
+  - analysis/authoring_surface_provenance_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3822,6 +3823,22 @@ random-label controls are nearby. It is therefore recorded as
 stays at v9 (`6917.285` content-included bits), and the next meaningful
 question remains the innovation replay policy rather than more tiny length
 defaults.
+
+The authoring-surface provenance audit then tests the allowed external route
+instead of another internal subcodec. It builds a v9 dependency ledger for the
+remaining external fields: event schedule/coarse control, copy/literal policy,
+non-continuation copy source/length, residual composition, innovation replay
+starts, literal innovation payload, row0, and granted book order/topology.
+Public/community surfaces are not promoted: the partial Hellgate topology
+manifest fails residual-stream controls, community book pages and the s2ward
+repository preserve corpus provenance but not authorial control variables, and
+speculative 486/computer lore supplies no executable field. No source qualifies
+as `PROMOTED_EXTERNAL_CONTROL_SOURCE`; the result is
+`internal_generative_route_saturated_without_external_authoring_surface`.
+The live route now requires primary CipSoft/in-game/map/object/script evidence
+or timestamped historical variants that predict v9 residual fields above
+controls. Otherwise the internal front should stay frozen as a strong
+mechanical decoder/ledger, not an authorial formula.
 
 ## Boundary
 
