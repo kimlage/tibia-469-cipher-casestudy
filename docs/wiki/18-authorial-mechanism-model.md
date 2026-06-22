@@ -889,6 +889,14 @@ beats random top-K p05 in only `2/5` prefix cells and leaves `306` missed-start
 corrections. The candidate route is therefore not promoted yet; the current
 gain may still be explained by candidate-set size rather than a robust boundary
 state.
+A surprisal start-candidate gate then checks whether the older digit-boundary
+surprisal clue repairs that weakness. The decoder-visible version, which uses
+only already-emitted digits, costs `1922.243` bits versus `2063.661`
+composition bits and captures `71/343` starts, but beats random top-K p05 in
+`0/5` prefix cells. The target-conditioned right-surprisal diagnostic is much
+stronger (`1665.114` bits, `171/343` starts, `4/5` cells), but it looks at the
+next digit and is not promotable as an executable generator. This closes the
+surprisal shortcut: useful alignment clue, not a decoder-visible start program.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
