@@ -1,0 +1,67 @@
+{
+  "case_reopened": false,
+  "compression_bound_status": "unchanged",
+  "decoder_contract": {
+    "derived_fields": [
+      "target_start from prior emitted operation lengths",
+      "book text by executing literal/copy ops over emitted digit stream",
+      "op_type from coarse type:length_bucket token",
+      "length bucket from coarse type:length_bucket token"
+    ],
+    "external_tapes": [
+      "seed books 0..9 digit payload",
+      "coarse type:length_bucket control stream",
+      "book-level composition index for exact lengths",
+      "literal innovation payload tape",
+      "copy hint rank/source tape",
+      "macro/template correction tape when program misses"
+    ],
+    "granted_inputs": [
+      "canonical book order 0..69",
+      "book lengths",
+      "row0 code table as exogenous mechanical substrate"
+    ],
+    "paid_fields": [
+      "seed payload bits",
+      "coarse control bits or macro-coded replacement",
+      "composition-index bits",
+      "literal-payload bits",
+      "copy-hint rank bits",
+      "macro grammar and correction bits"
+    ],
+    "target_text_dependencies": [
+      "literal payload tape is target digits",
+      "copy hint ranks are computed against canonical target chunk/source availability",
+      "composition index is computed from exact target lengths"
+    ]
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "composition_index": "analysis/composition_index_structure_audit_20260622/reports/test_results/01_composition_index_structure_gate.json",
+    "control_ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "minimal_external_tape_decoder_contract.v1",
+  "scope": "analysis_only_executable_decoder_contract",
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "exact_books": 70,
+    "operation_count": 261,
+    "roundtrip_70_70": true,
+    "seed_books": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "stream_digits": 11263
+  }
+}

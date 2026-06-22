@@ -19,6 +19,7 @@ source_refs:
   - analysis/skeleton_generation_route_review_20260622
   - analysis/joint_target_stream_parser_audit_20260622
   - analysis/composition_index_structure_audit_20260622
+  - analysis/minimal_external_tape_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -731,6 +732,18 @@ while the model costs `1211.748` bits (`-13.327` saving), essentially at
 random-rank p95 (`-13.273`). Edge ranks are rare (`2/48` nontrivial books) and
 low-half ranks are balanced (`24/48`). The composition-index codec remains a
 valid structural reduction, but the exact index stays external payload.
+A minimal external tape program audit then consolidates the residual into an
+executable decoder contract rather than another field-local search. With seed
+books `0..9`, coarse `type:length_bucket`, book-level composition indexes,
+literal payload tape, and copy-hint/source tape paid explicitly, the decoder
+roundtrips `70/70` books and `261` derived operations. The unified tape ledger
+charges `9992.848` bits including seed payload (`5633.990` seed,
+`935.675` coarse control, `665.782` composition index, `883.633` literal
+payload, `1873.768` copy-hint rank). The tested macro/template program is not
+promoted: after grammar/correction charges it is `-4942.611` bits worse than
+separated coarse+composition declaration, with only `1` nontrivial exact book
+generated without a sequence atlas. This gives a cleaner blocker ledger, not a
+new generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3065,6 +3078,10 @@ book generation, not row0 pair-cell placement.
 - [Book-level coarse length controller gate](../../analysis/book_level_coarse_length_controller_audit_20260622/reports/test_results/01_book_level_coarse_length_controller_gate.md)
 - [Final composition index structure audit](../../analysis/composition_index_structure_audit_20260622/reports/final_composition_index_structure_audit.md)
 - [Composition index structure gate](../../analysis/composition_index_structure_audit_20260622/reports/test_results/01_composition_index_structure_gate.md)
+- [Final minimal external tape program audit](../../analysis/minimal_external_tape_program_audit_20260622/reports/final_minimal_external_tape_program_audit.md)
+- [Executable decoder contract](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/01_executable_decoder_contract.md)
+- [Unified external tape ledger](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.md)
+- [Macro program gate](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/03_macro_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
