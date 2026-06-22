@@ -37,6 +37,11 @@ plus a small external innovation tape made from the literal payload?
 - Seed-subcodec copy digits: `87/266`.
 - Promotes seed subcodec: `False`.
 - Weak seed subcodec clue: `True`.
+- Seed-walk best total bits: `1106.842`.
+- Seed-walk best saving vs absolute-source subcodec: `-43.081`.
+- Seed-walk best saving vs raw tape: `-223.209`.
+- Promotes seed-walk subcodec: `False`.
+- Weak seed-walk clue: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -47,7 +52,8 @@ or Markov structure beyond shuffled controls. The synchronization gate
 then asks whether that structured tape is enough to drive a closed-loop
 copy transducer when only the tape start, book length, and prior material
 are granted. The seed-subcodec gate prices the seed-coverage clue as a
-real dependency reduction for the tape itself.
+real dependency reduction for the tape itself. The seed-walk gate then
+tests whether source addresses can be replaced by a cheaper source walk.
 
 ## Decision
 
@@ -59,6 +65,7 @@ real dependency reduction for the tape itself.
 - Tape synchronization is only a weak prefix-survival clue under the current beam.
 - Seed-derived tape subcodec is not promoted because paid references are still worse than raw tape.
 - Seed-derived tape subcodec remains a weak clue because paid coverage beats shuffled controls.
+- Seed-walk source model is rejected because deltas are more expensive than absolute source positions.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -69,3 +76,4 @@ real dependency reduction for the tape itself.
 - [Innovation tape structure gate](test_results/03_innovation_tape_structure_gate.md)
 - [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)
 - [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)
+- [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)

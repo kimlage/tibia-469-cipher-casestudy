@@ -654,6 +654,12 @@ its paid score beats shuffled subcodec p95 even though it does not beat raw
 tape. The next constructive route is therefore a cheaper seed/tape reference
 model or a state rule that makes these references less costly, not a claim that
 the tape is already derived.
+A seed-walk source model gate then tests the most obvious way to make those
+references cheaper: replace absolute seed source positions with signed deltas.
+That route is rejected. The best walk model costs `1106.842` bits, worse than
+the absolute-source subcodec at `1063.761` bits and still worse than the raw
+tape. The observed coverage remains a weak clue, but the specific source-walk
+mechanism does not reduce dependency.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2827,6 +2833,7 @@ book generation, not row0 pair-cell placement.
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)
 - [Tape synchronized closed loop gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/04_tape_synchronized_closed_loop_gate.md)
 - [Seed derived tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/05_seed_derived_tape_subcodec_gate.md)
+- [Seed walk source model gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/06_seed_walk_source_model_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
