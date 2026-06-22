@@ -1,0 +1,134 @@
+{
+  "case_reopened": false,
+  "classification": "leaked_source_route_rejected_clean_topology_contract_ready",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "can_get_or_use_leaked_tibia_source": false,
+    "clean_route_available": true,
+    "next_acceptable_input": "authorized object/container/slot/order metadata as CSV/JSON, official/in-game capture, or public licensed object-layer data",
+    "reason": "unauthorized proprietary leak is not an acceptable evidence source",
+    "v9_reduction_bits": 0.0
+  },
+  "example_clean_row": {
+    "book_text_or_exact_prefix": "9457655996704672611",
+    "capture_method": "official/in_game/user_authorized/public_licensed",
+    "container_or_bookcase_id": "bookcase_object_or_container_id",
+    "orientation_or_side": "unknown_allowed_if_absent",
+    "slot_or_read_order": 1,
+    "source_id": "example_authorized_capture_YYYYMMDD",
+    "source_rights": "user_owned_or_public_license_reference",
+    "source_version_or_date": "Tibia version/date",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "plaintext_claim": false,
+  "required_fields": [
+    {
+      "description": "Stable identifier for the provided dataset or capture.",
+      "field": "source_id",
+      "required": true
+    },
+    {
+      "description": "License/permission statement or proof that the data is user-owned/authorized/publicly licensed.",
+      "field": "source_rights",
+      "required": true
+    },
+    {
+      "description": "Client/game/map version or capture date.",
+      "field": "source_version_or_date",
+      "required": true
+    },
+    {
+      "description": "Exact numeric text or prefix sufficient to match a canonical 469 book.",
+      "field": "book_text_or_exact_prefix",
+      "required": true
+    },
+    {
+      "description": "World X coordinate or equivalent local coordinate.",
+      "field": "x",
+      "required": true
+    },
+    {
+      "description": "World Y coordinate or equivalent local coordinate.",
+      "field": "y",
+      "required": true
+    },
+    {
+      "description": "Floor/depth coordinate.",
+      "field": "z",
+      "required": true
+    },
+    {
+      "description": "Bookcase/container object identity, not just a public ordinal.",
+      "field": "container_or_bookcase_id",
+      "required": true
+    },
+    {
+      "description": "Slot inside the container, item stack position, or observed read order.",
+      "field": "slot_or_read_order",
+      "required": true
+    },
+    {
+      "description": "Shelf side/orientation when available.",
+      "field": "orientation_or_side",
+      "required": false
+    },
+    {
+      "description": "Official/in-game capture, user-generated observation, licensed map export, or other allowed route.",
+      "field": "capture_method",
+      "required": true
+    }
+  ],
+  "retrieved_at_utc": "2026-06-22T22:37:10.350670+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "leaked_source_boundary_and_clean_topology_contract.v1",
+  "scope": "analysis_only_source_boundary_for_topology_acquisition",
+  "source_policies": [
+    {
+      "allowed_action": "do not obtain, download, parse, quote, or integrate",
+      "can_use": false,
+      "reason": "unauthorized proprietary leak would contaminate provenance and cannot be used as project evidence",
+      "source_class": "leaked_proprietary_source_or_map",
+      "status": "REJECTED_SOURCE_ROUTE"
+    },
+    {
+      "allowed_action": "parse into the clean topology contract and test against v9 fields with controls",
+      "can_use": true,
+      "reason": "primary or directly observed in-game evidence can establish topology provenance",
+      "source_class": "official_cipsoft_public_or_in_game_capture",
+      "status": "PROMOTABLE_IF_FIELDS_AND_CONTROLS_PASS"
+    },
+    {
+      "allowed_action": "validate schema, match canonical books, then run holdout/permutation controls",
+      "can_use": true,
+      "reason": "metadata can be tested if the provider has rights/permission and includes required fields",
+      "source_class": "user_provided_authorized_metadata_csv_json",
+      "status": "PROMOTABLE_IF_RIGHTS_FIELDS_AND_CONTROLS_PASS"
+    },
+    {
+      "allowed_action": "record provenance and test only fields present in the clean contract",
+      "can_use": true,
+      "reason": "map/marker data is useful only if it exposes book objects/slots, not just floor imagery",
+      "source_class": "public_licensed_community_map_or_marker_data",
+      "status": "AUDIT_ONLY_UNLESS_OBJECT_LAYER_PRESENT"
+    },
+    {
+      "allowed_action": "use as corpus provenance only; do not promote as generator evidence",
+      "can_use": true,
+      "reason": "text mirrors can verify corpus strings but not object topology or authoring control",
+      "source_class": "public_text_mirror_or_fan_solution",
+      "status": "REJECTED_FOR_TOPOLOGY_CONTROL"
+    }
+  ],
+  "test_protocol": [
+    "validate rights/provenance and required fields",
+    "match each row to canonical 469 book by exact text/prefix",
+    "separate unique, ambiguous, and unmatched book rows",
+    "derive coordinate/order variables without looking at v9 residual targets",
+    "test prediction of v9 fields: book_order_topology, event_schedule/coarse_control, copy_literal_decision_policy",
+    "compare against shuffled coordinates, permuted book order, same-bookcase controls, and public-bookcase baseline",
+    "promote only if the clean source reduces declared external fields after model/correction costs"
+  ],
+  "translation_delta": "NONE"
+}

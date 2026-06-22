@@ -104,6 +104,12 @@ representative 469 book-prefix searches produce `60` exact text hits across
 container, slot, or order provenance. This preserves the acquisition target:
 object-layer data or versioned authoring traces, not another text mirror.
 
+The leaked-source boundary gate rejects the old Tibia source-code/map leak as
+an evidence route for this repository. Community reuse in alt servers is not
+enough to establish permission or clean provenance. A usable topology input
+must instead be official/in-game, public licensed, user-authorized, or otherwise
+rights-cleared metadata with the required object/container/slot/order fields.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)

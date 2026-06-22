@@ -66,3 +66,15 @@ No hit supplies book object/container/slot/order provenance, so no source is int
 - [02_github_exact_book_source_hunt.py](../scripts/02_github_exact_book_source_hunt.py)
 - [02_github_exact_book_source_hunt.json](test_results/02_github_exact_book_source_hunt.json)
 - [02_github_exact_book_source_hunt.md](test_results/02_github_exact_book_source_hunt.md)
+
+## Leaked Source Boundary
+
+A source-boundary gate answers whether the old Tibia source-code/map leak should be used for topology.
+It should not: leaked proprietary material is rejected as an evidence route.
+Community reuse in alt servers is not sufficient provenance or permission for this repository.
+The usable path is an authorized CSV/JSON object-layer contract with book text/prefix, coordinates, container/bookcase identity, slot/read order, version/date, and rights/provenance.
+No source is integrated into v9 and net v9 reduction remains `0.0` bits.
+
+- [03_leaked_source_boundary_and_clean_topology_contract.py](../scripts/03_leaked_source_boundary_and_clean_topology_contract.py)
+- [03_leaked_source_boundary_and_clean_topology_contract.json](test_results/03_leaked_source_boundary_and_clean_topology_contract.json)
+- [03_leaked_source_boundary_and_clean_topology_contract.md](test_results/03_leaked_source_boundary_and_clean_topology_contract.md)

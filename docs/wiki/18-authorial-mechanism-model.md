@@ -3860,6 +3860,13 @@ the repositories are text/corpus mirrors or community analysis surfaces only:
 No public-code hit exposes the object/container/slot/order layer needed to
 derive v9 events. This closes the easy public-code route without changing v9.
 
+The leaked-source boundary gate answers the direct question about using the old
+Tibia source-code/map leak for topology: do not use it. Leaked proprietary
+material is rejected as an evidence route even if alt-server communities reuse
+it. The acceptable path remains a rights-cleared object-layer CSV/JSON,
+official/in-game capture, public licensed data, or versioned authoring artifact
+that can be tested against v9 fields with permutation and holdout controls.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
