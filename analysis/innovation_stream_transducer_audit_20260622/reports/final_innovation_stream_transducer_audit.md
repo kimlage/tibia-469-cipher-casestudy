@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_BOUNDARY_CANDIDATE_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED`
+Classification: `INNOVATION_STREAM_DECODER_VISIBLE_BOOKSTART_TRIGGER_CLUE_PROMOTED_INTERNAL_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -70,6 +70,11 @@ plus a small external innovation tape made from the literal payload?
 - Boundary-candidate trigger literal/copy hits: `4/42`.
 - Boundary-candidate trigger delta vs same-cutoff global: `169.492` bits.
 - Promotes boundary-candidate trigger: `True`.
+- Decoder-visible boundary-candidate feature: `book_start`.
+- Decoder-visible boundary-candidate start hits: `34/94`.
+- Decoder-visible boundary-candidate delta vs global: `129.644` bits.
+- Internal decoder-visible boundary-candidate start hits: `0/3`.
+- Promotes internal decoder-visible boundary-candidate trigger: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -91,7 +96,9 @@ trigger gate removes that target-conditioned availability while still
 granting known operation starts and true tape state. The boundary
 candidate trigger gate then replaces exact operation starts with the
 previously promoted `right_ge:4` boundary candidate set and asks for
-three-way `nonstart/literal/copy` labels.
+three-way `nonstart/literal/copy` labels. The decoder-visible boundary
+candidate gate removes target-conditioned copy availability from that
+candidate-label problem and decomposes book-start versus internal starts.
 
 ## Decision
 
@@ -110,6 +117,7 @@ three-way `nonstart/literal/copy` labels.
 - The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.
 - Decoder-visible trigger policy is rejected: without target-conditioned copy availability, the trigger clue collapses to the copy-majority baseline.
 - Boundary-candidate trigger policy is promoted as a composed dependency-reduction clue, but still leaves missed operation starts and target-conditioned copy availability unresolved.
+- Decoder-visible boundary-candidate trigger policy is promoted only as a book-start clue; the internal-only trigger decomposition is not promoted.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -125,3 +133,4 @@ three-way `nonstart/literal/copy` labels.
 - [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)
 - [Decoder visible trigger policy gate](test_results/09_decoder_visible_trigger_policy_gate.md)
 - [Boundary candidate trigger gate](test_results/10_boundary_candidate_trigger_gate.md)
+- [Decoder visible boundary candidate trigger gate](test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)

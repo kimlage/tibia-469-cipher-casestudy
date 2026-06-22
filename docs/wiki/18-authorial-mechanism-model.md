@@ -693,6 +693,14 @@ saves `116.856` bits versus three-way lookup, `169.492` bits better than the
 same-cutoff nonstart-majority baseline. This is still not a generator: the
 candidate set misses `107` canonical starts, and the best feature still depends
 on target-conditioned copy availability.
+A decoder-visible boundary-candidate trigger gate then removes that
+target-conditioned copy availability from the same `right_ge:4` candidate-label
+problem. A target-free clue remains, but it is narrow: `book_start` gets
+`635/695` candidate labels right at cutoff `30`, recovers `34/94` actual starts,
+and saves `87.064` bits versus three-way lookup. The internal-only decomposition
+does not promote: after removing book starts, the best row hits `0/3` internal
+starts and is `-5.044` bits versus the global baseline. So this is a book-start
+invariance clue, not an internal skeleton parser.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2871,6 +2879,7 @@ book generation, not row0 pair-cell placement.
 - [Tape trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/08_tape_trigger_policy_gate.md)
 - [Decoder visible trigger policy gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/09_decoder_visible_trigger_policy_gate.md)
 - [Boundary candidate trigger gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/10_boundary_candidate_trigger_gate.md)
+- [Decoder visible boundary candidate trigger gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
