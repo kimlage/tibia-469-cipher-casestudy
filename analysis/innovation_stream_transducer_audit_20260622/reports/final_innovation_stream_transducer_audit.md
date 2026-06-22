@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_TARGET_FREE_TRIGGER_REJECTED`
+Classification: `INNOVATION_STREAM_BOUNDARY_CANDIDATE_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -64,6 +64,12 @@ plus a small external innovation tape made from the literal payload?
 - Decoder-visible trigger delta vs global: `-4.807` bits.
 - Target-conditioning gap bits: `48.262`.
 - Promotes decoder-visible trigger: `False`.
+- Boundary-candidate trigger feature: `book_start_x_copy_available`.
+- Boundary-candidate trigger exact candidates: `745/819`.
+- Boundary-candidate trigger start hits: `46/120`.
+- Boundary-candidate trigger literal/copy hits: `4/42`.
+- Boundary-candidate trigger delta vs same-cutoff global: `169.492` bits.
+- Promotes boundary-candidate trigger: `True`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -82,7 +88,10 @@ trigger gate then moves one level down, asking whether literal-vs-copy
 can be predicted at known operation starts when true-prefix,
 target-conditioned copy availability is granted. The decoder-visible
 trigger gate removes that target-conditioned availability while still
-granting known operation starts and true tape state.
+granting known operation starts and true tape state. The boundary
+candidate trigger gate then replaces exact operation starts with the
+previously promoted `right_ge:4` boundary candidate set and asks for
+three-way `nonstart/literal/copy` labels.
 
 ## Decision
 
@@ -100,6 +109,7 @@ granting known operation starts and true tape state.
 - Conditional trigger policy is promoted as a dependency-reduction clue: copy availability explains many literal/copy decisions after paying table/correction cost.
 - The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.
 - Decoder-visible trigger policy is rejected: without target-conditioned copy availability, the trigger clue collapses to the copy-majority baseline.
+- Boundary-candidate trigger policy is promoted as a composed dependency-reduction clue, but still leaves missed operation starts and target-conditioned copy availability unresolved.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -114,3 +124,4 @@ granting known operation starts and true tape state.
 - [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)
 - [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)
 - [Decoder visible trigger policy gate](test_results/09_decoder_visible_trigger_policy_gate.md)
+- [Boundary candidate trigger gate](test_results/10_boundary_candidate_trigger_gate.md)

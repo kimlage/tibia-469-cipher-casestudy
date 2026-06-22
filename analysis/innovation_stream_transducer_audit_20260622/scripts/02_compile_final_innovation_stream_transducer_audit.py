@@ -18,6 +18,7 @@ SEED_WALK_GATE = TEST_RESULTS / "06_seed_walk_source_model_gate.json"
 SCHEDULE_GATE = TEST_RESULTS / "07_innovation_tape_schedule_gate.json"
 TRIGGER_GATE = TEST_RESULTS / "08_tape_trigger_policy_gate.json"
 DECODER_VISIBLE_TRIGGER_GATE = TEST_RESULTS / "09_decoder_visible_trigger_policy_gate.json"
+BOUNDARY_CANDIDATE_TRIGGER_GATE = TEST_RESULTS / "10_boundary_candidate_trigger_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -48,6 +49,7 @@ def main() -> None:
     schedule = load_json(SCHEDULE_GATE)
     trigger = load_json(TRIGGER_GATE)
     decoder_visible_trigger = load_json(DECODER_VISIBLE_TRIGGER_GATE)
+    boundary_candidate_trigger = load_json(BOUNDARY_CANDIDATE_TRIGGER_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -56,6 +58,7 @@ def main() -> None:
     assert_boundary("innovation_tape_schedule_gate", schedule)
     assert_boundary("tape_trigger_policy_gate", trigger)
     assert_boundary("decoder_visible_trigger_policy_gate", decoder_visible_trigger)
+    assert_boundary("boundary_candidate_trigger_gate", boundary_candidate_trigger)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -64,7 +67,10 @@ def main() -> None:
     x = schedule["summary"]
     y = trigger["summary"]
     z = decoder_visible_trigger["summary"]
-    if trigger["summary"]["promotes_conditional_trigger_clue"]:
+    aa = boundary_candidate_trigger["summary"]
+    if boundary_candidate_trigger["summary"]["promotes_boundary_candidate_trigger"]:
+        classification = "INNOVATION_STREAM_BOUNDARY_CANDIDATE_TRIGGER_CLUE_PROMOTED_GENERATOR_NOT_PROMOTED"
+    elif trigger["summary"]["promotes_conditional_trigger_clue"]:
         classification = "INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_PROMOTED_TARGET_FREE_TRIGGER_REJECTED"
     elif trigger["summary"]["weak_conditional_trigger_clue"]:
         classification = "INNOVATION_STREAM_CONDITIONAL_TRIGGER_CLUE_WEAK"
@@ -151,6 +157,12 @@ def main() -> None:
         f"- Decoder-visible trigger delta vs global: `{z['best_feature_delta_bits_vs_global']:.3f}` bits.",
         f"- Target-conditioning gap bits: `{z['target_conditioning_gap_bits']:.3f}`.",
         f"- Promotes decoder-visible trigger: `{z['promotes_decoder_visible_trigger']}`.",
+        f"- Boundary-candidate trigger feature: `{aa['best_feature']}`.",
+        f"- Boundary-candidate trigger exact candidates: `{aa['best_feature_exact_candidates']}/{aa['best_feature_test_candidates']}`.",
+        f"- Boundary-candidate trigger start hits: `{aa['best_feature_start_hits']}/{aa['best_feature_actual_starts']}`.",
+        f"- Boundary-candidate trigger literal/copy hits: `{aa['best_feature_literal_hits']}/{aa['best_feature_copy_hits']}`.",
+        f"- Boundary-candidate trigger delta vs same-cutoff global: `{aa['best_feature_delta_bits_vs_global']:.3f}` bits.",
+        f"- Promotes boundary-candidate trigger: `{aa['promotes_boundary_candidate_trigger']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -169,7 +181,10 @@ def main() -> None:
         "can be predicted at known operation starts when true-prefix,",
         "target-conditioned copy availability is granted. The decoder-visible",
         "trigger gate removes that target-conditioned availability while still",
-        "granting known operation starts and true tape state.",
+        "granting known operation starts and true tape state. The boundary",
+        "candidate trigger gate then replaces exact operation starts with the",
+        "previously promoted `right_ge:4` boundary candidate set and asks for",
+        "three-way `nonstart/literal/copy` labels.",
         "",
         "## Decision",
         "",
@@ -187,6 +202,7 @@ def main() -> None:
         "- Conditional trigger policy is promoted as a dependency-reduction clue: copy availability explains many literal/copy decisions after paying table/correction cost.",
         "- The trigger clue is not a closed-loop generator because it still grants operation starts and target-conditioned copy availability.",
         "- Decoder-visible trigger policy is rejected: without target-conditioned copy availability, the trigger clue collapses to the copy-majority baseline.",
+        "- Boundary-candidate trigger policy is promoted as a composed dependency-reduction clue, but still leaves missed operation starts and target-conditioned copy availability unresolved.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -201,6 +217,7 @@ def main() -> None:
         "- [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)",
         "- [Tape trigger policy gate](test_results/08_tape_trigger_policy_gate.md)",
         "- [Decoder visible trigger policy gate](test_results/09_decoder_visible_trigger_policy_gate.md)",
+        "- [Boundary candidate trigger gate](test_results/10_boundary_candidate_trigger_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
