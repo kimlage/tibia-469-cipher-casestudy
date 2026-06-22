@@ -18,6 +18,7 @@ source_refs:
   - analysis/target_digit_boundary_miss_transition_audit_20260621
   - analysis/skeleton_generation_route_review_20260622
   - analysis/joint_target_stream_parser_audit_20260622
+  - analysis/composition_index_structure_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -723,6 +724,13 @@ bits. Integrated latent beam plus residual composition costs `3146.578` bits
 versus `4478.440` for separated op-count/coarse/residual declaration. It is
 still not a complete generator: coarse-sequence corrections, composition index,
 literal innovation, copy hints, seeds, and row0 remain external.
+A composition-index structure audit then tests that residual field directly.
+The best prefix-holdout model, `count_x_length__quantile10`, is not promoted:
+uniform composition-index coding over repeated holdouts costs `1198.420` bits,
+while the model costs `1211.748` bits (`-13.327` saving), essentially at
+random-rank p95 (`-13.273`). Edge ranks are rare (`2/48` nontrivial books) and
+low-half ranks are balanced (`24/48`). The composition-index codec remains a
+valid structural reduction, but the exact index stays external payload.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3055,6 +3063,8 @@ book generation, not row0 pair-cell placement.
 - [Coarse control program gate](../../analysis/coarse_control_program_audit_20260622/reports/test_results/01_coarse_control_program_gate.md)
 - [Final book-level coarse length controller audit](../../analysis/book_level_coarse_length_controller_audit_20260622/reports/final_book_level_coarse_length_controller_audit.md)
 - [Book-level coarse length controller gate](../../analysis/book_level_coarse_length_controller_audit_20260622/reports/test_results/01_book_level_coarse_length_controller_gate.md)
+- [Final composition index structure audit](../../analysis/composition_index_structure_audit_20260622/reports/final_composition_index_structure_audit.md)
+- [Composition index structure gate](../../analysis/composition_index_structure_audit_20260622/reports/test_results/01_composition_index_structure_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
