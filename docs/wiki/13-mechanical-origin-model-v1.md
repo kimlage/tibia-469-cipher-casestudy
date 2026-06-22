@@ -1140,6 +1140,16 @@ claims remain inadmissible.
   [final_executable_v4_one_sided_boundary_program_audit.md](../../analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/final_executable_v4_one_sided_boundary_program_audit.md)
 - Executable v4 one-sided boundary program gate:
   [01_executable_v4_one_sided_boundary_program_gate.md](../../analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/test_results/01_executable_v4_one_sided_boundary_program_gate.md)
+- Final v4 unanchored copy residual audit:
+  [final_v4_unanchored_copy_residual_audit.md](../../analysis/v4_unanchored_copy_residual_audit_20260622/reports/final_v4_unanchored_copy_residual_audit.md)
+- Final unanchored copy-origin representation audit:
+  [final_unanchored_copy_origin_representation_audit.md](../../analysis/unanchored_copy_origin_representation_audit_20260622/reports/final_unanchored_copy_origin_representation_audit.md)
+- Unanchored copy-origin representation gate:
+  [01_unanchored_copy_origin_representation_gate.md](../../analysis/unanchored_copy_origin_representation_audit_20260622/reports/test_results/01_unanchored_copy_origin_representation_gate.md)
+- Final executable v5 source-endpoint memory audit:
+  [final_executable_v5_source_endpoint_memory_audit.md](../../analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/final_executable_v5_source_endpoint_memory_audit.md)
+- Executable v5 source-endpoint memory gate:
+  [01_executable_v5_source_endpoint_memory_gate.md](../../analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_gate.md)
 - Final shared innovation tape audit:
   [final_shared_innovation_tape_audit.md](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - Shared literal-length tape gate:

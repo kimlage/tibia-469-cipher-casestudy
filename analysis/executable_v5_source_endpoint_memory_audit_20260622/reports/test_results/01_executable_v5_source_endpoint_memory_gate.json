@@ -1,0 +1,49 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V5_SOURCE_ENDPOINT_MEMORY_LEDGER",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "executable_v5_promoted": true,
+    "next_blocker": "101/208 copy events remain fallback plus literal payload, seed payload, and row0",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v4_one_sided_boundary_program_gate": "analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/test_results/01_executable_v4_one_sided_boundary_program_gate.json",
+    "unanchored_copy_origin_representation_gate": "analysis/unanchored_copy_origin_representation_audit_20260622/reports/test_results/01_unanchored_copy_origin_representation_gate.json"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v5_source_endpoint_memory_gate.v1",
+  "scope": "analysis_only_executable_v5_source_endpoint_memory",
+  "summary": {
+    "class_counts": {
+      "both_endpoint_interval": 52,
+      "end_only": 55,
+      "fallback": 101
+    },
+    "copy_bits": 1895.7445966819005,
+    "copy_ops": 208,
+    "delta_excluding_seed_vs_v4": -11.805377736250193,
+    "delta_including_seed_vs_v4": -11.805377736250193,
+    "literal_payload_bits": 883.6328732400384,
+    "online_x64_coarse_bits": 876.412,
+    "representation_declaration_bits": 1.584962500721156,
+    "residual_composition_bits": 439.958642781383,
+    "seed_payload_bits": 5633.990048928967,
+    "source_endpoint_marks_added": 416,
+    "v4_external_bits_excluding_seed": 4109.138452940293,
+    "v4_external_bits_including_seed": 9743.12850186926,
+    "v4_residual_bits": 3232.7264529402933,
+    "v5_external_bits_excluding_seed": 4097.333075204043,
+    "v5_external_bits_including_seed": 9731.32312413301,
+    "v5_residual_bits": 3220.921075204043
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "exact_books": 70,
+    "roundtrip_70_70": true
+  }
+}

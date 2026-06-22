@@ -3603,6 +3603,23 @@ book generation, not row0 pair-cell placement.
 - [Literal payload model gate](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/29_literal_payload_model_gate.md)
 - [Authorial provenance source notes](../../analysis/authorial_provenance_audit_20260621/reports/authorial_provenance_source_notes.md)
 - [Chayenne spacing audit](../../analysis/authorial_provenance_audit_20260621/reports/test_results/01_chayenne_spacing_audit.md)
+- [V4 unanchored copy residual audit](../../analysis/v4_unanchored_copy_residual_audit_20260622/reports/final_v4_unanchored_copy_residual_audit.md)
+- [Unanchored copy-origin representation audit](../../analysis/unanchored_copy_origin_representation_audit_20260622/reports/final_unanchored_copy_origin_representation_audit.md)
+- [Executable v5 source-endpoint memory audit](../../analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/final_executable_v5_source_endpoint_memory_audit.md)
+
+## Executable v5 source-endpoint memory
+
+The latest executable-program increment promotes `source_endpoint_memory` as a
+small residual reduction, not as a complete generator. Once a copy source is
+paid or derived, its source-side endpoints become reusable online marks for
+future source-interval derivation. The executable decoder still roundtrips
+`70/70` books. External bits excluding seed fall from v4 `4109.138` to v5
+`4097.333`, a reduction of `11.805` bits after charging `1.585` bits to declare
+the representation family. Copy classes shift to `52` fully-derived intervals,
+`55` end-only intervals, and `101` fallback copy-hint intervals.
+
+This changes the executable dependency ledger only. It does not change `row0`,
+plaintext, translation, semantics, or the separate `compression_bound`.
 
 ## Boundary
 

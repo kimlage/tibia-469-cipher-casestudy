@@ -1,0 +1,74 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_UNANCHORED_COPY_ORIGIN_REPRESENTATION",
+  "compression_bound_status": "unchanged",
+  "control": {
+    "random_trials": 300,
+    "shuffled_hit_p95": 35,
+    "shuffled_residual_p05": 3229.8036176262754,
+    "source_memory_beats_shuffled_p05": true
+  },
+  "decision": {
+    "next_blocker": "source_endpoint_memory_and_within_span_do_not_reduce_v4",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v4_one_sided_boundary_program_gate": "analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/test_results/01_executable_v4_one_sided_boundary_program_gate.json",
+    "one_sided_source_boundary_program_script": "analysis/one_sided_source_boundary_program_audit_20260622/scripts/01_one_sided_source_boundary_program_gate.py",
+    "source_boundary_candidate_program_script": "analysis/source_boundary_candidate_program_audit_20260622/scripts/01_source_boundary_candidate_program_gate.py",
+    "v4_unanchored_copy_residual_ledger": "analysis/v4_unanchored_copy_residual_audit_20260622/reports/test_results/01_v4_unanchored_copy_residual_ledger.json"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "unanchored_copy_origin_representation_gate.v1",
+  "scope": "analysis_only_unanchored_copy_origin_representation",
+  "summary": {
+    "declaration_bits_representation_family": 1.584962500721156,
+    "delta_hit_only_vs_v4": -1.7867477589929877,
+    "delta_source_endpoint_memory_after_declaration_vs_v4": -11.80537773625034,
+    "delta_source_endpoint_memory_vs_v4": -13.390340236971497,
+    "hit_only": {
+      "class_counts": {
+        "both_endpoint_interval": 29,
+        "end_only": 56,
+        "fallback": 123
+      },
+      "composition_bits": 511.96112092274507,
+      "copy_bits": 1835.3457110185168,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "marks_added": 58,
+      "mode": "source_endpoint_hit_only",
+      "residual_bits": 3230.9397051813003
+    },
+    "promoted": true,
+    "source_endpoint_memory": {
+      "class_counts": {
+        "both_endpoint_interval": 52,
+        "end_only": 55,
+        "fallback": 101
+      },
+      "composition_bits": 439.958642781383,
+      "copy_bits": 1895.7445966819005,
+      "copy_ops": 208,
+      "literal_payload_bits": 883.6328732400384,
+      "marks_added": 416,
+      "mode": "source_endpoint_memory",
+      "residual_bits": 3219.3361127033218
+    },
+    "source_endpoint_memory_residual_with_declaration": 3220.921075204043,
+    "v4_residual_bits": 3232.7264529402933,
+    "within_prior_span_interval": {
+      "copy_ops": 208,
+      "delta_vs_copy_hint_on_fitting": 1281.121478027979,
+      "fitting_copy_hint_bits": 976.7586217707063,
+      "fitting_count": 116,
+      "fitting_paid_bits": 2257.8800997986855,
+      "mean_delta_on_fitting": 11.044150672654993,
+      "mode": "within_prior_span_interval"
+    }
+  },
+  "translation_delta": "NONE"
+}
