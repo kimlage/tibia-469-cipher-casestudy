@@ -26,6 +26,7 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `innovation_demand_coupling_state` | `WEAK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | downstream demand segments weakly contain replay events but do not derive replay boundaries or reduce v9 fields |
 | `simple_numeric_innovation_source` | `TESTED_NOT_PROMOTED` | `False` | mathematical constants/simple sequences/fixed PRNG controls do not provide the innovation content source after paid costs and controls |
 | `known_external_numeric_anchor_content_source` | `WEAK_CHAYENNE_CLUE_NOT_ORIGIN_SOURCE` | `False` | Chayenne overlaps the innovation tape as secondary corpus-compatible validation, while promotable external anchors copy zero digits |
+| `chayenne_external_holdout_module_bank_validation` | `PROMOTED_EXTERNAL_HOLDOUT_VALIDATION_NOT_ORIGIN` | `False` | validates the innovation tape as a module bank on one external holdout, but does not generate event policy or content origin |
 | `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
 
 ## Next Work Contract
@@ -47,6 +48,7 @@ Do not count as progress:
 - demand-segment containment clues that do not derive replay boundaries or reduce decoder fields
 - small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs
 - known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin
+- Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction
 - semantic/plaintext/row0 reopening
 
 ## Decision

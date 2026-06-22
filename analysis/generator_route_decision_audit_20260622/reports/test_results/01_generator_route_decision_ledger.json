@@ -4,6 +4,7 @@
   "compression_bound_status": "unchanged",
   "inputs": {
     "causal_content_aware_event_policy": "analysis/causal_content_aware_event_policy_audit_20260622/reports/test_results/01_causal_content_aware_event_policy_gate.json",
+    "chayenne_external_holdout": "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
     "external_01": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/01_external_authoring_surface_acquisition_gate.json",
     "external_02": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/02_github_exact_book_source_hunt.json",
     "external_03": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/03_leaked_source_boundary_and_clean_topology_contract.json",
@@ -39,11 +40,12 @@
       "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
       "small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs",
       "known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin",
+      "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-22T23:54:19.649233+00:00",
+  "retrieved_at_utc": "2026-06-22T23:58:41.203190+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -233,6 +235,22 @@
       "status": "WEAK_CHAYENNE_CLUE_NOT_ORIGIN_SOURCE"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "avar_tar_copied_digits": 0,
+        "beats_random_source_p05": true,
+        "beats_shuffled_target_p05": true,
+        "chayenne_copied_digits": 49,
+        "chayenne_delta_vs_raw_bits": -131.25440180726756,
+        "chayenne_digits": 49,
+        "classification": "PROMOTED_CHAYENNE_EXTERNAL_HOLDOUT_VALIDATION",
+        "your_true_colour_copied_digits": 0
+      },
+      "reason": "validates the innovation tape as a module bank on one external holdout, but does not generate event policy or content origin",
+      "route": "chayenne_external_holdout_module_bank_validation",
+      "status": "PROMOTED_EXTERNAL_HOLDOUT_VALIDATION_NOT_ORIGIN"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
@@ -249,6 +267,9 @@
           "innovation_demand_coupling_state",
           "simple_numeric_innovation_source",
           "known_external_numeric_anchor_content_source"
+        ],
+        "validated_but_not_solved": [
+          "chayenne_external_holdout_module_bank_validation"
         ]
       },
       "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",

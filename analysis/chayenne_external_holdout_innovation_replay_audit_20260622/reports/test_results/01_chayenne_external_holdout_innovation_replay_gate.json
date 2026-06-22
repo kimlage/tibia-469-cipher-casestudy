@@ -1,0 +1,223 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_CHAYENNE_EXTERNAL_HOLDOUT_VALIDATION",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "external_field_reduced": false,
+    "external_holdout_validation_promoted": true,
+    "next_blocker": "module-bank validation does not generate the 70-book event policy or innovation origin",
+    "origin_source_promoted": false,
+    "reason": "Chayenne validates the innovation module bank as an external holdout, but remains secondary validation rather than origin",
+    "v9_reduction_bits": 0.0
+  },
+  "external_rows": [
+    {
+      "beats_random_source_p05": true,
+      "beats_shuffled_target_p05": true,
+      "best_min_len": 12,
+      "classifier_classification": "copy_holdout_like_secondary_validation",
+      "controls": {
+        "random_source": {
+          "copied_digits_p95": 0,
+          "delta_p05": 10.0,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        },
+        "shuffled_target": {
+          "copied_digits_p95": 0,
+          "delta_p05": 10.0,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        }
+      },
+      "copied_digits": 49,
+      "copy_ops": 2,
+      "delta_vs_raw_bits": -131.25440180726756,
+      "digits": 49,
+      "event_samples": [
+        {
+          "kind": "copy",
+          "length": 36,
+          "offset": 160,
+          "start": 0
+        },
+        {
+          "kind": "copy",
+          "length": 13,
+          "offset": 347,
+          "start": 36
+        }
+      ],
+      "literal_digits": 0,
+      "name": "chayenne",
+      "raw_digits": "1145145194856114519083045765122821776612527570584"
+    },
+    {
+      "beats_random_source_p05": false,
+      "beats_shuffled_target_p05": false,
+      "best_min_len": 5,
+      "classifier_classification": "external_unknown_event_layer",
+      "controls": {
+        "random_source": {
+          "copied_digits_p95": 11,
+          "delta_p05": 6.868165964680827,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        },
+        "shuffled_target": {
+          "copied_digits_p95": 0,
+          "delta_p05": 10.0,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        }
+      },
+      "copied_digits": 0,
+      "copy_ops": 0,
+      "delta_vs_raw_bits": 10.0,
+      "digits": 21,
+      "event_samples": [
+        {
+          "kind": "literal",
+          "length": 21,
+          "start": 0
+        }
+      ],
+      "literal_digits": 21,
+      "name": "your_true_colour",
+      "raw_digits": "785673433498913565142"
+    },
+    {
+      "beats_random_source_p05": false,
+      "beats_shuffled_target_p05": false,
+      "best_min_len": 5,
+      "classifier_classification": "external_numeric_anchor",
+      "controls": {
+        "random_source": {
+          "copied_digits_p95": 10,
+          "delta_p05": 5.595047029784091,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        },
+        "shuffled_target": {
+          "copied_digits_p95": 4,
+          "delta_p05": 9.650396946669787,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        }
+      },
+      "copied_digits": 0,
+      "copy_ops": 0,
+      "delta_vs_raw_bits": 10.0,
+      "digits": 10,
+      "event_samples": [
+        {
+          "kind": "literal",
+          "length": 10,
+          "start": 0
+        }
+      ],
+      "literal_digits": 10,
+      "name": "secret_library_74032_45331",
+      "raw_digits": "7403245331"
+    },
+    {
+      "beats_random_source_p05": false,
+      "beats_shuffled_target_p05": false,
+      "best_min_len": 5,
+      "classifier_classification": "generator_selector_hypothesis_only",
+      "controls": {
+        "random_source": {
+          "copied_digits_p95": 10,
+          "delta_p05": 5.595047029784091,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        },
+        "shuffled_target": {
+          "copied_digits_p95": 5,
+          "delta_p05": 5.595047029784091,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        }
+      },
+      "copied_digits": 0,
+      "copy_ops": 0,
+      "delta_vs_raw_bits": 10.0,
+      "digits": 10,
+      "event_samples": [
+        {
+          "kind": "literal",
+          "length": 10,
+          "start": 0
+        }
+      ],
+      "literal_digits": 10,
+      "name": "honeminas_primary_vectors",
+      "raw_digits": "4315334784"
+    },
+    {
+      "beats_random_source_p05": false,
+      "beats_shuffled_target_p05": false,
+      "best_min_len": 8,
+      "classifier_classification": "negative_control_not_true_469",
+      "controls": {
+        "random_source": {
+          "copied_digits_p95": 0,
+          "delta_p05": 10.0,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        },
+        "shuffled_target": {
+          "copied_digits_p95": 0,
+          "delta_p05": 10.0,
+          "delta_p50": 10.0,
+          "delta_p95": 10.0,
+          "trials": 1000
+        }
+      },
+      "copied_digits": 0,
+      "copy_ops": 0,
+      "delta_vs_raw_bits": 10.0,
+      "digits": 115,
+      "event_samples": [
+        {
+          "kind": "literal",
+          "length": 115,
+          "start": 0
+        }
+      ],
+      "literal_digits": 115,
+      "name": "avar_tar",
+      "raw_digits": "2963946781906337629032220116778032242967538148053946880326677633781293370117268314963043784536395783009863722953639"
+    }
+  ],
+  "inputs": {
+    "external_numeric_string_classifier": "analysis/post_review_20260619/external_numeric_string_classifier_results.json",
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:57:35.023990+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "chayenne_external_holdout_innovation_replay_gate.v1",
+  "scope": "analysis_only_external_holdout_validation_not_origin",
+  "summary": {
+    "avar_tar_copied_digits": 0,
+    "chayenne_beats_random_source_p05": true,
+    "chayenne_beats_shuffled_target_p05": true,
+    "chayenne_copied_digits": 49,
+    "chayenne_delta_vs_raw_bits": -131.25440180726756,
+    "chayenne_digits": 49,
+    "innovation_digits": 1962,
+    "promoted_external_holdout_validation": true,
+    "your_true_colour_copied_digits": 0
+  },
+  "translation_delta": "NONE"
+}

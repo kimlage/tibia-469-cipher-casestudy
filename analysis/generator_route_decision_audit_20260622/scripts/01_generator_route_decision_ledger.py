@@ -57,6 +57,8 @@ INPUTS = {
     / "analysis/numeric_innovation_source_audit_20260622/reports/test_results/01_numeric_innovation_source_gate.json",
     "external_numeric_anchor_source": ROOT
     / "analysis/external_numeric_anchor_source_audit_20260622/reports/test_results/01_external_numeric_anchor_source_gate.json",
+    "chayenne_external_holdout": ROOT
+    / "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
 }
 
 
@@ -85,6 +87,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     demand_coupling = data["innovation_demand_coupling"]
     numeric_source = data["numeric_innovation_source"]
     external_anchor_source = data["external_numeric_anchor_source"]
+    chayenne_holdout = data["chayenne_external_holdout"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -107,6 +110,9 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(numeric_source["decision"]["external_field_reduced"] is False, "numeric innovation source unexpectedly reduced a field")
     require(external_anchor_source["decision"]["external_numeric_anchor_source_promoted"] is False, "external numeric anchor source unexpectedly promoted")
     require(external_anchor_source["decision"]["external_field_reduced"] is False, "external numeric anchor source unexpectedly reduced a field")
+    require(chayenne_holdout["classification"] == "PROMOTED_CHAYENNE_EXTERNAL_HOLDOUT_VALIDATION", "Chayenne holdout validation not promoted")
+    require(chayenne_holdout["decision"]["origin_source_promoted"] is False, "Chayenne unexpectedly promoted as origin")
+    require(chayenne_holdout["decision"]["external_field_reduced"] is False, "Chayenne holdout unexpectedly reduced a field")
 
     public_surface_rows = [
         {
@@ -299,6 +305,22 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "reason": "Chayenne overlaps the innovation tape as secondary corpus-compatible validation, while promotable external anchors copy zero digits",
         },
         {
+            "route": "chayenne_external_holdout_module_bank_validation",
+            "status": "PROMOTED_EXTERNAL_HOLDOUT_VALIDATION_NOT_ORIGIN",
+            "evidence": {
+                "classification": chayenne_holdout["classification"],
+                "chayenne_copied_digits": chayenne_holdout["summary"]["chayenne_copied_digits"],
+                "chayenne_digits": chayenne_holdout["summary"]["chayenne_digits"],
+                "chayenne_delta_vs_raw_bits": chayenne_holdout["summary"]["chayenne_delta_vs_raw_bits"],
+                "beats_shuffled_target_p05": chayenne_holdout["summary"]["chayenne_beats_shuffled_target_p05"],
+                "beats_random_source_p05": chayenne_holdout["summary"]["chayenne_beats_random_source_p05"],
+                "your_true_colour_copied_digits": chayenne_holdout["summary"]["your_true_colour_copied_digits"],
+                "avar_tar_copied_digits": chayenne_holdout["summary"]["avar_tar_copied_digits"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "validates the innovation tape as a module bank on one external holdout, but does not generate event policy or content origin",
+        },
+        {
             "route": "primary_authoring_surface_or_new_causal_state",
             "status": "OPEN_REQUIRES_NEW_INFORMATION",
             "evidence": {
@@ -310,6 +332,9 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                     "innovation_demand_coupling_state",
                     "simple_numeric_innovation_source",
                     "known_external_numeric_anchor_content_source",
+                ],
+                "validated_but_not_solved": [
+                    "chayenne_external_holdout_module_bank_validation",
                 ],
                 "must_use_new_information": [
                     "external authoring surface not already covered by targeted public/community search",
@@ -340,6 +365,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
                 "small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs",
                 "known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin",
+                "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
@@ -417,6 +443,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "",
         "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
         "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, downstream-demand segment coupling, simple numeric-source content banks, and known short external numeric anchors are now tested and not promoted as executable programs.",
+        "Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.",
         "",
         "## Decision",
         "",

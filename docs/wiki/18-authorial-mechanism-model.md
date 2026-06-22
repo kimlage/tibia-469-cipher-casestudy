@@ -85,6 +85,7 @@ source_refs:
   - analysis/innovation_demand_coupling_audit_20260622
   - analysis/numeric_innovation_source_audit_20260622
   - analysis/external_numeric_anchor_source_audit_20260622
+  - analysis/chayenne_external_holdout_innovation_replay_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3998,6 +3999,16 @@ corpus-compatible validation, not an origin source; it is exactly the kind of
 overlap expected if the public Chayenne answer reused existing 469 modules. This
 is a mechanical clue, not a promoted external content source, plaintext, or
 translation.
+
+The follow-up Chayenne external-holdout replay gate uses the same fact correctly:
+not as origin, but as validation. Against the promoted unified innovation tape
+as a module bank, Chayenne reconstructs `49/49` digits with `-131.254` bits
+versus raw and beats both shuffled-target and random-source controls; `Your
+True Colour`, Secret Library, Honeminas vectors, and Avar Tar do not show the
+same compatibility. This promotes a narrow structural point: the innovation
+tape captures a reusable 469 module bank that generalizes to one public
+secondary surface. It still does not generate the 70-book event policy, explain
+innovation origin, reduce v9, or translate anything.
 
 ## Boundary
 
