@@ -1,0 +1,290 @@
+{
+  "case_reopened": false,
+  "classification": "WEAK_INTERNAL_START_PROGRAM_CLUE",
+  "compression_bound_status": "unchanged",
+  "cutoff_rows": [
+    {
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff": 20,
+      "summary": {
+        "composition_bits": 450.42981837695606,
+        "correction_bits": 727.9338501182694,
+        "explicit_opcount_cutpoint_bits": 975.5005184265436,
+        "explicit_opcount_cutpoint_type_bits": 1030.3413538961365,
+        "generated_internal_starts_before_correction": 3,
+        "nontrivial_books": 38,
+        "program_bits": 1207.254866281228,
+        "rank_bits": 28.8911977860024,
+        "saving_vs_explicit_opcount_cutpoint_bits": -231.7543478546844,
+        "saving_vs_explicit_opcount_cutpoint_type_bits": -176.9135123850915,
+        "sequence_hit_books": 15,
+        "sequence_miss_books": 35,
+        "test_books": 50,
+        "test_internal_starts": 132,
+        "test_ops": 182
+      }
+    },
+    {
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff": 30,
+      "summary": {
+        "composition_bits": 350.1611069965339,
+        "correction_bits": 552.5353500894232,
+        "explicit_opcount_cutpoint_bits": 758.8103307198768,
+        "explicit_opcount_cutpoint_type_bits": 801.6998814745027,
+        "generated_internal_starts_before_correction": 3,
+        "nontrivial_books": 30,
+        "program_bits": 910.6330950249595,
+        "rank_bits": 7.936637939002571,
+        "saving_vs_explicit_opcount_cutpoint_bits": -151.82276430508273,
+        "saving_vs_explicit_opcount_cutpoint_type_bits": -108.9332135504568,
+        "sequence_hit_books": 13,
+        "sequence_miss_books": 27,
+        "test_books": 40,
+        "test_internal_starts": 100,
+        "test_ops": 140
+      }
+    },
+    {
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff": 40,
+      "summary": {
+        "composition_bits": 227.0035736320491,
+        "correction_bits": 358.79700005769246,
+        "explicit_opcount_cutpoint_bits": 515.3784906644223,
+        "explicit_opcount_cutpoint_type_bits": 546.6062633212765,
+        "generated_internal_starts_before_correction": 3,
+        "nontrivial_books": 21,
+        "program_bits": 593.2924267860712,
+        "rank_bits": 7.491853096329674,
+        "saving_vs_explicit_opcount_cutpoint_bits": -77.91393612164893,
+        "saving_vs_explicit_opcount_cutpoint_type_bits": -46.68616346479473,
+        "sequence_hit_books": 12,
+        "sequence_miss_books": 18,
+        "test_books": 30,
+        "test_internal_starts": 65,
+        "test_ops": 95
+      }
+    },
+    {
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff": 50,
+      "summary": {
+        "composition_bits": 132.75176079662924,
+        "correction_bits": 205.323312532452,
+        "explicit_opcount_cutpoint_bits": 309.6906708636438,
+        "explicit_opcount_cutpoint_type_bits": 324.57484138275214,
+        "generated_internal_starts_before_correction": 2,
+        "nontrivial_books": 13,
+        "program_bits": 341.98196392468975,
+        "rank_bits": 3.9068905956085183,
+        "saving_vs_explicit_opcount_cutpoint_bits": -32.29129306104596,
+        "saving_vs_explicit_opcount_cutpoint_type_bits": -17.40712254193761,
+        "sequence_hit_books": 9,
+        "sequence_miss_books": 11,
+        "test_books": 20,
+        "test_internal_starts": 36,
+        "test_ops": 56
+      }
+    },
+    {
+      "coarse_model": "op_count",
+      "count_model": "book_length",
+      "cutoff": 60,
+      "summary": {
+        "composition_bits": 38.07412528927297,
+        "correction_bits": 51.43458750793272,
+        "explicit_opcount_cutpoint_bits": 104.28059657654808,
+        "explicit_opcount_cutpoint_type_bits": 108.45052157799039,
+        "generated_internal_starts_before_correction": 2,
+        "nontrivial_books": 5,
+        "program_bits": 93.4156033928142,
+        "rank_bits": 3.9068905956085183,
+        "saving_vs_explicit_opcount_cutpoint_bits": 10.864993183733873,
+        "saving_vs_explicit_opcount_cutpoint_type_bits": 15.034918185176181,
+        "sequence_hit_books": 7,
+        "sequence_miss_books": 3,
+        "test_books": 10,
+        "test_internal_starts": 10,
+        "test_ops": 20
+      }
+    }
+  ],
+  "decision": {
+    "best_pair": "book_length__op_count",
+    "exact_generator_promoted": false,
+    "program_candidate_promoted": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "examples": [
+    {
+      "book": 20,
+      "cutoff": 20,
+      "op_count": 7,
+      "top_sequence": [
+        "copy:len_0064",
+        "literal:len_0008"
+      ],
+      "true_sequence": [
+        "copy:len_0016",
+        "copy:len_0008",
+        "copy:len_0016",
+        "copy:len_0016",
+        "copy:len_0008",
+        "copy:len_0016",
+        "copy:len_0008"
+      ]
+    },
+    {
+      "book": 21,
+      "cutoff": 20,
+      "op_count": 3,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "copy:len_0016",
+        "copy:len_0256p",
+        "copy:len_0032"
+      ]
+    },
+    {
+      "book": 23,
+      "cutoff": 20,
+      "op_count": 12,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "literal:len_0008",
+        "copy:len_0016",
+        "literal:len_0008",
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0016",
+        "copy:len_0008",
+        "literal:len_0008",
+        "copy:len_0016",
+        "copy:len_0032",
+        "literal:len_0008",
+        "copy:len_0032"
+      ]
+    },
+    {
+      "book": 24,
+      "cutoff": 20,
+      "op_count": 3,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "copy:len_0064",
+        "copy:len_0128",
+        "copy:len_0016"
+      ]
+    },
+    {
+      "book": 25,
+      "cutoff": 20,
+      "op_count": 2,
+      "top_sequence": [
+        "copy:len_0064",
+        "literal:len_0008"
+      ],
+      "true_sequence": [
+        "literal:len_0008",
+        "copy:len_0032"
+      ]
+    },
+    {
+      "book": 26,
+      "cutoff": 20,
+      "op_count": 4,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "copy:len_0016",
+        "copy:len_0016",
+        "literal:len_0008",
+        "copy:len_0256p"
+      ]
+    },
+    {
+      "book": 28,
+      "cutoff": 20,
+      "op_count": 5,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "copy:len_0128",
+        "copy:len_0008",
+        "copy:len_0016",
+        "copy:len_0032",
+        "copy:len_0032"
+      ]
+    },
+    {
+      "book": 29,
+      "cutoff": 20,
+      "op_count": 4,
+      "top_sequence": [
+        "copy:len_0064",
+        "copy:len_0064",
+        "copy:len_0064"
+      ],
+      "true_sequence": [
+        "copy:len_0128",
+        "copy:len_0032",
+        "copy:len_0008",
+        "copy:len_0016"
+      ]
+    }
+  ],
+  "inputs": {
+    "book_level_controller_gate": "analysis/book_level_coarse_length_controller_audit_20260622/reports/test_results/01_book_level_coarse_length_controller_gate.json",
+    "book_level_controller_script": "analysis/book_level_coarse_length_controller_audit_20260622/scripts/01_book_level_coarse_length_controller_gate.py",
+    "parser_decoder_frontier_synthesis": "analysis/parser_decoder_frontier_synthesis_audit_20260622/reports/test_results/01_parser_decoder_frontier_synthesis.json"
+  },
+  "plaintext_claim": false,
+  "schema": "target_free_internal_start_program_gate.v1",
+  "scope": "analysis_only_internal_start_program_from_book_level_type_length_beam",
+  "summary": {
+    "best_pair": "book_length__op_count",
+    "classification": "WEAK_INTERNAL_START_PROGRAM_CLUE",
+    "composition_bits": 1198.4203850914414,
+    "correction_bits": 1896.02410030577,
+    "explicit_opcount_cutpoint_bits": 2663.660607251035,
+    "explicit_opcount_cutpoint_type_bits": 2811.6728616526584,
+    "generated_internal_start_fraction": 0.037900874635568516,
+    "generated_internal_starts_before_correction": 13,
+    "nontrivial_books": 107,
+    "program_bits": 3146.577955409763,
+    "random_exact_sequence_p95": 37,
+    "rank_bits": 52.13347001255168,
+    "route_boundary": "program candidate only; exact residual composition index and coarse-sequence corrections remain external",
+    "saving_vs_explicit_opcount_cutpoint_bits": -482.91734815872815,
+    "saving_vs_explicit_opcount_cutpoint_type_bits": -334.90509375710445,
+    "sequence_hit_books": 56,
+    "sequence_miss_books": 94,
+    "test_books": 150,
+    "test_internal_starts": 343,
+    "test_ops": 493
+  },
+  "translation_delta": "NONE"
+}
