@@ -4,7 +4,7 @@ page_type: finding
 context: bonelord-469
 visibility: public_candidate
 status: frozen
-updated_at: 2026-06-21
+updated_at: 2026-06-22
 moc_parent: README.md
 source_refs:
   - analysis/authorial_mechanism_20260620
@@ -23,6 +23,7 @@ source_refs:
   - analysis/source_tape_removal_program_audit_20260622
   - analysis/book_level_controller_program_integration_audit_20260622
   - analysis/executable_program_frontier_synthesis_audit_20260622
+  - analysis/joint_chunk_origin_route_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -777,6 +778,16 @@ tape removal (`-1609.513` bits), and book-level controller integration
 representation is useful for accounting, but the next real generator route
 needs a representation change, most likely a joint chunk-origin program, not
 another local field codec.
+A joint chunk-origin route audit then makes that representation change
+explicit. Exact target-chunk dictionaries are rejected (`256/261` operation
+chunks unique; all-chunk dictionary `+32442.167` bits versus the
+target-conditioned baseline), shallow chunk signatures are rejected, the
+current external-tape program remains a frontier ledger, and
+target-conditioned source collapse remains lower-bound-only because it grants
+the missing target chunk. The selected next gate is
+`joint_chunk_origin_beam_pilot`, which must propose chunk-origin hypotheses
+jointly with source choice, length, and literal innovation; no generator is
+promoted by this route-selection audit.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3121,6 +3132,8 @@ book generation, not row0 pair-cell placement.
 - [Book-level controller program integration gate](../../analysis/book_level_controller_program_integration_audit_20260622/reports/test_results/01_book_level_controller_program_integration_gate.md)
 - [Final executable program frontier synthesis audit](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/final_executable_program_frontier_synthesis_audit.md)
 - [Executable program frontier synthesis](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.md)
+- [Final joint chunk-origin route audit](../../analysis/joint_chunk_origin_route_audit_20260622/reports/final_joint_chunk_origin_route_audit.md)
+- [Joint chunk-origin route gate](../../analysis/joint_chunk_origin_route_audit_20260622/reports/test_results/01_joint_chunk_origin_route_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

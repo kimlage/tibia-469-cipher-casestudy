@@ -1,0 +1,108 @@
+{
+  "case_reopened": false,
+  "classification": "JOINT_CHUNK_ORIGIN_ROUTE_REQUIRED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "next_frontier": "joint_chunk_origin_beam_pilot",
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "chunk_dictionary": "analysis/target_chunk_dictionary_audit_20260621/reports/test_results/01_target_chunk_dictionary_gate.json",
+    "chunk_signature": "analysis/target_chunk_signature_audit_20260621/reports/test_results/01_target_chunk_signature_gate.json",
+    "executable_frontier": "analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.json",
+    "segmentation": "analysis/segmentation_decision_audit_20260621/reports/test_results/02_structural_segmentation_hypothesis_audit.json",
+    "source_boundary": "analysis/segmentation_decision_audit_20260621/reports/test_results/15_source_boundary_alignment_audit.json",
+    "source_collapse": "analysis/target_conditioned_source_collapse_audit_20260621/reports/test_results/01_target_conditioned_source_collapse_gate.json"
+  },
+  "next_gate": {
+    "granted": [
+      "book order",
+      "book_length",
+      "seed books 0..9",
+      "row0 as exogenous substrate"
+    ],
+    "minimum_success": [
+      "at least one nontrivial held-out book exact without full atlas correction",
+      "or reduction of combined chunk/source/literal external ledger after paid corrections",
+      "and stronger than same-length/chunk-shuffled controls"
+    ],
+    "name": "joint_chunk_origin_beam_pilot",
+    "not_granted": [
+      "exact target chunks",
+      "copy source tape",
+      "exact coarse sequence atlas",
+      "composition index",
+      "literal payload as separate tape"
+    ],
+    "purpose": "construct a beam over chunk-origin hypotheses instead of field tapes"
+  },
+  "plaintext_claim": false,
+  "requirements": [
+    {
+      "failure_condition": "if exact chunks must be declared or payload signatures are used, route collapses to rejected dictionary/signature accounts",
+      "requirement": "generate_or_keep_target_chunks_without_exact_chunk_dictionary",
+      "testable_gate": "prefix/family holdout must keep true chunk stream in beam above same-length/chunk-shuffled controls"
+    },
+    {
+      "failure_condition": "if source policy still needs future target text outside the generated chunk candidate, source remains external",
+      "requirement": "choose_source_and_length_jointly_after_chunk_hypothesis",
+      "testable_gate": "given generated chunk candidates, earliest-source collapse should reduce source tape with paid exceptions"
+    },
+    {
+      "failure_condition": "if literal tape remains a separate payload declaration, representation has not changed enough",
+      "requirement": "consume_literal_innovation_as_part_of_chunk_origin",
+      "testable_gate": "literal/copy chunk candidates must share one innovation process and improve over separate literal payload + composition/source tapes"
+    },
+    {
+      "failure_condition": "if corrections exceed direct external tape declaration, it is only a predictive clue",
+      "requirement": "execute_decoder_without_atlas_corrections_dominating",
+      "testable_gate": "controller must reduce executable ledger after model, beam-rank, and correction costs"
+    },
+    {
+      "failure_condition": "if gains vanish under controls, classify as parser/compressor artifact",
+      "requirement": "survive_controls",
+      "testable_gate": "prefix holdout, public-bookcase family holdout, same-multiset chunk shuffle, same-length random chunks, and permuted train controls"
+    }
+  ],
+  "route_rows": [
+    {
+      "evidence": "unique chunks 256/261; copy unique 207/208; dictionary delta 32442.167 bits",
+      "reason": "mostly declares target payload rather than generating chunks",
+      "route": "exact_target_chunk_dictionary",
+      "status": "REJECTED"
+    },
+    {
+      "evidence": "best non-payload family kind_x_book_mod10_x_length_bucket has 85 signatures and 22 singleton rows; payload signatures rely on target digits",
+      "reason": "non-payload signatures leave exact chunks unresolved; payload signatures are target-text oracles",
+      "route": "coarse_target_chunk_signature",
+      "status": "REJECTED"
+    },
+    {
+      "evidence": "roundtrip True; promoted executable reductions 0; rejected routes 3",
+      "reason": "valid ledger but no tape reducer promotes inside decoder",
+      "route": "current_external_tape_program",
+      "status": "FRONTIER"
+    },
+    {
+      "evidence": "source choice collapses after target chunk is granted, but target chunk remains the missing generator",
+      "reason": "useful lower bound for a future joint program, not decoder-visible",
+      "route": "target_conditioned_source_collapse",
+      "status": "LOWER_BOUND_ONLY"
+    },
+    {
+      "evidence": "prior source-boundary alignment found no single-prior-chunk copy explanation and source starts/end rarely align to op boundaries",
+      "reason": "operation chunks are not reused as simple block units",
+      "route": "operation_boundary_chunk_reuse",
+      "status": "REJECTED"
+    }
+  ],
+  "scope": "analysis_only_joint_chunk_origin_route_selection",
+  "summary": {
+    "frontier_routes": 1,
+    "lower_bound_only_routes": 1,
+    "next_gate": "joint_chunk_origin_beam_pilot",
+    "rejected_routes": 3
+  },
+  "translation_delta": "NONE"
+}

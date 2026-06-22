@@ -4,7 +4,7 @@ page_type: finding
 context: bonelord-469
 visibility: public_candidate
 status: frozen
-updated_at: 2026-06-21
+updated_at: 2026-06-22
 moc_parent: README.md
 source_refs:
   - analysis/mechanism_model_20260618
@@ -27,6 +27,7 @@ source_refs:
   - analysis/source_tape_removal_program_audit_20260622
   - analysis/book_level_controller_program_integration_audit_20260622
   - analysis/executable_program_frontier_synthesis_audit_20260622
+  - analysis/joint_chunk_origin_route_audit_20260622
 ---
 
 # 13. Mechanical Origin Model v1
@@ -394,6 +395,7 @@ The model is mechanical only. It is not a semantic decoder.
 | Source tape removal program audit | tests whether the executable decoder can remove the copy source/hint tape using decoder-visible source policies plus paid uniform source-address exceptions; best `previous_source_end` hits `22/537` holdout copy ops, produces `0` unrepaired exact books, and costs `6672.081` bits versus `5062.568` copy-hint baseline (`-1609.513`, random visible-source p95 `-8.288`) | source tape remains external |
 | Book-level controller program integration audit | inserts the frozen `book_length__op_count` controller into the executable decoder and compares it to the paid `coarse_control + composition_index` ledger; controller+beam/full-sequence corrections cost `4069.056` bits vs `3824.176` baseline (`-244.881`) with `0.000` model cost, true sequence in beam `66/186` (`16` nontrivial), and top-1 exact books all trivial (`38`, `0` nontrivial) | controller clue not promoted as executable program |
 | Executable program frontier synthesis | consolidates the current executable decoder state: roundtrip remains `70/70`, but promoted executable tape reductions are `0`; external tape cost is `4358.858` bits excluding seed and `9992.848` including seed, while macro/template (`-4942.611`), source tape removal (`-1609.513`), and book-level controller integration (`-244.881`) are all rejected inside the decoder | current tape-ledger representation at frontier / representation change required |
+| Joint chunk-origin route audit | consolidates rejected exact chunk dictionaries (`256/261` unique operation chunks, `+32442.167` bits), rejected shallow chunk signatures, the current external-tape frontier, and target-conditioned source collapse as lower-bound-only evidence; selects `joint_chunk_origin_beam_pilot` as the next falsifiable representation route | route selected / no generator promoted |
 | Shared innovation tape audit | tests whether the already-paid `266` literal innovation digits can also drive the `261` within-bucket length residuals with one digit per op and prefix-selected arithmetic policies; the real tape is less bad than shuffled same-multiset controls (`-36.755` bits vs p95 `-56.770`) but still worse than uniform residual declaration, with only `53/493` suffix hits | weak shared-tape clue / residual length tape retained |
 | Closed-loop digit survival gate | removes within-book target teacher forcing while granting book length and true prior material; the real stream is never top-1 or present in the finished beam (`0/150`), true-prefix survival is `0/150`, and mean true-prefix max fraction is only `0.007754` | closed-loop digit generator rejected |
 | Innovation stream transducer audit | recasts the `266` literal payload digits as one innovation tape; target-conditioned replay reaches `22/60` exact books but does not beat shuffled-tape p95 (`23`), while tape-structure tests promote a clue: seed coverage beats controls at minlen `3/4/5` (`231`, `153`, `87` digits vs p95 `187`, `71`, `20`) and Markov order `2` is `879.609` bits vs shuffled p05 `898.869`; tape-synchronized closed-loop generation still has `0/60` exact books, but true-prefix survival is `19/60` vs shuffled p95 `7.45`; paid seed subcodec remains `+180.128` bits worse than raw tape but beats shuffled subcodec controls; seed-walk deltas are rejected; hybrid seed+prior tape subcodec is also rejected (`1075.983` bits vs `883.633` raw; `-192.350` saving); book-control header packaging beats separate field coding in `5/5` cutoffs but has no predictive clue over shuffled controls (`0/5`); tape-schedule sparsity saves `221.844` bits but no feature improves over global-majority; at known op-starts, target-conditioned copy availability predicts literal/copy triggers at `172/182` holdout ops and saves `48.262` bits vs literal-site lookup, but decoder-visible features without target-conditioned availability collapse to baseline (`0/27` literal hits, `-4.807` bits); replacing exact starts with the `right_ge:4` candidate set still lets `book_start_x_copy_available` recover `46/120` holdout starts and save `116.856` bits vs three-way lookup; removing copy availability leaves only a book-start clue (`34/94` starts, `87.064` bits), internal starts are rejected even with target-conditioned copy availability (`0/70`, `-5.285` bits), and first-op literal/copy mode has no promoted target-free rule (`13/47` literal/copy starts, best non-global `-4.000` bits); frontier ledger identifies `201` internal ops, `107` missed internal starts under `right_ge:4`, and internal op-start generation as the main blocker; length-control tape beats shuffled paid controls in `4/5` prefix holdouts but depends on type stream in `4/5` and beats fixed-op cutpoint composition in `0/5`; joint `type:length` control also beats shuffled controls in `4/5`, but has `97` pair symbols and beats fixed-op cutpoint+type composition in `0/5` | tape structure + book-start existence + control-stream clues promoted / tape subcodec, header predictor, and skeleton replacement rejected / generator not promoted |
@@ -945,6 +947,10 @@ claims remain inadmissible.
   [final_executable_program_frontier_synthesis_audit.md](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/final_executable_program_frontier_synthesis_audit.md)
 - Executable program frontier synthesis:
   [01_executable_program_frontier_synthesis.md](../../analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.md)
+- Final joint chunk-origin route audit:
+  [final_joint_chunk_origin_route_audit.md](../../analysis/joint_chunk_origin_route_audit_20260622/reports/final_joint_chunk_origin_route_audit.md)
+- Joint chunk-origin route gate:
+  [01_joint_chunk_origin_route_gate.md](../../analysis/joint_chunk_origin_route_audit_20260622/reports/test_results/01_joint_chunk_origin_route_gate.md)
 - Final shared innovation tape audit:
   [final_shared_innovation_tape_audit.md](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - Shared literal-length tape gate:
