@@ -37,6 +37,7 @@ source_refs:
   - analysis/digit_content_boundary_transducer_audit_20260622
   - analysis/physical_topology_control_signal_audit_20260622
   - analysis/book_residual_mode_coupling_audit_20260622
+  - analysis/latent_book_mode_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -918,6 +919,14 @@ also survives (`357.235` saved versus p95 `132.102`). This does not generate
 exact `type:length`, literal payload, or copy hints, but it promotes a new
 representation target: a latent book-mode program over residual burdens rather
 than more local endpoint/source selectors.
+A latent book-mode program gate then tests that exact next step and demotes the
+simple version. Features available to the decoder (`book_length` bucket,
+numeric phase, and previous decoded mode) do not predict the residual mode well
+enough: the selected program costs `945.479` bits versus `891.772` global mode
+bits (`-53.707` saving), has only `2/20` positive splits, and does not beat
+shuffled-mode p95. The coupling remains useful evidence that residual burdens
+are synchronized, but the mode is still a paid compact label under current
+features, not a generated book controller.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
