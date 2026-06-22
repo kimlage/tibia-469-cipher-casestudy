@@ -84,6 +84,7 @@ source_refs:
   - analysis/primary_authoring_surface_search_audit_20260622
   - analysis/innovation_demand_coupling_audit_20260622
   - analysis/numeric_innovation_source_audit_20260622
+  - analysis/external_numeric_anchor_source_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3987,6 +3988,16 @@ parse copies only `24` digits in `3` copy ops, costs `+9.954` bits versus raw
 declaration, has `0/3` positive prefix holdouts, and does not beat random-source
 or shuffled-target controls. Simple numeric sources are therefore not promoted
 as the missing innovation content source.
+
+A known external numeric-anchor source gate then tests the short public/official
+469-like strings directly as innovation content sources. The distinction matters:
+promotable external anchors (`Your True Colour`, Secret Library) copy `0`
+innovation digits and cost `+10.585` bits versus raw declaration. Chayenne alone
+copies `245` digits with `-338.627` bit delta, but it is classified as secondary
+corpus-compatible validation, not an origin source; it is exactly the kind of
+overlap expected if the public Chayenne answer reused existing 469 modules. This
+is a mechanical clue, not a promoted external content source, plaintext, or
+translation.
 
 ## Boundary
 

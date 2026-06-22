@@ -25,6 +25,7 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `simple_global_content_objective_event_program` | `TESTED_NOT_PROMOTED` | `False` | target-free cost minimization over literal/copy events does not keep the true suffix in beam |
 | `innovation_demand_coupling_state` | `WEAK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | downstream demand segments weakly contain replay events but do not derive replay boundaries or reduce v9 fields |
 | `simple_numeric_innovation_source` | `TESTED_NOT_PROMOTED` | `False` | mathematical constants/simple sequences/fixed PRNG controls do not provide the innovation content source after paid costs and controls |
+| `known_external_numeric_anchor_content_source` | `WEAK_CHAYENNE_CLUE_NOT_ORIGIN_SOURCE` | `False` | Chayenne overlaps the innovation tape as secondary corpus-compatible validation, while promotable external anchors copy zero digits |
 | `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
 
 ## Next Work Contract
@@ -45,6 +46,7 @@ Do not count as progress:
 - target-free literal/copy cost minimization that loses the true suffix immediately
 - demand-segment containment clues that do not derive replay boundaries or reduce decoder fields
 - small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs
+- known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin
 - semantic/plaintext/row0 reopening
 
 ## Decision

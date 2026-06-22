@@ -12,6 +12,7 @@
     "external_06": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/06_clean_topology_v9_control_protocol.json",
     "external_07": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/07_tales_libsearch_book_database_probe.json",
     "external_08": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/08_arturo_bookcase_mapping_control_probe.json",
+    "external_numeric_anchor_source": "analysis/external_numeric_anchor_source_audit_20260622/reports/test_results/01_external_numeric_anchor_source_gate.json",
     "global_content_objective": "analysis/global_content_objective_event_program_audit_20260622/reports/test_results/01_global_content_objective_event_program_gate.json",
     "innovation_demand_coupling": "analysis/innovation_demand_coupling_audit_20260622/reports/test_results/01_innovation_demand_coupling_gate.json",
     "innovation_policy": "analysis/innovation_replay_policy_frontier_audit_20260622/reports/test_results/01_innovation_replay_policy_frontier_gate.json",
@@ -37,11 +38,12 @@
       "target-free literal/copy cost minimization that loses the true suffix immediately",
       "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
       "small banks of constants/simple numeric sequences/PRNG controls that do not reduce the innovation tape after paid costs",
+      "known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-22T23:49:48.921934+00:00",
+  "retrieved_at_utc": "2026-06-22T23:54:19.649233+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -216,6 +218,21 @@
       "status": "TESTED_NOT_PROMOTED"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "chayenne_copied_digits": 245,
+        "chayenne_delta_vs_raw_bits": -338.6269030697358,
+        "classification": "chayenne_secondary_overlap_weak_clue_not_origin",
+        "holdout_count": 3,
+        "positive_holdouts": 2,
+        "promotable_sources_copied_digits": 0,
+        "promotable_sources_delta_vs_raw_bits": 10.584962500721304
+      },
+      "reason": "Chayenne overlaps the innovation tape as secondary corpus-compatible validation, while promotable external anchors copy zero digits",
+      "route": "known_external_numeric_anchor_content_source",
+      "status": "WEAK_CHAYENNE_CLUE_NOT_ORIGIN_SOURCE"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
@@ -230,7 +247,8 @@
           "causal_content_aware_event_policy_program",
           "simple_global_content_objective_event_program",
           "innovation_demand_coupling_state",
-          "simple_numeric_innovation_source"
+          "simple_numeric_innovation_source",
+          "known_external_numeric_anchor_content_source"
         ]
       },
       "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",
