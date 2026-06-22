@@ -1,0 +1,209 @@
+{
+  "case_reopened": false,
+  "classification": "shared_literal_length_tape_weak_clue",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "beats_random_p95": true,
+    "meaningful_saving": false,
+    "row0_status": "unchanged_exogenous",
+    "status": "WEAK_SHARED_INNOVATION_TAPE"
+  },
+  "inputs": {
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json",
+    "literal_tape_digits": 266,
+    "policies_tested": 264,
+    "random_trials": 300,
+    "residual_events": 261
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "cutoff": 20,
+      "selected_policy": {
+        "a": 1,
+        "b": 0,
+        "name": "digit_scaled_round",
+        "offset": 5
+      },
+      "test_ops": 182,
+      "test_score": {
+        "correction_bits": 707.811987640404,
+        "correction_payload_bits": 601.1665328248988,
+        "hit_rate": 0.14835164835164835,
+        "hits": 27,
+        "mismatches": 155,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -9.486583244263898,
+        "site_bits": 106.64545481550519,
+        "uniform_bits": 698.3254043961401
+      },
+      "train_ops": 79,
+      "train_score": {
+        "correction_bits": 274.04195359916423,
+        "correction_payload_bits": 236.45942086186412,
+        "hit_rate": 0.11392405063291139,
+        "hits": 9,
+        "mismatches": 70,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -5.72922318189643,
+        "site_bits": 37.58253273730011,
+        "uniform_bits": 268.3127304172678
+      }
+    },
+    {
+      "cutoff": 30,
+      "selected_policy": {
+        "a": 1,
+        "b": 0,
+        "name": "digit_mod",
+        "offset": 5
+      },
+      "test_ops": 140,
+      "test_score": {
+        "correction_bits": 567.2841130051385,
+        "correction_payload_bits": 501.716445981734,
+        "hit_rate": 0.10714285714285714,
+        "hits": 15,
+        "mismatches": 125,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -14.075813927074819,
+        "site_bits": 65.56766702340447,
+        "uniform_bits": 553.2082990780636
+      },
+      "train_ops": 121,
+      "train_score": {
+        "correction_bits": 423.1707437955879,
+        "correction_payload_bits": 358.21517510784514,
+        "hit_rate": 0.1322314049586777,
+        "hits": 16,
+        "mismatches": 105,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -9.740908060243555,
+        "site_bits": 64.95556868774278,
+        "uniform_bits": 413.42983573534434
+      }
+    },
+    {
+      "cutoff": 40,
+      "selected_policy": {
+        "a": 1,
+        "b": 0,
+        "name": "digit_mod",
+        "offset": 5
+      },
+      "test_ops": 95,
+      "test_score": {
+        "correction_bits": 388.8895909466329,
+        "correction_payload_bits": 348.793802457308,
+        "hit_rate": 0.09473684210526316,
+        "hits": 9,
+        "mismatches": 86,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -10.60393539299531,
+        "site_bits": 40.09578848932489,
+        "uniform_bits": 378.2856555536376
+      },
+      "train_ops": 166,
+      "train_score": {
+        "correction_bits": 601.3591867332415,
+        "correction_payload_bits": 511.13781863227115,
+        "hit_rate": 0.13253012048192772,
+        "hits": 22,
+        "mismatches": 144,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -13.006707473471124,
+        "site_bits": 90.22136810097037,
+        "uniform_bits": 588.3524792597703
+      }
+    },
+    {
+      "cutoff": 50,
+      "selected_policy": {
+        "a": 1,
+        "b": 0,
+        "name": "digit_mod",
+        "offset": 5
+      },
+      "test_ops": 56,
+      "test_score": {
+        "correction_bits": 233.94550057287614,
+        "correction_payload_bits": 223.35678593729384,
+        "hit_rate": 0.03571428571428571,
+        "hits": 2,
+        "mismatches": 54,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -2.588714635582278,
+        "site_bits": 10.588714635582303,
+        "uniform_bits": 231.35678593729386
+      },
+      "train_ops": 205,
+      "train_score": {
+        "correction_bits": 753.4778853464525,
+        "correction_payload_bits": 636.5748351522853,
+        "hit_rate": 0.14146341463414633,
+        "hits": 29,
+        "mismatches": 176,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -18.1965364703384,
+        "site_bits": 116.90305019416711,
+        "uniform_bits": 735.2813488761141
+      }
+    },
+    {
+      "cutoff": 60,
+      "selected_policy": {
+        "a": 1,
+        "b": 0,
+        "name": "digit_mod",
+        "offset": 5
+      },
+      "test_ops": 20,
+      "test_score": {
+        "correction_bits": 83.89763140305314,
+        "correction_payload_bits": 83.89763140305314,
+        "hit_rate": 0.0,
+        "hits": 0,
+        "mismatches": 20,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": 0.0,
+        "site_bits": 0.0,
+        "uniform_bits": 83.89763140305314
+      },
+      "train_ops": 241,
+      "train_score": {
+        "correction_bits": 905.7611993567454,
+        "correction_payload_bits": 776.033989686526,
+        "hit_rate": 0.12863070539419086,
+        "hits": 31,
+        "mismatches": 210,
+        "missing_digits": 0,
+        "saving_vs_uniform_bits": -23.02069594639056,
+        "site_bits": 129.7272096702194,
+        "uniform_bits": 882.7405034103548
+      }
+    }
+  ],
+  "scope": "analysis_only_shared_literal_tape_to_length_residual",
+  "summary": {
+    "observed_hit_rate": 0.1075050709939148,
+    "observed_saving_vs_uniform_bits": -36.75504719991659,
+    "observed_total_correction_bits": 1981.8288235681048,
+    "observed_total_hits": 53,
+    "observed_total_rows": 493,
+    "observed_total_uniform_bits": 1945.0737763681882,
+    "random_saving_p05": -82.17284603762536,
+    "random_saving_p95": -56.769835237460924,
+    "selected_policy_counts": {
+      "{'name': 'digit_mod', 'offset': 5, 'a': 1, 'b': 0}": 4,
+      "{'name': 'digit_scaled_round', 'offset': 5, 'a': 1, 'b': 0}": 1
+    }
+  },
+  "translation_delta": "NONE"
+}

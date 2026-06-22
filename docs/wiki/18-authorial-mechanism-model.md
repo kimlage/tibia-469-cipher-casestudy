@@ -702,6 +702,15 @@ residual is not generated: the best residual context, `type_bucket`, is still
 `117.997` bits worse than uniform residual declaration, and no residual feature
 is promoted. The blocker is therefore narrower but still external:
 within-bucket length innovation.
+A shared innovation tape audit then tests whether that fine length residual can
+reuse the already-paid literal innovation tape. The sizes make the hypothesis
+worth testing (`266` literal-tape digits versus `261` length-residual events),
+but the one-digit-per-op policies do not replace the residual tape. The real
+tape is less bad than shuffled same-multiset controls after prefix selection
+(`-36.755` bits versus p95 `-56.770`), yet it is still worse than uniform
+residual declaration and hits only `53/493` suffix residuals. This is retained
+only as a weak shared-innovation clue; the within-bucket residual tape remains
+external.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -3021,6 +3030,8 @@ book generation, not row0 pair-cell placement.
 - [Stateful control program gate](../../analysis/stateful_control_program_audit_20260622/reports/test_results/01_stateful_control_program_gate.md)
 - [Final length innovation factor audit](../../analysis/length_innovation_factor_audit_20260622/reports/final_length_innovation_factor_audit.md)
 - [Length innovation factor gate](../../analysis/length_innovation_factor_audit_20260622/reports/test_results/01_length_innovation_factor_gate.md)
+- [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
+- [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
 - [Book control header gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/18_book_control_header_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
