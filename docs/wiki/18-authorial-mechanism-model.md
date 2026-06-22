@@ -66,6 +66,7 @@ source_refs:
   - analysis/lineage_signature_library_audit_20260622
   - analysis/residual_content_basis_program_audit_20260622
   - analysis/residual_content_fingerprint_program_audit_20260622
+  - analysis/seed_bootstrap_copy_surface_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3622,6 +3623,7 @@ book generation, not row0 pair-cell placement.
 - [Lineage signature library audit](../../analysis/lineage_signature_library_audit_20260622/reports/final_lineage_signature_library_audit.md)
 - [Residual content-basis program audit](../../analysis/residual_content_basis_program_audit_20260622/reports/final_residual_content_basis_program_audit.md)
 - [Residual content-fingerprint program audit](../../analysis/residual_content_fingerprint_program_audit_20260622/reports/final_residual_content_fingerprint_program_audit.md)
+- [Seed bootstrap copy-surface audit](../../analysis/seed_bootstrap_copy_surface_audit_20260622/reports/final_seed_bootstrap_copy_surface_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3705,6 +3707,17 @@ policy is `prefix_1`, already `+245.804` bits worse than copy-hint and with
 `0` unique content selections. Longer edge fingerprints eventually become
 unique (`edge_8` has `90/90` unique selections), but at `+1549.686` bits. The
 route is therefore not a smaller content-selection program.
+
+The next constructive pivot is seed bootstrap, because the v6 ledger still pays
+books `0..9` as `1696` raw digits (`5633.990` bits). A target-conditioned
+copy-surface audit finds that this field is not random-looking under previous
+copy: at `min_len=4`, `1335/1696` seed digits are copy-covered, versus
+same-multiset shuffled p95 `534`. The clue is strong across min_lens
+`[4, 5, 6, 8, 10, 12]`, but it is still only a surface clue. Book-order
+permutation controls show that most of the signal comes from repeated content,
+not from proving canonical `0..9` as authorial seed order. The next real gate is
+a target-free bootstrap policy that derives seed copy starts/choices from a
+smaller innovation tape.
 
 ## Boundary
 
