@@ -34,6 +34,7 @@ source_refs:
   - analysis/within_book_order_program_audit_20260622
   - analysis/sequence_mutation_program_audit_20260622
   - analysis/generative_route_frontier_synthesis_audit_20260622
+  - analysis/digit_content_boundary_transducer_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -873,6 +874,13 @@ route is therefore not another operation-token decomposition, but a
 to derive internal operation starts and copy/literal triggers without granting
 target-conditioned copy availability, exact internal starts, book multisets, or
 operation-token order.
+The first digit/content-boundary transducer gate then labels every internal
+digit position as `nonstart`, `literal`, or `copy` using only decoder-visible
+prefix/content features. The selected feature (`suffix4_seen`) beats
+shuffled-label p05 in `4/5` prefix cells and saves `31.030` bits versus a global
+label model, but it predicts `0` start labels and costs `3075.566` bits versus
+`2160.605` true-count composition bits (`+914.961`). This is a weak content
+clue, not an internal-start generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3239,6 +3247,8 @@ book generation, not row0 pair-cell placement.
 - [Sequence mutation program gate](../../analysis/sequence_mutation_program_audit_20260622/reports/test_results/01_sequence_mutation_program_gate.md)
 - [Final generative route frontier synthesis audit](../../analysis/generative_route_frontier_synthesis_audit_20260622/reports/final_generative_route_frontier_synthesis_audit.md)
 - [Generative route frontier synthesis](../../analysis/generative_route_frontier_synthesis_audit_20260622/reports/test_results/01_generative_route_frontier_synthesis.md)
+- [Final digit content boundary transducer audit](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/final_digit_content_boundary_transducer_audit.md)
+- [All-position boundary transducer gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/01_all_position_boundary_transducer_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
