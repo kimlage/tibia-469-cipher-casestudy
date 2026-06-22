@@ -625,6 +625,13 @@ current beam, the true book is never top-1 or present in the finished beam
 prefix fraction is only `0.007754`. This rejects the current model as a
 closed-loop digit generator: the teacher-forced parser clue does not yet become
 a self-generating process.
+A closed-loop rescue ledger then asks whether the miss is at least close enough
+for a compact latent steering state. On a fixed first/middle/last suffix-book
+sample per cutoff (`15` book instances), oracle rescues can force all books
+exact but require `1732` rescues, `21403.967` rescue bits, and `3.069669x` the
+raw digit cost; no sampled book needs zero rescues, and the first rescue happens
+near the first `1.5%` of each book. This is high external control, not a
+near-miss beam-width artifact.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -2915,6 +2922,7 @@ book generation, not row0 pair-cell placement.
 - [Final latent transducer generation audit](../../analysis/latent_transducer_generation_audit_20260622/reports/final_latent_transducer_generation_audit.md)
 - [Latent transducer beam gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/01_latent_transducer_beam_gate.md)
 - [Closed loop digit survival gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/03_closed_loop_digit_survival_gate.md)
+- [Closed loop rescue ledger](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/04_closed_loop_rescue_ledger.md)
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)
