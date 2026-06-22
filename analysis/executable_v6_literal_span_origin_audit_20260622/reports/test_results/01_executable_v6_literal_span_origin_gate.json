@@ -1,0 +1,56 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V6_LITERAL_SPAN_ORIGIN_LEDGER",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "executable_v6_promoted": true,
+    "next_blocker": "90 v5 fallback copy origins, literal payload, residual composition, seed payload, and row0 remain external",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v5_gate": "analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/test_results/01_executable_v5_source_endpoint_memory_gate.json",
+    "joint_content_origin_gate": "analysis/joint_content_origin_program_audit_20260622/reports/test_results/01_joint_content_origin_program_gate.json",
+    "joint_content_origin_script": "analysis/joint_content_origin_program_audit_20260622/scripts/01_joint_content_origin_program_gate.py",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v6_literal_span_origin_gate.v1",
+  "scope": "analysis_only_executable_v6_literal_span_origin",
+  "summary": {
+    "class_counts": {
+      "both_endpoint_interval": 52,
+      "end_only": 55,
+      "fallback": 90,
+      "literal_span_source": 11
+    },
+    "copy_bits": 1863.4249407956356,
+    "copy_ops": 208,
+    "delta_excluding_seed_vs_v5": -32.319655886264854,
+    "delta_including_seed_vs_v5": -32.319655886264854,
+    "fallback_copy_hint_bits_before": 891.1177777521392,
+    "fallback_copy_hint_bits_remaining": 779.5709514714924,
+    "fallback_copy_hint_bits_replaced": 111.5468262806468,
+    "literal_payload_bits": 883.6328732400384,
+    "literal_span_origin_bits": 858.7981218658744,
+    "literal_span_origin_bits_before_declaration": 76.90524229949433,
+    "literal_span_source_events": 11,
+    "online_x64_coarse_bits": 876.412,
+    "residual_composition_bits": 439.958642781383,
+    "seed_payload_bits": 5633.990048928967,
+    "v5_external_bits_excluding_seed": 4097.333075204043,
+    "v5_external_bits_including_seed": 9731.32312413301,
+    "v6_external_bits_excluding_seed": 4065.0134193177782,
+    "v6_external_bits_including_seed": 9699.003468246745
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "derived_literal_span_sources_match_raw": 11,
+    "errors": [],
+    "exact_books": 70,
+    "literal_span_source_events": 11,
+    "roundtrip_70_70": true
+  }
+}

@@ -60,6 +60,8 @@ source_refs:
   - analysis/executable_v5_source_endpoint_memory_audit_20260622
   - analysis/v5_external_dependency_frontier_synthesis_audit_20260622
   - analysis/joint_content_origin_program_audit_20260622
+  - analysis/executable_v6_literal_span_origin_audit_20260622
+  - analysis/causal_event_graph_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3610,6 +3612,8 @@ book generation, not row0 pair-cell placement.
 - [Unanchored copy-origin representation audit](../../analysis/unanchored_copy_origin_representation_audit_20260622/reports/final_unanchored_copy_origin_representation_audit.md)
 - [Executable v5 source-endpoint memory audit](../../analysis/executable_v5_source_endpoint_memory_audit_20260622/reports/final_executable_v5_source_endpoint_memory_audit.md)
 - [Joint content-origin program audit](../../analysis/joint_content_origin_program_audit_20260622/reports/final_joint_content_origin_program_audit.md)
+- [Executable v6 literal-span origin audit](../../analysis/executable_v6_literal_span_origin_audit_20260622/reports/final_executable_v6_literal_span_origin_audit.md)
+- [Causal event graph program audit](../../analysis/causal_event_graph_program_audit_20260622/reports/final_causal_event_graph_program_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3642,6 +3646,24 @@ excluding seed from v5 `4097.333` to `4065.013`. It is not a complete
 content-origin generator: most fallback copy origins, literal payload, seed
 payload, `row0`, plaintext, translation, semantics, and the separate
 `compression_bound` remain unchanged.
+
+The executable v6 closure integrates that subprogram into the decoder contract.
+Roundtrip remains `70/70`; copy classes become `52` both-endpoint intervals,
+`55` end-only intervals, `11` literal-span sources, and `90` fallback copy
+hints. The replaced subset previously cost `111.547` copy-hint bits and is now
+addressed by `76.905` literal-span offset bits plus model declaration. This
+closes the v6 bookkeeping and leaves the next main question at the event-graph
+level, not another isolated source/endpoint codec.
+
+The causal event graph audit then tests that main question. It converts the v6
+decoder into a graph of seed spans, literal innovation spans, copy intervals,
+operation spans, source-boundary/endpoint marks, and causal edges. As a ledger
+the graph is useful, but prefix/family macro induction does not become a
+smaller generator: `72` split-stream rows are tested, the best macro delta is
+still `+88.238` bits versus direct event labels, `0` rows are positive, only
+`2/72` beat shuffled p05, and shuffled literal tape preserves `0/53` literal
+chunks. The result is `causal_event_graph_program_not_promoted`; the blocker
+remains origin of innovation/content, not another isolated local selector.
 
 ## Boundary
 
