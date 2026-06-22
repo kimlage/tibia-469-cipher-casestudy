@@ -13,6 +13,7 @@ TEST_RESULTS = REPORTS / "test_results"
 REPLAY_GATE = TEST_RESULTS / "01_innovation_tape_replay_gate.json"
 STRUCTURE_GATE = TEST_RESULTS / "03_innovation_tape_structure_gate.json"
 SYNC_GATE = TEST_RESULTS / "04_tape_synchronized_closed_loop_gate.json"
+SEED_SUBCODEC_GATE = TEST_RESULTS / "05_seed_derived_tape_subcodec_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -38,13 +39,20 @@ def main() -> None:
     replay = load_json(REPLAY_GATE)
     structure = load_json(STRUCTURE_GATE)
     sync = load_json(SYNC_GATE)
+    seed_subcodec = load_json(SEED_SUBCODEC_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
+    assert_boundary("seed_derived_tape_subcodec_gate", seed_subcodec)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
-    if sync["summary"]["weak_tape_synchronization_clue"]:
+    v = seed_subcodec["summary"]
+    if seed_subcodec["summary"]["promotes_seed_subcodec"]:
+        classification = "INNOVATION_STREAM_SEED_TAPE_SUBCODEC_PROMOTED"
+    elif seed_subcodec["summary"]["weak_seed_subcodec_clue"]:
+        classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SEED_SUBCODEC_WEAK"
+    elif sync["summary"]["weak_tape_synchronization_clue"]:
         classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK"
     elif structure["summary"]["promotes_tape_structure"]:
         classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED"
@@ -85,6 +93,11 @@ def main() -> None:
         f"- Tape-synchronized exact-in-beam shuffled p95: `{u['exact_in_finished_beam_control_p95']}`.",
         f"- Tape-synchronized true-prefix survival: `{u['true_prefix_survival_books']}/60`.",
         f"- Tape-synchronized mean true-prefix max fraction: `{u['mean_true_prefix_max_fraction']:.6f}`.",
+        f"- Seed-subcodec best saving vs raw tape: `{v['best_saving_vs_raw_bits']:.3f}` bits.",
+        f"- Seed-subcodec best control saving p95: `{v['best_control_saving_p95']:.3f}` bits.",
+        f"- Seed-subcodec copy digits: `{v['best_copy_digits']}/{v['literal_tape_digits']}`.",
+        f"- Promotes seed subcodec: `{v['promotes_seed_subcodec']}`.",
+        f"- Weak seed subcodec clue: `{v['weak_seed_subcodec_clue']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -94,7 +107,8 @@ def main() -> None:
         "or Markov structure beyond shuffled controls. The synchronization gate",
         "then asks whether that structured tape is enough to drive a closed-loop",
         "copy transducer when only the tape start, book length, and prior material",
-        "are granted.",
+        "are granted. The seed-subcodec gate prices the seed-coverage clue as a",
+        "real dependency reduction for the tape itself.",
         "",
         "## Decision",
         "",
@@ -104,6 +118,8 @@ def main() -> None:
         "- This does not yet derive when the transducer should consume the tape.",
         "- Tape-synchronized closed-loop generation is not promoted unless exact books survive above shuffled controls.",
         "- Tape synchronization is only a weak prefix-survival clue under the current beam.",
+        "- Seed-derived tape subcodec is not promoted because paid references are still worse than raw tape.",
+        "- Seed-derived tape subcodec remains a weak clue because paid coverage beats shuffled controls.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -113,6 +129,7 @@ def main() -> None:
         "- [Innovation tape replay gate](test_results/01_innovation_tape_replay_gate.md)",
         "- [Innovation tape structure gate](test_results/03_innovation_tape_structure_gate.md)",
         "- [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)",
+        "- [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

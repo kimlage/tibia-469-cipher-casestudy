@@ -645,6 +645,15 @@ true-prefix survival is `19/60` versus shuffled p95 `7.45`, and mean true-prefix
 max fraction is `0.002495` versus shuffled p95 `0.001134`. This is only a weak
 sync clue because the surviving prefix is tiny; it opens a state-search route
 without solving the transducer.
+A seed-derived tape subcodec gate then prices the seed-coverage clue directly.
+It does not promote a dependency reduction yet: the best paid seed-reference
+codec, minlen `5`, costs `1063.761` bits versus `883.633` raw tape bits
+(`+180.128`). But it remains a weak clue rather than a rejection of the route:
+the observed copy coverage is `87/266` digits versus shuffled p95 `20.05`, and
+its paid score beats shuffled subcodec p95 even though it does not beat raw
+tape. The next constructive route is therefore a cheaper seed/tape reference
+model or a state rule that makes these references less costly, not a claim that
+the tape is already derived.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2817,6 +2826,7 @@ book generation, not row0 pair-cell placement.
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)
 - [Tape synchronized closed loop gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/04_tape_synchronized_closed_loop_gate.md)
+- [Seed derived tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/05_seed_derived_tape_subcodec_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

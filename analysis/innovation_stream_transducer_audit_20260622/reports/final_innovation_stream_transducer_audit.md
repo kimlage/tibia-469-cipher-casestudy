@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK`
+Classification: `INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SEED_SUBCODEC_WEAK`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -32,6 +32,11 @@ plus a small external innovation tape made from the literal payload?
 - Tape-synchronized exact-in-beam shuffled p95: `0.0`.
 - Tape-synchronized true-prefix survival: `19/60`.
 - Tape-synchronized mean true-prefix max fraction: `0.002495`.
+- Seed-subcodec best saving vs raw tape: `-180.128` bits.
+- Seed-subcodec best control saving p95: `-249.663` bits.
+- Seed-subcodec copy digits: `87/266`.
+- Promotes seed subcodec: `False`.
+- Weak seed subcodec clue: `True`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -41,7 +46,8 @@ second gate asks whether the tape itself has seed-derived, recurrent,
 or Markov structure beyond shuffled controls. The synchronization gate
 then asks whether that structured tape is enough to drive a closed-loop
 copy transducer when only the tape start, book length, and prior material
-are granted.
+are granted. The seed-subcodec gate prices the seed-coverage clue as a
+real dependency reduction for the tape itself.
 
 ## Decision
 
@@ -51,6 +57,8 @@ are granted.
 - This does not yet derive when the transducer should consume the tape.
 - Tape-synchronized closed-loop generation is not promoted unless exact books survive above shuffled controls.
 - Tape synchronization is only a weak prefix-survival clue under the current beam.
+- Seed-derived tape subcodec is not promoted because paid references are still worse than raw tape.
+- Seed-derived tape subcodec remains a weak clue because paid coverage beats shuffled controls.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -60,3 +68,4 @@ are granted.
 - [Innovation tape replay gate](test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](test_results/03_innovation_tape_structure_gate.md)
 - [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)
+- [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)
