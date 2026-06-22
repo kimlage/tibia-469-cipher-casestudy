@@ -1,0 +1,108 @@
+{
+  "case_reopened": false,
+  "classification": "GENERATION_ROUTE_FRONTIER_SYNTHESIS",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "closed_route_family": "operation_token_decomposition_and_sequence_reuse",
+    "generator_promoted": false,
+    "next_route": "digit_level_content_boundary_transducer",
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "book_multiset_order": "analysis/book_multiset_order_factorization_audit_20260622/reports/test_results/01_book_multiset_order_factorization_gate.json",
+    "innovation_stream_transducer": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.json",
+    "latent_nonlocal_state": "analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/test_results/01_latent_nonlocal_state_program_pilot.json",
+    "minimal_external_tape": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/01_executable_decoder_contract.json",
+    "schedule_state_multistream": "analysis/schedule_state_multistream_pilot_audit_20260622/reports/test_results/01_schedule_state_multistream_pilot.json",
+    "sequence_mutation": "analysis/sequence_mutation_program_audit_20260622/reports/test_results/01_sequence_mutation_program_gate.json",
+    "within_book_order": "analysis/within_book_order_program_audit_20260622/reports/test_results/01_within_book_order_program_gate.json"
+  },
+  "open_route": {
+    "may_grant_for_next_pilot": [
+      "book_order",
+      "book_length",
+      "seed_books_0_9",
+      "literal_innovation_tape_as_paid_input",
+      "previously_emitted_digits"
+    ],
+    "must_not_grant": [
+      "operation_token_sequence",
+      "book_multiset",
+      "within_book_order",
+      "target_conditioned_copy_availability",
+      "exact_internal_op_starts"
+    ],
+    "name": "digit_level_content_boundary_transducer",
+    "promotion_requirements": [
+      "reduce internal operation-start or copy/literal trigger fields after paid corrections",
+      "generate nontrivial held-out books or operation starts above shuffled/permuted controls",
+      "avoid target-text availability except as a separately labeled diagnostic lower bound",
+      "keep row0/plaintext/translation unchanged"
+    ],
+    "why": "operation-token distribution routes compress or factor the ledger but do not reduce declared dependencies under controls; the remaining positive evidence sits at digit/content-boundary level: innovation tape structure, book-start candidate clues, copy-availability when target-conditioned, and internal op-start generation as the explicit blocker"
+  },
+  "plaintext_claim": false,
+  "route_rows": [
+    {
+      "classification": "LATENT_NONLOCAL_STATE_PILOT_NOT_PROMOTED",
+      "control_result": "shuffle_p05 0/5",
+      "decision": "not_promoted_hidden_state_distribution_signal",
+      "external_dependency_reduced": false,
+      "next_action": "do_not_repeat_hmm_without_new_decoder-visible_state",
+      "positive_signal": "-2138.447 bits vs factorized",
+      "route": "latent_hmm_joint_operation_tokens"
+    },
+    {
+      "classification": "SCHEDULE_STATE_MULTISTREAM_CLUE_NOT_GENERATOR",
+      "control_result": "shuffle_p05 0/5",
+      "decision": "not_promoted_schedule_distribution_signal",
+      "external_dependency_reduced": false,
+      "next_action": "do_not_treat_schedule_bits_as_generator",
+      "positive_signal": "-1652.574 bits vs factorized",
+      "route": "schedule_state_joint_operation_tokens"
+    },
+    {
+      "classification": "BOOK_MULTISET_ORDER_FACTORIZATION_AUDIT_ONLY",
+      "control_result": "permuted_feature_p95 0/5",
+      "decision": "audit_only_bag_factorization",
+      "external_dependency_reduced": false,
+      "next_action": "do_not_pursue_book_bag_as_standalone_program",
+      "positive_signal": "57.222 bag bits vs global",
+      "route": "book_multiset_then_order"
+    },
+    {
+      "classification": "WITHIN_BOOK_ORDER_PROGRAM_NOT_PROMOTED",
+      "control_result": "shuffled_train_p95 1/5; shuffled_test_p95 0/5",
+      "decision": "order_index_program_rejected",
+      "external_dependency_reduced": false,
+      "next_action": "do_not_split_multiset_and_order_again",
+      "positive_signal": "-19.387 bits vs uniform order",
+      "route": "within_book_order_given_true_multiset"
+    },
+    {
+      "classification": "SEQUENCE_MUTATION_PROGRAM_NOT_PROMOTED",
+      "control_result": "shuffled_train_p95 0/5; random_source_p95 2/5",
+      "decision": "whole_sequence_mutation_rejected_even_as_lower_bound",
+      "external_dependency_reduced": false,
+      "next_action": "do_not_use_book-level_sequence_reuse_as_main_route",
+      "positive_signal": "-1216.694 bits vs sequence unigram",
+      "route": "previous_book_sequence_mutation"
+    }
+  ],
+  "schema": "generative_route_frontier_synthesis.v1",
+  "scope": "analysis_only_decision_synthesis_after_operation_token_route_failures",
+  "summary": {
+    "closed_routes": [
+      "latent_hmm_joint_operation_tokens",
+      "schedule_state_joint_operation_tokens",
+      "book_multiset_then_order",
+      "within_book_order_given_true_multiset",
+      "previous_book_sequence_mutation"
+    ],
+    "operation_token_family_closed": true,
+    "promoted_generators": 0,
+    "routes_reviewed": 5
+  },
+  "translation_delta": "NONE"
+}

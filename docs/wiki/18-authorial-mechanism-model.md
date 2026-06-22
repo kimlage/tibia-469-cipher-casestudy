@@ -33,6 +33,7 @@ source_refs:
   - analysis/book_multiset_order_factorization_audit_20260622
   - analysis/within_book_order_program_audit_20260622
   - analysis/sequence_mutation_program_audit_20260622
+  - analysis/generative_route_frontier_synthesis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -863,6 +864,15 @@ cost `4742.368` bits versus `3525.674` sequence-unigram bits (`+1216.694`
 worse), beat shuffled-train p95 in `0/5` cells, and the oracle source lower
 bound with paid source index is still `+832.040` bits worse than unigram. So
 book-sequence mutation is rejected as the next generator route.
+A generative route frontier synthesis then closes the recent operation-token
+route family as the main path. Hidden HMM state, visible schedule state,
+book-multiset factorization, within-book ordering, and previous-book sequence
+mutation all produce `0` promoted generators under controls. The next aligned
+route is therefore not another operation-token decomposition, but a
+`digit_level_content_boundary_transducer` that pays an innovation tape and tries
+to derive internal operation starts and copy/literal triggers without granting
+target-conditioned copy availability, exact internal starts, book multisets, or
+operation-token order.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3227,6 +3237,8 @@ book generation, not row0 pair-cell placement.
 - [Within-book order program gate](../../analysis/within_book_order_program_audit_20260622/reports/test_results/01_within_book_order_program_gate.md)
 - [Final sequence mutation program audit](../../analysis/sequence_mutation_program_audit_20260622/reports/final_sequence_mutation_program_audit.md)
 - [Sequence mutation program gate](../../analysis/sequence_mutation_program_audit_20260622/reports/test_results/01_sequence_mutation_program_gate.md)
+- [Final generative route frontier synthesis audit](../../analysis/generative_route_frontier_synthesis_audit_20260622/reports/final_generative_route_frontier_synthesis_audit.md)
+- [Generative route frontier synthesis](../../analysis/generative_route_frontier_synthesis_audit_20260622/reports/test_results/01_generative_route_frontier_synthesis.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
