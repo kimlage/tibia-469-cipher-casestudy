@@ -608,6 +608,15 @@ generator: the best prefix-trained family, additive `age_bucket` plus
 `surprisal_bin`, recovers `74/343` held-out cutpoints and beats same-count
 random endpoint p95 in `5/5` cells, but still decodes `0` nontrivial books
 exactly.
+A latent transducer beam gate then changes the unit of test. Instead of
+selecting endpoints after the fact, it trains mode, length, boundary, and digit
+costs on prefix books and decodes future books with one beam where literal
+spans, copy spans, copy sources, and boundaries compete together. This is the
+right structural route, but the first gate is not promoted: it remains
+teacher-forced by the target digit stream, recovers `224/343` held-out
+cutpoints, beats random cutpoint p95 in `5/5` cells, and saves `675.669` paid
+cutpoint-correction bits versus the cutpoint atlas, but reaches `0` nontrivial
+exact books and only `131/421` source+length hits.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2773,6 +2782,8 @@ book generation, not row0 pair-cell placement.
 - [Boundary hazard state gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/02_boundary_hazard_state_gate.md)
 - [Boundary hazard endpoint decoder gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/03_boundary_hazard_endpoint_decoder_gate.md)
 - [Combined boundary endpoint decoder gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/04_combined_boundary_endpoint_decoder_gate.md)
+- [Final latent transducer generation audit](../../analysis/latent_transducer_generation_audit_20260622/reports/final_latent_transducer_generation_audit.md)
+- [Latent transducer beam gate](../../analysis/latent_transducer_generation_audit_20260622/reports/test_results/01_latent_transducer_beam_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
