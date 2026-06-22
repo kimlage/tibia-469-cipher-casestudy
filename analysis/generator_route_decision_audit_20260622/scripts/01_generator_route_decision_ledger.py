@@ -51,6 +51,8 @@ INPUTS = {
     / "analysis/global_content_objective_event_program_audit_20260622/reports/test_results/01_global_content_objective_event_program_gate.json",
     "primary_surface_search": ROOT
     / "analysis/primary_authoring_surface_search_audit_20260622/reports/test_results/01_primary_authoring_surface_search_gate.json",
+    "innovation_demand_coupling": ROOT
+    / "analysis/innovation_demand_coupling_audit_20260622/reports/test_results/01_innovation_demand_coupling_gate.json",
 }
 
 
@@ -76,6 +78,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     content_event = data["causal_content_aware_event_policy"]
     global_objective = data["global_content_objective"]
     primary_search = data["primary_surface_search"]
+    demand_coupling = data["innovation_demand_coupling"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -92,6 +95,8 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(primary_search["summary"]["promoted_primary_surfaces"] == 0, "targeted primary surface search unexpectedly promoted a source")
     require(primary_search["decision"]["external_surface_integrated"] is False, "targeted primary surface unexpectedly integrated")
     require(primary_search["decision"]["leak_route_accepted"] is False, "leak route unexpectedly accepted")
+    require(demand_coupling["decision"]["innovation_demand_coupling_promoted"] is False, "innovation demand coupling unexpectedly promoted")
+    require(demand_coupling["decision"]["external_field_reduced"] is False, "innovation demand coupling unexpectedly reduced a field")
 
     public_surface_rows = [
         {
@@ -236,6 +241,21 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "reason": "target-free cost minimization over literal/copy events does not keep the true suffix in beam",
         },
         {
+            "route": "innovation_demand_coupling_state",
+            "status": "WEAK_CLUE_NOT_EXECUTABLE_PROGRAM",
+            "evidence": {
+                "classification": demand_coupling["classification"],
+                "event_boundary_demand_hits": demand_coupling["summary"]["event_boundary_demand_hits"],
+                "internal_event_boundaries": demand_coupling["summary"]["internal_event_boundaries"],
+                "events_within_single_consumer_segment": demand_coupling["summary"]["events_within_single_consumer_segment"],
+                "innovation_events": demand_coupling["summary"]["innovation_events"],
+                "demand_boundary_saving_bits": demand_coupling["summary"]["demand_boundary_saving_bits"],
+                "weak_within_segment_clue": demand_coupling["summary"]["weak_within_segment_clue"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "downstream demand segments weakly contain replay events but do not derive replay boundaries or reduce v9 fields",
+        },
+        {
             "route": "primary_authoring_surface_or_new_causal_state",
             "status": "OPEN_REQUIRES_NEW_INFORMATION",
             "evidence": {
@@ -244,10 +264,11 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                     "simple_nonlocal_event_sequence_program",
                     "causal_content_aware_event_policy_program",
                     "simple_global_content_objective_event_program",
+                    "innovation_demand_coupling_state",
                 ],
                 "must_use_new_information": [
                     "external authoring surface not already covered by targeted public/community search",
-                    "new causal state beyond emitted-content/literal-tape/copy-lineage",
+                    "new causal state beyond emitted-content/literal-tape/copy-lineage/downstream-demand segments",
                     "event beam survival rather than rank-only trace",
                     "paid corrections with prefix/family holdout",
                 ],
@@ -271,6 +292,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "simple n-gram/phase event grammar over replay events",
                 "rank-only content-aware event traces that do not survive beam decoding",
                 "target-free literal/copy cost minimization that loses the true suffix immediately",
+                "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
@@ -347,7 +369,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
         "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
-        "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, and target-free literal/copy cost minimization are now tested and not promoted.",
+        "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, and downstream-demand segment coupling are now tested and not promoted as executable programs.",
         "",
         "## Decision",
         "",

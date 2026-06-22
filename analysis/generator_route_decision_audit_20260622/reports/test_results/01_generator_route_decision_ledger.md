@@ -23,6 +23,7 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `simple_nonlocal_event_sequence_program` | `TESTED_NOT_PROMOTED` | `False` | n-gram/phase sequence models over replay events do not reduce the joint event policy stream or keep true suffixes in beam |
 | `causal_content_aware_event_policy_program` | `WEAK_RANK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | content-aware candidate ranking reduces loose raw-choice cost but does not keep true event suffixes in beam |
 | `simple_global_content_objective_event_program` | `TESTED_NOT_PROMOTED` | `False` | target-free cost minimization over literal/copy events does not keep the true suffix in beam |
+| `innovation_demand_coupling_state` | `WEAK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | downstream demand segments weakly contain replay events but do not derive replay boundaries or reduce v9 fields |
 | `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
 
 ## Next Work Contract
@@ -41,6 +42,7 @@ Do not count as progress:
 - simple n-gram/phase event grammar over replay events
 - rank-only content-aware event traces that do not survive beam decoding
 - target-free literal/copy cost minimization that loses the true suffix immediately
+- demand-segment containment clues that do not derive replay boundaries or reduce decoder fields
 - semantic/plaintext/row0 reopening
 
 ## Decision

@@ -1,0 +1,279 @@
+{
+  "case_reopened": false,
+  "classification": "innovation_demand_within_segment_weak_clue_not_program",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "permuted_event_length_hit_mean": 2.032,
+    "permuted_event_length_hit_p95": 5,
+    "permuted_event_length_within_mean": 46.2965,
+    "permuted_event_length_within_p95": 52,
+    "random_boundary_hit_mean": 1.9215,
+    "random_boundary_hit_p95": 4,
+    "rng_seed": 46920260622,
+    "shuffled_consumer_segment_hit_mean": 2.06,
+    "shuffled_consumer_segment_hit_p95": 5,
+    "trials": 2000
+  },
+  "copy_demand_alignment": {
+    "copy_events": 39,
+    "same_demand_segment": 0,
+    "sample_rows": [
+      {
+        "event_index": 1,
+        "length": 8,
+        "same_demand_segment": false,
+        "source": 171,
+        "source_segment_label": "seed_book_1",
+        "source_within_demand_segment": true,
+        "start": 242,
+        "target_segment_label": "seed_book_2",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 3,
+        "length": 12,
+        "same_demand_segment": false,
+        "source": 226,
+        "source_segment_label": null,
+        "source_within_demand_segment": false,
+        "start": 420,
+        "target_segment_label": "seed_book_3",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 5,
+        "length": 9,
+        "same_demand_segment": false,
+        "source": 299,
+        "source_segment_label": "seed_book_2",
+        "source_within_demand_segment": true,
+        "start": 511,
+        "target_segment_label": "seed_book_3",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 7,
+        "length": 9,
+        "same_demand_segment": false,
+        "source": 55,
+        "source_segment_label": "seed_book_0",
+        "source_within_demand_segment": true,
+        "start": 536,
+        "target_segment_label": "seed_book_3",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 9,
+        "length": 16,
+        "same_demand_segment": false,
+        "source": 467,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 560,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 10,
+        "length": 39,
+        "same_demand_segment": false,
+        "source": 419,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 576,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 12,
+        "length": 11,
+        "same_demand_segment": false,
+        "source": 528,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 617,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 14,
+        "length": 15,
+        "same_demand_segment": false,
+        "source": 506,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 631,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 15,
+        "length": 14,
+        "same_demand_segment": false,
+        "source": 539,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 646,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 17,
+        "length": 9,
+        "same_demand_segment": false,
+        "source": 458,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 663,
+        "target_segment_label": "seed_book_4",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 18,
+        "length": 22,
+        "same_demand_segment": false,
+        "source": 485,
+        "source_segment_label": "seed_book_3",
+        "source_within_demand_segment": true,
+        "start": 672,
+        "target_segment_label": null,
+        "target_within_demand_segment": false
+      },
+      {
+        "event_index": 20,
+        "length": 10,
+        "same_demand_segment": false,
+        "source": 90,
+        "source_segment_label": "seed_book_0",
+        "source_within_demand_segment": true,
+        "start": 695,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 21,
+        "length": 64,
+        "same_demand_segment": false,
+        "source": 287,
+        "source_segment_label": "seed_book_2",
+        "source_within_demand_segment": true,
+        "start": 705,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 22,
+        "length": 62,
+        "same_demand_segment": false,
+        "source": 351,
+        "source_segment_label": "seed_book_2",
+        "source_within_demand_segment": true,
+        "start": 769,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 24,
+        "length": 8,
+        "same_demand_segment": false,
+        "source": 27,
+        "source_segment_label": "seed_book_0",
+        "source_within_demand_segment": true,
+        "start": 853,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 26,
+        "length": 64,
+        "same_demand_segment": false,
+        "source": 0,
+        "source_segment_label": "seed_book_0",
+        "source_within_demand_segment": true,
+        "start": 893,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 27,
+        "length": 9,
+        "same_demand_segment": false,
+        "source": 64,
+        "source_segment_label": "seed_book_0",
+        "source_within_demand_segment": true,
+        "start": 957,
+        "target_segment_label": "seed_book_5",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 29,
+        "length": 15,
+        "same_demand_segment": false,
+        "source": 859,
+        "source_segment_label": "seed_book_5",
+        "source_within_demand_segment": true,
+        "start": 972,
+        "target_segment_label": "seed_book_6",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 30,
+        "length": 11,
+        "same_demand_segment": false,
+        "source": 797,
+        "source_segment_label": "seed_book_5",
+        "source_within_demand_segment": true,
+        "start": 987,
+        "target_segment_label": "seed_book_6",
+        "target_within_demand_segment": true
+      },
+      {
+        "event_index": 32,
+        "length": 18,
+        "same_demand_segment": false,
+        "source": 832,
+        "source_segment_label": "seed_book_5",
+        "source_within_demand_segment": true,
+        "start": 1004,
+        "target_segment_label": "seed_book_6",
+        "target_within_demand_segment": true
+      }
+    ],
+    "source_within_demand_segment": 38,
+    "target_within_demand_segment": 36
+  },
+  "decision": {
+    "external_field_reduced": false,
+    "innovation_demand_coupling_promoted": false,
+    "next_blocker": "innovation replay policy remains external; demand surface is not sufficient as the missing causal state",
+    "reason": "consumer-demand boundaries do not explain replay event boundaries after paid boundary coding and controls; within-segment containment is only a weak clue",
+    "v9_reduction_bits": 0.0,
+    "weak_within_segment_clue": true
+  },
+  "inputs": {
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-22T23:39:58.580450+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "innovation_demand_coupling_gate.v1",
+  "scope": "analysis_only_new_causal_state_candidate",
+  "summary": {
+    "boundary_program_promoted": false,
+    "consumer_segments": 63,
+    "demand_boundary_bits": 390.12195509833737,
+    "demand_boundary_saving_bits": -2.366201928203054,
+    "event_boundary_demand_hits": 4,
+    "event_boundary_demand_misses": 57,
+    "events_crossing_consumer_segments": 8,
+    "events_within_single_consumer_segment": 54,
+    "innovation_events": 62,
+    "internal_consumer_boundaries": 62,
+    "internal_event_boundaries": 61,
+    "promoted": false,
+    "raw_boundary_bits": 387.7557531701343,
+    "stream_digits": 1962,
+    "weak_within_segment_clue": true
+  },
+  "translation_delta": "NONE"
+}

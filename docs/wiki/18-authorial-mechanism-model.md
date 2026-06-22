@@ -82,6 +82,7 @@ source_refs:
   - analysis/causal_content_aware_event_policy_audit_20260622
   - analysis/global_content_objective_event_program_audit_20260622
   - analysis/primary_authoring_surface_search_audit_20260622
+  - analysis/innovation_demand_coupling_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3966,6 +3967,17 @@ acceptance or alt-server reuse is not CipSoft authorization, not a rights-clean
 license, and not usable evidence for this repository. The live route now
 requires a user-provided/authorized object-layer artifact, official/in-game
 capture, public licensed object-layer data, or a genuinely new causal state.
+
+An innovation-demand coupling gate then tests one plausible new internal causal
+state: maybe replay events in the unified innovation tape are synchronized to
+the downstream consumer segments that use that tape as seed payload and literal
+payload. The result is only a weak clue. Replay events are often contained
+inside one consumer segment (`54/62`, above permuted-length p95), but exact
+replay boundaries do not align: only `4/61` internal starts hit consumer
+boundaries, and a paid demand-boundary codec is worse than raw boundary
+declaration (`-2.366` bits saved). This does not reduce v9 or promote a replay
+policy. The missing state must be stronger than emitted content, literal tape,
+copy lineage, and downstream-demand segment containment.
 
 ## Boundary
 

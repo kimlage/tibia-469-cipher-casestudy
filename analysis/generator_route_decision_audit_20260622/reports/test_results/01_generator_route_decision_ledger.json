@@ -13,6 +13,7 @@
     "external_07": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/07_tales_libsearch_book_database_probe.json",
     "external_08": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/08_arturo_bookcase_mapping_control_probe.json",
     "global_content_objective": "analysis/global_content_objective_event_program_audit_20260622/reports/test_results/01_global_content_objective_event_program_gate.json",
+    "innovation_demand_coupling": "analysis/innovation_demand_coupling_audit_20260622/reports/test_results/01_innovation_demand_coupling_gate.json",
     "innovation_policy": "analysis/innovation_replay_policy_frontier_audit_20260622/reports/test_results/01_innovation_replay_policy_frontier_gate.json",
     "nonlocal_event_policy": "analysis/nonlocal_event_policy_program_audit_20260622/reports/test_results/01_nonlocal_event_policy_program_gate.json",
     "post_v9": "analysis/post_v9_generator_frontier_synthesis_audit_20260622/reports/test_results/01_post_v9_generator_frontier_synthesis.json",
@@ -33,11 +34,12 @@
       "simple n-gram/phase event grammar over replay events",
       "rank-only content-aware event traces that do not survive beam decoding",
       "target-free literal/copy cost minimization that loses the true suffix immediately",
+      "demand-segment containment clues that do not derive replay boundaries or reduce decoder fields",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-22T23:34:23.941525+00:00",
+  "retrieved_at_utc": "2026-06-22T23:40:41.363193+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -179,19 +181,35 @@
       "status": "TESTED_NOT_PROMOTED"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "classification": "innovation_demand_within_segment_weak_clue_not_program",
+        "demand_boundary_saving_bits": -2.366201928203054,
+        "event_boundary_demand_hits": 4,
+        "events_within_single_consumer_segment": 54,
+        "innovation_events": 62,
+        "internal_event_boundaries": 61,
+        "weak_within_segment_clue": true
+      },
+      "reason": "downstream demand segments weakly contain replay events but do not derive replay boundaries or reduce v9 fields",
+      "route": "innovation_demand_coupling_state",
+      "status": "WEAK_CLUE_NOT_EXECUTABLE_PROGRAM"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
         "must_use_new_information": [
           "external authoring surface not already covered by targeted public/community search",
-          "new causal state beyond emitted-content/literal-tape/copy-lineage",
+          "new causal state beyond emitted-content/literal-tape/copy-lineage/downstream-demand segments",
           "event beam survival rather than rank-only trace",
           "paid corrections with prefix/family holdout"
         ],
         "rejected_simple_routes": [
           "simple_nonlocal_event_sequence_program",
           "causal_content_aware_event_policy_program",
-          "simple_global_content_objective_event_program"
+          "simple_global_content_objective_event_program",
+          "innovation_demand_coupling_state"
         ]
       },
       "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",
