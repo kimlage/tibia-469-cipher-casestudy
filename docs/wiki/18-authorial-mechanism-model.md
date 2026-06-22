@@ -702,6 +702,15 @@ residual is not generated: the best residual context, `type_bucket`, is still
 `117.997` bits worse than uniform residual declaration, and no residual feature
 is promoted. The blocker is therefore narrower but still external:
 within-bucket length innovation.
+A coarse control program audit then tests the other side of that factorization:
+the `type:length_bucket` stream alone, with per-book operation count granted.
+This is the first positive result on the control-program route after the exact
+stateful model failed. The best model uses `op_count_bucket`, costs `1512.974`
+bits across prefix/suffix cutoffs, saves `254.413` bits versus uniform coarse
+control, and beats same-multiset shuffled p95 (`116.843`). Beam20 recovers
+nontrivial held-out coarse sequences in every cutoff. This promotes a
+coarse-control program candidate only: op-count, exact within-bucket residuals,
+literal innovation, copy hints, seed books, and row0 remain external.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3030,6 +3039,8 @@ book generation, not row0 pair-cell placement.
 - [Stateful control program gate](../../analysis/stateful_control_program_audit_20260622/reports/test_results/01_stateful_control_program_gate.md)
 - [Final length innovation factor audit](../../analysis/length_innovation_factor_audit_20260622/reports/final_length_innovation_factor_audit.md)
 - [Length innovation factor gate](../../analysis/length_innovation_factor_audit_20260622/reports/test_results/01_length_innovation_factor_gate.md)
+- [Final coarse control program audit](../../analysis/coarse_control_program_audit_20260622/reports/final_coarse_control_program_audit.md)
+- [Coarse control program gate](../../analysis/coarse_control_program_audit_20260622/reports/test_results/01_coarse_control_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

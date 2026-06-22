@@ -1,0 +1,6459 @@
+{
+  "case_reopened": false,
+  "classification": "coarse_control_program_candidate",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "best_model": "op_count",
+    "generator_promoted": [
+      "prev_symbol",
+      "op_pos",
+      "remaining_ops",
+      "op_count",
+      "prev_x_pos",
+      "prev_x_remaining_ops",
+      "count_x_pos"
+    ],
+    "promoted_models": [
+      "prev_symbol",
+      "op_pos",
+      "remaining_ops",
+      "op_count",
+      "prev_x_pos",
+      "prev_x_remaining_ops",
+      "count_x_pos"
+    ],
+    "row0_status": "unchanged_exogenous"
+  },
+  "inputs": {
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "granted_dependencies": [
+      "book_length",
+      "op_count"
+    ],
+    "ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json",
+    "random_trials": 500,
+    "vocab": [
+      "literal:len_0008",
+      "literal:len_0016",
+      "literal:len_0032",
+      "literal:len_0064",
+      "literal:len_0128",
+      "literal:len_0256p",
+      "copy:len_0008",
+      "copy:len_0016",
+      "copy:len_0032",
+      "copy:len_0064",
+      "copy:len_0128",
+      "copy:len_0256p"
+    ]
+  },
+  "models": {
+    "book_length": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 14,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 16,
+              "5": 5
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 46,
+              "5": 26
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 7,
+            "test_books": 50
+          },
+          "model_bits": 626.4125260091419,
+          "saving_bits": 26.050649122108553,
+          "test_ops": 182,
+          "top1_hits": 24,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 12,
+              "5": 5
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 3,
+              "20": 29,
+              "5": 14
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 3,
+            "test_books": 40
+          },
+          "model_bits": 475.68018144276436,
+          "saving_bits": 26.214568658197493,
+          "test_ops": 140,
+          "top1_hits": 16,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 12,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 26,
+              "5": 11
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 30
+          },
+          "model_bits": 305.22696344997706,
+          "saving_bits": 35.34447411853279,
+          "test_ops": 95,
+          "top1_hits": 10,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 9,
+              "5": 1
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 0,
+              "20": 17,
+              "5": 5
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 0,
+            "test_books": 20
+          },
+          "model_bits": 178.8878326936774,
+          "saving_bits": 21.870067346707344,
+          "test_ops": 56,
+          "top1_hits": 7,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 0,
+              "20": 9,
+              "5": 1
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 0,
+            "test_books": 10
+          },
+          "model_bits": 63.32681391602572,
+          "saving_bits": 8.372436098397394,
+          "test_ops": 20,
+          "top1_hits": 2,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "book_length_bucket"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1649.5343175115866,
+      "observed_saving_bits": 117.85219534394358,
+      "observed_top1_hits": 59,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 76.5617751919104,
+      "random_saving_p95": 128.3461621459242,
+      "status": "REJECTED_COARSE_CONTROL_PROGRAM"
+    },
+    "count_x_pos": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 12,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 17,
+              "5": 1
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 46,
+              "5": 16
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 2,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 10,
+            "test_books": 50
+          },
+          "model_bits": 640.3594636965693,
+          "saving_bits": 12.103711434681145,
+          "test_ops": 182,
+          "top1_hits": 26,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 15,
+              "5": 10
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 27,
+              "5": 19
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 10,
+            "test_books": 40
+          },
+          "model_bits": 471.03886439607635,
+          "saving_bits": 30.85588570488551,
+          "test_ops": 140,
+          "top1_hits": 19,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 6,
+              "20": 11,
+              "5": 10
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 21,
+              "5": 14
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 46,
+                "greedy": [
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 6,
+            "greedy_prefix_ops": 10,
+            "test_books": 30
+          },
+          "model_bits": 286.9263076299903,
+          "saving_bits": 53.645129938519574,
+          "test_ops": 95,
+          "top1_hits": 21,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 6,
+              "20": 11,
+              "5": 9
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 1,
+              "20": 4,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 8,
+              "20": 20,
+              "5": 15
+            },
+            "examples": [
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 56,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 57,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "literal:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "literal:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 6,
+            "greedy_prefix_ops": 8,
+            "test_books": 20
+          },
+          "model_bits": 156.88123549564062,
+          "saving_bits": 43.87666454474413,
+          "test_ops": 56,
+          "top1_hits": 17,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 4,
+              "20": 7,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 1,
+              "20": 2,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 5,
+              "20": 11,
+              "5": 8
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 67,
+                "greedy": [
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 4,
+            "greedy_prefix_ops": 5,
+            "test_books": 10
+          },
+          "model_bits": 51.148911505068185,
+          "saving_bits": 20.55033850935493,
+          "test_ops": 20,
+          "top1_hits": 7,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "op_count_bucket",
+        "op_pos_bucket_online"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1606.3547827233447,
+      "observed_saving_bits": 161.0317301321853,
+      "observed_top1_hits": 90,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": -2.887344562206522,
+      "random_saving_p95": 67.27774967798766,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "global": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 14,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 40,
+              "5": 17
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 7,
+            "test_books": 50
+          },
+          "model_bits": 603.0142591121105,
+          "saving_bits": 49.448916019139915,
+          "test_ops": 182,
+          "top1_hits": 25,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 10,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 3,
+              "20": 26,
+              "5": 7
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 3,
+            "test_books": 40
+          },
+          "model_bits": 447.6021879205627,
+          "saving_bits": 54.29256218039916,
+          "test_ops": 140,
+          "top1_hits": 19,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 10,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 1,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 20,
+              "5": 4
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 30
+          },
+          "model_bits": 305.17262908318133,
+          "saving_bits": 35.398808485328516,
+          "test_ops": 95,
+          "top1_hits": 11,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 7,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 15,
+              "5": 3
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 20
+          },
+          "model_bits": 182.05406527050263,
+          "saving_bits": 18.70383476988212,
+          "test_ops": 56,
+          "top1_hits": 8,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 0,
+              "20": 9,
+              "5": 3
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 0,
+            "test_books": 10
+          },
+          "model_bits": 63.51312726185374,
+          "saving_bits": 8.186122752569375,
+          "test_ops": 20,
+          "top1_hits": 2,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [],
+      "meaningful_saving": true,
+      "observed_model_bits": 1601.356268648211,
+      "observed_saving_bits": 166.03024420731907,
+      "observed_top1_hits": 65,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 166.03024420731873,
+      "random_saving_p95": 166.03024420731953,
+      "status": "REJECTED_COARSE_CONTROL_PROGRAM"
+    },
+    "op_count": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 12,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 16,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 41,
+              "5": 12
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 7,
+            "test_books": 50
+          },
+          "model_bits": 616.4006069600268,
+          "saving_bits": 36.062568171223575,
+          "test_ops": 182,
+          "top1_hits": 27,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 13,
+              "5": 10
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 9,
+              "20": 34,
+              "5": 19
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 9,
+            "test_books": 40
+          },
+          "model_bits": 427.1412703164643,
+          "saving_bits": 74.75347978449759,
+          "test_ops": 140,
+          "top1_hits": 20,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 6,
+              "20": 13,
+              "5": 11
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 30,
+              "5": 20
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 46,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 6,
+            "greedy_prefix_ops": 10,
+            "test_books": 30
+          },
+          "model_bits": 268.2653891722002,
+          "saving_bits": 72.30604839630968,
+          "test_ops": 95,
+          "top1_hits": 22,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 5,
+              "20": 10,
+              "5": 9
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 19,
+              "5": 13
+            },
+            "examples": [
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 56,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 57,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "literal:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "literal:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 5,
+            "greedy_prefix_ops": 7,
+            "test_books": 20
+          },
+          "model_bits": 152.6868196528814,
+          "saving_bits": 48.07108038750334,
+          "test_ops": 56,
+          "top1_hits": 14,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 8,
+              "5": 7
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 12,
+              "5": 10
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 4,
+            "test_books": 10
+          },
+          "model_bits": 48.47968943613289,
+          "saving_bits": 23.219560578290228,
+          "test_ops": 20,
+          "top1_hits": 5,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "op_count_bucket"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1512.9737755377057,
+      "observed_saving_bits": 254.4127373178244,
+      "observed_top1_hits": 88,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 43.14190981642267,
+      "random_saving_p95": 116.84309199981928,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "op_pos": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 15,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 9,
+              "20": 36,
+              "5": 16
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 2,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 9,
+            "test_books": 50
+          },
+          "model_bits": 614.2693626828341,
+          "saving_bits": 38.19381244841634,
+          "test_ops": 182,
+          "top1_hits": 34,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 13,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 6,
+              "20": 32,
+              "5": 15
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 6,
+            "test_books": 40
+          },
+          "model_bits": 458.2394867948375,
+          "saving_bits": 43.65526330612437,
+          "test_ops": 140,
+          "top1_hits": 26,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 12,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 5,
+              "20": 28,
+              "5": 17
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 5,
+            "test_books": 30
+          },
+          "model_bits": 288.3970965429081,
+          "saving_bits": 52.174341025601734,
+          "test_ops": 95,
+          "top1_hits": 15,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 2,
+              "20": 10,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 19,
+              "5": 10
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 2,
+            "greedy_prefix_ops": 4,
+            "test_books": 20
+          },
+          "model_bits": 166.05309680758336,
+          "saving_bits": 34.704803232801396,
+          "test_ops": 56,
+          "top1_hits": 11,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 2,
+              "20": 8,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 15,
+              "5": 10
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 66,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              }
+            ],
+            "greedy_exact_books": 2,
+            "greedy_prefix_ops": 4,
+            "test_books": 10
+          },
+          "model_bits": 54.02754370166874,
+          "saving_bits": 17.671706312754374,
+          "test_ops": 20,
+          "top1_hits": 6,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "op_pos_bucket_online"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1580.9865865298316,
+      "observed_saving_bits": 186.3999263256982,
+      "observed_top1_hits": 92,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 52.993544823731,
+      "random_saving_p95": 125.42013732779328,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "phase_x_pos": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 182,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 14,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 40,
+              "5": 17
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 7,
+            "test_books": 50
+          },
+          "model_bits": 603.0142591121105,
+          "saving_bits": 49.448916019139915,
+          "test_ops": 182,
+          "top1_hits": 25,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 113,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 10,
+              "5": 1
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 3,
+              "20": 26,
+              "5": 7
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 3,
+            "test_books": 40
+          },
+          "model_bits": 456.30619483882475,
+          "saving_bits": 45.588555262137106,
+          "test_ops": 140,
+          "top1_hits": 19,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 56,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 11,
+              "5": 2
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 22,
+              "5": 5
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 30
+          },
+          "model_bits": 308.6288173885037,
+          "saving_bits": 31.942620180006145,
+          "test_ops": 95,
+          "top1_hits": 12,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 56,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 7,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 15,
+              "5": 3
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 20
+          },
+          "model_bits": 182.05406527050263,
+          "saving_bits": 18.70383476988212,
+          "test_ops": 56,
+          "top1_hits": 8,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 20,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 0
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 0,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 0,
+              "20": 9,
+              "5": 3
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 0,
+            "test_books": 10
+          },
+          "model_bits": 63.51312726185374,
+          "saving_bits": 8.186122752569375,
+          "test_ops": 20,
+          "top1_hits": 2,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "book_phase",
+        "op_pos_bucket_online"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1613.5164638717952,
+      "observed_saving_bits": 153.87004898373465,
+      "observed_top1_hits": 66,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 132.52092145573033,
+      "random_saving_p95": 161.2597604263737,
+      "status": "REJECTED_COARSE_CONTROL_PROGRAM"
+    },
+    "prev_symbol": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 1,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 15,
+              "5": 5
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 8,
+              "20": 39,
+              "5": 18
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 8,
+            "test_books": 50
+          },
+          "model_bits": 611.8087155624656,
+          "saving_bits": 40.65445956878477,
+          "test_ops": 182,
+          "top1_hits": 37,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 1,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 13,
+              "5": 3
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 6,
+              "20": 35,
+              "5": 13
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 6,
+            "test_books": 40
+          },
+          "model_bits": 453.5966853622813,
+          "saving_bits": 48.29806473868058,
+          "test_ops": 140,
+          "top1_hits": 26,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 1,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 10,
+              "5": 3
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 1,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 5,
+              "20": 26,
+              "5": 8
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 5,
+            "test_books": 30
+          },
+          "model_bits": 300.72044362127406,
+          "saving_bits": 39.85099394723579,
+          "test_ops": 95,
+          "top1_hits": 14,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 1,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 8,
+              "5": 3
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 1,
+              "20": 1,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 5,
+              "20": 18,
+              "5": 9
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 5,
+            "test_books": 20
+          },
+          "model_bits": 171.6669928774851,
+          "saving_bits": 29.09090716289967,
+          "test_ops": 56,
+          "top1_hits": 8,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 2,
+              "20": 6,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 1,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 12,
+              "5": 11
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 66,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              }
+            ],
+            "greedy_exact_books": 2,
+            "greedy_prefix_ops": 4,
+            "test_books": 10
+          },
+          "model_bits": 55.822851507997285,
+          "saving_bits": 15.87639850642583,
+          "test_ops": 20,
+          "top1_hits": 7,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "prev_symbol"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1593.6156889315034,
+      "observed_saving_bits": 173.77082392402664,
+      "observed_top1_hits": 92,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 21.238464782924936,
+      "random_saving_p95": 92.04362670030689,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "prev_x_pos": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 13,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 15,
+              "5": 5
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 9,
+              "20": 33,
+              "5": 20
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 2,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 9,
+            "test_books": 50
+          },
+          "model_bits": 637.264485778154,
+          "saving_bits": 15.19868935309637,
+          "test_ops": 182,
+          "top1_hits": 26,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 4,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 14,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 6,
+              "20": 37,
+              "5": 16
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 6,
+            "test_books": 40
+          },
+          "model_bits": 468.4547132050203,
+          "saving_bits": 33.440036895941546,
+          "test_ops": 140,
+          "top1_hits": 22,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 4,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 12,
+              "5": 4
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 3,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 5,
+              "20": 29,
+              "5": 15
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 5,
+            "test_books": 30
+          },
+          "model_bits": 309.6083207745784,
+          "saving_bits": 30.963116793931476,
+          "test_ops": 95,
+          "top1_hits": 14,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 2,
+          "generation": {
+            "beam_exact_books": {
+              "1": 2,
+              "20": 11,
+              "5": 3
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 21,
+              "5": 9
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 2,
+            "greedy_prefix_ops": 4,
+            "test_books": 20
+          },
+          "model_bits": 171.92600538167343,
+          "saving_bits": 28.83189465871132,
+          "test_ops": 56,
+          "top1_hits": 8,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 2,
+              "20": 7,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 14,
+              "5": 12
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 66,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              }
+            ],
+            "greedy_exact_books": 2,
+            "greedy_prefix_ops": 4,
+            "test_books": 10
+          },
+          "model_bits": 54.69659389526514,
+          "saving_bits": 17.002656119157976,
+          "test_ops": 20,
+          "top1_hits": 8,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "prev_symbol",
+        "op_pos_bucket_online"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1641.9501190346912,
+      "observed_saving_bits": 125.43639382083869,
+      "observed_top1_hits": 78,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 19.337724254756097,
+      "random_saving_p95": 81.72583478029327,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "prev_x_remaining_ops": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 30,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 17,
+              "5": 2
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 5,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 44,
+              "5": 18
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0008",
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "literal:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 3,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 10,
+            "test_books": 50
+          },
+          "model_bits": 638.3200295281931,
+          "saving_bits": 14.143145603057292,
+          "test_ops": 182,
+          "top1_hits": 26,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 2,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 14,
+              "5": 11
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 30,
+              "5": 24
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0128"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 10,
+            "test_books": 40
+          },
+          "model_bits": 477.20335347359895,
+          "saving_bits": 24.691396627362906,
+          "test_ops": 140,
+          "top1_hits": 23,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 2,
+          "generation": {
+            "beam_exact_books": {
+              "1": 6,
+              "20": 13,
+              "5": 10
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 10,
+              "20": 24,
+              "5": 17
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 46,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 6,
+            "greedy_prefix_ops": 10,
+            "test_books": 30
+          },
+          "model_bits": 316.40181794790715,
+          "saving_bits": 24.169619620602703,
+          "test_ops": 95,
+          "top1_hits": 16,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 2,
+          "generation": {
+            "beam_exact_books": {
+              "1": 5,
+              "20": 11,
+              "5": 9
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 4,
+              "5": 2
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 18,
+              "5": 13
+            },
+            "examples": [
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 56,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 57,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "literal:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "literal:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 5,
+            "greedy_prefix_ops": 7,
+            "test_books": 20
+          },
+          "model_bits": 173.78738559865212,
+          "saving_bits": 26.970514441732632,
+          "test_ops": 56,
+          "top1_hits": 11,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 7,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 4,
+              "20": 11,
+              "5": 7
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0128",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 4,
+            "test_books": 10
+          },
+          "model_bits": 52.655791492925495,
+          "saving_bits": 19.04345852149762,
+          "test_ops": 20,
+          "top1_hits": 7,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "prev_symbol",
+        "remaining_ops_bucket"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1658.3683780412769,
+      "observed_saving_bits": 109.01813481425316,
+      "observed_top1_hits": 83,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": -6.178949104571004,
+      "random_saving_p95": 56.610182795165784,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    },
+    "remaining_ops": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 14,
+              "5": 8
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 7,
+              "20": 39,
+              "5": 25
+            },
+            "examples": [
+              {
+                "book": 20,
+                "greedy": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 21,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 22,
+                "greedy": [
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 23,
+                "greedy": [
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 24,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 25,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 7,
+            "test_books": 50
+          },
+          "model_bits": 610.2707764762487,
+          "saving_bits": 42.19239865500174,
+          "test_ops": 182,
+          "top1_hits": 33,
+          "train_ops": 79,
+          "uniform_bits": 652.4631751312504
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 11,
+              "5": 7
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 1,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 3,
+              "20": 25,
+              "5": 14
+            },
+            "examples": [
+              {
+                "book": 30,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 31,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0032",
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ]
+              },
+              {
+                "book": 32,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 33,
+                "greedy": [
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 34,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0008",
+                  "copy:len_0064",
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0032",
+                  "copy:len_0016",
+                  "copy:len_0008",
+                  "copy:len_0016"
+                ]
+              },
+              {
+                "book": 35,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 3,
+            "test_books": 40
+          },
+          "model_bits": 435.3142762416439,
+          "saving_bits": 66.58047385931798,
+          "test_ops": 140,
+          "top1_hits": 24,
+          "train_ops": 121,
+          "uniform_bits": 501.89475010096186
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 11,
+              "5": 9
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 22,
+              "5": 13
+            },
+            "examples": [
+              {
+                "book": 40,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "literal:len_0008",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 41,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 42,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0032",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "literal:len_0008",
+                  "copy:len_0128",
+                  "copy:len_0016",
+                  "literal:len_0008"
+                ]
+              },
+              {
+                "book": 43,
+                "greedy": [
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 44,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 45,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008",
+                  "copy:len_0128"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 30
+          },
+          "model_bits": 292.5405356670879,
+          "saving_bits": 48.03090190142194,
+          "test_ops": 95,
+          "top1_hits": 12,
+          "train_ops": 166,
+          "uniform_bits": 340.57143756850985
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 0,
+              "20": 9,
+              "5": 7
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 2,
+              "5": 0
+            },
+            "beam_prefix_ops": {
+              "1": 1,
+              "20": 15,
+              "5": 10
+            },
+            "examples": [
+              {
+                "book": 50,
+                "greedy": [
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 51,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 52,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 53,
+                "greedy": [
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0256p"
+                ]
+              },
+              {
+                "book": 54,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              },
+              {
+                "book": 55,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0064"
+                ],
+                "prefix": 1,
+                "truth": [
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0008"
+                ]
+              }
+            ],
+            "greedy_exact_books": 0,
+            "greedy_prefix_ops": 1,
+            "test_books": 20
+          },
+          "model_bits": 167.17814888559198,
+          "saving_bits": 33.579751154792774,
+          "test_ops": 56,
+          "top1_hits": 7,
+          "train_ops": 205,
+          "uniform_bits": 200.75790004038475
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "generation": {
+            "beam_exact_books": {
+              "1": 3,
+              "20": 6,
+              "5": 6
+            },
+            "beam_nontrivial_exact_books": {
+              "1": 0,
+              "20": 1,
+              "5": 1
+            },
+            "beam_prefix_ops": {
+              "1": 3,
+              "20": 8,
+              "5": 8
+            },
+            "examples": [
+              {
+                "book": 60,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0016",
+                  "copy:len_0064",
+                  "copy:len_0064",
+                  "copy:len_0016",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 61,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0032"
+                ]
+              },
+              {
+                "book": 62,
+                "greedy": [
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 63,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0064",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 64,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "copy:len_0128",
+                  "copy:len_0128"
+                ]
+              },
+              {
+                "book": 65,
+                "greedy": [
+                  "copy:len_0016",
+                  "copy:len_0016",
+                  "copy:len_0256p"
+                ],
+                "prefix": 0,
+                "truth": [
+                  "literal:len_0008",
+                  "copy:len_0256p",
+                  "copy:len_0032"
+                ]
+              }
+            ],
+            "greedy_exact_books": 3,
+            "greedy_prefix_ops": 3,
+            "test_books": 10
+          },
+          "model_bits": 55.169071296140025,
+          "saving_bits": 16.53017871828309,
+          "test_ops": 20,
+          "top1_hits": 5,
+          "train_ops": 241,
+          "uniform_bits": 71.69925001442311
+        }
+      ],
+      "features": [
+        "remaining_ops_bucket"
+      ],
+      "meaningful_saving": true,
+      "observed_model_bits": 1560.4728085667123,
+      "observed_saving_bits": 206.9137042888175,
+      "observed_top1_hits": 81,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1767.38651285553,
+      "random_saving_p05": 114.6641852813133,
+      "random_saving_p95": 162.89471395058914,
+      "status": "PROMOTED_COARSE_CONTROL_PROGRAM_CANDIDATE"
+    }
+  },
+  "plaintext_claim": false,
+  "scope": "analysis_only_target_free_coarse_type_length_bucket_control",
+  "translation_delta": "NONE"
+}
