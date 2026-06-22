@@ -28,6 +28,7 @@ INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE = (
 BOOK_START_MODE_GATE = TEST_RESULTS / "13_book_start_mode_gate.json"
 FRONTIER_LEDGER = TEST_RESULTS / "14_generation_dependency_frontier_ledger.json"
 LENGTH_CONTROL_GATE = TEST_RESULTS / "15_length_control_tape_gate.json"
+JOINT_CONTROL_GATE = TEST_RESULTS / "16_joint_type_length_control_tape_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -68,6 +69,7 @@ def main() -> None:
     book_start_mode = load_json(BOOK_START_MODE_GATE)
     frontier = load_json(FRONTIER_LEDGER)
     length_control = load_json(LENGTH_CONTROL_GATE)
+    joint_control = load_json(JOINT_CONTROL_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -88,6 +90,7 @@ def main() -> None:
     assert_boundary("book_start_mode_gate", book_start_mode)
     assert_boundary("generation_dependency_frontier_ledger", frontier)
     assert_boundary("length_control_tape_gate", length_control)
+    assert_boundary("joint_type_length_control_tape_gate", joint_control)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -102,7 +105,13 @@ def main() -> None:
     ad = book_start_mode["summary"]
     ae = frontier["summary"]
     af = length_control["summary"]
+    ag = joint_control["summary"]
     if (
+        joint_control["summary"]["promotes_joint_type_length_control_clue"]
+        and not joint_control["summary"]["promotes_skeleton_replacement"]
+    ):
+        classification = "INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_SKELETON_REPLACEMENT_REJECTED"
+    elif (
         length_control["summary"]["promotes_predictive_length_control_clue"]
         and not length_control["summary"]["promotes_cutpoint_replacement"]
     ):
@@ -246,6 +255,12 @@ def main() -> None:
         f"- Length-control beats fixed-op composition cutoffs: `{af['beats_fixed_op_composition_cutoffs']}/{len(af['cutoffs_tested'])}`.",
         f"- Promotes length-control clue: `{af['promotes_predictive_length_control_clue']}`.",
         f"- Promotes cutpoint replacement: `{af['promotes_cutpoint_replacement']}`.",
+        f"- Joint control pair alphabet size: `{ag['pair_alphabet_size']}`.",
+        f"- Joint control skeleton composition bits with fixed op counts: `{ag['all_books_skeleton_composition_bits_fixed_op_counts']:.3f}`.",
+        f"- Joint control beats shuffled paid p95 cutoffs: `{ag['beats_shuffle_paid_pair_p95_cutoffs']}/{len(ag['cutoffs_tested'])}`.",
+        f"- Joint control beats skeleton composition cutoffs: `{ag['beats_skeleton_composition_cutoffs']}/{len(ag['cutoffs_tested'])}`.",
+        f"- Promotes joint type-length clue: `{ag['promotes_joint_type_length_control_clue']}`.",
+        f"- Promotes skeleton replacement: `{ag['promotes_skeleton_replacement']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -281,7 +296,12 @@ def main() -> None:
         "shuffled controls, but the useful contexts usually require operation",
         "type and the paid model does not beat fixed-op-count cutpoint",
         "composition. It is therefore a clue about the control stream, not a",
-        "replacement for the internal-start atlas.",
+        "replacement for the internal-start atlas. The joint type-length gate",
+        "then removes the type grant by encoding each operation as one",
+        "`type:length` control symbol. This pair stream also beats shuffled paid",
+        "controls in `4/5` cutoffs, but it is far more expensive than simply",
+        "declaring fixed-op-count cutpoints plus types. That closes the most",
+        "direct control-tape replacement route under the current features.",
         "",
         "## Decision",
         "",
@@ -306,6 +326,7 @@ def main() -> None:
         "- The consolidated frontier identifies internal operation-start generation as the main blocker.",
         "- Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.",
         "- The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.",
+        "- Joint type-length control structure is promoted only as a weak control-stream clue; skeleton replacement is rejected.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -326,6 +347,7 @@ def main() -> None:
         "- [Book start mode gate](test_results/13_book_start_mode_gate.md)",
         "- [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)",
         "- [Length control tape gate](test_results/15_length_control_tape_gate.md)",
+        "- [Joint type-length control tape gate](test_results/16_joint_type_length_control_tape_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

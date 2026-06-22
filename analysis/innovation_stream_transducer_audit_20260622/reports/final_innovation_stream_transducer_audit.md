@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_LENGTH_CONTROL_CLUE_PROMOTED_CUTPOINT_REPLACEMENT_REJECTED`
+Classification: `INNOVATION_STREAM_JOINT_CONTROL_CLUE_PROMOTED_SKELETON_REPLACEMENT_REJECTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -92,6 +92,12 @@ plus a small external innovation tape made from the literal payload?
 - Length-control beats fixed-op composition cutoffs: `0/5`.
 - Promotes length-control clue: `True`.
 - Promotes cutpoint replacement: `False`.
+- Joint control pair alphabet size: `97`.
+- Joint control skeleton composition bits with fixed op counts: `1245.263`.
+- Joint control beats shuffled paid p95 cutoffs: `4/5`.
+- Joint control beats skeleton composition cutoffs: `0/5`.
+- Promotes joint type-length clue: `True`.
+- Promotes skeleton replacement: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -127,7 +133,12 @@ by cumulative sum. That stream has prefix-holdout structure beyond
 shuffled controls, but the useful contexts usually require operation
 type and the paid model does not beat fixed-op-count cutpoint
 composition. It is therefore a clue about the control stream, not a
-replacement for the internal-start atlas.
+replacement for the internal-start atlas. The joint type-length gate
+then removes the type grant by encoding each operation as one
+`type:length` control symbol. This pair stream also beats shuffled paid
+controls in `4/5` cutoffs, but it is far more expensive than simply
+declaring fixed-op-count cutpoints plus types. That closes the most
+direct control-tape replacement route under the current features.
 
 ## Decision
 
@@ -152,6 +163,7 @@ replacement for the internal-start atlas.
 - The consolidated frontier identifies internal operation-start generation as the main blocker.
 - Length-control tape structure is promoted as a clue, but cutpoint replacement is rejected.
 - The length-control clue usually depends on the operation type stream, so it is not source-free skeleton generation.
+- Joint type-length control structure is promoted only as a weak control-stream clue; skeleton replacement is rejected.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -172,3 +184,4 @@ replacement for the internal-start atlas.
 - [Book start mode gate](test_results/13_book_start_mode_gate.md)
 - [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)
 - [Length control tape gate](test_results/15_length_control_tape_gate.md)
+- [Joint type-length control tape gate](test_results/16_joint_type_length_control_tape_gate.md)

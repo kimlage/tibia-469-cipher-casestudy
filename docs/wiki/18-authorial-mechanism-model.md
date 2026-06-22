@@ -730,6 +730,12 @@ prefix-holdout cutoffs, but the best paid feature requires the operation type
 stream in `4/5` cutoffs and beats fixed-op-count cutpoint composition in `0/5`.
 So the length tape has predictive structure, while cutpoint replacement and
 source-free skeleton generation remain rejected.
+A joint type-length control tape gate then removes the type grant by encoding
+each operation as one `type:length` symbol. This also finds structure beyond
+shuffled paid controls in `4/5` prefix-holdout cutoffs, but the pair alphabet
+has `97` symbols and the paid model beats fixed-op-count cutpoint+type
+composition in `0/5` cutoffs. The control stream is therefore structured, but
+the direct skeleton-replacement route is rejected under the current features.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2913,6 +2919,7 @@ book generation, not row0 pair-cell placement.
 - [Book start mode gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/13_book_start_mode_gate.md)
 - [Generation dependency frontier ledger](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.md)
 - [Length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/15_length_control_tape_gate.md)
+- [Joint type-length control tape gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/16_joint_type_length_control_tape_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
