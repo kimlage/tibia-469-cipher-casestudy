@@ -1,0 +1,1043 @@
+{
+  "case_reopened": false,
+  "classification": "book_level_controller_program_integration_not_promoted",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "permuted_train_trials_per_prefix": 8,
+    "random_trainset_saving_p95": -13.32029999423075,
+    "random_trials": 40,
+    "same_multiset_shuffled_saving_p95": 7.169925001442312
+  },
+  "decision": {
+    "frozen_coarse_model": "op_count",
+    "frozen_count_model": "book_length",
+    "promoted": false,
+    "row0_status": "unchanged_exogenous"
+  },
+  "inputs": {
+    "controller_script": "analysis/book_level_coarse_length_controller_audit_20260622/scripts/01_book_level_coarse_length_controller_gate.py",
+    "family_holdout": "analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/08_recipe_reparse_family_holdout.json",
+    "minimal_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "minimal_ledger_reference": {
+    "full_corpus_coarse_plus_composition_bits": 1601.4570698724688
+  },
+  "plaintext_claim": false,
+  "rows": [
+    {
+      "baseline_bits": 1102.892993508206,
+      "controller_bits": 1207.254866281228,
+      "examples": [
+        {
+          "baseline_bits": 42.13211286281133,
+          "beam_rank": null,
+          "book": 20,
+          "composition_bits": 17.03737535776324,
+          "controller_bits": 46.13211286281133,
+          "op_count": 7,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 17.743572188935634,
+          "beam_rank": null,
+          "book": 21,
+          "composition_bits": 6.9886846867721655,
+          "controller_bits": 21.743572188935634,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 2,
+          "book": 22,
+          "composition_bits": 0.0,
+          "controller_bits": 1.0,
+          "op_count": 1,
+          "saving_bits": 2.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 77.44792243425877,
+          "beam_rank": null,
+          "book": 23,
+          "composition_bits": 34.42837242560489,
+          "controller_bits": 81.44792243425877,
+          "op_count": 12,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 17.002815015607055,
+          "beam_rank": null,
+          "book": 24,
+          "composition_bits": 6.247927513443585,
+          "controller_bits": 21.002815015607055,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 9.754887502163468,
+          "beam_rank": null,
+          "book": 25,
+          "composition_bits": 2.584962500721156,
+          "controller_bits": 13.754887502163468,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "prefix_20",
+      "nontrivial_sequence_in_beam": 3,
+      "saving_bits": -104.36187277302159,
+      "sequence_in_beam": 15,
+      "split_type": "prefix",
+      "test_books": 50,
+      "test_ops": 182,
+      "train_books": 10
+    },
+    {
+      "baseline_bits": 852.0558570974958,
+      "controller_bits": 910.6330950249595,
+      "examples": [
+        {
+          "baseline_bits": 39.4976884827205,
+          "beam_rank": null,
+          "book": 30,
+          "composition_bits": 17.987913478393562,
+          "controller_bits": 43.4976884827205,
+          "op_count": 6,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 56.33907492974357,
+          "beam_rank": null,
+          "book": 31,
+          "composition_bits": 27.65937492397432,
+          "controller_bits": 60.33907492974357,
+          "op_count": 8,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 16.75488750216347,
+          "beam_rank": null,
+          "book": 32,
+          "composition_bits": 6.0,
+          "controller_bits": 20.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 33,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 57.1325172605534,
+          "beam_rank": null,
+          "book": 34,
+          "composition_bits": 24.867854754062996,
+          "controller_bits": 61.1325172605534,
+          "op_count": 9,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 13.169925001442312,
+          "beam_rank": null,
+          "book": 35,
+          "composition_bits": 6.0,
+          "controller_bits": 17.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "prefix_30",
+      "nontrivial_sequence_in_beam": 3,
+      "saving_bits": -58.577237927464054,
+      "sequence_in_beam": 13,
+      "split_type": "prefix",
+      "test_books": 40,
+      "test_ops": 140,
+      "top1_exact_books": 10,
+      "top1_exact_ops": 10,
+      "train_books": 20
+    },
+    {
+      "baseline_bits": 567.5750112005592,
+      "controller_bits": 593.2924267860712,
+      "examples": [
+        {
+          "baseline_bits": 25.314981459805963,
+          "beam_rank": null,
+          "book": 40,
+          "composition_bits": 10.97513145692134,
+          "controller_bits": 29.314981459805963,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 19.46913301982959,
+          "beam_rank": null,
+          "book": 41,
+          "composition_bits": 5.129283016944966,
+          "controller_bits": 23.46913301982959,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 45.9578832416716,
+          "beam_rank": null,
+          "book": 42,
+          "composition_bits": 20.86314573662351,
+          "controller_bits": 49.9578832416716,
+          "op_count": 7,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 43,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": null,
+          "book": 44,
+          "composition_bits": 3.0,
+          "controller_bits": 14.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 18.75488750216347,
+          "beam_rank": null,
+          "book": 45,
+          "composition_bits": 8.0,
+          "controller_bits": 22.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "prefix_40",
+      "nontrivial_sequence_in_beam": 3,
+      "saving_bits": -25.71741558551234,
+      "sequence_in_beam": 12,
+      "split_type": "prefix",
+      "test_books": 30,
+      "test_ops": 95,
+      "top1_exact_books": 9,
+      "top1_exact_ops": 9,
+      "train_books": 30
+    },
+    {
+      "baseline_bits": 333.5096608370138,
+      "controller_bits": 341.98196392468975,
+      "examples": [
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 50,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 10.629356620079609,
+          "beam_rank": null,
+          "book": 51,
+          "composition_bits": 3.4594316186372973,
+          "controller_bits": 14.629356620079609,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": null,
+          "book": 52,
+          "composition_bits": 3.0,
+          "controller_bits": 14.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 53,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": null,
+          "book": 54,
+          "composition_bits": 3.0,
+          "controller_bits": 14.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 25.1931595582883,
+          "beam_rank": null,
+          "book": 55,
+          "composition_bits": 10.853309555403674,
+          "controller_bits": 29.1931595582883,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "prefix_50",
+      "nontrivial_sequence_in_beam": 2,
+      "saving_bits": -8.472303087675806,
+      "sequence_in_beam": 9,
+      "split_type": "prefix",
+      "test_books": 20,
+      "test_ops": 56,
+      "top1_exact_books": 7,
+      "top1_exact_ops": 7,
+      "train_books": 40
+    },
+    {
+      "baseline_bits": 109.7733753036961,
+      "controller_bits": 93.4156033928142,
+      "examples": [
+        {
+          "baseline_bits": 39.26648767983504,
+          "beam_rank": null,
+          "book": 60,
+          "composition_bits": 17.756712675508098,
+          "controller_bits": 43.26648767983504,
+          "op_count": 6,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 11.169925001442312,
+          "beam_rank": null,
+          "book": 61,
+          "composition_bits": 4.0,
+          "controller_bits": 15.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 62,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 12.027905996569885,
+          "beam_rank": 3,
+          "book": 63,
+          "composition_bits": 4.857980995127572,
+          "controller_bits": 6.442943495848728,
+          "op_count": 2,
+          "saving_bits": 5.584962500721157,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 11.629356620079609,
+          "beam_rank": 5,
+          "book": 64,
+          "composition_bits": 4.459431618637297,
+          "controller_bits": 6.78135971352466,
+          "op_count": 2,
+          "saving_bits": 4.847996906554949,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 17.75488750216347,
+          "beam_rank": null,
+          "book": 65,
+          "composition_bits": 7.0,
+          "controller_bits": 21.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "prefix_60",
+      "nontrivial_sequence_in_beam": 2,
+      "saving_bits": 16.357771910881887,
+      "sequence_in_beam": 7,
+      "split_type": "prefix",
+      "test_books": 10,
+      "test_ops": 20,
+      "top1_exact_books": 5,
+      "top1_exact_ops": 5,
+      "train_books": 50
+    },
+    {
+      "baseline_bits": 141.30017629132317,
+      "controller_bits": 149.30017629132317,
+      "examples": [
+        {
+          "baseline_bits": 89.24755066391691,
+          "beam_rank": null,
+          "book": 12,
+          "composition_bits": 39.058075653820715,
+          "controller_bits": 93.24755066391691,
+          "op_count": 14,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 52.05262562740626,
+          "beam_rank": null,
+          "book": 14,
+          "composition_bits": 23.372925621637012,
+          "controller_bits": 56.05262562740626,
+          "op_count": 8,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_1",
+      "saving_bits": -8.0,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 22,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 90.74199772130716,
+      "controller_bits": 102.74199772130716,
+      "examples": [
+        {
+          "baseline_bits": 25.314981459805963,
+          "beam_rank": null,
+          "book": 40,
+          "composition_bits": 10.97513145692134,
+          "controller_bits": 29.314981459805963,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 19.46913301982959,
+          "beam_rank": null,
+          "book": 41,
+          "composition_bits": 5.129283016944966,
+          "controller_bits": 23.46913301982959,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 45.9578832416716,
+          "beam_rank": null,
+          "book": 42,
+          "composition_bits": 20.86314573662351,
+          "controller_bits": 49.9578832416716,
+          "op_count": 7,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_13",
+      "saving_bits": -12.0,
+      "split_type": "family",
+      "test_books": 3,
+      "test_ops": 15,
+      "train_books": 57
+    },
+    {
+      "baseline_bits": 145.07374475576316,
+      "controller_bits": 153.07374475576316,
+      "examples": [
+        {
+          "baseline_bits": 69.05425385660749,
+          "beam_rank": null,
+          "book": 15,
+          "composition_bits": 29.619666348674762,
+          "controller_bits": 73.05425385660749,
+          "op_count": 11,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 76.01949089915567,
+          "beam_rank": null,
+          "book": 16,
+          "composition_bits": 32.99994089050179,
+          "controller_bits": 80.01949089915567,
+          "op_count": 12,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_2",
+      "saving_bits": -8.0,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 23,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 28.924812503605782,
+      "controller_bits": 28.562242424221076,
+      "examples": [
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": 7,
+          "book": 44,
+          "composition_bits": 3.0,
+          "controller_bits": 5.807354922057604,
+          "op_count": 2,
+          "saving_bits": 4.362570079384708,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 18.75488750216347,
+          "beam_rank": null,
+          "book": 45,
+          "composition_bits": 8.0,
+          "controller_bits": 22.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_20",
+      "nontrivial_sequence_in_beam": 1,
+      "saving_bits": 0.3625700793847084,
+      "sequence_in_beam": 1,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 5,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 27.24222511737065,
+      "controller_bits": 13.224303209373389,
+      "examples": [
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 62,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 12.027905996569885,
+          "beam_rank": 3,
+          "book": 63,
+          "composition_bits": 4.857980995127572,
+          "controller_bits": 6.442943495848728,
+          "op_count": 2,
+          "saving_bits": 5.584962500721157,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 11.629356620079609,
+          "beam_rank": 5,
+          "book": 64,
+          "composition_bits": 4.459431618637297,
+          "controller_bits": 6.78135971352466,
+          "op_count": 2,
+          "saving_bits": 4.847996906554949,
+          "sequence_in_beam": true,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_21",
+      "nontrivial_sequence_in_beam": 2,
+      "saving_bits": 14.01792190799726,
+      "sequence_in_beam": 3,
+      "split_type": "family",
+      "test_books": 3,
+      "test_ops": 5,
+      "top1_exact_books": 1,
+      "top1_exact_ops": 1,
+      "train_books": 57
+    },
+    {
+      "baseline_bits": 56.246051402607605,
+      "controller_bits": 64.2460514026076,
+      "examples": [
+        {
+          "baseline_bits": 31.906201399722985,
+          "beam_rank": null,
+          "book": 28,
+          "composition_bits": 13.981388896117206,
+          "controller_bits": 35.90620139972299,
+          "op_count": 5,
+          "saving_bits": -4.0000000000000036,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 24.339850002884624,
+          "beam_rank": null,
+          "book": 29,
+          "composition_bits": 10.0,
+          "controller_bits": 28.339850002884624,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_23",
+      "saving_bits": -8.000000000000004,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 9,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 23.172740017049364,
+      "controller_bits": 23.58777751632821,
+      "examples": [
+        {
+          "baseline_bits": 19.58777751632821,
+          "beam_rank": null,
+          "book": 46,
+          "composition_bits": 8.832890014164741,
+          "controller_bits": 23.58777751632821,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 47,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_27",
+      "saving_bits": -0.4150374992788439,
+      "sequence_in_beam": 1,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 4,
+      "top1_exact_books": 1,
+      "top1_exact_ops": 1,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 59.87568505174697,
+      "controller_bits": 67.87568505174697,
+      "examples": [
+        {
+          "baseline_bits": 42.13211286281133,
+          "beam_rank": null,
+          "book": 20,
+          "composition_bits": 17.03737535776324,
+          "controller_bits": 46.13211286281133,
+          "op_count": 7,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 17.743572188935634,
+          "beam_rank": null,
+          "book": 21,
+          "composition_bits": 6.9886846867721655,
+          "controller_bits": 21.743572188935634,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_3",
+      "saving_bits": -8.0,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 10,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 20.339850002884624,
+      "controller_bits": 20.75488750216347,
+      "examples": [
+        {
+          "baseline_bits": 16.75488750216347,
+          "beam_rank": null,
+          "book": 32,
+          "composition_bits": 6.0,
+          "controller_bits": 20.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 33,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_30",
+      "saving_bits": -0.4150374992788439,
+      "sequence_in_beam": 1,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 4,
+      "top1_exact_books": 1,
+      "top1_exact_ops": 1,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 31.68636373605026,
+      "controller_bits": 39.68636373605026,
+      "examples": [
+        {
+          "baseline_bits": 11.977279923499916,
+          "beam_rank": null,
+          "book": 18,
+          "composition_bits": 4.807354922057604,
+          "controller_bits": 15.977279923499916,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 19.709083812550343,
+          "beam_rank": null,
+          "book": 19,
+          "composition_bits": 8.954196310386875,
+          "controller_bits": 23.709083812550343,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_33",
+      "saving_bits": -8.0,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 5,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 50.09755252065515,
+      "controller_bits": 62.09755252065515,
+      "examples": [
+        {
+          "baseline_bits": 17.002815015607055,
+          "beam_rank": null,
+          "book": 24,
+          "composition_bits": 6.247927513443585,
+          "controller_bits": 21.002815015607055,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 9.754887502163468,
+          "beam_rank": null,
+          "book": 25,
+          "composition_bits": 2.584962500721156,
+          "controller_bits": 13.754887502163468,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 23.339850002884624,
+          "beam_rank": null,
+          "book": 26,
+          "composition_bits": 9.0,
+          "controller_bits": 27.339850002884624,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_4",
+      "saving_bits": -12.0,
+      "split_type": "family",
+      "test_books": 3,
+      "test_ops": 9,
+      "train_books": 57
+    },
+    {
+      "baseline_bits": 27.96920662296423,
+      "controller_bits": 28.79928162152192,
+      "examples": [
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 50,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 10.629356620079609,
+          "beam_rank": null,
+          "book": 51,
+          "composition_bits": 3.4594316186372973,
+          "controller_bits": 14.629356620079609,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": null,
+          "book": 52,
+          "composition_bits": 3.0,
+          "controller_bits": 14.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 53,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_40",
+      "saving_bits": -0.8300749985576878,
+      "sequence_in_beam": 2,
+      "split_type": "family",
+      "test_books": 4,
+      "test_ops": 6,
+      "top1_exact_books": 2,
+      "top1_exact_ops": 2,
+      "train_books": 56
+    },
+    {
+      "baseline_bits": 46.67970000576925,
+      "controller_bits": 54.67970000576925,
+      "examples": [
+        {
+          "baseline_bits": 29.92481250360578,
+          "beam_rank": null,
+          "book": 38,
+          "composition_bits": 12.0,
+          "controller_bits": 33.92481250360578,
+          "op_count": 5,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 16.75488750216347,
+          "beam_rank": null,
+          "book": 39,
+          "composition_bits": 6.0,
+          "controller_bits": 20.75488750216347,
+          "op_count": 3,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_6",
+      "saving_bits": -8.0,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 8,
+      "train_books": 58
+    },
+    {
+      "baseline_bits": 101.84877016947162,
+      "controller_bits": 113.84877016947162,
+      "examples": [
+        {
+          "baseline_bits": 10.169925001442312,
+          "beam_rank": null,
+          "book": 54,
+          "composition_bits": 3.0,
+          "controller_bits": 14.169925001442312,
+          "op_count": 2,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 25.1931595582883,
+          "beam_rank": null,
+          "book": 55,
+          "composition_bits": 10.853309555403674,
+          "controller_bits": 29.1931595582883,
+          "op_count": 4,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        },
+        {
+          "baseline_bits": 66.48568560974101,
+          "beam_rank": null,
+          "book": 56,
+          "composition_bits": 30.63606060252945,
+          "controller_bits": 70.48568560974101,
+          "op_count": 10,
+          "saving_bits": -4.0,
+          "sequence_in_beam": false,
+          "top1_exact": false
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_7",
+      "saving_bits": -12.0,
+      "split_type": "family",
+      "test_books": 3,
+      "test_ops": 16,
+      "train_books": 57
+    },
+    {
+      "baseline_bits": 7.169925001442312,
+      "controller_bits": 0.0,
+      "examples": [
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 68,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        },
+        {
+          "baseline_bits": 3.584962500721156,
+          "beam_rank": 1,
+          "book": 69,
+          "composition_bits": 0.0,
+          "controller_bits": 0.0,
+          "op_count": 1,
+          "saving_bits": 3.584962500721156,
+          "sequence_in_beam": true,
+          "top1_exact": true
+        }
+      ],
+      "label": "family_hellgate_public_bookcase_8",
+      "saving_bits": 7.169925001442312,
+      "sequence_in_beam": 2,
+      "split_type": "family",
+      "test_books": 2,
+      "test_ops": 2,
+      "top1_exact_books": 2,
+      "top1_exact_ops": 2,
+      "train_books": 58
+    }
+  ],
+  "scope": "analysis_only_book_level_controller_program_integration",
+  "summary": {
+    "baseline_bits": 3824.1756988669817,
+    "controller_bits": 4069.0564893380647,
+    "nontrivial_sequence_in_beam": 16,
+    "saving_bits": -244.88079047108297,
+    "sequence_in_beam": 66,
+    "test_books": 186,
+    "test_ops": 636,
+    "top1_exact_books": 38,
+    "top1_exact_ops": 38
+  },
+  "translation_delta": "NONE"
+}

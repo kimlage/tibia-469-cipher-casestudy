@@ -21,6 +21,7 @@ source_refs:
   - analysis/composition_index_structure_audit_20260622
   - analysis/minimal_external_tape_program_audit_20260622
   - analysis/source_tape_removal_program_audit_20260622
+  - analysis/book_level_controller_program_integration_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -754,6 +755,17 @@ unrepaired books, and costs `6672.081` bits versus `5062.568` copy-hint
 baseline (`-1609.513` saving; random visible-source p95 `-8.288`). The
 copy source/hint tape therefore remains external under decoder-visible policy
 tests.
+A book-level controller program integration audit then tries to convert the
+strongest positive coarse-control clue into an actual executable decoder
+component. The frozen `book_length__op_count` controller is inserted into the
+minimal external tape program and compared directly against the paid
+`coarse_control + composition_index` ledger. It is not promoted: across
+prefix/family holdouts, the baseline costs `3824.176` bits, while controller
+plus beam-rank/full-sequence corrections costs `4069.056` bits (`-244.881`
+saving), even with `0.000` model/grammar descriptor bits charged. The true
+sequence is in beam `66/186` times (`16` nontrivial), but top-1 exact books are
+all trivial (`38` books, `0` nontrivial). The book-level controller therefore
+remains a predictive clue, not an executable program component.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3094,6 +3106,8 @@ book generation, not row0 pair-cell placement.
 - [Macro program gate](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/03_macro_program_gate.md)
 - [Final source tape removal program audit](../../analysis/source_tape_removal_program_audit_20260622/reports/final_source_tape_removal_program_audit.md)
 - [Source tape removal program gate](../../analysis/source_tape_removal_program_audit_20260622/reports/test_results/01_source_tape_removal_program_gate.md)
+- [Final book-level controller program integration audit](../../analysis/book_level_controller_program_integration_audit_20260622/reports/final_book_level_controller_program_integration_audit.md)
+- [Book-level controller program integration gate](../../analysis/book_level_controller_program_integration_audit_20260622/reports/test_results/01_book_level_controller_program_integration_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
