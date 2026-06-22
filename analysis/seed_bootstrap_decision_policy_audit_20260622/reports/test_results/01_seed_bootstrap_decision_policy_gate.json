@@ -1,0 +1,158 @@
+{
+  "case_reopened": false,
+  "classification": "seed_bootstrap_decision_policy_not_promoted",
+  "compression_bound_status": "unchanged",
+  "control": {
+    "observed_mean_test_accuracy": 0.446042137042708,
+    "p05_mean_test_accuracy": 0.6655702038944973,
+    "p50_mean_test_accuracy": 0.7674320279587193,
+    "p95_mean_test_accuracy": 0.8469744547963217,
+    "trials": 300
+  },
+  "decision": {
+    "generator_status": "not_generator_teacher_forced_decision_surface",
+    "next_blocker": "copy/literal decision policy is only a clue unless integrated into a target-free seed decoder with source and length choices",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "holdouts": [
+    {
+      "cutoff_book": 3,
+      "selected_rule": "ctx5_repeat_literal_in_next",
+      "test": {
+        "accuracy": 0.6182795698924731,
+        "copy_precision": 1.0,
+        "copy_recall": 0.08974358974358974,
+        "copy_tp": 7,
+        "false_copy": 0,
+        "false_literal": 71,
+        "literal_tn": 108,
+        "rows": 186
+      },
+      "train": {
+        "accuracy": 0.8850174216027874,
+        "copy_precision": 0.5714285714285714,
+        "copy_recall": 0.11764705882352941,
+        "copy_tp": 4,
+        "false_copy": 3,
+        "false_literal": 30,
+        "literal_tn": 250,
+        "rows": 287
+      }
+    },
+    {
+      "cutoff_book": 5,
+      "selected_rule": "ctx5_repeat_literal_in_next",
+      "test": {
+        "accuracy": 0.584070796460177,
+        "copy_precision": 1.0,
+        "copy_recall": 0.09615384615384616,
+        "copy_tp": 5,
+        "false_copy": 0,
+        "false_literal": 47,
+        "literal_tn": 61,
+        "rows": 113
+      },
+      "train": {
+        "accuracy": 0.8416666666666667,
+        "copy_precision": 0.6666666666666666,
+        "copy_recall": 0.1,
+        "copy_tp": 6,
+        "false_copy": 3,
+        "false_literal": 54,
+        "literal_tn": 297,
+        "rows": 360
+      }
+    },
+    {
+      "cutoff_book": 7,
+      "selected_rule": "ctx5_repeat_literal_in_next",
+      "test": {
+        "accuracy": 0.5818181818181818,
+        "copy_precision": 1.0,
+        "copy_recall": 0.08,
+        "copy_tp": 2,
+        "false_copy": 0,
+        "false_literal": 23,
+        "literal_tn": 30,
+        "rows": 55
+      },
+      "train": {
+        "accuracy": 0.80622009569378,
+        "copy_precision": 0.75,
+        "copy_recall": 0.10344827586206896,
+        "copy_tp": 9,
+        "false_copy": 3,
+        "false_literal": 78,
+        "literal_tn": 328,
+        "rows": 418
+      }
+    },
+    {
+      "cutoff_book": 9,
+      "selected_rule": "ctx5_repeat_literal_in_next",
+      "test": {
+        "accuracy": 0.0,
+        "copy_precision": 0.0,
+        "copy_recall": 0.0,
+        "copy_tp": 0,
+        "false_copy": 0,
+        "false_literal": 6,
+        "literal_tn": 0,
+        "rows": 6
+      },
+      "train": {
+        "accuracy": 0.7901498929336188,
+        "copy_precision": 0.7857142857142857,
+        "copy_recall": 0.10377358490566038,
+        "copy_tp": 11,
+        "false_copy": 3,
+        "false_literal": 95,
+        "literal_tn": 358,
+        "rows": 467
+      }
+    }
+  ],
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "seed_bootstrap_copy_surface_final": "analysis/seed_bootstrap_copy_surface_audit_20260622/reports/final_seed_bootstrap_copy_surface_audit.md",
+    "seed_bootstrap_transducer_final": "analysis/seed_bootstrap_transducer_program_audit_20260622/reports/final_seed_bootstrap_transducer_program_audit.md",
+    "surface_script": "analysis/seed_bootstrap_copy_surface_audit_20260622/scripts/01_seed_bootstrap_copy_surface_gate.py"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "seed_bootstrap_decision_policy_gate.v1",
+  "scope": "analysis_only_seed_bootstrap_decision_policy",
+  "summary": {
+    "action_counts": {
+      "copy": 112,
+      "literal": 361
+    },
+    "beats_shuffled_label_p95": false,
+    "classification": "seed_bootstrap_decision_policy_not_promoted",
+    "literal_tape_digits": 361,
+    "mean_test_accuracy": 0.446042137042708,
+    "positive_splits": 0,
+    "promoted": false,
+    "rows": 473,
+    "seed_digits": 1696,
+    "weak": false
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "book_lengths": [
+      144,
+      92,
+      177,
+      140,
+      140,
+      273,
+      175,
+      106,
+      155,
+      294
+    ],
+    "validation_errors": []
+  }
+}

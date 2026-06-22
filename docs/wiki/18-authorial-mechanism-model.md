@@ -68,6 +68,7 @@ source_refs:
   - analysis/residual_content_fingerprint_program_audit_20260622
   - analysis/seed_bootstrap_copy_surface_audit_20260622
   - analysis/seed_bootstrap_transducer_program_audit_20260622
+  - analysis/seed_bootstrap_decision_policy_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3626,6 +3627,7 @@ book generation, not row0 pair-cell placement.
 - [Residual content-fingerprint program audit](../../analysis/residual_content_fingerprint_program_audit_20260622/reports/final_residual_content_fingerprint_program_audit.md)
 - [Seed bootstrap copy-surface audit](../../analysis/seed_bootstrap_copy_surface_audit_20260622/reports/final_seed_bootstrap_copy_surface_audit.md)
 - [Seed bootstrap transducer program audit](../../analysis/seed_bootstrap_transducer_program_audit_20260622/reports/final_seed_bootstrap_transducer_program_audit.md)
+- [Seed bootstrap decision-policy audit](../../analysis/seed_bootstrap_decision_policy_audit_20260622/reports/final_seed_bootstrap_decision_policy_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3730,6 +3732,15 @@ deterministic context-copy policy. The best policy (`context=4`, `copy_len=4`,
 show the prefix is non-random (`p95=1`), but the policy still does not reduce
 the executable ledger. The blocker is now more precise: repeated seed content
 exists, but the copy-start/source-length decision policy is still missing.
+
+A teacher-forced decision-policy audit isolates that blocker. On the true seed
+prefix path, with suffix-repeat features and the literal-tape pointer visible,
+simple prefix-selected rules reach only `0.446` mean holdout accuracy, below
+shuffled-label p95 `0.847`. The selected rule has high precision when it calls
+copy, but copy recall is only about `0.08-0.10` on nonempty splits, so it
+mostly learns not to copy. This demotes simple visible-state copy/literal rules
+as a bootstrap path; any future seed generator needs a richer decision state or
+a different innovation process.
 
 ## Boundary
 
