@@ -55,6 +55,8 @@ source_refs:
   - analysis/executable_v3_source_boundary_program_audit_20260622
   - analysis/executable_v3_source_boundary_robustness_audit_20260622
   - analysis/boundary_mark_propagation_program_audit_20260622
+  - analysis/one_sided_source_boundary_program_audit_20260622
+  - analysis/executable_v4_one_sided_boundary_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1093,6 +1095,18 @@ larger candidate sets make the ledger slightly worse: `3280.551` bits versus
 v3 at `3280.192` (`+0.359`). A shuffled-propagation control gets even more hits
 (`48/208`) while also worsening cost. Mark propagation is therefore not promoted
 as the next generator route; v3 remains the active partial boundary program.
+The one-sided source-boundary audit then finds a more useful extension. Instead
+of requiring both source endpoints, it allows exactly one anchored endpoint and
+leaves exact length in the book-level residual composition. Coverage decomposes
+as `29` both-endpoint hits, `40` start-only, `56` end-only, and `83` intervals
+with neither endpoint in the promoted boundary set. A fixed `end_first` policy
+reduces the v3 residual by `49.465` bits before a `2.000` bit policy
+declaration; after declaration the gain remains `47.465`, and prefix-only
+policy selection is positive in `5/5` splits. The executable v4 integration
+then preserves `70/70` roundtrip and lowers external bits excluding seed from
+v3 `4156.604` to `4109.138`. This is promoted as another partial executable
+dependency reduction, not a complete generator: `123` copy hints still fall back
+and `83` intervals have neither endpoint anchored.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3497,6 +3511,10 @@ book generation, not row0 pair-cell placement.
 - [Executable v3 source-boundary robustness gate](../../analysis/executable_v3_source_boundary_robustness_audit_20260622/reports/test_results/01_executable_v3_source_boundary_robustness_gate.md)
 - [Final boundary-mark propagation program audit](../../analysis/boundary_mark_propagation_program_audit_20260622/reports/final_boundary_mark_propagation_program_audit.md)
 - [Boundary-mark propagation program gate](../../analysis/boundary_mark_propagation_program_audit_20260622/reports/test_results/01_boundary_mark_propagation_program_gate.md)
+- [Final one-sided source-boundary program audit](../../analysis/one_sided_source_boundary_program_audit_20260622/reports/final_one_sided_source_boundary_program_audit.md)
+- [One-sided source-boundary program gate](../../analysis/one_sided_source_boundary_program_audit_20260622/reports/test_results/01_one_sided_source_boundary_program_gate.md)
+- [Final executable v4 one-sided boundary program audit](../../analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/final_executable_v4_one_sided_boundary_program_audit.md)
+- [Executable v4 one-sided boundary program gate](../../analysis/executable_v4_one_sided_boundary_program_audit_20260622/reports/test_results/01_executable_v4_one_sided_boundary_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

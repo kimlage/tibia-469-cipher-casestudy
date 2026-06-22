@@ -1,0 +1,49 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_EXECUTABLE_V4_ONE_SIDED_BOUNDARY_LEDGER",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "executable_v4_promoted": true,
+    "next_blocker": "83/208 copy intervals still have neither endpoint in the promoted boundary set",
+    "plaintext_claim": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v3_source_boundary_program_gate": "analysis/executable_v3_source_boundary_program_audit_20260622/reports/test_results/01_executable_v3_source_boundary_program_gate.json",
+    "one_sided_source_boundary_program_gate": "analysis/one_sided_source_boundary_program_audit_20260622/reports/test_results/01_one_sided_source_boundary_program_gate.json"
+  },
+  "plaintext_claim": false,
+  "row0_status": "unchanged_exogenous",
+  "schema": "executable_v4_one_sided_boundary_program_gate.v1",
+  "scope": "analysis_only_executable_v4_one_sided_boundary_program",
+  "summary": {
+    "class_counts": {
+      "both": 29,
+      "fallback": 123,
+      "one_sided_end": 56
+    },
+    "copy_bits": 1835.13245877751,
+    "copy_ops": 208,
+    "delta_excluding_seed_vs_v3": -47.46548798363165,
+    "delta_including_seed_vs_v3": -47.465487983632556,
+    "literal_payload_bits": 883.6328732400384,
+    "online_x64_coarse_bits": 876.412,
+    "policy": "end_first",
+    "policy_declaration_bits": 2.0,
+    "residual_composition_bits": 511.96112092274507,
+    "seed_payload_bits": 5633.990048928967,
+    "v3_external_bits_excluding_seed": 4156.603940923925,
+    "v3_external_bits_including_seed": 9790.593989852892,
+    "v3_residual_bits": 3280.191940923925,
+    "v4_external_bits_excluding_seed": 4109.138452940293,
+    "v4_external_bits_including_seed": 9743.12850186926,
+    "v4_residual_bits": 3232.7264529402933
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "exact_books": 70,
+    "roundtrip_70_70": true
+  }
+}
