@@ -1,0 +1,504 @@
+{
+  "case_reopened": false,
+  "classification": "length_innovation_factorization_clue_residual_external",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "best_residual_feature": "type_bucket",
+    "factorization_promoted": true,
+    "promoted_residual_features": [],
+    "residual_codec_promoted": false,
+    "row0_status": "unchanged_exogenous"
+  },
+  "feature_results": {
+    "global": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "model_bits": 834.6736924919925,
+          "saving_bits": -136.34828809585235,
+          "test_ops": 182,
+          "top1_hits": 17,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "model_bits": 693.8216527963061,
+          "saving_bits": -140.61335371824248,
+          "test_ops": 140,
+          "top1_hits": 13,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "model_bits": 482.3190673785181,
+          "saving_bits": -104.03341182488055,
+          "test_ops": 95,
+          "top1_hits": 7,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "model_bits": 294.1916709069965,
+          "saving_bits": -62.834884969702614,
+          "test_ops": 56,
+          "top1_hits": 3,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 116.19160238820483,
+          "saving_bits": -32.29397098515169,
+          "test_ops": 20,
+          "top1_hits": 2,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [],
+      "observed_model_bits": 2421.197685962018,
+      "observed_saving_bits": -476.1239095938297,
+      "observed_top1_hits": 42,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -391.6192882865545,
+      "random_saving_p95": -308.9232197985185,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    },
+    "length_bucket": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "model_bits": 754.0121197296662,
+          "saving_bits": -55.68671533352608,
+          "test_ops": 182,
+          "top1_hits": 10,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "model_bits": 599.4373286393012,
+          "saving_bits": -46.22902956123755,
+          "test_ops": 140,
+          "top1_hits": 8,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "model_bits": 411.9024737052038,
+          "saving_bits": -33.616818151566235,
+          "test_ops": 95,
+          "top1_hits": 11,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "model_bits": 251.53214987276797,
+          "saving_bits": -20.17536393547411,
+          "test_ops": 56,
+          "top1_hits": 2,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 96.75248172607144,
+          "saving_bits": -12.854850323018297,
+          "test_ops": 20,
+          "top1_hits": 3,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "length_bucket"
+      ],
+      "observed_model_bits": 2113.636553673011,
+      "observed_saving_bits": -168.56277730482228,
+      "observed_top1_hits": 34,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -184.75717519627224,
+      "random_saving_p95": -137.7853344084362,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    },
+    "op_type": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "model_bits": 820.7175333712535,
+          "saving_bits": -122.39212897511334,
+          "test_ops": 182,
+          "top1_hits": 17,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "model_bits": 669.4424257936689,
+          "saving_bits": -116.23412671560527,
+          "test_ops": 140,
+          "top1_hits": 12,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "model_bits": 465.95480440039483,
+          "saving_bits": -87.66914884675725,
+          "test_ops": 95,
+          "top1_hits": 10,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "model_bits": 282.13034226829996,
+          "saving_bits": -50.77355633100609,
+          "test_ops": 56,
+          "top1_hits": 5,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 111.19643765286905,
+          "saving_bits": -27.29880624981591,
+          "test_ops": 20,
+          "top1_hits": 1,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "op_type"
+      ],
+      "observed_model_bits": 2349.4415434864864,
+      "observed_saving_bits": -404.3677671182979,
+      "observed_top1_hits": 45,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -375.00834419547,
+      "random_saving_p95": -292.50070906487764,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    },
+    "remaining_bucket": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 0,
+          "model_bits": 772.7721378336807,
+          "saving_bits": -74.44673343754062,
+          "test_ops": 182,
+          "top1_hits": 20,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 0,
+          "model_bits": 641.7299062034801,
+          "saving_bits": -88.5216071254165,
+          "test_ops": 140,
+          "top1_hits": 9,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 0,
+          "model_bits": 453.6926440188768,
+          "saving_bits": -75.40698846523924,
+          "test_ops": 95,
+          "top1_hits": 8,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 0,
+          "model_bits": 277.8700732671467,
+          "saving_bits": -46.51328732985286,
+          "test_ops": 56,
+          "top1_hits": 3,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 106.75668745445911,
+          "saving_bits": -22.85905605140597,
+          "test_ops": 20,
+          "top1_hits": 0,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "remaining_bucket"
+      ],
+      "observed_model_bits": 2252.8214487776436,
+      "observed_saving_bits": -307.74767240945516,
+      "observed_top1_hits": 40,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -289.3041654051828,
+      "random_saving_p95": -222.94868354937574,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    },
+    "type_bucket": {
+      "beats_random_p95": true,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 1,
+          "model_bits": 736.8617973965447,
+          "saving_bits": -38.53639300040459,
+          "test_ops": 182,
+          "top1_hits": 19,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 1,
+          "model_bits": 582.4676291356941,
+          "saving_bits": -29.25933005763045,
+          "test_ops": 140,
+          "top1_hits": 14,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 1,
+          "model_bits": 402.06954417145505,
+          "saving_bits": -23.783888617817468,
+          "test_ops": 95,
+          "top1_hits": 13,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 1,
+          "model_bits": 246.67933195949735,
+          "saving_bits": -15.322546022203483,
+          "test_ops": 56,
+          "top1_hits": 4,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 94.9923330625196,
+          "saving_bits": -11.094701659466466,
+          "test_ops": 20,
+          "top1_hits": 3,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "op_type",
+        "length_bucket"
+      ],
+      "observed_model_bits": 2063.070635725711,
+      "observed_saving_bits": -117.99685935752245,
+      "observed_top1_hits": 53,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -231.15145010132807,
+      "random_saving_p95": -171.11511402428542,
+      "status": "WEAK_RESIDUAL_CODEC_CLUE"
+    },
+    "type_bucket_prev_bucket": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 56,
+          "model_bits": 779.8195018761803,
+          "saving_bits": -81.49409748004018,
+          "test_ops": 182,
+          "top1_hits": 20,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 15,
+          "model_bits": 594.8829697607855,
+          "saving_bits": -41.67467068272185,
+          "test_ops": 140,
+          "top1_hits": 14,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 8,
+          "model_bits": 403.2371094469945,
+          "saving_bits": -24.951453893356927,
+          "test_ops": 95,
+          "top1_hits": 11,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 5,
+          "model_bits": 247.64292188854816,
+          "saving_bits": -16.286135951254295,
+          "test_ops": 56,
+          "top1_hits": 5,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 1,
+          "model_bits": 96.15639766109594,
+          "saving_bits": -12.258766258042797,
+          "test_ops": 20,
+          "top1_hits": 1,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "op_type",
+        "length_bucket",
+        "prev_length_bucket"
+      ],
+      "observed_model_bits": 2121.7389006336043,
+      "observed_saving_bits": -176.66512426541607,
+      "observed_top1_hits": 51,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -194.73633468608563,
+      "random_saving_p95": -139.1246232985448,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    },
+    "type_bucket_remaining": {
+      "beats_random_p95": false,
+      "cutoff_rows": [
+        {
+          "cutoff": 20,
+          "fallback_rows": 43,
+          "model_bits": 773.7776444291035,
+          "saving_bits": -75.45224003296335,
+          "test_ops": 182,
+          "top1_hits": 20,
+          "train_ops": 79,
+          "uniform_bits": 698.3254043961401
+        },
+        {
+          "cutoff": 30,
+          "fallback_rows": 3,
+          "model_bits": 572.7054256433848,
+          "saving_bits": -19.497126565321196,
+          "test_ops": 140,
+          "top1_hits": 15,
+          "train_ops": 121,
+          "uniform_bits": 553.2082990780636
+        },
+        {
+          "cutoff": 40,
+          "fallback_rows": 3,
+          "model_bits": 401.47657299435843,
+          "saving_bits": -23.190917440720852,
+          "test_ops": 95,
+          "top1_hits": 14,
+          "train_ops": 166,
+          "uniform_bits": 378.2856555536376
+        },
+        {
+          "cutoff": 50,
+          "fallback_rows": 3,
+          "model_bits": 245.8489273140432,
+          "saving_bits": -14.492141376749345,
+          "test_ops": 56,
+          "top1_hits": 8,
+          "train_ops": 205,
+          "uniform_bits": 231.35678593729386
+        },
+        {
+          "cutoff": 60,
+          "fallback_rows": 0,
+          "model_bits": 92.36933459968681,
+          "saving_bits": -8.471703196633669,
+          "test_ops": 20,
+          "top1_hits": 3,
+          "train_ops": 241,
+          "uniform_bits": 83.89763140305314
+        }
+      ],
+      "features": [
+        "op_type",
+        "length_bucket",
+        "remaining_bucket"
+      ],
+      "observed_model_bits": 2086.177904980577,
+      "observed_saving_bits": -141.10412861238842,
+      "observed_top1_hits": 60,
+      "observed_total_rows": 493,
+      "observed_uniform_bits": 1945.0737763681882,
+      "random_saving_p05": -179.6568129934865,
+      "random_saving_p95": -123.7355610673314,
+      "status": "REJECTED_RESIDUAL_MODEL"
+    }
+  },
+  "inputs": {
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json",
+    "random_trials": 300,
+    "unified_tests": "analysis/unified_control_program_audit_20260622/reports/test_results/02_unified_control_program_tests.json"
+  },
+  "plaintext_claim": false,
+  "scope": "analysis_only_length_bucket_plus_residual_innovation",
+  "summary": {
+    "factorized_saving_bits": 113.99753259698969,
+    "factorized_type_bucket_residual_bits": 1741.6414480989374,
+    "independent_type_exact_length_bits": 1855.638980695927,
+    "op_type_uniform_bits": 261.0,
+    "raw_length_bits": 1594.638980695927,
+    "residual_uniform_bits": 966.638134813408,
+    "rows": 261,
+    "type_bucket_stream_bits": 775.0033132855294
+  },
+  "translation_delta": "NONE"
+}

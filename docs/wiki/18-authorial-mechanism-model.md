@@ -692,6 +692,16 @@ trivial one-operation books under a rejected codec. Exact `type:length` remains
 an external stream, and the next route needs a different length-innovation or
 joint latent-state representation rather than another observable Markov/context
 program.
+A length innovation factor audit then changes the representation rather than
+the local context. It splits each exact length into a coarse
+`type:length_bucket` control stream plus a within-bucket residual. This is a
+useful dependency factorization: independent `op_type + exact_length` costs
+`1855.639` bits, while `type:length_bucket` plus uniform residual costs
+`1741.641`, saving `113.998` bits after paying the coarse stream. But the fine
+residual is not generated: the best residual context, `type_bucket`, is still
+`117.997` bits worse than uniform residual declaration, and no residual feature
+is promoted. The blocker is therefore narrower but still external:
+within-bucket length innovation.
 An innovation stream transducer audit then reframes the problem more
 constructively: instead of demanding free digit generation, treat the `266`
 literal-payload digits as one external innovation tape. The first replay gate
@@ -3009,6 +3019,8 @@ book generation, not row0 pair-cell placement.
 - [Unified control program tests](../../analysis/unified_control_program_audit_20260622/reports/test_results/02_unified_control_program_tests.md)
 - [Final stateful control program audit](../../analysis/stateful_control_program_audit_20260622/reports/final_stateful_control_program_audit.md)
 - [Stateful control program gate](../../analysis/stateful_control_program_audit_20260622/reports/test_results/01_stateful_control_program_gate.md)
+- [Final length innovation factor audit](../../analysis/length_innovation_factor_audit_20260622/reports/final_length_innovation_factor_audit.md)
+- [Length innovation factor gate](../../analysis/length_innovation_factor_audit_20260622/reports/test_results/01_length_innovation_factor_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
 - [Book control header gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/18_book_control_header_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
