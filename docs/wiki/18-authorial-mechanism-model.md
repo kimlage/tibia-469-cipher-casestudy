@@ -69,6 +69,7 @@ source_refs:
   - analysis/seed_bootstrap_copy_surface_audit_20260622
   - analysis/seed_bootstrap_transducer_program_audit_20260622
   - analysis/seed_bootstrap_decision_policy_audit_20260622
+  - analysis/unified_innovation_payload_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3628,6 +3629,7 @@ book generation, not row0 pair-cell placement.
 - [Seed bootstrap copy-surface audit](../../analysis/seed_bootstrap_copy_surface_audit_20260622/reports/final_seed_bootstrap_copy_surface_audit.md)
 - [Seed bootstrap transducer program audit](../../analysis/seed_bootstrap_transducer_program_audit_20260622/reports/final_seed_bootstrap_transducer_program_audit.md)
 - [Seed bootstrap decision-policy audit](../../analysis/seed_bootstrap_decision_policy_audit_20260622/reports/final_seed_bootstrap_decision_policy_audit.md)
+- [Unified innovation payload audit](../../analysis/unified_innovation_payload_audit_20260622/reports/final_unified_innovation_payload_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3743,6 +3745,21 @@ copy, but copy recall is only about `0.08-0.10` on nonempty splits, so it
 mostly learns not to copy. This demotes simple visible-state copy/literal rules
 as a bootstrap path; any future seed generator needs a richer decision state or
 a different innovation process.
+
+The constructive follow-up is to stop splitting content into seed payload and
+derived-book literal payload. A unified innovation payload audit concatenates
+the `1696` seed digits with the `266` v6 literal digits and replays that
+`1962`-digit stream with paid previous-copy/literal events. This is promoted as
+a payload-ledger reduction: raw declaration costs `6517.623` bits, while the
+best paid replay (`min_len=8`) costs `4010.770` bits after declaration, a
+`2506.853` bit reduction. Replacing the separate v6 seed and literal payload
+declarations moves the ledger including seed from `9699.003` to `7192.151`
+bits. The replay roundtrips all `63` seed/literal
+segments, beats same-multiset digit shuffle and segment-order shuffle p05, and
+has `4/4` positive replay holdouts. The caveat is essential: the replay ledger
+is still target-conditioned and does not explain why or when the innovation
+chunks are introduced. It reduces declared payload dependency; it does not
+promote a source-free generator.
 
 ## Boundary
 
