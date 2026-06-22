@@ -12,6 +12,7 @@ TEST_RESULTS = REPORTS / "test_results"
 
 REPLAY_GATE = TEST_RESULTS / "01_innovation_tape_replay_gate.json"
 STRUCTURE_GATE = TEST_RESULTS / "03_innovation_tape_structure_gate.json"
+SYNC_GATE = TEST_RESULTS / "04_tape_synchronized_closed_loop_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -36,11 +37,16 @@ def assert_boundary(name: str, data: dict[str, Any]) -> None:
 def main() -> None:
     replay = load_json(REPLAY_GATE)
     structure = load_json(STRUCTURE_GATE)
+    sync = load_json(SYNC_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
+    assert_boundary("tape_synchronized_closed_loop_gate", sync)
     s = replay["summary"]
     t = structure["summary"]
-    if structure["summary"]["promotes_tape_structure"]:
+    u = sync["summary"]
+    if sync["summary"]["weak_tape_synchronization_clue"]:
+        classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK"
+    elif structure["summary"]["promotes_tape_structure"]:
         classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED"
     else:
         classification = replay["classification"]
@@ -75,13 +81,20 @@ def main() -> None:
         f"- Best prior-tape coverage: `{t['best_prior_covered_digits']}/{t['literal_tape_digits']}`.",
         f"- Best Markov tape bits: `{t['best_markov_bits']:.3f}`.",
         f"- Promotes tape structure: `{t['promotes_tape_structure']}`.",
+        f"- Tape-synchronized exact books in beam: `{u['exact_in_finished_beam_books']}/60`.",
+        f"- Tape-synchronized exact-in-beam shuffled p95: `{u['exact_in_finished_beam_control_p95']}`.",
+        f"- Tape-synchronized true-prefix survival: `{u['true_prefix_survival_books']}/60`.",
+        f"- Tape-synchronized mean true-prefix max fraction: `{u['mean_true_prefix_max_fraction']:.6f}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
         "target-conditioned upper bound from a blind replay control, so any",
         "positive result is not overclaimed as a closed-loop generator. The",
         "second gate asks whether the tape itself has seed-derived, recurrent,",
-        "or Markov structure beyond shuffled controls.",
+        "or Markov structure beyond shuffled controls. The synchronization gate",
+        "then asks whether that structured tape is enough to drive a closed-loop",
+        "copy transducer when only the tape start, book length, and prior material",
+        "are granted.",
         "",
         "## Decision",
         "",
@@ -89,6 +102,8 @@ def main() -> None:
         "- The literal payload can now be discussed as one tape-shaped dependency rather than only per-operation payload.",
         "- Tape structure is promoted as a mechanical clue because it beats same-multiset shuffled controls.",
         "- This does not yet derive when the transducer should consume the tape.",
+        "- Tape-synchronized closed-loop generation is not promoted unless exact books survive above shuffled controls.",
+        "- Tape synchronization is only a weak prefix-survival clue under the current beam.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -97,6 +112,7 @@ def main() -> None:
         "",
         "- [Innovation tape replay gate](test_results/01_innovation_tape_replay_gate.md)",
         "- [Innovation tape structure gate](test_results/03_innovation_tape_structure_gate.md)",
+        "- [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")

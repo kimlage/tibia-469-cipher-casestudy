@@ -636,6 +636,15 @@ covers `231`, `153`, and `87` digits versus shuffled p95 `187`, `71`, and
 `20`, and prequential Markov order `2` costs `879.609` bits versus shuffled
 p05 `898.869`. This promotes tape structure, not a complete transducer; the
 remaining blocker is the state/rule that decides when to consume the tape.
+A tape-synchronized closed-loop gate then tests that blocker directly under a
+generous setup: book length, canonical tape start, and true prior material are
+granted, while target digits inside the book are not. It still does not promote
+a generator: exact books in the finished beam remain `0/60`. But the canonical
+tape is not interchangeable with a shuffled tape at the first-prefix level:
+true-prefix survival is `19/60` versus shuffled p95 `7.45`, and mean true-prefix
+max fraction is `0.002495` versus shuffled p95 `0.001134`. This is only a weak
+sync clue because the surviving prefix is tiny; it opens a state-search route
+without solving the transducer.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2807,6 +2816,7 @@ book generation, not row0 pair-cell placement.
 - [Final innovation stream transducer audit](../../analysis/innovation_stream_transducer_audit_20260622/reports/final_innovation_stream_transducer_audit.md)
 - [Innovation tape replay gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.md)
 - [Innovation tape structure gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.md)
+- [Tape synchronized closed loop gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/04_tape_synchronized_closed_loop_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
