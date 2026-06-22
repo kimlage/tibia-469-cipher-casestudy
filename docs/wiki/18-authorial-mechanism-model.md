@@ -50,6 +50,7 @@ source_refs:
   - analysis/executable_v2_residual_coupling_audit_20260622
   - analysis/executable_v2_remaining_tape_coupling_audit_20260622
   - analysis/content_addressed_event_program_audit_20260622
+  - analysis/event_aligned_chunk_library_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1042,6 +1043,15 @@ rank tape: the residual costs `3686.781` bits versus the v2 residual
 `3423.183`, with `0/5` prefix holdout splits improving v2. The route is
 therefore `content_addressed_event_program_not_promoted`; the blocker has moved
 to origin/content rather than coarse control.
+The event-aligned chunk library audit then tests a narrower constructive route:
+copy events may choose only prior operation-boundary spans, including short
+concatenations of earlier event chunks. This sharply reduces candidate sets for
+the rare aligned hits, but it explains only `6/208` copy chunks. The residual
+cost is `3322.129` bits versus `3423.183` for v2, yet shuffled completed-book
+boundaries still save `51.361` bits and the aligned-hit rank does not beat the
+random p05 control. The route is therefore
+`event_aligned_chunk_library_not_promoted`; most copy content remains subchunk
+material whose origin is not explained by previous event boundaries.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3436,6 +3446,8 @@ book generation, not row0 pair-cell placement.
 - [Executable v2 remaining-tape coupling gate](../../analysis/executable_v2_remaining_tape_coupling_audit_20260622/reports/test_results/01_executable_v2_remaining_tape_coupling_gate.md)
 - [Final content-addressed event program audit](../../analysis/content_addressed_event_program_audit_20260622/reports/final_content_addressed_event_program_audit.md)
 - [Content-addressed event program gate](../../analysis/content_addressed_event_program_audit_20260622/reports/test_results/01_content_addressed_event_program_gate.md)
+- [Final event-aligned chunk library audit](../../analysis/event_aligned_chunk_library_audit_20260622/reports/final_event_aligned_chunk_library_audit.md)
+- [Event-aligned chunk library gate](../../analysis/event_aligned_chunk_library_audit_20260622/reports/test_results/01_event_aligned_chunk_library_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
