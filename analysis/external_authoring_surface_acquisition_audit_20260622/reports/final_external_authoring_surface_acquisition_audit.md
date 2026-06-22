@@ -56,3 +56,13 @@ No external source is acquired or integrated into v9. Net v9 reduction: `0.0` bi
 - [01_external_authoring_surface_acquisition_gate.py](../scripts/01_external_authoring_surface_acquisition_gate.py)
 - [01_external_authoring_surface_acquisition_gate.json](test_results/01_external_authoring_surface_acquisition_gate.json)
 - [01_external_authoring_surface_acquisition_gate.md](test_results/01_external_authoring_surface_acquisition_gate.md)
+
+## GitHub Exact Book Source Hunt
+
+A follow-up exact-code search checks whether public GitHub hits for representative book strings expose an object layer.
+It found `60` exact text hits across `5` repositories, but all promoted-class hits are corpus mirrors or community analysis repositories.
+No hit supplies book object/container/slot/order provenance, so no source is integrated into v9.
+
+- [02_github_exact_book_source_hunt.py](../scripts/02_github_exact_book_source_hunt.py)
+- [02_github_exact_book_source_hunt.json](test_results/02_github_exact_book_source_hunt.json)
+- [02_github_exact_book_source_hunt.md](test_results/02_github_exact_book_source_hunt.md)

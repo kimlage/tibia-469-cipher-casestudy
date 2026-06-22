@@ -97,6 +97,13 @@ future topology requirement: a promotable source must provide
 version/provenance`. Map images alone do not satisfy the contract and do not
 reduce v9.
 
+A GitHub exact-book source hunt then checks the easy public-code route. Five
+representative 469 book-prefix searches produce `60` exact text hits across
+`5` repositories, but all are corpus mirrors or community analysis repositories
+(`s2ward/469`, `elkolorado/*`, `caiocrm/469`). No hit exposes book object,
+container, slot, or order provenance. This preserves the acquisition target:
+object-layer data or versioned authoring traces, not another text mirror.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)

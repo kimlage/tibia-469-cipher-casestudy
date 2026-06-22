@@ -3852,6 +3852,14 @@ object/container/slot/order source for the Hellgate books or versioned
 authoring variants/scripts/workbooks that predict v9 residual fields above
 controls.
 
+The same acquisition front also runs a GitHub exact-book source hunt. Five
+representative exact-string queries find `60` hits across `5` repositories, but
+the repositories are text/corpus mirrors or community analysis surfaces only:
+`s2ward/469`, `elkolorado/tibia-469-bacca-averages`,
+`elkolorado/tibia-corpus`, `elkolorado/tibialibraries`, and `caiocrm/469`.
+No public-code hit exposes the object/container/slot/order layer needed to
+derive v9 events. This closes the easy public-code route without changing v9.
+
 ## Boundary
 
 This page changes the mechanical model, not the semantic verdict. Future work
