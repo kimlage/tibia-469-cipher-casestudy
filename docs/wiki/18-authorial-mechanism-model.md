@@ -52,6 +52,7 @@ source_refs:
   - analysis/content_addressed_event_program_audit_20260622
   - analysis/event_aligned_chunk_library_audit_20260622
   - analysis/source_boundary_candidate_program_audit_20260622
+  - analysis/executable_v3_source_boundary_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1063,6 +1064,16 @@ source-side `prev2` surprisal boundaries, and their unions. The best system,
 random-boundary p95 hit count (`29` versus `15`). This is promoted only as a
 partial source-boundary program: `179` copy intervals still require fallback
 copy hints, and the result does not touch row0, plaintext, or semantics.
+The executable v3 integration then folds that partial program back into the
+decoder contract. Roundtrip remains `70/70`; external bits excluding seed fall
+from `4299.595` in v2 to `4156.604`, exactly preserving the `142.991` bit
+source-boundary reduction inside the executable ledger. The new breakdown is
+`876.412` online-x64 coarse bits, `275.077` source-boundary interval-rank bits,
+`1609.521` fallback copy-hint bits, `511.961` residual composition bits, and
+`883.633` literal payload bits, plus the unchanged `5633.990` seed payload.
+This is real generation-program progress, but still not a complete formula:
+`179/208` copy intervals, literal innovation, seed payload, and row0 remain
+external.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3461,6 +3472,8 @@ book generation, not row0 pair-cell placement.
 - [Event-aligned chunk library gate](../../analysis/event_aligned_chunk_library_audit_20260622/reports/test_results/01_event_aligned_chunk_library_gate.md)
 - [Final source-boundary candidate program audit](../../analysis/source_boundary_candidate_program_audit_20260622/reports/final_source_boundary_candidate_program_audit.md)
 - [Source-boundary candidate program gate](../../analysis/source_boundary_candidate_program_audit_20260622/reports/test_results/01_source_boundary_candidate_program_gate.md)
+- [Final executable v3 source-boundary program audit](../../analysis/executable_v3_source_boundary_program_audit_20260622/reports/final_executable_v3_source_boundary_program_audit.md)
+- [Executable v3 source-boundary program gate](../../analysis/executable_v3_source_boundary_program_audit_20260622/reports/test_results/01_executable_v3_source_boundary_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
