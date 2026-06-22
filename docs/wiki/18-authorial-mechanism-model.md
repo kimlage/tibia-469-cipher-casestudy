@@ -26,6 +26,7 @@ source_refs:
   - analysis/joint_chunk_origin_route_audit_20260622
   - analysis/joint_chunk_origin_beam_pilot_audit_20260622
   - analysis/chunk_length_prior_integration_audit_20260622
+  - analysis/markov_chunk_content_prior_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -808,6 +809,13 @@ looks attractive (`562.273` length-prior bits; `2436.040` with copy hint,
 generalize: prefix holdout gives `0/5` positive-saving cells against uniform
 feasible length. The length-prior rescue is therefore posthoc under current
 evidence and not an executable generator component.
+A Markov chunk-content prior audit then tests the other obvious rescue:
+use the promoted `prev2` digit model as a content prior for same-length copy
+chunks. It also fails as a chunk-origin selector. Content-first Markov policies
+beat frequency/recency in `0/5` prefix holdouts and cost `4244.687` aggregate
+bits versus `3998.858` for frequency/recency (`+245.829`). Markov as a
+frequency/recency tie-breaker gives no improvement. The `prev2` clue therefore
+remains scoped to digit/boundary statistics, not chunk selection.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3158,6 +3166,8 @@ book generation, not row0 pair-cell placement.
 - [Bucket chunk-origin beam pilot](../../analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/test_results/01_bucket_chunk_origin_beam_pilot.md)
 - [Final chunk length-prior integration audit](../../analysis/chunk_length_prior_integration_audit_20260622/reports/final_chunk_length_prior_integration_audit.md)
 - [Chunk length-prior integration gate](../../analysis/chunk_length_prior_integration_audit_20260622/reports/test_results/01_chunk_length_prior_integration_gate.md)
+- [Final Markov chunk-content prior audit](../../analysis/markov_chunk_content_prior_audit_20260622/reports/final_markov_chunk_content_prior_audit.md)
+- [Markov chunk-content prior gate](../../analysis/markov_chunk_content_prior_audit_20260622/reports/test_results/01_markov_chunk_content_prior_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

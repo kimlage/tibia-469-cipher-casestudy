@@ -1,0 +1,260 @@
+{
+  "case_reopened": false,
+  "classification": "MARKOV_CHUNK_CONTENT_PRIOR_REJECTED",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "generator_promoted": false,
+    "markov_content_prior_promoted": false,
+    "next_blocker": "prev2 digit likelihood does not improve same-length chunk choice over frequency/recency; chunk-origin still needs a richer latent state or nonlocal mechanism",
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "bucket_chunk_origin_beam_pilot": "analysis/joint_chunk_origin_beam_pilot_audit_20260622/reports/test_results/01_bucket_chunk_origin_beam_pilot.json",
+    "copy_hint_stream_lower_bound": "analysis/latent_transducer_generation_audit_20260622/reports/test_results/08_copy_hint_stream_lower_bound.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json"
+  },
+  "plaintext_claim": false,
+  "prefix_rows": [
+    {
+      "baseline_freq_recent_bits": 1434.1736757367914,
+      "best_content_first_delta_vs_freq_recent": 58.4193137862469,
+      "best_content_first_policy": "markov_likely",
+      "best_content_first_policy_bits": 1492.5929895230383,
+      "best_markov_augmented_delta_vs_freq_recent": 0.0,
+      "best_markov_augmented_policy": "freq_recent_markov",
+      "best_markov_augmented_policy_bits": 1434.1736757367914,
+      "best_policy_overall": "freq_recent",
+      "content_first_beats_freq_recent": false,
+      "content_first_beats_random_p05": true,
+      "cutoff": 20,
+      "markov_augmented_beats_freq_recent": false,
+      "policy_bits": {
+        "freq_recent": 1434.1736757367914,
+        "freq_recent_markov": 1434.1736757367914,
+        "markov_likely": 1492.5929895230383,
+        "markov_likely_freq_recent": 1492.5995922578627,
+        "recent_freq_markov": 1497.6054920890083
+      },
+      "random_controls": {
+        "random_bits_mean": 1589.746267308591,
+        "random_bits_p05": 1561.3115142199133,
+        "random_bits_p50": 1588.5822129156677,
+        "random_bits_p95": 1619.208081957142,
+        "random_top80_p95": 8.0,
+        "seed": 46920260622,
+        "trials": 500
+      },
+      "test_copy_ops": 155,
+      "top1_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 4,
+        "markov_likely_freq_recent": 4,
+        "recent_freq_markov": 2
+      },
+      "top80_hits": {
+        "freq_recent": 13,
+        "freq_recent_markov": 13,
+        "markov_likely": 12,
+        "markov_likely_freq_recent": 12,
+        "recent_freq_markov": 11
+      }
+    },
+    {
+      "baseline_freq_recent_bits": 1114.374629266504,
+      "best_content_first_delta_vs_freq_recent": 81.1784896395327,
+      "best_content_first_policy": "markov_likely_freq_recent",
+      "best_content_first_policy_bits": 1195.5531189060366,
+      "best_markov_augmented_delta_vs_freq_recent": 0.0,
+      "best_markov_augmented_policy": "freq_recent_markov",
+      "best_markov_augmented_policy_bits": 1114.374629266504,
+      "best_policy_overall": "freq_recent",
+      "content_first_beats_freq_recent": false,
+      "content_first_beats_random_p05": true,
+      "cutoff": 30,
+      "markov_augmented_beats_freq_recent": false,
+      "policy_bits": {
+        "freq_recent": 1114.374629266504,
+        "freq_recent_markov": 1114.374629266504,
+        "markov_likely": 1195.557484098598,
+        "markov_likely_freq_recent": 1195.5531189060366,
+        "recent_freq_markov": 1169.2464448900764
+      },
+      "random_controls": {
+        "random_bits_mean": 1243.9857735814774,
+        "random_bits_p05": 1215.4720196763064,
+        "random_bits_p50": 1242.9396999830965,
+        "random_bits_p95": 1271.4480734761628,
+        "random_top80_p95": 6.0,
+        "seed": 46920260623,
+        "trials": 500
+      },
+      "test_copy_ops": 119,
+      "top1_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 1,
+        "markov_likely_freq_recent": 1,
+        "recent_freq_markov": 2
+      },
+      "top80_hits": {
+        "freq_recent": 10,
+        "freq_recent_markov": 10,
+        "markov_likely": 5,
+        "markov_likely_freq_recent": 5,
+        "recent_freq_markov": 8
+      }
+    },
+    {
+      "baseline_freq_recent_bits": 774.9519184759429,
+      "best_content_first_delta_vs_freq_recent": 65.34459622125564,
+      "best_content_first_policy": "markov_likely",
+      "best_content_first_policy_bits": 840.2965146971985,
+      "best_markov_augmented_delta_vs_freq_recent": 0.0,
+      "best_markov_augmented_policy": "freq_recent_markov",
+      "best_markov_augmented_policy_bits": 774.9519184759429,
+      "best_policy_overall": "freq_recent",
+      "content_first_beats_freq_recent": false,
+      "content_first_beats_random_p05": false,
+      "cutoff": 40,
+      "markov_augmented_beats_freq_recent": false,
+      "policy_bits": {
+        "freq_recent": 774.9519184759429,
+        "freq_recent_markov": 774.9519184759429,
+        "markov_likely": 840.2965146971985,
+        "markov_likely_freq_recent": 840.2965146971985,
+        "recent_freq_markov": 788.1351900973469
+      },
+      "random_controls": {
+        "random_bits_mean": 854.6541743653491,
+        "random_bits_p05": 833.4712396870807,
+        "random_bits_p50": 855.3043280444912,
+        "random_bits_p95": 875.1599768624707,
+        "random_top80_p95": 4.0,
+        "seed": 46920260624,
+        "trials": 500
+      },
+      "test_copy_ops": 80,
+      "top1_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 0,
+        "markov_likely_freq_recent": 0,
+        "recent_freq_markov": 2
+      },
+      "top80_hits": {
+        "freq_recent": 4,
+        "freq_recent_markov": 4,
+        "markov_likely": 2,
+        "markov_likely_freq_recent": 2,
+        "recent_freq_markov": 8
+      }
+    },
+    {
+      "baseline_freq_recent_bits": 491.7686080318411,
+      "best_content_first_delta_vs_freq_recent": 21.623602767060163,
+      "best_content_first_policy": "markov_likely",
+      "best_content_first_policy_bits": 513.3922107989013,
+      "best_markov_augmented_delta_vs_freq_recent": 0.0,
+      "best_markov_augmented_policy": "freq_recent_markov",
+      "best_markov_augmented_policy_bits": 491.7686080318411,
+      "best_policy_overall": "freq_recent",
+      "content_first_beats_freq_recent": false,
+      "content_first_beats_random_p05": true,
+      "cutoff": 50,
+      "markov_augmented_beats_freq_recent": false,
+      "policy_bits": {
+        "freq_recent": 491.7686080318411,
+        "freq_recent_markov": 491.7686080318411,
+        "markov_likely": 513.3922107989013,
+        "markov_likely_freq_recent": 513.3922107989013,
+        "recent_freq_markov": 506.294187449571
+      },
+      "random_controls": {
+        "random_bits_mean": 534.1314081314598,
+        "random_bits_p05": 516.9498465440578,
+        "random_bits_p50": 534.8559479162111,
+        "random_bits_p95": 550.7977124779377,
+        "random_top80_p95": 3.0,
+        "seed": 46920260625,
+        "trials": 500
+      },
+      "test_copy_ops": 49,
+      "top1_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 0,
+        "markov_likely_freq_recent": 0,
+        "recent_freq_markov": 1
+      },
+      "top80_hits": {
+        "freq_recent": 2,
+        "freq_recent_markov": 2,
+        "markov_likely": 2,
+        "markov_likely_freq_recent": 2,
+        "recent_freq_markov": 3
+      }
+    },
+    {
+      "baseline_freq_recent_bits": 183.58963666574334,
+      "best_content_first_delta_vs_freq_recent": 19.26277562688267,
+      "best_content_first_policy": "markov_likely",
+      "best_content_first_policy_bits": 202.852412292626,
+      "best_markov_augmented_delta_vs_freq_recent": 0.0,
+      "best_markov_augmented_policy": "freq_recent_markov",
+      "best_markov_augmented_policy_bits": 183.58963666574334,
+      "best_policy_overall": "freq_recent",
+      "content_first_beats_freq_recent": false,
+      "content_first_beats_random_p05": false,
+      "cutoff": 60,
+      "markov_augmented_beats_freq_recent": false,
+      "policy_bits": {
+        "freq_recent": 183.58963666574334,
+        "freq_recent_markov": 183.58963666574334,
+        "markov_likely": 202.852412292626,
+        "markov_likely_freq_recent": 202.852412292626,
+        "recent_freq_markov": 201.666469189066
+      },
+      "random_controls": {
+        "random_bits_mean": 201.88951028920613,
+        "random_bits_p05": 191.8808490887164,
+        "random_bits_p50": 202.07748102232654,
+        "random_bits_p95": 210.85137451515038,
+        "random_top80_p95": 1.0,
+        "seed": 46920260626,
+        "trials": 500
+      },
+      "test_copy_ops": 18,
+      "top1_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 0,
+        "markov_likely_freq_recent": 0,
+        "recent_freq_markov": 0
+      },
+      "top80_hits": {
+        "freq_recent": 0,
+        "freq_recent_markov": 0,
+        "markov_likely": 0,
+        "markov_likely_freq_recent": 0,
+        "recent_freq_markov": 0
+      }
+    }
+  ],
+  "schema": "markov_chunk_content_prior_gate.v1",
+  "scope": "analysis_only_prev2_content_prior_for_same_length_copy_chunks",
+  "summary": {
+    "content_first_beats_freq_recent_cells": 0,
+    "content_first_beats_random_p05_cells": 3,
+    "copy_ops": 208,
+    "markov_augmented_beats_freq_recent_cells": 0,
+    "total_baseline_freq_recent_bits": 3998.8584681768225,
+    "total_best_content_first_bits": 4244.687246217801,
+    "total_best_content_first_delta_vs_freq_recent": 245.82877804097825,
+    "total_best_markov_augmented_bits": 3998.8584681768225,
+    "total_best_markov_augmented_delta_vs_freq_recent": 0.0
+  },
+  "translation_delta": "NONE"
+}
