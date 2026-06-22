@@ -1,7 +1,7 @@
 # Final Joint Target Stream Parser Audit
 
 Status: `analysis_only`
-Classification: `JOINT_BOUNDARY_DIGIT_PAIR_MODEL_REJECTED`
+Classification: `JOINT_TARGET_STREAM_PARSER_FIRST_GATES_MIXED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -9,27 +9,30 @@ Compression bound: `unchanged_8154_676268`
 
 ## Question
 
-Does the simplest joint target-stream/parser model improve generation by
-emitting `(boundary flag, digit)` pairs under prefix-trained contexts?
+Do first-pass joint target-stream/parser models reduce dependency by
+emitting boundary state along with the digit stream under prefix holdout?
 
 ## Result
 
-- Prefix cutoffs tested: `5`.
-- Context orders tested: `[0, 1, 2, 3]`.
-- Best nontrivial model: `joint_pair_context_order0`.
-- Best aggregate gain vs baseline: `-29.950` bits.
-- Positive cells for best model: `2/5`.
-- Promotes joint parser: `False`.
+- Pair-token best model: `joint_pair_context_order0`.
+- Pair-token aggregate gain vs baseline: `-29.950` bits.
+- Pair-token positive cells: `2/5`.
+- Hazard-state best feature: `age_bucket`.
+- Hazard-state gain after feature charge: `170.175` bits.
+- Hazard-state positive cells: `5/5`.
+- Hazard-state random p95 before feature charge: `167.705` bits.
 
-The simplest joint model is rejected. Pairing the boundary flag with the
-current digit is not enough; context sparsity overwhelms any boundary
-signal. A future parser needs explicit latent state or another joint
-mechanism, not just `(boundary,digit)` tokens.
+The pair-token model is rejected: pairing the boundary flag with the
+current digit is not enough. A simple sequential hazard state is promoted
+as a boundary dependency reducer: age since the last emitted boundary
+beats same-count random boundary controls under prefix holdout. It is not
+an exact parser; it still emits a probability distribution over endpoints.
 
 ## Decision
 
 - Simple joint boundary+digit pair emission is rejected.
-- No parser/generator is promoted.
+- Sequential boundary hazard state is promoted as a dependency reducer.
+- No exact parser/generator is promoted.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -37,3 +40,4 @@ mechanism, not just `(boundary,digit)` tokens.
 ## Sources
 
 - [Joint boundary digit gate](test_results/01_joint_boundary_digit_gate.md)
+- [Boundary hazard state gate](test_results/02_boundary_hazard_state_gate.md)

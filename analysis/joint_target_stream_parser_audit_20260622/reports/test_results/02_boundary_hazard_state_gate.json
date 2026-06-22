@@ -1,0 +1,594 @@
+{
+  "case_reopened": false,
+  "classification": "boundary_hazard_state_dependency_reduced_not_generator",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_exact_parser": false,
+    "promotes_hazard_state": true,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "joint_pair_gate": "analysis/joint_target_stream_parser_audit_20260622/reports/test_results/01_joint_boundary_digit_gate.json"
+  },
+  "plaintext_claim": false,
+  "random_control_best": {
+    "gain_max_before_feature_charge": 223.1830038552103,
+    "gain_mean_before_feature_charge": 125.08953815546182,
+    "gain_p05_before_feature_charge": 80.61973881257468,
+    "gain_p95_before_feature_charge": 167.70521694308331,
+    "random_seed": 46920261656,
+    "trials": 400
+  },
+  "schema": "boundary_hazard_state_gate_v1",
+  "scope": "analysis_only_joint_parser_state_boundary_hazard",
+  "score_rows": [
+    {
+      "aggregate_gain_after_feature_charge": 170.17506519653293,
+      "aggregate_gain_before_feature_charge": 173.4969932914203,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_bucket",
+          "gain_bits": 73.80423978930116,
+          "model_bits": 1013.2112977681411,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_bucket",
+          "gain_bits": 44.18173320735207,
+          "model_bits": 771.4956390621097,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_bucket",
+          "gain_bits": 29.975905434139122,
+          "model_bits": 519.0239990800912,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_bucket",
+          "gain_bits": 19.368308061562686,
+          "model_bits": 305.0766063098731,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_bucket",
+          "gain_bits": 6.166806799065256,
+          "model_bits": 97.71194897291268,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_bucket",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 5
+    },
+    {
+      "aggregate_gain_after_feature_charge": 140.29102050589194,
+      "aggregate_gain_before_feature_charge": 143.6129486007793,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "count_bucket",
+          "gain_bits": 38.30968135504531,
+          "model_bits": 1048.705856202397,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "count_bucket",
+          "gain_bits": 40.53485024977067,
+          "model_bits": 775.1425220196911,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "count_bucket",
+          "gain_bits": 32.304349580816734,
+          "model_bits": 516.6955549334136,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "count_bucket",
+          "gain_bits": 21.956243229891584,
+          "model_bits": 302.4886711415442,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "count_bucket",
+          "gain_bits": 10.50782418525499,
+          "model_bits": 93.37093158672295,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "count_bucket",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 5
+    },
+    {
+      "aggregate_gain_after_feature_charge": 128.0654009528973,
+      "aggregate_gain_before_feature_charge": 131.38732904778468,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_x_count",
+          "gain_bits": 7.328697327888676,
+          "model_bits": 1079.6868402295536,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_x_count",
+          "gain_bits": 47.951833612769974,
+          "model_bits": 767.7255386566918,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_x_count",
+          "gain_bits": 38.19461338382729,
+          "model_bits": 510.8052911304031,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_x_count",
+          "gain_bits": 27.61471169224552,
+          "model_bits": 296.8302026791903,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_x_count",
+          "gain_bits": 10.297473031053215,
+          "model_bits": 93.58128274092472,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_x_count",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 5
+    },
+    {
+      "aggregate_gain_after_feature_charge": 97.73066012531244,
+      "aggregate_gain_before_feature_charge": 101.05258822019981,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_exact_cap20",
+          "gain_bits": 40.31435058618308,
+          "model_bits": 1046.7011869712592,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_exact_cap20",
+          "gain_bits": 28.653828796564994,
+          "model_bits": 787.0235434728968,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_exact_cap20",
+          "gain_bits": 19.115570200072625,
+          "model_bits": 529.8843343141577,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_exact_cap20",
+          "gain_bits": 8.43262493900636,
+          "model_bits": 316.01228943242944,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_exact_cap20",
+          "gain_bits": 4.536213698372748,
+          "model_bits": 99.34254207360519,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_exact_cap20",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 5
+    },
+    {
+      "aggregate_gain_after_feature_charge": 66.1139413400834,
+      "aggregate_gain_before_feature_charge": 69.43586943497077,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_x_progress",
+          "gain_bits": -13.427886377126924,
+          "model_bits": 1100.4434239345692,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_x_progress",
+          "gain_bits": 20.750162930504302,
+          "model_bits": 794.9272093389575,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_x_progress",
+          "gain_bits": 34.27820897570325,
+          "model_bits": 514.7216955385271,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_x_progress",
+          "gain_bits": 21.777798898850733,
+          "model_bits": 302.66711547258507,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_x_progress",
+          "gain_bits": 6.057585007039407,
+          "model_bits": 97.82117076493853,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_x_progress",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 4
+    },
+    {
+      "aggregate_gain_after_feature_charge": 33.84854621530902,
+      "aggregate_gain_before_feature_charge": 37.17047431019638,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_x_remaining",
+          "gain_bits": -19.76245117392955,
+          "model_bits": 1106.7779887313718,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_x_remaining",
+          "gain_bits": 15.23827386459243,
+          "model_bits": 800.4390984048694,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_x_remaining",
+          "gain_bits": 17.620127279985695,
+          "model_bits": 531.3797772342447,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_x_remaining",
+          "gain_bits": 19.296459359030678,
+          "model_bits": 305.1484550124051,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_x_remaining",
+          "gain_bits": 4.778064980517129,
+          "model_bits": 99.1006907914608,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_x_remaining",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 4
+    },
+    {
+      "aggregate_gain_after_feature_charge": -30.845367277225215,
+      "aggregate_gain_before_feature_charge": -27.523439182337853,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "remaining_bucket",
+          "gain_bits": -17.088509216678858,
+          "model_bits": 1104.1040467741211,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "remaining_bucket",
+          "gain_bits": -5.844613092020609,
+          "model_bits": 821.5219853614824,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "remaining_bucket",
+          "gain_bits": -2.4747358712747882,
+          "model_bits": 551.4746403855052,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "remaining_bucket",
+          "gain_bits": -0.1741599732592931,
+          "model_bits": 324.6190743446951,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "remaining_bucket",
+          "gain_bits": -1.9414210291043048,
+          "model_bits": 105.82017680108224,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "remaining_bucket",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 0
+    },
+    {
+      "aggregate_gain_after_feature_charge": -33.29262869493838,
+      "aggregate_gain_before_feature_charge": -29.970700600051018,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "progress_quint",
+          "gain_bits": -16.55100250708506,
+          "model_bits": 1103.5665400645273,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "progress_quint",
+          "gain_bits": -14.148269629075799,
+          "model_bits": 829.8256418985376,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "progress_quint",
+          "gain_bits": -1.4525665174562619,
+          "model_bits": 550.4524710316866,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "progress_quint",
+          "gain_bits": 1.6247171357669004,
+          "model_bits": 322.8201972356689,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "progress_quint",
+          "gain_bits": 0.5564209177992012,
+          "model_bits": 103.32233485417873,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "progress_quint",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 2
+    },
+    {
+      "aggregate_gain_after_feature_charge": -83.98258399622239,
+      "aggregate_gain_before_feature_charge": -80.66065590133502,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "count_mod3",
+          "gain_bits": -78.91751733071965,
+          "model_bits": 1165.933054888162,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "count_mod3",
+          "gain_bits": -1.5771812376960952,
+          "model_bits": 817.2545535071579,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "count_mod3",
+          "gain_bits": -1.498782981941531,
+          "model_bits": 550.4986874961719,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "count_mod3",
+          "gain_bits": 0.6291027515692917,
+          "model_bits": 323.8158116198665,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "count_mod3",
+          "gain_bits": 0.7037228974529626,
+          "model_bits": 103.17503287452497,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "count_mod3",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 2
+    },
+    {
+      "aggregate_gain_after_feature_charge": -89.37850708408519,
+      "aggregate_gain_before_feature_charge": -86.05657898919782,
+      "cells": 5,
+      "cutoff_rows": [
+        {
+          "baseline_bits": 1087.0155375574423,
+          "cutoff": 20,
+          "feature": "age_exact_cap50",
+          "gain_bits": -51.39525161500637,
+          "model_bits": 1138.4107891724486,
+          "test_boundaries": 132,
+          "test_rows": 7875
+        },
+        {
+          "baseline_bits": 815.6773722694618,
+          "cutoff": 30,
+          "feature": "age_exact_cap50",
+          "gain_bits": -21.318762872631282,
+          "model_bits": 836.9961351420931,
+          "test_boundaries": 100,
+          "test_rows": 6587
+        },
+        {
+          "baseline_bits": 548.9999045142304,
+          "cutoff": 40,
+          "feature": "age_exact_cap50",
+          "gain_bits": -9.052073391437034,
+          "model_bits": 558.0519779056674,
+          "test_boundaries": 65,
+          "test_rows": 5029
+        },
+        {
+          "baseline_bits": 324.4449143714358,
+          "cutoff": 50,
+          "feature": "age_exact_cap50",
+          "gain_bits": -2.638589431029459,
+          "model_bits": 327.08350380246526,
+          "test_boundaries": 36,
+          "test_rows": 3469
+        },
+        {
+          "baseline_bits": 103.87875577197794,
+          "cutoff": 60,
+          "feature": "age_exact_cap50",
+          "gain_bits": -1.651901679093669,
+          "model_bits": 105.5306574510716,
+          "test_boundaries": 10,
+          "test_rows": 1449
+        }
+      ],
+      "feature": "age_exact_cap50",
+      "feature_bits": 3.321928094887362,
+      "positive_cells": 0
+    }
+  ],
+  "summary": {
+    "best_aggregate_gain_after_feature_charge": 170.17506519653293,
+    "best_aggregate_gain_before_feature_charge": 173.4969932914203,
+    "best_beats_random_p95": true,
+    "best_cells": 5,
+    "best_feature": "age_bucket",
+    "best_positive_cells": 5,
+    "best_random_gain_p95_before_feature_charge": 167.70521694308331,
+    "cutoff_count": 5,
+    "feature_count": 10,
+    "interpretation": "A sequential boundary hazard state based on age since the last emitted boundary reduces boundary-flag coding under prefix holdout and beats same-count random boundary controls. It is a real parser-state clue, but it still emits probabilities rather than exact endpoints.",
+    "promotes_exact_parser": false,
+    "promotes_hazard_state": true
+  },
+  "translation_delta": "NONE"
+}

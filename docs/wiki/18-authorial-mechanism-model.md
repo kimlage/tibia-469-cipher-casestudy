@@ -591,6 +591,14 @@ It fails. The best nontrivial model, `joint_pair_context_order0`, is
 and is positive in only `2/5` prefix cells. This rejects the simple pair-token
 model, not the broader latent-state route; a future parser needs real state,
 not just coupling the current boundary flag to the current digit.
+A boundary hazard state gate then tests a minimal real parser state: age since
+the last emitted boundary, plus related sequential state features. This is the
+first positive result on the joint-parser route. The best feature,
+`age_bucket`, reduces boundary-flag coding by `170.175` bits after feature
+charge, is positive in `5/5` prefix cells, and beats same-count random boundary
+p95 (`167.705` bits before feature charge). It is still not an exact parser:
+it emits a boundary probability distribution and does not derive exact
+endpoints.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2753,6 +2761,7 @@ book generation, not row0 pair-cell placement.
 - [Skeleton generation route review](../../analysis/skeleton_generation_route_review_20260622/reports/test_results/01_skeleton_generation_route_review.md)
 - [Final joint target stream parser audit](../../analysis/joint_target_stream_parser_audit_20260622/reports/final_joint_target_stream_parser_audit.md)
 - [Joint boundary digit gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/01_joint_boundary_digit_gate.md)
+- [Boundary hazard state gate](../../analysis/joint_target_stream_parser_audit_20260622/reports/test_results/02_boundary_hazard_state_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)

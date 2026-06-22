@@ -10,7 +10,8 @@ HERE = Path(__file__).resolve().parents[1]
 REPORTS = HERE / "reports"
 TEST_RESULTS = REPORTS / "test_results"
 
-GATE = TEST_RESULTS / "01_joint_boundary_digit_gate.json"
+PAIR_GATE = TEST_RESULTS / "01_joint_boundary_digit_gate.json"
+HAZARD_GATE = TEST_RESULTS / "02_boundary_hazard_state_gate.json"
 OUT = REPORTS / "final_joint_target_stream_parser_audit.md"
 
 
@@ -33,10 +34,13 @@ def assert_boundary(name: str, data: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    gate = load_json(GATE)
-    assert_boundary("joint_boundary_digit_gate", gate)
-    s = gate["summary"]
-    classification = "JOINT_BOUNDARY_DIGIT_PAIR_MODEL_REJECTED"
+    pair_gate = load_json(PAIR_GATE)
+    hazard_gate = load_json(HAZARD_GATE)
+    assert_boundary("joint_boundary_digit_gate", pair_gate)
+    assert_boundary("boundary_hazard_state_gate", hazard_gate)
+    pair = pair_gate["summary"]
+    hazard = hazard_gate["summary"]
+    classification = "JOINT_TARGET_STREAM_PARSER_FIRST_GATES_MIXED"
     lines = [
         "# Final Joint Target Stream Parser Audit",
         "",
@@ -49,27 +53,30 @@ def main() -> None:
         "",
         "## Question",
         "",
-        "Does the simplest joint target-stream/parser model improve generation by",
-        "emitting `(boundary flag, digit)` pairs under prefix-trained contexts?",
+        "Do first-pass joint target-stream/parser models reduce dependency by",
+        "emitting boundary state along with the digit stream under prefix holdout?",
         "",
         "## Result",
         "",
-        f"- Prefix cutoffs tested: `{s['cutoff_count']}`.",
-        f"- Context orders tested: `{s['orders_tested']}`.",
-        f"- Best nontrivial model: `{s['best_nontrivial_model']}`.",
-        f"- Best aggregate gain vs baseline: `{s['best_aggregate_gain_vs_baseline_bits']:.3f}` bits.",
-        f"- Positive cells for best model: `{s['best_positive_cells']}/{s['best_cells']}`.",
-        f"- Promotes joint parser: `{s['promotes_joint_parser']}`.",
+        f"- Pair-token best model: `{pair['best_nontrivial_model']}`.",
+        f"- Pair-token aggregate gain vs baseline: `{pair['best_aggregate_gain_vs_baseline_bits']:.3f}` bits.",
+        f"- Pair-token positive cells: `{pair['best_positive_cells']}/{pair['best_cells']}`.",
+        f"- Hazard-state best feature: `{hazard['best_feature']}`.",
+        f"- Hazard-state gain after feature charge: `{hazard['best_aggregate_gain_after_feature_charge']:.3f}` bits.",
+        f"- Hazard-state positive cells: `{hazard['best_positive_cells']}/{hazard['best_cells']}`.",
+        f"- Hazard-state random p95 before feature charge: `{hazard['best_random_gain_p95_before_feature_charge']:.3f}` bits.",
         "",
-        "The simplest joint model is rejected. Pairing the boundary flag with the",
-        "current digit is not enough; context sparsity overwhelms any boundary",
-        "signal. A future parser needs explicit latent state or another joint",
-        "mechanism, not just `(boundary,digit)` tokens.",
+        "The pair-token model is rejected: pairing the boundary flag with the",
+        "current digit is not enough. A simple sequential hazard state is promoted",
+        "as a boundary dependency reducer: age since the last emitted boundary",
+        "beats same-count random boundary controls under prefix holdout. It is not",
+        "an exact parser; it still emits a probability distribution over endpoints.",
         "",
         "## Decision",
         "",
         "- Simple joint boundary+digit pair emission is rejected.",
-        "- No parser/generator is promoted.",
+        "- Sequential boundary hazard state is promoted as a dependency reducer.",
+        "- No exact parser/generator is promoted.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -77,6 +84,7 @@ def main() -> None:
         "## Sources",
         "",
         "- [Joint boundary digit gate](test_results/01_joint_boundary_digit_gate.md)",
+        "- [Boundary hazard state gate](test_results/02_boundary_hazard_state_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
