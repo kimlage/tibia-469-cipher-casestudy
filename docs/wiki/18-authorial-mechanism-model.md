@@ -49,6 +49,7 @@ source_refs:
   - analysis/online_x64_coarse_control_program_audit_20260622
   - analysis/executable_v2_residual_coupling_audit_20260622
   - analysis/executable_v2_remaining_tape_coupling_audit_20260622
+  - analysis/content_addressed_event_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -1032,6 +1033,15 @@ rank bucket is `-37.807`, and literal payload digits are `-35.665`; none beats
 shuffled controls and no weak target remains. The x64 result is therefore a
 localized executable coarse-control improvement, not a shared generator for
 composition, copy hints, or literal innovation.
+The content-addressed event audit then tests a representation change instead of
+another local context codec. Copy events choose prior content chunks inside the
+online-x64 coarse bucket, so exact length and canonical source derive from the
+selected chunk. This derives a canonical source for all `208/208` copy events
+and matches the raw source in `200/208`, but it pays for a much larger content
+rank tape: the residual costs `3686.781` bits versus the v2 residual
+`3423.183`, with `0/5` prefix holdout splits improving v2. The route is
+therefore `content_addressed_event_program_not_promoted`; the blocker has moved
+to origin/content rather than coarse control.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3424,6 +3434,8 @@ book generation, not row0 pair-cell placement.
 - [Executable v2 residual coupling gate](../../analysis/executable_v2_residual_coupling_audit_20260622/reports/test_results/01_executable_v2_residual_coupling_gate.md)
 - [Final executable v2 remaining-tape coupling audit](../../analysis/executable_v2_remaining_tape_coupling_audit_20260622/reports/final_executable_v2_remaining_tape_coupling_audit.md)
 - [Executable v2 remaining-tape coupling gate](../../analysis/executable_v2_remaining_tape_coupling_audit_20260622/reports/test_results/01_executable_v2_remaining_tape_coupling_gate.md)
+- [Final content-addressed event program audit](../../analysis/content_addressed_event_program_audit_20260622/reports/final_content_addressed_event_program_audit.md)
+- [Content-addressed event program gate](../../analysis/content_addressed_event_program_audit_20260622/reports/test_results/01_content_addressed_event_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
