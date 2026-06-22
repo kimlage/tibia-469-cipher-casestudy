@@ -1,0 +1,165 @@
+{
+  "case_reopened": false,
+  "classification": "LATENT_NONLOCAL_STATE_PILOT_NOT_PROMOTED",
+  "compression_bound_status": "unchanged",
+  "cutoff_rows": [
+    {
+      "cutoff": 20,
+      "factorized_bits": 1967.3589296469565,
+      "hmm_beats_factorized": true,
+      "hmm_beats_shuffle_p05": false,
+      "hmm_bits": 1108.1310971538262,
+      "hmm_delta_vs_factorized": -859.2278324931303,
+      "hmm_delta_vs_unigram": -259.3209528123414,
+      "selected_k": 6,
+      "selected_mode": "book_phase",
+      "shuffle_controls": {
+        "seed": 46920260622,
+        "shuffle_bits_mean": 1108.63214037875,
+        "shuffle_bits_p05": 1103.594104768583,
+        "shuffle_bits_p50": 1108.4911879302454,
+        "shuffle_bits_p95": 1113.8066022641665,
+        "trials": 300
+      },
+      "test_books": 50,
+      "test_ops": 182,
+      "train_books": 10,
+      "train_ops": 79,
+      "unigram_bits": 1367.4520499661676
+    },
+    {
+      "cutoff": 30,
+      "factorized_bits": 1523.485053506848,
+      "hmm_beats_factorized": true,
+      "hmm_beats_shuffle_p05": false,
+      "hmm_bits": 918.7821642988814,
+      "hmm_delta_vs_factorized": -604.7028892079667,
+      "hmm_delta_vs_unigram": -158.69736814552323,
+      "selected_k": 6,
+      "selected_mode": "position",
+      "shuffle_controls": {
+        "seed": 46920260623,
+        "shuffle_bits_mean": 918.9131959212845,
+        "shuffle_bits_p05": 914.208924610706,
+        "shuffle_bits_p50": 918.934122208074,
+        "shuffle_bits_p95": 923.5919154865152,
+        "trials": 300
+      },
+      "test_books": 40,
+      "test_ops": 140,
+      "train_books": 20,
+      "train_ops": 121,
+      "unigram_bits": 1077.4795324444046
+    },
+    {
+      "cutoff": 40,
+      "factorized_bits": 1033.8253734935552,
+      "hmm_beats_factorized": true,
+      "hmm_beats_shuffle_p05": false,
+      "hmm_bits": 645.1930817515994,
+      "hmm_delta_vs_factorized": -388.6322917419558,
+      "hmm_delta_vs_unigram": -84.25882544131389,
+      "selected_k": 6,
+      "selected_mode": "position",
+      "shuffle_controls": {
+        "seed": 46920260624,
+        "shuffle_bits_mean": 649.9713166850706,
+        "shuffle_bits_p05": 644.5746983777586,
+        "shuffle_bits_p50": 649.9972233284424,
+        "shuffle_bits_p95": 654.5275918207283,
+        "trials": 300
+      },
+      "test_books": 30,
+      "test_ops": 95,
+      "train_books": 30,
+      "train_ops": 166,
+      "unigram_bits": 729.4519071929133
+    },
+    {
+      "cutoff": 50,
+      "factorized_bits": 600.8744723740336,
+      "hmm_beats_factorized": true,
+      "hmm_beats_shuffle_p05": false,
+      "hmm_bits": 387.3738883694618,
+      "hmm_delta_vs_factorized": -213.50058400457186,
+      "hmm_delta_vs_unigram": -31.83032431236859,
+      "selected_k": 6,
+      "selected_mode": "position",
+      "shuffle_controls": {
+        "seed": 46920260625,
+        "shuffle_bits_mean": 388.9543753203088,
+        "shuffle_bits_p05": 383.70657619487025,
+        "shuffle_bits_p50": 389.18308257896877,
+        "shuffle_bits_p95": 393.4749823269649,
+        "trials": 300
+      },
+      "test_books": 20,
+      "test_ops": 56,
+      "train_books": 40,
+      "train_ops": 205,
+      "unigram_bits": 419.20421268183037
+    },
+    {
+      "cutoff": 60,
+      "factorized_bits": 217.12342120002646,
+      "hmm_beats_factorized": true,
+      "hmm_beats_shuffle_p05": false,
+      "hmm_bits": 144.7399780235575,
+      "hmm_delta_vs_factorized": -72.38344317646894,
+      "hmm_delta_vs_unigram": -8.987370439523971,
+      "selected_k": 6,
+      "selected_mode": "position",
+      "shuffle_controls": {
+        "seed": 46920260626,
+        "shuffle_bits_mean": 141.75082651664968,
+        "shuffle_bits_p05": 138.36419803748063,
+        "shuffle_bits_p50": 141.84411679251332,
+        "shuffle_bits_p95": 145.61279453671244,
+        "trials": 300
+      },
+      "test_books": 10,
+      "test_ops": 20,
+      "train_books": 50,
+      "train_ops": 241,
+      "unigram_bits": 153.72734846308148
+    }
+  ],
+  "decision": {
+    "generator_promoted": false,
+    "latent_state_clue_promoted": false,
+    "next_blocker": "small HMM-style latent states over current operation tokens are insufficient unless they reduce factorized streams under holdout and order controls",
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "latent_state_route_synthesis": "analysis/latent_state_route_synthesis_audit_20260622/reports/test_results/01_latent_state_route_synthesis.json",
+    "unified_residual_control_ledger": "analysis/unified_control_program_audit_20260622/reports/test_results/01_unified_residual_control_ledger.json"
+  },
+  "plaintext_claim": false,
+  "schema": "latent_nonlocal_state_program_pilot.v1",
+  "scope": "analysis_only_hmm_multistream_operation_tokens",
+  "summary": {
+    "beats_factorized_cells": 5,
+    "beats_shuffle_p05_cells": 0,
+    "cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "state_counts": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "total_factorized_bits": 5342.66725022142,
+    "total_hmm_bits": 3204.220209597326,
+    "total_hmm_delta_vs_factorized": -2138.4470406240935,
+    "total_hmm_delta_vs_unigram": -543.0948411510713,
+    "total_unigram_bits": 3747.3150507483974
+  },
+  "translation_delta": "NONE"
+}

@@ -28,6 +28,7 @@ source_refs:
   - analysis/chunk_length_prior_integration_audit_20260622
   - analysis/markov_chunk_content_prior_audit_20260622
   - analysis/latent_state_route_synthesis_audit_20260622
+  - analysis/latent_nonlocal_state_program_pilot_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -826,6 +827,12 @@ still gives `0` exact books/ops without atlas. The next aligned route is
 jointly accounts for control, length/chunk origin, literal innovation, and copy
 availability. Isolated length/content/source priors are closed as the main
 route unless they are embedded in that joint state program.
+A latent nonlocal state program pilot then tests the first small hidden-state
+version of that route: prefix-frozen HMMs over joint operation tokens. The
+model captures multistream coupling (`3204.220` bits versus `5342.667`
+factorized and `3747.315` unigram), but it fails the order/nonlocal control:
+it beats same-multiset shuffled p05 in `0/5` prefix cells. This is retained as
+a multistream coupling clue, not a promoted nonlocal state generator.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3180,6 +3187,8 @@ book generation, not row0 pair-cell placement.
 - [Markov chunk-content prior gate](../../analysis/markov_chunk_content_prior_audit_20260622/reports/test_results/01_markov_chunk_content_prior_gate.md)
 - [Final latent-state route synthesis audit](../../analysis/latent_state_route_synthesis_audit_20260622/reports/final_latent_state_route_synthesis_audit.md)
 - [Latent-state route synthesis](../../analysis/latent_state_route_synthesis_audit_20260622/reports/test_results/01_latent_state_route_synthesis.md)
+- [Final latent nonlocal state program pilot audit](../../analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/final_latent_nonlocal_state_program_pilot_audit.md)
+- [Latent nonlocal state program pilot](../../analysis/latent_nonlocal_state_program_pilot_audit_20260622/reports/test_results/01_latent_nonlocal_state_program_pilot.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
