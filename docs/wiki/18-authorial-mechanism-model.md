@@ -77,6 +77,7 @@ source_refs:
   - analysis/post_v9_generator_frontier_synthesis_audit_20260622
   - analysis/authoring_surface_provenance_audit_20260622
   - analysis/external_authoring_surface_acquisition_audit_20260622
+  - analysis/generator_route_decision_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3908,6 +3909,17 @@ post-hoc/community provenance and has negative total heldout savings for coarse
 control (`-105.714` bits), op type (`-67.441`), and copy-hint rank bucket
 (`-65.026`). This rejects the public bookcase/slot route as a v9 control
 source under current evidence.
+
+The generator-route decision audit then consolidates the post-v9 state instead
+of opening another local codec. It keeps v9 as the promoted executable ledger,
+but not a final generator, and marks public/community external surfaces as
+saturated under current evidence. The only routes still counted as possible
+progress are now explicit: a genuinely rights-clean primary authoring surface
+that predicts v9 residual fields under the existing topology protocol, or a
+nonlocal event-policy program that generates replay schedule plus copy/literal/
+source-length choices in holdout after paying corrections. More public mirrors,
+leaked data, small residual field codecs, and row0/plaintext reopening do not
+count as progress.
 
 ## Boundary
 
