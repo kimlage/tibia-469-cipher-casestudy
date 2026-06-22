@@ -1,0 +1,502 @@
+{
+  "case_reopened": false,
+  "classification": "target_digit_boundary_miss_transition_classes_rejected_control",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "promotes_endpoint_generator": false,
+    "promotes_feature": false,
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "feature_rows": [
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 20,
+      "category_counts": {
+        "copy_long__copy_long": {
+          "misses": 16,
+          "rows": 37
+        },
+        "copy_long__copy_med": {
+          "misses": 8,
+          "rows": 19
+        },
+        "copy_long__copy_short": {
+          "misses": 1,
+          "rows": 2
+        },
+        "copy_long__literal_long": {
+          "misses": 1,
+          "rows": 1
+        },
+        "copy_long__literal_med": {
+          "misses": 1,
+          "rows": 3
+        },
+        "copy_long__literal_short": {
+          "misses": 5,
+          "rows": 10
+        },
+        "copy_med__copy_long": {
+          "misses": 10,
+          "rows": 22
+        },
+        "copy_med__copy_med": {
+          "misses": 19,
+          "rows": 28
+        },
+        "copy_med__copy_short": {
+          "misses": 1,
+          "rows": 3
+        },
+        "copy_med__literal_med": {
+          "misses": 3,
+          "rows": 6
+        },
+        "copy_med__literal_short": {
+          "misses": 13,
+          "rows": 19
+        },
+        "copy_short__copy_med": {
+          "misses": 1,
+          "rows": 2
+        },
+        "copy_short__literal_short": {
+          "misses": 1,
+          "rows": 1
+        },
+        "literal_long__copy_long": {
+          "misses": 0,
+          "rows": 1
+        },
+        "literal_long__copy_med": {
+          "misses": 0,
+          "rows": 1
+        },
+        "literal_med__copy_long": {
+          "misses": 1,
+          "rows": 3
+        },
+        "literal_med__copy_med": {
+          "misses": 2,
+          "rows": 8
+        },
+        "literal_short__copy_long": {
+          "misses": 11,
+          "rows": 15
+        },
+        "literal_short__copy_med": {
+          "misses": 12,
+          "rows": 19
+        },
+        "literal_short__copy_short": {
+          "misses": 1,
+          "rows": 1
+        }
+      },
+      "feature": "shape",
+      "grouped_bits_before_feature_charge": 156.4365548060583,
+      "saving_after_feature_charge": 35.89957034513212,
+      "saving_before_feature_charge": 39.806460940740635
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 10,
+      "category_counts": {
+        "0": {
+          "misses": 10,
+          "rows": 20
+        },
+        "1": {
+          "misses": 8,
+          "rows": 19
+        },
+        "2": {
+          "misses": 15,
+          "rows": 22
+        },
+        "3": {
+          "misses": 10,
+          "rows": 20
+        },
+        "4": {
+          "misses": 9,
+          "rows": 20
+        },
+        "5": {
+          "misses": 14,
+          "rows": 19
+        },
+        "6": {
+          "misses": 17,
+          "rows": 30
+        },
+        "7": {
+          "misses": 6,
+          "rows": 19
+        },
+        "8": {
+          "misses": 8,
+          "rows": 12
+        },
+        "9": {
+          "misses": 10,
+          "rows": 20
+        }
+      },
+      "feature": "book_mod10",
+      "grouped_bits_before_feature_charge": 167.44895971766888,
+      "saving_after_feature_charge": 24.887165433521528,
+      "saving_before_feature_charge": 28.794056029130047
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 5,
+      "category_counts": {
+        "0": {
+          "misses": 41,
+          "rows": 67
+        },
+        "1": {
+          "misses": 27,
+          "rows": 48
+        },
+        "2": {
+          "misses": 20,
+          "rows": 35
+        },
+        "3": {
+          "misses": 10,
+          "rows": 27
+        },
+        "4": {
+          "misses": 9,
+          "rows": 24
+        }
+      },
+      "feature": "op_mod5",
+      "grouped_bits_before_feature_charge": 180.4959193374346,
+      "saving_after_feature_charge": 11.840205813755812,
+      "saving_before_feature_charge": 15.747096409364332
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 5,
+      "category_counts": {
+        "0": {
+          "misses": 30,
+          "rows": 45
+        },
+        "1": {
+          "misses": 12,
+          "rows": 28
+        },
+        "2": {
+          "misses": 23,
+          "rows": 44
+        },
+        "3": {
+          "misses": 17,
+          "rows": 34
+        },
+        "4": {
+          "misses": 25,
+          "rows": 50
+        }
+      },
+      "feature": "pos_quint",
+      "grouped_bits_before_feature_charge": 182.02308515606126,
+      "saving_after_feature_charge": 10.313039995129156,
+      "saving_before_feature_charge": 14.219930590737675
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 3,
+      "category_counts": {
+        "long": {
+          "misses": 32,
+          "rows": 74
+        },
+        "med": {
+          "misses": 49,
+          "rows": 89
+        },
+        "short": {
+          "misses": 26,
+          "rows": 38
+        }
+      },
+      "feature": "prev_len_bucket",
+      "grouped_bits_before_feature_charge": 185.7164041018857,
+      "saving_after_feature_charge": 6.6197210493047125,
+      "saving_before_feature_charge": 10.526611644913231
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 3,
+      "category_counts": {
+        "copy->copy": {
+          "misses": 56,
+          "rows": 113
+        },
+        "copy->literal": {
+          "misses": 24,
+          "rows": 40
+        },
+        "literal->copy": {
+          "misses": 27,
+          "rows": 48
+        }
+      },
+      "feature": "transition",
+      "grouped_bits_before_feature_charge": 189.4689149558685,
+      "saving_after_feature_charge": 2.8672101953219,
+      "saving_before_feature_charge": 6.774100790930419
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 3,
+      "category_counts": {
+        "long": {
+          "misses": 39,
+          "rows": 79
+        },
+        "med": {
+          "misses": 46,
+          "rows": 86
+        },
+        "short": {
+          "misses": 22,
+          "rows": 36
+        }
+      },
+      "feature": "next_len_bucket",
+      "grouped_bits_before_feature_charge": 189.48893866050963,
+      "saving_after_feature_charge": 2.847186490680781,
+      "saving_before_feature_charge": 6.7540770862893
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 3,
+      "category_counts": {
+        "0": {
+          "misses": 49,
+          "rows": 87
+        },
+        "1": {
+          "misses": 33,
+          "rows": 67
+        },
+        "2": {
+          "misses": 25,
+          "rows": 47
+        }
+      },
+      "feature": "op_mod3",
+      "grouped_bits_before_feature_charge": 189.8334055332943,
+      "saving_after_feature_charge": 2.5027196178961164,
+      "saving_before_feature_charge": 6.409610213504635
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "0": {
+          "misses": 66,
+          "rows": 116
+        },
+        "1": {
+          "misses": 41,
+          "rows": 85
+        }
+      },
+      "feature": "op_mod2",
+      "grouped_bits_before_feature_charge": 192.04871330817517,
+      "saving_after_feature_charge": 0.2874118430152466,
+      "saving_before_feature_charge": 4.194302438623765
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "False": {
+          "misses": 72,
+          "rows": 128
+        },
+        "True": {
+          "misses": 35,
+          "rows": 73
+        }
+      },
+      "feature": "next_prefix3_seen",
+      "grouped_bits_before_feature_charge": 192.2229077861473,
+      "saving_after_feature_charge": 0.1132173650431243,
+      "saving_before_feature_charge": 4.020107960651643
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "copy": {
+          "misses": 83,
+          "rows": 161
+        },
+        "literal": {
+          "misses": 24,
+          "rows": 40
+        }
+      },
+      "feature": "next_type",
+      "grouped_bits_before_feature_charge": 192.76645990901878,
+      "saving_after_feature_charge": -0.4303347578283647,
+      "saving_before_feature_charge": 3.476555837780154
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "False": {
+          "misses": 69,
+          "rows": 128
+        },
+        "True": {
+          "misses": 38,
+          "rows": 73
+        }
+      },
+      "feature": "prev_suffix3_seen",
+      "grouped_bits_before_feature_charge": 193.0983488653851,
+      "saving_after_feature_charge": -0.7622237141946924,
+      "saving_before_feature_charge": 3.1446668814138263
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "copy": {
+          "misses": 80,
+          "rows": 153
+        },
+        "literal": {
+          "misses": 27,
+          "rows": 48
+        }
+      },
+      "feature": "prev_type",
+      "grouped_bits_before_feature_charge": 193.15663500844778,
+      "saving_after_feature_charge": -0.8205098572573659,
+      "saving_before_feature_charge": 3.086380738351153
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "False": {
+          "misses": 103,
+          "rows": 196
+        },
+        "True": {
+          "misses": 4,
+          "rows": 5
+        }
+      },
+      "feature": "prev_chunk_seen_before",
+      "grouped_bits_before_feature_charge": 193.8206644291021,
+      "saving_after_feature_charge": -1.484539277911682,
+      "saving_before_feature_charge": 2.4223513176968368
+    },
+    {
+      "baseline_bits": 196.24301574679893,
+      "category_count": 2,
+      "category_counts": {
+        "False": {
+          "misses": 106,
+          "rows": 198
+        },
+        "True": {
+          "misses": 1,
+          "rows": 3
+        }
+      },
+      "feature": "next_chunk_seen_before",
+      "grouped_bits_before_feature_charge": 194.73166039520933,
+      "saving_after_feature_charge": -2.3955352440189186,
+      "saving_before_feature_charge": 1.5113553515896
+    }
+  ],
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "miss_residual_gate": "analysis/target_digit_boundary_miss_residual_audit_20260621/reports/test_results/01_target_digit_boundary_miss_residual_gate.json"
+  },
+  "plaintext_claim": false,
+  "prequential_rows": [
+    {
+      "cutoff": 20,
+      "selected_feature": "book_mod10",
+      "test_misses": 62,
+      "test_rows": 132,
+      "test_saving_after_feature_charge": 24.19909865774076,
+      "train_saving_after_feature_charge": 15.64643794395771
+    },
+    {
+      "cutoff": 30,
+      "selected_feature": "shape",
+      "test_misses": 46,
+      "test_rows": 100,
+      "test_saving_after_feature_charge": 24.286815783976092,
+      "train_saving_after_feature_charge": 21.097687142170027
+    },
+    {
+      "cutoff": 40,
+      "selected_feature": "shape",
+      "test_misses": 28,
+      "test_rows": 65,
+      "test_saving_after_feature_charge": 19.16889628956309,
+      "train_saving_after_feature_charge": 28.382251761892018
+    },
+    {
+      "cutoff": 50,
+      "selected_feature": "shape",
+      "test_misses": 17,
+      "test_rows": 36,
+      "test_saving_after_feature_charge": 12.44265446548797,
+      "train_saving_after_feature_charge": 31.013085349356782
+    },
+    {
+      "cutoff": 60,
+      "selected_feature": "shape",
+      "test_misses": 7,
+      "test_rows": 10,
+      "test_saving_after_feature_charge": 0.6780719051126329,
+      "train_saving_after_feature_charge": 36.23499862481218
+    }
+  ],
+  "random_control_best": {
+    "random_seed": 46920261151,
+    "saving_mean_before_feature_charge": 38.979372037267126,
+    "saving_p05_before_feature_charge": 34.36307355487594,
+    "saving_p95_before_feature_charge": 44.76313794764377,
+    "trials": 2000
+  },
+  "schema": "target_digit_boundary_miss_transition_gate_v1",
+  "scope": "analysis_only_threshold_miss_transition_classes",
+  "summary": {
+    "baseline_miss_label_bits": 196.24301574679893,
+    "best_beats_random_p95": false,
+    "best_category_count": 20,
+    "best_feature": "shape",
+    "best_random_saving_p95_before_feature_charge": 44.76313794764377,
+    "best_saving_after_feature_charge": 35.89957034513212,
+    "best_saving_before_feature_charge": 39.806460940740635,
+    "cutpoint_count": 201,
+    "feature_count": 15,
+    "hit_count": 94,
+    "interpretation": "Skeleton transition/chunk classes are useful diagnostics for where threshold misses occur, but the best apparent feature does not beat random relabel controls. No miss-class rule is promoted.",
+    "miss_count": 107,
+    "prequential_cells": 5,
+    "prequential_positive_test_cells": 5,
+    "promotes_feature": false
+  },
+  "translation_delta": "NONE"
+}
