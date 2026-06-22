@@ -74,6 +74,7 @@ source_refs:
   - analysis/innovation_replay_policy_frontier_audit_20260622
   - analysis/executable_v8_innovation_literal_markov_audit_20260622
   - analysis/executable_v9_innovation_copy_continuation_audit_20260622
+  - analysis/post_v9_generator_frontier_synthesis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3638,6 +3639,7 @@ book generation, not row0 pair-cell placement.
 - [Innovation replay policy frontier audit](../../analysis/innovation_replay_policy_frontier_audit_20260622/reports/final_innovation_replay_policy_frontier_audit.md)
 - [Executable v8 innovation-literal Markov audit](../../analysis/executable_v8_innovation_literal_markov_audit_20260622/reports/final_executable_v8_innovation_literal_markov_audit.md)
 - [Executable v9 innovation copy-continuation audit](../../analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/final_executable_v9_innovation_copy_continuation_audit.md)
+- [Post-v9 generator frontier synthesis audit](../../analysis/post_v9_generator_frontier_synthesis_audit_20260622/reports/final_post_v9_generator_frontier_synthesis_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3811,6 +3813,15 @@ content-included cost moves from v8 `6954.909` to v9 `6917.285`. This is an
 executable dependency reduction, but random-label controls are close, so it is
 not strong evidence for a broad causal program. The unresolved blocker remains
 the replay schedule and non-continuation copy source/length policy.
+
+A post-v9 frontier synthesis then blocks the next obvious micro-sweep. The
+copy-length default candidate (`cap` or `len=9`) is technically positive, but
+only at `23.283` net bits after paying pattern and declaration costs, and
+random-label controls are nearby. It is therefore recorded as
+`MICRO_REDUCTION_NOT_PROMOTED`, not integrated as v10. The executable frontier
+stays at v9 (`6917.285` content-included bits), and the next meaningful
+question remains the innovation replay policy rather than more tiny length
+defaults.
 
 ## Boundary
 

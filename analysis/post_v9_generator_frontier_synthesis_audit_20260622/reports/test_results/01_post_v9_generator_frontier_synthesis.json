@@ -1,0 +1,87 @@
+{
+  "case_reopened": false,
+  "classification": "post_v9_frontier_synthesis_no_new_program_promoted",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "next_blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
+    "plaintext_claim": false,
+    "promoted_new_program": false,
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "executable_v9_gate": "analysis/executable_v9_innovation_copy_continuation_audit_20260622/reports/test_results/01_executable_v9_innovation_copy_continuation_gate.json",
+    "innovation_replay_policy_frontier_gate": "analysis/innovation_replay_policy_frontier_audit_20260622/reports/test_results/01_innovation_replay_policy_frontier_gate.json",
+    "unified_innovation_payload_gate": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "plaintext_claim": false,
+  "residual_ledger": {
+    "copy_length_bits_before_any_default": 231.90689059560853,
+    "copy_length_counts": {
+      "8": 3,
+      "9": 6,
+      "10": 1,
+      "11": 4,
+      "12": 2,
+      "13": 1,
+      "14": 2,
+      "15": 2,
+      "16": 1,
+      "18": 1,
+      "21": 1,
+      "22": 1,
+      "26": 1,
+      "29": 1,
+      "34": 2,
+      "35": 1,
+      "39": 1,
+      "53": 1,
+      "62": 1,
+      "64": 6
+    },
+    "copy_ops": 39,
+    "copy_source_bits_before_v9_continuation": 383.3609954329558,
+    "copy_type_bits": 39.0,
+    "innovation_policy_best_exact_prefix": 242,
+    "innovation_policy_classification": "innovation_replay_policy_not_promoted",
+    "literal_run_bits": 157.8073549220576,
+    "literal_runs": 23,
+    "replay_events": 62,
+    "v9_external_bits_total_content_included": 6917.284942990288
+  },
+  "row0_status": "unchanged_exogenous",
+  "schema": "post_v9_generator_frontier_synthesis.v1",
+  "scope": "analysis_only_post_v9_generator_frontier",
+  "summary": {
+    "copy_length_default_net_bits": 23.283435292547935,
+    "copy_length_default_status": "MICRO_REDUCTION_NOT_PROMOTED",
+    "new_program_promoted": false,
+    "next_blocker": "innovation_replay_policy",
+    "v9_external_bits_total_content_included": 6917.284942990288
+  },
+  "tested_candidates": {
+    "copy_length_cap_or_len9_default": {
+      "classification": "MICRO_REDUCTION_NOT_PROMOTED",
+      "control_p05": 21.19032588815645,
+      "control_p50": 23.283435292547935,
+      "control_p95": 23.283435292547935,
+      "counts": {
+        "cap": 6,
+        "len9": 6,
+        "paid": 27
+      },
+      "declaration_bits": 7.0,
+      "gross_saving_bits": 72.0,
+      "multinomial_pattern_bits": 41.716564707452065,
+      "net_saving_bits": 23.283435292547935,
+      "promotion_min_net_bits": 50.0,
+      "reason": "positive but below promotion threshold and control-close; keep out of executable line",
+      "trials": 500
+    }
+  },
+  "translation_delta": "NONE",
+  "validation": {
+    "errors": [],
+    "v9_roundtrip_70_70": true
+  }
+}
