@@ -20,6 +20,7 @@ source_refs:
   - analysis/joint_target_stream_parser_audit_20260622
   - analysis/composition_index_structure_audit_20260622
   - analysis/minimal_external_tape_program_audit_20260622
+  - analysis/source_tape_removal_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -744,6 +745,15 @@ promoted: after grammar/correction charges it is `-4942.611` bits worse than
 separated coarse+composition declaration, with only `1` nontrivial exact book
 generated without a sequence atlas. This gives a cleaner blocker ledger, not a
 new generator.
+A source-tape removal audit then tests the largest non-seed tape inside that
+executable decoder. Granting seed, coarse controls, exact lengths, and literal
+payloads, decoder-visible source policies try to choose copy sources online and
+pay uniform source-address exceptions on misses. The best policy,
+`previous_source_end`, hits only `22/537` holdout copy ops, gives `0` exact
+unrepaired books, and costs `6672.081` bits versus `5062.568` copy-hint
+baseline (`-1609.513` saving; random visible-source p95 `-8.288`). The
+copy source/hint tape therefore remains external under decoder-visible policy
+tests.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3082,6 +3092,8 @@ book generation, not row0 pair-cell placement.
 - [Executable decoder contract](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/01_executable_decoder_contract.md)
 - [Unified external tape ledger](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.md)
 - [Macro program gate](../../analysis/minimal_external_tape_program_audit_20260622/reports/test_results/03_macro_program_gate.md)
+- [Final source tape removal program audit](../../analysis/source_tape_removal_program_audit_20260622/reports/final_source_tape_removal_program_audit.md)
+- [Source tape removal program gate](../../analysis/source_tape_removal_program_audit_20260622/reports/test_results/01_source_tape_removal_program_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
