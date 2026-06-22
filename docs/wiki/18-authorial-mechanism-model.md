@@ -881,6 +881,14 @@ shuffled-label p05 in `4/5` prefix cells and saves `31.030` bits versus a global
 label model, but it predicts `0` start labels and costs `3075.566` bits versus
 `2160.605` true-count composition bits (`+914.961`). This is a weak content
 clue, not an internal-start generator.
+A start-candidate ranking gate then asks the less brittle question: can the
+same prefix/content signal rank a candidate set for starts, with missed starts
+paid as corrections? It reduces the binary start-position ledger from
+`2063.661` to `1941.433` bits (`-122.227`) and captures `37/343` starts, but it
+beats random top-K p05 in only `2/5` prefix cells and leaves `306` missed-start
+corrections. The candidate route is therefore not promoted yet; the current
+gain may still be explained by candidate-set size rather than a robust boundary
+state.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3249,6 +3257,7 @@ book generation, not row0 pair-cell placement.
 - [Generative route frontier synthesis](../../analysis/generative_route_frontier_synthesis_audit_20260622/reports/test_results/01_generative_route_frontier_synthesis.md)
 - [Final digit content boundary transducer audit](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/final_digit_content_boundary_transducer_audit.md)
 - [All-position boundary transducer gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/01_all_position_boundary_transducer_gate.md)
+- [Start candidate ranking gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/02_start_candidate_ranking_gate.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)

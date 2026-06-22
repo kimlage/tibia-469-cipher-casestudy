@@ -1,25 +1,27 @@
 # Final Digit Content Boundary Transducer Audit
 
 Status: `analysis_only`
-Classification: `WEAK_DIGIT_BOUNDARY_CLUE_NOT_GENERATOR`
+Classification: `START_CANDIDATE_RANKING_NOT_PROMOTED`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Case reopened: `False`
 
 ## Question
 
-Can decoder-visible digit-prefix/content features derive internal operation starts and literal/copy modes without granting the operation-token sequence or target-conditioned copy availability?
+Can decoder-visible digit-prefix/content features rank a small candidate set for internal starts and reduce the paid start-position dependency?
 
 ## Result
 
-The all-position model costs `3075.566` bits versus `2160.605` true-count composition bits (`914.961` bits worse). It beats composition in `0/5` cells and shuffled-label p05 in `4/5` cells. Across held-out scoring it has `343` true start labels and predicts `0` start labels.
+The candidate ranking codec costs `1941.433` bits versus `2063.661` exact start-composition bits (`-122.227`). It beats random top-K p05 in `2/5` cells and captures `37/343` starts, leaving `306` missed-start corrections.
 
 ## Decision
 
-This is the first strict pilot of the selected digit/content-boundary route. It is promoted only if it reduces the internal-start/mode dependency after controls. Row0, plaintext, translation, and compression_bound remain unchanged.
+This gate is a candidate-set test, not a complete parser. It is promoted only if the candidate set plus corrections reduces the start ledger under controls. Row0, plaintext, translation, and compression_bound remain unchanged.
 
 ## Reproducible Artifacts
 
 - [01_all_position_boundary_transducer_gate.py](../scripts/01_all_position_boundary_transducer_gate.py)
+- [02_start_candidate_ranking_gate.py](../scripts/02_start_candidate_ranking_gate.py)
 - [01_all_position_boundary_transducer_gate.json](test_results/01_all_position_boundary_transducer_gate.json)
-- [01_all_position_boundary_transducer_gate.md](test_results/01_all_position_boundary_transducer_gate.md)
+- [02_start_candidate_ranking_gate.json](test_results/02_start_candidate_ranking_gate.json)
+- [02_start_candidate_ranking_gate.md](test_results/02_start_candidate_ranking_gate.md)
