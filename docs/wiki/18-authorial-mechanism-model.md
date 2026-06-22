@@ -67,6 +67,7 @@ source_refs:
   - analysis/residual_content_basis_program_audit_20260622
   - analysis/residual_content_fingerprint_program_audit_20260622
   - analysis/seed_bootstrap_copy_surface_audit_20260622
+  - analysis/seed_bootstrap_transducer_program_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3624,6 +3625,7 @@ book generation, not row0 pair-cell placement.
 - [Residual content-basis program audit](../../analysis/residual_content_basis_program_audit_20260622/reports/final_residual_content_basis_program_audit.md)
 - [Residual content-fingerprint program audit](../../analysis/residual_content_fingerprint_program_audit_20260622/reports/final_residual_content_fingerprint_program_audit.md)
 - [Seed bootstrap copy-surface audit](../../analysis/seed_bootstrap_copy_surface_audit_20260622/reports/final_seed_bootstrap_copy_surface_audit.md)
+- [Seed bootstrap transducer program audit](../../analysis/seed_bootstrap_transducer_program_audit_20260622/reports/final_seed_bootstrap_transducer_program_audit.md)
 
 ## Executable v5 source-endpoint memory
 
@@ -3718,6 +3720,16 @@ permutation controls show that most of the signal comes from repeated content,
 not from proving canonical `0..9` as authorial seed order. The next real gate is
 a target-free bootstrap policy that derives seed copy starts/choices from a
 smaller innovation tape.
+
+The first target-free bootstrap policy gate does not promote. It grants the
+seed book lengths, the `361`-digit literal tape from the surface parse, and one
+deterministic context-copy policy. The best policy (`context=4`, `copy_len=4`,
+`latest`) matches only the first `55` seed digits before correction, yields
+`0/10` exact seed books, and costs `6656.992` bits after raw suffix correction:
+`+1023.002` worse than the raw seed payload. Shuffled literal-tape controls
+show the prefix is non-random (`p95=1`), but the policy still does not reduce
+the executable ledger. The blocker is now more precise: repeated seed content
+exists, but the copy-start/source-length decision policy is still missing.
 
 ## Boundary
 
