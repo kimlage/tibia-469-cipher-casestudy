@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_BOOKSTART_MODE_REJECTED_INTERNAL_TRIGGER_REJECTED`
+Classification: `INNOVATION_STREAM_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -82,6 +82,9 @@ plus a small external innovation tape made from the literal payload?
 - Book-start mode best feature: `book_decade`.
 - Book-start mode best feature delta vs global: `-4.000` bits.
 - Promotes book-start mode: `False`.
+- Frontier main blocker: `internal_operation_starts`.
+- Frontier internal ops: `201`.
+- Frontier right_ge:4 missed internal starts: `107`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -109,7 +112,8 @@ candidate-label problem and decomposes book-start versus internal starts.
 The internal decomposition gate then removes book-start candidates from
 the target-conditioned candidate-label problem itself. The book-start
 mode gate then asks whether the remaining first-operation literal/copy
-choice has a target-free rule beyond global majority.
+choice has a target-free rule beyond global majority. The frontier
+ledger consolidates the surviving dependencies after these gates.
 
 ## Decision
 
@@ -131,6 +135,7 @@ choice has a target-free rule beyond global majority.
 - Decoder-visible boundary-candidate trigger policy is promoted only as a book-start clue; the internal-only trigger decomposition is not promoted.
 - Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.
 - Book-start mode policy is rejected: the existence of a first operation is structural, but its literal/copy mode remains declared.
+- The consolidated frontier identifies internal operation-start generation as the main blocker.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -149,3 +154,4 @@ choice has a target-free rule beyond global majority.
 - [Decoder visible boundary candidate trigger gate](test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)
 - [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)
 - [Book start mode gate](test_results/13_book_start_mode_gate.md)
+- [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)

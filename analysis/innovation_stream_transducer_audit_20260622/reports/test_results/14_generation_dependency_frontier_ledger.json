@@ -1,0 +1,118 @@
+{
+  "case_reopened": false,
+  "classification": "GENERATION_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER",
+  "decision": {
+    "compression_bound_status": "unchanged_8154_676268",
+    "generator_status": "not_promoted",
+    "main_blocker": "internal_operation_starts",
+    "row0_origin_status": "unchanged_exogenous",
+    "translation_or_plaintext_status": "NONE"
+  },
+  "frontier_items": [
+    {
+      "dependency": "row0_table",
+      "evidence": "All innovation-stream gates preserve row0_origin_status=unchanged_exogenous.",
+      "remaining": "full row0 origin remains outside this generation route",
+      "status": "external_unchanged"
+    },
+    {
+      "dependency": "seed_books_0_9_payload",
+      "evidence": "The innovation tape route generates only derived books 10..69 from granted seed material.",
+      "remaining": "seed payload not derived here",
+      "status": "external_seed_material"
+    },
+    {
+      "dependency": "literal_innovation_tape",
+      "evidence": "266 literal digits; tape structure promoted, Markov bits 879.609; seed subcodec remains -180.128 bits vs raw tape.",
+      "remaining": "raw tape payload and its origin/order still external",
+      "status": "tape_shaped_clue_promoted_not_generated"
+    },
+    {
+      "dependency": "tape_consumption_schedule",
+      "evidence": "schedule best feature global_majority; feature delta -5.585 bits; promotes=False.",
+      "remaining": "when to consume tape vs copy remains unresolved",
+      "status": "sparsity_weak_not_policy"
+    },
+    {
+      "dependency": "book_start_existence",
+      "evidence": "right_ge:4 candidate labels recover 34/94 starts with decoder-visible book_start feature.",
+      "remaining": "only the existence of a first operation is explained",
+      "status": "structural_clue_retained"
+    },
+    {
+      "dependency": "book_start_mode",
+      "evidence": "13/47 literal/copy starts; best non-global delta -4.000 bits.",
+      "remaining": "literal/copy mode at book start remains declared",
+      "status": "rejected_policy_external"
+    },
+    {
+      "dependency": "internal_operation_starts",
+      "evidence": "201 internal canonical ops; right_ge:4 includes 94 and misses 107; internal candidate trigger hits 0/70 even with target-conditioned copy availability.",
+      "remaining": "internal op-start parser remains the main blocker",
+      "status": "blocked_rejected_current_route"
+    },
+    {
+      "dependency": "target_conditioned_copy_availability",
+      "evidence": "known-start trigger delta 48.262 bits; decoder-visible trigger delta -4.807 bits.",
+      "remaining": "copy availability still relies on target future where promoted",
+      "status": "conditional_clue_not_closed_loop"
+    },
+    {
+      "dependency": "copy_source_and_length",
+      "evidence": "copy ops 208; replay source+length hits 47/208 under target-conditioned replay.",
+      "remaining": "source and length fields are not generated",
+      "status": "external_fields_after_shape"
+    },
+    {
+      "dependency": "closed_loop_generation",
+      "evidence": "sync exact books 0/60; target-conditioned replay exact books 22/60 with shuffled p95 23.0.",
+      "remaining": "no closed-loop generated derived book set",
+      "status": "not_promoted"
+    }
+  ],
+  "inputs": {
+    "book_start_mode": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/13_book_start_mode_gate.json",
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "boundary_candidate_trigger": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/10_boundary_candidate_trigger_gate.json",
+    "copy_source_ledger": "analysis/copy_source_generation_audit_20260621/reports/test_results/01_copy_source_ledger.json",
+    "decoder_visible_boundary_candidate": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/11_decoder_visible_boundary_candidate_trigger_gate.json",
+    "decoder_visible_trigger": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/09_decoder_visible_trigger_policy_gate.json",
+    "internal_boundary_candidate": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/12_internal_boundary_candidate_trigger_decomposition_gate.json",
+    "known_start_trigger": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/08_tape_trigger_policy_gate.json",
+    "replay": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/01_innovation_tape_replay_gate.json",
+    "schedule": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/07_innovation_tape_schedule_gate.json",
+    "seed_subcodec": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/05_seed_derived_tape_subcodec_gate.json",
+    "seed_walk": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/06_seed_walk_source_model_gate.json",
+    "structure": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/03_innovation_tape_structure_gate.json",
+    "sync": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/04_tape_synchronized_closed_loop_gate.json"
+  },
+  "plaintext_claim": false,
+  "schema": "generation_dependency_frontier_ledger_v1",
+  "scope": "analysis_only_generation_frontier_after_innovation_stream_gates",
+  "summary": {
+    "book_start_copy_ops": 47,
+    "book_start_literal_ops": 13,
+    "book_start_mode_promoted": false,
+    "book_start_ops": 60,
+    "canonical_ops": 261,
+    "classification": "GENERATION_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER",
+    "closed_loop_exact_books": 0,
+    "compression_bound_status": "unchanged_8154_676268",
+    "copy_ops": 208,
+    "derived_books": 60,
+    "internal_ops": 201,
+    "internal_trigger_promoted": false,
+    "literal_digits": 266,
+    "literal_ops": 53,
+    "next_aligned_route": "derive internal operation starts without target-future oracle; book-start and tape-shape clues are useful but do not yet form a generator",
+    "right_ge4_candidate_actual_starts": 154,
+    "right_ge4_candidate_nonstarts": 841,
+    "right_ge4_candidate_positions": 995,
+    "right_ge4_missed_internal_starts": 107,
+    "row0_origin_status": "unchanged_exogenous",
+    "seed_books": 10,
+    "tape_structure_promoted": true,
+    "target_conditioned_replay_exact_books": 22
+  },
+  "translation_delta": "NONE"
+}

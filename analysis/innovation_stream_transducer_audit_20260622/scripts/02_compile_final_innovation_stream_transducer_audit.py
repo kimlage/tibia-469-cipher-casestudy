@@ -26,6 +26,7 @@ INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE = (
     TEST_RESULTS / "12_internal_boundary_candidate_trigger_decomposition_gate.json"
 )
 BOOK_START_MODE_GATE = TEST_RESULTS / "13_book_start_mode_gate.json"
+FRONTIER_LEDGER = TEST_RESULTS / "14_generation_dependency_frontier_ledger.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -64,6 +65,7 @@ def main() -> None:
         INTERNAL_BOUNDARY_CANDIDATE_TRIGGER_GATE
     )
     book_start_mode = load_json(BOOK_START_MODE_GATE)
+    frontier = load_json(FRONTIER_LEDGER)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
@@ -82,6 +84,7 @@ def main() -> None:
         internal_boundary_candidate_trigger,
     )
     assert_boundary("book_start_mode_gate", book_start_mode)
+    assert_boundary("generation_dependency_frontier_ledger", frontier)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
@@ -94,7 +97,10 @@ def main() -> None:
     ab = decoder_visible_boundary_candidate_trigger["summary"]
     ac = internal_boundary_candidate_trigger["summary"]
     ad = book_start_mode["summary"]
-    if (
+    ae = frontier["summary"]
+    if frontier["classification"] == "GENERATION_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER":
+        classification = "INNOVATION_STREAM_FRONTIER_INTERNAL_STARTS_MAIN_BLOCKER"
+    elif (
         not book_start_mode["summary"]["promotes_book_start_mode"]
         and not internal_boundary_candidate_trigger["summary"][
             "promotes_internal_boundary_candidate_trigger"
@@ -221,6 +227,9 @@ def main() -> None:
         f"- Book-start mode best feature: `{ad['best_feature']}`.",
         f"- Book-start mode best feature delta vs global: `{ad['best_feature_delta_bits_vs_global']:.3f}` bits.",
         f"- Promotes book-start mode: `{ad['promotes_book_start_mode']}`.",
+        f"- Frontier main blocker: `{frontier['decision']['main_blocker']}`.",
+        f"- Frontier internal ops: `{ae['internal_ops']}`.",
+        f"- Frontier right_ge:4 missed internal starts: `{ae['right_ge4_missed_internal_starts']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -248,7 +257,8 @@ def main() -> None:
         "The internal decomposition gate then removes book-start candidates from",
         "the target-conditioned candidate-label problem itself. The book-start",
         "mode gate then asks whether the remaining first-operation literal/copy",
-        "choice has a target-free rule beyond global majority.",
+        "choice has a target-free rule beyond global majority. The frontier",
+        "ledger consolidates the surviving dependencies after these gates.",
         "",
         "## Decision",
         "",
@@ -270,6 +280,7 @@ def main() -> None:
         "- Decoder-visible boundary-candidate trigger policy is promoted only as a book-start clue; the internal-only trigger decomposition is not promoted.",
         "- Internal boundary-candidate trigger is rejected even with target-conditioned copy availability, so the composed candidate-trigger gain is book-start dominated.",
         "- Book-start mode policy is rejected: the existence of a first operation is structural, but its literal/copy mode remains declared.",
+        "- The consolidated frontier identifies internal operation-start generation as the main blocker.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -288,6 +299,7 @@ def main() -> None:
         "- [Decoder visible boundary candidate trigger gate](test_results/11_decoder_visible_boundary_candidate_trigger_gate.md)",
         "- [Internal boundary candidate trigger decomposition gate](test_results/12_internal_boundary_candidate_trigger_decomposition_gate.md)",
         "- [Book start mode gate](test_results/13_book_start_mode_gate.md)",
+        "- [Generation dependency frontier ledger](test_results/14_generation_dependency_frontier_ledger.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
