@@ -43,6 +43,7 @@ source_refs:
   - analysis/paid_control_context_payload_codec_audit_20260622
   - analysis/parser_decoder_frontier_synthesis_audit_20260622
   - analysis/target_free_internal_start_program_audit_20260622
+  - analysis/internal_start_beam_capacity_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -972,6 +973,13 @@ control (`56/150` versus p95 `37`), but this generates only `13/343` internal
 starts before corrections and costs `3146.578` bits versus `2811.673` for
 explicit opcount+cutpoint+type declaration. It is therefore a weak clue, not a
 promoted internal-start program.
+An internal-start beam-capacity gate then tests whether that failure is merely
+beam width. Wider beams improve coverage monotonically: x32 reaches `101/150`
+true coarse sequences and `78/343` internal starts before correction. But after
+charging the width choice, rank, residual composition, and corrections, it still
+costs `2815.682` bits versus `2811.673` for explicit opcount+cutpoint+type
+declaration (`-4.010` bits). The route is retained as a near-bound capacity
+clue; it still needs a better ranking/state model before promotion.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3353,6 +3361,7 @@ book generation, not row0 pair-cell placement.
 - [Final paid-control context payload codec audit](../../analysis/paid_control_context_payload_codec_audit_20260622/reports/final_paid_control_context_payload_codec_audit.md)
 - [Final parser/decoder frontier synthesis audit](../../analysis/parser_decoder_frontier_synthesis_audit_20260622/reports/final_parser_decoder_frontier_synthesis_audit.md)
 - [Final target-free internal start program audit](../../analysis/target_free_internal_start_program_audit_20260622/reports/final_target_free_internal_start_program_audit.md)
+- [Final internal start beam capacity audit](../../analysis/internal_start_beam_capacity_audit_20260622/reports/final_internal_start_beam_capacity_audit.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
