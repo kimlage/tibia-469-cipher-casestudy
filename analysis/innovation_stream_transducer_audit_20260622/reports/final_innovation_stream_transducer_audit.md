@@ -1,7 +1,7 @@
 # Final Innovation Stream Transducer Audit
 
 Status: `analysis_only`
-Classification: `INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SEED_SUBCODEC_WEAK`
+Classification: `INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SCHEDULE_SPARSITY_WEAK`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Row0 origin: `unchanged_exogenous`
@@ -42,6 +42,15 @@ plus a small external innovation tape made from the literal payload?
 - Seed-walk best saving vs raw tape: `-223.209`.
 - Promotes seed-walk subcodec: `False`.
 - Weak seed-walk clue: `False`.
+- Tape schedule best feature: `global_majority`.
+- Tape schedule exact books: `33/50`.
+- Tape schedule saving vs count baseline: `221.844` bits.
+- Tape schedule global-majority exact books: `33/50`.
+- Tape schedule global-majority saving: `221.844` bits.
+- Tape schedule best feature delta bits: `-5.585`.
+- Tape schedule best feature delta exact: `0`.
+- Tape schedule random exact p95: `31.000`.
+- Promotes tape schedule: `False`.
 
 The first gate tests the right external-input hypothesis: a canonical
 literal tape plus an online copy transducer. It separates a
@@ -54,6 +63,8 @@ copy transducer when only the tape start, book length, and prior material
 are granted. The seed-subcodec gate prices the seed-coverage clue as a
 real dependency reduction for the tape itself. The seed-walk gate then
 tests whether source addresses can be replaced by a cheaper source walk.
+The schedule gate asks whether per-book tape consumption can be predicted
+from online mechanical features beyond a global sparsity baseline.
 
 ## Decision
 
@@ -66,6 +77,8 @@ tests whether source addresses can be replaced by a cheaper source walk.
 - Seed-derived tape subcodec is not promoted because paid references are still worse than raw tape.
 - Seed-derived tape subcodec remains a weak clue because paid coverage beats shuffled controls.
 - Seed-walk source model is rejected because deltas are more expensive than absolute source positions.
+- Tape schedule feature model is not promoted unless it improves over global-majority sparsity.
+- Tape schedule sparsity is retained only as a weak clue.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
 - No plaintext, translation, semantic reading, or case reopening is introduced.
@@ -77,3 +90,4 @@ tests whether source addresses can be replaced by a cheaper source walk.
 - [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)
 - [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)
 - [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)
+- [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)

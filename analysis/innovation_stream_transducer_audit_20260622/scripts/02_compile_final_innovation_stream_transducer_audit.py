@@ -15,6 +15,7 @@ STRUCTURE_GATE = TEST_RESULTS / "03_innovation_tape_structure_gate.json"
 SYNC_GATE = TEST_RESULTS / "04_tape_synchronized_closed_loop_gate.json"
 SEED_SUBCODEC_GATE = TEST_RESULTS / "05_seed_derived_tape_subcodec_gate.json"
 SEED_WALK_GATE = TEST_RESULTS / "06_seed_walk_source_model_gate.json"
+SCHEDULE_GATE = TEST_RESULTS / "07_innovation_tape_schedule_gate.json"
 OUT = REPORTS / "final_innovation_stream_transducer_audit.md"
 
 
@@ -42,17 +43,24 @@ def main() -> None:
     sync = load_json(SYNC_GATE)
     seed_subcodec = load_json(SEED_SUBCODEC_GATE)
     seed_walk = load_json(SEED_WALK_GATE)
+    schedule = load_json(SCHEDULE_GATE)
     assert_boundary("innovation_tape_replay_gate", replay)
     assert_boundary("innovation_tape_structure_gate", structure)
     assert_boundary("tape_synchronized_closed_loop_gate", sync)
     assert_boundary("seed_derived_tape_subcodec_gate", seed_subcodec)
     assert_boundary("seed_walk_source_model_gate", seed_walk)
+    assert_boundary("innovation_tape_schedule_gate", schedule)
     s = replay["summary"]
     t = structure["summary"]
     u = sync["summary"]
     v = seed_subcodec["summary"]
     w = seed_walk["summary"]
-    if seed_walk["summary"]["promotes_seed_walk_subcodec"]:
+    x = schedule["summary"]
+    if schedule["summary"]["promotes_schedule_model"]:
+        classification = "INNOVATION_STREAM_TAPE_SCHEDULE_PROMOTED"
+    elif schedule["summary"]["weak_schedule_clue"]:
+        classification = "INNOVATION_STREAM_MIXED_TAPE_STRUCTURE_PROMOTED_SYNC_WEAK_SCHEDULE_SPARSITY_WEAK"
+    elif seed_walk["summary"]["promotes_seed_walk_subcodec"]:
         classification = "INNOVATION_STREAM_SEED_WALK_SUBCODEC_PROMOTED"
     elif seed_subcodec["summary"]["promotes_seed_subcodec"]:
         classification = "INNOVATION_STREAM_SEED_TAPE_SUBCODEC_PROMOTED"
@@ -109,6 +117,15 @@ def main() -> None:
         f"- Seed-walk best saving vs raw tape: `{w['best_walk_saving_vs_raw_bits']:.3f}`.",
         f"- Promotes seed-walk subcodec: `{w['promotes_seed_walk_subcodec']}`.",
         f"- Weak seed-walk clue: `{w['weak_seed_walk_clue']}`.",
+        f"- Tape schedule best feature: `{x['best_feature']}`.",
+        f"- Tape schedule exact books: `{x['best_exact_books']}/{x['best_test_books']}`.",
+        f"- Tape schedule saving vs count baseline: `{x['best_saving_vs_baseline_bits']:.3f}` bits.",
+        f"- Tape schedule global-majority exact books: `{x['best_global_exact_books']}/{x['best_global_test_books']}`.",
+        f"- Tape schedule global-majority saving: `{x['best_global_saving_vs_baseline_bits']:.3f}` bits.",
+        f"- Tape schedule best feature delta bits: `{x['best_feature_delta_bits']:.3f}`.",
+        f"- Tape schedule best feature delta exact: `{x['best_feature_delta_exact']}`.",
+        f"- Tape schedule random exact p95: `{x['random_exact_p95']:.3f}`.",
+        f"- Promotes tape schedule: `{x['promotes_schedule_model']}`.",
         "",
         "The first gate tests the right external-input hypothesis: a canonical",
         "literal tape plus an online copy transducer. It separates a",
@@ -121,6 +138,8 @@ def main() -> None:
         "are granted. The seed-subcodec gate prices the seed-coverage clue as a",
         "real dependency reduction for the tape itself. The seed-walk gate then",
         "tests whether source addresses can be replaced by a cheaper source walk.",
+        "The schedule gate asks whether per-book tape consumption can be predicted",
+        "from online mechanical features beyond a global sparsity baseline.",
         "",
         "## Decision",
         "",
@@ -133,6 +152,8 @@ def main() -> None:
         "- Seed-derived tape subcodec is not promoted because paid references are still worse than raw tape.",
         "- Seed-derived tape subcodec remains a weak clue because paid coverage beats shuffled controls.",
         "- Seed-walk source model is rejected because deltas are more expensive than absolute source positions.",
+        "- Tape schedule feature model is not promoted unless it improves over global-majority sparsity.",
+        "- Tape schedule sparsity is retained only as a weak clue.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
         "- No plaintext, translation, semantic reading, or case reopening is introduced.",
@@ -144,6 +165,7 @@ def main() -> None:
         "- [Tape synchronized closed loop gate](test_results/04_tape_synchronized_closed_loop_gate.md)",
         "- [Seed derived tape subcodec gate](test_results/05_seed_derived_tape_subcodec_gate.md)",
         "- [Seed walk source model gate](test_results/06_seed_walk_source_model_gate.md)",
+        "- [Innovation tape schedule gate](test_results/07_innovation_tape_schedule_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
