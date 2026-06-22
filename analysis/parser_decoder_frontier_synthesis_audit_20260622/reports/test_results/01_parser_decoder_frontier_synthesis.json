@@ -1,0 +1,88 @@
+{
+  "case_reopened": false,
+  "classification": "PARSER_DECODER_FRONTIER_REQUIRES_INTERNAL_START_REPRESENTATION_CHANGE",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "generator_promoted": false,
+    "next_aligned_route": "target_free_internal_operation_start_program: combine the retained innovation-tape shape, joint type:length control clue, and small-beam survival into an executable decoder that pays missed-start and rank corrections explicitly; do not open another isolated selector/codec gate.",
+    "promoted_generators": [],
+    "row0_status": "unchanged_exogenous",
+    "translation_delta": "NONE"
+  },
+  "inputs": {
+    "beam_markov_state_selector": "analysis/segmentation_decision_audit_20260621/reports/test_results/63_beam_markov_state_selector_gate.json",
+    "beam_rank_selector": "analysis/segmentation_decision_audit_20260621/reports/test_results/59_beam_rank_selector_gate.json",
+    "beam_survival_budget": "analysis/segmentation_decision_audit_20260621/reports/test_results/58_beam_survival_budget_gate.json",
+    "branch_choice_frontier_closure": "analysis/segmentation_decision_audit_20260621/reports/test_results/36_branch_choice_frontier_closure_audit.json",
+    "executable_program_frontier": "analysis/executable_program_frontier_synthesis_audit_20260622/reports/test_results/01_executable_program_frontier_synthesis.json",
+    "generation_dependency_frontier": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/14_generation_dependency_frontier_ledger.json",
+    "joint_type_length_control_tape": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/16_joint_type_length_control_tape_gate.json",
+    "length_control_tape": "analysis/innovation_stream_transducer_audit_20260622/reports/test_results/15_length_control_tape_gate.json",
+    "paid_control_context_payload_codec": "analysis/paid_control_context_payload_codec_audit_20260622/reports/test_results/01_paid_control_context_payload_codec_gate.json"
+  },
+  "plaintext_claim": false,
+  "route_rows": [
+    {
+      "evidence": "roundtrip_70_70=True; promoted_tape_reductions=0; external_bits_including_seed=9992.848",
+      "reason": "The contract is executable and useful as ledger, but no tested macro/source/controller route reduces paid tapes.",
+      "route": "current_executable_external_tape_program",
+      "status": "closed_needs_representation_change"
+    },
+    {
+      "evidence": "promoted_targets=[]; savings={'composition_quantile10': -60.345, 'copy_hint_rank_bucket': -61.147, 'literal_payload_digits': -61.049}",
+      "reason": "Already-paid coarse/book/op contexts do not reduce literal payload, copy-hint, or composition residual streams.",
+      "route": "paid_control_context_payload_codec",
+      "status": "closed_negative"
+    },
+    {
+      "evidence": "gates=20; complete_promoted=0; partial_promoted=0; next_blocker=A richer path/state segmentation mechanism or source-free target digit generator is required; the branch-choice weak-signal family is closed under current evidence.",
+      "reason": "Residual branch choices are oracle-repairable, but tested observable selectors either overfit, miss residuals, or become lookup patches.",
+      "route": "local_branch_choice_and_residual_selector",
+      "status": "closed_saturated"
+    },
+    {
+      "evidence": "best_objective=max_suffix_copy_digits; width=5; survival_cells=5/5; fixed_width_net_vs_lookup=4.750",
+      "reason": "A width-5 beam keeps stable residual branches alive, but paying fixed width is worse than lookup and no stable selector is promoted.",
+      "route": "small_beam_path_state",
+      "status": "retained_weak_clue_not_program"
+    },
+    {
+      "evidence": "rank_cover_all_cells=0/5; rank_zero_clean_cells=0/5; markov_cover_all_cells=0/5; markov_zero_clean_cells=0/5",
+      "reason": "Full-fit selectors see the right branch, but context tables and Markov state fail holdout/clean-control requirements.",
+      "route": "beam_rank_or_markov_selector",
+      "status": "closed_selector_not_promoted"
+    },
+    {
+      "evidence": "closed_loop_exact_books=0; target_conditioned_replay_exact_books=22; internal_ops=201; right_ge4_missed_internal_starts=107; tape_structure_promoted=True",
+      "reason": "Tape shape is real, but closed-loop generation fails and internal operation starts remain unresolved without target-future oracle.",
+      "route": "innovation_tape_closed_loop_transducer",
+      "status": "retained_clues_main_blocker_internal_starts"
+    },
+    {
+      "evidence": "length_beats_shuffle_p95=4/5; length_beats_composition=0; joint_beats_shuffle_p95=4/5; joint_beats_skeleton_composition=0",
+      "reason": "Control streams have prefix-holdout structure versus shuffled controls, but do not replace the fixed-op cutpoint/type composition ledger.",
+      "route": "length_or_joint_type_length_control_tape",
+      "status": "retained_predictive_clue_not_skeleton_replacement"
+    }
+  ],
+  "schema": "parser_decoder_frontier_synthesis.v1",
+  "scope": "analysis_only_route_frontier_synthesis",
+  "summary": {
+    "classification": "PARSER_DECODER_FRONTIER_REQUIRES_INTERNAL_START_REPRESENTATION_CHANGE",
+    "closed_routes": [
+      "current_executable_external_tape_program",
+      "paid_control_context_payload_codec",
+      "local_branch_choice_and_residual_selector",
+      "beam_rank_or_markov_selector"
+    ],
+    "main_blocker": "target_free_internal_operation_starts",
+    "promoted_generator_count": 0,
+    "retained_clues": [
+      "small_beam_path_state",
+      "innovation_tape_closed_loop_transducer",
+      "length_or_joint_type_length_control_tape"
+    ],
+    "routes_audited": 7
+  },
+  "translation_delta": "NONE"
+}

@@ -41,6 +41,7 @@ source_refs:
   - analysis/residual_mode_header_codec_audit_20260622
   - analysis/residual_burden_cross_prediction_audit_20260622
   - analysis/paid_control_context_payload_codec_audit_20260622
+  - analysis/parser_decoder_frontier_synthesis_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -953,6 +954,14 @@ also fails to reduce the executable residual: literal payload digits save
 quantile buckets save `-60.345`, with no shuffled-target p95 win. The current
 paid/derived control fields therefore do not explain the payload residual
 streams.
+A parser/decoder frontier synthesis then consolidates the current representation
+state. It closes the executable external-tape program, paid-control context
+codec, local branch-choice residual selector, and beam-rank/Markov selector
+routes under current evidence. It retains only weak clues: width-5 stable-branch
+survival, innovation-tape shape, and length/joint `type:length` control
+structure. The next aligned route is therefore not another isolated selector,
+but a target-free internal-operation-start program with missed-start and rank
+corrections paid explicitly.
 A shared innovation tape audit then tests whether that fine length residual can
 reuse the already-paid literal innovation tape. The sizes make the hypothesis
 worth testing (`266` literal-tape digits versus `261` length-residual events),
@@ -3332,6 +3341,7 @@ book generation, not row0 pair-cell placement.
 - [All-position boundary transducer gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/01_all_position_boundary_transducer_gate.md)
 - [Start candidate ranking gate](../../analysis/digit_content_boundary_transducer_audit_20260622/reports/test_results/02_start_candidate_ranking_gate.md)
 - [Final paid-control context payload codec audit](../../analysis/paid_control_context_payload_codec_audit_20260622/reports/final_paid_control_context_payload_codec_audit.md)
+- [Final parser/decoder frontier synthesis audit](../../analysis/parser_decoder_frontier_synthesis_audit_20260622/reports/final_parser_decoder_frontier_synthesis_audit.md)
 - [Final shared innovation tape audit](../../analysis/shared_innovation_tape_audit_20260622/reports/final_shared_innovation_tape_audit.md)
 - [Shared literal-length tape gate](../../analysis/shared_innovation_tape_audit_20260622/reports/test_results/01_shared_literal_length_tape_gate.md)
 - [Hybrid innovation tape subcodec gate](../../analysis/innovation_stream_transducer_audit_20260622/reports/test_results/17_hybrid_innovation_tape_subcodec_gate.md)
