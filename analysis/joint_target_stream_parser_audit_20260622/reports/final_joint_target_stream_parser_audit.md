@@ -23,19 +23,26 @@ emitting boundary state along with the digit stream under prefix holdout?
 - Hazard-state random p95 before feature charge: `167.705` bits.
 - Hazard endpoint decoder hits: `9/343`.
 - Hazard endpoint cells beating random p95: `0/5`.
+- Combined endpoint best family: `age_plus_surprisal_bin_additive`.
+- Combined endpoint decoder hits: `74/343`.
+- Combined endpoint cells beating random p95: `5/5`.
+- Combined endpoint nontrivial exact books: `0`.
 
 The pair-token model is rejected: pairing the boundary flag with the
 current digit is not enough. A simple sequential hazard state is promoted
 as a boundary dependency reducer: age since the last emitted boundary
 beats same-count random boundary controls under prefix holdout. It is not
 an exact parser: when decoded into exact endpoints with true op-count
-granted, it does not beat same-count random endpoint controls.
+granted, it does not beat same-count random endpoint controls. Combining
+that hazard with the promoted digit-surprisal boundary clue improves
+endpoint hits, but still does not decode any nontrivial book exactly.
 
 ## Decision
 
 - Simple joint boundary+digit pair emission is rejected.
 - Sequential boundary hazard state is promoted as a dependency reducer.
 - Hazard endpoint decoding is rejected.
+- Combined surprisal+hazard endpoint decoding is rejected as a generator.
 - No exact parser/generator is promoted.
 - Compression bound is unchanged.
 - Row0 remains exogenous and unchanged.
@@ -46,3 +53,4 @@ granted, it does not beat same-count random endpoint controls.
 - [Joint boundary digit gate](test_results/01_joint_boundary_digit_gate.md)
 - [Boundary hazard state gate](test_results/02_boundary_hazard_state_gate.md)
 - [Boundary hazard endpoint decoder gate](test_results/03_boundary_hazard_endpoint_decoder_gate.md)
+- [Combined boundary endpoint decoder gate](test_results/04_combined_boundary_endpoint_decoder_gate.md)

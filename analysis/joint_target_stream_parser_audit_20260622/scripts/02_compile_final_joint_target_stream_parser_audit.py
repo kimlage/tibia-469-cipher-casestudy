@@ -13,6 +13,7 @@ TEST_RESULTS = REPORTS / "test_results"
 PAIR_GATE = TEST_RESULTS / "01_joint_boundary_digit_gate.json"
 HAZARD_GATE = TEST_RESULTS / "02_boundary_hazard_state_gate.json"
 ENDPOINT_GATE = TEST_RESULTS / "03_boundary_hazard_endpoint_decoder_gate.json"
+COMBINED_ENDPOINT_GATE = TEST_RESULTS / "04_combined_boundary_endpoint_decoder_gate.json"
 OUT = REPORTS / "final_joint_target_stream_parser_audit.md"
 
 
@@ -38,12 +39,15 @@ def main() -> None:
     pair_gate = load_json(PAIR_GATE)
     hazard_gate = load_json(HAZARD_GATE)
     endpoint_gate = load_json(ENDPOINT_GATE)
+    combined_endpoint_gate = load_json(COMBINED_ENDPOINT_GATE)
     assert_boundary("joint_boundary_digit_gate", pair_gate)
     assert_boundary("boundary_hazard_state_gate", hazard_gate)
     assert_boundary("boundary_hazard_endpoint_decoder_gate", endpoint_gate)
+    assert_boundary("combined_boundary_endpoint_decoder_gate", combined_endpoint_gate)
     pair = pair_gate["summary"]
     hazard = hazard_gate["summary"]
     endpoint = endpoint_gate["summary"]
+    combined = combined_endpoint_gate["summary"]
     classification = "JOINT_TARGET_STREAM_PARSER_FIRST_GATES_MIXED"
     lines = [
         "# Final Joint Target Stream Parser Audit",
@@ -71,19 +75,26 @@ def main() -> None:
         f"- Hazard-state random p95 before feature charge: `{hazard['best_random_gain_p95_before_feature_charge']:.3f}` bits.",
         f"- Hazard endpoint decoder hits: `{endpoint['aggregate_hazard_hits']}/{endpoint['aggregate_boundaries']}`.",
         f"- Hazard endpoint cells beating random p95: `{endpoint['cells_beating_random_p95']}/{endpoint['cutoff_count']}`.",
+        f"- Combined endpoint best family: `{combined['best_family']}`.",
+        f"- Combined endpoint decoder hits: `{combined['best_aggregate_hits']}/{combined['best_aggregate_boundaries']}`.",
+        f"- Combined endpoint cells beating random p95: `{combined['best_cells_beating_random_p95']}/{combined['cutoff_count']}`.",
+        f"- Combined endpoint nontrivial exact books: `{combined['best_aggregate_nontrivial_exact_books']}`.",
         "",
         "The pair-token model is rejected: pairing the boundary flag with the",
         "current digit is not enough. A simple sequential hazard state is promoted",
         "as a boundary dependency reducer: age since the last emitted boundary",
         "beats same-count random boundary controls under prefix holdout. It is not",
         "an exact parser: when decoded into exact endpoints with true op-count",
-        "granted, it does not beat same-count random endpoint controls.",
+        "granted, it does not beat same-count random endpoint controls. Combining",
+        "that hazard with the promoted digit-surprisal boundary clue improves",
+        "endpoint hits, but still does not decode any nontrivial book exactly.",
         "",
         "## Decision",
         "",
         "- Simple joint boundary+digit pair emission is rejected.",
         "- Sequential boundary hazard state is promoted as a dependency reducer.",
         "- Hazard endpoint decoding is rejected.",
+        "- Combined surprisal+hazard endpoint decoding is rejected as a generator.",
         "- No exact parser/generator is promoted.",
         "- Compression bound is unchanged.",
         "- Row0 remains exogenous and unchanged.",
@@ -94,6 +105,7 @@ def main() -> None:
         "- [Joint boundary digit gate](test_results/01_joint_boundary_digit_gate.md)",
         "- [Boundary hazard state gate](test_results/02_boundary_hazard_state_gate.md)",
         "- [Boundary hazard endpoint decoder gate](test_results/03_boundary_hazard_endpoint_decoder_gate.md)",
+        "- [Combined boundary endpoint decoder gate](test_results/04_combined_boundary_endpoint_decoder_gate.md)",
     ]
     REPORTS.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
