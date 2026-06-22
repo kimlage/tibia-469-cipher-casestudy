@@ -12,6 +12,7 @@ source_refs:
   - analysis/authorial_provenance_audit_20260621
   - analysis/segmentation_decision_audit_20260621
   - analysis/target_digit_boundary_threshold_audit_20260621
+  - analysis/target_digit_boundary_peak_audit_20260621
 ---
 
 # 18. Authorial Mechanism Model
@@ -539,6 +540,14 @@ policy charge, a `645.694`-bit dependency reduction. It also beats random p95
 and stays positive in `5/5` prefix-selected suffix cells. This still is not a
 generator: precision is only `0.100535`, the code pays `948` FP/FN corrections,
 and exact books remain `0/60`.
+A target digit boundary peak audit then asks whether the broad high-surprisal
+regions should be sharpened to local peaks or non-maximum-suppressed rank
+peaks. The best policy, `nms_rank:top=0.05:gap=3`, is diagnostically cleaner:
+it reduces predicted boundaries from `935` to `417` and correction events from
+`948` to `504`. It is still not a better code or a generator. It saves
+`615.947` bits after policy charge, `29.746` bits worse than the threshold
+gate, and does so by adding `37` missed true cutpoints; exact books remain
+`0/60`.
 A skeleton rule coverage audit then tests whether that atlas can be replaced by
 simple decoder-visible rules. It cannot: the best op-type rule is just
 `always_copy` at `208/261`, the best length rule reaches `116/261`, literal
@@ -2689,6 +2698,8 @@ book generation, not row0 pair-cell placement.
 - [Skeleton dependency after boundary pruning gate](../../analysis/skeleton_dependency_after_boundary_pruning_20260621/reports/test_results/01_skeleton_dependency_after_boundary_pruning_gate.md)
 - [Final target digit boundary threshold audit](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/final_target_digit_boundary_threshold_audit.md)
 - [Target digit boundary threshold gate](../../analysis/target_digit_boundary_threshold_audit_20260621/reports/test_results/01_target_digit_boundary_threshold_gate.md)
+- [Final target digit boundary peak audit](../../analysis/target_digit_boundary_peak_audit_20260621/reports/final_target_digit_boundary_peak_audit.md)
+- [Target digit boundary peak gate](../../analysis/target_digit_boundary_peak_audit_20260621/reports/test_results/01_target_digit_boundary_peak_gate.md)
 - [Skeleton rule coverage audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/100_skeleton_rule_coverage_audit.md)
 - [Skeleton template reuse audit](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/101_skeleton_template_reuse_audit.md)
 - [Type motif library ledger](../../analysis/prequential_and_row0_origin_audit_20260621/reports/test_results/102_type_motif_library_ledger.md)
