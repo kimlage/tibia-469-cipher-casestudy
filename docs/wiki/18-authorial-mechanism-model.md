@@ -76,6 +76,7 @@ source_refs:
   - analysis/executable_v9_innovation_copy_continuation_audit_20260622
   - analysis/post_v9_generator_frontier_synthesis_audit_20260622
   - analysis/authoring_surface_provenance_audit_20260622
+  - analysis/external_authoring_surface_acquisition_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -3839,6 +3840,17 @@ The live route now requires primary CipSoft/in-game/map/object/script evidence
 or timestamped historical variants that predict v9 residual fields above
 controls. Otherwise the internal front should stay frozen as a strong
 mechanical decoder/ledger, not an authorial formula.
+
+The follow-up acquisition audit turns that into a concrete source contract. A
+new candidate, `tibiamaps/tibia-historical-map-data`, is useful enough to track
+because it exposes historical map folders (`7.3/7.4/7.5/7.7`) and documents
+official-reference/leaked-file provenance, but the observed artifact shape is
+PNG floor maps rather than a book object layer. Current TibiaMaps data is also
+map/marker context, not historical authoring order. Net v9 reduction is `0.0`
+bits. The only external evidence that can now move this front is an allowed
+object/container/slot/order source for the Hellgate books or versioned
+authoring variants/scripts/workbooks that predict v9 residual fields above
+controls.
 
 ## Boundary
 

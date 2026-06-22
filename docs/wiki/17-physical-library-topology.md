@@ -9,6 +9,7 @@ moc_parent: README.md
 source_refs:
   - analysis/physical_topology_20260620
   - analysis/physical_topology_control_signal_audit_20260622
+  - analysis/external_authoring_surface_acquisition_audit_20260622
 ---
 
 # 17. Physical Library Topology
@@ -85,6 +86,17 @@ than global coding for coarse control (`-107.149` bits), copy-hint rank bucket
 for each target and no permutation-p95 wins. Public topology therefore remains
 a bounded manifest/context clue, not a generation-control program.
 
+The external authoring-surface acquisition audit checks the next plausible
+topology source class. `tibiamaps/tibia-historical-map-data` is now tracked as a
+weak map-geometry candidate because it exposes historical `7.3/7.4/7.5/7.7`
+floor maps, but the API probe sees PNG floor imagery, not book object,
+container, slot, or insertion-order metadata. Current TibiaMaps data is also
+map/marker surface, not historical book object provenance. This narrows the
+future topology requirement: a promotable source must provide
+`book_id/text -> x/y/z -> container/bookcase object -> slot/read/order ->
+version/provenance`. Map images alone do not satisfy the contract and do not
+reduce v9.
+
 ## Reports
 
 - [Public topology synthesis report](../../analysis/physical_topology_20260620/reports/public_topology_synthesis_report.md)
@@ -93,6 +105,7 @@ a bounded manifest/context clue, not a generation-control program.
 - [Topology mechanical signal audit](../../analysis/physical_topology_20260620/reports/test_results/02_topology_mechanical_signal_audit.md)
 - [Structured physical order LZ test](../../analysis/authorial_mechanism_20260620/reports/test_results/16_structured_physical_order_lz_test.md)
 - [Physical topology control signal audit](../../analysis/physical_topology_control_signal_audit_20260622/reports/final_physical_topology_control_signal_audit.md)
+- [External authoring surface acquisition audit](../../analysis/external_authoring_surface_acquisition_audit_20260622/reports/final_external_authoring_surface_acquisition_audit.md)
 
 ## What Counts As Future Progress
 
