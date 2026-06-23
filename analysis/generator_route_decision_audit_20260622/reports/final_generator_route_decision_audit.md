@@ -17,6 +17,7 @@ Simple n-gram/phase sequence grammars, rank-only content-aware event traces, tar
 Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.
 The follow-up copy-source overlap gate is negative: Chayenne seed subspans overlap some executable decoder source intervals, but not beyond same-length controls enough to derive source choice or event policy.
 A latent authoring-workspace program was then tested as the charitable internal route: it keeps some held-out events in beam but generates `0` nontrivial books, does not beat true-path controls, and cannot claim v9 reduction because the cost is a lower bound that still grants coarse/op positions.
+The remaining external route now has a concrete acquisition packet: a 70-row worksheet with canonical book prefixes and blank source-rights/object-layer fields. It integrates no source and reduces `0.0` bits until filled with clean data.
 
 ## Decision
 

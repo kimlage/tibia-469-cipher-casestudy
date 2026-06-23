@@ -1,0 +1,58 @@
+{
+  "accepted_source_classes": [
+    "official_cipsoft_public_or_in_game_capture",
+    "user_provided_authorized_metadata_csv_json",
+    "public_licensed_object_layer_data",
+    "versioned_authoring_artifact_with_rights"
+  ],
+  "case_reopened": false,
+  "classification": "primary_surface_acquisition_packet_ready_no_source_integrated",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "external_surface_integrated": false,
+    "next_step": "fill worksheet with clean primary/authorized object-layer data and run the v9 control protocol",
+    "v9_reduction_bits": 0.0
+  },
+  "forbidden_source_classes": [
+    "leaked_proprietary_source_or_map",
+    "unknown_rights_export",
+    "fan_solution_without_object_layer"
+  ],
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-23T00:39:12.350104+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "primary_surface_acquisition_packet.v1",
+  "scope": "analysis_only_primary_surface_acquisition_handoff",
+  "summary": {
+    "currently_valid_source": false,
+    "external_surface_integrated": false,
+    "helper_fields": [
+      "canonical_book",
+      "canonical_book_length",
+      "canonical_prefix_20",
+      "canonical_prefix_32"
+    ],
+    "required_fields": [
+      "source_id",
+      "source_rights",
+      "source_version_or_date",
+      "book_text_or_exact_prefix",
+      "x",
+      "y",
+      "z",
+      "container_or_bookcase_id",
+      "slot_or_read_order",
+      "capture_method"
+    ],
+    "v9_reduction_bits": 0.0,
+    "worksheet_rows": 70
+  },
+  "translation_delta": "NONE",
+  "validation_command": [
+    "python3",
+    "analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py",
+    "--input",
+    "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv"
+  ],
+  "worksheet": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv"
+}

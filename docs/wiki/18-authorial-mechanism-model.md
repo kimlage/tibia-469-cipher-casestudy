@@ -90,6 +90,7 @@ source_refs:
   - analysis/chayenne_seed_subspan_reuse_audit_20260622
   - analysis/chayenne_copy_source_overlap_audit_20260622
   - analysis/latent_authoring_workspace_program_audit_20260623
+  - analysis/primary_surface_acquisition_packet_20260623
 ---
 
 # 18. Authorial Mechanism Model
@@ -3945,6 +3946,15 @@ v9 and cannot be counted as a ledger reduction. This records
 `latent_authoring_workspace_program_not_promoted` and closes the internal
 workspace route as the main front; the next meaningful route is a clean primary
 authoring surface with object/container/slot/order/versioned trace.
+
+The primary-surface acquisition packet then converts that blocker into a
+fillable 70-row worksheet. It pre-fills canonical book ids, lengths, and
+matching prefixes, while leaving `source_rights`, `source_version_or_date`,
+coordinates, `container_or_bookcase_id`, `slot_or_read_order`, and
+`capture_method` blank for an official/in-game/user-authorized/public-licensed
+object-layer capture. This packet integrates no source and reduces `0.0` bits;
+its purpose is to make the only remaining route executable without using leaked
+material or another internal codec.
 
 The earlier nonlocal event-policy program gate had tested that internal route
 at the replay-event level. It models the `62` innovation replay events as joint

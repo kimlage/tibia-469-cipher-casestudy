@@ -67,6 +67,8 @@ INPUTS = {
     / "analysis/chayenne_copy_source_overlap_audit_20260622/reports/test_results/01_chayenne_copy_source_overlap_gate.json",
     "latent_authoring_workspace": ROOT
     / "analysis/latent_authoring_workspace_program_audit_20260623/reports/test_results/01_latent_authoring_workspace_program_gate.json",
+    "primary_surface_acquisition_packet": ROOT
+    / "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_packet.json",
 }
 
 
@@ -100,6 +102,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     chayenne_reuse = data["chayenne_seed_subspan_reuse"]
     chayenne_copy_source = data["chayenne_copy_source_overlap"]
     latent_workspace = data["latent_authoring_workspace"]
+    acquisition_packet = data["primary_surface_acquisition_packet"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -158,6 +161,14 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(
         latent_workspace["decision"]["external_field_reduced"] is False,
         "latent authoring workspace unexpectedly reduced a field",
+    )
+    require(
+        acquisition_packet["classification"] == "primary_surface_acquisition_packet_ready_no_source_integrated",
+        "primary surface acquisition packet unexpected classification",
+    )
+    require(
+        acquisition_packet["decision"]["external_surface_integrated"] is False,
+        "primary surface acquisition packet unexpectedly integrated a source",
     )
 
     public_surface_rows = [
@@ -433,6 +444,12 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "status": "OPEN_REQUIRES_CLEAN_PRIMARY_SOURCE",
             "evidence": {
                 "blocker": post_v9["decision"]["next_blocker"],
+                "acquisition_packet": {
+                    "classification": acquisition_packet["classification"],
+                    "worksheet_rows": acquisition_packet["summary"]["worksheet_rows"],
+                    "currently_valid_source": acquisition_packet["summary"]["currently_valid_source"],
+                    "v9_reduction_bits": acquisition_packet["summary"]["v9_reduction_bits"],
+                },
                 "rejected_simple_routes": [
                     "simple_nonlocal_event_sequence_program",
                     "causal_content_aware_event_policy_program",
@@ -462,7 +479,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
         "route_ledger": route_ledger,
         "next_work_contract": {
             "do_next": [
-                "acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol",
+                "fill/test the primary-surface acquisition worksheet with genuinely rights-clean object/slot/order or versioned authoring data",
             ],
             "do_not_count_as_progress": [
                 "another public text mirror or community topology list without new fields",
@@ -560,6 +577,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.",
         "The follow-up copy-source overlap gate is negative: Chayenne seed subspans overlap some executable decoder source intervals, but not beyond same-length controls enough to derive source choice or event policy.",
         "A latent authoring-workspace program was then tested as the charitable internal route: it keeps some held-out events in beam but generates `0` nontrivial books, does not beat true-path controls, and cannot claim v9 reduction because the cost is a lower bound that still grants coarse/op positions.",
+        "The remaining external route now has a concrete acquisition packet: a 70-row worksheet with canonical book prefixes and blank source-rights/object-layer fields. It integrates no source and reduces `0.0` bits until filled with clean data.",
         "",
         "## Decision",
         "",

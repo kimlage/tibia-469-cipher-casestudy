@@ -37,7 +37,7 @@ It does not promote a new formula. It now narrows the live work to one real rout
 
 Progress now means one of:
 
-- acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol
+- fill/test the primary-surface acquisition worksheet with genuinely rights-clean object/slot/order or versioned authoring data
 
 Do not count as progress:
 
