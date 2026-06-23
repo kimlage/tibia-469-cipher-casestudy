@@ -54,7 +54,7 @@
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-23T01:06:31.688587+00:00",
+  "retrieved_at_utc": "2026-06-23T01:10:56.016952+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -98,6 +98,13 @@
           "classification": "WEAK_EXTERNAL_SURFACE_CANDIDATE_MAP_GEOMETRY_ONLY",
           "coverage": "historical map PNG folders",
           "source": "tibiamaps_historical_map_data",
+          "v9_reduction_bits": 0.0
+        },
+        {
+          "blocking_issue": "rights-clean coordinate/marker surface lacks exact book text, container/bookcase, slot/read order, and versioned object placement for balanced_v9_probe_22_books",
+          "classification": "RIGHTS_CLEAN_MAP_MARKER_SURFACE_NO_BOOK_OBJECT_LAYER",
+          "coverage": "MIT map/path PNGs plus markers JSON with description/icon/x/y/z",
+          "source": "tibiamaps_map_data_current",
           "v9_reduction_bits": 0.0
         },
         {
@@ -180,6 +187,8 @@
           "TibiaSecrets theory articles",
           "s2ward/469 and s2ward/tibia community repositories",
           "elkolorado/caiocrm community corpus repositories",
+          "tibiamaps/tibia-map-data MIT map and marker repository without object/container/slot layer",
+          "tibiamaps/tibia-historical-map-data historical map repository without clean license and with leak-derived branch risk",
           "arturoornelasb community bookcase mapping already rejected by v9 controls"
         ],
         "classification": "internal_route_saturated_pending_primary_authoring_surface",
@@ -218,8 +227,75 @@
         ],
         "scope": "targeted attempt to obtain a primary/rights-clean surface for balanced_v9_probe_22_books",
         "source_integrated": false,
+        "tibiamaps_historical_map_data_probe": {
+          "blocking_issue": "GitHub metadata reports no license; public description/repository context includes official-reference/leak-derived historical folders, so it is not an admissible promoted source",
+          "classification": "REJECTED_PROVENANCE_CONTROL_OR_NO_LICENSE",
+          "license": null,
+          "repository": "https://github.com/tibiamaps/tibia-historical-map-data"
+        },
+        "tibiamaps_map_data_probe": {
+          "classification": "RIGHTS_CLEAN_MAP_MARKER_SURFACE_NO_BOOK_OBJECT_LAYER",
+          "format": "floor map PNG, pathfinding PNG, markers JSON",
+          "license": "MIT",
+          "marker_schema_observed": [
+            "description",
+            "icon",
+            "x",
+            "y",
+            "z"
+          ],
+          "marker_term_counts": {
+            "469": 17,
+            "beholder": 0,
+            "bonelord": 3,
+            "hellgate": 3,
+            "library": 5
+          },
+          "relevant_marker_examples": [
+            {
+              "description": "Bonelord tome (TibiaSecrets)",
+              "icon": "?",
+              "x": 32516,
+              "y": 32175,
+              "z": 10
+            },
+            {
+              "description": "Towards Hellgate (key 3012)",
+              "icon": "red up",
+              "x": 32676,
+              "y": 31672,
+              "z": 10
+            },
+            {
+              "description": "Portal out of Hellgate",
+              "icon": "flag",
+              "x": 32620,
+              "y": 31702,
+              "z": 12
+            }
+          ],
+          "repository": "https://github.com/tibiamaps/tibia-map-data",
+          "required_fields_missing": [
+            "exact book text/prefix",
+            "container/bookcase",
+            "slot/read order",
+            "versioned object placement for the 22-book balanced probe"
+          ]
+        },
         "v9_reduction_bits": 0.0,
         "web_targeted_queries": [
+          {
+            "query": "TibiaMaps object layer books Hellgate Library coordinates license",
+            "result_class": "rights-clean map/marker surface found, but no book object/container/slot/read-order layer"
+          },
+          {
+            "query": "Tibia maps data book items coordinates Hellgate Library GitHub license",
+            "result_class": "tibiamaps/tibia-map-data is MIT licensed map/marker data, not object-layer book placement data"
+          },
+          {
+            "query": "OTBM Hellgate Library books coordinates slot bookcase license GitHub",
+            "result_class": "parser/leak/private-server adjacent results; no admissible rights-clean object-layer source"
+          },
           {
             "query": "\"78302031180657191894343464651800\" \"slot\" \"bookcase\"",
             "result_class": "TibiaWiki/community corpus pages and theory discussions; no object-layer slot surface"

@@ -103,6 +103,18 @@ BALANCED_PROBE_SOURCE_ATTEMPT = {
     ],
     "web_targeted_queries": [
         {
+            "query": "TibiaMaps object layer books Hellgate Library coordinates license",
+            "result_class": "rights-clean map/marker surface found, but no book object/container/slot/read-order layer",
+        },
+        {
+            "query": "Tibia maps data book items coordinates Hellgate Library GitHub license",
+            "result_class": "tibiamaps/tibia-map-data is MIT licensed map/marker data, not object-layer book placement data",
+        },
+        {
+            "query": "OTBM Hellgate Library books coordinates slot bookcase license GitHub",
+            "result_class": "parser/leak/private-server adjacent results; no admissible rights-clean object-layer source",
+        },
+        {
             "query": "\"78302031180657191894343464651800\" \"slot\" \"bookcase\"",
             "result_class": "TibiaWiki/community corpus pages and theory discussions; no object-layer slot surface",
         },
@@ -125,8 +137,41 @@ BALANCED_PROBE_SOURCE_ATTEMPT = {
         "TibiaSecrets theory articles",
         "s2ward/469 and s2ward/tibia community repositories",
         "elkolorado/caiocrm community corpus repositories",
+        "tibiamaps/tibia-map-data MIT map and marker repository without object/container/slot layer",
+        "tibiamaps/tibia-historical-map-data historical map repository without clean license and with leak-derived branch risk",
         "arturoornelasb community bookcase mapping already rejected by v9 controls",
     ],
+    "tibiamaps_map_data_probe": {
+        "repository": "https://github.com/tibiamaps/tibia-map-data",
+        "license": "MIT",
+        "format": "floor map PNG, pathfinding PNG, markers JSON",
+        "marker_schema_observed": ["description", "icon", "x", "y", "z"],
+        "marker_term_counts": {
+            "hellgate": 3,
+            "469": 17,
+            "bonelord": 3,
+            "beholder": 0,
+            "library": 5,
+        },
+        "relevant_marker_examples": [
+            {"description": "Bonelord tome (TibiaSecrets)", "icon": "?", "x": 32516, "y": 32175, "z": 10},
+            {"description": "Towards Hellgate (key 3012)", "icon": "red up", "x": 32676, "y": 31672, "z": 10},
+            {"description": "Portal out of Hellgate", "icon": "flag", "x": 32620, "y": 31702, "z": 12},
+        ],
+        "required_fields_missing": [
+            "exact book text/prefix",
+            "container/bookcase",
+            "slot/read order",
+            "versioned object placement for the 22-book balanced probe",
+        ],
+        "classification": "RIGHTS_CLEAN_MAP_MARKER_SURFACE_NO_BOOK_OBJECT_LAYER",
+    },
+    "tibiamaps_historical_map_data_probe": {
+        "repository": "https://github.com/tibiamaps/tibia-historical-map-data",
+        "license": None,
+        "blocking_issue": "GitHub metadata reports no license; public description/repository context includes official-reference/leak-derived historical folders, so it is not an admissible promoted source",
+        "classification": "REJECTED_PROVENANCE_CONTROL_OR_NO_LICENSE",
+    },
     "source_integrated": False,
     "v9_reduction_bits": 0.0,
     "classification": "internal_route_saturated_pending_primary_authoring_surface",
@@ -238,6 +283,13 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "classification": data["external_01"]["candidate_matrix"][0]["classification"],
             "coverage": "historical map PNG folders",
             "blocking_issue": data["external_01"]["candidate_matrix"][0]["blocking_issue"],
+            "v9_reduction_bits": 0.0,
+        },
+        {
+            "source": "tibiamaps_map_data_current",
+            "classification": BALANCED_PROBE_SOURCE_ATTEMPT["tibiamaps_map_data_probe"]["classification"],
+            "coverage": "MIT map/path PNGs plus markers JSON with description/icon/x/y/z",
+            "blocking_issue": "rights-clean coordinate/marker surface lacks exact book text, container/bookcase, slot/read order, and versioned object placement for balanced_v9_probe_22_books",
             "v9_reduction_bits": 0.0,
         },
         {
@@ -639,6 +691,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "The current executable frontier remains v9, not a final authorial generator.",
         "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, a targeted official/community primary-surface search, and a focused balanced-probe acquisition attempt.",
         "None reduces v9 residual fields under the required controls.",
+        "The latest clean map-surface check adds TibiaMaps current map data: it is MIT licensed and exposes marker coordinates, but its marker records provide only description/icon/x/y/z, not exact book text, container/bookcase, slot/read order, or versioned object placement for the balanced probe.",
         "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
         "The route frontier is therefore narrowed rather than solved: obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set.",

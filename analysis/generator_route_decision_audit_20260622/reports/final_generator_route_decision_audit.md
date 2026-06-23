@@ -10,6 +10,7 @@ Case reopened: `False`
 The current executable frontier remains v9, not a final authorial generator.
 Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, a targeted official/community primary-surface search, and a focused balanced-probe acquisition attempt.
 None reduces v9 residual fields under the required controls.
+The latest clean map-surface check adds TibiaMaps current map data: it is MIT licensed and exposes marker coordinates, but its marker records provide only description/icon/x/y/z, not exact book text, container/bookcase, slot/read order, or versioned object placement for the balanced probe.
 The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.
 
 The route frontier is therefore narrowed rather than solved: obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set.
