@@ -108,6 +108,7 @@ No v9 reduction is claimed.
 A pre-registered executable control protocol now exists for future rights-clean topology CSV inputs.
 It will run prefix/leave-container holdouts, feature selection on training data, and topology-label permutation controls against v9 streams.
 The current template input has `1` unique match and does not meet coverage thresholds, so no source is integrated and no v9 reduction is claimed.
+Synthetic/non-evidential fixture markers now require `--allow-non-evidence-fixture`; even then, fixture runs can exercise the protocol path only and can never promote external integration.
 
 - [06_clean_topology_v9_control_protocol.py](../scripts/06_clean_topology_v9_control_protocol.py)
 - [06_clean_topology_v9_control_protocol.json](test_results/06_clean_topology_v9_control_protocol.json)

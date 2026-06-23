@@ -1,6 +1,6 @@
 # Clean Topology v9 Control Protocol
 
-Classification: `clean_topology_v9_controls_preregistered_not_run_coverage_insufficient`
+Classification: `non_evidential_fixture_protocol_path_not_runnable`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Case reopened: `False`
@@ -9,9 +9,9 @@ Case reopened: `False`
 
 This is the pre-registered executable control protocol for a future rights-clean topology CSV.
 
-Current input `analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv` has `0` unique match(es), `0` derived-book match(es), `0` joined v9 rows, and `0` usable splits.
+Current input `analysis/primary_surface_acquisition_packet_20260623/reports/test_results/04_minimal_capture_protocol_fixture.csv` has `0` unique match(es), `0` derived-book match(es), `0` joined v9 rows, and `0` usable splits.
 
-Non-evidential fixture mode: `False`.
+Non-evidential fixture mode: `True`.
 
 ## Protocol
 

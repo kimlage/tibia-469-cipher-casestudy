@@ -11,12 +11,15 @@ This is the pre-registered executable control protocol for a future rights-clean
 
 Current input `analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/04_clean_topology_contract_template.csv` has `1` unique match(es), `0` derived-book match(es), `0` joined v9 rows, and `0` usable splits.
 
+Non-evidential fixture mode: `False`.
+
 ## Protocol
 
 - Features: `['container', 'slot_bucket', 'coord_bucket', 'container_x_slot_bucket', 'container_x_op_pos']`
 - Targets: `['coarse_control', 'op_type', 'copy_hint_rank_bucket']`
 - Permutation controls: `150` trials
 - Promotion rule: positive total heldout saving and beats topology-label permutation p95
+- Non-evidence fixture policy: synthetic/fixture/not_external_evidence/protocol_path_only markers require --allow-non-evidence-fixture and can never promote integration
 
 ## Decision
 

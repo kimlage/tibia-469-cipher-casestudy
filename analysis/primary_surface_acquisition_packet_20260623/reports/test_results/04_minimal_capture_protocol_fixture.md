@@ -19,7 +19,10 @@ It must not be used as an external topology source or v9 reduction claim.
 - Coverage ok: `True`
 - Split count: `5`
 - Joined v9 rows: `102`
-- Underlying protocol classification: `clean_topology_v9_control_source_not_promoted`
+- Fixture flag accepted: `True`
+- Underlying protocol classification: `non_evidential_fixture_protocol_path_verified`
+- No-flag guard validation errors: `22`
+- No-flag guard unique matches: `0`
 
 ## Decision
 

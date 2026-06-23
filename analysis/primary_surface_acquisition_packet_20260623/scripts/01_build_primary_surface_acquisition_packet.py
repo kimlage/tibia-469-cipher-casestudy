@@ -201,6 +201,8 @@ def write_final(result: dict[str, Any]) -> None:
         "- [04_minimal_capture_protocol_fixture.md](test_results/04_minimal_capture_protocol_fixture.md)",
         "- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json)",
         "- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md)",
+        "- [minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.json)",
+        "- [minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.md)",
         "- [protocol_dry_run/06_clean_topology_v9_control_protocol.json](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.json)",
         "- [protocol_dry_run/06_clean_topology_v9_control_protocol.md](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.md)",
     ]

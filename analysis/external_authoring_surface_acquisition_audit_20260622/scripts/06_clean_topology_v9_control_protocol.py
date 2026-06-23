@@ -41,6 +41,7 @@ REQUIRED_FIELDS = [
     "capture_method",
 ]
 FORBIDDEN_RIGHTS_MARKERS = ["", "unknown", "leak", "leaked", "proprietary_leak"]
+NON_EVIDENTIAL_MARKERS = ["synthetic", "fixture", "not_external_evidence", "protocol_path_only"]
 MIN_TOTAL_MATCHED_BOOKS = 20
 MIN_DERIVED_MATCHED_BOOKS = 10
 MIN_SPLITS = 3
@@ -67,7 +68,15 @@ def load_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
-def validate_rows(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
+def row_has_non_evidential_marker(row: dict[str, str]) -> bool:
+    text = " ".join(
+        str(row.get(field, "")).strip().lower()
+        for field in ["source_id", "source_rights", "capture_method", "notes"]
+    )
+    return any(marker in text for marker in NON_EVIDENTIAL_MARKERS)
+
+
+def validate_rows(rows: list[dict[str, str]], allow_non_evidence_fixture: bool = False) -> list[dict[str, Any]]:
     errors: list[dict[str, Any]] = []
     if not rows:
         return [{"line": 1, "field": "*", "error": "no_rows"}]
@@ -84,6 +93,14 @@ def validate_rows(rows: list[dict[str, str]]) -> list[dict[str, Any]]:
         rights = str(row.get("source_rights", "")).strip().lower()
         if rights in FORBIDDEN_RIGHTS_MARKERS or "leak" in rights:
             errors.append({"line": index, "field": "source_rights", "error": "unacceptable_rights_marker"})
+        if row_has_non_evidential_marker(row) and not allow_non_evidence_fixture:
+            errors.append(
+                {
+                    "line": index,
+                    "field": "source_rights",
+                    "error": "non_evidential_fixture_requires_explicit_flag",
+                }
+            )
         for coord in ["x", "y", "z"]:
             try:
                 int(str(row.get(coord, "")).strip())
@@ -311,10 +328,11 @@ def permutation_controls(topology: dict[int, dict[str, Any]], target_name: str, 
     }
 
 
-def run_protocol(input_path: Path) -> dict[str, Any]:
+def run_protocol(input_path: Path, allow_non_evidence_fixture: bool = False) -> dict[str, Any]:
     books = load_json(BOOKS_DIGITS)
     rows = load_csv(input_path)
-    validation_errors = validate_rows(rows)
+    non_evidential_fixture = any(row_has_non_evidential_marker(row) for row in rows)
+    validation_errors = validate_rows(rows, allow_non_evidence_fixture)
     matches = [] if validation_errors else match_books(rows, books)
     topology = topology_by_book(matches)
     matched_books = sorted(topology)
@@ -344,7 +362,13 @@ def run_protocol(input_path: Path) -> dict[str, Any]:
             ):
                 promoted.append(target_name)
 
+    promoted_for_decision = [] if non_evidential_fixture else promoted
     classification = (
+        "non_evidential_fixture_protocol_path_verified"
+        if non_evidential_fixture and runnable
+        else "non_evidential_fixture_protocol_path_not_runnable"
+        if non_evidential_fixture
+        else
         "PROMOTED_CLEAN_TOPOLOGY_V9_CONTROL_SOURCE"
         if promoted
         else "clean_topology_v9_controls_preregistered_not_run_coverage_insufficient"
@@ -374,7 +398,10 @@ def run_protocol(input_path: Path) -> dict[str, Any]:
                 "split_count": MIN_SPLITS,
             },
             "promotion_rule": "positive total heldout saving and beats topology-label permutation p95",
+            "non_evidence_fixture_policy": "synthetic/fixture/not_external_evidence/protocol_path_only markers require --allow-non-evidence-fixture and can never promote integration",
         },
+        "allow_non_evidence_fixture": allow_non_evidence_fixture,
+        "non_evidential_fixture": non_evidential_fixture,
         "validation_errors": validation_errors,
         "match_summary": {
             "input_rows": len(rows),
@@ -389,10 +416,17 @@ def run_protocol(input_path: Path) -> dict[str, Any]:
         "split_count": split_count,
         "target_results": target_results,
         "decision": {
-            "external_surface_integrated": bool(promoted),
-            "promoted_targets": promoted,
+            "external_surface_integrated": bool(promoted_for_decision),
+            "promoted_targets": promoted_for_decision,
+            "promoted_targets_before_fixture_block": promoted,
             "v9_reduction_bits": 0.0,
-            "reason": "coverage_insufficient" if not coverage_ok else "split_count_insufficient" if not runnable else "no_promoted_target",
+            "reason": "non_evidential_fixture_forced_no_promotion"
+            if non_evidential_fixture
+            else "coverage_insufficient"
+            if not coverage_ok
+            else "split_count_insufficient"
+            if not runnable
+            else "no_promoted_target",
         },
     }
 
@@ -414,12 +448,15 @@ def write_markdown(result: dict[str, Any], output_dir: Path) -> None:
         f"`{len(result['match_summary']['derived_matched_books'])}` derived-book match(es), "
         f"`{result['joined_v9_rows']}` joined v9 rows, and `{result['split_count']}` usable splits.",
         "",
+        f"Non-evidential fixture mode: `{result['non_evidential_fixture']}`.",
+        "",
         "## Protocol",
         "",
         f"- Features: `{result['protocol']['features']}`",
         f"- Targets: `{result['protocol']['targets']}`",
         f"- Permutation controls: `{result['protocol']['random_trials']}` trials",
         f"- Promotion rule: {result['protocol']['promotion_rule']}",
+        f"- Non-evidence fixture policy: {result['protocol']['non_evidence_fixture_policy']}",
         "",
         "## Decision",
         "",
@@ -458,6 +495,11 @@ def main() -> None:
         default=str(OUT_DIR),
         help="Directory for protocol JSON/Markdown outputs. Defaults to the canonical report directory.",
     )
+    parser.add_argument(
+        "--allow-non-evidence-fixture",
+        action="store_true",
+        help="Allow synthetic/non-evidential fixture markers for protocol-path tests. Such runs can never promote integration.",
+    )
     args = parser.parse_args()
     input_path = Path(args.input)
     if not input_path.is_absolute():
@@ -467,7 +509,7 @@ def main() -> None:
         output_dir = ROOT / output_dir
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    result = run_protocol(input_path)
+    result = run_protocol(input_path, allow_non_evidence_fixture=args.allow_non_evidence_fixture)
     (output_dir / "06_clean_topology_v9_control_protocol.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     write_markdown(result, output_dir)
     if output_dir.resolve() == OUT_DIR.resolve():

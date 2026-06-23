@@ -26,7 +26,7 @@ FIXTURE_CSV = OUT_DIR / "04_minimal_capture_protocol_fixture.csv"
 JSON_OUT = OUT_DIR / "04_minimal_capture_protocol_fixture.json"
 MD_OUT = OUT_DIR / "04_minimal_capture_protocol_fixture.md"
 PROTOCOL_OUT_DIR = OUT_DIR / "minimal_capture_protocol_fixture"
-PROTOCOL_JSON = PROTOCOL_OUT_DIR / "06_clean_topology_v9_control_protocol.json"
+NO_FLAG_OUT_DIR = OUT_DIR / "minimal_capture_protocol_fixture_no_flag"
 FINAL_OUT = FRONT / "reports" / "final_primary_surface_acquisition_packet.md"
 PROTOCOL_SCRIPT = ROOT / "analysis" / "external_authoring_surface_acquisition_audit_20260622" / "scripts" / "06_clean_topology_v9_control_protocol.py"
 
@@ -96,21 +96,20 @@ def write_fixture(rows: list[dict[str, str]]) -> None:
         writer.writerows(rows)
 
 
-def run_protocol() -> dict[str, Any]:
-    PROTOCOL_OUT_DIR.mkdir(parents=True, exist_ok=True)
-    subprocess.run(
-        [
-            "python3",
-            str(PROTOCOL_SCRIPT.relative_to(ROOT)),
-            "--input",
-            str(FIXTURE_CSV.relative_to(ROOT)),
-            "--output-dir",
-            str(PROTOCOL_OUT_DIR.relative_to(ROOT)),
-        ],
-        cwd=ROOT,
-        check=True,
-    )
-    return load_json(PROTOCOL_JSON)
+def run_protocol(output_dir: Path, allow_fixture: bool) -> dict[str, Any]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    command = [
+        "python3",
+        str(PROTOCOL_SCRIPT.relative_to(ROOT)),
+        "--input",
+        str(FIXTURE_CSV.relative_to(ROOT)),
+        "--output-dir",
+        str(output_dir.relative_to(ROOT)),
+    ]
+    if allow_fixture:
+        command.append("--allow-non-evidence-fixture")
+    subprocess.run(command, cwd=ROOT, check=True)
+    return load_json(output_dir / "06_clean_topology_v9_control_protocol.json")
 
 
 def write_markdown(data: dict[str, Any]) -> None:
@@ -137,7 +136,10 @@ def write_markdown(data: dict[str, Any]) -> None:
         f"- Coverage ok: `{protocol['coverage_ok']}`",
         f"- Split count: `{protocol['split_count']}`",
         f"- Joined v9 rows: `{protocol['joined_v9_rows']}`",
+        f"- Fixture flag accepted: `{protocol['protocol_allow_non_evidence_fixture']}`",
         f"- Underlying protocol classification: `{protocol['classification']}`",
+        f"- No-flag guard validation errors: `{data['no_flag_guard_summary']['validation_errors']}`",
+        f"- No-flag guard unique matches: `{data['no_flag_guard_summary']['unique_matches']}`",
         "",
         "## Decision",
         "",
@@ -169,6 +171,8 @@ def append_final() -> None:
         "- [04_minimal_capture_protocol_fixture.md](test_results/04_minimal_capture_protocol_fixture.md)",
         "- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json)",
         "- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md)",
+        "- [minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.json)",
+        "- [minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture_no_flag/06_clean_topology_v9_control_protocol.md)",
     ]
     FINAL_OUT.write_text(report.rstrip() + "\n" + "\n".join(addition) + "\n")
 
@@ -177,7 +181,8 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     rows = fixture_rows()
     write_fixture(rows)
-    protocol = run_protocol()
+    protocol = run_protocol(PROTOCOL_OUT_DIR, allow_fixture=True)
+    no_flag = run_protocol(NO_FLAG_OUT_DIR, allow_fixture=False)
     derived_matches = len(protocol["match_summary"]["derived_matched_books"])
     data = {
         "schema": "minimal_capture_protocol_fixture.v1",
@@ -191,8 +196,10 @@ def main() -> None:
         "compression_bound_status": "unchanged",
         "fixture_csv": str(FIXTURE_CSV.relative_to(ROOT)),
         "protocol_output_dir": str(PROTOCOL_OUT_DIR.relative_to(ROOT)),
+        "no_flag_guard_output_dir": str(NO_FLAG_OUT_DIR.relative_to(ROOT)),
         "fixture_rows": len(rows),
         "synthetic_fixture_not_external_evidence": True,
+        "protocol_invocation_requires_allow_non_evidence_fixture": True,
         "external_surface_integrated": False,
         "v9_reduction_bits": 0.0,
         "underlying_protocol_summary": {
@@ -205,6 +212,19 @@ def main() -> None:
             "joined_v9_rows": protocol["joined_v9_rows"],
             "protocol_external_surface_integrated": protocol["decision"]["external_surface_integrated"],
             "protocol_promoted_targets": protocol["decision"]["promoted_targets"],
+            "protocol_promoted_targets_before_fixture_block": protocol["decision"].get("promoted_targets_before_fixture_block", []),
+            "protocol_decision_reason": protocol["decision"]["reason"],
+            "protocol_non_evidential_fixture": protocol["non_evidential_fixture"],
+            "protocol_allow_non_evidence_fixture": protocol["allow_non_evidence_fixture"],
+        },
+        "no_flag_guard_summary": {
+            "classification": no_flag["classification"],
+            "validation_errors": len(no_flag["validation_errors"]),
+            "unique_matches": no_flag["match_summary"]["unique_matches"],
+            "coverage_ok": no_flag["coverage_ok"],
+            "non_evidential_fixture": no_flag["non_evidential_fixture"],
+            "allow_non_evidence_fixture": no_flag["allow_non_evidence_fixture"],
+            "decision_reason": no_flag["decision"]["reason"],
         },
         "decision": {
             "external_surface_integrated": False,

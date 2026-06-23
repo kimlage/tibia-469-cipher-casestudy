@@ -1,12 +1,14 @@
 {
+  "allow_non_evidence_fixture": true,
   "case_reopened": false,
-  "classification": "clean_topology_v9_control_source_not_promoted",
+  "classification": "non_evidential_fixture_protocol_path_verified",
   "compression_bound_status": "unchanged",
   "coverage_ok": true,
   "decision": {
     "external_surface_integrated": false,
     "promoted_targets": [],
-    "reason": "no_promoted_target",
+    "promoted_targets_before_fixture_block": [],
+    "reason": "non_evidential_fixture_forced_no_promotion",
     "v9_reduction_bits": 0.0
   },
   "input_csv": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/04_minimal_capture_protocol_fixture.csv",
@@ -55,6 +57,7 @@
     "unique_matches": 22,
     "unmatched": 0
   },
+  "non_evidential_fixture": true,
   "plaintext_claim": false,
   "protocol": {
     "alpha": 0.5,
@@ -70,6 +73,7 @@
       "split_count": 3,
       "total_matched_books": 20
     },
+    "non_evidence_fixture_policy": "synthetic/fixture/not_external_evidence/protocol_path_only markers require --allow-non-evidence-fixture and can never promote integration",
     "prefix_cutoffs": [
       20,
       30,
@@ -85,7 +89,7 @@
       "copy_hint_rank_bucket"
     ]
   },
-  "retrieved_at_utc": "2026-06-23T00:54:18.043863+00:00",
+  "retrieved_at_utc": "2026-06-23T00:58:46.235027+00:00",
   "row0_status": "unchanged_exogenous",
   "schema": "clean_topology_v9_control_protocol.v1",
   "scope": "analysis_only_clean_topology_v9_control_protocol",
