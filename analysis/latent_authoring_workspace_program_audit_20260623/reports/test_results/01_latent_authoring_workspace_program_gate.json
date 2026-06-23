@@ -1,0 +1,134 @@
+{
+  "baseline": {
+    "v9_classification": "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER",
+    "v9_external_bits_total_content_included": 6917.284942990288
+  },
+  "case_reopened": false,
+  "classification": "latent_authoring_workspace_program_not_promoted",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "beats_event_beam_p95": true,
+    "beats_program_bits_p05": true,
+    "beats_true_path_p95": false,
+    "control_trials": 80,
+    "cutoff": 40,
+    "events_in_beam_p95": 19,
+    "program_bits_p05": 2390.6626170434297,
+    "real_events_in_beam": 20,
+    "real_program_bits": 2371.442461933692,
+    "real_true_path_books_in_beam": 1,
+    "true_path_books_in_beam_p95": 1
+  },
+  "decision": {
+    "event_policy_promoted": false,
+    "external_field_reduced": false,
+    "next_route_if_failed": "stop internal route as mainline; require clean primary authoring surface acquisition/test",
+    "origin_source_promoted": false,
+    "reason": "Workspace candidates do not generate nontrivial books or preserve true paths above controls; lower-bound bits do not reduce v9",
+    "workspace_program_promoted": false
+  },
+  "holdouts": [
+    {
+      "correction_bits": 2212.907668988696,
+      "cutoff": 20,
+      "exact_nontrivial_books_without_correction": 0,
+      "program_bits": 2375.6216073026308,
+      "rank_bits": 159.9065833918772,
+      "test_books": 50,
+      "test_event_beam_fraction": 0.21428571428571427,
+      "test_events": 182,
+      "test_events_in_beam": 39,
+      "true_path_books_in_beam": 1
+    },
+    {
+      "correction_bits": 2223.0825946711966,
+      "cutoff": 30,
+      "exact_nontrivial_books_without_correction": 0,
+      "program_bits": 2373.6002896485093,
+      "rank_bits": 147.71034005525524,
+      "test_books": 40,
+      "test_event_beam_fraction": 0.20714285714285716,
+      "test_events": 140,
+      "test_events_in_beam": 29,
+      "true_path_books_in_beam": 1
+    },
+    {
+      "correction_bits": 2212.555117665137,
+      "cutoff": 40,
+      "exact_nontrivial_books_without_correction": 0,
+      "program_bits": 2371.442461933692,
+      "rank_bits": 156.07998934649734,
+      "test_books": 30,
+      "test_event_beam_fraction": 0.21052631578947367,
+      "test_events": 95,
+      "test_events_in_beam": 20,
+      "true_path_books_in_beam": 1
+    },
+    {
+      "correction_bits": 2223.0825946711966,
+      "cutoff": 50,
+      "exact_nontrivial_books_without_correction": 0,
+      "program_bits": 2374.6933714813526,
+      "rank_bits": 148.8034218880986,
+      "test_books": 20,
+      "test_event_beam_fraction": 0.16071428571428573,
+      "test_events": 56,
+      "test_events_in_beam": 9,
+      "true_path_books_in_beam": 0
+    },
+    {
+      "correction_bits": 2130.0686080143505,
+      "cutoff": 60,
+      "exact_nontrivial_books_without_correction": 0,
+      "program_bits": 2279.4137307512547,
+      "rank_bits": 146.5377678148466,
+      "test_books": 10,
+      "test_event_beam_fraction": 0.15,
+      "test_events": 20,
+      "test_events_in_beam": 3,
+      "true_path_books_in_beam": 0
+    }
+  ],
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-23T00:34:31.777337+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "latent_authoring_workspace_program_gate.v1",
+  "scope": "analysis_only_workspace_program_candidate",
+  "summary": {
+    "cost_comparison_status": "not_comparable_lower_bound_grants_coarse_and_op_positions",
+    "exact_nontrivial_books_without_correction": 0,
+    "holdout_count": 5,
+    "net_reduction_vs_v9_bits": null,
+    "total_test_events": 493,
+    "total_test_events_in_beam": 100,
+    "total_true_path_books_in_beam": 3,
+    "v9_bits": 6917.284942990288,
+    "workspace_lower_bound_bits": 2279.4137307512547
+  },
+  "translation_delta": "NONE",
+  "workspace_program": {
+    "action_families": [
+      "literal_consume",
+      "copy_continuation",
+      "source_cursor_same",
+      "source_cursor_advance",
+      "nearest_start_mark",
+      "nearest_end_mark",
+      "copy_between_marks"
+    ],
+    "beam_width": 128,
+    "inputs_granted": [
+      "book_order",
+      "book_lengths",
+      "seed_books",
+      "unified_innovation_tape"
+    ],
+    "state": [
+      "emitted_text",
+      "source_cursor",
+      "endpoint_marks",
+      "previous_copy",
+      "literal_pointer"
+    ]
+  }
+}

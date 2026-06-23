@@ -89,6 +89,7 @@ source_refs:
   - analysis/chayenne_holdout_boundary_alignment_audit_20260622
   - analysis/chayenne_seed_subspan_reuse_audit_20260622
   - analysis/chayenne_copy_source_overlap_audit_20260622
+  - analysis/latent_authoring_workspace_program_audit_20260623
 ---
 
 # 18. Authorial Mechanism Model
@@ -3932,7 +3933,20 @@ source-length choices in holdout after paying corrections. More public mirrors,
 leaked data, small residual field codecs, and row0/plaintext reopening do not
 count as progress.
 
-The first nonlocal event-policy program gate tests that second route directly
+The latent authoring-workspace program audit then tests the charitable internal
+version of that second route. It builds a workspace IR over v9 events with
+emitted text, source cursor, endpoint marks, previous-copy continuation, and an
+innovation-tape pointer. Even with true coarse/op positions still granted as a
+lower bound, the program keeps only `100/493` held-out events in beam, has `3`
+true-path books in beam across prefix holdouts, generates `0` nontrivial books
+without correction, and does not beat true-path controls (`1` real at cutoff
+`40` versus control p95 `1`). Its partial cost is therefore not comparable to
+v9 and cannot be counted as a ledger reduction. This records
+`latent_authoring_workspace_program_not_promoted` and closes the internal
+workspace route as the main front; the next meaningful route is a clean primary
+authoring surface with object/container/slot/order/versioned trace.
+
+The earlier nonlocal event-policy program gate had tested that internal route
 at the replay-event level. It models the `62` innovation replay events as joint
 symbol streams rather than separate fields. The easier `type:length` stream is
 negative (`-15.097` bits total saving), and the main

@@ -65,6 +65,8 @@ INPUTS = {
     / "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
     "chayenne_copy_source_overlap": ROOT
     / "analysis/chayenne_copy_source_overlap_audit_20260622/reports/test_results/01_chayenne_copy_source_overlap_gate.json",
+    "latent_authoring_workspace": ROOT
+    / "analysis/latent_authoring_workspace_program_audit_20260623/reports/test_results/01_latent_authoring_workspace_program_gate.json",
 }
 
 
@@ -97,6 +99,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     chayenne_alignment = data["chayenne_holdout_boundary_alignment"]
     chayenne_reuse = data["chayenne_seed_subspan_reuse"]
     chayenne_copy_source = data["chayenne_copy_source_overlap"]
+    latent_workspace = data["latent_authoring_workspace"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -143,6 +146,18 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(
         chayenne_copy_source["decision"]["external_field_reduced"] is False,
         "Chayenne copy-source overlap unexpectedly reduced a field",
+    )
+    require(
+        latent_workspace["classification"] == "latent_authoring_workspace_program_not_promoted",
+        "latent authoring workspace unexpected classification",
+    )
+    require(
+        latent_workspace["decision"]["workspace_program_promoted"] is False,
+        "latent authoring workspace unexpectedly promoted",
+    )
+    require(
+        latent_workspace["decision"]["external_field_reduced"] is False,
+        "latent authoring workspace unexpectedly reduced a field",
     )
 
     public_surface_rows = [
@@ -399,8 +414,23 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "reason": "Chayenne seed subspans overlap copy-source intervals, but do not beat same-length controls enough to derive source choice or event policy",
         },
         {
-            "route": "primary_authoring_surface_or_new_causal_state",
-            "status": "OPEN_REQUIRES_NEW_INFORMATION",
+            "route": "latent_authoring_workspace_program",
+            "status": "TESTED_NOT_PROMOTED_INTERNAL_ROUTE_CLOSED_AS_MAINLINE",
+            "evidence": {
+                "classification": latent_workspace["classification"],
+                "test_events_in_beam": latent_workspace["summary"]["total_test_events_in_beam"],
+                "test_events": latent_workspace["summary"]["total_test_events"],
+                "true_path_books_in_beam": latent_workspace["summary"]["total_true_path_books_in_beam"],
+                "exact_nontrivial_books_without_correction": latent_workspace["summary"]["exact_nontrivial_books_without_correction"],
+                "beats_true_path_p95": latent_workspace["controls"]["beats_true_path_p95"],
+                "cost_comparison_status": latent_workspace["summary"]["cost_comparison_status"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "the latent workspace lower-bound keeps some events in beam but generates no nontrivial books, does not beat true-path controls, and cannot claim v9 reduction while granting coarse/op positions",
+        },
+        {
+            "route": "primary_authoring_surface",
+            "status": "OPEN_REQUIRES_CLEAN_PRIMARY_SOURCE",
             "evidence": {
                 "blocker": post_v9["decision"]["next_blocker"],
                 "rejected_simple_routes": [
@@ -411,6 +441,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                     "simple_numeric_innovation_source",
                     "known_external_numeric_anchor_content_source",
                     "chayenne_copy_source_overlap",
+                    "latent_authoring_workspace_program",
                 ],
                 "validated_but_not_solved": [
                     "chayenne_external_holdout_module_bank_validation",
@@ -419,13 +450,12 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 ],
                 "must_use_new_information": [
                     "external authoring surface not already covered by targeted public/community search",
-                    "new causal state beyond emitted-content/literal-tape/copy-lineage/downstream-demand segments",
-                    "event beam survival rather than rank-only trace",
+                    "rights-clean object/container/slot/order/versioned authoring trace",
                     "paid corrections with prefix/family holdout",
                 ],
             },
             "counts_as_next_progress": True,
-            "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",
+            "promotion_test": "must integrate a primary or rights-clean authoring surface that reduces declared external fields after paying program/corrections and beating permutations",
         },
     ]
     return {
@@ -433,7 +463,6 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
         "next_work_contract": {
             "do_next": [
                 "acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol",
-                "introduce new causal state beyond emitted content/literal tape/copy lineage, or integrate a primary authoring source",
             ],
             "do_not_count_as_progress": [
                 "another public text mirror or community topology list without new fields",
@@ -450,9 +479,10 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "Chayenne subspan validation reported as replay-event policy derivation",
                 "Chayenne seed-subspan coverage reported as an internal reuse program",
                 "Chayenne copy-source overlap reported as source-choice or event-policy derivation",
+                "another internal latent/workspace variant that still grants coarse/op positions and only reports event-level beam hits",
                 "semantic/plaintext/row0 reopening",
             ],
-            "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
+            "completion_not_achieved_reason": "No current internal route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula, and the main route now requires a clean primary authoring surface",
         },
     }
 
@@ -469,7 +499,7 @@ def write_markdown(result: dict[str, Any]) -> None:
         "## Summary",
         "",
         "This audit consolidates the current generator frontier after v9 and the public external-surface probes.",
-        "It does not promote a new formula. It narrows the live work to one real route class: new information, either from a primary authoring surface or from a causal state not yet represented.",
+        "It does not promote a new formula. It now narrows the live work to one real route class: new primary/rights-clean authoring-surface information.",
         "",
         "## Route Ledger",
         "",
@@ -499,7 +529,7 @@ def write_markdown(result: dict[str, Any]) -> None:
             "",
             "## Decision",
             "",
-            "`post_external_generator_route_frontier_narrowed_no_formula_promoted`",
+        "`post_workspace_internal_route_saturated_requires_primary_surface`",
             "",
             result["next_work_contract"]["completion_not_achieved_reason"],
             "",
@@ -525,16 +555,17 @@ def write_final_report(result: dict[str, Any]) -> None:
         "None reduces v9 residual fields under the required controls.",
         "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
-        "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
+        "The route frontier is therefore narrowed rather than solved: obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set.",
         "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, downstream-demand segment coupling, simple numeric-source content banks, and known short external numeric anchors are now tested and not promoted as executable programs.",
         "Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.",
         "The follow-up copy-source overlap gate is negative: Chayenne seed subspans overlap some executable decoder source intervals, but not beyond same-length controls enough to derive source choice or event policy.",
+        "A latent authoring-workspace program was then tested as the charitable internal route: it keeps some held-out events in beam but generates `0` nontrivial books, does not beat true-path controls, and cannot claim v9 reduction because the cost is a lower bound that still grants coarse/op positions.",
         "",
         "## Decision",
         "",
-        "`post_external_generator_route_frontier_narrowed_no_formula_promoted`.",
+        "`post_workspace_internal_route_saturated_requires_primary_surface`.",
         "",
-        "No new formula is promoted. No external source is integrated. The next useful work requires new admissible information or a genuinely new causal state, not more residual-field subcodecs.",
+        "No new formula is promoted. No external source is integrated. The next useful work requires new admissible primary authoring-surface information, not more internal residual-field or workspace variants.",
         "",
         "## Reproducible Artifacts",
         "",
@@ -552,7 +583,7 @@ def main() -> None:
     result = {
         "schema": "generator_route_decision_ledger.v1",
         "scope": "analysis_only_route_decision",
-        "classification": "post_external_generator_route_frontier_narrowed_no_formula_promoted",
+        "classification": "post_workspace_internal_route_saturated_requires_primary_surface",
         "retrieved_at_utc": datetime.now(UTC).isoformat(),
         "translation_delta": "NONE",
         "plaintext_claim": False,

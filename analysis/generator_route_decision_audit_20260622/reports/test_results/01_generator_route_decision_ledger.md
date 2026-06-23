@@ -1,6 +1,6 @@
 # Generator Route Decision Ledger
 
-Classification: `post_external_generator_route_frontier_narrowed_no_formula_promoted`
+Classification: `post_workspace_internal_route_saturated_requires_primary_surface`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Case reopened: `False`
@@ -8,7 +8,7 @@ Case reopened: `False`
 ## Summary
 
 This audit consolidates the current generator frontier after v9 and the public external-surface probes.
-It does not promote a new formula. It narrows the live work to one real route class: new information, either from a primary authoring surface or from a causal state not yet represented.
+It does not promote a new formula. It now narrows the live work to one real route class: new primary/rights-clean authoring-surface information.
 
 ## Route Ledger
 
@@ -30,14 +30,14 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `chayenne_holdout_boundary_alignment` | `PROMOTED_SUBSPAN_MODULE_CLUE_NOT_EVENT_POLICY` | `False` | locates the Chayenne validation at internal subspan/module level rather than replay-event boundary policy |
 | `chayenne_seed_subspan_reuse` | `EXTERNAL_COVER_CLUE_NOT_REUSE_PROGRAM` | `False` | the seed subspans uniquely cover Chayenne but do not beat same-length seed controls for derived-book reuse |
 | `chayenne_copy_source_overlap` | `TESTED_NOT_PROMOTED` | `False` | Chayenne seed subspans overlap copy-source intervals, but do not beat same-length controls enough to derive source choice or event policy |
-| `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
+| `latent_authoring_workspace_program` | `TESTED_NOT_PROMOTED_INTERNAL_ROUTE_CLOSED_AS_MAINLINE` | `False` | the latent workspace lower-bound keeps some events in beam but generates no nontrivial books, does not beat true-path controls, and cannot claim v9 reduction while granting coarse/op positions |
+| `primary_authoring_surface` | `OPEN_REQUIRES_CLEAN_PRIMARY_SOURCE` | `True` | must integrate a primary or rights-clean authoring surface that reduces declared external fields after paying program/corrections and beating permutations |
 
 ## Next Work Contract
 
 Progress now means one of:
 
 - acquire/test a genuinely new rights-clean primary object/slot/order or versioned authoring source using the existing CSV/control protocol
-- introduce new causal state beyond emitted content/literal tape/copy lineage, or integrate a primary authoring source
 
 Do not count as progress:
 
@@ -55,12 +55,13 @@ Do not count as progress:
 - Chayenne subspan validation reported as replay-event policy derivation
 - Chayenne seed-subspan coverage reported as an internal reuse program
 - Chayenne copy-source overlap reported as source-choice or event-policy derivation
+- another internal latent/workspace variant that still grants coarse/op positions and only reports event-level beam hits
 - semantic/plaintext/row0 reopening
 
 ## Decision
 
-`post_external_generator_route_frontier_narrowed_no_formula_promoted`
+`post_workspace_internal_route_saturated_requires_primary_surface`
 
-no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula
+No current internal route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula, and the main route now requires a clean primary authoring surface
 
 `row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.
