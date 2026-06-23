@@ -71,6 +71,67 @@ INPUTS = {
     / "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_packet.json",
 }
 
+BALANCED_PROBE_SOURCE_ATTEMPT = {
+    "scope": "targeted attempt to obtain a primary/rights-clean surface for balanced_v9_probe_22_books",
+    "required_fields": [
+        "exact book text/prefix",
+        "coordinate/tile or equivalent",
+        "container/bookcase",
+        "slot/read order",
+        "version/date",
+        "clean rights/provenance",
+    ],
+    "balanced_probe_books": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 17, 20, 23, 31, 34, 42, 49, 56, 57, 60, 65],
+    "github_exact_prefix_hits": {
+        "checked_examples": [
+            "78302031180657191894343464651800",
+            "78167057477090961216480065861143",
+            "01746483494343528217783045765128",
+        ],
+        "hit_classes": [
+            "s2ward/469 corpus and alignment files",
+            "caiocrm/469 sequence corpus",
+            "elkolorado/tibialibraries rendered corpus",
+            "elkolorado/tibia-469-bacca-averages corpus/analysis files",
+            "elkolorado/tibia-corpus text corpus",
+        ],
+        "classification": "exact_prefix_hits_are_corpus_or_analysis_only",
+    },
+    "github_object_layer_queries": [
+        {"query": "469 Hellgate Library slot bookcase", "result": "no code hits"},
+        {"query": "Hellgate Library bookcase_mapping", "result": "no new code hits beyond already-tested community mapping class"},
+    ],
+    "web_targeted_queries": [
+        {
+            "query": "\"78302031180657191894343464651800\" \"slot\" \"bookcase\"",
+            "result_class": "TibiaWiki/community corpus pages and theory discussions; no object-layer slot surface",
+        },
+        {
+            "query": "\"78167057477090961216480065861143\" \"x\" \"y\" \"z\" Tibia",
+            "result_class": "community corpus/book pages; no coordinate/container/slot layer",
+        },
+        {
+            "query": "\"Hellgate Library\" \"slot\" \"read order\" \"bookcase\" \"469\"",
+            "result_class": "community posts and bookcase analysis, not primary rights-clean authoring surface",
+        },
+        {
+            "query": "\"Hellgate Library\" \"object\" \"container\" \"slot\" \"469\"",
+            "result_class": "community/public pages; no clean object-layer export",
+        },
+    ],
+    "candidate_classes_seen": [
+        "TibiaWiki/Fandom corpus and book pages",
+        "Reddit/TibiaMMO analysis posts",
+        "TibiaSecrets theory articles",
+        "s2ward/469 and s2ward/tibia community repositories",
+        "elkolorado/caiocrm community corpus repositories",
+        "arturoornelasb community bookcase mapping already rejected by v9 controls",
+    ],
+    "source_integrated": False,
+    "v9_reduction_bits": 0.0,
+    "classification": "internal_route_saturated_pending_primary_authoring_surface",
+}
+
 
 def load_json(path: Path) -> Any:
     with path.open() as f:
@@ -264,6 +325,13 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             },
             "counts_as_next_progress": False,
             "reason": "targeted public search found no admissible primary object-layer/control surface; leaked proprietary material remains rejected",
+        },
+        {
+            "route": "balanced_v9_probe_primary_surface_attempt",
+            "status": "NO_RIGHTS_CLEAN_SURFACE_FOUND_THIS_ROUND",
+            "evidence": BALANCED_PROBE_SOURCE_ATTEMPT,
+            "counts_as_next_progress": True,
+            "reason": "the current main route was tested against focused balanced-probe source acquisition and remains blocked on a primary rights-clean authoring surface",
         },
         {
             "route": "rights_clean_primary_authoring_surface",
@@ -500,6 +568,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "No current internal route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula, and the main route now requires a clean primary authoring surface",
+            "current_blocker": "internal_route_saturated_pending_primary_authoring_surface",
         },
     }
 
@@ -546,7 +615,7 @@ def write_markdown(result: dict[str, Any]) -> None:
             "",
             "## Decision",
             "",
-        "`post_workspace_internal_route_saturated_requires_primary_surface`",
+        "`internal_route_saturated_pending_primary_authoring_surface`",
             "",
             result["next_work_contract"]["completion_not_achieved_reason"],
             "",
@@ -568,7 +637,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "## Summary",
         "",
         "The current executable frontier remains v9, not a final authorial generator.",
-        "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, and a targeted official/community primary-surface search.",
+        "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, a targeted official/community primary-surface search, and a focused balanced-probe acquisition attempt.",
         "None reduces v9 residual fields under the required controls.",
         "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
@@ -577,13 +646,13 @@ def write_final_report(result: dict[str, Any]) -> None:
         "Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.",
         "The follow-up copy-source overlap gate is negative: Chayenne seed subspans overlap some executable decoder source intervals, but not beyond same-length controls enough to derive source choice or event policy.",
         "A latent authoring-workspace program was then tested as the charitable internal route: it keeps some held-out events in beam but generates `0` nontrivial books, does not beat true-path controls, and cannot claim v9 reduction because the cost is a lower bound that still grants coarse/op positions.",
-        "The remaining external route now has a concrete acquisition packet: a 70-row worksheet with canonical book prefixes and blank source-rights/object-layer fields. It integrates no source and reduces `0.0` bits until filled with clean data.",
+        "The remaining external route now has a concrete acquisition packet and a minimal 22-book balanced probe. The focused attempt to obtain a real source for that probe found only corpus/community-analysis surfaces, not a primary rights-clean object/container/slot/order trace.",
         "",
         "## Decision",
         "",
-        "`post_workspace_internal_route_saturated_requires_primary_surface`.",
+        "`internal_route_saturated_pending_primary_authoring_surface`.",
         "",
-        "No new formula is promoted. No external source is integrated. The next useful work requires new admissible primary authoring-surface information, not more internal residual-field or workspace variants.",
+        "No new formula is promoted. No external source is integrated. The main route is saturated until a primary/rights-clean authoring surface is acquired for the balanced probe or a stronger external causal variable appears.",
         "",
         "## Reproducible Artifacts",
         "",
@@ -601,7 +670,7 @@ def main() -> None:
     result = {
         "schema": "generator_route_decision_ledger.v1",
         "scope": "analysis_only_route_decision",
-        "classification": "post_workspace_internal_route_saturated_requires_primary_surface",
+        "classification": "internal_route_saturated_pending_primary_authoring_surface",
         "retrieved_at_utc": datetime.now(UTC).isoformat(),
         "translation_delta": "NONE",
         "plaintext_claim": False,

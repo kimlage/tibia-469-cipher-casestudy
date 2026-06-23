@@ -1,6 +1,6 @@
 # Generator Route Decision Ledger
 
-Classification: `post_workspace_internal_route_saturated_requires_primary_surface`
+Classification: `internal_route_saturated_pending_primary_authoring_surface`
 Translation delta: `NONE`
 Plaintext claim: `False`
 Case reopened: `False`
@@ -19,6 +19,7 @@ It does not promote a new formula. It now narrows the live work to one real rout
 | `simple_online_innovation_replay_policy` | `TESTED_NOT_PROMOTED` | `False` | literal-only/online policies do not recover the event schedule or source-length choices |
 | `public_or_community_external_surfaces` | `SATURATED_UNDER_CURRENT_EVIDENCE` | `False` | tested surfaces either lack object/slot/versioned authoring data or fail v9 residual controls |
 | `targeted_primary_surface_search` | `TESTED_NO_SOURCE_FOUND` | `False` | targeted public search found no admissible primary object-layer/control surface; leaked proprietary material remains rejected |
+| `balanced_v9_probe_primary_surface_attempt` | `NO_RIGHTS_CLEAN_SURFACE_FOUND_THIS_ROUND` | `True` | the current main route was tested against focused balanced-probe source acquisition and remains blocked on a primary rights-clean authoring surface |
 | `rights_clean_primary_authoring_surface` | `OPEN_REQUIRES_NEW_SOURCE` | `True` | source must be rights-clean/primary or user-authorized, match books, expose object/container/slot/order or versioned authoring fields, and reduce v9 residual streams in holdout above permutations |
 | `simple_nonlocal_event_sequence_program` | `TESTED_NOT_PROMOTED` | `False` | n-gram/phase sequence models over replay events do not reduce the joint event policy stream or keep true suffixes in beam |
 | `causal_content_aware_event_policy_program` | `WEAK_RANK_CLUE_NOT_EXECUTABLE_PROGRAM` | `False` | content-aware candidate ranking reduces loose raw-choice cost but does not keep true event suffixes in beam |
@@ -60,7 +61,7 @@ Do not count as progress:
 
 ## Decision
 
-`post_workspace_internal_route_saturated_requires_primary_surface`
+`internal_route_saturated_pending_primary_authoring_surface`
 
 No current internal route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula, and the main route now requires a clean primary authoring surface
 
