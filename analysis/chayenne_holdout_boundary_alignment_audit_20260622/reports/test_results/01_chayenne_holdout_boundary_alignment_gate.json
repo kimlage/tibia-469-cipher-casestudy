@@ -1,0 +1,75 @@
+{
+  "case_reopened": false,
+  "classification": "PROMOTED_CHAYENNE_SUBSPAN_MODULE_HOLDOUT_CLUE_NOT_EVENT_POLICY",
+  "compression_bound_status": "unchanged",
+  "decision": {
+    "event_boundary_policy_promoted": false,
+    "external_field_reduced": false,
+    "next_blocker": "external holdout validation still does not derive the replay event policy or innovation origin",
+    "origin_source_promoted": false,
+    "reason": "Chayenne validates subspans inside the innovation module bank, not replay event boundaries",
+    "subspan_module_holdout_clue_promoted": true,
+    "v9_reduction_bits": 0.0
+  },
+  "inputs": {
+    "chayenne_external_holdout": "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
+    "unified_innovation_payload": "analysis/unified_innovation_payload_audit_20260622/reports/test_results/01_unified_innovation_payload_gate.json"
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-23T00:01:56.572876+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "chayenne_holdout_boundary_alignment_gate.v1",
+  "scope": "analysis_only_external_holdout_boundary_localization",
+  "span_rows": [
+    {
+      "chayenne_copy_index": 0,
+      "chayenne_target_start": 0,
+      "consumer_segment_end": 236,
+      "consumer_segment_kind": "seed_book",
+      "consumer_segment_label": "seed_book_1",
+      "consumer_segment_start": 144,
+      "contained_in_single_consumer_segment": true,
+      "contained_in_single_replay_event": true,
+      "end_is_consumer_boundary": false,
+      "end_is_replay_boundary": false,
+      "length": 36,
+      "replay_event_end": 242,
+      "replay_event_kind": "literal",
+      "replay_event_start": 0,
+      "source_end": 196,
+      "source_start": 160,
+      "start_is_consumer_boundary": false,
+      "start_is_replay_boundary": false
+    },
+    {
+      "chayenne_copy_index": 1,
+      "chayenne_target_start": 36,
+      "consumer_segment_end": 413,
+      "consumer_segment_kind": "seed_book",
+      "consumer_segment_label": "seed_book_2",
+      "consumer_segment_start": 236,
+      "contained_in_single_consumer_segment": true,
+      "contained_in_single_replay_event": true,
+      "end_is_consumer_boundary": false,
+      "end_is_replay_boundary": false,
+      "length": 13,
+      "replay_event_end": 420,
+      "replay_event_kind": "literal",
+      "replay_event_start": 250,
+      "source_end": 360,
+      "source_start": 347,
+      "start_is_consumer_boundary": false,
+      "start_is_replay_boundary": false
+    }
+  ],
+  "summary": {
+    "chayenne_copy_spans": 2,
+    "consumer_boundary_aligned_spans": 0,
+    "contained_in_single_consumer_segment": 2,
+    "contained_in_single_replay_event": 2,
+    "promotes_event_boundary": false,
+    "promotes_subspan_module_holdout": true,
+    "replay_boundary_aligned_spans": 0
+  },
+  "translation_delta": "NONE"
+}
