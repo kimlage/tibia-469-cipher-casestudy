@@ -48,4 +48,9 @@ The current worksheet intentionally has blank required fields, so it is not a va
 The command above writes into `protocol_dry_run/` so acquisition checks cannot overwrite the canonical external-authoring protocol outputs.
 The expected dry run result for the blank worksheet is `clean_topology_v9_controls_preregistered_not_run_coverage_insufficient`.
 
+Companion acquisition gates:
+
+- `02_source_candidate_preflight` classifies proposed sources before any v9 integration attempt.
+- `03_minimal_capture_design` prioritizes a protocol-useful first capture batch when full 70-book object-layer coverage is not yet available.
+
 `row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.
