@@ -54,7 +54,7 @@
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-23T01:10:56.016952+00:00",
+  "retrieved_at_utc": "2026-06-23T01:14:21.192224+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -105,6 +105,13 @@
           "classification": "RIGHTS_CLEAN_MAP_MARKER_SURFACE_NO_BOOK_OBJECT_LAYER",
           "coverage": "MIT map/path PNGs plus markers JSON with description/icon/x/y/z",
           "source": "tibiamaps_map_data_current",
+          "v9_reduction_bits": 0.0
+        },
+        {
+          "blocking_issue": "public layout/page-order clue is not a primary object-layer capture and is already covered by rejected public-bookcase and bookcase/slot controls",
+          "classification": "REJECTED_PUBLIC_LAYOUT_SURFACE_ALREADY_COVERED_NO_OBJECT_LAYER",
+          "coverage": "exact numeric texts, public cabinet headings, previous/next page order, and numbered layout image",
+          "source": "tibia_wiki_net_polish_hellgate_layout",
           "v9_reduction_bits": 0.0
         },
         {
@@ -189,6 +196,7 @@
           "elkolorado/caiocrm community corpus repositories",
           "tibiamaps/tibia-map-data MIT map and marker repository without object/container/slot layer",
           "tibiamaps/tibia-historical-map-data historical map repository without clean license and with leak-derived branch risk",
+          "tibia-wiki.net Polish Hellgate placement page with numbered layout image but no primary object-layer provenance",
           "arturoornelasb community bookcase mapping already rejected by v9 controls"
         ],
         "classification": "internal_route_saturated_pending_primary_authoring_surface",
@@ -217,6 +225,32 @@
             "result": "no new code hits beyond already-tested community mapping class"
           }
         ],
+        "polish_tibia_wiki_layout_probe": {
+          "already_covered_controls": [
+            "tibiawiki_hellgate_library_bookcase_order rejected in external authoring surface gate",
+            "hellgate_public_bookcase_manifest.csv negative control",
+            "arturo bookcase/slot mapping control probe rejected for v9 reduction"
+          ],
+          "classification": "REJECTED_PUBLIC_LAYOUT_SURFACE_ALREADY_COVERED_NO_OBJECT_LAYER",
+          "contract_value": "stronger public placement clue than plain text mirror, but same route class as public bookcase manifest",
+          "layout_image": "https://www.tibia-wiki.net/images/2/2b/HellgateLib.png",
+          "observed_fields": [
+            "exact original numeric text",
+            "public cabinet heading / szafka ordinal",
+            "previous/next public sequence links",
+            "relative numbered cabinet layout image"
+          ],
+          "page": "https://www.tibia-wiki.net/wiki/Biblioteka_w_Hellgate",
+          "required_fields_missing": [
+            "primary or author-authorized provenance",
+            "exact x/y/z tile per book object",
+            "container object id distinct from public cabinet ordinal",
+            "slot/read order from object layer rather than page order",
+            "versioned object placement capture for the 22-book balanced probe"
+          ],
+          "source_integrated": false,
+          "v9_reduction_bits": 0.0
+        },
         "required_fields": [
           "exact book text/prefix",
           "coordinate/tile or equivalent",
@@ -295,6 +329,10 @@
           {
             "query": "OTBM Hellgate Library books coordinates slot bookcase license GitHub",
             "result_class": "parser/leak/private-server adjacent results; no admissible rights-clean object-layer source"
+          },
+          {
+            "query": "\"Biblioteka w Hellgate\" \"Umiejscowienie ksi\u0105\u017cek\" \"HellgateLib.png\"",
+            "result_class": "Polish Tibia Wiki placement page has book texts, cabinet headings, previous/next order, and a numbered layout image; still public bookcase/layout surface rather than primary object/tile/slot authoring layer"
           },
           {
             "query": "\"78302031180657191894343464651800\" \"slot\" \"bookcase\"",

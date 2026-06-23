@@ -115,6 +115,10 @@ BALANCED_PROBE_SOURCE_ATTEMPT = {
             "result_class": "parser/leak/private-server adjacent results; no admissible rights-clean object-layer source",
         },
         {
+            "query": '"Biblioteka w Hellgate" "Umiejscowienie książek" "HellgateLib.png"',
+            "result_class": "Polish Tibia Wiki placement page has book texts, cabinet headings, previous/next order, and a numbered layout image; still public bookcase/layout surface rather than primary object/tile/slot authoring layer",
+        },
+        {
             "query": "\"78302031180657191894343464651800\" \"slot\" \"bookcase\"",
             "result_class": "TibiaWiki/community corpus pages and theory discussions; no object-layer slot surface",
         },
@@ -139,6 +143,7 @@ BALANCED_PROBE_SOURCE_ATTEMPT = {
         "elkolorado/caiocrm community corpus repositories",
         "tibiamaps/tibia-map-data MIT map and marker repository without object/container/slot layer",
         "tibiamaps/tibia-historical-map-data historical map repository without clean license and with leak-derived branch risk",
+        "tibia-wiki.net Polish Hellgate placement page with numbered layout image but no primary object-layer provenance",
         "arturoornelasb community bookcase mapping already rejected by v9 controls",
     ],
     "tibiamaps_map_data_probe": {
@@ -171,6 +176,32 @@ BALANCED_PROBE_SOURCE_ATTEMPT = {
         "license": None,
         "blocking_issue": "GitHub metadata reports no license; public description/repository context includes official-reference/leak-derived historical folders, so it is not an admissible promoted source",
         "classification": "REJECTED_PROVENANCE_CONTROL_OR_NO_LICENSE",
+    },
+    "polish_tibia_wiki_layout_probe": {
+        "page": "https://www.tibia-wiki.net/wiki/Biblioteka_w_Hellgate",
+        "layout_image": "https://www.tibia-wiki.net/images/2/2b/HellgateLib.png",
+        "observed_fields": [
+            "exact original numeric text",
+            "public cabinet heading / szafka ordinal",
+            "previous/next public sequence links",
+            "relative numbered cabinet layout image",
+        ],
+        "contract_value": "stronger public placement clue than plain text mirror, but same route class as public bookcase manifest",
+        "required_fields_missing": [
+            "primary or author-authorized provenance",
+            "exact x/y/z tile per book object",
+            "container object id distinct from public cabinet ordinal",
+            "slot/read order from object layer rather than page order",
+            "versioned object placement capture for the 22-book balanced probe",
+        ],
+        "already_covered_controls": [
+            "tibiawiki_hellgate_library_bookcase_order rejected in external authoring surface gate",
+            "hellgate_public_bookcase_manifest.csv negative control",
+            "arturo bookcase/slot mapping control probe rejected for v9 reduction",
+        ],
+        "source_integrated": False,
+        "v9_reduction_bits": 0.0,
+        "classification": "REJECTED_PUBLIC_LAYOUT_SURFACE_ALREADY_COVERED_NO_OBJECT_LAYER",
     },
     "source_integrated": False,
     "v9_reduction_bits": 0.0,
@@ -290,6 +321,13 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "classification": BALANCED_PROBE_SOURCE_ATTEMPT["tibiamaps_map_data_probe"]["classification"],
             "coverage": "MIT map/path PNGs plus markers JSON with description/icon/x/y/z",
             "blocking_issue": "rights-clean coordinate/marker surface lacks exact book text, container/bookcase, slot/read order, and versioned object placement for balanced_v9_probe_22_books",
+            "v9_reduction_bits": 0.0,
+        },
+        {
+            "source": "tibia_wiki_net_polish_hellgate_layout",
+            "classification": BALANCED_PROBE_SOURCE_ATTEMPT["polish_tibia_wiki_layout_probe"]["classification"],
+            "coverage": "exact numeric texts, public cabinet headings, previous/next page order, and numbered layout image",
+            "blocking_issue": "public layout/page-order clue is not a primary object-layer capture and is already covered by rejected public-bookcase and bookcase/slot controls",
             "v9_reduction_bits": 0.0,
         },
         {
@@ -692,6 +730,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "Public/community external surfaces have now been tested at the useful levels available: text mirrors, map/marker surfaces, Tales/LIBSearch, licensed community bookcase mapping, a targeted official/community primary-surface search, and a focused balanced-probe acquisition attempt.",
         "None reduces v9 residual fields under the required controls.",
         "The latest clean map-surface check adds TibiaMaps current map data: it is MIT licensed and exposes marker coordinates, but its marker records provide only description/icon/x/y/z, not exact book text, container/bookcase, slot/read order, or versioned object placement for the balanced probe.",
+        "A follow-up check of the Polish Tibia Wiki Hellgate placement page adds a numbered cabinet-layout image and exact numeric texts, but it stays in the already-rejected public bookcase/layout route: no primary object ids, no exact per-book tiles, no authoring trace, and no v9 reduction.",
         "The targeted search also records the source boundary: leaked proprietary Tibia source/map material is not an admissible evidence route even if reused by alt-server communities.",
         "",
         "The route frontier is therefore narrowed rather than solved: obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set.",
