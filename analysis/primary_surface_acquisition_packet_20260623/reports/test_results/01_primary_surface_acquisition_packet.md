@@ -41,9 +41,11 @@ Rejected source classes:
 After filling the worksheet with real authorized object-layer data, run:
 
 ```bash
-python3 analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py --input analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv
+python3 analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py --input analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv --output-dir analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run
 ```
 
 The current worksheet intentionally has blank required fields, so it is not a valid source yet and integrates `0.0` v9 bits.
+The command above writes into `protocol_dry_run/` so acquisition checks cannot overwrite the canonical external-authoring protocol outputs.
+The expected dry run result for the blank worksheet is `clean_topology_v9_controls_preregistered_not_run_coverage_insufficient`.
 
 `row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.

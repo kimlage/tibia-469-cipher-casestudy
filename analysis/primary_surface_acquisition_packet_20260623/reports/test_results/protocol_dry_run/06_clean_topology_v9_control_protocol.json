@@ -1,0 +1,4961 @@
+{
+  "case_reopened": false,
+  "classification": "clean_topology_v9_controls_preregistered_not_run_coverage_insufficient",
+  "compression_bound_status": "unchanged",
+  "coverage_ok": false,
+  "decision": {
+    "external_surface_integrated": false,
+    "promoted_targets": [],
+    "reason": "coverage_insufficient",
+    "v9_reduction_bits": 0.0
+  },
+  "input_csv": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv",
+  "joined_v9_rows": 0,
+  "match_summary": {
+    "ambiguous_matches": 0,
+    "derived_matched_books": [],
+    "input_rows": 70,
+    "matched_books": [],
+    "unique_matches": 0,
+    "unmatched": 0
+  },
+  "plaintext_claim": false,
+  "protocol": {
+    "alpha": 0.5,
+    "features": [
+      "container",
+      "slot_bucket",
+      "coord_bucket",
+      "container_x_slot_bucket",
+      "container_x_op_pos"
+    ],
+    "minimum_coverage": {
+      "derived_matched_books": 10,
+      "split_count": 3,
+      "total_matched_books": 20
+    },
+    "prefix_cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "promotion_rule": "positive total heldout saving and beats topology-label permutation p95",
+    "random_trials": 150,
+    "targets": [
+      "coarse_control",
+      "op_type",
+      "copy_hint_rank_bucket"
+    ]
+  },
+  "retrieved_at_utc": "2026-06-23T00:43:15.509146+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "clean_topology_v9_control_protocol.v1",
+  "scope": "analysis_only_clean_topology_v9_control_protocol",
+  "split_count": 0,
+  "target_results": {},
+  "translation_delta": "NONE",
+  "validation_errors": [
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 2
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 2
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 2
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 2
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 2
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 2
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 3
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 3
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 3
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 3
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 3
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 3
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 4
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 4
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 4
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 4
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 4
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 4
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 5
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 5
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 5
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 5
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 5
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 5
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 6
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 6
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 6
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 6
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 6
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 6
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 7
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 7
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 7
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 7
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 7
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 7
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 8
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 8
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 8
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 8
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 8
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 8
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 9
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 9
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 9
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 9
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 9
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 9
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 10
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 10
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 10
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 10
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 10
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 10
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 11
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 11
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 11
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 11
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 11
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 11
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 12
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 12
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 12
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 12
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 12
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 12
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 13
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 13
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 13
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 13
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 13
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 13
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 14
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 14
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 14
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 14
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 14
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 14
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 15
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 15
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 15
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 15
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 15
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 15
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 16
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 16
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 16
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 16
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 16
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 16
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 17
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 17
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 17
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 17
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 17
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 17
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 18
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 18
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 18
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 18
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 18
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 18
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 19
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 19
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 19
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 19
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 19
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 19
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 20
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 20
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 20
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 20
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 20
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 20
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 21
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 21
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 21
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 21
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 21
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 21
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 22
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 22
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 22
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 22
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 22
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 22
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 23
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 23
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 23
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 23
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 23
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 23
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 24
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 24
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 24
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 24
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 24
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 24
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 25
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 25
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 25
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 25
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 25
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 25
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 26
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 26
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 26
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 26
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 26
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 26
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 27
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 27
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 27
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 27
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 27
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 27
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 28
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 28
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 28
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 28
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 28
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 28
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 29
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 29
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 29
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 29
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 29
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 29
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 30
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 30
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 30
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 30
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 30
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 30
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 31
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 31
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 31
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 31
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 31
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 31
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 32
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 32
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 32
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 32
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 32
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 32
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 33
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 33
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 33
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 33
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 33
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 33
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 34
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 34
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 34
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 34
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 34
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 34
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 35
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 35
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 35
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 35
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 35
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 35
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 36
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 36
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 36
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 36
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 36
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 36
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 37
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 37
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 37
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 37
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 37
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 37
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 38
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 38
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 38
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 38
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 38
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 38
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 39
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 39
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 39
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 39
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 39
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 39
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 40
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 40
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 40
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 40
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 40
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 40
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 41
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 41
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 41
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 41
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 41
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 41
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 42
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 42
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 42
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 42
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 42
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 42
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 43
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 43
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 43
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 43
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 43
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 43
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 44
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 44
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 44
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 44
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 44
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 44
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 45
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 45
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 45
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 45
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 45
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 45
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 46
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 46
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 46
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 46
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 46
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 46
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 47
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 47
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 47
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 47
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 47
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 47
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 48
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 48
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 48
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 48
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 48
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 48
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 49
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 49
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 49
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 49
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 49
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 49
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 50
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 50
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 50
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 50
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 50
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 50
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 51
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 51
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 51
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 51
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 51
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 51
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 52
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 52
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 52
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 52
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 52
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 52
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 53
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 53
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 53
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 53
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 53
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 53
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 54
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 54
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 54
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 54
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 54
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 54
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 55
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 55
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 55
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 55
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 55
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 55
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 56
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 56
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 56
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 56
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 56
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 56
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 57
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 57
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 57
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 57
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 57
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 57
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 58
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 58
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 58
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 58
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 58
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 58
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 59
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 59
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 59
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 59
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 59
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 59
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 60
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 60
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 60
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 60
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 60
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 60
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 61
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 61
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 61
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 61
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 61
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 61
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 62
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 62
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 62
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 62
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 62
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 62
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 63
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 63
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 63
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 63
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 63
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 63
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 64
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 64
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 64
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 64
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 64
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 64
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 65
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 65
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 65
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 65
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 65
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 65
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 66
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 66
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 66
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 66
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 66
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 66
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 67
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 67
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 67
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 67
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 67
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 67
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 68
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 68
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 68
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 68
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 68
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 68
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 69
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 69
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 69
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 69
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 69
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 69
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 70
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 70
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 70
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 70
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 70
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 70
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_id",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_rights",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "source_version_or_date",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "x",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "y",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "z",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "container_or_bookcase_id",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "slot_or_read_order",
+      "line": 71
+    },
+    {
+      "error": "blank_required_field",
+      "field": "capture_method",
+      "line": 71
+    },
+    {
+      "error": "unacceptable_rights_marker",
+      "field": "source_rights",
+      "line": 71
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "x",
+      "line": 71
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "y",
+      "line": 71
+    },
+    {
+      "error": "coordinate_not_integer",
+      "field": "z",
+      "line": 71
+    },
+    {
+      "error": "slot_not_integer",
+      "field": "slot_or_read_order",
+      "line": 71
+    }
+  ]
+}

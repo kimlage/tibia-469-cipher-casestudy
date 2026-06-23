@@ -397,7 +397,7 @@ def run_protocol(input_path: Path) -> dict[str, Any]:
     }
 
 
-def write_markdown(result: dict[str, Any]) -> None:
+def write_markdown(result: dict[str, Any], output_dir: Path) -> None:
     lines = [
         "# Clean Topology v9 Control Protocol",
         "",
@@ -427,7 +427,7 @@ def write_markdown(result: dict[str, Any]) -> None:
         "",
         "`row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.",
     ]
-    (OUT_DIR / "06_clean_topology_v9_control_protocol.md").write_text("\n".join(lines) + "\n")
+    (output_dir / "06_clean_topology_v9_control_protocol.md").write_text("\n".join(lines) + "\n")
 
 
 def append_final(result: dict[str, Any]) -> None:
@@ -453,16 +453,25 @@ def append_final(result: dict[str, Any]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default=str(DEFAULT_INPUT), help="Clean topology CSV path")
+    parser.add_argument(
+        "--output-dir",
+        default=str(OUT_DIR),
+        help="Directory for protocol JSON/Markdown outputs. Defaults to the canonical report directory.",
+    )
     args = parser.parse_args()
     input_path = Path(args.input)
     if not input_path.is_absolute():
         input_path = ROOT / input_path
+    output_dir = Path(args.output_dir)
+    if not output_dir.is_absolute():
+        output_dir = ROOT / output_dir
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
     result = run_protocol(input_path)
-    (OUT_DIR / "06_clean_topology_v9_control_protocol.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    write_markdown(result)
-    append_final(result)
+    (output_dir / "06_clean_topology_v9_control_protocol.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    write_markdown(result, output_dir)
+    if output_dir.resolve() == OUT_DIR.resolve():
+        append_final(result)
 
 
 if __name__ == "__main__":

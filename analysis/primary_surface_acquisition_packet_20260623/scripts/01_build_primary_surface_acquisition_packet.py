@@ -27,6 +27,7 @@ BOOKS_DIGITS = ROOT / "analysis" / "audit_20260609" / "books_digits.json"
 WORKSHEET = OUT_DIR / "01_primary_surface_acquisition_worksheet.csv"
 JSON_OUT = OUT_DIR / "01_primary_surface_acquisition_packet.json"
 MD_OUT = OUT_DIR / "01_primary_surface_acquisition_packet.md"
+PROTOCOL_DRY_RUN_DIR = OUT_DIR / "protocol_dry_run"
 
 REQUIRED_FIELDS = [
     "source_id",
@@ -135,10 +136,12 @@ def write_markdown(result: dict[str, Any]) -> None:
             "After filling the worksheet with real authorized object-layer data, run:",
             "",
             "```bash",
-            "python3 analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py --input analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv",
+            "python3 analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py --input analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv --output-dir analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run",
             "```",
             "",
             "The current worksheet intentionally has blank required fields, so it is not a valid source yet and integrates `0.0` v9 bits.",
+            "The command above writes into `protocol_dry_run/` so acquisition checks cannot overwrite the canonical external-authoring protocol outputs.",
+            "The expected dry run result for the blank worksheet is `clean_topology_v9_controls_preregistered_not_run_coverage_insufficient`.",
             "",
             "`row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.",
         ]
@@ -168,6 +171,8 @@ def write_final(result: dict[str, Any]) -> None:
         f"`{result['classification']}`.",
         "",
         "Progress now requires filling this worksheet or an equivalent CSV with clean source rights, version/date, coordinates, container identity, and slot/read order, then running the existing v9 control protocol.",
+        "The packet's own validation command writes to `reports/test_results/protocol_dry_run/`, so incomplete acquisition worksheets can be checked without changing the canonical external-authoring report outputs.",
+        "The blank worksheet is expected to fail coverage and integrate `0.0` v9 bits until real authorized topology fields are supplied.",
         "",
         "## Reproducible Artifacts",
         "",
@@ -175,6 +180,8 @@ def write_final(result: dict[str, Any]) -> None:
         "- [01_primary_surface_acquisition_worksheet.csv](test_results/01_primary_surface_acquisition_worksheet.csv)",
         "- [01_primary_surface_acquisition_packet.json](test_results/01_primary_surface_acquisition_packet.json)",
         "- [01_primary_surface_acquisition_packet.md](test_results/01_primary_surface_acquisition_packet.md)",
+        "- [protocol_dry_run/06_clean_topology_v9_control_protocol.json](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.json)",
+        "- [protocol_dry_run/06_clean_topology_v9_control_protocol.md](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.md)",
     ]
     FINAL_OUT.write_text("\n".join(lines) + "\n")
 
@@ -209,7 +216,16 @@ def main() -> None:
             "analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py",
             "--input",
             str(WORKSHEET.relative_to(ROOT)),
+            "--output-dir",
+            str(PROTOCOL_DRY_RUN_DIR.relative_to(ROOT)),
         ],
+        "protocol_dry_run": {
+            "output_dir": str(PROTOCOL_DRY_RUN_DIR.relative_to(ROOT)),
+            "json": str((PROTOCOL_DRY_RUN_DIR / "06_clean_topology_v9_control_protocol.json").relative_to(ROOT)),
+            "markdown": str((PROTOCOL_DRY_RUN_DIR / "06_clean_topology_v9_control_protocol.md").relative_to(ROOT)),
+            "expected_blank_worksheet_classification": "clean_topology_v9_controls_preregistered_not_run_coverage_insufficient",
+            "purpose": "validate filled acquisition worksheets without overwriting canonical external-authoring protocol outputs",
+        },
         "decision": {
             "external_surface_integrated": False,
             "v9_reduction_bits": 0.0,

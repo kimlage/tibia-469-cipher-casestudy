@@ -19,7 +19,14 @@
     "fan_solution_without_object_layer"
   ],
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-23T00:39:12.350104+00:00",
+  "protocol_dry_run": {
+    "expected_blank_worksheet_classification": "clean_topology_v9_controls_preregistered_not_run_coverage_insufficient",
+    "json": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.json",
+    "markdown": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.md",
+    "output_dir": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run",
+    "purpose": "validate filled acquisition worksheets without overwriting canonical external-authoring protocol outputs"
+  },
+  "retrieved_at_utc": "2026-06-23T00:43:15.462558+00:00",
   "row0_status": "unchanged_exogenous",
   "schema": "primary_surface_acquisition_packet.v1",
   "scope": "analysis_only_primary_surface_acquisition_handoff",
@@ -52,7 +59,9 @@
     "python3",
     "analysis/external_authoring_surface_acquisition_audit_20260622/scripts/06_clean_topology_v9_control_protocol.py",
     "--input",
-    "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv"
+    "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv",
+    "--output-dir",
+    "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/protocol_dry_run"
   ],
   "worksheet": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/01_primary_surface_acquisition_worksheet.csv"
 }
