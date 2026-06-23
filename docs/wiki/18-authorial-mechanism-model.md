@@ -88,6 +88,7 @@ source_refs:
   - analysis/chayenne_external_holdout_innovation_replay_audit_20260622
   - analysis/chayenne_holdout_boundary_alignment_audit_20260622
   - analysis/chayenne_seed_subspan_reuse_audit_20260622
+  - analysis/chayenne_copy_source_overlap_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -4027,6 +4028,13 @@ their internal reuse is not exceptional: `15` derived-book occurrences versus
 control p95 `19`, and `402` derived covered digits versus p95 `431`. This keeps
 the result as an external cover clue, not a corpus-reuse program, event policy,
 or source of innovation.
+
+A copy-source overlap gate then checks the sharper question: are those Chayenne
+seed subspans actually overrepresented as executable decoder copy-source
+intervals? They overlap `17` copy-source rows and `337` source digits, but the
+same-length seed-span controls reach p95 `20` rows and p99 `402` digits. This
+does not promote a source-choice rule, event policy, origin source, v9
+reduction, plaintext, or translation.
 
 ## Boundary
 

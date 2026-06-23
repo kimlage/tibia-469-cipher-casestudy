@@ -63,6 +63,8 @@ INPUTS = {
     / "analysis/chayenne_holdout_boundary_alignment_audit_20260622/reports/test_results/01_chayenne_holdout_boundary_alignment_gate.json",
     "chayenne_seed_subspan_reuse": ROOT
     / "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
+    "chayenne_copy_source_overlap": ROOT
+    / "analysis/chayenne_copy_source_overlap_audit_20260622/reports/test_results/01_chayenne_copy_source_overlap_gate.json",
 }
 
 
@@ -94,6 +96,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     chayenne_holdout = data["chayenne_external_holdout"]
     chayenne_alignment = data["chayenne_holdout_boundary_alignment"]
     chayenne_reuse = data["chayenne_seed_subspan_reuse"]
+    chayenne_copy_source = data["chayenne_copy_source_overlap"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -125,6 +128,22 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(chayenne_reuse["decision"]["external_cover_clue"] is True, "Chayenne seed subspan external cover clue missing")
     require(chayenne_reuse["decision"]["seed_subspan_reuse_clue_promoted"] is False, "Chayenne seed subspan reuse unexpectedly promoted")
     require(chayenne_reuse["decision"]["external_field_reduced"] is False, "Chayenne seed subspan reuse unexpectedly reduced a field")
+    require(
+        chayenne_copy_source["classification"] == "chayenne_copy_source_overlap_not_promoted",
+        "Chayenne copy-source overlap unexpected classification",
+    )
+    require(
+        chayenne_copy_source["decision"]["event_policy_promoted"] is False,
+        "Chayenne copy-source overlap unexpectedly promoted event policy",
+    )
+    require(
+        chayenne_copy_source["decision"]["origin_source_promoted"] is False,
+        "Chayenne copy-source overlap unexpectedly promoted origin",
+    )
+    require(
+        chayenne_copy_source["decision"]["external_field_reduced"] is False,
+        "Chayenne copy-source overlap unexpectedly reduced a field",
+    )
 
     public_surface_rows = [
         {
@@ -362,6 +381,24 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "reason": "the seed subspans uniquely cover Chayenne but do not beat same-length seed controls for derived-book reuse",
         },
         {
+            "route": "chayenne_copy_source_overlap",
+            "status": "TESTED_NOT_PROMOTED",
+            "evidence": {
+                "classification": chayenne_copy_source["classification"],
+                "copy_rows_with_overlap": chayenne_copy_source["summary"]["copy_rows_with_overlap"],
+                "copy_rows_with_overlap_p95": chayenne_copy_source["controls"]["copy_rows_with_overlap_p95"],
+                "total_overlap_digits": chayenne_copy_source["summary"]["total_overlap_digits"],
+                "total_overlap_digits_p95": chayenne_copy_source["controls"]["total_overlap_digits_p95"],
+                "total_overlap_digits_p99": chayenne_copy_source["controls"]["total_overlap_digits_p99"],
+                "source_starts_inside_spans": chayenne_copy_source["summary"]["source_starts_inside_spans"],
+                "source_starts_inside_spans_p95": chayenne_copy_source["controls"]["source_starts_inside_spans_p95"],
+                "fully_contained_copy_rows": chayenne_copy_source["summary"]["fully_contained_copy_rows"],
+                "fully_contained_copy_rows_p95": chayenne_copy_source["controls"]["fully_contained_copy_rows_p95"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "Chayenne seed subspans overlap copy-source intervals, but do not beat same-length controls enough to derive source choice or event policy",
+        },
+        {
             "route": "primary_authoring_surface_or_new_causal_state",
             "status": "OPEN_REQUIRES_NEW_INFORMATION",
             "evidence": {
@@ -373,6 +410,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                     "innovation_demand_coupling_state",
                     "simple_numeric_innovation_source",
                     "known_external_numeric_anchor_content_source",
+                    "chayenne_copy_source_overlap",
                 ],
                 "validated_but_not_solved": [
                     "chayenne_external_holdout_module_bank_validation",
@@ -411,6 +449,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
                 "Chayenne subspan validation reported as replay-event policy derivation",
                 "Chayenne seed-subspan coverage reported as an internal reuse program",
+                "Chayenne copy-source overlap reported as source-choice or event-policy derivation",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",
@@ -489,6 +528,7 @@ def write_final_report(result: dict[str, Any]) -> None:
         "The route frontier is therefore narrowed rather than solved: either obtain a genuinely primary/rights-clean authoring surface outside the already-tested public/community set, or introduce a causal state not already captured by emitted content, literal tape, and copy lineage.",
         "Simple n-gram/phase sequence grammars, rank-only content-aware event traces, target-free literal/copy cost minimization, downstream-demand segment coupling, simple numeric-source content banks, and known short external numeric anchors are now tested and not promoted as executable programs.",
         "Chayenne is the important positive exception: it is promoted as external holdout validation of the innovation module bank, but explicitly not as an origin source, v9 reduction, or translation.",
+        "The follow-up copy-source overlap gate is negative: Chayenne seed subspans overlap some executable decoder source intervals, but not beyond same-length controls enough to derive source choice or event policy.",
         "",
         "## Decision",
         "",

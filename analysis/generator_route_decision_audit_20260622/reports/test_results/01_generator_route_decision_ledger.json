@@ -4,6 +4,7 @@
   "compression_bound_status": "unchanged",
   "inputs": {
     "causal_content_aware_event_policy": "analysis/causal_content_aware_event_policy_audit_20260622/reports/test_results/01_causal_content_aware_event_policy_gate.json",
+    "chayenne_copy_source_overlap": "analysis/chayenne_copy_source_overlap_audit_20260622/reports/test_results/01_chayenne_copy_source_overlap_gate.json",
     "chayenne_external_holdout": "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
     "chayenne_holdout_boundary_alignment": "analysis/chayenne_holdout_boundary_alignment_audit_20260622/reports/test_results/01_chayenne_holdout_boundary_alignment_gate.json",
     "chayenne_seed_subspan_reuse": "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
@@ -45,11 +46,12 @@
       "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
       "Chayenne subspan validation reported as replay-event policy derivation",
       "Chayenne seed-subspan coverage reported as an internal reuse program",
+      "Chayenne copy-source overlap reported as source-choice or event-policy derivation",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-23T00:09:35.055079+00:00",
+  "retrieved_at_utc": "2026-06-23T00:16:22.630310+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -284,6 +286,24 @@
       "status": "EXTERNAL_COVER_CLUE_NOT_REUSE_PROGRAM"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "classification": "chayenne_copy_source_overlap_not_promoted",
+        "copy_rows_with_overlap": 17,
+        "copy_rows_with_overlap_p95": 20,
+        "fully_contained_copy_rows": 4,
+        "fully_contained_copy_rows_p95": 4,
+        "source_starts_inside_spans": 7,
+        "source_starts_inside_spans_p95": 9,
+        "total_overlap_digits": 337,
+        "total_overlap_digits_p95": 333,
+        "total_overlap_digits_p99": 402
+      },
+      "reason": "Chayenne seed subspans overlap copy-source intervals, but do not beat same-length controls enough to derive source choice or event policy",
+      "route": "chayenne_copy_source_overlap",
+      "status": "TESTED_NOT_PROMOTED"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
@@ -299,7 +319,8 @@
           "simple_global_content_objective_event_program",
           "innovation_demand_coupling_state",
           "simple_numeric_innovation_source",
-          "known_external_numeric_anchor_content_source"
+          "known_external_numeric_anchor_content_source",
+          "chayenne_copy_source_overlap"
         ],
         "validated_but_not_solved": [
           "chayenne_external_holdout_module_bank_validation",

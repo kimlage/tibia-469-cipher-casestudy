@@ -1,0 +1,362 @@
+{
+  "case_reopened": false,
+  "chayenne_spans": [
+    {
+      "end": 196,
+      "label": "chayenne_span_0",
+      "length": 36,
+      "seed_location": {
+        "book": 1,
+        "local_start": 16
+      },
+      "start": 160
+    },
+    {
+      "end": 360,
+      "label": "chayenne_span_1",
+      "length": 13,
+      "seed_location": {
+        "book": 2,
+        "local_start": 111
+      },
+      "start": 347
+    }
+  ],
+  "classification": "chayenne_copy_source_overlap_not_promoted",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "copy_rows_with_overlap_p95": 20,
+    "copy_rows_with_overlap_p99": 23,
+    "fully_contained_copy_rows_p95": 4,
+    "source_starts_inside_spans_p95": 9,
+    "total_overlap_digits_p95": 333,
+    "total_overlap_digits_p99": 402,
+    "trials": 5000
+  },
+  "decision": {
+    "copy_source_overlap_clue_promoted": false,
+    "event_policy_promoted": false,
+    "external_field_reduced": false,
+    "next_blocker": "copy-source overlap alone does not derive source choice, event policy, or innovation origin",
+    "origin_source_promoted": false,
+    "reason": "Chayenne seed subspans are not overrepresented as copy-source intervals after same-length controls",
+    "v9_reduction_bits": 0.0
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "chayenne_seed_subspan_reuse": "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
+    "unified_external_tape_ledger": "analysis/minimal_external_tape_program_audit_20260622/reports/test_results/02_unified_external_tape_ledger.json"
+  },
+  "observed": {
+    "copy_rows_with_overlap": 17,
+    "fully_contained_copy_rows": 4,
+    "hit_rows": [
+      {
+        "book": 10,
+        "length": 276,
+        "op_index": 1,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 276,
+        "source_start": 0,
+        "target_start": 5,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 13,
+        "length": 52,
+        "op_index": 8,
+        "overlaps": [
+          {
+            "overlap_digits": 10,
+            "span_end": 360,
+            "span_label": "chayenne_span_1",
+            "span_start": 347
+          }
+        ],
+        "source_end": 402,
+        "source_start": 350,
+        "target_start": 89,
+        "total_overlap_digits": 10
+      },
+      {
+        "book": 14,
+        "length": 26,
+        "op_index": 4,
+        "overlaps": [
+          {
+            "overlap_digits": 20,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 180,
+        "source_start": 154,
+        "target_start": 89,
+        "total_overlap_digits": 20
+      },
+      {
+        "book": 16,
+        "length": 8,
+        "op_index": 10,
+        "overlaps": [
+          {
+            "overlap_digits": 5,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 165,
+        "source_start": 157,
+        "target_start": 165,
+        "total_overlap_digits": 5
+      },
+      {
+        "book": 19,
+        "length": 48,
+        "op_index": 1,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 196,
+        "source_start": 148,
+        "target_start": 36,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 20,
+        "length": 6,
+        "op_index": 1,
+        "overlaps": [
+          {
+            "overlap_digits": 6,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 196,
+        "source_start": 190,
+        "target_start": 15,
+        "total_overlap_digits": 6
+      },
+      {
+        "book": 20,
+        "length": 10,
+        "op_index": 2,
+        "overlaps": [
+          {
+            "overlap_digits": 10,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 190,
+        "source_start": 180,
+        "target_start": 21,
+        "total_overlap_digits": 10
+      },
+      {
+        "book": 22,
+        "length": 137,
+        "op_index": 0,
+        "overlaps": [
+          {
+            "overlap_digits": 13,
+            "span_end": 360,
+            "span_label": "chayenne_span_1",
+            "span_start": 347
+          }
+        ],
+        "source_end": 411,
+        "source_start": 274,
+        "target_start": 0,
+        "total_overlap_digits": 13
+      },
+      {
+        "book": 23,
+        "length": 23,
+        "op_index": 9,
+        "overlaps": [
+          {
+            "overlap_digits": 4,
+            "span_end": 360,
+            "span_label": "chayenne_span_1",
+            "span_start": 347
+          }
+        ],
+        "source_end": 379,
+        "source_start": 356,
+        "target_start": 129,
+        "total_overlap_digits": 4
+      },
+      {
+        "book": 27,
+        "length": 124,
+        "op_index": 0,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 271,
+        "source_start": 147,
+        "target_start": 0,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 31,
+        "length": 44,
+        "op_index": 1,
+        "overlaps": [
+          {
+            "overlap_digits": 19,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 221,
+        "source_start": 177,
+        "target_start": 9,
+        "total_overlap_digits": 19
+      },
+      {
+        "book": 31,
+        "length": 30,
+        "op_index": 3,
+        "overlaps": [
+          {
+            "overlap_digits": 17,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 177,
+        "source_start": 147,
+        "target_start": 73,
+        "total_overlap_digits": 17
+      },
+      {
+        "book": 31,
+        "length": 52,
+        "op_index": 5,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 210,
+        "source_start": 158,
+        "target_start": 141,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 34,
+        "length": 5,
+        "op_index": 7,
+        "overlaps": [
+          {
+            "overlap_digits": 5,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 188,
+        "source_start": 183,
+        "target_start": 105,
+        "total_overlap_digits": 5
+      },
+      {
+        "book": 35,
+        "length": 127,
+        "op_index": 1,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 274,
+        "source_start": 147,
+        "target_start": 159,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 41,
+        "length": 65,
+        "op_index": 2,
+        "overlaps": [
+          {
+            "overlap_digits": 36,
+            "span_end": 196,
+            "span_label": "chayenne_span_0",
+            "span_start": 160
+          }
+        ],
+        "source_end": 207,
+        "source_start": 142,
+        "target_start": 54,
+        "total_overlap_digits": 36
+      },
+      {
+        "book": 42,
+        "length": 12,
+        "op_index": 2,
+        "overlaps": [
+          {
+            "overlap_digits": 12,
+            "span_end": 360,
+            "span_label": "chayenne_span_1",
+            "span_start": 347
+          }
+        ],
+        "source_end": 359,
+        "source_start": 347,
+        "target_start": 77,
+        "total_overlap_digits": 12
+      }
+    ],
+    "source_starts_inside_spans": 7,
+    "total_overlap_digits": 337
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-23T00:16:22.587971+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "chayenne_copy_source_overlap_gate.v1",
+  "scope": "analysis_only_copy_source_overlap_for_external_holdout_spans",
+  "summary": {
+    "chayenne_spans": 2,
+    "copy_rows": 208,
+    "copy_rows_with_overlap": 17,
+    "fully_contained_copy_rows": 4,
+    "promoted": false,
+    "source_starts_inside_spans": 7,
+    "total_overlap_digits": 337
+  },
+  "translation_delta": "NONE"
+}
