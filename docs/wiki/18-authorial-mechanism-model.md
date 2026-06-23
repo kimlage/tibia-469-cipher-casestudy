@@ -87,6 +87,7 @@ source_refs:
   - analysis/external_numeric_anchor_source_audit_20260622
   - analysis/chayenne_external_holdout_innovation_replay_audit_20260622
   - analysis/chayenne_holdout_boundary_alignment_audit_20260622
+  - analysis/chayenne_seed_subspan_reuse_audit_20260622
 ---
 
 # 18. Authorial Mechanism Model
@@ -4018,6 +4019,14 @@ boundaries in `0/2` cases; both are subspans inside single seed-book consumer
 segments (`seed_book_1` and `seed_book_2`) and inside larger literal replay
 events. This promotes only a subspan/module-bank clue, not an event-boundary
 policy. The replay/event schedule and innovation origin remain the blocker.
+
+A seed-subspan reuse gate then checks whether those same Chayenne spans are
+unusually reused modules inside the 70-book corpus. They cover `49/49` Chayenne
+digits, above the random same-length seed-subspan control maximum (`36`), but
+their internal reuse is not exceptional: `15` derived-book occurrences versus
+control p95 `19`, and `402` derived covered digits versus p95 `431`. This keeps
+the result as an external cover clue, not a corpus-reuse program, event policy,
+or source of innovation.
 
 ## Boundary
 

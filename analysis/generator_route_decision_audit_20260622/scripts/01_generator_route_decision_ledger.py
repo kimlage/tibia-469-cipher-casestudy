@@ -61,6 +61,8 @@ INPUTS = {
     / "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
     "chayenne_holdout_boundary_alignment": ROOT
     / "analysis/chayenne_holdout_boundary_alignment_audit_20260622/reports/test_results/01_chayenne_holdout_boundary_alignment_gate.json",
+    "chayenne_seed_subspan_reuse": ROOT
+    / "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
 }
 
 
@@ -91,6 +93,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     external_anchor_source = data["external_numeric_anchor_source"]
     chayenne_holdout = data["chayenne_external_holdout"]
     chayenne_alignment = data["chayenne_holdout_boundary_alignment"]
+    chayenne_reuse = data["chayenne_seed_subspan_reuse"]
 
     require(v9["classification"] == "PROMOTED_EXECUTABLE_V9_INNOVATION_COPY_CONTINUATION_LEDGER", "v9 not promoted")
     require(v9["summary"]["v9_external_bits_total_content_included"] < v9["summary"]["v8_external_bits_total_content_included"], "v9 not an improvement")
@@ -119,6 +122,9 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
     require(chayenne_alignment["decision"]["subspan_module_holdout_clue_promoted"] is True, "Chayenne subspan holdout clue not promoted")
     require(chayenne_alignment["decision"]["event_boundary_policy_promoted"] is False, "Chayenne unexpectedly promoted event boundary policy")
     require(chayenne_alignment["decision"]["external_field_reduced"] is False, "Chayenne alignment unexpectedly reduced a field")
+    require(chayenne_reuse["decision"]["external_cover_clue"] is True, "Chayenne seed subspan external cover clue missing")
+    require(chayenne_reuse["decision"]["seed_subspan_reuse_clue_promoted"] is False, "Chayenne seed subspan reuse unexpectedly promoted")
+    require(chayenne_reuse["decision"]["external_field_reduced"] is False, "Chayenne seed subspan reuse unexpectedly reduced a field")
 
     public_surface_rows = [
         {
@@ -341,6 +347,21 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
             "reason": "locates the Chayenne validation at internal subspan/module level rather than replay-event boundary policy",
         },
         {
+            "route": "chayenne_seed_subspan_reuse",
+            "status": "EXTERNAL_COVER_CLUE_NOT_REUSE_PROGRAM",
+            "evidence": {
+                "classification": chayenne_reuse["classification"],
+                "chayenne_cover_digits": chayenne_reuse["summary"]["chayenne_cover_digits"],
+                "chayenne_digits": chayenne_reuse["summary"]["chayenne_digits"],
+                "derived_occurrences": chayenne_reuse["summary"]["derived_occurrences"],
+                "derived_occurrences_p95": chayenne_reuse["controls"]["derived_occurrences_p95"],
+                "derived_covered_digits": chayenne_reuse["summary"]["derived_covered_digits"],
+                "derived_covered_digits_p95": chayenne_reuse["controls"]["derived_covered_digits_p95"],
+            },
+            "counts_as_next_progress": False,
+            "reason": "the seed subspans uniquely cover Chayenne but do not beat same-length seed controls for derived-book reuse",
+        },
+        {
             "route": "primary_authoring_surface_or_new_causal_state",
             "status": "OPEN_REQUIRES_NEW_INFORMATION",
             "evidence": {
@@ -356,6 +377,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "validated_but_not_solved": [
                     "chayenne_external_holdout_module_bank_validation",
                     "chayenne_holdout_boundary_alignment",
+                    "chayenne_seed_subspan_reuse",
                 ],
                 "must_use_new_information": [
                     "external authoring surface not already covered by targeted public/community search",
@@ -388,6 +410,7 @@ def build_route_ledger(data: dict[str, Any]) -> dict[str, Any]:
                 "known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin",
                 "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
                 "Chayenne subspan validation reported as replay-event policy derivation",
+                "Chayenne seed-subspan coverage reported as an internal reuse program",
                 "semantic/plaintext/row0 reopening",
             ],
             "completion_not_achieved_reason": "no current route generates the 70 books source-free or removes the replay event policy; v9 remains a strong executable ledger, not a final authorial formula",

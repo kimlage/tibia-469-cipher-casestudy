@@ -28,6 +28,7 @@ It does not promote a new formula. It narrows the live work to one real route cl
 | `known_external_numeric_anchor_content_source` | `WEAK_CHAYENNE_CLUE_NOT_ORIGIN_SOURCE` | `False` | Chayenne overlaps the innovation tape as secondary corpus-compatible validation, while promotable external anchors copy zero digits |
 | `chayenne_external_holdout_module_bank_validation` | `PROMOTED_EXTERNAL_HOLDOUT_VALIDATION_NOT_ORIGIN` | `False` | validates the innovation tape as a module bank on one external holdout, but does not generate event policy or content origin |
 | `chayenne_holdout_boundary_alignment` | `PROMOTED_SUBSPAN_MODULE_CLUE_NOT_EVENT_POLICY` | `False` | locates the Chayenne validation at internal subspan/module level rather than replay-event boundary policy |
+| `chayenne_seed_subspan_reuse` | `EXTERNAL_COVER_CLUE_NOT_REUSE_PROGRAM` | `False` | the seed subspans uniquely cover Chayenne but do not beat same-length seed controls for derived-book reuse |
 | `primary_authoring_surface_or_new_causal_state` | `OPEN_REQUIRES_NEW_INFORMATION` | `True` | must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections |
 
 ## Next Work Contract
@@ -51,6 +52,7 @@ Do not count as progress:
 - known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin
 - Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction
 - Chayenne subspan validation reported as replay-event policy derivation
+- Chayenne seed-subspan coverage reported as an internal reuse program
 - semantic/plaintext/row0 reopening
 
 ## Decision

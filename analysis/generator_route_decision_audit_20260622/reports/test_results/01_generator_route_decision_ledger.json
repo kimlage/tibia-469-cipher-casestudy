@@ -6,6 +6,7 @@
     "causal_content_aware_event_policy": "analysis/causal_content_aware_event_policy_audit_20260622/reports/test_results/01_causal_content_aware_event_policy_gate.json",
     "chayenne_external_holdout": "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json",
     "chayenne_holdout_boundary_alignment": "analysis/chayenne_holdout_boundary_alignment_audit_20260622/reports/test_results/01_chayenne_holdout_boundary_alignment_gate.json",
+    "chayenne_seed_subspan_reuse": "analysis/chayenne_seed_subspan_reuse_audit_20260622/reports/test_results/01_chayenne_seed_subspan_reuse_gate.json",
     "external_01": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/01_external_authoring_surface_acquisition_gate.json",
     "external_02": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/02_github_exact_book_source_hunt.json",
     "external_03": "analysis/external_authoring_surface_acquisition_audit_20260622/reports/test_results/03_leaked_source_boundary_and_clean_topology_contract.json",
@@ -43,11 +44,12 @@
       "known short external numeric anchors where only Chayenne overlaps, because Chayenne is secondary validation rather than origin",
       "Chayenne module-bank validation reported as an origin source, plaintext, or v9 reduction",
       "Chayenne subspan validation reported as replay-event policy derivation",
+      "Chayenne seed-subspan coverage reported as an internal reuse program",
       "semantic/plaintext/row0 reopening"
     ]
   },
   "plaintext_claim": false,
-  "retrieved_at_utc": "2026-06-23T00:03:11.316585+00:00",
+  "retrieved_at_utc": "2026-06-23T00:09:35.055079+00:00",
   "route_ledger": [
     {
       "counts_as_next_progress": false,
@@ -267,6 +269,21 @@
       "status": "PROMOTED_SUBSPAN_MODULE_CLUE_NOT_EVENT_POLICY"
     },
     {
+      "counts_as_next_progress": false,
+      "evidence": {
+        "chayenne_cover_digits": 49,
+        "chayenne_digits": 49,
+        "classification": "chayenne_seed_subspan_external_cover_clue_not_reuse_program",
+        "derived_covered_digits": 402,
+        "derived_covered_digits_p95": 431,
+        "derived_occurrences": 15,
+        "derived_occurrences_p95": 19
+      },
+      "reason": "the seed subspans uniquely cover Chayenne but do not beat same-length seed controls for derived-book reuse",
+      "route": "chayenne_seed_subspan_reuse",
+      "status": "EXTERNAL_COVER_CLUE_NOT_REUSE_PROGRAM"
+    },
+    {
       "counts_as_next_progress": true,
       "evidence": {
         "blocker": "innovation replay schedule and copy/literal/source-length policy remain the main non-source-free dependency",
@@ -286,7 +303,8 @@
         ],
         "validated_but_not_solved": [
           "chayenne_external_holdout_module_bank_validation",
-          "chayenne_holdout_boundary_alignment"
+          "chayenne_holdout_boundary_alignment",
+          "chayenne_seed_subspan_reuse"
         ]
       },
       "promotion_test": "must keep/generate replay event suffixes in prefix/family holdout using new causal state, or integrate a primary source that reduces declared external fields after paying program/corrections",

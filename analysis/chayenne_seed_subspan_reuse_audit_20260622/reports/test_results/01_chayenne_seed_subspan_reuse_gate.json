@@ -1,0 +1,258 @@
+{
+  "case_reopened": false,
+  "classification": "chayenne_seed_subspan_external_cover_clue_not_reuse_program",
+  "compression_bound_status": "unchanged",
+  "controls": {
+    "chayenne_cover_digits_max": 36,
+    "chayenne_cover_digits_p95": 0,
+    "derived_covered_digits_p95": 431,
+    "derived_occurrences_p95": 19,
+    "derived_occurrences_p99": 22,
+    "distinct_derived_books_p95": 17,
+    "trials": 5000
+  },
+  "decision": {
+    "event_policy_promoted": false,
+    "external_cover_clue": true,
+    "external_field_reduced": false,
+    "next_blocker": "subspan reuse does not derive module selection, replay events, or innovation origin",
+    "origin_source_promoted": false,
+    "reason": "Chayenne spans uniquely cover the external holdout, but corpus reuse does not beat same-length seed controls",
+    "seed_subspan_reuse_clue_promoted": false,
+    "v9_reduction_bits": 0.0
+  },
+  "inputs": {
+    "books_digits": "analysis/audit_20260609/books_digits.json",
+    "chayenne_alignment": "analysis/chayenne_holdout_boundary_alignment_audit_20260622/reports/test_results/01_chayenne_holdout_boundary_alignment_gate.json",
+    "chayenne_holdout": "analysis/chayenne_external_holdout_innovation_replay_audit_20260622/reports/test_results/01_chayenne_external_holdout_innovation_replay_gate.json"
+  },
+  "observed": {
+    "all_occurrences": 20,
+    "chayenne_cover_digits": 49,
+    "covered_derived_books": [
+      10,
+      19,
+      22,
+      27,
+      28,
+      31,
+      35,
+      37,
+      41,
+      46,
+      48,
+      51,
+      53,
+      63,
+      66
+    ],
+    "derived_covered_digits": 402,
+    "derived_occurrences": 15,
+    "distinct_all_books": 20,
+    "distinct_derived_books": 15,
+    "span_rows": [
+      {
+        "all_occurrences": 11,
+        "derived_books": [
+          10,
+          19,
+          27,
+          31,
+          35,
+          37,
+          41,
+          63,
+          66
+        ],
+        "derived_occurrences": 9,
+        "label": "chayenne_span_0",
+        "length": 36,
+        "per_book_hits": [
+          {
+            "book": 1,
+            "count": 1,
+            "positions": [
+              16
+            ]
+          },
+          {
+            "book": 8,
+            "count": 1,
+            "positions": [
+              6
+            ]
+          },
+          {
+            "book": 10,
+            "count": 1,
+            "positions": [
+              165
+            ]
+          },
+          {
+            "book": 19,
+            "count": 1,
+            "positions": [
+              48
+            ]
+          },
+          {
+            "book": 27,
+            "count": 1,
+            "positions": [
+              13
+            ]
+          },
+          {
+            "book": 31,
+            "count": 1,
+            "positions": [
+              143
+            ]
+          },
+          {
+            "book": 35,
+            "count": 1,
+            "positions": [
+              172
+            ]
+          },
+          {
+            "book": 37,
+            "count": 1,
+            "positions": [
+              55
+            ]
+          },
+          {
+            "book": 41,
+            "count": 1,
+            "positions": [
+              72
+            ]
+          },
+          {
+            "book": 63,
+            "count": 1,
+            "positions": [
+              53
+            ]
+          },
+          {
+            "book": 66,
+            "count": 1,
+            "positions": [
+              165
+            ]
+          }
+        ],
+        "seed_global_start": 160,
+        "seed_location": {
+          "book": 1,
+          "local_start": 16
+        },
+        "text": "114514519485611451908304576512282177"
+      },
+      {
+        "all_occurrences": 9,
+        "derived_books": [
+          22,
+          28,
+          46,
+          48,
+          51,
+          53
+        ],
+        "derived_occurrences": 6,
+        "label": "chayenne_span_1",
+        "length": 13,
+        "per_book_hits": [
+          {
+            "book": 2,
+            "count": 1,
+            "positions": [
+              111
+            ]
+          },
+          {
+            "book": 5,
+            "count": 1,
+            "positions": [
+              72
+            ]
+          },
+          {
+            "book": 9,
+            "count": 1,
+            "positions": [
+              70
+            ]
+          },
+          {
+            "book": 22,
+            "count": 1,
+            "positions": [
+              73
+            ]
+          },
+          {
+            "book": 28,
+            "count": 1,
+            "positions": [
+              21
+            ]
+          },
+          {
+            "book": 46,
+            "count": 1,
+            "positions": [
+              207
+            ]
+          },
+          {
+            "book": 48,
+            "count": 1,
+            "positions": [
+              44
+            ]
+          },
+          {
+            "book": 51,
+            "count": 1,
+            "positions": [
+              217
+            ]
+          },
+          {
+            "book": 53,
+            "count": 1,
+            "positions": [
+              188
+            ]
+          }
+        ],
+        "seed_global_start": 347,
+        "seed_location": {
+          "book": 2,
+          "local_start": 111
+        },
+        "text": "6612527570584"
+      }
+    ]
+  },
+  "plaintext_claim": false,
+  "retrieved_at_utc": "2026-06-23T00:09:34.981831+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "chayenne_seed_subspan_reuse_gate.v1",
+  "scope": "analysis_only_seed_subspan_module_reuse",
+  "summary": {
+    "chayenne_cover_digits": 49,
+    "chayenne_digits": 49,
+    "derived_covered_digits": 402,
+    "derived_occurrences": 15,
+    "distinct_derived_books": 15,
+    "external_cover_clue": true,
+    "promoted": false
+  },
+  "translation_delta": "NONE"
+}
