@@ -52,5 +52,6 @@ Companion acquisition gates:
 
 - `02_source_candidate_preflight` classifies proposed sources before any v9 integration attempt.
 - `03_minimal_capture_design` prioritizes a protocol-useful first capture batch when full 70-book object-layer coverage is not yet available.
+- `04_minimal_capture_protocol_fixture` verifies the first batch can run through the v9 protocol path using synthetic non-evidence fields.
 
 `row0`, plaintext, translation, semantics, and `compression_bound` remain unchanged.

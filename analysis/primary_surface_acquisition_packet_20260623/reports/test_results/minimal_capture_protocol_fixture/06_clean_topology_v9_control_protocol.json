@@ -1,0 +1,307 @@
+{
+  "case_reopened": false,
+  "classification": "clean_topology_v9_control_source_not_promoted",
+  "compression_bound_status": "unchanged",
+  "coverage_ok": true,
+  "decision": {
+    "external_surface_integrated": false,
+    "promoted_targets": [],
+    "reason": "no_promoted_target",
+    "v9_reduction_bits": 0.0
+  },
+  "input_csv": "analysis/primary_surface_acquisition_packet_20260623/reports/test_results/04_minimal_capture_protocol_fixture.csv",
+  "joined_v9_rows": 102,
+  "match_summary": {
+    "ambiguous_matches": 0,
+    "derived_matched_books": [
+      14,
+      17,
+      20,
+      23,
+      31,
+      34,
+      42,
+      49,
+      56,
+      57,
+      60,
+      65
+    ],
+    "input_rows": 22,
+    "matched_books": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      17,
+      20,
+      23,
+      31,
+      34,
+      42,
+      49,
+      56,
+      57,
+      60,
+      65
+    ],
+    "unique_matches": 22,
+    "unmatched": 0
+  },
+  "plaintext_claim": false,
+  "protocol": {
+    "alpha": 0.5,
+    "features": [
+      "container",
+      "slot_bucket",
+      "coord_bucket",
+      "container_x_slot_bucket",
+      "container_x_op_pos"
+    ],
+    "minimum_coverage": {
+      "derived_matched_books": 10,
+      "split_count": 3,
+      "total_matched_books": 20
+    },
+    "prefix_cutoffs": [
+      20,
+      30,
+      40,
+      50,
+      60
+    ],
+    "promotion_rule": "positive total heldout saving and beats topology-label permutation p95",
+    "random_trials": 150,
+    "targets": [
+      "coarse_control",
+      "op_type",
+      "copy_hint_rank_bucket"
+    ]
+  },
+  "retrieved_at_utc": "2026-06-23T00:54:18.043863+00:00",
+  "row0_status": "unchanged_exogenous",
+  "schema": "clean_topology_v9_control_protocol.v1",
+  "scope": "analysis_only_clean_topology_v9_control_protocol",
+  "split_count": 5,
+  "target_results": {
+    "coarse_control": {
+      "alphabet_size": 10,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -11.609640474436901,
+        "permutation_p05": -11.609640474436901,
+        "permutation_p50": -11.609640474436901,
+        "permutation_p95": -11.609640474436901,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "container",
+          "global_bits": 243.87894154004852,
+          "label": "prefix_20",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "topology_bits": 246.20086963493588,
+          "train_books": 2
+        },
+        {
+          "feature": "container",
+          "global_bits": 183.48251030397816,
+          "label": "prefix_30",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 63,
+          "topology_bits": 185.80443839886553,
+          "train_books": 4
+        },
+        {
+          "feature": "container",
+          "global_bits": 133.3493366334834,
+          "label": "prefix_40",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 46,
+          "topology_bits": 135.67126472837077,
+          "train_books": 6
+        },
+        {
+          "feature": "container",
+          "global_bits": 80.25327889444311,
+          "label": "prefix_50",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 27,
+          "topology_bits": 82.57520698933048,
+          "train_books": 8
+        },
+        {
+          "feature": "container",
+          "global_bits": 25.65100062348568,
+          "label": "prefix_60",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 9,
+          "topology_bits": 27.97292871837304,
+          "train_books": 10
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 5,
+        "total_global_bits": 666.6150679954388,
+        "total_target_rows": 227,
+        "total_topology_bits": 678.2247084698757
+      }
+    },
+    "copy_hint_rank_bucket": {
+      "alphabet_size": 10,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -42.418934387345985,
+        "permutation_p05": -42.418934387345985,
+        "permutation_p50": -42.418934387345985,
+        "permutation_p95": -42.418934387345985,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "container_x_op_pos",
+          "global_bits": 196.42347541364927,
+          "label": "prefix_20",
+          "saving_bits": -12.313767641761473,
+          "split_type": "prefix",
+          "target_rows": 65,
+          "topology_bits": 208.73724305541074,
+          "train_books": 2
+        },
+        {
+          "feature": "container_x_op_pos",
+          "global_bits": 158.79929477367173,
+          "label": "prefix_30",
+          "saving_bits": -15.058703760950237,
+          "split_type": "prefix",
+          "target_rows": 50,
+          "topology_bits": 173.85799853462197,
+          "train_books": 4
+        },
+        {
+          "feature": "container_x_op_pos",
+          "global_bits": 117.57306580320191,
+          "label": "prefix_40",
+          "saving_bits": -10.402606794859537,
+          "split_type": "prefix",
+          "target_rows": 35,
+          "topology_bits": 127.97567259806145,
+          "train_books": 6
+        },
+        {
+          "feature": "container",
+          "global_bits": 80.19465600000508,
+          "label": "prefix_50",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 22,
+          "topology_bits": 82.51658409489245,
+          "train_books": 8
+        },
+        {
+          "feature": "container",
+          "global_bits": 20.5901717256978,
+          "label": "prefix_60",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 7,
+          "topology_bits": 22.912099820585162,
+          "train_books": 10
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 5,
+        "total_global_bits": 573.5806637162258,
+        "total_target_rows": 179,
+        "total_topology_bits": 615.9995981035718
+      }
+    },
+    "op_type": {
+      "alphabet_size": 2,
+      "permutation_controls": {
+        "beats_permutation_p95": false,
+        "permutation_mean": -15.732631911722489,
+        "permutation_p05": -23.215438267804274,
+        "permutation_p50": -15.399410837079756,
+        "permutation_p95": -10.798333990345583,
+        "trials": 150
+      },
+      "split_results": [
+        {
+          "feature": "container",
+          "global_bits": 70.83250803124554,
+          "label": "prefix_20",
+          "saving_bits": -2.321928094887369,
+          "split_type": "prefix",
+          "target_rows": 82,
+          "topology_bits": 73.15443612613291,
+          "train_books": 2
+        },
+        {
+          "feature": "container",
+          "global_bits": 48.84335383459946,
+          "label": "prefix_30",
+          "saving_bits": -2.3219280948873617,
+          "split_type": "prefix",
+          "target_rows": 63,
+          "topology_bits": 51.165281929486824,
+          "train_books": 4
+        },
+        {
+          "feature": "container_x_slot_bucket",
+          "global_bits": 36.54646694035526,
+          "label": "prefix_40",
+          "saving_bits": -3.1296722592107855,
+          "split_type": "prefix",
+          "target_rows": 46,
+          "topology_bits": 39.676139199566045,
+          "train_books": 6
+        },
+        {
+          "feature": "container_x_slot_bucket",
+          "global_bits": 19.42913378018406,
+          "label": "prefix_50",
+          "saving_bits": -1.7273393527129528,
+          "split_type": "prefix",
+          "target_rows": 27,
+          "topology_bits": 21.156473132897013,
+          "train_books": 8
+        },
+        {
+          "feature": "container_x_slot_bucket",
+          "global_bits": 6.9052624949519075,
+          "label": "prefix_60",
+          "saving_bits": -2.300800232738421,
+          "split_type": "prefix",
+          "target_rows": 9,
+          "topology_bits": 9.206062727690329,
+          "train_books": 10
+        }
+      ],
+      "summary": {
+        "positive_splits": 0,
+        "split_count": 5,
+        "total_global_bits": 182.55672508133623,
+        "total_target_rows": 227,
+        "total_topology_bits": 194.3583931157731
+      }
+    }
+  },
+  "translation_delta": "NONE",
+  "validation_errors": []
+}

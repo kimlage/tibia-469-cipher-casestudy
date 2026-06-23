@@ -28,6 +28,7 @@ Use the minimal capture design to collect a protocol-useful first batch when a f
 - [01_build_primary_surface_acquisition_packet.py](../scripts/01_build_primary_surface_acquisition_packet.py)
 - [02_source_candidate_preflight.py](../scripts/02_source_candidate_preflight.py)
 - [03_minimal_capture_design.py](../scripts/03_minimal_capture_design.py)
+- [04_minimal_capture_protocol_fixture.py](../scripts/04_minimal_capture_protocol_fixture.py)
 - [01_primary_surface_acquisition_worksheet.csv](test_results/01_primary_surface_acquisition_worksheet.csv)
 - [01_primary_surface_acquisition_packet.json](test_results/01_primary_surface_acquisition_packet.json)
 - [01_primary_surface_acquisition_packet.md](test_results/01_primary_surface_acquisition_packet.md)
@@ -36,6 +37,11 @@ Use the minimal capture design to collect a protocol-useful first batch when a f
 - [03_minimal_capture_design.csv](test_results/03_minimal_capture_design.csv)
 - [03_minimal_capture_design.json](test_results/03_minimal_capture_design.json)
 - [03_minimal_capture_design.md](test_results/03_minimal_capture_design.md)
+- [04_minimal_capture_protocol_fixture.csv](test_results/04_minimal_capture_protocol_fixture.csv)
+- [04_minimal_capture_protocol_fixture.json](test_results/04_minimal_capture_protocol_fixture.json)
+- [04_minimal_capture_protocol_fixture.md](test_results/04_minimal_capture_protocol_fixture.md)
+- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json)
+- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md)
 - [protocol_dry_run/06_clean_topology_v9_control_protocol.json](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.json)
 - [protocol_dry_run/06_clean_topology_v9_control_protocol.md](test_results/protocol_dry_run/06_clean_topology_v9_control_protocol.md)
 
@@ -58,3 +64,15 @@ This is an acquisition plan only: no source is integrated and v9 reduction remai
 - [03_minimal_capture_design.csv](test_results/03_minimal_capture_design.csv)
 - [03_minimal_capture_design.json](test_results/03_minimal_capture_design.json)
 - [03_minimal_capture_design.md](test_results/03_minimal_capture_design.md)
+
+## Minimal Capture Protocol Fixture
+
+A synthetic protocol fixture now verifies that the `balanced_v9_probe_22_books` capture batch can enter the v9 protocol path with sufficient schema, book matching, coverage, joined rows, and splits.
+This fixture is explicitly non-evidential and integrates no source; it only tests that the acquisition design is runnable once real authorized object-layer fields are supplied.
+
+- [04_minimal_capture_protocol_fixture.py](../scripts/04_minimal_capture_protocol_fixture.py)
+- [04_minimal_capture_protocol_fixture.csv](test_results/04_minimal_capture_protocol_fixture.csv)
+- [04_minimal_capture_protocol_fixture.json](test_results/04_minimal_capture_protocol_fixture.json)
+- [04_minimal_capture_protocol_fixture.md](test_results/04_minimal_capture_protocol_fixture.md)
+- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.json)
+- [minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md](test_results/minimal_capture_protocol_fixture/06_clean_topology_v9_control_protocol.md)
